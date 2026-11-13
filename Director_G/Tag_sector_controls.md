@@ -54,4 +54,31 @@ Through tick four, the larger-norm rule reproduces every autonomous cell. At eac
 
 For a particular instrument, equality to the shielded fraction at each occupied local context suffices to replay the joint terminal masses, given the initial marker and correct tag transport. Fresh adjacent panels can test those fractions directly. Even within the class of rules continuous on the whole joint unit sphere, the sum and maximum denominators agree on all occupied pure inputs and give different four-tick records. Agreement with the autonomous four-tick records also leaves the later routing underdetermined.
 
-The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, compares both initial labels, and tests each four-tick rule in a varying spacetime label frame. The original 464 joint cells across five settings and 24 panels remain in the record. They also give the larger-norm probabilities by checked cellwise equality to the autonomous column. The checker separately verifies their tick-eight difference. [Standard-library checker](check_tag_sector_controls.py) · [Exact panels](results/tag_sector_controls.json)
+## What a finite calibration can determine
+
+Suppose a set of mixed-tag calibrations visits finitely many local signed fields. This includes finitely many finite-support preparations run to finite depths with specified tag permutations and free ticks. Fix the same field evolution, initial marker distributions and marker transport at those permutations for every rule. Even exact agreement with sector autonomy at every panel in this set, together with all occupied pure-tag responses, leaves distinct **real-analytic** splitting rules on the joint unit sphere. A later measurement on the sharp launch in setting \(O\) distinguishes them. The construction places no uniform bound on derivatives or on the degree of the response.
+
+Write \(S=s_0+s_1>0\) and \(r=s_b/S\). Let \(A\) contain 1 and every value of \(r\) in the calibration for which \(u_bv_b\ne0\), using both choices of \(b\). All members of \(A\) are positive. Define
+
+\[
+H(r)=\prod_{a\in A}(r-a)^2,\qquad
+K_b^{(c)}=\frac12+\frac{u_bv_b/S}{r+cH(r)},\qquad c>0 .
+\]
+
+The denominator is positive for \(r>0\) and equals \(cH(0)>0\) at zero. Thus \(K_b^{(c)}\) is real-analytic everywhere on \(S=1\), including an empty selected sector. Assign a fair split at the separate all-zero field. The numerator satisfies \(2|u_bv_b|/S\le r\), so these are probabilities. They are invariant under common nonzero rescaling, and use the same formula upon exchanging the two bit names. Where \(u_bv_b=0\) every rule is fair. At the other calibration inputs \(H(r)=0\), giving the autonomous fraction. The same holds for every occupied pure-tag direction because \(1\in A\). Starting with the common marker, equality at each visited splitter gives equality of the full calibrated panels by induction.
+
+To find a reachable input outside any such finite \(A\), consider the parent at \(x=t-2\), \(t\ge3\), in setting \(O\). Every history there has exactly one left step. With first step right, the left step in positions 2 through \(t-1\) gives \(t-2\) right-ending words, while a final left step gives one left-ending word. With first step left there is just the right-ending word. All signs are positive. Putting \(n=t-2\), the two pairs are \((n,1)\) in tag one and \((1,0)\) in tag zero. The tagged marker reaches this parent with positive probability under every rule: one route takes \(t-1\) right steps on the pure right frontier, then goes left. Each choice on that route has probability \(1/2\).
+
+The fractions \(r_n=(n^2+1)/(n^2+2)\) are distinct. Infinitely many \(n\ge2\) therefore give \(r_n\notin A\). At each such parent \(H(r_n)>0\) and \(u_bv_b=n>0\), so the right fraction decreases strictly as \(c\) increases. Both daughters have positive mass and each has that unique parent. Their ratio in a single terminal panel is \(K_b^{(c)}/(1-K_b^{(c)})\), even if earlier marker masses have already diverged. This argument uses the integer line or rings large enough to keep each chosen light cone unwrapped.
+
+For a finite example take all panels of \(O\) through tick eight. Its contributing parent ticks are 0 through 7. The checker finds 12 distinct values in \(A\). The next edge parent, \(t=8,x=6,b=1\), has \(r_*=37/38\notin A\) and mass \(37/256\). Choose \(c_1=r_*/H(r_*)\) and \(c_2=3c_1\). The following joint endpoint probabilities count all launches under the indicated rule.
+
+| Rule | Tick 9 at \((7,R,1)\) | Tick 9 at \((5,L,1)\) |
+|---|---:|---:|
+| Sector autonomy | \(49/512\) | \(25/512\) |
+| Analytic rule with \(c_1\) | \(43/512\) | \(31/512\) |
+| Analytic rule with \(c_2\) | \(40/512\) | \(34/512\) |
+
+The two analytic rules agree with every autonomous cell up to and including tick eight. Calibrated relative efficiencies at the two named detectors would allow their odds to be tested on fresh terminal reads. Physical implementation and sampling uncertainty remain open.
+
+The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, compares both initial labels, and tests the spacetime relabeling. It verifies the tick-eight and tick-nine differences separately. The stored 464 cells across five settings and 24 four-tick panels also give the larger-norm probabilities by checked equality to the autonomous column. [Standard-library checker](check_tag_sector_controls.py) · [Exact four-tick panels](results/tag_sector_controls.json)
