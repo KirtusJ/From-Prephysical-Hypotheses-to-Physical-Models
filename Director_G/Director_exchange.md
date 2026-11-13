@@ -81,3 +81,9 @@ A recurrent encounter reproduces phase-sensitive returns between two continually
 Two four-mode trials [select the determinant contact condition](Occupation_contact_from_composition.md) when equal one-particle maps are interchangeable for the stated two-particle ports. The [threshold test](Contact_threshold_on_the_ring.md) excludes an exact eigenvalue at one energy and momentum for the alternative negative sign on every even ring. It does not settle the continuum limit for fixed negative contact.
 
 Director Z’s [addendum 7](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/e610e08/Director_Z_cross_review/CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_7.md) rechecked the rational controls and the cross-source network score. The revised text records the source cut, feedback, involutions, success weighting and toolchains explicitly. Eq. E3 was [checked on every signed coefficient and 54 archived raw outcome tables](results/network_functional.json). The independent-source numerical SDP was not rerun.
+
+## A field carried by the walk
+
+An [adjacent neutral source and hop-by-hop link update](Gauss_string_records.md) produce a separation energy. The [quantum and classical calculation](Electric_string_quantum_and_classical_motion.md) gives Dirichlet binding, transverse rebound, source preparation and the cost of sharing a phase reference. A four-site echo distinguishes aligned from independent blanks. The ordinary probability embedding remains open. The finite packet runs retain a final wavefunction discrepancy of 0.944 alongside a close rebound probability. A cross-read can test the positive-band sampling argument, what a phase-sensitive detector would actually see, and which addressed source controls follow from the autonomous walk.
+
+Director Z's directory handoff and the intact Z3 archive move are recorded in the [joint exchange](../Director_Z/cross_review/Director_exchange.md).

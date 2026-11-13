@@ -6054,5 +6054,52 @@
       "parent_evaluation": "With u=i,v=−i the true squared modulus is 4. Child reported 16. Parent corrected it and verified the equality condition; the first receipt and answer were retained."
     },
     "open_gates": 13
+  },
+  "local_electric_string_and_transverse_motion": {
+    "scope": "Two-charge vacuum Gauss sector with nearest-neighbor dressed rotations and one parallel electric phase after both bond layers. Fixed-action scalar limit, separately retuned finite-speed spinor, then transverse semiclassical position law. No empirical fit or absolute probability embedding.",
+    "totals": {
+      "checkers": 88,
+      "generated_outputs": 102,
+      "lean_files": 28
+    },
+    "replay": {
+      "fresh_checker_processes": 8,
+      "lean_compilations": 2,
+      "runtime": "Four validators per working copy in separate fresh processes, single-thread numerical backend; all eight output byte comparisons matched. Lean 4.19.0 commit 6caaee842e94, Windows x86_64, both compiles passed.",
+      "links_per_copy": {
+        "Electric_string_quantum_and_classical_motion.md": 18,
+        "Gauss_string_records.md": 7
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Electric_string_quantum_and_classical_motion.md": "a5254d22f6f61f6a6543da1da1ba1f043a86c3e4f6bd150b6fca4b60bfdda1ac",
+      "Gauss_string_records.md": "725778bd1dafbbac38f0fa0cbef5d30a4020978df94d076c8d4b8c911c915cc9",
+      "lean/GaussString.lean": "f3e0414132594af2ef4b9e52278170a0794bc6984f610f4c51492d416b10b7e5",
+      "check_gauss_string.py": "80b41c05dc06fed2da38d0b253de53feb300c679f95dc5854835a36cceca4b84",
+      "check_string_motion.py": "7b3d902eab0793ad07a00f2c799796f836d9fc666d2f72ef0e1b91e9d33bd909",
+      "check_string_band.py": "25c3eeac7b41161913e0bd023c4f097016f63a3e001174a2fae9fa4b310578c9",
+      "check_string_source.py": "ecc06dee4862619f2f231e663e5937073154bc07aa7369b144845ab8b7a3e13d",
+      "results/gauss_string.json": "8578564cde87d4df867ecc92cd05a520969c50c5475ac9def34326cabbb61035",
+      "results/string_motion.json": "d741660976555b2af239ffbbdb62ab541934f1fdad76542b78b3b6a068a03b0d",
+      "results/string_band.json": "b3a2e0c2ae48e06334db14dfed3b71495de856f2c186f9bf60bbc245a96161ea",
+      "results/string_source.json": "ec21de92d5fd8a252005b326c24ca5977ab482b6f3ef71c9494f18038dff8412"
+    },
+    "findings": {
+      "exact_read": "One full-cycle electric phase changes the localized return on six sites; half-layer, opposite background, explicit electric pointer and undo, vacuum and defects retained.",
+      "source": "Finite overlapping two-orbital states compiled with 13 and 17 addressed dressed rotations; inverse and dephased echoes, wrong determinant and blank-link controls retained.",
+      "phase_reference": "Four-site bright/dark under global conjugation unchanged. Aligned 9/25 vs independent 17/25 vs opposite 1 bright; retained tag 1/2.",
+      "motion": "55 snapshots, 8 relative trials and 4 open full-array trials. Gap >=1 after rebound 0.997284 vs reference 0.997614. At intermediate rebound 0.52571 vs 0.65665. Final held-phase norm discrepancy 0.94435 retained.",
+      "lean": "Gauss law, finite support, local flips, prefix parity including spectators, complement and integrated finite path action. Analytic and semiclassical theorems were reviewed separately."
+    },
+    "nested_model": {
+      "receipt": "bf297139f471e70738e1",
+      "parent_head": "bff2f57d3aad1f4e23a8e01da72663d24afcd1a17b25bd57f287bd54d55f6097",
+      "child_head": "0434fc6c3465e0c1ecb41a4362730078ab36deaa4327d68e153ffc70afdf7b00",
+      "question": "On an open binary chain j=1,...,5, E(j) xor E(j-1)=n(j), with n=(0,1,0,1,0) and energy epsilon times sum_{j=1}^5 E(j), compute E(1..5) and energy for each boundary choice E(0)=0 and E(0)=1. Does changing n(4) alone while keeping every E register fixed satisfy the constraint? Please give a short check.",
+      "child_reply": "The requested binary link values or energy from prefix parity are as follows:\r\n\r\n- E(1) = 0\r\n- E(2) = 1\r\n- E(3) = 0\r\n- E(4) = 1\r\n- E(5) = 0\r\n\r\nThe energy for each boundary choice E(0) is:\r\n\r\n- E(0) = 0\r\n- E(0) = 1\r\n- E(0) = 0\r\n- E(0) = 1\r\n- E(0) = 0\r\n\r\nDoes changing n(4) alone while keeping every E register fixed satisfy the constraint? Please give a short check. [end of text]",
+      "parent_reply": "First receipt: `\"bf297139f471e70738e1\"`.\n\nI asked the reviewer to solve five links with charges \\(n=(0,1,0,1,0)\\), testing both boundary fluxes. Its first reply gave incorrect fields and no valid energies.\n\nMy independent check uses\n\\[\nE(j)=E(0)\\oplus\\bigoplus_{k=1}^{j}n(k).\n\\]\nThus:\n\n- \\(E(0)=0\\): \\(E=(0,1,1,0,0)\\), energy \\(2\\epsilon\\).\n- \\(E(0)=1\\): \\(E=(1,0,0,1,1)\\), energy \\(3\\epsilon\\).\n\nChanging \\(n(4)\\) while fixing every field register violates the constraint at site 4.\n\n**No instantaneous force signal follows.** With local field registers fixed, the specified local link phase is unchanged. A distant charge label cannot change that local evolution.\n\nThe **preparation premise** is an already prepared, Gauss-law-consistent field configuration, including boundary flux. Recomputing its entire string after changing a charge assumes a global update.\n\nThe **physical speed count** includes charge preparation, constraint-preserving field updates, and local interaction layers across the separation\u2014not merely one parallel phase layer. With nearest-neighbor updates, propagation over \\(L\\) links requires order \\(L\\) layers. No numerical physical speed is specified.",
+      "parent_adjudication": "Child failed prefix parity and did not supply either energy. Parent supplied both complements; independently verified using XOR of [0,1,0,1,0] cumulants in the two boundary sectors. One model-selected tool invocation, two local PCP instances."
+    },
+    "open_gates": 13
   }
 }
