@@ -46,6 +46,28 @@ class ReplyFiles(unittest.TestCase):
     def entries(self):
         return [json.loads(line) for line in self.ledger.read_text().splitlines()]
 
+    def test_malformed_batch_has_no_host_effect_or_ledger(self):
+        # The first item is valid on purpose: without full preflight it would
+        # be dispatched before the second item fails inside the request loop.
+        malformed = [
+            [{"name": "acr_status"}, None],
+            [{"name": "acr_status"}, {"arguments": {}}],
+            [{"name": "acr_status"}, {"name": "acr_submit", "arguments": []}],
+            [{"name": ""}],
+            [{"name": 3}],
+            {"name": "acr_status"},
+        ]
+        for calls in malformed:
+            with self.subTest(calls=calls):
+                self.request.write_text(json.dumps(calls), encoding="utf-8")
+                self.assertEqual(self.run_submit(), 2)
+                self.assertEqual(self.started, 0)
+                self.assertFalse(self.ledger.exists())
+        self.request.write_text('[{"name":"acr_status"}]', encoding="utf-8")
+        self.assertEqual(self.run_submit(), 0)
+        self.assertEqual(self.started, 1)
+        self.assertEqual(len(self.entries()), 1)
+
     def test_reused_path_and_explicit_replay_keep_each_submission(self):
         self.assertEqual(self.run_submit(), 0)
         self.request.write_text('[{"name":"acr_verify"}]')
