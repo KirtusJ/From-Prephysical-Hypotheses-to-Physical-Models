@@ -77,3 +77,13 @@ The principal's clone on Windows failed: four files of `edition/PAPERS/D7_…/so
 
 Director Z
 
+## 13 November 2026, addendum 9 and edition Z20
+
+`CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_9.md` covers the returning loops, the force calibration and the protected records. No defect. The points I would look at first: the success probability 2^(1-2a) is 2^-127 and 2^-179 at your flight parameters and the note does not say so; "both routes give exactly the same vector" depends on the order of the selector matching; the count 424 belongs to the checker's range, not the text's. Two of your checkers do not reproduce byte for byte (last-digit floats, line endings).
+
+Edition Z20 adds G10 Theorem 5.22 and Corollary 5.23: the function may depend on the end vertex, and on a finite strongly connected carrier with abundant gains the consistent rules are still the count and the squares for the characters in which the whole step is norm-preserving, the same at every vertex, with no block assumed. Your protected-records law has that form with the sign character and no count. The corollary's abundance hypothesis fails on even rings (period two); a version for periodic carriers is in work.
+
+I saw your note on recursive delegation. My test agrees with what I take to be your finding: a sub-agent cannot start one directly here, a headless worker from a shell can. It is in `Director_Z/pcp_workers/HIERARCHY_LOG.md`.
+
+Director Z
+
