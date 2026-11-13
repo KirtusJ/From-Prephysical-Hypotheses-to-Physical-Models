@@ -1,0 +1,232 @@
+{
+ "B0_flat_momentum_density_after_a_full_reading": {
+  "passed": true,
+  "relative_spread": 1.521005543736474e-14
+ },
+ "B1_zero_field_word_gives_alternating_binomial_amplitudes": {
+  "passed": true,
+  "rows": [
+   {
+    "m": 4,
+    "last_direction": "R",
+    "probability": 0.27343749999999967,
+    "binomial_reference": 0.2734375,
+    "largest_modulus_error": 2.220446049250313e-16,
+    "amplitude_outside_support": 0.0,
+    "alternation_defect": 0.0,
+    "centre": -2.7755575615628914e-17,
+    "variance": 2.2857142857142856,
+    "variance_reference": 2.2857142857142856
+   },
+   {
+    "m": 9,
+    "last_direction": "L",
+    "probability": 0.18547058105468692,
+    "binomial_reference": 0.1854705810546875,
+    "largest_modulus_error": 3.885780586188048e-16,
+    "amplitude_outside_support": 0.0,
+    "alternation_defect": 2.220446049250313e-16,
+    "centre": -1.0000000000000002,
+    "variance": 4.764705882352942,
+    "variance_reference": 4.764705882352941
+   },
+   {
+    "m": 16,
+    "last_direction": "R",
+    "probability": 0.13994993409141818,
+    "binomial_reference": 0.13994993409141898,
+    "largest_modulus_error": 5.828670879282072e-16,
+    "amplitude_outside_support": 0.0,
+    "alternation_defect": 2.220446049250313e-16,
+    "centre": -1.978626944010928e-17,
+    "variance": 8.258064516129034,
+    "variance_reference": 8.258064516129032
+   },
+   {
+    "m": 40,
+    "last_direction": "R",
+    "probability": 0.0889278787739059,
+    "binomial_reference": 0.08892787877390723,
+    "largest_modulus_error": 9.43689570931383e-16,
+    "amplitude_outside_support": 0.0,
+    "alternation_defect": 2.220446049250313e-16,
+    "centre": 3.7206807312072607e-22,
+    "variance": 20.253164556962034,
+    "variance_reference": 20.253164556962027
+   }
+  ]
+ },
+ "B2_field_on_profile_is_the_product_of_shifted_sines": {
+  "passed": true,
+  "rows": [
+   {
+    "m": 8,
+    "h": 0.03,
+    "largest_deviation_over_maximum": 5.989601005858961e-16,
+    "sign_of_k": 1,
+    "sign_of_h": 1,
+    "constant": 0.9999999999999987
+   },
+   {
+    "m": 20,
+    "h": 0.01,
+    "largest_deviation_over_maximum": 7.612995745233782e-16,
+    "sign_of_k": 1,
+    "sign_of_h": 1,
+    "constant": 0.9999999999999962
+   },
+   {
+    "m": 41,
+    "h": 0.004,
+    "largest_deviation_over_maximum": 1.0677927070391315e-15,
+    "sign_of_k": 1,
+    "sign_of_h": 1,
+    "constant": 0.9999999999999927
+   }
+  ]
+ },
+ "B3_finite_field_filter_approaches_the_shifted_zero_field_filter": {
+  "passed": true,
+  "rows": [
+   {
+    "m": 64,
+    "c": 0.5,
+    "h": 0.0013810679320049757,
+    "distance": 0.0009405531603885264,
+    "norm_ratio": 0.8452940682397996,
+    "distance_over_m2h2": 0.12039080452973135
+   },
+   {
+    "m": 64,
+    "c": 0.125,
+    "h": 0.0006905339660024879,
+    "distance": 0.00023480975847185606,
+    "norm_ratio": 0.9588767006780891,
+    "distance_over_m2h2": 0.12022259633759028
+   },
+   {
+    "m": 64,
+    "c": 0.03125,
+    "h": 0.00034526698300124393,
+    "distance": 5.868194701469237e-05,
+    "norm_ratio": 0.9895582553226732,
+    "distance_over_m2h2": 0.12018062748608994
+   },
+   {
+    "m": 256,
+    "c": 0.5,
+    "h": 0.00017263349150062197,
+    "distance": 0.00023140958359085502,
+    "norm_ratio": 0.8461801591542347,
+    "distance_over_m2h2": 0.11848170679851774
+   },
+   {
+    "m": 256,
+    "c": 0.125,
+    "h": 8.631674575031098e-05,
+    "distance": 5.783251360330529e-05,
+    "norm_ratio": 0.9591098991559259,
+    "distance_over_m2h2": 0.1184409878595692
+   },
+   {
+    "m": 256,
+    "c": 0.03125,
+    "h": 4.315837287515549e-05,
+    "distance": 1.445688636131714e-05,
+    "norm_ratio": 0.9896172566892499,
+    "distance_over_m2h2": 0.11843081307190999
+   },
+   {
+    "m": 1024,
+    "c": 0.5,
+    "h": 2.1579186437577746e-05,
+    "distance": 5.762134139708921e-05,
+    "norm_ratio": 0.8464060452106151,
+    "distance_over_m2h2": 0.11800850718123868
+   },
+   {
+    "m": 1024,
+    "c": 0.125,
+    "h": 1.0789593218788873e-05,
+    "distance": 1.4404102735096214e-05,
+    "norm_ratio": 0.9591694827225136,
+    "distance_over_m2h2": 0.11799840960590816
+   },
+   {
+    "m": 1024,
+    "c": 0.03125,
+    "h": 5.3947966093944364e-06,
+    "distance": 3.60094865526188e-06,
+    "norm_ratio": 0.9896323412531048,
+    "distance_over_m2h2": 0.11799588553562125
+   }
+  ]
+ },
+ "B4_two_rays_with_equal_masses": {
+  "passed": false,
+  "rows": [
+   {
+    "delta": 0.2,
+    "m": 56,
+    "h": 0.0016000000000000003,
+    "free_steps": 250,
+    "word_probability": 0.06466361039906081,
+    "word_probability_reference": 0.07545926283324943,
+    "total": 0.9999999999999587,
+    "mass_negative": 0.4558543562828847,
+    "mass_positive": 0.5437860483779331,
+    "mean_negative": -2.6045283736347353,
+    "mean_positive": 2.7069235226299115,
+    "width_negative": 0.8138586793214522,
+    "width_positive": 0.8034896884301402,
+    "central_ray": 2.0,
+    "ray_with_preparation_offset": 2.896,
+    "residual_against_central": 0.6557259481323234,
+    "relative_error_against_offset_ray": 0.10064627982225982
+   },
+   {
+    "delta": 0.1,
+    "m": 316,
+    "h": 0.00010000000000000002,
+    "free_steps": 2000,
+    "word_probability": 0.02855310901824517,
+    "word_probability_reference": 0.03172671180708365,
+    "total": 0.9999999999996481,
+    "mass_negative": 0.48419632822768466,
+    "mass_positive": 0.5157566329859842,
+    "mean_negative": -2.5536109016795834,
+    "mean_positive": 2.603480979582008,
+    "width_negative": 0.770908800168861,
+    "width_positive": 0.7703147871965919,
+    "central_ray": 2.0,
+    "ray_with_preparation_offset": 2.632,
+    "residual_against_central": 0.5785459406307958,
+    "relative_error_against_offset_ray": 0.029783092067027672
+   },
+   {
+    "delta": 0.05,
+    "m": 1788,
+    "h": 6.250000000000001e-06,
+    "free_steps": 16000,
+    "word_probability": 0.012384471248119717,
+    "word_probability_reference": 0.01333943911318217,
+    "total": 0.99999999999716,
+    "mass_negative": 0.4944085505222855,
+    "mass_positive": 0.5055874643577292,
+    "mean_negative": -2.4258345864538677,
+    "mean_positive": 2.4454151786890765,
+    "width_negative": 0.6663441539452446,
+    "width_positive": 0.6663457502366258,
+    "central_ray": 2.0,
+    "ray_with_preparation_offset": 2.447,
+    "residual_against_central": 0.43562488257147214,
+    "relative_error_against_offset_ray": 0.008649535572591849
+   }
+  ]
+ },
+ "_summary": {
+  "predicates": 5,
+  "passed": 4,
+  "numpy": "2.5.3"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "B4b_mass_difference_is_m_times_h": {
+  "passed": true,
+  "rows": [
+   {
+    "delta": 0.14,
+    "m": 136,
+    "h": 0.00038416000000000014,
+    "free_steps": 729,
+    "mass_negative": 0.47401562985910184,
+    "mass_positive": 0.5259843701407736,
+    "mass_difference_over_mh": 0.9946977569408836,
+    "mean_negative": -2.5973209227394567,
+    "mean_positive": 2.671705458722731,
+    "ray_with_preparation_offset": 2.7463680000000004,
+    "relative_error_against_offset_ray": 0.054270613865492034,
+    "word_probability_over_zero_field": 0.883179575909772,
+    "exp_minus_m3h2_over_3": 0.8836071214746378
+   },
+   {
+    "delta": 0.07,
+    "m": 772,
+    "h": 2.401000000000001e-05,
+    "free_steps": 5831,
+    "mass_negative": 0.49073375792292356,
+    "mass_positive": 0.5092662420760524,
+    "mass_difference_over_mh": 0.9998254264268587,
+    "mean_negative": -2.4899489059476747,
+    "mean_positive": 2.5211138727324207,
+    "ray_with_preparation_offset": 2.529592,
+    "relative_error_against_offset_ray": 0.015671734434772655,
+    "word_probability_over_zero_field": 0.9153278636879554,
+    "exp_minus_m3h2_over_3": 0.9153829618790199
+   }
+  ]
+ },
+ "B4c_means_follow_the_ray_with_the_preparation_offset": {
+  "passed": true
+ },
+ "B4d_word_probability_ratio": {
+  "passed": true
+ },
+ "_summary": {
+  "predicates": 3,
+  "passed": 3,
+  "numpy": "2.5.3"
+ }
+}
