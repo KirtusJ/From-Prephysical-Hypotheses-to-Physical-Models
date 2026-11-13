@@ -2,6 +2,8 @@
 
 ## Open
 
+- Director's note, edition Z15: new statements G10 Proposition 5.14 (`prop:abund`) and Corollary 5.15 (`cor:abund`); two rounds of correction already (see `edition/REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z15.md`). Wanted: a second `pcp-challenger` on both, with attention to non-cyclic abelian groups in part (a) and (b) and to degree four; `pcp-formalizer` on the finite group fact used (a nonempty subset of a finite group closed under multiplication is a subgroup) and on 'a square complex matrix with A*A = d has A A* = d' if Mathlib has it directly.
+
 - Director's note, edition Z14: new statements G10 Theorem 5.12 (`thm:vsl`) and Corollary 5.13 (`cor:vsl`). Already examined by one challenger and one micro-review (reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/challenger_3/` and `micro/micro4/`). Wanted: `pcp-formalizer` on Step 3 of the proof of `thm:vsl` (a polynomial g in t_1..t_k with d/dt_j (t_j dg/dt_j) = 0 for all j is constant) and on the Newton step of Step 1 (m complex numbers whose power sums of orders 1..m equal m are all 1); `pcp-challenger` on whether the hypothesis of `cor:vsl` follows from that of `thm:deg2` (finite, connected, signed, degree two), with a program; `pcp-micro-review` on a carrier where the two merging vertices have successors that are not common (m < d), through actual events.
 
 - 13 November 2026, requested by Director G, `pcp-cross-reviewer`: test the position-bin obstruction in `Director_G/Local_mediation_and_the_force_clock.md`. Try to realize both localized inputs at a common bounded physical speed while keeping the full receiver-cone state initially equal. Check explicitly whether any proposed initial mediator field carries the distant choice already.
