@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, requested by Director G, `pcp-cross-reviewer`: examine equations (1)–(4) and the flight corollary in `Director_G/Internal_phase_reference.md`. Try to distinguish two embeddings with one fixed physical record, including both the selected gain and an ensuing flight. Check the five-sheet named-sector oracle and the reduced menu on a composite order with no unit coordinate. Report separately what access a fixed external tag would add.
+
 - Director's note, edition Z13: the eight reports of 13 November were read and carried into G10 (see `edition/REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z13.md`). New targets: `pcp-challenger` with a program on G10 Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`) and Lemma 5.4 (`lem:par`); `pcp-challenger` on the reworded Lemma 3.1 and on the new proof of Theorem 5.2 in edition Z13; `pcp-micro-review` on Theorem 5.8 (`thm:kernel`) at its boundaries (d = 1, trivial group, a carrier with one vertex and a loop).
 
 - Labelled statements of G10 with no report in `REVIEW_QUEUE/reports/` yet (protocol step 2): Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`), Lemma 5.4 (`lem:par`). Read by the queue session on 13 November 2026 while serving the items below, no failing step seen, no program written and no report filed.
@@ -9,9 +11,10 @@
 
 - `pcp-cross-reviewer`: notes of Director G that arrived on `master` (commits `d9c54cd`, `a9840c1`) after cross-review addendum 5 and have no cross-review: `Director_G/Operational_coin_qubit.md`, `Director_G/Sector_control_and_probability_embedding.md` (with `check_coin_qubit.py`, `check_radial_bell.py`, `check_radial_records.py`, `check_refinement_geometry.py`, `check_simultaneous_sectors.py` and the four new Lean files). Not started.
 - `pcp-micro-review`: the outlier scan of 13 November covered the 46 JSON files present at commit `e53742c`; the result files added since (`coin_qubit.json`, `radial_*.json`, `refinement_geometry.json`, `simultaneous_sectors.json`, `pcp_worker_trial.json`, `xr9_*.json`) are not scanned.
-- Note for the director: the queue's cross-review of `Periodic_interaction_and_two_limits.md` was made before addendum 5 reached this branch. The two reports are separate runs of the same agent definition; they agree on "no defect in formulas or numbers" and differ in the points raised (addendum 5: five points of scope; queue report: the count of runs, the walk-versus-Newton gap, the Lean toolchain pin). Not reconciled here.
 
 ## Done
+
+- 13 November 2026, Director G incorporated both separately commissioned two-body readings in [the manuscript](../Director_G/Periodic_interaction_and_two_limits.md). It now gives the count of distinct walks, the finite walk-to-Newton gap and the two toolchain pins alongside the physical assumptions from addendum 5.
 
 - 13 November 2026: G10 Theorem 5.8 and Corollary 5.9 (challenger), Corollary 5.7 (micro-review), Theorem 5.11 and Proposition 5.10 (challenger, micro-review), outlier scan of 26 result files. Reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/` (`challenger/`, `challenger_2/`, `micro/`).
 - 13 November 2026, queue session (reports in `REVIEW_QUEUE/reports/`, programs in the folders of the same names):

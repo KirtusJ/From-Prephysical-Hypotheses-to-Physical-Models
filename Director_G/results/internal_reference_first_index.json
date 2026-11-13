@@ -1,0 +1,5934 @@
+{
+  "cases": [
+    {
+      "order": 3,
+      "dimensions": 2,
+      "ring_sites": 18,
+      "diamonds": {
+        "all_centres_and_incoming": 36,
+        "three_step_histories": 288,
+        "destructive_terms_at_nonzero_gain": 32,
+        "constructive_terms_at_nonzero_gain": 32,
+        "zero_gain_blocks": 20
+      },
+      "sectors": {
+        "hidden_tuples": 9,
+        "subgroup_order_counts": {
+          "1": 1,
+          "3": 8
+        },
+        "faithful": 8,
+        "limiting_yield": "8/9",
+        "possible_settings": 9,
+        "signed_label_checks": 144,
+        "opposite_anchor_checks": 72,
+        "full_integer_fold_table_sha256": "27925943c489b277318d6d17deeda8d55662378936022fd5882643a578f2e3e4"
+      },
+      "simultaneous_relabelling": {
+        "units": [
+          1,
+          2
+        ],
+        "matched_hidden_setting_cases": 162,
+        "changed_tagged_cases_when_label_held_fixed": 0
+      },
+      "gram": {
+        "order": 3,
+        "interpretation": "For real integer A,B, this reconstructs Re[A(z) conjugate(B(z))]; A=B gives |A(z)|^2. The calibrated variable z is the diamond phase, twice the departure phase.",
+        "polynomial_pairs": [
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "twice_real_gram_ring_coefficients": [
+              22,
+              -2,
+              -2
+            ]
+          },
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "twice_real_gram_ring_coefficients": [
+              14,
+              -10,
+              -10
+            ]
+          },
+          {
+            "first": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "second": [
+              3,
+              0,
+              -1,
+              2,
+              0
+            ],
+            "twice_real_gram_ring_coefficients": [
+              30,
+              -19,
+              -19
+            ]
+          }
+        ]
+      },
+      "finite_sort_stress": {
+        "scope": "Exact rational stress of the finite clustering and reversed input order. Actual localized count probabilities are evaluated separately in finite_five.",
+        "rows": [
+          {
+            "image_order": 1,
+            "raw_trial_denominator": 108,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": null,
+            "outlier_clusters": null
+          },
+          {
+            "image_order": 3,
+            "raw_trial_denominator": 108,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                26
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                1
+              ],
+              [
+                1
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "dimensions": 2,
+      "ring_sites": 50,
+      "diamonds": {
+        "all_centres_and_incoming": 100,
+        "three_step_histories": 800,
+        "destructive_terms_at_nonzero_gain": 96,
+        "constructive_terms_at_nonzero_gain": 96,
+        "zero_gain_blocks": 52
+      },
+      "sectors": {
+        "hidden_tuples": 25,
+        "subgroup_order_counts": {
+          "1": 1,
+          "5": 24
+        },
+        "faithful": 24,
+        "limiting_yield": "24/25",
+        "possible_settings": 25,
+        "signed_label_checks": 1200,
+        "opposite_anchor_checks": 600,
+        "full_integer_fold_table_sha256": "0b821560fbf718f7c1081f9003a8895f960daa1d8fa59364cde966c9d0596891"
+      },
+      "simultaneous_relabelling": {
+        "units": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "matched_hidden_setting_cases": 2500,
+        "changed_tagged_cases_when_label_held_fixed": 960
+      },
+      "gram": {
+        "order": 5,
+        "interpretation": "For real integer A,B, this reconstructs Re[A(z) conjugate(B(z))]; A=B gives |A(z)|^2. The calibrated variable z is the diamond phase, twice the departure phase.",
+        "polynomial_pairs": [
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "twice_real_gram_ring_coefficients": [
+              30,
+              -14,
+              8,
+              8,
+              -14
+            ]
+          },
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "twice_real_gram_ring_coefficients": [
+              2,
+              -5,
+              1,
+              1,
+              -5
+            ]
+          },
+          {
+            "first": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "second": [
+              3,
+              0,
+              -1,
+              2,
+              0
+            ],
+            "twice_real_gram_ring_coefficients": [
+              16,
+              -18,
+              6,
+              6,
+              -18
+            ]
+          }
+        ]
+      },
+      "finite_sort_stress": {
+        "scope": "Exact rational stress of the finite clustering and reversed input order. Actual localized count probabilities are evaluated separately in finite_five.",
+        "rows": [
+          {
+            "image_order": 1,
+            "raw_trial_denominator": 300,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": null,
+            "outlier_clusters": null
+          },
+          {
+            "image_order": 5,
+            "raw_trial_denominator": 300,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                50
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                2
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "dimensions": 3,
+      "ring_sites": 250,
+      "diamonds": {
+        "all_centres_and_incoming": 500,
+        "three_step_histories": 4000,
+        "destructive_terms_at_nonzero_gain": 496,
+        "constructive_terms_at_nonzero_gain": 496,
+        "zero_gain_blocks": 252
+      },
+      "sectors": {
+        "hidden_tuples": 125,
+        "subgroup_order_counts": {
+          "1": 1,
+          "5": 124
+        },
+        "faithful": 124,
+        "limiting_yield": "124/125",
+        "possible_settings": 125,
+        "signed_label_checks": 31000,
+        "opposite_anchor_checks": 15500,
+        "full_integer_fold_table_sha256": "31b901c9dc955f78b1f52b69b26ea3a1da5e8152f78504dbeea93bc8f70527e0"
+      },
+      "simultaneous_relabelling": {
+        "units": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "matched_hidden_setting_cases": 62500,
+        "changed_tagged_cases_when_label_held_fixed": 24800
+      },
+      "gram": {
+        "order": 5,
+        "interpretation": "For real integer A,B, this reconstructs Re[A(z) conjugate(B(z))]; A=B gives |A(z)|^2. The calibrated variable z is the diamond phase, twice the departure phase.",
+        "polynomial_pairs": [
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "twice_real_gram_ring_coefficients": [
+              30,
+              -14,
+              8,
+              8,
+              -14
+            ]
+          },
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "twice_real_gram_ring_coefficients": [
+              2,
+              -5,
+              1,
+              1,
+              -5
+            ]
+          },
+          {
+            "first": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "second": [
+              3,
+              0,
+              -1,
+              2,
+              0
+            ],
+            "twice_real_gram_ring_coefficients": [
+              16,
+              -18,
+              6,
+              6,
+              -18
+            ]
+          }
+        ]
+      },
+      "finite_sort_stress": {
+        "scope": "Exact rational stress of the finite clustering and reversed input order. Actual localized count probabilities are evaluated separately in finite_five.",
+        "rows": [
+          {
+            "image_order": 1,
+            "raw_trial_denominator": 300,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": null,
+            "outlier_clusters": null
+          },
+          {
+            "image_order": 5,
+            "raw_trial_denominator": 300,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                50
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                2
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 9,
+      "dimensions": 2,
+      "ring_sites": 162,
+      "diamonds": {
+        "all_centres_and_incoming": 324,
+        "three_step_histories": 2592,
+        "destructive_terms_at_nonzero_gain": 320,
+        "constructive_terms_at_nonzero_gain": 320,
+        "zero_gain_blocks": 164
+      },
+      "sectors": {
+        "hidden_tuples": 81,
+        "subgroup_order_counts": {
+          "1": 1,
+          "3": 8,
+          "9": 72
+        },
+        "faithful": 72,
+        "limiting_yield": "8/9",
+        "possible_settings": 81,
+        "signed_label_checks": 11664,
+        "opposite_anchor_checks": 5832,
+        "full_integer_fold_table_sha256": "26cb38e12a97900769421587f238ff5519acfa55b2f765127016bb781e14b1c8"
+      },
+      "simultaneous_relabelling": {
+        "units": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        "matched_hidden_setting_cases": 39366,
+        "changed_tagged_cases_when_label_held_fixed": 15552
+      },
+      "gram": {
+        "order": 9,
+        "interpretation": "For real integer A,B, this reconstructs Re[A(z) conjugate(B(z))]; A=B gives |A(z)|^2. The calibrated variable z is the diamond phase, twice the departure phase.",
+        "polynomial_pairs": [
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "twice_real_gram_ring_coefficients": [
+              30,
+              -16,
+              12,
+              -4,
+              2,
+              2,
+              -4,
+              12,
+              -16
+            ]
+          },
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "twice_real_gram_ring_coefficients": [
+              2,
+              -4,
+              -5,
+              6,
+              -1,
+              -1,
+              6,
+              -5,
+              -4
+            ]
+          },
+          {
+            "first": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "second": [
+              3,
+              0,
+              -1,
+              2,
+              0
+            ],
+            "twice_real_gram_ring_coefficients": [
+              16,
+              -9,
+              -1,
+              7,
+              -9,
+              -9,
+              7,
+              -1,
+              -9
+            ]
+          }
+        ]
+      },
+      "finite_sort_stress": {
+        "scope": "Exact rational stress of the finite clustering and reversed input order. Actual localized count probabilities are evaluated separately in finite_five.",
+        "rows": [
+          {
+            "image_order": 1,
+            "raw_trial_denominator": 972,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": null,
+            "outlier_clusters": null
+          },
+          {
+            "image_order": 3,
+            "raw_trial_denominator": 972,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                3
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                74
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                3
+              ],
+              [
+                3
+              ]
+            ]
+          },
+          {
+            "image_order": 9,
+            "raw_trial_denominator": 972,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                4,
+                93
+              ],
+              [
+                4,
+                98
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                98
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                4
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 15,
+      "dimensions": 2,
+      "ring_sites": 450,
+      "diamonds": {
+        "all_centres_and_incoming": 900,
+        "three_step_histories": 7200,
+        "destructive_terms_at_nonzero_gain": 896,
+        "constructive_terms_at_nonzero_gain": 896,
+        "zero_gain_blocks": 452
+      },
+      "sectors": {
+        "hidden_tuples": 225,
+        "subgroup_order_counts": {
+          "1": 1,
+          "3": 8,
+          "5": 24,
+          "15": 192
+        },
+        "faithful": 192,
+        "limiting_yield": "64/75",
+        "possible_settings": 225,
+        "signed_label_checks": 86400,
+        "opposite_anchor_checks": 43200,
+        "full_integer_fold_table_sha256": "b500944168972ca80b722334c6df609e8891810ed55e1bdac15e1b16f9f64d67"
+      },
+      "simultaneous_relabelling": {
+        "units": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          13,
+          14
+        ],
+        "matched_hidden_setting_cases": 405000,
+        "changed_tagged_cases_when_label_held_fixed": 201600
+      },
+      "gram": {
+        "order": 15,
+        "interpretation": "For real integer A,B, this reconstructs Re[A(z) conjugate(B(z))]; A=B gives |A(z)|^2. The calibrated variable z is the diamond phase, twice the departure phase.",
+        "polynomial_pairs": [
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "twice_real_gram_ring_coefficients": [
+              30,
+              -16,
+              12,
+              -4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              -4,
+              12,
+              -16
+            ]
+          },
+          {
+            "first": [
+              1,
+              -2,
+              3,
+              0,
+              1
+            ],
+            "second": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "twice_real_gram_ring_coefficients": [
+              2,
+              -4,
+              -5,
+              6,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              6,
+              -5,
+              -4
+            ]
+          },
+          {
+            "first": [
+              2,
+              -1,
+              0,
+              1,
+              -3
+            ],
+            "second": [
+              3,
+              0,
+              -1,
+              2,
+              0
+            ],
+            "twice_real_gram_ring_coefficients": [
+              16,
+              -9,
+              -1,
+              7,
+              -9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -9,
+              7,
+              -1,
+              -9
+            ]
+          }
+        ]
+      },
+      "finite_sort_stress": {
+        "scope": "Exact rational stress of the finite clustering and reversed input order. Actual localized count probabilities are evaluated separately in finite_five.",
+        "rows": [
+          {
+            "image_order": 1,
+            "raw_trial_denominator": 2700,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": null,
+            "outlier_clusters": null
+          },
+          {
+            "image_order": 3,
+            "raw_trial_denominator": 2700,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                5,
+                117
+              ],
+              [
+                5,
+                122
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                5
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                122
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          },
+          {
+            "image_order": 5,
+            "raw_trial_denominator": 2700,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                6,
+                141
+              ],
+              [
+                6,
+                146
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                3
+              ],
+              [
+                6
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                6,
+                146
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                6
+              ],
+              [
+                3
+              ],
+              [
+                6
+              ]
+            ]
+          },
+          {
+            "image_order": 15,
+            "raw_trial_denominator": 2700,
+            "synthetic_finite_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                4,
+                93
+              ],
+              [
+                4,
+                98
+              ],
+              [
+                5,
+                117
+              ],
+              [
+                5,
+                122
+              ],
+              [
+                6,
+                141
+              ],
+              [
+                6,
+                146
+              ],
+              [
+                7,
+                165
+              ],
+              [
+                7,
+                170
+              ]
+            ],
+            "clusters": [
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "reversed_input_same": true,
+            "outlier_counts": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                1,
+                26
+              ],
+              [
+                2,
+                45
+              ],
+              [
+                2,
+                50
+              ],
+              [
+                3,
+                69
+              ],
+              [
+                3,
+                74
+              ],
+              [
+                4,
+                93
+              ],
+              [
+                4,
+                98
+              ],
+              [
+                5,
+                117
+              ],
+              [
+                5,
+                122
+              ],
+              [
+                6,
+                141
+              ],
+              [
+                6,
+                146
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                170
+              ]
+            ],
+            "outlier_clusters": [
+              [
+                0,
+                7
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "finite_five": {
+    "order": 5,
+    "independent_sheets": 1,
+    "blocks_each_gain": 16,
+    "total_probe_ticks": 96,
+    "gain_order": [
+      1,
+      2
+    ],
+    "retention": "Strict lower counted raw dark rate wins; ties all rejected. All non-dark suboutcomes retained as classical alternatives.",
+    "prior": "Localized sheet; mass 1/5 trivial and 2/5 on each pair.",
+    "likelihood_denominator_per_hidden_pair": 340282366920938463463374607431768211456,
+    "scaled_prior_denominator": 1701411834604692317316873037158841057280,
+    "outcome_masses": {
+      "tie": "2239463809997748944885340295/9903520314283042199192993792",
+      "1": "7664056504285293254307653497/19807040628566084398385987584",
+      "2": "7664056504285293254307653497/19807040628566084398385987584"
+    },
+    "total_acceptance": "7664056504285293254307653497/9903520314283042199192993792",
+    "correct_given_acceptance": [
+      "1/2",
+      "8137172846490532170198052768/38320282521426466271538267485"
+    ],
+    "wrong_given_acceptance": [
+      "1/2",
+      "-8137172846490532170198052768/38320282521426466271538267485"
+    ],
+    "observed_next_dark_probability": "22045936828445401931142161949/122624904068564692068922455952",
+    "numeric": {
+      "acceptance": 0.7738719426093414,
+      "wrong_given_acceptance": 0.02517908449018985,
+      "observed_next_dark": 0.17978351947267254
+    },
+    "rows": [
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 0,
+        "selected_gain": null,
+        "total_probability": "3961458175007952949146955021/19807040628566084398385987584",
+        "plane_2_numerator": [
+          1074800420396416620962707947913216,
+          0
+        ],
+        "plane_1_numerator": [
+          1074800420396416620962707947913216,
+          0
+        ],
+        "count_pair_probability_given_trivial": 1
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 1,
+        "selected_gain": 1,
+        "total_probability": "25887566242794553322847/1237940039285380274899124224",
+        "plane_2_numerator": [
+          8894900030866896173484479568936960,
+          2371973341564505646262527885049856
+        ],
+        "plane_1_numerator": [
+          8894900030866896173484479568936960,
+          -2371973341564505646262527885049856
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 2,
+        "selected_gain": 1,
+        "total_probability": "272265782898356509085115/2475880078570760549798248448",
+        "plane_2_numerator": [
+          46774905334731091946771832215961600,
+          18403241443172888634795474970214400
+        ],
+        "plane_1_numerator": [
+          46774905334731091946771832215961600,
+          -18403241443172888634795474970214400
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 3,
+        "selected_gain": 1,
+        "total_probability": "500975196910203751877925/1237940039285380274899124224",
+        "plane_2_numerator": [
+          172133766946918829040974916747264000,
+          74529602319669514509497383308492800
+        ],
+        "plane_1_numerator": [
+          172133766946918829040974916747264000,
+          -74529602319669514509497383308492800
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 4,
+        "selected_gain": 1,
+        "total_probability": "5313333898461910092683275/4951760157141521099596496896",
+        "plane_2_numerator": [
+          456411906532441770995339900223488000,
+          202450244254959779650712805310464000
+        ],
+        "plane_1_numerator": [
+          456411906532441770995339900223488000,
+          -202450244254959779650712805310464000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 5,
+        "selected_gain": 1,
+        "total_probability": "2624206120441946046381375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          901670357220895626864360381480960000,
+          402405623996206657551066345976627200
+        ],
+        "plane_1_numerator": [
+          901670357220895626864360381480960000,
+          -402405623996206657551066345976627200
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "7938482771225277726980525/2475880078570760549798248448",
+        "plane_2_numerator": [
+          1363820955290880707435942868156416000,
+          609600136075250034930791976271872000
+        ],
+        "plane_1_numerator": [
+          1363820955290880707435942868156416000,
+          -609600136075250034930791976271872000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "4680887625500557987498125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1608340741422079374884481898905600000,
+          719176643462673564221953256980480000
+        ],
+        "plane_1_numerator": [
+          1608340741422079374884481898905600000,
+          -719176643462673564221953256980480000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "34781866939262892156654375/9903520314283042199192993792",
+        "plane_2_numerator": [
+          1493869809979577401592054494003200000,
+          668056523959723227007780336435200000
+        ],
+        "plane_1_numerator": [
+          1493869809979577401592054494003200000,
+          -668056523959723227007780336435200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "3190866149541615537403125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1096373260655574729932150931456000000,
+          490308876607330513761989977702400000
+        ],
+        "plane_1_numerator": [
+          1096373260655574729932150931456000000,
+          -490308876607330513761989977702400000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "3688407417440193210888125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          633663569289177995067429119590400000,
+          283382356352157918562445426688000000
+        ],
+        "plane_1_numerator": [
+          633663569289177995067429119590400000,
+          -283382356352157918562445426688000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "830559493508600196534375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          285378068960140971108345053184000000,
+          127624883180672365367518455398400000
+        ],
+        "plane_1_numerator": [
+          285378068960140971108345053184000000,
+          -127624883180672365367518455398400000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "1142938984306348833296875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          98177711178384509683556679680000000,
+          43906401200440364438881566720000000
+        ],
+        "plane_1_numerator": [
+          98177711178384509683556679680000000,
+          -43906401200440364438881566720000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "72591088638246145078125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          24942108134584349432689459200000000,
+          11154449471831761329628119040000000
+        ],
+        "plane_1_numerator": [
+          24942108134584349432689459200000000,
+          -11154449471831761329628119040000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "25686808996647501796875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          4412960183167983754307174400000000,
+          1973535773023254810407731200000000
+        ],
+        "plane_1_numerator": [
+          4412960183167983754307174400000000,
+          -1973535773023254810407731200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "1413912499087777734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          485816635439010816196608000000000,
+          217263803806991987003883520000000
+        ],
+        "plane_1_numerator": [
+          485816635439010816196608000000000,
+          -217263803806991987003883520000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 0,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "1167417424382212578125/19807040628566084398385987584",
+        "plane_2_numerator": [
+          25070098292510780135833600000000,
+          11211688790648541098803200000000
+        ],
+        "plane_1_numerator": [
+          25070098292510780135833600000000,
+          -11211688790648541098803200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "25887566242794553322847/1237940039285380274899124224",
+        "plane_2_numerator": [
+          8894900030866896173484479568936960,
+          -2371973341564505646262527885049856
+        ],
+        "plane_1_numerator": [
+          8894900030866896173484479568936960,
+          2371973341564505646262527885049856
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 1,
+        "selected_gain": null,
+        "total_probability": "8629188747598184440949/77371252455336267181195264",
+        "plane_2_numerator": [
+          47439466831290112925250557700997120,
+          0
+        ],
+        "plane_1_numerator": [
+          47439466831290112925250557700997120,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 2,
+        "selected_gain": 1,
+        "total_probability": "66950602352054879283225/154742504910672534362390528",
+        "plane_2_numerator": [
+          184032414431728886347954749702144000,
+          49075310515127703026121266587238400
+        ],
+        "plane_1_numerator": [
+          184032414431728886347954749702144000,
+          -49075310515127703026121266587238400
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 3,
+        "selected_gain": 1,
+        "total_probability": "109532211510833078367575/77371252455336267181195264",
+        "plane_2_numerator": [
+          602159700860906011268786805538816000,
+          236915292141995807712309562834944000
+        ],
+        "plane_1_numerator": [
+          602159700860906011268786805538816000,
+          -236915292141995807712309562834944000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 4,
+        "selected_gain": 1,
+        "total_probability": "1122875441350456685243625/309485009821345068724781056",
+        "plane_2_numerator": [
+          1543268255386168812091499253596160000,
+          668196434590140474912735160696832000
+        ],
+        "plane_1_numerator": [
+          1543268255386168812091499253596160000,
+          -668196434590140474912735160696832000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 5,
+        "selected_gain": 1,
+        "total_probability": "549655230875370009587925/77371252455336267181195264",
+        "plane_2_numerator": [
+          3021761588076855863141560718721024000,
+          1340360237825940610101270986883072000
+        ],
+        "plane_1_numerator": [
+          3021761588076855863141560718721024000,
+          -1340360237825940610101270986883072000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "1658980880739161293689375/154742504910672534362390528",
+        "plane_2_numerator": [
+          4560171921576943400233546756915200000,
+          2035154879980815279568611404939264000
+        ],
+        "plane_1_numerator": [
+          4560171921576943400233546756915200000,
+          -2035154879980815279568611404939264000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "977645661480945532879375/77371252455336267181195264",
+        "plane_2_numerator": [
+          5374663863215293428318986672537600000,
+          2402365068276847428298687591219200000
+        ],
+        "plane_1_numerator": [
+          5374663863215293428318986672537600000,
+          -2402365068276847428298687591219200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "7263446315431900325428125/618970019642690137449562112",
+        "plane_2_numerator": [
+          4991402300965073922055288651776000000,
+          2231927514194504164826751487180800000
+        ],
+        "plane_1_numerator": [
+          4991402300965073922055288651776000000,
+          -2231927514194504164826751487180800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "666319290024193336334375/77371252455336267181195264",
+        "plane_2_numerator": [
+          3663129035965247268271704506368000000,
+          1638146265648363468524825346048000000
+        ],
+        "plane_1_numerator": [
+          3663129035965247268271704506368000000,
+          -1638146265648363468524825346048000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "770209070579010646959375/154742504910672534362390528",
+        "plane_2_numerator": [
+          2117134572300420168144843177984000000,
+          946803347931396854161084094873600000
+        ],
+        "plane_1_numerator": [
+          2117134572300420168144843177984000000,
+          -946803347931396854161084094873600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "173436085459570213678125/77371252455336267181195264",
+        "plane_2_numerator": [
+          953474963193747453392996794368000000,
+          426406053445253294388632616960000000
+        ],
+        "plane_1_numerator": [
+          953474963193747453392996794368000000,
+          -426406053445253294388632616960000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "238666521123160976015625/309485009821345068724781056",
+        "plane_2_numerator": [
+          328020768919702265641775923200000000,
+          146695268023761339502894776320000000
+        ],
+        "plane_1_numerator": [
+          328020768919702265641775923200000000,
+          -146695268023761339502894776320000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "15158341966927703359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          83333866252209663391878348800000000,
+          37268032849180150186849075200000000
+        ],
+        "plane_1_numerator": [
+          83333866252209663391878348800000000,
+          -37268032849180150186849075200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "5363873544697991015625/154742504910672534362390528",
+        "plane_2_numerator": [
+          14744103330788777989767168000000000,
+          6593763234580351524903321600000000
+        ],
+        "plane_1_numerator": [
+          14744103330788777989767168000000000,
+          -6593763234580351524903321600000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "295250678122385078125/77371252455336267181195264",
+        "plane_2_numerator": [
+          1623157768521557242963558400000000,
+          725898215364875332563763200000000
+        ],
+        "plane_1_numerator": [
+          1623157768521557242963558400000000,
+          -725898215364875332563763200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 1,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "243778017084099609375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          83761488868794968309760000000000,
+          37459276518446894311014400000000
+        ],
+        "plane_1_numerator": [
+          83761488868794968309760000000000,
+          -37459276518446894311014400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "272265782898356509085115/2475880078570760549798248448",
+        "plane_2_numerator": [
+          46774905334731091946771832215961600,
+          -18403241443172888634795474970214400
+        ],
+        "plane_1_numerator": [
+          46774905334731091946771832215961600,
+          18403241443172888634795474970214400
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "66950602352054879283225/154742504910672534362390528",
+        "plane_2_numerator": [
+          184032414431728886347954749702144000,
+          -49075310515127703026121266587238400
+        ],
+        "plane_1_numerator": [
+          184032414431728886347954749702144000,
+          49075310515127703026121266587238400
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 2,
+        "selected_gain": null,
+        "total_probability": "334753011760274396416125/309485009821345068724781056",
+        "plane_2_numerator": [
+          460081036079322215869886874255360000,
+          0
+        ],
+        "plane_1_numerator": [
+          460081036079322215869886874255360000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 3,
+        "selected_gain": 1,
+        "total_probability": "404012255572744961191875/154742504910672534362390528",
+        "plane_2_numerator": [
+          1110540431915605348651451075788800000,
+          296144115177494759640386953543680000
+        ],
+        "plane_1_numerator": [
+          1110540431915605348651451075788800000,
+          -296144115177494759640386953543680000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 4,
+        "selected_gain": 1,
+        "total_probability": "3682548490450422462358125/618970019642690137449562112",
+        "plane_2_numerator": [
+          2530628053186997245633910066380800000,
+          995656938958818588446128550707200000
+        ],
+        "plane_1_numerator": [
+          2530628053186997245633910066380800000,
+          -995656938958818588446128550707200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 5,
+        "selected_gain": 1,
+        "total_probability": "1742392926233467270205625/154742504910672534362390528",
+        "plane_2_numerator": [
+          4789453206370868727180514924953600000,
+          2073713072865953198005040153886720000
+        ],
+        "plane_1_numerator": [
+          4789453206370868727180514924953600000,
+          -2073713072865953198005040153886720000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "5212247878990577677126875/309485009821345068724781056",
+        "plane_2_numerator": [
+          7163658937251166916930424117657600000,
+          3177578150018393687740082080972800000
+        ],
+        "plane_1_numerator": [
+          7163658937251166916930424117657600000,
+          -3177578150018393687740082080972800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "3064619853582194508046875/154742504910672534362390528",
+        "plane_2_numerator": [
+          8423962909317013670382167654400000000,
+          3759522561540914925311474270208000000
+        ],
+        "plane_1_numerator": [
+          8423962909317013670382167654400000000,
+          -3759522561540914925311474270208000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "22755545568953042575640625/1237940039285380274899124224",
+        "plane_2_numerator": [
+          7818745921703282465765767249920000000,
+          3494819873032051754529340784640000000
+        ],
+        "plane_1_numerator": [
+          7818745921703282465765767249920000000,
+          -3494819873032051754529340784640000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "2087197217078132277421875/154742504910672534362390528",
+        "plane_2_numerator": [
+          5737244024097786117304929484800000000,
+          2565433924361499040030748835840000000
+        ],
+        "plane_1_numerator": [
+          5737244024097786117304929484800000000,
+          -2565433924361499040030748835840000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "2412535360432424148796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          3315763351520266923866629079040000000,
+          1482804809423087622371609149440000000
+        ],
+        "plane_1_numerator": [
+          3315763351520266923866629079040000000,
+          -1482804809423087622371609149440000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "543250911850399359140625/154742504910672534362390528",
+        "plane_2_numerator": [
+          1493276735948572218910939545600000000,
+          667808004026847310928664330240000000
+        ],
+        "plane_1_numerator": [
+          1493276735948572218910939545600000000,
+          -667808004026847310928664330240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "747569333877457817578125/618970019642690137449562112",
+        "plane_2_numerator": [
+          513725734479389791698812928000000000,
+          229744640864899404304220160000000000
+        ],
+        "plane_1_numerator": [
+          513725734479389791698812928000000000,
+          -229744640864899404304220160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "47480077146517435546875/154742504910672534362390528",
+        "plane_2_numerator": [
+          130512242275743607019274240000000000,
+          58366817516085413595316224000000000
+        ],
+        "plane_1_numerator": [
+          130512242275743607019274240000000000,
+          -58366817516085413595316224000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "16801117943639080078125/309485009821345068724781056",
+        "plane_2_numerator": [
+          23091280673333958452183040000000000,
+          10326733240228489891676160000000000
+        ],
+        "plane_1_numerator": [
+          23091280673333958452183040000000000,
+          -10326733240228489891676160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "924805783568619140625/154742504910672534362390528",
+        "plane_2_numerator": [
+          2542086781170478963752960000000000,
+          1136855730100060607741952000000000
+        ],
+        "plane_1_numerator": [
+          2542086781170478963752960000000000,
+          -1136855730100060607741952000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 2,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "763579339971685546875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          131181931723186199592960000000000,
+          58666342836600915886080000000000
+        ],
+        "plane_1_numerator": [
+          131181931723186199592960000000000,
+          -58666342836600915886080000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "500975196910203751877925/1237940039285380274899124224",
+        "plane_2_numerator": [
+          172133766946918829040974916747264000,
+          -74529602319669514509497383308492800
+        ],
+        "plane_1_numerator": [
+          172133766946918829040974916747264000,
+          74529602319669514509497383308492800
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "109532211510833078367575/77371252455336267181195264",
+        "plane_2_numerator": [
+          602159700860906011268786805538816000,
+          -236915292141995807712309562834944000
+        ],
+        "plane_1_numerator": [
+          602159700860906011268786805538816000,
+          236915292141995807712309562834944000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "404012255572744961191875/154742504910672534362390528",
+        "plane_2_numerator": [
+          1110540431915605348651451075788800000,
+          -296144115177494759640386953543680000
+        ],
+        "plane_1_numerator": [
+          1110540431915605348651451075788800000,
+          296144115177494759640386953543680000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 3,
+        "selected_gain": null,
+        "total_probability": "314231754334357192038125/77371252455336267181195264",
+        "plane_2_numerator": [
+          1727507338535386097902257229004800000,
+          0
+        ],
+        "plane_1_numerator": [
+          1727507338535386097902257229004800000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 4,
+        "selected_gain": 1,
+        "total_probability": "2112937658455160429221875/309485009821345068724781056",
+        "plane_2_numerator": [
+          2903999405296554216301208272896000000,
+          774399841412414457680322206105600000
+        ],
+        "plane_1_numerator": [
+          2903999405296554216301208272896000000,
+          -774399841412414457680322206105600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 5,
+        "selected_gain": 1,
+        "total_probability": "888891014936308870224375/77371252455336267181195264",
+        "plane_2_numerator": [
+          4886730033740408474327550473011200000,
+          1922647882127373825964937891020800000
+        ],
+        "plane_1_numerator": [
+          4886730033740408474327550473011200000,
+          -1922647882127373825964937891020800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "2570196462068524517353125/154742504910672534362390528",
+        "plane_2_numerator": [
+          7064902239282699080323748069376000000,
+          3058925413997670426176017085235200000
+        ],
+        "plane_1_numerator": [
+          7064902239282699080323748069376000000,
+          -3058925413997670426176017085235200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "1497772379020280941703125/77371252455336267181195264",
+        "plane_2_numerator": [
+          8234090732472605651644165652480000000,
+          3652388678182061710046071357440000000
+        ],
+        "plane_1_numerator": [
+          8234090732472605651644165652480000000,
+          -3652388678182061710046071357440000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "11096037400901049080859375/618970019642690137449562112",
+        "plane_2_numerator": [
+          7625138840330055477501100032000000000,
+          3403016111739621268600903434240000000
+        ],
+        "plane_1_numerator": [
+          7625138840330055477501100032000000000,
+          -3403016111739621268600903434240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "1017169980732256053828125/77371252455336267181195264",
+        "plane_2_numerator": [
+          5591951106199027050866959974400000000,
+          2499488031798146848705531084800000000
+        ],
+        "plane_1_numerator": [
+          5591951106199027050866959974400000000,
+          -2499488031798146848705531084800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "1175547857894580248203125/154742504910672534362390528",
+        "plane_2_numerator": [
+          3231321346905649652275190169600000000,
+          1444899566594407505304674631680000000
+        ],
+        "plane_1_numerator": [
+          3231321346905649652275190169600000000,
+          -1444899566594407505304674631680000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "264698237038040267109375/77371252455336267181195264",
+        "plane_2_numerator": [
+          1455193947375665734612313702400000000,
+          650760731408251621103527526400000000
+        ],
+        "plane_1_numerator": [
+          1455193947375665734612313702400000000,
+          -650760731408251621103527526400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "364248695685133669921875/309485009821345068724781056",
+        "plane_2_numerator": [
+          500619595385057736224931840000000000,
+          223881993687161454813249536000000000
+        ],
+        "plane_1_numerator": [
+          500619595385057736224931840000000000,
+          -223881993687161454813249536000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "23134329518754220703125/77371252455336267181195264",
+        "plane_2_numerator": [
+          127182321533359099624816640000000000,
+          56877541505014883470540800000000000
+        ],
+        "plane_1_numerator": [
+          127182321533359099624816640000000000,
+          -56877541505014883470540800000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "8186220197675419921875/154742504910672534362390528",
+        "plane_2_numerator": [
+          22502110737197173624012800000000000,
+          10063244399325071309537280000000000
+        ],
+        "plane_1_numerator": [
+          22502110737197173624012800000000000,
+          -10063244399325071309537280000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "450604695806412109375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2477225512848087496785920000000000,
+          1107848776729493168455680000000000
+        ],
+        "plane_1_numerator": [
+          2477225512848087496785920000000000,
+          -1107848776729493168455680000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 3,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "372048303734501953125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          127834823765756844441600000000000,
+          57169469186066266193920000000000
+        ],
+        "plane_1_numerator": [
+          127834823765756844441600000000000,
+          -57169469186066266193920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "5313333898461910092683275/4951760157141521099596496896",
+        "plane_2_numerator": [
+          456411906532441770995339900223488000,
+          -202450244254959779650712805310464000
+        ],
+        "plane_1_numerator": [
+          456411906532441770995339900223488000,
+          202450244254959779650712805310464000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "1122875441350456685243625/309485009821345068724781056",
+        "plane_2_numerator": [
+          1543268255386168812091499253596160000,
+          -668196434590140474912735160696832000
+        ],
+        "plane_1_numerator": [
+          1543268255386168812091499253596160000,
+          668196434590140474912735160696832000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "3682548490450422462358125/618970019642690137449562112",
+        "plane_2_numerator": [
+          2530628053186997245633910066380800000,
+          -995656938958818588446128550707200000
+        ],
+        "plane_1_numerator": [
+          2530628053186997245633910066380800000,
+          995656938958818588446128550707200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "2112937658455160429221875/309485009821345068724781056",
+        "plane_2_numerator": [
+          2903999405296554216301208272896000000,
+          -774399841412414457680322206105600000
+        ],
+        "plane_1_numerator": [
+          2903999405296554216301208272896000000,
+          774399841412414457680322206105600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 4,
+        "selected_gain": null,
+        "total_probability": "9156063186639028526628125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          3145999355737933734326308962304000000,
+          0
+        ],
+        "plane_1_numerator": [
+          3145999355737933734326308962304000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 5,
+        "selected_gain": 1,
+        "total_probability": "2841536851025905404815625/309485009821345068724781056",
+        "plane_2_numerator": [
+          3905378510571228083991280091136000000,
+          1041434269485660822397674690969600000
+        ],
+        "plane_1_numerator": [
+          3905378510571228083991280091136000000,
+          -1041434269485660822397674690969600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "7305253743442078646096875/618970019642690137449562112",
+        "plane_2_numerator": [
+          5020132146730448360839365787648000000,
+          1975133959369356732133520965632000000
+        ],
+        "plane_1_numerator": [
+          5020132146730448360839365787648000000,
+          -1975133959369356732133520965632000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "4114846552572760926796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          5655402038834672909126153011200000000,
+          2448647191007987410116269834240000000
+        ],
+        "plane_1_numerator": [
+          5655402038834672909126153011200000000,
+          -2448647191007987410116269834240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "30213684197478081065390625/2475880078570760549798248448",
+        "plane_2_numerator": [
+          5190671420793614554107582873600000000,
+          2302421742172959159888956620800000000
+        ],
+        "plane_1_numerator": [
+          5190671420793614554107582873600000000,
+          -2302421742172959159888956620800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "2763380961910222951171875/309485009821345068724781056",
+        "plane_2_numerator": [
+          3797961874493897364272578560000000000,
+          1694988867916286455624971059200000000
+        ],
+        "plane_1_numerator": [
+          3797961874493897364272578560000000000,
+          -1694988867916286455624971059200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "3191809249883975893046875/618970019642690137449562112",
+        "plane_2_numerator": [
+          2193394614931514920814195507200000000,
+          980402633162204151862945382400000000
+        ],
+        "plane_1_numerator": [
+          2193394614931514920814195507200000000,
+          -980402633162204151862945382400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "718595085546843725390625/309485009821345068724781056",
+        "plane_2_numerator": [
+          987629565276805144504172544000000000,
+          441622908285124550994375475200000000
+        ],
+        "plane_1_numerator": [
+          987629565276805144504172544000000000,
+          -441622908285124550994375475200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "988815253303023986328125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          339754333977795519934627840000000000,
+          151937670767012770731786240000000000
+        ],
+        "plane_1_numerator": [
+          339754333977795519934627840000000000,
+          -151937670767012770731786240000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "62801499256057529296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          86313723342251333831884800000000000,
+          38600343739165768071249920000000000
+        ],
+        "plane_1_numerator": [
+          86313723342251333831884800000000000,
+          -38600343739165768071249920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "22222631803729423828125/618970019642690137449562112",
+        "plane_2_numerator": [
+          15271276292490778587955200000000000,
+          6829507754604619628544000000000000
+        ],
+        "plane_1_numerator": [
+          15271276292490778587955200000000000,
+          -6829507754604619628544000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "1223228305399775390625/309485009821345068724781056",
+        "plane_2_numerator": [
+          1681192181514731362713600000000000,
+          751851593053022569103360000000000
+        ],
+        "plane_1_numerator": [
+          1681192181514731362713600000000000,
+          -751851593053022569103360000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 4,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "1009976042324716796875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          86756281430563409100800000000000,
+          38798583236754879283200000000000
+        ],
+        "plane_1_numerator": [
+          86756281430563409100800000000000,
+          -38798583236754879283200000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "2624206120441946046381375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          901670357220895626864360381480960000,
+          -402405623996206657551066345976627200
+        ],
+        "plane_1_numerator": [
+          901670357220895626864360381480960000,
+          402405623996206657551066345976627200
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "549655230875370009587925/77371252455336267181195264",
+        "plane_2_numerator": [
+          3021761588076855863141560718721024000,
+          -1340360237825940610101270986883072000
+        ],
+        "plane_1_numerator": [
+          3021761588076855863141560718721024000,
+          1340360237825940610101270986883072000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "1742392926233467270205625/154742504910672534362390528",
+        "plane_2_numerator": [
+          4789453206370868727180514924953600000,
+          -2073713072865953198005040153886720000
+        ],
+        "plane_1_numerator": [
+          4789453206370868727180514924953600000,
+          2073713072865953198005040153886720000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "888891014936308870224375/77371252455336267181195264",
+        "plane_2_numerator": [
+          4886730033740408474327550473011200000,
+          -1922647882127373825964937891020800000
+        ],
+        "plane_1_numerator": [
+          4886730033740408474327550473011200000,
+          1922647882127373825964937891020800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "2841536851025905404815625/309485009821345068724781056",
+        "plane_2_numerator": [
+          3905378510571228083991280091136000000,
+          -1041434269485660822397674690969600000
+        ],
+        "plane_1_numerator": [
+          3905378510571228083991280091136000000,
+          1041434269485660822397674690969600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 5,
+        "selected_gain": null,
+        "total_probability": "568307370205181080963125/77371252455336267181195264",
+        "plane_2_numerator": [
+          3124302808456982467193024072908800000,
+          0
+        ],
+        "plane_1_numerator": [
+          3124302808456982467193024072908800000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 6,
+        "selected_gain": 1,
+        "total_probability": "1077824322802929636309375/154742504910672534362390528",
+        "plane_2_numerator": [
+          2962700939054035098200281448448000000,
+          790053583747742692853408386252800000
+        ],
+        "plane_1_numerator": [
+          2962700939054035098200281448448000000,
+          -790053583747742692853408386252800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "539797074638577239859375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2967565801022925139412432977920000000,
+          1167566872533609890916367073280000000
+        ],
+        "plane_1_numerator": [
+          2967565801022925139412432977920000000,
+          -1167566872533609890916367073280000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "3831064031705673966328125/618970019642690137449562112",
+        "plane_2_numerator": [
+          2632687156009244285282864332800000000,
+          1139887485469235518502401474560000000
+        ],
+        "plane_1_numerator": [
+          2632687156009244285282864332800000000,
+          -1139887485469235518502401474560000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "347283726407794035234375/77371252455336267181195264",
+        "plane_2_numerator": [
+          1909212476613743284269455769600000000,
+          846867767236030955361455308800000000
+        ],
+        "plane_1_numerator": [
+          1909212476613743284269455769600000000,
+          -846867767236030955361455308800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "400213794483549530859375/154742504910672534362390528",
+        "plane_2_numerator": [
+          1100099301577542684823781376000000000,
+          490962292775751938870681272320000000
+        ],
+        "plane_1_numerator": [
+          1100099301577542684823781376000000000,
+          -490962292775751938870681272320000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "90051044667572987578125/77371252455336267181195264",
+        "plane_2_numerator": [
+          495060853526862301876558233600000000,
+          221282099020936360295084851200000000
+        ],
+        "plane_1_numerator": [
+          495060853526862301876558233600000000,
+          -221282099020936360295084851200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "123895704404628228515625/309485009821345068724781056",
+        "plane_2_numerator": [
+          170280959530483645604167680000000000,
+          76141880738814577757650944000000000
+        ],
+        "plane_1_numerator": [
+          170280959530483645604167680000000000,
+          -76141880738814577757650944000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "7868556392331755859375/77371252455336267181195264",
+        "plane_2_numerator": [
+          43257846235899694845788160000000000,
+          19344849328426029164789760000000000
+        ],
+        "plane_1_numerator": [
+          43257846235899694845788160000000000,
+          -19344849328426029164789760000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "2784302922682353515625/154742504910672534362390528",
+        "plane_2_numerator": [
+          7653433596849871965388800000000000,
+          3422690577857063178731520000000000
+        ],
+        "plane_1_numerator": [
+          7653433596849871965388800000000000,
+          -3422690577857063178731520000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "153259529680892578125/77371252455336267181195264",
+        "plane_2_numerator": [
+          842553174758111922094080000000000,
+          376800427840254876057600000000000
+        ],
+        "plane_1_numerator": [
+          842553174758111922094080000000000,
+          -376800427840254876057600000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 5,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "126540859179287109375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          43479108142622362828800000000000,
+          19444437751371273338880000000000
+        ],
+        "plane_1_numerator": [
+          43479108142622362828800000000000,
+          -19444437751371273338880000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "7938482771225277726980525/2475880078570760549798248448",
+        "plane_2_numerator": [
+          1363820955290880707435942868156416000,
+          -609600136075250034930791976271872000
+        ],
+        "plane_1_numerator": [
+          1363820955290880707435942868156416000,
+          609600136075250034930791976271872000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "1658980880739161293689375/154742504910672534362390528",
+        "plane_2_numerator": [
+          4560171921576943400233546756915200000,
+          -2035154879980815279568611404939264000
+        ],
+        "plane_1_numerator": [
+          4560171921576943400233546756915200000,
+          2035154879980815279568611404939264000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "5212247878990577677126875/309485009821345068724781056",
+        "plane_2_numerator": [
+          7163658937251166916930424117657600000,
+          -3177578150018393687740082080972800000
+        ],
+        "plane_1_numerator": [
+          7163658937251166916930424117657600000,
+          3177578150018393687740082080972800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "2570196462068524517353125/154742504910672534362390528",
+        "plane_2_numerator": [
+          7064902239282699080323748069376000000,
+          -3058925413997670426176017085235200000
+        ],
+        "plane_1_numerator": [
+          7064902239282699080323748069376000000,
+          3058925413997670426176017085235200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "7305253743442078646096875/618970019642690137449562112",
+        "plane_2_numerator": [
+          5020132146730448360839365787648000000,
+          -1975133959369356732133520965632000000
+        ],
+        "plane_1_numerator": [
+          5020132146730448360839365787648000000,
+          1975133959369356732133520965632000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "1077824322802929636309375/154742504910672534362390528",
+        "plane_2_numerator": [
+          2962700939054035098200281448448000000,
+          -790053583747742692853408386252800000
+        ],
+        "plane_1_numerator": [
+          2962700939054035098200281448448000000,
+          790053583747742692853408386252800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 6,
+        "selected_gain": null,
+        "total_probability": "1317340838981358444378125/309485009821345068724781056",
+        "plane_2_numerator": [
+          1810539462755243671122394218496000000,
+          0
+        ],
+        "plane_1_numerator": [
+          1810539462755243671122394218496000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 7,
+        "selected_gain": 1,
+        "total_probability": "486702280411831937578125/154742504910672534362390528",
+        "plane_2_numerator": [
+          1337837041444761333341670604800000000,
+          356756544385269688891112161280000000
+        ],
+        "plane_1_numerator": [
+          1337837041444761333341670604800000000,
+          -356756544385269688891112161280000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "3071259217771215330234375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1055276631829272948282438451200000000,
+          415190805965615586209483980800000000
+        ],
+        "plane_1_numerator": [
+          1055276631829272948282438451200000000,
+          -415190805965615586209483980800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "269104114615341083203125/154742504910672534362390528",
+        "plane_2_numerator": [
+          739707757754832366235287552000000000,
+          320274900131841397280368230400000000
+        ],
+        "plane_1_numerator": [
+          739707757754832366235287552000000000,
+          -320274900131841397280368230400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "307366056705748743828125/309485009821345068724781056",
+        "plane_2_numerator": [
+          422440691664535151979161190400000000,
+          187381661141305699893195571200000000
+        ],
+        "plane_1_numerator": [
+          422440691664535151979161190400000000,
+          -187381661141305699893195571200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "69002378359232677734375/154742504910672534362390528",
+        "plane_2_numerator": [
+          189672293375438393935134720000000000,
+          84648671168233092908738150400000000
+        ],
+        "plane_1_numerator": [
+          189672293375438393935134720000000000,
+          -84648671168233092908738150400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "94881368902615216796875/618970019642690137449562112",
+        "plane_2_numerator": [
+          65201980229831002402324480000000000,
+          29143954612431752433500160000000000
+        ],
+        "plane_1_numerator": [
+          65201980229831002402324480000000000,
+          -29143954612431752433500160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "6024990046202080078125/154742504910672534362390528",
+        "plane_2_numerator": [
+          16561366532584616283340800000000000,
+          7405487958682231258480640000000000
+        ],
+        "plane_1_numerator": [
+          16561366532584616283340800000000000,
+          -7405487958682231258480640000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "2131874884621904296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          2930026530756752729702400000000000,
+          1310303833821960103526400000000000
+        ],
+        "plane_1_numerator": [
+          2930026530756752729702400000000000,
+          -1310303833821960103526400000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "117346100189677734375/154742504910672534362390528",
+        "plane_2_numerator": [
+          322558504081795370188800000000000,
+          144251327036121436651520000000000
+        ],
+        "plane_1_numerator": [
+          322558504081795370188800000000000,
+          -144251327036121436651520000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 6,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "96888208418955078125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          16645267461097757081600000000000,
+          7443973969545265152000000000000
+        ],
+        "plane_1_numerator": [
+          16645267461097757081600000000000,
+          -7443973969545265152000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "4680887625500557987498125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1608340741422079374884481898905600000,
+          -719176643462673564221953256980480000
+        ],
+        "plane_1_numerator": [
+          1608340741422079374884481898905600000,
+          719176643462673564221953256980480000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "977645661480945532879375/77371252455336267181195264",
+        "plane_2_numerator": [
+          5374663863215293428318986672537600000,
+          -2402365068276847428298687591219200000
+        ],
+        "plane_1_numerator": [
+          5374663863215293428318986672537600000,
+          2402365068276847428298687591219200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "3064619853582194508046875/154742504910672534362390528",
+        "plane_2_numerator": [
+          8423962909317013670382167654400000000,
+          -3759522561540914925311474270208000000
+        ],
+        "plane_1_numerator": [
+          8423962909317013670382167654400000000,
+          3759522561540914925311474270208000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "1497772379020280941703125/77371252455336267181195264",
+        "plane_2_numerator": [
+          8234090732472605651644165652480000000,
+          -3652388678182061710046071357440000000
+        ],
+        "plane_1_numerator": [
+          8234090732472605651644165652480000000,
+          3652388678182061710046071357440000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "4114846552572760926796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          5655402038834672909126153011200000000,
+          -2448647191007987410116269834240000000
+        ],
+        "plane_1_numerator": [
+          5655402038834672909126153011200000000,
+          2448647191007987410116269834240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "539797074638577239859375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2967565801022925139412432977920000000,
+          -1167566872533609890916367073280000000
+        ],
+        "plane_1_numerator": [
+          2967565801022925139412432977920000000,
+          1167566872533609890916367073280000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "486702280411831937578125/154742504910672534362390528",
+        "plane_2_numerator": [
+          1337837041444761333341670604800000000,
+          -356756544385269688891112161280000000
+        ],
+        "plane_1_numerator": [
+          1337837041444761333341670604800000000,
+          356756544385269688891112161280000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 7,
+        "selected_gain": null,
+        "total_probability": "115881495336150461328125/77371252455336267181195264",
+        "plane_2_numerator": [
+          637065257830838730162700288000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          637065257830838730162700288000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 8,
+        "selected_gain": 1,
+        "total_probability": "539448340357941802734375/618970019642690137449562112",
+        "plane_2_numerator": [
+          370706076755013916258467840000000000,
+          98854953801337044335591424000000000
+        ],
+        "plane_1_numerator": [
+          370706076755013916258467840000000000,
+          -98854953801337044335591424000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "42025988201576564453125/77371252455336267181195264",
+        "plane_2_numerator": [
+          231040313482052095956746240000000000,
+          90901106943758201687900160000000000
+        ],
+        "plane_1_numerator": [
+          231040313482052095956746240000000000,
+          -90901106943758201687900160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "46397261140576048828125/154742504910672534362390528",
+        "plane_2_numerator": [
+          127535820302557304523325440000000000,
+          55219810367558861600063488000000000
+        ],
+        "plane_1_numerator": [
+          127535820302557304523325440000000000,
+          -55219810367558861600063488000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "10323535267770333984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          56754235333345519746416640000000000,
+          25174428276933143738449920000000000
+        ],
+        "plane_1_numerator": [
+          56754235333345519746416640000000000,
+          -25174428276933143738449920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "14163049745326904296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          19465547349696058490880000000000000,
+          8687260998381885561241600000000000
+        ],
+        "plane_1_numerator": [
+          19465547349696058490880000000000000,
+          -8687260998381885561241600000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "898838280623486328125/77371252455336267181195264",
+        "plane_2_numerator": [
+          4941415705178552664064000000000000,
+          2208711982753448460288000000000000
+        ],
+        "plane_1_numerator": [
+          4941415705178552664064000000000000,
+          -2208711982753448460288000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "317997363451904296875/154742504910672534362390528",
+        "plane_2_numerator": [
+          874104496793698959360000000000000,
+          390859674103566041088000000000000
+        ],
+        "plane_1_numerator": [
+          874104496793698959360000000000000,
+          -390859674103566041088000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "17503077870458984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          96224188202192207872000000000000,
+          43031324591854190592000000000000
+        ],
+        "plane_1_numerator": [
+          96224188202192207872000000000000,
+          -43031324591854190592000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 7,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "14451490171142578125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          4965494213081825280000000000000,
+          2220617719152115712000000000000
+        ],
+        "plane_1_numerator": [
+          4965494213081825280000000000000,
+          -2220617719152115712000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "34781866939262892156654375/9903520314283042199192993792",
+        "plane_2_numerator": [
+          1493869809979577401592054494003200000,
+          -668056523959723227007780336435200000
+        ],
+        "plane_1_numerator": [
+          1493869809979577401592054494003200000,
+          668056523959723227007780336435200000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "7263446315431900325428125/618970019642690137449562112",
+        "plane_2_numerator": [
+          4991402300965073922055288651776000000,
+          -2231927514194504164826751487180800000
+        ],
+        "plane_1_numerator": [
+          4991402300965073922055288651776000000,
+          2231927514194504164826751487180800000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "22755545568953042575640625/1237940039285380274899124224",
+        "plane_2_numerator": [
+          7818745921703282465765767249920000000,
+          -3494819873032051754529340784640000000
+        ],
+        "plane_1_numerator": [
+          7818745921703282465765767249920000000,
+          3494819873032051754529340784640000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "11096037400901049080859375/618970019642690137449562112",
+        "plane_2_numerator": [
+          7625138840330055477501100032000000000,
+          -3403016111739621268600903434240000000
+        ],
+        "plane_1_numerator": [
+          7625138840330055477501100032000000000,
+          3403016111739621268600903434240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "30213684197478081065390625/2475880078570760549798248448",
+        "plane_2_numerator": [
+          5190671420793614554107582873600000000,
+          -2302421742172959159888956620800000000
+        ],
+        "plane_1_numerator": [
+          5190671420793614554107582873600000000,
+          2302421742172959159888956620800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "3831064031705673966328125/618970019642690137449562112",
+        "plane_2_numerator": [
+          2632687156009244285282864332800000000,
+          -1139887485469235518502401474560000000
+        ],
+        "plane_1_numerator": [
+          2632687156009244285282864332800000000,
+          1139887485469235518502401474560000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "3071259217771215330234375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1055276631829272948282438451200000000,
+          -415190805965615586209483980800000000
+        ],
+        "plane_1_numerator": [
+          1055276631829272948282438451200000000,
+          415190805965615586209483980800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "539448340357941802734375/618970019642690137449562112",
+        "plane_2_numerator": [
+          370706076755013916258467840000000000,
+          -98854953801337044335591424000000000
+        ],
+        "plane_1_numerator": [
+          370706076755013916258467840000000000,
+          98854953801337044335591424000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 8,
+        "selected_gain": null,
+        "total_probability": "1618345021073825408203125/4951760157141521099596496896",
+        "plane_2_numerator": [
+          139014778783130218596925440000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          139014778783130218596925440000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 9,
+        "selected_gain": 1,
+        "total_probability": "93008334544472724609375/618970019642690137449562112",
+        "plane_2_numerator": [
+          63914840819829985561804800000000000,
+          17043957551954662816481280000000000
+        ],
+        "plane_1_numerator": [
+          63914840819829985561804800000000000,
+          -17043957551954662816481280000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "91297836437907708984375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          31369697735709659580334080000000000,
+          12342176158311997211934720000000000
+        ],
+        "plane_1_numerator": [
+          31369697735709659580334080000000000,
+          -12342176158311997211934720000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "19635204557924033203125/618970019642690137449562112",
+        "plane_2_numerator": [
+          13493209828248617641574400000000000,
+          5842221316316964197498880000000000
+        ],
+        "plane_1_numerator": [
+          13493209828248617641574400000000000,
+          -5842221316316964197498880000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "26698798106302587890625/2475880078570760549798248448",
+        "plane_2_numerator": [
+          4586818588363053858816000000000000,
+          2034571250829726056448000000000000
+        ],
+        "plane_1_numerator": [
+          4586818588363053858816000000000000,
+          -2034571250829726056448000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "1690549704349365234375/618970019642690137449562112",
+        "plane_2_numerator": [
+          1161736910790878822400000000000000,
+          518470483988308819968000000000000
+        ],
+        "plane_1_numerator": [
+          1161736910790878822400000000000000,
+          -518470483988308819968000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "597749595488525390625/1237940039285380274899124224",
+        "plane_2_numerator": [
+          205385197105635655680000000000000,
+          91802991894001090560000000000000
+        ],
+        "plane_1_numerator": [
+          205385197105635655680000000000000,
+          -91802991894001090560000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "32896278977783203125/618970019642690137449562112",
+        "plane_2_numerator": [
+          22606150779147386880000000000000,
+          10108439847506018304000000000000
+        ],
+        "plane_1_numerator": [
+          22606150779147386880000000000000,
+          -10108439847506018304000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 8,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "27159948419677734375/9903520314283042199192993792",
+        "plane_2_numerator": [
+          1166510902235627520000000000000,
+          521662070752542720000000000000
+        ],
+        "plane_1_numerator": [
+          1166510902235627520000000000000,
+          -521662070752542720000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "3190866149541615537403125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          1096373260655574729932150931456000000,
+          -490308876607330513761989977702400000
+        ],
+        "plane_1_numerator": [
+          1096373260655574729932150931456000000,
+          490308876607330513761989977702400000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "666319290024193336334375/77371252455336267181195264",
+        "plane_2_numerator": [
+          3663129035965247268271704506368000000,
+          -1638146265648363468524825346048000000
+        ],
+        "plane_1_numerator": [
+          3663129035965247268271704506368000000,
+          1638146265648363468524825346048000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "2087197217078132277421875/154742504910672534362390528",
+        "plane_2_numerator": [
+          5737244024097786117304929484800000000,
+          -2565433924361499040030748835840000000
+        ],
+        "plane_1_numerator": [
+          5737244024097786117304929484800000000,
+          2565433924361499040030748835840000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "1017169980732256053828125/77371252455336267181195264",
+        "plane_2_numerator": [
+          5591951106199027050866959974400000000,
+          -2499488031798146848705531084800000000
+        ],
+        "plane_1_numerator": [
+          5591951106199027050866959974400000000,
+          2499488031798146848705531084800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "2763380961910222951171875/309485009821345068724781056",
+        "plane_2_numerator": [
+          3797961874493897364272578560000000000,
+          -1694988867916286455624971059200000000
+        ],
+        "plane_1_numerator": [
+          3797961874493897364272578560000000000,
+          1694988867916286455624971059200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "347283726407794035234375/77371252455336267181195264",
+        "plane_2_numerator": [
+          1909212476613743284269455769600000000,
+          -846867767236030955361455308800000000
+        ],
+        "plane_1_numerator": [
+          1909212476613743284269455769600000000,
+          846867767236030955361455308800000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "269104114615341083203125/154742504910672534362390528",
+        "plane_2_numerator": [
+          739707757754832366235287552000000000,
+          -320274900131841397280368230400000000
+        ],
+        "plane_1_numerator": [
+          739707757754832366235287552000000000,
+          320274900131841397280368230400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "42025988201576564453125/77371252455336267181195264",
+        "plane_2_numerator": [
+          231040313482052095956746240000000000,
+          -90901106943758201687900160000000000
+        ],
+        "plane_1_numerator": [
+          231040313482052095956746240000000000,
+          90901106943758201687900160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "93008334544472724609375/618970019642690137449562112",
+        "plane_2_numerator": [
+          63914840819829985561804800000000000,
+          -17043957551954662816481280000000000
+        ],
+        "plane_1_numerator": [
+          63914840819829985561804800000000000,
+          17043957551954662816481280000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 9,
+        "selected_gain": null,
+        "total_probability": "3444753131276767578125/77371252455336267181195264",
+        "plane_2_numerator": [
+          18937730613282958684979200000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          18937730613282958684979200000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 10,
+        "selected_gain": 1,
+        "total_probability": "2494476405407314453125/154742504910672534362390528",
+        "plane_2_numerator": [
+          6856764532395554006630400000000000,
+          1828470541972147735101440000000000
+        ],
+        "plane_1_numerator": [
+          6856764532395554006630400000000000,
+          -1828470541972147735101440000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "477000190375693359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2622336278847202472755200000000000,
+          1031738863808735399116800000000000
+        ],
+        "plane_1_numerator": [
+          2622336278847202472755200000000000,
+          -1031738863808735399116800000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "626922240035888671875/309485009821345068724781056",
+        "plane_2_numerator": [
+          861635365788545187840000000000000,
+          373066495294825299968000000000000
+        ],
+        "plane_1_numerator": [
+          861635365788545187840000000000000,
+          -373066495294825299968000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "39343940622314453125/77371252455336267181195264",
+        "plane_2_numerator": [
+          216295600983816273920000000000000,
+          95942057215666421760000000000000
+        ],
+        "plane_1_numerator": [
+          216295600983816273920000000000000,
+          -95942057215666421760000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "13879718426513671875/154742504910672534362390528",
+        "plane_2_numerator": [
+          38152279500521472000000000000000,
+          17026945286972375040000000000000
+        ],
+        "plane_1_numerator": [
+          38152279500521472000000000000000,
+          -17026945286972375040000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "763409445068359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          4196887808033423360000000000000,
+          1875923206007685120000000000000
+        ],
+        "plane_1_numerator": [
+          4196887808033423360000000000000,
+          -1875923206007685120000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 9,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "630196915283203125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          216534011294515200000000000000,
+          96824136470364160000000000000
+        ],
+        "plane_1_numerator": [
+          216534011294515200000000000000,
+          -96824136470364160000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "3688407417440193210888125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          633663569289177995067429119590400000,
+          -283382356352157918562445426688000000
+        ],
+        "plane_1_numerator": [
+          633663569289177995067429119590400000,
+          283382356352157918562445426688000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "770209070579010646959375/154742504910672534362390528",
+        "plane_2_numerator": [
+          2117134572300420168144843177984000000,
+          -946803347931396854161084094873600000
+        ],
+        "plane_1_numerator": [
+          2117134572300420168144843177984000000,
+          946803347931396854161084094873600000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "2412535360432424148796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          3315763351520266923866629079040000000,
+          -1482804809423087622371609149440000000
+        ],
+        "plane_1_numerator": [
+          3315763351520266923866629079040000000,
+          1482804809423087622371609149440000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "1175547857894580248203125/154742504910672534362390528",
+        "plane_2_numerator": [
+          3231321346905649652275190169600000000,
+          -1444899566594407505304674631680000000
+        ],
+        "plane_1_numerator": [
+          3231321346905649652275190169600000000,
+          1444899566594407505304674631680000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "3191809249883975893046875/618970019642690137449562112",
+        "plane_2_numerator": [
+          2193394614931514920814195507200000000,
+          -980402633162204151862945382400000000
+        ],
+        "plane_1_numerator": [
+          2193394614931514920814195507200000000,
+          980402633162204151862945382400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "400213794483549530859375/154742504910672534362390528",
+        "plane_2_numerator": [
+          1100099301577542684823781376000000000,
+          -490962292775751938870681272320000000
+        ],
+        "plane_1_numerator": [
+          1100099301577542684823781376000000000,
+          490962292775751938870681272320000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "307366056705748743828125/309485009821345068724781056",
+        "plane_2_numerator": [
+          422440691664535151979161190400000000,
+          -187381661141305699893195571200000000
+        ],
+        "plane_1_numerator": [
+          422440691664535151979161190400000000,
+          187381661141305699893195571200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "46397261140576048828125/154742504910672534362390528",
+        "plane_2_numerator": [
+          127535820302557304523325440000000000,
+          -55219810367558861600063488000000000
+        ],
+        "plane_1_numerator": [
+          127535820302557304523325440000000000,
+          55219810367558861600063488000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "91297836437907708984375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          31369697735709659580334080000000000,
+          -12342176158311997211934720000000000
+        ],
+        "plane_1_numerator": [
+          31369697735709659580334080000000000,
+          12342176158311997211934720000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "2494476405407314453125/154742504910672534362390528",
+        "plane_2_numerator": [
+          6856764532395554006630400000000000,
+          -1828470541972147735101440000000000
+        ],
+        "plane_1_numerator": [
+          6856764532395554006630400000000000,
+          1828470541972147735101440000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 10,
+        "selected_gain": null,
+        "total_probability": "1164088989190080078125/309485009821345068724781056",
+        "plane_2_numerator": [
+          1599911724225629268213760000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          1599911724225629268213760000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 11,
+        "selected_gain": 1,
+        "total_probability": "164213180293271484375/154742504910672534362390528",
+        "plane_2_numerator": [
+          451385752916321737113600000000000,
+          120369534111019129896960000000000
+        ],
+        "plane_1_numerator": [
+          451385752916321737113600000000000,
+          -120369534111019129896960000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "191896628312060546875/618970019642690137449562112",
+        "plane_2_numerator": [
+          131870358850074836992000000000000,
+          51883419875439280128000000000000
+        ],
+        "plane_1_numerator": [
+          131870358850074836992000000000000,
+          -51883419875439280128000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "11640465995361328125/154742504910672534362390528",
+        "plane_2_numerator": [
+          31997069286577274880000000000000,
+          13853928207234891776000000000000
+        ],
+        "plane_1_numerator": [
+          31997069286577274880000000000000,
+          -13853928207234891776000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "4070062822998046875/309485009821345068724781056",
+        "plane_2_numerator": [
+          5593851749581455360000000000000,
+          2481260100405166080000000000000
+        ],
+        "plane_1_numerator": [
+          5593851749581455360000000000000,
+          -2481260100405166080000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "223351790771484375/154742504910672534362390528",
+        "plane_2_numerator": [
+          613944727594598400000000000000,
+          273996820709900288000000000000
+        ],
+        "plane_1_numerator": [
+          613944727594598400000000000000,
+          -273996820709900288000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 10,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "184271245361328125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          31657558896803840000000000000,
+          14150282803937280000000000000
+        ],
+        "plane_1_numerator": [
+          31657558896803840000000000000,
+          -14150282803937280000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "830559493508600196534375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          285378068960140971108345053184000000,
+          -127624883180672365367518455398400000
+        ],
+        "plane_1_numerator": [
+          285378068960140971108345053184000000,
+          127624883180672365367518455398400000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "173436085459570213678125/77371252455336267181195264",
+        "plane_2_numerator": [
+          953474963193747453392996794368000000,
+          -426406053445253294388632616960000000
+        ],
+        "plane_1_numerator": [
+          953474963193747453392996794368000000,
+          426406053445253294388632616960000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "543250911850399359140625/154742504910672534362390528",
+        "plane_2_numerator": [
+          1493276735948572218910939545600000000,
+          -667808004026847310928664330240000000
+        ],
+        "plane_1_numerator": [
+          1493276735948572218910939545600000000,
+          667808004026847310928664330240000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "264698237038040267109375/77371252455336267181195264",
+        "plane_2_numerator": [
+          1455193947375665734612313702400000000,
+          -650760731408251621103527526400000000
+        ],
+        "plane_1_numerator": [
+          1455193947375665734612313702400000000,
+          650760731408251621103527526400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "718595085546843725390625/309485009821345068724781056",
+        "plane_2_numerator": [
+          987629565276805144504172544000000000,
+          -441622908285124550994375475200000000
+        ],
+        "plane_1_numerator": [
+          987629565276805144504172544000000000,
+          441622908285124550994375475200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "90051044667572987578125/77371252455336267181195264",
+        "plane_2_numerator": [
+          495060853526862301876558233600000000,
+          -221282099020936360295084851200000000
+        ],
+        "plane_1_numerator": [
+          495060853526862301876558233600000000,
+          221282099020936360295084851200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "69002378359232677734375/154742504910672534362390528",
+        "plane_2_numerator": [
+          189672293375438393935134720000000000,
+          -84648671168233092908738150400000000
+        ],
+        "plane_1_numerator": [
+          189672293375438393935134720000000000,
+          84648671168233092908738150400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "10323535267770333984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          56754235333345519746416640000000000,
+          -25174428276933143738449920000000000
+        ],
+        "plane_1_numerator": [
+          56754235333345519746416640000000000,
+          25174428276933143738449920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "19635204557924033203125/618970019642690137449562112",
+        "plane_2_numerator": [
+          13493209828248617641574400000000000,
+          -5842221316316964197498880000000000
+        ],
+        "plane_1_numerator": [
+          13493209828248617641574400000000000,
+          5842221316316964197498880000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "477000190375693359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2622336278847202472755200000000000,
+          -1031738863808735399116800000000000
+        ],
+        "plane_1_numerator": [
+          2622336278847202472755200000000000,
+          1031738863808735399116800000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "164213180293271484375/154742504910672534362390528",
+        "plane_2_numerator": [
+          451385752916321737113600000000000,
+          -120369534111019129896960000000000
+        ],
+        "plane_1_numerator": [
+          451385752916321737113600000000000,
+          120369534111019129896960000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 11,
+        "selected_gain": null,
+        "total_probability": "14928470935751953125/77371252455336267181195264",
+        "plane_2_numerator": [
+          82070136893876679475200000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          82070136893876679475200000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 12,
+        "selected_gain": 1,
+        "total_probability": "12869371496337890625/309485009821345068724781056",
+        "plane_2_numerator": [
+          17687529502990663680000000000000,
+          4716674534130843648000000000000
+        ],
+        "plane_1_numerator": [
+          17687529502990663680000000000000,
+          -4716674534130843648000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "694104032958984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          3815877275623096320000000000000,
+          1501328764179578880000000000000
+        ],
+        "plane_1_numerator": [
+          3815877275623096320000000000000,
+          -1501328764179578880000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "234581715087890625/154742504910672534362390528",
+        "plane_2_numerator": [
+          644813308506931200000000000000,
+          279187984471818240000000000000
+        ],
+        "plane_1_numerator": [
+          644813308506931200000000000000,
+          -279187984471818240000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "12758817626953125/77371252455336267181195264",
+        "plane_2_numerator": [
+          70142341687541760000000000000,
+          31112979315425280000000000000
+        ],
+        "plane_1_numerator": [
+          70142341687541760000000000000,
+          -31112979315425280000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 11,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "10502435302734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          3608609292288000000000000000,
+          1610482880348160000000000000
+        ],
+        "plane_1_numerator": [
+          3608609292288000000000000000,
+          -1610482880348160000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "1142938984306348833296875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          98177711178384509683556679680000000,
+          -43906401200440364438881566720000000
+        ],
+        "plane_1_numerator": [
+          98177711178384509683556679680000000,
+          43906401200440364438881566720000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "238666521123160976015625/309485009821345068724781056",
+        "plane_2_numerator": [
+          328020768919702265641775923200000000,
+          -146695268023761339502894776320000000
+        ],
+        "plane_1_numerator": [
+          328020768919702265641775923200000000,
+          146695268023761339502894776320000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "747569333877457817578125/618970019642690137449562112",
+        "plane_2_numerator": [
+          513725734479389791698812928000000000,
+          -229744640864899404304220160000000000
+        ],
+        "plane_1_numerator": [
+          513725734479389791698812928000000000,
+          229744640864899404304220160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "364248695685133669921875/309485009821345068724781056",
+        "plane_2_numerator": [
+          500619595385057736224931840000000000,
+          -223881993687161454813249536000000000
+        ],
+        "plane_1_numerator": [
+          500619595385057736224931840000000000,
+          223881993687161454813249536000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "988815253303023986328125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          339754333977795519934627840000000000,
+          -151937670767012770731786240000000000
+        ],
+        "plane_1_numerator": [
+          339754333977795519934627840000000000,
+          151937670767012770731786240000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "123895704404628228515625/309485009821345068724781056",
+        "plane_2_numerator": [
+          170280959530483645604167680000000000,
+          -76141880738814577757650944000000000
+        ],
+        "plane_1_numerator": [
+          170280959530483645604167680000000000,
+          76141880738814577757650944000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "94881368902615216796875/618970019642690137449562112",
+        "plane_2_numerator": [
+          65201980229831002402324480000000000,
+          -29143954612431752433500160000000000
+        ],
+        "plane_1_numerator": [
+          65201980229831002402324480000000000,
+          29143954612431752433500160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "14163049745326904296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          19465547349696058490880000000000000,
+          -8687260998381885561241600000000000
+        ],
+        "plane_1_numerator": [
+          19465547349696058490880000000000000,
+          8687260998381885561241600000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "26698798106302587890625/2475880078570760549798248448",
+        "plane_2_numerator": [
+          4586818588363053858816000000000000,
+          -2034571250829726056448000000000000
+        ],
+        "plane_1_numerator": [
+          4586818588363053858816000000000000,
+          2034571250829726056448000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "626922240035888671875/309485009821345068724781056",
+        "plane_2_numerator": [
+          861635365788545187840000000000000,
+          -373066495294825299968000000000000
+        ],
+        "plane_1_numerator": [
+          861635365788545187840000000000000,
+          373066495294825299968000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "191896628312060546875/618970019642690137449562112",
+        "plane_2_numerator": [
+          131870358850074836992000000000000,
+          -51883419875439280128000000000000
+        ],
+        "plane_1_numerator": [
+          131870358850074836992000000000000,
+          51883419875439280128000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 11,
+        "selected_gain": 2,
+        "total_probability": "12869371496337890625/309485009821345068724781056",
+        "plane_2_numerator": [
+          17687529502990663680000000000000,
+          -4716674534130843648000000000000
+        ],
+        "plane_1_numerator": [
+          17687529502990663680000000000000,
+          4716674534130843648000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 12,
+        "selected_gain": null,
+        "total_probability": "7149650831298828125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          2456601319859814400000000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          2456601319859814400000000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 13,
+        "selected_gain": 1,
+        "total_probability": "284468865966796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          390971032338432000000000000000,
+          104258941956915200000000000000
+        ],
+        "plane_1_numerator": [
+          390971032338432000000000000000,
+          -104258941956915200000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "85480792236328125/618970019642690137449562112",
+        "plane_2_numerator": [
+          58741953134592000000000000000,
+          23111588118528000000000000000
+        ],
+        "plane_1_numerator": [
+          58741953134592000000000000000,
+          -23111588118528000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "4493902587890625/309485009821345068724781056",
+        "plane_2_numerator": [
+          6176372686848000000000000000,
+          2674214410649600000000000000
+        ],
+        "plane_1_numerator": [
+          6176372686848000000000000000,
+          -2674214410649600000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 12,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "3666326904296875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          314935083008000000000000000,
+          139695489024000000000000000
+        ],
+        "plane_1_numerator": [
+          314935083008000000000000000,
+          -139695489024000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "72591088638246145078125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          24942108134584349432689459200000000,
+          -11154449471831761329628119040000000
+        ],
+        "plane_1_numerator": [
+          24942108134584349432689459200000000,
+          11154449471831761329628119040000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "15158341966927703359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          83333866252209663391878348800000000,
+          -37268032849180150186849075200000000
+        ],
+        "plane_1_numerator": [
+          83333866252209663391878348800000000,
+          37268032849180150186849075200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "47480077146517435546875/154742504910672534362390528",
+        "plane_2_numerator": [
+          130512242275743607019274240000000000,
+          -58366817516085413595316224000000000
+        ],
+        "plane_1_numerator": [
+          130512242275743607019274240000000000,
+          58366817516085413595316224000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "23134329518754220703125/77371252455336267181195264",
+        "plane_2_numerator": [
+          127182321533359099624816640000000000,
+          -56877541505014883470540800000000000
+        ],
+        "plane_1_numerator": [
+          127182321533359099624816640000000000,
+          56877541505014883470540800000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "62801499256057529296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          86313723342251333831884800000000000,
+          -38600343739165768071249920000000000
+        ],
+        "plane_1_numerator": [
+          86313723342251333831884800000000000,
+          38600343739165768071249920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "7868556392331755859375/77371252455336267181195264",
+        "plane_2_numerator": [
+          43257846235899694845788160000000000,
+          -19344849328426029164789760000000000
+        ],
+        "plane_1_numerator": [
+          43257846235899694845788160000000000,
+          19344849328426029164789760000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "6024990046202080078125/154742504910672534362390528",
+        "plane_2_numerator": [
+          16561366532584616283340800000000000,
+          -7405487958682231258480640000000000
+        ],
+        "plane_1_numerator": [
+          16561366532584616283340800000000000,
+          7405487958682231258480640000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "898838280623486328125/77371252455336267181195264",
+        "plane_2_numerator": [
+          4941415705178552664064000000000000,
+          -2208711982753448460288000000000000
+        ],
+        "plane_1_numerator": [
+          4941415705178552664064000000000000,
+          2208711982753448460288000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "1690549704349365234375/618970019642690137449562112",
+        "plane_2_numerator": [
+          1161736910790878822400000000000000,
+          -518470483988308819968000000000000
+        ],
+        "plane_1_numerator": [
+          1161736910790878822400000000000000,
+          518470483988308819968000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "39343940622314453125/77371252455336267181195264",
+        "plane_2_numerator": [
+          216295600983816273920000000000000,
+          -95942057215666421760000000000000
+        ],
+        "plane_1_numerator": [
+          216295600983816273920000000000000,
+          95942057215666421760000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "11640465995361328125/154742504910672534362390528",
+        "plane_2_numerator": [
+          31997069286577274880000000000000,
+          -13853928207234891776000000000000
+        ],
+        "plane_1_numerator": [
+          31997069286577274880000000000000,
+          13853928207234891776000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 11,
+        "selected_gain": 2,
+        "total_probability": "694104032958984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          3815877275623096320000000000000,
+          -1501328764179578880000000000000
+        ],
+        "plane_1_numerator": [
+          3815877275623096320000000000000,
+          1501328764179578880000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 12,
+        "selected_gain": 2,
+        "total_probability": "284468865966796875/309485009821345068724781056",
+        "plane_2_numerator": [
+          390971032338432000000000000000,
+          -104258941956915200000000000000
+        ],
+        "plane_1_numerator": [
+          390971032338432000000000000000,
+          104258941956915200000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 13,
+        "selected_gain": null,
+        "total_probability": "7294073486328125/77371252455336267181195264",
+        "plane_2_numerator": [
+          40099593060352000000000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          40099593060352000000000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 14,
+        "selected_gain": 1,
+        "total_probability": "1616912841796875/154742504910672534362390528",
+        "plane_2_numerator": [
+          4444536176640000000000000000,
+          1185209647104000000000000000
+        ],
+        "plane_1_numerator": [
+          4444536176640000000000000000,
+          -1185209647104000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "75579833984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          415504531456000000000000000,
+          163477192704000000000000000
+        ],
+        "plane_1_numerator": [
+          415504531456000000000000000,
+          -163477192704000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 13,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "59600830078125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          20478689280000000000000000,
+          8866758656000000000000000
+        ],
+        "plane_1_numerator": [
+          20478689280000000000000000,
+          -8866758656000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "25686808996647501796875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          4412960183167983754307174400000000,
+          -1973535773023254810407731200000000
+        ],
+        "plane_1_numerator": [
+          4412960183167983754307174400000000,
+          1973535773023254810407731200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "5363873544697991015625/154742504910672534362390528",
+        "plane_2_numerator": [
+          14744103330788777989767168000000000,
+          -6593763234580351524903321600000000
+        ],
+        "plane_1_numerator": [
+          14744103330788777989767168000000000,
+          6593763234580351524903321600000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "16801117943639080078125/309485009821345068724781056",
+        "plane_2_numerator": [
+          23091280673333958452183040000000000,
+          -10326733240228489891676160000000000
+        ],
+        "plane_1_numerator": [
+          23091280673333958452183040000000000,
+          10326733240228489891676160000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "8186220197675419921875/154742504910672534362390528",
+        "plane_2_numerator": [
+          22502110737197173624012800000000000,
+          -10063244399325071309537280000000000
+        ],
+        "plane_1_numerator": [
+          22502110737197173624012800000000000,
+          10063244399325071309537280000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "22222631803729423828125/618970019642690137449562112",
+        "plane_2_numerator": [
+          15271276292490778587955200000000000,
+          -6829507754604619628544000000000000
+        ],
+        "plane_1_numerator": [
+          15271276292490778587955200000000000,
+          6829507754604619628544000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "2784302922682353515625/154742504910672534362390528",
+        "plane_2_numerator": [
+          7653433596849871965388800000000000,
+          -3422690577857063178731520000000000
+        ],
+        "plane_1_numerator": [
+          7653433596849871965388800000000000,
+          3422690577857063178731520000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "2131874884621904296875/309485009821345068724781056",
+        "plane_2_numerator": [
+          2930026530756752729702400000000000,
+          -1310303833821960103526400000000000
+        ],
+        "plane_1_numerator": [
+          2930026530756752729702400000000000,
+          1310303833821960103526400000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "317997363451904296875/154742504910672534362390528",
+        "plane_2_numerator": [
+          874104496793698959360000000000000,
+          -390859674103566041088000000000000
+        ],
+        "plane_1_numerator": [
+          874104496793698959360000000000000,
+          390859674103566041088000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "597749595488525390625/1237940039285380274899124224",
+        "plane_2_numerator": [
+          205385197105635655680000000000000,
+          -91802991894001090560000000000000
+        ],
+        "plane_1_numerator": [
+          205385197105635655680000000000000,
+          91802991894001090560000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "13879718426513671875/154742504910672534362390528",
+        "plane_2_numerator": [
+          38152279500521472000000000000000,
+          -17026945286972375040000000000000
+        ],
+        "plane_1_numerator": [
+          38152279500521472000000000000000,
+          17026945286972375040000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "4070062822998046875/309485009821345068724781056",
+        "plane_2_numerator": [
+          5593851749581455360000000000000,
+          -2481260100405166080000000000000
+        ],
+        "plane_1_numerator": [
+          5593851749581455360000000000000,
+          2481260100405166080000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 11,
+        "selected_gain": 2,
+        "total_probability": "234581715087890625/154742504910672534362390528",
+        "plane_2_numerator": [
+          644813308506931200000000000000,
+          -279187984471818240000000000000
+        ],
+        "plane_1_numerator": [
+          644813308506931200000000000000,
+          279187984471818240000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 12,
+        "selected_gain": 2,
+        "total_probability": "85480792236328125/618970019642690137449562112",
+        "plane_2_numerator": [
+          58741953134592000000000000000,
+          -23111588118528000000000000000
+        ],
+        "plane_1_numerator": [
+          58741953134592000000000000000,
+          23111588118528000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 13,
+        "selected_gain": 2,
+        "total_probability": "1616912841796875/154742504910672534362390528",
+        "plane_2_numerator": [
+          4444536176640000000000000000,
+          -1185209647104000000000000000
+        ],
+        "plane_1_numerator": [
+          4444536176640000000000000000,
+          1185209647104000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 14,
+        "selected_gain": null,
+        "total_probability": "230987548828125/309485009821345068724781056",
+        "plane_2_numerator": [
+          317466869760000000000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          317466869760000000000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 15,
+        "selected_gain": 1,
+        "total_probability": "7965087890625/154742504910672534362390528",
+        "plane_2_numerator": [
+          21894266880000000000000000,
+          5838471168000000000000000
+        ],
+        "plane_1_numerator": [
+          21894266880000000000000000,
+          -5838471168000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 14,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "5584716796875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          959447040000000000000000,
+          377487360000000000000000
+        ],
+        "plane_1_numerator": [
+          959447040000000000000000,
+          -377487360000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "1413912499087777734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          485816635439010816196608000000000,
+          -217263803806991987003883520000000
+        ],
+        "plane_1_numerator": [
+          485816635439010816196608000000000,
+          217263803806991987003883520000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "295250678122385078125/77371252455336267181195264",
+        "plane_2_numerator": [
+          1623157768521557242963558400000000,
+          -725898215364875332563763200000000
+        ],
+        "plane_1_numerator": [
+          1623157768521557242963558400000000,
+          725898215364875332563763200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "924805783568619140625/154742504910672534362390528",
+        "plane_2_numerator": [
+          2542086781170478963752960000000000,
+          -1136855730100060607741952000000000
+        ],
+        "plane_1_numerator": [
+          2542086781170478963752960000000000,
+          1136855730100060607741952000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "450604695806412109375/77371252455336267181195264",
+        "plane_2_numerator": [
+          2477225512848087496785920000000000,
+          -1107848776729493168455680000000000
+        ],
+        "plane_1_numerator": [
+          2477225512848087496785920000000000,
+          1107848776729493168455680000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "1223228305399775390625/309485009821345068724781056",
+        "plane_2_numerator": [
+          1681192181514731362713600000000000,
+          -751851593053022569103360000000000
+        ],
+        "plane_1_numerator": [
+          1681192181514731362713600000000000,
+          751851593053022569103360000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "153259529680892578125/77371252455336267181195264",
+        "plane_2_numerator": [
+          842553174758111922094080000000000,
+          -376800427840254876057600000000000
+        ],
+        "plane_1_numerator": [
+          842553174758111922094080000000000,
+          376800427840254876057600000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "117346100189677734375/154742504910672534362390528",
+        "plane_2_numerator": [
+          322558504081795370188800000000000,
+          -144251327036121436651520000000000
+        ],
+        "plane_1_numerator": [
+          322558504081795370188800000000000,
+          144251327036121436651520000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "17503077870458984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          96224188202192207872000000000000,
+          -43031324591854190592000000000000
+        ],
+        "plane_1_numerator": [
+          96224188202192207872000000000000,
+          43031324591854190592000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "32896278977783203125/618970019642690137449562112",
+        "plane_2_numerator": [
+          22606150779147386880000000000000,
+          -10108439847506018304000000000000
+        ],
+        "plane_1_numerator": [
+          22606150779147386880000000000000,
+          10108439847506018304000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "763409445068359375/77371252455336267181195264",
+        "plane_2_numerator": [
+          4196887808033423360000000000000,
+          -1875923206007685120000000000000
+        ],
+        "plane_1_numerator": [
+          4196887808033423360000000000000,
+          1875923206007685120000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "223351790771484375/154742504910672534362390528",
+        "plane_2_numerator": [
+          613944727594598400000000000000,
+          -273996820709900288000000000000
+        ],
+        "plane_1_numerator": [
+          613944727594598400000000000000,
+          273996820709900288000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 11,
+        "selected_gain": 2,
+        "total_probability": "12758817626953125/77371252455336267181195264",
+        "plane_2_numerator": [
+          70142341687541760000000000000,
+          -31112979315425280000000000000
+        ],
+        "plane_1_numerator": [
+          70142341687541760000000000000,
+          31112979315425280000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 12,
+        "selected_gain": 2,
+        "total_probability": "4493902587890625/309485009821345068724781056",
+        "plane_2_numerator": [
+          6176372686848000000000000000,
+          -2674214410649600000000000000
+        ],
+        "plane_1_numerator": [
+          6176372686848000000000000000,
+          2674214410649600000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 13,
+        "selected_gain": 2,
+        "total_probability": "75579833984375/77371252455336267181195264",
+        "plane_2_numerator": [
+          415504531456000000000000000,
+          -163477192704000000000000000
+        ],
+        "plane_1_numerator": [
+          415504531456000000000000000,
+          163477192704000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 14,
+        "selected_gain": 2,
+        "total_probability": "7965087890625/154742504910672534362390528",
+        "plane_2_numerator": [
+          21894266880000000000000000,
+          -5838471168000000000000000
+        ],
+        "plane_1_numerator": [
+          21894266880000000000000000,
+          5838471168000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 15,
+        "selected_gain": null,
+        "total_probability": "177001953125/77371252455336267181195264",
+        "plane_2_numerator": [
+          973078528000000000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          973078528000000000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 15,
+        "dark_gain_two": 16,
+        "selected_gain": 1,
+        "total_probability": "91552734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          31457280000000000000000,
+          8388608000000000000000
+        ],
+        "plane_1_numerator": [
+          31457280000000000000000,
+          -8388608000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 0,
+        "selected_gain": 2,
+        "total_probability": "1167417424382212578125/19807040628566084398385987584",
+        "plane_2_numerator": [
+          25070098292510780135833600000000,
+          -11211688790648541098803200000000
+        ],
+        "plane_1_numerator": [
+          25070098292510780135833600000000,
+          11211688790648541098803200000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 1,
+        "selected_gain": 2,
+        "total_probability": "243778017084099609375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          83761488868794968309760000000000,
+          -37459276518446894311014400000000
+        ],
+        "plane_1_numerator": [
+          83761488868794968309760000000000,
+          37459276518446894311014400000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 2,
+        "selected_gain": 2,
+        "total_probability": "763579339971685546875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          131181931723186199592960000000000,
+          -58666342836600915886080000000000
+        ],
+        "plane_1_numerator": [
+          131181931723186199592960000000000,
+          58666342836600915886080000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 3,
+        "selected_gain": 2,
+        "total_probability": "372048303734501953125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          127834823765756844441600000000000,
+          -57169469186066266193920000000000
+        ],
+        "plane_1_numerator": [
+          127834823765756844441600000000000,
+          57169469186066266193920000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 4,
+        "selected_gain": 2,
+        "total_probability": "1009976042324716796875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          86756281430563409100800000000000,
+          -38798583236754879283200000000000
+        ],
+        "plane_1_numerator": [
+          86756281430563409100800000000000,
+          38798583236754879283200000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 5,
+        "selected_gain": 2,
+        "total_probability": "126540859179287109375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          43479108142622362828800000000000,
+          -19444437751371273338880000000000
+        ],
+        "plane_1_numerator": [
+          43479108142622362828800000000000,
+          19444437751371273338880000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 6,
+        "selected_gain": 2,
+        "total_probability": "96888208418955078125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          16645267461097757081600000000000,
+          -7443973969545265152000000000000
+        ],
+        "plane_1_numerator": [
+          16645267461097757081600000000000,
+          7443973969545265152000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 7,
+        "selected_gain": 2,
+        "total_probability": "14451490171142578125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          4965494213081825280000000000000,
+          -2220617719152115712000000000000
+        ],
+        "plane_1_numerator": [
+          4965494213081825280000000000000,
+          2220617719152115712000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 8,
+        "selected_gain": 2,
+        "total_probability": "27159948419677734375/9903520314283042199192993792",
+        "plane_2_numerator": [
+          1166510902235627520000000000000,
+          -521662070752542720000000000000
+        ],
+        "plane_1_numerator": [
+          1166510902235627520000000000000,
+          521662070752542720000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 9,
+        "selected_gain": 2,
+        "total_probability": "630196915283203125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          216534011294515200000000000000,
+          -96824136470364160000000000000
+        ],
+        "plane_1_numerator": [
+          216534011294515200000000000000,
+          96824136470364160000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 10,
+        "selected_gain": 2,
+        "total_probability": "184271245361328125/2475880078570760549798248448",
+        "plane_2_numerator": [
+          31657558896803840000000000000,
+          -14150282803937280000000000000
+        ],
+        "plane_1_numerator": [
+          31657558896803840000000000000,
+          14150282803937280000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 11,
+        "selected_gain": 2,
+        "total_probability": "10502435302734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          3608609292288000000000000000,
+          -1610482880348160000000000000
+        ],
+        "plane_1_numerator": [
+          3608609292288000000000000000,
+          1610482880348160000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 12,
+        "selected_gain": 2,
+        "total_probability": "3666326904296875/4951760157141521099596496896",
+        "plane_2_numerator": [
+          314935083008000000000000000,
+          -139695489024000000000000000
+        ],
+        "plane_1_numerator": [
+          314935083008000000000000000,
+          139695489024000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 13,
+        "selected_gain": 2,
+        "total_probability": "59600830078125/1237940039285380274899124224",
+        "plane_2_numerator": [
+          20478689280000000000000000,
+          -8866758656000000000000000
+        ],
+        "plane_1_numerator": [
+          20478689280000000000000000,
+          8866758656000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 14,
+        "selected_gain": 2,
+        "total_probability": "5584716796875/2475880078570760549798248448",
+        "plane_2_numerator": [
+          959447040000000000000000,
+          -377487360000000000000000
+        ],
+        "plane_1_numerator": [
+          959447040000000000000000,
+          377487360000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 15,
+        "selected_gain": 2,
+        "total_probability": "91552734375/1237940039285380274899124224",
+        "plane_2_numerator": [
+          31457280000000000000000,
+          -8388608000000000000000
+        ],
+        "plane_1_numerator": [
+          31457280000000000000000,
+          8388608000000000000000
+        ],
+        "count_pair_probability_given_trivial": 0
+      },
+      {
+        "dark_gain_one": 16,
+        "dark_gain_two": 16,
+        "selected_gain": null,
+        "total_probability": "30517578125/19807040628566084398385987584",
+        "plane_2_numerator": [
+          655360000000000000000,
+          0
+        ],
+        "plane_1_numerator": [
+          655360000000000000000,
+          0
+        ],
+        "count_pair_probability_given_trivial": 0
+      }
+    ],
+    "all_count_masses_verified_in_physical_coordinates": true
+  },
+  "physical_profile": {
+    "rows": [
+      {
+        "selected_gain": 1,
+        "finite_word": "constructive twice, then destructive twice",
+        "occupied_sheet_sites_after_each_probe": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "physical_counts": [
+          -1,
+          -1,
+          0,
+          2,
+          0
+        ],
+        "normalized_sheet_probabilities": [
+          "1/6",
+          "1/6",
+          "0",
+          "2/3",
+          "0"
+        ]
+      },
+      {
+        "selected_gain": 2,
+        "finite_word": "constructive twice, then destructive twice",
+        "occupied_sheet_sites_after_each_probe": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "physical_counts": [
+          0,
+          0,
+          -1,
+          2,
+          -1
+        ],
+        "normalized_sheet_probabilities": [
+          "0",
+          "0",
+          "1/6",
+          "2/3",
+          "1/6"
+        ]
+      },
+      {
+        "selected_gain": 3,
+        "finite_word": "constructive twice, then destructive twice",
+        "occupied_sheet_sites_after_each_probe": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "physical_counts": [
+          2,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "normalized_sheet_probabilities": [
+          "2/3",
+          "1/6",
+          "0",
+          "0",
+          "1/6"
+        ]
+      },
+      {
+        "selected_gain": 4,
+        "finite_word": "constructive twice, then destructive twice",
+        "occupied_sheet_sites_after_each_probe": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "physical_counts": [
+          0,
+          -1,
+          -1,
+          0,
+          2
+        ],
+        "normalized_sheet_probabilities": [
+          "0",
+          "1/6",
+          "1/6",
+          "0",
+          "2/3"
+        ]
+      }
+    ],
+    "interpretation": "Fixed physical gain, input, and record give the same coordinate table under every change of Fourier embedding. A genuinely different selected physical gain need not preserve spacings under native T-neighbour isometries. The example uses prescribed single-step transfers; its sheet table is conditional on that route and the four outcomes."
+  },
+  "limitations": "The exact five-sheet finite table is a one-register gain-one/gain-two classifier including all count-pair outcomes. The multisheet yields are ideal identification limits, not finite-time observations. Single-step routing records give known sheet translations; the stated fixed scanner block count excludes routing. The exact group-ring identity concerns real Gram entries. The sign of the imaginary orientation is free."
+}
