@@ -1,5 +1,5 @@
 {
-  "research_rerun": "Six research checkers ran into fresh temporary destinations. All thirteen generated results matched the working copies byte for byte.",
+  "research_rerun": "Eight research checkers ran into fresh temporary destinations. All seventeen generated results matched both working copies byte for byte.",
   "output_sha256": {
     "checks.json": "83dba60d1cbf7662e669655fbb221155ac1962adcd941f0bb6b5debc6a59194b",
     "filter_trials.csv": "91da8b349fad6ed65376f9c3ffd394a53c2fbe512e927b57395578bdce55db31",
@@ -13,7 +13,11 @@
     "native_embedding.json": "5e8b2424fbcadeb36abb48afd06b6d88a75d81022d1f6b748e90aa89da7e9011",
     "native_record_tree.csv": "9c86d63e96ae4e514e3b0dec2a821c13f0684717004cbe14014a3fd7ecea0689",
     "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
-    "band_preparation_flights.csv": "f4b28a7341f91fe3104a3605986b6c48e1017d5b9a95d94ca3c90bf342afe2ae"
+    "band_preparation_flights.csv": "f4b28a7341f91fe3104a3605986b6c48e1017d5b9a95d94ca3c90bf342afe2ae",
+    "relative_transport.csv": "c250b655e3d7e93c765efdf982f96957a9562807a2bbc5b73cdce7b7fdd44fa4",
+    "relative_transport.json": "15c53165421a78ab25c433f43b8e4fcde816eafd785ba53427d04467306413c1",
+    "position_records.json": "9e22f0243f6208e470d349421213d5e15cbd8656e936fa4116b6443e96fb2ff8",
+    "position_histories.csv": "3b396346dd641bc97dea7728cae7923e8421f4bef6f8c93f1070bf64ade3e549"
   },
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "numpy": "2.3.5",
@@ -37,7 +41,9 @@
     "probability_walk_trials.csv": 2920,
     "forced_envelope_trials.csv": 54774,
     "native_record_tree.csv": 573,
-    "band_preparation_flights.csv": 1300
+    "band_preparation_flights.csv": 1300,
+    "relative_transport.csv": 3060,
+    "position_histories.csv": 128
   },
   "baseline_payloads_rechecked": 967,
   "map_gates": 13,
@@ -66,7 +72,7 @@
     "affected": "first written phase-control expression",
     "first_run_pass": false
   },
-  "review_limits": "No physical correspondence has been established. The latest two-ray result has a same-participant proof and checks.",
+  "review_limits": "No physical correspondence has been established. Relative sheet transport, posterior acceptance yield and measured histories have same-participant proofs and checks.",
   "probability_selection_checks": {
     "character_recursion": true,
     "tag_permutation": true,
@@ -92,7 +98,9 @@
     "probability_selection": "a740fa5c385acc90f00ff588c0eda117e596814d09f0f8c6d6130a204bd16d62",
     "forced_envelope": "3462858d011c092027af36e6f8d4811da503123ea4f68d4f3ee4384a1ce30363",
     "native_embedding": "e05dae50ff867ee08d4f6058353031ca97a487e121553ea4aab5a894a469095b",
-    "band_preparation": "50efa87d2430699968f535e5841fa50975dad98808d57961a0d4f91d7cff87bc"
+    "band_preparation": "50efa87d2430699968f535e5841fa50975dad98808d57961a0d4f91d7cff87bc",
+    "relative_transport": "e15e6a5397e782b483df74e1170f0df948cb880f402eb883a37f8740b7d239f7",
+    "position_records": "11456c6d6e1be64968202e0d46411b78d99a60455f19b74aedbcdca86511254b"
   },
   "calibration_record_sha256_scope": "External fingerprint of the local session calibration record. The shared scientific packet includes the research controls.",
   "native_embedding_checks": {
@@ -123,9 +131,29 @@
     "director": "Director Z",
     "assessed_heads": [
       "b626c0d",
-      "00b8e26"
+      "00b8e26",
+      "d4f6fea"
     ],
     "review_artifacts_commit": "d21f101dcce9c962ebd0845dbbebebce8fd5a589",
-    "standing": "Cross-reading with exposure and contact. Separate Linux reruns of four checkers and separate code for selected analytic results. New base-preparation paper outside review."
+    "standing": "Cross-reading with exposure and contact. Separate Linux reruns of the earlier research and separate code for selected results. The base-preparation review retained a failed near-equal-mass predicate at delta = 0.2. New relative-transport and sequential-record results are outside this review.",
+    "base_preparation_review_commit": "4ebcf785f7bf498fffc44ce155c21165a47f72bc"
+  },
+  "relative_transport_checks": {
+    "destructive_preparation": true,
+    "complete_second_block": true,
+    "all_joint_counts": true,
+    "common_relabelling": true,
+    "tagged_nulls": true,
+    "finite_relation_words": true,
+    "all_followup_probes": true
+  },
+  "position_records_checks": {
+    "sign_probability_total": true,
+    "unitary_and_record_norms": true,
+    "conjugate_sheet_agreement": true,
+    "bin_word_complement": true,
+    "retained_site_coherence": true,
+    "sequential_bound": true,
+    "posterior_yield_inequalities": true
   }
 }

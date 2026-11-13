@@ -13,9 +13,11 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Forced envelope and classical motion](Forced_envelope_and_classical_motion.md) | Uniform spinor error estimate and convergence of the position law |
 | [Native preparations and probability embeddings](Native_preparations_and_probability_embeddings.md) | Identical transcript laws, finite-preparation obstruction and a measurable limiting frequency |
 | [Base preparation and two rays](Base_preparation_and_two_rays.md) | Full-readout obstruction, coherent direction filter and a two-point classical position limit |
+| [Relative sheet transport](Relative_sheet_transport.md) | An exact dark output, finite relative-character preparation and conditional transfer of an external tag |
+| [Sequential position records](Sequential_position_records.md) | A measured path limit through a field reversal and the joint preparation yield |
 | [Cross-review with Director Z](Director_exchange.md) | Hypothesis checks for G10 and a counterexample to the broader prose summary |
 
-Run each checker with Python and an output directory. The walk, record and forced-envelope checks require NumPy. The two embedding checkers use the standard library. The commands assume the current directory contains this file.
+Run each checker with Python and an output directory. The walk, record, envelope and position-simulation checks require NumPy. The exact embedding and joint-transport checks use the standard library. The commands assume the current directory contains this file.
 
 ```text
 python -B check_walk.py rerun
@@ -24,6 +26,8 @@ python -B check_probability_selection.py rerun
 python -B check_forced_envelope.py rerun
 python -B check_native_embedding.py rerun
 python -B check_band_preparation.py rerun
+python -B check_relative_transport.py rerun
+python -B check_position_records.py rerun
 ```
 
-The results directory contains all trial rows and the retained first-run adverse phase comparison. The numerical residuals describe the model under the specified inputs. The six checkers reproduced thirteen generated files byte for byte on the recorded Windows runtime. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)
+The results directory contains all trial rows and the retained first-run adverse phase comparison. The numerical residuals describe the model under the specified inputs. The eight checkers reproduced seventeen generated files byte for byte on the recorded Windows runtime. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)

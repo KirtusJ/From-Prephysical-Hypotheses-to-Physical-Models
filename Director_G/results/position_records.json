@@ -1,0 +1,890 @@
+{
+  "checks": {
+    "sign_probability_total": true,
+    "unitary_and_record_norms": true,
+    "conjugate_sheet_agreement": true,
+    "bin_word_complement": true,
+    "retained_site_coherence": true,
+    "sequential_bound": true,
+    "posterior_yield_inequalities": true
+  },
+  "synthetic_posterior_controls": [
+    {
+      "k": 4,
+      "acceptance": "0",
+      "target_in_accepted": "0",
+      "lower_bound": "-2.5277100236416704486091258565451872988059698546449216821436507720",
+      "upper_bound": "0.41450777202072538860103626943005181347150259067357512953367875648",
+      "agrees": true
+    },
+    {
+      "k": 12,
+      "acceptance": "0",
+      "target_in_accepted": "0",
+      "lower_bound": "-1.5522822780519709563687423042470132342511203977250273195901871652",
+      "upper_bound": "0.41450777202072538860103626943005181347150259067357512953367875648",
+      "agrees": true
+    },
+    {
+      "k": 32,
+      "acceptance": "0.30329827941760834206839414166843350124046951532363891601562500000",
+      "target_in_accepted": "0.30166594923909905141846345688873600000000000000000000000000000000",
+      "lower_bound": "-0.30944888638621443394170211978688511869374815987580698103674192297",
+      "upper_bound": "0.41450777202072538860103626943005181347150259067357512953367875648",
+      "agrees": true
+    },
+    {
+      "k": 80,
+      "acceptance": "0.39515229429426508635263714611613402060901794156431855989983995566",
+      "target_in_accepted": "0.39497425806015705169854857233695563256782826086551163866698394133",
+      "lower_bound": "0.33722520133690500395007897931177417764122147802755482840809928809",
+      "upper_bound": "0.41450777202072538860103626943005181347150259067357512953367875648",
+      "agrees": true
+    },
+    {
+      "k": 160,
+      "acceptance": "0.39989961475607605232993833093861271778310256583656054925815914863",
+      "target_in_accepted": "0.39989773613301075167478863966363697035331524094466883152249039381",
+      "lower_bound": "0.39888208781824081249432546520323613674793060795577939984493023160",
+      "upper_bound": "0.41450777202072538860103626943005181347150259067357512953367875648",
+      "agrees": true
+    }
+  ],
+  "flights": [
+    {
+      "order": 127,
+      "sign": -1,
+      "switched": false,
+      "delta": 0.39658523197928935,
+      "blocks": 10,
+      "preparation_success": 0.14226113934511342,
+      "steps": [
+        22,
+        37,
+        48
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.3722470146096464,
+        2.3078699791162234,
+        2.9939934864210462
+      ],
+      "sign_word_total": 0.9999999999999922,
+      "maximum_norm_or_partition_error": 3.1086244689504383e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9001961516500411,
+        "R": 0.9047093699652352
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        3.114899849719702e-05,
+        0.09595821082240381
+      ],
+      "all_other_bin_words_probability": 0.904010640179099
+    },
+    {
+      "order": 127,
+      "sign": 1,
+      "switched": false,
+      "delta": 0.39658523197928935,
+      "blocks": 10,
+      "preparation_success": 0.14226113934511342,
+      "steps": [
+        22,
+        37,
+        48
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.3722470146096464,
+        2.3078699791162234,
+        2.9939934864210462
+      ],
+      "sign_word_total": 0.9999999999999922,
+      "maximum_norm_or_partition_error": 3.1086244689504383e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9001961516500411,
+        "R": 0.9047093699652352
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        3.114899849719702e-05,
+        0.09595821082240381
+      ],
+      "all_other_bin_words_probability": 0.904010640179099
+    },
+    {
+      "order": 127,
+      "sign": -1,
+      "switched": true,
+      "delta": 0.39658523197928935,
+      "blocks": 10,
+      "preparation_success": 0.14226113934511342,
+      "steps": [
+        22,
+        37,
+        48
+      ],
+      "switch_step": 12,
+      "attained_times": [
+        1.3722470146096464,
+        2.3078699791162234,
+        2.9939934864210462
+      ],
+      "sign_word_total": 0.9999999999999926,
+      "maximum_norm_or_partition_error": 3.219646771412954e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.8729922780539439,
+        "R": 0.8908499615791919
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.004959306419344171,
+        0.006738405407326974
+      ],
+      "all_other_bin_words_probability": 0.9883022881733289
+    },
+    {
+      "order": 127,
+      "sign": 1,
+      "switched": true,
+      "delta": 0.39658523197928935,
+      "blocks": 10,
+      "preparation_success": 0.14226113934511342,
+      "steps": [
+        22,
+        37,
+        48
+      ],
+      "switch_step": 12,
+      "attained_times": [
+        1.3722470146096464,
+        2.3078699791162234,
+        2.9939934864210462
+      ],
+      "sign_word_total": 0.9999999999999926,
+      "maximum_norm_or_partition_error": 3.219646771412954e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.8729922780539439,
+        "R": 0.8908499615791919
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.004959306419344171,
+        0.006738405407326974
+      ],
+      "all_other_bin_words_probability": 0.9883022881733289
+    },
+    {
+      "order": 509,
+      "sign": -1,
+      "switched": false,
+      "delta": 0.28029027043341936,
+      "blocks": 24,
+      "preparation_success": 0.09575448950353571,
+      "steps": [
+        64,
+        104,
+        136
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.4093019139977039,
+        2.2901156102462688,
+        2.994766567245121
+      ],
+      "sign_word_total": 0.9999999999999761,
+      "maximum_norm_or_partition_error": 9.992007221626409e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9556767184634634,
+        "R": 0.9552905774051782
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.005745999914313212,
+        0.08989620300400661
+      ],
+      "all_other_bin_words_probability": 0.9043577970816802
+    },
+    {
+      "order": 509,
+      "sign": 1,
+      "switched": false,
+      "delta": 0.28029027043341936,
+      "blocks": 24,
+      "preparation_success": 0.09575448950353571,
+      "steps": [
+        64,
+        104,
+        136
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.4093019139977039,
+        2.2901156102462688,
+        2.994766567245121
+      ],
+      "sign_word_total": 0.9999999999999761,
+      "maximum_norm_or_partition_error": 9.992007221626409e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9556767184634634,
+        "R": 0.9552905774051782
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.005745999914313212,
+        0.08989620300400661
+      ],
+      "all_other_bin_words_probability": 0.9043577970816802
+    },
+    {
+      "order": 509,
+      "sign": -1,
+      "switched": true,
+      "delta": 0.28029027043341936,
+      "blocks": 24,
+      "preparation_success": 0.09575448950353571,
+      "steps": [
+        64,
+        104,
+        136
+      ],
+      "switch_step": 34,
+      "attained_times": [
+        1.4093019139977039,
+        2.2901156102462688,
+        2.994766567245121
+      ],
+      "sign_word_total": 0.9999999999999775,
+      "maximum_norm_or_partition_error": 9.658940314238862e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9425107697858894,
+        "R": 0.9427943195135672
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.009932995469557766,
+        0.012858496455426872
+      ],
+      "all_other_bin_words_probability": 0.9772085080750154
+    },
+    {
+      "order": 509,
+      "sign": 1,
+      "switched": true,
+      "delta": 0.28029027043341936,
+      "blocks": 24,
+      "preparation_success": 0.09575448950353571,
+      "steps": [
+        64,
+        104,
+        136
+      ],
+      "switch_step": 34,
+      "attained_times": [
+        1.4093019139977039,
+        2.2901156102462688,
+        2.994766567245121
+      ],
+      "sign_word_total": 0.9999999999999775,
+      "maximum_norm_or_partition_error": 9.658940314238862e-15,
+      "coherent_two_site_overlap": {
+        "L": 0.9425107697858894,
+        "R": 0.9427943195135672
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.009932995469557766,
+        0.012858496455426872
+      ],
+      "all_other_bin_words_probability": 0.9772085080750154
+    },
+    {
+      "order": 2039,
+      "sign": -1,
+      "switched": false,
+      "delta": 0.1981222090663309,
+      "blocks": 58,
+      "preparation_success": 0.06325653206717866,
+      "steps": [
+        180,
+        296,
+        386
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.399819342672388,
+        2.3019251412834825,
+        3.001834812619676
+      ],
+      "sign_word_total": 0.9999999999999304,
+      "maximum_norm_or_partition_error": 3.352873534367973e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9805251389948495,
+        "R": 0.9804932796149994
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.009188923810945628,
+        0.07957106384720335
+      ],
+      "all_other_bin_words_probability": 0.911240012341851
+    },
+    {
+      "order": 2039,
+      "sign": 1,
+      "switched": false,
+      "delta": 0.1981222090663309,
+      "blocks": 58,
+      "preparation_success": 0.06325653206717866,
+      "steps": [
+        180,
+        296,
+        386
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.399819342672388,
+        2.3019251412834825,
+        3.001834812619676
+      ],
+      "sign_word_total": 0.9999999999999304,
+      "maximum_norm_or_partition_error": 3.352873534367973e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9805251389948495,
+        "R": 0.9804932796149994
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.009188923810945628,
+        0.07957106384720335
+      ],
+      "all_other_bin_words_probability": 0.911240012341851
+    },
+    {
+      "order": 2039,
+      "sign": -1,
+      "switched": true,
+      "delta": 0.1981222090663309,
+      "blocks": 58,
+      "preparation_success": 0.06325653206717866,
+      "steps": [
+        180,
+        296,
+        386
+      ],
+      "switch_step": 96,
+      "attained_times": [
+        1.399819342672388,
+        2.3019251412834825,
+        3.001834812619676
+      ],
+      "sign_word_total": 0.9999999999999297,
+      "maximum_norm_or_partition_error": 3.375077994860476e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9730636827193582,
+        "R": 0.9734496604430883
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "two_word_probabilities": [
+        0.017193700784570977,
+        0.005373816113703262
+      ],
+      "all_other_bin_words_probability": 0.9774324831017258
+    },
+    {
+      "order": 2039,
+      "sign": 1,
+      "switched": true,
+      "delta": 0.1981222090663309,
+      "blocks": 58,
+      "preparation_success": 0.06325653206717866,
+      "steps": [
+        180,
+        296,
+        386
+      ],
+      "switch_step": 96,
+      "attained_times": [
+        1.399819342672388,
+        2.3019251412834825,
+        3.001834812619676
+      ],
+      "sign_word_total": 0.9999999999999297,
+      "maximum_norm_or_partition_error": 3.375077994860476e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9730636827193582,
+        "R": 0.9734496604430883
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "two_word_probabilities": [
+        0.017193700784570977,
+        0.005373816113703262
+      ],
+      "all_other_bin_words_probability": 0.9774324831017258
+    },
+    {
+      "order": 8191,
+      "sign": -1,
+      "switched": false,
+      "delta": 0.13994366280220658,
+      "blocks": 136,
+      "preparation_success": 0.042705021567475646,
+      "steps": [
+        511,
+        839,
+        1095
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.4004919285720645,
+        2.2994378240155813,
+        3.001054132654424
+      ],
+      "sign_word_total": 0.9999999999998,
+      "maximum_norm_or_partition_error": 9.636735853746359e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9913830878788871,
+        "R": 0.9913749464512922
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.02312823468164312,
+        0.06326531188612118
+      ],
+      "all_other_bin_words_probability": 0.9136064534322357
+    },
+    {
+      "order": 8191,
+      "sign": 1,
+      "switched": false,
+      "delta": 0.13994366280220658,
+      "blocks": 136,
+      "preparation_success": 0.042705021567475646,
+      "steps": [
+        511,
+        839,
+        1095
+      ],
+      "switch_step": null,
+      "attained_times": [
+        1.4004919285720645,
+        2.2994378240155813,
+        3.001054132654424
+      ],
+      "sign_word_total": 0.9999999999998,
+      "maximum_norm_or_partition_error": 9.636735853746359e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9913830878788871,
+        "R": 0.9913749464512922
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -2,
+          -4,
+          -7
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "two_word_probabilities": [
+        0.02312823468164312,
+        0.06326531188612118
+      ],
+      "all_other_bin_words_probability": 0.9136064534322357
+    },
+    {
+      "order": 8191,
+      "sign": -1,
+      "switched": true,
+      "delta": 0.13994366280220658,
+      "blocks": 136,
+      "preparation_success": 0.042705021567475646,
+      "steps": [
+        511,
+        839,
+        1095
+      ],
+      "switch_step": 274,
+      "attained_times": [
+        1.4004919285720645,
+        2.2994378240155813,
+        3.001054132654424
+      ],
+      "sign_word_total": 0.9999999999997964,
+      "maximum_norm_or_partition_error": 9.670042544485113e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9870321208614525,
+        "R": 0.9873305469275228
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.023364115130392757,
+        0.05574123722876739
+      ],
+      "all_other_bin_words_probability": 0.9208946476408398
+    },
+    {
+      "order": 8191,
+      "sign": 1,
+      "switched": true,
+      "delta": 0.13994366280220658,
+      "blocks": 136,
+      "preparation_success": 0.042705021567475646,
+      "steps": [
+        511,
+        839,
+        1095
+      ],
+      "switch_step": 274,
+      "attained_times": [
+        1.4004919285720645,
+        2.2994378240155813,
+        3.001054132654424
+      ],
+      "sign_word_total": 0.9999999999997964,
+      "maximum_norm_or_partition_error": 9.670042544485113e-14,
+      "coherent_two_site_overlap": {
+        "L": 0.9870321208614525,
+        "R": 0.9873305469275228
+      },
+      "site_dephased_two_site_overlap": 0,
+      "bin_width": 0.75,
+      "bin_offset": 0.18,
+      "two_bin_words": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "two_word_probabilities": [
+        0.023364115130392757,
+        0.05574123722876739
+      ],
+      "all_other_bin_words_probability": 0.9208946476408398
+    }
+  ],
+  "conjugation_maximum": 0.0,
+  "projection_control": [
+    {
+      "angle": 0.0,
+      "count": 1,
+      "budget": 0.0,
+      "loss": 0.0,
+      "disturbance_squared": 0.0
+    },
+    {
+      "angle": 0.0,
+      "count": 2,
+      "budget": 0.0,
+      "loss": 0.0,
+      "disturbance_squared": 0.0
+    },
+    {
+      "angle": 0.0,
+      "count": 7,
+      "budget": 0.0,
+      "loss": 0.0,
+      "disturbance_squared": 0.0
+    },
+    {
+      "angle": 0.0,
+      "count": 64,
+      "budget": 0.0,
+      "loss": 0.0,
+      "disturbance_squared": 0.0
+    },
+    {
+      "angle": 0.02,
+      "count": 1,
+      "budget": 0.0003999466695110299,
+      "loss": 0.0003999466695110421,
+      "disturbance_squared": 0.0003999466695110299
+    },
+    {
+      "angle": 0.02,
+      "count": 2,
+      "budget": 0.0005167127571454796,
+      "loss": 0.00048443926977381757,
+      "disturbance_squared": 0.00011679989368914206
+    },
+    {
+      "angle": 0.02,
+      "count": 7,
+      "budget": 0.001549766333338622,
+      "loss": 0.001560761015473311,
+      "disturbance_squared": 0.00036908104360769097
+    },
+    {
+      "angle": 0.02,
+      "count": 64,
+      "budget": 0.01301427320448882,
+      "loss": 0.011877780492149492,
+      "disturbance_squared": 0.00042194983942756676
+    },
+    {
+      "angle": 0.3,
+      "count": 1,
+      "budget": 0.08733219254516084,
+      "loss": 0.08733219254516089,
+      "disturbance_squared": 0.08733219254516082
+    },
+    {
+      "angle": 0.3,
+      "count": 2,
+      "budget": 0.11337629239831862,
+      "loss": 0.10458043567886488,
+      "disturbance_squared": 0.027694565529841494
+    },
+    {
+      "angle": 0.3,
+      "count": 7,
+      "budget": 0.3404162399820111,
+      "loss": 0.29920651345147886,
+      "disturbance_squared": 0.09550623893366308
+    },
+    {
+      "angle": 0.3,
+      "count": 64,
+      "budget": 2.8626621558103724,
+      "loss": 0.9339376947746878,
+      "disturbance_squared": 0.5743315444167738
+    },
+    {
+      "angle": 1.3,
+      "count": 1,
+      "budget": 0.9284443766844737,
+      "loss": 0.9284443766844737,
+      "disturbance_squared": 0.9284443766844737
+    },
+    {
+      "angle": 1.3,
+      "count": 2,
+      "budget": 1.3458199484030582,
+      "loss": 0.951098374614134,
+      "disturbance_squared": 0.711314412757946
+    },
+    {
+      "angle": 1.3,
+      "count": 7,
+      "budget": 4.126220975391828,
+      "loss": 0.9998916508299255,
+      "disturbance_squared": 0.9935087826052548
+    },
+    {
+      "angle": 1.3,
+      "count": 64,
+      "budget": 35.51789086476294,
+      "loss": 1.0,
+      "disturbance_squared": 0.9999999999999982
+    }
+  ]
+}
