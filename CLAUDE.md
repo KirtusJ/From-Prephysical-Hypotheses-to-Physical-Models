@@ -30,7 +30,7 @@ Rules for the stack:
 
 ## Running without the director
 
-The stack is defined in files so that it does not depend on one session: agent definitions in `.claude/agents/` (`pcp-challenger`, `pcp-micro-review`, `pcp-formalizer`, `pcp-cross-reviewer`) and a file queue in `REVIEW_QUEUE/` with its protocol. Any session, a scheduled routine or a sub-agent can serve the queue; reports go to the branch `pcp/review-queue` and never to `master`. The director reads that branch at the start of each working period, rechecks each report, and carries findings into the next edition. New statements are added to `REVIEW_QUEUE/QUEUE.md` when they are drafted. Changes to this hierarchy, with what worked and what did not, are logged in `Director_Z_pcp_workers/HIERARCHY_LOG.md`; check the child session's status at the start of each working period, because it shares the account's limits and stops silently.
+The stack is defined in files so that it does not depend on one session: agent definitions in `.claude/agents/` (`pcp-challenger`, `pcp-micro-review`, `pcp-formalizer`, `pcp-cross-reviewer`) and a file queue in `REVIEW_QUEUE/` with its protocol. Any session, a scheduled routine or a sub-agent can serve the queue; reports go to the branch `pcp/review-queue` and never to `master`. The director reads that branch at the start of each working period, rechecks each report, and carries findings into the next edition. New statements are added to `REVIEW_QUEUE/QUEUE.md` when they are drafted. Changes to this hierarchy, with what worked and what did not, are logged in `Director_Z/pcp_workers/HIERARCHY_LOG.md`; check the child session's status at the start of each working period, because it shares the account's limits and stops silently.
 
 ## Lessons paid for
 
@@ -47,6 +47,7 @@ The stack is defined in files so that it does not depend on one session: agent d
 - Programs: predicates in the docstring before the first run; result file that the program refuses to overwrite; fixed seed; rerun in a fresh directory and compare bytes.
 - Register: `.pcp/register.jsonl`, written through the `pcpos` tool server; one review per edition; objections that stand are recorded open. Copy the register into the edition in the same commit.
 - Lean: 4.12.0. Core-only files in `edition/COMPUTATION/Lean/`; Mathlib v4.12.0 files in `edition/COMPUTATION/Lean/Mathlib/` with their lakefile. A pass is exit code 0 with only `propext`, `Quot.sound` and `Classical.choice`.
+- Layout: the repository root holds only `README.md`, `AGENTS.md`, `CLAUDE.md`, `CONTRIBUTORS.md`, `edition/`, `Director_G/`, `Director_Z/`, `REVIEW_QUEUE/`, `.pcp/`, `.claude/` and the archive of edition Z3. Director Z's working copies go under `Director_Z/` (`papers/`, `addenda/`, `findings/`, `computation/`, `lean/`, `challenger/`, `cross_review/`, `comb/`, `pcp_workers/`). When files are moved, use `git mv`, write a manifest of old path, new path and digest, and check that the set of blobs is unchanged; dated records keep the path names of their day.
 - Branches: work on the session branch, fetch before every push, fast-forward `master` only. Never rewrite history. Do not touch `Director_G/`.
 - Identifiers: Director Z owns paper G10, findings `Z-…`, open problems to OP-30; Director G owns `Director_G/`, papers G11 on, OP-31 on.
 

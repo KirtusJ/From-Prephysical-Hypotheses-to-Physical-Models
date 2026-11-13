@@ -8,7 +8,7 @@ A file-based queue that lets review work run without the director present. Any C
 2. Find work, in this order:
    - items listed under **Open** in `REVIEW_QUEUE/QUEUE.md`;
    - any labelled statement of `edition/PAPERS/G10_*/source/body.tex` whose label has no report in `REVIEW_QUEUE/reports/` (run `pcp-challenger` and `pcp-micro-review` on it);
-   - any note in `Director_G/` newer than the newest `CROSS_REVIEW_OF_DIRECTOR_G*` file in `Director_Z_cross_review/` (run `pcp-cross-reviewer`);
+   - any note in `Director_G/` newer than the newest `CROSS_REVIEW_OF_DIRECTOR_G*` file in `Director_Z/cross_review/` (run `pcp-cross-reviewer`);
    - an outlier scan (`pcp-micro-review`) of every JSON result file if none is dated today.
 3. Do one item at a time with the matching agent definition. Work in a scratch directory. Keep failed predicates.
 4. Write one report per item: `REVIEW_QUEUE/reports/<UTC date>_<agent>_<target>.md`, beginning with three lines: target (file and label or commit), outcome (DEFECT / GAP / NONE FOUND), reviewer kind. Put the reviewer's program beside it in a folder of the same name. Move the item from **Open** to **Done** in `QUEUE.md` with the report's name.
@@ -19,7 +19,7 @@ A file-based queue that lets review work run without the director present. Any C
 ## Efficiency and periodic reports
 
 - Budget per item: challenger 10 minutes, cross-reviewer 12, formalizer 5, micro-review 2. Stop an item at twice its budget, file what you have and mark it partial.
-- Do not redo work that exists: before an item, list `REVIEW_QUEUE/reports/`, `Director_Z_cross_review/` and `edition/REVIEW_RECORDS/Director_Z/Session_4/` for the same target and commit; if a report exists for an unchanged statement, skip it.
+- Do not redo work that exists: before an item, list `REVIEW_QUEUE/reports/`, `Director_Z/cross_review/` and `edition/REVIEW_RECORDS/Director_Z/Session_4/` for the same target and commit; if a report exists for an unchanged statement, skip it.
 - Run items in parallel as sub-agents when they do not share files. Give each sub-agent only the file paths and line ranges it needs.
 - Reuse: keep one scratch library of carrier builders, exact cyclotomic arithmetic and consistency-equation solvers under `REVIEW_QUEUE/lib/` and import it, in place of rewriting them per item. Keep one Lean project with the Mathlib cache between items.
 - Programs: sample sizes just large enough for the predicate; no run above three minutes without a stated reason.
