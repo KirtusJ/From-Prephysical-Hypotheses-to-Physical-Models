@@ -1,0 +1,781 @@
+{
+ "seed": 20261113,
+ "predicates": {
+  "L0": {
+   "built": 60,
+   "qualifying": 49,
+   "met": true
+  },
+  "L1": {
+   "failures": 0,
+   "met": true
+  },
+  "L2": {
+   "pairs": 5689,
+   "pairs_with_equal_cylinders": 2129,
+   "failures": 0,
+   "met": true
+  },
+  "L3": {
+   "failures": 0,
+   "met": true
+  },
+  "L4": {
+   "consistent_family_failures": 0,
+   "count_family_digraphs_checked": 43,
+   "count_family_conflict_found": 43,
+   "met": true
+  },
+  "L5": {
+   "digraphs_with_dead_end": 11,
+   "counterexample_to_a_found_on": 11,
+   "example": {
+    "digraph": {
+     "0": [],
+     "1": [
+      1
+     ],
+     "2": []
+    },
+    "walk": [
+     0
+    ]
+   },
+   "met": true,
+   "note": "a walk ending where no history continues has an empty cylinder; (a) 'only if' fails without the hypothesis, which is stated in the section text before the lemma and not in the lemma"
+  },
+  "L6": {
+   "failures": 0,
+   "met": true
+  },
+  "A0": {
+   "built": 23,
+   "qualifying_graphs": 21,
+   "instances_with_gains": 63,
+   "met": true
+  },
+  "A1": {
+   "failures": 0,
+   "first_kind": 54,
+   "second_kind": 9,
+   "met": true
+  },
+  "A2": {
+   "failures": 0,
+   "met": true
+  },
+  "A3": {
+   "cycle_instances": 9,
+   "met": true
+  },
+  "A4": {
+   "solutions": "[{c: 0, f0: -1}, {c: 2, f0: 1}]",
+   "met": true,
+   "note": "hypothesis 'no loops' violated on purpose; recorded only"
+  }
+ },
+ "prop_add_instances": [
+  {
+   "name": "cycle n=3",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=3",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=3",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=4",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=4",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=4",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=5",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=5",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "cycle n=5",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=3",
+   "q": 1,
+   "d": 2,
+   "kind1": false,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=3",
+   "q": 2,
+   "d": 2,
+   "kind1": false,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=3",
+   "q": 3,
+   "d": 2,
+   "kind1": false,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=4",
+   "q": 1,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 3, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=4",
+   "q": 2,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 3, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "complete n=4",
+   "q": 3,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 3, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=5 {1,2}",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=5 {1,2}",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=5 {1,2}",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=6 {1,3}",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=6 {1,3}",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "circulant n=6 {1,3}",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #0",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #0",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #0",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=2 #1",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=2 #1",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=2 #1",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=1 #2",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=1 #2",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=1 #2",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #3",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #3",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #3",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #4",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #4",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=1 #4",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #5",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #5",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #5",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #6",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #6",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #6",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #7",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #7",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #7",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #8",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #8",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #8",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #9",
+   "q": 1,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 1, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #9",
+   "q": 2,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=4 d=1 #9",
+   "q": 3,
+   "d": 1,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 1, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #10",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #10",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #10",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=3 #11",
+   "q": 1,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 3, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=3 #11",
+   "q": 2,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 3, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=3 #11",
+   "q": 3,
+   "d": 3,
+   "kind1": false,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 3, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #12",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #12",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=5 d=2 #12",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #13",
+   "q": 1,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 1,
+   "sols_a1": "[{c: 2, f0: 1}]",
+   "sols_a0": "[{f0: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #13",
+   "q": 2,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 2,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "random n=6 d=2 #13",
+   "q": 3,
+   "d": 2,
+   "kind1": true,
+   "closed_gains": 3,
+   "sols_a1": "[{c: 2, f0: 1, f1: 1, f2: 1}]",
+   "sols_a0": "[{f0: 0, f1: 0, f2: 0}]",
+   "A1": true,
+   "A2": true
+  },
+  {
+   "name": "deliberately irregular",
+   "excluded": "hypothesis not met"
+  },
+  {
+   "name": "deliberately with loop",
+   "excluded": "hypothesis not met"
+  }
+ ],
+ "all_met": true
+}
