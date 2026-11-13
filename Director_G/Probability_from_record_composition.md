@@ -1,0 +1,78 @@
+# Which probability rule can the signed walk select?
+
+**From Prephysical Hypotheses to Physical Models**  
+**Kirtus Justus**, Theoretical Physicist  
+Port Coquitlam, British Columbia, Canada  
+Mathematical development and computational checks by Director G (Codex).
+
+The three-step sheet filter uses a squared amplitude to predict its own records. Requiring a distant record to keep its probability when another walker mixes its two channels puts that assumption to a test. On a continuous amplitude plane this requirement, rotation invariance and mild regularity force the squared norm. On the exact number field of the walk, even independent composition and every local unitary leave a finite choice of probability rules. A five-sheet example identifies both the ambiguity and a finite additional control that would resolve it.
+
+This calculation addresses P1, P5, P6, OP-21 and OP-27. It concerns a basis-record probability law conditional on the [signed walk and its instrument](Records_and_complex_structure.md). It assumes amplitude addition, a single weight for each elementary record, ordinary marginalization over exclusive records, and specified controls. The physical origin of these assumptions remains open.
+
+## A marginal test with one balanced coin
+
+Let \(W(v)>0\) for \(v\ne0\), with \(W(0)=0\). For a nonzero array of amplitudes \(v_i\), assign the probability \(W(v_i)/\sum_j W(v_j)\) to record \(i\). The rows of a joint array denote distinct Alice records. Its two columns are Bob's channels at a common site. Use amplitude representatives with the indicated entries, or assume the probabilities are invariant under an overall rescaling when preparations are specified as rays. The flags below refer to the *unread* joint preparation. Reading Bob's channels before mixing would change the experiment.
+
+Assume every array with rows \((a,b)\) and \((c,0)\), for arbitrary \(a,b\) and one fixed \(c\ne0\), is available. Allow Bob alone to operate the real coin \(H(a,b)=((a+b)/\sqrt2,(a-b)/\sqrt2)\) or to wait. Require Alice's row probability to agree under these two choices. This compares normalized probabilities and makes no assumption about the total raw weight after Bob's operation. The comparison of row odds gives
+\[
+ W((a+b)/\sqrt2)+W((a-b)/\sqrt2)=
+ k[W(a)+W(b)],\qquad k=2W(c/\sqrt2)/W(c).
+\]
+Taking \(b=0\) gives \(2W(a/\sqrt2)=kW(a)\). Substitution yields the parallelogram identity
+\[
+ W(a+b)+W(a-b)=2W(a)+2W(b). \tag{1}
+\]
+The flag preparations and independently timed coin are operational assumptions. The synchronized free product of two walks does not by itself supply them.
+
+For comparison, \(W(v)=|v|^p\) for any real \(p>0\) respects rotations, ray rescaling and factorization of all independent product statistics. On the two rows \((1,1),(1,0)\), Alice's first probability changes from \(2/3\) to \(2^p/(2^p+2)\) under Bob's coin. Only \(p=2\) passes. This calculation uses one exponent family. A single end-to-end probability test does not establish (1) for arbitrary inputs. Multiplicative norms and modifications of quantum probability have been investigated with distinct hypotheses. [Aubrun and Nechita](https://arxiv.org/abs/1102.2618) · [Aaronson](https://arxiv.org/abs/quant-ph/0401062)
+
+There is also a probe starting at a single site in the program's collision model. On the five-sheet character \(r=2\), start both walkers at \(0,R\), take two synchronized steps with sheet displacement \(x+y+\mathbf1_{x=y}\), then let Bob wait or take one **free** step alone. At \(p=4\), Alice's \((-2,L)\) probability changes from \(1/4\) to \((15+\sqrt5)/60\). With the contact removed it stays \(1/4\). At \(p=2\) it stays \(1/4\) with or without contact. These statements compare sums over all Bob records, including both channels. The computation uses exact field arithmetic. An independent timing choice and a specified sector remain necessary for this probe. The marginal test asserts an operational independence condition. A spacetime explanation of that condition belongs to P8.
+
+## The continuous plane
+
+Equation (1) implies \(W(-a)=W(a)\) and \(W(2a)=4W(a)\). Put \(B(a,b)=[W(a+b)-W(a-b)]/4\). It is symmetric and odd in each argument. Applying (1) twice gives \(B(a+c,b)+B(a-c,b)=2B(a,b)\). Setting \(c=a\) gives doubling. Substitution of \(a=(x+y)/2,\ c=(x-y)/2\) gives additivity. Thus \(B\) is rational bilinear and \(W(a)=B(a,a)\). Nonnegativity of \(W(a+qb)\) for rational \(q\) gives \(|B(a,b)|^2\le W(a)W(b)\).
+
+On \(V=\mathbb R^2\), assume \(W\) is bounded above on some Euclidean neighborhood of zero. The last inequality makes each additive map \(a\mapsto B(a,b)\) locally bounded. Doubling shows continuity at zero, and rational approximation gives real linearity. Consequently \(W(v)=v^\mathsf T Gv\) for a positive definite real symmetric matrix \(G\). Require the *same* readout to give \(W(Rv)=W(v)\) after the elementary holonomy rotation \(R=T^2\). In a faithful odd-order plane with \(M\ge3\) its angle is neither zero nor a half-turn. Therefore \(G\) commutes with a nontrivial planar rotation. A symmetric matrix with two distinct eigenvalues would give it a real invariant line. Hence \(G\) is a positive scalar multiple of the identity. The normalized record law is the squared Euclidean amplitude. The polarization step is related to the classic characterization of inner-product norms. [Jordan and von Neumann](https://doi.org/10.2307/1968653)
+
+Each premise has a distinct role. For instance, \(W(x+iy)=x^2+2y^2\) obeys the balanced-coin condition and fails the given rotation test. For coherent path sums (1) implies vanishing third-order interference by expansion of a quadratic form. Applying that identity to an actual path-blocking experiment also requires that blocking paths preserve the remaining amplitudes. The proof makes no assumption about post-measurement states and derives no general instrument. Reconstructions using unitary quantum mechanics and finite-dimensional ensemble estimation use other operational hypotheses, including assumptions under debate about measurement and state update. [Masanes, Galley and Müller](https://arxiv.org/abs/1811.11060) · [Kent](https://arxiv.org/abs/2307.06191) · [authors' reply](https://arxiv.org/abs/2309.01650)
+
+## Classification on the algebraic amplitude domain
+
+Fix odd \(M\ge3\), a primitive \(M\)-th root \(\zeta\), and \(K=\mathbb Q(\zeta,\sqrt2)\) in its usual complex embedding. This field contains the amplitudes of every finite walk from a basis state in a tagged character. Allowing *every* element of \(K\) as a relative preparation is a stronger hypothesis. It permits a classification and gives the alternatives the full range of algebraic tests. Denote ordinary complex conjugation by a bar and the fixed real subfield by \(F\).
+
+**Claim.** On \(K\), impose the flag test, invariance of \(W\) under multiplication by \(\zeta\), and factorization of independently prepared product tables. With \(W(1)=1\), the solutions are exactly
+\[
+                W(a)=\lambda(a\bar a),
+       \qquad \lambda:F\hookrightarrow\mathbb R
+       \text{ a field embedding}. \tag{2}
+\]
+Rotation by the elementary diamond suffices for this assertion when the character is faithful, since \(\zeta^2\) generates the same odd-order group. The proof uses no real-topology assumption.
+
+1. Comparing product-record odds for \((x,1)\otimes(y,1)\), between the \(xy\) and \(1\) cells, gives \(W(xy)=W(x)W(y)\). The flag argument gives the rational bilinear form \(B\). Polarization of rotation invariance yields \(B(\zeta x,y)=B(x,\bar\zeta y)\).
+2. From \(W(2)=4\), multiplicativity and positivity give \(W(\sqrt2)=2\). Thus \(B(\sqrt2 x,\sqrt2 y)=2B(x,y)\) and \(B(\sqrt2 x,y)=B(x,\sqrt2 y)\). These adjoint identities extend by rational linearity, products and inversion to every scalar \(s\in K\). In particular \(B(x,y)=B(1,\bar x y)\). For \(t\in F\) set \(\lambda(t)=B(1,t)\). Then \(W(x)=\lambda(\bar x x)\) and \(\lambda(1)=1\).
+3. Multiplicativity of \(W\) makes \(\lambda\) multiplicative on pairs of norms. Norms span \(F\) over \(\mathbb Q\), since every \(t\in F\) equals \(((t+1)^2-(t-1)^2)/4\). Bilinearity therefore extends the product identity to all pairs in \(F\). The unital homomorphism \(\lambda\) is injective.
+4. Conversely each embedding of \(F\) extends to a complex embedding \(\sigma\) of \(K\). Both fields lie in the abelian cyclotomic field \(\mathbb Q(\zeta_{8M})\), so the embedding can be extended there and commutes with conjugation. This gives \(W(a)=|\sigma(a)|^2\), which is positive, passes the flag test, and factorizes. The two extensions that differ by ordinary conjugation have the same weights. The cyclotomic Galois group and its action on primitive roots are standard. [Brian Conrad, proof for cyclotomic fields](https://math.stanford.edu/~conrad/121Page/handouts/cyclotomic.pdf)
+
+The ambiguity survives an extensive measurement menu. For any \(K\)-valued unitary, applying \(\sigma\) entrywise gives a unitary, including on an entangled array where Bob applies a local unitary. Alice's row masses are consequently invariant. More generally, a complete family of \(K\)-valued instrument matrices obeying \(\sum_j A_j^*A_j=I\) still obeys completeness after applying \(\sigma\). Use the unnormalized state \(A_jv\) on each branch and its embedded squared norm relative to the initial embedded squared norm for its probability. Summing probabilities over subsequent records recovers each parent probability. Conditioning a nonzero parent divides by its probability. This includes repeated and adaptively chosen tests without introducing normalizing square roots outside \(K\). It constructs one coherent instrument theory per embedding from the supplied algebraic instruments.
+
+## Five sheets and an operational discriminator
+
+Take \(\zeta=e^{2\pi i/5}\). There is an embedding fixing \(\sqrt2\) and sending \(\zeta\mapsto\zeta^2\). For example, send \(\zeta_{40}\mapsto\zeta_{40}^{17}\). Prepare the character \(r=2\) with a fixed external label. From \(0,R\) the three-step constructive record \(+1,R\) has amplitude \((\zeta^r+\zeta^{-r})/\sqrt8\). Its usual probability is \((3+\sqrt5)/16\), about 0.327254. With the other embedding it is \((3-\sqrt5)/16\), about 0.047746. Both tables normalize and pass every algebraic marginal test. Overall conjugation leaves this record invariant. In a sheet-localized preparation, averaging over the five sectors gives \(1/4\) in both theories.
+
+Indeed, for any native finite sequence starting from a localized sheet, the full sheet-coordinate matrices have entries in \(\mathbb Q(\sqrt2)\). The indicated embedding fixes every entry of the input, walk, sheet-coordinate projections and sheet-unresolved vertex projections. Every fine-grained or coarsened branch probability is consequently unchanged. This applies also to record-dependent stopping and to repeated conditional sheet filters on finite branches. In Fourier coordinates the embedding simply permutes the sector interpretations. Selecting a class by its own records cannot also provide an independent identification of its root of unity. The distinction concerns a fixed, externally calibrated algebraic label.
+
+One way to state the missing regularity uses \(q=\zeta+\zeta^{-1}=(\sqrt5-1)/2\). The amplitudes \(q^n\) tend to zero in the usual embedding. Their weights under \(\zeta\mapsto\zeta^2\) grow as \(((1+\sqrt5)/2)^{2n}\). Even the normalized probability of the second record of \((1,q^n)\) tends to opposite extremes. This sequence illustrates the local boundedness assumption with specified coordinates. Availability of those preparations or verification of a topology by the native apparatus remains open.
+
+**A finite alternative to assuming a topology.** On five sheets \(F=\mathbb Q(q,\sqrt2)\). Its four embeddings independently choose the two roots of \(q^2+q-1=0\) and either sign of \(\sqrt2\). Define \(s=q+\sqrt2-2\). In the intended embedding \(0<s<1\). In each of the other three, \(s<-1\). These bounds follow already from \(0.61<q<0.62\), \(-1.62<q'<-1.61\), and \(1.41<\sqrt2<1.42\). Suppose a calibrated normalized preparation or a column of a reversible mixer has this *specified algebraic entry* \(s\), with the rest observed as exclusive records and the unit fixed by the reference record. Require the embedding law to extend to the apparatus while keeping the total raw squared weight one. Then \(W(s)\le1\), which excludes all three alternatives. The usual embedding has the real orthogonal completion with first column \((s,\sqrt{1-s^2})\). No completion over \(K\) can furnish that column: applying the other embeddings to its normalization would leave a negative residual weight. Thus the proposed control requires an extension of the preparation resources, with a calibrated meaning for its designated entry. Merely forming the polynomial expression \(q+\sqrt2-2\) in the generated algebra does not implement the mixer. If the scale of a column can be freely changed before readout, the inequality carries no information.
+
+This example distinguishes three routes to the same basis probabilities. One may supply a regular real plane, a physically grounded order on its real algebraic amplitudes, or a calibrated extension that excludes the other embeddings. For the order route, an order-preserving unital embedding \(F\to\mathbb R\) fixes each element by the rational numbers on either side of it. The problem is to account for that order, bound or apparatus from independently available prephysical operations. Neither the weak-field ray nor successful sheet filtering supplies it.
+
+## Verification and status
+
+The [checker](check_probability_selection.py) enumerates all signed paths from both input channels through eight steps on five sheets. An independent recursion propagates tagged-character amplitudes. It records every endpoint, tag and embedding as four integer coefficients in the basis \(1,\zeta,\zeta^2,\zeta^3\) with a common probability denominator \(2^t\). The localized-sheet numerator is computed directly from signed sheet counts. Parseval's identity, total mass, conjugate orientation and tag permutation are checked exactly. The algebraic controls cover every pair in the 81-element coefficient alphabet \(\{-1,0,1\}^4\) at every primitive embedding. Collision controls compare exact numerator-denominator cross products. All computed endpoints and control outcomes are retained. [2,920 endpoint rows](results/probability_walk_trials.csv) · [control results](results/probability_selection.json)
+
+The calculations are mathematical and computational. The ordered-embedding and exponent illustrations are numerical evaluations of explicit formulas. No physical observations or independent assessment of the new proofs have been obtained. The operational closure of the native preparations, an endogenous discriminator of the probability rule, the physical clock and the quantum-to-classical correspondence remain open. The root claim is **UNRESOLVED**.
+
+The follow-up gives the all-protocol non-identification theorem, a sharp five-sheet preparation bound and the ordered probability limit that native records select. [Native preparations and probability embeddings](Native_preparations_and_probability_embeddings.md)
+
+For odd M, the solution count on the full field is φ(M). The cyclotomic extension of order 8M has Galois group the product of the units modulo 8 and modulo M. Restriction to the primitive M-th root and to √2 therefore gives independently φ(M) root images and two signs. Conjugating the images identifies pairs, giving φ(M) real embeddings. Director Z cross-checked the classification for the indicated scope. [Review record](Director_exchange.md)

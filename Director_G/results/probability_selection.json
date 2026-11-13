@@ -1,0 +1,784 @@
+{
+  "checks": {
+    "character_recursion": true,
+    "tag_permutation": true,
+    "localized_sheet_parseval": true,
+    "total_mass": true,
+    "three_step_witness": true,
+    "conjugate_orientation": true,
+    "all_algebraic_pairs": true,
+    "collision_and_free_controls": true,
+    "flag_witness": true,
+    "opposite_convergence": true,
+    "five_sheet_dilation_selector": true
+  },
+  "native_endpoint_rows": 2920,
+  "field_controls": {
+    "1": {
+      "pairs": 6561,
+      "failures": []
+    },
+    "2": {
+      "pairs": 6561,
+      "failures": []
+    },
+    "3": {
+      "pairs": 6561,
+      "failures": []
+    },
+    "4": {
+      "pairs": 6561,
+      "failures": []
+    }
+  },
+  "collision_rows": [
+    {
+      "contact": 0,
+      "p": 2,
+      "alice_site": -2,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 2,
+      "alice_site": 0,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 2,
+      "alice_site": 0,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 2,
+      "alice_site": 2,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 4,
+      "alice_site": -2,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          64,
+          0,
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 4,
+      "alice_site": 0,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          64,
+          0,
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 4,
+      "alice_site": 0,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          64,
+          0,
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "contact": 0,
+      "p": 4,
+      "alice_site": 2,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          64,
+          0,
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 2,
+      "alice_site": -2,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 2,
+      "alice_site": 0,
+      "alice_coin": -1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 2,
+      "alice_site": 0,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 2,
+      "alice_site": 2,
+      "alice_coin": 1,
+      "unchanged": true,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 4,
+      "alice_site": -2,
+      "alice_coin": -1,
+      "unchanged": false,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          14,
+          0,
+          -2,
+          -2
+        ],
+        [
+          60,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 4,
+      "alice_site": 0,
+      "alice_coin": -1,
+      "unchanged": false,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          60,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 4,
+      "alice_site": 0,
+      "alice_coin": 1,
+      "unchanged": false,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          14,
+          0,
+          -2,
+          -2
+        ],
+        [
+          60,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "contact": 1,
+      "p": 4,
+      "alice_site": 2,
+      "alice_coin": 1,
+      "unchanged": false,
+      "before_ratio": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ]
+      ],
+      "after_ratio": [
+        [
+          16,
+          0,
+          2,
+          2
+        ],
+        [
+          60,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "flag_power_controls": [
+    {
+      "p": 0.5,
+      "before": 0.6666666666666666,
+      "after": 0.4142135623730951,
+      "after_from_amplitudes": 0.41421356237309503
+    },
+    {
+      "p": 1,
+      "before": 0.6666666666666666,
+      "after": 0.5,
+      "after_from_amplitudes": 0.5000000000000001
+    },
+    {
+      "p": 1.5,
+      "before": 0.6666666666666666,
+      "after": 0.5857864376269051,
+      "after_from_amplitudes": 0.5857864376269051
+    },
+    {
+      "p": 2,
+      "before": 0.6666666666666666,
+      "after": 0.6666666666666666,
+      "after_from_amplitudes": 0.6666666666666669
+    },
+    {
+      "p": 3,
+      "before": 0.6666666666666666,
+      "after": 0.8,
+      "after_from_amplitudes": 0.8
+    },
+    {
+      "p": 4,
+      "before": 0.6666666666666666,
+      "after": 0.8888888888888888,
+      "after_from_amplitudes": 0.888888888888889
+    }
+  ],
+  "ordered_embedding_stress": [
+    {
+      "power": 0,
+      "weight": 1.0,
+      "other_weight": 1.0,
+      "binary_record": 0.5,
+      "other_binary_record": 0.5
+    },
+    {
+      "power": 1,
+      "weight": 0.3819660112501052,
+      "other_weight": 2.618033988749895,
+      "binary_record": 0.27639320225002106,
+      "other_binary_record": 0.7236067977499789
+    },
+    {
+      "power": 2,
+      "weight": 0.14589803375031551,
+      "other_weight": 6.854101966249686,
+      "binary_record": 0.1273220037500351,
+      "other_binary_record": 0.872677996249965
+    },
+    {
+      "power": 3,
+      "weight": 0.055728090000841245,
+      "other_weight": 17.944271909999163,
+      "binary_record": 0.052786404500042086,
+      "other_binary_record": 0.947213595499958
+    },
+    {
+      "power": 4,
+      "weight": 0.021286236252208202,
+      "other_weight": 46.978713763747805,
+      "binary_record": 0.02084257625004508,
+      "other_binary_record": 0.979157423749955
+    },
+    {
+      "power": 5,
+      "weight": 0.008130618755783355,
+      "other_weight": 122.99186938124426,
+      "binary_record": 0.008065044950046275,
+      "other_binary_record": 0.9919349550499538
+    },
+    {
+      "power": 6,
+      "weight": 0.0031056200151418616,
+      "other_weight": 321.996894379985,
+      "binary_record": 0.0030960050000467376,
+      "other_binary_record": 0.9969039949999533
+    },
+    {
+      "power": 7,
+      "weight": 0.0011862412896422284,
+      "other_weight": 842.9988137587108,
+      "binary_record": 0.0011848357885084538,
+      "other_binary_record": 0.9988151642114915
+    },
+    {
+      "power": 8,
+      "weight": 0.00045310385378482274,
+      "other_weight": 2206.9995468961474,
+      "binary_record": 0.0004528986436640047,
+      "other_binary_record": 0.999547101356336
+    },
+    {
+      "power": 9,
+      "weight": 0.00017307027171223962,
+      "other_weight": 5777.999826929732,
+      "binary_record": 0.00017304032357642107,
+      "other_binary_record": 0.9998269596764235
+    },
+    {
+      "power": 10,
+      "weight": 6.610696135189609e-05,
+      "other_weight": 15126.999933893048,
+      "binary_record": 6.610259151043384e-05,
+      "other_binary_record": 0.9999338974084896
+    },
+    {
+      "power": 11,
+      "weight": 2.5250612343448612e-05,
+      "other_weight": 39602.999974749415,
+      "binary_record": 2.524997476612411e-05,
+      "other_binary_record": 0.9999747500252338
+    },
+    {
+      "power": 12,
+      "weight": 9.644875678449738e-06,
+      "other_weight": 103681.99999035521,
+      "binary_record": 9.644782655720077e-06,
+      "other_binary_record": 0.9999903552173443
+    },
+    {
+      "power": 13,
+      "weight": 3.6840146919005987e-06,
+      "other_weight": 271442.9999963162,
+      "binary_record": 3.6840011199863476e-06,
+      "other_binary_record": 0.9999963159988801
+    },
+    {
+      "power": 14,
+      "weight": 1.407168397252057e-06,
+      "other_weight": 710646.9999985935,
+      "binary_record": 1.407166417131945e-06,
+      "other_binary_record": 0.9999985928335828
+    },
+    {
+      "power": 15,
+      "weight": 5.374904998555718e-07,
+      "other_weight": 1860497.9999994645,
+      "binary_record": 5.374902109596896e-07,
+      "other_binary_record": 0.999999462509789
+    },
+    {
+      "power": 16,
+      "weight": 2.05303102314658e-07,
+      "other_weight": 4870846.9999998,
+      "binary_record": 2.0530306016530282e-07,
+      "other_binary_record": 0.9999997946969398
+    }
+  ],
+  "dilation_selector": [
+    {
+      "q": 0.6180339887498949,
+      "root_two": 1.4142135623730951,
+      "proposed_entry": 0.032247551122989826,
+      "necessary_residual_weight": 0.9989600954465702
+    },
+    {
+      "q": 0.6180339887498949,
+      "root_two": -1.4142135623730951,
+      "proposed_entry": -2.7961795736232,
+      "necessary_residual_weight": -6.818620207947621
+    },
+    {
+      "q": -1.618033988749895,
+      "root_two": 1.4142135623730951,
+      "proposed_entry": -2.2038204263768,
+      "necessary_residual_weight": -3.856824471715621
+    },
+    {
+      "q": -1.618033988749895,
+      "root_two": -1.4142135623730951,
+      "proposed_entry": -5.03224755112299,
+      "necessary_residual_weight": -24.323515415783326
+    }
+  ],
+  "constructive_tag_r2": 0.32725424859373686,
+  "constructive_tag_r2_under_u2": 0.04774575140626314,
+  "numerical_scope": "Exact integer polynomial trials. Power, closed-form and convergence illustrations use binary64."
+}
