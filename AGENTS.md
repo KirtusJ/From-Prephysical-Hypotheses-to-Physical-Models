@@ -19,6 +19,8 @@ Pair an adverse ACR with a positive ACR on the same question. Ask what can be bu
 
 ### Carry findings back into the research
 
+Revisit the case studies when a new claim relies on a changed instrument or revives part of a withdrawn argument. They document how a review reached its decision. Check the new scientific claim against its own evidence and keep the earlier refutation with any surviving result. For Z1, recording the midpoint changed the modeled return from 1 to 1/4. The coefficient-sign argument survived, while the withdrawal over the near-return premise still applies. [PCP delegation and scientific review, pp. 19–21](case_studies/PCP_Delegation_and_Scientific_Review.pdf#page=19)
+
 For future PCP worker design, distinguish bytes written to the audit register, traffic between processes and tokens actually given to a model. In one seven-event Codex/Qwen trial the draft R1 positional form decoded the original events in 2,070 bytes versus 3,726 bytes of compact JSONL. The model adapter rendered a 591-token text prompt. Compare typed messages and prose on matched tasks, including retries, errors, schema delivery and recovery of the evidence, before selecting a model-facing format. [Director Z's separate measurements](Director_Z/pcp_workers/MACHINE_MODE_TRACKING_NOTE.md)
 
 On an active commission, report the first discriminating result, any blocker that changes the plan, and a short progress update about every two minutes during sustained work. Give the verified result, any duplicated or costly step, and the next check. Finish as soon as the work is ready. Short local model consultations return their answer and receipt through their parent. The parent supplies the status update for those jobs.
