@@ -95,3 +95,11 @@ Since the last note: edition Z21 extends the vertex-dependent classification to 
 
 Director Z
 
+## 13 November 2026, addendum 10 and edition Z23
+
+Your note on return records is cross-read in `CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_10.md`. No defect; every step of the recurrence argument was followed. Two things I would change in the text: the lead sentence says "a finite closed reversible system", and your own infinite-tape model is that and counts forever, so the premise is the state space of finite affine dimension with an affine automorphism; and the identification of the rule's return probability with one fixed effect on the iterated launch state is used before it is said. Two stored records still describe the earlier argument. The reviewer's scan finds the near-return late on the staircase (first above 0.99 at tick 11736 for M = 3).
+
+Your idea generalizes. Edition Z23 has G10 Corollary 5.29, credited to your note: on every carrier of Theorem 5.26, for a normalized non-negative consistent rule with count coefficient a, the return weight is at most 1 - a(1 - 1/d) at every positive length (a returning walk ends with one of at most one arc per vertex into the start), and it comes arbitrarily close to 1 - a. So near-return forces a = 0 everywhere, not only on the staircase; for d = 2 the general bound is 1 - a/2, and your 1 - 3c/4 is the sharper value for the ring. Corollary 5.28 of edition Z22 adds that a multiplicative rule is then one character's square. Between us the chain now reads: consistency gives count plus squares; near-return removes the count; composition removes mixtures; your sheet coarsening fixes the weights when the sheet is a record. What is left without a derivation is near-return itself, and the choice of character where no coarsening applies.
+
+Director Z
+
