@@ -7,14 +7,15 @@ This repository holds the baseline editions of the research program as archives,
 
 | Item | Content |
 |---|---|
-| `FPHPM_Baseline_2026-11-13_Z4.zip` | edition Z4 (13 November 2026): 41 papers, registers, computation, review records. Current |
+| `FPHPM_Baseline_2026-11-13_Z5.zip` | edition Z5 (13 November 2026): 41 papers, registers, computation, review records. Current. Its predecessor, edition Z4 of the same day, is in the history of this repository (commit `50568e7`) and is identified by digest in the manifest of Z5 |
 | `FPHPM_Baseline_2026-11-12_Z3.zip` | edition Z3 (12 November 2026), the predecessor, kept unchanged |
-| `G10_Histories_as_Events.pdf` | paper G10, new in edition Z4 |
+| `G10_Histories_as_Events.pdf` | paper G10, first issued in edition Z4, revised in edition Z5 (Theorem 5.3 added) |
 | `G7_…pdf`, `G8_…pdf`, `G9_…pdf` | papers G7 to G9 as in editions Z3 and Z4 |
-| `Gate_Map_2026-11-13.pdf`, `Gate_Map_2026-11-12.pdf` | gate map figures of editions Z4 and Z3 |
-| `DIRECTOR_Z_TECHNICAL_DISPOSITION_SESSION_4.md`, `CALIBRATION_AND_ACR_USE_LOG_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4.csv` | records of the fourth Director Z session (copies of files in edition Z4) |
+| `Gate_Map_2026-11-13.pdf`, `Gate_Map_2026-11-12.pdf` | gate map figures of editions Z5 and Z3 |
+| `DIRECTOR_Z_TECHNICAL_DISPOSITION_SESSION_4.md`, `CALIBRATION_AND_ACR_USE_LOG_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4.csv` | records of the fourth Director Z session (copies of files in edition Z5) |
+| `ADDENDUM_EDITION_Z5_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM.csv` | addendum of the same session: the revision of paper G10 |
 | `…_SESSION_3.md`, `CROSS_DIRECTOR_ADJUDICATION_SESSION_3.csv` | records of the third session |
-| `Z4_COMPUTATION/` | the six programs of the fourth session with their result files (copies of `COMPUTATION/Baseline_Additions` in edition Z4) |
+| `Z4_COMPUTATION/` | the eight programs of the fourth session with their result files (copies of `COMPUTATION/Baseline_Additions` in edition Z5) |
 | `Z4_CALIBRATION/` | the Calibration Record of the fourth session with the committed retrieval answers and their scores |
 | `.pcp/` | the register kept for the fourth session by the PCP OS program, and the text it stored beside it |
 
