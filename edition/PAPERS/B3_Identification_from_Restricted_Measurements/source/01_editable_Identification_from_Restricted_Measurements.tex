@@ -1,0 +1,358 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=.88in,headheight=15pt]{geometry}
+\usepackage{fontspec,amsmath,amsthm,booktabs,tabularx,fancyhdr,xcolor,hyperref,unicode-math}
+\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}\setmathfont{Latin Modern Math}
+\definecolor{ink}{HTML}{153D45}
+\hypersetup{pdftitle={Identification from restricted measurements},pdfauthor={Kirtus Justus},colorlinks=true,linkcolor=ink,urlcolor=ink}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\sffamily\color{ink}Identification from restricted measurements}\fancyfoot[R]{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{Tr}}\newcommand{\ket}[1]{\lvert#1\rangle}\newcommand{\proj}[1]{\ket{#1}\!\langle#1\rvert}
+\linespread{0.99}\raggedbottom\setlength{\emergencystretch}{2em}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}{\LARGE\sffamily\bfseries\color{ink}Identification from restricted measurements}\par\medskip
+{\large Kirtus Justus}\\Port Coquitlam, British Columbia, Canada\end{center}
+\begin{abstract}
+An experiment may identify a sharp interval even when it cannot identify a unique operation. We derive this interval for rectangular quantum operations with any finite discarded factor of dimension at least two. A joint semidefinite program gives the attainable ceiling, and regular-simplex states show why separately optimizing the pairs can overestimate it. Observing returned labels yields two-sided bounds, with a polygon formula for commuting data. Even full basis-output tomography can leave a finite interval. Calibrated coherent return measurements determine the weight by an average-fidelity identity. A single graph edge distinguishes relative precision from uniform absolute precision. For a specified graph pair, we compute the loss in total variation when a resolved eigenvalue is passed through the scale filter. A rare-success discrimination problem separates an assignment-independent lower bound, a bound that uses the allocation policy, and an attainable minimum for two specified laws. All trial probabilities in these examples are model values.
+\end{abstract}
+
+\section{What a phase scan fixes}
+In the two-qubit Choi space, use the output-first vectorization $\ket{A}=\operatorname{vec}(A)/2$ for a $4\times4$ unitary. Write $p=\ket{I_4}$, $u=\ket{iZ\otimes I_2}$ and $v=\ket{iX\otimes I_2}$. They are orthonormal. In a normalized Choi state $C$ write $s=C_{pp}$, $k=C_{uu}$ and $c=C_{pu}$. Read out the projector onto $\sqrt h\,p+\sqrt{1-h}\,u$ after applying $U_\phi=P+e^{i\phi}(I-P)$, $P=\proj{p}$. The probability is
+\[
+ q_\phi=hs+(1-h)k+2\sqrt{h(1-h)}\,\Re(e^{-i\phi}c).
+\]
+The constant term and the first harmonic determine $k$ and $c$ if $s$ is known and $0<h<1$. A coefficient here means the Fourier coefficient of $e^{-i\phi}$, not the peak-to-peak amplitude. For the curve $|\sqrt{sh}-e^{i\phi}\sqrt{k(1-h)}|^2$, $|c|^2=sk$. The positive block has determinant zero and rank one precisely when $s+k>0$. This includes the case in which one population vanishes; the zero trace case gives a zero block. Inverting the harmonic amplifies absolute error by $1/\sqrt{h(1-h)}$. No such division is available at either endpoint. In particular, an arbitrary complete phase curve need not saturate the determinant constraint.
+
+\begin{proposition}
+At each endpoint $h=0$ or $h=1$, two trace-preserving channels can agree on the full phase curve and the complete output for each computational-basis input while their Choi purities differ.
+\end{proposition}
+\begin{proof}
+Take $C_1=(\proj p+\proj u)/4+\proj v/2$ and $C_2=(p-u)(p-u)^\dagger/4+\proj v/2$. Their Kraus lists are respectively
+\[
+ (I_4/2,\ iZ\otimes I_2/2,\ iX\otimes I_2/\sqrt2),\qquad
+ ((I_4-iZ\otimes I_2)/2,\ iX\otimes I_2/\sqrt2).
+\]
+Each list has $\sum K_j^\dagger K_j=I_4$. Both Choi states have $s=k=1/4$. The endpoint projectors commute with $U_\phi$, so both click rates are constantly $1/4$. The nonzero Choi spectra are $(1/2,1/4,1/4)$ and $(1/2,1/2)$, giving purities $3/8$ and $1/2$. For either list, a basis input $\ket{a,b}$ produces the equal mixture of $\ket{a,b}$ and $\ket{1-a,b}$. On $\ket{+,0}$ the first list gives zero first-qubit $Y$ expectation. In the second, the coherent Kraus term has probability $1/2$ and rotates $+X$ to $+Y$; the other term leaves $+X$. The positive $Y$ outcome has probabilities $1/2$ and $3/4$, respectively.
+\end{proof}
+
+\section{A graph comparison blind on every pair}
+For a real symmetric matrix $H$ and either $\psi_{ij}^\pm=(\ket i\pm i\ket j)/\sqrt2$,
+$\langle \psi_{ij}^\pm,H\psi_{ij}^\pm\rangle=(H_{ii}+H_{jj})/2$.
+Take the rook and Shrikhande graphs on $(\mathbb Z/4\mathbb Z)^2$. The rook graph connects distinct vertices in a common row or column. The Shrikhande connection set is $\{\pm(1,0),\pm(0,1),\pm(1,1)\}$. Both have Laplacian eigenvalues $0,4,8$ with multiplicities $1,6,9$. For instance one can evaluate the corresponding Fourier characters, or use the strongly regular identity $A^2=4I+2\mathbf1\mathbf1^T$ for their adjacency matrices and $L=6I-A$. Translation invariance makes each spectral projector have constant diagonal equal to its rank divided by 16. Thus each of the 120 labelled pairs has exactly the same three masses $(1,6,9)/16$ in both graphs, including the zero-mode output. Every positive-scale probability density calculated from those masses agrees.
+
+The rook graph has eight four-cliques, its rows and columns. A four-clique in the Shrikhande graph would give a triangle among the neighbors of any of its vertices. Those neighbors induce a six-cycle, so there is no four-clique \cite{brouwer}. The graphs are nonisomorphic. By contrast the real plus and minus preparations give $\Delta p_0=2/16$. The ratio in the labelled-pair reconstruction theorem then applies under its matched-population and apparatus assumptions. The four-vertex weighted extension that agrees with a rook probe through inverse moment three uses a different comparator and a different probe.
+
+\subsection*{How much phase information reaches the scale readout?}
+Keep the common vertex labelling. Choose $i=(0,0)$ and $j=(0,2)$, and prepare $(\ket i+e^{i\phi}\ket j)/\sqrt2$. Write $c=\cos\phi$. The vertices are neighbors in the rook graph alone. For a single preparation with this phase, the space of eigenvalues is a finer observation than the output of the scale filter.
+
+\begin{proposition}[Distinguishability of the two readouts]
+For this pair the two spectral laws, in the order $0,4,8$, are
+\[
+ p_R=\left(\frac{1+c}{16},\frac{3+c}{8},\frac{9-3c}{16}\right),\qquad
+ p_S=\left(\frac{1+c}{16},\frac{3-c}{8},\frac{9+c}{16}\right).
+\]
+Their total variation distances before and after the ideal scale measurement are
+\[
+ \operatorname{TV}_{\rm spec}=\frac{|c|}{4},\qquad
+ \operatorname{TV}_{\rm scale}=\frac{3+4\log 2}{64}|c|.
+\]
+\end{proposition}
+\begin{proof}
+Let $A$ be adjacency and $P_0=\mathbf1\mathbf1^T/16$. Then $P_4=(A+2I-8P_0)/4$ and $P_8=I-P_0-P_4$ are the other two spectral projectors of $L=6I-A$. For a real symmetric projector $P$, the pair probability is $(P_{ii}+P_{jj})/2+cP_{ij}$. Substitution gives the displayed laws. Their signed differences at eigenvalues 4 and 8 are $c/4$ and $-c/4$. The zero-mode probabilities agree.
+
+Conditional on a positive eigenvalue $\lambda$, the scale density is $f_\lambda(s)=4s\lambda^2e^{-2s\lambda}$. The two positive-mode densities cross once, at $t=\log(4)/8$. The conditional scale distributions have total variation $F_8(t)-F_4(t)=(3+4\log 2)/16$, where $F_\lambda(t)=1-(1+2\lambda t)e^{-2\lambda t}$. Scaling this difference by $|c|/4$ proves the formula. For $c\ne0$ the filter retains $36.0786795\ldots\%$ of the one-observation spectral total variation. A threshold at $t$ attains the single-observation scale total variation; this statement does not assert sufficiency for a repeated likelihood-ratio test.
+\end{proof}
+
+The fixed Cayley labellings have four common neighbor displacements per vertex, two unique to each graph, and seven nonneighbor displacements common to both. Dividing the directed counts by two gives 32 common edges, 16 edges unique to each graph, and 56 common nonedges. Thus 32 of the 120 unordered pairs distinguish these graphs for $c\ne0$ and the other 88 agree for all phases. The count uses this specific labelling.
+
+\paragraph{A necessary sample count.}
+For this same pair let $A(c)=\sum_\lambda\sqrt{p_R(\lambda)p_S(\lambda)}$ denote the root fidelity, also called the affinity:
+\[
+ A(c)=\frac{1+c}{16}+\frac{\sqrt{9-c^2}}8
+       +\frac{\sqrt{(9-3c)(9+c)}}{16}.
+\]
+Independent repetitions raise the affinity to $A(c)^N$. The total variation of the product laws is at most $\sqrt{1-A(c)^{2N}}$ by the fidelity--distance inequality \cite[Theorem~3.33]{watrous}. A size-$0.05$ test with power at least $0.95$ needs total variation at least $0.90$. For $c\ne0$ this gives
+\[
+ N\ge\left\lceil\frac{\log(0.19)}{2\log A(c)}\right\rceil.
+\]
+The scale record is obtainable by a random transformation of the spectral record, so the same lower bound applies to it. At $c=0$, the laws coincide. Expansion around zero gives $1-A(c)=5c^2/144+O(c^3)$. The bound consequently grows as $1/c^2$ even though the one-record total variation decays linearly in $|c|$.
+
+The affinity need not be even in $c$. The integer lower bounds are 2,380 at $c=+0.1$ and 2,402 at $c=-0.1$. The reproducibility packet encloses the square roots by rationals and compares their powers directly with $19/100$ on each side of both integer crossings. These are lower bounds for repetitions of the same labelled probe at a known phase. They are not attainable budgets established by this inequality.
+
+\paragraph{Population identification and absolute precision.}
+On two vertices joined by a single edge of conductance $g>0$, the real plus and minus preparations have zero-mode probabilities one and zero. The minus preparation has density $f_g(s)=16g^2s e^{-4gs}$, with mean $1/(2g)$. Direct integration gives, for $r=g'/g$,
+\[
+ D_{\rm KL}(f_g\Vert f_{g'})=2(r-1-\log r).
+\]
+For any single preparation the zero-mode mass is independent of $g$, and the positive part is a multiple of $f_g$. The one-use divergence is therefore at most the displayed value. In $N$ fresh uses a shared adaptive rule may choose the next preparation from the recorded history. The chain rule bounds the record divergence by $2N(r-1-\log r)$ because the assignment probabilities conditional on the same history agree. Pinsker's inequality bounds record total variation by $\sqrt{N(r-1-\log r)}$ \cite{poly}. In fixed conductance units take $g'=g+\sqrt g$. Then the absolute difference diverges while the record laws approach each other at every fixed $N$. For any fixed accuracy radius, the two accuracy intervals eventually become disjoint. Uniform success probability strictly above $1/2$ would yield a binary test contradicting this limit. The quantifier concerns these scale measurements with an unbounded range of conductances.
+
+A positive precision result holds in the same experiment. From $N$ independent minus preparations observe $T=\sum_{i=1}^N s_i$. Then $8gT$ has a $\chi^2$ law with $4N$ degrees of freedom. For $0<\alpha<1$, let $u_p$ denote its $p$-quantile. The interval
+\[
+ \left[\frac{u_{\alpha/2}}{8T},\frac{u_{1-\alpha/2}}{8T}\right]
+\]
+has coverage $1-\alpha$ at every $g>0$ and a fixed ratio of endpoints. This relative guarantee uses a calibrated scale and complete positive-scale records.
+
+\section{A binary discarded factor in any finite first dimension}
+Consider a nonzero completely positive, trace-nonincreasing branch from $\mathbb C^d\otimes\mathbb C^2$ to $\mathbb C^{d'}\otimes\mathbb C^2$. Both first dimensions are positive and can differ. Its Kraus operators are $K_j$. Write $\tau_{ab}$ for the positive first-output marginal on input $\ket{a,b}$ with $1\le a\le d$, $b=0,1$. Its trace $s_{ab}$ is the probability of success. Write $S=\sum s_{ab}>0$. The local operator subspace is $\mathcal V=\{V\otimes I_2: V:\mathbb C^d\to\mathbb C^{d'}\}$. Its normalized Choi weight is $w=\sum_j\|\Pi_{\mathcal V}K_j\|_F^2/S$, independent of Kraus representation. Define $F_*(A,B)=\|\sqrt A\sqrt B\|_1$ and $d_*(A,B)=\tr A+\tr B-2F_*(A,B)$.
+
+\begin{theorem}
+For prescribed positive $\tau_{ab}$ with $0\le s_{ab}\le1$ and $S>0$, the complete set of compatible weights is
+\[
+ [0,w_{\max}],\qquad
+ w_{\max}=1-\frac1{2S}\sum_{a=1}^d d_*(\tau_{a0},\tau_{a1}).
+\]
+\end{theorem}
+\begin{proof}
+In second-bit blocks write $K_j=\left(\begin{smallmatrix}A_j&B_j\\ C_j&D_j\end{smallmatrix}\right)$. All four blocks are $d'\times d$. Projection averages the diagonal blocks and removes the others. Consequently $S(1-w)=\sum_j(\|A_j-D_j\|_F^2/2+\|B_j\|_F^2+\|C_j\|_F^2)$. For the dilation columns $u_{ab}=\sum_jK_j\ket{a,b}\otimes\ket j$, let $X_B$ flip the second output. Then
+\[
+ \sum_a\|u_{a0}-X_Bu_{a1}\|^2
+ =\sum_j(\|A_j-D_j\|_F^2+\|C_j-B_j\|_F^2)\le2S(1-w).
+\]
+Uhlmann's purification theorem bounds the real overlap of each aligned pair by $F_*$ of its two marginals. This bounds the left side below by the sum of the $d_*$'s \cite[Theorem~3.22]{watrous}.
+
+For each $a$ choose purifications attaining this overlap in an environment orthogonal to those used for the other first labels. Give each column its second output flag $\ket b$. Different columns are mutually orthogonal with squared norms $s_{ab}$. They define a single contraction, hence a common admissible branch. Its off-diagonal blocks vanish, and every pair attains equality simultaneously. A zero marginal is represented by a zero column. Now flip the discarded output of this attaining branch. All Kraus blocks are off diagonal in the second factor, so their projections vanish. Tracing out that factor leaves the first-output map identical for every input. A convex mixture with the first branch has the same $S$ and interpolates linearly in $w$. This proves the complete interval.
+\end{proof}
+\section{A discarded factor of arbitrary finite dimension}
+Let the branch map $\mathbb C^d\otimes\mathbb C^q$ to $\mathbb C^{d'}\otimes\mathbb C^q$, with $q\ge2$. Input and output use the same specified basis on the second factor. For each basis input $(a,b)$ let $\tau_{ab}$ be the unnormalized first-output marginal, $s_{ab}=\tr\tau_{ab}\le1$, and $S=\sum_{a,b}s_{ab}>0$. Define the weight $w$ using Hilbert--Schmidt projection onto the rectangular matrices $V\otimes I_q$. These data contain one positive matrix per input, without coherences between different input preparations.
+
+For each $a$ let $X=[X_{bc}]$ be a $q\times q$ block matrix of $d'\times d'$ operators and define
+\[
+ T_a=\max\left\{\sum_{b,c}\Re\tr X_{bc}:X\succeq0,\quad X_{bb}=\tau_{ab}\right\}.
+\]
+The diagonal choice is feasible. Positive $X$ has fixed trace $\sum_b s_{ab}$, so the feasible set is compact, including for singular or zero marginals.
+
+\begin{theorem}[Exact interval from all basis-input marginals]
+Over all common completely positive, trace-nonincreasing operations with the stated marginals, the compatible set is
+\[
+ \boxed{\mathcal I_w=[0,W],\qquad W=\frac{\sum_aT_a}{qS},\qquad 1/q\le W\le1.}
+\]
+When every input succeeds with probability one, the endpoint constructions preserve trace.
+\end{theorem}
+\begin{proof}
+Write $K_j^{tb}$ for a Kraus block sending second-input label $b$ to second-output label $t$. Set $\xi_{ab}=\sum_j K_j^{bb}\ket a\otimes\ket j$. Orthogonal projection onto $V\otimes I_q$ averages the $q$ diagonal blocks and annihilates the others. Thus
+\[
+ qSw=\sum_a\left\|\sum_b\xi_{ab}\right\|^2 .
+\]
+The reduced operator of $\xi_{ab}$ is bounded by $\tau_{ab}$, because tracing out the second output also sums the positive contributions of the blocks $t\ne b$. Purify each positive remainder in a fresh environment orthogonal to the original one and to the remainders for other $b$. Adding these components gives purifications $\zeta_{ab}$ of the full marginals. Their sum has squared norm at least that of the original sum. For fixed $a$, their reduced block Gram matrix $X_{bc}=\tr_E\ket{\zeta_{ab}}\!\langle\zeta_{ac}|$ is positive with the prescribed diagonal. Its objective is the squared norm of this sum. This proves the upper bound.
+
+Conversely, factor an optimal block matrix as $X_{bc}=A_bA_c^\dagger$. Vectorizing the $A_b$ gives common purifications attaining the objective. Assign the dilation column $\zeta_{ab}$ second-output flag $\ket b$, and use mutually orthogonal environments for different $a$. The columns are mutually orthogonal with squared norms $s_{ab}$. Their Gram matrix is bounded by identity, so they define one admissible branch on all inputs, including zero columns. Its projection attains $W$. A cyclic shift of the second output puts every Kraus block off the diagonal and preserves the entire first-output map of this construction, giving $w=0$. Mixing both branches keeps $S$ fixed and fills the interval. The diagonal feasible choice gives $T_a\ge\sum_b s_{ab}$, while Cauchy--Schwarz gives $T_a\le q\sum_b s_{ab}$. With all $s_{ab}=1$ the dilation is an isometry. For $q=1$, separately, the local subspace is the whole operator space and every nonzero branch has $w=1$.
+\end{proof}
+
+\paragraph{Published fidelity and certificates.}
+In the multivariate semidefinite-programming fidelity convention of Nuradha, Mishra, Leditzky and Wilde \cite[Def.~5.8, Rem.~5.9, Prop.~5.10]{multi},
+\[
+ T_a=\sum_bs_{ab}+q(q-1)F_{\rm SDP}(\tau_{a1},\ldots,\tau_{aq}).
+\]
+This follows by separating diagonal from off-diagonal traces. The fidelity program, its dual and continuity results are established prior work. The theorem identifies the operation that attains its value for this observation class. An explicit upper certificate is any tuple of Hermitian $H_b$ satisfying
+\[
+ \operatorname{diag}(H_b)\succeq \mathbf1\mathbf1^T\otimes I_{d'},
+ \qquad T_a\le\sum_b\tr(H_b\tau_{ab}).
+\]
+The infimum equals $T_a$: the constraint is the SDP dual and a sufficiently large scalar tuple is strictly dual feasible. Equality of a feasible primal and dual objective certifies an endpoint. For $q=2$ the only off-diagonal overlap reduces to ordinary root fidelity. For $q>2$ all overlaps must admit a common positive block completion.
+
+\paragraph{A simplex exposes the difference.}
+Take a single first-input label and $q$ pure unit-success marginals from unit vectors $x_b$ of a real regular simplex in $\mathbb R^{q-1}$. Distinct vectors have overlap $-1/(q-1)$. Any common purifications have the form $x_b\otimes e_b$ with unit $e_b$, so
+\[
+ \left\|\sum_b x_b\otimes e_b\right\|^2
+   =\frac{q^2}{q-1}-\frac1{q-1}\left\|\sum_b e_b\right\|^2 .
+\]
+The $q$ roots of unity give unit $e_b$ summing to zero. With the flags above the resulting columns form an isometry. The exact weight ceiling is $1/(q-1)$, whereas replacing every off-diagonal term by its independently maximized overlap would give $2/q$. At $q=3$ the true and pairwise values are $1/2$ and $2/3$. Pairwise and joint fidelities can differ in published examples as well \cite[Sec.~5.5.1]{multi}.
+
+There is a simple full-rank check of both certificates. For $q=3$ take trine projectors $P_b$ on $\mathbb C^2$ and $\tau_b=(I+8P_b)/10$. These matrices do not commute. Their square roots $A_b=(I+2P_b)/\sqrt{10}$ sum to $cI$, $c=6/\sqrt{10}$. The block matrix $X_{bc}=A_b A_c^\dagger$ attains objective $2c^2=36/5$. For the dual take $H_b=cA_b^{-1}$. Since $\sum H_b^{-1}=I$, the block-diagonal tuple dominates $\mathbf1\mathbf1^T\otimes I$ by Cauchy--Schwarz, or a Schur complement. Its objective is also $2c^2$. Thus the interval is exactly $[0,4/5]$ for these mixed noncommuting marginals. Both endpoints are trace-preserving.
+
+\subsection*{Stability of the identified interval}
+Write $\delta=\sum_{ab}\|\tau_{ab}-\tau'_{ab}\|_1$, and use primes for the second table's values. A dimension-independent sufficient bound for $S,S'>0$ is
+\[
+ |W-W'|\le\min\!\left(1,\frac{(\sqrt S+\sqrt{S'})\sqrt\delta+\delta}{\min(S,S')}\right).
+\]
+To see this, perturb optimizing purifications to purifications of the primed blocks. For each arm the least squared change is $s_{ab}+s'_{ab}-2F_*(\tau_{ab},\tau'_{ab})\le\|\tau_{ab}-\tau'_{ab}\|_1$, by Uhlmann alignment and the Powers--Størmer square-root inequality \cite{powers,watrous}. The triangle inequality and interchange of tables give $|\sqrt{T_a}-\sqrt{T'_a}|\le\sqrt{q\delta_a}$, where $\delta_a=\sum_b\|\tau_{ab}-\tau'_{ab}\|_1$. Using $T_a\le q\sum_b s_{ab}$ and Cauchy--Schwarz over $a$ bounds $|\sum T_a-\sum T'_a|$ by $q(\sqrt S+\sqrt{S'})\sqrt\delta$. Divide by the respective success sums, using $|S-S'|\le\delta$ and $W,W'\le1$. For $S=S'$ the normalization term vanishes, giving $2\sqrt{\delta/S}$.
+
+A stronger form accounts for common positive rescaling of each whole table. Let $R=\bigoplus_{ab}\tau_{ab}/S$, $R'=\bigoplus_{ab}\tau'_{ab}/S'$ and $D=\|R-R'\|_1$. Then
+\[
+ |W-W'|\le\sqrt{1-F_*(R,R')^2}\le\sqrt{D(1-D/4)} .
+\]
+Indeed the direct sum of the optimizing purifications, divided by $\sqrt S$, is a unit vector. Its squared projection onto the uniform $b$ direction in each $a$ sector equals $W$. Align purifications of the primed blocks individually so the corresponding unit vector has overlap $\sum F_*(\tau_{ab},\tau'_{ab})/\sqrt{SS'}=F_*(R,R')$ with the first. The primed projection probability is at most $W'$. The variation of any projection probability is at most the trace distance of the pure states. Reversing the two tables and applying the fidelity--distance inequalities proves the result \cite[Thm.~3.33]{watrous}. For normalized marginal states, the continuity of the corresponding fidelity is treated in \cite[Cor.~5.14]{multi}. These deterministic inequalities apply to every pair in a jointly justified uncertainty region; they do not assign that region a confidence level.
+
+The square-root dependence in trace-norm error is unavoidable in general. At $q=2$ take orthogonal pure marginals and change the second to $\epsilon P_0+(1-\epsilon)P_1$, leaving the first equal to $P_0$. Both tables have $S=2$, their normalized trace discrepancy is $\epsilon$, and $W$ rises from $1/2$ to $(1+\sqrt\epsilon)/2$. Thus even at fixed total success no finite uniform Lipschitz constant holds through this rank-deficient boundary.
+
+
+\section{Measuring the returned output label}
+Suppose the second output is measured in its calibrated input-label basis. Call this classical result the \emph{returned label} or \emph{flag}. The observation on input $\ket{a,b}$ now gives a first-output matrix $\sigma_{ab,t}$ for every successful flag $t$. Its trace is a probability per attempt. Assume $\sigma_{ab,t}\succeq0$, $s_{ab}=\sum_t\tr\sigma_{ab,t}\le1$ for every basis input, and $S=\sum_{ab}s_{ab}>0$. Only these matrices are fixed. One common branch acts on all inputs, with the same identification of the input and output label spaces.
+
+\begin{theorem}[Weight interval with a measured output label]
+Set $M_{ab}=\sigma_{ab,b}$. For each $a$, let $T_a^-$ and $T_a^+$ be the minimum and maximum, respectively, of $\sum_{b,c}\Re\tr X_{bc}$ over $X\succeq0$ with $X_{bb}=M_{ab}$. For $q\ge2$, the exact interval is
+\[
+ \mathcal I_w=\left[\frac{\sum_a T_a^-}{qS},\frac{\sum_a T_a^+}{qS}\right].
+\]
+For a binary flag define $D=\sum_a\tr(M_{a0}+M_{a1})$ and $F=\sum_a F_*(M_{a0},M_{a1})$. Then the endpoints are $(D-2F)/(2S)$ and $(D+2F)/(2S)$.
+\end{theorem}
+\begin{proof}
+In any dilation let $x_{ab}$ be the matching-flag component of its column for $\ket{a,b}$. Its first-output marginal is exactly $M_{ab}$. Projection of the Kraus matrices onto $V\otimes I_q$ gives $qSw=\sum_a\|\sum_b x_{ab}\|^2$. For each $a$, tracing the outer products $|x_{ab}\rangle\langle x_{ac}|$ over the environment gives a feasible block matrix with objective $\|\sum_b x_{ab}\|^2$. The feasible set is compact because its trace is fixed.
+
+For either extremum, factor an optimizing block matrix into common purifications of the matching blocks. Attach label $b$ to the matching component for input $(a,b)$. For each $t\ne b$ attach label $t$ to a purification of $\sigma_{ab,t}$ in its own environment sector, orthogonal to every matching sector and to the other such sectors. Use separate environment sectors for different $a$. Columns with different $b$ have orthogonal matching labels and mutually orthogonal wrong-label sectors. Thus the column Gram matrix is $\operatorname{diag}(s_{ab})\preceq I$. This constructs one trace-nonincreasing operation attaining each endpoint. The operation preserves trace if all $s_{ab}=1$. Mixing the two operations preserves every measured block and the normalization $S$, and realizes every intermediate weight.
+
+In the binary case the objective for a pair is the sum of its two traces plus twice the real purification overlap. Uhlmann's theorem gives the maximal absolute overlap $F_*$, including for subnormalized matrices \cite[Thm.~3.22]{watrous}. A phase of $-1$ gives its negative with unchanged diagonal data, proving the formula.
+\end{proof}
+
+In particular the binary interval is a single point exactly when all matching pairs have orthogonal supports. Its lower endpoint is zero exactly when $M_{a0}=M_{a1}$ for every $a$. Indeed $\tr(M_{a0}+M_{a1})-2F_*(M_{a0},M_{a1})$ is the minimum squared distance between their purifications. It vanishes exactly when they can be purified by the same vector.
+
+\paragraph{When success and label counts suffice.}
+Suppose the binary first-output marginals $\tau_{a0},\tau_{a1}$ have orthogonal supports in each pair. Since $0\preceq M_{ab}\preceq\tau_{ab}$, the matching blocks also have orthogonal supports, so $F=0$. The weight is half the fraction of successes with a matching label, $w=D/(2S)$. Establishing the orthogonality independently and counting successful returns suffices in this case. With a single pair of always-successful inputs and perfect return, observing the first outputs alone allows $[0,1/2]$, and observing the returned labels fixes $w=1/2$. More generally, if only a return fraction of at least $1-\epsilon$ is certified, the exact range under orthogonality and that bound alone is $[(1-\epsilon)/2,1/2]$ for $0\le\epsilon\le1$. To attain each value, split each known marginal in the same return proportion and apply the theorem.
+
+\paragraph{Incomplete input coverage.}
+The normalization and projection sum run over the full input basis. Data on one pair in a larger channel need not fix its global weight. For two input qubits and two output qubits, specify dilation columns in output-first-factor, flag, environment order. Let $e_0,e_1$ be orthogonal unit vectors. Set the columns for $(0,b)$ to $|b,b\rangle e_0$. For $(1,b)$ choose either $|0,b\rangle e_1$ for both $b$, or $|0,1-b\rangle e_1$ for both. Each choice is an isometry. Both give identical records on $(0,0),(0,1)$, with perfect label return and orthogonal first states. The measured pair contributes $2$ to $2Sw$; the other contributes $4$ or $0$, and $S=4$. Thus these trace-preserving channels give $w=3/4$ or $1/4$ on the full space.
+
+\subsection{Commuting matching blocks}
+For each $a$, suppose that $M_{ab}$ for all $b$ are diagonal in one basis of the first output. Denote their diagonal entries by $p_{abk}$ and put $r_{abk}=\sqrt{p_{abk}}$. The two joint optimizations then have the closed forms
+\[
+ T_a^+=\sum_k\Big(\sum_b r_{abk}\Big)^2,\qquad
+ T_a^-=\sum_k\Big[2\max_b r_{abk}-\sum_b r_{abk}\Big]_+^2 ,
+\]
+where $[x]_+=\max(x,0)$. Resolve each matching purification into first-output basis components. Within component $k$, the vectors have prescribed lengths $r_{abk}$. The greatest length of their sum is their sum of lengths. The smallest is the excess of the longest over the rest if positive, and zero otherwise. To see attainability, adding a segment of length $r$ to a sum of length $u$ gives every resultant length in $[|u-r|,u+r]$ by rotating the segment. Iteration gives the full interval between the stated extremes, also for vanishing lengths. Choose separate environment directions for different $k$, and use the corresponding complex phases in each direction. Each purification has the prescribed diagonal marginal and the extrema are attained simultaneously. For the upper endpoint this is the commuting reduction of multivariate SDP fidelity \cite{multi}.
+
+\paragraph{A three-label channel.}
+Take a complete three-dimensional input ($d=1$, $q=3$), unit success and perfect return. Write $P_k=|k\rangle\langle k|$ on the two-dimensional first output. The three first-output states are $P_0$, $(P_0+3P_1)/4$ and $P_1$. In the two first-output sectors the nonzero lengths are $(1,1/2)$ and $(\sqrt3/2,1)$. The weight interval is exactly
+\[
+ \left[\frac{2-\sqrt3}{9},\ \frac{4+\sqrt3}{9}\right].
+\]
+For phases $|u|=|v|=1$, two Kraus matrices are
+\[
+ K_0=|0\rangle\otimes\operatorname{diag}(1,u/2,0),\qquad
+ K_1=|1\rangle\otimes\operatorname{diag}(0,v\sqrt3/2,1).
+\]
+Their squared products sum to $I_3$. Every basis input $b$ gives the same entire joint output $\tau_b\otimes|b\rangle\langle b|$ throughout the family. The lower and upper endpoints use $u=v=-1$ and $u=v=1$, respectively.
+
+Prepare $|+\rangle=(|0\rangle+|1\rangle+|2\rangle)/\sqrt3$ and test $P_0\otimes |+_{01}\rangle\langle+_{01}|$ with $|+_{01}\rangle=(|0\rangle+|1\rangle)/\sqrt2$. Its probability $y=|1+u/2|^2/6$ is $1/24$ or $3/8$ at the two endpoints. For \emph{any} compatible operation with these basis outputs and this extra reading, the exact remaining interval is
+\[
+ \left[\frac{6y+7/4-\sqrt3}{9},\frac{6y+7/4+\sqrt3}{9}\right],
+ \qquad 1/24\le y\le3/8.
+\]
+Indeed perfect return fixes each column's flag. Its matching purification decomposes into the two first-output sectors. In sector 0 only inputs 0 and 1 contribute, and the squared length of their sum is $6y$. In sector 1 only inputs 1 and 2 contribute, with squared sum in $[7/4-\sqrt3,7/4+\sqrt3]$. The independent phases $u,v$ attain every combination. Dividing their sum by $qS=9$ proves the assertion. Thus this particular coherent reading resolves the two named alternatives while leaving an interval of width $2\sqrt3/9$ for every allowed $y$.
+
+\subsection{A calibrated coherent return measurement}
+Prepare $|a\rangle$ on the first input. On the second input use $|z\rangle=q^{-1/2}\sum_b z_b|b\rangle$, and on success project the second output onto that same vector, ignoring the first output. Denote the joint probability of success and return per attempt by $y_a(z)$. The same linear branch must apply to these superpositions and to the basis preparations. In the notation of the returned-label theorem, put $D=\sum_{ab}\tr M_{ab}$.
+\begin{proposition}[Recovering the local weight from return counts]
+If every successful basis output returns its input flag, any fixed unit-modulus phases give
+\[
+ w=\frac{q}{S}\sum_a y_a(z).
+\]
+With arbitrary flag changes, draw the $z_b$ independently and uniformly from the three cube roots of unity. Then the exact population identity is
+\[
+ w=\frac{q^2\sum_a\mathbb E_z y_a(z)-(S-D)}{qS}.
+\]
+\end{proposition}
+\begin{proof}
+Write $v_{ab,t}$ for the dilation component on output flag $t$. Expanding the matched output projection gives $q^2y_a(z)=\|\sum_{bt}z_b\overline z_t v_{ab,t}\|^2$. Perfect return annihilates every term with $b\ne t$. In general, the characters $z_b\overline z_t$ for ordered pairs $b\ne t$ have mean zero and are mutually orthogonal over these phases. In particular an ordered pair and its reversal remain distinct. The diagonal terms share the constant character. Hence, after summing over $a$, the phase average is the sum of $qSw$ and the squared norms of all wrong-flag components, divided by $q^2$. The latter norms sum to $S-D$. All probabilities include unsuccessful attempts in their denominator.
+\end{proof}
+For the three-label example $q=S=3$. The projector $I_2\otimes|+\rangle\langle+|$ on the same coherent input has click probability exactly $w$ for every compatible channel. A phase calibration restricted to real signs generally preserves extra cross terms between reversed wrong-flag paths.
+
+\paragraph{Relation to average gate fidelity.}
+Let $p_*=S/(dq)$, the success probability on the maximally mixed input, and prepare the first input uniformly in its basis. Choose a uniformly sampled basis label for a matched projective return test with probability $1/(q+1)$, or choose a flat phase state as above with probability $q/(q+1)$. Its unconditional return probability is
+\[
+ \bar y=\frac{D}{dq(q+1)}+
+        \frac{qSw+S-D}{dq(q+1)}
+       =p_*\frac{1+qw}{q+1}.
+\]
+Here $w$ is the overlap of the identity's normalized maximally entangled vector with the trace-one Choi state of the reduced flag operation $X\mapsto\operatorname{Tr}_{A'}\mathcal B(I_d/d\otimes X)$. This follows by using its Kraus matrices $(\langle k|\otimes I)K_j(|a\rangle\otimes I)/\sqrt d$ and the projection trace formula. The average-return identity specializes the average gate fidelity relation and its operator averaging formula \cite{nielsen,pedersen}. Combining phase and basis ensembles to reproduce second moments has established projective-design constructions \cite{iosue}. For trace-decreasing operations, dividing the unconditional return rate by the independently justified $p_*$ normalizes successes. An unweighted average of conditional return rates generally gives a different quantity. If simultaneous intervals give $0<\ell\le p_*\le u$ and $y_-\le\bar y\le y_+$ with $y_-\ge0$, the physical interval $[0,1]$ can be intersected with
+\[
+ \left[\frac{(q+1)y_-/u-1}{q},\frac{(q+1)y_+/\ell-1}{q}\right].
+\]
+The intersection inherits the joint coverage under the measurement assumptions. A small success lower bound limits precision. No matched trials implementing the superpositions, projections or transfer conditions enter this calculation.
+
+\subsection{Incomplete classical observation of the flag}
+Suppose first-output tomography resolves only the classical report $y$. Assume a known matrix $H$ with nonnegative entries and $\sum_y H_{yt}=1$ gives the report law conditional on the true flag $t$, independent of the preparation and first output. Losses must be recorded as an outcome when present. The observed subnormalized matrices are $Z_{ab,y}$ with positive total trace $S$ and each input success at most one. The feasible set is given by
+\[
+ \sigma_{ab,t}\succeq0,\quad Z_{ab,y}=\sum_tH_{yt}\sigma_{ab,t},
+ \quad X^{(a)}\succeq0,\quad X^{(a)}_{bb}=\sigma_{ab,b}.
+\]
+Minimizing and maximizing $\sum_a\tr(J X^{(a)})/(qS)$, $J=\mathbf1\mathbf1^T\otimes I_{d'}$, gives the exact endpoints whenever feasible. Every lift to the true flag blocks is realized by the constructed dilation. The constraints fix each input's total trace, so the feasible set is compact. Mixtures fill the interval. Inconsistent observed blocks reject the model.
+
+For one $a$ suppressed in the notation, Hermitian $G_b,Y_{by}$ certify an upper bound $\sum_{by}\tr(Y_{by}Z_{b,y})$ on the unnormalized objective if
+\[
+ \operatorname{diag}(G_b)\succeq J,\qquad
+ \sum_y H_{yt}Y_{by}\succeq\mathbf1_{t=b}G_b \quad(\text{all }b,t).
+\]
+Reversing both orders certifies a lower bound. Pair the first inequality with $X$ and the second with the latent blocks to obtain each certificate. They are the SDP duals. Strict feasible upper and lower certificates follow by taking all $G_b,Y_{by}$ respectively to be $(q+1)I,(q+2)I$ or $-I,-2I$. Hence their infimum or supremum equals the corresponding primal extremum for feasible data. Full column rank of $H$ yields a unique lift whenever feasible; distinguishability of columns alone need not do so. This classical degradation model assumes effects diagonal in the stated flag basis. A detector sensitive to flag coherences needs its own measurement constraints. For uncertain calibration, compatibility requires a common admissible $H$ across all arms and jointly covered data. The constraints are bilinear if both $H$ and the latent blocks are unknown.
+
+For an exact scalar check, take two unit-success inputs and a binary flag reported correctly with probability $3/4$ in either direction. The two observed report distributions $(3/8,5/8)$ and $(1/4,3/4)$ give matching masses $1/4$ and $1$. The interval is $[1/16,9/16]$. For the upper certificate take $(G_0,G_1)=(3,3/2)$ and for the lower take $(-1,1/2)$. In each case take the report coefficients to solve $H^T Y_b=G_b e_b$, with $e_b$ the $b$th standard basis vector. The corresponding signed semidefinite slacks have rank one and are positive. Pairing each certificate with the reports gives its matching endpoint after division by $2S=4$. These values check a specified population model.
+
+\paragraph{Effects with flag coherence.}
+For known effects $E_y$ acting on the flag with $\sum_y E_y=I$, a Choi program also covers nondiagonal readouts. Use the output-first, unnormalized Choi matrix $C=\sum_j|K_j\rangle\!\rangle\langle\!\langle K_j|$. With all basis-input reports included, $\tr C=S$. Require
+\[
+ C\succeq0,\qquad \operatorname{Tr}_{\rm out}C\preceq I,\qquad
+ \tr\!\left[(O\otimes E_y\otimes |a,b\rangle\langle a,b|^T)C\right]
+   =\tr(O Z_{ab,y})
+\]
+for each input, report, and a Hermitian operator basis $O$ on the first output. Minimize and maximize $\tr(P_{\mathcal L}C)/S$, where $P_{\mathcal L}$ projects onto the vectorized matrices $V\otimes I_q$. The Choi correspondence gives exactly the compatible branches, and the linear constraints are precisely the observed probabilities by the Born rule. Convexity fills the interval. For example, the qubit flag states $|+\rangle$ and $|-\rangle$ have the same flag-basis populations but opposite deterministic outcomes under an $X$ readout. A classical report matrix on those populations cannot implement this effect.
+
+\section{Discrimination with rare successful reports}
+Fix two simple independent branches and a common two-outcome detector. Success has probability $h$ on every input. In the null law every successful first output occupies the high eigenspace. In the alternative, even inputs still occupy the high eigenspace and odd inputs occupy the low eigenspace. Their maximum compatible weights are $1$ and $1/2$. The per-success click probabilities on odd inputs are $U$ in the null and $L$ in the alternative, with $0<L<U<1$. Let $q$ bound the probability of choosing an odd input at every history. A private policy may depend on earlier observations.
+
+\begin{proposition}
+For any decision by horizon $N$ of null size at most $\alpha$, its alternative rejection probability is at most $\min\{1,\alpha+1-(1-qh(U-L))^N\}$. If it also attains power at least $1-\beta>\alpha$, then
+\[
+ Nqh\,D_{\rm Ber}(L\|U)\ge D_{\rm Ber}(1-\beta\|\alpha).
+\]
+Here $D_{\rm Ber}(p\|r)=p\log(p/r)+(1-p)\log[(1-p)/(1-r)]$.
+\end{proposition}
+\begin{proof}
+While the two pasts agree, draw the same assignment from the specified policy in both experiments. The two conditional laws agree on even assignments and have total variation $h(U-L)$ on odd assignments. A maximal coupling keeps the next records equal with probability at least $1-qh(U-L)$. Iteration gives the stated power bound. For relative entropy take the alternative as the first law. The conditional assignment probabilities cancel in the likelihood ratio. A distinguishing input contributes $hD_{\rm Ber}(L\|U)$ and an even input contributes zero. The chain rule bounds path relative entropy above by the left side. Data processing to the binary decision bounds it below by the right side, using monotonicity for power $>\alpha$ \cite{poly}.
+\end{proof}
+For $h=0.001$, $(L,U)=(0.2,0.8)$ and $\alpha=\beta=0.05$, coupling gives necessary counts 3,837, 5,116, 7,675 and 15,350 for $q=1,0.75,0.5,0.25$, respectively. With $(L,U)=(0.45,0.55)$ and $q=0.5$, the relative-entropy bound requires 264,114 attempts. These inequalities do not construct a procedure that attains the stated error levels.
+
+\subsection*{Exact threshold for two specified laws}
+Take $(L,U)=(1/5,4/5)$. Under always-odd assignment, let $M$ be the number of successes among $N$ attempts. Under uniform independent four-input assignment, count only successful odd assignments. In these designs $M\sim\operatorname{Bin}(N,t)$ with $t=h$ and $h/2$, respectively. Conditional on $M=m$, the number $K$ of informative no-clicks is binomial with parameter $1/5$ under the null, $4/5$ under the alternative. All other observations have likelihood ratio one. The full likelihood ratio is $4^{2K-m}$. The optimal equal-prior rule selects the alternative if $2K>m$ and randomizes fairly at equality. Symmetry makes its two errors equal. Therefore 5\% size and 95\% power are possible for these two laws exactly when the optimal average error is at most $1/20$.
+
+Write $e_m=\Pr_{1/5}(K>m/2)+\tfrac12\Pr_{1/5}(K=m/2)$. The risk is $\sum_{m=0}^N{N\choose m}t^m(1-t)^{N-m}e_m$. The verifier evaluates the first 66 terms by integer arithmetic and bounds the omitted risk by half the omitted binomial probability. The width is below $10^{-38}$ at each of the four reported counts. The exact comparisons with $1/20$ give the following decimal summaries.
+\begin{center}\small\begin{tabular}{@{}lrr@{}}\toprule
+Design & Attempts & Minimum average error\\\midrule
+Always odd & 7,064 & 0.05001038431917\\
+Always odd & 7,065 & 0.04999782557675\\
+Uniform independent & 14,130 & 0.05000391973171\\
+Uniform independent & 14,131 & 0.04999764112286\\\bottomrule
+\end{tabular}\end{center}
+An extra observation can be discarded, so optimal risk is nonincreasing. Always-odd observations can simulate any adaptive policy for this pair: keep the next observation for an odd assignment or generate an independent draw from the common even law. Thus 7,065 is necessary for any such policy and sufficient for the always-odd comparison. The 14,131 threshold concerns the specified uniform policy. Neither number is a sufficient sample size for the composite four-arm sequential test. Ville's inequality controls that test's false-rejection probability at any stopping time under the stated conditional null \cite{wills}.
+
+For the narrower detector $L=0.45$, $U=0.55$ with independent uniform assignment, the log likelihood ratio has the sign of $2K-m$ just as in the wider case. Now $t=1/2000$ and $K$ given $m$ has null parameter $0.45$. The two adjacent minimum errors are
+\[
+ R_{540253}=0.05000011219494777\ldots,\qquad
+ R_{540254}=0.04999995504566493\ldots .
+\]
+Thus 540,254 is the first sufficient count for this optimal two-law test. The 264,114 figure is the relative-entropy necessary bound for the same design. For an exact check, start the unnormalized binomial weights at $u_0=1$ and iterate $u_{m+1}/u_m=(N-m)t/[(m+1)(1-t)]$. Divide their risk-weighted sum by their total. Beyond $m=760$ a decreasing-ratio geometric bound encloses the missing mass by less than $1.4\times10^{-131}$. All comparisons with $1/20$ can then be made in rational arithmetic, without roundoff at the crossing.
+
+\section{A sharp finite-dimensional Gibbs perturbation bound}
+Let $A,V$ be Hermitian matrices, $s\ge0$ and $v=\lambda_{\max}(V)-\lambda_{\min}(V)$. Write $\rho=e^{-sA}/\tr e^{-sA}$ and $\sigma=e^{-s(A+V)}/\tr e^{-s(A+V)}$. In the half-trace-distance convention the sharp universal bound is
+\[
+ T=\tfrac12\|\rho-\sigma\|_1\le\tanh(sv/4).
+\]
+Indeed the two relative entropies sum to $s\tr[(\rho-\sigma)V]\le svT$, since subtracting the spectral midpoint of $V$ does not change the trace pairing. For $T>0$ the positive spectral subspace of $\rho-\sigma$ yields Bernoulli probabilities $x+T,x$. By data processing, their two relative entropies sum to at most the quantum sum. The classical sum equals
+\[
+ T\log\frac{(x+T)(1-x)}{x(1-x-T)}.
+\]
+The ratio is $1+T/[x(1-x-T)]$ and its minimum occurs at $x=(1-T)/2$. Thus $4T\operatorname{artanh}(T)\le svT$. This is the tight classical symmetric-divergence bound in the sum convention \cite[Prop.~4]{sason}. The case $T=0$ is immediate. With $A=\operatorname{diag}(-v/4,v/4)$ and $V=-2A$, the two Gibbs probabilities are interchanged and $T=\tanh(sv/4)$. The proof allows noncommuting $A,V$ and attains equality already for commuting matrices. The trace-class result in the collected papers has separate domain hypotheses.
+
+\section{Reading the identification map quantitatively}
+The map separates a mathematical implication, an instrument premise, and a prospective test. Several observations in the same panel answer different questions. The graph moment and instrument results below illustrate the distinction.
+\begin{itemize}
+\item For $n=16$ the ratio method uses two preparations on each of 120 pairs. Common observation windows give entry bias at most $B/2$ for the omitted positive first-moment operator of norm at most $B$. A protocol without a zero-mode detector requires a separate common-contrast assumption and additional moments. Matching a consistency identity cannot calibrate a nonlinear change of scale.
+\item In the specified coherent spectral design the two monitored outputs yield Fisher coefficient $0.4780676701\ldots$ and access to all three yields $0.8279358532\ldots$. At the optimal equal scales, eigenvalue coordinates $2.5212815658\ldots$ and $0.2637461879\ldots$ give the same full output. Local precision and global identification are distinct.
+\item The finite graph moment witness is a labelled rook edge and a weighted graph. Their shared inverse moments through order three are $1,5/32,7/256,11/2048$. Their fourth moments are $19/16384$ and approximately $0.0068045648751154$. The gap $27/2{,}945{,}024$ belongs to a separate pair of positive spectral measures. For those measures 57,291,466 trials suffice under the specified one-sided variance calculation. That budget does not transfer to either graph comparison.
+\item For the rook-edge versus Shrikhande-nonedge counting protocols, the fixed threshold $\log 2/4$ has equal-prior 10\% error crossings of 181 and 188 for equal and antisymmetric phase preparations. Optimizing a repeated upper-threshold bit gives 165 and 173. Full scale records give numerical crossings of 117 and 127; those are not certified optimal experimental budgets. The antisymmetric sample mean has a sufficient 375-trial guarantee for each error. The parity, phase and rare-success tests use different outcomes and nulls.
+\item In the interior fixed-detector phase experiment with a saturating curve, the three-axis Choi-purity bound uses coefficients $91/1230$ and $7/97$ for longitudinal and transverse squared deviations. At exact two-dimensional support a transferred transverse measurement can determine the remaining coherence. At positive leakage, first-qubit measurements can miss a relative sign detectable by second-qubit $Y$ in the exhibited family. These conclusions depend on the trace-preserving marginal and its transfer to a product preparation.
+\item Balanced phase offsets illustrate what must transfer across arms. In the specified general density-state model at $\pm60^\circ$, a trace-distance cap below $0.830970598587\ldots$ guarantees a strict increase, and at that critical cap general states can attain zero. Normalized trace-preserving Choi states still give a strict increase at the cap. The unrestricted trace-preserving sign at $\pm60^\circ$ remains open; a unitary pair gives a decrease at $\pm61^\circ$. These results require the same detector and the stated calibration on the conditional preparations.
+\end{itemize}
+These calculations use supplied quantum states, tensor factors and labelled ports. Independent evidence of a source, phase operation, common detector and trial accounting determines whether a physical device instantiates a particular observation model.
+\paragraph{Acknowledgment.} Kirtus Justus directed the research and holds scholarly responsibility. ChatGPT (OpenAI) provided mathematical, computational and editorial assistance.
+\small\begin{thebibliography}{9}
+\bibitem{brouwer} A. E. Brouwer, \href{https://aeb.win.tue.nl/drg/graphs/Shrikhande.html}{The Shrikhande graph}. S. S. Shrikhande, \emph{Ann. Math. Statist.} \textbf{30}, 781--798 (1959).
+\bibitem{multi} T. Nuradha, H. K. Mishra, F. Leditzky and M. M. Wilde, “Multivariate fidelities,” \textit{J. Phys. A: Math. Theor.} \textbf{58}, 165304 (2025). \href{https://doi.org/10.1088/1751-8121/adc645}{DOI}.
+\bibitem{powers} R. T. Powers and E. Størmer, “Free states of the canonical anticommutation relations,” \textit{Commun. Math. Phys.} \textbf{16}, 1--33 (1970). \href{https://doi.org/10.1007/BF01645492}{DOI}.
+\bibitem{watrous} J. Watrous, \emph{The Theory of Quantum Information}, Cambridge University Press (2018), Theorem 3.22. \href{https://doi.org/10.1017/9781316848142}{DOI}.
+\bibitem{sason} I. Sason, “Tight bounds for symmetric divergence measures and a refined bound for lossless source coding,” \emph{IEEE Transactions on Information Theory} \textbf{61}, 701--707 (2015). \href{https://arxiv.org/abs/1403.7164}{Author manuscript}.
+\bibitem{poly} Y. Polyanskiy and Y. Wu, \emph{Information Theory: From Coding to Learning}, chapter on binary hypothesis testing, \href{https://people.lids.mit.edu/yp/homepage/data/itbook-export.pdf}{author manuscript}.
+\bibitem{nielsen} M. A. Nielsen, “A simple formula for the average gate fidelity of a quantum dynamical operation,” \emph{Phys. Lett. A} \textbf{303}, 249--252 (2002). \href{https://doi.org/10.1016/S0375-9601(02)01272-0}{DOI}.
+\bibitem{pedersen} L. H. Pedersen, N. M. Møller and K. Mølmer, “Fidelity of quantum operations,” \emph{Phys. Lett. A} \textbf{367}, 47--51 (2007). \href{https://doi.org/10.1016/j.physleta.2007.02.069}{DOI}.
+\bibitem{iosue} J. T. Iosue, T. C. Mooney, A. Ehrenberg and A. V. Gorshkov, “Projective toric designs, quantum state designs, and mutually unbiased bases,” \emph{Quantum} \textbf{8}, 1546 (2024). \href{https://doi.org/10.22331/q-2024-12-03-1546}{DOI}.
+\bibitem{wills} P. Wills, E. Knill, K. Coakley and Y. Zhang, \emph{J. Res. NIST} \textbf{125}, 125003 (2020). \href{https://doi.org/10.6028/jres.125.003}{DOI}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,9 @@
+# External-source ledger (12 November 2026)
+
+These sources were inspected as publisher/abstract or article landing pages through public search, not as independent reviews of this program. No paper was represented as having endorsed any constructed ontology. Numerical and exact mathematical findings in B4 are independent **internal calculations**, not published experimental results.
+
+1. **Dowker, Johnston, Sorkin (2010)**, *Hilbert spaces from path integrals*, J. Phys. A 43 275302, DOI `10.1088/1751-8113/43/27/275302`. Publisher page inspected. Supports the established context that a strongly positive decoherence functional can define a history Hilbert space. It does **not** assert the specific G8 graph measure is a physically consistent history process.
+2. **Dowker, Johnston, Surya (2010)**, *On extending the quantum measure*, J. Phys. A 43 505305, DOI `10.1088/1751-8113/43/50/505305`. Publisher page inspected. Distinguishes the extension of a fixed quantum measure to a sigma algebra from B4's separate **finite-horizon cylinder-refinement** test.
+3. **Barnum, Hilgert (2020)**, *Spectral Properties of Convex Bodies*, Journal of Lie Theory 30, 315-344, DOI `10.5802/jolt.1118`. Publisher landing page inspected. Spectrality and strong symmetry constrain convex state spaces to Euclidean Jordan state spaces or simplices, on additional assumptions that G3's Veronese model and G8's graph event construction have not been independently shown to satisfy.
+
+Internal manuscripts: Z2 papers G7 and G8, Director A3 and G3 manuscripts, and all source verifier scripts were inspected directly from the supplied ZIP archives. They are **internal research provenance**, not independent scientific references. In particular G8's claims were checked against its *actual* paper rather than solely a quoted disposition.

@@ -1,0 +1,116 @@
+{
+  "all_mixed_trial_count": 384,
+  "all_pure_trial_count": 1536,
+  "exact_witness": {
+    "affine_dimension_formula": "(k+1)(k+2)/2",
+    "born_effects_all_directions_on_both_mixtures": "1/2",
+    "cubic_effect_x_A": "1/2",
+    "cubic_effect_x_B": "5/8",
+    "mixture_A": "0.5*(north^3+south^3)",
+    "mixture_B": "1/3*(u0^3+u120^3+u240^3) in xy plane",
+    "model": "K_k=conv{n^{tensor k}:|n|=1}, odd k, in Sym^k(R^3)",
+    "mutation_test_identify_E3_as_F": "REJECTED (5/8 != 1/2 on mixtures A/B)",
+    "pure_test_c=1/2": {
+      "1": {
+        "Born": "3/4",
+        "Veronese": "3/4"
+      },
+      "3": {
+        "Born": "3/4",
+        "Veronese": "9/16"
+      },
+      "5": {
+        "Born": "3/4",
+        "Veronese": "33/64"
+      },
+      "7": {
+        "Born": "3/4",
+        "Veronese": "129/256"
+      }
+    },
+    "seed": 2026111203,
+    "separation": "1/8",
+    "source_notion": "mathematical control, not physics",
+    "tau_A": [
+      0,
+      0,
+      0
+    ],
+    "tau_B": [
+      0,
+      0,
+      0
+    ],
+    "tensor_A_xxx": "0",
+    "tensor_B_xxx": "1/4"
+  },
+  "limits": [
+    "No emergent qubit",
+    "No prephysical Born rule",
+    "No time or physical dynamics",
+    "No higher-order interference characterization",
+    "No quantum tensor product",
+    "No experimental test",
+    "No independent expert review"
+  ],
+  "max_mixed_residual": 9.992007221626409e-16,
+  "max_pure_residual": 2.6645352591003757e-15,
+  "outlier_policy": "No trial exclusions. Full signed residuals and extrema retained.",
+  "seed": 2026111203,
+  "status": "PASS_SCOPE_BOUND_SYMBOLIC_AND_NUMERIC",
+  "tested_odd_degrees": {
+    "1": {
+      "Born_effect_kernel_dimension": 0,
+      "contraction_rank": 3,
+      "max_E_pure": 0.9972217159581741,
+      "max_mixed_residual": 2.220446049250313e-16,
+      "max_pure_residual": 6.314393452555578e-16,
+      "min_E_pure": 0.00213873194739711,
+      "mixed_trials": 96,
+      "pure_trials": 384,
+      "span_rank_numeric": 3,
+      "span_smallest_singular_value": 8.806464243330861,
+      "state_dimension_analytic": 3
+    },
+    "3": {
+      "Born_effect_kernel_dimension": 7,
+      "contraction_rank": 3,
+      "max_E_pure": 0.9925527275135235,
+      "max_mixed_residual": 3.3306690738754696e-16,
+      "max_pure_residual": 1.3322676295501878e-15,
+      "min_E_pure": 0.0008476044923098058,
+      "mixed_trials": 96,
+      "pure_trials": 384,
+      "span_rank_numeric": 10,
+      "span_smallest_singular_value": 3.108642065420893,
+      "state_dimension_analytic": 10
+    },
+    "5": {
+      "Born_effect_kernel_dimension": 18,
+      "contraction_rank": 3,
+      "max_E_pure": 0.9943358754352495,
+      "max_mixed_residual": 9.992007221626409e-16,
+      "max_pure_residual": 1.9984014443252818e-15,
+      "min_E_pure": 0.0007050953981238561,
+      "mixed_trials": 96,
+      "pure_trials": 384,
+      "span_rank_numeric": 21,
+      "span_smallest_singular_value": 1.3988516619370315,
+      "state_dimension_analytic": 21
+    },
+    "7": {
+      "Born_effect_kernel_dimension": 33,
+      "contraction_rank": 3,
+      "max_E_pure": 0.9983445857862079,
+      "max_mixed_residual": 6.661338147750939e-16,
+      "max_pure_residual": 2.6645352591003757e-15,
+      "min_E_pure": 0.03782248597381227,
+      "mixed_trials": 96,
+      "pure_trials": 384,
+      "span_rank_numeric": 36,
+      "span_smallest_singular_value": 0.599597470296674,
+      "state_dimension_analytic": 36
+    }
+  },
+  "theory": "stipulated finite-dimensional GPT countermodel only"
+}

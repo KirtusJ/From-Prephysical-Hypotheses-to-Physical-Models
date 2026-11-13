@@ -1,0 +1,251 @@
+{
+  "classical_I3_exact_float_residual": 1.6653345369377348e-16,
+  "curvature_comparison": {
+    "K_CP1": 4,
+    "K_RP2": 1,
+    "right_angle_triangle_distance": [
+      {
+        "CP1_opposite_dist": 0.07065164934806172,
+        "RP2_minus_CP1": 4.429093299145037e-05,
+        "RP2_opposite_dist": 0.07069594028105317,
+        "leg_length": 0.05
+      },
+      {
+        "CP1_opposite_dist": 0.1409466409779817,
+        "RP2_minus_CP1": 0.000356657718141723,
+        "RP2_opposite_dist": 0.14130329869612343,
+        "leg_length": 0.1
+      },
+      {
+        "CP1_opposite_dist": 0.27896452381241804,
+        "RP2_minus_CP1": 0.0029287581435453736,
+        "RP2_opposite_dist": 0.2818932819559634,
+        "leg_length": 0.2
+      },
+      {
+        "CP1_opposite_dist": 0.41071233262714296,
+        "RP2_minus_CP1": 0.010319270785554002,
+        "RP2_opposite_dist": 0.42103160341269696,
+        "leg_length": 0.3
+      }
+    ],
+    "scaling": "d([u],[v])=acos(|<u,v>|) for normalized rays"
+  },
+  "dynamics_nonselection": {
+    "chosen_formal_time": 1.5707963267948966,
+    "context": "Exact analytic controls inside imported 2-level theory, not experimental dynamics or a derived qubit",
+    "dephasing_T": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "rank_T": 1,
+    "survival_H_sigma_z_over_two": 0.4999999999999999,
+    "survival_H_zero": 0.9999999999999996
+  },
+  "finite_net_positive_control": [
+    {
+      "N": 4,
+      "lattice_latitudes": 5,
+      "longitude_samples": 8,
+      "observed_max_FS_distance": 0.27226298309645713,
+      "proved_FS_upper_bound": 0.39269908169872414,
+      "random_probe_points": 20000
+    },
+    {
+      "N": 8,
+      "lattice_latitudes": 9,
+      "longitude_samples": 16,
+      "observed_max_FS_distance": 0.13820333024476722,
+      "proved_FS_upper_bound": 0.19634954084936207,
+      "random_probe_points": 20000
+    },
+    {
+      "N": 16,
+      "lattice_latitudes": 17,
+      "longitude_samples": 32,
+      "observed_max_FS_distance": 0.06883687474344362,
+      "proved_FS_upper_bound": 0.09817477042468103,
+      "random_probe_points": 20000
+    },
+    {
+      "N": 32,
+      "lattice_latitudes": 33,
+      "longitude_samples": 64,
+      "observed_max_FS_distance": 0.034326936255424156,
+      "proved_FS_upper_bound": 0.04908738521234052,
+      "random_probe_points": 20000
+    },
+    {
+      "N": 64,
+      "lattice_latitudes": 65,
+      "longitude_samples": 128,
+      "observed_max_FS_distance": 0.017062336018619183,
+      "proved_FS_upper_bound": 0.02454369260617026,
+      "random_probe_points": 20000
+    }
+  ],
+  "geometry": [
+    {
+      "bargmann_phase_rad": -0.03553946929666446,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 2,
+      "determinant_abs_error": 9.550635997115283e-14,
+      "line_integral_phase_rad": -0.035539469296664454,
+      "metric_preservation_norm_residual": 1.6864287802121062e-13,
+      "num_polygon_vertices": 3,
+      "phase_quadrature_abs_error": 1.1123893155135927e-16,
+      "projective_complex_dim": 1,
+      "tangent_holonomy_det_phase_rad": -0.07107893859337049
+    },
+    {
+      "bargmann_phase_rad": -0.10899997211603574,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 2,
+      "determinant_abs_error": 2.3734457944043204e-13,
+      "line_integral_phase_rad": -0.10899997211603572,
+      "metric_preservation_norm_residual": 3.769207168602587e-13,
+      "num_polygon_vertices": 4,
+      "phase_quadrature_abs_error": 1.1188630228279524e-16,
+      "projective_complex_dim": 1,
+      "tangent_holonomy_det_phase_rad": -0.2179999442322112
+    },
+    {
+      "bargmann_phase_rad": -0.1511606487805007,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 3,
+      "determinant_abs_error": 2.103266828440088e-13,
+      "line_integral_phase_rad": -0.15116064878050084,
+      "metric_preservation_norm_residual": 1.7289802975658382e-13,
+      "num_polygon_vertices": 3,
+      "phase_quadrature_abs_error": 2.0014830212433605e-16,
+      "projective_complex_dim": 2,
+      "tangent_holonomy_det_phase_rad": -0.4534819463412962
+    },
+    {
+      "bargmann_phase_rad": -0.8487489216029124,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 3,
+      "determinant_abs_error": 3.7863835198661454e-13,
+      "line_integral_phase_rad": -0.8487489216029128,
+      "metric_preservation_norm_residual": 3.144273227922231e-13,
+      "num_polygon_vertices": 4,
+      "phase_quadrature_abs_error": 4.710277376051325e-16,
+      "projective_complex_dim": 2,
+      "tangent_holonomy_det_phase_rad": -2.5462467648090747
+    },
+    {
+      "bargmann_phase_rad": 0.6708510332322819,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 4,
+      "determinant_abs_error": 4.434686368973274e-13,
+      "line_integral_phase_rad": 0.6708510332322817,
+      "metric_preservation_norm_residual": 1.7695271786659397e-13,
+      "num_polygon_vertices": 3,
+      "phase_quadrature_abs_error": 2.482534153247273e-16,
+      "projective_complex_dim": 3,
+      "tangent_holonomy_det_phase_rad": 2.683404132928686
+    },
+    {
+      "bargmann_phase_rad": -0.2700320589289395,
+      "complex_conjugation_pairwise_probability_difference": 0.0,
+      "complex_vec_dim": 4,
+      "determinant_abs_error": 7.35974046709963e-13,
+      "line_integral_phase_rad": -0.27003205892893883,
+      "metric_preservation_norm_residual": 1.6822066661164454e-13,
+      "num_polygon_vertices": 4,
+      "phase_quadrature_abs_error": 6.206335383118183e-16,
+      "projective_complex_dim": 3,
+      "tangent_holonomy_det_phase_rad": -1.0801282357164894
+    }
+  ],
+  "gram": [
+    {
+      "delta": [
+        0.1249999999999997,
+        0.0
+      ],
+      "determinant": 0.5000000000000001,
+      "min_Gram_eig": 0.49999999999999967,
+      "pairwise_probabilities": [
+        0.24999999999999983,
+        0.24999999999999895,
+        0.25
+      ],
+      "phase_rad": 0.0,
+      "phi_rad": 0.0,
+      "rank": 3
+    },
+    {
+      "delta": [
+        0.1082531754730547,
+        0.06249999999999992
+      ],
+      "determinant": 0.4665063509461097,
+      "min_Gram_eig": 0.35721239031346047,
+      "pairwise_probabilities": [
+        0.24999999999999983,
+        0.2499999999999996,
+        0.24999999999999983
+      ],
+      "phase_rad": 0.5235987755982988,
+      "phi_rad": 0.5235987755982988,
+      "rank": 3
+    },
+    {
+      "delta": [
+        -1.488721618999017e-16,
+        0.12499999999999954
+      ],
+      "determinant": 0.25000000000000006,
+      "min_Gram_eig": 0.13397459621556115,
+      "pairwise_probabilities": [
+        0.24999999999999928,
+        0.24999999999999944,
+        0.24999999999999944
+      ],
+      "phase_rad": 1.570796326794898,
+      "phi_rad": 1.5707963267948966,
+      "rank": 3
+    },
+    {
+      "delta": [
+        -0.12500000000000014,
+        3.781196946532839e-17
+      ],
+      "determinant": 0.0,
+      "min_Gram_eig": -2.220446049250476e-16,
+      "pairwise_probabilities": [
+        0.2499999999999996,
+        0.2500000000000011,
+        0.2499999999999999
+      ],
+      "phase_rad": 3.141592653589793,
+      "phi_rad": 3.141592653589793,
+      "rank": 2
+    },
+    {
+      "delta": [
+        -1.488721618999017e-16,
+        -0.12499999999999954
+      ],
+      "determinant": 0.25000000000000006,
+      "min_Gram_eig": 0.13397459621556115,
+      "pairwise_probabilities": [
+        0.24999999999999928,
+        0.24999999999999944,
+        0.24999999999999944
+      ],
+      "phase_rad": -1.570796326794898,
+      "phi_rad": -1.5707963267948966,
+      "rank": 3
+    }
+  ],
+  "manifest": "First-principles numerical and algebraic checks, no physical evidence",
+  "rng": "numpy default_rng with stated seeds"
+}

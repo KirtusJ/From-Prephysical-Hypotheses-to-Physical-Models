@@ -1,0 +1,38 @@
+{
+  "evidence_kind": "exact proofs plus deterministic local algebra and computational controls; NO EMPIRICAL RECORD",
+  "false_controls": {
+    "false_4_party_repair_s_eq_t_rejected": true,
+    "false_GHZ_in_matching_hierarchy_rejected": true,
+    "false_universal_filter_closure_rejected": true,
+    "incorrect_filter_x_equals_1_is_not_optimum_at_t_half": true
+  },
+  "limitations": [
+    "The constructed state spaces assume quantum density matrices and Born probabilities.",
+    "Closure under local quantum channels is distinct from closure under conditioned quantum instruments.",
+    "The matching hierarchy deliberately restricts retained-system instrument availability and does not prove emergence.",
+    "The mixed-seed extension relies on external distillation literature and a compactness premise.",
+    "No independent sub-agent or experimental corroboration occurred."
+  ],
+  "max_float_identity_residual": 6.661338147750939e-16,
+  "min_highprecision_positive_filter_gap": "2.50000000000000037173092925268872665541328007e-81",
+  "new_results": [
+    "A3-01 stochastic one-party local filter excludes all 0<t<1 intermediate K_t",
+    "A3-02 no two/four party K_(t_n) affine interpolation survives both pair preparation and discard for 0<t2<1",
+    "A3-03 matching-generated hierarchy is closed under independent preparation, trace and elementary one-site CPTP, but excludes GHZ",
+    "A3-04 any convex 2-qubit state subset closed under all local unitaries and selective local filters containing one pure entangled state equals D2",
+    "A3-05 mixed-seed to pure Bell selection is conditional on external 2x2 distillation and strong all-arity operational closure"
+  ],
+  "outliers": {
+    "all_cases_retained_in_csv": true,
+    "near_one_filter_gap_below_double_precision_visible": true,
+    "zero_t_filter_not_defined_because_success_probability_is_zero": true
+  },
+  "records": {
+    "arbitrary_precision_parameter_cases": 217,
+    "finite_matrix_filter_cases": 249,
+    "ghz_biseparable_trials": 480,
+    "high_precision_digits": 95,
+    "pure_seed_filter_trials": 240
+  },
+  "research_status": "Initial External Grounding G1 OPEN; NO ONTOLOGY SELECTED"
+}

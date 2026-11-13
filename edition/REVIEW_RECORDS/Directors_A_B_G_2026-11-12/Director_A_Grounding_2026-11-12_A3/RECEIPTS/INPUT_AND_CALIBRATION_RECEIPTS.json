@@ -1,0 +1,87 @@
+{
+  "environment": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "evidential_scope": "Local hash checks verify unchanged bytes relative to supplied local manifests; reruns check finite scripts; proofs are manuscript arguments; neither constitutes empirical research, model emergence, peer review, independent agent certification, or host-enforced PCP/ACR.",
+  "local_calibrations": {
+    "ACR_implementation": {
+      "fingerprint": "42341ddf38a21a659d974af7d27c739605dd192b2d16c76ef1ae2dcdbdd41c79",
+      "payloads": 57,
+      "result": "PASS_LOCAL_STRUCTURAL_AND_DERIVED_CHECKS"
+    },
+    "Director_A_A3": {
+      "GHZ_samples": 480,
+      "float_matrix": 249,
+      "high_precision": 217,
+      "pure_seed_samples": 240,
+      "result": "A3_MATHEMATICAL_CHECK_PASS"
+    },
+    "Director_B_B2": {
+      "payloads": 18,
+      "rerun_math": "PASS_SCOPED_MATHEMATICAL_CONSISTENCY_NOT_PHYSICAL_EMERGENCE",
+      "result": "B2_PACKET_INTEGRITY_PASS"
+    },
+    "Director_G_G2": {
+      "payloads": 15,
+      "rerun_math": "PASS_DIRECTOR_G_COMPOSITE_SELECTION",
+      "result": "PASS_LOCAL_DIRECTOR_G_AB_PACKET"
+    },
+    "PCP_enterprise": {
+      "files": 10,
+      "fingerprint": "6e0cd24f626c065eb5d00ad976caade59f4da286a4b1203362feb79a98a8d1f6",
+      "result": "PASS_EDITION_CHECK"
+    },
+    "research_baseline": {
+      "files": 645,
+      "papers": 38,
+      "registry_rows": 344,
+      "result": "BASELINE_CHECK_PASS"
+    }
+  },
+  "real_participants": "single ChatGPT GPT-6 assistant; B/G are source submissions; no independent spawned sub-agent",
+  "research_direction": "Kirtus Justus",
+  "review": "Director A continuation 3, Initial External Grounding G1 OPEN",
+  "source_archives": [
+    {
+      "bytes": 343952,
+      "inspection": "read actual mounted file",
+      "label": "Director G A/B reconciliation G2",
+      "sha256": "048358d9a5807243db3bb56d2be8ca03f15d751efca7b2409902d2967835190a",
+      "source_basename": "FPHPM_Director_G_AB_Reconciliation_2026-11-12(2).zip"
+    },
+    {
+      "bytes": 350314,
+      "inspection": "read actual mounted file",
+      "label": "Director B second reconciliation B2",
+      "sha256": "62e096ae854655e63c079a70f2683d0c764f5ac2714a1fdb492feac3baa8ebd7",
+      "source_basename": "Director_B_Second_Reconciliation_2026-11-12_B2(1).zip"
+    },
+    {
+      "bytes": 484911,
+      "inspection": "read actual mounted file",
+      "label": "Director A prior continuation self-citation",
+      "sha256": "000bdb6d7e8256b45c0ec92a6034befd8788ccecb7544c61987650448b69b880",
+      "source_basename": "Director_A_Grounding_Continuation_2026-11-12_A2.zip"
+    },
+    {
+      "bytes": 2534245,
+      "inspection": "previous source and current verifier",
+      "label": "PCP 1.0 Enterprise input",
+      "sha256": "1282bcd3f0ec8bd22bfb0575a6cf7e3e38f29f8cbdb278082dcfd317da907be7",
+      "source_basename": "PCP_1.0_Enterprise_Edition.zip"
+    },
+    {
+      "bytes": 41438879,
+      "inspection": "previous source and current verifier",
+      "label": "supplied research baseline outer package",
+      "sha256": "7792807ad4558ee75a32d1533977936578fbbe88e66dea0d7f61c0940744949e",
+      "source_basename": "files(15).zip"
+    }
+  ],
+  "timestamp_convention": "12 November 2026 B.C. Pacific Time"
+}

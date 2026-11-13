@@ -1,0 +1,193 @@
+{
+ "A_CPn_schild_holonomy": [
+  {
+   "n": 1,
+   "bargmann_phase": 0.24379418486269722,
+   "closing_lift_phase_exact": -0.2437941848626971,
+   "schild_vs_closed_form": 2.509483160216256e-06,
+   "schild_unitarity_residual": 4.287337571629024e-07,
+   "schild_J_linearity_residual": 2.7869885907294877e-07,
+   "arg_det_schild": 0.4875908700361557,
+   "arg_det_closed_form": 0.4875883697253943,
+   "predicted_n_plus_1_times_bargmann_phase": 0.48758836972539443,
+   "det_law_residual_schild": 2.500310761262726e-06,
+   "det_law_residual_closed_form": 5.551115123125783e-16
+  },
+  {
+   "n": 2,
+   "bargmann_phase": 0.039505548081086,
+   "closing_lift_phase_exact": -0.039505548081085994,
+   "schild_vs_closed_form": 5.734084696014986e-07,
+   "schild_unitarity_residual": 2.5994061877711393e-08,
+   "schild_J_linearity_residual": 3.125181517213663e-07,
+   "arg_det_schild": 0.11851715702127906,
+   "arg_det_closed_form": 0.11851664424325803,
+   "predicted_n_plus_1_times_bargmann_phase": 0.118516644243258,
+   "det_law_residual_schild": 5.127780210575586e-07,
+   "det_law_residual_closed_form": 2.2887833992611187e-16
+  },
+  {
+   "n": 3,
+   "bargmann_phase": -0.11709732958761442,
+   "closing_lift_phase_exact": 0.11709732958761442,
+   "schild_vs_closed_form": 1.6235316701533398e-06,
+   "schild_unitarity_residual": 4.786608212144775e-07,
+   "schild_J_linearity_residual": 3.47850304944842e-07,
+   "arg_det_schild": -0.46839147225173194,
+   "arg_det_closed_form": -0.4683893183504578,
+   "predicted_n_plus_1_times_bargmann_phase": -0.46838931835045766,
+   "min_distance_eigenvalue_schild_to_bargmann_phase": 5.558661247323453e-07,
+   "min_distance_eigenvalue_closed_form_to_bargmann_phase": 2.860979249076398e-16,
+   "det_law_residual_schild": 2.1539012743076026e-06,
+   "det_law_residual_closed_form": 5.79553433516819e-16
+  }
+ ],
+ "B_commutant_dimension": {
+  "CP2": 2,
+  "CP3": 2,
+  "S2_equals_CP1": 2,
+  "S3": 1,
+  "S4_equals_HP1": 1,
+  "S8_equals_OP1": 1,
+  "RP2_restricted_only": 2,
+  "RP2_with_monodromy": 1
+ },
+ "C_RP2": {
+  "det_noncontractible_schild": -0.9999950652128854,
+  "det_noncontractible_closed_form": -1.0000000000000002,
+  "schild_vs_closed_form": 4.934786981380947e-06,
+  "det_contractible": 1.0,
+  "sign_bundle_holonomy_noncontractible": -1.0,
+  "sign_bundle_holonomy_contractible": 1.0
+ },
+ "D_hamiltonian_form_max_residual": 3.595390651867092e-10,
+ "E_spin_coherent_half_width": {
+  "0.5": {
+   "half_probability_angle": 1.5707963267948966,
+   "times_sqrt_j": 1.1107207345395915
+  },
+  "2": {
+   "half_probability_angle": 0.8205857378323635,
+   "times_sqrt_j": 1.1604834795324617
+  },
+  "8": {
+   "half_probability_angle": 0.41477612576820133,
+   "times_sqrt_j": 1.1731640448199179
+  },
+  "32": {
+   "half_probability_angle": 0.20795085125037047,
+   "times_sqrt_j": 1.176347656581216
+  },
+  "128": {
+   "half_probability_angle": 0.10404584642239423,
+   "times_sqrt_j": 1.1771443769531047
+  },
+  "512": {
+   "half_probability_angle": 0.05203172805171281,
+   "times_sqrt_j": 1.177343607751054
+  }
+ },
+ "F_finite_homogeneous_subsets_of_S2": {
+  "T (12)": {
+   "order": 12,
+   "orbit_size_at_optimum": 12,
+   "best_covering_radius_deg": 37.3773682169562,
+   "grid_stage_deg": 36.836024117663094
+  },
+  "O (24)": {
+   "order": 24,
+   "orbit_size_at_optimum": 24,
+   "best_covering_radius_deg": 27.69129911732116,
+   "grid_stage_deg": 27.141887462769983
+  },
+  "I (60)": {
+   "order": 60,
+   "orbit_size_at_optimum": 60,
+   "best_covering_radius_deg": 18.718316852373267,
+   "grid_stage_deg": 18.32035149342136
+  },
+  "Th/x-1 (24)": {
+   "order": 24,
+   "orbit_size_at_optimum": 24,
+   "best_covering_radius_deg": 30.36119340482622,
+   "grid_stage_deg": 29.81878366369092
+  },
+  "Oh/x-1 (48)": {
+   "order": 48,
+   "orbit_size_at_optimum": 48,
+   "best_covering_radius_deg": 27.56927628365942,
+   "grid_stage_deg": 27.012800940238638
+  },
+  "Ih/x-1 (120)": {
+   "order": 120,
+   "orbit_size_at_optimum": 120,
+   "best_covering_radius_deg": 18.71254735082287,
+   "grid_stage_deg": 18.294975923103284
+  },
+  "axial families (C_n, C_nv, C_nh, S_2n, D_n, D_nd, D_nh), n -> infinity": {
+   "order": "unbounded",
+   "infimum_covering_radius_deg": 45.0,
+   "reason": "orbit contained in two parallels at colatitude t and pi-t; covering radius >= max(t, pi/2 - t) >= pi/4"
+  }
+ },
+ "F_smallest_covering_radius_found_deg": 18.71254735082287,
+ "F_rigorous_area_lower_bound_deg_for_order_at_most_120": 10.475313843229452,
+ "G_words_in_two_stipulated_generators": [
+  {
+   "word_length_at_most": 4,
+   "group_elements": 19,
+   "orbit_points": 8,
+   "covering_radius_deg": 90.0
+  },
+  {
+   "word_length_at_most": 8,
+   "group_elements": 128,
+   "orbit_points": 35,
+   "covering_radius_deg": 47.26579040286729
+  },
+  {
+   "word_length_at_most": 12,
+   "group_elements": 494,
+   "orbit_points": 113,
+   "covering_radius_deg": 24.148674789630597
+  },
+  {
+   "word_length_at_most": 16,
+   "group_elements": 1525,
+   "orbit_points": 338,
+   "covering_radius_deg": 16.3249499181396
+  },
+  {
+   "word_length_at_most": 20,
+   "group_elements": 4428,
+   "orbit_points": 971,
+   "covering_radius_deg": 9.103700140786898
+  },
+  {
+   "word_length_at_most": 24,
+   "group_elements": 12629,
+   "orbit_points": 2770,
+   "covering_radius_deg": 7.5193579107288375
+  },
+  {
+   "word_length_at_most": 28,
+   "group_elements": 35935,
+   "orbit_points": 7882,
+   "covering_radius_deg": 4.438554023330406
+  }
+ ],
+ "predicates": {
+  "A_closed_form_det_law": true,
+  "A_schild_det_law": true,
+  "A_schild_matches_closed_form": true,
+  "A_eigenvalue_law_nonspanning": true,
+  "A_schild_J_linear": true,
+  "B_commutants": true,
+  "C_monodromy_reflection": true,
+  "D_hamiltonian_form": true,
+  "E_width_scales_as_inverse_sqrt_j": true,
+  "F_bounded_below": true,
+  "G_covering_radius_falls_below_homogeneous_bound": true
+ },
+ "all_predicates_true": true
+}

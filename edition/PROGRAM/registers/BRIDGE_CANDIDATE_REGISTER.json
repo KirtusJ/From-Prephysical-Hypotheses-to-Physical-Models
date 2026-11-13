@@ -1,0 +1,595 @@
+{
+ "title": "Bridge Candidate Register: typed map segment for From Prephysical Hypotheses to Physical Models",
+ "date": "2026-11-13",
+ "author": "LLM Director D (Claude, Anthropic) and LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus; entries marked Director A, B or G follow review records prepared with GPT-6 (OpenAI); entries of edition Z7 marked Director G (Codex) follow the research supplements of pull request 2, commit b626c0d; entries of edition Z8 marked Director G (Codex) follow the supplement on native preparations, pull request 2, commit 00b8e26; the edge of edition Z9 marked Director G (Codex) follows the supplement on the base preparation and two rays, pull request 2, commit d4f6fea",
+ "reading_rule": "Nodes are model classes. Edges are typed. Nothing in this file asserts a physical derivation or a selected ontology; it records checked relations, postulates that would have to be supplied, obstructions, discriminators and untested proposals so that the search space is explicit.",
+ "edge_types": {
+  "exact_correspondence": "proved relation within or between mathematical models, with a locator",
+  "postulate": "an axiom that would have to be supplied by a candidate for the edge to exist",
+  "obstruction": "a checked nonselection, ambiguity or impossibility within a stated class",
+  "discriminator": "an observable quantity whose value separates classes; carries its calibration obligations",
+  "untested_transfer": "a proposed relation with no warrant beyond its proposal"
+ },
+ "nodes": {
+  "PRE-REL": "finite relational structures (finite positive-arity signature, homomorphic equivalence, cores) [baseline, Collections Overview §Relational]",
+  "PRE-SIG": "signed-sector signal proposal (exploratory; no construction or observation law) [baseline program figure]",
+  "PRE-CAUSAL": "bare causal/incidence graph (order, compatibility, local counting) [Toy packet comparator]",
+  "PRE-CTX": "unrestricted contextual tables incl. TO-0 (local, quantum and PR-type tables) [withdrawn as ontology; negative control]",
+  "GPT-CLASSICAL": "classical probabilistic theory (simplex state space, deterministic pure states)",
+  "GPT-REALQT": "real-amplitude quantum theory (real Hilbert spaces)",
+  "QT": "complex quantum theory (C*-algebraic / Hilbert space, Born rule, tensor products)",
+  "GPT-BEYOND": "generalized probabilistic theories beyond QT (PR boxes, pentagon state, third-order interference)",
+  "CM-SYMP": "classical Hamiltonian mechanics on a symplectic manifold (incl. integrable systems with monodromy)",
+  "CM-STOCH": "classical stochastic dynamics induced by full dephasing (T_ji = |U_ji|^2) [FAR-1 demonstration]",
+  "GEOM-EPS": "Ehlers–Pirani–Schild: events, light rays, free fall -> conformal + projective -> Weyl -> (extra axiom) Lorentzian metric",
+  "FAR-1": "finite amplitude-record toy universe [stipulated; negative control; all quantum structure imported]",
+  "WILSON": "Wilson–Dirac interval relative-entropy results [baseline; fixed-mass finite part proved; cross-boundary path S(mu) dependency open]",
+  "GPT-NO-I3": "non-classical single-system theories with classical decomposability, strong symmetry and no third-order interference: real, complex and quaternionic quantum theory, three-level octonionic theory, ball state spaces [Barnum–Müller–Ududec 2014] Director A reports, from Barnum–Hilgert 2020, that spectrality and strong symmetry already give this list; not inspected by Director Z.",
+  "PSTP": "Poisson spaces with a transition probability: common description of classical and quantum pure-state spaces [Landsman 1997]",
+  "PRE-GAIN": "finite gain graphs: a group element on each oriented edge of a finite graph, up to switching; signed graphs are the case of the group of order two [Zaslavsky; papers G3, G8]",
+  "QMS": "quantum measure systems: a strongly positive bi-additive function on events, with its Hilbert space [Sorkin 1994; Dowker–Johnston–Sorkin 2010]",
+  "COMPOSITES": "candidate composites of two systems with given single-system theory: minimal, interpolated K_t, quantum [Director B; Director G; paper G7 Section 8]",
+  "PRE-ARC": "norm-preserving gain digraphs: a group element on each arc of a finite digraph with step matrix a multiple of a unitary matrix; for out-degree two, arc digraphs of 2-in 2-out digraphs with a sign -1 [paper G9; Severini 2003]",
+  "GPT-VERONESE": "convex hulls of the tensors n x ... x n (odd degree) with projective and higher-degree affine tests [Director G; Sanyal-Sottile-Sturmfels 2009 for the convex bodies]"
+ },
+ "edges": [
+  {
+   "from": "CM-SYMP",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "Geometric quantization: prequantum line bundle with connection whose curvature is the symplectic form; trivial holonomy on Lagrangian tori is the Bohr–Sommerfeld condition; integrality 2j in Z for the sphere.",
+   "locator": "Kostant–Souriau; checked here only through the spin-j coherent-state phase jΩ (verify_transport_bridges.py B)",
+   "status": "SUPPORTED_IN_SCOPE (mathematics)"
+  },
+  {
+   "from": "CM-SYMP",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "Classical Hamiltonian monodromy of a focus-focus singularity equals the quantum monodromy of the joint spectrum lattice.",
+   "locator": "Vũ Ngọc, Comm. Math. Phys. 1999 (arXiv math/9810137 for the Bohr–Sommerfeld form); Cushman–Duistermaat 1988; executed demonstration: spherical pendulum lattice shift 0.984 (hbar=0.05) and 0.985 (hbar=0.04), control 0.000",
+   "status": "SUPPORTED_IN_SCOPE (mathematics); limit check with exact counting function still to be run"
+  },
+  {
+   "from": "CM-SYMP",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "Same base loop, different representation: Levi-Civita holonomy on S^2 is the solid angle Ω (Schild's ladder reproduces it to 6e-7); the spin-j phase of the same loop is jΩ; the Bargmann triple phase is the discrete holonomy of the geodesic triangle (geodesic rule).",
+   "locator": "verify_transport_bridges.py A, C, F; Berry 1984; Simon 1983; Samuel–Bhandari 1988; Mukunda–Simon 1993",
+   "status": "SUPPORTED_IN_SCOPE (mathematics)"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Holonomy/transport structure does not select the representation: finite group-valued loop products (program's S3 example), SO(2) Levi-Civita and U(1) Hopf holonomies all live on the same loop structure. Transport alone is not a selection mechanism.",
+   "locator": "Director D assessment D-TRN-A; baseline note 'formal gauge covariance, cocycles and holonomy do not by themselves identify physical gauge fields'",
+   "status": "NOT_IDENTIFIED_IN_SCOPE (strong claim)"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "postulate",
+   "statement": "Continuous Reversibility (connected group acting transitively on pure states) + Tomographic Locality + Subspace Axiom or Existence of an Information Unit force the quantum state space. A finite structure has a finite automorphism group and cannot satisfy Continuous Reversibility directly; a limit construction producing a compact homogeneous pure-state space is an obligation for any finite prephysical candidate.",
+   "locator": "Hardy 2001; Masanes–Müller 2011; Masanes et al. 2013; obligation argument in D-TRN-C",
+   "status": "obligation, not discharged"
+  },
+  {
+   "from": "GPT-CLASSICAL",
+   "to": "QT",
+   "type": "discriminator",
+   "statement": "Oriented triple phase arg Tr(P1 P2 P3): classical point states give {0,1}; real amplitudes give phases in {0, pi}; complex QT gives a continuous phase. Pairwise overlaps do not fix it (program's +X,+Y,+Z example; overlaps witness imaginarity for 4 states but not 3).",
+   "locator": "verify_transport_bridges.py A, D; Oszmaniec–Brod–Galvão 2024 (NJP) for measurability; Fernandes–Wagner–Novo–Galvão 2024 (arXiv 2403.15066); Renou et al. Nature 2021 and Li et al. 2022 for the network test",
+   "status": "SUPPORTED_IN_SCOPE (mathematics); CONDITIONAL for application (calibrated preparations, known overlaps, independence)"
+  },
+  {
+   "from": "QT",
+   "to": "GPT-BEYOND",
+   "type": "discriminator",
+   "statement": "Sorkin third-order interference I3 vanishes in QT and in all Jordan-algebraic theories; PR-box and pentagon-state correlations require I3 ≠ 0; experiments bound the normalized term near 1e-4.",
+   "locator": "Sorkin 1994; Sinha et al. 2010; Niestegge arXiv 1303.3986 / 1104.0091",
+   "status": "external precedent; not a result of this program; the exclusion of PR-box and pentagon correlations is a result for quantum logics with unique conditional probabilities and further postulates (Niestegge), not for arbitrary theories (Director A, A-11)"
+  },
+  {
+   "from": "PRE-SIG",
+   "to": "GEOM-EPS",
+   "type": "untested_transfer",
+   "statement": "The signed-sector proposal names geometry and a continuum as targets. EPS is the template such a route would have to match: primitives -> conformal and projective structures -> Weyl -> metric, each step with its named axiom; the final step requires the absence of a second clock effect (an empirical clock statement).",
+   "locator": "Ehlers–Pirani–Schild 1972 (reprint GRG 44, 2012); Perlick 1987; Audretsch–Lämmerzahl 1991 for the matter-wave variant",
+   "status": "check-against template; no construction supplied"
+  },
+  {
+   "from": "PRE-CTX",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Contextual tables do not select the quantum subset; TO-0 withdrawn as ontology.",
+   "locator": "Toy packet TU-01; Director C C-ORI-013",
+   "status": "inherited; unchanged"
+  },
+  {
+   "from": "FAR-1",
+   "to": "CM-STOCH",
+   "type": "exact_correspondence",
+   "statement": "Full basis dephasing induces the stochastic transition T_ji=|U_ji|^2 within the toy; this is not a Hamiltonian limit.",
+   "locator": "Toy packet TU-03; verify_toy_models.py reproduced byte-identically with output path redirected",
+   "status": "inherited; unchanged"
+  },
+  {
+   "from": "FAR-1",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "All central quantum structures are imported; FAR-1 explains none of them.",
+   "locator": "Toy packet Assumptions_and_Dispositions.json",
+   "status": "inherited negative control"
+  },
+  {
+   "from": "WILSON",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "Fixed positive scaled mass: D_L(mu) = (mu^2/6) log L + finite part - S(mu) + O_mu((log L)^-1); S(mu) is a cross-boundary trace path whose dependency remains an open proof obligation.",
+   "locator": "Finite Part of Wilson–Dirac Relative Entropy, Theorem 1; collected article §2.2",
+   "status": "inherited; S(mu) dependency open; not examined this session"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "For supplied operator data, a connected Hermitian matrix is reconstructed from edge magnitudes and a fundamental set of complex cycle products up to diagonal phase gauge; the generated algebra detects connected components but not the support graph.",
+   "locator": "Paper G6, Invariant Relational Selection and Approximate Symmetry",
+   "status": "PROOF_IN_MANUSCRIPT; operator data are supplied, not derived"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "The limit construction owed by a finite candidate is not canonical: Z_n has direct-limit closure U(1) (connected) and inverse limit the profinite integers (totally disconnected).",
+   "locator": "OPEN_PROBLEMS OP-10",
+   "status": "standard mathematics; reasoned, not executed"
+  },
+  {
+   "from": "QT",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "Levi-Civita holonomy of a geodesic polygon in CP^n is unitary with complex determinant (B/|B|)^(n+1), B the Bargmann invariant, and multiplies by B/|B| the tangent vectors orthogonal to the vertices. The transport is fixed by the transition probabilities (d = arccos sqrt p); Schild's ladder computes it.",
+   "locator": "Paper G7, G7-01-03 to G7-01-05; verify_holonomy_field_discriminator.py A",
+   "status": "PROOF_IN_MANUSCRIPT; executed by an independent route for n = 1, 2, 3; unrefereed"
+  },
+  {
+   "from": "GPT-NO-I3",
+   "to": "QT",
+   "type": "discriminator",
+   "statement": "The commutant of the Levi-Civita holonomy group of the pure-state manifold is C exactly for complex quantum theory. Restricted holonomy does not separate the real three-level theory (RP^2) from the qubit; the monodromy round the non-contractible loop is a reflection and does. The metrics are not locally isometric: curvature 1 for RP^2 and 4 for the qubit with d = arccos sqrt p (Directors A, B, G; G7 Remark 5.2). The numbers of generators and of observables modulo constants agree exactly for the complex theories (G7-01-12).",
+   "locator": "Paper G7, G7-01-06 and Remark 5.2; verify_holonomy_field_discriminator.py B, C",
+   "status": "holonomy and isotropy groups of HP^n and OP^2 inspected in extracts; RP^m for m >= 3 quoted; presupposes the transition-probability geometry"
+  },
+  {
+   "from": "GPT-NO-I3",
+   "to": "QT",
+   "type": "postulate",
+   "statement": "The pure states form a symplectic manifold. Within the class this holds only for complex quantum theory; it also holds for classical Hamiltonian mechanics. No reason for imposing it that avoids presupposing Hamiltonian dynamics is identified.",
+   "locator": "Paper G7, G7-01-06 (c); compare observability of energy in Barnum–Müller–Ududec 2014; OPEN_PROBLEMS OP-18",
+   "status": "obligation, not discharged"
+  },
+  {
+   "from": "CM-SYMP",
+   "to": "PSTP",
+   "type": "exact_correspondence",
+   "statement": "Classical mechanics is the instance p = Kronecker delta with an unrestricted Poisson structure.",
+   "locator": "Landsman, Rev. Math. Phys. 9 (1997) 29; arXiv quant-ph/9603005, quant-ph/9604008",
+   "status": "external precedent; inspected in extract"
+  },
+  {
+   "from": "QT",
+   "to": "PSTP",
+   "type": "exact_correspondence",
+   "statement": "Quantum mechanics is the instance in which two-point subspaces are qubit spheres and the sectors of p are the symplectic leaves; the Poisson structure is then fixed up to a constant identified with Planck's constant.",
+   "locator": "Landsman, as above; consistent with the last statement of G7-01-06",
+   "status": "external precedent; inspected in extract"
+  },
+  {
+   "from": "QT",
+   "to": "CM-SYMP",
+   "type": "exact_correspondence",
+   "statement": "Restricted to spin-j coherent states the transition probability is cos^{4j}(theta/2), which tends to the Kronecker delta with half-probability angle sqrt(2 ln 2 / j), while the Bargmann phase is j times the solid angle.",
+   "locator": "Paper G7, equation (6.1); verify_holonomy_field_discriminator.py E",
+   "status": "standard formula; executed"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Finite carriers with a transitive symmetry group cannot approximate a quantum pure-state space: a finite homogeneous subset of the Bloch sphere leaves a cap of radius arccos(59/60) = 10.475 degrees uncovered (arccos(29/30) = 14.835 degrees for rotation orbits; Director G), and CP^n is not a Gromov–Hausdorff limit of finite homogeneous metric spaces. The circle and tori are such limits.",
+   "locator": "Paper G7, G7-01-07 to G7-01-09; Turing, Ann. Math. 39 (1938) 105; Gelander, L'Enseignement Math. 59 (2013) 195, Theorem 1.1 and Corollary 1.3",
+   "status": "G7-01-07 PROOF_IN_MANUSCRIPT; G7-01-09 CONDITIONAL on the quoted theorems"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "untested_transfer",
+   "statement": "Forms of a finite-to-continuum limit not excluded by the obstruction: inhomogeneous finite approximants; finite generating data with words of unbounded length; cyclic-group-valued phases. A trial with two stipulated rotations reaches covering radius 4.4 degrees at word length 28.",
+   "locator": "Paper G7, Section 7 and Table 4; OPEN_PROBLEMS OP-19",
+   "status": "the trial imports its generators; a conditional construction for the second and third forms is in paper G8"
+  },
+  {
+   "from": "QT",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "The transition probabilities of CP^n determine every Bargmann phase up to one conjugation common to all polygons: the phase is the product over a fan of thin triangles of the roots nearest 1 of their holonomy determinants. Three overlaps alone do not determine a triple phase in CP^2 (Director A), and the determinant of one loop loses a root of unity (Director B, B2).",
+   "locator": "Paper G7, G7-01-10, G7-01-11; verify_reconciliation_and_phase_recovery.py B; verify_second_round_director_items.py F3",
+   "status": "PROOF_IN_MANUSCRIPT; executed; uniqueness also follows from Wigner's theorem"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Algebraic generating data do not determine the transition probability: the group generated by H and T carries on its orbit both p and its image under the field automorphism zeta -> zeta^3, with the same completion and no uniformly continuous identification. An ordering of the values has to be supplied.",
+   "locator": "Paper G7, G7-01-13; verify_galois_conjugate_embeddings.py",
+   "status": "PROOF_IN_MANUSCRIPT; exact arithmetic; density of the group quoted"
+  },
+  {
+   "from": "QT",
+   "to": "COMPOSITES",
+   "type": "obstruction",
+   "statement": "Single-system transition probabilities, holonomies and reversible transformations are shared by the minimal composite, the family K_t = (1-t) Sep + t Q and the quantum composite; the uniform four-system extension of K_t fails closure under parallel preparation by t(1-t)/4. A composite fixes the relative orientation of the complex structures of its parts; relative orientations form a balanced signing.",
+   "locator": "Paper G7, G7-01-14, G7-01-15; Director B (B-COMP-05); Director G (DG-COMP-01 to 03); verify_second_round_director_items.py F4",
+   "status": "PROOF_IN_MANUSCRIPT for G7; Director G statements recomputed for the gap and the bounds"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "GPT-CLASSICAL",
+   "type": "exact_correspondence",
+   "statement": "A switching-invariant additive function on walks has a constant weight on open walks and a class function of the gain on closed walks; with one weight function for all walks it is a multiple of the count. Walks that leave distinct records have the counting measure under any pair rule. (Sentence of edition Z2 corrected after Directors A, B, G.)",
+   "locator": "Paper G8, G8-01-01 (revised), G8-01-07; verify_fourth_round_director_items.py G2",
+   "status": "PROOF_IN_MANUSCRIPT; counting measure only, no Hamiltonian mechanics"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "QMS",
+   "type": "exact_correspondence",
+   "statement": "A pair rule on walks with a common end vertex is switching invariant exactly when it is a class function of the pair holonomy, and strongly positive exactly when its character coefficients are non-negative; the extreme measures are squared norms of summed representation matrices; third-order interference is absent.",
+   "locator": "Paper G8, G8-01-02 to G8-01-04; verify_gain_graph_pair_measures.py E1 to E3",
+   "status": "PROOF_IN_MANUSCRIPT; conditional on the postulates of the next edge"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "QMS",
+   "type": "postulate",
+   "statement": "Second order of the rule; end vertices as records; one rule for all graphs; strong positivity; the gain group and its irreducible representation; step count.",
+   "locator": "Paper G8, Section 9; CONSTRUCTED_TRIALS/GH-1",
+   "status": "supplied, not derived; real, complex and quaternionic types all occur"
+  },
+  {
+   "from": "QMS",
+   "to": "QT",
+   "type": "exact_correspondence",
+   "statement": "The Dowker–Johnston–Sorkin construction gives a Hilbert space and a transition probability on classes of events; for cyclic gains of order at least 3 and under a growth condition the rays of events of unbounded walk length are dense in CP^(m-1). The product of gain graphs gives the tensor product.",
+   "locator": "Paper G8, G8-01-05, G8-01-06",
+   "status": "PROOF_IN_MANUSCRIPT; growth condition unproved for a class of graphs; common step count assumed; no operational meaning of the transition probability"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Walk length is not a unitary evolution; long walks converge to one eigenvector; the measure depends on the faithful character unless the cyclic order is 1, 2, 3, 4 or 6. No reversible dynamics, clock or classical Hamiltonian limit. Edition Z3: the measures at successive lengths are not related by continuation (Directors A, B); on an undirected gain graph a norm-preserving step is an involution (G9-01-03; Director B).",
+   "locator": "Paper G8, Section 9 and G8-01-08; verify_gain_graph_pair_measures.py E5, E6",
+   "status": "computed instances and one proposition"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "A directed three-cycle gives C = P - P^T with C^2 = -3 on the zero-sum plane, hence the Eisenstein field without a choice of root of unity; the same input supports the classical simplex of three outcomes. Complex-type algebra does not select quantum theory. Edition Z3: for every odd directed cycle the polar factor of P - P^T is a complex structure on the zero-sum space, reversed by reversal (Directors B, G); it is the case of a permutation of the polar structure of any real orthogonal map (G9-01-05), and the vertex projections do not commute with it.",
+   "locator": "Director A, A2 (Finite-Cycle Complex Structure and Selection Boundaries); identity recomputed in verify_second_round_director_items.py F1",
+   "status": "Director A record; identity recomputed"
+  },
+  {
+   "from": "PRE-REL",
+   "to": "PRE-GAIN",
+   "type": "exact_correspondence",
+   "statement": "A rectagraph carries a transport of its own: an edge is carried across the quadrilateral it spans with the edge travelled (discrete Schild's ladder). Its holonomy is trivial exactly for Cayley graphs of elementary abelian 2-groups; on the incidence graph of the 7-point biplane it is the symmetric group S_4. Its permutation representation contains the trivial one. On the Cayley rectagraphs the signings with norm-preserving step are those with every quadrilateral negative, i.e. anticommuting class matrices; their ordered product is a central complex structure exactly for k = 3 mod 4.",
+   "locator": "Paper G9, G9-01-11, G9-01-12; verify_reversible_gain_digraphs.py R10; Huang 2019; Mathews 2019; Alon-Zheng 2020",
+   "status": "PROOF_IN_MANUSCRIPT; examined in the third Director Z session (was: untested transfer); selects nothing: the number of classes is supplied"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "PRE-ARC",
+   "type": "postulate",
+   "statement": "Consistency of the pair measure under continuation (the measure of an event equals, up to a fixed factor, that of all its continuations); gains of modulus one; out-degree two. Edition Z4: the requirement is equivalent to taking events to be sets of histories (G10-01-01); the event structure is the postulate.",
+   "locator": "Paper G9, Sections 3, 8; CONSTRUCTED_TRIALS/GH-2; Paper G10, Section 3",
+   "status": "supplied, not derived; violated by a generic gain graph (Directors A, B)"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "PRE-ARC",
+   "type": "exact_correspondence",
+   "statement": "Consistency under continuation is norm preservation of the step matrix. With trivial gains it admits permutations only; on undirected gain graphs involutions only; for out-degree two and unit gains exactly the arc digraphs of 2-in 2-out digraphs with zigzag gain -1 in every block: the two continuations of a pair of walks interfere with opposite signs.",
+   "locator": "Paper G9, G9-01-01 to G9-01-04; verify_reversible_gain_digraphs.py R1, R2",
+   "status": "PROOF_IN_MANUSCRIPT; exhaustive on at most six vertices"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "GPT-REALQT",
+   "type": "obstruction",
+   "statement": "A real reversible step has a complex structure of its own (unique under a positive generator, reversed with the step), but only real scalars commute with the step and the vertex records: the model with its records is a real theory and the complex structure is not a structure of it.",
+   "locator": "Paper G9, G9-01-05, G9-01-06; Stueckelberg 1960; Moretti-Oppio 2017; verify_reversible_gain_digraphs.py R3, R5",
+   "status": "PROOF_IN_MANUSCRIPT; no warrant for complex amplitudes (OP-18)"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "exact_correspondence",
+   "statement": "Signed arc digraph of a ring: two branches of opposite group velocity; position over steps converges in law to the group-velocity distribution (quoted); a gain linear in position translates the quasi-momentum by a fixed amount per step exactly, and exchanged steps have a uniform pair gain; packets follow the rays of w(k) + Phi x over one period in instances; the velocity is the response of the eigenphase to the holonomy round the ring.",
+   "locator": "Paper G9, G9-01-07 to G9-01-10; verify_reversible_walk_rays.py",
+   "status": "conditional on the ring, the step count and the requirement; position equation in instances only (deviation 0.61 to 0.65 site); one predicate failed and kept"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "obstruction",
+   "statement": "With gains of the orders 2, 3, 4, 6 a linear gain is a strong field and a walk stays within about six sites over four periods; a staircase of order-4 gains with weak mean slope does not follow the ray of the mean field (3.80 against 5.53 sites, 12.00 against 22.26). A weak force was obtained only with gains whose order grows, where the pair measure depends on the character. The long-time behaviour under a linear gain depends on the arithmetic of the field. Edition Z4: an exact translation of the quasi-momentum by 2 pi / n needs gains of order at least n (G10-01-05); for gains of order q >= 3 no quasi-energy lies in the local spectra of all blocks of a winding staircase, except four band edges for q = 4 (G10-01-06); instances at block lengths 1 to 256 confine, leak or spread, and none follows the ray of its mean field; a linear gain of small order spreads ballistically at long times.",
+   "locator": "Paper G9, Section 6.2; G8-01-08; Cedzich et al. 2013; verify_reversible_walk_rays.py R8; Paper G10, Section 6; verify_fourth_session_corrections.py N1 to N3",
+   "status": "two propositions PROOF_IN_MANUSCRIPT; computed instances; general statement unresolved (OP-28)"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "QMS",
+   "type": "exact_correspondence",
+   "statement": "The pair measure of the identity indicator is the count of coincidences of lifted walks on the derived covering graph and the dimension-weighted mean of the irreducible measures; a covering supplies its group but not the choice of representation. The gains reached at a given length form a coset of the holonomy group of the gain augmented by length parity, and the density statement of G8-01-05 holds with the limit space determined by the gains of closed walks of even length.",
+   "locator": "Paper G8, G8-01-09, G8-01-10; verify_gain_graph_covers_and_growth.py; witnesses of Directors A, B, G",
+   "status": "PROOF_IN_MANUSCRIPT"
+  },
+  {
+   "from": "QT",
+   "to": "GPT-VERONESE",
+   "type": "obstruction",
+   "statement": "A designated family of pure tests with the qubit table does not determine the convex set of states: the cubic Veronese model has dimension 10 and a cubic effect separating mixtures with equal Bloch contraction (1/2 against 5/8). With the designated tests only the model is the qubit; with all affine effects pure states at Bloch angle 60 degrees are perfectly distinguishable, so the model does not carry the qubit transition-probability geometry.",
+   "locator": "Director G, G3 (Operational Veroneses and Quantum Nonselection); Paper G7, Section 5; verify_third_round_director_items.py H7, H8",
+   "status": "Director G record; recomputed; second reading added by Director Z"
+  },
+  {
+   "from": "QT",
+   "to": "COMPOSITES",
+   "type": "obstruction",
+   "statement": "Selective local filters take every interior member of the family K_t outside itself; no four-party weight makes the affine family closed under parallel preparation and discarding; a matching-generated hierarchy is closed under weaker operations and excludes GHZ; one pure entangled seed with local unitaries and filters gives all two-qubit states. Which selective operations are available has to be supplied.",
+   "locator": "Director A, A3; Director B, B3; Director G, G4; verify_third_round_director_items.py H1 to H5",
+   "status": "Director records within the imported quantum formalism; recomputed"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "QT",
+   "type": "untested_transfer",
+   "statement": "Not examined: exp(-isH) on an undirected gain graph as a dynamics (Director G; imports the imaginary unit and a continuous parameter); arc digraphs of degree three with blocks in Z_3; composition of two norm-preserving digraphs with interaction as gains on the product.",
+   "locator": "Director Z third-session disposition, section 5",
+   "status": "background; no construction"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "PRE-ARC",
+   "type": "exact_correspondence",
+   "statement": "A family of set functions on walks of each length is one function on the algebra of cylinder sets of histories exactly when it is consistent under continuation.",
+   "locator": "Paper G10, G10-01-01; Dowker-Johnston-Surya 2010 for the algebra",
+   "status": "PROOF_IN_MANUSCRIPT; elementary"
+  },
+  {
+   "from": "PRE-GAIN",
+   "to": "GPT-CLASSICAL",
+   "type": "exact_correspondence",
+   "statement": "An additive switching-invariant rule that is consistent under continuation is a multiple of the number of walks: on sets of histories a first-order rule is the classical count and cannot depend on the transport; the holonomy weighting of returning walks is excluded.",
+   "locator": "Paper G10, G10-01-02; verify_continuation_selection.py S3",
+   "status": "PROOF_IN_MANUSCRIPT; loopless digraphs of constant out-degree"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "QMS",
+   "type": "exact_correspondence",
+   "statement": "Among rules that add over end vertices a function of the modulus of the summed gains, consistency under continuation admits only the square on the signed arc digraph of the line, and only the second power on any norm-preserving gain digraph with a merging pair of walks (merging is necessary: on the countable binary tree every such rule is the count; Director G). With trivial gains the count is consistent on the same digraph. Edition Z5: the square is the only consistent rule of this form on every finite connected signed gain digraph that is norm-preserving of degree two (G10-01-07); observed, not proved, for gains of order four. Edition Z6: for gains in the q-th roots of unity the consistent rules are exactly the combinations of the squared moduli in the conjugate characters (G10-01-09); this replaces the sentence on gains of order four.",
+   "locator": "Paper G10, G10-01-03, G10-01-04; verify_fourth_session_corrections.py M1 and controls; G10-01-07; verify_degree_two_quadratic_rule_followup.py; G10-01-09; verify_cyclotomic_modulus_rules.py",
+   "status": "PROOF_IN_MANUSCRIPT; conditional on the event structure, the record-sum form and the carrier, all supplied"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "untested_transfer",
+   "statement": "Under a linear gain the centroid of a packet follows the ray averaged over the quasi-momentum distribution of the packet, displaced by the connection of the branch eigenvector, with a remainder of first order in the field.",
+   "locator": "Paper G10, Section 7 and equation (7.1); verify_ray_averaged_prediction.py; Panati-Spohn-Teufel 2003 for Schroedinger operators",
+   "status": "heuristic; computed instances (remainder 0.0735 to 0.0016 site over periods 64 to 2048); no bound"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "QT",
+   "type": "obstruction",
+   "statement": "Consistency on history events forces the order of the rule and does not select the embedding of the amplitudes: for gains of order q the consistent rules of the record-sum form are the real combinations of the squared moduli in the phi(q)/2 conjugate characters; the rule is unique exactly for q = 2, 4, 6. A combination with unequal weights is a consistent rule that is the squared modulus of no character. Edition Z7: positivity confines the weights to a cone; multiplicativity on products selects one conjugate character (G10-01-10; Director G's classification on Q(zeta, sqrt 2), obtained first). The Galois group on one character remains. Edition Z8: if the gain of a walk is a record (signed lift) the rule is unique for every order and is the equal-weight mean over the characters in which -1 acts as -1 (G10-01-11); the choice of an embedding belongs to the reduction by a character. Director G: native records from a localized sheet have one rational law under every embedding law (obtained first). Edition Z9: among switching-invariant pair rules, with no choice of records, the consistent ones are exactly those whose kernel changes sign under -1 (G10-01-12); composition then leaves one character in which -1 acts as -1, not necessarily faithful.",
+   "locator": "Paper G10, G10-01-08, G10-01-09; verify_cyclotomic_modulus_rules.py; compare G8-01-08 and G7-01-13; G10-01-10; Director G, Probability_from_record_composition.md; G10-01-11; Director G, Native_preparations_and_probability_embeddings.md; G10-01-12",
+   "status": "PROOF_IN_MANUSCRIPT under a growth hypothesis on one block; exact computation for q = 2, 4, 6, 8, 10, 12"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "exact_correspondence",
+   "statement": "Signed line walk under a linear gain, packet near the band edge k = -pi/2: the full spinor stays within E(t) = 2|F| t delta + t delta^2 L^4/(6 eps) + t |F| L delta^2/2 of a constant-force Schroedinger envelope, and for a shrinking packet the scaled lattice position law converges weakly to the Newtonian trajectory Y0 + p0 t - F t^2/2.",
+   "locator": "Director G (Codex), Forced_envelope_and_classical_motion.md, pull request 2, commit b626c0d; cross-check: REVIEW_RECORDS/Director_Z/Session_4/cross_review",
+   "status": "Director G record; proof read and bound checked by a real-space walk by Director Z; unrefereed; conditional on the band preparation, the readout, the scaling and gains of growing order"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "exact_correspondence",
+   "statement": "Signed line walk under a linear gain, prepared by a coherent projection on the direction with the sites unread, alternated every two steps: in the scaling eps = delta, h = F delta^4, about delta^(-5/2) blocks, the sheet-unresolved position law at scaled time t tends to equal point masses at -F t^2/2 and +F t^2/2, the two band curvatures at the two edges. Full site-and-direction readings cannot prepare the packet (flat momentum density).",
+   "locator": "Director G (Codex), Base_preparation_and_two_rays.md, pull request 2, commit d4f6fea; cross-check: REVIEW_RECORDS/Director_Z/Session_4/cross_review/CROSS_REVIEW_OF_DIRECTOR_G_TWO_RAYS_ADDENDUM.md",
+   "status": "Director G record; read once and checked by real-space runs at five scales by Director Z; unrefereed; conditional on the direction instrument, a weak-field sheet plane, the readout and gains of growing order; a law at one time, not a trajectory"
+  }
+ ],
+ "obligations_for_any_prephysical_candidate": [
+  "supply a limit construction whose pure-state space is a compact homogeneous space under a connected group (Continuous Reversibility)",
+  "supply tomographic locality (composition rule) and an information unit or subspace structure",
+  "exhibit a continuously varying oriented triple phase (imaginarity) with I3 = 0, or else declare which rung of the classical/real/complex/beyond ladder the candidate occupies",
+  "for geometry: name the axioms at each EPS step and the clock statement that closes the Weyl-to-metric gap",
+  "for dynamics: name the formal update index's relation to a calibrated clock (inherited; open)",
+  "do not rely on exact transitive symmetry at finite stages; state which form of limit is used and why the symmetry of the limit appears",
+  "either derive that pure states form a symplectic manifold or name the postulate (observability of energy, tomographic locality) that selects complex amplitudes",
+  "state which equivalence relation the candidate respects: conjugation of a whole model is unobservable, relative orientation of systems is not",
+  "supply the ordering of probability values, or use data whose only field automorphism is complex conjugation",
+  "supply a composite closed under parallel preparation for every number of systems, and the origin of entangling operations",
+  "supply a reason for the second order of the probability rule and for what counts as a record",
+  "state how the measures at different lengths or times are related, and why",
+  "state which tests are admitted, before attributing a transition-probability geometry",
+  "if a force is to arise from a transport of bounded order, exhibit the limit; if from a transport of growing order, supply the ordering of values",
+  "state the event structure: if events are sets of histories, a first-order rule is the count and is blind to the transport; say what selects a carrier on which a rule that depends on the transport is consistent"
+ ],
+ "retained_outliers": {
+  "lattice_shift_hbar_0.05_M8": 0.9839250731740311,
+  "lattice_shift_hbar_0.04_M6": 0.985233874008125,
+  "schild_ladder_residual_rad": 6.2e-07,
+  "note": "retained as data; limiting values are the cited theorems, not these numbers",
+  "monodromy_integer_index": "1 for enclosing loops and 0 for control loops at hbar = 0.05, 0.04, 0.03, 0.02 (two loops); see COMPUTATION/Baseline_Additions",
+  "schild_one_sided_determinant_residual_rung_1e-3": 0.00033,
+  "schild_one_sided_determinant_residual_rung_2e-3": 0.00065,
+  "covering_radius_deg_icosahedral_chiral_and_full": [
+   18.718,
+   18.713
+  ],
+  "RP2_restricted_holonomy_commutant_dimension": 2,
+  "icosahedral_full_group_covering_radius_deg_exact_circumradius": 18.7125,
+  "phase_recovery_n4_k5_root_of_whole_polygon_vs_phase": [
+   0.202307,
+   2.715582
+  ],
+  "conjugate_embedding_extreme_element_p_and_pconj": [
+   0.9953,
+   0.0672
+  ],
+  "gain_graph_first_draw_I4_of_fourth_order_rule": 0.0,
+  "Q8_non_class_weight_change_of_single_set_measure": 0.0,
+  "random_Z4_gain_graph_max_singular_value_ratio": 0.4236,
+  "rays_residual_after_connection_offset_sites_periods_64_256": [
+   0.0747,
+   0.038
+  ],
+  "staircase_order4_displacement_vs_linear_gain_sites": [
+   [
+    3.796,
+    5.535
+   ],
+   [
+    11.998,
+    22.256
+   ]
+  ],
+  "strong_field_return_probability_order3_after_3_and_6_steps": [
+   0.0,
+   0.7656
+  ],
+  "veronese_infimum_at_20_40_60_degrees": [
+   0.704,
+   0.207,
+   0.0
+  ],
+  "three_cycle_commutator_of_vertex_projection_with_J": "2 sqrt 2/3",
+  "consistent_signings_of_K4": 0,
+  "biplane_ladder_holonomy_group_order": 24,
+  "central_ray_residual_after_offset_sites_periods_64_to_2048": [
+   0.0748,
+   0.0385,
+   0.0381,
+   0.0622,
+   0.1174,
+   0.2315
+  ],
+  "averaged_ray_residual_sites_periods_64_to_2048": [
+   0.0735,
+   0.0273,
+   0.0135,
+   0.0071,
+   0.0029,
+   0.0016
+  ],
+  "staircase_rms_distance_after_2048_steps_orders_2_3_4_6_by_block_length_1_2_4_16_64": [
+   [
+    1108,
+    750,
+    403,
+    346,
+    347
+   ],
+   [
+    520,
+    520,
+    160,
+    9.3,
+    31
+   ],
+   [
+    750,
+    365,
+    102,
+    8.4,
+    34
+   ],
+   [
+    520,
+    181,
+    27,
+    11,
+    48
+   ]
+  ],
+  "interface_transmission_for_gain_steps_pi_over_12_6_4_3_2_and_2pi_over_3_and_pi": [
+   0.99974,
+   0.99944,
+   0.97466,
+   0.00254,
+   3.1e-13,
+   2.9e-13,
+   0.47693
+  ],
+  "order4_staircase_fraction_of_mean_field_displacement_block_lengths_16_64_256": [
+   0.686,
+   0.539,
+   0.158
+  ],
+  "additive_holonomy_weight_continuation_ratios_K4_Z3": [
+   1.5,
+   2.5,
+   4.0
+  ],
+  "band_velocities_from_sorted_eigenphases_discarded_instrument_orders_2_12_24": [
+   0.00049,
+   21.1,
+   5.46
+  ],
+  "period_64_staircase_displacement_every_64_steps_sites": [
+   3.86,
+   -3.55,
+   -1.17,
+   4.0,
+   -2.07,
+   -1.38,
+   2.45,
+   -1.27,
+   -0.4,
+   1.69,
+   -2.05,
+   0.21,
+   1.66,
+   -2.66,
+   0.12,
+   2.53
+  ],
+  "quasiperiodic_rounded_order4_displacement_range_sites": [
+   -6.6,
+   5.75
+  ],
+  "degree_two_first_program_carriers_with_two_dimensional_solution_space": "2 of 40 (an unknown without an equation; walks of length 10); 0 of 40 with walks of length 16",
+  "consistent_modulus_rule_solution_dimension_for_q_2_4_6_8_10_12": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  "director_g_rerun_largest_relative_difference_of_floating_outputs": 1.49e-06,
+  "signed_lifts_with_two_connected_components_of_30": 2,
+  "two_ray_mass_of_positive_half_at_delta_0p2": 0.5437860483779331,
+  "kernel_rule_first_run_predicates_failed_of_4": 3
+ }
+}

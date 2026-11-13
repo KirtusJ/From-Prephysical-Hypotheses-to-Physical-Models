@@ -1,0 +1,71 @@
+{
+  "status": "PASS_SCOPED_ARITHMETIC_AND_NUMERIC_CHECKS_NOT_PROOF_OR_PHYSICAL_VALIDATION",
+  "participants": "one AI assistant; one code implementation; no independent assessment",
+  "exact_three_ray_witness": {
+    "states": "X=(1,0); Y=(sqrt(3)/2,1/2); Z=(sqrt(3)/2,i/2)",
+    "probabilities_XY_YZ_ZX": [
+      "3/4",
+      "5/8",
+      "3/4"
+    ],
+    "bargmann": "9/16 + 3*I/16",
+    "bargmann_conjugate": "9/16 - 3*I/16",
+    "metric_same_under_conjugation": true,
+    "phase_radians": 0.3217505543966422,
+    "conjugate_phase_radians": -0.3217505543966422,
+    "note": "Complex rays and standard inner product are stipulated for this conditional counterexample."
+  },
+  "classical_spin_countermodel": {
+    "pure_state_geometry": "(S^2,round metric,signed area symplectic form)",
+    "classical_mixed_states": "Borel probability measures on S^2",
+    "two_distributions_same_mean": true,
+    "effect_nz_squared_antipodal": 1.0,
+    "effect_nz_squared_uniform": 0.3333333333333333,
+    "higher_order_interference": "classical disjoint filters obey finite additivity; no nontrivial I_k for k>=2"
+  },
+  "sphere_transport": {
+    "method": "exact great-circle ambient rotations (Rodrigues), NOT a Schild-ladder algorithm",
+    "fixed_phase_error_rad": 2.220446049250313e-16,
+    "random_seed": 20261112,
+    "num_trials": 96,
+    "max_phase_error_rad": 1.5314274795707798e-15,
+    "max_loop_anchor_error": 1.0026641665932502e-15,
+    "all_trials_file": "ALL_96_SPHERE_HOLONOMY_TRIALS.csv",
+    "note": "Conventional CP1/S2 geometry is input, not derived. Monte Carlo checks do not prove any general identity."
+  },
+  "finite_group_cover_radius_lower_bounds": {
+    "SO3_icosahedral_max_orbit_60_degrees": 14.835111581975733,
+    "O3_icosahedral_max_orbit_120_degrees": 10.475313843229452,
+    "SO3_exact_cosine_upper_bound": "29/30",
+    "O3_exact_cosine_upper_bound": "59/60",
+    "proof_dependencies": "classification of finite subgroups of SO(3), axis normality for cyclic/dihedral, spherical cap area"
+  },
+  "local_curvature_discriminator": {
+    "CP1_FS_constant_gaussian_curvature": 4,
+    "RP2_real_projective_constant_gaussian_curvature": 1,
+    "normalization": "d([u],[v]) = arccos |<u,v>|, both diameters pi/2",
+    "scope": "Intrinsic 2D Riemannian geometry under transition-probability metric. Only-by-monodromy is not literal across all tests."
+  },
+  "orientation_under_opposite_complex_structure": {
+    "real_orientation_multiplier_by_complex_dimension": {
+      "1": -1,
+      "2": 1,
+      "3": -1,
+      "4": 1,
+      "5": -1,
+      "6": 1
+    },
+    "even_n_same_real_orientation_J_versus_negative_J": true
+  },
+  "checker_controls": {
+    "valid_control_accepted": true,
+    "known_false_conjugated_B_rejected": true
+  },
+  "boundaries": [
+    "no actual experiment",
+    "no G7/Z1 manuscript access",
+    "no independent reviewers",
+    "not a physical bridge",
+    "finite classical spin model is infinite-dimensional as convex state space; classification theorems imposing finite-dimensionality require separate assessment"
+  ]
+}

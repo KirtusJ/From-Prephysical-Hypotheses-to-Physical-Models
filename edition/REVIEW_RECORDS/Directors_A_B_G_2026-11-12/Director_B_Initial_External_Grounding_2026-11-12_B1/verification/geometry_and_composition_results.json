@@ -1,0 +1,42 @@
+{
+  "bell_state_CHSH": 2.8284271247461894,
+  "bell_state_partial_transpose_eigenvalues": [
+    -0.4999999999999999,
+    0.4999999999999999,
+    0.4999999999999999,
+    0.4999999999999999
+  ],
+  "cp1_conjugation_max_abs_error": 0.0,
+  "cp1_det_holonomy_vs_Bargmann_squared_max_abs_error": 1.7044725877846372e-14,
+  "cp1_min_B_magnitude": 0.00851865875380383,
+  "cp1_probability_metric_max_abs_error": 5.551115123125783e-16,
+  "cp1_triangles": 1000,
+  "limitations": [
+    "CP^n n>1 determinant identity is analytic not verified by this script",
+    "Finite-subgroup O(3) classification is an external mathematical theorem, not checked computationally",
+    "1000 random triangles and 10000 random product states are checks, not universal proofs"
+  ],
+  "local_checks": "PASS",
+  "max_abs_CHSH_10000_random_product_states": 1.4107770291448893,
+  "rp2_monodromy_determinant": -1.0,
+  "rp2_nontrivial_monodromy_matrix": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0
+    ]
+  ],
+  "scope": "Computed checks on exact specified mathematical toy objects only, no physics or independent peer review",
+  "seed": 20261112,
+  "spherical_cap_lower_bound_degrees_for_N_le_120": 10.475313843229452,
+  "wrong_exponent_negative_control": {
+    "B_imag": 0.07835777839692487,
+    "B_phase_radians": 1.8480813375205052,
+    "B_real": -0.02230196574139145,
+    "oriented_solid_angle": 3.6961626750410117,
+    "wrong_exponent_one_error": 1.5960860741397296
+  }
+}

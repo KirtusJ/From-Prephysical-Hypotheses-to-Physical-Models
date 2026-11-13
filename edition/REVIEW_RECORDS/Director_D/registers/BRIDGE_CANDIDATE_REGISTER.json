@@ -1,0 +1,55 @@
+{
+  "title": "Bridge Candidate Register: typed map segment for From Prephysical Hypotheses to Physical Models",
+  "date": "2026-11-11",
+  "author": "LLM Director D (Claude, Anthropic) at the direction of Kirtus Justus",
+  "reading_rule": "Nodes are model classes. Edges are typed. Nothing in this file asserts a physical derivation or a selected ontology; it records checked relations, postulates that would have to be supplied, obstructions, discriminators and untested proposals so that the search space is explicit.",
+  "edge_types": {
+    "exact_correspondence": "proved relation within or between mathematical models, with a locator",
+    "postulate": "an axiom that would have to be supplied by a candidate for the edge to exist",
+    "obstruction": "a checked nonselection, ambiguity or impossibility within a stated class",
+    "discriminator": "an observable quantity whose value separates classes; carries its calibration obligations",
+    "untested_transfer": "a proposed relation with no warrant beyond its proposal"
+  },
+  "nodes": {
+    "PRE-REL": "finite relational structures (finite positive-arity signature, homomorphic equivalence, cores) [baseline, Collections Overview §Relational]",
+    "PRE-SIG": "signed-sector signal proposal (exploratory; no construction or observation law) [baseline program figure]",
+    "PRE-CAUSAL": "bare causal/incidence graph (order, compatibility, local counting) [Toy packet comparator]",
+    "PRE-CTX": "unrestricted contextual tables incl. TO-0 (local, quantum and PR-type tables) [withdrawn as ontology; negative control]",
+    "GPT-CLASSICAL": "classical probabilistic theory (simplex state space, deterministic pure states)",
+    "GPT-REALQT": "real-amplitude quantum theory (real Hilbert spaces)",
+    "QT": "complex quantum theory (C*-algebraic / Hilbert space, Born rule, tensor products)",
+    "GPT-BEYOND": "generalized probabilistic theories beyond QT (PR boxes, pentagon state, third-order interference)",
+    "CM-SYMP": "classical Hamiltonian mechanics on a symplectic manifold (incl. integrable systems with monodromy)",
+    "CM-STOCH": "classical stochastic dynamics induced by full dephasing (T_ji = |U_ji|^2) [FAR-1 demonstration]",
+    "GEOM-EPS": "Ehlers–Pirani–Schild: events, light rays, free fall -> conformal + projective -> Weyl -> (extra axiom) Lorentzian metric",
+    "FAR-1": "finite amplitude-record toy universe [stipulated; negative control; all quantum structure imported]",
+    "WILSON": "Wilson–Dirac interval relative-entropy results [baseline; fixed-mass finite part proved; cross-boundary path S(mu) dependency open]"
+  },
+  "edges": [
+    {"from": "CM-SYMP", "to": "QT", "type": "exact_correspondence", "statement": "Geometric quantization: prequantum line bundle with connection whose curvature is the symplectic form; trivial holonomy on Lagrangian tori is the Bohr–Sommerfeld condition; integrality 2j in Z for the sphere.", "locator": "Kostant–Souriau; checked here only through the spin-j coherent-state phase jΩ (verify_transport_bridges.py B)", "status": "SUPPORTED_IN_SCOPE (mathematics)"},
+    {"from": "CM-SYMP", "to": "QT", "type": "exact_correspondence", "statement": "Classical Hamiltonian monodromy of a focus-focus singularity equals the quantum monodromy of the joint spectrum lattice.", "locator": "Vũ Ngọc, Comm. Math. Phys. 1999 (arXiv math/9810137 for the Bohr–Sommerfeld form); Cushman–Duistermaat 1988; executed demonstration: spherical pendulum lattice shift 0.984 (hbar=0.05) and 0.985 (hbar=0.04), control 0.000", "status": "SUPPORTED_IN_SCOPE (mathematics); limit check with exact counting function still to be run"},
+    {"from": "CM-SYMP", "to": "QT", "type": "exact_correspondence", "statement": "Same base loop, different representation: Levi-Civita holonomy on S^2 is the solid angle Ω (Schild's ladder reproduces it to 6e-7); the spin-j phase of the same loop is jΩ; the Bargmann triple phase is the discrete holonomy of the geodesic triangle (geodesic rule).", "locator": "verify_transport_bridges.py A, C, F; Berry 1984; Simon 1983; Samuel–Bhandari 1988; Mukunda–Simon 1993", "status": "SUPPORTED_IN_SCOPE (mathematics)"},
+    {"from": "PRE-REL", "to": "QT", "type": "obstruction", "statement": "Holonomy/transport structure does not select the representation: finite group-valued loop products (program's S3 example), SO(2) Levi-Civita and U(1) Hopf holonomies all live on the same loop structure. Transport alone is not a selection mechanism.", "locator": "Director D assessment D-TRN-A; baseline note 'formal gauge covariance, cocycles and holonomy do not by themselves identify physical gauge fields'", "status": "NOT_IDENTIFIED_IN_SCOPE (strong claim)"},
+    {"from": "PRE-REL", "to": "QT", "type": "postulate", "statement": "Continuous Reversibility (connected group acting transitively on pure states) + Tomographic Locality + Subspace Axiom or Existence of an Information Unit force the quantum state space. A finite structure has a finite automorphism group and cannot satisfy Continuous Reversibility directly; a limit construction producing a compact homogeneous pure-state space is an obligation for any finite prephysical candidate.", "locator": "Hardy 2001; Masanes–Müller 2011; Masanes et al. 2013; obligation argument in D-TRN-C", "status": "obligation, not discharged"},
+    {"from": "GPT-CLASSICAL", "to": "QT", "type": "discriminator", "statement": "Oriented triple phase arg Tr(P1 P2 P3): classical point states give {0,1}; real amplitudes give phases in {0, pi}; complex QT gives a continuous phase. Pairwise overlaps do not fix it (program's +X,+Y,+Z example; overlaps witness imaginarity for 4 states but not 3).", "locator": "verify_transport_bridges.py A, D; Oszmaniec–Brod–Galvão 2024 (NJP) for measurability; Fernandes–Wagner–Novo–Galvão 2024 (arXiv 2403.15066); Renou et al. Nature 2021 and Li et al. 2022 for the network test", "status": "SUPPORTED_IN_SCOPE (mathematics); CONDITIONAL for application (calibrated preparations, known overlaps, independence)"},
+    {"from": "QT", "to": "GPT-BEYOND", "type": "discriminator", "statement": "Sorkin third-order interference I3 vanishes in QT and in all Jordan-algebraic theories; PR-box and pentagon-state correlations require I3 ≠ 0; experiments bound the normalized term near 1e-4.", "locator": "Sorkin 1994; Sinha et al. 2010; Niestegge arXiv 1303.3986 / 1104.0091", "status": "external precedent; not a result of this program"},
+    {"from": "PRE-SIG", "to": "GEOM-EPS", "type": "untested_transfer", "statement": "The signed-sector proposal names geometry and a continuum as targets. EPS is the template such a route would have to match: primitives -> conformal and projective structures -> Weyl -> metric, each step with its named axiom; the final step requires the absence of a second clock effect (an empirical clock statement).", "locator": "Ehlers–Pirani–Schild 1972 (reprint GRG 44, 2012); Perlick 1987; Audretsch–Lämmerzahl 1991 for the matter-wave variant", "status": "check-against template; no construction supplied"},
+    {"from": "PRE-CTX", "to": "QT", "type": "obstruction", "statement": "Contextual tables do not select the quantum subset; TO-0 withdrawn as ontology.", "locator": "Toy packet TU-01; Director C C-ORI-013", "status": "inherited; unchanged"},
+    {"from": "FAR-1", "to": "CM-STOCH", "type": "exact_correspondence", "statement": "Full basis dephasing induces the stochastic transition T_ji=|U_ji|^2 within the toy; this is not a Hamiltonian limit.", "locator": "Toy packet TU-03; verify_toy_models.py reproduced byte-identically with output path redirected", "status": "inherited; unchanged"},
+    {"from": "FAR-1", "to": "QT", "type": "obstruction", "statement": "All central quantum structures are imported; FAR-1 explains none of them.", "locator": "Toy packet Assumptions_and_Dispositions.json", "status": "inherited negative control"},
+    {"from": "WILSON", "to": "QT", "type": "exact_correspondence", "statement": "Fixed positive scaled mass: D_L(mu) = (mu^2/6) log L + finite part - S(mu) + O_mu((log L)^-1); S(mu) is a cross-boundary trace path whose dependency remains an open proof obligation.", "locator": "Finite Part of Wilson–Dirac Relative Entropy, Theorem 1; collected article §2.2", "status": "inherited; S(mu) dependency open; not examined this session"}
+  ],
+  "obligations_for_any_prephysical_candidate": [
+    "supply a limit construction whose pure-state space is a compact homogeneous space under a connected group (Continuous Reversibility)",
+    "supply tomographic locality (composition rule) and an information unit or subspace structure",
+    "exhibit a continuously varying oriented triple phase (imaginarity) with I3 = 0, or else declare which rung of the classical/real/complex/beyond ladder the candidate occupies",
+    "for geometry: name the axioms at each EPS step and the clock statement that closes the Weyl-to-metric gap",
+    "for dynamics: name the formal update index's relation to a calibrated clock (inherited; open)"
+  ],
+  "retained_outliers": {
+    "lattice_shift_hbar_0.05_M8": 0.9839250731740311,
+    "lattice_shift_hbar_0.04_M6": 0.985233874008125,
+    "schild_ladder_residual_rad": 6.2e-07,
+    "note": "retained as data; limiting values are the cited theorems, not these numbers"
+  }
+}

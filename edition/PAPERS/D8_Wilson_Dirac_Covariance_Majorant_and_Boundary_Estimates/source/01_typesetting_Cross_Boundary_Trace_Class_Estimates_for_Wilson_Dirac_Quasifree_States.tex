@@ -1,0 +1,441 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom\sloppy
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Cross-Boundary Trace-Class Estimates for Wilson--Dirac Quasifree States},
+  pdfauthor={Kirtus Justus  Theoretical Physicist  23 October 2026Port Coquitlam, British Columbia, Canada},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Cross-Boundary Trace-Class Estimates for Wilson--Dirac Quasifree States}
+\author{Kirtus Justus \textbullet{} Theoretical Physicist \textbullet{} 23 October 2026\tabularnewline Port Coquitlam, British Columbia, Canada}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Abstract.} We derive lattice Fourier moment identities, two-boundary Laplace and modified-Bessel representations, trace-class convergence and subcritical fractional Sobolev nuclear bounds for compressed infinite-chain Wilson--Dirac projectors. The finite quasifree trace-path identity and these estimates prove an entropy-difference convergence rate for this specified model. These results alone do not establish the complete Wilson relative-entropy asymptotic or its modular remainder.
+
+\subsection{Model and definitions}\label{model-and-definitions}
+
+The model is the infinite-chain Wilson--Dirac occupied-band projection
+
+\[
+P_m(k)=\frac12\left[I-\frac{\sin k\,\sigma_x+(1+m-\cos k)\sigma_z}{\sqrt{m^2+4(1+m)\sin^2(k/2)}}\right],\qquad m=\mu/L.
+\]
+
+The finite region consists of \textbf{L cells, each with two orbitals}. Restricting the \emph{infinite-chain projection} to these cells is essential; the proof is not for the ground-state projection of an open finite chain. Let \(U_L\colon\ell^2(\mathbb Z;\mathbb C^2)\to L^2(\mathbb R;\mathbb C^2)\) be the isometry whose outputs are constant on each interval \([j/L,(j+1)/L)\), and \(\chi=1_{(0,1)}\). Set
+
+\[
+\begin{aligned}
+\widetilde P_{L,\mu}&=U_L\mathsf P_{\mu/L}U_L^*,
+&X_{L,\mu}&=\chi\widetilde P_{L,\mu}(1-\chi),\\
+P_\mu^c&=\mathcal F^{-1}\frac12\left[I-\frac{u\sigma_x+\mu\sigma_z}{\sqrt{u^2+\mu^2}}\right]\mathcal F,
+&X_\mu&=\chi P_\mu^c(1-\chi),\\
+Z_{L,\mu}&=X_{L,\mu}-X_{L,0},&Z_\mu&=X_\mu-X_0,\\
+\mathbb D_\mu&=\begin{pmatrix}0&Z_\mu\\Z_\mu^*&0\end{pmatrix}.
+\end{aligned}
+\]
+
+The value of the continuum multiplier at \((u,\mu)=(0,0)\) is irrelevant. The \(L^2\) decomposition is into the interior and \textbf{both} exterior half-lines.
+
+\subsection{Lattice Fourier moment identity (no contour deformation)}\label{lattice-fourier-moment-identity-no-contour-deformation}
+
+In the fixed \(\sigma_y\) eigenbasis, the Bloch projection has off-diagonal function
+
+\[
+q_\tau(e^{ik})=\frac{1+m-e^{ik}}{E_m(k)}
+=\left(1-\tau e^{ik}\right)^{1/2}
+ \left(1-\tau e^{-ik}\right)^{-1/2},\qquad \tau=(1+m)^{-1}.
+\]
+
+For \(0<\tau<1\) both binomial series converge absolutely and uniformly on the unit circle. Put \(c_j=(-1/2)_j/j!\) and \(b_j=(1/2)_j/j!\). For integer \(d\ge1\), the Fourier convention \(q_d=(2\pi)^{-1}\int_{-\pi}^{\pi}e^{idk}q_\tau(e^{ik})\,dk\) yields
+
+\[
+\begin{aligned}
+q_d(\tau)&=\tau^d\sum_{j\ge0}c_jb_{j+d}\tau^{2j}
+=\frac{\tau^d}{\pi}B(d+\tfrac12,\tfrac12)
+{}_2F_1(-\tfrac12,d+\tfrac12;d+1;\tau^2),\\
+q_{-d}(\tau)&=\tau^d\sum_{j\ge0}c_{j+d}b_j\tau^{2j}
+=-\frac{\tau^d}{\pi}B(d-\tfrac12,\tfrac32)
+{}_2F_1(\tfrac12,d-\tfrac12;d+1;\tau^2).
+\end{aligned}
+\]
+
+The prefactors follow from \(b_d=B(d+1/2,1/2)/\pi\) and \(c_d=-B(d-1/2,3/2)/\pi\). Euler's beta integral, or termwise integration of its binomial expansion, therefore proves exactly
+
+\[
+\boxed{\begin{aligned}
+q_d(\tau)&=\frac1\pi\int_0^\tau x^{d-1}
+\sqrt{\frac{x(1-\tau x)}{\tau-x}}\,dx,\\
+q_{-d}(\tau)&=-\frac1\pi\int_0^\tau x^{d-1}
+\sqrt{\frac{\tau-x}{x(1-\tau x)}}\,dx.
+\end{aligned}}
+\tag{B1}
+\]
+
+The integrands have integrable endpoints for \(d\ge1\); dominated convergence extends the result to \(\tau=1\), where the densities become \(\sqrt{x}\) and \(x^{-1/2}\). This is a separate derivation of the sign-sensitive positive- and negative-displacement formula, not an assumption about a contour.
+
+\subsection{Both boundary channels and direct continuum identification}\label{both-boundary-channels-and-direct-continuum-identification}
+
+For \(\mu>0\) set
+
+\[
+\begin{gathered}
+a=a_L=L\log(1+\mu/L),\quad \tau=e^{-a/L},\\
+R_L(t)=\sqrt{\frac{\sinh((t+a)/(2L))}{\sinh((t-a)/(2L))}},\quad
+R_a(t)=\sqrt{\frac{t+a}{t-a}},\quad t>a.
+\end{gathered}
+\]
+
+Define \(d_L^\pm(t)=1_{t>a}R_L(t)^{\pm1}-1\) and \(d_a^\pm(t)=1_{t>a}R_a(t)^{\pm1}-1\). For \(x\in(0,1),\ y>0\), let
+
+\[
+u_{L,t}(x)=e^{-t\lfloor Lx\rfloor/L},\quad v_{L,t}(y)=e^{-t\lfloor Ly\rfloor/L},\quad
+u_t(x)=e^{-tx},\quad v_t(y)=e^{-ty}.
+\]
+
+Writing \(P_L(t)=|u_{L,t}\rangle\langle v_{L,t}|\) and \(P(t)=|u_t\rangle\langle v_t|\), substitution \(x=e^{-t/L}\) in (B1) gives \textbf{exactly}, with no asymptotic replacement,
+
+\[
+H_L^+=\int_0^\infty e^{-3t/(2L)}d_L^+(t)P_L(t)\,dt,
+\qquad H_L^-=\int_0^\infty e^{-t/(2L)}d_L^-(t)P_L(t)\,dt.
+\tag{B2}
+\]
+
+The unequal exponents \(3/2\) and \(1/2\) result from the alternative square-root channel and the Jacobian \(dx=-e^{-t/L}dt/L\). They cannot be interchanged. In the \(\sigma_y\) basis, the left exterior contribution to \(Z_{L,\mu}\) is \((2\pi)^{-1}\begin{psmallmatrix}0&-H_L^+\\H_L^-&0\end{psmallmatrix}\). Reflecting the interior interval gives the right exterior contribution, with channel signs exchanged and the same \((2\pi)^{-1}\) factor. The triangle inequality over both exterior columns gives the factor \textbf{\(1/\pi\)} in the assembled trace-norm estimate, \emph{not} \(1/(2\pi)\).
+
+The corresponding continuum candidates are \(H_b^\pm=\int_0^\infty d_b^\pm(t)P(t)dt\), with \(d_b^\pm=1_{t>b}[(t+b)/(t-b)]^{\pm1/2}-1\). These are trace-class Bochner integrals, by the estimates established below.
+
+An additional kernel check follows. For a separation \(r>0\), substitute \(t=b\cosh v\). Using \(\coth(v/2)\sinh v=\cosh v+1\) and \(\tanh(v/2)\sinh v=\cosh v-1\), the classical integral \(K_j(z)=\int_0^\infty e^{-z\cosh v}\cosh(jv)dv\) yields
+
+\[
+\boxed{\begin{aligned}
+\int_0^\infty d_b^+(t)e^{-rt}dt&=b[K_1(br)+K_0(br)]-\frac1r,\\
+\int_0^\infty d_b^-(t)e^{-rt}dt&=b[K_1(br)-K_0(br)]-\frac1r.
+\end{aligned}}
+\tag{B3}
+\]
+
+The Fourier kernel of \(q_b(u)=(b-iu)/\sqrt{u^2+b^2}\) is \(b[K_0(br)+K_1(br)]/\pi\) for \(r>0\), while the massless Fourier kernel is \(1/(\pi r)\). For negative displacement, the \(K_1\) term changes sign and matches the sign-reversed second channel. Equation (B3) thus identifies the continuum Laplace candidate with the \textbf{specified continuum Dirac projector} rather than merely defining a formal limiting kernel. This uses standard Bessel integral identities, without invoking a lattice branch-contour argument.
+
+Finally, the full-line step projections converge strongly on band-limited test functions to \(P_b^c\) because the rescaled Bloch multipliers converge pointwise almost everywhere, the cell form factor tends to one, and projectors are uniformly bounded. Density and the identity \(\|P_n f-Pf\|^2=\langle f,(P_n+P- P_nP-PP_n)f\rangle\), or the standard weak-to-strong argument for projections, extend this convergence to all \(L^2\). The trace-norm limit of the rank-one formulas then agrees with the strong limit, uniquely fixing the continuum operator and its factors.
+
+\subsection{Direct rank-one trace-norm bound and mass variation}\label{direct-rank-one-trace-norm-bound-and-mass-variation}
+
+The nuclear norms of the rank-one kernels are exactly
+
+\[
+\Phi(t):=\|P(t)\|_1=\frac{\sqrt{1-e^{-2t}}}{2t},\qquad
+\|P_L(t)\|_1=\frac{\sqrt{1-e^{-2t}}}{L(1-e^{-2t/L})}.
+\]
+
+Assume \(L\ge\max\{1,2\mu\}\), so \(0<a\le\mu\le L/2\). On \(0<t\le L\), the floor inequality yields
+
+\[
+\|e^{-\gamma t/L}P_L(t)-P(t)\|_1\le10\frac tL\Phi(t),\qquad
+\gamma\in\{\tfrac12,\tfrac32\}.
+\]
+
+To control the square-root singularity at \(t=a\), put \(g(x)=\log(\sinh x/x)\). Since \(0\le g'(x)\le x/2\) for \(x>0\),
+
+\[
+0\le\delta:=\log(R_L/R_a)\le\frac{at}{8L^2}\le\frac1{16},
+\]
+
+and hence
+
+\[
+|R_L-R_a|+|R_L^{-1}-R_a^{-1}|
+\le\frac{at}{4L^2}(R_a+R_a^{-1}).
+\]
+
+The essential integrable combined densities are \textbf{exactly}
+
+\[
+|d_a^+|+|d_a^-|=
+\begin{cases}2,&0<t<a,\\2a/\sqrt{t^2-a^2},&t>a.\end{cases}
+\tag{B4}
+\]
+
+By splitting \(e^{-\gamma t/L}d_LP_L-d_aP\) into its step/phase and density differences, the trace-norm bounds for the \textbf{sum of both channels} are:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4286}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5714}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Contribution
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Upper bound before the two-boundary \(1/\pi\) factor
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Step vector and phase, \(0<t\le L\) & \(10a[1+\operatorname{arcosh}(L/a)]/L\) \\
+Hyperbolic density, \(a<t\le L\) & \(4a/L\) (conservative; a sharper \(2a/L\) follows) \\
+Continuum tail, \(t>L\) & \(2a/L\) \\
+Lattice tail, \(t>L\) & \(24a/L\) \\
+\end{longtable}
+
+For the continuum tail, use \(\int_L^\infty a\,[t\sqrt{t^2-a^2}]^{-1}dt=\arcsin(a/L)\le2a/L\). For the lattice tail, set \(\epsilon=a/L\le1/2\), \(z=t/L\ge1\), and use \(\log R_L\le(\epsilon/2)\coth(z/4)\le5\epsilon/2\), \(R_L-1\le5\epsilon\), \(\|P_L\|_1\le6/(5L)\), and the exponentially decaying phase factors. These reproduce the stated bound without numerical extrapolation.
+
+Define \(\mathcal Z_b:=Z_b\) for the continuum cross-boundary difference at mass \(b\). Consequently
+
+\[
+\boxed{\|Z_{L,\mu}-\mathcal Z_a\|_1\le\frac{a}{\pi L}
+\left[40+10\log\frac{2L}{a}\right].}\tag{B5}
+\]
+
+To change the effective mass \(a\) to \(\mu\), rewrite the continuum channels as \(H_b^\pm=\int_0^\infty b\,d_\pm(v)P(bv)\,dv\), where \(d_\pm(v)=1_{v>1}[(v+1)/(v-1)]^{\pm1/2}-1\). The derivative of \(bP(bv)\) is a sum of three rank-one kernels, and elementary truncated-exponential moment bounds give
+
+\[
+\left\|\frac{d}{db}[bP(bv)]\right\|_1\le(1+\sqrt2)\Phi(bv).
+\]
+
+The combined density \(w(v)=|d_+(v)|+|d_-(v)|\) is 2 below 1 and \(2/\sqrt{v^2-1}\) above it. With \(\Phi(t)\le1/\sqrt{2t}\),
+
+\[
+\frac1\pi\int_0^\infty w(v)\Phi(bv)dv\le\frac{C_{\rm ent}}{2\sqrt b},\quad
+C_{\rm ent}=\frac{2\sqrt2}{\pi}\left(2+\frac{\sqrt\pi\,\Gamma(1/4)}{2\Gamma(3/4)}\right).
+\]
+
+Dominated differentiation on compact positive mass intervals is valid (the integrand is \(O(v^{-1/2})\) at zero, \(O((v-1)^{-1/2})\) at one, and \(O(v^{-3/2})\) at infinity). Thus
+
+\[
+\|\mathcal Z_b'\|_1\le\frac{(1+\sqrt2)C_{\rm ent}}{2\sqrt b},\qquad
+\|\mathcal Z_b-\mathcal Z_c\|_1\le(1+\sqrt2)C_{\rm ent}|\sqrt b-\sqrt c|.
+\]
+
+Since \(0\le\mu-a_L\le\mu^2/(2L)\), the calculation gives the claimed finite-size bound:
+
+\[
+\boxed{\begin{aligned}
+\|Z_{L,\mu}-Z_\mu\|_1&\le B_{L,\mu},\\
+B_{L,\mu}&=\frac{a_L}{\pi L}\left[40+10\log\frac{2L}{a_L}\right]
++(1+\sqrt2)C_{\rm ent}(\sqrt\mu-\sqrt{a_L}).
+\end{aligned}}\tag{B6}
+\]
+
+For fixed \(\mu>0\), this is \(O_\mu((\log L)/L)\). For each \(M>0\), a common bound for \(0\le\mu\le M\), \(L\ge2M\), follows from monotonicity of \(a[40+10\log(2L/a)]\) on \((0,M]\):
+
+\[
+\sup_{0\le\mu\le M}\|Z_{L,\mu}-Z_\mu\|_1
+\le\frac{M}{\pi L}\left[40+10\log\frac{2L}{M}\right]
++\frac{(1+\sqrt2)C_{\rm ent}M^{3/2}}{2L}.
+\]
+
+At \(\mu=0\), both differences are precisely zero, not an unexamined singular endpoint.
+
+\subsection{\texorpdfstring{direct \(0<s<1/2\) Sobolev nuclear estimate}{direct 0\textless s\textless1/2 Sobolev nuclear estimate}}\label{direct-0s12-sobolev-nuclear-estimate}
+
+For \(0<s<1/2\), characteristic multiplication by either half-line, hence by \(\chi\) and \(1-\chi\), is bounded on \(H^s(\mathbb R)\). One direct proof starts with the Gagliardo seminorm. The extra cutoff crossing term is bounded by \(C_s\int|f(x)|^2|x|^{-2s}dx\). Under Fourier transformation its bilinear positive kernel is proportional to
+
+\[
+K_s(u,v)=\frac{|u-v|^{2s-1}}{|u|^s|v|^s}.
+\]
+
+The weighted Schur test with weight \(|u|^{-1/2}\) reduces precisely to \(\int_{\mathbb R}|1-t|^{2s-1}|t|^{-s-1/2}dt<\infty\). The exponent conditions at \(0,1,\infty\) give \(0<s<1/2\). There is no assertion at \(s=1/2\), where nonzero boundary traces already obstruct sharp cutoffs.
+
+For the continuum rank-one vectors, the Fourier transforms of the zero extensions are
+
+\[
+\widehat u_t(u)\propto\frac{1-e^{-t-iu}}{t+iu},\qquad
+\widehat v_t(u)\propto\frac1{t+iu}.
+\]
+
+Direct integration after splitting \(t\le1\) and \(t\ge1\) gives
+
+\[
+\begin{aligned}
+\|v_t\|_{H^s}&\le C_s(t^{-1/2}+t^{s-1/2}),\\
+\|u_t\|_{H^s}&\le C_s\quad(t\le1),\qquad
+\|u_t\|_{H^s}\le C_st^{s-1/2}\quad(t\ge1).
+\end{aligned}
+\]
+
+Together with the elementary \(L^2\) norms, both rank-one nuclear output norms \(\|u_t\|_{H^s}\|v_t\|_2\) and \(\|v_t\|_{H^s}\|u_t\|_2\) are bounded by \(C_st^{-1/2}\) \textbf{at all positive \(t\)}. The inequality \(s-1\le-1/2\) for \(t\ge1\) is the relevant global step. Equation (B4) gives the exact scalar integral
+
+\[
+\int_0^\infty (|d_\mu^+|+|d_\mu^-|)t^{-1/2}dt
+=\sqrt\mu\left[4+\frac{\sqrt\pi\,\Gamma(1/4)}{\Gamma(3/4)}\right].
+\]
+
+Since the left and right exterior channels, their adjoints, and the fixed finite spin matrices are all included, the rank-one Bochner integrals converge in the operator nuclear ideal \(\mathcal S_1(L^2,H^s)\) and prove
+
+\[
+\boxed{\|\mathbb D_\mu\|_{\mathcal S_1(L^2,H^s)}\le C_s\sqrt\mu,
+\qquad 0<s<1/2,\quad\mu\ge0.}\tag{B7}
+\]
+
+This statement is about a nuclear operator \textbf{from \(L^2\) into \(H^s\)}, not the eigenvalues of a single unbounded Sobolev multiplier; no commutation is required.
+
+\subsection{Finite cross-block trace path}\label{finite-cross-block-trace-path}
+
+\textbf{Lemma (Finite cross-block trace path).} Let \(P\) be an orthogonal projection, let \(\chi\) have finite rank, and put \(C=\chi P\chi\) and \(X=\chi P(1-\chi)\). With \[
+\mathbb H(X)=\begin{pmatrix}0&X\\X^*&0\end{pmatrix},\qquad
+F(t)=h\!\left(\frac{1+\sqrt{1-4t^2}}2\right),\quad
+h(p)=-p\log p-(1-p)\log(1-p),
+\] one has \(XX^*=C-C^2\), \(\|\mathbb H(X)\|\le1/2\), and \(S(C)=\tfrac12\operatorname{Tr}F(\mathbb H(X))\). For the embedded finite cross blocks, define \[
+\mathbb D_{L,\mu}=\mathbb H(Z_{L,\mu}),\quad
+A_{L,\theta}=\mathbb H(X_{L,0})+\theta\mathbb D_{L,\mu},\quad
+Y_{L,\theta}=A_{L,\theta}+I/2,
+\] and, in the continuum, \[
+A_\theta=\mathbb H(X_0)+\theta\mathbb D_\mu,\qquad
+Y_\theta=A_\theta+I/2.
+\] The interpolants \(Y_{L,\theta},Y_\theta\) are positive contractions and \[
+\Delta S_L(\mu)=\frac12\int_0^1
+\operatorname{Tr}[F'(A_{L,\theta})\mathbb D_{L,\mu}]\,d\theta.
+\] The analogous continuum integral \(\mathcal S(\mu)=\tfrac12\int_0^1\operatorname{Tr}[F'(A_\theta)\mathbb D_\mu]d\theta\) is finite whenever \(\mathbb D_\mu\) is trace class.
+
+\emph{Proof.} The \((\chi,\chi)\) block of \(P^2=P\) gives \(XX^*=C-C^2\le I/4\). A singular-value decomposition of \(X\) gives signed eigenvalue pairs \(\pm s_j\) of \(\mathbb H(X)\). Since \(F(\sqrt{p(1-p)})=h(p)\) and \(F(0)=0\), the entropy identity follows. For the embedded finite operators the interval is infinite dimensional as an \(L^2\) subspace, but \(X_{L,\mu}\) has finite rank and the compression is zero off its finite step-function subspace, so the same argument applies. The norm bound \(1/2\) is preserved by convex interpolation, proving the contraction claims. The ranges of the two finite endpoint block operators span a common finite-dimensional invariant subspace. On it \(F\) is \(C^1\) on \([-1/2,1/2]\), with \(F'(0)=0\), and the trace derivative is \(\operatorname{Tr}[F'(A_{L,\theta})\mathbb D_{L,\mu}]\). This identity follows, for example, by uniformly approximating \(F'\) by polynomials and applying cyclicity to their primitives before passing to the limit in finite dimension. Integration proves the path formula. Finally \(\|F'\|_\infty\le2\), so the continuum product is trace class and its trace is continuous in \(\theta\) by continuous functional calculus. The continuum integral is absolutely finite; no difference of divergent continuum entropies is taken. \(\square\)
+
+\subsection{Uniform projector comparison and entropy consequence}\label{uniform-projector-comparison-and-entropy-consequence}
+
+Let \(p_{\mu/L}(k)\) be the lattice Bloch projection, and \(p_\mu(u)\) the continuum multiplier. On \(|u|\le\pi L\), write
+
+\[
+q_L(u)=\operatorname{sinc}^2(u/(2L)),\quad
+ a=(L\sin(u/L),\mu+L[1-\cos(u/L)]),\quad b=(u,\mu).
+\]
+
+The Pauli projector formula, \(\|a/|a|-b/|b|\|\le 2|a-b|/|b|\), and elementary Taylor-remainder inequalities give \(\|p_{\mu/L}(u/L)-p_\mu(u)\|\le |u|/(\sqrt2L)\), uniformly in \(\mu\ge0\). \textbf{The output can contain aliases.} Rather than dropping them, use that both full-line operators are orthogonal projections to derive the exact band-limited squared-norm identity
+
+\[
+\|[\widetilde P_{L,\mu}-P_\mu^c]f\|_2^2
+=\int q_L\|[p_{\mu/L}(u/L)-p_\mu(u)]\widehat f(u)\|^2du
++\int(1-q_L)\|p_\mu(u)\widehat f(u)\|^2du.
+\]
+
+Since \(1-q_L\le u^2/(12L^2)\) on the band and the difference of orthogonal projections has norm at most one off it, frequency splitting proves
+
+\[
+\boxed{\|\widetilde P_{L,\mu}-P_\mu^c\|_{H^s\to L^2}\le C_sL^{-s}}
+\qquad (0<s<1/2),\tag{B8}
+\]
+
+with \(C_s\) independent of \(L,\mu\). The cutoff multiplier lemma supplies the same estimate for the self-adjoint off-diagonal interpolants, and their continuum versions act boundedly on \(H^s\).
+
+For the entropy branch, set \(F(t)=h((1+\sqrt{1-4t^2})/2)\), \(h(p)=-p\log p-(1-p)\log(1-p)\), and \(g(z)=F'(z/2)\). The exact identity
+
+\[
+g(z)=-2z\log|z|+r(z),\quad r\in C^2([-1,1]),
+\]
+
+implies that the cosine--Chebyshev coefficients of \(g\) are \(O(k^{-2})\). For the logarithmic term the odd coefficients at \(k=2j+1\ge3\) are exactly \((-1)^j/[j(j+1)]\), with even coefficients zero. Thus the degree-\(n\) Chebyshev truncation approximates \(g\) uniformly within \(C/n\); when written as a polynomial in \(Y\in[0,1]\), its monomial coefficient \(\ell^1\)-norm is at most \(C7^n\).
+
+For each \(\theta\), abbreviate \(Y_L=Y_{L,\theta}\) and \(Y=Y_\theta\) from the trace-path lemma. The noncommutative telescoping identity
+
+\[
+(Y_L^k-Y^k)\mathbb D_\mu
+=\sum_{j=0}^{k-1}Y_L^j(Y_L-Y)Y^{k-1-j}\mathbb D_\mu
+\]
+
+places the \textbf{only} high-regularity input to the right of the \(H^s\to L^2\) difference. Left lattice factors are merely \(L^2\) contractions, so no unjustified lattice \(H^s\) functional calculus is used. Taking the nuclear norm and applying (B7)--(B8) yields
+
+\[
+|\Delta S_L(\mu)-\mathcal S(\mu)|
+\le 2B_{L,\mu}+\frac Cn\|\mathbb D_\mu\|_1
++C_s n(7M_s)^n L^{-s}\|\mathbb D_\mu\|_{\mathcal S_1(L^2,H^s)}.
+\]
+
+Choosing \(s=1/4\) and \(n=\lfloor s\log L/[2\log(7M_s)]\rfloor\) (for sufficiently large \(L\)) establishes
+
+\[
+\boxed{\sup_{0\le\mu\le M}|\Delta S_L(\mu)-\mathcal S(\mu)|=O_M(1/\log L)}.
+\tag{B9}
+\]
+
+Here \(\mathcal S(\mu)\) is the finite continuum \textbf{trace path}, not the difference of two separately divergent continuum entropies. The finite trace-path lemma above proves the spectral-calculus and singular-value identities used in this assertion. Thus (B9) is a theorem for the specified boundary subsystem; it does not assume a full relative-entropy finite-part limit.
+
+\subsection{Scope and limitations}\label{scope-and-limitations}
+
+The estimates concern restrictions of infinite-chain quasifree projections, not the occupied projector of an open finite chain. The derived boundary estimates and entropy-difference rate do not by themselves imply modular or nonlinear convergence. Those separate inputs are proved for this model in \emph{Finite Part of Wilson--Dirac Relative Entropy}, whose Theorem 1 assembles the full fixed-\(\mu\) expansion, and are sharpened in \emph{Uniform Modular Control and Nonlinear Convergence for Wilson--Dirac Intervals}. No uniform Coulomb or moving-edge matching estimate is asserted as a consequence of the boundary argument.
+
+\subsection{Mathematical references}\label{mathematical-references}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  NIST Digital Library of Mathematical Functions, §§5.12 and 10.32 (beta integrals and modified-Bessel integral representations), \url{https://dlmf.nist.gov/5.12} and \url{https://dlmf.nist.gov/10.32}.
+\item
+  R. Frank and R. Seiringer, ``Non-linear ground state representations and sharp Hardy inequalities,'' \emph{Journal of Functional Analysis} 255 (2008), 3407--3430, \url{doi:10.1016/j.jfa.2008.05.015} (fractional Hardy background).
+\end{enumerate}
+
+\subsection{AI assistance and acknowledgments}\label{ai-assistance-and-acknowledgments}
+
+Kirtus Justus is the responsible human author. ChatGPT (OpenAI) assisted with mathematical drafting, computational diagnostics and source checking. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for broader research contributions without assigning any specific proof here absent documented provenance. These acknowledgments do not imply external peer review or institutional endorsement.
+
+\end{document}

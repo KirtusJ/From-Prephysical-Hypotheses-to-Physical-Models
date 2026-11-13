@@ -1,0 +1,176 @@
+{
+  "program": "From Prephysical Hypotheses to Physical Models",
+  "responsible_author": "Kirtus Justus",
+  "assistant": "GPT-6 Director G, AI-assisted internal provenance",
+  "date_bc_pacific": "2026-11-12",
+  "root_stage": "G1 Initial External Grounding, OPEN",
+  "ontology_selected": false,
+  "source_baseline": "FPHPM-BASELINE-2026-11-12 (verified locally; separately reported Z1 unavailable)",
+  "reading_rule": "Edges are typed; derived mathematics in stipulated models is not physical correspondence. This register is a Director G supplement only, not a source baseline replacement.",
+  "nodes": {
+    "REL": "Finite relational prephysical candidate, no assumed time, phase, wavelength, amplitude or Hilbert structure",
+    "LIMIT": "Specified topological/metric limit and symmetry; currently not established",
+    "OPER": "Experimentally meaningful preparations, effects, transition data and units",
+    "MET": "Transition-probability metric; conventional CPn geometry available as conditional comparator",
+    "SIGNED": "Selected signed compatible parallel complex/symplectic structure",
+    "QTSTRUCT": "Complex amplitude and operational quantum convex state and effect structures",
+    "COMP": "Composition, tomography, locality and operational instruments",
+    "TIME": "Calibrated physical clock and dynamical law",
+    "QTM": "Explained quantum mechanics on physical systems",
+    "CL": "Controlled semiclassical limit, coarse-graining and Hamiltonian mechanics",
+    "PHY": "Empirical physical correspondence and complete map",
+    "FAR1": "Stipulated amplitude-record negative-control world",
+    "CLSPIN": "Classical probability measures over symplectic spin sphere S2",
+    "RQT": "Real three-level quantum model with pure states RP2",
+    "CQT": "Complex two-level quantum model with pure states CP1"
+  },
+  "edges": [
+    {
+      "source": "REL",
+      "target": "LIMIT",
+      "type": "untested_transfer",
+      "claim": "Open: require explicit limit object, convergence topology and symmetries",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "LIMIT",
+      "target": "MET",
+      "type": "untested_transfer",
+      "claim": "Open: mathematical metric not physically calibrated",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "LIMIT",
+      "target": "CQT",
+      "type": "obstruction",
+      "claim": "Gelander forbids exactly finite-homogeneous GH limit CP1",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "MET",
+      "target": "SIGNED",
+      "type": "obstruction",
+      "claim": "Conjugate ray-triple retains metric but flips signed Bargmann phase; real orientation alone insufficient when n even",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "SIGNED",
+      "target": "QTSTRUCT",
+      "type": "untested_transfer",
+      "claim": "Classical spin shows symplectic pure-state geometry does not choose statistical/effect space",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "QTSTRUCT",
+      "target": "COMP",
+      "type": "postulate",
+      "claim": "Quantum tensor, composition, and records not derived",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "OPER",
+      "target": "QTM",
+      "type": "untested_transfer",
+      "claim": "No physical instrument correspondence or measurement uncertainty program",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "TIME",
+      "target": "QTM",
+      "type": "untested_transfer",
+      "claim": "Physical time/frequency not derived from prephysical objects",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "COMP",
+      "target": "QTM",
+      "type": "untested_transfer",
+      "claim": "Missing complete quantum theory, dynamics and operational identification",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "QTM",
+      "target": "CL",
+      "type": "untested_transfer",
+      "claim": "Formal semiclassical limits require ħ scaling, Hamiltonian regime and error estimates, none derived",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "CL",
+      "target": "PHY",
+      "type": "untested_transfer",
+      "claim": "Classical equations do not establish matched physical clocks, units or macroscopic predictions",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "QTM",
+      "target": "PHY",
+      "type": "untested_transfer",
+      "claim": "Physical correspondence and complete map not established",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "FAR1",
+      "target": "QTSTRUCT",
+      "type": "postulate",
+      "claim": "Born probabilities, complex Hilbert space and updates explicitly supplied",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "CLSPIN",
+      "target": "MET",
+      "type": "discriminator",
+      "claim": "Shared chosen pure geometry possible; effects and mixed states differ",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "RQT",
+      "target": "CQT",
+      "type": "discriminator",
+      "claim": "Curvature 1 vs 4 under canonical projective distance; full holonomy O2 vs SO2",
+      "physical_bridge_established": false
+    },
+    {
+      "source": "MET",
+      "target": "CQT",
+      "type": "exact_correspondence",
+      "claim": "In assumed CPn, tangent determinant holonomy equals normalized Bargmann phase^(n+1), with J selected",
+      "physical_bridge_established": false
+    }
+  ],
+  "proposed_local_open_problems": [
+    {
+      "id": "DG-OP-01",
+      "question": "Direct inspect Z1/G7 wording and prove/refute cited sources, including numerical ladder settings and monodromy conventions"
+    },
+    {
+      "id": "DG-OP-02",
+      "question": "Find independently warranted signed Kähler structure, not just metric, and resolve J/-J ambiguity for even complex dimensions"
+    },
+    {
+      "id": "DG-OP-03",
+      "question": "Test finite-dimensional Jordan plus operational transition-metric restrictions against classical-spin and other GPT countermodels"
+    },
+    {
+      "id": "DG-OP-04",
+      "question": "Operationally ground multi-slit filtrations, composition and effects before importing I3=0"
+    },
+    {
+      "id": "DG-OP-05",
+      "question": "Exhibit a finite-to-continuum candidate with defined convergence, symmetry, and empirical discrimination, or prove an obstruction"
+    },
+    {
+      "id": "DG-OP-06",
+      "question": "Develop time/units/observations/uncertainty and a controlled quantum to classical Hamiltonian limit without importing them unnoticed"
+    }
+  ],
+  "excluded": [
+    "No physical ontology",
+    "No peer review",
+    "No independent multi-agent check",
+    "No externally calibrated physical evidence",
+    "No source alteration or Z1 merging"
+  ],
+  "retained_inherited_outliers_untouched": true,
+  "new_numerical_cases_retained": "verification/ALL_96_SPHERE_HOLONOMY_TRIALS.csv"
+}

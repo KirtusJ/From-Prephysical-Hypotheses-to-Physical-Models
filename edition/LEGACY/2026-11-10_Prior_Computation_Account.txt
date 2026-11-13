@@ -1,0 +1,336 @@
+COMPUTATION ACCOUNT RETAINED FROM THE PRECEDING 83-COMPONENT EDITION
+
+The text below describes the preceding preparation. Its references to
+'this edition' and fresh executions refer to that earlier work. The current
+COMPUTATIONAL_SCOPE.txt distinguishes the newly executed calculations.
+
+Computational materials and scope
+
+PART I. EXECUTIONS ACCOMPANYING THE ADDED STUDIES
+
+The calculations concern specified mathematical models. None is an observation
+of a physical device. Exact finite arithmetic, high-precision approximation
+and a general mathematical proof have distinct scopes.
+
+A. Two supplied programs executed for this edition
+
+Directory:
+  Computational_Material/Channel_and_Operational_Examples/
+
+The programs verify_abstract_channels.py and verify_calibration_width.py were
+read and executed from the supplied program bytes. Their parsed JSON outputs
+agreed exactly with the corresponding supplied results. New execution outputs
+are retained under fresh_selected_results/. The seven supplied program files
+remain under programs/; supplied outputs remain under source_reported_results/.
+The other five supplied programs were not rerun as supplied for this edition.
+
+The abstract-channel program combines finite rational examples with numerical
+entropy calculations and quadrature. Its approximate calculations are not
+certified interval bounds and do not establish a theorem for all inputs. The
+calibration-width program checks the displayed finite rational example.
+The Gaussian optimization and capacity counterexamples rely on their proofs.
+
+B. Recovery calculations
+
+  Computational_Material/Channel_Recovery/verify_channel_recovery.py
+  Computational_Material/Channel_Recovery/Channel_Recovery_Checks.json
+
+The program records 40 successful predicates: 32 exact rational checks and
+8 numerical checks using 80-digit mpmath arithmetic. They include explicit
+stochastic kernels, the attained one-quarter error, anchor tradeoffs, the
+original-optimizer counterexample, rare probes and the displayed Bayesian
+reverse. Universal optimality and sufficiency conclusions rest on the proofs.
+The logarithmic evaluations are approximate checks, not interval certificates.
+
+C. Selected operational examples
+
+  Computational_Material/Channel_and_Operational_Examples/fresh_exact_checks/
+    verify_supplied_operational_examples.py
+    Supplied_Operational_Exact_Checks.json
+
+This transparent implementation performs 23 exact checks of displayed
+operational examples, including symbolic matrix identities and the randomized
+simple-hypothesis binomial test at 467 and 468 trials. Optimal size-0.05 power
+is below 0.95 at 467 and above 0.95 at 468. The claimed minimum uses the
+Neyman-Pearson optimum and monotonicity obtained by ignoring extra observations.
+It applies to the stated simple, iid, randomized, fixed-horizon test.
+
+The distributed program binds the retained 17-page operational source edition.
+Its relevant pages 5–10 reproduce the source combined-volume pages 15–20.
+It does not need an external upload path. Source identity does not provide
+an empirical validation of the mathematical inputs.
+
+The recovery and selected-operational programs were each executed from their
+original mathematical implementation. After timestamp metadata and portable
+source references were corrected, each distributed version was executed once.
+Their calculation objects agree exactly with the original results. These are
+reproductions of the same computations, not additional independent evidence.
+
+D. Joint calibration and sampling uncertainty
+
+  Computational_Material/Joint_Calibration/verify_joint_calibration.py
+  Computational_Material/Joint_Calibration/Joint_Calibration_Results.json
+
+The program records 11,807 successful predicates. These include 11,025
+separated-rectangle and target-grid cases, 5,321 constructive feasible
+witnesses, binomial coverage controls on the specified finite grid, an adverse
+zero-radius example and exact outward tail inversion.
+
+Binomial controls cover n=1,...,12, p=i/20 for i=0,...,20, at three stated
+error levels. They are not a proof for all real p; that proof is in the study.
+The numerical interval construction uses arbitrary-precision integers and
+Fraction arithmetic. Forty bisections give endpoint brackets at most 2^-40
+wide. Exact tail inequalities and outward endpoint choices are retained.
+
+The counts 85/100, 15/100 and 85/200 are hypothetical. Under the declared
+binomial marginals and a preassigned total error of 0.05, the displayed
+outward target interval is [0.128936, 0.651769]. Its interpretation depends on
+the stated calibration anchors, shared response law and sampling contract.
+The uniform whole-identified-set guarantee is a mathematical implication,
+not a finding that an apparatus satisfies those conditions.
+
+E. Reproduction
+
+Use a working copy of the packet: the recovery and operational checkers write
+their result beside the program. The supplied comparison outputs should be
+preserved before rerunning. From the package root:
+
+  python -I -B Computational_Material/Channel_and_Operational_Examples/programs/verify_abstract_channels.py
+  python -I -B Computational_Material/Channel_and_Operational_Examples/programs/verify_calibration_width.py
+  python -I -B Computational_Material/Channel_Recovery/verify_channel_recovery.py
+  python -I -B Computational_Material/Channel_and_Operational_Examples/fresh_exact_checks/verify_supplied_operational_examples.py
+  python -I -B Computational_Material/Joint_Calibration/verify_joint_calibration.py > Joint_Calibration_Run.json
+
+Python 3.12.14, SymPy 1.14.0 and mpmath 1.3.0 were used where required.
+Predicate counts may overlap in content. They are not numbers of theorems,
+independent proofs, physical samples or a fraction of literature verified.
+
+PART II. EXECUTIONS RETAINED FROM THE PRECEDING COMPLETE EDITION
+
+The following account records six executions performed during the preceding
+preparation: two supplied programs and four finite-example suites. It is
+retained with their sources and results. They were not executed again merely
+to assemble this edition. Statements below about newly written programs or
+repeated executions refer to that earlier preparation.
+
+Computational materials and scope
+
+This note identifies the computations accompanying the Collections and
+Mathematical Supplement. It distinguishes exact finite calculations, numerical
+evaluations, and the proofs needed for statements over unrestricted sizes or
+parameters. None of these calculations is an observation of a physical device.
+
+1. Environment and file conventions
+
+The reference execution environment was Python 3.12.14, SymPy 1.14.0 and mpmath
+1.3.0. The programs below use Python's standard library and the indicated
+mathematical libraries. They require no network access. The four finite-example
+programs and the graph certificate contain their mathematical inputs directly
+in the source. The causal-readout verifier additionally requires the exact
+TRANSPORT_CERTIFICATE.json file beside the verifier.
+
+The two original source digests below identify the preserved source bytes used
+for the repeated executions. The distributed copies have documentation and
+comment edits described in SOURCE_EDITING_NOTE.txt; their numerical statements
+and outputs are unchanged. Both executed and distributed source digests are
+given below so that their identities are unambiguous.
+
+Paths below are relative to the accompanying material's top-level directory.
+Result files distributed with the sources should be retained as comparison
+files. The example commands write new results into Run_Results instead.
+
+2. Two original computational dependencies rerun
+
+Realizable graph moment witness
+
+Program:
+  Computational_Material/Instrument_and_Graph_Examples/checks/graph_certificate.py
+Stored comparison result:
+  Computational_Material/Instrument_and_Graph_Examples/expected/graph_certificate.json
+
+An unchanged copy of the original program was run again. It constructs the three polynomial
+inverse-moment equations, uses the full rational centre and radius stored in
+the source, and verifies exact rational inequalities for a contracting map on
+the specified box. It also checks a positive determinant bound and a derivative
+bound sufficient for the strict fourth-moment enclosure
+
+  0.006804564875115 < m4 < 0.006804564875116.
+
+The characteristic-polynomial sign brackets concern the rational centre.
+The manuscript's perturbation argument transfers the spectral-gap bound to
+the root in the box. The sixteen-vertex lift uses the stated invariant-subspace
+construction; this run is not a separate numerical diagonalization of every
+lifted graph.
+
+The exact calculations use SymPy rational arithmetic. The narrower interval,
+residual and contraction values printed as decimals in the JSON are rounded
+renderings. They should not be treated as outward-rounded interval endpoints.
+The coarse decimal inequalities displayed above are checked as exact rational
+inequalities in the program.
+
+The newly generated JSON was byte-identical to the stored comparison result.
+Executed original source SHA-256:
+  a6059c1ccb591204a6a7ae8b319ba1631f2f3edad26e72d5b3471a6b333e80e6
+Distributed source SHA-256:
+  dee4171608257ea74b50c5e267420d0de628a6306062910bd5f73bfea2be2ef3
+Result SHA-256:
+  f0a14b49fc58196258a0941fdd105fe919a625d7ea645dba796fa9f5f1a190b5
+
+Freshness versus reporting error
+
+Program and required input:
+  Computational_Material/Causal_Readout/verify_causal_readout.py
+  Computational_Material/Causal_Readout/TRANSPORT_CERTIFICATE.json
+Stored comparison result:
+  Computational_Material/Causal_Readout/RESULTS.json
+
+An unchanged copy of the original verifier was run again with the exact thirty-six-entry rational
+transport certificate. Python Fraction arithmetic checks normalization,
+positivity, all sixteen ideal-word marginals, all sixteen reported-word
+marginals, all eight true-bit-conditional flip constraints, and exact saturation
+of the reporting-error/freshness tradeoff. In particular,
+
+  L_s(Q) = 875470225373317 / 32768000000000000,
+  final-bit reporting error = 1/100,
+  eta = 547790225373317 / 32768000000000000 = L_s(Q) - 1/100.
+
+These are exact identities for the specified probability model. They do not
+identify a physical reporting mechanism or establish a causal direction.
+
+The same program also evaluates two exponential expressions for the specified
+8,982-record test with mpmath at 75-digit working precision. The returned values
+are approximately
+
+  0.04999520376305833929,
+  0.049985875128356778308.
+
+Those evaluations are numerical, not outward-rounded interval certificates.
+They are separate from the exact rational transport identities and saturation
+proof. Decimal summaries of other fractions in the JSON likewise serve as
+readable displays; the fraction strings retain the exact values.
+
+The newly generated RESULTS.json was byte-identical to the stored comparison
+result. The date fields emitted by this original program are fixed source
+metadata, not timestamps of the repeated execution.
+
+Executed original source SHA-256:
+  be3b3dd5a704d410b5a370dd130999862db3dc34a8047fc06a6e882103807d27
+Distributed source SHA-256:
+  fcbd7b0e09f823db0a99f84e8537a3377321ac2a56c843ad19b2d949a71dbab5
+Transport-certificate SHA-256:
+  fdddd8d56a607af7766f3aae1a444a84d40a374ddbd89b7b06d4658827af459a
+Result SHA-256:
+  0ad9554dd47060bf322bab08b8d793cf244f53a659d39f1f8abb06f69c7ce455
+
+3. Four newly written finite-predicate suites
+
+The following programs reconstruct selected finite examples from their
+displayed definitions. They do not import or execute the archived programs.
+Their accompanying result files record successful runs.
+
+All eight files in this section are under:
+  Computational_Material/Finite_Examples/
+
+(a) verify_mathematical_examples.py
+    Result: Mathematical_Examples_Exact_Checks.json
+    Recorded successful predicates: 680.
+
+    Rational and symbolic checks include positive event-kernel examples,
+    aggregation distances, equality-pattern comparisons, collision and sampling
+    constants, finite-population error-count calculations, and selected qubit
+    and reference-state identities.
+
+(b) verify_operational_results.py
+    Result: Operational_Exact_Checks.json
+    Recorded successful predicates: 418.
+
+    The finite checks include specified ideal and noisy testing problems,
+    ordered-word and count calculations, noisy block-matrix rank and singular
+    values, sufficient rank-test budgets, controlled finite-state examples,
+    environmental-fragment comparisons, and generator identities. The noisy
+    count-only minimum is checked against each smaller horizon in its stated
+    finite range. It is not a minimum over every full-record procedure.
+
+(c) verify_finite_signs.py
+    Result: Finite_Sign_Exact_Checks.json
+    Recorded successful predicates: 449.
+
+    Checks include the complete four-coordinate marginals of the five- and
+    six-sign extensions, support-witness identities, selected finite extension
+    distances, bounded probability-ratio examples and their certificates,
+    graph-sign partition polynomials, and complete-bipartite spectra. The
+    all-size staircase and all-real-parameter optimum require the accompanying
+    proofs, not merely these selected instances.
+
+(d) verify_coverage_additions.py
+    Result: Coverage_Additions_Exact_Checks.json
+    Recorded successful predicates: 1,735.
+
+    Checks include the conditional four-probability graph identity for every
+    labelled simple graph on four vertices at the specified coupling, selected
+    latent-sign aliases, Legendre identities at orders 2, 4 and 6, and finite
+    marked-partition composition laws. The arbitrary-order and growing-size
+    statements rest on the displayed algebraic and limit arguments.
+
+The counts enumerate successful predicates in the programs. A predicate can
+check a scalar, a matrix, a distribution or one parameter instance. Predicates
+can overlap in mathematical content. These counts are not theorem counts,
+numbers of distinct proofs, experimental sample sizes, or measures of how much
+of the literature has been verified.
+
+All four suites use rational, integer or symbolic comparisons for their stated
+checks. Some result files also print floating-point decimal summaries of exact
+quantities. A decimal display alone is not an interval enclosure.
+
+4. Reproduction commands
+
+Use the package versions stated above to reproduce the recorded environment.
+The following commands assume a shell with Python available as python.
+
+Create a destination for new outputs:
+  mkdir -p Run_Results
+
+Run the graph certificate:
+  python -I -B Computational_Material/Instrument_and_Graph_Examples/checks/graph_certificate.py --output Run_Results/graph_certificate.json
+
+The causal-readout program writes RESULTS.json beside itself. Copy its program
+and input into a new directory before running:
+  mkdir -p Run_Results/Causal_Readout
+  cp Computational_Material/Causal_Readout/verify_causal_readout.py Run_Results/Causal_Readout/
+  cp Computational_Material/Causal_Readout/TRANSPORT_CERTIFICATE.json Run_Results/Causal_Readout/
+  python -I -B Run_Results/Causal_Readout/verify_causal_readout.py > Run_Results/Causal_Readout/run.log
+
+Run the four finite-example suites:
+  python -I -B Computational_Material/Finite_Examples/verify_mathematical_examples.py --output Run_Results/Mathematical_Examples_Exact_Checks.json
+  python -I -B Computational_Material/Finite_Examples/verify_operational_results.py > Run_Results/Operational_Exact_Checks.json
+  python -I -B Computational_Material/Finite_Examples/verify_finite_signs.py > Run_Results/Finite_Sign_Exact_Checks.json
+  python -I -B Computational_Material/Finite_Examples/verify_coverage_additions.py > Run_Results/Coverage_Additions_Exact_Checks.json
+
+The first finite-example program writes to its --output path and prints a short
+status to standard output. The other three print their complete JSON results to
+standard output. No additional data file is required by these four programs.
+
+Successful completion means that the program reached its result output without
+a failed explicit check or an execution error. Inspect the recorded status,
+predicate count and mathematical scope as well as the process exit status.
+Changing software versions can change formatting or numerical decimal
+renderings; byte identity is the reported result for the recorded environment,
+not a general promise across environments.
+
+5. Remaining computational scope
+
+Other archived programs, recorded outputs and certificates included with the
+articles were retained for inspection and reproduction. They were not rerun
+for this preparation. In particular, the two original reruns above do not
+establish fresh execution of every calculation in the same articles, such as
+the graph threshold-sampling guarantees, interval sweeps, full-density
+integrals, calibration-rank calculations, or a separate 6,758-record
+calculation. Each such claim retains the proof and computational qualifications
+given in its own article.
+
+A stored expected output is not itself evidence that the corresponding program
+was newly executed. Agreement with a stored output establishes reproducibility
+of that calculation under the stated inputs and environment; it does not
+validate every assumption used to connect the calculation to an unrestricted
+theorem or a physical experiment. The mathematical arguments and their explicit
+observation, calibration, sampling, and resource assumptions remain essential.

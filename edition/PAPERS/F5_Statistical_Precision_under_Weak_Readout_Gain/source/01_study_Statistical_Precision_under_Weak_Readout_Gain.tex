@@ -1,0 +1,227 @@
+\documentclass[11pt,a4paper]{article}
+\input{Scientific_Preamble.tex}
+\hypersetup{pdftitle={Statistical Precision under Weak Readout Gain}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Bern}{\operatorname{Bern}}
+\title{Statistical Precision under\\Weak Readout Gain}
+\author{Kirtus Justus\\\small Port Coquitlam, British Columbia, Canada}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A binary readout can identify a population parameter while allowing little precision at a finite sample size. For a symmetric pair in a stipulated Bernoulli experiment, we bound the probability that an honest confidence set must contain two target values separated by $h$. If the readout gain is $\kappa$, the bound depends on $\sqrt{1-(1-\kappa^2h^2)^N}$ for $N$ source observations. It applies even with known calibration, and to bounded adaptive transcripts under an explicit common observation rule. A complementary construction with a warranted positive gain floor gives coverage and a deterministic diameter bound using source and reference samples. The two arguments exhibit the same power $\kappa^{-2}h^{-2}$ in their sample requirements, without optimality of constants or reference allocation. Exact finite controls, a disconnected projection and a dependence counterexample delimit the statements. These are mathematical experiments; no physical data, novelty, or physical selection of the model is claimed.
+\end{abstract}
+
+\section{Experiment, scope and conventions}
+
+Let $\theta\in[0,1]$ be a target population fraction. A binary readout has probability $f$ of reporting one on a labelled zero reference and probability $s$ on a labelled one reference. Its source probability is
+\begin{equation}
+ p=(1-\theta)f+\theta s,\qquad (\theta,f,s)\in[0,1]^3.
+ \label{eq:readout}
+\end{equation}
+The calibration labels and this mixture relation are supplied assumptions. A physical application must justify them. The gain is $s-f$; its magnitude measures the response contrast. Positive gain alone does not identify an unknown-calibration model from its source probability. The calibration probabilities must be supplied or identified by reference observation laws.
+
+Two companion studies treat whole-set confidence by projection and exact binomial calibration~\cite{justusCalibration,justusJoint}. Their general projection principle is separate from a particular seven-target finite experiment. Here the emphasis is the precision available when gain is small. Confidence for an individual admissible parameter and simultaneous confidence for an identified set remain distinct inferential targets~\cite{romano}. The lower bounds below require only point coverage at two specified alternatives.
+
+We use natural logarithms and
+\[
+ \TV(P,Q)=\sup_A|P(A)-Q(A)|=\frac12\int|p-q|\,d\nu,
+\]
+where $p,q$ are densities with respect to a common dominating measure. This convention is half the variational distance denoted $|P-Q|$ in~\cite[Section II-B]{sason}. All random sets have measurable inclusion and diameter events. Set diameter is the supremum of pairwise distances; the empty set has diameter zero. No assertion of useful precision follows from coverage alone.
+
+\section{A finite-sample obstruction}
+
+Fix $0<\kappa\le1$, $0<h\le1$, and $t=\kappa h<1$. Consider the two points
+\begin{equation}
+ f=\frac{1-\kappa}{2},\quad s=\frac{1+\kappa}{2},\qquad
+ \theta_0=\frac{1-h}{2},\quad \theta_1=\frac{1+h}{2}.
+ \label{eq:points}
+\end{equation}
+Their target separation is $h$, their common gain is $\kappa$, and the source probabilities are $p_0=(1-t)/2$ and $p_1=(1+t)/2$.
+
+For this section, the $N\ge1$ source observations are independent and identically distributed. The complete reference data have a common law under both alternatives and are independent of the source sequence. Reference sample sizes may be arbitrary, and the argument still applies when $f,s$ are supplied exactly. Independent auxiliary randomization is allowed. A common randomized observation rule may subsequently coarsen the complete data.
+
+\begin{lemma}[Affinity bound]
+For probability laws $P,Q$, let $\rho(P,Q)=\int\sqrt{pq}\,d\nu$. Then
+\[
+ \TV(P,Q)\le\sqrt{1-\rho(P,Q)^2}.
+\]
+For the complete data laws in \eqref{eq:points}, and after any common randomized observation rule,
+\begin{equation}
+ \TV(P_0,P_1)\le\Delta_N(t):=\sqrt{1-(1-t^2)^N}
+ \le\min\{1,\sqrt N\,t\}.
+ \label{eq:affinity}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Cauchy--Schwarz gives
+\[
+ \frac12\int|\sqrt p-\sqrt q|(\sqrt p+\sqrt q)\,d\nu
+ \le\frac12\sqrt{(2-2\rho)(2+2\rho)}.
+\]
+For one symmetric Bernoulli pair the affinity is $\sqrt{1-t^2}$, and affinities multiply for independent products. Adding an independent common reference law leaves both affinity and total variation unchanged. A common randomized observation rule cannot increase total variation: its probability of an output event is an input function taking values in $[0,1]$, whose expectation difference is at most the input total variation. Finally $(1-t^2)^N\ge1-Nt^2$ proves the second inequality.
+\end{proof}
+
+\begin{theorem}[Confidence diameter]
+Let $0<\alpha<1/2$. Suppose $C(D)\subseteq[0,1]$ satisfies
+$P_j\{\theta_j\in C(D)\}\ge1-\alpha$ for $j=0,1$ under the preceding experiment. Then
+\begin{align}
+ P_0\{\{\theta_0,\theta_1\}\subseteq C(D)\}
+ &\ge 1-2\alpha-\TV(P_0,P_1),\label{eq:twoinclusion}\\
+ P_0\{\diam C(D)\ge h\}
+ &\ge \max\{0,1-2\alpha-\Delta_N(\kappa h)\}.\label{eq:diameter}
+\end{align}
+\end{theorem}
+\begin{proof}
+Transfer the event $\theta_1\in C$ from law one to law zero to obtain probability at least $1-\alpha-\TV(P_0,P_1)$. Under law zero the event $\theta_0\in C$ has probability at least $1-\alpha$. Intersect them by the union bound. A set containing both points has diameter at least $h$.
+\end{proof}
+
+For endpoint targets ($h=1$), gain $\kappa=2\delta$ gives a bound of order $\sqrt N\,\delta$, improving the earlier common-uniform coupling bound $2N\delta$ in~\cite[Theorem 6]{justusJoint}. Both statements are valid. If a sequence of positive gains satisfies $\sqrt N\,\kappa_N\to0$, every procedure honest throughout that sequence has
+\[
+ \liminf_{N\to\infty}P_0\{\diam C_N=1\}\ge1-2\alpha.
+\]
+At $95\%$ coverage this lower limit is $0.9$. When calibration laws are observed or known, each positive-gain member is population point-identified. Thus point identification does not imply uniformly shrinking honest sets over a class admitting arbitrary positive gains.
+
+At the scale $\kappa_N=c/\sqrt N$, $\Delta_N(\kappa_N)\to\sqrt{1-e^{-c^2}}$. This supplies a nontrivial diameter bound when that limit is below $1-2\alpha$. It does not by itself classify optimal confidence procedures at every critical constant, or rule out consistency at a fixed positive gain.
+
+\subsection{Exact binomial distance}
+
+Write $b_{N,p}(k)=\binom Nk p^k(1-p)^{N-k}$. Before coarsening, the distance is exactly
+\begin{align}
+ T_N(t)
+ &=\sum_{k>N/2}\bigl[b_{N,(1+t)/2}(k)-b_{N,(1-t)/2}(k)\bigr]\label{eq:exacttv}\\
+ &=\Pr_{(1+t)/2}(K>N/2)-\Pr_{(1+t)/2}(K<N/2).\nonumber
+\end{align}
+Indeed the likelihood ratio increases with the count $k$ and exceeds one exactly when $k>N/2$. Reflection $k\mapsto N-k$ gives the second expression. The tie at $N/2$, when present, contributes zero. Counting retains all the distance for this pair. The confidence bound can use $T_N(t)$ in place of $\Delta_N(t)$; a common coarsening can only reduce the distance further. Rational $t$ gives an exact rational value, without a normal approximation.
+
+\subsection{A necessary source sample size}
+
+\begin{corollary}[Source requirement]
+Let $0\le\beta<1-2\alpha$. If the coverage conditions of the theorem hold and
+$P_0\{\diam C<h\}\ge1-\beta$, then
+\begin{equation}
+ N\ge
+ \frac{\log\bigl(1-(1-2\alpha-\beta)^2\bigr)}
+      {\log(1-\kappa^2h^2)}.
+ \label{eq:necessary}
+\end{equation}
+The least permissible integer is the ceiling of this expression.
+\end{corollary}
+\begin{proof}
+The probability of diameter at least $h$ is at most $\beta$, so \eqref{eq:diameter} forces $\Delta_N(\kappa h)\ge1-2\alpha-\beta>0$. Squaring gives
+$(1-\kappa^2h^2)^N\le1-(1-2\alpha-\beta)^2$. Taking logarithms and dividing by the negative denominator yields \eqref{eq:necessary}.
+\end{proof}
+
+For fixed $\alpha,\beta$ the right side is of order $(\kappa h)^{-2}$ as $\kappa h\to0$. This obstruction holds even with known calibration. It is a necessary source count, not a lower bound on each reference count or a claim of an optimal constant. Exact \eqref{eq:exacttv} can strengthen this necessary condition. The perfectly separated case $\kappa h=1$ is excluded from the logarithmic expression; one source observation then distinguishes the two specified alternatives.
+
+\section{What adaptive observation preserves}
+
+\begin{proposition}[A bounded common observation rule]
+Suppose a transcript is a measurable common randomized function of an iid source tape of length $N$ and independent reference and randomization tapes whose full laws are the same under both alternatives. Then \eqref{eq:affinity}--\eqref{eq:diameter} apply to any confidence set based on that transcript, provided its stated coverage holds.
+\end{proposition}
+\begin{proof}
+The input experiment has the distance bound already proved. The same measurable randomized function is a common observation kernel, so total variation contracts. Apply the confidence-diameter theorem to the transcript laws.
+\end{proof}
+
+This formulation includes a common policy that chooses the next stream from past outcomes, reveals at most $N$ source draws, inspects reference draws and stops, when it admits the stated tape representation. The observed reference portion need not have the same marginal law after adaptive selection; equality is required for the underlying independent reference tape. The condition excludes a changed detector or source law, a target-dependent policy, informative source-reference coupling outside the model, and an unbounded source stopping rule.
+
+The proposition does not give optional-stopping validity to a fixed-time confidence interval. It transfers a distance bound. Coverage of the procedure used at the stopping time remains a separate premise.
+
+\subsection{Why equal calibration marginals are insufficient}
+
+Take independent reference bits $Z_0\sim\Bern(2/5)$ and $Z_1\sim\Bern(3/5)$. Under target zero let one source bit be $X=Z_0$; under target one let $X=1-Z_0$. These source marginals satisfy \eqref{eq:readout} with $f=2/5,s=3/5$. The full reference law is the same in both alternatives. Nevertheless the full data supports are disjoint: $X=Z_0$ versus $X\ne Z_0$. Their total variation is one, while the source-marginal distance is $1/5$. The independent-source contract is essential to the lower-bound factorization; it cannot be replaced by equality of calibration marginals.
+
+\section{A constructive result with a gain floor}
+
+Now fix a population class with $|s-f|\ge\kappa>0$. This is a warranted restriction on the admitted model, not a conclusion drawn from a noisy estimated denominator. Both gain orientations may be admitted.
+
+Let the source and reference counts have their specified binomial marginals with fixed sample sizes $n_p,n_f,n_s\ge1$. Independence within each stream suffices for those marginals; the upper construction does not require independence across streams. Write the observed fractions as $\widehat q_j$, for $j\in\{p,f,s\}$. Choose $\alpha_j>0$ with $\sum_j\alpha_j=\alpha<1$ and define
+\begin{equation}
+ e_j=\sqrt{\frac{\log(2/\alpha_j)}{2n_j}},\qquad
+ J_j=[\widehat q_j-e_j,\widehat q_j+e_j]\cap[0,1].
+ \label{eq:intervals}
+\end{equation}
+
+For completeness, the Bernoulli form of Hoeffding's bound~\cite{hoeffding} follows directly. For $B\sim\Bern(q)$, the second derivative of
+$\log\mathbb E e^{\lambda(B-q)}$ is the variance of a tilted Bernoulli law, at most $1/4$. Its value and first derivative at zero vanish, hence its value is at most $\lambda^2/8$. Independence within a stream multiplies moment generating functions. Exponential Markov inequality with $\lambda=4\varepsilon$ gives each one-sided deviation probability at most $e^{-2n\varepsilon^2}$. Therefore
+\[
+ \Pr\{|\widehat q-q|>\varepsilon\}\le2e^{-2n\varepsilon^2}.
+\]
+It follows by a union bound that the three intervals in \eqref{eq:intervals} simultaneously contain their true probabilities with probability at least $1-\alpha$.
+
+\begin{theorem}[Coverage and diameter with calibrated gain]
+Let $C_\kappa(D)$ be the projection onto $\theta$ of all triples satisfying \eqref{eq:readout}, $p\in J_p$, $f\in J_f$, $s\in J_s$, and $|s-f|\ge\kappa$. Let $w_j$ be the width of $J_j$. Then, uniformly over the stated population and sampling class,
+\begin{align}
+ \Pr\{\theta\in C_\kappa(D)\}&\ge1-\alpha,\label{eq:positivecoverage}\\
+ \diam C_\kappa(D)&\le
+ \min\left\{1,\frac{w_p+\max(w_f,w_s)}{\kappa}\right\}\label{eq:widthbound}\\
+ &\le\min\left\{1,\frac{2[e_p+\max(e_f,e_s)]}{\kappa}\right\}.
+ \nonumber
+\end{align}
+The diameter bound holds for every realized sample, with the empty-set convention already specified.
+\end{theorem}
+\begin{proof}
+On simultaneous inclusion, the true triple is feasible. For any two feasible points, subtract their readout equations and isolate $(\theta-\theta')(s-f)$ to get
+\begin{align*}
+ |\theta-\theta'|
+ &\le\frac{|p-p'|+(1-\theta')|f-f'|+\theta'|s-s'|}{|s-f|}\\
+ &\le\frac{w_p+\max(w_f,w_s)}{\kappa}.
+\end{align*}
+Take the supremum over feasible pairs and use $w_j\le2e_j$. The proof does not assume the two points have the same gain sign.
+\end{proof}
+
+With positive reference sample sizes, the population reference laws determine $f,s$; nonzero gain then identifies $\theta$. Thus this projection covers the complete, singleton population identified set in that experiment. A larger stipulated nuisance class or a missing calibration observation changes the identified set and must be handled through its own observation map. Empty reported sets can occur on noncoverage events and do not constitute a logical contradiction of a correct population model.
+
+\begin{corollary}[An equal-allocation upper control]
+For $n_p=n_f=n_s=n$ and $\alpha_j=\alpha/3$, the sufficient condition
+\begin{equation}
+ n\ge\frac{8\log(6/\alpha)}{\kappa^2h^2}
+ \label{eq:sufficient}
+\end{equation}
+ensures $\diam C_\kappa\le h$ for every outcome and coverage at least $1-\alpha$.
+\end{corollary}
+\begin{proof}
+The diameter bound is at most $(4/\kappa)\sqrt{\log(6/\alpha)/(2n)}$. Substitute \eqref{eq:sufficient}.
+\end{proof}
+
+The lower and upper results have the same powers of gain and target precision when all three sample sizes are comparable. The upper construction is conservative and not an optimal allocation among streams. An exact binomial construction can replace \eqref{eq:intervals}, retaining the projection and width argument with its actual interval widths. The finite seven-target comparison in~\cite{justusJoint} is a different calculation and does not supply continuous-model precision guarantees.
+
+\subsection{The projected set need not be an interval}
+
+The gain restriction changes the elementary rectangle projection. For exact $p=1/5$, unrestricted $f,s\in[0,1]$ and $|s-f|\ge3/5$, the exact projection is
+\[
+ C_{3/5}=[0,1/3]\ \cup\ [2/3,1].
+\]
+For positive gain, $p=f+(s-f)\theta\ge(3/5)\theta$, forcing $\theta\le1/3$. Every such value is attained with $f=1/5-(3/5)\theta$ and $s=f+3/5$. Negative gain gives the other interval by exchanging the reference labels and replacing $\theta$ by $1-\theta$. Both witnesses lie in $[0,1]^2$. Thus the interval assertion for a plain calibration rectangle must not be transferred to a gain-constrained class without checking it. Taking a convex hull preserves coverage and diameter, but fills gaps and loses the exact shape of the feasible set.
+
+\section{Finite controls and their limits}
+
+The accompanying calculation specifies before execution the sample sizes
+$N\in\{1,2,5,20,80,320\}$ and separations
+$t\in\{1/100,1/20,1/5,1/2\}$. It evaluates all $24$ binomial distances by rational arithmetic and compares the likelihood-ratio and reflected-tail formulas. It checks the squared-affinity bound without numerical square roots, the earlier coupling bound, and the ordered-sample calculation for $N\le5$. Separate exact controls check the source-reference counterexample, rational witnesses for the disconnected projection, and sample-count thresholds. These controls are finite implementation evidence; the proofs establish the general statements.
+
+\input{Weak_Gain_Tables.tex}
+
+At $\alpha=1/20$, $\beta=1/10$ and $h=1/5$, the necessary source counts are determined without logarithmic rounding by locating the least $N$ such that
+$(1-\kappa^2h^2)^N\le9/25$. For the upper counts in the second table, $\log120<5$ gives the conservative sufficient choice $n=\lceil40/(\kappa h)^2\rceil$. The inequality follows, for example, because the exponential series through degree eight at argument five already exceeds $120$. The upper choice makes the diameter strictly below $h$ for every outcome; the lower requirement assumes diameter below $h$ only with probability at least $0.9$. The columns therefore express different strengths of guarantee, and their gap is not a measured inefficiency of an optimal method.
+
+\section{Implications for a physical model}
+
+The results concern information in declared observation laws. They do not determine which reference labels, mixture law, sampling scheme or gain restriction is physically warranted. Additional independent reference observations cannot distinguish the particular lower-bound alternatives when the references have the same law and the source contract is retained. They can still be essential for learning an unknown detector in a different inference problem.
+
+The useful model-specific question is which target invariant, calibration experiment and allowed intervention produce a justified positive separation between competing observation laws. A change of apparatus or preparation may create that separation, but it also changes the experiment and must be represented explicitly. A gain floor learned only under unexamined assumptions cannot be used to certify itself.
+
+\section*{Research and computational disclosure}
+
+The derivations, source comparison, code and manuscript preparation used substantial ChatGPT assistance within the same research program. Related reviews share sources and model lineage. No independent peer review, empirical replication or priority claim is made. The exact controls do not certify every program input or replace the analytic arguments. Editable source, a portable calculation and complete exact results accompany this manuscript. The stated examples use no observed physical data.
+
+\clearpage
+\begin{thebibliography}{9}
+\bibitem{hoeffding} W. Hoeffding, ``Probability inequalities for sums of bounded random variables,'' \emph{Journal of the American Statistical Association} \textbf{58}(301), 13--30 (1963). \href{https://doi.org/10.1080/01621459.1963.10500830}{doi:10.1080/01621459.1963.10500830}. The Bernoulli bound used here is also proved in the text.
+\bibitem{sason} I. Sason and S. Verd\'u, ``$f$-divergence inequalities,'' \emph{IEEE Transactions on Information Theory} \textbf{62}(11), 5973--6006 (2016). \href{https://doi.org/10.1109/TIT.2016.2603151}{doi:10.1109/TIT.2016.2603151}. Author version: \url{https://arxiv.org/abs/1508.00335}. The normalization of total variation is specified in the text.
+\bibitem{romano} J. P. Romano and A. M. Shaikh, ``Inference for the identified set in partially identified econometric models,'' \emph{Econometrica} \textbf{78}(1), 169--211 (2010). \href{https://doi.org/10.3982/ECTA6706}{doi:10.3982/ECTA6706}. This provides context for distinct confidence targets, not a proof of the present finite-sample bounds.
+\bibitem{justusCalibration} K. Justus, \emph{Calibration Uncertainty and Finite-Sample Identification} (2026), in the accompanying Mathematical Supplement. Same-program mathematical study.
+\bibitem{justusJoint} K. Justus, \emph{Calibration, Identified Sets and Uniform Limits} (2026), in the accompanying Mathematical Supplement. Its supplied companion edition is titled \emph{Mathematical Supplement: Calibration, identified sets and uniform limits}. Same-program source; not independent corroboration.
+\end{thebibliography}
+\end{document}

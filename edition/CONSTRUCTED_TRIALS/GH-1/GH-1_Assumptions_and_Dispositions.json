@@ -1,0 +1,143 @@
+{
+ "trial": "GH-1",
+ "date": "2026-11-12",
+ "proof_home": "Paper G8",
+ "built_by": "LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus",
+ "primitives": [
+  "finite connected simple graph",
+  "finite group element on each oriented edge, inverse on the reversed edge",
+  "equivalence under switching"
+ ],
+ "assumptions": [
+  {
+   "id": "GH1-A1",
+   "text": "the set function is of second order (additive in pairs of walks)",
+   "standing": "CONDITIONALLY_DERIVED (edition Z4); otherwise SUPPLIED",
+   "note": "for one weight function applied to all walks order one cannot depend on gains; returning walks admit a first-order class-function weight without interference (Lemma 3.1, revised; Directors A, B, G); higher even orders exist; edition Z4: if events are sets of histories, a rule adding over end vertices a function of the modulus of the summed gains is consistent only for the square on the signed line and only for the second power on a norm-preserving gain digraph with merging walks (G10-01-03, G10-01-04), and the first-order weighting of returning walks is excluded (G10-01-02); with trivial gains the count is consistent; edition Z7: the carrier must have merging walks; on the countable binary tree every rule of the form is the count (Director G); edition Z8: which objects are records (end vertex only, or end vertex and gain) is part of this assumption and changes the classification (G10 Corollary 5.7); edition Z9: within pair rules consistency excludes the characters in which -1 acts trivially and leaves the others; faithfulness of the character is not obtained (G10 Theorem 5.8)"
+  },
+  {
+   "id": "GH1-A2",
+   "text": "pairs of walks with different end vertices do not contribute",
+   "standing": "SUPPLIED",
+   "note": "end vertices act as records"
+  },
+  {
+   "id": "GH1-A3",
+   "text": "one rule, depending on the two gains only, for all graphs and vertices",
+   "standing": "SUPPLIED"
+  },
+  {
+   "id": "GH1-A4",
+   "text": "strong positivity",
+   "standing": "SUPPLIED",
+   "note": "argued from closure under composition by Dowker and Wilkes (2022)"
+  },
+  {
+   "id": "GH1-A5",
+   "text": "the group and the irreducible representation",
+   "standing": "SUPPLIED",
+   "note": "real, complex and quaternionic types all occur; edition Z6: consistency on histories does not select the character (G10-01-09)"
+  },
+  {
+   "id": "GH1-A6",
+   "text": "walk length as the only ordering parameter; common step count in products",
+   "standing": "SUPPLIED"
+  },
+  {
+   "id": "GH1-A7",
+   "text": "events are sets of histories (cylinder sets of unending walks); the rule is a sum over end vertices of a function of the modulus of the summed gains",
+   "standing": "SUPPLIED",
+   "note": "added in edition Z4 as the assumptions under which GH1-A1 is derived (paper G10)"
+  }
+ ],
+ "derived": [
+  {
+   "id": "G8-01-01",
+   "text": "additive invariant functions: constant weight on open walks, class function of the gain on closed walks"
+  },
+  {
+   "id": "G8-01-02",
+   "text": "invariant pair rules are class functions of the pair holonomy; strongly positive iff non-negative combination of irreducible characters"
+  },
+  {
+   "id": "G8-01-03",
+   "text": "squared-norm form"
+  },
+  {
+   "id": "G8-01-04",
+   "text": "I_2 = 2 Re D, I_r = 0 for r >= 3"
+  },
+  {
+   "id": "G8-01-05",
+   "text": "Hilbert space and transition probability; density under a growth condition (criterion: G8-01-10)"
+  },
+  {
+   "id": "G8-01-06",
+   "text": "product of gain graphs gives the tensor product at each walk length"
+  },
+  {
+   "id": "G8-01-07",
+   "text": "recorded walks give the counting measure"
+  },
+  {
+   "id": "G8-01-08",
+   "text": "independence of the faithful character iff n in {1,2,3,4,6}"
+  },
+  {
+   "id": "G8-01-09",
+   "text": "identity-indicator measure = coincidence count on the derived covering graph = dimension-weighted mean of the irreducible measures"
+  },
+  {
+   "id": "G8-01-10",
+   "text": "growth condition holds iff the closed walks of even length realize every group element; the limit space follows the group they realize"
+  },
+  {
+   "id": "G10-01-02",
+   "text": "an additive invariant rule consistent under continuation is a multiple of the count"
+  },
+  {
+   "id": "G10-01-03",
+   "text": "signed line: consistent modulus rule is the square"
+  },
+  {
+   "id": "G10-01-04",
+   "text": "norm-preserving digraph with merging walks: the only consistent power is the second"
+  },
+  {
+   "id": "G10-01-07",
+   "text": "every finite connected signed carrier that is norm-preserving of degree two: consistent modulus rule is the square"
+  },
+  {
+   "id": "G10-01-09",
+   "text": "gains in the q-th roots of unity: consistent modulus rules are the combinations of the squared moduli in the conjugate characters; unique exactly for q = 2, 4, 6"
+  },
+  {
+   "id": "G10-01-10",
+   "text": "positivity: non-negative weights; multiplicativity on products: one conjugate character"
+  },
+  {
+   "id": "G10-01-11",
+   "text": "signed lift: with the gain recorded the record-sum rule is unique for every order, the mean over the characters in which -1 acts as -1"
+  },
+  {
+   "id": "G10-01-12",
+   "text": "pair rules with a kernel: consistent exactly when the kernel changes sign under -1; mixtures of the characters in which -1 acts as -1"
+  }
+ ],
+ "absent": [
+  "relation between the measures at successive lengths (Directors A, B)",
+  "reversible dynamics",
+  "calibrated clock",
+  "continuous group acting on the limit space",
+  "classical Hamiltonian mechanics",
+  "operational meaning of the transition probability",
+  "selection of complex amplitudes",
+  "physical correspondence"
+ ],
+ "dispositions": {
+  "a gain graph yields quantum mechanics": "NOT_IDENTIFIED_IN_SCOPE",
+  "conditional statements of paper G8": "SUPPORTED_IN_SCOPE (mathematics, unrefereed, self-assessed)",
+  "with events as sets of histories, a gain graph yields quantum mechanics": "NOT_IDENTIFIED_IN_SCOPE (the count is consistent with trivial gains)"
+ },
+ "revised": "2026-11-13, edition Z9"
+}

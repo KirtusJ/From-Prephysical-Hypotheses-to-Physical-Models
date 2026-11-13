@@ -1,0 +1,271 @@
+---
+title: "Fixed-Index Jacobi Spectral Expansion Through Inverse-Square Order"
+author: 'Kirtus Justus (Theoretical Physicist) \textbullet{} 31 October 2026\tabularnewline Port Coquitlam, British Columbia, Canada'
+date: ''
+lang: en
+header-includes:
+ - \usepackage{microtype,booktabs,longtable}
+ - \setlength{\emergencystretch}{3em}
+---
+
+## Abstract
+
+For the tridiagonal Jacobi matrix commuting with the half-filled finite sine-kernel concentration operator, we prove an expansion of each fixed-index upper-edge eigenvalue through the inverse-square term, with an index-dependent inverse-cube error. The argument begins with an exact finite-dimensional quadratic form and combines compact spectral convergence to a harmonic oscillator, quantitative weighted Taylor bounds for sampled Hermite functions, and two perturbative corrections to a finite Hermite quasimode. The spectral-gap argument also controls the approximation of the corresponding fixed-index eigenvector. The scope is fixed index. The theorem does not control indices growing with the matrix size, reference-modular operator norms, or Wilson–Dirac relative-entropy asymptotics.
+
+## 1. Exact problem and result
+
+For an even positive integer \(N\), let \(J_N\) be the real symmetric \(N\times N\) matrix
+
+\[
+(J_N)_{j,j+1}=(J_N)_{j+1,j}=\frac{(j+1)(N-j-1)}N,\qquad 0\le j\le N-2,
+\]
+
+with all diagonal entries zero. The off-diagonal entries are strictly positive, so the eigenvalues are simple. Write them in strictly decreasing order as \(\lambda_{N,0}>\cdots>\lambda_{N,N-1}\).
+
+**Theorem.** For each fixed nonnegative integer \(k\), as \(N\to\infty\) through even integers,
+
+\[
+\boxed{\lambda_{N,k}=\frac N2-\frac{2k+1}{\sqrt2}
++\frac{6k^2+6k+3}{8N}
++\frac{\sqrt2(2k+1)(k^2+k+5)}{64N^2}
++O_k(N^{-3}).}\tag{1}
+\]
+
+The remainder constant and the starting dimension may depend on \(k\). All statements below use a fixed \(k\); no uniformity over moving indices is asserted.
+
+## 2. Discrete form and identification of the oscillator index
+
+Set \(h=N^{-1/2}\), \(H_N=(N/2)I-J_N\), \(y_j=h(j-(N-1)/2)\), and
+
+\[
+a_{j+1/2}=\frac1{4h^2}-(y_j+h/2)^2
+=\frac{(j+1)(N-j-1)}N.
+\]
+
+The exterior coefficients \(a_{-1/2}\) and \(a_{N-1/2}\) vanish exactly. Summing squares gives the exact formula
+
+\[
+\boxed{\langle v,H_Nv\rangle
+=\sum_{j=0}^{N-2}a_{j+1/2}|v_{j+1}-v_j|^2
++\sum_{j=0}^{N-1}(2y_j^2+h^2/2)|v_j|^2.}\tag{2}
+\]
+
+The limiting oscillator is
+
+\[
+H=-\tfrac14\partial_y^2+2y^2,\qquad
+H\psi_k=\varepsilon_k\psi_k,\qquad
+\varepsilon_k=(2k+1)/\sqrt2,
+\tag{3}
+\]
+
+with normalized Hermite functions \(\psi_k\). We justify the spectral numbering instead of deriving it from a quasimode alone.
+
+For \(u\in\mathcal S(\mathbb R)\), define \((\mathcal S_hu)_j=\sqrt h\,u(y_j)\). Riemann-sum convergence gives convergence of scalar products and of (2) on any fixed finite span of Hermite functions. The min–max principle therefore yields
+
+\[
+\limsup_{N\to\infty}\varepsilon_{N,k}\le\varepsilon_k,
+\qquad\varepsilon_{N,k}=N/2-\lambda_{N,k},
+\]
+
+where the discrete energies are ordered increasingly.
+
+For the converse, take normalized vectors \(v^{(N)}\) with uniformly bounded energy. Formula (2) implies \(\sum_j y_j^2 |v^{(N)}_j|^2\le C\), so their mass outside \(|y|\le R\) is at most \(C/R^2\), uniformly in \(N\). Embed them into \(L^2(\mathbb R)\) by the piecewise constant functions \(v_j/\sqrt h\) on the cells centered at \(y_j\). These embeddings preserve the \(\ell^2\) norm exactly. For the bond midpoint \(y_{j+1/2}=y_j+h/2\), the coefficient satisfies the quantitative local bound
+
+\[
+a_{j+1/2}=\frac1{4h^2}-y_{j+1/2}^2\ge\frac1{8h^2},
+\qquad |y_{j+1/2}|\le R,\quad h^2R^2\le\tfrac18.
+\]
+
+Consequently, for discrete vectors of energy at most \(C\),
+\(\sum_{|y_{j+1/2}|\le R}|v_{j+1}-v_j|^2/h^2\le8C\).
+The piecewise linear interpolants therefore have uniformly bounded local \(H^1\) seminorms, and their local \(L^2\) distance from the piecewise constant embeddings is \(O_R(h)\). Local Rellich compactness plus the uniform tail control gives global strong \(L^2\) precompactness. By lower semicontinuity and the local limit of the bond coefficients, every limit \(u\) satisfies
+
+\[
+\langle u,Hu\rangle\le\liminf_N\langle v^{(N)},H_Nv^{(N)}\rangle
+\]
+
+in the quadratic-form sense. Apply this to the first \(k+1\) discrete energy eigenvectors simultaneously, including all their fixed linear combinations. Their limits remain orthonormal. Continuum min–max then gives \(\liminf_N\varepsilon_{N,k}\ge\varepsilon_k\). Thus
+
+\[
+\boxed{\varepsilon_{N,k}\to\varepsilon_k\quad\text{for every fixed }k.}\tag{4}
+\]
+
+In particular, each sufficiently small fixed neighborhood of \(\varepsilon_k\) contains precisely one discrete eigenvalue for sufficiently large \(N\). This fact will identify the eigenvalue located by the quasimode.
+
+## 3. Uniform Taylor remainder on fixed Hermite spans
+
+For a smooth function sampled at \(y=y_j\), the exact finite action is
+
+\[
+\begin{aligned}
+(H_N\mathcal S_hu)_j/\sqrt h={}&(2y^2+h^2/2)u(y)\\
+&-\left(\frac1{4h^2}-y^2-\frac{h^2}4\right)
+ \bigl[u(y+h)+u(y-h)-2u(y)\bigr]\\
+&+yh\bigl[u(y+h)-u(y-h)\bigr].
+\end{aligned}\tag{5}
+\]
+
+This identity holds even at an endpoint, because the coefficient multiplying the exterior value is identically zero.
+
+Define
+
+\[
+\begin{aligned}
+P&=\partial_y(y^2\partial_y)+\tfrac12-\tfrac1{48}\partial_y^4,\\
+Q&=\tfrac1{12}\partial_y^2(y^2\partial_y^2)
++\tfrac1{12}\partial_y^2-\tfrac1{1440}\partial_y^6.
+\end{aligned}\tag{6}
+\]
+
+**Taylor lemma.** For each fixed finite Hermite span \(\mathcal H_M=\operatorname{span}\{\psi_0,\ldots,\psi_M\}\), and for each fixed \(u\in\mathcal H_M\),
+
+\[
+\|H_N\mathcal S_hu-\mathcal S_h(Hu+h^2Pu+h^4Qu)\|_{\ell^2}
+\le C_u h^6.\tag{7}
+\]
+
+The estimate also holds uniformly on the unit sphere of any fixed finite Hermite span, after enlarging the constant.
+
+**Justification.** Taylor's theorem with integral remainders gives
+
+\[
+\begin{aligned}
+u(y+h)+u(y-h)-2u(y)
+&=h^2u''+\tfrac{h^4}{12}u^{(4)}+\tfrac{h^6}{360}u^{(6)}+O_u(h^8),\\
+u(y+h)-u(y-h)
+&=2hu'+\tfrac{h^3}{3}u^{(3)}+O_u(h^5),
+\end{aligned}
+\]
+
+where the remainders admit bounds by finite sums of Schwartz seminorms, including the \(y^2\) weights in (5). The leading coefficient \(1/(4h^2)\) turns the \(h^8\) symmetric-difference remainder into \(O(h^6)\); the remaining terms are also \(O(h^6)\) or smaller in the sampled \(\ell^2\) norm. The weighted sampled Schwartz norms stay bounded uniformly in \(h\) by Riemann-sum estimates. Equating the \(h^0,h^2,h^4\) terms gives exactly \(H,P,Q\). The endpoint treatment in (5) requires no nonphysical boundary value: the combined coefficients of the exterior samples vanish exactly. The discarded Gaussian tails are smaller than any inverse power of \(N\). The same argument may be taken one order further: on fixed Hermite spans,
+
+\[
+H_N\mathcal S_hu=\mathcal S_h\big[(H+h^2P+h^4Q+h^6R_6)u\big]+O_u(h^8),
+\]
+
+where the additional *Taylor remainder operator*, used only to cross-check the residual scale, is
+
+\[
+R_6=\frac{y^2}{360}\partial_y^6+\frac{y}{60}\partial_y^5
++\frac1{48}\partial_y^4-\frac1{80640}\partial_y^8.
+\]
+
+Every derivative in this display acts on a fixed Schwartz function and its sampled weighted norms are uniformly bounded. This higher expansion does not change the statement of the spectral theorem. \(\square\)
+
+## 4. Two perturbative coefficients
+
+Use the Hermite ladder operators with \(\alpha=2\sqrt2\):
+
+\[
+y=\frac{a+a^\dagger}{\sqrt{2\alpha}},\qquad
+\partial_y=\sqrt{\frac\alpha2}(a-a^\dagger).
+\]
+
+For any \(k\ge0\), negative-index terms being absent, the nonzero matrix elements of \(P\psi_k\) are
+
+\[
+\begin{aligned}
+P_{kk}&=-\frac{6k^2+6k+3}{8}=:p_k,\\
+P_{k-2,k}&=\frac{(2k-1)\sqrt{k(k-1)}}{12},\\
+P_{k+2,k}&=\frac{(2k+3)\sqrt{(k+1)(k+2)}}{12},\\
+P_{k-4,k}&=\frac5{24}\sqrt{k(k-1)(k-2)(k-3)},\\
+P_{k+4,k}&=\frac5{24}\sqrt{(k+1)(k+2)(k+3)(k+4)}.
+\end{aligned}\tag{8}
+\]
+
+The second diagonal coefficient is
+
+\[
+\langle\psi_k,Q\psi_k\rangle
+=\frac{\sqrt2}{36}(4k^3+6k^2+8k+3).\tag{9}
+\]
+
+Introduce the finite correction
+
+\[
+w_k=\sum_{\ell\ne k}\frac{P_{\ell k}}{\varepsilon_k-\varepsilon_\ell}\psi_\ell,
+\quad (H-\varepsilon_k)w_k=-(P-p_k)\psi_k.
+\]
+
+The inverse-square energy coefficient equals
+
+\[
+\begin{aligned}
+q_k&=\langle\psi_k,Q\psi_k\rangle
++\sum_{\ell\ne k}\frac{|P_{\ell k}|^2}{\varepsilon_k-\varepsilon_\ell}\\
+&=-\frac{\sqrt2(2k+1)(k^2+k+5)}{64}.
+\end{aligned}\tag{10}
+\]
+
+Only the four possible off-diagonal shifts in (8) enter the sum; its simplification is an identity in \(k\). No infinite perturbation sum is required.
+
+## 5. Second corrected quasimode and proof of the theorem
+
+The combination
+
+\[
+R_k=(P-p_k)w_k+(Q-q_k)\psi_k
+\]
+
+has zero component on \(\psi_k\), by (10), and belongs to a finite Hermite span. Consequently the finite vector
+
+\[
+z_k=-\sum_{\ell\ne k}
+\frac{\langle\psi_\ell,R_k\rangle}{\varepsilon_\ell-\varepsilon_k}\psi_\ell
+\]
+
+satisfies \((H-\varepsilon_k)z_k=-R_k\). Let
+
+\[
+U_{N,k}=\mathcal S_h(\psi_k+h^2w_k+h^4z_k),\qquad
+\mathcal E_{N,k}=\varepsilon_k+h^2p_k+h^4q_k.
+\]
+
+Insert these expressions into (7). The coefficients of \(h^0,h^2,h^4\) cancel separately, leaving
+
+\[
+\|(H_N-\mathcal E_{N,k})U_{N,k}\|_{\ell^2}\le C_k h^6,
+\qquad\|U_{N,k}\|_{\ell^2}\longrightarrow1.\tag{11}
+\]
+
+For a self-adjoint finite-dimensional matrix, a normalized vector with residual at most \(\rho\) places an eigenvalue within \(\rho\) of its proposed energy. Apply this to (11), and use the indexed convergence (4) and oscillator spectral gaps to identify the nearby eigenvalue as \(\varepsilon_{N,k}\). In fact, the same spectral gap yields control of the eigenvector itself: if \(v_{N,k}\) is its normalized eigenvector and \(\widehat U_{N,k}=U_{N,k}/\|U_{N,k}\|\), then there is a choice of sign such that
+
+\[
+\min_{\sigma\in\{+1,-1\}}\|\widehat U_{N,k}-\sigma v_{N,k}\|_{\ell^2}=O_k(h^6).
+\]
+
+To see this, use the convergent separation of the adjacent discrete energies to bound the spectral projection onto the orthogonal complement of \(v_{N,k}\) by the residual in (11) divided by a fixed positive gap. This statement has fixed-index scope only. It follows that
+
+\[
+\varepsilon_{N,k}=\varepsilon_k+h^2p_k+h^4q_k+O_k(h^6).
+\]
+
+Since \(h^2=N^{-1}\) and \(\lambda_{N,k}=N/2-\varepsilon_{N,k}\), equation (1) follows. \(\square\)
+
+## 6. Relationship to the sine-kernel reference and its limits
+
+The half-filled finite sine kernel has entries
+
+\[
+(B_N)_{j\ell}=\frac1{2\pi}\int_{-\pi/2}^{\pi/2}e^{i(j-\ell)\theta}\,d\theta.
+\]
+
+For \(W=1/4\), the reference matrix \(B_N\) is Slepian's finite concentration matrix \(p(N,W)\), equation (21), and \(J_N=\frac{2}{N}\sigma(N,1/4)\) in terms of his commuting tridiagonal matrix, equation (14). Slepian proves that the ordered eigenvectors of \(\sigma(N,W)\) have strictly decreasing finite concentration eigenvalues, §4.1, equations (129)–(131), pp. 1403–1404. The argument uses Sturm zero ordering and continuity in the bandwidth; **commutation alone would not imply the index matching**. Thus the \(k\)-th largest Jacobi eigenvector corresponds to the \(k\)-th largest occupation of \(B_N\). With this classical ordering input, Slepian's fixed-index concentration asymptotic (reproduced by Adcock, Huybrechs and Martín-Vaquero, §3.2, equation (3.10)) and the scalar endpoint expansion give, for fixed \(k\), the modular residual limit
+
+\[
+\lim_{N\to\infty}e_{N,k}=\frac12\log\pi-\log(k!)-k\log2
++\left(k+\tfrac12\right)[\log(2k+1)-1].
+\]
+
+The extra inverse-square Jacobi coefficient in (1) **does not** imply a next-order modular residual: a compatible quantitative correction to the discrete-prolate concentration asymptotic would also be required. Nothing in this manuscript establishes a bound uniform for \(k=k(N)\), the operator-norm bound \(\|E_N\|=O(1)\), or the required Wilson longitudinal modular trace estimate \(\operatorname{Tr}(S_NE_N)=o_\mu(\log N)\). The separate whole-line argument in *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law* establishes the fixed-positive-mass leading entropy law with bounded remainder. The fixed-index analysis here does not supply the whole-line argument. Theorem 1 of *Finite Part of Wilson–Dirac Relative Entropy* determines the finite part for fixed $\mu>0$, and Theorem 3 of *Uniform Modular Control and Nonlinear Convergence for Wilson–Dirac Intervals* proves $\|E_N\|\le7$ for even $N\ge2$. Neither statement turns this fixed-index expansion into a moving-index expansion.
+
+## References
+
+- D. Slepian, “Prolate spheroidal wave functions, Fourier analysis, and uncertainty V: The discrete case,” *Bell System Technical Journal* **57** (1978), 1371–1430, DOI: 10.1002/j.1538-7305.1978.tb02104.x; see equation (14), equation (21), and §4.1, equations (129)–(131), pp. 1403–1404.
+- F. A. Grünbaum, “Eigenvectors of a Toeplitz matrix: discrete version of the prolate spheroidal wave functions,” *SIAM Journal on Algebraic Discrete Methods* **2** (1981), 136–141, DOI: 10.1137/0602017.
+- B. Adcock, D. Huybrechs, and J. Martín-Vaquero, “On the numerical stability of Fourier extensions,” *Foundations of Computational Mathematics* **14** (2014), 635–687; preprint https://arxiv.org/html/1206.4111v3, §3.2, equation (3.10).
+
+## Contributions and acknowledgments
+
+Kirtus Justus directed the research program and its scientific standards. ChatGPT (OpenAI) developed and scrutinized the fixed-index spectral perturbation argument and its mathematical presentation with finite-dimensional checks. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for participation in the wider program without attribution of work on this particular theorem not supported by provenance. No institutional endorsement, academic credential, external peer review, or formal proof certification is implied.

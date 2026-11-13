@@ -1,0 +1,123 @@
+\section{Wilson relative entropy: additive and relative limits}\label{sec:wilson}
+
+This section records a consequence of the explicit estimates in the supplied Wilson manuscripts \cite{wilson}. It is conditional on those estimates and their exact finite-dimensional and trace-class inputs. The argument below checks their uniform assembly; it does not independently certify every singular operator domain or boundary regularity proof on which the inputs depend.
+
+The model is the restriction of an infinite-chain occupied-band projector, with Bloch Hamiltonian
+\[
+h_m(k)=\sin k\,\sigma_x+(1+m-\cos k)\sigma_z.
+\]
+Write $\mathcal D_L(\mu)=D(C_{L,\mu/L}\Vert C_{L,0})$, where $C$ is the interval-compressed covariance, and set $N=2L$. This is not the occupied projector of an open finite chain. The supplied fixed-positive-mass theorem states
+\[
+\mathcal D_L(\mu)=\frac{\mu^2}{6}\log L+
+\mu^2\left(\frac{13}{36}-\frac\pi{12}-\frac{\log\mu}{6}\right)
+-\mathcal S(\mu)+O_\mu(1/\log L).
+\]
+Its error notation alone does not imply uniformity in $\mu$. The finite inequalities behind it carry additional information.
+
+\begin{proposition}[Conditional uniform additive consequence]\label{prop:wilson}
+Fix $M>0$. Assume the exact four-term decomposition below, Corollary 4 and equation (8) of \emph{Uniform Modular Control and Nonlinear Convergence}, and the uniform boundary estimate (B9) of \emph{Cross-Boundary Trace-Class Estimates}, together with the exact two-bond formula stated below. Then, for a common sufficiently large $L_0(M)$,
+\begin{align*}
+\sup_{0\le\mu\le M}\Bigg|\mathcal D_L(\mu)
+-\frac{\mu^2}{6}\log L
+-\mu^2\left(\frac{13}{36}-\frac\pi{12}-\frac{\log\mu}{6}\right)
++\mathcal S(\mu)\Bigg|
+\le \frac{C_M}{\log L}\quad(L\ge L_0(M)).
+\end{align*}
+At $\mu=0$, the product $\mu^2\log\mu$ is defined by continuity, and $\mathcal D_L(0)=\mathcal S(0)=0$.
+\end{proposition}
+
+\begin{proof}
+Choose $L\ge\max(2,4M)$ and enlarge that common lower threshold when necessary. Then $N\ge\mu$, $r=\mu/(N+\mu)\le1/2$, $L\ge2\mu$, and $\log(1+\mu/L)\le1/4$ throughout the mass interval. Thus the prerequisites used below have a common onset. Logarithmic estimates are applied first for $0<\mu\le M$ and extended to zero by continuity.
+
+The exact decomposition is
+\[
+\mathcal D_L=\mathcal P_L+\mathcal Q_N+\mathcal F_L-\Delta S_L.
+\]
+We bound each contribution separately.
+
+\emph{Modular contribution.} Put $a_\mu=\sqrt{2/15}\,\mu^2/\pi$ and $b_\mu=\mu/(3\pi)$. Corollary 4 gives
+\[
+|\operatorname{Tr}(S_NE_N)|\le
+\frac{14\mu/\pi+28a_\mu}{N}+\frac{112b_\mu}{N^2},
+\]
+\[
+V_N\le\frac{392(H_N+1)}{\pi^2N^2}+49Ne^{-\pi N/6},\qquad
+|\operatorname{Tr}(D_N^{\rm tr}E_N)|\le2\sqrt{\mu V_N/\pi}.
+\]
+Here $H_N$ is the harmonic number and $\mathcal F_L=\operatorname{Tr}[(S_N+D_N^{\rm tr})E_N]$. The coefficients are explicit polynomials in $\mu$, while $V_N$ is mass independent. Therefore
+\[
+\sup_{0\le\mu\le M}|\mathcal F_L|=O_M(\sqrt{\log N}/N).
+\]
+
+\emph{Nonlinear contribution.} Let $c_\eta=11/18-\pi/12-(\log2)/2$, and $C_\eta$ be the finite mass-independent constant in equation (8) of the same paper. That inequality reads
+\begin{align*}
+|\mathcal Q_N-\mu^2c_\eta|\le{}&
+\frac{19}{3\sqrt2}NJ_1(r)K+\frac{2C_\eta}{35}N^2J_3(r)
++\frac{2c_\eta\mu^3}{N}+\frac{\mu^2}{384K^3}\\
+&+\frac{\sqrt2}{K}\left(\frac{3a_\mu}{8}+\frac{3b_\mu}{2N}\right)
++2C_\eta\sqrt{\left(\frac{a_\mu}{6N}+\frac{b_\mu}{2N^2}\right)M_{2,N}},
+\end{align*}
+where $M_{2,N}\le32(H_N+1)/\pi^2$ and
+\[
+J_1(r)\le\frac{r^2}{\pi}\left(1+\frac12\log\frac2r\right),\qquad
+J_3(r)\le\frac{r^4}{\pi}\left(\frac12+\frac38\log\frac2r\right).
+\]
+The elementary bound $\sup_{x\ge0}x^a\log_+(1/x)=1/(ae)$, $a>0$, and $\log(2/r)\le\log(3N)+\log_+(1/\mu)$ imply
+\begin{align*}
+NJ_1(r)&\le\frac{M^2[1+\tfrac12\log(3N)]+1/(4e)}{\pi N},\\
+N^2J_3(r)&\le\frac{M^4[\tfrac12+\tfrac38\log(3N)]+3/(32e)}{\pi N^2}.
+\end{align*}
+Use the same $K=\lfloor\sqrt{N/\log N}\rfloor$ for every mass. For large $N$, $K^{-1}\le2\sqrt{\log N/N}$. Every term is then bounded uniformly, and
+\[
+\sup_{0\le\mu\le M}|\mathcal Q_N-\mu^2c_\eta|
+=O_M(\sqrt{\log N/N}).
+\]
+This uses the supplied finite all-degree estimate; it does not exchange uncontrolled mass and infinite-series limits.
+
+\emph{Two-bond contribution.} The exact formula in \emph{Relative Entropy of Finite-Interval Wilson–Dirac Quasifree States}, pp. 3–4, is
+\[
+\mathcal P_L=-\pi\left[\frac{N^2-1}{6}\left(u_m+v_m-\frac2\pi\right)
++\frac12(u_m-v_m)\right].
+\]
+In the paper's elliptic parameter convention,
+\[
+u_m+v_m=\frac2\pi\frac{\mathbf E(1-r^2)-r^2\mathbf K(1-r^2)}{1-r^2},\qquad
+u_m-v_m=\frac{2r}\pi\frac{\mathbf K(1-r^2)-\mathbf E(1-r^2)}{1-r^2}.
+\]
+The complementary modulus in the convergent series of \cite{dlmf} is $r$. On $0<r\le1/2$, with $\ell=\log(4/r)$, those series give
+\[
+\mathcal P_L=(N^2-1)r^2\left(\frac\ell6-\frac14\right)-r(\ell-1)
++O(N^2r^4\ell+r^3\ell),
+\]
+with absolute constants. This uniform remainder follows, for example, by bounding the remaining convergent power-series coefficients on $r^2\le1/4$; the logarithmic factors are retained explicitly. With $A=(N^2-1)r^2$ and $\ell_0=\log(4N/\mu)$,
+\[
+0\le\mu^2-A\le\frac{2\mu^3}{N}+\frac{\mu^4+\mu^2}{N^2},\qquad
+0\le\ell-\ell_0\le\mu/N.
+\]
+For each $a>0$, $\mu^a\ell\le M^a\log(6N)+1/(ae)$. The coefficient error, linear $r$ term and elliptic remainders therefore give
+\[
+\sup_{0\le\mu\le M}\left|\mathcal P_L-\frac{\mu^2}{6}\log L
+-\mu^2\left(\frac16\log\frac8\mu-\frac14\right)\right|
+=O_M(\log L/L).
+\]
+
+\emph{Boundary contribution and zero endpoint.} Equation (B9) of \emph{Cross-Boundary Trace-Class Estimates}, p. 7, states directly
+\[
+\sup_{0\le\mu\le M}|\Delta S_L(\mu)-\mathcal S(\mu)|=O_M(1/\log L).
+\]
+Its trace-path definition has $\|F'\|_\infty\le2$, and (B7) gives the nuclear bound $\|\mathbb D_\mu\|_1\le C\sqrt\mu$. Consequently $|\mathcal S(\mu)|\le C\sqrt\mu$ and $\mathcal S(0)=0$ continuously. The finite covariances coincide at zero mass. This concerns a finite trace path, not subtraction of two divergent continuum entropies.
+
+Adding the two scalar constants gives $13/36-\pi/12-(\log\mu)/6$. The boundary rate is slower than the other three error rates. Their sum proves the stated uniform additive bound.
+\end{proof}
+
+\paragraph{What does not follow.}
+The proposition controls the absolute remainder for any bounded sequence $\mu_L$, including sequences tending to zero. It does not establish
+\[
+\mathcal D_L(\mu_L)\sim \frac{\mu_L^2}{6}\log L.
+\]
+Even the additive error divided by that leading term is bounded only by
+\[\frac{6C_M}{\mu_L^2(\log L)^2},\]
+which need not tend to zero. The mass-dependent finite part also requires relative control. For a purely logical example, the residual $r_L(\mu)=L\mu e^{-L\mu}/\log L$ vanishes at zero, tends rapidly to zero for each fixed positive mass, and is uniformly at most $1/(e\log L)$, yet at $\mu=1/L$ it exceeds the scale $L^{-2}\log L$ by an unbounded factor. This example concerns the validity of an inference; it is not asserted to be the actual Wilson residual.
+
+\paragraph{Status of the dependencies.}
+The inspected modular Riccati estimates, Jacobi edge comparison, all-degree path argument and positive-weight manipulations are coherent with the displayed bounds. The exact concentration connection and boundary theorem remain substantive analytic dependencies. The present work has not independently reproduced every domain and regularity argument. Accordingly, Proposition~\ref{prop:wilson} is stated with its inputs explicit. It corrects an overbroad reading of the phrase “no uniform shrinking-mass theorem follows” without claiming a relative asymptotic or an optimal rate.

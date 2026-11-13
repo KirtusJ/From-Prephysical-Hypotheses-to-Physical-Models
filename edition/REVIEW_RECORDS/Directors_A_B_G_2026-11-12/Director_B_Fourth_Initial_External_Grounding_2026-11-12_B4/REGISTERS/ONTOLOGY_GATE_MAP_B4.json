@@ -1,0 +1,156 @@
+{
+  "title": "Gate map for the target of the program",
+  "date": "2026-11-12",
+  "edition": "FPHPM-BASELINE-2026-11-12-Z2",
+  "reading_rule": "Gates are obligations a candidate would have to meet. The list is a map of obligations and of the evidence bearing on each; it is not a claim that the gates are jointly satisfiable, and no gate is passed. The gate list follows the record of LLM Director A (GPT-6, OpenAI); evidence entries name the record or paper they come from.",
+  "gates": [
+    {
+      "id": "P0",
+      "name": "Primitive selection",
+      "state": "OPEN",
+      "evidence": "Finite relational structures, signed graphs and gain graphs are available as primitives; none is selected. A directed three-cycle supports both a complex-type algebra and a classical simplex (Director A, A2). Transport on a graph takes arbitrary values in arbitrary groups (G7-01-01)."
+    },
+    {
+      "id": "P1",
+      "name": "Operational event structure",
+      "state": "OPEN",
+      "evidence": "Unrestricted contextual tables do not select the quantum subset (TO-0). GH-1 uses walk sets as events with end vertices as records; the record role is supplied (G8)."
+    },
+    {
+      "id": "P2",
+      "name": "State and effect spaces",
+      "state": "OPEN",
+      "evidence": "Pure-state geometry does not fix the mixed-state theory: classical spin on S^2 (Directors A, G). GH-1 gives a Hilbert space by the Dowker-Johnston-Sorkin construction, conditional (G8-01-05)."
+    },
+    {
+      "id": "P3",
+      "name": "Transition geometry",
+      "state": "OPEN; restricted",
+      "evidence": "Finite homogeneous carriers excluded (G7-01-07, G7-01-09; Gelander 2013). Curvature 1 against 4 separates RP^2 from the qubit (Directors A, G; G7 Remark 5.2). Inhomogeneous nets exist with imported geometry (Directors A, B). Dense inhomogeneous subsets from gain graphs, conditional (G8-01-05). Algebraic generating data fix p only up to field automorphisms (G7-01-13).",
+      "B4_additive_evidence": "B4 supplies one explicit finite Z3-gain K4 construction with dense projective CP3 event-ray closure, conditional on a chosen complex character; not a physical transition-probability identification."
+    },
+    {
+      "id": "P4",
+      "name": "Phase and complex structure",
+      "state": "OPEN; sharpened",
+      "evidence": "Transition probabilities fix all Bargmann phases up to one conjugation, constructively (G7-01-10, G7-01-11); three overlaps alone do not (Directors A, G; Li-Wagner-Zhang 2026); the determinant of one loop does not (Director B, B2). Global conjugation of a whole model is unobservable (Director B, B2); relative orientation is fixed by composition (G7-01-15). Complex structure, symplectic form, dynamical correspondence and equality of generator and observable counts are forms of one postulate (G7-01-06, G7-01-12)."
+    },
+    {
+      "id": "P5",
+      "name": "Probability rule",
+      "state": "OPEN; conditional derivation",
+      "evidence": "Squared-norm rule from invariance, second order and strong positivity on a gain graph (G8-01-02, G8-01-03). Second order is supplied. No third-order interference alone does not select quantum theory (Directors A, B, G; Barnum-Mueller-Ududec 2014).",
+      "B4_additive_evidence": "B4 shows squared-norm positive finite-horizon D_k need not obey cylinder-refinement compatibility. G8 generic additive impossibility requires gain-only F1 scope; closed-loop endpoint-aware additive gauge-invariants exist."
+    },
+    {
+      "id": "P6",
+      "name": "Composition",
+      "state": "OPEN; conditional derivation",
+      "evidence": "Single-system data do not fix the composite: minimal against quantum (Director B; G7-01-14); interpolated family K_t and failure of its uniform four-system extension by t(1-t)/4 (Director G); CNOT closure forces the quantum composite once a complex representation is given (Director G). Product of gain graphs gives the full tensor product with a common step count (G8-01-06).",
+      "B4_additive_evidence": "A3/G3 show a restricted but consistent matching-generated hierarchy and additional mixed effects are compatible with the same elementary or pure-state data; no quantum physical composition derived."
+    },
+    {
+      "id": "P7",
+      "name": "Dynamics",
+      "state": "OPEN",
+      "evidence": "Static geometry does not select a generator or clock (Director A). Walk length on a gain graph is not unitary (G8 Section 9). No calibrated time.",
+      "B4_additive_evidence": "B4: if reciprocal-gain adjacency is scalar-unitary, it is a period-two involution; the same K4 with dense CP3 rays fails time-refinement compatibility (cross term 0->2)."
+    },
+    {
+      "id": "P8",
+      "name": "Space, causal and clock structure",
+      "state": "OPEN",
+      "evidence": "Ehlers-Pirani-Schild template only (Director D). No construction."
+    },
+    {
+      "id": "P9",
+      "name": "Classical Hamiltonian mechanics",
+      "state": "OPEN",
+      "evidence": "Dephasing gives a stochastic channel, not a Hamiltonian flow (FAR-1; Director A). Recorded walks give the counting measure (G8-01-07). Classical and quantum pure states share a Poisson description (Landsman 1997). No derivation."
+    },
+    {
+      "id": "P10",
+      "name": "Quantitative limit",
+      "state": "OPEN; restricted",
+      "evidence": "Exact homogeneity excluded; three forms of limit remain; ordering of values has to be supplied for algebraic data (G7-01-13, G8-01-08); growth condition of G8-01-05 unproved for a class of graphs.",
+      "B4_additive_evidence": "G8 Proposition 5.1 growth hypothesis proven for an explicit K4/Z3 graph: N_k(y,g)>=3^floor((k-10)/2) for all k>=10; this is a class-member existence proof, not a uniform physical limit law."
+    },
+    {
+      "id": "P11",
+      "name": "Empirical correspondence",
+      "state": "OPEN",
+      "evidence": "None."
+    },
+    {
+      "id": "P12",
+      "name": "Integrated claim",
+      "state": "OPEN",
+      "evidence": "No candidate satisfies P0 to P11. Root review G1 OPEN."
+    }
+  ],
+  "dependencies": [
+    [
+      "P0",
+      "P1"
+    ],
+    [
+      "P1",
+      "P2"
+    ],
+    [
+      "P2",
+      "P3"
+    ],
+    [
+      "P3",
+      "P4"
+    ],
+    [
+      "P2",
+      "P5"
+    ],
+    [
+      "P4",
+      "P5"
+    ],
+    [
+      "P5",
+      "P6"
+    ],
+    [
+      "P6",
+      "P7"
+    ],
+    [
+      "P7",
+      "P8"
+    ],
+    [
+      "P7",
+      "P9"
+    ],
+    [
+      "P3",
+      "P10"
+    ],
+    [
+      "P9",
+      "P10"
+    ],
+    [
+      "P8",
+      "P11"
+    ],
+    [
+      "P10",
+      "P11"
+    ],
+    [
+      "P11",
+      "P12"
+    ]
+  ],
+  "overlay_id": "FPHPM_DIRECTOR_B_2026-11-12_B4",
+  "overlay_policy": "No source gate states modified, no source materials overwritten; additive review only",
+  "B4_parent_state": "Initial External Grounding, G1 OPEN; no ontology"
+}

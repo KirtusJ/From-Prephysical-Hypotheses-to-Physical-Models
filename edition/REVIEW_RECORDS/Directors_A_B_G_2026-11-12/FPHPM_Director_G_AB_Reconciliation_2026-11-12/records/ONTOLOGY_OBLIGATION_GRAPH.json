@@ -1,0 +1,135 @@
+{
+  "graph_type": "SCIENTIFIC_OBLIGATION_GRAPH_NOT_A_PROVEN_ONTOLOGY",
+  "root_G1": "OPEN",
+  "ontology_selected": false,
+  "nodes": [
+    {
+      "id": "P",
+      "label": "Prephysical relational primitives",
+      "status": "OPEN"
+    },
+    {
+      "id": "O",
+      "label": "Calibrated preparations / records / effects",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q",
+      "label": "Complex projective single-system geometry",
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "S",
+      "label": "Signed phase and holonomy observables",
+      "status": "NONIDENTIFIED"
+    },
+    {
+      "id": "C2",
+      "label": "Admissible two-system state and effect cones",
+      "status": "NONIDENTIFIED"
+    },
+    {
+      "id": "C4",
+      "label": "All-arity closure: preparation / discard / reassociation",
+      "status": "NEW_INDEPENDENT_GATE"
+    },
+    {
+      "id": "U",
+      "label": "Reversible entangling transformations",
+      "status": "OPEN"
+    },
+    {
+      "id": "T",
+      "label": "Physical dynamics and clocks",
+      "status": "OPEN"
+    },
+    {
+      "id": "L",
+      "label": "Controlled quantum-to-classical limit",
+      "status": "OPEN"
+    },
+    {
+      "id": "E",
+      "label": "Independent empirical and uncertainty map",
+      "status": "OPEN"
+    },
+    {
+      "id": "F",
+      "label": "Total ontology as defined",
+      "status": "NOT_IDENTIFIED"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P",
+      "target": "O",
+      "needed": "emergence, operational calibration",
+      "status": "OPEN"
+    },
+    {
+      "source": "O",
+      "target": "Q",
+      "needed": "complex statistical manifold identification",
+      "status": "OPEN"
+    },
+    {
+      "source": "Q",
+      "target": "S",
+      "needed": "oriented transport representation",
+      "status": "OPEN"
+    },
+    {
+      "source": "Q",
+      "target": "C2",
+      "needed": "local data insufficient",
+      "status": "NOT_IDENTIFIED"
+    },
+    {
+      "source": "S",
+      "target": "C2",
+      "needed": "phase alone insufficient",
+      "status": "NOT_IDENTIFIED"
+    },
+    {
+      "source": "C2",
+      "target": "C4",
+      "needed": "independent-preparation closure",
+      "status": "OPEN"
+    },
+    {
+      "source": "C4",
+      "target": "U",
+      "needed": "consistent allowed gate",
+      "status": "OPEN"
+    },
+    {
+      "source": "U",
+      "target": "T",
+      "needed": "calibrated generator and clock",
+      "status": "OPEN"
+    },
+    {
+      "source": "T",
+      "target": "L",
+      "needed": "classical Hamiltonian limit",
+      "status": "OPEN"
+    },
+    {
+      "source": "L",
+      "target": "E",
+      "needed": "evidence and calibrations",
+      "status": "OPEN"
+    },
+    {
+      "source": "E",
+      "target": "F",
+      "needed": "full physical map",
+      "status": "OPEN"
+    }
+  ],
+  "controls": {
+    "same_local_data_different_composites": "Sep2 vs Quantum2 vs K_t",
+    "four_party_uniform_extension": "REFUTED_IN_SCOPE interior t",
+    "CNOT_choice": "conditional theorem, imported gate"
+  }
+}

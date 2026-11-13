@@ -1,0 +1,393 @@
+\section{Resources, Equality Patterns and Composition}
+\label{pat:chapter}
+
+This chapter uses classical probability models to distinguish invariance, consistency, observable information and controllable communication. The sample positions are mathematical labels. Counts of positions or repetitions are not assigned physical time, spatial volume or energy without a separate resource model. Logarithms in relative entropy are natural; reported information in bits divides by $\ln2$.
+
+\subsection{One common reference and a complete preparation}
+\label{pat:reference}
+Let a finite or countable message $\Theta$ select a preparation law $P_\theta$ and let $\mu$ be one common normalized reference. If $D(P_\theta\|\mu)\le K<\infty$ for every admitted message, then any fixed stochastic observation of the complete preparation obeys
+\[
+ I(\Theta;Y)\le I(\Theta;X)\le K,\qquad
+ I(\Theta;Y)_{\rm bits}\le K/\ln2.
+\]
+Indeed, with $\overline P=\sum_\theta\pi_\theta P_\theta$, the relative-entropy identity
+\[
+ \sum_\theta\pi_\theta D(P_\theta\|\mu)
+ =I(\Theta;X)+D(\overline P\|\mu)
+\]
+and data processing prove the bound. The reference and the complete-preparation budget are premises. Choosing a separate reference for each message would invalidate this argument. Entropy and communication are used in their ordinary Shannon sense~\cite{shannon}.
+
+Marginal budgets need not bound joint information. Let $\Theta$ and $X$ be independent fair bits and set $Y=X\oplus\Theta$. Both marginal laws are independent of the message, while $(X,Y)$ determines it. Likewise, a message encoded in distinct Bell states has identical single-qubit marginals. The message-conditioned correlation resource belongs to the complete preparation. It cannot be replaced by the correlations of the message-averaged state. Preshared entanglement and selection on successful attempts also change the resource accounting.
+
+For $n$ individually addressable binary positions, a hard Hamming-weight budget of one permits $n+1$ perfectly distinguishable strings and gives $\log_2(n+1)$ bits. A mean Hamming-weight budget of one instead gives $n h_2(1/n)$ for $n\ge2$, attained by independent Bernoulli$(1/n)$ positions. The upper bound follows from entropy subadditivity and concavity of binary entropy. Both quantities grow with $n$; a scalar cost bound alone does not bound the number of distinguishable modes.
+
+\begin{theorem}[Finite entropy under a mean cost]
+\label{pat:entropycriterion}
+Let $J$ be a finite or countable alphabet with finite costs $r_j\ge0$ and at least one zero-cost symbol. Admit all probability laws on $J$ and ideal identification of its symbols. For $E>0$, the supremum of $H(p)$ over $\sum_jp_jr_j\le E$ is finite if and only if
+\[
+ Z(\beta)=\sum_j e^{-\beta r_j}<\infty
+\]
+for some $\beta>0$. Finiteness for one positive $E$ implies finiteness for every finite positive $E$.
+\end{theorem}
+\begin{proof}
+A finite $Z(\beta)$ gives the Gibbs law $q_j=e^{-\beta r_j}/Z$ and $H(p)\le\beta E+\log Z$. Conversely, an infinite finite-cost sublevel allows a fixed positive mass spread over arbitrarily many symbols, with the remaining mass on a zero-cost symbol; entropy is unbounded. Suppose all sublevels are finite and write $N(R)=\#\{j:r_j\le R\}$. If $\log N(R)/R$ were bounded for large $R$, summing integer-width cost shells would make $Z(\beta)$ finite for a sufficiently large $\beta$. If no such $\beta$ exists, take $R\to\infty$ with $\log N(R)/R\to\infty$, place mass $E/R$ uniformly on the nonreference symbols of cost at most $R$, and place the remainder on the zero-cost symbol. Its entropy is at least $(E/R)\log(N(R)-1)$ and is unbounded.
+\end{proof}
+For a finite alphabet, the endpoint $\beta=0$ gives the uniform law and $H(p)\le\log|J|$. On an infinite counting alphabet $Z(0)$ diverges, so that endpoint supplies no finite entropy bound.
+
+Finiteness of one Gibbs sum is not an entropy-continuity theorem. Nor does the theorem determine physical costs. For example, $2^{\ell^2}$ alternatives at cost $\ell$ permit entropy $h_2(1/\ell)+\ell$ at mean cost one, despite every finite-cost sublevel being finite.
+
+\subsection{A finite entropy supremum without a maximizer}
+\label{pat:nonattainment}
+
+The word \emph{supremum} in Theorem~\ref{pat:entropycriterion} cannot in general be replaced by \emph{maximum}. Take one zero-cost symbol and $g_n=\lfloor2^n/n^3\rfloor$ symbols of cost $n$ for each positive integer $n$, omitting empty levels. At $\beta_0=\log2$, put
+\[
+ Z_0=1+\sum_{n\ge1}g_n2^{-n},\qquad
+ q_j=\frac{e^{-\beta_0r_j}}{Z_0},\qquad
+ \bar r=\sum_jq_jr_j.
+\]
+The sum $Z_0$ is finite because $g_n2^{-n}\le n^{-3}$. Also $g_1=2$ gives $Z_0\ge2$, so
+\[
+ 0<\bar r\le\frac12\sum_{n\ge1}\frac1{n^2}<1;
+\]
+the last inequality follows from $\sum_{n\ge1}n^{-2}<1+\int_1^\infty x^{-2}\,dx=2$.
+
+At mean-cost budget one, Gibbs comparison gives $H(p)\le\log Z_0+\beta_0$. Let $U_n$ be uniform on the level of cost $n$, and for sufficiently large $n$ set
+\[
+ p_n=(1-\varepsilon_n)q+\varepsilon_nU_n,\qquad
+ \varepsilon_n=\frac{1-\bar r}{n-\bar r}.
+\]
+This law has mean cost exactly one. Entropy concavity and $n^{-1}\log g_n\to\log2$ give
+\[
+ \liminf_n H(p_n)\ge H(q)+(1-\bar r)\beta_0
+ =\log Z_0+\beta_0.
+\]
+Thus this upper bound is the supremum. Equality for an admissible law would require both mean cost one and $D(p\|q)=0$. The latter forces $p=q$, whose mean is strictly less than one. The supremum is not attained.
+
+Moreover, $p_n\to q$ in total variation while the entropies approach a value strictly larger than $H(q)$. Finiteness of a Gibbs sum at one temperature therefore does not guarantee entropy continuity on the cost-bounded set. The example's Gibbs sums diverge for $0<\beta<\log2$; it does not satisfy the stronger all-positive-temperature hypothesis used in entropy-continuity results~\cite{beckerEntropy}. The integer-partition example below has its own stronger partition-product and mean-cost argument and is not contradicted by this construction. The example was supplied in the related scientific assessment and is proved here in full~\cite{justusAssessment}.
+
+\subsection{Orientation, abstract channel uses and physical rates}
+\label{pat:orientation}
+The two-copy event score in Section~\ref{str:kernels} gives the hypothetical binary law $p(t,u)=1/2+2tu$ when an oriented reference $u$ is fixed. Choosing $u=1/2$ and inputs $t=\pm1/8$ gives outcome probabilities $5/8$ and $3/8$. As an ordinary binary symmetric communication channel, with that effect assumed available, its capacity is
+\[
+ C=1-h_2(3/8)=0.045565997075\ldots\quad\text{bits per use}.
+\]
+An unlimited number of independently accessible uses has unbounded total information at this positive rate. The copy resource and the observation effect cannot be omitted from a proposed total information limit.
+
+Using two identical preparations instead gives $p(t)=1/2+2t^2$. Its Bernoulli Fisher information about $t$ and relative entropy from $t=0$ satisfy
+\[
+ \mathcal J(t)=\frac{64t^2}{1-16t^4},\qquad
+ D(\operatorname{Bern}(1/2+2t^2)\|
+ \operatorname{Bern}(1/2))=8t^4+O(t^8).
+\]
+The first formula is $(p')^2/[p(1-p)]$; the second follows by expanding the two logarithms at zero. Sign information is absent in this identical-copy law. With a fixed nonzero reference $u$, the corresponding Fisher information is
+$16u^2/(1-16t^2u^2)$ and is nonzero at $t=0$. These are properties of the specified observation laws, not a derivation of an oriented apparatus.
+
+For comparison, the conventional Gaussian channel formula
+$C(B)=B\log_2(1+P/(N_0B))$ has limit $P/(N_0\ln2)$ as $B\to\infty$ at fixed signal power $P$, with $N_0$ defined so the noise power is $N_0B$~\cite{shannon}. The limit is the elementary limit $\log(1+x)/x\to1$. Bandwidth in hertz, power and information per second already presume physical time and a specified channel. No observer-independent rate or whole-system capacity follows from an uncalibrated mathematical order parameter.
+
+A finite-dimensional channel kernel and a mathematical cost can define a capacity in bits per block without physical time or energy. The Gaussian vector example and its countercontrols are developed in \emph{Abstract Channels and Gaussian Capacity}. Deriving that kernel from a proposed foundation and interpreting a physical rate remain separate questions.
+
+\subsection{Equality patterns, raw probabilities and deletion}
+\label{pat:orbits}
+For $k$ positions carrying labels in a countably infinite set, two tuples are related by a common permutation of the label set exactly when they have the same equality pattern. Thus the orbits are the $B_k$ set partitions of the $k$ positions. If position labels are also forgotten, only the integer partition of block sizes remains; there are $p(k)$ such types. Neither quotient gives an invariant normalized raw-label distribution. An invariant marginal on a countably infinite transitive label set would contradict countable additivity.
+
+Uniformity at each size does not give a consistent family. Under uniform set partitions, two positions agree with probability $1/2$, whereas restricting the five equally likely three-position partitions gives $2/5$. Under uniform integer-partition types at size three, random deletion gives equality probability $(1+1/3+0)/3=4/9$, differing from the size-two uniform law by TV $1/18$.
+
+A positive alternative is a deterministic paintbox: choose probabilities $p_i$, draw labels independently, and observe their equality partition. A different alternative is an Ewens law with parameter $\theta>0$, whose probability for a particular partition with block sizes $n_1,\ldots,n_b$ is
+\[
+ \frac{\theta^b\prod_{j=1}^b(n_j-1)!}{\theta(\theta+1)\cdots(\theta+k-1)}.
+\]
+These are consistent exchangeable laws, not unique selections by symmetry. Paintboxes and exchangeable partitions are treated systematically by Pitman~\cite{pitman}.
+
+Separate pair probabilities do not determine joint pair observations. Independent fair binary labels and the Ewens$(1)$ law both give pair-equality probability $1/2$. For three positions their all-equal probabilities are $1/4$ and $1/3$, and their complete partition laws have TV $1/4$. Jointly recording two pair indicators already distinguishes them. The observation menu must specify whether outcomes are aligned on the same sample.
+
+\subsection{Arbitrarily late first separation}
+\label{pat:prouhet}
+\begin{theorem}[Paintboxes with a prescribed finite cutoff]
+For every integer $K\ge2$ there are distinct, full-support, fixed paintboxes whose complete partition laws agree through order $K$. At $m=K+1$, if $\Delta_m$ is the difference of their $m$th collision moments, the exact complete-pattern TV is
+\[
+ \operatorname{TV}_m=\frac{|\Delta_m|}{2}
+ \sum_{b=1}^m {m\brace b}(b-1)!,\qquad
+ |\Delta_m|=\frac{m!}{2^{m(m-1)/2}(2^m+1)^m}.
+\]
+\end{theorem}
+\begin{proof}
+Split $1,\ldots,2^m$ according to the parity of the binary digit sum of the predecessor. The polynomial identity
+$\prod_{j=0}^{m-1}(1-e^{2^jt})=\sum_{a=0}^{2^m-1}(-1)^{s_2(a)}e^{at}$
+has a zero of order $m$ at the origin. Its derivatives show equality of power sums through $m-1$ and difference $(-1)^m m!2^{m(m-1)/2}$ at order $m$; shifting $a$ to $a+1$ leaves that first difference unchanged. Both groups sum to $S=2^{m-2}(2^m+1)$. Give a core entry $a$ the probability $a/(2S)$ and append common tail probabilities $2^{-j-1}$, $j\ge1$, of total mass $1/2$. The tails cancel in moment differences, giving the formula for $\Delta_m$.
+
+For a specified partition with $b$ blocks, its probability is a sum over distinct block labels. Inclusion-exclusion on identifications of those labels expresses it as a polynomial in collision moments. At total order $m$, the only term involving the differing moment $s_m$ merges all $b$ blocks and has coefficient $(-1)^{b-1}(b-1)!$. Every other term agrees. Summing absolute differences over the ${m\brace b}$ partitions with $b$ blocks proves the formula. Strict positivity of every finite partition event follows from the infinite positive tail.
+\end{proof}
+The first values, for $K=2,3,4,5$, respectively, are
+\[\frac1{324},\quad\frac{39}{668168},\quad\frac{125}{556592256},\quad\frac{4869}{30891577600000}.\]
+They are exact mathematical distinctions, however small.
+
+Any sequence of independently restarted experiments restricted to the agreeing orders has identical history laws under these two models, including a common adaptive choice of the next allowed order. This follows inductively from equality of each conditional next-record law. Shared references across repetitions or growing joint arity define a different experiment.
+
+At $K=2$ the core weights are $(1,4,6,7)/36$ and $(2,3,5,8)/36$, with the common geometric tail. The five three-position patterns have probabilities
+\[
+\begin{array}{c|cc}
+ & A&B\\\hline
+\text{all equal}&425/13608&439/13608\\
+\text{each specified pair only}&445/3402&883/6804\\
+\text{all distinct}&7843/13608&7871/13608
+\end{array}
+\]
+(the middle row represents three patterns). For $n$ independent complete triple records, a test of size at most $0.05$ and power at least $0.95$ must satisfy
+$nD(P_{\rm alt}\|P_{\rm null})\ge0.9\log19$, by data processing to the binary decision. Evaluation gives necessary counts $81{,}288$ with $A$ as null and $81{,}670$ with $B$ as null. These are not sufficient counts and do not apply to one larger joint equality partition.
+
+\subsubsection{A separate finite-order ambiguity for exchangeable signs}
+\label{pat:latent-sign-aliases}
+
+A related construction concerns signed records, with a different
+state space and observation rule from equality-pattern paintboxes.
+Let a latent \(T\in[-1,1]\) have law \(\nu\), and conditional on \(T\)
+draw signs independently with mean \(T\).  The resulting complete law is
+\[
+ P_\nu^{(m)}(s_1,\ldots,s_m)
+ =2^{-m}\int_{-1}^1\prod_{i=1}^m(1+s_it)\,d\nu(t).
+\]
+These laws are exchangeable and consistent under every coordinate
+deletion, because they are restrictions of one conditional iid process.
+
+For \(0<\eta<1\), compare the fair prior on
+\(\{\sqrt\eta,-\sqrt\eta\}\) with the prior assigning masses
+\(1-\eta,\eta/2,\eta/2\) to \(0,1,-1\).  Their first three moments
+agree, while their fourth moments are \(\eta^2\) and \(\eta\).
+Expanding the displayed product proves equality of every joint law
+through three signs and
+\[
+ P_B^{(4)}(s)-P_A^{(4)}(s)
+ =\frac{\eta(1-\eta)}{16}\prod_{i=1}^4s_i,\qquad
+ \operatorname{TV}(P_A^{(4)},P_B^{(4)})
+ =\frac{\eta(1-\eta)}2.
+\]
+
+For an arbitrary finite cutoff \(k\), take an even \(n>k\), let \(L_n\)
+be the Legendre polynomial and choose \(0<\varepsilon\le1\).  Define
+\[
+ d\nu_\pm(t)=\tfrac12[1\pm\varepsilon L_n(t)]\,dt,
+ \qquad -1\le t\le1.
+\]
+These are symmetric probability measures.  To verify the needed
+polynomial facts, Rodrigues' formula
+\[
+ L_n(t)=\frac1{2^n n!}\frac{d^n}{dt^n}(t^2-1)^n
+\]
+and integration by parts give orthogonality to every polynomial of
+degree below \(n\).  The identity
+\[
+ L_n(t)=\frac1\pi\int_0^\pi
+       \bigl(t+i\sqrt{1-t^2}\cos u\bigr)^n\,du
+\]
+(obtained by binomial expansion) gives \(|L_n(t)|\le1\).
+Thus the two densities are nonnegative and normalized.  Their
+moments below order \(n\) agree, so all smaller complete sign laws agree.
+At order \(n\), only the top monomial in the product can contribute
+to their difference.  Another integration by parts yields
+\[
+ \int_{-1}^1t^nL_n(t)\,dt
+ =2^{-n}\int_{-1}^1(1-t^2)^n\,dt
+ =\frac{2^{n+1}(n!)^2}{(2n+1)!}.
+\]
+Consequently
+\[
+ \operatorname{TV}(P_{\nu_+}^{(n)},P_{\nu_-}^{(n)})
+ =\varepsilon\,\frac{2^n(n!)^2}{(2n+1)!}>0 .
+\]
+For \(n=4,\varepsilon=1/2\), this distance is \(4/315\).
+
+The obstruction is to a fixed finite observation order over the entire
+declared class.  Complete knowledge of all orders identifies every
+moment of \(\nu\); on the compact interval, polynomial approximation
+of continuous functions then identifies \(\nu\) itself.
+The latent source, conditional sampling and accessible joint order
+remain supplied assumptions.  Neither the sign construction nor the
+paintbox construction selects a physical source.
+
+\subsection{Entropy of quotient outputs and controllable messages}
+\label{pat:coherententropy}
+If every set partition at order $k$ has common cost $c_k$ and can be selected and distinguished, Theorem~\ref{pat:entropycriterion} gives
+\[
+ \exists\beta>0:\sum_k B_ke^{-\beta c_k}<\infty
+ \quad\Longleftrightarrow\quad
+ \liminf_{k\to\infty}\frac{c_k}{\log B_k}>0.
+\]
+For a positive lower ratio, choose $\beta$ so that the summand is at most $B_k^{-1}\le2^{-(k-1)}$. If the lower ratio is zero, infinitely many terms exceed $\sqrt{B_k}$ for each fixed $\beta$. Linear costs fail; costs of order $k\log k$ can suffice. This identifies a mathematical growth condition without explaining why a physical apparatus should obey it.
+
+For integer-partition types with cost equal to order and the empty type allowed,
+\[
+ Z(\beta)=\prod_{j\ge1}(1-e^{-\beta j})^{-1},\qquad
+ \sum_{j\ge1}\frac{j}{e^{\beta_*j}-1}=1.
+\]
+The unique mean-one entropy maximizer is the Gibbs law, and
+\[
+ H_*=(\beta_*+\log Z(\beta_*))/\log2
+ =2.420267156348295\ldots,\quad
+ \beta_*=1.074984419833593\ldots.
+\]
+The equations, rather than rounded decimals, define the exact optimum.
+
+Requiring the conditional pattern laws at every order to come from one exchangeable consistent family gives a strict gap. Let $G_k$ be the Gibbs probability of order $k$, and let $c$ be the common probability of a uniformly selected pair agreeing in orders two and three. The two uniform type laws have pair probabilities $u_2=1/2,u_3=4/9$. Relative-entropy decomposition, data processing to that pair indicator, and minimization over order weights give
+\[
+ H_*-H(P)\ge-\frac1{\log2}\log\max_{0\le c\le1}
+ \left[1-G_2-G_3+G_2e^{-d(c\|1/2)}+G_3e^{-d(c\|4/9)}\right]>0.
+\]
+Here $d$ is Bernoulli relative entropy. Both exponential terms are at most one, with equality at different $c$, proving strictness by compactness. The resulting relaxed upper value is approximately $2.41988092049132$ bits. A specified finite-order example uses the Ewens$(4/3)$ integer-type law
+\[
+ Q_k(\lambda)=\frac{k!\theta^{\sum_jm_j}}{(\theta)_{k\uparrow}}\prod_{j\ge1}\frac1{j^{m_j}m_j!},\qquad\theta=4/3,
+\]
+where $m_j$ counts blocks of size $j$. Put $h_k=-\sum_\lambda Q_k(\lambda)\log Q_k(\lambda)$ and choose order weights
+\[
+ \pi_k=\frac{\exp(h_k-1.047262\,k)}{\sum_{j=0}^{22}\exp(h_j-1.047262\,j)},\quad0\le k\le22,
+ \qquad\pi_k=0\quad(k>22).
+\]
+The conditional type laws are restrictions of one coherent exchangeable family. Evaluation gives
+\begin{align*}
+\mathbb E K&=0.999996239443005554\ldots,\\
+H&=2.395335833829052067\ldots\text{ bits}.
+\end{align*} These numerical evaluations, including the mean's proximity to one, are not formal interval enclosures. The formulas specify the example exactly; no infinite-order lottery or exact mean-one retuning is implicit in the quoted digits. The exact coherent optimum remains undetermined.
+
+If a sender controls only the order $K$ and the family $Q_k$ is fixed, then $M\to K\to\Lambda$ is a Markov chain and
+\[
+ I(M;K,\Lambda)=I(M;K),\qquad
+ H(K,\Lambda)=H(K)+H(\Lambda\mid K).
+\]
+At $\mathbb EK\le1$, $K\in\mathbb N_0$, the largest order entropy is two bits, attained by the geometric law $P(K=k)=2^{-k-1}$. Conditional pattern randomness is not an extra controllable message alphabet. For the stated Ewens witness the decomposition is approximately $1.984978648746772$ order bits plus $0.410357185082280$ conditional pattern bits. If the empty order is disallowed, positive integer $K$ with mean at most one forces $K=1$.
+
+\subsection{Composition and aligned observations}
+\label{pat:composition}
+Two quotient patterns do not determine a shared-label concatenation. Types $(2)$ and $(1)$ can arise from $(a,a)$ with $(a)$, yielding $(3)$, or with $(b)$, yielding $(2,1)$. Requiring disjoint fresh labels supplies a valid multiset-union operation, but adds a reference convention.
+
+For independent paintboxes, common refinement is the equality law of independently drawn label pairs and has product weights. It need not stay in the original parameter family. Refining two Ewens$(1)$ laws gives all-equal probability $1/k^2$. Matching its second and third orders to a Pitman--Yor law forces $(\alpha,\theta)=(2/7,13/7)$. At order four the all-equal probabilities $1/16$ and $19/306$ differ; summing all fifteen pattern differences gives TV $59/4896$. Agreement at early orders does not establish closure at all orders.
+
+Refinement commutes with restriction; join need not. If one input joins $1$ to $2$ and the other joins $2$ to $3$, their join connects $1$ and $3$, even after restricting the joined relation to $\{1,3\}$. Joining the restricted inputs leaves them separate. A set-valued disjoint-carrier amalgamation is associative as a set of possible completions. Uniformly selecting one completion at each binary step is a further stochastic rule and can fail associativity (already by TV $1/12$ on three singleton carriers).
+
+Independent self-refinement leaves a random partition law fixed only if each pair-coincidence probability obeys $p_{ij}=p_{ij}^2$. On a countable carrier this forces a deterministic partition. Full exchangeability then leaves only the discrete and universal partitions. Perfectly coupling the two inputs as the same random partition removes the independence premise and permits any law.
+
+To see an all-order coupling ambiguity, let independently sampled pairs $(X,Y)$ have probability matrix
+\[
+ R_t=\begin{pmatrix}t&1/2-t\\1/2-t&t\end{pmatrix},\quad0<t<1/2.
+\]
+Both component processes are fair and have unchanged full equality-pattern laws. Composite pair equality has probability $1/4+4(t-1/4)^2$. Comparing $t=1/4$ and $3/8$ gives TV $1/16$ for that binary observation and $1/8$ for the aligned pair of component equality indicators. On a countable alphabet the full-support coupling
+$(1-\epsilon)p_ip_j+\epsilon p_i\mathbf1_{i=j}$ with $p_i=2^{-i}$ likewise preserves both components. Comparing $\epsilon=0,1/2$ changes composite equality from $1/9$ to $23/126$, a gap $1/14$.
+
+Even the separate all-order laws of both components and their composite can all agree while aligned observations differ. Divide each of the following matrices by $40$:
+\[
+ A=\begin{pmatrix}1&2&3&4\\2&3&4&1\\3&4&1&2\\4&1&2&3\end{pmatrix},\quad
+ B=\begin{pmatrix}1&2&3&4\\2&1&4&3\\3&4&1&2\\4&3&2&1\end{pmatrix}.
+\]
+Their row and column sums coincide, and their multisets of cell masses coincide. Thus all three separate equality-pattern laws agree at every order. The aligned four-position laws have TV $3/1250$. In particular, the event
+$X_1=X_2\ne X_3=X_4$, $Y_1=Y_3\ne Y_2=Y_4$
+has unnormalized numerator
+$\sum_{i\ne k,j\ne\ell}M_{ij}M_{i\ell}M_{kj}M_{k\ell}$,
+equal to $4360$ and $4488$ respectively; the probability gap is $1/20000$. This explicit finite enumeration is included among the computational checks.
+
+After $m$ independent fair binary refinements there are $D=2^m$ equally weighted categories. The chance of any collision among $k$ labels is
+\[
+ 1-\frac{(D)_k}{D^k}.
+\]
+It tends to zero for fixed $k$, but to $1-e^{-c^2/2}$ when $k/\sqrt D\to c>0$. The logarithm of the product $\prod_{j<k}(1-j/D)$ proves the latter limit. A fixed-order disappearance statement is therefore not uniform over growing observation order.
+
+\subsection{Operations natural under every restriction}
+\label{pat:naturality}
+\begin{theorem}[Deterministic selection]
+For a finite integer $r\in\mathbb N_0$, total operations $F_S:\operatorname{Eq}(S)^r\to\operatorname{Eq}(S)$, on every finite carrier and commuting with every injection-induced restriction, are exactly the discrete constant and intersections of a fixed subset of the $r$ input relations. The empty intersection is the universal relation. There are $2^r+1$ operations.
+\end{theorem}
+\begin{proof}
+Pair restriction makes off-diagonal output membership a Boolean function of the $r$ input memberships. Let $\mathcal W$ be the coalitions of input coordinates that make the pair equal. On three positions, coalitions $A,A,B$ on edges $12,23,13$ are realizable when $A\subseteq B$, so transitivity makes $\mathcal W$ upward closed. Coalitions $A,B,A\cap B$ are also realizable, so $\mathcal W$ is intersection closed. If nonempty it is the principal filter generated by $\cap\mathcal W$; if empty the output is discrete. Each listed operation plainly satisfies the assumptions.
+\end{proof}
+At arity zero, the input tuple is unique and restriction to a pair selects exactly one of two constant rules: the discrete or universal relation. Both extend naturally to every finite carrier, so the same count $2^0+1=2$ applies.
+
+Finite arity is essential. For countably many input relations, declare a pair equivalent when it is equivalent in all but finitely many inputs. The cofinite filter is closed under finite intersections, so this defines an equivalence relation and commutes with every restriction. It is not intersection over a fixed subset of inputs: acceptance of every coalition $\mathbb N\setminus\{j\}$ would force that subset to be empty, which would also accept the empty coalition. The cofinite rule does not. Finite carriers do not remove this infinite-arity alternative.
+
+For two inputs, commutativity and pointwise idempotence select intersection in this deterministic class. The random kernel $\tfrac12\delta_R+\tfrac12\delta_Q$ shows that simply dropping determinism invalidates that conclusion.
+
+\begin{theorem}[Stochastic selection and a local bound]
+Let $K_S(R,Q)$ be a total kernel on finite equivalence relations, restriction-natural at every size, commutative and pointwise idempotent. Let $a$ be its two-position equality probability on mixed input statuses. Then $0\le a\le1/2$. Ordinary conditional composition on the input triple $(1,0,0)$ has associator TV $\epsilon_2=a(1-a)$. If $\kappa(R,Q)$ counts pairs of distinct blocks of $R\cap Q$ sharing a parent block in at least one input, then
+\[
+ \operatorname{TV}(K_S(R,Q),\delta_{R\cap Q})
+ \le\min\{1,\kappa(R,Q)a\},\qquad a\le2\epsilon_2.
+\]
+Exact associativity therefore forces deterministic intersection.
+\end{theorem}
+\begin{proof}
+On three positions take inputs identifying only $12$ and only $23$. Both separate $13$, so the output cannot identify $13$. Its events identifying $12$ and $23$ are disjoint, each of probability $a$, hence $2a\le1$. On two positions the two parenthesizations of $(1,0,0)$ have equality probabilities $a^2$ and $a$. Naturality preserves each common block with probability one, forbids mergers separated by both inputs and assigns probability $a$ to each eligible block merger. The union bound over those mergers gives the estimate. Since $a\le1/2$, $a(1-a)\ge a/2$. If the associator is zero, all pair memberships equal those of $R\cap Q$ almost surely; finiteness gives equality of the whole relation.
+\end{proof}
+If commutativity is omitted while exact associativity and pointwise idempotence are retained, the only possibilities are intersection and the two input projections. To prove this, let $a$ and $b$ be the two mixed-input equality probabilities for ordered statuses $(1,0)$ and $(0,1)$. The same three-position transitivity construction gives $a+b\le1$. Associativity on $(1,0,0)$ and $(0,0,1)$ gives $a^2=a$ and $b^2=b$. Thus $(a,b)$ is $(0,0)$, $(1,0)$ or $(0,1)$. Restricting to every pair then determines the entire finite output relation almost surely as intersection, the first input, or the second input, respectively.
+
+The second application must use its specified conditional kernel given the intermediate relation. An unrecorded persistent random variable can violate that assumption. A two-position population bound suffices for this size-dependent inequality; an all-carrier associativity bound is unnecessary. Exact all-size restriction naturality remains a substantive premise, not something established by finitely many successful tests.
+
+For $G_a=(1-2a)\delta_{R\cap Q}+a\delta_R+a\delta_Q$, expansion gives the signed associator $a(1-a)(\delta_T-\delta_R)$ and uniform distance to intersection at most $2a$. A different kernel independently marks common blocks horizontal, vertical or neutral with probabilities $t,t,1-2t$ and merges identically marked blocks sharing the appropriate parent. It agrees with $G_{t^2}$ on every two-position input. On $(\top_3,\bot_3)$ its probabilities are $t^3$ for one block, $t^2(1-t)$ for each specified pair block, and $1-3t^2+2t^3$ for three singletons. The TV gap is $3t^2(1-t)$. At $t=1/10$ an exactly-two-block event has probability $27/1000$ and is impossible under $G_{t^2}$. Independent repetition gives size zero and power $1-(973/1000)^m$; $110$ is the first integer reaching $0.95$. This optimum concerns that specified pair and zero-size tests, not certification of all stochastic kernels.
+
+\subsubsection{Small-carrier agreement and a growing-carrier obstruction}
+\label{pat:marked-growing}
+
+The marked-common-block kernel has a stronger contrast on growing
+carriers.  Fix \(0<t\le1/2\).  Its common blocks receive independent
+marks \(H,V,N\) with probabilities \(t,t,1-2t\); \(H\) blocks merge
+within a parent block of the first input, and \(V\) blocks within a
+parent block of the second.  These operations preserve the common
+blocks, are commutative, are pointwise idempotent, and commute with
+restriction: surviving common blocks inherit the same independent
+marks.  Conditional composition samples the stated kernel anew given
+the intermediate relation.
+
+Let \(C_{n,u}\) select each of \(n\) positions independently with
+probability \(u\), merge the selected positions into one block, and
+leave other positions single.  Selecting zero or one position gives
+the discrete relation \(\bot_n\).  For the marked kernel \(L_t\),
+\[
+ L_t(\top_n,\bot_n)=C_{n,t},
+\]
+and its two composed laws on \((\top_n,\bot_n,\bot_n)\) are
+\[
+ L_t(L_t(\top_n,\bot_n),\bot_n)=C_{n,t^2},\qquad
+ L_t(\top_n,L_t(\bot_n,\bot_n))=C_{n,t}.
+\]
+In the first expression a position must survive two independent
+selections to belong to the merged block.  In the second, the inner
+operation leaves the discrete relation unchanged.
+
+For fixed positive \(t\), the largest block divided by \(n\) converges
+in probability to \(t^2\) under the first law and \(t\) under the second.
+A threshold strictly between these values has probability difference
+tending to one.  Therefore the supremum of the marked kernel's
+associator TV over all finite carriers and triples is exactly one,
+although its two-position defect is only \(t^2(1-t^2)\).
+For every fixed cutoff \(N\), the defect on carriers of size at most
+\(N\) is at most \(4\binom N2t^2\): each kernel application differs from
+deterministic meet by at most \(\binom N2t^2\), and coupling the two
+applications in each grouping to the common deterministic output
+gives the bound.  Thus it can be arbitrarily small at a prescribed
+finite cutoff.
+
+There is also an exact moving-size limit.  If \(t\to0\) and \(nt\to c>0\),
+\[
+ \operatorname{TV}(C_{n,t^2},C_{n,t})
+       \longrightarrow 1-(1+c)e^{-c}.
+\]
+To prove it, the chance that the \(t^2\) selection contains at least
+two points is at most \(\binom n2t^4\to0\), so its partition law
+converges in TV to the discrete relation.  The other law has distance
+\[
+ 1-(1-t)^n-nt(1-t)^{n-1}
+\]
+from that relation, which tends to the displayed Poisson expression.
+The triangle inequality transfers the limit to the two-law distance.
+
+For an exact finite calculation, combine the probabilities of binomial
+counts zero and one into one category, keep counts \(2,\ldots,n\)
+separate, and take the TV distance of those two count laws.  Conditional
+on a count at least two, each selected subset has the same probability,
+so this is also the full partition-law distance.
+These growing-carrier failures do not invalidate the earlier
+size-dependent bound derived from the two-position parameter under
+exact restriction naturality.  Finite tests still cannot certify that
+all-size structural premise.
+
+For uniform independent permutations, the join of their cycle partitions is the orbit partition of the generated subgroup. The chance of transitivity failure is $1/n+O(n^{-2})$, while a fixed pair is disconnected with probability $2/n^2+6/n^3+O(n^{-4})$. These are different events. One exact route to the first statement is the recurrence $p_1=1$ and
+$p_n=1-\sum_{k=1}^{n-1}\frac{k p_k}{n\binom nk}$,
+obtained by choosing the orbit of a specified point; the fixed-pair probability is
+$\sum_{k=1}^{n-1}\frac{k(n-k)p_k}{n(n-1)\binom nk}$.
+They describe this supplied random-permutation model, not a general law of relational connectivity.

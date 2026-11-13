@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\title{Representation and Physical Interpretation}
+\author{Kirtus Justus}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An abstract information channel need not represent transmission through physical space or evolution in physical time. We distinguish a mathematical representation, a derivation of that representation from a proposed foundational description, and a physical interpretation supported by observations. A finite-dimensional Gaussian channel illustrates the distinction: its capacity follows from a probability kernel and a quadratic cost without assigning frequency, duration, or energy. Its usual bandwidth interpretation requires additional assumptions. Exact counterexamples show that the capacity is not determined by a cost-to-variance ratio alone. These observations place information theory alongside relational, quantum, dynamical, and analytic models within a common question: which conclusions follow from specified assumptions, and which remain unchanged across the descriptions compatible with the available observations?
+\end{abstract}
+
+\section{Mathematical structure and physical meaning}
+The term \emph{afrequent} describes a proposed foundational level at which physical frequency, wavelength, and periodicity have not been assigned. It is not a limit of large physical frequency and does not mean infinite frequency. The absence of a physical assignment does not, by itself, prohibit an abstract index set, probability space, algebra, graph, or coordinate system. Such objects can belong to a representation used to formulate or test a proposal. Whether a particular representation follows from the proposal is a further question.
+
+Three claims must therefore be distinguished. A representation claim specifies mathematical objects and demonstrates their consistency or consequences. A derivation claim explains why a stated foundational description determines that representation, or an appropriate equivalence class of representations. A physical claim identifies what preparations, transformations, observations, and quantities the representation describes, and supplies evidence for that interpretation. A failure to establish one claim does not constitute a theorem that another is impossible.
+
+This distinction applies to familiar words. An abstract channel can be a conditional probability kernel; a cost can be a nonnegative function; and a block can be a finite collection of coordinates. Calling these quantities a channel, signal, or noise does not assign them physical bandwidth, power, or duration. Conversely, using mathematical terminology does not establish that a chosen probability law, composition rule, or observation map is warranted by an underlying hypothesis.
+
+The relevant scientific question is specific: what is defined, what follows from the definition, what is selected by the foundational description, and what has an observational interpretation? The answer can differ across models in the same research program. A signed-sector proposal does not serve as the common origin of every relational theorem, quantum trial, or conventional field calculation considered here.
+
+\section{An abstract capacity formula}
+Let \(X\) be a random vector in a real Euclidean space of mathematical dimension \(d\), and let
+\[
+Y=X+Z,\qquad Z\sim\mathcal N(0,\sigma^2 I_d),\qquad Z\perp X,
+\]
+where \(\sigma^2>0\). Impose the second-moment constraint \(\mathbb E\|X\|^2\le dP\), with \(P\ge0\), and allow the full vector \(Y\) as output. Mutual information is defined by base-2 relative entropy. Then
+\[
+\mathcal C_d(P,\sigma^2)
+=\sup_{\mathbb E\|X\|^2\le dP} I(X;Y)
+=\frac d2\log_2\!\left(1+\frac P{\sigma^2}\right)
+\quad\text{bits per vector block}.
+\]
+The proof uses Gaussian entropy maximization and a determinant bound under a trace constraint. Equality is attained by a centered Gaussian input of covariance \(PI_d\). A complete proof and adverse examples appear in \emph{Abstract Channels and Gaussian Capacity} in the Mathematical Supplement. The underlying Gaussian coding results are established information theory \cite{shannon,polyanskiy17}.
+
+No duration variable enters this finite-vector calculation. Its inner product is mathematical structure, and its second moment is a stipulated mathematical cost. The dimension \(d\) is not a statement about the number of physical spatial dimensions. A finite coordinate set need not carry a preferred temporal order. It does retain coordinate identities: discarding those identities would define a different observation model.
+
+The familiar algebraic form is recovered by setting
+\[
+B_{\mathrm{abs}}=\frac d2,\qquad S_{\mathrm{abs}}=P,
+\qquad N_{\mathrm{abs}}=\sigma^2.
+\]
+Thus \(\mathcal C_d=B_{\mathrm{abs}}\log_2(1+S_{\mathrm{abs}}/N_{\mathrm{abs}})\). In this realization \(B_{\mathrm{abs}}\) is a positive half-integer coordinate multiplicity. With \(m\) circular complex coordinates and the corresponding complex variance convention, the coefficient is the integer \(m\). An arbitrary positive real coefficient requires a declared normalization or another model. It cannot automatically be read as the dimension of a finite vector space.
+
+The engineering Shannon-Hartley formula has a different interpretation: bandwidth is measured relative to physical time, and the resulting capacity is expressed as a rate per unit duration. Shannon's original white-noise theorem states that physical signal model and its power constraint \cite{shannon}. Using the same algebraic expression in an abstract representation does not inherit those units.
+
+The relation between a duration-bandwidth product and an effective number of coordinates also has limiting qualifications. A nonzero function cannot be simultaneously exactly time limited and exactly band limited. A continuous-time capacity derivation must state the appropriate relaxation and asymptotic convention \cite{polyanskiy19}. The finite-vector theorem needs none of that conversion.
+
+\section{Which assumptions determine the capacity?}
+The Gaussian expression depends on the conditional law, input class, cost, and accessible output. It is not a universal formula for any two quantities called signal and noise.
+
+For a sharp counterexample, let \(Z\) equal \(+1\) and \(-1\) with equal probability, independently of \(X\). Its variance is one. Given any \(P>0\), choose \(0<a<\min\{1,\sqrt P\}\). Place arbitrarily many distinct input values in \((-a,a)\). Every input satisfies the same strict quadratic budget, while the exact real output obeys
+\[
+Z=\operatorname{sign}(Y),\qquad
+X=Y-\operatorname{sign}(Y).
+\]
+Every selected input can therefore be recovered without error. The capacity supremum is unbounded even though the input budget and noise variance are finite. This is an abstract channel with ideal real-valued readout and discrete noise. It makes no assertion about physically unlimited detector precision. It demonstrates that finite variance and cost alone do not select Gaussian capacity.
+
+Even within Gaussian models, total noise variance is insufficient in multiple dimensions. Under total input second-moment budget two, noise covariance \(I_2\) gives one bit per vector block. Noise covariance \(\operatorname{diag}(1/2,3/2)\), with the same trace, gives
+\[
+\frac12\log_2\!\left(\frac{16}{3}\right)
+\approx1.20751875
+\]
+bits under its optimal allocation. Covariance structure and admissible allocation matter. The standard parallel-channel theorem describes this optimization \cite{polyanskiy17}.
+
+Additional restrictions also matter. A finite output alphabet bounds mutual information by its logarithmic cardinality. A peak-amplitude constraint changes the admissible input distributions. Uncertain readout, erased labels, or dependent copies change the experiment. One must preserve these distinctions when transferring a capacity result to another representation.
+
+\section{Representation changes and changes of information}
+Invertible relabelling does not alter an experiment's information when the channel, cost, and admissible distributions are transported together. In a Gaussian coordinate change \(x\mapsto ax\), \(a\ne0\), both the input second-moment budget and the noise variance scale by \(a^2\). Their ratio and the represented capacity remain unchanged. Numerical values alone therefore do not establish that either quantity is a physical energy.
+
+Deleting observations has a different effect. If a stochastic map sends output \(Y\) to \(V\), data processing gives
+\[
+I(X;V)\le I(X;Y).
+\]
+The inequality can be strict: for a noiseless binary channel with zero cost and all binary input distributions admissible, mapping the output to a constant lowers capacity from one bit to zero. A coarse-grained description is consequently not interchangeable with a bijective change of coordinates. A statement that two descriptions are merely representations must specify which transformations count as equivalences and what information those transformations preserve.
+
+Likewise, fitting an arbitrary positive value \(C\) to the identity \(C=B\log_2(1+\rho)\) by defining \(\rho=2^{C/B}-1\) supplies no noise model, coding theorem, or prediction. A successful representation requires more than the ability to rewrite a number in a familiar algebraic form.
+
+\section{Information, coding, and a physical rate}
+The finite-block mutual-information supremum is distinct from an error-free message count. An operational coding theorem specifies message sets, encoders, decoders, composition of channel copies, admissible codewords, and an error criterion. For independent copies of the Gaussian kernel with the stated cost, the supremum asymptotically achievable rate equals the Gaussian information capacity \cite{polyanskiy17}.
+
+The index counting copies need not be a physical clock. A limit over larger product spaces can be a mathematical limit without a claim about temporal succession. If only one finite block is available, the asymptotic coding conclusion requires additional interpretation. Nondegenerate Gaussian noise gives overlapping positive output densities for distinct finite codewords, so positive capacity does not imply nontrivial finite-block zero-error transmission.
+
+To claim a physical rate, one must additionally identify which mathematical blocks correspond to actual preparations and observations, how many are available per physical resource, and how calibration and uncertainty enter. Those questions concern applicability of the representation. They do not retroactively make physical duration a prerequisite for defining the abstract kernel.
+
+\section{Observational identification across model families}
+For a class of descriptions \(\Theta\), an experiment family \(\mathcal E\), and outcome laws \(P_\theta^e\), define
+\[
+\theta\sim_{\mathcal E}\theta'
+\quad\Longleftrightarrow\quad
+P_\theta^e=P_{\theta'}^e\ \text{for all }e\in\mathcal E.
+\]
+A property is identified exactly when it is constant on the relevant equivalence class. With uncertain data or calibration, the target is its range over all jointly compatible descriptions. This mathematical formulation can itself be used abstractly; its experimental interpretation requires a correspondence to actual procedures.
+
+The accompanying articles give complementary examples. A restricted phase curve admits a classical stochastic realization. A common environmental unitary preserves reduced system data while changing correlations among inaccessible record fragments. Two exact controls identify a stated positive, linearly minimal two-state model, while positive tolerance in one control admits a nontrivial compatible interval in a labelled hidden coordinate. Exact integer-grid transitions can conceal continuous-time circulation, although two exact incommensurate observation intervals identify a common finite generator in a fixed labelled basis. These statements have different premises and do not combine into a single foundational derivation \cite{operational}.
+
+The same care applies to relational and analytic results. Uniqueness of a core within a specified homomorphism-equivalence class does not select the class or a physical world. A continuum estimate for a specified operator does not establish that the operator follows from a prephysical proposal. These are useful conditional results whose scope should be preserved.
+
+\section{Requirements for a foundational application}
+An abstract capacity model is available without assigning physical bandwidth. A derivation from a particular foundational proposal must still explain why that proposal determines the relevant probability structure, noise law, admissible distinctions, cost, coordinate multiplicity, and composition. These ingredients may belong to an effective representation rather than the fundamental description. Their status should be stated explicitly.
+
+A physical application has further requirements: an observation map, justified quantities and units where claimed, competing models, and predictions that discriminate among them under admitted uncertainty. A proposed channel representation can be useful before all these questions are answered, provided its claims remain at the level actually established.
+
+The scientific conclusion is therefore open but constrained. Afrequence alone neither forbids Shannon information nor selects the Gaussian logarithmic law. A well-defined representation supplies mathematical consequences. Its foundational origin and physical interpretation remain separate propositions to be derived and tested.
+
+\section*{Acknowledgments}
+Kirtus Justus directed the research and supplied the scientific questions. ChatGPT (OpenAI) assisted with mathematical derivation, source inspection, computation, and manuscript preparation. The assistance does not imply provider endorsement or independent empirical corroboration. Responsibility for the submitted scholarly claims remains with the named author.
+
+\begin{thebibliography}{99}
+\bibitem{shannon} C. E. Shannon, ``A Mathematical Theory of Communication,'' \emph{Bell System Technical Journal} \textbf{27} (1948), 379--423 and 623--656, especially Section 24, Theorem 17. Original second installment: \texttt{https://academicweb.nd.edu/\~{}powers/ame.20231/shannon1948b.pdf}.
+\bibitem{polyanskiy17} Y. Polyanskiy and Y. Wu, \emph{Information Theory}, MIT 6.441, Spring 2016, Chapter 17, Sections 17.1--17.3.2. Official course notes: \texttt{https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/}.
+\bibitem{polyanskiy19} Y. Polyanskiy and Y. Wu, same course, Chapter 19, Sections 19.2--19.3, especially the qualification following Theorem 19.2.
+\bibitem{operational} K. Justus, \emph{Operational Identification of Records, Controls, and Continuous-Time Dynamics}, Mathematical Supplement to \emph{From Prephysical Hypotheses to Physical Models}, 10 November 2026. Companion manuscript (self-citation); proofs are reproduced with their stated assumptions.
+\end{thebibliography}
+\end{document}

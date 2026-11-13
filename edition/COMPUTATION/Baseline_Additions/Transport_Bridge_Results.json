@@ -1,0 +1,156 @@
+{
+  "scope": "stipulated finite mathematical models; no physical claim",
+  "checks": {
+    "A_bargmann_xyz_exact": {
+      "passed": true,
+      "value": "1/4 + I/4",
+      "argument": "pi/4",
+      "solid_angle_octant": "pi/2",
+      "relation": "|arg| = Omega/2 for spin-1/2 (Omega = pi/2, octant)"
+    },
+    "A_general_triple_formula": {
+      "passed": true,
+      "formula": "Tr(P_a P_b P_c) = (1 + a.b + b.c + c.a + i a.(b x c))/4, P_n=(I+n.sigma)/2"
+    },
+    "A_numeric_phase_vs_solid_angle": {
+      "passed": true,
+      "bargmann_phase": 0.7853981633974482,
+      "half_solid_angle": 0.7853981633974483,
+      "sign_convention": "arg(<1|2><2|3><3|1>) = +Omega/2 for the orientation x->y->z; the Berry phase of the same loop is -Omega/2 (Berry 1984 convention gamma = -j Omega)"
+    },
+    "B_spin_0.5_triple_phase_equals_jOmega": {
+      "passed": true,
+      "modulus": 0.3535533905932736,
+      "expected_modulus": 0.3535533905932738,
+      "phase_mod_2pi": 0.7853981633974483,
+      "j_times_Omega": 0.7853981633974483,
+      "basis": "eigenvectors of n.J; independent of the tensor-power construction"
+    },
+    "B_spin_1.0_triple_phase_equals_jOmega": {
+      "passed": true,
+      "modulus": 0.12500000000000017,
+      "expected_modulus": 0.12500000000000003,
+      "phase_mod_2pi": 1.5707963267948961,
+      "j_times_Omega": 1.5707963267948966,
+      "basis": "eigenvectors of n.J; independent of the tensor-power construction"
+    },
+    "B_spin_1.5_triple_phase_equals_jOmega": {
+      "passed": true,
+      "modulus": 0.0441941738241592,
+      "expected_modulus": 0.04419417382415923,
+      "phase_mod_2pi": 2.3561944901923444,
+      "j_times_Omega": 2.356194490192345,
+      "basis": "eigenvectors of n.J; independent of the tensor-power construction"
+    },
+    "B_spin_2.0_triple_phase_equals_jOmega": {
+      "passed": true,
+      "modulus": 0.015624999999999997,
+      "expected_modulus": 0.015625000000000003,
+      "phase_mod_2pi": 3.141592653589792,
+      "j_times_Omega": 3.141592653589793,
+      "basis": "eigenvectors of n.J; independent of the tensor-power construction"
+    },
+    "C_ladder_N1_geodesic_triangle": {
+      "passed": true,
+      "phase": 0.7853981633974482,
+      "expected": 0.7853981633974483,
+      "points": 3,
+      "note": "geodesic rule: any refinement of the geodesic triangle gives the same holonomy as the 3-point chain"
+    },
+    "C_ladder_N3_geodesic_triangle": {
+      "passed": true,
+      "phase": 0.785398163397448,
+      "expected": 0.7853981633974483,
+      "points": 9,
+      "note": "geodesic rule: any refinement of the geodesic triangle gives the same holonomy as the 3-point chain"
+    },
+    "C_ladder_N30_geodesic_triangle": {
+      "passed": true,
+      "phase": 0.7853981633974482,
+      "expected": 0.7853981633974483,
+      "points": 90,
+      "note": "geodesic rule: any refinement of the geodesic triangle gives the same holonomy as the 3-point chain"
+    },
+    "C_ladder_N3000_geodesic_triangle": {
+      "passed": true,
+      "phase": 0.7853981633974458,
+      "expected": 0.7853981633974483,
+      "points": 9000,
+      "note": "geodesic rule: any refinement of the geodesic triangle gives the same holonomy as the 3-point chain"
+    },
+    "C_berry_line_integral_equals_minus_half_solid_angle": {
+      "passed": true,
+      "berry_phase": -0.7853981633974434,
+      "minus_half_solid_angle": -0.7853981633974483,
+      "note": "Berry phase of a spin-1/2 loop is -Omega/2; the Bargmann phase of the same chain is +Omega/2 (opposite sign convention)"
+    },
+    "D_real_amplitudes_triple_phase_in_0_pi": {
+      "passed": true,
+      "distinct_phase_values": [
+        0.0,
+        3.141593
+      ]
+    },
+    "D_classical_point_states_triple_in_{0,1}": {
+      "passed": true,
+      "note": "no nontrivial oriented triple phase in a classical simplex"
+    },
+    "E_monodromy_enclosing_loop_shift_is_plus_or_minus_one": {
+      "passed": true,
+      "start": [
+        -8,
+        9,
+        0.2675579518091846
+      ],
+      "v_initial": 0.03032174732977877,
+      "v_final": 0.11042148929628398,
+      "u": 0.08140837564806891,
+      "shift_in_units_of_u": 0.9839250731740311,
+      "model": "H = (hbar^2/2) L^2 + cos(theta), hbar=0.05, basis Y_l^m, l<=160; focus-focus value (ell,E)=(0,1)"
+    },
+    "E_monodromy_control_loop_shift_is_zero": {
+      "passed": true,
+      "start": [
+        -8,
+        4,
+        -0.16178032574647563
+      ],
+      "v_initial": 0.035876677478915875,
+      "v_final": 0.035876677478915875,
+      "u": 0.08877182620506831,
+      "shift_in_units_of_u": 0.0
+    },
+    "E_monodromy_variation_hbar0.04_M6": {
+      "passed": true,
+      "enclosing": {
+        "start": [
+          -6,
+          16,
+          0.4053296946202023
+        ],
+        "v_initial": 0.025055072389774224,
+        "v_final": 0.08528857484633562,
+        "u": 0.061136247997157944,
+        "shift_in_units_of_u": 0.985233874008125
+      },
+      "control": {
+        "start": [
+          -6,
+          8,
+          -0.12324966042743916
+        ],
+        "v_initial": 0.0307690996321488,
+        "v_final": 0.0307690996321488,
+        "u": 0.06968052917708643,
+        "shift_in_units_of_u": 0.0
+      }
+    },
+    "F_schild_ladder_levi_civita_holonomy_equals_solid_angle": {
+      "passed": true,
+      "rotation_angle": 1.570796943399784,
+      "solid_angle": 1.5707963267948966,
+      "note": "classical SO(2) holonomy of the Levi-Civita connection on S^2 is the enclosed area; the spin-j quantum phase of the same loop is j*Omega (prequantum line bundle, j in (1/2)Z); same base loop, different representation"
+    }
+  },
+  "all_passed": true
+}

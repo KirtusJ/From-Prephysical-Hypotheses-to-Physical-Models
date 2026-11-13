@@ -1,0 +1,139 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom\sloppy
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Source and gain ambiguity},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Source and gain ambiguity}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{3. gain-shift ambiguity with arbitrary common source covariance}\label{gain-shift-ambiguity-with-arbitrary-common-source-covariance}
+
+Let L be a \textbf{connected real symmetric weighted graph Laplacian} on n \emph{already labeled} sites, with \texttt{P0=J/n}, \texttt{Q=I-P0}, \texttt{W\_s=sLe\^{}\{-sL\}}. Take distinct \textbf{known} scales \texttt{0\textless{}s\textless{}t}, a \textbf{single shared} zero-mean random source x with covariance Σ strictly positive on the mean-zero subspace, and positive scalar detector gains \texttt{g\_s,g\_t}:
+
+\texttt{y\_s=g\_s\ W\_s\ x}, \texttt{y\_t=g\_t\ W\_t\ x}.
+
+The jointly measured covariances are
+
+\texttt{C\_st=g\_s\ g\_t\ W\_s\ Σ\ W\_t}, \texttt{C\_tt=g\_t²\ W\_t\ Σ\ W\_t}.
+
+All operators W\_s and W\_t vanish on P0 and are invertible on Q. On Q, \texttt{C\_st\ C\_tt\^{}+\ =\ (g\_s/g\_t)\ W\_s\ W\_t\^{}\{-1\}}, independent of the generally \textbf{noncommuting} covariance Σ. Thus
+
+\texttt{C\_st\ C\_tt\^{}+\ =\ (g\_s/g\_t)\ (s/t)\ exp{[}(t-s)L{]}Q}.
+
+Consequently the nominal logarithmic reconstruction without calibrated relative gain returns
+
+\texttt{\textbackslash{}hat\ L\ =\ (1/(t-s))\ log{[}P0+(t/s)\ C\_st\ C\_tt\^{}+{]}\ =\ L+αQ},
+
+where \texttt{α=log(g\_s/g\_t)/(t-s)}.
+
+This is an \textbf{exact one-parameter ambiguity}, not an additive noise approximation. Unknown Σ by itself cancels for paired measurements; unknown relative gain does not. The identity fails if cross-scale observations do not share the same x, if Σ loses rank on Q, or if the readout covariances contain uncorrected independent additive detector noise.
+
+\subsubsection{A conditional self-calibration that weakens the gain premise}\label{a-conditional-self-calibration-that-weakens-the-gain-premise}
+
+A weighted graph Laplacian has offdiagonal entries \texttt{L\_ij=-w\_ij\ ≤\ 0}. If the candidate is independently known to have \textbf{at least one absent edge} in the measured site basis, then \texttt{max\_\{i≠j\}\ L\_ij=0}. As \texttt{Q\_ij=-1/n} for \texttt{i≠j},
+
+\texttt{\textbackslash{}hat\ L\_ij=L\_ij-α/n}.
+
+Therefore
+
+\texttt{α=-n\ max\_\{i≠j\}\textbackslash{}hat\ L\_ij},
+
+\texttt{L=\textbackslash{}hat\ L-αQ}, and \texttt{g\_s/g\_t=exp{[}(t-s)α{]}}.
+
+\textbf{The location of the missing edge need not be known.} If an approximate shifted generator has entrywise error at most \texttt{δ}, the extracted α has error at most \texttt{nδ}, and the final recovered generator has entrywise error at most \texttt{nδ}. This controls errors \textbf{after} the logarithmic inversion; it is not a uniform stability bound from noisy covariance measurements, whose inversion may be severely ill-conditioned. The existence of the missing edge must, however, be justified independently; otherwise the inference has simply inserted sparsity into the premises. This statement is false as unconditional graph reconstruction: for a fully connected positive-weight graph, adding a small complete-graph term generates alternative valid graph Laplacians.
+
+\subsubsection{Adversarial source-and-gain transformation}\label{adversarial-source-and-gain-transformation}
+
+For any \texttt{c\textgreater{}0}, \texttt{L\_c=L+cQ} is a valid connected graph Laplacian adding weight \texttt{c/n} to \emph{every} distinct pair. With
+
+\texttt{T\_c=P0\ +\ L(L+cQ)\^{}\{-1\}\_Q\ Q}, \texttt{x\textquotesingle{}=T\_c\ x}, \texttt{g\textquotesingle{}\_s=g\_s\ e\^{}\{sc\}},
+
+one has exactly \texttt{g\textquotesingle{}\_s\ W\_s(L\_c)x\textquotesingle{}=g\_s\ W\_s(L)x} for \textbf{all scales} and individual realizations. Hence if the source and gain laws are insufficiently calibrated, sparse and complete graphs can be observationally identical. The conditional sparsity recovery above \textbf{rejects} the complete augmentation only because its prior forbids the augmented model.
+
+\subsubsection{Numerical checks}\label{numerical-checks}
+
+Constructed both 16-vertex rook/Shrikhande Laplacians and a nonwhite, noncommuting positive-definite Σ. Used scales \texttt{s=log2/4}, \texttt{t=.31}, gains \texttt{g\_s=1.73}, \texttt{g\_t=.67}. The recovered \texttt{α} is \texttt{6.93860535328…}; the exact target is \texttt{log(1.73/.67)/(.31-log2/4)}. Reconstructed each L by the independent no-missing-edge-coordinate self-calibration with entrywise errors \texttt{1.25e-13} (rook), \texttt{2.26e-13} (Shrikhande). With complete-graph augmentation \texttt{c=2.3} and transformed sources/gains, four separate filter scales agree to \textless{}\texttt{2.5e-15} in maximum matrix entry. These are floating-point corroborations of the exact formulas, not formal error bars or physical data. The test script and JSON output are retained. A separate verification program constructs both graphs, enumerates all induced three-port types and four-cliques, compares noncommuting three-port control sequences, and verifies an exact π-flux four-cycle caging identity. All assertions pass locally, with three-port controlled response difference \texttt{7.33e-16}, Krylov ranks \texttt{7} in both chosen triangle-port experiments, and π-flux opposite-corner transfer below \texttt{6.1e-17}.
+
+\textbf{Prior art boundary:} blind graph deconvolution, spectrum/graph learning from structured signals, and system-identification similarity classes are established fields (e.g.~Hammond et al.~2011; Ramírez et al.~2017; Burgarth and Yuasa 2014). These conditional formulas are a working synthesis and do not establish publication novelty.
+
+\subsection{4. Operational readout of full commutation: a simple robustness calculation}\label{operational-readout-of-full-commutation-a-simple-robustness-calculation}
+
+Let A and B be Pauli observables with \texttt{A²=B²=I}. After a projective measurement of B, apply \texttt{U(θ)=exp(iθA)}, then measure B again. Let b,b' be the consecutive ideal outcomes. For commuting A,B, \texttt{E{[}bb\textquotesingle{}{]}=1}. For anticommuting A,B, \texttt{E{[}bb\textquotesingle{}{]}=cos(2θ)}. At θ=π/2 they are +1 and -1, respectively, irrespective of the state. This distinguishes the two models without interpreting a global -I phase as an observable by itself.
+
+Under the \textbf{specific} error model in which the two recorded bits are independently flipped with probability \texttt{e}, and θ=\texttt{π/2+δ}, the observed contrast is
+
+\texttt{Δ\_corr=2(1-2e)²\ cos²\ δ}.
+
+Thus a simple instrument noise model retains a finite discrimination signal whenever \texttt{e\textless{}1/2} and \texttt{\textbar{}δ\textbar{}\textless{}π/2}. This is not a guarantee for arbitrary invasive/nonprojective measurements, source drift, or pulse crosstalk. For \texttt{e=.08}, \texttt{δ=.07}, the predicted contrast is \texttt{1.40429640693}, checked by full two-qubit matrices. The required B in the dressed model is itself a nonlocal Pauli string under the original site interpretation, so access to its projective measurement is a substantial operational input.
+
+If a faithful state \texttt{ρ} on dimension d has known smallest eigenvalue \texttt{r\textgreater{}0}, then \texttt{Tr{[}ρ\ C†C{]}\ ≥\ r\ \textbar{}\textbar{}C\textbar{}\textbar{}\_op²} for \texttt{C={[}A,B{]}}. A measured small commutator \emph{mean-square} controls an operator-norm cross-commutator only with this faithfulness bound. The weaker expected commutator \texttt{Tr(ρ{[}A,B{]})≈0} does not provide it. If \texttt{r=0} or scales to zero with d, no uniform operator-level guarantee follows.
+
+\end{document}

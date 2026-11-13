@@ -1,0 +1,706 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\artanh}{\operatorname{artanh}}
+\setlength{\emergencystretch}{2em}
+\title{Positive Moment Bounds and Growing Plunge Windows}
+\author{Kirtus Justus (Theoretical Physicist)\\\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Positive Moment Bounds and Growing Plunge Windows},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\begin{document}
+\maketitle
+\begin{abstract}
+The reciprocal trace associated with the even half-filled sine kernel has a
+positive Stieltjes representation. It follows that every finite inverse-power
+expansion has a remainder of the sign of, and smaller than, its first omitted
+term. Two rational bounds control the exact central slope. The full formal
+inverse-power series nevertheless has zero radius of convergence. An elementary
+variational construction controls growing central windows of the commuting
+Jacobi matrix. An exact Darboux deletion, with its singular endpoint domains
+proved explicitly, realizes the omitted spectrum as a positive differential
+operator. Elementary bracketing then supplies higher reciprocal moments and
+proves the signed plunge law uniformly for $|\lambda|\le L_N=o(N^{1/4})$.
+In particular a logarithmic number of actual central pairs obey the law with
+relative error $O(N^{-1/2})$. No bulk quantum-period remainder is assumed.
+\end{abstract}
+
+\section{The finite problem and exact inputs}
+Let $N=2m$ be a positive even integer. With site indices $1,\ldots,N$, define
+\[
+B_{jk}=\begin{cases}1/2,&j=k,\\
+\sin[\pi(j-k)/2]/[\pi(j-k)],&j\ne k,
+\end{cases}\qquad
+(J_N)_{j,j+1}=(J_N)_{j+1,j}=b_j:=\frac{j(N-j)}N,
+\quad (J_N)_{jj}=0.
+\]
+The matrices commute and $0<B<I$. Write their common eigenvalues as
+$J_Nv=\lambda v$ and $Bv=\zeta v$. Let $H=NJ_N/2$,
+$\alpha=(N^2-1)/4$, and let $\mu_{N,k}$, in increasing order starting at
+$k=0$, be the eigenvalues of the Friedrichs realization
+\[
+A_Nu=-(\cos x\,u')'-\alpha\cos x\,u,
+\qquad -\pi/2<x<\pi/2.
+\]
+The endpoint condition excludes the logarithmic solution. The exact
+spectral-tail and trace identities established in \cite{tails,trace} are
+\begin{gather}
+\{\mu_{N,0},\ldots,\mu_{N,N-1}\}=-\operatorname{spec}H,
+\qquad \mu_{N,N}>\|H\|,\qquad
+Z_N:=\sum_{k\ge N}\mu_{N,k}^{-1},\label{eq:tail}\\
+\log\frac\zeta{1-\zeta}=F_N(N\lambda/2),\qquad
+F_N(b)=2\sum_{k\ge N}\artanh\frac b{\mu_{N,k}},\label{eq:logit}\\
+Z_N=\pi\int_0^\infty e^{-Nt}f(t)\dd t,
+\qquad f(t)=P_{-1/2}(\cosh t)^2.\label{eq:laplace}
+\end{gather}
+Here $P$ is the real Legendre function on $[1,\infty)$. The first identity
+identifies precisely the modes removed from the differential spectrum; the
+second holds at the actual common finite modes. The normalization in
+\eqref{eq:laplace} follows from a weighted Legendre resolvent and a Mellin
+reflection identity, rather than an asymptotic fit. These previous results
+are the exact inputs to this paper. The positive integral in
+\eqref{eq:laplace} defines an interpolation for every real $N>0$; equality
+with the specified spectral trace is used only for even integers.
+
+\section{A positive Fourier measure}
+\begin{lemma}[Autocorrelation identity]
+Put $g(u)=\sech(u)^{1/2}$ and use the Fourier convention
+$\widehat g(\omega)=\int_{\mathbb R}e^{-i\omega u}g(u)\dd u$. Then
+\begin{align}
+y(t):=P_{-1/2}(\cosh t)
+&=\frac1\pi\int_{\mathbb R}g(u)g(u-t)\dd u,\label{eq:correlation}\\
+\widehat g(\omega)&=\frac{|\Gamma(1/4+i\omega/2)|^2}{\sqrt{2\pi}},
+\qquad
+y(t)=\int_{\mathbb R}e^{i\omega t}p(\omega)\dd\omega,\label{eq:density}\\
+p(\omega)&=\frac{|\Gamma(1/4+i\omega/2)|^4}{4\pi^3}.
+\end{align}
+The function $p$ is an even, strictly positive probability density with
+moments of every order. Consequently $f=y^2$ is the Fourier transform of
+the probability density $q=p*p$.
+\end{lemma}
+\begin{proof}
+The classical angular representation \cite[Eq.~14.12.7]{dlmf} gives
+\[
+y(t)=\frac1\pi\int_0^\pi
+(\cosh t+\sinh t\cos\theta)^{-1/2}\dd\theta.
+\]
+For $t\ge0$, substitute $\tan(\theta/2)=e^u$. Then
+$\dd\theta=\sech u\,\dd u$ and
+\[
+\cosh t+\sinh t\cos\theta=\frac{\cosh(u-t)}{\cosh u},
+\]
+which proves \eqref{eq:correlation}. Both sides are even in $t$, so it
+holds on the whole real line. Substitution $x=e^{2u}$ in the Fourier
+integral, followed by Euler's beta integral \cite[Eq.~5.12.3]{dlmf}, gives
+\[
+\widehat g(\omega)=2^{-1/2}
+\int_0^\infty x^{1/4-i\omega/2-1}(1+x)^{-1/2}\dd x
+=\frac{\Gamma(1/4-i\omega/2)\Gamma(1/4+i\omega/2)}{\sqrt{2\pi}}.
+\]
+The function $g$ and all its derivatives decay exponentially; in
+particular $g$ is a Schwartz function. Fourier inversion for its
+autocorrelation proves \eqref{eq:density}. Plancherel and
+$\int_{\mathbb R}g^2\dd u=\pi$ give $\int p=1$. Positivity follows
+because the gamma function has no zeros. The Schwartz property supplies
+every moment and justifies differentiation under the Fourier integral.
+Multiplication of the two absolutely convergent Fourier integrals gives
+the convolution statement.
+\end{proof}
+
+Let $\sigma$ be the image of $q(\omega)\dd\omega$ under $s=\omega^2$.
+It is a probability measure on $[0,\infty)$, has full support, and has
+moments $m_k=\int_0^\infty s^k\dd\sigma(s)$ for all $k\ge0$.
+\begin{theorem}[Stieltjes representation and signed remainder]
+For the interpolation in \eqref{eq:laplace}, for every $N>0$,
+\begin{equation}
+\boxed{\quad\frac{NZ_N}\pi=\int_0^\infty
+\frac{\dd\sigma(s)}{1+s/N^2}.\quad}\label{eq:Stieltjes}
+\end{equation}
+For every integer $K\ge0$,
+\begin{equation}
+0<(-1)^{K+1}\left[\frac{NZ_N}\pi-
+\sum_{k=0}^{K}\frac{(-1)^km_k}{N^{2k}}\right]
+<\frac{m_{K+1}}{N^{2K+2}}.\label{eq:nextterm}
+\end{equation}
+The formal series in $N^{-2}$ has zero radius of convergence, while
+\eqref{eq:nextterm} proves its asymptotic validity to every fixed order.
+\end{theorem}
+\begin{proof}
+Insert the Fourier representation for $f$ in \eqref{eq:laplace}.
+Absolute Fubini is justified by
+$\int_{\mathbb R}q(\omega)\int_0^\infty Ne^{-Nt}\dd t\,\dd\omega=1$.
+Integrating in $t$ and using the evenness of $q$ gives
+$N^2/(N^2+\omega^2)$, proving \eqref{eq:Stieltjes}. The finite identity
+\[
+\frac1{1+x}=\sum_{k=0}^{K}(-x)^k+
+\frac{(-1)^{K+1}x^{K+1}}{1+x},\qquad x\ge0,
+\]
+then gives the signed remainder in \eqref{eq:nextterm} exactly as
+\[
+\frac1{N^{2K+2}}\int_0^\infty
+\frac{s^{K+1}}{1+s/N^2}\dd\sigma(s).
+\]
+It is strictly between zero and $m_{K+1}/N^{2K+2}$ because $\sigma$ is
+not supported at zero. For every $R>0$,
+$m_k\ge R^k\sigma([R,\infty))$, with a strictly positive last factor.
+Therefore $m_k^{1/k}\to\infty$, proving zero convergence radius.
+The estimate at each fixed $K$ already proves the asymptotic assertion.
+\end{proof}
+
+Since $f^{(2k)}(0)=(-1)^km_k$, its differential equation or
+hypergeometric series determines the moments exactly:
+\begin{equation}
+\begin{array}{c|rrrrrr}
+k&0&1&2&3&4&5\\\hline
+m_k&1&\frac14&\frac{17}{64}&\frac{169}{256}&
+\frac{50777}{16384}&\frac{1575169}{65536}.
+\end{array}\label{eq:moments}
+\end{equation}
+For example, if
+\[
+S_N=\frac\pi N-\frac\pi{4N^3}+\frac{17\pi}{64N^5}
+-\frac{169\pi}{256N^7}+\frac{50777\pi}{16384N^9},
+\]
+then for every positive even $N$,
+\begin{equation}
+0<S_N-Z_N<\frac{1575169\pi}{65536N^{11}}.\label{eq:concrete}
+\end{equation}
+These are bounds on the exact trace, not just on formal coefficients.
+
+\begin{corollary}[Two rational slope bounds]
+For every positive even $N$,
+\begin{equation}
+\boxed{\quad\frac{4\pi}{16N^2+17}<\pi-NZ_N<
+\frac\pi{4N^2+1}.\quad}\label{eq:rational}
+\end{equation}
+Also
+\begin{equation}
+\left|\pi-NZ_N-\frac\pi{4N^2}\right|
+<\frac{17\pi}{64N^4}.\label{eq:slope}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Strict Jensen applied to $s\mapsto(1+s/N^2)^{-1}$ under $\sigma$
+gives $NZ_N/\pi>(1+m_1/N^2)^{-1}$. For the probability measure
+$\dd\tau=s\dd\sigma/m_1$, its mean is $m_2/m_1=17/16$ and
+\[
+1-\frac{NZ_N}\pi=\frac{m_1}{N^2}
+\int\frac{\dd\tau(s)}{1+s/N^2}
+>\frac{m_1}{N^2+m_2/m_1}.
+\]
+Both measures are nondegenerate, so both inequalities are strict.
+Substitution of the moments proves \eqref{eq:rational}; the case
+$K=1$ of \eqref{eq:nextterm} proves \eqref{eq:slope}.
+\end{proof}
+
+\section{A growing window of small Jacobi eigenvalues}
+List the positive eigenvalues of $J_{2m}$ increasingly as
+$0<\lambda_{1,+}\le\cdots\le\lambda_{m,+}$. The negative eigenvalues
+are their opposites: conjugation by alternating signs sends $J$ to $-J$.
+There is no zero eigenvalue, since
+$\det J_{2m}=(-1)^m\prod_{k=1}^m b_{2k-1}^2\ne0$.
+\begin{theorem}[Explicit logarithmic-window bound]
+Set $L=\lfloor m/2\rfloor$. For any integer $r\ge1$ with $16^r\le L$,
+put $\ell=\lfloor\log L/(r\log16)\rfloor$. Then
+\begin{equation}
+\lambda_{r,+}\le\frac{12\sqrt2\,\pi}{\ell\log16}.
+\label{eq:packetbound}
+\end{equation}
+In particular, if $1\le r\le\log L/(2\log16)$, then
+\begin{equation}
+\boxed{\quad\lambda_{r,+}\le
+\frac{24\sqrt2\,\pi r}{\log L}.\quad}\label{eq:logbound}
+\end{equation}
+Thus the innermost $r_N$ pairs shrink uniformly to zero whenever
+$r_N=o(\log N)$ as even $N\to\infty$.
+\end{theorem}
+\begin{proof}
+Define $A_1=1$ and $A_{k+1}=-b_{2k-1}A_k/b_{2k}$ for $k<m$.
+For $v_{2k-1}=A_kf_k$, $v_{2k}=0$, direct substitution gives
+\begin{equation}
+\|v\|^2=\sum_{k=1}^m A_k^2f_k^2,\qquad
+\|Jv\|^2=\sum_{k=1}^m(b_{2k-1}A_k)^2(f_k-f_{k+1})^2,
+\label{eq:gauge}
+\end{equation}
+where $f_{m+1}=0$ encodes the actual last row. For $1\le k\le L$,
+\begin{equation}
+\frac1{4k}\le A_k^2\le\frac3k,
+\qquad (b_{2k-1}A_k)^2\le12k.\label{eq:weights}
+\end{equation}
+Indeed, with $c_s=(1/2)_s/s!$,
+\[
+|A_k|=c_{k-1}\prod_{j=1}^{k-1}\left(1+\frac1{2(m-j)}\right).
+\]
+For $s\ge1$, $s c_s^2$ increases from $1/4$, because its successive
+ratio is $(2s+1)^2/[4s(s+1)]>1$. Also $(s+1)c_s^2$ decreases from one,
+because its successive ratio is $1-(3s+2)/[4(s+1)^3]<1$.
+These prove the required lower bound and $c_{k-1}^2\le1/k$.
+For $k\le L$, the logarithm of the squared product is at most
+\[
+\sum_{j=1}^{k-1}\frac1{m-j}\le\frac{k-1}{m-k+1}<1.
+\]
+The squared product is therefore below $e<3$. Checking $k=1$ directly and using
+$b_{2k-1}\le2k$ proves \eqref{eq:weights}.
+
+Set $R=16^\ell$ and $h=\log R$. On each integer block
+$[a,b]=[R^j,R^{j+1}]$, $j=0,\ldots,r-1$, use the sequence
+\[
+f_k=\begin{cases}
+\sin[\pi\log(k/a)/h],&a\le k\le b,\\
+0,&\text{otherwise}.
+\end{cases}
+\]
+All blocks lie in $[1,L]$, and their shared endpoints are zero.
+The resulting odd-site vectors have disjoint nonzero supports; so do
+their images under $J$, since a block contributes only to the even
+rows corresponding to $k=a,\ldots,b-1$ in \eqref{eq:gauge}.
+The norm and energy forms consequently have no cross terms between
+different packets.
+
+The numbers $aR^{1/4}$ and $aR^{3/4}$ are integers, and $f_k^2\ge1/2$
+between them. Thus
+\[
+\|v\|^2\ge\frac18\sum_{k=aR^{1/4}}^{aR^{3/4}}\frac1k
+\ge\frac18\int_{aR^{1/4}}^{aR^{3/4}+1}\frac{\dd x}{x}
+\ge\frac h{16}.
+\]
+The sine function is 1-Lipschitz and $\log(1+1/k)\le1/k$, so
+$|f_{k+1}-f_k|\le\pi/(hk)$ inside the block. Therefore
+\[
+\|Jv\|^2\le\frac{12\pi^2}{h^2}\sum_{k=a}^{b-1}\frac1k
+\le\frac{12\pi^2(h+1)}{h^2}\le\frac{18\pi^2}{h},
+\]
+where $h\ge\log16>2$. Every nonzero vector in the $r$-dimensional
+packet span thus has $\|Jv\|^2/\|v\|^2\le288\pi^2/h^2$.
+
+Order the odd sites before the even sites. Then
+\[
+J=\begin{pmatrix}0&T^{\mathsf T}\\T&0\end{pmatrix},
+\]
+where $T$ is invertible and upper bidiagonal, with diagonal
+$b_1,b_3,\ldots,b_{2m-1}$. Its singular values are precisely the
+positive eigenvalues of $J$. Min--max on the odd-site block
+$T^{\mathsf T}T$ therefore gives
+$\lambda_{r,+}^2\le288\pi^2/h^2$, proving \eqref{eq:packetbound}.
+If $\log L/(r\log16)\ge2$, the floor is at least half its argument;
+this proves \eqref{eq:logbound}. Finally $\log L\sim\log N$.
+\end{proof}
+The constants are deliberately elementary, not optimal. The finite-size
+condition for \eqref{eq:packetbound} already requires $N\ge64$ when
+$r=1$; the assertion is not applied outside its stated range.
+
+\section{Uniform transfer to the modular error}
+For a common mode define
+\[
+\eta(t)=\pi t\,{}_3F_2(1/4,1/2,3/4;1,3/2;4t^2),\qquad
+\varepsilon=\log\frac{1-\zeta}{\zeta},\qquad
+e=\varepsilon+N\eta(\lambda/N).
+\]
+All quantities are dimensionless. In particular the word ``modular''
+here does not supply a physical clock or an energy unit.
+\begin{lemma}[Explicit ratio control]
+For every even $N\ge8$ and every common mode with $0<|\lambda|\le1$,
+\begin{equation}
+\left|\frac{-4N^2e}{\varepsilon}-1\right|
+\le\frac{10}{N^2}+33\lambda^2.\label{eq:ratio}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The two central sites give $\|H\|\ge N^2/8$ by a Rayleigh quotient.
+From \eqref{eq:tail}, with $\beta=N\lambda/2$,
+\[
+\frac{|\beta|}{\mu_{N,N}}\le\frac{4|\lambda|}N\le\frac12,
+\qquad
+\sum_{k\ge N}\mu_{N,k}^{-3}\le\frac{64Z_N}{N^4}
+\le\frac{64\pi}{N^5}.
+\]
+The positive artanh series therefore yields
+\begin{equation}
+|F_N(\beta)-N\lambda Z_N|
+\le\frac{64\pi|\lambda|^3}{9N^2}.\label{eq:cubic}
+\end{equation}
+The coefficients $d_k$ of the hypergeometric series in the definition
+of $\eta$ are positive and decreasing, with $d_1=1/16$. Indeed their
+successive ratio is
+$[(k+1/4)(k+1/2)(k+3/4)]/[(k+1)^2(k+3/2)]<1$.
+Thus
+\[
+|N\eta(\lambda/N)-\pi\lambda|
+\le\frac{\pi|\lambda|^3}{4N^2(1-4\lambda^2/N^2)}
+\le\frac{4\pi|\lambda|^3}{15N^2}.
+\]
+Since $\varepsilon=-F_N(\beta)$, combining this with
+\eqref{eq:cubic} gives
+\[
+|e-\lambda(\pi-NZ_N)|\le\frac{8\pi|\lambda|^3}{N^2}.
+\]
+Set $a=4N^2e/(\pi\lambda)$ and
+$b=F_N(\beta)/(\pi\lambda)$. Equations \eqref{eq:slope} and
+\eqref{eq:cubic}, including the common sign of each artanh term and
+$\lambda$, imply
+\[
+|a-1|\le\frac{17}{16N^2}+32\lambda^2,\qquad
+b\ge1-\frac1{4N^2}>0,\qquad |b-1|\le\frac8{N^2}.
+\]
+Consequently
+\[
+\left|\frac ab-1\right|
+\le\frac{145/(16N^2)+32\lambda^2}{1-1/(4N^2)}
+\le\frac{10}{N^2}+33\lambda^2.
+\]
+Here $a/b=-4N^2e/\varepsilon$. Strict positivity of $b$ also
+justifies division by $\varepsilon$.
+\end{proof}
+
+\begin{corollary}[Uniform signed plunge law on a growing window]
+Let $r_N\ge1$ be integers with $r_N=o(\log N)$ as even $N\to\infty$.
+For both signs of the innermost $r_N$ pairs of common eigenmodes,
+\begin{equation}
+\sup_{1\le j\le r_N,\,\pm}
+\left|\frac{-4N^2 e_{j,\pm}}{\varepsilon_{j,\pm}}-1\right|
+=O\!\left(N^{-2}+\frac{r_N^2}{\log^2 N}\right)\longrightarrow0.
+\label{eq:windowlaw}
+\end{equation}
+For all sufficiently large $N$, an explicit upper bound for the left
+side is
+\[
+\frac{10}{N^2}+33\left(
+\frac{24\sqrt2\,\pi r_N}{\log\lfloor N/4\rfloor}\right)^2.
+\]
+\end{corollary}
+\begin{proof}
+The bound \eqref{eq:logbound} puts every eigenvalue in the window below one
+in absolute value for all sufficiently large $N$. Apply
+\eqref{eq:ratio} to each mode. Its constants are uniform, so taking
+the supremum preserves the estimate.
+\end{proof}
+In particular every fixed number of central pairs obeys the law, with
+the conservative relative error $O((\log N)^{-2})$.
+
+\section{An exact positive operator for the differential tail}
+
+The higher reciprocal moments admit a useful positive realization.
+Write $p(x)=\cos x$ and introduce the Liouville coordinate
+\[
+z(x)=\int_{-\pi/2}^x\frac{\dd u}{\sqrt{\cos u}},\qquad
+0<z<\mathcal L,\qquad
+\mathcal L=\frac{\sqrt\pi\,\Gamma(1/4)}{\Gamma(3/4)}.
+\]
+Below $p(z)=\cos x(z)$.
+\begin{theorem}[Exact deletion of the finite block]
+The spectrum of
+\begin{equation}
+\boxed{\quad T_N=-D_z^2+
+\frac{4N^2-1}{16p(z)}+\frac{p(z)}{16}\quad}
+\label{eq:positivepartner}
+\end{equation}
+with its Friedrichs realization is precisely
+$\{\mu_{N,k}:k\ge N\}$. Its form domain is $H_0^1(0,\mathcal L)$,
+and its endpoints are limit point. In particular,
+\begin{equation}
+\mu_{N,N}>N^2/4,\qquad
+Z_N(s):=\sum_{k\ge N}\mu_{N,k}^{-s}
+=\operatorname{Tr}T_N^{-s}\quad(s>1/2).
+\label{eq:highertrace}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The unitary map $\psi(z)=p(x(z))^{1/4}u(x(z))$ transforms $A_N$
+into $-D_z^2+V_N$, where direct differentiation gives
+\[
+V_N=-N^2p/4+p/16-1/(16p).
+\]
+At either endpoint, with $d$ the distance to that endpoint,
+$p=d^2/4+O(d^6)$. Thus $V_N=-1/(4d^2)+O(d^2)$, and the
+selected eigenfunctions behave as $d^{1/2}$ times a regular power
+series in $d^2$. The logarithmic branch is excluded. This critical
+endpoint requires a domain argument in addition to the usual formal
+Darboux--Crum transformation \cite{crum}.
+
+For one deletion, let $g>0$ be the current ground eigenfunction,
+with eigenvalue $E_0$, and suppose its selected endpoint exponent is
+$k+1/2$, $k\ge0$. Define $Q$ as the closure from $C_c^\infty$ of
+$D_z-g'/g$. The compact-support ground-state identity, followed by
+closure of quadratic forms, gives
+\[
+S-E_0=Q^*Q
+\]
+for the current Friedrichs operator $S$. The self-adjoint partner
+$QQ^*+E_0$ extends the differential expression with potential
+$V-2(\log g)''$. Differentiable Frobenius expansions show that its
+endpoint coefficient is $((k+1)^2-1/4)d^{-2}+O(1)$.
+Its two branches have exponents $k+3/2$ and $-k-1/2$; only the
+first is square integrable. Hence the partner is limit point at
+both endpoints and is its unique self-adjoint realization.
+Moreover $\ker Q^*=\{0\}$, since $Q^*f=0$ implies $f=c/g$,
+which is not square integrable, including at $k=0$.
+The gap above $E_0$ makes $\operatorname{ran}Q$ closed; its orthogonal
+complement is $\ker Q^*$, so it is all of $L^2$.
+Polar decomposition therefore pairs the orthogonal complement of
+$g$ unitarily with the partner space. Exactly the ground eigenvalue
+is deleted, with completeness and compact resolvent preserved.
+The new ground state has exponent $k+3/2$, permitting iteration.
+
+Direct finite Fourier transformation and \eqref{eq:tail} show that
+the first $N$ original eigenfunctions span
+\[
+\operatorname{span}\{e^{imx}:m=-(N-1)/2,\ldots,(N-1)/2\}.
+\]
+Their transformed Wronskian is therefore
+\[
+W_z(\psi_0,\ldots,\psi_{N-1})=C\,p^{N^2/4},\qquad C\ne0.
+\]
+Indeed the common factor $p^{1/4}$ contributes $p^{N/4}$,
+the change of variable contributes
+$(\dd x/\dd z)^{N(N-1)/2}=p^{N(N-1)/4}$, and the Fourier
+Wronskian is a nonzero constant Vandermonde determinant.
+Iterating the one-step identity gives
+$V_{\rm tail}=V_N-2D_z^2\log|W_z|$.
+Since
+\[
+D_z^2\log p=-\tfrac12(p+p^{-1}),
+\]
+this is exactly \eqref{eq:positivepartner}.
+The Wronskian formula evaluates the already justified self-adjoint
+deletions; it does not replace their domain argument.
+
+The final potential is $(N^2-1/4)d^{-2}+O(1)$.
+Hardy's inequality gives form domain $H_0^1$.
+Finally
+\[
+\frac{4N^2-1}{16p}+\frac p{16}-\frac{N^2}{4}
+=\frac{(1-p)(4N^2-1-p)}{16p}\ge0.
+\]
+The kinetic energy is strictly positive on $H_0^1$, proving the
+first assertion of \eqref{eq:highertrace}. The trace convergence
+and its quantitative form also follow from the bracketing below.
+\end{proof}
+
+\section{Higher reciprocal moments by elementary bracketing}
+
+\begin{theorem}[Higher-moment leading terms with an explicit error]
+For each fixed $s>1/2$,
+\begin{equation}
+Z_N(s)=N^{1-2s}\{I_s+O_s(N^{-1/2})\},\qquad
+I_s=\frac{2^{2s-2}\Gamma(s-1/2)\Gamma(s/2)}
+{\Gamma(s)\Gamma((s+1)/2)}.
+\label{eq:momentleading}
+\end{equation}
+For every integer $M\ge1$ one has, in particular,
+\begin{equation}
+\left|N^5Z_N(3)-3\pi\right|\le D_{N,M}:=
+\frac{6\mathcal L}{M}+\frac{128M}{N}
++3\pi\left[\left(1-\frac1{4N^2}\right)^{-5/2}-1\right].
+\label{eq:thirdmomentbound}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Put $h=1/N$ and $Q_h=h^2T_N=-h^2D_z^2+V_h$. Then
+\[
+V_h=\left(1-\frac{h^2}{4}\right)V_0+\frac{h^2p}{16},
+\qquad V_0=\frac1{4p},\qquad
+(1-h^2/4)V_0\le V_h\le V_0.
+\]
+The potential $V_h$ has minimum $1/4$ and is monotone on
+each half-interval. Divide each half into $M$ cells of length
+$\delta=\mathcal L/(2M)$. Neumann conditions and the cell infimum
+of $V_h$ give an upper trace bound by the min-max principle.
+Dirichlet conditions and the cell supremum give a lower trace
+bound. The two exterior cells, whose supremum is infinite, are
+omitted from the latter bound; this is a restriction of variational
+subspaces, not a boundedness assumption at the singular endpoints.
+
+For constant potential $v>0$ the cell eigenvalues are
+$(h\pi j/\delta)^2+v$, with $j\ge0$ for Neumann and $j\ge1$
+for Dirichlet conditions. The integral test gives
+\[
+\left|h\operatorname{Tr}(-h^2D_{\rm N/D}^2+v)^{-s}
+-c_s\delta v^{1/2-s}\right|\le hv^{-s},
+\qquad c_s=\frac{\Gamma(s-1/2)}{2\sqrt\pi\,\Gamma(s)}.
+\]
+The total cell trace error is at most $2Mh4^s$.
+The function $V_h^{1/2-s}$ rises from zero to $4^{s-1/2}$
+and falls symmetrically; its upper and lower Riemann sums differ
+by at most $2\delta4^{s-1/2}$. Therefore, with
+$I_s(h)=c_s\int_0^{\mathcal L}V_h^{1/2-s}\dd z$,
+\[
+\left|h\operatorname{Tr}Q_h^{-s}-I_s(h)\right|
+\le\frac{c_s\mathcal L4^{s-1/2}}{M}+2Mh4^s.
+\]
+This also proves convergence of the trace. Potential comparison
+gives $I_s\le I_s(h)\le(1-h^2/4)^{-(s-1/2)}I_s$, where
+\[
+I_s=c_s4^{s-1/2}\int_{-\pi/2}^{\pi/2}
+(\cos x)^{s-1}\dd x.
+\]
+The beta integral evaluates this as \eqref{eq:momentleading}.
+Since $h\operatorname{Tr}Q_h^{-s}=N^{2s-1}Z_N(s)$,
+choosing $M=\lceil\sqrt N\rceil$ proves the stated rate.
+For $s=3$, $c_3=3/16$ and $I_3=3\pi$, giving
+\eqref{eq:thirdmomentbound}.
+\end{proof}
+For example $I_5=105\pi/4$. The first-moment result obtained
+by this general argument is weaker than \eqref{eq:laplace};
+the new information is the independently proved higher-moment
+coefficient. No bulk period expansion was used.
+
+\section{A larger uniform eigenvalue window}
+
+The third-moment coefficient cancels the leading nonlinear term
+of the modular error.
+\begin{theorem}[Uniform center law beyond shrinking eigenvalues]
+Let $L_N=o(N^{1/4})$ as even $N\to\infty$. Uniformly over nonzero
+common modes with $|\lambda|\le L_N$,
+\begin{align}
+e&=\frac{\pi\lambda}{4N^2}
+\left[1+O\left(N^{-2}+\lambda^2N^{-1/2}
++\lambda^4N^{-2}\right)\right],\label{eq:largercenter}\\
+\frac{-4N^2e}{\varepsilon}&\longrightarrow1.
+\label{eq:largerratio}
+\end{align}
+This includes every fixed bounded eigenvalue window. More explicitly,
+for even $N\ge2$, $0<|\lambda|\le N/4$, and any integer $M\ge1$,
+\begin{equation}
+\left|\frac{-4N^2e}{\varepsilon}-1\right|
+\le
+\frac{\displaystyle
+\frac{21}{16N^2}
++\left(\frac{D_{N,M}}{3\pi}+\frac{16}{9N^2}\right)\lambda^2
++\frac{20\lambda^4}{N^2}}
+{\displaystyle1-\frac1{4N^2}}.
+\label{eq:largerexplicit}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Set $\beta=N\lambda/2$. By \eqref{eq:highertrace},
+$r=|\beta|/\mu_{N,N}<2|\lambda|/N\le1/2$.
+The exact artanh series \eqref{eq:logit} gives
+\[
+F_N(\beta)=N\lambda Z_N+\frac{N^3\lambda^3}{12}Z_N(3)+R,
+\qquad
+|R|\le\frac{2|\beta|^5}{5(1-r^2)}Z_N(5).
+\]
+The simple bound $Z_N(5)\le(4/N^2)^4Z_N\le256\pi/N^9$
+suffices, giving $|R|\le64\pi|\lambda|^5/(15N^4)$.
+The convergent hypergeometric series defining $\eta$, with positive
+decreasing coefficients, gives
+\[
+N\eta(\lambda/N)=\pi\lambda+\frac{\pi\lambda^3}{4N^2}
++R_\eta,\qquad |R_\eta|\le\frac{7\pi|\lambda|^5}{16N^4}.
+\]
+Equation \eqref{eq:thirdmomentbound} cancels the two cubic terms,
+and \eqref{eq:slope} therefore implies
+\[
+\left|e-\frac{\pi\lambda}{4N^2}\right|
+\le\frac{17\pi|\lambda|}{64N^4}
++\frac{D_{N,M}|\lambda|^3}{12N^2}
++\frac{5\pi|\lambda|^5}{N^4}.
+\]
+Choosing $M=\lceil\sqrt N\rceil$ proves \eqref{eq:largercenter}.
+For division, put $a=4N^2e/(\pi\lambda)$ and
+$b=F_N(\beta)/(\pi\lambda)$.
+The sign of every artanh term gives
+$b\ge NZ_N/\pi\ge1-1/(4N^2)>0$.
+Also $Z_N(3)\le16Z_N/N^4$ and the artanh bound before the
+cubic term give
+\[
+|b-1|\le\frac{1/4+16\lambda^2/9}{N^2}.
+\]
+Combining this with the preceding bound on $a-1$ gives
+\eqref{eq:largerexplicit}, since $a/b=-4N^2e/\varepsilon$.
+On the stated window all its terms tend uniformly to zero,
+proving \eqref{eq:largerratio}.
+\end{proof}
+\begin{corollary}[A logarithmic number of actual central pairs]
+For all sufficiently large even $N$, put
+\[
+r_N=\left\lfloor
+\frac{\log\lfloor N/4\rfloor}{\log16}
+\right\rfloor.
+\]
+For both signs of the innermost $r_N$ pairs of common modes,
+\[
+\sup_{1\le j\le r_N,\,\pm}
+\left|\frac{-4N^2e_{j,\pm}}{\varepsilon_{j,\pm}}-1\right|
+=O(N^{-1/2}).
+\]
+\end{corollary}
+\begin{proof}
+The choice of $r_N$ satisfies $16^{r_N}\le\lfloor N/4\rfloor$.
+The integer $\ell$ in \eqref{eq:packetbound} is at least one, so
+\[
+|\lambda_{j,\pm}|\le\frac{12\sqrt2\,\pi}{\log16}
+\qquad(1\le j\le r_N).
+\]
+Apply \eqref{eq:largerexplicit} on this fixed bounded window with
+$M=\lceil\sqrt N\rceil$. Its constants are independent of the
+selected mode. The numerical constant and the bracketing rate
+are not asserted to be optimal.
+\end{proof}
+This is still a center result:
+$t=\lambda/N=o(N^{-3/4})$. The argument proves no fixed-$t$
+bulk quantum-period remainder and does not claim the displayed
+bracketing rate or window exponent is optimal.
+
+\section{Literature comparison and scope}
+The logarithmic scale has a rigorous precedent. Deift, Its, and
+Krasovsky \cite[Theorem 1.3]{dik} prove that, for a symbol taking two
+positive constant values on complementary rational arcs, eigenvalues
+in a fixed compact subinterval of the gap have spacing of order
+$1/\log N$; every interval of a suitable constant times $1/\log N$
+contains an eigenvalue. The choice of values $1,2$ and a half-circle
+gives $I+B_N$ up to diagonal unitary conjugation. This supports the
+known logarithmic occupation scale. The finite Jacobi construction
+above supplies an independent bound with explicit constants. No new
+scale or priority is claimed.
+
+The positive-measure theorem controls the exact first reciprocal trace
+at every even size. The growing-window result concerns actual common
+eigenmodes, and its proof is uniform over the stated window. It does
+not establish a uniform bulk quantum-period expansion, an odd-size
+deflation identity, or a general-filling effective-size convention. The fixed-interior bulk expansion is supplied separately by \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law}; it is not a consequence of moment bracketing alone.
+In particular, the trace measure's moments $m_k$ are not the higher
+reciprocal spectral traces $\sum_{j\ge N}\mu_{N,j}^{-(2k+1)}$.
+Their leading asymptotics are established separately by \eqref{eq:momentleading}.
+
+Exact arithmetic checks recover the displayed moments independently
+from the hypergeometric series. Quadrature checks compare the
+autocorrelation, gamma density, and Legendre representations, and
+finite matrix checks verify the packet energies. Symbolic checks also verify
+the transformed potential, Wronskian exponent, and moment constants. These checks provide
+reproducibility; the analytic inequalities and min--max argument are
+the proofs. No finite numerical agreement is used to infer a theorem.
+
+\paragraph{Acknowledgments and provenance.}
+This work belongs to \emph{From Prephysical Hypotheses to Physical Models}.
+The present derivations and checks were developed by Kirtus Justus with
+ChatGPT (OpenAI). The preceding connection-coefficient proposal was supplied
+in correspondence prepared with Claude (Anthropic). The wider program has
+also used Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer); no
+specific proof here is attributed to those systems. Assistance does not
+imply external peer review or endorsement. No priority claim is made for
+the special-function identities or the logarithmic central-mode scale.
+
+\begin{thebibliography}{9}
+\bibitem{tails} K. Justus, \emph{Spectral Tails and Exact Concentration Logits},
+research manuscript, October 2026.
+\bibitem{trace} K. Justus, \emph{Reciprocal Traces and the Half-Filled Plunge Law},
+research manuscript, October 2026.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/14.12.E7}{Eq.~14.12.7} and
+\href{https://dlmf.nist.gov/5.12.E3}{Eq.~5.12.3}.
+\bibitem{crum} M. M. Crum, Associated Sturm--Liouville systems,
+\emph{Quarterly Journal of Mathematics} \textbf{6} (1955), 121--127;
+\href{https://arxiv.org/abs/physics/9908019}{archival transcription}.
+\bibitem{dik} P. Deift, A. Its, and I. Krasovsky,
+\emph{Eigenvalues of Toeplitz matrices in the bulk of the spectrum},
+\href{https://arxiv.org/abs/1110.4089}{arXiv:1110.4089}, Theorem 1.3.
+\end{thebibliography}
+\end{document}

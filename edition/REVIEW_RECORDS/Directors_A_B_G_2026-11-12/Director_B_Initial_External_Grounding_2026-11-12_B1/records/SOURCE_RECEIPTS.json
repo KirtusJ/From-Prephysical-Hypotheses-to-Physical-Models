@@ -1,0 +1,150 @@
+{
+  "external_published_sources": [
+    {
+      "scope": "theorem and corollaries, PDF first-page screenshot",
+      "title": "Gelander 2013 finite homogeneous metric limits",
+      "url": "https://ems.press/content/serial-article-files/44250"
+    },
+    {
+      "scope": "abstract, selected theorem and scaling conditions",
+      "title": "Guigui and Pennec numerical accuracy of ladder schemes",
+      "url": "https://link.springer.com/article/10.1007/s10208-021-09515-x"
+    },
+    {
+      "scope": "abstract, three postulates; DOI landing result",
+      "title": "Barnum Mueller Ududec 2014",
+      "url": "https://doi.org/10.1088/1367-2630/16/12/123029"
+    },
+    {
+      "scope": "GPT minimal tensor product framework",
+      "title": "Eftaxias Weilenmann Colbeck 2023",
+      "url": "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.062212"
+    },
+    {
+      "scope": "classification and group orders from university-hosted extract",
+      "title": "Bui finite subgroups SO3",
+      "url": "https://math.uchicago.edu/~may/REU2020/REUPapers/Bui%2CAn.pdf"
+    },
+    {
+      "scope": "Bargmann phase published precedent",
+      "title": "Rabei Arvind Mukunda Simon 1999",
+      "url": "https://doi.org/10.1103/PhysRevA.60.3397"
+    },
+    {
+      "scope": "s indicator multiplier s in (-1/2,1/2)",
+      "title": "Meyries Veraar multiplier theorem exposition",
+      "url": "https://npfsa2017.uni-jena.de/l_notes/veraar.pdf"
+    }
+  ],
+  "files": [
+    {
+      "path": "/mnt/data/files(15).zip",
+      "role": "outer baseline carrier",
+      "sha256": "7792807ad4558ee75a32d1533977936578fbbe88e66dea0d7f61c0940744949e",
+      "size": 41438879
+    },
+    {
+      "path": "/mnt/data/Toy_Universe_Session_Packet(2).zip",
+      "role": "FAR-1 separate toy",
+      "sha256": "6c512b6a54c05b568afff95d0e73c15e4a72284234badb5c2c64da31bb891cb2",
+      "size": 331168
+    },
+    {
+      "path": "/mnt/data/PCP_1.0_Enterprise_Edition.zip",
+      "role": "PCP 1.0 enterprise edition",
+      "sha256": "1282bcd3f0ec8bd22bfb0575a6cf7e3e38f29f8cbdb278082dcfd317da907be7",
+      "size": 2534245
+    },
+    {
+      "path": "/mnt/data/director_B_work/parent/FPHPM_Baseline_2026-11-12.zip",
+      "role": "extracted nested program baseline",
+      "sha256": "2d1efd40a27f8c33707aac745580d6bf30e8478292b24c3a80fbcd285c7ac348",
+      "size": 41581002
+    },
+    {
+      "path": "/mnt/data/director_B_work/pcp/PCP_1.0_Enterprise_Edition/ACR_1.0_Implementation.zip",
+      "role": "extracted nested ACR implementation",
+      "sha256": "7f9b3692d1184101e3fa8bf3c3b79267b3dc12cfec9609e0f1c3272af74d0853",
+      "size": 346609
+    },
+    {
+      "path": "/mnt/data/director_B_work/parent/D8_Uniform_Sobolev_Bound.pdf",
+      "role": "separate D8 pdf",
+      "sha256": "f4fc667565625b32ecc060110a2ade348a3c9b84f0054dec5bfd66fb4a37635f",
+      "size": 78837
+    },
+    {
+      "path": "/mnt/data/director_B_work/baseline/FPHPM_Baseline_2026-11-12/PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/17_D8_Uniform_Sobolev_Bound.pdf",
+      "role": "baseline D8 part17 PDF",
+      "sha256": "f4fc667565625b32ecc060110a2ade348a3c9b84f0054dec5bfd66fb4a37635f",
+      "size": 78837
+    }
+  ],
+  "module_sources": [
+    {
+      "component": "acr.core",
+      "sha256": "94de9a3e78600fb5aa6eede9e76c5939f89dce5182c4b2727ab37052579f5608",
+      "source_path": "MODULES/01_Core/SOURCE/Specification.md",
+      "version": "1.0"
+    },
+    {
+      "component": "acr.mathematics",
+      "sha256": "0c30c90f853e1ece3127dd7360c54618ac14b6a5bce3063600a4b01539194e3b",
+      "source_path": "MODULES/02_Mathematics/SOURCE/Specification.md",
+      "version": "1.0"
+    },
+    {
+      "component": "acr.science",
+      "sha256": "dd02839e0ab8f29eb9e13abbbd0d76029a94ca63f102c4c375c81a89d0277995",
+      "source_path": "MODULES/03_Science/SOURCE/Specification.md",
+      "version": "1.0"
+    },
+    {
+      "component": "acr.quality_assurance",
+      "sha256": "7bcb16d67653e5feeb4ff624a0fece294d3fd57cca15e7e8ef36e4fc93fd0193",
+      "source_path": "MODULES/07_Quality_Assurance/SOURCE/Specification.md",
+      "version": "1.0"
+    }
+  ],
+  "quoted_not_supplied": [
+    {
+      "access": "supplied text only",
+      "actual_Z1_G7_files": "NOT_INSPECTED/NOT_ATTACHED",
+      "item": "Director Z 2026-11-12 quoted disposition"
+    }
+  ],
+  "session": "LLM Director B / 2026-11-12 / B.C. Pacific Time",
+  "sha256_basis": "hash computed locally on inspected bytes; no publisher authentication",
+  "verification": [
+    {
+      "program": "baseline/verify_baseline.py",
+      "result": "BASELINE_CHECK_PASS 645 files; 38 papers; 344 registry rows; 85 legacy components accounted for",
+      "status": "executed/local consistency"
+    },
+    {
+      "program": "PCP_1.0_Enterprise_Edition/verify_edition.py",
+      "result": "PASS_EDITION_CHECK ENTERPRISE edition, 10 files",
+      "status": "executed/local consistency"
+    },
+    {
+      "program": "ACR_1.0_Implementation/TOOLS/verify_release.py",
+      "result": "PASS_LOCAL_STRUCTURAL_AND_DERIVED_CHECKS 57 payloads",
+      "status": "executed/local consistency"
+    },
+    {
+      "program": "verification/verify_geometry_and_composition.py",
+      "result": "PASS_LOCAL_GEOMETRY_COMPOSITION_TESTS",
+      "status": "executed/specified finite mathematical checks"
+    },
+    {
+      "program": "verification/verify_exact_algebra.py",
+      "result": "PASS_EXACT_ALGEBRA",
+      "status": "executed/symbolic finite witness checks"
+    },
+    {
+      "program": "verification/verify_mutations.py",
+      "result": "PASS_MUTATION_CONTROLS; 1 accept and 2 known-invalid rejections",
+      "status": "executed/narrow checker controls"
+    }
+  ]
+}

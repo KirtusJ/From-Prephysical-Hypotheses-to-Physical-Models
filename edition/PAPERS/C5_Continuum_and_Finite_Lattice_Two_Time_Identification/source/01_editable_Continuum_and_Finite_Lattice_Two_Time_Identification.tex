@@ -1,0 +1,504 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,booktabs,needspace}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.65em}
+\allowdisplaybreaks
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\cS}{\mathscr S}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\hypersetup{pdftitle={Continuum and Finite-Lattice Two-Time Identification},pdfauthor={Kirtus Justus}}
+\title{Continuum and Finite-Lattice Two-Time Identification}
+\author{Kirtus Justus\enspace\textbullet\enspace Theoretical Physicist\enspace\textbullet\enspace 23 October 2026\\Port Coquitlam, British Columbia, Canada}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consider a smooth-mode continuum two-time response and an explicit finite open-chain discretization. Uniform estimates for the response and its parameter derivatives give a global inverse comparison under explicit short-time, small-spacing and boundary-buffer conditions. The finite-lattice result is restricted to fixed positive lower velocity and mass bounds; the continuum inverse separately permits zero squared mass. The finite-lattice massless endpoint requires separate analysis. These mathematical identification results do not establish an experimental implementation.
+\end{abstract}
+\noindent\textbf{Keywords:} Dirac operators, finite differences, inverse problems, continuum approximation, boundary propagation.
+
+\section{Smooth-mode continuum and exact finite-lattice identification}
+\label{sec:twotime-two-time}
+To study a fixed physical-time limit, the smooth-mode construction uses
+normalized cell averages of a real compactly supported profile
+$\phi\in H^4(\mathbb R)$ and a mass-independent partner mode. Here
+$\mu$ denotes the continuum inverse-length mass parameter; it is
+\emph{not} the dimensionless $\mu=mL$ of a distinct entropy-scaling limit.
+The continuum one-particle operator is
+\[
+ H_{0,\mu}=-i\sigma_x\partial_x+\mu\sigma_z,
+\]
+and the ideal transition probability at the time-normalized distance
+$s=vt$ has square-root response $b(s,\theta)$, with $\theta=\mu^2$,
+\begin{equation}
+ b(s,\theta)=\frac1k\int_{\mathbb R} q^2
+ \frac{\sin(s\sqrt{q^2+\theta})}{\sqrt{q^2+\theta}}
+ |\widehat\phi(q)|^2\,dq,
+ \qquad k=\norm{\phi'}_2>0.
+ \label{eq:twotime-continuum-response}
+\end{equation}
+The expression has a continuous extension at vanishing denominator.
+The sign $b\ge0$ is justified only on the declared short-time window;
+probabilities otherwise determine $|b|$, not its sign.
+
+\subsection{Two-time inverse for the continuum response}
+Let $v\in[v_{\min},V]$ with $v_{\min}>0$ and
+$\theta\in[0,\Theta]$. For a sufficiently small registered time $t>0$,
+let
+\[
+ h_1=\frac{b(vt,\theta)}t,\quad
+ h_2=\frac{b(2vt,\theta)}{2t},\quad
+ X=\frac{4h_1-h_2}{3},\quad
+ Y=\frac{2(h_1-h_2)}{t^2}.
+\]
+The leading small-time map is
+\[
+ X_0=kv,\qquad Y_0=k(\beta+\theta)v^3,
+ \quad\beta=\norm{\phi''}_2^2/k^2.
+\]
+The continuum calculation below bounds the derivatives of the
+higher-order remainders and establishes a positive comparison determinant
+$AD-BC>0$ on this rectangle. This yields the \emph{global} inverse modulus
+\begin{equation}
+ |\Delta v|\le\frac{D|\Delta X|+B|\Delta Y|}{AD-BC},\qquad
+ |\Delta\theta|\le\frac{C|\Delta X|+A|\Delta Y|}{AD-BC}.
+ \label{eq:twotime-continuum-inverse}
+\end{equation}
+The proof integrates the derivative bounds between arbitrary parameter
+pairs, not merely checking a nonzero Jacobian locally. At $v=0$ the
+response vanishes for every mass, so mass is unidentifiable by this
+experiment. Estimation in the parameter $\mu$ at the endpoint zero has
+different conditioning from estimation in $\mu^2$. The required derivative estimates are given in Section \ref{app:finite-lattice-proof}.
+
+\subsection{Exact finite-lattice inference and its endpoint restriction}
+For spacing $a>0$, the corresponding finite open-device operator is the
+compression of
+\begin{equation}
+ H_{a,\mu}=\sigma_x D_a+\sigma_z\left(\mu+\frac a2L_a\right),
+ \label{eq:twotime-lattice-dirac}
+\end{equation}
+where $D_a$ is the central difference and $L_a$ the positive second
+difference. The partner mode is defined by centered application of the
+\emph{finite} one-particle generator to the sampled smooth target mode.
+The complete partner support, including one lattice stencil extension,
+determines the distance to an omitted boundary.
+
+\begin{proposition}[Scoped finite-lattice two-time inverse]
+\label{prop:twotime-finite-lattice-inverse}
+For a fixed normalized real $H^4$ compactly supported profile, a bounded
+rectangle
+\[
+ 0<v_{\min}\le v\le V,\qquad
+ 0<\mu_{\min}\le\mu\le\mu_{\max},
+\]
+and the time, buffer and small-spacing hypotheses in the finite-lattice derivation given below, the \emph{exact} two-time finite-open-device
+probability map is globally injective for all sufficiently small $a$.
+A positive comparison determinant gives a uniform inverse modulus over
+those sufficiently small spacings. The proof requires convergence of both
+response values and their first elapsed/mass derivatives, including the
+boundary estimates; value convergence alone would not suffice.
+\end{proposition}
+\noindent
+\emph{Proof outline.} Let the two-time amplitude be formed from the
+finite open-chain propagator and its normalized, mass-independent partner
+state. Uniform estimates for its value and its first time and mass
+derivatives follow from cell-average consistency, Duhamel's formula and
+a boundary-reaching hopping expansion. On the stated positive-mass
+rectangle, the derivative comparison transfers the strict continuum
+inverse inequalities to the finite model for sufficiently small spacing.
+The resulting positive comparison determinant proves global injectivity.
+The small-spacing sufficiency bound can be extremely conservative; no
+claim of practical device size follows. The derivative inequalities and the global inverse argument are given in
+Section \ref{app:finite-lattice-proof}.
+
+At fixed nonzero $a$, the finite-lattice root response generally has a
+nonzero term linear in $\mu$ at $\mu=0$. Consequently, differentiating
+with respect to $\theta=\mu^2$ introduces a $\theta^{-1/2}$ singularity
+on the massless boundary. The $C^1$ transfer through squared mass
+therefore \emph{does not} establish the finite-lattice inverse at
+$\mu=0$. This is a regularity obstruction to that proof method, not a
+counterexample to injectivity. The continuum inverse allowing
+$\theta=0$ remains a distinct theorem.
+
+\subsection{Operational limits and physical interpretation}
+The smooth-mode theorem supports a mathematical fixed positive physical-time
+window as the spacing decreases when velocity and time units are supplied.
+It does not control all physical resources uniformly: a fixed-width mode
+occupies $O(a^{-1})$ lattice cells, requiring growing coherent mode control,
+calibrated readout and appropriate error budgets. The proposed experimental
+law requires independent specification of preparation, target-mode
+measurement, time and length calibration, admissible nuisance errors and a
+statistical stopping rule. The limiting continuum two-time response and its
+finite-lattice comparison do not select a physical local quantum field
+algebra or establish the continuum Araki-relative-entropy identification.
+
+
+\section{Derivative control for the finite-lattice two-time response}
+\label{app:finite-lattice-proof}
+We record the quantitative estimates underlying Proposition
+\ref{prop:twotime-finite-lattice-inverse}. The argument concerns a normalized
+real compactly supported profile $\phi\in H^4(\mathbb R)$ and the fixed
+bounded parameter domains in that proposition. Write
+$k_j=\|\phi^{(j)}\|_2$, $k=k_1>0$, and set $S=2Vt$.
+
+On the full lattice, let
+\[
+ H_{a,\mu}=\sigma_xD_a+\sigma_z(\mu+W_a),\qquad
+ D_au_j=\frac{u_{j+1}-u_{j-1}}{2ia},\quad
+ W_au_j=\frac{2u_j-u_{j+1}-u_{j-1}}{2a}.
+\]
+The corresponding continuum operator is
+$H_{0,\mu}=-i\sigma_x\partial_x+\mu\sigma_z$.
+Let $J_a$ denote the $L^2$-normalized cell-average map, and define
+\[
+ f_a=\frac{J_a\phi}{\|J_a\phi\|}\otimes|\uparrow\rangle,
+ \quad e_a=\langle f_a,H_{a,\mu}f_a\rangle,
+ \quad c_a=\|(H_{a,\mu}-e_a)f_a\|,
+ \quad w_a=\frac{(H_{a,\mu}-e_a)f_a}{c_a}.
+\]
+For sufficiently small spacing, $c_a\ge k/2$.
+The spin-up mass term cancels under centering, so $c_a$ and $w_a$
+are independent of $\mu$. The continuum target and partner are
+$f=\phi\otimes|\uparrow\rangle$ and
+$w_0=-i\phi'\otimes|\downarrow\rangle/k$.
+Write $A_a(s,\mu)=\langle f_a,e^{-isH_{a,\mu}}w_a\rangle$ and
+$A_0(s,\mu)=\langle f,e^{-isH_{0,\mu}}w_0\rangle$.
+
+For the continuum two-time inverse, put
+\[
+ \beta=\frac{k_2^2}{k^2},\quad \rho=\frac{k_3^2}{k^2},\quad
+ \Theta=\mu_{\max}^2,\quad M_1=\beta+\Theta,\quad
+ M_2=\rho+2\beta\Theta+\Theta^2.
+\]
+The Taylor representation of the continuum amplitude in the variable
+$\theta=\mu^2$ has leading terms
+\[
+ b(s,\theta)=ks-\frac{k(\beta+\theta)s^3}{6}+R(s,\theta),
+ \quad |\partial_s R|\le\frac{kM_2s^4}{24},\quad
+ |\partial_\theta R|\le\frac{kM_1s^5}{60}.
+\]
+The estimates follow by differentiating the scalar sine quotient and
+integrating against the probability measure
+$q^2|\widehat\phi(q)|^2\,dq/k^2$. The short-time positivity
+condition is $M_1S^2\le3$.
+For the combinations $X,Y$ in Section \ref{sec:twotime-two-time}, the
+continuum derivative comparison has coefficients
+\begin{align*}
+ a_t&=\tfrac5{18}kM_2V^4t^4,&
+ b_t&=\tfrac19kM_1V^5t^4,\\
+ c_t&=\tfrac{17}{12}kM_2V^4t^2,&
+ d_t&=\tfrac{17}{30}kM_1V^5t^2,\\
+ A_t&=k-a_t,& B_t&=b_t,\\
+ C_t&=3kM_1V^2+c_t,& D_t&=kv_{\min}^3-d_t.
+\end{align*}
+For a sufficiently small positive observation time,
+$A_t,D_t>0$ and $A_tD_t-B_tC_t>0$.
+These are sufficient inequalities, not sharp conditioning constants.
+
+\begin{lemma}[Full-line $C^1$ comparison]
+\label{lem:full-lattice-c1}
+Assume $a^2k^2\le3/4$ and $E_a+a k_2\le k/2$, where $E_a$ is
+defined below. These explicit sufficient conditions hold for all
+sufficiently small $a$. Set
+\begin{align*}
+ E_a&=ak_2+a^2(k_3/3+2k^3), & c_*&=k/2,\\
+ d_f&=a^2k^2,&d_w&=(2E_a+ak_2)/c_*,\\
+ d_0&=\frac{ak_3}{2k}+\frac{a^2k_4}{6k},
+ &F_a&=d_f+d_w+Sd_0+a^2k_2.
+\end{align*}
+Let $M_H=(\mu_{\max}^2+k^2)^{1/2}$ and
+$M_{H,1}=(\mu_{\max}^2k^2+k_2^2)^{1/2}$, and put
+\[
+ d_{Hf}=2a^2k^2M_H+ak_2+a^2k_3/3,
+ \qquad
+ G_a=d_{Hf}+M_H(d_w+Sd_0)+a^2M_{H,1}k_2/k.
+\]
+For $0\le s\le S$ and $0\le\mu\le\mu_{\max}$,
+\[
+ |A_a-A_0|\le F_a,\qquad
+ |\partial_s A_a-\partial_s A_0|\le G_a,
+ \qquad
+ |\partial_\mu A_a-\partial_\mu A_0|\le SF_a.
+\]
+In particular all three bounds are $O(a)$, uniformly on these domains.
+\end{lemma}
+\begin{proof}
+Write $J_a\psi=(a^{-1/2}\int_{ja}^{(j+1)a}\psi(x)\,dx)_j$,
+$P_a=J_a^*J_a$, and $z_a=\|J_a\phi\|$.
+The map $P_a$ is the orthogonal projection onto cellwise constants.
+The cell Poincar\'e inequality, with a deliberately nonoptimal constant,
+gives
+\[
+ \|(I-P_a)\psi\|\le a\|\psi'\|,\qquad
+ |\langle J_au,J_av\rangle-\langle u,v\rangle|
+ \le a^2\|u'\|\|v'\|.
+\]
+Consequently $z_a^2\ge1-a^2k^2$. The first small-spacing condition
+gives $z_a\ge1/2$, and
+\[
+ 1-z_a\le a^2k^2,\qquad z_a^{-1}-1\le2a^2k^2.
+\]
+These statements hold componentwise for spinors as well. In particular
+$\|f_a-J_af\|=1-z_a\le d_f$.
+
+Cell averaging intertwines translations by integer multiples of $a$.
+The integral finite-difference estimates therefore give
+\[
+ \|D_aJ_a\psi-J_a(-i\psi')\|\le\frac{a^2}{6}\|\psi'''\|,
+ \qquad \|W_aJ_a\psi\|\le\frac a2\|\psi''\|.
+\]
+For example, these follow by integrating the Taylor remainders for
+the centered first difference and the second difference; contraction
+of $J_a$ does not increase the bounds. Thus, for a spinor
+$\psi\in H^3$,
+\[
+ \|(H_{a,\mu}J_a-J_aH_{0,\mu})\psi\|
+ \le\frac a2\|\psi''\|+\frac{a^2}{6}\|\psi'''\|.
+\]
+The estimate is independent of $\mu$.
+
+To verify the partner constants explicitly, put
+$\varphi_a=J_a\phi/z_a$, $\overline W_a=\langle\varphi_a,W_a\varphi_a\rangle$,
+and $g_a=(H_{a,\mu}-e_a)f_a$. Centering removes the spin-up mass term:
+\[
+ g_a=(W_a-\overline W_a)\varphi_a\otimes|\uparrow\rangle
+       +D_a\varphi_a\otimes|\downarrow\rangle.
+\]
+In particular $g_a,c_a,w_a$ are mass independent. The variance identity
+implies
+\[
+ \|(W_a-\overline W_a)\varphi_a\|\le\|W_a\varphi_a\|
+ \le ak_2.
+\]
+For the other spin component, the normalization and difference bounds give
+\[
+ \|D_a\varphi_a-J_a(-i\phi')\|
+ \le 2a^2k^3+\frac{a^2k_3}{3}.
+\]
+Since $kJ_aw_0=J_a(-i\phi')\otimes|\downarrow\rangle$, it follows that
+\[
+ \|g_a-kJ_aw_0\|\le E_a.
+\]
+Also $|\|J_a\phi'\|-k|\le a k_2$, so
+$|c_a-k|\le E_a+a k_2$. The second small-spacing condition yields
+$c_a\ge c_*=k/2$. Using $\|J_aw_0\|\le1$ now gives the displayed
+normalized-partner estimate without dividing by an uncontrolled norm:
+\[
+ \|w_a-J_aw_0\|
+ \le \frac{E_a}{c_a}+\frac{|k-c_a|}{c_a}\|J_aw_0\|
+ \le\frac{2E_a+a k_2}{c_*}=d_w.
+\]
+
+Let $U_a(s)=e^{-isH_{a,\mu}}$ and $U_0(s)=e^{-isH_{0,\mu}}$.
+The continuum propagator commutes with spatial derivatives and is
+unitary in every spatial Sobolev norm. Since
+$\|w_0''\|=k_3/k$ and $\|w_0'''\|=k_4/k$,
+Duhamel's formula gives
+\[
+ \|U_a(s)J_aw_0-J_aU_0(s)w_0\|\le s d_0,
+ \qquad
+ \|U_a(s)w_a-J_aU_0(s)w_0\|\le d_w+s d_0.
+\]
+Splitting the amplitude into its target-normalization, propagated-partner
+and cell-inner-product errors therefore bounds these three errors by
+$d_f$, $d_w+s d_0$ and $a^2 k_2$, respectively. This proves
+$|A_a-A_0|\le F_a$.
+
+For the elapsed derivative, the target graph-norm comparison is
+\begin{align*}
+ \|H_{a,\mu}f_a-J_aH_{0,\mu}f\|
+ &\le (z_a^{-1}-1)\|H_{0,\mu}f\|
+      +z_a^{-1}\|(H_{a,\mu}J_a-J_aH_{0,\mu})f\|\\
+ &\le2a^2k^2M_H+ak_2+a^2k_3/3=d_{Hf}.
+\end{align*}
+Here $\|H_{0,\mu}f\|\le M_H$ and
+$\|(H_{0,\mu}f)'\|\le M_{H,1}$.
+Move the generator to the target in $\partial_s A_a$ and use the same
+three-term comparison. The resulting bounds are
+$d_{Hf}$, $M_H(d_w+s d_0)$ and
+$a^2M_{H,1}k_2/k$, proving the estimate by $G_a$.
+
+Finally the bounded-perturbation derivative in mass has integrand
+$U_a(s-r)\sigma_zU_a(r)$. The cell map commutes with $\sigma_z$.
+The continuum spinor $\sigma_zU_0(r)w_0$ has the same spatial
+Sobolev norms as $w_0$. Applying the preceding consistency estimate
+first over $r$ and then over $s-r$ gives
+\[
+ \|U_a(s-r)\sigma_zU_a(r)J_aw_0
+       -J_aU_0(s-r)\sigma_zU_0(r)w_0\|\le s d_0.
+\]
+For each integrand the target, partner and inner-product errors are
+therefore bounded by $d_f+d_w+s d_0+a^2k_2\le F_a$.
+Integration over $0\le r\le s\le S$ gives
+$|\partial_\mu A_a-\partial_\mu A_0|\le SF_a$.
+No inverse power of $\mu$ enters this full-line comparison.
+\end{proof}
+
+\begin{lemma}[Open-boundary $C^1$ comparison]
+\label{lem:boundary-c1}
+Assume the full support of the prepared partner mode is contained inside
+a finite open interval, at least $q_a$ cell hops from the first omitted
+cell. Let $x=S/a$ and $T_j(x)=\sum_{n\ge j}x^n/n!$. If
+$A_a^{\mathrm{op}}$ denotes the finite open-chain amplitude, then
+\begin{align*}
+ |A_a^{\mathrm{op}}-A_a|&\le B_0:=2T_{q_a}(x),\\
+ |\partial_sA_a^{\mathrm{op}}-\partial_sA_a|
+ &\le B_s:=2(\mu_{\max}+2/a)T_{q_a}(x)+a^{-1}T_{q_a-1}(x),\\
+ |\partial_\mu A_a^{\mathrm{op}}-\partial_\mu A_a|
+ &\le B_\mu:=2S T_{q_a}(x)+4SxT_{q_a-1}(x).
+\end{align*}
+If $q_a-1\ge4S/a$, these errors vanish exponentially with buffer
+length, up to the explicitly displayed inverse powers of $a$.
+\end{lemma}
+\begin{proof}
+Extend the open evolution by the same on-site operator outside the
+interval, deleting only the hopping across its boundary. The complete full-line hopping operator has Fourier symbol
+$(\sin k\,\sigma_x-\cos k\,\sigma_z)/a$, hence norm $1/a$.
+Its open-interval compressions have no larger norm. If $P$ is the
+projection onto the device, $Q=I-P$, and $K$ is the full hopping
+operator, the removed hopping is $PKQ+QKP$, with norm
+$\|PKQ+QKP\|=\|PKQ\|\le1/a$. This gives the boundary-exit
+factor in $B_s$ without summing separate edge norms. Conjugation by
+the on-site propagator preserves the hopping bound in the interaction picture.
+The two Dyson expansions applied to the partner agree at every order
+strictly below $q_a$ because no such hopping path can reach the omitted
+cells. Their remaining tails give $B_0$. For $\partial_s$, multiply the
+value difference by the generator and separately bound the boundary-exit
+coupling after at least $q_a-1$ hops. For $\partial_\mu$, differentiating
+an on-site factor costs at most $S$ and the $n$ interaction-picture
+hopping factors together cost at most $2nS$ relative to their
+undifferentiated majorant. The two differentiated remainder tails are
+therefore bounded by
+\[
+ 2S T_{q_a}(x)+4S\sum_{n\ge q_a}\frac{n x^n}{n!}
+ =2S T_{q_a}(x)+4SxT_{q_a-1}(x)=B_\mu.
+\]
+For $j\ge4x$, geometric and factorial comparison give
+$T_j(x)\le(4/3)(ex/j)^j\le(4/3)(e/4)^j$.
+Taking $j=q_a-1$ or $q_a$ proves the stated exponential decay,
+including after multiplication by the displayed inverse powers of $a$.
+\end{proof}
+
+\begin{proof}[Completion of Proposition \ref{prop:twotime-finite-lattice-inverse}]
+Define $\mathcal E_0=F_a+B_0$, $\mathcal E_s=G_a+B_s$, and
+$\mathcal E_\mu=SF_a+B_\mu$. Restrict to
+$\theta=\mu^2\in[\mu_{\min}^2,\mu_{\max}^2]$,
+where $\mu_{\min}>0$.
+The continuum amplitude has modulus $b(s,\theta)>0$ on the required
+short-time interval. If $M_1S^2\le3$ and
+$b_*:=kv_{\min}t/2$ with $\mathcal E_0<b_*/2$, the finite amplitude
+is nonzero as well.
+The derivative of the complex modulus obeys the phase comparison
+$|u/|u|-v/|v||\le2|u-v|/|v|$. Hence
+\[
+ |\partial_s|A_a^{\mathrm{op}}|-\partial_s b|
+ \le L_s:=\mathcal E_s+\frac{2k\mathcal E_0}{b_*},
+\]
+\[
+ |\partial_\theta|A_a^{\mathrm{op}}|-\partial_\theta b|
+ \le L_\theta:=\frac{\mathcal E_\mu}{2\mu_{\min}}
+ +\frac{kS^3\mathcal E_0}{3b_*}.
+\]
+The positive lower mass is used exactly in converting
+$\partial_\mu$ to $\partial_\theta$.
+
+Define the same two-time combinations $X_a,Y_a$ of exact lattice moduli
+as in the continuum calculation. If $A_t,B_t,C_t,D_t$ are the continuum
+comparison constants, their additional derivative errors satisfy
+\[
+ \delta_A=\frac53L_s,\quad
+ \delta_B=\frac{3L_\theta}{2t},\quad
+ \delta_C=\frac{4L_s}{t^2},\quad
+ \delta_D=\frac{3L_\theta}{t^3}.
+\]
+Set
+\[
+ \widetilde A=A_t-\delta_A,\quad
+ \widetilde B=B_t+\delta_B,\quad
+ \widetilde C=C_t+\delta_C,\quad
+ \widetilde D=D_t-\delta_D,\quad
+ \widetilde\Delta=\widetilde A\widetilde D-
+ \widetilde B\widetilde C.
+\]
+The continuum strict inequalities and the convergence of all $\delta$'s
+guarantee $\widetilde A,\widetilde D,\widetilde\Delta>0$ for
+sufficiently small $a$. Integrating the derivative bounds between any
+two points in the parameter rectangle gives
+\[
+ \widetilde A|\Delta v|-\widetilde B|\Delta\theta|
+ \le|\Delta X_a|,\qquad
+ -\widetilde C|\Delta v|+\widetilde D|\Delta\theta|
+ \le|\Delta Y_a|.
+\]
+The inverse comparison matrix has nonnegative entries; thus
+\[
+ |\Delta v|\le\frac{\widetilde D|\Delta X_a|+
+ \widetilde B|\Delta Y_a|}{\widetilde\Delta},\quad
+ |\Delta\theta|\le\frac{\widetilde C|\Delta X_a|+
+ \widetilde A|\Delta Y_a|}{\widetilde\Delta}.
+\]
+Equal two-time responses therefore imply identical $(v,\theta)$, and
+hence identical $(v,\mu)$ on the strictly positive mass domain.
+\end{proof}
+
+\begin{remark}[Massless boundary]
+At fixed nonzero spacing, write
+$m_j(\mu)=\langle f_a,H_{a,\mu}^j f_a\rangle$ and
+$c_a^2=m_2-m_1^2$. Define
+\[
+ Q_a(\mu)=\frac{m_4-m_1m_3}{c_a^2}
+ -\frac{3(m_3-m_1m_2)^2}{4c_a^4}.
+\]
+Expansion of $A_a(s,\mu)=\langle f_a,e^{-isH_{a,\mu}}w_a\rangle$
+at $s=0$ gives, for $s>0$,
+\[
+ |A_a(s,\mu)|=c_as\left(1-\frac{Q_a(\mu)}6s^2+O(s^4)\right).
+\]
+On the full lattice let $T=L_a$, $\tau=\langle\varphi_a,T\varphi_a\rangle$
+and $\zeta=\langle\varphi_a,T^2\varphi_a\rangle$, where
+$\varphi_a=J_a\phi/\|J_a\phi\|$.
+The identities $D_a^2+W_a^2=T$ and $2W_a=aT$ imply
+$H_{a,\mu}^2=\mu^2+(1+a\mu)T$. Consequently
+\begin{align*}
+ m_1&=\mu+a\tau/2,\\
+ m_2&=\mu^2+(1+a\mu)\tau,\\
+ m_3&=\mu^3+\mu(1+a\mu)\tau+
+       \tfrac a2[\mu^2\tau+(1+a\mu)\zeta],\\
+ m_4&=\mu^4+2\mu^2(1+a\mu)\tau+(1+a\mu)^2\zeta,\\
+ c_a^2&=\tau-a^2\tau^2/4.
+\end{align*}
+These same moments apply on the open device when all paths contributing
+through the fourth moment remain inside it, as holds under the stated
+buffer condition for sufficiently small spacing. Differentiation gives
+\[
+ Q_a'(0)=
+ \frac{a(4\tau-a^2\zeta)(6\zeta-2\tau^2-a^2\tau^3)}
+ {\tau^2(4-a^2\tau)^2}>0
+\]
+when $0<a^2\tau<4$ and $\tau^2\le\zeta<4\tau/a^2$.
+Indeed the second numerator factor is at least
+$\tau^2(4-a^2\tau)>0$. Thus the cubic short-time coefficient
+of the modulus depends linearly on $\mu$ at zero. For sufficiently small
+positive times its $\mu$ derivative is nonzero, and converting to
+$\theta=\mu^2$ produces an unbounded first derivative at zero.
+This obstructs the present $C^1$ transfer method there; it does not prove
+failure of injectivity of the finite-lattice observation map.
+\end{remark}
+
+\section*{AI assistance and acknowledgments}
+Kirtus Justus is the responsible human author. ChatGPT (OpenAI) assisted with mathematical drafting, verification code, source checks, and editorial preparation. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for involvement in the broader research program; no particular calculation or proof in this article is assigned to those systems without specific documentation. The author assumes responsibility for all content. These acknowledgments do not imply external peer review or endorsement by any AI provider.
+
+\end{document}

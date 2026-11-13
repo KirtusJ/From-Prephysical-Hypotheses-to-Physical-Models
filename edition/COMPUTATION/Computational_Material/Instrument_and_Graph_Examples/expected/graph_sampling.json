@@ -1,0 +1,66 @@
+{
+  "antisymmetric": {
+    "Bhattacharyya_sufficient": 248,
+    "Hellinger_necessary": 79,
+    "full_count_status": "numerically resolved by two routes; no outward-rounded FFT proof",
+    "full_likelihood_FFT_binning_brackets": {
+      "126": [
+        0.10023380653637676,
+        0.10032715390622296
+      ],
+      "127": [
+        0.0993457539807663,
+        0.09943901371729849
+      ]
+    },
+    "full_likelihood_quadrature_risks": {
+      "126": 0.10028047356800479,
+      "127": 0.09939237712428152
+    },
+    "global_bit": {
+      "N_minus_1_partitions_verified": 775,
+      "minimum_trials_all_nonnegative_single_upper_thresholds": 173,
+      "uniform_lower_bound_at_N_minus_1": 0.10000069733128472,
+      "witness_threshold": "23077/100000",
+      "witness_upper_risk": 0.09949372041088493
+    },
+    "single_trial_Bhattacharyya": 0.9935267630157465
+  },
+  "equal_phase": {
+    "Bhattacharyya_sufficient": 229,
+    "Hellinger_necessary": 73,
+    "full_count_status": "numerically resolved by two routes; no outward-rounded FFT proof",
+    "full_likelihood_FFT_binning_brackets": {
+      "116": [
+        0.10018099730003188,
+        0.10026716044664599
+      ],
+      "117": [
+        0.0992168976372891,
+        0.09930297186752607
+      ]
+    },
+    "full_likelihood_quadrature_risks": {
+      "116": 0.10022951057257085,
+      "117": 0.09926536069030835
+    },
+    "global_bit": {
+      "N_minus_1_partitions_verified": 447,
+      "minimum_trials_all_nonnegative_single_upper_thresholds": 165,
+      "uniform_lower_bound_at_N_minus_1": 0.1000023166485892,
+      "witness_threshold": "22943/100000",
+      "witness_upper_risk": 0.09978676682981606
+    },
+    "single_trial_Bhattacharyya": 0.9929663376506274
+  },
+  "sample_mean_and_fifth": {
+    "CLT_normal_approximation": 10454892.952619405,
+    "Cantelli_sufficient": 57291466,
+    "chernoff_tail_upper_bounds": [
+      0.09985515840249945,
+      0.09985338413381713
+    ],
+    "rational_threshold": "1711/10000",
+    "sample_mean_sufficient": 375
+  }
+}

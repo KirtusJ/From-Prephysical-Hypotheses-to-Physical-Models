@@ -1,0 +1,219 @@
+\section{What observations determine about memory, records, and time}
+\label{op:collections}
+
+The operational studies concern finite conventional models and ask a precise
+question: which features of a model are fixed by a stated observation and
+intervention menu?  The answers include positive identification theorems,
+finite statistical designs, and explicit indistinguishable alternatives.
+Their premises include ordinary probability or quantum theory, calibrated
+settings, and a specified notion of state.  They do not constitute a
+derivation of those primitives from a prephysical candidate.
+Complete statements, proofs, and computational certificates appear in the
+Mathematical Supplement under \emph{Observation, Memory, Control, and Time
+in Finite Models}.
+
+\subsection{Reduced dynamics require a predictive state}
+
+For a finite controlled Markov model, an observation quotient has exact
+autonomous dynamics for all starting distributions and all common
+visible-history policies precisely when each action's pushed transition
+row is constant within each observation fiber.  This is a controlled form
+of strong lumpability \cite{op:wolfer}.  Uniform conditional row error
+\(\delta\) gives a sharp complete-history total variation bound
+\[
+ 1-(1-\delta)^N
+\]
+after \(N\) transitions.  An average stationary fit does not replace the
+uniform premise.
+
+A four-state stationary process illustrates the difference.  Its observed
+singles are fair and every adjacent pair is independent and fair, yet its
+triple law differs from the fair iid law by total variation \(1/4\).
+Conversely, a hidden bit may alternate forever without affecting the
+visible Markov law when its pushed rows coincide.  Hidden state is neither
+automatically harmful nor automatically recoverable.
+An operation on fine states can also distinguish two inputs that the
+observation map identifies.  Such an operation is not determined by the
+coarse state unless the intervention itself descends through the quotient.
+
+\subsection{Memory depth, readout, and state count}
+
+The parity-shift family has a uniform \(L\)-bit initial block and append
+probabilities
+\[
+ P(b\mid x_1,\ldots,x_L)
+ =\tfrac12[1+\eta(-1)^{x_1+\cdots+x_L+b}].
+\]
+It belongs to the established two-faced-chain setting
+\cite{op:ryabko}.  Every contiguous block of length at most \(L\) has the
+fair iid law, while the first \(L+1\) block differs by
+\(|\eta|/2\) in total variation.  Therefore no common finite block depth
+validates independence over unrestricted \(L\).
+
+The parity innovations are iid under ideal readout because the entire
+record probability factors in those coordinates.  Independent detector
+bit flips alter that conclusion: consecutive observed parity windows
+overlap in their detector bits, producing nonzero covariance through lag
+\(L\).  Their count is generally insufficient for the ordered record.
+For \(L=2,\eta=1/2,\epsilon=1/10\), a rule that attained more than \(95\%\)
+power with \(40\) ideal innovations has only about \(49.26\%\) power after
+the specified readout noise.  An exact finite recursion gives a minimum
+of \(183\) innovations for the randomized, size-\(5\%\), count-only
+experiment to attain \(95\%\) power.  Every shorter count horizon is
+checked separately; this is not a minimum for all full-record procedures.
+
+The joint matrix of adjacent \(L\)-bit past and future blocks has rank
+\(2^L\) for nonzero \(\eta\).  The explicit shift-state model attains that
+number, so it is the exact minimum for classical transition-emitting
+realizations of this process.  Independent symmetric readout preserves
+the rank when its flip probability is below \(1/2\), while potentially
+making the small singular values difficult to estimate.
+This model differs from a stationary random-phase concatenation of
+perturbed \(k\)-bit blocks; the latter's separate \(2k-1\) realization
+result does not describe the parity-shift family.
+
+Population rank is not by itself a finite-data certificate.  For \(n\)
+iid complete records distributed over \(K\) joint-matrix cells, the
+empirical matrix obeys the confidence radius
+\[
+ \|\widehat H-H\|_F\le
+ \frac{\sqrt{1-1/K}+\sqrt{\log(1/\alpha)}}{\sqrt n}
+\]
+with probability at least \(1-\alpha\).
+Combining this radius with the singular tail produces rank tests and
+confidence lower bounds on total variation from every normalized
+low-rank competitor.  Exact matching of competitor marginals strengthens
+the population bound; that restriction must be justified, not silently
+imposed.
+For the specified four-output noisy example, the conservative \(5\%\)
+size and \(95\%\) power designs require \(2976,5116,18213\) iid records
+to reject state counts at most \(1,2,3\), respectively.
+These are sufficient budgets for one particular bound, not optimal
+sample sizes.  The independence requirement is across complete records;
+dependence within a record is allowed.
+
+\subsection{Sequential validity and power are different questions}
+
+Against the complete fair iid observed law, a predeclared mixture of
+coherent record likelihood ratios is a nonnegative martingale.
+Crossing \(20\) gives an anytime false-rejection probability at most
+\(5\%\), by the standard martingale argument \cite{op:howard}.
+With weights \(1/[L(L+1)]\) over memory lengths, fixed
+\(\eta=1/2,\epsilon=1/10\), and true \(L=2\), a component argument using
+\(650\) disjoint three-bit parity windows proves power by \(1950\)
+outputs of at least \(0.9519745696463602\ldots\).
+This is a sufficient horizon for that alternative.  Every fixed
+nondegenerate candidate with positive mixture weight is detected
+eventually almost surely, but no finite horizon works uniformly over
+unrestricted memory length.
+
+Conditional-bias null envelopes permit dependence and require a
+different interpretation.  A valid normalized forecast factor can have
+negative long-run log growth even under its own correct alternative
+forecast.  Clipping a Bernoulli forecast to the null interval gives an
+explicit valid factor that maximizes one-step expected log growth,
+consistent with established e-variable theory \cite{op:larsson}.
+Enlarging an envelope can admit the memory-bearing alternative itself;
+no test valid on that enlarged null can simultaneously promise high
+rejection probability for the admitted process.
+
+\subsection{Final-system records do not locate environmental structure}
+
+Conditionally identical product fragments with overlap \(\gamma\) give
+visibility \(|\gamma|^N\).  For real \(0\le\gamma\le1\), the final binary
+family \([1+\gamma^N\cos\phi]/2\) also has an elementary two-state classical
+realization with a setting-dependent readout.  This reproduces that
+specified binary family; it makes no claim to simulate arbitrary quantum
+experiments.
+
+Even complete final-system channel knowledge does not identify
+tensor-product factorization of inaccessible conditional fragment
+states.  A common environment-only controlled-phase unitary preserves
+the full reduced channel, including retained ancillas, while changing a
+product branch into a nonproduct branch across the fixed fragment
+partition.  Complete later histories remain equal only when those
+transformed fragments are never accessed or recoupled.
+The distinction concerns quantum conditional states, not necessarily
+the classical distribution of a particular fragment measurement.
+
+With branch preparation and local fragment access added, the explicit
+pair becomes distinguishable.  At overlap \(\gamma=3/5\), a calibrated
+local \(X\) readout has binary probability gap \(384/625\).
+The pair is still separated if each output law has total variation error
+at most \(\varepsilon\) and \(384/625-2\varepsilon>0\).
+Thus a change in access assumptions changes the operational conclusion.
+
+\subsection{Exact controls and uncertain controls}
+
+Strictly positive, linearly minimal two-state Mealy models can have
+identical passive output laws without being state-label permutations
+\cite{op:vanluyten}.  In the explicit pair, a common silent control
+\[
+ K(a,b)=\begin{pmatrix}1-a&a\\b&1-b\end{pmatrix}
+\]
+separates the next-zero probability by \((2a-b)/35\).
+All controlled laws agree precisely when \(b=2a\).
+A reset can separate this pair yet leave other minimal partners, and
+one fixed silent control leaves a local continuum throughout the
+unrestricted strictly positive minimal class with unanchored preparation.
+
+There is a sharp positive two-state result.  Consider stationary,
+binary-output, strictly positive transition-emitting models with
+linear minimal dimension two and a preparation that is not separately
+anchored.  Two exactly known controls \(K_j=K(a_j,b_j)\), in one common
+labelled hidden basis and fixed across the compared models, identify
+the numerical realization from controlled population laws if and only if
+\[
+ a_1b_2-a_2b_1\ne0.
+\]
+At most one control followed by two outputs per setting suffices for an
+explicit reconstruction, using the same starting preparation across
+settings.  The result requires exact common controls and exact
+probabilities; it does not give a finite-sample guarantee or a uniform
+stability bound.
+
+In arbitrary finite dimension, an exactly labelled cycle and reset
+prepare every pure state; observability then gives reconstruction from
+records with at most \(n\) outputs.
+
+Calibration uncertainty reopens equivalence.  For an explicit positive
+pair of control matrices, fixing one exactly while allowing the other
+a full row-total-variation ball of radius \(\varepsilon\) leaves a
+contained first-preparation-coordinate interval
+\[
+ \left[\frac49,\frac49+
+       \min\left\{\frac1{15},\frac{8\varepsilon}{9}\right\}\right]
+\]
+with identical complete controlled laws.  It is a lower bound on an
+identified set, not its full characterization.  In a separate fixed-pair
+reset experiment, uniform separation fails at a \(20\%\) preparation
+nuisance threshold.  Perfect iid reset trials for that pair have an
+exact randomized fixed-horizon minimum of \(468\) trials at size \(5\%\)
+and power at least \(95\%\).  These numbers concern different
+experiments and are not tolerances or sample budgets for the
+two-control reconstruction.
+
+\subsection{Sampling time can hide irreversible circulation}
+
+Two explicitly positive three-state continuous-time generators have
+the same full transition matrix at every nonnegative integer time.
+One is reversible and one has nonzero stationary cycle current.
+Their sampled equivalence survives every common adaptive policy whose
+controls and readouts, including silent state maps, all occur on the
+integer grid while the generator remains fixed between boundaries.
+This does not include off-grid controls, persistent drives, or
+continuous monitoring.
+An anchored state-one preparation and a calibrated quarter-time readout
+resolving states two and three gives the explicit distinguishing
+contrast \(2e^{-3}/\sqrt3\).
+
+Full exact transition matrices at two positive times of irrational ratio
+uniquely determine a finite generator in a common basis.
+Nevertheless, rates tending to infinity can make finitely many sampled
+kernels arbitrarily close while the generators remain a fixed distance
+apart.  Exact uniqueness and uniform inverse stability therefore differ.
+The compact, bounded-parameter case admits qualitative uniform
+continuity, but no general quantitative finite-data clock-calibration
+theorem follows here.  These are results within the classical
+matrix-exponential inverse problem \cite{op:baake,op:yue}; they
+presuppose a physical time assignment.

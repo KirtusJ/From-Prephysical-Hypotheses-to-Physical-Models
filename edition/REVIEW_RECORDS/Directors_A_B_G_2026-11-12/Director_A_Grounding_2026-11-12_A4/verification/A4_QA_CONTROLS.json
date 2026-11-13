@@ -1,0 +1,12 @@
+{
+  "legitimate_positive_control": "PASS unchanged source reports zero mismatches",
+  "known_float_residual_control": "PASS seven scalar differences retained",
+  "introduced_known_fault": "PASS injected 0.731234 detected at correct path",
+  "initial_checker_defect": "first comparator version omitted traverse(A,B) call and incorrectly returned zero changes; fixed and challenged with these controls",
+  "mutation_witness": {
+    "path": "$.E5_limits.long_walk_limit.rows[0].total_variation_to_top_eigenvector",
+    "original": 0.4325786411623506,
+    "reexecution": 0.731234,
+    "abs_delta": 0.29865535883764943
+  }
+}

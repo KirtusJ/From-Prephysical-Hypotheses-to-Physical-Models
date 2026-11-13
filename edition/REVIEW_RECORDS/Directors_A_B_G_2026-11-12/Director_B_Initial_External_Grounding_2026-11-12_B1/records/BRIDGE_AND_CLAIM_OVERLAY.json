@@ -1,0 +1,155 @@
+{
+  "program": "From Prephysical Hypotheses to Physical Models",
+  "date_bc_pacific": "2026-11-12",
+  "author": "Kirtus Justus",
+  "reviewer": "GPT-6 (OpenAI), LLM Director B, internal research provenance",
+  "parent_stage": "Initial External Grounding OPEN",
+  "release_state": "no baseline modifications; additive packet",
+  "claims": [
+    {
+      "id": "B-GEO-01",
+      "claim": "The CP^n complex tangent determinant holonomy equals normalized Bargmann product to power n+1 for nonorthogonal geodesic polygons",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "mathematical theorem; supplied CP geometry"
+    },
+    {
+      "id": "B-MON-02",
+      "claim": "The RP^2 nontrivial loop yields reflection monodromy and full O(2) tangent holonomy",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "mathematical theorem; standard round quotient"
+    },
+    {
+      "id": "B-FIN-03",
+      "claim": "Finite exactly homogeneous spherical subsets have covering radius >=acos(59/60)",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "mathematical theorem; finite O(3) subgroup classification"
+    },
+    {
+      "id": "B-FIN-04",
+      "claim": "CP^n is excluded as GH limit of finite homogeneous metric spaces",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "Gelander published theorem applicable under GH exact homogeneity"
+    },
+    {
+      "id": "B-COMP-05",
+      "claim": "Complete single-system quantum geometry identifies ordinary entangled composite state space",
+      "disposition": "NOT_IDENTIFIED_IN_SCOPE",
+      "basis_and_scope": "two explicit models same local input, differing entangled composite correlations"
+    },
+    {
+      "id": "B-CLASS-06",
+      "claim": "No third-order interference alone supplies the Barnum-Mueller-Ududec theory classification",
+      "disposition": "UNRESOLVED",
+      "basis_and_scope": "published classification requires further classical decomposability and strong symmetry premises"
+    },
+    {
+      "id": "B-LAD-07",
+      "claim": "Properly scaled Schild ladder approximates the given Levi-Civita transport",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "published convergence on mathematical manifolds"
+    },
+    {
+      "id": "B-LAD-07A",
+      "claim": "Director Z claimed 1e-6 ladder residuals for n=1,2,3",
+      "disposition": "UNRESOLVED",
+      "basis_and_scope": "quoted disposition; direct scripts/results absent"
+    },
+    {
+      "id": "B-D8-08",
+      "claim": "Uniform D8 operator bound from Sobolev projectors and characteristic multipliers",
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "basis_and_scope": "math proof; Shamir-Strichartz multiplier theorem applied"
+    },
+    {
+      "id": "B-D8-08A",
+      "claim": "Full Wilson entropy theorem proved by the D8 subcheck",
+      "disposition": "UNRESOLVED",
+      "basis_and_scope": "essential B6 B7 B8 and other inputs not re-audited"
+    },
+    {
+      "id": "B-ROOT",
+      "claim": "Total ontology and emergent quantum + classical mechanics from prephysical primitives",
+      "disposition": "NOT_IDENTIFIED_IN_SCOPE",
+      "basis_and_scope": "not selected from information reviewed, not globally impossible"
+    }
+  ],
+  "proposed_graph_updates": [
+    {
+      "type": "obstruction",
+      "from": "GPT-COMPLEX-SINGLE",
+      "to": "GPT-COMPOSITE",
+      "claim_id": "B-COMP-05",
+      "reason": "same local geometry/stats, different minimal-vs-quantum composites"
+    },
+    {
+      "type": "exact_correspondence",
+      "from": "COMPLEX-PROJECTIVE-GEOMETRY",
+      "to": "BARGMANN-PHASE",
+      "claim_id": "B-GEO-01",
+      "reason": "det complex holonomy = b^(n+1); geometry imported"
+    },
+    {
+      "type": "obstruction",
+      "from": "FINITE-EXACT-HOMOGENEOUS-METRIC",
+      "to": "CPn-GH-LIMIT",
+      "claim_id": "B-FIN-04",
+      "reason": "Gelander corollary; only manifolds possible are tori"
+    },
+    {
+      "type": "discriminator",
+      "from": "RP2",
+      "to": "CP1",
+      "claim_id": "B-MON-02",
+      "reason": "nonorientable global reflection loop in RP2"
+    },
+    {
+      "type": "obstruction",
+      "from": "FINITE-EXACT-HOMOGENEOUS-SPHERE-ORBIT",
+      "to": "DENSE-BLOCH-SPHERE-COVER",
+      "claim_id": "B-FIN-03",
+      "reason": "covering radius ≥arccos(59/60)"
+    }
+  ],
+  "open_problem_updates": [
+    {
+      "id": "O-B-01",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 1",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-02",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 2",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-03",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 3",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-04",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 4",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-05",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 5",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-06",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 6",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-07",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 7",
+      "status": "open (B scoped; not yet upstream integrated)"
+    },
+    {
+      "id": "O-B-08",
+      "locator": "DIRECTOR_B_TECHNICAL_DISPOSITION.md §F item 8",
+      "status": "open (B scoped; not yet upstream integrated)"
+    }
+  ]
+}

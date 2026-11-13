@@ -1,0 +1,41 @@
+digraph Ontology {
+  graph [label="From Prephysical Hypotheses to Physical Models | Director A, scoped grounding map | 2026-11-12", labelloc="t", fontsize=17, fontname="DejaVu Sans", ranksep="0.75", nodesep="0.38", compound=true, pad="0.24", bgcolor="white", rankdir="TB"];
+  node [shape=box, style="rounded,filled", fillcolor="#f4f6f8", color="#6e7781", fontname="DejaVu Sans", fontsize=10.5, margin="0.14,0.11"];
+  edge [fontname="DejaVu Sans", fontsize=9.2, color="#606e7b", arrowsize=0.7];
+  subgraph cluster_primitive {
+    label="PREPHYSICAL -> MATHEMATICAL"; color="#bdcbd7";
+    base [label="Unidentified prephysical primitives\nrecords, equivalence, calibration",fillcolor="#fff0ee",color="#b27b75"];
+    c3 [label="Directed finite 3-cycle\nEXACT: C^2 = -3 I\n(after chosen linearization)",fillcolor="#e6f0f6",color="#5a91b0"];
+    cp [label="Projective / phase geometry\nCONDITIONAL: real completion,\nmetric, quotient, Born overlap",fillcolor="#fff7e3",color="#c7a354"];
+    base -> c3 [label="not selected / one test case",style=dashed];
+    c3 -> cp [label="imports remain"];
+  }
+  subgraph cluster_composition {
+    label="COMPOSITION AND OPERATIONAL SELECTION"; color="#bdcbd7";
+    local [label="Stipulated elementary quantum\nH = C^2, Born statistics",fillcolor="#fff7e3",color="#c7a354"];
+    kt [label="K_t = (1-t) Sep2 + t D2\nlocal CPTP stable; pairs nonselected",fillcolor="#e6f0f6",color="#5a91b0"];
+    filter [label="One-site selective filter\nEXACT: any 0 < t < 1 leaves K_t",fillcolor="#fdebe8",color="#bf7066"];
+    four [label="Pair prep + four-party discard\nEXACT: impossible affine weights\nfor any interior t",fillcolor="#fdebe8",color="#bf7066"];
+    match [label="Matching hierarchy M_n(t)\nEXACT: weak closure survives\nGHZ3 excluded; CHSH possible",fillcolor="#e8f4ef",color="#63967f"];
+    full [label="Full 2-system D2\nCONDITIONAL: pure entangled seed\n+ all local selective filters",fillcolor="#fff7e3",color="#c7a354"];
+    local -> kt [label="selected mathematical family"];
+    kt -> filter [label="fails stronger operation"];
+    kt -> four [label="fails affine all-arity repair"];
+    kt -> match [label="positive countercompletion"];
+    filter -> full [label="additional pure seed condition",style=dashed];
+  }
+  subgraph cluster_physics {
+    label="OPEN PHYSICAL EMERGENCE OBLIGATIONS"; color="#bdcbd7";
+    operations [label="Physically identified composite\npreparations / instruments",fillcolor="#fff0ee",color="#b27b75"];
+    dynamics [label="Physical dynamics / units / clock\nand spacetime",fillcolor="#fff0ee",color="#b27b75"];
+    classical [label="Controlled classical Hamiltonian limit\nobservables and error bounds",fillcolor="#fff0ee",color="#b27b75"];
+    empirical [label="Complete empirical physical map\nlikelihoods, controls, falsifiers",fillcolor="#fff0ee",color="#b27b75"];
+    operations -> dynamics [label="OPEN"];
+    dynamics -> classical [label="OPEN"];
+    classical -> empirical [label="OPEN"];
+  }
+  cp -> local [label="Born rule not derived",style=dashed,color="#b27b75"];
+  full -> operations [label="physical origin OPEN",style=dashed,color="#b27b75"];
+  match -> operations [label="not identified",style=dashed,color="#b27b75"];
+  base -> operations [label="primitive calibration OPEN",style=dotted,color="#b27b75",constraint=false];
+}

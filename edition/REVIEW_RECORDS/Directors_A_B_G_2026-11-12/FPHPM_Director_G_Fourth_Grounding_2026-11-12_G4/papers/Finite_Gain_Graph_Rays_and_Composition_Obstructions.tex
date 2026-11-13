@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,enumitem,microtype,hyperref,xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Hil}{\mathcal H}
+\newcommand{\D}{\mathrm D}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\FS}{\mathrm{FS}}
+\title{Finite Gain-Graph Rays, Gauge-Invariant Additivity,\\ and Synchronization Obstructions}
+\author{Kirtus Justus\\\small Theoretical Physicist; Port Coquitlam, British Columbia, Canada\\[3pt]\small Mathematical and computational research support: ChatGPT (GPT-6), Director G}
+\date{12 November 2026, B.C. Pacific Time}
+\begin{document}
+\maketitle
+\begin{abstract}
+A finite, explicitly labelled gain graph satisfies a previously conditional walk-growth hypothesis used to obtain a dense complex-projective ray set from coherent walk events. Its 15-vertex voltage cover has an integer adjacency matrix $B$ with $B^5$ strictly positive, and every endpoint--gain count grows at least as $2^{k-5}$. We give an exact realization theorem for Eisenstein-integer amplitude vectors and a uniform exponential projective approximation bound. Conversely, gauge invariance does not generally exclude additive transport-sensitive measures, and synchronized products of bipartite gain graphs need not span the tensor product of their all-length accessible state spaces. Formal exponentiation of a Hermitian represented adjacency yields reversible mathematical flow, but different graph products prescribe inequivalent interactions. None of these results selects an operational probability rule, establishes a physical clock, derives classical Hamiltonian mechanics, or identifies a physical ontology.
+\end{abstract}
+
+\section{Conventions and scope}
+Let $\Gamma$ be a finite connected simple graph whose oriented edges carry gains $g(e)\in\Z_3$, with $g(\bar e)=-g(e)$. A walk $w=(e_1,\ldots,e_k)$ has gain $g(w)=\sum_jg(e_j)$ in $\Z_3$. Write
+\[
+\zeta=e^{2\pi i/3},\qquad \zeta^3=1,\qquad 1+\zeta+\zeta^2=0.
+\]
+For a fixed starting vertex $x$, let $\Omega_k(x)$ denote all length-$k$ walks from $x$. The \emph{assumed} coherent event map and its quadratic measure are
+\begin{equation}
+ v_S(y)=\sum_{\substack{w\in S\\t(w)=y}}\zeta^{g(w)},\qquad
+ \mu_2(S)=\sum_y|v_S(y)|^2, \qquad S\subseteq\Omega_k(x).
+ \label{eq:event}
+\end{equation}
+This uses the stipulated character $g\mapsto\zeta^g$, coherent addition, and a quadratic rule. The parameter $k$ counts edges; it is not a physical time, frequency, or externally calibrated clock. The construction is a targeted examination of the unproved growth condition in an internal, unrefereed research manuscript~\cite{G8}; it is not a derivation of its postulates.
+
+\section{A five-vertex construction with verified growth}
+Define $\Gamma$ on vertices $0,1,2,3,4$ by the two triangles sharing vertex $0$, with oriented edges and gains
+\begin{equation}
+ (0\to1,0),\ (1\to2,0),\ (2\to0,0),\quad
+ (0\to3,0),\ (3\to4,0),\ (4\to0,1).
+ \label{eq:edges}
+\end{equation}
+Reversed edges have the opposite gains. Its voltage lift $\widetilde\Gamma$ has vertices $(y,h)\in\{0,\dots,4\}\times\Z_3$. An oriented edge $y\to z$ with gain $g$ lifts to $(y,h)\to(z,h+g)$. Let $B$ be the $15\times15$ \emph{integer} adjacency matrix of this undirected cover, indexed lexicographically.
+
+\begin{theorem}[Exact walk-growth witness]\label{th:growth}
+For the cover of \eqref{eq:edges},
+\begin{equation}
+ \min_{u,v}(B^5)_{uv}=1,\qquad B^5>0 \text{ entrywise}. \label{eq:certificate}
+\end{equation}
+For every $k\ge5$, every terminal vertex $y$ and every gain $h\in\Z_3$, the number $N_k(y,h)$ of walks of length $k$ from $0$ to $y$ with gain $h$ satisfies
+\begin{equation}
+ N_k(y,h)\ge 2^{k-5}. \label{eq:lower}
+\end{equation}
+In particular, the terminal-vertex set is the same full set of five vertices for every $k\ge5$, and all terminal-gain counts diverge along the full sequence of lengths.
+\end{theorem}
+\begin{proof}
+The displayed edge list yields an explicit symmetric $0$--$1$ integer matrix $B$. Exact multiplication, reproducible by the supplied independent Python implementation, gives \eqref{eq:certificate}; its complete $225$-entry matrix $B^5$ is deposited as a machine-readable certificate. There is also a structural check: the gain-$1$ triangle generates all three sheets of the cover, so the lift is connected, while the gain-$0$ triangle lifts to an odd cycle; the lift is nonbipartite. Thus some positive adjacency power must exist, and the finite computation specifies the exponent $5$.
+Every vertex of the cover has degree $2$ or $4$. Hence the total number of length-$r$ walks from any starting lift vertex is at least $2^r$. Since every entry of $B^5$ is at least $1$,
+\[
+ (B^k)_{(0,0),(y,h)}
+ =\sum_{u\in\widetilde V}(B^{k-5})_{(0,0),u}(B^5)_{u,(y,h)}
+ \ge \sum_u(B^{k-5})_{(0,0),u}\ge2^{k-5}.
+\]
+The left-hand side counts exactly the required walks.\qedhere
+\end{proof}
+
+\begin{corollary}[Exact finite-length lattice realization]\label{cor:lattice}
+For every $\alpha\in\Z[\zeta]^5$ there is an integer $k$ and an event $S\subseteq\Omega_k(0)$ with $v_S=\alpha$. More quantitatively, for $k\ge6$ define $M_k=2^{k-6}$. Every vector
+\[
+ \alpha=(a_y+b_y\zeta)_{y=0}^4,
+ \qquad a_y,b_y\in\Z,\quad |a_y|,|b_y|\le M_k
+\]
+is represented \emph{at that same length} $k$.
+\end{corollary}
+\begin{proof}
+Use $\zeta^2=-1-\zeta$ to write, at each terminal vertex,
+\[
+ a+b\zeta=(a+M_k)+(b+M_k)\zeta+M_k\zeta^2.
+\]
+All three coefficients are nonnegative integers at most $2M_k=2^{k-5}$. By Theorem~\ref{th:growth}, sufficiently many mutually distinct walks exist of every terminal gain at this common length. Select exactly those numbers in the event $S$, separately for each terminal vertex and gain. The component amplitudes are exactly $\alpha$. For a general finite vector first choose $k$ with $M_k$ large enough.\qedhere
+\end{proof}
+
+\begin{corollary}[Uniform complex-projective approximation]\label{cor:net}
+Every projective ray $[z]\in\C\mathbb P^4$ is approximated by an event ray of \eqref{eq:event}; the event rays are dense. More precisely, for $k\ge10$, each unit vector $z\in\C^5$ has a nonzero event vector $v_S$ at length $k$ with
+\begin{equation}
+ \sin d_{\FS}([z],[v_S])\le
+ \frac{2\sqrt5}{M_k-2\sqrt5},\qquad M_k=2^{k-6}.
+ \label{eq:uniform}
+\end{equation}
+Thus the projective approximation error has a uniform $O(2^{-k})$ upper bound.
+\end{corollary}
+\begin{proof}
+Set $R=M_k/2$. Any complex number $Rz_y$ has unique real coefficients $a_y^*,b_y^*$ in the basis $(1,\zeta)$; direct coordinate conversion gives
+$|a_y^*|,|b_y^*|\le (2/\sqrt3)R=M_k/\sqrt3$.
+Round each coefficient to a nearest integer, obtaining $a_y,b_y$; for $M_k\ge2$ these integers have absolute value at most $M_k$. The resulting vector $v=(a_y+b_y\zeta)_y$ is an attainable event vector by Corollary~\ref{cor:lattice}. Each component of $v-Rz$ has modulus at most $1$ (the sum of two complex rounding errors of modulus at most $1/2$), so $\|v-Rz\|_2\le\sqrt5$. The reverse triangle inequality gives $\|v\|_2\ge R-\sqrt5>0$. If $P_z$ is the orthogonal projection onto the span of $z$, then
+\[
+ \sin d_{\FS}([z],[v])
+ =\frac{\|(I-P_z)v\|_2}{\|v\|_2}
+ \le\frac{\sqrt5}{R-\sqrt5}
+ =\frac{2\sqrt5}{M_k-2\sqrt5}.
+\]
+This proves a finite-stage uniform covering bound, not a Gromov--Hausdorff convergence of exactly homogeneous finite metric spaces.\qedhere
+\end{proof}
+
+\section{Gauge-invariant additive measures: a countercontrol}
+The original gain-graph analysis proves a valid \emph{restricted} result: if each singleton walk receives the same function $F_1(g(w))$ of its raw gain, required to be switching-invariant for all graphs and vertices, then $F_1$ must be constant. That result does not cover event weights that also depend on whether the walk is closed.
+
+\begin{proposition}[Grade-one holonomy sensitivity]\label{prop:additive}
+On every finite connected $\Z_3$ gain graph, the assignment
+\begin{equation}
+ \mu_1(S)=\sum_{w\in S}\Big(1+\mathbf 1_{t(w)=x}\operatorname{Re}\zeta^{g(w)}\Big)
+ \label{eq:additive}
+\end{equation}
+is nonnegative, additive on disjoint event sets, and invariant under vertex switching. It depends nontrivially on the transport for some graphs and events.
+\end{proposition}
+\begin{proof}
+Every summand lies in $[0,2]$, so nonnegativity and additivity are immediate. Switching by $h:V\to\Z_3$ changes a walk gain by $h(t(w))-h(x)$; for $t(w)=x$ the change is zero, while for open walks the gain-dependent summand is absent. Hence every summand is invariant. On a triangle containing a closed walk of length $3$, trivial gain gives that singleton weight $2$, whereas holonomy $1\in\Z_3$ gives weight $1+\operatorname{Re}\zeta=1/2$.\qedhere
+\end{proof}
+\begin{remark}
+This is an explicit counterexample to the unrestricted sentence that \emph{no additive gauge-invariant set function can depend on transport}; it is not a counterexample to the narrower raw-gain-only lemma. The difference is a change in the admissible functional class, and cannot be silently used to invalidate the narrower theorem. Higher-order interference is therefore not forced by gauge invariance without additional restrictions on record structure or allowed singleton data.
+\end{remark}
+
+\section{Synchronized composition and missing sectors}
+For each integer $k$, let $\Hil_i(k)$ be the span of the single-walk event vectors reachable at length $k$ in a gain graph $\Gamma_i$ from its fixed start. Let $\Hil_i^{\rm all}=\operatorname{span}_{k\ge0}\Hil_i(k)$. A categorical graph product advances one edge in both factors per step, so at each fixed $k$ it satisfies the conditional factorization $\Hil_{12}(k)=\Hil_1(k)\otimes\Hil_2(k)$ for the one-dimensional character rule. However, taking spans and tensor products need not commute with the \emph{synchronized} length requirement.
+
+\begin{proposition}[Exact synchronization obstruction]\label{prop:sync}
+Let both factors be a four-cycle $0-1-2-3-0$, with all gains zero except the oriented edge $3\to0$ of gain $1\in\Z_3$, and start each factor at vertex $0$. Each factor has nontrivial cycle holonomy and
+\[
+ \Hil_1^{\rm all}=\Hil_2^{\rm all}=\C^4.
+\]
+But for the synchronized categorical product over all lengths,
+\begin{equation}
+ \Hil_{12}^{\rm sync}=
+ \big(\C^{\{0,2\}}\otimes\C^{\{0,2\}}\big)
+ \oplus
+ \big(\C^{\{1,3\}}\otimes\C^{\{1,3\}}\big),
+ \quad \dim\Hil_{12}^{\rm sync}=8<16.
+ \label{eq:sync}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The four-cycle is bipartite with even part $E=\{0,2\}$ and odd part $O=\{1,3\}$. Every length-$k$ walk from vertex $0$ ends in $E$ if $k$ is even and in $O$ if $k$ is odd. All four basis endpoints are realized when lengths vary, so each separately accessible all-length space is $\C^4$. In the synchronized product, both endpoints necessarily have the same parity. Conversely, every $E\times E$ endpoint pair is reachable at length $2$, and every $O\times O$ pair at length $1$. The gain character never vanishes, so singletons span the corresponding basis vectors. Thus precisely eight independent endpoint basis vectors occur.\qedhere
+\end{proof}
+
+\begin{remark}
+At length $2$ there are two routes from $0$ to $2$ with gains $0$ and $2$. Their coherent sum $1+\zeta^2$ has squared modulus $1$, rather than $4$ for trivial gains; the example is not a transport-free tree. Proposition~\ref{prop:sync} is compatible with the fixed-length factorization in the original manuscript. The missing eight dimensions concern the identification $\operatorname{span}_k(\Hil_1(k)\otimes\Hil_2(k))\stackrel?= (\operatorname{span}_k\Hil_1(k))\otimes(\operatorname{span}_k\Hil_2(k))$. Independent step counts or adequately aperiodic carriers remove this particular parity obstruction, but are additional structural choices. This is an instance of the standard connectivity phenomenon for categorical products of bipartite graphs~\cite{Weichsel}.
+\end{remark}
+
+\section{Formal dynamics do not establish physical time}
+The complex weighted adjacency $H$ of the five-vertex graph, defined by $H_{ba}=\zeta^{g(a\to b)}$ and its conjugate reverse, is Hermitian. Its diagonal satisfies
+\begin{equation}
+ \operatorname{diag}(H^2)=(4,2,2,2,2), \label{eq:notunitary}
+\end{equation}
+so no common scalar multiple of $H$ is unitary. Nevertheless, functional calculus supplies the \emph{formal} one-parameter unitary $U(s)=\exp(-isH)$ for any stipulated real parameter $s$. Its existence does not identify $s$ with a clock reading or fix a dimensionful energy scale.
+
+There is a second independent composition choice. For single-edge factor adjacencies $X=\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)$, the categorical-product generator and the Cartesian-product generator are respectively
+\[
+ H_\times=X\otimes X,\qquad H_\square=X\otimes I+I\otimes X.
+\]
+On the \emph{assumed} complex two-level tensor state space,
+\begin{align*}
+ e^{-isH_\times}|00\rangle
+   &=\cos(s)|00\rangle-i\sin(s)|11\rangle,\\
+ e^{-isH_\square}|00\rangle
+   &=(\cos(s)|0\rangle-i\sin(s)|1\rangle)^{\otimes2}.
+\end{align*}
+At $s=\pi/4$ the first vector is maximally entangled and the second is a product vector. Thus the graph product determines whether an interaction is mathematically stipulated, and no preferred physical generator follows from the tensor state space alone. The factors $i$, $s$ and the Hilbert representation have all been inserted as mathematics. No empirical time, dynamical law or physical entanglement has been derived.
+
+\section{Reconciliation with selective-filter arguments}
+Within the separate, explicitly imported standard complex two-system density-matrix calculus, let
+$K_t=(1-t)\operatorname{Sep}_2+t\mathcal D_2$ with $0<t<1$. The existing internal filter witnesses establish that $K_t$ is not stable under all positive-probability normalized branches of allowed ordinary quantum product instruments~\cite{A3,B3}. One exact supplementary observation identifies a nonpostselected sensitivity criterion. For
+\[
+ \rho_t=(1-t)|00\rangle\langle00|+t|\Psi^+\rangle\langle\Psi^+|,
+ \qquad F=\operatorname{diag}(\sqrt{x},1),
+\]
+apply $F\otimes F$. The success probability is $p=x[t+(1-t)x]$ and the conditional Bell fidelity is $f=t/[t+(1-t)x]$. The sharp Bell bound within $K_t$ is $(1+t)/2$. Therefore the \emph{unconditional witness excess} is
+\[
+ W_t(x)=p\left[f-\frac{1+t}{2}\right]
+ =\frac{1-t}{2}x\big[t-(1+t)x\big].
+\]
+This quadratic is maximized over $x\in[0,1]$ at $x_*=t/[2(1+t)]$, with
+\begin{equation}
+ W_t(x_*)=\frac{t^2(1-t)}{8(1+t)}>0. \label{eq:filter}
+\end{equation}
+The identity is an internal algebraic complement to the published pair of Director submissions, not empirical statistical power. The maximum is over the \emph{specified symmetric diagonal filter family}, not all possible quantum instruments or all admissible theories.
+
+\section{Boundaries and evidentiary standing}
+The following premises are \emph{not} derived: the cyclic group and character; coherent sum of gains; the squared-modulus measure; physically meaningful preparation and measurement procedures; complex rather than real/quaternionic alternatives; unrestricted instrument closure; independence of composite preparation; an empirical clock; physical scales and constants; an observed or emergent Hamiltonian flow; a classical Hamiltonian limit; experimentally calibrated consequences. The graph, primitive cover and event spaces are stipulated mathematical constructions. The projective-density result is a positive existence theorem in that framework and no more.
+
+The integer matrix identities, gauge invariance and parity ranks have exact proofs and reproducible finite checks. The reported random projective approximation samples are diagnostics, not proof of density, independent replication, or statistical evidence. Every numerical row is retained, including endpoint controls and small floating-point differences. No result has been independently refereed or experimentally verified.
+
+\begin{thebibliography}{9}
+\bibitem{G8} K. Justus, \emph{Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule}, program paper G8, 12 November 2026, supplied unrefereed manuscript (\emph{internal research provenance}).
+\bibitem{A3} Director A (GPT-6), \emph{Instrument Closure and Multipartite Selection}, supplied mathematical manuscript, 12 November 2026 (\emph{internal research provenance; not independent replication}).
+\bibitem{B3} Director B (GPT-6), \emph{Selective Local Filtering and Odd Cycle Algebra}, supplied mathematical manuscript, 12 November 2026 (\emph{internal research provenance; not independent replication}).
+\bibitem{Weichsel} P. M. Weichsel, ``The Kronecker product of graphs,'' \emph{Proceedings of the American Mathematical Society} \textbf{13} (1962), 47--52. \href{https://doi.org/10.1090/S0002-9939-1962-0133816-6}{doi:10.1090/S0002-9939-1962-0133816-6}.
+\bibitem{GrossTucker} J. L. Gross and T. W. Tucker, ``Fast computations in voltage graph theory,'' \emph{Annals of the New York Academy of Sciences} \textbf{319} (1979), 247--253. \href{https://doi.org/10.1111/j.1749-6632.1979.tb32796.x}{doi:10.1111/j.1749-6632.1979.tb32796.x}.
+\end{thebibliography}
+\end{document}

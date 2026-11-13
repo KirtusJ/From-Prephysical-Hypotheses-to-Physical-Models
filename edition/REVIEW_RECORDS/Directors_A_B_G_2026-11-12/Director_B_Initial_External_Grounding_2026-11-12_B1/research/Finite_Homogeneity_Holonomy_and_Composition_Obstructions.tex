@@ -1,0 +1,138 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.00in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,enumitem,microtype}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\setlength{\parskip}{0.32em}\setlength{\headheight}{14pt}
+\setlength{\parindent}{1em}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Director B | Mathematical examination}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CP}{\mathbb C\mathrm P}
+\newcommand{\RP}{\mathbb R\mathrm P}
+\newcommand{\HP}{\mathbb H\mathrm P}
+\newcommand{\Om}{\Omega}
+\title{\bfseries Holonomy, Finite Homogeneity, and the Nonidentification of Quantum Composition\\[3pt]\large A mathematical examination of prephysical-to-physical bridge proposals}
+\author{\textbf{Kirtus Justus}\\Theoretical Physicist\\Port Coquitlam, British Columbia, Canada}
+\date{12 November 2026, B.C. Pacific Time\\\small Internal mathematical research, unrefereed}
+\begin{document}\maketitle
+\begin{abstract}
+We examine four bridge proposals using explicit hypothesis-to-conclusion bookkeeping. First, a geometric determinant identity holds on \(\CP^n\): for a nonorthogonal geodesic polygon, the complex determinant of Levi--Civita tangent holonomy is the \((n+1)\)-st power of the normalized Bargmann invariant, relative to fixed connection and inner-product conventions. Second, real three-level pure-state geometry \(\RP^2\) has reflection monodromy despite local rotational holonomy, giving a concrete global discriminator from \(\CP^1\). Third, finite exactly homogeneous subsets of the Bloch sphere have covering radius at least \(\arccos(59/60)\simeq10.47531384^\circ\); a published Gromov--Hausdorff theorem rules out the limit of finite homogeneous metric spaces being any \(\CP^n\). Fourth, even complete elementary-system complex quantum geometry and probabilities do not identify the composite state space: minimal separable and ordinary quantum composites are operationally different. These are conditional mathematical results and obstructions. None identifies a prephysical substrate, a clock, quantum dynamics, or the emergence of classical mechanics.
+\end{abstract}
+
+\section{Conventions and limits}
+Let \(H=\mathbb C^{n+1}\) with the inner product conjugate linear in the first slot and linear in the second. Rays \([\psi]\) of unit vectors form \(\CP^n\) with the standard Fubini--Study metric and natural complex structure \(J\). We distinguish: \emph{(i)} supplying this geometry as a mathematical premise, \emph{(ii)} proving a relation inside it, and \emph{(iii)} independently identifying that geometry through preparations and records. Only (i) and (ii) are performed below.
+
+For rays \(x_0,\ldots,x_{m-1}\) with nonzero consecutive overlaps, put \(x_m=x_0\), choose normalized representatives, and define
+\begin{equation}\label{eq:B}
+B(x_0,\ldots,x_{m-1})=\prod_{i=0}^{m-1}\langle\psi_i,\psi_{i+1}\rangle,\qquad b=B/|B|\in U(1).
+\end{equation}
+Each edge is the unique shortest Fubini--Study geodesic. Orthogonal adjacent rays, with nonunique shortest geodesics, are excluded. \(\operatorname{Hol}^{LC}(\gamma)\) transports \(T^{1,0}_{x_0}\CP^n\) around the indicated oriented geodesic polygon.
+
+\section{Exact determinant identity with its genuine inputs}
+\begin{theorem}[Determinant and Bargmann product]\label{thm:det}
+Under the conventions above,
+\begin{equation}\label{eq:main}
+\boxed{\det_{\mathbb C}\operatorname{Hol}^{LC}(\gamma)=b^{\,n+1}.}
+\end{equation}
+For reversed traversal both sides are complex conjugated. The usual real determinant of tangent holonomy is instead identically \(+1\); the complex determinant uses \(J\).
+\end{theorem}
+\begin{proof}
+Let \(L\rightarrow\CP^n\) be the tautological Hermitian line bundle with the connection obtained by orthogonal projection from the trivial flat \(H\)-bundle. Along a shortest nonorthogonal projective geodesic, a horizontal lift has endpoint phase chosen to make the overlap with the starting lift real and positive. Iterating the phase choices around the polygon yields line holonomy \(h_L=b^{-1}\). Let \(Q=H/L\) carry the quotient Hermitian connection. The standard Hermitian holomorphic bundle identities, respecting the induced Chern connections, give
+\[
+T^{1,0}\CP^n\cong\operatorname{Hom}(L,Q)=L^*\otimes Q,
+\quad \det Q\cong L^*,\quad
+\det T^{1,0}\CP^n\cong (L^*)^{\otimes(n+1)}.
+\]
+Because the Fubini--Study metric is K\"ahler, its Levi--Civita connection on \(T^{1,0}\CP^n\) equals the Chern connection. The determinant connection therefore has holonomy \(h_L^{-(n+1)}=b^{n+1}\). The result presupposes a complex Hilbert space, a unitary inner product, its Fubini--Study geometry, and the induced connections. It does not derive these data from a relational prephysical model.
+\end{proof}
+\begin{remark}[Metric and orientation caveat]
+Complex conjugation of every ray is a Fubini--Study isometry, preserves all transition magnitudes \(|\langle\psi,\phi\rangle|^2\), but maps \(J\mapsto-J\), \(\omega\mapsto-\omega\) and \(b\mapsto\bar b\). Thus an unoriented transition-probability metric alone does not canonically select a signed Bargmann phase. In particular, recovering \(b\) from the determinant as an \((n+1)\)-st root has a root ambiguity; when \(J\) is not fixed, its complex determinant is not an intrinsically signed scalar. Complex-conjugate descriptions can be physically equivalent, so this observation is a representational nonselection, not evidence of distinct physics.
+\end{remark}
+\begin{remark}[Relation to Schild's ladder]
+Schild's ladder is a \emph{numerical approximation} to parallel transport, not an independent production mechanism for complex amplitudes. Guigui and Pennec \cite{guigui} prove convergence for appropriately rescaled iterates; dividing only the base path without scaling transported vectors need not converge. The finite numerical observations ascribed to other directors are not substituted for this theorem or for a source inspection.
+\end{remark}
+
+\section{A real three-level monodromy witness}
+\begin{proposition}[Full holonomy of \(\RP^2\)]\label{prop:rp}
+Take \(\RP^2=S^2/(x\sim-x)\) with its round quotient metric. Its restricted tangent holonomy is \(SO(2)\), whereas the full tangent holonomy contains reflections and equals \(O(2)\). The real commutant of the latter is \(\mathbb R I\), while that of the former is \(\{aI+bJ:a,b\in\mathbb R\}\simeq\mathbb C\).
+\end{proposition}
+\begin{proof}
+At \(p=(0,0,1)\), follow the great semicircle \(\gamma(t)=(\sin t,0,\cos t)\), \(0\le t\le\pi\), from \(p\) to \(-p\). The geodesic tangent \(T(t)=(\cos t,0,-\sin t)\) and \(e_y=(0,1,0)\) are parallel. At \(t=\pi\), these are \((-1,0,0)\) and \((0,1,0)\). The antipodal identification has differential \(-I\), so the induced return map on the initial ordered basis \((e_x,e_y)\) is \(\operatorname{diag}(1,-1)\). This has determinant \(-1\) and is a noncontractible loop in \(\RP^2\). The local curvature generates all \(SO(2)\) rotations from contractible loops. Hence the full holonomy is \(O(2)\). Commuting first with all rotations yields \(aI+bJ\); commuting with the displayed reflection forces \(b=0\).
+\end{proof}
+The standard pure-state space for a real three-dimensional Hilbert system is \(\RP^2\), while a complex two-dimensional Hilbert system has \(\CP^1\cong S^2\). After matching constant curvature scales they are locally indistinguishable but globally differ by the above loop; this statement assumes those pure-state geometries, and is not a physical detection proposal.
+
+\section{Quantitative finite-carrier obstruction}
+For a finite \(S\subset S^2\), let \(R(S)=\sup_{x\in S^2}\min_{s\in S}d_{S^2}(x,s)\), with unit-sphere geodesic distance. Call \(S\) exactly homogeneous when the distance-isometry group of \(S\) acts transitively on \(S\).
+\begin{theorem}[Uniform uncovered spherical cap]\label{thm:cap}
+Every nonempty finite exactly homogeneous \(S\subset S^2\) satisfies
+\[
+\boxed{R(S)\ge\arccos(59/60)=10.475313843\ldots^\circ.}
+\]
+Here \(10.48^\circ\) is a \emph{rounded approximation}, not a rigorous lower bound of exactly \(10.48^\circ\). The inequality is not claimed sharp.
+\end{theorem}
+\begin{proof}
+If \(S\) lies in a proper linear subspace of \(\mathbb R^3\), some point at distance at least \(\pi/2\) from that subspace suffices. Otherwise every distance-preserving permutation of \(S\) extends uniquely to an orthogonal transformation of \(\mathbb R^3\); the full symmetry group \(\Gamma\le O(3)\) is finite and transitive on \(S\). Its orientation-preserving normal subgroup \(\Gamma^+=\Gamma\cap SO(3)\) has index at most two.
+
+By the finite subgroup classification of \(SO(3)\) \cite{bui}, \(\Gamma^+\) is cyclic, dihedral, tetrahedral, octahedral, or icosahedral. In the last three cases \(|\Gamma^+|\le60\), hence \(|S|\le|\Gamma|\le120\). If \(N=|S|\), spherical caps of radius \(r\) have area \(2\pi(1-\cos r)\). Covering the sphere requires \(N2\pi(1-\cos R(S))\ge4\pi\), hence
+\(R(S)\ge\arccos(1-2/N)\ge\arccos(59/60)\).
+
+In the cyclic $C_k$ cases with $k\ge2$ and dihedral $D_k$ cases with $k\ge3$, the principal rotation axis is preserved as an unoriented axis by the full normalizing group \(\Gamma\). The orbit \(S\) therefore lies in at most two latitude circles with colatitudes \(\theta\) and \(\pi-\theta\). Regardless of \(\theta\), a point on an appropriate latitude has colatitude distance at least \(\pi/4\) from those circles, so \(R(S)\ge\pi/4\). Low-order exceptional axial cases have \(|\Gamma^+|\le4\), thus \(|S|\le8\) and the area bound applies. This covers all cases.
+\end{proof}
+\begin{corollary}[No exact-homogeneity continuum through GH limits]\label{cor:gelander}
+No sequence of finite homogeneous metric spaces can converge in Gromov--Hausdorff distance to \(\CP^n\) for any \(n\ge1\), with its Fubini--Study metric.
+\end{corollary}
+\begin{proof}
+Gelander \cite{gelander} proves that the only manifolds obtainable as Gromov--Hausdorff limits of finite homogeneous metric spaces are tori. The compact simply connected \(\CP^n\) is not a torus.
+\end{proof}
+\begin{remark}
+The cap theorem concerns finite \emph{embedded} exact-homogeneity orbits. Gelander's theorem is stronger but depends specifically on Gromov--Hausdorff convergence and exact finite metric homogeneity. Neither prohibits nonhomogeneous approximants, asymptotically homogeneous limits, or different nonmetric limit schemes.
+\end{remark}
+
+\section{Composition remains unselected even with complete local quantum data}
+\begin{theorem}[Elementary-system geometry does not identify quantum composites]\label{thm:composite}
+There exist two consistent finite-dimensional operational state-space constructions with identical full elementary qubit state spaces \(\mathcal S_1=\{\rho\succeq0:\operatorname{Tr}\rho=1\}\), identical local effects \(0\preceq E\preceq I\), and identical local reversible unitaries, hence identical \(\CP^1\) geometry, transition probabilities, Bargmann products and holonomy, but different two-system state spaces and distinguishable correlations.
+\end{theorem}
+\begin{proof}
+For the ordinary complex quantum composite set
+\(\mathcal S^{Q}_{AB}=\{\rho_{AB}\succeq0:\operatorname{Tr}\rho_{AB}=1\}\). For the minimal composite set
+\[
+\mathcal S^{\mathrm{sep}}_{AB}=\operatorname{conv}\{\rho_A\otimes\rho_B:\rho_A,\rho_B\in\mathcal S_1\}.
+\]
+Both contain all product preparations, are convex and compact, admit every standard local effect and independent local operation, and give the same statistics on every elementary-system experiment. One may consistently restrict global state-changing instruments in the minimal theory to separability-preserving instruments, including local CPTP instruments and measure-and-reprepare-separable instruments. An entangled state is not thereby silently preparable by a global instrument.
+
+For the Bell ray \(|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2\), the partial transpose of its projector has eigenvalues
+\(\{-1/2,1/2,1/2,1/2\}\). Thus it is not separable. Set \(A_0=Z\), \(A_1=X\),
+\(B_0=(Z+X)/\sqrt2\) and \(B_1=(Z-X)/\sqrt2\).
+With local dichotomic effects, the CHSH combination reaches \(2\sqrt2\) on \(|\Phi^+\rangle\) in the quantum composite.
+Every minimal-composite state is a convex mixture of products, so its CHSH correlations admit a local hidden-variable factorization and obey \(|\mathrm{CHSH}|\le2\).
+The two operational constructions therefore differ, even though all their elementary-system geometry and statistics agree.
+\end{proof}
+This is a \emph{nonidentification witness for an insufficient premise set}, not a disproof of quantum composition or of reconstruction theorems that additionally assume compositional axioms. The established generalized-probabilistic-theory distinction between minimal and other tensor products is discussed in \cite{eftaxias}.
+
+\section{Conditional classification and scope of third-order interference}
+Barnum, M\"uller and Ududec \cite{barnum} require \emph{three} single-system postulates (classical decomposability, strong symmetry, and absence of third-order interference) to obtain a restricted list of theories. No-third-order-interference \emph{alone} does not establish that list. Even when a symplectic/holonomy test discriminates among the listed pure-state geometries, it does not supply the operational facts establishing the postulates, composition, dynamics, or an experimentally calibrated geometry. The real \(\RP^2\) example in Proposition~\ref{prop:rp} illustrates why full holonomy, not merely restricted holonomy, must be used if a global commutant criterion is proposed.
+
+\section{Research disposition and next mathematical obligations}
+\begin{enumerate}[leftmargin=1.7em,itemsep=1pt]
+\item Theorem~\ref{thm:det} is a proved \emph{conditional geometric identity}: it presupposes the very complex quantum geometric data a prephysical emergence must explain.
+\item Proposition~\ref{prop:rp} is a concrete exact global obstruction to conflating local holonomy with global topology.
+\item Theorem~\ref{thm:cap} and Corollary~\ref{cor:gelander} constrain \emph{exactly homogeneous finite metric} strategies; they say nothing universal about approximate/asymmetric finite models.
+\item Theorem~\ref{thm:composite} is an explicit nonselection witness for composite physics given all elementary-system quantum data. Any total-ontology map must add and justify composition and admissible dynamics.
+\item No prephysical primitive set, emergence of the Born rule, physical clocks, physical observations, or quantum-to-classical scaling limit is established. The parent Initial External Grounding stage stays open.
+\end{enumerate}
+
+\paragraph{Reproducibility and assistance.} A separate Python verifier checks 1,000 seeded Bloch-sphere triangle identities, the phase-conjugation symmetry, the one-loop reflection matrix, a Bell/PPT witness, and the decimal radius; these are finite checks, not proofs of the general theorems. This AI-assisted research examination was drafted by GPT-6 (OpenAI), acting as LLM Director B at the research direction of Kirtus Justus. The author remains responsible for scientific claims; the assistant's work is \emph{internal research provenance}, not independent expert review or provider endorsement. The Director Z disposition was available as quoted text; its claimed G7 manuscript and Z1 archive were not independently supplied for inspection in this examination.
+
+\begin{thebibliography}{9}\setlength{\itemsep}{2pt}
+\bibitem{gelander} T. Gelander, ``Limits of finite homogeneous metric spaces,'' \emph{L'Enseignement Math\'ematique} \textbf{59} (2013), 195--206. \url{https://ems.press/content/serial-article-files/44250}.
+\bibitem{bui} H. T. A. Bui, ``Classifying the finite subgroups of $SO_3$,'' University of Chicago REU notes (2020). \url{https://math.uchicago.edu/~may/REU2020/REUPapers/Bui%2CAn.pdf}.
+\bibitem{guigui} N. Guigui and X. Pennec, ``Numerical Accuracy of Ladder Schemes for Parallel Transport on Manifolds,'' \emph{Found. Comput. Math.} \textbf{22} (2022), 757--790, published online 2021. \url{https://doi.org/10.1007/s10208-021-09515-x}.
+\bibitem{barnum} H. Barnum, M. P. M\"uller, and C. Ududec, ``Higher-order interference and single-system postulates characterizing quantum theory,'' \emph{New J. Phys.} \textbf{16} (2014), 123029. \url{https://doi.org/10.1088/1367-2630/16/12/123029}.
+\bibitem{eftaxias} G. Eftaxias, M. Weilenmann, and R. Colbeck, ``Multisystem measurements in generalized probabilistic theories and their role in information processing,'' \emph{Phys. Rev. A} \textbf{108} (2023), 062212. \url{https://doi.org/10.1103/PhysRevA.108.062212}.
+\bibitem{bargmann} E. M. Rabei, Arvind, N. Mukunda, and R. Simon, ``Bargmann invariants and geometric phases: A generalized connection,'' \emph{Phys. Rev. A} \textbf{60} (1999), 3397--3409. \url{https://doi.org/10.1103/PhysRevA.60.3397}.
+\end{thebibliography}
+\end{document}

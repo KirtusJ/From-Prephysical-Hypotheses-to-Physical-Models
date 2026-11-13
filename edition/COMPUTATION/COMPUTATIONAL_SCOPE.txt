@@ -1,0 +1,124 @@
+COMPUTATIONAL MATERIALS AND SCOPE
+
+1. Current calculations and evidence
+
+Two scientific calculation programs were read and executed for the current
+additions. They use Python 3.12.14 standard-library arbitrary-precision integers
+and Fraction arithmetic. They calculate stipulated probability models, not
+measurements of a device. Stored-result comparisons and document checks are
+separate operations and are not counted as additional scientific experiments.
+
+A. Declared joint-calibration experiment
+
+Computational_Material/Joint_Calibration_Check/
+  verify_declared_calibration_experiment.py
+  Declared_Calibration_Exact_Checks.json
+  compare_exact_results.py
+  Exact_Result_Comparison.json
+
+The fresh formula-based calculation uses no supplied result file as input.
+Its design is 80 source observations, four observations on each reference,
+independent binomial streams, seven target values and three values of each
+reference probability. This gives 63 parameter points and 45 distinct laws.
+Each law has 2,025 possible count triples. Exact inclusive-tail acceptance is
+strictly greater than its cutoff; equality is rejected.
+
+All 639 primary fraction quantities agree with the supplied calculation:
+whole-set and point coverage, empty-set probabilities, expected cardinalities
+and true-law admission. The comparison also agrees on all 45 identified sets.
+All 369 fractions and 45 sets checked by the supplied second arithmetic route
+also agree. These counts overlap; they must not be added as distinct results.
+The rounded coverage values in the article were separately compared with
+the exact fractions. This is shared-source work, not independent replication.
+
+Minimum whole-set / point coverage on the declared finite family:
+  Joint source and calibration:          0.9863278192 / 0.9879076023
+  Calibration estimates treated exact:   0.1365905911 / 0.3421980437
+  Known calibration:                    0.9544970010 / 0.9544970010
+
+Every one of the 45 plug-in laws has whole-set coverage below 0.95. At target
+1/2 and reference probabilities 1/5 and 4/5, joint coverage is approximately
+0.9999935614 but the expected reported set has 6.9820796237 of seven targets.
+The example demonstrates undercoverage from omitted uncertainty and the
+possible low precision of valid joint inference. It is not typical-performance
+evidence or a comparison with all calibration-estimation procedures.
+
+The checker also records a tail-equality control, a dependence counterexample,
+a nonzero population calibration interval and rational bounds supporting the
+mean-cost estimate in the entropy example. Infinite nonattainment is proved
+analytically; it is not inferred from a finite truncation. None of the 51
+distinct tested sample-size/probability/error triples in the main experiment
+hits the tail threshold exactly, so the strict convention does not alter those
+particular reported values relative to the corresponding closed convention.
+
+The two supplied calibration programs and results are under
+Related_Source_Editions/Assessment_and_Further_Results/computations/.
+They were read, bound to the supplied execution account and compared, but were
+not rerun for this current preparation. Their cited execution account is
+retained under that folder's evidence/. The filename containing 'Independent'
+denotes a different arithmetic route with disclosed shared lineage and exposure.
+
+B. Precision under weak readout gain
+
+Computational_Material/Weak_Readout_Gain/
+  verify_weak_gain_precision.py
+  Weak_Gain_Precision_Results.json
+
+The program records 197 successful exact predicates. It covers 24 declared
+sample-size/separation cases, the exact binomial total-variation formula,
+affinity and coupling inequalities, small ordered-sample controls, a dependence
+counterexample, finite witnesses for a disconnected projection and exact
+integer sample-threshold controls. The continuum projection and general
+confidence bounds rest on the accompanying proofs.
+
+Square roots and decimal probability summaries in the result are displays,
+not outward-rounded interval certificates. Exact comparisons use rational
+values or squared inequalities. The sample-threshold calculation avoids
+floating-point logarithms and checks the adjacent integer threshold. The
+sufficient upper sample counts use the rigorous conservative log(120) < 5
+inequality. The necessary source requirement and sufficient three-stream
+construction have different guarantees and are not claimed to give optimal
+constants or optimal allocation.
+
+2. Reproduction of the current calculations
+
+Keep the supplied results as comparison files. From the package root, create
+a new Run_Results directory. Copy only the declared-model checker to a fresh
+subdirectory because it writes beside itself and refuses an existing result:
+
+  mkdir -p Run_Results/Declared_Calibration
+  cp Computational_Material/Joint_Calibration_Check/verify_declared_calibration_experiment.py Run_Results/Declared_Calibration/
+  python -I -B Run_Results/Declared_Calibration/verify_declared_calibration_experiment.py
+  python -I -B Computational_Material/Joint_Calibration_Check/compare_exact_results.py --fresh Run_Results/Declared_Calibration/Declared_Calibration_Exact_Checks.json
+
+Run the weak-gain checker with a new output path:
+
+  python -I -B Computational_Material/Weak_Readout_Gain/verify_weak_gain_precision.py --output Run_Results/Weak_Gain_Precision_Results.json
+
+The stored-result comparator alone does not rerun either probability
+calculation. It verifies fractions and target sets in the specified files.
+The supplied calibration programs can also be run from a working copy of
+their complete computations directory; the second requires the primary source
+and primary result at the retained relative paths.
+
+3. Earlier calculations retained with the collection
+
+Computational_Material/Prior_Computation_Account.txt preserves the full preceding
+account, including exact reproduction commands and source/result identities.
+Its references to fresh runs describe that earlier preparation. It covers the
+graph and readout certificates; four finite-example suites reporting 680, 418,
+449 and 1,735 predicates; the recovery checker; selected operational examples;
+the separate 11,807-predicate calibration study; and selected supplied channel
+programs. These are different computations with different scopes. They were
+not all rerun merely to assemble the present volumes.
+
+The earlier 11,807-predicate joint-calibration program remains at
+Computational_Material/Joint_Calibration/verify_joint_calibration.py.
+It is distinct from the supplied 63-parameter experiment in the companion
+source folder. Neither source or result was overwritten by the other.
+
+Other archived programs and expected outputs retain their source-reported
+status. A stored output is not itself evidence of a new execution. Agreement
+with it establishes only the recorded calculation under the stated inputs
+and environment. General theorems and physical interpretations retain their
+separate mathematical and empirical requirements.

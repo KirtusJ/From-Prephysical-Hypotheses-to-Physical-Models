@@ -1,0 +1,120 @@
+{
+ "X_controls_for_order_8": {
+  "passed": true,
+  "largest_relative_difference_of_sigma3_rule_from_squared_modulus": 196.99494936611927,
+  "largest_defect_of_fourth_power": 524.2152954766495
+ },
+ "H_every_gain_reached_with_multiplicity_on_both_vertices": {
+  "passed": true,
+  "rows": [
+   {
+    "q": 2,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 5
+   },
+   {
+    "q": 4,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 6
+   },
+   {
+    "q": 6,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 7
+   },
+   {
+    "q": 8,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 8
+   },
+   {
+    "q": 10,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 9
+   },
+   {
+    "q": 12,
+    "length_at_which_every_gain_has_3_walks_to_both_vertices": 10
+   }
+  ]
+ },
+ "D_solution_space_is_spanned_by_the_conjugate_squared_moduli": {
+  "passed": true,
+  "rows": [
+   {
+    "q": 2,
+    "euler_phi_over_2": 1,
+    "moduli": 6,
+    "equations": 5639,
+    "solution_dimension": 1,
+    "largest_defect_of_conjugate_rules": 0.0,
+    "conjugate_characters": [
+     1
+    ]
+   },
+   {
+    "q": 4,
+    "euler_phi_over_2": 1,
+    "moduli": 15,
+    "equations": 5615,
+    "solution_dimension": 1,
+    "largest_defect_of_conjugate_rules": 3.552713678800501e-15,
+    "conjugate_characters": [
+     1
+    ]
+   },
+   {
+    "q": 6,
+    "euler_phi_over_2": 1,
+    "moduli": 14,
+    "equations": 5650,
+    "solution_dimension": 1,
+    "largest_defect_of_conjugate_rules": 1.7763568394002505e-15,
+    "conjugate_characters": [
+     1
+    ]
+   },
+   {
+    "q": 8,
+    "euler_phi_over_2": 2,
+    "moduli": 83,
+    "equations": 5600,
+    "solution_dimension": 2,
+    "largest_defect_of_conjugate_rules": 7.105427357601002e-15,
+    "conjugate_characters": [
+     1,
+     3
+    ]
+   },
+   {
+    "q": 10,
+    "euler_phi_over_2": 2,
+    "moduli": 96,
+    "equations": 5604,
+    "solution_dimension": 2,
+    "largest_defect_of_conjugate_rules": 7.993605777301127e-15,
+    "conjugate_characters": [
+     1,
+     3
+    ]
+   },
+   {
+    "q": 12,
+    "euler_phi_over_2": 2,
+    "moduli": 85,
+    "equations": 5620,
+    "solution_dimension": 2,
+    "largest_defect_of_conjugate_rules": 2.842170943040401e-14,
+    "conjugate_characters": [
+     1,
+     5
+    ]
+   }
+  ],
+  "seed": 20261115
+ },
+ "U_unique_rule_exactly_for_orders_2_4_6": {
+  "passed": true
+ },
+ "_summary": {
+  "predicates": 4,
+  "passed": 4,
+  "seed": 20261115,
+  "numpy": "2.5.3"
+ }
+}

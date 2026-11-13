@@ -1,0 +1,254 @@
+\section{Quantum State Families, Symmetry and Relative References}
+\label{qua:chapter}
+
+This chapter uses ordinary complex qubit Hilbert spaces, their tensor products, density operators, partial traces and Born measurements as explicit assumptions. The examples compare the consequences of different state families and selection rules. None derives that quantum apparatus from signed labels or from a relational quotient. In particular, preserving one classical outcome law need not preserve transverse quantum observations, and separately consistent state families need not satisfy one common selection principle.
+
+\subsection{A shared latent source and a supplied quantum representation}
+\label{qua:shared}
+Fix $0<r<1$ and $c=\sqrt{1-r^2}$. A fair latent variable $T\in\{r,-r\}$ and conditionally independent signs $S_i\in\{-1,1\}$ with $\mathbb E[S_i\mid T]=T$ give an exchangeable family at every size. All restrictions are consistent. The latent prior and conditional sampling rule are part of this construction; signed cancellation alone does not determine them.
+
+On qubits define the pure states
+\[
+ \rho_\pm=\tfrac12(I+cX\pm rZ),\qquad
+ \Omega_N=\tfrac12(\rho_+^{\otimes N}+\rho_-^{\otimes N}).
+\]
+Their $Z$ measurement law is the preceding classical law. The family is separable and consistent under arbitrary deletions. Choose phases of the branch vectors so their inner product is $c$. The two nonzero eigenvalues of $\Omega_N$ are
+\[
+ \lambda_\pm=(1\pm c^N)/2,
+\]
+because the nonzero spectrum of an equal mixture of two unit vectors is that of their $2\times2$ Gram matrix divided by two. Thus $\Omega_N$ is not faithful on the full $2^N$-dimensional algebra for $N\ge2$. A modular evolution requiring an invertible full-space state must be restricted to its support or supplied with an explicit faithful regularization; neither convention selects a physical clock.
+
+Writing $\bar\rho=(\rho_++\rho_-)/2$, one obtains
+\[
+ \Omega_2-\bar\rho^{\otimes2}=\frac{r^2}{4}Z\otimes Z,
+ \qquad D_{\rm tr}(\Omega_2,\bar\rho^{\otimes2})=r^2/2.
+\]
+Here and throughout $D_{\rm tr}(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1$.
+The correlation matrix of $\Omega_2$ is $\operatorname{diag}(c^2,0,r^2)$. The optimized CHSH value for spin measurements is therefore
+$2\sqrt{c^4+r^4}\le2$, by the two-largest-squared-singular-values criterion~\cite{horodecki}.
+For $0<r<1$ the two branch states do not commute. The absence of CHSH violation is consequently not a statement that every quantum correlation notion vanishes; the state is separable but is not diagonal in a fixed product basis.
+
+A static projective family is not a copying dynamics. If one branch-blind CPTP map sent each $\rho_\pm^{\otimes N}$ to $\rho_\pm^{\otimes(N+1)}$, monotonicity of squared fidelity would require $c^{2(N+1)}\ge c^{2N}$, which is false. A preparation that knows the branch, or access to additional correlated resources, changes this problem.
+
+A commutative signed algebra remains commutative under any algebra representation. It cannot supply noncommuting $X$ and $Z$ merely by renaming its elements. The complex crossed product of the two-point function algebra with its sign-swap action is $M_2(\mathbb C)$: the diagonal minimal projections together with the swap generate all matrix units. The swap operation and complex algebra are additional inputs. Likewise, the supported double well $\lambda(t^2-r^2)^2$ vanishes on both allowed latent values, so its coupling does not affect the already chosen source law. The proposed cost from $Q=mZ$ and $R=X$ obeys $[Q,R]^*[Q,R]=4m^2I$ and cannot select a state or transverse direction.
+
+\subsection{Phase-sensitive observations with an unchanged signed law}
+\label{qua:phase}
+The supplied diagonal unitary $U_\phi=\exp(i\phi Z\otimes Z)$ commutes with every $Z$-outcome projector. It preserves the complete signed law of a pair while changing other measurements. Direct Pauli conjugation yields
+\begin{equation}
+ U_\phi\Omega_2U_\phi^*=\tfrac14\{II+c\cos(2\phi)(XI+IX)
+ -c\sin(2\phi)(YZ+ZY)+c^2XX+r^2ZZ\}.
+ \label{qua:phaseform}
+\end{equation}
+Tensor signs have been suppressed only in this equation. At $\phi=\pi/4$, the two-party negativity is $c^2/2$ and the optimized CHSH value is $2\sqrt{1+c^4}$. These follow from the partial-transpose spectrum and from the correlation matrix
+\[
+ T_\phi=\begin{pmatrix}c^2&0&0\\0&0&-c\sin(2\phi)\\0&-c\sin(2\phi)&r^2\end{pmatrix}.
+\]
+At $\phi=\pi/4$ its eigenvalues are $c^2,1,-c^2$.
+For the concrete value $r=1/2$, partial-transpose negativity appears whenever $\sin(2\phi)\ne0$, whereas CHSH violation requires
+\[
+ \sin^2(2\phi)>(7-\sqrt7)/12.
+\]
+Indeed, the larger eigenvalue of the lower block is
+$[1+\sqrt{1+48\sin^2(2\phi)}]/8$ and the other relevant singular value is $3/4$. A negative partial transpose, a CHSH violation, and a usable physical Bell experiment are distinct requirements.
+
+\begin{proposition}[A matched projective family]
+For $t=\pm r$, let $\rho_t=(I+cX+tZ)/2$,
+$\sigma_t=U_\phi\rho_t^{\otimes2}U_\phi^*$ and $\tau_t=\operatorname{Tr}_2\sigma_t$.
+Then
+\[
+ \Xi_{2k}=\tfrac12\sum_{t=\pm r}\sigma_t^{\otimes k},\qquad
+ \Xi_{2k+1}=\tfrac12\sum_{t=\pm r}\sigma_t^{\otimes k}\otimes\tau_t
+\]
+is consistent under deletion of its last factor and preserves the complete shared-source signed law. Its pair assignment is an additional ordering convention.
+\end{proposition}
+\begin{proof}
+The pair state is symmetric in its two factors, and $\operatorname{Tr}\tau_t=1$. Tracing the last factor of an even member gives the preceding odd member; tracing the last factor of an odd member gives the preceding even member. Diagonal phases do not change the $Z$ law and $\tau_t$ has $Z$ mean $t$, so every displayed family member has the stated classical law. Importantly, the odd unpaired factor is $\tau_t$, not the original $\rho_t$. Substituting $\rho_t$ would generally destroy the asserted consistency.
+\end{proof}
+At $\phi=\pi/4$,
+$\tau_t=\tfrac12(I-ctY+tZ)$.
+Two factors from different pairs have state $\tfrac12\sum_t\tau_t\otimes\tau_t$, which is separable. Its difference from a designated pair is
+\[
+ \frac{c^2}{4}\{XX-c(YZ+ZY)-r^2YY\}.
+\]
+The eigenvalues of the expression in braces are $2+c^2$, $-c^2$, $-c^2$, and $c^2-2$. Hence the trace distance is
+$c^2(2+c^2)/4=(1-r^2)(3-r^2)/4$, equal to $33/64$ at $r=1/2$.
+Arbitrary deletion therefore need not preserve a named pairing, even though the signed probabilities agree.
+
+Applying the same phase to every pair at each size is a different proposal. For
+$\widetilde\Omega_N=(\prod_{i<j}e^{i\phi Z_iZ_j})\Omega_N(\prod_{i<j}e^{i\phi Z_iZ_j})^*$,
+the two-site $XX$ expectation is $c^2$, while the same expectation in the two-site reduction of the three-site state is $c^2\cos^2(2\phi)$. If $\sin(2\phi)\ne0$, consistency fails. If $\phi$ is an odd multiple of $\pi/2$, a one-site $X$ expectation changes sign between those sizes. Only the trivial $\phi\in\pi\mathbb Z$ avoids this particular obstruction for $0<r<1$. This excludes the stated uniform all-pairs prescription, not every coherent family.
+
+\subsection{A finite tail constrains a maximally transverse completion}
+\label{qua:tail}
+Suppose a state $\Gamma_{k+L}$ has exactly the full shared-source signed law above and satisfies $\langle X_i\rangle=c$ for every one of the first $k$ factors. Let $e_L$ be the minimum classification error for the fair sign $T$ from $L$ conditionally independent $Z$ observations of mean $T$. A majority rule, randomized fairly on ties, attains this error. Then
+\begin{equation}
+ D_{\rm tr}(\Gamma_k,\Omega_k)\le\sqrt{2kr^2e_L}.
+ \label{qua:tailbound}
+\end{equation}
+To see the mechanism, measure the tail and denote its conditional first-$k$ state by $\gamma_y$. Guess the sign $s_y\in\{-1,1\}$. For each first factor the average failure probability of the pure projector $\rho_{s_yr}$ is
+\[
+ \tfrac12\{1-c\langle X_i\rangle-r\,\mathbb E[s_yZ_i]\}
+ =\tfrac12\{1-c^2-r^2(1-2e_L)\}=r^2e_L.
+\]
+The product-projector failure is at most the sum of its single-site failures. The pure-target trace-distance bound and concavity of the square root then give \eqref{qua:tailbound} (in fact this argument permits the smaller right side $\sqrt{kr^2e_L}$). The guessed signs are fair, so the average pure target is exactly $\Omega_k$. All first-$k$ transverse constraints are used; a constraint only on the first factor does not establish the bound. Exact full signed laws, conditional tail sampling and arbitrary precision in those constraints are substantial assumptions. The estimate is a sufficient restriction on finite completions, not a claim that a particular finite size is necessary for every Bell test.
+
+\subsection{Bell resources and pair structure}
+\label{qua:bell}
+For deterministic simultaneous signs $a_0,a_1,b_0,b_1$, the CHSH combination
+$a_0(b_0+b_1)+a_1(b_0-b_1)$ has magnitude two. The same bound holds after mixing such local response assignments with setting independence. Quantum dichotomic observables obey $2\sqrt2$ by the squared-CHSH operator bound, while a general nonsignalling binary box can attain four, for example the law $a\oplus b=xy$ with uniform marginals. These bounds use different response assumptions; a classical set notation alone does not impose the first factorization.
+
+For ordinary qubit factors, let $\beta_{ij}$ denote the CHSH value optimized over nontrivial local Pauli spin observables. Independently optimized pair values obey
+$\beta_{AB}^2+\beta_{AC}^2\le8$. The independently optimized qualification uses the strong three-qubit monogamy result of Cheng and Hall~\cite{chenghall}; a common-settings monogamy statement alone would not justify it. Hence the graph of pairs satisfying $\beta_{ij}>2$ is a matching. If one defines the nonlinear objective
+\[
+ A_N=-\sum_{i<j}\max\{0,\beta_{ij}-2\},
+\]
+then
+$A_N\ge-\lfloor N/2\rfloor(2\sqrt2-2)$, attained by products of Bell pairs. A deficit smaller than $2\sqrt2-2$ from that optimum forces a maximum-cardinality violation matching. This follows by counting at most $\lfloor N/2\rfloor$ nonzero terms and applying the single-pair bound. It does not select a labelled matching.
+
+The objective is not the expectation of a fixed Hamiltonian: both measurement optimization and the positive-part operation are nonlinear in the state. In an equal mixture of two distinct four-qubit singlet matchings, each edge present in one matching has Werner state
+$\tfrac12P_{\rm sing}+\tfrac12I_4/4$.
+Its negativity is $1/8$ and its optimized spin-CHSH value is $\sqrt2$, so it contributes no positive Bell excess. The other pairs are maximally mixed. This example makes the loss under mixing explicit without claiming that every symmetric nonlinear objective uniquely selects Bell pairs.
+
+\subsection{Collective spin and the distribution of singlet weight}
+\label{qua:spin}
+Let $J_N=\tfrac12\sum_{i=1}^N\boldsymbol\sigma_i$ and $H_N=J_N^2$. Its eigenvalues are $j(j+1)$, with multiplicities
+\[
+ m_{N,j}=\binom N{N/2-j}-\binom N{N/2-j-1}
+\]
+for the allowed spins $j$. This follows by subtracting consecutive fixed-$J_z$ dimensions: each spin-$j$ copy contributes one vector to every weight from $-j$ to $j$. In particular, the minimum is zero for even $N$ and $3/4$ for odd $N$. The even zero-spin multiplicity is the Catalan number $C_k=\binom{2k}k/(k+1)$ for $N=2k$. For $N=2k-1$, the minimum-sector dimension is $2C_k$; for $N=2k$, it is $C_k$. At $N=2$ the singlet is unique and the gap to the triplet is two.
+
+The Pauli identity gives
+\[
+ H_N=\frac{3N}{4}I+\frac12\sum_{i<j}\boldsymbol\sigma_i\cdot\boldsymbol\sigma_j,
+ \qquad
+ \sum_{i<j}P_{\rm sing}^{(ij)}=\frac{N(N+2)}8I-\frac12H_N.
+\]
+Consequently the mean pair singlet fraction is at most
+$\frac{N+2}{4(N-1)}$ for even $N$ and $\frac{N+3}{4N}$ for odd $N$. Every state supported in the minimum sector saturates the corresponding average bound. The identity does not fix how that weight is distributed among pairs.
+
+For four qubits, the product of singlets on pairs $(12),(34)$ has singlet fraction one on pair $12$. Coupling the two pair-triplet sectors to total spin zero gives an orthogonal total-singlet vector whose pair-$12$ reduction is the uniform triplet state, with singlet fraction zero. Superpositions of these vectors realize every fraction in $[0,1]$ at the same global energy zero: after tracing pair $34$, cross terms vanish because its singlet and triplet sectors are orthogonal. An arbitrarily small additional operator can therefore select substantially different pair structures within the same degenerate ground space.
+
+\begin{proposition}[No unique symmetric ground ray for three or more qubits]
+A Hamiltonian commuting with diagonal $SU(2)$ and every factor permutation has no unique pure ground ray when $N\ge3$.
+\end{proposition}
+\begin{proof}
+A unique ray carries a one-dimensional representation of each symmetry. The connected group $SU(2)$ has no nontrivial continuous one-dimensional character, so the vector must be a spin singlet. A one-dimensional representation of $S_N$ is either symmetric or alternating. The symmetric qubit subspace has spin $N/2$; the alternating subspace is $\bigwedge^N\mathbb C^2=0$ for $N>2$. Neither can contain the required ray. This does not forbid a unique invariant mixed state or a symmetry-breaking preparation.
+\end{proof}
+
+\subsection{Ordered dimers, symmetric mixtures and restrictions}
+\label{qua:projective}
+An explicitly chosen ordered matching gives
+\[
+ \Gamma_{2k}=P_{\rm sing}^{\otimes k},\qquad
+ \Gamma_{2k+1}=P_{\rm sing}^{\otimes k}\otimes I_2/2.
+\]
+These states minimize $H_N$ and are consistent under last-factor deletion. Thus failure of one symmetric family does not prove failure of all minimizing projective families. The matching remains a supplied preparation choice.
+
+Write $P_{\min,N}$ for the minimum-spin projector and $d_N$ for its rank. Averaging $\Gamma_N$ over permutations gives
+$\rho_N^*=P_{\min,N}/d_N$.
+Within the relevant spin sector, permutation irreducibility on its multiplicity space and the already maximally mixed spin factor give this identity. Even-to-odd reduction of this canonical family is consistent. Odd-to-even reduction is not, and
+\begin{equation}
+ D_{\rm tr}\bigl(\operatorname{Tr}_{2k+1}\rho_{2k+1}^*,\rho_{2k}^*\bigr)
+ =\frac{3k}{2(2k+1)}.
+ \label{qua:oddgap}
+\end{equation}
+Only spins zero and one of the first $2k$ factors can couple to total spin $1/2$. The spin-zero contribution to the odd minimum sector has dimension $2C_k$, while the full sector has dimension $2C_{k+1}$. Its weight is therefore $C_k/C_{k+1}=(k+2)/[2(2k+1)]$. The other contribution has orthogonal support, giving \eqref{qua:oddgap}.
+
+For $N=2k-1$ or $2k$, the dimer/canonical distances are
+\[
+ D_{\rm tr}(\Gamma_N,\rho_N^*)=1-1/C_k,
+ \qquad
+ \operatorname{TV}(Z\text{ laws})=1-\frac{2^k}{\binom{2k}k}.
+\]
+For even $N$, the dimer state has rank one inside a $C_k$-dimensional uniformly mixed sector. Its $Z$ law is uniform on the $2^k$ words with one positive sign per specified pair, while the canonical law is uniform on the $\binom{2k}k$ balanced words. For odd $N$, the dimer rank is two inside dimension $2C_k$, and the same ratio follows from the two nearest-balanced count sectors. These are global quantum and labelled classical distances, respectively. If permutations are declared gauge redundancies, named-pair measurements require a relative reference; if they are physical symmetries, choosing a matching is additional state preparation. The formal Casimir does not decide between those interpretations.
+
+Another family, the maximum-spin mixture
+\[
+ \Sigma_N=\frac{P_{{\rm sym},N}}{N+1}
+ =\int(|\psi\rangle\langle\psi|)^{\otimes N}\,d\psi,
+\]
+uses normalized Haar measure on pure qubits. Invariance makes the integral scalar on the irreducible symmetric subspace, and its trace fixes the scalar. The formula proves separability and arbitrary-deletion consistency. In a $Z$ measurement the positive count is uniform on $0,\ldots,N$ because the pure-state population is uniform on $[0,1]$ and its beta-binomial integral is $1/(N+1)$. Distinct-site odd signed moments vanish and the even moment of order $2m$ is $1/(2m+1)$. Exchangeability thus permits correlation; it does not mean independent unconditioned draws.
+
+\subsection{Infinite extension and finite-temperature limits}
+\label{qua:exchangeability}
+An indefinitely exchangeable complex quantum state has the de Finetti form
+$\omega_N=\int\tau^{\otimes N}\,d\mu(\tau)$~\cite{caves}.
+For $N\ge2$, the canonical minimum-spin state satisfies the exact distance formula
+\begin{equation}
+ \inf_{\omega_N\text{ indefinitely exchangeable}}
+ D_{\rm tr}(\rho_N^*,\omega_N)=1-d_N/2^N.
+ \label{qua:distanceexchange}
+\end{equation}
+To prove it, diagonalize $\tau$ by a common rotation, with eigenvalues $p,1-p$. For $N=2k$, the minimum-sector overlap is $d_N[p(1-p)]^k$; for $N=2k+1$, it is $(d_N/2)[p(1-p)]^k$. In either case it is at most $d_N/2^N$. Measuring the minimum-sector projector yields the lower bound, and the product state $I/2^N$ attains it because $\rho_N^*$ is uniform on that projector. The same lower bound holds for any state wholly supported there, but attainment is asserted only for the canonical uniform state. Arbitrary finite permutation invariance is a weaker requirement than indefinite extension.
+
+The thermal prescription $\rho_N(\beta)\propto e^{-\beta H_N}$ also need not be projective. At one common finite $\beta>0$, the two-site singlet probabilities of $\rho_2(\beta)$ and of the reduced $\rho_3(\beta)$ are
+\[
+ p_2=\frac1{1+3e^{-2\beta}},\qquad
+ p_{3\to2}=\frac1{2(1+e^{-3\beta})}.
+\]
+Both states are Werner states, so their trace distance is their singlet-probability difference. With $x=e^{-\beta}$,
+\[
+ p_2-p_{3\to2}=\frac{(1-x)^2(1+2x)}{2(1+3x^2)(1+x^3)}>0.
+\]
+At $\beta=\log2$ this is $8/63$. At $\beta=0$ the family is the consistent product $I/2^N$. No statement follows here about size-dependent temperatures, other Hamiltonians or other thermal models.
+
+Small normalized energy does not control a global state distance. The product $I/2^N$ has $\operatorname{Tr}(H_NI/2^N)=3N/4$, whose value per unordered pair is $3/[2(N-1)]\to0$, while its distance from $\rho_N^*$ is $1-d_N/2^N\to1$. Conversely, the shared pure-product family $\Omega_N$ lies entirely in maximum spin and has energy $N(N+2)/4$. At $\phi=\pi/4$ the phase-pair state is triplet-supported with pair energy two. For the matched family of Section~\ref{qua:phase}, specifically at $\phi=\pi/4$,
+\[
+ \operatorname{Tr}(\Xi_NH_N)=\frac{3N}{4}+\frac{k}{2}
+ +\frac12\left[\binom N2-k\right]r^2(2-r^2),\qquad k=\lfloor N/2\rfloor.
+\]
+The paired correlation sum is one and every other pair has sum $r^2(2-r^2)$, proving the formula. These families cannot be generated by one unchanged minimum-Casimir prescription. Choosing a different objective is possible, but must be stated as an additional model.
+
+\subsection{Matching orbits and shared references}
+\label{qua:references}
+On four qubits the three two-singlet matchings span the two-dimensional total-singlet space. Let their density operators be $\eta_1,\eta_2,\eta_3$. Their pair overlaps are one on the diagonal and $1/4$ off it; their equal mixture is the maximally mixed state on that space. These identities follow by expanding the singlets in the computational basis. The permutation group $S_4$ acts transitively on the three matchings, and a matching has stabilizer of order eight. That stabilizer contains odd permutations, so permutation parity does not define a function of the matching alone.
+
+For two independent systems in specified density states $\rho,\sigma$, the symmetric SWAP effect has probability
+$[1+\operatorname{Tr}(\rho\sigma)]/2$.
+It gives one for aligned pure matchings and $5/8$ for distinct matchings. A common random matching reference produces
+$\frac13\sum_i\eta_i\otimes\eta_i$, whereas independently randomized references produce
+$(\frac13\sum_i\eta_i)^{\otimes2}$.
+Their trace distance is $1/4$ and their SWAP probabilities are one and $3/4$. In a Bloch representation the three rays form a planar trine; the difference matrix has eigenvalues $1/4,0,0,-1/4$, which proves the distance. Shared randomization is not independent randomization.
+
+Relative references can be described without assigning an absolute frame. If $U$ is a unitary group representation, the overlap
+$\operatorname{Tr}(\rho U_r\sigma U_r^*)$ is invariant under
+\[
+ \rho\mapsto U_g\rho U_g^*,\quad
+ \sigma\mapsto U_h\sigma U_h^*,\quad r\mapsto grh^{-1}.
+\]
+Compatible three-reference assignments satisfy $r_{13}=r_{12}r_{23}$. Independent vertex changes remove all edge labels on a connected tree by fixing a root and propagating frames. On a graph with cycles, the residual loop products transform by simultaneous conjugation. Their individual conjugacy classes, or their parities, need not determine the joint loop tuple. For example, in $S_3$ two noncommuting transpositions and two equal transpositions have the same individual conjugacy classes but different product classes. This is formal group-valued transport, not a derivation of physical gauge fields or curvature.
+
+The matching orbit has two stabilizer double-coset classes, $E$ and $D$, of sizes eight and sixteen. Uniform independent lifts induce
+$D*D=(E+D)/2$.
+On the three-element orbit, a $D$ move chooses uniformly one of the two other matchings; two such moves return with probability $1/2$. This stochastic product is associative because it comes from convolution with the uniform stabilizer measure. It is not deterministic quotient multiplication. A groupoid representation preserves inverses; noninvertible erasure needs extra mixing or an instrument and cannot be called a groupoid arrow merely by changing its name.
+
+\subsection{An orbit alphabet is more restrictive than a positive matrix}
+\label{qua:packing}
+For $m\ge2$ preparations chosen from the three exact matching rays, let $n_1+n_2+n_3=m$ be their counts. The sum of pair overlaps is
+\[
+ \sum_{a<b}\operatorname{Tr}(\eta_{i_a}\eta_{i_b})
+ =\frac{3\sum_i n_i^2+m^2-4m}{8}.
+\]
+It is minimized by balanced counts, giving
+\[
+ \frac{m(m-2)}4+\begin{cases}0,&3\mid m,\\1/4,&3\nmid m.\end{cases}
+\]
+For four matching preparations the minimum is therefore $9/4$. Allowing arbitrary density states on the same two-dimensional support lowers the sharp minimum to $m(m-2)/4$, equal to two at $m=4$. If $S=\sum_i\rho_i$, then
+\[
+ \sum_{i<j}\operatorname{Tr}(\rho_i\rho_j)
+ =\tfrac12\{\operatorname{Tr}S^2-\sum_i\operatorname{Tr}\rho_i^2\}
+ \ge\tfrac12(m^2/2-m),
+\]
+and equally spaced pure states on a Bloch great circle attain it. Positive-semidefinite candidate overlap data need not be realizable by a specified three-state alphabet. If the matching labels are indefinitely exchangeable, their conditional independent representation instead gives mean pair overlap
+$1/4+(3/4)\sum_i p_i^2\ge1/2$, also after averaging over $p$.
+
+Pair overlaps do not fix an oriented triple invariant. For three pure Bloch vectors along $+X,+Y,+Z$, all pair overlaps are $1/2$, but
+\[
+ \operatorname{Im}\operatorname{Tr}(\rho_1\rho_2\rho_3)=1/4.
+\]
+Reflecting $Y$ reverses this sign without changing pair overlaps. On three copies define the cyclic permutation $V$ with orientation chosen so $\operatorname{Tr}(V\rho_1\otimes\rho_2\otimes\rho_3)=\operatorname{Tr}(\rho_1\rho_2\rho_3)$, and let
+$K=(V-V^*)/(2i)$, $E=(I+K)/2$.
+Since the spectrum of $K$ is contained in $\{0,\sqrt3/2,-\sqrt3/2\}$, $E$ is an effect. It gives probabilities $5/8$ and $3/8$ for the two orientations. Averaging over every permutation removes this oriented effect's contrast, because odd permutations reverse $K$. It does not make the entire anonymized preparations identical: a calibrated $+Y$ single-factor effect averaged over the three positions has probabilities $2/3$ and $1/3$. Removing one reference-dependent observable is weaker than equality of all admitted observations.
+
+All these comparisons require a declared group action, copy convention and effect menu. A formal matching, relative phase or loop variable does not by itself identify physical adjacency, charge, chirality, time or spatial geometry.

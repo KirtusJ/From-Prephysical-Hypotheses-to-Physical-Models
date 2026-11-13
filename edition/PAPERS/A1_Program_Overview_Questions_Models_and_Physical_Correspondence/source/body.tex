@@ -1,0 +1,260 @@
+\section{The question and the scope of the studies}
+\label{col:scope}
+
+One organizing question is which properties of a proposed physical description can be justified by a specified set of observations. The wider program also asks what primitives and relations can be stated without assuming the physical structures sought, and which mathematical models follow from those premises. It considers mathematical structures that might precede a physical interpretation, together with conventional physical models in which the requirements for that interpretation can be examined. These starting points do not establish one common physical ontology. In particular, the relational structures, signed probability laws, positive kernels, quantum completions and dynamical models appearing here are not successive derived stages of one demonstrated theory.
+
+Some hypotheses deliberately withhold a fundamental position coordinate, clock or causal orientation. That restriction leaves a mathematical question; it does not establish a physical domain without those quantities. An algebraic sign is not yet a measured charge, a spectral parameter is not yet a physical frequency, and a count of copies is not yet elapsed time. Conversely, conventional fermionic, spin and field models can answer useful conditional questions even though they already assume quantum states, space or time. Their assumptions must remain visible when the models are used to assess a proposed physical correspondence.
+
+The studies make positive mathematical progress in several forms: exact reconstruction under calibrated access, sharp bounds over compatible models, consistency and nonextension theorems, resource-dependent information limits, finite-sample guarantees, and explicit counterexamples to stronger identification claims. These results do not require a proof of metaphysical uniqueness. A physical application nevertheless needs an independently warranted assignment of preparations, transformations, observations, units and relevant uncertainties.
+
+\subsection{What is included}
+
+The Collections volume presents the common questions, a synthesis of the operator, spectral, fermionic and instrument studies, and six collected articles with their model-specific arguments. The Mathematical Supplement develops the relational, probabilistic, statistical, quantum and dynamical comparisons, followed by studies of abstract Gaussian capacity, stochastic recovery, calibration uncertainty, exact joint calibration and uniform limits, and weak-gain statistical precision, with the detailed articles and supporting proofs. Computational sources give exact finite checks and specified numerical calculations. Two separate diagrams serve distinct purposes. \emph{Program questions, models and physical correspondence} organizes parallel research approaches and their outstanding physical interpretation requirements. \emph{Structure, observation and physical identification} connects selected model assumptions, admitted observations, conditional inferences and prospective physical tests.
+
+In the observation diagram, the dashed connection denotes an unresolved physical correspondence. Its solid horizontal connections denote implications within specified mathematical models. Its lower branches denote possible conclusions of a future test. The five illustrated observation problems are representative; they are neither an exhaustive ontology nor evidence that one proposed foundation has been realized. In the program diagram, the signed-sector signal proposal is one exploratory approach alongside finite relational models, state/effect and instrument models, identification and information, and analytic/effective models. Grouping does not imply causal propagation, physical emergence or a ranking among those approaches.
+
+\subsection{Kinds of evidence}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.22\textwidth}p{0.71\textwidth}@{}}
+\toprule
+Kind & What it establishes and what it requires\\
+\midrule
+\endhead
+Mathematical premise &
+A state space, relation, probability rule, composition, action or observation menu chosen for a model. A premise is not established by a theorem that assumes it.\\
+Derived result &
+A statement following from the displayed assumptions and proof. Scope includes the dimension, topology, normalization, source dependence and measurement access used in that proof.\\
+Computed instance &
+An exact finite enumeration, rational certificate or numerical evaluation. Unrestricted claims require an argument beyond the finite instances. Numerical precision is distinct from an error enclosure.\\
+Physical correspondence &
+A warranted relation between the mathematical experiment and physical preparations, controls and records, with units and uncertainty. The present constructions do not establish one correspondence encompassing the entire program.\\
+\bottomrule
+\end{longtable}
+
+The supplied studies contain no direct experimental observation of a hypothesized prephysical substrate. Distances between deliberately specified models, including exact nonzero distances, are mathematical distinctions. They are not observed anomalies, empirical significance levels or evidence of a new physical interaction. The stated test sizes and powers are conditional probability guarantees for the experiments as defined.
+
+\section{Abstract representation, recovery and uncertainty}
+\label{col:representation}
+
+\subsection{Three different questions about a mathematical model}
+
+A representation can be mathematically well defined without assigning its variables a physical clock, energy or position. This establishes an available mathematical model. It leaves separate questions: whether particular foundational premises select or derive that model, and whether preparations, controls and records justify a physical interpretation. A lack of physical units does not invalidate an otherwise valid abstract information theorem; supplying such a theorem does not derive the missing physical interpretation.
+
+For example, let $Y=X+Z$ in a real Euclidean space of dimension $d\ge1$, with independent $Z\sim N(0,\sigma^2I_d)$, $\sigma^2>0$, full-vector observation, and the input class $\mathbb E\|X\|^2\le dP$, $P\ge0$. The standard Gaussian optimization gives
+\[
+ \sup I(X;Y)=\frac d2\log_2\left(1+\frac P{\sigma^2}\right)
+ \quad\text{bits per vector block}.
+\]
+The companion capacity study supplies the entropy argument, attainment, complex-coordinate convention, representation invariance and the distinct coding interpretation~\cite{justusGaussian,gaussianNotes}. No physical frequency or rate is needed to define this supremum. A rate in bits per second would require a further model of time and use rate.
+
+The Gaussian kernel, covariance, Euclidean norm, cost restriction and output access are substantive ingredients. Equal scalar noise variance and cost do not select them. The capacity study exhibits discrete additive noise with arbitrarily many exactly distinguishable bounded inputs, and two Gaussian covariance geometries with equal noise trace but different capacities. The former uses an ideal exact real-valued observation and is not a claim of infinite physical communication capacity. A signed-sector sketch or relational equivalence rule has not, by itself, supplied these channel ingredients. Equally, these limits do not refute every possible mathematical development of either proposal.
+
+\subsection{Capacity equality and recovery of an experiment}
+
+Output processing cannot increase information for a fixed input law. Equality of optimized capacities is weaker than retaining all input-conditioned laws. A three-input, four-output example has capacity one bit before and after a specified output merger, yet no stochastic map reconstructs every original row. The study \emph{Stochastic Recovery from Information Loss and Equality of Channel Capacity} strengthens this example: the smallest maximum row total-variation error over all recovery maps is exactly $1/4$~\cite{justusRecovery}.
+
+There is also a positive result. For finite alphabets, zero information loss under one input distribution assigning positive probability to every input is equivalent to a common stochastic recovery of every row. Equal capacities imply such recovery if the \emph{coarse} channel has a full-support maximizing input. Merely having a full-support maximizing input for the original channel is insufficient. With information loss $\delta$ bits and minimum probe probability $p_{\min}>0$, the study constructs a reverse channel with maximum row error at most
+\[
+ \min\left\{1,\sqrt{\frac{(\ln2)\delta}{2p_{\min}}}\right\}.
+\]
+This is a sufficient bound, not an optimal universal modulus. A fixed channel can have arbitrarily small loss under increasingly unbalanced full-support probes while its minimax recovery error remains $1/4$. Consequently a small averaged information loss needs a sampling and probe-weight interpretation before it can support a uniform experimental claim.
+
+\subsection{Compatibility sets with a sampling guarantee}
+
+An estimated set of compatible models is not automatically a confidence region. The study \emph{Calibration Uncertainty and Finite-Sample Identification} gives an explicit projection argument: a simultaneous confidence region for the complete population observation index projects to a region containing the entire population identified set with at least the same coverage~\cite{justusCalibration}. The observation index may include calibration experiments. A stipulated nuisance range, a population identified set and a finite-sample confidence region retain different interpretations.
+
+For a binary detector with anchored calibration labels, response probabilities $a,b$ and target mixture mass $\theta$, the study law is $q=b+(a-b)\theta$. Exact binomial tail intervals and a fixed error allocation give a finite-sample uniform guarantee under the stated binomial marginals. Independent samples are sufficient but the union-bound guarantee permits arbitrary dependence between the three counts when those marginals hold. A sharp projection formula applies to separated calibration intervals. The inverse problem becomes poorly conditioned as the detector contrast $|a-b|$ approaches zero.
+
+An adverse example makes the distinction concrete. With exactly calibrated $a=4/5$, $b=1/5$ and true $\theta=1/2$, one study observation gives empirical probability zero or one. Treating that empirical value as exact produces an empty compatible set for both outcomes, despite a correct population model. A scientifically useful exclusion therefore needs justified treatment of sampling and calibration uncertainty, together with a sound feasibility or exclusion argument. These mathematical constructions propose methods for bounded observation questions; they do not report physical observations or a derivation of a prephysical substrate.
+
+\subsection{Joint calibration: exact coverage and limited precision}
+
+The study \emph{Calibration, Identified Sets and Uniform Limits} treats $p=(1-\theta)f+\theta s$ with anchored reference labels, including inverted and zero-gain readouts. For rectangular probability regions, the exact projection is determined by
+\[
+ 0\le\theta\le1,\qquad
+ (1-\theta)f_-+\theta s_-\le p_+,\qquad
+ (1-\theta)f_++\theta s_+\ge p_-.
+\]
+This formulation avoids division by a possibly zero estimated gain. Additional restrictions on calibration must be imposed in the feasibility problem. With exact $p=1/2$, $f\in[1/5,3/10]$ and $s\in[7/10,4/5]$, the complete population interval remains $[2/5,3/5]$.
+
+A declared finite example uses $80$ source observations and four observations on each reference, with independent binomial streams. Its seven target values and three choices for each reference probability give $63$ parameter points and $45$ distinct laws. Exact rational enumeration over every count outcome gives the following results~\cite{justusJoint}.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.41\textwidth}rr@{}}
+\toprule
+Procedure & Minimum set coverage & Minimum point coverage\\
+\midrule
+Joint source and calibration & $98.6328\%$ & $98.7908\%$\\
+Calibration estimates treated as exact & $13.6591\%$ & $34.2198\%$\\
+Known calibration & $95.4497\%$ & $95.4497\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Whole-set coverage includes every target compatible with a given law. All $45$ plug-in laws fall below $95\%$ whole-set coverage; this is a failure of the deliberately incomplete uncertainty calculation, not a comparison with all calibration-estimation methods. At $\theta=1/2,f=1/5,s=4/5$, joint coverage is $99.9994\%$, but its expected reported size is $6.9821$ of seven target values. Validity at this small calibration sample size gives little precision. These are complete values for a constructed finite class, not measurements or typical-performance claims. A separate analytic projection argument supplies the continuous-model coverage guarantee.
+
+A fresh exact calculation from the declared experiment agrees with all $639$ primary result quantities: whole-set and point coverage, empty-set probabilities, expected cardinalities and true-law admission. It also agrees with the $369$ quantities checked by the supplied second arithmetic implementation. These overlapping counts must not be added as independent findings. The calculations share program provenance. Strict and nonstrict tail acceptance are distinct valid conventions; none of this example's $51$ distinct tested sample-size, probability and error triples hits a threshold equality, so that distinction does not change these particular values.
+
+\subsection{What a positive gain restriction changes}
+
+The additional study \emph{Statistical Precision under Weak Readout Gain} supplies a sharper finite-sample obstruction and a constructive counterpart~\cite{justusWeakGain}. For the symmetric pair constructed in that study, the target separation is $h$, the detector gain is $\kappa$, and the source probabilities are $(1\pm\kappa h)/2$. With independent iid source observations and independent common reference laws, any confidence set honest at both of those targets satisfies
+\[
+ P_0\{\operatorname{diam}C\ge h\}\ge
+ \max\{0,1-2\alpha-\sqrt{1-(1-\kappa^2h^2)^N}\}.
+\]
+The argument still holds with exact calibration. In particular, gains with $\sqrt N\,\kappa_N\to0$ force frequent diameter-one reports for endpoint targets. It is a uniform inference obstruction, not a refutation of consistency at a fixed nonzero gain. Equality of reference marginals alone is insufficient; the full joint sampling contract is material.
+
+Conversely, under a warranted population restriction $|s-f|\ge\kappa>0$, joint probability intervals of widths $w_p,w_f,w_s$ give a projected target diameter at most
+\[
+ \min\left\{1,\frac{w_p+\max(w_f,w_s)}{\kappa}\right\}.
+\]
+An elementary fixed-horizon Hoeffding construction gives valid coverage and diameter at most $h$ with $n\ge8\log(6/\alpha)/(\kappa^2h^2)$ observations in each of the three streams. The necessary source count and this sufficient equal-allocation construction have the same powers of gain and precision; no optimal constants or allocation are claimed. The gain floor is a supplied model restriction, not a conclusion obtained by substituting an empirical denominator. With both gain orientations, the projected set can have gaps.
+
+\section{Identification is a property of an observation family}
+\label{col:identification}
+
+Let $\Theta$ be a class of descriptions, $\mathcal E$ the admitted experiments, and $P_\theta^e$ the complete recorded law for experiment $e$. The description includes uncertain source, detector, loss, gain, reference and timing parameters whenever the evidence allows them to vary. Define
+\[
+ \theta\sim_{\mathcal E}\theta'
+ \quad\Longleftrightarrow\quad
+ P_\theta^e=P_{\theta'}^e\quad\text{for every }e\in\mathcal E.
+\]
+A property $h$ is identified exactly when it is constant on every equivalence class. At population law $p$, the compatible range is
+\[
+ \mathcal I_h(p)=
+ \{h(\theta):\theta\in\Theta,\ P_\theta^e=p^e\text{ for all }e\in\mathcal E\}.
+\]
+An empty set excludes the specified conjunction of model and calibration assumptions. A singleton identifies the property within that class. A nontrivial set records the ambiguity instead of selecting an unsupported representative.
+
+For finite samples, uncertainty in the laws and calibration must be propagated jointly into this set. Conditioning on successful preparation can change the experiment, so success frequencies and failed attempts remain relevant whenever the property concerns a whole operation. An added observation helps only when its law differs between descriptions assigning different values to the property. Repeating an exactly uninformative observation cannot supply that distinction.
+
+Exact identification also differs from stability. On a compact model space with continuous outcome maps and continuous $h$, exact identification implies a uniform continuity modulus for $h$ as the outcome laws approach each other. This compactness statement supplies no universal quantitative rate. Noncompact families, unbounded generator rates and poorly conditioned detector maps can retain severe instability even when a formal uniqueness theorem holds.
+
+\section{Relational and probabilistic structures}
+\label{col:structures}
+
+\subsection{What a quotient retains}
+
+Finite relational structures have cores unique up to isomorphism within homomorphism equivalence. Product and disjoint union induce meet and join in the quotient order. This is a precise mathematical simplification. It discards homomorphism counts, embeddings and some deletion operations, and it does not choose which structure exists physically.
+
+Universal properties depend on the category. In the full category of finite nonempty structures with positive-arity relations and ordinary homomorphisms, the empty-relation singleton is weakly initial, but it is not initial; in fact there is no initial object. The thin quotient does have a least element. If empty carriers are admitted under the stated signature convention, the empty structure is initial. The distinction is proved in the supplement and is retained wherever an initial object or composition unit is used.
+
+A tensor-preserving assignment of an idempotent quotient object to a nonzero finite-dimensional Hilbert space would require its dimension to satisfy $d=d^2$. This elementary restriction is narrower than a categorical no-cloning theorem~\cite{abramsky}, and infinite-dimensional object isomorphisms do not alone solve the arrow and coherence requirements. A more detailed representation may preserve information lost by a coarse quotient; the quotient's limitations are not a prohibition on every relational model. More generally, independently available preparations and product effects with factorizing evaluations give $r(x\wedge y)\ge r(x)r(y)$ for the rank of finite preparation--effect matrices. Operational idempotence then forces any finite positive rank to be one. This pairing-rank statement requires its explicit composition and access assumptions; it is not a theorem about every relational proposal.
+
+\subsection{Normalization, admissible effects and composition}
+
+A positive event kernel with $\mathbf1^*D\mathbf1=1$ need not be a density matrix. Its subset scores can exceed one: the supplement gives exact values $5/4$ and $9/8$ in finite examples. Strongly decoherent partitions produce normalized orthogonal Gram alternatives, but a kernel can admit distinct symmetry-related partitions without selecting one of them. This is a conditional construction within the mathematical setting of decoherence functionals~\cite{sorkin,boes}.
+
+The effect class is decisive. On the entire positive cone section $\operatorname{Tr}(WD)=1$, globally bounded affine effects depend only on the support of $W$. A rank-one normalizer therefore leaves only constant such effects. For higher-rank $W$, the support quotient is an ordinary density-matrix space, and a $W$-preserving completely positive map induces a trace-preserving channel there. These statements use the affine and completely positive assumptions. A compact restricted cone or a full-rank normalizer supplies a distinct mathematical alternative.
+
+Ordinary stochastic postprocessing of a classical law, $p\mapsto Tp$, is not coherent matrix congruence $D\mapsto TDT^T$. Nor can every aggregation that increases distinguishability be a deterministic quantum channel. For the specified four-to-two example, input trace distance $1/4$ becomes target distance $1/2$, the optimal maximum approximation error is $1/8$, and a conditional operation reaches the targets with success probability $1/2$. The failure probability belongs to the complete preparation experiment.
+
+Symmetry also fails to choose several otherwise necessary objects. Full permutation invariance on a countably infinite raw alphabet does not admit a normalized countably additive uniform law. Uniform quotient patterns at each finite size need not be consistent under deletion. All-degree matching-Gram positivity restricts a loop parameter to nonnegative integers but does not select one integer. A positive-definite correlation matrix can violate the triangle inequality after the transform $-\log R_{ij}$. Each positive alternative requires its own probability, operation or metric convention.
+
+\section{Information, composition and finite observation}
+\label{col:information}
+
+Information bounds require a complete resource specification. A uniform relative-entropy budget against one common normalized reference bounds the information recoverable from the complete preparation. Marginal budgets do not control information stored in message-dependent correlations. A cost bound also need not control the number of distinguishable modes: even a hard Hamming-weight budget of one permits $\log_2(n+1)$ bits when $n$ positions are separately addressable.
+
+For a countable ideal alphabet with a zero-cost reference symbol, a finite entropy supremum under a positive mean-cost bound is equivalent to convergence of $\sum_j e^{-\beta r_j}$ for some $\beta>0$. This theorem gives a mathematical growth criterion. It does not derive a physical cost law. Finiteness also need not imply attainment. With one zero-cost symbol and $\lfloor2^n/n^3\rfloor$ symbols of cost $n$, the mean-one entropy supremum is finite and is approached by increasingly rare high-cost contributions, but no law attains it. The supplement gives the full proof and distinguishes this example from the stronger integer-partition case, where a Gibbs optimizer exists. Similarly, the entropy of a random equality pattern is not automatically information a sender can control. If the sender chooses only its order while the conditional pattern law is fixed, the extra conditional randomness carries no additional message information.
+
+Exchangeable equality laws provide positive examples and exact \mbox{limitations}~\cite{pitman}. For every finite cutoff, two fixed full-support paintboxes can agree in their complete pattern laws through that order and first separate at the next. In the simplest supplied example, all pair probabilities agree, while triple patterns have TV distance $1/324$. Independently restarting only the agreeing experiments retains the ambiguity, even under adaptive selection of the next allowed experiment. Joint alignment across copies, a shared reference, or larger arity changes the observation family.
+
+Composition requires more than marginal laws. Two component sources can retain all their separate equality laws while different couplings change their composite law. Even the separate laws of both components and the composite can all agree at every order while aligned four-position observations differ. A chosen independence convention, uniform lift or common reference is part of the model. Refinement of equivalence relations respects restriction, whereas join can connect two retained points through a deleted intermediate point.
+
+There are also exact selection results. Total deterministic operations of fixed finite integer arity on finite equivalence relations commuting with every restriction are the discrete constant and intersections of fixed subsets of the inputs. In the commutative, pointwise-idempotent stochastic class, an exactly associative operation is forced to be intersection. A two-position associator gives a quantitative bound depending on the number of eligible common-block mergers. A finite collection of successful tests does not establish the all-size naturality premise, and a small local discrepancy need not be uniformly small on arbitrarily large carriers.
+
+\section{Graph, fermionic and spectral identification}
+\label{col:spectral}
+
+The collected operator and graph studies begin with calibrated access. Known finite operators and their commutant determine which invariant rank-one choices are available. Averages of commutators or spin fluctuations alone do not identify a microscopic subsystem decomposition. Labelled spectral preparations with nonzero zero-mode contrast can recover a graph generator under the stated source, port and scale assumptions. Imaginary coherences, an unknown source mixture or a common unknown readout can conceal information that an ideal spectral measurement would reveal.
+
+Positive moments constrain a measure within a specified positivity and support class. They can bound a support edge or certify a finite feasibility obstruction. They do not turn a finite moment list into a unique measure without further hypotheses. Likewise, compact-group transfer operators require their group, measure and scaling conventions; an operator limit is not by itself a physical continuum limit.
+
+In a fermionic system, an equal-time occupied projector does not in general determine the dispersion or its energy scale. Distinct Hamiltonians can have the same state. Thermal parameters can share scale ambiguities, and time-dependent response identifies more only when the clock unit and coupling are supplied. The two-time and local-response studies state the spectral, aliasing and access conditions under which the ambiguity is reduced. Static state equality, dynamic equality and equal measurement records are distinct claims.
+
+\subsection{Wilson--Dirac interval results and their regime}
+
+The Wilson studies concern restrictions of infinite-chain occupied-band projectors to a finite interval; they do not substitute the ground-state projector of an open finite chain. For the stated Wilson symbol, interval length $L$, bare mass $m=\mu/L$ and \emph{fixed} $\mu>0$, the finite-part article gives
+\[
+ D_L(\mu)=\frac{\mu^2}{6}\log L+
+ \mu^2\left(\frac{13}{36}-\frac{\pi}{12}-\frac{\log\mu}{6}\right)
+ -\mathcal S(\mu)+O_\mu((\log L)^{-1}).
+\]
+The massive covariance is the first relative-entropy argument. The finite boundary contribution $\mathcal S(\mu)$ is defined by the trace path in that article; it is not set to zero or replaced by an unspecified fitting constant.
+
+The uniform modular article uses $N=2L$ and proves $\|E_N\|\le7$ for every even $N\ge2$ for its exact half-filled reference discrepancy, with the sharper bound $|e|\le14/N$ on interior modes $|\lambda|\le N/4$. Its fixed-positive-$\mu$ consequences include a longitudinal modular trace $O_\mu(N^{-1})$, a full modular trace $O_\mu(\sqrt{\log N}/N)$ and nonlinear remainder $O_\mu(\sqrt{\log N/N})$. The two square-root rates have different meanings and are written separately.
+
+The explicit finite estimates contain more information than the fixed-$\mu$ notation alone. The companion study \emph{Calibration, Identified Sets and Uniform Limits}, Proposition~7, gives a conditional uniform additive consequence for every fixed $M>0$:
+\[
+ \sup_{0\le\mu\le M}\left|D_L(\mu)-\frac{\mu^2}{6}\log L
+ -\mu^2\left(\frac{13}{36}-\frac\pi{12}-\frac{\log\mu}{6}\right)
+ +\mathcal S(\mu)\right|\le\frac{C_M}{\log L}.
+\]
+Here $\mu^2\log\mu$ is extended continuously at zero and $D_L(0)=\mathcal S(0)=0$. The argument uses a common sufficiently large $L_0(M)$, the exact four-term decomposition, the stated finite modular and all-degree bounds, the exact two-bond formula and the uniform boundary estimate. It does not independently certify every concentration-connection, operator-domain or boundary-regularity input~\cite{justusJoint}.
+
+This controls absolute error along bounded shrinking-mass sequences. It does not prove $D_L(\mu_L)\sim\mu_L^2\log L/6$ for arbitrary $\mu_L\to0$. Dividing the additive error by that scale gives only $6C_M/[\mu_L^2(\log L)^2]$, which need not vanish; the finite part also needs relative control. The boundary term still limits the overall additive rate. General filling, a uniform interpolation expansion at a moving spectral edge, and general relative shrinking-mass asymptotics remain separate questions. Earlier component scope statements have been qualified accordingly; their original editions remain available.
+
+\section{Quantum models are distinct conditional constructions}
+\label{col:quantum}
+
+The supplement compares several families in one explicitly supplied qubit formalism. They differ in their preparation, symmetry and restriction properties. Those differences prevent their results from being combined into a single unchanged state-selection rule.
+
+\begin{longtable}{@{}p{0.23\textwidth}p{0.34\textwidth}p{0.34\textwidth}@{}}
+\toprule
+Construction & Result within its premises & Additional choice or limitation\\
+\midrule
+\endhead
+Shared latent pure-product mixture &
+Separable, exchangeable and consistent under arbitrary deletion; nontrivial shared-source correlations. &
+Latent prior, conditional sampling and the qubit representation are supplied. It occupies maximum total spin.\\
+Diagonal phase on designated pairs &
+The signed outcome law is unchanged while entanglement and spin-CHSH values change. An ordered hierarchy is consistent. &
+The phase and matching are supplied. Arbitrary deletion changes pair structure.\\
+Ordered singlet dimers &
+Minimum-spin states with exact last-factor consistency and Bell-capable designated pairs. &
+A labelled matching is additional preparation data.\\
+Canonical minimum-spin mixture &
+Fully invariant at each size; sharp singlet-share and infinite-extension distance formulas. &
+Odd-to-even deletion generally changes the prescribed state.\\
+Maximum-spin Haar mixture &
+Separable, fully invariant and consistent under every deletion. &
+It is a different sector and has correlated signed records.\\
+Fixed-temperature Casimir Gibbs law &
+A conventional finite quantum thermal model. &
+For one common finite positive inverse temperature, the three-to-two restriction fails; the \(\beta=0\) (zero inverse-temperature) product limit is consistent.\\
+\bottomrule
+\end{longtable}
+
+For example, the shared-source two-qubit state has no spin-CHSH violation, while a supplied diagonal phase can create one without changing any signed-$Z$ probability. The spin-CHSH criterion uses the full quantum correlation matrix~\cite{horodecki}. Strong qubit monogamy then makes simultaneously violating pair links a matching even when each pair optimizes its own spin settings~\cite{chenghall}. Neither result derives the available spin measurements or the physical subsystems.
+
+The collective-spin Casimir constrains average singlet weight but leaves large degeneracies. A Hamiltonian invariant under both diagonal $SU(2)$ and all qubit permutations cannot have a unique pure ground ray for three or more factors. Chosen dimer states are a positive projective exception; separately twirling each size destroys that chosen hierarchy. Indefinite quantum exchangeability imposes the de Finetti form~\cite{caves} and yields an exact distance from the canonical minimum-spin state. Finite permutation invariance alone is weaker.
+
+Relative-reference calculations further distinguish a common group action on two copies from independently randomized frames. A SWAP overlap can remain observable with a shared reference and become inadmissible under independent frame changes. Formal double-coset products, loop variables and oriented triple phases are valid mathematical constructions with a chosen group and effect menu. They do not establish physical gauge fields, spatial curvature or chirality.
+
+\section{Statistical comparison and calibration}
+\label{col:statistics}
+
+The two paintbox sources with matching pair statistics admit an explicit triple-collision comparison. Exact overlap counting gives the variance of the complete collision statistic. Optimizing the threshold within the stated two-sided use of one-sided variance bounds gives a sufficient raw sample size of $329180$. This is a boundary for that certificate, not a statistically optimal test among all possible experiments.
+
+The observation model can be changed to random queries from a larger fixed sample. A half-credit score extends triple equality to inconsistent binary pair reports and has the sharp global single-report sensitivity $3/[n(n-1)]$. With two million independent raw labels, ten million independently randomized triple queries and a report population fixed before the queries with at most $0.01\%$ incorrect entries, the displayed rational certificate bounds each error below $0.04$. At most thirty million pair queries are required. Conditional query independence is not unconditional independence of scores sharing the original sample; both variance contributions are retained.
+
+The commitment of the report assignment is essential. If it can respond after learning all queried positions, changing every queried pair to equality fits within the same nominal global error budget in this example and defeats the test. This is an explicit counterexample to an otherwise tempting interpretation of the sparse-query result.
+
+A separately warranted reference permits finite-population calibration. Accepting at most eight discrepancies in $200000$ distinct randomly sampled entries gives useful error guarantees between actual error fractions at most $10^{-5}$ and at least $10^{-4}$. Combined with the sparse comparison, the complete procedure has size below $0.05$ and power above $0.95$ under the stated uniformly good alternative class. Acceptance does not assign a posterior probability to the particular report population and does not validate a later population under drift.
+
+A much stronger demand has a very different cost. To accept every arrangement with at most $199999900$ errors with probability at least $0.95$, and accept every arrangement with one more error with probability at most $0.01$, truthful queries without structural information require inspection of all but $105$ of the $1999999000000$ entries. The supplement proves this exact worst-case cap by symmetrization and hypergeometric likelihood ordering, including adaptive index selection with that cap. The result does not concern expected stopping time, structured errors or separated quality classes.
+
+The reference's own accuracy is an assumption unless independently established. Two transitive comparison mechanisms can agree perfectly because both erase the same distinctions. The triangle inequality for their error counts makes the missing reference contribution explicit.
+
+\input{Observation_Memory_Control_and_Time_Overview.tex}
+
+\section{Requirements for a physical test}
+\label{col:physical}
+
+A concrete application must identify the physical preparations and interventions, the admitted observation effects, the copy or source dependence, the resource being counted, and the relevant units. Detector parameters, losses and calibration uncertainties belong in the compatible model class when they are not independently fixed. A prospective experiment should reserve an observation on which the remaining descriptions differ, state its eligibility and randomization rules, and count outcomes at the level required by its target property.
+
+The conditional instrument studies implement this principle mathematically. Basis-input first-output marginals can permit zero local operator weight while imposing an attainable upper bound. Returning a second output label can supply a positive lower bound. Matched coherent preparations and calibrated return projections can identify a weight that basis data leave ambiguous. These conclusions depend on the allowed discarded dimension, common apparatus constraints and complete input convention. The expanded identification study supplies the general finite-dimensional optimization and its attainability arguments. The four-preparation study retains success probabilities per attempt and specifies its sequential evidence rule.
+
+Conventional comparisons require explicit physical inputs. Ehrenfest's mean equation does not imply localization: a free Gaussian wave packet spreads. Abelian-Higgs masses follow from the supplied canonically normalized Lagrangian and its parameters. A horizon entropy formula or a higher-dimensional metric already presupposes gravitational structure. These comparisons do not supply the missing assignment of physical preparations and observed laws to an earlier hypothesis.
+
+A physical application must specify a realization, competing descriptions and uncertainties, an observation that distinguishes them, and independently justified experimental controls. These volumes establish mathematical requirements and obstructions for that task. They do not derive a unique prephysical foundation, a physical clock, spacetime geometry, matter or gravitational dynamics.

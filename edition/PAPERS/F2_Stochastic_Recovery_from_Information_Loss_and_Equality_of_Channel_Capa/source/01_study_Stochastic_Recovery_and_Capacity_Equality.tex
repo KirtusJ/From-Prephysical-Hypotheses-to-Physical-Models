@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+\input{Scientific_Preamble.tex}
+\usepackage{xurl}
+\lefthyphenmin=2\righthyphenmin=3
+\title{Stochastic Recovery from Information Loss\texorpdfstring{\\}{ }
+and Equality of Channel Capacity}
+\author{Kirtus Justus\\\small Port Coquitlam, British Columbia, Canada}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For finite channels, a Bayesian reverse kernel converts mutual-information
+loss under a specified full-support probe into explicit weighted relative-entropy
+and total-variation recovery bounds.  Zero loss is equivalent to a common
+stochastic recovery of every input row.  Equal channel capacities therefore
+imply recovery when the coarse channel has a full-support optimizer, but
+existence of a full-support optimizer for the original channel alone is
+insufficient, even for strictly positive channels.  For a specified three-input,
+four-output example with equal capacities before and after output merging,
+we prove that the sharp worst-case per-input recovery error is one quarter.
+The same fixed example has arbitrarily small information loss under a sequence
+of full-support probes, showing why a quantitative probe-mass condition matters.
+All conclusions concern explicit population probability models; finite-sample
+coverage and physical correspondence require separate premises.
+\end{abstract}
+\input{channel_recovery_body.tex}
+\input{channel_recovery_references.tex}
+\end{document}

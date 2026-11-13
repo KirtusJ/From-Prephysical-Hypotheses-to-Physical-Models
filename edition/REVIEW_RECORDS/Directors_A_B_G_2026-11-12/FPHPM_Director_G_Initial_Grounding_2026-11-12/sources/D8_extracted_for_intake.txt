@@ -1,0 +1,165 @@
+                 From Prephysical Hypotheses to Physical Models
+
+       A Uniform Sobolev Bound for the Continuum
+                Cross-Block Interpolants
+
+                                         Kirtus Justus
+                                    Theoretical Physicist
+                          Port Coquitlam, British Columbia, Canada
+
+
+                                    12 November 2026
+
+
+                                            Abstract
+
+         The entropy-difference estimate (B9) of Cross-Boundary Trace-Class Esti-
+      mates for Wilson–Dirac Quasifree States uses a constant 𝑀𝑠 that bounds the
+      continuum cross-block interpolants on a fractional Sobolev space. This note
+      defines the relevant space, proves 𝑀𝑠 ≤ 12 + max{𝑐𝑠 , 𝑐𝑠′ } for 0 ≤ 𝑠 < 1/2, where 𝑐𝑠
+      and 𝑐𝑠′ are the pointwise-multiplier norms of the indicators of the unit interval
+      and of its complement on 𝐻 𝑠 (ℝ), and records that the bound is independent
+      of the interpolation parameter, the scaled mass and the lattice size. The only
+      external input is the classical multiplier theorem for indicators of half-lines.
+
+
+
+1 Setting
+
+                                                                        ̂ 2 𝑑𝑢, and 𝜒 = 1
+Notation follows [1]. Let 𝐻 𝑠 = 𝐻 𝑠 (ℝ; ℂ2 ) with ‖𝑓‖2𝑠 = ∫ℝ (1+𝑢2 )𝑠 |𝑓(𝑢)|             (0,1) .
+               𝑐
+For 𝑏 ≥ 0 let 𝑃𝑏 be the Fourier multiplier with symbol
+
+                                                    𝑢𝜎 + 𝑏𝜎𝑧
+                                   𝑝𝑏 (𝑢) = 12 [𝐼 − √ 𝑥       ],
+                                                      𝑢2 + 𝑏2
+
+an orthogonal projection on ℂ2 for every (𝑢, 𝑏) ≠ (0, 0). Put 𝑋𝑏 = 𝜒𝑃𝑏𝑐 (1 − 𝜒), 𝑍𝜇 =
+𝑋𝜇 − 𝑋0 and
+
+           0 𝑋
+ℍ(𝑋) = (        ),        𝔻𝜇 = ℍ(𝑍𝜇 ),      𝐴𝜃 = ℍ(𝑋0 )+𝜃 𝔻𝜇 ,         𝑌𝜃 = 𝐴𝜃 + 12 𝐼,   0 ≤ 𝜃 ≤ 1.
+           𝑋∗ 0
+
+The block form refers to 𝐿2 (ℝ; ℂ2 ) = 𝐿2 ((0, 1); ℂ2 ) ⊕ 𝐿2 (ℝ ∖ (0, 1); ℂ2 ), 𝑓 = 𝑓in + 𝑓out with
+𝑓in = 𝜒𝑓. Since 𝐴𝜃 = (1 − 𝜃)ℍ(𝑋0 ) + 𝜃 ℍ(𝑋𝜇 ),
+
+                              ℍ(𝑋𝑏 )𝑓 = 𝜒𝑃𝑏𝑐 𝑓out + (1 − 𝜒)𝑃𝑏𝑐 𝑓in .                           (1)
+
+Definition 1 (Block Sobolev space). For 0 ≤ 𝑠 < 1/2 let ℋ𝑠 be the space of 𝑓 ∈
+𝐿2 (ℝ; ℂ2 ) whose parts 𝑓in , 𝑓out , extended by zero, belong to 𝐻 𝑠 , with ‖𝑓‖2ℋ𝑠 = ‖𝑓in ‖2𝑠 +
+‖𝑓out ‖2𝑠 .
+
+The classical theorem of Shamir and Strichartz [2, 3] states that multiplication
+by the indicator of a half-line is bounded on 𝐻 𝑠 (ℝ) exactly for −1/2 < 𝑠 < 1/2. Let
+
+                                                1
+Uniform Sobolev bound for the cross-block interpolants                                        Paper D8
+
+
+𝜅𝑠 be the norm of multiplication by 1(0,∞) on 𝐻 𝑠 (ℝ), 0 ≤ 𝑠 < 1/2. The 𝐻 𝑠 norm
+is invariant under translation and reflection, and 𝜒 = 1(0,∞) − 1[1,∞) . Hence the
+multiplier norms
+
+                     𝑐𝑠 = ‖𝜒‖𝐻 𝑠 →𝐻 𝑠 ≤ 2𝜅𝑠 ,      𝑐𝑠′ = ‖1 − 𝜒‖𝐻 𝑠 →𝐻 𝑠 ≤ 1 + 2𝜅𝑠
+
+are finite, and both are at least one because each multiplier fixes smooth functions
+supported inside (0, 1), respectively
+                                   √     outside [0, 1]. Consequently ℋ𝑠 = 𝐻 𝑠 as sets,
+       2     ′2 −1/2
+with (𝑐𝑠 + 𝑐𝑠 )      ‖𝑓‖ℋ𝑠 ≤ ‖𝑓‖𝑠 ≤ 2 ‖𝑓‖ℋ𝑠 .
+
+
+2 The bound
+
+Lemma 2 (Projection multipliers). For every 𝑏 ≥ 0 and 𝑠 ∈ ℝ, ‖𝑃𝑏𝑐 𝑓‖𝑠 ≤ ‖𝑓‖𝑠 .
+
+Proof. 𝑃  ̂ 𝑐              ̂
+           𝑏 𝑓(𝑢) = 𝑝𝑏 (𝑢)𝑓(𝑢) and |𝑝𝑏 (𝑢)𝑣| ≤ |𝑣| for almost every 𝑢; the value at (𝑢, 𝑏) =
+(0, 0) is irrelevant. Multiply by (1 + 𝑢2 )𝑠 and integrate.
+
+Theorem 3 (Uniform bound for the interpolants). Let 0 ≤ 𝑠 < 1/2. For all 𝑏 ≥ 0,
+
+                                   ‖ℍ(𝑋𝑏 )‖ℋ𝑠 →ℋ𝑠 ≤ max{𝑐𝑠 , 𝑐𝑠′ }.
+
+Consequently, for all 𝜃 ∈ [0, 1] and all 𝜇 ≥ 0,
+
+                         ‖𝑌𝜃 ‖ℋ𝑠 →ℋ𝑠 ≤ 𝑀𝑠 ∶= 12 + max{𝑐𝑠 , 𝑐𝑠′ } ≤ 32 + 2𝜅𝑠 ,
+
+and 𝑀𝑠 depends only on 𝑠.
+
+Proof. By (1) the inner part of ℍ(𝑋𝑏 )𝑓 is 𝜒𝑃𝑏𝑐 𝑓out and its outer part is (1 − 𝜒)𝑃𝑏𝑐 𝑓in .
+Lemma 2 and the definitions of 𝑐𝑠 , 𝑐𝑠′ give ‖𝜒𝑃𝑏𝑐 𝑓out ‖𝑠 ≤ 𝑐𝑠 ‖𝑓out ‖𝑠 and ‖(1 − 𝜒)𝑃𝑏𝑐 𝑓in ‖𝑠 ≤
+𝑐𝑠′ ‖𝑓in ‖𝑠 . Therefore ‖ℍ(𝑋𝑏 )𝑓‖2ℋ𝑠 ≤ 𝑐𝑠2 ‖𝑓out ‖2𝑠 + 𝑐𝑠′2 ‖𝑓in ‖2𝑠 ≤ max{𝑐𝑠 , 𝑐𝑠′ }2 ‖𝑓‖2ℋ𝑠 . The second
+claim follows from 𝑌𝜃 = 12 𝐼 + (1 − 𝜃)ℍ(𝑋0 ) + 𝜃 ℍ(𝑋𝜇 ) and the triangle inequality.
+
+Corollary 4 (Use in the entropy-difference estimate). Let 0 < 𝑠 < 1/2, let 𝑌𝐿,𝜃 be
+the lattice interpolant of [1], and assume its estimate (B8), ‖𝑃     ̃𝐿,𝜇 −𝑃𝜇𝑐 ‖𝐻 𝑠 →𝐿2 ≤ 𝐶𝑠 𝐿−𝑠
+uniformly in 𝜇 ≥ 0. Then for integers 𝑘 ≥ 1,
+                                        √
+                      𝑘
+                   ∥(𝑌𝐿,𝜃 − 𝑌𝜃𝑘 )𝔻𝜇 ∥1 ≤ 2 𝐶𝑠 𝑘 𝑀𝑠𝑘−1 𝐿−𝑠 ‖𝔻𝜇 ‖𝒮1 (𝐿2 ,ℋ𝑠 ) .
+
+If a polynomial ∑𝑘≤𝑛 𝑎𝑘 𝑌 𝑘 has ∑𝑘 |𝑎𝑘 | ≤ 𝐶7𝑛 , the corresponding difference of
+                                √
+traces against 𝔻𝜇 is at most 2 𝐶 𝐶𝑠 𝑛 (7𝑀𝑠 )𝑛 𝐿−𝑠 ‖𝔻𝜇 ‖𝒮1 (𝐿2 ,ℋ𝑠 ) . With 𝑠 = 1/4 and
+𝑛 = ⌊log 𝐿/(8 log(7𝑀1/4 ))⌋ one has (7𝑀1/4 )𝑛 ≤ 𝐿1/8 , so this term is 𝑂(𝑛 𝐿−1/8 ) times
+the nuclear norm, uniformly in 𝜃 and 𝜇.
+
+                                𝑘−1
+Proof. Write 𝑌𝐿𝑘 − 𝑌 𝑘 = ∑𝑗=0 𝑌𝐿𝑗 (𝑌𝐿 − 𝑌 )𝑌 𝑘−1−𝑗 . The lattice interpolants are 𝐿2 con-
+tractions [1]. By (1) and its lattice analogue, (𝑌𝐿 − 𝑌 )𝑓 is a convex combination of
+terms 𝜒(𝑃 ̃−𝑃 𝑐 )𝑓out +(1−𝜒)(𝑃
+                             ̃−𝑃 𝑐 )𝑓in , whose 𝐿2 norm is at most 𝐶𝑠 𝐿−𝑠 (‖𝑓out ‖𝑠 +‖𝑓in ‖𝑠 ) ≤
+√
+  2 𝐶𝑠 𝐿−𝑠 ‖𝑓‖ℋ𝑠 . Theorem 3 bounds 𝑌 𝑘−1−𝑗 on ℋ𝑠 by 𝑀𝑠𝑘−1−𝑗 ≤ 𝑀𝑠𝑘−1 , since 𝑀𝑠 ≥ 3/2.
+The ideal property of the nuclear norm gives the first display; summing over 𝑘 ≤ 𝑛
+gives the second. The choice of 𝑛 gives 𝑛 log(7𝑀1/4 ) ≤ 18 log 𝐿.
+
+
+
+
+                                                   2
+Uniform Sobolev bound for the cross-block interpolants                    Paper D8
+
+
+Scope. The theorem supplies the constant written 𝑀𝑠 in the display preceding
+(B9) of [1] and shows that it does not depend on 𝜃, 𝜇 or 𝐿. The corollary uses (B8),
+the contraction property of the lattice interpolants and the polynomial coefficient
+bound as stated there; it does not re-prove them, the nuclear estimate (B7), the
+trace-norm comparison (B6) or the Chebyshev approximation rate. The constants
+𝑐𝑠 , 𝑐𝑠′ are not evaluated numerically here. A finite-grid computation at 𝑠 = 1/4
+(accompanying program check_Ms_bound.py) is consistent with the inequality; it is
+a sanity check and not part of the proof.
+
+
+Research and computational disclosure
+
+This is an AI-assisted mathematical research manuscript prepared within the re-
+search program From Prephysical Hypotheses to Physical Models. Research di-
+rection and scholarly responsibility: Kirtus Justus. The argument was drafted by
+Claude (Anthropic) at the author’s direction and is presented for examination; it
+has not been independently refereed. Assistance does not imply provider endorse-
+ment.
+
+
+References
+
+[1] K. Justus, Cross-Boundary Trace-Class Estimates for Wilson–Dirac Quasifree
+    States, manuscript (23 October 2026), equations (B6)–(B9) and the finite
+    cross-block trace-path lemma.
+
+[2] R. S. Strichartz, “Multipliers on fractional Sobolev spaces,” Journal of Mathe-
+    matics and Mechanics 16 (1967), 1031–1060.
+
+[3] M. Meyries and M. Veraar, “Pointwise multiplication on vector-valued func-
+    tion spaces with power weights,” Journal of Fourier Analysis and Applica-
+    tions 21 (2015), 95–136, arXiv:1311.7404; the introduction states the Shamir–
+    Strichartz range −1/𝑝′ < 𝑠 < 1/𝑝 for 𝐻 𝑠,𝑝 (ℝ𝑑 ).
+
+
+
+
+                                           3
+

@@ -1,0 +1,288 @@
+\section{Question and results}
+
+Paper G8 assigns a measure to sets of walks of one length on a gain graph, and leaves three items as assumptions: the second order of the rule, the exclusion of a first-order weighting of returning walks, and any relation between the measures at different lengths \cite{g8}. Paper G9 takes the simplest such relation, consistency under continuation, as a requirement and finds what it forces on the carrier \cite{g9}. It leaves open a reason for the requirement, an error bound for the position of a ray, and whether gains of bounded order can imitate a weak force. The present paper asks what the same requirement decides about the rule itself, and returns to the two open items.
+
+\begin{enumerate}[label=(\roman*)]
+\item A family of set functions on walks of each length defines one function on sets of unending walks exactly when it is consistent under continuation (Lemma~\ref{lem:cyl}). The requirement of G9 is thus the statement that events are sets of histories.
+\item An additive rule that is consistent under continuation is a multiple of the number of walks: the weighting of returning walks by their holonomy, which switching invariance allows, is excluded (Proposition~\ref{prop:add}).
+\item On the signed arc digraph of a line, a rule that adds over end vertices a function of the modulus of the summed gains is consistent under continuation only if that function is the square (Theorem~\ref{thm:quad}); the same holds on every finite connected signed digraph that is norm-preserving of degree two (Theorem~\ref{thm:deg2}). On any norm-preserving gain digraph with a merging pair of walks, the only consistent power of the modulus is the second (Theorem~\ref{thm:power}). For gains in the $q$-th roots of unity the consistent rules of this form are exactly the combinations of the squared moduli in the conjugate characters; they form a space of dimension $\varphi(q)/2$ for $q>2$ and of dimension one for $q=2$, and the rule is unique up to a factor exactly for $q\in\{2,4,6\}$ (Theorem~\ref{thm:conj}). Such a rule is non-negative exactly when its weights are, and if it is multiplicative on products of carriers it is the squared modulus in one conjugate character (Proposition~\ref{prop:compo}). If the gain of a walk is itself recorded, so that the carrier is the signed lift with one sheet for each pair of opposite gains, the rule is unique for every $q$: it is the square of the integer amplitude, the mean of the squared moduli over the characters in which $-1$ acts as $-1$ (Corollary~\ref{cor:lift}). Without any choice of records, among the switching-invariant pair rules of \cite{g8} the consistent ones are exactly those whose kernel changes sign under $-1$: the mixtures of the characters in which $-1$ acts as $-1$, a space of dimension $\lceil q/4\rceil$ that contains both families (Theorem~\ref{thm:kernel}).
+\item A gain that depends on position translates the quasi-momentum by a fixed amount per step exactly only if it is the linear gain; a translation by $\Phi$ therefore needs a gain of order at least $2\pi/\Phi$ (Proposition~\ref{prop:exact}). For gains of order $q\ge3$ no quasi-energy belongs to the spectra of the free step multiplied by all $q$ gain values, except four band edges for $q=4$ (Proposition~\ref{prop:local}). Computed instances of staircases of gains of order $3$, $4$ and $6$ are recorded in Section~\ref{sec:force}; none follows the ray of its mean field.
+\item For the linear gain, the centroid of a packet follows the ray averaged over the quasi-momentum distribution of the packet, displaced by the connection of the branch eigenvector, with a remainder that decreases about as the first power of the field in the instances computed (Section~\ref{sec:ray}). No bound is proved.
+\end{enumerate}
+
+Section~\ref{sec:limits} states what is assumed and what is not obtained. The statements are mathematical and concern the constructed trials GH-1 and GH-2 of the program collection. Neither quantum nor classical mechanics is derived.
+
+\section{Setting}\label{sec:setting}
+
+The notation is that of \cite{g9}. A gain digraph $D$ has a finite or countable vertex set $V$, arcs $e$ with initial vertex $s(e)$, terminal vertex $t(e)$ and gain $\varphi(e)$ in a group $G$, at most one arc from a given vertex to a given vertex, and finitely many arcs leaving each vertex; a character $\chi\colon G\to\mathrm{U}(1)$ is fixed and $A_{yx}=\chi(\varphi(e))$ for an arc $e$ from $x$ to $y$, $A_{yx}=0$ if there is none. An event $S$ is a set of walks of one length $j$ from one vertex $x$, with vector $v_S(y)=\sum_{w\in S,\,t(w)=y}\chi(\varphi(w))$, and $\operatorname{Ext}S$ is the event of all walks of length $j+1$ whose first $j$ arcs form a walk of $S$; $v_{\operatorname{Ext}S}=Av_S$. A family $(\mu_j)_{j\ge0}$ of real functions on the events of each length is \emph{consistent under continuation with factor $c>0$} if
+\begin{equation}\label{eq:cons}
+\mu_{j+1}(\operatorname{Ext}S)=c\,\mu_j(S)\qquad\text{for every event }S\text{ of every length }j .
+\end{equation}
+A \emph{rule} gives $\mu_j$ by one formula for all $j$. The rule of \cite{g8} is $\mu(S)=\lVert v_S\rVert^2$; by Lemma~3.1 of \cite{g9} it satisfies \eqref{eq:cons} for all events exactly when $A^*A=c$ on the vectors concerned, and $D$ is then called norm-preserving of degree $c$.
+
+\section{Events as sets of histories}\label{sec:cyl}
+
+Suppose every vertex has an outgoing arc. A \emph{history} from $x$ is an unending walk $(e_1,e_2,\dots)$ with $s(e_1)=x$. For a walk $w$ of length $j$ from $x$ let $\operatorname{cyl}(w)$ be the set of histories whose first $j$ arcs are $w$, and for an event $S$ let $\operatorname{cyl}(S)=\bigcup_{w\in S}\operatorname{cyl}(w)$. The sets $\operatorname{cyl}(S)$ form an algebra of sets, the algebra of cylinder sets.
+
+\begin{lemma}\label{lem:cyl}
+\begin{enumerate}[label=(\alph*)]
+\item $\operatorname{cyl}(\operatorname{Ext}S)=\operatorname{cyl}(S)$, and for events $S,S'$ of lengths $j\le j'$ one has $\operatorname{cyl}(S)=\operatorname{cyl}(S')$ if and only if $S'=\operatorname{Ext}^{\,j'-j}S$.
+\item A family $(\nu_j)$ of functions on events defines a function $\nu$ on the algebra of cylinder sets by $\nu(\operatorname{cyl}S)=\nu_j(S)$ if and only if $\nu_{j+1}(\operatorname{Ext}S)=\nu_j(S)$ for all $S$ and $j$.
+\item A family $(\mu_j)$ is consistent under continuation with factor $c$ if and only if $\nu_j=c^{-j}\mu_j$ defines a function on the algebra of cylinder sets.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) A history begins with a walk of $S$ exactly when its first $j+1$ arcs form a walk of $\operatorname{Ext}S$. If $\operatorname{cyl}(S)=\operatorname{cyl}(S')$, a walk $w'$ of length $j'$ lies in $S'$ exactly when the histories beginning with $w'$ lie in $\operatorname{cyl}(S)$; since every walk is the beginning of a history, this holds exactly when the first $j$ arcs of $w'$ form a walk of $S$. (b) follows from (a), and (c) from (b).
+\end{proof}
+
+Condition \eqref{eq:cons} is therefore not a dynamical law added to the rule. It says that an event is a set of histories, and that the measure of a set of histories does not depend on the length at which the set is described. For a system of finitely many states with a unitary step the decoherence functional of Dowker, Johnston and Surya is defined on exactly this algebra, with cylinder sets of finite strings as generators \cite{djsu}; they show that it does not extend to the generated $\sigma$-algebra in general, which is not used here. That events are sets of histories is an assumption about the event structure. It is supplied. What follows is what it decides once it is made.
+
+\section{Additive rules}\label{sec:add}
+
+By Lemma~3.1 of \cite{g8} a switching-invariant additive rule has the form $\mu(S)=\sum_{w\in S}F(w)$ with $F(w)=a$ for a walk that does not end at its starting vertex and $F(w)=F_{\mathrm c}(\varphi(w))$, a class function of the gain, for a walk that does. Such a rule is consistent under continuation with factor $c$ exactly when
+\begin{equation}\label{eq:addcons}
+\sum_{e\colon s(e)=t(w)}F(we)=c\,F(w)\qquad\text{for every walk }w\text{ from }x .
+\end{equation}
+
+\begin{proposition}\label{prop:add}
+Let $D$ be a gain digraph without loops in which every vertex has $d\ge1$ outgoing arcs, and let an additive rule of the form above satisfy \eqref{eq:addcons} with a factor $c>0$. If $a\ne0$, then $c=d$ and $F_{\mathrm c}(g)=a$ for every $g$ that is the gain of a closed walk at $x$. If $a=0$, then $F_{\mathrm c}(g)=0$ for every such $g$. In both cases $\mu$ is $a$ times the number of walks.
+\end{proposition}
+\begin{proof}
+A closed walk $w$ at $x$ with gain $g$ has $d$ continuations, none of them closed, since there are no loops; so \eqref{eq:addcons} reads $da=cF_{\mathrm c}(g)$. If $a=0$ this gives $F_{\mathrm c}(g)=0$. Let $a\ne0$. If some walk from $x$ ends at a vertex $y\ne x$ without an arc to $x$, its continuations are open and \eqref{eq:addcons} reads $da=ca$, so $c=d$ and then $F_{\mathrm c}(g)=a$. Otherwise every walk $w$ ending at $y\ne x$ has exactly one closed continuation, with some gain $g'$, and \eqref{eq:addcons} reads $(d-1)a+F_{\mathrm c}(g')=ca$. Every closed walk of positive length arises in this way, so $F_{\mathrm c}$ has the single value $f=(c-d+1)a$ on their gains; with $da=cf$ this gives $(c-d)(c+1)=0$, hence $c=d$ and $f=a$. The closed walk of length $0$ gives $da=cF_{\mathrm c}(1)$ and the same value.
+\end{proof}
+
+The weights $2$ and $1/2$ of the example of Directors A, B and G for $\mathbb{Z}_3$, quoted after Lemma~3.1 of \cite{g8}, are thus not the values of a function on sets of histories: on the complete graph on four vertices with one gain of order three the ratios in \eqref{eq:addcons} take the values $1.5$, $2.5$ and $4$ on walks of length two \cite{comp4s}. For two triangles with a common vertex, where the out-degrees are $2$ and $4$, no factor among those tried makes a rule with $a\ne0$ consistent \cite{comp4s}. A first-order rule on histories is the count of walks, which is the uniform classical measure on histories and does not depend on the gains.
+
+\section{Rules that depend on the modulus}\label{sec:mod}
+
+Let $\phi\colon[0,\infty)\to\mathbb{R}$ with $\phi(0)=0$, and put
+\begin{equation}\label{eq:phi}
+\mu_\phi(S)=\sum_{y\in V}\phi\bigl(|v_S(y)|\bigr).
+\end{equation}
+This keeps two assumptions of \cite{g8}: gains of walks with a common end vertex are added, and end vertices are records over which the rule adds. It drops the second order. The rule of \cite{g8} is $\phi(t)=t^2$, its rule of fourth order is $\phi(t)=t^4$, and with trivial gains $\phi(t)=t$ is the number of walks.
+
+\subsection{The signed line}
+Let $D$ be the signed arc digraph of the line $\mathbb{Z}$ of \cite{g9}: vertices $(x,R)$ and $(x,L)$, arcs from either to $(x+1,R)$ and to $(x-1,L)$, all gains $+1$ except $-1$ on the arcs from $(x,L)$ to $(x-1,L)$. The vectors $v_S$ have integer components, so only the values of $\phi$ at integers enter.
+
+\begin{theorem}\label{thm:quad}
+On the signed arc digraph of the line, the rule \eqref{eq:phi} with $\phi(1)\ne0$ is consistent under continuation with a factor $c>0$ if and only if $c=2$ and $\phi(n)=n^2\phi(1)$ for every integer $n\ge0$.
+\end{theorem}
+\begin{proof}
+For one walk $w$, $\mu_\phi(\{w\})=\phi(1)$ and $\operatorname{Ext}\{w\}$ consists of two walks with different end vertices, so $2\phi(1)=c\,\phi(1)$ and $c=2$. Let $a\ge1$. A walk from $(0,R)$ is a sequence of steps to the right and to the left, and its gain is $-1$ to the power of the number of steps to the left that follow a step to the left. Among the walks of length $a+1$ with $a$ steps to the right and one to the left there are $a$ that end with a step to the right and one that ends with the step to the left; all have gain $+1$ and end at site $a-1$. Let $S$ consist of these $a+1$ walks. Then $v_S$ has the components $a$ at $(a-1,R)$ and $1$ at $(a-1,L)$ and no others, and $v_{\operatorname{Ext}S}=Av_S$ has the components $a+1$ at $(a,R)$ and $a-1$ at $(a-2,L)$. Consistency gives
+\[
+\phi(a+1)+\phi(a-1)=2\phi(a)+2\phi(1),\qquad a\ge1 ,
+\]
+and with $\phi(0)=0$ induction gives $\phi(n)=n^2\phi(1)$. Conversely $A^*A=2$ and $\phi(t)=t^2$ is consistent by Lemma~3.1 of \cite{g9}.
+\end{proof}
+
+The recursion is the parallelogram identity $\phi(|a+b|)+\phi(|a-b|)=2\phi(|a|)+2\phi(|b|)$ at $b=1$; the full identity holds at every site because the two arcs arriving at a site continue to one vertex with equal signs and to another with opposite signs, which is the zigzag gain $-1$ of Theorem~4.3 of \cite{g9}. A numerical solution of the consistency equations over $4000$ sampled events of length $12$ returns $\phi(n)/\phi(1)=n^2$ for $n\le8$ to $3\times10^{-13}$, and rejects $\phi(n)=n$ and $\phi(n)=n^4$ \cite{comp4s}. With all gains $+1$ on the same digraph the rule $\phi(t)=t$ is consistent, being the count.
+
+\subsection{Norm-preserving digraphs}
+\begin{theorem}\label{thm:power}
+Let $D$ be a gain digraph with gains of modulus one and $A^*A=d$, $d\ge2$. Suppose two walks of equal length from a common vertex end at distinct vertices $y_1,y_2$ that have a common successor. Then for $p>0$ the rule $\mu_p(S)=\sum_y|v_S(y)|^p$ is consistent under continuation with some factor $c>0$ if and only if $p=2$.
+\end{theorem}
+\begin{proof}
+Single walks give $c=d$, as every vertex has $d$ successors. Let $w_1,w_2$ be the two walks, $a,b$ the values of $\chi$ on their gains, and $S=\{w_1,w_2\}$, so $\mu_p(S)=2$. Let $Z$ be the set of the $m\ge1$ common successors of $y_1,y_2$. For $z\in Z$ the component of $Av_S$ is $aA_{zy_1}+bA_{zy_2}$, of modulus $|1+u_z|$ with $u_z=(b/a)\,\overline{A_{zy_1}}A_{zy_2}$; the other $2(d-m)$ successors carry components of modulus one. Orthogonality of the columns $y_1,y_2$ of $A$ gives $\sum_{z\in Z}u_z=0$. Hence $\mu_p(\operatorname{Ext}S)=2(d-m)+h(p)$ with $h(p)=\sum_{z\in Z}|1+u_z|^p$, and consistency requires $h(p)=2m$. Now $h(2)=\sum_z(2+2\operatorname{Re}u_z)=2m$. On $(0,\infty)$ the function $h$ is a sum of functions $t^p$ with $t\ge0$ and is convex, and its limit at $0$ is the number $h_0\le m$ of $z$ with $u_z\ne-1$. For $0<p<2$ convexity gives $h(p)\le(1-p/2)h_0+(p/2)\,2m<2m$, and for $p>2$ it gives $h(p)\ge2m+(p-2)(2m-h_0)/2>2m$.
+\end{proof}
+
+\begin{theorem}[Degree two]\label{thm:deg2}
+Let $D$ be a finite gain digraph with gains $\pm1$ that is norm-preserving of degree two and whose underlying graph is connected. The rule \eqref{eq:phi} with $\phi(1)\ne0$ is consistent under continuation with a factor $c>0$ if and only if $c=2$ and $\phi(n)=n^2\phi(1)$ for every integer $n\ge0$.
+\end{theorem}
+\begin{proof}
+Single walks give $c=2$. By Theorem~4.3 of \cite{g9} every vertex has two incoming and two outgoing arcs, so $D$ is strongly connected, and the vertices fall into blocks: pairs $\{x,x'\}$ with common successors $\{y,y'\}$ and signs $s_1=A_{yx}$, $s_2=A_{yx'}$, $s_3=A_{y'x}$, $s_4=A_{y'x'}$ with $s_1s_2s_3s_4=-1$. Fix a block and a starting vertex. Let $B$ be the matrix of the numbers of arcs; $B/2$ is doubly stochastic and irreducible, with some period $r$, so the number of walks of length $j$ from the starting vertex to a given vertex tends to infinity as $j\to\infty$ through the lengths of one residue class modulo $r$ and is zero for the other lengths. Because $x$ and $x'$ have a common successor, their residue classes coincide. Given $n\ge1$ choose a length with at least $2n-1$ walks to $x$ and one walk to $x'$; among the former, $n$ have equal gains. Let $S$ consist of these $n$ walks and one walk to $x'$. Then $v_S$ has the components $\pm n$ at $x$ and $\pm1$ at $x'$ and no others, and $Av_S$ has the components $s_1(\pm n)+s_2(\pm1)$ at $y$ and $s_3(\pm n)+s_4(\pm1)$ at $y'$, of moduli $n+1$ and $n-1$ in some order because $s_1s_2=-s_3s_4$. Consistency gives $\phi(n+1)+\phi(n-1)=2\phi(n)+2\phi(1)$, and the conclusion follows as in Theorem~\ref{thm:quad}. The converse is Lemma~3.1 of \cite{g9}.
+\end{proof}
+
+Theorem~\ref{thm:deg2} covers the rings and every other carrier of the constructed trial GH-2 with real gains; the choice of the base digraph does not matter. For $40$ random carriers of this kind on up to twelve vertices, and for $10$ carriers with gains of order four, where the moduli are those of Gaussian integers, a numerical solution of the consistency equations returns the square \cite{comp4s}; gains that are not real are treated in the next subsection. A first version of that computation failed on two carriers through an unknown that occurred in no equation, and is kept.
+
+The hypothesis on the pair of walks is the hypothesis of Lemma~3.1(b) of \cite{g9} together with a common successor; it holds on the ring and the line. It cannot be dropped. On the countable directed binary tree, with every gain $+1$, each vertex has two successors and distinct vertices have none in common, so $A^*A=2$; from the root every walk is the only walk to its end vertex, every event has $\mu_p(S)=|S|$, and every $p>0$ is consistent with factor $2$. This example is due to Director~G \cite{dg}; it shows that branching together with $A^*A=d$ does not suffice, and it corrects a summary sentence of the first issue of this paper, which named ``any branching norm-preserving carrier''. Theorem~\ref{thm:power} is the statement, for the vectors of events, that a unitary matrix which is not a permutation matrix with phases preserves no $\ell_p$ norm other than the Euclidean one; for all vectors this is the classical description of the isometries of $\ell_p$, $p\ne2$, as permutation matrices with phases, attributed to Li and So in the finite-dimensional case \cite{liso}. That reference was not inspected for this paper and is not used in the proof.
+
+\subsection{Gains in the roots of unity}
+Let $q\ge2$ be even, $\zeta=e^{2\pi i/q}$ and $R=\mathbb{Z}[\zeta]$; a norm-preserving digraph of degree two needs $-1$ among its gains \cite{g9}, so the order is even. For $j$ prime to $q$ let $\sigma_j$ be the automorphism of $R$ with $\sigma_j(\zeta)=\zeta^j$. It commutes with complex conjugation, $\sigma_{-j}=\overline{\sigma_j}$, and $|\sigma_j(\alpha)|^2=\sigma_j(|\alpha|^2)$ is a function of $|\alpha|$. Let $J$ contain one of $j,-j$ for each such $j$; it has $\varphi(q)/2$ elements for $q>2$, with $\varphi$ Euler's function, and one for $q=2$. The character $\sigma_j\circ\chi$ is the conjugate character of \cite{g8}, Section~8.
+
+\begin{lemma}[Parallelogram law]\label{lem:par}
+Let $\Gamma$ be an abelian group and $f\colon\Gamma\to\mathbb{R}$ with $f(x+y)+f(x-y)=2f(x)+2f(y)$ for all $x,y$. Then $B(x,y)=\tfrac14\bigl(f(x+y)-f(x-y)\bigr)$ is symmetric and additive in each argument, and $f(x)=B(x,x)$.
+\end{lemma}
+\begin{proof}
+The law gives $f(0)=0$, $f(-y)=f(y)$ and $f(2x)=4f(x)$, so $B$ is symmetric, $B(0,y)=0$ and $B(x,x)=f(x)$. Subtracting the law for the pair $(x-y,z)$ from the law for $(x+y,z)$ gives $B(x+z,y)+B(x-z,y)=2B(x,y)$. With $z=x$ this is $B(2x,y)=2B(x,y)$; with $x=u+v$, $z=u-v$ it is $B(2u,y)+B(2v,y)=2B(u+v,y)$, that is, $B(u,y)+B(v,y)=B(u+v,y)$.
+\end{proof}
+The lemma is the classical characterization of quadratic forms; the proof is included because the group here is a lattice, in which one cannot divide by two.
+
+\begin{theorem}[Conjugate characters]\label{thm:conj}
+Let $D$ be a gain digraph that is norm-preserving of degree two, with $\chi$ taking values in the $q$-th roots of unity. Suppose that for some block with vertices $x,x'$ and some starting vertex, and for every $N$, there is a length at which every $q$-th root of unity is the value of $\chi$ on the gains of at least $N$ walks to $x$ and of at least $N$ walks to $x'$. Then the rule \eqref{eq:phi} is consistent under continuation with factor $2$ if and only if there are real numbers $c_j$, $j\in J$, with
+\begin{equation}\label{eq:conj}
+\phi(|\alpha|)=\sum_{j\in J}c_j\,|\sigma_j(\alpha)|^2\qquad\text{for all }\alpha\in R .
+\end{equation}
+The consistent rules thus form a real vector space of dimension $\varphi(q)/2$ for $q>2$ and of dimension one for $q=2$; the rule is unique up to a factor exactly for $q\in\{2,4,6\}$.
+\end{theorem}
+\begin{proof}
+\emph{The rules \eqref{eq:conj} are consistent.} For the character $\sigma_j\circ\chi$ the step matrix is $\sigma_j(A)$ and the vector of an event is $\sigma_j(v_S)$. Since $\sigma_j$ commutes with complex conjugation, $\sigma_j(A)^*\sigma_j(A)=\sigma_j(A^*A)=2$, so $\sum_y|\sigma_j(v_S(y))|^2$ is consistent with factor $2$ by Lemma~3.1 of \cite{g9}.
+
+\emph{A consistent rule has the form \eqref{eq:conj}.} Every element of $R$ is a combination of powers of $\zeta$ with non-negative integer coefficients, because $-1=\zeta^{q/2}$. By the hypothesis there is, for any $\alpha,\beta\in R$, an event whose vector has the components $\alpha$ at $x$ and $\beta$ at $x'$ and no others. With the entries $u_1=A_{yx}$, $u_2=A_{yx'}$, $u_3=A_{y'x}$, $u_4=A_{y'x'}$ of the block, $\overline{u_1}u_2+\overline{u_3}u_4=0$, and the vector of the continued event has the components $u_1\alpha+u_2\beta$ and $u_3\alpha+u_4\beta$, of moduli $|\alpha+w\beta|$ and $|\alpha-w\beta|$ with $w=\overline{u_1}u_2$ a root of unity in $R$. Consistency, with $w^{-1}\beta$ in place of $\beta$, says that $f(\alpha)=\phi(|\alpha|)$ satisfies the parallelogram law on the additive group of $R$. By Lemma~\ref{lem:par}, $f(\alpha)=B(\alpha,\alpha)$ with $B$ symmetric and biadditive; $B$ extends to a real symmetric bilinear form on $V=R\otimes\mathbb{R}$, and $B(\zeta\alpha,\zeta\beta)=B(\alpha,\beta)$ because $f(\zeta\alpha)=f(\alpha)$. For $q=2$, $R=\mathbb{Z}$ and $f(n)=n^2f(1)$. For $q>2$ the map $\alpha\mapsto(\sigma_j(\alpha))_{j\in J}$ identifies $V$ with a sum of planes $\mathbb{C}$, on the $j$-th of which multiplication by $\zeta$ is the rotation by $2\pi j/q$. Over the complex numbers this map has the $\varphi(q)$ distinct eigenvalues $\zeta^{\pm j}$, and for eigenvectors $v,w$ with eigenvalues $\lambda,\mu$ invariance gives $B(v,w)(1-\lambda\mu)=0$; so $B$ pairs only the two eigenvectors of one plane, and on each plane it is a real multiple $c_j$ of the Euclidean inner product. Hence $f(\alpha)=\sum_jc_j|\sigma_j(\alpha)|^2$.
+
+\emph{Dimension.} The functions $|\sigma_j(\alpha)|^2$, $j\in J$, are the squared lengths of the components of $\alpha$ in complementary planes and are linearly independent. $\varphi(q)/2=1$ for even $q>2$ exactly when $q\in\{4,6\}$.
+\end{proof}
+
+\emph{Example.} Let $B_q$ be the gain digraph on two vertices with step matrix $\bigl(\begin{smallmatrix}1&\zeta\\1&-\zeta\end{smallmatrix}\bigr)$. It is norm-preserving of degree two. The digraph of pairs (vertex, gain) has two arcs into and out of every pair, a loop at each pair with the first vertex, and is strongly connected, so the numbers of walks to each pair grow without bound for all large lengths and the hypothesis of Theorem~\ref{thm:conj} holds. For $q=2,4,6,8,10,12$ a solution of the consistency equations in exact arithmetic in $R$ returns a space of dimension $1,1,1,2,2,2$ that contains every function $|\sigma_j(\alpha)|^2$; for $q=8$ the rule of $\sigma_3$ differs from the squared modulus by more than half its value on sampled moduli \cite{comp4s}.
+
+Theorem~\ref{thm:conj} says where consistency on histories stops. It forces the second order and then leaves exactly the freedom of Proposition~8.1 of \cite{g8}: the choice of the faithful character, that is, of the embedding of the amplitudes in the complex numbers. The orders $2,4,6$, for which that proposition makes the measure independent of the character, are the orders for which the consistent rule is unique. For other orders a combination with unequal $c_j$ is a consistent rule that is the squared modulus of no single character. Nothing in the event structure prefers $\sigma_1$. An instance on five sheets: for a fixed, independently tagged character, the three-step constructive record has the values $(3+\sqrt5)/16$ and $(3-\sqrt5)/16$ under two embeddings; from a localized sheet the same record has probability $\tfrac14$ under both (Director~G \cite{dg,dgn}; the two values for the tagged character were recomputed for this paper, and the third is an instance of \eqref{eq:lift} below).
+
+\begin{proposition}[Positivity and composition]\label{prop:compo}
+Let $\phi$ be of the form \eqref{eq:conj}.
+\begin{enumerate}[label=(\alph*)]
+\item $\phi(|\alpha|)\ge0$ for all $\alpha\in R$ if and only if $c_j\ge0$ for every $j\in J$.
+\item Suppose the rule is multiplicative on products: for gain digraphs with gains in the $q$-th roots of unity and events $S_1,S_2$ of the factors, $\mu_\phi(S_1\times S_2)=\mu_\phi(S_1)\,\mu_\phi(S_2)$, where the product is that of \cite{g8}, Section~6, with $v_{S_1\times S_2}=v_{S_1}\otimes v_{S_2}$. Then $\phi=0$ or there is one $j\in J$ with $\phi(|\alpha|)=|\sigma_j(\alpha)|^2$ for all $\alpha\in R$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) If all $c_j\ge0$ the sum is non-negative. Conversely the image of $R$ in the sum $V$ of the planes is a lattice of full rank, so the rays through its points are dense in $V$; if some $c_j<0$, the form $\sum_jc_j|z_j|^2$ is negative on an open cone of $V$, which contains a point of the lattice. (b) Put $N_j(\alpha)=|\sigma_j(\alpha)|^2$ and $M_j(S)=\sum_yN_j(v_S(y))$. Since $N_j$ is multiplicative, $\mu_\phi(S_1\times S_2)=\sum_jc_jM_j(S_1)M_j(S_2)$, while $\mu_\phi(S_1)\mu_\phi(S_2)=\sum_{j,k}c_jc_kM_j(S_1)M_k(S_2)$. On a carrier that satisfies the hypothesis of Theorem~\ref{thm:conj} the events of walks to one vertex have $M_j(S)=N_j(\alpha)$ with $\alpha$ arbitrary in $R$, and the functions $N_j$ are linearly independent, which means that the vectors $(N_j(\alpha))_{j\in J}$, $\alpha\in R$, span $\mathbb{R}^J$. The events $S_1$ and $S_2$ vary independently of each other, so both sides are bilinear forms that agree on a spanning set in each argument, and their coefficients agree: $c_jc_k=\delta_{jk}c_j$ for all $j,k$. Then every $c_j$ is $0$ or $1$ and at most one is $1$.
+\end{proof}
+
+Positivity confines the weights to a cone and selects nothing. Multiplicativity under composition removes the combinations and fixes the normalization: a consistent multiplicative rule is the squared modulus in one conjugate character. Part (b) agrees with a classification obtained independently and issued first by Director~G \cite{dg}: on the field $\mathbb{Q}(\zeta,\sqrt2)$, a weight that passes a marginal test with one balanced coin, is invariant under $\zeta$ and factorizes on product tables is $\lambda(a\bar a)$ for a field embedding $\lambda$ of the real subfield. The hypotheses differ (a marginal condition on records there, consistency on histories here) and the conclusions coincide where both apply. The freedom that remains is the Galois group acting on a single character, the same residue as in Proposition~7.4 of \cite{g7} and Proposition~8.1 of \cite{g8}; neither consistency nor composition breaks it. Director~G describes controls that would: a regular real plane, an order on the real algebraic amplitudes, or a calibrated preparation with a prescribed algebraic entry \cite{dg}. Instances of the proposition for $q=8,10,12$ are in \cite{comp4s}.
+
+\subsection{The signed lift}
+In Theorem~\ref{thm:conj} the end vertex of a walk is a record and its gain is not. The other reading makes the gain a record. Let $h=q/2$ and $\Lambda=\mathbb{Z}[X]/(X^h+1)$ with the basis $1,X,\dots,X^{h-1}$; multiplication by $X$ permutes the basis up to the sign $X^h=-1$. For an odd residue $j$ modulo $q$ let $\sigma_j\colon\Lambda\to\mathbb{C}$ be the ring homomorphism with $\sigma_j(X)=\zeta^j$. These are the $h$ characters of the group of $q$-th roots of unity in which $-1$ acts as $-1$; $\sigma_j$ is faithful exactly when $j$ is prime to $q$. Let $D$ be a gain digraph with gains $\zeta^k$, $0\le k<q$, and $\chi(\zeta)=\zeta$. Its \emph{signed lift} $\tilde D$ has the vertices $(y,s)$ with $y\in V$ and $s\in\{0,\dots,h-1\}$, the \emph{sheets}, and for every arc of $D$ from $x$ to $y$ with gain $\zeta^k$ and every $s$ an arc from $(x,s)$ to $(y,t)$ with gain $\varepsilon=\pm1$, where $X^{s+k}=\varepsilon X^t$ in $\Lambda$. A walk of $\tilde D$ from $(x,0)$ is a walk $w$ of $D$ from $x$ together with the record of its gain $\zeta^{k(w)}$: it ends on the sheet $t$ with gain $\varepsilon$, where $X^{k(w)}=\varepsilon X^t$. For a set $S$ of walks of $D$ of one length from $x$ put
+\[
+\tilde v_S(y)=\sum_{w\in S,\ t(w)=y}X^{k(w)}=\sum_{s=0}^{h-1}n_{y,s}X^s\in\Lambda .
+\]
+The integers $n_{y,s}$ are the components of the vector of $S$ on $\tilde D$, and $\sigma_j(\tilde v_S(y))$ is the component at $y$ of its vector on $D$ for the character $\zeta\mapsto\zeta^j$.
+
+\begin{corollary}[Signed lift]\label{cor:lift}
+Let $D$ be a finite gain digraph that is norm-preserving of degree two, with gains in the $q$-th roots of unity, $q$ even.
+\begin{enumerate}[label=(\alph*)]
+\item $\tilde D$ has gains $\pm1$ and is norm-preserving of degree two.
+\item On each connected component of $\tilde D$ the rule \eqref{eq:phi}, with the pairs of a vertex and a sheet as end vertices and $\phi(1)\ne0$, is consistent under continuation with a factor $c>0$ if and only if $c=2$ and $\phi(n)=n^2\phi(1)$ for every integer $n\ge0$.
+\item With $\phi(1)=1$ the value of that rule on a set $S$ of walks of $D$ of one length from one vertex is the integer
+\begin{equation}\label{eq:lift}
+\tilde\mu(S)=\sum_{y\in V}\sum_{s=0}^{h-1}n_{y,s}^2=\frac2q\sum_{j\ \mathrm{odd}}\ \sum_{y\in V}\bigl|\sigma_j(\tilde v_S(y))\bigr|^2 ,
+\end{equation}
+the mean, with equal weights, of the squared-modulus rules of the $h$ characters $\sigma_j$, faithful or not.
+\item For $q\ge6$ and $j$ prime to $q$ the function $|\sigma_j(\cdot)|^2$ on $\Lambda$ is not a sum over the sheets of a function of $|n_s|$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(a) Every column of the step matrix $\tilde A$ of $\tilde D$ has two entries $\pm1$. In a block of $D$ with vertices $x,x'$, successors $y,y'$ and entries $u_i=\zeta^{k_i}$ as in the proof of Theorem~\ref{thm:conj}, the relation $\overline{u_1}u_2+\overline{u_3}u_4=0$ reads $k_2-k_1\equiv k_4-k_3+h$ modulo $q$. The columns $(x,s)$ and $(x',s')$ of $\tilde A$ have a common row over $y$ exactly when $s+k_1\equiv s'+k_2$ modulo $h$, and over $y'$ exactly when $s+k_3\equiv s'+k_4$ modulo $h$; by the relation the two conditions are the same. When they hold, the products of the two entries in the common rows are the signs $X^{(s'+k_2)-(s+k_1)}$ and $X^{(s'+k_4)-(s+k_3)}$, and their quotient is $X^{(k_2-k_1)-(k_4-k_3)}=-1$, an odd power of $X^h$. So the two columns are orthogonal. Columns over vertices of different blocks have disjoint supports, and two columns over one vertex of $D$ on different sheets also. Hence $\tilde A^{\mathsf T}\tilde A=2$. (b) A connected component of $\tilde D$ is closed under successors and predecessors, so it is a finite gain digraph with gains $\pm1$, norm-preserving of degree two, with connected underlying graph, and Theorem~\ref{thm:deg2} applies. (c) The first equality is the description of the walks of $\tilde D$ given above. For $0\le s,s'<h$ the sum of $\zeta^{j(s-s')}$ over the odd residues $j$ is $h$ if $s=s'$ and $0$ otherwise, so $\sum_{j\ \mathrm{odd}}|\sigma_j(\sum_sn_sX^s)|^2=h\sum_sn_s^2$. (d) The elements $1+X$ and $1+X^2$ have the same absolute values of coordinates up to their order, and $|\sigma_j(1+X)|^2=2+2\cos(2\pi j/q)$ differs from $|\sigma_j(1+X^2)|^2=2+2\cos(4\pi j/q)$: equality would need $q$ to divide $j$ or $3j$.
+\end{proof}
+
+With the sheets as records nothing is left to select. The rule is unique for every even order, its values are integers, and no embedding of the amplitudes enters; for $q=2$ and $q=4$ it is the rule of Theorem~\ref{thm:conj}, and for $q\ge6$ it is none of the single-character rules. Its value \eqref{eq:lift} is the mean of the conjugate rules together with those of the characters that are not faithful; for $q=10$ the residue $5$, in which $\zeta$ acts as $-1$, carries one fifth of the weight. Proposition~4.4 of \cite{g8} identifies the coincidence count on the covering graph with the dimension-weighted mean over the characters; Corollary~\ref{cor:lift} adds that on the signed lift this mean is the only consistent rule of the record-sum form. The freedom of Theorem~\ref{thm:conj} therefore belongs to the reduction by a character, in which the end vertex of $D$ is a record and the sheet is not. An event from one vertex of $\tilde D$ has an integer vector and enters every character with the weight fixed by \eqref{eq:lift}; multiplication by $X$ is an orthogonal map on the vectors of $\tilde D$ that commutes with the step and not with the sheet records, and the characters $\sigma_j$ are its sectors.
+
+Director~G obtained first, for the signed walk with a sheet coordinate and odd $h$, that every protocol of steps and coordinate records from a localized sheet has the same rational law $2^{-t}\sum_im_i^2$ under each of the embedding laws of \cite{dg}, and that an integer branch vector is not supported in a single faithful plane when $\varphi(h)>2$ \cite{dgn}. Corollary~\ref{cor:lift}(b) and (c) reach the same law from the event structure, without assuming that the rule is one of the embedding laws; the assumption used instead is the record-sum form with the sheets as records. The instance of Section~\ref{sec:mod} on five sheets shows both readings: $\tfrac14$ is the mean of $(3+\sqrt5)/16$ and $(3-\sqrt5)/16$, each with weight $\tfrac25$, and of $\tfrac12$ with weight $\tfrac15$. Which reading applies, that is, whether the gain of a walk is recorded at its end, is an assumption about records and is not decided here. Records of the sheet modulo a divisor of $h$ are not treated. Instances of the corollary for $q=4,6,8,10,12$, with the lifts of $B_q$ and of $25$ random carriers, are in \cite{comp4s}.
+
+\subsection{Pair rules with a kernel}
+The two preceding subsections fix what is recorded and classify the rules of the form \eqref{eq:phi}. The pair rules of \cite{g8} need no such choice. By Theorem~4.1 of \cite{g8} a pair rule that is unchanged by switching is given by a class function $f$ on the group: for the group $C$ of the $q$-th roots of unity and $f$ real with $f(g^{-1})=f(g)$,
+\begin{equation}\label{eq:kernel}
+\mu_f(S)=\sum_{\substack{w,w'\in S\\ t(w)=t(w')}}f\bigl(\varphi(w')\varphi(w)^{-1}\bigr).
+\end{equation}
+Let $\chi_j$, $j$ modulo $q$, be the characters of $C$, $\chi_j(\zeta)=\zeta^j$, so that $\chi_j(-1)=-1$ exactly for odd $j$, and let $v^{(j)}_S$ be the vector of $S$ for $\chi_j$. The kernel $\operatorname{Re}\chi_j$ gives $\mu_f(S)=\lVert v^{(j)}_S\rVert^2$.
+
+\begin{theorem}[Kernel rules]\label{thm:kernel}
+Let $D$ be a gain digraph with gains in $C$ that is norm-preserving of degree two for the faithful character $\chi_1$. Suppose that for some block with vertices $x,x'$ and some starting vertex the quotients $\varphi(w')\varphi(w)^{-1}$, for walks $w$ to $x$ and $w'$ to $x'$ of one common length, take every value in $C$. Let $f\ne0$. Then $\mu_f$ is consistent under continuation with a factor $c>0$ if and only if $c=2$ and
+\begin{equation}\label{eq:odd}
+f(-g)=-f(g)\qquad\text{for all }g\in C .
+\end{equation}
+The kernels with \eqref{eq:odd} are the real combinations $f=\sum_ja_j\operatorname{Re}\chi_j$ over the odd $j$, one from each pair $\pm j$, with $\mu_f(S)=\sum_ja_j\lVert v^{(j)}_S\rVert^2$; they form a space of dimension $\lceil q/4\rceil$. Among them:
+\begin{enumerate}[label=(\alph*)]
+\item the rules of Theorem~\ref{thm:conj} are those with $a_j=0$ unless $j$ is prime to $q$;
+\item the rule of Corollary~\ref{cor:lift} is the kernel with $f(1)=1$, $f(-1)=-1$ and $f=0$ elsewhere, that is, $f=\frac2q\sum_{j\ \mathrm{odd}}\chi_j$;
+\item on a carrier that satisfies the hypothesis of Theorem~\ref{thm:conj}, a rule that is multiplicative on products as in Proposition~\ref{prop:compo} is zero or $\lVert v^{(j)}_S\rVert^2$ for one odd $j$, which need not be prime to $q$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Write the gains of the four arcs of the block as $u_1,\dots,u_4\in C$, as in the proof of Theorem~\ref{thm:conj}. Since $\chi_1$ is faithful, the relation $\overline{u_1}u_2+\overline{u_3}u_4=0$ is the relation $u_4u_3^{-1}=-u_2u_1^{-1}$ in $C$.
+
+\emph{Necessity.} A single walk has $\mu_f=f(1)$ and its two continuations end at different vertices, so $2f(1)=c\,f(1)$. Let $w$ end at $x$ and $w'$ at $x'$, of one length, with quotient $r=\varphi(w')\varphi(w)^{-1}$, and $S=\{w,w'\}$, so $\mu_f(S)=2f(1)$. Of the four walks of $\operatorname{Ext}S$ two end at $y$, with quotient $d=u_2u_1^{-1}r$, and two at $y'$, with quotient $u_4u_3^{-1}r=-d$. Each pair is counted in both orders and $f(g^{-1})=f(g)$, so
+\[
+\mu_f(\operatorname{Ext}S)=4f(1)+2f(d)+2f(-d),
+\]
+and consistency gives $2\bigl(f(d)+f(-d)\bigr)=(2c-4)f(1)$. By the hypothesis $d$ takes every value in $C$. If $f(1)\ne0$ then $c=2$ and \eqref{eq:odd} follows. If $f(1)=0$, \eqref{eq:odd} follows at once; then $\mu_f$ doubles under continuation by the next paragraph, and the event of the two walks of $\operatorname{Ext}S$ that end at $y$ has measure $2f(d)$, which is not zero for some $d$, so $c=2$.
+
+\emph{Sufficiency.} The coefficient of $\chi_j$ in $f$ is $\frac1q\sum_gf(g)\overline{\chi_j(g)}$; for even $j$ the terms of $g$ and $-g$ cancel by \eqref{eq:odd}. So $\mu_f=\sum_{j\ \mathrm{odd}}c_j\lVert v^{(j)}_S\rVert^2$ with real $c_j=c_{-j}$. For odd $j$ the relation in $C$ gives $\chi_j(u_4u_3^{-1})=-\chi_j(u_2u_1^{-1})$, so the columns of the step matrix for $\chi_j$ are orthogonal with squared length two, and each term is consistent with factor $2$ by Lemma~3.1 of \cite{g9}.
+
+\emph{Dimension.} With $h=q/2$, a kernel with \eqref{eq:odd} and $f(g^{-1})=f(g)$ satisfies $f(\zeta^{h-d})=-f(\zeta^d)$, so it is determined by its values at $\zeta^d$, $0\le d<h/2$, which are free. (a) is the definition of the rules of Theorem~\ref{thm:conj}. (b) follows from \eqref{eq:lift}, or from $\frac1q\sum_gf(g)\overline{\chi_j(g)}=\frac1q(1-\chi_j(-1))$. (c) is the argument of Proposition~\ref{prop:compo}(b): the functions $\lVert v^{(j)}_S\rVert^2$, $j$ odd, on events of walks to one vertex are the squared lengths of the components of an arbitrary element of $\Lambda$ in complementary subspaces of $\Lambda\otimes\mathbb{R}$, and are linearly independent.
+\end{proof}
+
+The condition \eqref{eq:odd} says that the kernel sees the central element $-1$ as a sign and constrains nothing else. Among the pair rules, then, consistency on histories excludes every character in which $-1$ acts trivially, the constant kernel of the coincidence count on $D$ among them, and admits every mixture of the others. The rule is unique up to a factor only for $q=2$ and $q=4$; for $q=6$ there are two, the faithful one and the sign character, in which the cube roots of unity are not seen. Theorem~\ref{thm:conj} and Corollary~\ref{cor:lift} are two sections of this family: the first by the requirement that the rule be a function of the faithful amplitude, the second by the requirement that it be a sum over sheets. Strong positivity in the sense of \cite{g8} is $a_j\ge0$ (Theorem~4.1(b) of \cite{g8}). By (c), composition leaves one character with $\chi(-1)=-1$ and does not make it faithful: that the whole group of gains acts is an assumption of Proposition~\ref{prop:compo}, contained in the form \eqref{eq:phi} with the faithful character, and is not a consequence of consistency or composition. Without the hypothesis on the quotients more kernels are consistent: $12$ of $40$ random carriers in \cite{comp4s} do not satisfy it, and each of them has a larger space of consistent kernels. A first version of the computation did not test the hypothesis and used a threshold without basis; three of its four predicates failed and are kept.
+
+Taken together with Proposition~\ref{prop:add} this gives the following division, under the assumption that events are sets of histories. A rule of first order is the count and is blind to the gains. A rule of the form \eqref{eq:phi} that is consistent on a finite connected signed norm-preserving carrier of degree two is the squared modulus, and on a norm-preserving carrier in which two walks of equal length merge it is the only consistent power. Where no two walks ever meet, as on a tree, every rule of this form is the count. The second order of the rule of \cite{g8} is then a consequence and no longer a separate assumption; the choice of the character is not decided (Theorem~\ref{thm:conj}), and it does not arise when the gains are recorded (Corollary~\ref{cor:lift}). Among pair rules with a kernel, with no assumption on records beyond the end vertices, the consistent rules are the mixtures of the characters in which $-1$ acts as $-1$ (Theorem~\ref{thm:kernel}). The form \eqref{eq:phi}, the record role of end vertices and the carrier remain assumed, and rules that are not sums over end vertices of a function of one modulus are not covered.
+
+\section{Gains of bounded order and a force}\label{sec:force}
+
+Let $U$ be the normalized step of the signed arc digraph of the line or of a ring, $\mathcal{T}$ the translation by one site, and for a function $m$ of modulus one on the sites let $M_m$ be the multiplication by $m(x)$; $UM_m$ is the step in which every arc leaving site $x$ carries the additional gain $m(x)$. Proposition~6.3 of \cite{g9} shows that $m(x)=e^{-i\Phi x}$ translates the quasi-momentum by $-\Phi$ per step.
+
+\begin{proposition}\label{prop:exact}
+$\mathcal{T}\,UM_m\,\mathcal{T}^{-1}=\lambda\,UM_m$ for a number $\lambda$ if and only if $m(x-1)=\lambda\,m(x)$ for all $x$, that is, $m(x)=m(0)\lambda^{-x}$. If $m$ takes its values in a finite group of roots of unity, $\lambda$ belongs to that group; an exact translation of the quasi-momentum by $\Phi=2\pi/n$ per step requires gains of order at least $n$.
+\end{proposition}
+\begin{proof}
+$\mathcal{T}$ commutes with $U$ and $\mathcal{T}M_m\mathcal{T}^{-1}$ is the multiplication by $m(x-1)$; $U$ is invertible.
+\end{proof}
+
+With gains of bounded order an exact force is therefore the linear gain of that order, a strong field. A weak mean field can only be approximate, with a gain that winds slowly: constant on long blocks and advancing by one group element from block to block, as in the staircase of \cite{g9}. On a block where the gain is the constant $\gamma$ the step is $\gamma U$. By Lemma~6.1 of \cite{g9} the spectrum of $U$ on the line is
+\[
+\Sigma=\{e^{i\theta}:|\theta|\le\pi/4\}\cup\{e^{i\theta}:|\theta-\pi|\le\pi/4\},
+\]
+two arcs of length $\pi/2$ separated by two gaps of length $\pi/2$.
+
+\begin{proposition}[Local spectra]\label{prop:local}
+Let $\zeta=e^{2\pi i/q}$. The set $\bigcap_{j=0}^{q-1}\zeta^{\,j}\Sigma$ equals $\Sigma$ for $q=1,2$, consists of the four points $e^{\pm i\pi/4},e^{\pm3i\pi/4}$ for $q=4$, and is empty for $q=3$ and for $q\ge5$.
+\end{proposition}
+\begin{proof}
+A point lies in the intersection exactly when its orbit under multiplication by $\zeta$ avoids both open gaps. $\Sigma=-\Sigma$ settles $q\le2$. For $q\ge5$ consecutive points of an orbit are at angular distance $2\pi/q<\pi/2$, and an open arc of length $\pi/2$ contains one of them. For $q=4$ the distance is $\pi/2$ and an orbit avoids a gap only by containing both its end points. For $q=3$ two of the three points of an orbit would lie in one arc of length $\pi/2$, at distance $2\pi/3$.
+\end{proof}
+
+For $q\ge3$ no quasi-energy is thus an interior point of the spectrum on every block of a staircase that winds through the group; for $q=4$ the common points are band edges, where the group velocity vanishes. A state that propagates in one block is in a gap of another. This is a statement about the spectra of the pieces. It is not a theorem about the dynamics of the staircase, whose gains are periodic in position, so that the theorem of Grimmett, Janson and Scudo \cite{gjs} applies with the period as cell and exact confinement is not to be expected. The computed instances are as follows \cite{comp4s}.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+block length $L$ & 1 & 2 & 4 & 16 & 64\\\midrule
+order 2 & $1108$ & $750$ & $403$ & $346$ & $347$\\
+order 3 & $520$ & $520$ & $160$ & $9.3$ & $31$\\
+order 4 & $750$ & $365$ & $102$ & $8.4$ & $34$\\
+order 6 & $520$ & $181$ & $27$ & $11$ & $48$\\\bottomrule
+\end{tabular}
+\caption{Root-mean-square distance, in sites, after $2048$ steps of a walk from one vertex under a staircase of gains of order $q$ with blocks of $L$ sites; $L=1$ is the linear gain of order $q$. Ring of $8192$ sites; the walk does not reach the far side \cite{comp4s}.}\label{tab:stair}
+\end{table}
+
+\emph{Observed.} (a) For $L=1$ the distance doubles between $1024$ and $2048$ steps: a linear gain with a rational field spreads ballistically, as proved by Cedzich et al.\ \cite{cedzich}; the bounded distance reported in Section~6.2 of \cite{g9} refers to four periods. (b) For $L=16$ and $L=64$ and the orders $3,4,6$ the walk stays within about one block up to $2048$ steps; for $L=4$ it does not. Order $2$ spreads for every $L$, in accordance with $\Sigma=-\Sigma$. (c) A packet meeting one interface with gain ratio $e^{-i\delta}$ is transmitted with probability $0.9997$, $0.9994$, $0.975$ for $\delta=\pi/12,\pi/6,\pi/4$, with probability $0.0025$ for $\pi/3$, below $10^{-12}$ for $\pi/2$ and $2\pi/3$, and $0.48$ for $\pi$; the packet has quasi-energy near $-0.21$, which lies in the shifted band for $\delta<0.996$. (d) Under a staircase of order $4$ a packet is displaced, after an eighth of the period of the mean field, by $0.69$, $0.54$ and $0.16$ of its displacement under the linear gain of the same mean slope, for $L=16,64,256$: the deviation from the mean field grows with the block length. The first two values reproduce those of \cite{g9}.
+
+\emph{Failed expectations, kept.} Two predicates fixed before their runs failed. The first expected the staircase of period $64$ to drift within $1024$ steps; it stayed within four sites of its start. The second expected confinement for $L=4$. A computation of band velocities from sorted eigenphases returned values above the largest possible speed and below the observed spread, and is discarded as an instrument. All three are in the result files.
+
+In these instances a winding gain of order $3$, $4$ or $6$ either is a strong field, or holds the walk within a block, or leaks slowly; in none does a packet follow the ray of the mean field. Whether some other arrangement of gains of bounded order has a ray limit with a force is not decided.
+
+\section{The position of a ray under a linear gain}\label{sec:ray}
+
+Table~4 of \cite{g9} compares the centroid of a packet with the ray $\dot k=-\Phi$, $\dot x=v(k)$ through the central quasi-momentum $k_0$, and reports a deviation of about $0.6$ site, most of it the change of the connection $\mathcal{A}(k)=\operatorname{Im}\langle u(k)|\partial_ku(k)\rangle$ of the branch eigenvector. Extending that comparison to longer periods shows that the remainder does not decrease: it is $0.075$, $0.038$, $0.038$, $0.062$, $0.117$, $0.232$ site at the periods $64$ to $2048$, and a predicate that expected a first-order decrease failed \cite{comp4s}. The cause is the width of the packet in $k$. If the ray and the connection are averaged over the quasi-momentum distribution $\rho$ of the initial packet,
+\begin{equation}\label{eq:avg}
+\bar x(t)=\sum_{s=1}^{t}\int v\bigl(k-(s-\tfrac12)\Phi\bigr)\,\rho(k)\,dk-\int\bigl[\mathcal{A}(k-t\Phi)-\mathcal{A}(k)\bigr]\rho(k)\,dk ,
+\end{equation}
+with the signs of the conventions of \cite{g9}, the remainder decreases (Table~\ref{tab:avg}); the fitted exponent against the period is $-1.1$.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+period $2\pi/\Phi$ (steps) & 64 & 128 & 256 & 512 & 1024 & 2048\\\midrule
+ray through $k_0$, with connection & $0.0748$ & $0.0385$ & $0.0381$ & $0.0622$ & $0.1174$ & $0.2315$\\
+averaged ray \eqref{eq:avg} & $0.0735$ & $0.0273$ & $0.0135$ & $0.0071$ & $0.0029$ & $0.0016$\\\bottomrule
+\end{tabular}
+\caption{Largest deviation, in sites, of the centroid from the prediction over one period. Packet at $k_0=1$ on the first branch, width $0.03$ in $k$, ring of $8192$ sites. The second row is sampled at $32$ times per period. For a packet of width $0.015$ the second row gives $0.0075$ and $0.0018$ at the periods $512$ and $2048$ \cite{comp4s}.}\label{tab:avg}
+\end{table}
+
+Equation \eqref{eq:avg} is what the adiabatic approximation gives: a vector that stays on one branch has the form $c(k+t\Phi)\,e^{-i\int\omega}u(k)$ in the quasi-momentum representation, in which position is $i\partial_k$, so that the mean position is the mean derivative of the phase plus the mean of $\mathcal{A}$. For an electron in a periodic potential with slowly varying external potentials Panati, Spohn and Teufel prove that the dynamics in an isolated band is governed, to first order in the slowness parameter, by semiclassical equations in which the Berry connection of the band enters \cite{pst}. Their theorem concerns Schr\"odinger operators in continuous time. No corresponding bound is proved here for the step of this paper; the criterion of $0.02$ site of \cite{g9} is met by the averaged prediction from the period $256$ on, and the failed predicate of \cite{g9} stands for the ray through $k_0$.
+
+\section{Assumptions and limits}\label{sec:limits}
+
+\emph{Assumed.} (1) Events are sets of histories (Section~\ref{sec:cyl}). This replaces ``consistency under continuation'' in the list of \cite{g9} by a statement about events; it is not derived from the carrier. (2) The form \eqref{eq:phi}: summed gains at a common end vertex, a function of their modulus, addition over end vertices. (3) The carrier: for Theorems~\ref{thm:quad} and \ref{thm:deg2} a signed norm-preserving digraph of degree two, for Theorem~\ref{thm:power} a norm-preserving digraph with a merging pair of walks; without merging walks every rule of the form is the count. (4) The group and the character, as in \cite{g8}.
+
+\emph{Obtained under these assumptions.} The second order of the rule; the exclusion of first-order weights of returning walks; the classification of the consistent rules of the form \eqref{eq:phi} for gains in the roots of unity as combinations over the conjugate characters; the uniqueness of the rule on the signed lift; the classification of the consistent pair rules with a kernel.
+
+\emph{Not obtained.} (5) A reason for (1) to (4). Nothing here selects the embedding of the amplitudes: for orders other than $2,4,6$ every conjugate character, and every combination, is consistent; multiplicativity on products removes the combinations and leaves the choice among the conjugate characters. On the signed lift there is no such choice (Corollary~\ref{cor:lift}); what is then not obtained is a reason for treating one character as a system, and a reason for or against the gain being a record. Among the pair rules, composition leaves one character in which $-1$ acts as $-1$ and does not make it faithful (Theorem~\ref{thm:kernel}). Nor does anything here select a carrier on which a rule that depends on the gains is consistent: on a digraph of constant out-degree with trivial gains the count is consistent and classical. (6) A classification of consistent rules outside the form \eqref{eq:phi}. (7) A ray limit with a force for gains of bounded order, or a proof that there is none; Proposition~\ref{prop:local} concerns local spectra only. (8) An error bound for \eqref{eq:avg}. (9) Everything listed as not obtained in \cite{g8,g9}: a clock, a selection of complex amplitudes, composition compatible with the step, and any physical correspondence.
+
+\section{Status of the statements}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.38\textwidth}@{}}\toprule
+Statement & Kind\\\midrule
+Lemmas~\ref{lem:cyl}, \ref{lem:par}; Propositions~\ref{prop:add}, \ref{prop:compo}, \ref{prop:exact}, \ref{prop:local}; Theorems~\ref{thm:quad}, \ref{thm:power}, \ref{thm:deg2}, \ref{thm:conj}, \ref{thm:kernel}; Corollary~\ref{cor:lift} & derived results, proofs given here\\
+Tables~\ref{tab:stair}, \ref{tab:avg}; the values in Sections~\ref{sec:add}, \ref{sec:mod}, \ref{sec:force}, \ref{sec:ray} & computed instances\\
+Equation \eqref{eq:avg} & heuristic; compared with computed instances; not proved\\\bottomrule
+\end{tabular}
+\end{center}
+
+The components are elementary or known: cylinder sets of histories, the parallelogram identity as a characterization of the square, the isometries of $\ell_p$, band spectra of a walk with a piecewise constant phase, and the semiclassical motion in a band with its Berry connection. The paper applies them to the pair measure on a gain digraph and claims no priority. The statements have not been refereed, and the numerical tables are not error enclosures.

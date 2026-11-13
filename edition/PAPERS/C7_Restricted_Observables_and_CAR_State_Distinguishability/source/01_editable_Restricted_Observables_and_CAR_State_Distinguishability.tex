@@ -1,0 +1,383 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,booktabs,needspace}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.65em}
+\allowdisplaybreaks
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\cS}{\mathscr S}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\hypersetup{pdftitle={Restricted Observables and CAR-State Distinguishability},pdfauthor={Kirtus Justus}}
+\title{Restricted Observables and CAR-State Distinguishability}
+\author{Kirtus Justus\enspace\textbullet\enspace Theoretical Physicist\enspace\textbullet\enspace 23 October 2026\\Port Coquitlam, British Columbia, Canada}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We analyze the information retained by restricted fermionic observation algebras. Exact finite-mode covariance fibers show that one-particle data do not specify arbitrary gauge-invariant states. We give a necessary and sufficient channel-descent condition, an occupation witness for distinguishability of quasifree CAR states, and finite-dimensional obstructions to proper common-standard-vector modular inclusions. We also characterize generators indistinguishable on the full number-conserving algebra, emphasizing the difference between a neutral two-time expression and an accessible neutral instrument. The results concern the stated algebras and observation classes, not an experimentally realized apparatus.
+\end{abstract}
+\noindent\textbf{Keywords:} CAR algebra, quasifree states, restricted observables, conditional expectations, modular inclusions, number conservation.
+
+\section{Observation classes and autonomous restricted dynamics}
+\label{sec:observation-results}
+All spaces in this section are finite-dimensional. Density matrices are
+positive and have trace one. Trace distance is used in its \emph{unhalved}
+form $\norm{\rho-\sigma}_1$, whose maximum is two. The distinction between
+this convention and the often used half-trace-distance convention is essential
+when comparing constants.
+
+\subsection{A covariance does not determine every gauge-invariant state}
+In the two-mode Fock basis ordered as vacuum, the two one-particle states and
+the two-particle state, define
+$C_{ij}=\Tr(\rho a_j^*a_i)$. This operator-index convention is the
+transpose of $C^{\rm occ}_{ij}=\Tr(\rho a_i^*a_j)$ used in the
+two-mode identification article: $C=(C^{\rm occ})^{\mathsf T}$.
+The one-particle block below uses the present convention.
+Gauge invariance means that $\rho$ is block
+diagonal in particle number. Put $t=\Tr(\rho n_1n_2)$.
+
+\Needspace{6\baselineskip}
+\begin{proposition}[Two-mode covariance fiber]
+\label{prop:fiber}
+For a fixed $2\times2$ positive contraction $C$, all gauge-invariant states
+with this covariance are exactly
+\begin{equation}
+\rho(C,t)=\operatorname{diag}
+\bigl(1-\Tr C+t,\ C-tI_2,\ t\bigr),
+\qquad
+\max\{0,\Tr C-1\}\le t\le\lambda_{\min}(C).
+\label{eq:fiber}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The two-particle block contributes $tI_2$ to the covariance, so the
+one-particle block must equal $C-tI_2$. Trace one fixes the vacuum block.
+Positivity of these three blocks is precisely the interval in
+\eqref{eq:fiber}. For eigenvalues $0\le c_1\le c_2\le1$,
+$\max(0,c_1+c_2-1)\le c_1$, so the interval is nonempty. The construction
+conversely has the required covariance and joint occupation.
+\end{proof}
+
+For $C=I_2/2$, the choices $t=0$ and $t=1/2$ have disjoint particle-number
+supports and trace-norm distance two, despite identical covariances. The
+gauge-invariant quasi-free state instead has $t=\det C=1/4$ and is $I_4/4$.
+Thus covariance reconstruction is complete only after a justified model-class
+restriction. In $n\ge1$ modes, the real dimensions of the normalized state spaces
+visible to the number-conserving, parity-preserving and unrestricted algebras
+are respectively
+\[
+\binom{2n}{n}-1,\qquad 2^{2n-1}-1,\qquad4^n-1.
+\]
+The first identity is the sum of squared charge-sector dimensions minus one.
+Number and parity algebras coincide for $n=1$; both inclusions are strict for
+$n\ge2$. These counts concern ideal linear expectations, not finite-sample
+complexity or experimental access.
+
+\subsection{The exact descent criterion}
+Let $E$ be the trace-preserving conditional expectation onto a fixed unital
+$*$-subalgebra $\mathcal A\subseteq M_d(\mathbb C)$, identified on density
+matrices using the trace pairing. Thus $E$ is completely positive, idempotent,
+trace preserving and self-adjoint for that pairing. Its algebra and
+conditional-expectation property are part of the assumptions; arbitrary
+completely positive idempotent maps are not substituted for them.
+
+\begin{proposition}[Channel and generator descent]
+\label{prop:descent}
+A completely positive trace-preserving map $\Phi$ induces a representative-independent
+channel on the restricted states $E(\rho)$ exactly when
+\begin{equation}
+E\Phi=E\Phi E.
+\label{eq:channel-descent}
+\end{equation}
+For a finite-dimensional continuous semigroup $\Phi_t=e^{t\mathcal L}$,
+this property holds for every $t\ge0$ exactly when
+\begin{equation}
+E\mathcal L=E\mathcal L E.
+\label{eq:generator-descent}
+\end{equation}
+\end{proposition}
+\begin{proof}
+If restricted evolution is well defined, the states $\rho$ and $E\rho$
+have the same restricted input and must have the same output $E\Phi\rho$.
+Density matrices linearly span the full matrix space, giving
+\eqref{eq:channel-descent}. Conversely that identity makes
+$\overline\Phi(E\rho)=E\Phi\rho$ well defined; complete positivity and trace
+preservation follow by restriction and composition.
+
+Differentiating the channel identity at $t=0$ proves necessity of
+\eqref{eq:generator-descent}. For sufficiency, that identity makes
+$\ker E$ invariant under $\mathcal L$. It is therefore invariant under every
+power of $\mathcal L$ and, in finite dimension, under the convergent exponential
+series. Hence $E e^{t\mathcal L}(I-E)=0$. The induced maps compose because
+$E\Phi_sE\Phi_t=E\Phi_s\Phi_t$ on restricted inputs.
+\end{proof}
+
+This proof uses all admissible density matrices. Agreement on preparations
+already in $\operatorname{ran}E$ alone need not test the missing kernel
+condition. The parameter $t$ is a mathematical semigroup parameter until a
+clock and units are separately specified. A scalar response satisfying
+$q(2t)=q(t)^2$ is a restriction of an appropriate exponential-response family;
+it is not a consequence of the semigroup property for every observable.
+
+\section{CAR distinguishability and spectral endpoints}
+\label{sec:car-results}
+Let $\operatorname{CAR}(\mathcal H)$ be one fixed CAR algebra and let
+$\omega_C,\omega_D$ be its gauge-invariant quasi-free states with bounded
+positive-contraction covariances $C,D$. General fermionic quasi-free states
+obey the signed Wick pairing rule; the gauge-invariant specialization gives
+determinants for appropriately ordered number-balanced correlators
+\cite{araki}. All covariance formulas in this section use that specialization.
+The state norm is
+\[
+\norm{\omega_C-\omega_D}
+=\sup_{\norm{A}\le1}|\omega_C(A)-\omega_D(A)|\le2.
+\]
+
+\begin{proposition}[Finite occupation witness]
+\label{prop:witness}
+For a finite-rank orthogonal projection $P$ on $\mathcal H$, set
+$B=P(D-C)P$ and $S_P=\Tr B^2$. If $S_P>0$, then
+\begin{equation}
+\norm{\omega_C-\omega_D}\ge
+\max\{0,\,2-8/S_P\}.
+\label{eq:witness}
+\end{equation}
+For $S_P=0$ the asserted lower bound is the trivial value zero.
+If $C-D$ is not Hilbert--Schmidt, then
+$\norm{\omega_C-\omega_D}=2$.
+\end{proposition}
+\begin{proof}
+On the finite-mode Fock algebra, use the bounded self-adjoint observable
+$d\Gamma(B)$. Wick's formula gives, for compressed covariance $Q$,
+\[
+\operatorname{Var}_Q(d\Gamma(B))
+=\Tr[QB(I-Q)B].
+\]
+In a $Q$-eigenbasis the diagonal coefficients are $q_i(1-q_i)\le1/4$;
+pairing the $i,j$ and $j,i$ terms gives
+$q_i(1-q_j)+q_j(1-q_i)\le1$. Thus the variance is at most
+$\tfrac12\Tr B^2$ without assuming $[B,Q]=0$.
+The expectation difference between the two states is
+$\Tr[B P(D-C)P]=S_P$. A spectral threshold halfway between their means
+has total error probability at most $4/S_P$ by Chebyshev's inequality.
+The norm of the state difference is at least twice the difference of its
+probabilities on that event, yielding \eqref{eq:witness}. If $C-D$ is not
+Hilbert--Schmidt, finite-rank compressions can be chosen with $S_P\to\infty$:
+the squared matrix entries over growing finite orthonormal sets have unbounded
+sum. The bound tends to two, which is the largest possible state norm.
+\end{proof}
+
+The variance factor $1/2$ cannot be uniformly reduced even under the
+comparison-witness constraint. For two rank-one projections whose ranges
+make angle $\theta$, choose $C$ to be one projection and $D$ the other. Then
+$\Tr(D-C)^2=2\sin^2\theta$ and the variance in $\omega_C$ is
+$\sin^2\theta\cos^2\theta$; their ratio tends to $1/2$ as
+$\theta\to0$. This sharpness statement concerns the variance bound, not
+optimality of the final Chebyshev certificate.
+
+\begin{example}[An arbitrarily small Hilbert--Schmidt difference with maximal state distance]
+\label{ex:endpoint}
+On $\ell^2(\mathbb N)$ let $C=0$ and
+$D_\epsilon=\operatorname{diag}(\epsilon/n)_{n\ge1}$, where $0<\epsilon<1$.
+Then $\norm{D_\epsilon-C}_2=\epsilon\pi/\sqrt6\to0$ as
+$\epsilon\to0$. The vacuum event in the first $M$ modes has probability
+one in $\omega_C$ and
+\[
+\prod_{n=1}^M(1-\epsilon/n)
+\le\exp\left(-\epsilon\sum_{n=1}^M n^{-1}\right)\longrightarrow0
+\]
+in $\omega_{D_\epsilon}$. Hence the two states have norm distance two
+for every $\epsilon>0$. Endpoint control is indispensable for any
+Hilbert--Schmidt-only continuity assertion.
+\end{example}
+
+For comparison, when $C-D$ is Hilbert--Schmidt, a common uniform gap
+$\delta I\le C,D\le(1-\delta)I$, $0<\delta\le1/2$, gives
+\begin{equation}
+\norm{\omega_C-\omega_D}
+\le\min\left\{2,\frac{\norm{C-D}_2}{\sqrt{\delta(1-\delta)}}\right\}.
+\label{eq:gap}
+\end{equation}
+In a finite compression the quasi-free relative entropy is the Bregman
+divergence of $\Tr f(C)$ with
+$f(x)=x\log x+(1-x)\log(1-x)$. Its Hessian bound on the gap interval is
+$1/[\delta(1-\delta)]$, so the divergence is at most
+$\norm{C-D}_2^2/[2\delta(1-\delta)]$. Unhalved quantum Pinsker \cite{pinsker} then
+gives \eqref{eq:gap}; norm density of finite CAR subalgebras extends it
+to the common infinite algebra. A common-projection lift is another
+sufficient continuity route, but small covariance difference alone does
+not establish such a lift with a small norm.
+
+\section{Finite-dimensional modular inclusions}
+\label{sec:modular-obstruction}
+The modular group of a faithful finite-dimensional density matrix can be
+defined and studied. A proper standard half-sided modular inclusion is a
+stronger object. The following elementary obstruction isolates one of the
+missing requirements.
+
+\begin{proposition}[Common standard vector obstruction]
+\label{prop:finite-modular}
+Let $\mathcal N\subseteq\mathcal M\subseteq B(\mathcal H)$ be
+finite-dimensional unital $*$-algebras. If a vector $\Omega$ is cyclic
+and separating for both algebras on the same $\mathcal H$, then
+$\mathcal N=\mathcal M$.
+\end{proposition}
+\begin{proof}
+For either algebra, $A\mapsto A\Omega$ is injective by separation and
+surjective by cyclicity; in finite dimension its range is closed. Thus
+$\dim\mathcal N=\dim\mathcal H=\dim\mathcal M$. Inclusion of equal
+finite-dimensional vector spaces gives equality of the algebras.
+\end{proof}
+
+There is a second finite-dimensional observation. If an automorphism
+$\sigma_t$ satisfies $\sigma_t(\mathcal N)\subseteq\mathcal N$, then
+injectivity and dimension imply equality at that time. These arguments
+do not forbid modular dynamics in finite dimensions. They show why the
+stated finite hypotheses do not produce a proper one-sided inclusion.
+For infinite algebras, common cyclicity and separation, one-sided modular
+invariance and any additional relative-commutant standardness must be
+specified exactly as in the theorem invoked \cite{arakizsido}. Type III$_1$
+and geometric modular action are additional, model-specific issues.
+
+
+\section{Local number-conserving probes and operational equivalence}
+\label{app:neutral-clock}
+
+An ideal neutral two-time expectation need not correspond to an accessible
+measurement instrument. Here allowed interventions are specified as
+number-conserving operations on the full finite algebra. The conclusions
+depend on that intervention class and on a fixed preparation and calibrated
+dynamics; physical implementation is a separate question.
+
+\subsection{The full finite neutral algebra}
+
+Let $d\ge1$, let
+$\mathcal F_d=\bigoplus_{n=0}^d\bigwedge^n\mathbb C^d$, and let
+$\widehat N$ be the total number operator. Write
+\[
+ \mathcal A_0=\{A:[A,\widehat N]=0\}
+   =\bigoplus_{n=0}^d\mathcal B(\textstyle\bigwedge^n\mathbb C^d).
+\]
+Generators $K$ below have inverse-time units, so their Schr\"odinger
+propagators are $e^{-itK}$.
+
+\begin{proposition}[Exact equivalence on the full neutral algebra]
+\label{prop:neutral-generator}
+Let $K,K'$ be self-adjoint operators on $\mathcal F_d$ commuting with
+$\widehat N$. Their Heisenberg automorphisms agree on every
+$A\in\mathcal A_0$ for every real $t$ if and only if
+\begin{equation}
+ K'-K=f(\widehat N)
+ \quad\text{for a real function }f:\{0,\ldots,d\}\longrightarrow\mathbb R.
+ \label{eq:neutral-sector-centers}
+\end{equation}
+If $K=d\Gamma(h)$ and $K'=d\Gamma(h')$ have the same vacuum scalar,
+this is equivalent to $h'-h=bI$ and $K'-K=b\widehat N$.
+
+For generators satisfying \eqref{eq:neutral-sector-centers}, every finite
+adaptive protocol has the same outcome law when it uses the same initial
+state, controls, instruments, waiting-time rules and readout under both
+generators, and every control and instrument Kraus operator commutes with
+$\widehat N$. Final readout effects must also belong to $\mathcal A_0$.
+\end{proposition}
+\begin{proof}
+Differentiating the assumed equality at $t=0$ gives
+$[K'-K,A]=0$ for every $A\in\mathcal A_0$. Commutation with the number-sector
+projections first makes $K'-K$ block diagonal. Commutation with the full
+matrix algebra in each sector then makes each block a scalar. Self-adjointness
+makes those scalars real, proving \eqref{eq:neutral-sector-centers}.
+Conversely $f(\widehat N)$ commutes with $K$ and every $A\in\mathcal A_0$,
+so its exponential cancels from conjugation. There is no domain issue in
+this finite-dimensional argument. Restriction to the one-particle sector
+gives $h'-h=bI$ in the quadratic case, whose second quantization is
+$b\widehat N$. If independent vacuum scalars are allowed, a full-Fock
+scalar multiple of $I$ is an additional invisible term.
+
+For the protocol assertion, fix a recorded history $h$ and a fine-grained
+Kraus path within it. Every neutral intervening operator commutes with
+$f(\widehat N)$, so replacing all free propagators gives
+\[
+ B'_h=e^{-if(\widehat N)T_h}B_h,
+\]
+where $T_h$ is the sum of the waiting times on that history. The policy
+chooses the same times and operations for the same history under either
+generator. Consequently $(B'_h)^*B'_h=B_h^*B_h$; a neutral terminal effect
+also commutes with the extra unitary. Each fine-grained branch probability
+is unchanged for the same initial density matrix, whether or not that
+matrix itself is neutral. Summing unobserved Kraus labels and inducting over
+the finite decision tree proves equality of the outcome laws. Classical
+randomization with the same parameter-independent law preserves it.
+\end{proof}
+
+The if-and-only-if statement concerns the \emph{full} algebra and all times.
+One fixed state or a smaller set of accessible probes can leave still more
+generators indistinguishable. The protocol statement is a sufficient
+invariance result for the declared intervention class, not a universal
+particle-number superselection law. Parity-even operations form a larger
+class. A reference that exchanges particles with the system can compare a
+relative offset even when total number of system plus reference is conserved.
+Such a reference requires its own specified state, dynamics and couplings.
+Allowing the preparation itself to vary with the generator, for example by
+re-equilibrating separately, also changes the experiment.
+
+For a concrete relative-offset task, consider two modes (system and
+reference), the total-one-particle preparation
+$(|10\rangle+|01\rangle)/\sqrt2$, a reference generator fixed to zero,
+and $K=b n_{\rm sys}$. The joint observable
+$X=c_{\rm sys}^*c_{\rm ref}+c_{\rm ref}^*c_{\rm sys}$ conserves combined
+number and has expectation $\cos(bt)$. This follows by evolving the two
+components, by the elementary two-mode evolution formula. It does not
+commute with system number alone, so it lies outside the restricted
+system-only intervention class. The specified reference dynamics and
+relative-phase preparation are additional resources, not an apparatus
+established by the finite-algebra theorem.
+
+\begin{proposition}[Neutrality of a product does not supply an instrument]
+\label{prop:neutral-access}
+For one CAR mode, put $K_b=b n$ and keep the vacuum preparation fixed.
+Then
+\begin{equation}
+ \omega\bigl(c_b(t)c^*\bigr)=e^{-ibt},
+ \qquad c_b(t)=e^{-ibt}c.
+ \label{eq:neutral-charged-product}
+\end{equation}
+This gauge-neutral, parity-even two-time expression depends on $b$, while
+every protocol in Proposition~\ref{prop:neutral-generator} is insensitive
+to $b$.
+\end{proposition}
+\begin{proof}
+The relation $[n,c]=-c$ gives the evolution of $c$, and
+$\omega(cc^*)=1$ in the vacuum. The neutral algebra of this one-mode system
+is diagonal in the occupation basis. Every difference $(b'-b)n$ is a
+function of $\widehat N=n$, so the preceding proposition applies.
+\end{proof}
+
+There is no contradiction: the product in
+\eqref{eq:neutral-charged-product} depends on the unknown generator and has
+charged insertions at the two times. Its membership in the neutral algebra,
+or taking its Hermitian quadratures, does not specify a parameter-independent
+neutral measurement procedure. This qualifies operational access to the
+vacancy correlation; it does not alter the ideal-data slope theorem.
+
+
+\section*{AI assistance and acknowledgments}
+Kirtus Justus is the responsible human author. ChatGPT (OpenAI) assisted with mathematical drafting, verification code, source checks, and editorial preparation. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for involvement in the broader research program; no particular calculation or proof in this article is assigned to those systems without specific documentation. The author assumes responsibility for all content. These acknowledgments do not imply external peer review or endorsement by any AI provider.
+
+\begin{thebibliography}{10}
+\bibitem{araki} H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, \emph{Publ. Res. Inst. Math. Sci.} \textbf{6} (1970/71), 385--442, doi:10.2977/prims/1195193913.
+\bibitem{arakizsido} H. Araki and L. Zsid\'o, Extension of the structure theorem of Borchers and its application to half-sided modular inclusions, \emph{Rev. Math. Phys.} \textbf{17} (2005), 491--543, doi:10.1142/S0129055X05002388.
+\bibitem{pinsker} M. Ohya and D. Petz, \emph{Quantum Entropy and Its Use}, Springer, 2004 (quantum Pinsker inequality).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,148 @@
+{
+ "title": "Gate map for the target of the program",
+ "date": "2026-11-13",
+ "edition": "FPHPM-BASELINE-2026-11-13-Z9",
+ "reading_rule": "Gates are obligations a candidate would have to meet. The list is a map of obligations and of the evidence bearing on each; it is not a claim that the gates are jointly satisfiable, and no gate is passed. The gate list follows the record of LLM Director A (GPT-6, OpenAI); evidence entries name the record or paper they come from.",
+ "gates": [
+  {
+   "id": "P0",
+   "name": "Primitive selection",
+   "state": "OPEN",
+   "evidence": "Finite relational structures, signed graphs and gain graphs are available as primitives; none is selected. A directed three-cycle supports both a complex-type algebra and a classical simplex (Director A, A2). Transport on a graph takes arbitrary values in arbitrary groups (G7-01-01). Edition Z3: a requirement restricts the primitive: consistency of the pair measure under continuation admits, with trivial gains, permutations only; on undirected gain graphs, involutions only; for out-degree two and unit gains, arc digraphs of 2-in 2-out digraphs with a sign -1 (G9-01-02 to G9-01-04). The requirement is supplied. Rectagraphs carry a transport of their own, trivial exactly on Cayley graphs of elementary abelian 2-groups (G9-01-11)."
+  },
+  {
+   "id": "P1",
+   "name": "Operational event structure",
+   "state": "OPEN",
+   "evidence": "Unrestricted contextual tables do not select the quantum subset (TO-0). GH-1 uses walk sets as events with end vertices as records; the record role is supplied (G8). Edition Z3: with the distinction between returning and non-returning walks admitted, an additive weighting of returning walks by a class function of their holonomy exists (G8-01-01, revised; Directors A, B, G). What counts as a record decides which orders of rule can see the transport. Edition Z4: if events are sets of histories, the measures at successive lengths are related by continuation and conversely (G10-01-01); a first-order rule is then the count, and the holonomy weighting of returning walks is not available (G10-01-02). The event structure is supplied."
+  },
+  {
+   "id": "P2",
+   "name": "State and effect spaces",
+   "state": "OPEN",
+   "evidence": "Pure-state geometry does not fix the mixed-state theory: classical spin on S^2 (Directors A, G). GH-1 gives a Hilbert space by the Dowker-Johnston-Sorkin construction, conditional (G8-01-05). Edition Z3: the cubic Veronese model has the qubit table on a designated family of pure tests and a ten-dimensional state space (Director G); with those tests only it is the qubit, with all affine effects pure states at Bloch angle 60 degrees are perfectly distinguishable (G7 Section 5). Which tests are admitted is a separate obligation (OP-29)."
+  },
+  {
+   "id": "P3",
+   "name": "Transition geometry",
+   "state": "OPEN; restricted",
+   "evidence": "Finite homogeneous carriers excluded (G7-01-07, G7-01-09; Gelander 2013). Curvature 1 against 4 separates RP^2 from the qubit (Directors A, G; G7 Remark 5.2). Inhomogeneous nets exist with imported geometry (Directors A, B). Dense inhomogeneous subsets from gain graphs, conditional (G8-01-05). Algebraic generating data fix p only up to field automorphisms (G7-01-13). Edition Z3: the growth condition holds exactly when the closed walks of even length realize every group element; the type of the limit space follows the group they realize (G8-01-10; witnesses of Directors A, B, G)."
+  },
+  {
+   "id": "P4",
+   "name": "Phase and complex structure",
+   "state": "OPEN; sharpened",
+   "evidence": "Transition probabilities fix all Bargmann phases up to one conjugation, constructively (G7-01-10, G7-01-11); three overlaps alone do not (Directors A, G; Li-Wagner-Zhang 2026); the determinant of one loop does not (Director B, B2). Global conjugation of a whole model is unobservable (Director B, B2); relative orientation is fixed by composition (G7-01-15). Complex structure, symplectic form, dynamical correspondence and equality of generator and observable counts are forms of one postulate (G7-01-06, G7-01-12). Edition Z3: a real reversible step has a complex structure of its own, unique under a positive generator and reversed with the step (G9-01-05; Stueckelberg 1960; Moretti-Oppio 2017 for Poincare symmetry); the vertex records do not commute with it and the commutant of step and records is real (G9-01-06). On signed Cayley rectagraphs the class matrices have a central complex structure exactly for k = 3 mod 4, with k supplied (G9-01-12). No warrant for complex amplitudes."
+  },
+  {
+   "id": "P5",
+   "name": "Probability rule",
+   "state": "OPEN; conditional derivation",
+   "evidence": "Squared-norm rule from invariance, second order and strong positivity on a gain graph (G8-01-02, G8-01-03). Second order is supplied. No third-order interference alone does not select quantum theory (Directors A, B, G; Barnum-Mueller-Ududec 2014). Edition Z3: the measures at successive lengths are not related by continuation in general (Directors A, B); the same carrier supports a classical Markov walk and an additive holonomy weighting (Director A); the representation-free pair measure is the coincidence count on the cover (G8-01-09). Edition Z4: under consistency under continuation the second order is forced among rules that add over end vertices a function of the modulus of the summed gains: only the square on the signed line, only the second power on norm-preserving gain digraphs with merging walks (G10-01-03, G10-01-04). With trivial gains the count is consistent on the same carrier, so the event structure does not select the quadratic rule. Rules outside that form are not classified. Edition Z5: the square is forced on every finite connected signed carrier that is norm-preserving of degree two (G10-01-07). Edition Z6: for gains of order q the consistent rules are the combinations of the squared moduli in the conjugate characters, a space of dimension phi(q)/2 (G10-01-09): the order is forced, the character is not. Edition Z7: positivity gives non-negative weights; multiplicativity on products gives one conjugate character (G10-01-10; Director G's record-marginal classification, obtained first). Merging walks are necessary: on a tree every rule is the count (Director G). Edition Z8: what counts as a record enters the rule. With the gain of a walk recorded (signed lift) the consistent record-sum rule is unique for every order and integer-valued (G10-01-11); with only the end vertex recorded the conjugate rules remain. Director G: every native protocol from a localized sheet has the same rational law under each embedding law. Edition Z9: among the switching-invariant pair rules the consistent ones are exactly those whose kernel changes sign under -1, the mixtures of the characters in which -1 acts as -1 (G10-01-12); the even characters, the coincidence count on the base among them, are excluded. Unique only for the orders 2 and 4."
+  },
+  {
+   "id": "P6",
+   "name": "Composition",
+   "state": "OPEN; conditional derivation",
+   "evidence": "Single-system data do not fix the composite: minimal against quantum (Director B; G7-01-14); interpolated family K_t and failure of its uniform four-system extension by t(1-t)/4 (Director G); CNOT closure forces the quantum composite once a complex representation is given (Director G). Product of gain graphs gives the full tensor product with a common step count (G8-01-06). Edition Z3: the interpolated composites are not closed under selective local filters, no four-party weight repairs them, a matching hierarchy is closed under weaker operations and excludes GHZ, one pure entangled seed with local filters gives all states (Directors A, B; recomputed); the product of gain graphs is a tensor product at each length and can be smaller over all lengths (Director G). Edition Z7: requiring the rule to be multiplicative on products of carriers selects the squared modulus of one conjugate character among the consistent rules (G10-01-10; Director G). Edition Z9: among pair rules, multiplicativity on products leaves one character in which -1 acts as -1; it does not make the character faithful (G10-01-12)."
+  },
+  {
+   "id": "P7",
+   "name": "Dynamics",
+   "state": "OPEN; conditional construction",
+   "evidence": "Static geometry does not select a generator or clock (Director A). Walk length on a gain graph is not unitary (G8 Section 9). No calibrated time. Edition Z3: a step consistent under continuation is unitary up to a factor (G9-01-01); for the signed arc digraph of a ring it has two branches of opposite group velocity (G9-01-07). The requirement and the carrier are supplied; the generator is a choice of logarithm. exp(-isH) on an undirected gain graph is a formal completion with imported imaginary unit and parameter (Director G). Edition Z4: the continuation requirement is the statement that events are sets of histories (G10-01-01); it is no longer a separate dynamical assumption, and it remains supplied."
+  },
+  {
+   "id": "P8",
+   "name": "Space, causal and clock structure",
+   "state": "OPEN",
+   "evidence": "Ehlers-Pirani-Schild template only (Director D). No construction. Edition Z3: in GH-2 the clock is the step count without unit and the ring is supplied (G9 Section 8)."
+  },
+  {
+   "id": "P9",
+   "name": "Classical Hamiltonian mechanics",
+   "state": "OPEN; conditional instance",
+   "evidence": "Dephasing gives a stochastic channel, not a Hamiltonian flow (FAR-1; Director A). Recorded walks give the counting measure (G8-01-07). Classical and quantum pure states share a Poisson description (Landsman 1997). No derivation. Edition Z3: in GH-2 position over steps has the distribution of the group velocity (quoted, Grimmett-Janson-Scudo), a linear gain translates the quasi-momentum exactly (G9-01-09), and packets follow the rays of w(k) + Phi x over one period in instances (deviation 0.61 to 0.65 site; no error bound). One walk, one dimension, linear potential only. A staircase of order-4 gains does not follow the ray of its mean field. Edition Z4: the centroid follows the packet-averaged ray displaced by the eigenvector connection with a remainder falling about as the first power of the field in instances (0.0735 to 0.0016 site over periods 64 to 2048); for the ray through the central quasi-momentum the remainder does not fall. No bound. An exact force of size 2 pi / n needs gains of order at least n (G10-01-05). Edition Z7: near a band edge Director G bounds the spinor against a constant-force Schroedinger envelope and obtains weak convergence of the position law to a Newtonian trajectory for a shrinking packet; the bound was checked by Director Z by a real-space walk. Conditional on preparation, readout, scaling and gains of growing order. Edition Z9: Director G prepares, by a coherent direction projection, a packet at the two band edges and obtains in a scaling limit equal point masses at the two Newtonian positions of opposite curvature; consistent with real-space runs of Director Z at five scales. Conditional on the instrument, a weak-field sheet plane, the readout and gains of growing order; the native cost of the sheet plane is exponential in the square of the sheet order for the instrument examined."
+  },
+  {
+   "id": "P10",
+   "name": "Quantitative limit",
+   "state": "OPEN; restricted",
+   "evidence": "Exact homogeneity excluded; three forms of limit remain; ordering of values has to be supplied for algebraic data (G7-01-13, G8-01-08). Edition Z3: growth criterion proved (G8-01-10). A weak force was obtained only with gains of growing order, for which the measure depends on the character (G8-01-08; OP-28). Edition Z4: for gains of order q >= 3 wound through blocks no quasi-energy lies in every local spectrum, except four band edges for q = 4 (G10-01-06); staircases of order 3, 4, 6 confine, leak or are strong fields in the instances computed, and an order-4 staircase reaches 0.69, 0.54 and 0.16 of the mean-field displacement at block lengths 16, 64, 256 (OP-28, unresolved). Edition Z6: consistency on histories leaves the ordering of values open for every order other than 2, 4, 6 (G10-01-09); what selects the ordinary embedding is under examination by Director G. Edition Z7: the choice among conjugate characters is what remains after consistency and composition; Director G shows that a localized sheet with native operations cannot make it and names three controls that would. Edition Z8: the selection of an embedding is required only after reduction by a character; on the signed lift the rule is real, unique and the mean over the characters (G10-01-11; Director G's native-preparation theorem, obtained first). Not obtained: a reason for or against the gain being a record, and a warrant for treating one character as a system. Edition Z9: faithfulness of the character is a further assumption: neither consistency nor composition yields it among pair rules (G10-01-12)."
+  },
+  {
+   "id": "P11",
+   "name": "Empirical correspondence",
+   "state": "OPEN",
+   "evidence": "None."
+  },
+  {
+   "id": "P12",
+   "name": "Integrated claim",
+   "state": "OPEN",
+   "evidence": "No candidate satisfies P0 to P11. GH-1 and GH-2 are constructed trials with ledgers of imports. Root review G1 OPEN. Edition Z4: unchanged. With history events the trials admit the classical count as well as the quadratic rule."
+  }
+ ],
+ "dependencies": [
+  [
+   "P0",
+   "P1"
+  ],
+  [
+   "P1",
+   "P2"
+  ],
+  [
+   "P2",
+   "P3"
+  ],
+  [
+   "P3",
+   "P4"
+  ],
+  [
+   "P2",
+   "P5"
+  ],
+  [
+   "P4",
+   "P5"
+  ],
+  [
+   "P5",
+   "P6"
+  ],
+  [
+   "P6",
+   "P7"
+  ],
+  [
+   "P7",
+   "P8"
+  ],
+  [
+   "P7",
+   "P9"
+  ],
+  [
+   "P3",
+   "P10"
+  ],
+  [
+   "P9",
+   "P10"
+  ],
+  [
+   "P8",
+   "P11"
+  ],
+  [
+   "P10",
+   "P11"
+  ],
+  [
+   "P11",
+   "P12"
+  ]
+ ]
+}

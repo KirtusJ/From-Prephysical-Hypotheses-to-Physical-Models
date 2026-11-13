@@ -1,0 +1,36 @@
+digraph Ontology {
+  graph [fontname="Helvetica",rankdir=LR,bgcolor="white",pad="0.25",nodesep="0.30",ranksep="0.65",label="Director A4 | Explicit mathematics versus the physical bridge",labelloc="t",fontsize=16,fontcolor="#203956"];
+  node [shape=box,style="rounded,filled",fontname="Helvetica",fontsize=10,color="#aebbc7",fillcolor="#f4f7fa",fontcolor="#18334f",margin="0.13,0.11"];
+  edge [fontname="Helvetica",fontsize=9,color="#75869a",arrowsize=0.75];
+  K [label="Finite K4 carrier\nwith Z_n gains",fillcolor="#e9f2fa"];
+  C [label="Connected aperiodic\n4n-cover",fillcolor="#e9f2fa"];
+  L [label="All walk counts grow\n3^k / (4n) + o(3^k)",fillcolor="#e7f4ec"];
+  Q [label="Select complex character\nand pair rule",fillcolor="#fff1db"];
+  H [label="Fixed-length Hilbert\nevent kernel",fillcolor="#e7f4ec"];
+  CP [label="Dense CP^3\nmathematical rays",fillcolor="#e7f4ec"];
+  Hist [label="Cross-length histories\nconsistency FAILS",fillcolor="#feeceb",color="#d29f9f"];
+  Classical [label="Classical Markov\ncompletion also exists",fillcolor="#e7f4ec"];
+  Endpoint [label="Endpoint-aware additive\nholonomy measure",fillcolor="#e7f4ec"];
+  O [label="Operational preparation,\nmeasurement, tomography",fillcolor="#fff1db"];
+  Dynam [label="Clock, reversible dynamics,\nenergy",fillcolor="#fff1db"];
+  Comp [label="Quantum tensor\ncomposition",fillcolor="#fff1db"];
+  HM [label="Classical Hamiltonian\nlimit",fillcolor="#fff1db"];
+  Emp [label="Calibrated empirical map",fillcolor="#fff1db"];
+  Root [label="Total ontology\nNOT IDENTIFIED",fillcolor="#feeceb",color="#d29f9f"];
+  K->C [label="derived"];
+  C->L [label="proved"];
+  L->Q [style=dashed,label="not selected"];
+  Q->H [label="defined"];
+  H->CP [label="proved"];
+  H->Hist [label="counterexample",color="#af4949"];
+  K->Classical [label="alternative"];
+  K->Endpoint [label="alternative"];
+  CP->O [style=dashed,label="unknown"];
+  CP->Comp [style=dashed,label="unknown"];
+  H->Dynam [style=dashed,label="unknown"];
+  O->Emp [style=dashed];
+  Comp->Root [style=dashed];
+  Dynam->HM [style=dashed];
+  HM->Root [style=dashed];
+  Emp->Root [style=dashed];
+}

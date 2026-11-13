@@ -1,0 +1,220 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Selected-branch convention},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Selected-branch convention}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{1. Notation and normalized instrument branch}\label{notation-and-normalized-instrument-branch}
+
+Let \(\mathcal B: M_4\to M_4\) be a \textbf{nonzero} completely positive trace-nonincreasing map. Write \(H=\mathcal B^*(I_4)\) for its positive success effect, so \(0\le H\le I_4\). Define \(p_*=\operatorname{Tr}H/4>0\). The trace-one Choi state \(C\) of the branch is the Choi operator of \(\mathcal B\) acting on the output half of the normalized maximally entangled state, divided by \(p_*\). Equivalently, it has Kraus representation
+
+\[
+C=\sum_j |K_j\rangle\!\rangle\langle\!\langle K_j|,
+\quad |K\rangle\!\rangle=\tfrac12\operatorname{vec}K,\quad
+\sum_jK_j^\dagger K_j=G:=H/p_*,\quad \operatorname{Tr}G=4.
+\]
+
+Thus \(C\ge0\) and \(\operatorname{Tr}C=1\); its input-reference marginal is \(G^{\mathsf T}/4\). A postselected branch is not generally represented by a normalized CPTP Choi state, because \(G\) need not be \(I_4\).
+
+All computational basis vectors use the order \(|00\rangle,|01\rangle,|10\rangle,|11\rangle\). Let \(\mathcal L\) be the four-dimensional Hilbert-Schmidt subspace of matrices \(V\otimes I_2\). Its normalized Choi-population is \(w=\operatorname{Tr}(\Pi_{\mathcal L} C)\). Let \(g_0=\langle00|G|00\rangle>0\) and \(g_1=\langle01|G|01\rangle\ge0\). Let \(\beta\) be the \textbf{conditional} probability that the second output qubit is \(1\) given input \(|00\rangle\) and success of this same branch.
+
+\section{2. Theorem: sharp branch-relative flip bound}\label{theorem-sharp-branch-relative-flip-bound}
+
+\textbf{Theorem 1.} For the stated branch, without a trace-preservation or unitality assumption,
+
+\[
+\boxed{\quad 4(1-w)\ \ge\ g_0\beta+
+\tfrac12\left(\sqrt{g_0(1-\beta)}-\sqrt{g_1}\right)^2.\quad}
+\tag{1}
+\]
+
+For every triple \(g_0>0\), \(g_1\ge0\), \(g_0+g_1\le4\), and \(\beta\in[0,1]\), equality is realizable by a nonzero CPTNI branch after normalizing its Choi operator.
+
+\textbf{Proof.} Partition each \(K_j\) into \(2\times2\) blocks \((A_j,B_j;C_j,D_j)\) indexed by the second bit. Orthogonal projection onto \(V\otimes I_2\) replaces its diagonal blocks by \((A_j+D_j)/2\) and removes the others. Therefore
+
+\[
+4(1-w)=\sum_j\left[\tfrac12\|A_j-D_j\|_F^2+\|B_j\|_F^2+\|C_j\|_F^2\right].
+\]
+
+Concatenate the first columns of these blocks over \(j\). Their squared norms obey
+
+\[
+\|A_0\|^2=g_0(1-\beta),\quad \|C_0\|^2=g_0\beta,\quad
+\|B_0\|^2=\alpha,\quad \|D_0\|^2=g_1-\alpha,
+\]
+
+with \(0\le\alpha\le g_1\). The reverse triangle inequality gives
+
+\[
+4(1-w)\ge g_0\beta+\alpha+
+\tfrac12\left(\sqrt{g_0(1-\beta)}-\sqrt{g_1-\alpha}\right)^2.
+\]
+
+For fixed \(g_0,g_1,\beta\), the right side is nondecreasing in \(\alpha\); its interior derivative is \(\frac12+\frac{\sqrt{g_0(1-\beta)}}{2\sqrt{g_1-\alpha}}\ge0\). Setting \(\alpha=0\) proves (1), with endpoint cases obtained by continuity.
+
+For attainment, put \(u=(4-g_0-g_1)/2\ge0\) and take normalized Kraus operators
+
+\[
+K_0=\operatorname{diag}\left(\sqrt{g_0(1-\beta)},\sqrt{g_1},\sqrt u,\sqrt u\right),
+\qquad K_1=\sqrt{g_0\beta}\,|01\rangle\langle00|.
+\]
+
+They satisfy \(\sum K_j^\dagger K_j=\operatorname{diag}(g_0,g_1,u,u)\), have normalized Choi trace one, and saturate every inequality. Multiplying both Kraus operators by any sufficiently small nonzero common scalar makes their sum-of-effects at most \(I_4\), without changing \(C,w,g_0,g_1\) or conditional \(\beta\). This gives the promised CPTNI branch. \(\square\)
+
+\textbf{CPTP case.} If \(G=I_4\), then \(g_0=g_1=1\) and (1) reduces to the original sharp inequality \(4(1-w)\ge\beta+\frac12(1-\sqrt{1-\beta})^2\). More generally, equal relative successes \(g_0=g_1=1\) suffice for this formula; full trace preservation is not logically required for this particular inequality.
+
+\textbf{Inverting a bound.} For a separately justified lower population \(w\ge w_0\), define \(L=2(g_0+g_1)-8(1-w_0)\). Whenever the data are compatible and \(g_0>0\), equation (1) yields
+
+\[
+\sqrt{g_0(1-\beta)}+\sqrt{g_1}\ge\sqrt{\max\{0,L\}},
+\quad
+\beta\le 1-\left[\frac{\max\{0,\sqrt{\max\{0,L\}}-\sqrt{g_1}\}}{\sqrt{g_0}}\right]^2.
+\tag{2}
+\]
+
+When \(g_0=g_1=1\) and the supplied exact model populations give \(w_0=0.99\), (2) gives \(\beta\le 0.039797974644666\ldots\). This is a conditional \textbf{population} bound, not a detector measurement. Independently measured success rates and a common applicable branch are prerequisites to interpreting \(g_0,g_1\) physically.
+
+\section{3. Theorem: sharp Choi-purity interval for one prepared input}\label{theorem-sharp-choi-purity-interval-for-one-prepared-input}
+
+Fix an input \(|\psi\rangle=|00\rangle\) with nonzero branch success. Define
+
+\[
+t=\operatorname{Tr}\left[C\left(I_4\otimes|\psi^*\rangle\langle\psi^*|\right)\right]
+=\frac{\langle\psi|H|\psi\rangle}{\operatorname{Tr}H},\qquad 0<t\le1.
+\]
+
+Here \(t\) is the \emph{fraction of the trace-normalized Choi state in the selected input-reference block}, not the raw physical success probability. Let \(\sigma=\mathcal B(|\psi\rangle\langle\psi|)/\operatorname{Tr}\mathcal B(|\psi\rangle\langle\psi|)\) be the full \(4\times4\) normalized output, \(P=\operatorname{Tr}\sigma^2\), and \(\lambda=\lambda_{\max}(\sigma)\).
+
+\textbf{Theorem 2.} Among all normalized Choi states of nonzero CPTNI operations with these exact \(t\) and \(\sigma\), the complete attainable purity interval is
+
+\[
+\boxed{\quad t^2P+\frac{(1-t)^2}{12}\ \le\ \operatorname{Tr}C^2\ \le\
+ t^2P+(1-t)^2+2t(1-t)\lambda.\quad}
+\tag{3}
+\]
+
+\textbf{Proof.} Let \(P_0=I_4\otimes|\psi^*\rangle\langle\psi^*|\) have rank four. In the decomposition \(P_0\oplus(I-P_0)\), write \(C\) in blocks \(A=t\sigma\), \(B\), and \(D\), with \(D\ge0\) supported on a twelve-dimensional space and \(\operatorname{Tr}D=1-t\). Then
+
+\[\operatorname{Tr}C^2=t^2P+\operatorname{Tr}D^2+2\|B\|_2^2.\]
+
+The lower bound follows from \(\operatorname{Tr}D^2\ge(1-t)^2/12\) and \(\|B\|_2^2\ge0\), with equality for \(B=0,D=(1-t)I_{12}/12\). For the upper bound, \(\operatorname{Tr}D^2\le(1-t)^2\). Block positivity gives \(B=A^{1/2}KD^{1/2}\) for a contraction \(K\), so \(\|B\|_2^2\le \|A\|_{\mathrm{op}}\operatorname{Tr}D=t\lambda(1-t)\).
+
+To attain the upper bound, take a top eigenvector \(|u_1\rangle\) of \(\sigma\) and any normalized vector \(|v\rangle\) in the complementary twelve-dimensional input-reference block. Set
+
+\[
+|\chi\rangle=\sqrt{t\lambda}\,|u_1\rangle\otimes|\psi^*\rangle+\sqrt{1-t}\,|v\rangle,
+\quad C_{\max}=|\chi\rangle\langle\chi|+t\sum_{j=2}^4\lambda_j |u_j,\psi^*\rangle\langle u_j,\psi^*|.
+\]
+
+This positive unit-trace state fixes the desired input block and attains the upper formula. Every positive normalized bipartite Choi operator defines a CP map; multiplying that map by a sufficiently small positive factor makes it trace-nonincreasing while leaving its normalized Choi state and conditional output unchanged. Finally, convexly mixing the two attaining normalized Choi states fixes \(t,\sigma\) and continuously covers all intermediate purities. \(\square\)
+
+\textbf{Trace-preserving specialization.} CPTP implies \(t=1/4\). Formula (3) becomes the previously supplied
+
+\[\boxed{\quad (P+3/4)/16\ \le\operatorname{Tr}C^2\le (9+6\lambda+P)/16.\quad}\]
+
+The supplied model's conditional \(\beta\) bound and first-output spectrum yield the earlier \(0.807826398288\) outward ceiling when the additional readout premises imply the stated bound on \(\beta\). Equation (3) is sharp when only \(t,\sigma\) are fixed, and its CPTNI constructions need not be TP for \(t=1/4\); the separate TP attainability construction must be invoked to claim TP sharpness.
+
+\subsection{Corollary: partial local output information}\label{corollary-partial-local-output-information}
+
+Let \(a\in[1/2,1]\) be the larger eigenvalue of the first output marginal of \(\sigma\), and \(b=\min\{\beta,1-\beta\}\in[0,1/2]\) for a calibrated second-output rank-one effect. Define
+
+\[
+\begin{aligned}
+x_*&=\operatorname{clip}\!\left(\frac{a+b}{2}-\frac14,\,\max(0,a+b-1),\,\min(a,b)\right),\\
+P_{\min}(a,b)&=(a-x_*)^2+x_*^2+(1-a-b+x_*)^2+(b-x_*)^2,\\
+m&=\min(1,a+b).
+\end{aligned}
+\]
+
+Among all normalized CPTNI Choi states with the given \(t,a,b\), the sharp interval is
+
+\[
+\boxed{\quad t^2P_{\min}(a,b)+\frac{(1-t)^2}{12}
+\ \le\operatorname{Tr}C^2\le\
+t^2[m^2+(1-m)^2]+(1-t)^2+2t(1-t)m.\quad}
+\tag{4}
+\]
+
+The endpoints follow by minimizing joint-output purity under the measured local marginals and, separately, attaining \(\lambda_{\max}(\sigma)=m\), \(\operatorname{Tr}\sigma^2=m^2+(1-m)^2\). Explicit two-qubit outputs and the block constructions of Theorem 2 attain both, and continuity fills the interval. At \(t=1/4\) this recovers the numerical and algebraic bounds reported for the CPTP local-output model.
+
+\subsection{Corollary: pure-branch exclusion does not require trace preservation}\label{corollary-pure-branch-exclusion-does-not-require-trace-preservation}
+
+A \textbf{rank-one Choi state} for any nonzero CP operation has a single effective Kraus operator \(K\). For a pure input with nonzero branch success, its normalized output is a rank-one projector on \(K|\psi\rangle\). Hence the two output-qubit marginals must have the same unordered eigenvalues. Consequently the local readings permit a rank-one Choi state only if
+
+\[\boxed{\quad 1-a\le \beta\le a.\quad}\]
+
+Conversely, whenever this inequality holds, a pure joint output with the specified local readings exists by Schmidt decomposition and a rotation of the second Schmidt basis. The single Kraus operator \(K=|\varphi\rangle\langle\psi|\) is trace-nonincreasing and yields that output on \(|\psi\rangle\). Therefore \textbf{this is necessary and sufficient for a rank-one CPTNI explanation when only these local output data are fixed}. The same condition was previously established for a pure unitary-channel explanation in the CPTP class, but the relevant explanation after postselection need not be unitary. Other joint/Choi observations can rule out rank one even when these local readings alone do not.
+
+A mixed conditional joint output from a known pure input excludes rank-one normalized Choi states of a \emph{single, applicable} CP branch, regardless of global trace preservation. If \(t\) is separately known and strictly positive, (3) also supplies a quantitative Choi-purity ceiling. Without a positive lower bound on \(t\), a mixed output alone need not give a uniform numerical gap below purity one.
+
+\end{document}

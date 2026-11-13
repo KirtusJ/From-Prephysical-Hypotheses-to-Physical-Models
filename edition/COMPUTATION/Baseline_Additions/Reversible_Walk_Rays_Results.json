@@ -1,0 +1,210 @@
+{
+ "R6_weak_limit_moments_match_group_velocity_distribution": {
+  "passed": true,
+  "predicted_mean": 0.2928932188134521,
+  "predicted_second_moment": 0.2928932188134524,
+  "value_1_minus_1_over_sqrt2": 0.29289321881345254,
+  "rows": [
+   {
+    "t": 50,
+    "mean_over_t": 0.2846997286269043,
+    "second_moment_over_t2": 0.29312824303904955,
+    "norm": 0.9999999999999915
+   },
+   {
+    "t": 100,
+    "mean_over_t": 0.2897556015637119,
+    "second_moment_over_t2": 0.2929422330793922,
+    "norm": 0.9999999999999826
+   },
+   {
+    "t": 200,
+    "mean_over_t": 0.29126632043024614,
+    "second_moment_over_t2": 0.2929057692102017,
+    "norm": 0.999999999999965
+   },
+   {
+    "t": 400,
+    "mean_over_t": 0.29205917173138657,
+    "second_moment_over_t2": 0.2928964084744026,
+    "norm": 0.9999999999999297
+   }
+  ],
+  "first_run": "the first version obtained the velocities by a finite difference of numerically matched eigenvalues; at the points where the two eigenvalues are close the matching failed and the predicted moments were -108 and 9.6e7. Failure of the checking program; the velocities are now the closed form on each branch",
+  "note": "prediction: velocity cos k / sqrt(1 + cos^2 k) on either branch weighted by the squared component of the initial vector; Grimmett-Janson-Scudo"
+ },
+ "R7_packet_velocity_equals_group_velocity": {
+  "passed": true,
+  "rows": [
+   {
+    "k0": 0.3,
+    "displacement_over_T": 0.6905898836638713,
+    "group_velocity": 0.6907749687068042
+   },
+   {
+    "k0": 1.0,
+    "displacement_over_T": 0.474917135100067,
+    "group_velocity": 0.4753548222423668
+   },
+   {
+    "k0": 2.2,
+    "displacement_over_T": -0.5067738390895313,
+    "group_velocity": -0.5071903186884974
+   },
+   {
+    "k0": -0.8,
+    "displacement_over_T": 0.5712939711270973,
+    "group_velocity": 0.5716474205251091
+   }
+  ],
+  "sign_convention": 1.0,
+  "steps": 300,
+  "sigma_k": 0.03
+ },
+ "R8_momentum_distribution_shifts_rigidly_by_the_field": {
+  "passed": true,
+  "rows": [
+   {
+    "period": 64,
+    "field": 0.09817477042468103,
+    "momentum_shift_error": 1.2789769243681803e-12,
+    "k_direction_per_step": -1,
+    "max_position_error_sites": 0.6463051283259018,
+    "excursion_sites": 16.06155728959618,
+    "predicted_excursion": 16.0,
+    "return_probability_after_one_period": 0.99999999956385
+   },
+   {
+    "period": 128,
+    "field": 0.04908738521234052,
+    "momentum_shift_error": 2.1458390619955026e-12,
+    "k_direction_per_step": -1,
+    "max_position_error_sites": 0.618202753387262,
+    "excursion_sites": 31.987534091410566,
+    "predicted_excursion": 32.0,
+    "return_probability_after_one_period": 0.9999999999999765
+   },
+   {
+    "period": 256,
+    "field": 0.02454369260617026,
+    "momentum_shift_error": 3.410605131648481e-12,
+    "k_direction_per_step": -1,
+    "max_position_error_sites": 0.6114147687051172,
+    "excursion_sites": 63.967611291704884,
+    "predicted_excursion": 64.0,
+    "return_probability_after_one_period": 0.9999999999999614
+   }
+  ]
+ },
+ "R8_centroid_follows_ray_of_w(k)+Phi_x": {
+  "passed": true,
+  "note": "ray integrated with the midpoint rule; excursion over one period is (w_max - w_min)/Phi = (pi/2)/Phi on branch 1"
+ },
+ "R8_residual_below_0.02_site_after_connection_offset": {
+  "passed": false,
+  "rows": [
+   {
+    "period": 64,
+    "max_error_without_offset": 0.6463051283259018,
+    "max_error_with_offset": 0.07471319973159024,
+    "offset_sign": -1
+   },
+   {
+    "period": 256,
+    "max_error_without_offset": 0.6114147687051172,
+    "max_error_with_offset": 0.03801257425107696,
+    "offset_sign": -1
+   }
+  ],
+  "note": "criterion fixed before the run; it is not met (0.075 and 0.038 site) and the predicate is kept as failed. Observation: the change of the connection of the branch eigenvector accounts for 88 and 94 per cent of the residual, and the remainder is smaller for the weaker field"
+ },
+ "R8_strong_field_revivals_recorded": {
+  "passed": true,
+  "rows": [
+   {
+    "gain_order": 2,
+    "return_probability": {
+     "2": 0.2499999999999999,
+     "4": 0.06249999999999996,
+     "8": 0.03515624999999997
+    },
+    "largest_rms_distance_within_4_periods": 4.373213921133973
+   },
+   {
+    "gain_order": 3,
+    "return_probability": {
+     "3": 0.0,
+     "6": 0.7656249999999987,
+     "12": 0.2990722656249988
+    },
+    "largest_rms_distance_within_4_periods": 3.3260336739125127
+   },
+   {
+    "gain_order": 4,
+    "return_probability": {
+     "4": 0.5624999999999997,
+     "8": 0.03515624999999998,
+     "16": 0.13197326660156217
+    },
+    "largest_rms_distance_within_4_periods": 5.92457474739748
+   },
+   {
+    "gain_order": 6,
+    "return_probability": {
+     "6": 0.7656249999999992,
+     "12": 0.2990722656249995,
+     "24": 0.04418617486953706
+    },
+    "largest_rms_distance_within_4_periods": 6.190074038455628
+   },
+   {
+    "gain_order": 12,
+    "return_probability": {
+     "12": 0.9689941406249973,
+     "24": 0.8802800774574234,
+     "48": 0.584223810827806
+    },
+    "largest_rms_distance_within_4_periods": 4.531529349223881
+   },
+   {
+    "gain_order": 24,
+    "return_probability": {
+     "24": 0.9995117783546403,
+     "48": 0.9980481859529626,
+     "96": 0.9922098811005596
+    },
+    "largest_rms_distance_within_4_periods": 4.356081656071609
+   }
+  ],
+  "note": "recorded, not a predicate: localized start; return probability at m, 2m, 4m steps for field 2 pi/m"
+ },
+ "R8_staircase_of_order_4_gains_recorded": {
+  "passed": true,
+  "rows": [
+   {
+    "step_length": 16,
+    "steps": 8,
+    "staircase_displacement": 3.7962260825834164,
+    "smooth_field_displacement": 5.534610493497894,
+    "ray_prediction": 5.570123130171733,
+    "staircase_rms_width": 16.906139799766308,
+    "fraction_left_of_start": 0.25651282027156974
+   },
+   {
+    "step_length": 64,
+    "steps": 32,
+    "staircase_displacement": 11.998113966556957,
+    "smooth_field_displacement": 22.25583466801254,
+    "ray_prediction": 22.275775795497026,
+    "staircase_rms_width": 24.636384906494026,
+    "fraction_left_of_start": 0.3882559876048529
+   }
+  ],
+  "note": "recorded, not a predicate: whether gains of a rigid order reproduce the ray of the mean field"
+ },
+ "_summary": {
+  "predicates": 7,
+  "passed": 6,
+  "seeds": []
+ }
+}

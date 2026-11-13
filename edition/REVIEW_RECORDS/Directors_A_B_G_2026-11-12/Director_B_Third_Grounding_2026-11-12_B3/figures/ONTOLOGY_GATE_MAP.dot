@@ -1,0 +1,36 @@
+digraph ontology {
+  graph [rankdir=LR, bgcolor="white", pad="0.32", nodesep="0.25", ranksep="0.48", splines=polyline,
+         label="From Prephysical Hypotheses to Physical Models | Grounding obligations, not an established ontology",
+         labelloc=t, fontsize=19, fontname="Helvetica"];
+  node [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", penwidth=0.9, color="#999999", fillcolor="#f6f6f6", margin="0.12,0.10"];
+  edge [fontname="Helvetica", fontsize=8, color="#606060", arrowsize=0.65];
+  primitive [label="Prephysical primitives\n& equivalence", fillcolor="#ededed"];
+  linear [label="Chosen finite linearization\nodd-cycle alternator", fillcolor="#ecf5ff"];
+  classical [label="Classical simplex\ncountercompletion", fillcolor="#fff0e3"];
+  op [label="Operational outcomes,\nprobability and calibration", fillcolor="#fff5e5"];
+  geom [label="Complex geometry,\nphase and holonomy", fillcolor="#ecf5ff"];
+  comp [label="Two-system composition\nstate/effect cones", fillcolor="#fff5e5"];
+  parallel [label="Parallel composition\nand all-arity closure", fillcolor="#fff5e5"];
+  selective [label="Selective instruments\nfilter and conditioning", fillcolor="#fff5e5"];
+  entangling [label="Entangling transformations\nand their physical origin", fillcolor="#fff5e5"];
+  dynamics [label="Clock, energy,\nphysical dynamics", fillcolor="#fff5e5"];
+  limit [label="Controlled classical\nHamiltonian limit", fillcolor="#fff5e5"];
+  evidence [label="Independent empirical map\nuncertainties and falsifiers", fillcolor="#fff5e5"];
+  total [label="Total ontology: NOT IDENTIFIED", fillcolor="#ffe6e5", color="#bc5550", penwidth=1.5];
+  primitive -> linear [label="optional functor", style=dashed];
+  primitive -> classical [label="same seed", style=dashed];
+  primitive -> op [label="OPEN", color="#b76533"];
+  op -> geom [label="OPEN", color="#b76533"];
+  geom -> comp [label="nonidentified", color="#b76533"];
+  op -> comp [label="OPEN", color="#b76533"];
+  comp -> parallel [label="G: naive rule fails", color="#b76533"];
+  comp -> selective [label="B: conditional filter test", color="#b76533"];
+  parallel -> entangling [label="OPEN"];
+  selective -> entangling [label="OPEN"];
+  entangling -> dynamics [label="OPEN"];
+  dynamics -> limit [label="OPEN"];
+  limit -> evidence [label="OPEN"];
+  evidence -> total [label="OPEN"];
+  classical -> op [style=dotted, label="nonselection control", constraint=false];
+  linear -> geom [style=dashed, label="import norm + projectivization", constraint=false];
+}

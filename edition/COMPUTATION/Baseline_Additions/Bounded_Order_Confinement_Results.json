@@ -1,0 +1,263 @@
+{
+ "C1_bands_flat_for_orders_2_3_4_and_dispersive_for_8_12_24": {
+  "passed": false,
+  "rows": [
+   {
+    "order": 2,
+    "step_delta": 3.141592653589793,
+    "supercell_sites": 32,
+    "largest_band_velocity": 0.00048722838125181406,
+    "rms_band_velocity": 0.00025140572810475266
+   },
+   {
+    "order": 3,
+    "step_delta": 2.0943951023931953,
+    "supercell_sites": 48,
+    "largest_band_velocity": 4.199881183571582e-08,
+    "rms_band_velocity": 1.054464024978439e-08
+   },
+   {
+    "order": 4,
+    "step_delta": 1.5707963267948966,
+    "supercell_sites": 64,
+    "largest_band_velocity": 1.413370809277836e-06,
+    "rms_band_velocity": 3.299661815069685e-07
+   },
+   {
+    "order": 6,
+    "step_delta": 1.0471975511965976,
+    "supercell_sites": 96,
+    "largest_band_velocity": 8.604228440844963e-11,
+    "rms_band_velocity": 4.2103362038721944e-11
+   },
+   {
+    "order": 8,
+    "step_delta": 0.7853981633974483,
+    "supercell_sites": 128,
+    "largest_band_velocity": 5.2041704279304205e-12,
+    "rms_band_velocity": 1.0979418798100871e-12
+   },
+   {
+    "order": 12,
+    "step_delta": 0.5235987755982988,
+    "supercell_sites": 192,
+    "largest_band_velocity": 21.137152371940765,
+    "rms_band_velocity": 9.467962088985388
+   },
+   {
+    "order": 24,
+    "step_delta": 0.2617993877991494,
+    "supercell_sites": 384,
+    "largest_band_velocity": 5.458728542899586,
+    "rms_band_velocity": 2.673309133469238
+   }
+  ],
+  "block_length": 16,
+  "note": "sorted eigenphases differentiated numerically; a crossing can lower a computed velocity, not create one. Order 6 (delta = pi/3 < pi/2) is reported, not part of the criterion"
+ },
+ "C1b_localized_start_stays_bounded_for_orders_2_3_4": {
+  "passed": false,
+  "rows": [
+   {
+    "order": 2,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 11.830519281777432,
+      "mean": 3.093953853576278
+     },
+     {
+      "t": 256,
+      "rms_distance": 43.43801706871524,
+      "mean": 16.458207301217485
+     },
+     {
+      "t": 1024,
+      "rms_distance": 173.16431089675692,
+      "mean": 67.59521777449599
+     }
+    ]
+   },
+   {
+    "order": 3,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 8.530239580498366,
+      "mean": -0.1019474903870572
+     },
+     {
+      "t": 256,
+      "rms_distance": 7.981844841554198,
+      "mean": -0.120806446004464
+     },
+     {
+      "t": 1024,
+      "rms_distance": 7.066243914323975,
+      "mean": -0.44456095128781303
+     }
+    ]
+   },
+   {
+    "order": 4,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 8.854293997593102,
+      "mean": -0.20661956077753985
+     },
+     {
+      "t": 256,
+      "rms_distance": 10.350464025834414,
+      "mean": -0.18328153647811174
+     },
+     {
+      "t": 1024,
+      "rms_distance": 8.073254530280575,
+      "mean": -0.5399946086716585
+     }
+    ]
+   },
+   {
+    "order": 6,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 13.597120532787374,
+      "mean": -0.3181558240418729
+     },
+     {
+      "t": 256,
+      "rms_distance": 10.283301912996915,
+      "mean": 0.31695449881915305
+     },
+     {
+      "t": 1024,
+      "rms_distance": 10.5781335078851,
+      "mean": -0.5098557692566077
+     }
+    ]
+   },
+   {
+    "order": 8,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 20.412515669402946,
+      "mean": -1.2986854356422466
+     },
+     {
+      "t": 256,
+      "rms_distance": 17.378131619070636,
+      "mean": -0.7090712451197314
+     },
+     {
+      "t": 1024,
+      "rms_distance": 15.650976072133941,
+      "mean": -1.5979552347772579
+     }
+    ]
+   },
+   {
+    "order": 12,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 28.5008169711529,
+      "mean": 3.3045916021920263
+     },
+     {
+      "t": 256,
+      "rms_distance": 27.434948591570517,
+      "mean": -1.1512965674730342
+     },
+     {
+      "t": 1024,
+      "rms_distance": 23.761478658389375,
+      "mean": -0.7186292028291064
+     }
+    ]
+   },
+   {
+    "order": 24,
+    "rows": [
+     {
+      "t": 64,
+      "rms_distance": 34.81899965210105,
+      "mean": 12.814447162902967
+     },
+     {
+      "t": 256,
+      "rms_distance": 48.9801007637152,
+      "mean": -10.19982377767427
+     },
+     {
+      "t": 1024,
+      "rms_distance": 51.51693703023981,
+      "mean": 0.03417912031817494
+     }
+    ]
+   }
+  ]
+ },
+ "C2_transmission_vanishes_at_half_bandwidth_step": {
+  "passed": true,
+  "rows": [
+   {
+    "delta": 0.2617993877991494,
+    "delta_over_pi": 0.08333333333333333,
+    "transmitted_probability": 0.9997448326870997,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 0.5235987755982988,
+    "delta_over_pi": 0.16666666666666666,
+    "transmitted_probability": 0.9994404741657881,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 0.7853981633974483,
+    "delta_over_pi": 0.25,
+    "transmitted_probability": 0.9746559118357565,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 1.0471975511965976,
+    "delta_over_pi": 0.3333333333333333,
+    "transmitted_probability": 0.0025392746868048047,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 1.5707963267948966,
+    "delta_over_pi": 0.5,
+    "transmitted_probability": 3.123198550853751e-13,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 2.0943951023931953,
+    "delta_over_pi": 0.6666666666666666,
+    "transmitted_probability": 2.8611986714343983e-13,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   },
+   {
+    "delta": 3.141592653589793,
+    "delta_over_pi": 1.0,
+    "transmitted_probability": 0.4769259445219613,
+    "packet_speed": 0.6907749687068042,
+    "moved_right": true
+   }
+  ],
+  "note": "branch-1 packet at k0 = 0.3, width 0.03 in k, 400 steps; the interface step delta is the gain ratio between the two regions. Eigenphase intervals: branch 1 [-pi/4, pi/4], branch 2 [3 pi/4, 5 pi/4] (G9 Lemma 6.1): within-branch passage needs |delta| < pi/2, cross-branch passage |delta - pi| < pi/2"
+ },
+ "_summary": {
+  "predicates": 3,
+  "passed": 1,
+  "numpy": "2.5.3"
+ }
+}

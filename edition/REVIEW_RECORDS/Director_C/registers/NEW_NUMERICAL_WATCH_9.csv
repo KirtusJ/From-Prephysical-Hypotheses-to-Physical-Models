@@ -1,0 +1,10 @@
+watch_id,quantity,exact_value,approximation,scope
+C-ORI-W01,Uniform orientation training error n6,189/4096,0.046142578125,PR fixed ideal iid uniform settings
+C-ORI-W02,Nonuniform orientation training error n6,74487/1000000,0.074487,Settings 0.3 0.3 0.3 0.1
+C-ORI-W03,Nonuniform local false-rejection lower bound,26588814358957503287787/500000000000000000000000,0.053177628717915,Deterministic Bell-local model under biased contexts
+C-ORI-W04,Nonuniform PR power upper bound,8826423062685922777/9536743164062500000,0.925517538937896,Six-plus-nineteen all-win protocol under biased contexts
+C-ORI-W05,Quantum all-win 19 size upper,(cos(pi/8)^2)^19,0.049360908567905,Unbiased fresh test settings
+C-ORI-W06,Ideal PR 25 split power,2048393405/2147483648,0.953857509884983,Uniform iid six training and nineteen heldout
+C-ORI-W07,Designed three-context plus nineteen test records,22,22,Three distinct calibration contexts plus independent uniform heldout
+C-ORI-W08,Bonferroni 33 round upper,8*(cos(pi/8)^2)^33,0.043023210734674,Conservative orientation-free scan
+C-ORI-W09,Context-bias threshold for displayed local counterexample,(1-(0.05/(20/27))^(1/25)),0.1022154013,Rare-context probability below threshold with others equal

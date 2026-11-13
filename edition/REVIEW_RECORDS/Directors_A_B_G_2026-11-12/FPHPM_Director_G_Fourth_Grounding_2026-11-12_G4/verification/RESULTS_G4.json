@@ -1,0 +1,72 @@
+{
+  "exact_lattice_construction": {
+    "amplitudes": "Eisenstein integers Z[zeta_3]^5",
+    "approximations": 1024,
+    "gain_order": 3,
+    "m": 5,
+    "max_FS_angle_by_k": {
+      "10": 0.15481140969762258,
+      "12": 0.039908538877274115,
+      "14": 0.009904448729454042,
+      "16": 0.002354046240485302
+    }
+  },
+  "filter": {
+    "cases": 7,
+    "formula": "W_opt=t^2(1-t)/[8(1+t)]"
+  },
+  "formal_adjacency": {
+    "Hermitian": true,
+    "max_unitarity_residual": 1.7706590280260435e-15,
+    "nonuniform_H2_diagonal": [
+      4,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "formal_composites": {
+    "cartesian_concurrence_at_pi_over_4": 2.220446049250313e-16,
+    "categorical_concurrence_at_pi_over_4": 1.0
+  },
+  "grade_one_counterexample": {
+    "gauge_cases": 729,
+    "max_gauge_residual": 0,
+    "nontrivial_closed_weight_twice_mu": [
+      4,
+      1
+    ]
+  },
+  "lift": {
+    "degrees": [
+      4,
+      2,
+      2,
+      2,
+      2
+    ],
+    "minimum_count_k18": 1454605,
+    "minimum_entry_B5": 1,
+    "primitive_exponent": 5,
+    "vertices": 15
+  },
+  "research_gate": "G1 OPEN; no total ontology",
+  "sync_composition": {
+    "expected_tensor_dim": 16,
+    "missing_dimension": 8,
+    "nontrivial_interference_magnitude_sq": 1.0,
+    "one_factor_full_dim": 4,
+    "synchronized_dim": 8
+  },
+  "trial_counts": {
+    "filter_rows": 7,
+    "formal_composite_rows": 4,
+    "formal_unitary_rows": 6,
+    "gauge_switch_rows": 729,
+    "lift_cell_rows": 285,
+    "lift_coverage_rows": 19,
+    "phase_approximation_rows": 1024,
+    "sync_rank_rows": 13
+  }
+}

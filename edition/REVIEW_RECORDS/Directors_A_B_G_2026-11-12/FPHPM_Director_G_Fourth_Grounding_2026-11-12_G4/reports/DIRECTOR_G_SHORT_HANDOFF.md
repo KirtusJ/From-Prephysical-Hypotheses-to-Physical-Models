@@ -1,0 +1,19 @@
+# Director G | Short handoff to Directors Z, A and B
+
+12 November 2026, B.C. Pacific Time. Research direction: Kirtus Justus. Internal mathematical research support: ChatGPT (GPT-6), Director G. **G1 OPEN; no total ontology.** Additive packet only; Z2 baseline unchanged. Claims are subject to direct proof-level review by recipients; agreement is not independent replication.
+
+**Intake:** Z2 baseline verifier passed (791 files, 39 papers, 367 registry rows); A3 and B3 manifests and mathematical scripts passed. G8's original script reran with all 15 predicates passing, but 7 floating entries changed by at most 1.11e-16; the source and rerun JSON are not byte-identical. The differences are retained. PCP 1.0 Enterprise (10 checks) and nested ACR 1.0 Implementation (57 checks) passed local structural verification; there is no host enforcement, no independent sub-agent and no behavioral/empirical validation.
+
+**G8 growth condition is realizable:** five-vertex graph of triangles `(0,1,2,0)` and `(0,3,4,0)` sharing vertex zero, with Z3 edge gains all zero except `4->0` gain one. Its 15-state voltage-cover adjacency `B` satisfies `B^5>0` (minimum entry 1). Every endpoint/gain has at least `2^(k-5)` length-k walks for k>=5. At length k, all Eisenstein-integer vectors with coefficients up to `2^(k-6)` occur as event vectors; at unbounded k they yield a dense `CP^4`, with uniform Fubini-Study sin-error at most `2 sqrt(5)/(2^(k-6)-2 sqrt(5))` for k>=10. These are mathematical amplitudes with an assumed character and quadratic rule, not operational probabilities. See accompanying six-page proof and 225-entry exact certificate.
+
+**G8 grade-one scope correction:** `mu(S)=sum_{w in S}[1+1_{t(w)=x} Re(zeta^gain(w))]` is positive, additive, switching invariant and holonomy sensitive. It refutes the **unrestricted** statement that no additive invariant set function can see transport. G8 Lemma 3.1, restricted to a universal raw-gain singleton function, survives; the paper itself notes extra closed-loop terms later. 729 exact gauge controls passed.
+
+**G8 composition scope correction:** two Z3-gained four-cycles each span C^4 over all walk lengths, but their synchronously stepped product spans `(E tensor E) direct-sum (O tensor O)` of dimension **8 rather than 16**. The fixed-k tensor theorem still holds; its all-length extension requires an additional synchrony/asynchrony or aperiodicity premise. A graph-product connectivity theorem by Weichsel independently supports the parity mechanism.
+
+**Formal dynamics and composition:** Hermitian represented adjacency yields a mathematical `exp(-isH)` flow after importing complex functional calculus and continuous `s`, despite nonunitary single-edge walk iteration. Categorical generator `X tensor X` gives Bell entanglement at formal `s=pi/4`, while Cartesian generator `X tensor I+I tensor X` does not; neither graph product is physically selected. No real clock, Hamiltonian classical limit or empirical map results.
+
+**A3/B3:** their selective-filter witnesses are compatible. Within B3's symmetric filter family, the unconditioned Bell-excess `W_t(x)=(1-t)x[t-(1+t)x]/2` is maximized at `x=t/[2(1+t)]`, with value `t^2(1-t)/[8(1+t)]`. This is only a mathematical comparison in imported complex density operators.
+
+**Next decisions:** amend the broad grade-one phrase (without altering the narrower theorem); mark OP-25 growth partially resolved for an explicit class; add all-length synchronization and product-generator choice to OP-22/23; keep probability, preparation/instruments, complex orientation, time/energy, classical Hamiltonian and correspondence wholly open. No advance from G1.
+
+**Files:** `papers/Finite_Gain_Graph_Rays_and_Composition_Obstructions.pdf`, source `.tex`, `reports/DIRECTOR_G_TECHNICAL_DISPOSITION.md`, `verification/`, `records/`, and a SHA-256 manifest plus archive verifier.

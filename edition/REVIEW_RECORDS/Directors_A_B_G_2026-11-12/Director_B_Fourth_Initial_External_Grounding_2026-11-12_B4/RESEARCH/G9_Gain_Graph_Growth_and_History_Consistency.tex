@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,enumitem,microtype,xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!50!black}
+\definecolor{navy}{HTML}{173B5E}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small From Prephysical Hypotheses to Physical Models}\fancyhead[R]{\small Grounding supplement}\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\cH}{\mathcal H}\newcommand{\Om}{\Omega}\newcommand{\CC}{\mathbb C}\newcommand{\ZZ}{\mathbb Z}
+\title{\vspace{-1.7em}\color{navy}\bfseries Gain-Graph Growth, Incompatible Histories,\\ and the Limits of Transport-Based Emergence}
+\author{\textbf{Kirtus Justus}\\Theoretical Physicist\\Port Coquitlam, British Columbia, Canada}
+\date{12 November 2026 (B.C. Pacific Time)\\\small Director B technical supplement to the Initial External Grounding collection}
+\begin{document}
+\maketitle\thispagestyle{fancy}
+\begin{abstract}
+An explicit four-vertex gain graph over $\ZZ_3$ satisfies the previously unverified uniform walk-growth hypothesis of the conditional construction in research paper G8. Its finite walk events generate a dense subset of $\CC P^3$ under a \emph{stipulated} character-amplitude map. The same graph fails a necessary consistency condition for interpreting finite-horizon decoherence functionals as restrictions of a single growing history functional. For reciprocal unit-modulus edge gains, all adjacency matrices that can themselves be normalized to unitaries have two-step period. Two source corrections are recorded: the final determinant-holonomy law of paper G7 survives a sign error in its intermediate lifting proof; and the headline claim that no additive walk measure can see the transport is false unless the gain-only hypothesis of G8 Lemma 3.1 is retained. These results concern mathematical models. No operational quantum probability, physical time, classical Hamiltonian mechanics, or total ontology follows.
+\end{abstract}
+
+\section{Objects and evidential status}
+Let $\Gamma$ be a finite connected undirected simple graph, with finite group $G$ and reciprocal edge gains $\varphi(v\to u)=\varphi(u\to v)^{-1}$. Fix an initial vertex $x$, a unitary character $\chi:G\to U(1)$, and all directed walks $\Om_k$ of length $k$ from $x$. Define the amplitude vector $v_k(S)\in\CC^V$ of an event $S\subseteq\Om_k$ by
+\begin{equation}\label{eq:v}
+ v_k(S)_y=\sum_{w\in S:\,t(w)=y}\chi(\varphi(w)),\qquad D_k(S,T)=\langle v_k(S),v_k(T)\rangle.
+\end{equation}
+These objects are \emph{definitions}, not operational identifications. Strong positivity of $D_k$ follows immediately from its Gram representation at each $k$. The present review asks two logically distinct questions: whether the rays $[v_k(S)]$ are dense in projective space as $k$ varies, and whether $D_k$ is compatible with extension of events from one $k$ to another.
+
+\section{A finite graph satisfying G8's growth premise}
+\begin{theorem}[Explicit growth and dense projective rays]\label{thm:growth}
+Take $\Gamma=K_4$ with vertices $\{0,1,2,3\}$, $G=\ZZ_3$, and give the edge $0\to3$ gain $1\pmod3$ and its reverse gain $-1\pmod3$, with all other oriented edges of gain $0$. From $x=0$ let $N_k(y,g)$ count walks of length $k$ terminating at $y$ with gain $g$. For every $k\ge10$,
+\begin{equation}\label{eq:lower}
+ \min_{y\in V,\;g\in\ZZ_3}N_k(y,g)\ \ge\ 3^{\lfloor(k-10)/2\rfloor}.
+\end{equation}
+Thus each of the twelve gain/endpoint counts diverges. With $\chi(g)=\omega^g$, $\omega=e^{2\pi i/3}$, the rays $[v_k(S)]$ of nonzero event vectors, over all $k$, are dense in $\CC P^3$.
+\end{theorem}
+\begin{proof}
+At the root the three-step closed walk $T=(0,3,1,0)$ has gain $1$. The three-step closed walk $C=(0,1,2,0)$ and each of the three two-step walks $B_j=(0,j,0)$, $j=1,2,3$, have gain $0$. For any specified $(y,g)$, choose a path $q$ of length at most one from $0$ to $y$ (the empty path when $y=0$) and prepend $r\in\{0,1,2\}$ copies of $T$ so that the gain becomes $g$. The resulting base walk has length $\ell_{y,g}\le7$. For $k\ge10$, put $d=k-\ell_{y,g}\ge3$. Write $d=2a+3b$, with $b=0$ when $d$ is even, $b=1$ when $d$ is odd, and $a\ge\lfloor(k-10)/2\rfloor$. Prepend $a$ arbitrarily chosen two-step loops $B_j$, and (if $b=1$) one copy of $C$. They have zero gain and produce $3^a$ distinct walks of exactly length $k$ with the required $(y,g)$. This proves \eqref{eq:lower}.
+
+Because $1+\omega+\omega^2=0$, every Eisenstein integer $a+b\omega$ can be expressed with nonnegative coefficients as $(a+L)+(b+L)\omega+L\omega^2$ for sufficiently large integer $L$. For any desired $z\in\ZZ[\omega]^4$, the divergent counts make all these finite numbers of gains simultaneously selectable at one sufficiently large length $k$, independently at the four endpoints. Hence some event has $v_k(S)=z$. Rays through $\ZZ[\omega]^4$ are rays through $\mathbb Q(\omega)^4$ after clearing denominators, and $\mathbb Q(\omega)$ is dense in $\CC$ because $1$ and $\omega$ form a real basis with rational coefficients dense in $\mathbb R^2$. Their nonzero rays are dense in $\CC P^3$.
+\end{proof}
+\begin{remark}[Existence, not selection]
+The graph, gain group, faithful character, complex addition, quadratic rule and definition of ray are all supplied. The theorem discharges \emph{one explicit growth instance} previously open in paper G8; it does not select this representation, probabilities or effects from prephysical data. The closure is reached by increasing finite step counts, not by a derived continuous temporal evolution.
+\end{remark}
+
+\section{An independent consistency obstruction}
+Let $\operatorname{Ext}(S)\subseteq\Om_{k+1}$ contain every one-edge extension of every walk in $S$. Define the represented gain adjacency matrix $A$ by $A_{yu}=\chi(\varphi(u\to y))$ if $u\sim y$ and zero otherwise. The reciprocal-gain condition implies $A^\dagger=A$.
+\begin{proposition}[Refinement identity and necessary scalar condition]\label{prop:refine}
+For all events $S,T\subseteq\Om_k$,
+\begin{equation}\label{eq:refine}
+ v_{k+1}(\operatorname{Ext}S)=A v_k(S),\quad D_{k+1}(\operatorname{Ext}S,\operatorname{Ext}T)=\langle v_k(S),A^\dagger A v_k(T)\rangle.
+\end{equation}
+If all finite-horizon values are to agree under extension up to a single positive scalar factor $c_k$ at each horizon, then $A^\dagger A=c_k I$ as a sesquilinear form on the span $R_k=\operatorname{span}\{v_k(S):S\subseteq\Om_k\}$; equivalently $P_{R_k}A^\dagger A P_{R_k}=c_kP_{R_k}$.
+\end{proposition}
+\begin{proof}
+Every added edge contributes its character weight to precisely the component indexed by the new endpoint. Summing over all parent walks and child edges gives $Av_k(S)$. Equation \eqref{eq:refine} follows. If scalar consistency holds for every pair of events, bilinearity extends it to every pair of vectors in $R_k$, proving the compressed operator condition. No scalar can change a zero cross-term to a nonzero cross-term.
+\end{proof}
+\begin{proposition}[Exact failure on the growth example]\label{prop:fail}
+For the $K_4$ and $\ZZ_3$ construction of Theorem~\ref{thm:growth}, consider the one-step walks $S=(0,1)$ and $T=(0,2)$. Then
+\[
+ D_1(S,T)=0,\qquad D_2(\operatorname{Ext}S,\operatorname{Ext}T)=2.
+\]
+Thus no positive horizon-dependent scalar normalization makes the entire family $D_k$ consistent under refinement.
+\end{proposition}
+\begin{proof}
+At step one the event vectors are the distinct standard basis vectors $e_1,e_2$. Their one-step extensions share terminal vertices $0$ and $3$, and both contributions have identity gain. Their inner product is $2$, independent of the nontrivial gain on the edge $0\leftrightarrow3$. Hence the cross-term changes from zero to two.
+\end{proof}
+\begin{remark}[A smaller control]
+For a triangle with trivial gains, the same choice of distinct one-step walks gives $D_1(S,T)=0$ but $D_2(S^+,T^+)=1$. The entire one-step event has measure $2$ and its refinement measure $6$, while a single one-step history has measures $1$ and $2$. Normalizing by the whole-event measure changes the latter from $1/2$ to $1/3$. These are exact integer equalities, not estimated probabilities. A different dynamics or a different family of compatible event measures may repair the defect; the unmodified G8 adjacency iteration does not.
+\end{remark}
+
+\section{Why the exceptional unitary case is periodic}
+\begin{proposition}[Two-step obstruction for reciprocal gains]\label{prop:two}
+For any finite loop-free undirected reciprocal-gain graph and one-dimensional unitary character, if the represented adjacency satisfies $A/\sqrt c$ unitary for some $c>0$, then $(A/\sqrt c)^2=I$. Moreover the number of vertices must be even.
+\end{proposition}
+\begin{proof}
+Since $A=A^\dagger$, unitarity implies $A^2=cI$. Therefore $U^2=I$ for $U=A/\sqrt c$. Because a loop-free graph has zero diagonal, $\operatorname{tr}A=0$. Every eigenvalue of $A$ is $+\sqrt c$ or $-\sqrt c$, and equal multiplicities are forced by the zero trace. There are thus an even number of vertices.
+\end{proof}
+This is a failure of the specific adjacency-as-one-step-operator choice, not of every graph-based dynamics. Choosing a different operator (e.g. a directed permutation shift, a coin-plus-shift walk, or $e^{-iAt}$) introduces additional structural choices and may avoid this two-step obstruction. None of those choices supplies an independently grounded clock or a physical Hamiltonian merely by being mathematically possible.
+
+\section{Corrections to the inherited source claims}
+\begin{proposition}[Horizontal-lift sign in G7]\label{prop:sign}
+Let $\theta=\arg B$ for a complex-projective geodesic polygon with nonzero consecutive overlaps, using the antilinear-first inner product convention of paper G7. The final horizontal lift is $\widetilde a_k=e^{-i\theta}a_0$, not $e^{i\theta}a_0$. The final claimed determinant identity remains valid:
+\begin{equation}\label{eq:det}
+ \det_{\CC} T=\left(B/|B|\right)^{n+1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Choose horizontal representatives $\widetilde a_j=e^{i\alpha_j}a_j$ with $\alpha_0=0$. Making each adjacent overlap positive requires $\alpha_{j+1}=\alpha_j-\arg\langle a_j,a_{j+1}\rangle$. Therefore $\alpha_k=-\theta$. The product $U$ of the determinant-one ambient unitary geodesic rotations sends $a_0$ to $e^{-i\theta}a_0$; hence $\det(U|_{a_0^\perp})=e^{i\theta}$. Returning the horizontal tangent representative to the original gauge multiplies by $e^{i\theta}$ on complex dimension $n$, so $\det T=e^{in\theta}e^{i\theta}$, proving \eqref{eq:det}. For the exact qubit triple $(1,0)$, $(1,1)/\sqrt2$, $(1,i)/\sqrt2$, $B=(1+i)/4$, the lift phase is $(1-i)/\sqrt2$ and the tangent holonomy determinant is $i$.
+\end{proof}
+\begin{proposition}[Endpoint-aware additive counterexample to G8's headline]\label{prop:add}
+Fix a starting vertex $x$ and define
+\[
+ L(S)=\sum_{w\in S}\mathbf1_{\{t(w)=x\}}\,\mathbf1_{\{\varphi(w)=e_G\}}.
+\]
+Then $L$ is nonnegative, additive on disjoint events, unchanged by arbitrary vertex switching for every gain graph, and may depend on the transport.
+\end{proposition}
+\begin{proof}
+Each summand is counted individually, making $L$ additive. A closed walk based at $x$ has gain transformed to $h(x)\varphi(w)h(x)^{-1}$ by switching, so equality to the identity is unchanged. On a three-cycle with gain group $\ZZ_2$, a length-three closed walk has $L=1$ for product gain $+1$ and $L=0$ after changing one edge gain to $-1$. The two assignments are not switching equivalent.
+\end{proof}
+\begin{remark}[Original and substitute claims are not interchangeable]
+This refutes the unrestricted abstract and Section 3 gloss that \emph{no} additive walk-set rule can detect the gain. It does \emph{not} refute the precise G8 Lemma 3.1, which restricts to $L(S)=\sum_{w\in S}F_1(\varphi(w))$ with one uniform $F_1:G\to\mathbb R$ independent of the walk endpoint or its closure status. That narrower lemma is correct for open walks under switching at their terminal vertex. G8 itself recognizes possible extra closed-walk terms in its limits section. The correction therefore belongs to scope and statements, not to the valid positive-definite character classification of its specific pair rule.
+\end{remark}
+
+\section{Scientific reconciliation and unresolved requirements}
+Director A's A3 interpolation and matching-hierarchy results show that closure under a \emph{restricted} collection of operations need not select full multipartite quantum theory, while sufficiently rich successful local filtering can conditionally force the ordinary two-system density set after an entangled pure seed is supplied. Director G's G3 odd Veronese state space retains the pure Bloch sphere, pure Born table and pure metric but contains additional effects distinguishing mixed states that the stipulated projective instruments cannot separate. Both are compatible with the present results: neither a dense pure projective set nor a tensor-vector-space representation uniquely specifies actual mixed states, all effects, operation closure, physical composition, or an operationally measured probability law.
+
+A useful external reference point is Dowker, Johnston and Sorkin's Hilbert-space construction from a decoherence functional~\cite{DJS2010}. The finite-horizon refinement requirement examined here is \emph{not the same problem} as extending a fixed quantum measure from an event algebra to a generated sigma algebra, as studied by Dowker, Johnston and Surya~\cite{DJS2010b}. These distinctions must remain explicit. Barnum and Hilgert's classification~\cite{BH2020} similarly supplies conditional convex-theoretic selection only after its assumptions are imposed.
+
+\paragraph{Disposition.} The finite growth instance is \textbf{proved within its mathematical premises}; the horizon inconsistency, graph-adjacency involution, and additive closed-loop exception are \textbf{proved within their stated scopes}; G7's determinant formula is retained while its intermediate sign argument needs correction. All require independent referee checking before being promoted beyond internal mathematical research. The bridge obligations for probability, measurement records, mixed states, composition, dynamical time, classical Hamiltonian mechanics, and empirical calibration remain \textbf{open}. No total ontology is asserted or selected; Initial External Grounding and its root review remain open.
+
+\paragraph{Reproducibility.} The companion exact-arithmetic Python checker retains all 492 $(k,y,g)$ count rows for $0\le k\le40$, including all initial zeros, 64 exhaustive switch cases, source sign controls and five deliberately false controls. Reported computations test a bounded implementation; the universal assertions rest on the proofs above.
+
+\paragraph{Provenance.} Research direction and scholarly responsibility: Kirtus Justus. Mathematical, computational and editorial assistance: ChatGPT (GPT-6), Director B, with cross-examination of supplied Director A, G, and Z packets. This is internal AI-assisted analysis, not independent peer review or an external physical experiment. No endorsement by any provider is implied.
+
+\begin{thebibliography}{9}\small
+\bibitem{G7} K. Justus, \emph{Transport, Holonomy and Monodromy as Bridge Candidates between Classical and Quantum Models}, research program paper G7, revised supplied manuscript (12 Nov. 2026; internal research provenance).
+\bibitem{G8} K. Justus, \emph{Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule}, research program paper G8 (12 Nov. 2026; internal research provenance).
+\bibitem{A3} Director A (GPT-6), \emph{Instrument Closure and Multipartite Selection}, supplied A3 research manuscript (12 Nov. 2026; internal research provenance).
+\bibitem{G3} Director G (GPT-6), \emph{Operational Veroneses and Quantum Nonselection}, supplied G3 research manuscript (12 Nov. 2026; internal research provenance).
+\bibitem{DJS2010} F. Dowker, S. Johnston and R. D. Sorkin, ``Hilbert spaces from path integrals,'' \emph{J. Phys. A} \textbf{43}, 275302 (2010), \url{https://doi.org/10.1088/1751-8113/43/27/275302}.
+\bibitem{DJS2010b} F. Dowker, S. Johnston and S. Surya, ``On extending the quantum measure,'' \emph{J. Phys. A} \textbf{43}, 505305 (2010), \url{https://doi.org/10.1088/1751-8113/43/50/505305}.
+\bibitem{BH2020} H. Barnum and J. Hilgert, ``Spectral Properties of Convex Bodies,'' \emph{Journal of Lie Theory} \textbf{30}, 315--344 (2020), \url{https://doi.org/10.5802/jolt.1118}.
+\end{thebibliography}
+\end{document}

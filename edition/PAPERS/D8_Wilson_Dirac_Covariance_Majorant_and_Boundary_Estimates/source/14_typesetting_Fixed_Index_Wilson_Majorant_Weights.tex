@@ -1,0 +1,258 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{DejaVu Serif}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Fixed-Index Wilson Majorant Weights and Longitudinal Edge Contributions},
+  pdfauthor={Kirtus Justus (Theoretical Physicist)  31 October 2026Port Coquitlam, British Columbia, Canada},
+  pdflang={en},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Fixed-Index Wilson Majorant Weights and Longitudinal Edge Contributions}
+\author{Kirtus Justus (Theoretical Physicist) \textbullet{} 31 October 2026\tabularnewline Port Coquitlam, British Columbia, Canada}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{Abstract}\label{abstract}
+
+For the half-filled discrete prolate concentration matrix and its commuting finite Jacobi matrix, we prove an explicit cubic asymptotic for the positive Wilson-majorant expectation at every fixed extreme spectral index, with an order-four error bound. The proof combines the finite-Hermite corrected quasimode construction, Fourier concentration, and positivity of the majorant. Exact particle--hole and occupation--majorant relations, together with Slepian's fixed-index concentration asymptotic, determine the contribution of any fixed finite collection of extreme-mode pairs to the longitudinal reference-modular trace. No bound uniform in a growing spectral index is asserted.
+
+\subsection{1. Operators and conventions}\label{operators-and-conventions}
+
+Let \(N=2L\) be even. On \(\mathbb C^N\), define the symmetric Jacobi matrix
+
+\[
+(J_N)_{j,j+1}=\frac{(j+1)(N-j-1)}{N},\qquad (J_N)_{jj}=0,
+\quad 0\le j<N-1.
+\]
+
+The eigenvalues are simple. Denote its unit real eigenvectors in decreasing eigenvalue order by \(v_{N,k}\), \(0\le k<N\). Let \(P_0\) be the infinite-lattice Fourier projection onto \(|p|\le\pi/2\), \(\chi_N\) the projection onto the \(N\)-site interval, and \(B_N=\chi_NP_0\chi_N\). In Slepian's notation, \(B_N=p(N,1/4)\) and \(J_N=\frac{2}{N}\sigma(N,1/4)\). His §4.1, equations (129)--(131), pp.~1403--1404, identifies the descending Jacobi eigenvalue index with the descending concentration eigenvalue index. This ordering theorem is a separate classical input; it does not follow merely from commutation.
+
+For \(\mu>0\), set \(r_N=\mu/(N+\mu)\). In the interval-preserving scalarization, the full-line positive Wilson majorant has momentum multiplier
+
+\[
+\widetilde G_r(p)=\frac12\left(1-\frac{|\cos p|}{\sqrt{\cos^2p+r^2\sin^2p}}\right),
+\quad -\pi\le p\le\pi.
+\tag{1}
+\]
+
+Write \(G_N=\chi_NG_{r_N}\chi_N\) and \[
+q_{N,k}(\mu)=\langle v_{N,k},G_Nv_{N,k}\rangle.
+\]
+
+For every \(r>0\), \(0\le G_r\le I/2\). If \(\widehat v(p)=\sum_{j=0}^{N-1}v_je^{ijp}\), our Fourier convention is \[
+\langle v,G_Nv\rangle=\frac1{2\pi}\int_{-\pi}^{\pi}
+\widetilde G_{r_N}(p)|\widehat v(p)|^2\,dp.
+\tag{2}
+\]
+
+\subsection{2. Corrected Hermite approximation}\label{corrected-hermite-approximation}
+
+Put \(h=N^{-1/2}\), \(y_j=h(j-(N-1)/2)\), and \(H_N=NI/2-J_N\). The limiting harmonic oscillator is \[
+H=-\tfrac14\partial_y^2+2y^2,
+\qquad H\psi_k=\varepsilon_k\psi_k,
+\quad \varepsilon_k=\frac{2k+1}{\sqrt2}.
+\]
+
+For a fixed finite Hermite span, sampling \((\mathcal S_hu)_j=\sqrt h\,u(y_j)\) gives the lattice expansion \[
+H_N\mathcal S_hu
+=\mathcal S_h\bigl(Hu+h^2Pu+h^4Qu\bigr)+O_u(h^6),
+\] where \[
+P=\partial_y(y^2\partial_y)+\tfrac12-\tfrac1{48}\partial_y^4,
+\qquad
+Q=\tfrac1{12}\partial_y^2(y^2\partial_y^2)
++\tfrac1{12}\partial_y^2-\tfrac1{1440}\partial_y^6.
+\]
+
+The finite Hermite corrections \(w_k,z_k\), orthogonal to \(\psi_k\), solve the successive off-diagonal perturbation equations \[
+(H-\varepsilon_k)w_k=-(P-p_k)\psi_k,
+\] \[
+(H-\varepsilon_k)z_k=-\bigl((P-p_k)w_k+(Q-\rho_k)\psi_k\bigr),
+\] with \(p_k=\langle\psi_k,P\psi_k\rangle\) and \(\rho_k=\langle\psi_k,Q\psi_k\rangle+\langle\psi_k,Pw_k\rangle\). The solvability conditions are precisely the diagonal perturbative equations. After normalization, the sampled vector \[
+u_{N,k}=\mathcal S_h(\psi_k+h^2w_k+h^4z_k)/\|\mathcal S_h(\psi_k+h^2w_k+h^4z_k)\|
+\] obeys a spectral residual \(O_k(h^6)\). The fixed-index spectral gap is bounded away from zero for sufficiently small \(h\), by convergence to the simple oscillator eigenvalues. Therefore, with a suitable eigenvector sign, \[
+\boxed{\|v_{N,k}-u_{N,k}\|_{\ell^2}=O_k(h^6).}
+\tag{3}
+\]
+
+The construction and spectral isolation are established in \emph{Fixed-Index Jacobi Spectral Expansion Through Inverse-Square Order}, §5; equation (3) is the consequence required here. It is not uniform when \(k\) grows with \(N\).
+
+\subsection{3. Cubic expectation theorem}\label{cubic-expectation-theorem}
+
+\textbf{Theorem 1.} For each fixed \(k\ge0\) and fixed \(\mu>0\), \[
+\boxed{
+q_{N,k}(\mu)=\frac{\mu^2(2k+1)}{2\sqrt2\,N^3}
++O_{\mu,k}(N^{-4}).
+}
+\tag{4}
+\]
+
+\emph{Proof.} Every \(u_{N,k}\) is a normalized sample of a fixed finite Hermite combination, with coefficients expanding in even powers of \(h\). Poisson summation and Schwartz decay imply Fourier concentration at \(p=O(h)\), with superalgebraically small mass outside each fixed \((-\epsilon,\epsilon)\), \(0<\epsilon<\pi/2\). In particular, \[
+\frac1{2\pi}\int_{-\pi}^{\pi}p^2|\widehat u_{N,k}(p)|^2\,dp
+=h^2\|\psi_k'\|_2^2+O_k(h^4),
+\] \[
+\frac1{2\pi}\int_{-\pi}^{\pi}p^4|\widehat u_{N,k}(p)|^2\,dp=O_k(h^4).
+\tag{5}
+\] On \(|p|\le\epsilon\), with \(0<r\le1\), the scalar multiplier has the uniform expansion \[
+\widetilde G_r(p)=\frac{r^2p^2}{4}
++O_\epsilon(r^2p^4+r^4p^4).
+\tag{6}
+\] As \(r_N=\mu h^2+O_\mu(h^4)\), equations (2), (5), and (6) imply \[
+\langle u_{N,k},G_Nu_{N,k}\rangle
+=\frac{\mu^2h^6}{4}\|\psi_k'\|_2^2+O_{\mu,k}(h^8).
+\tag{7}
+\] The oscillator virial identity gives \(\|\psi_k'\|_2^2=\sqrt2(2k+1)\).
+
+Positivity provides a sharper eigenvector-transfer estimate than the operator norm alone. From \(\|G_N\|\le1/2\), equation (3), and (7), \[
+\begin{aligned}
+|\langle v,G_Nv\rangle-\langle u,G_Nu\rangle|
+&\le2\|G_N^{1/2}u\|\,\|G_N^{1/2}(v-u)\|
++\|G_N^{1/2}(v-u)\|^2\\
+&=O_{\mu,k}(h^9)+O_k(h^{12}).
+\end{aligned}
+\] Together with (7) this gives an \(O(h^8)=O(N^{-4})\) remainder and proves (4). \(\square\)
+
+The estimate depends on the third-order Hermite quasimode and remains a fixed-index theorem. A standard unweighted \(\|v-u\|\) estimate alone would not provide the same conclusion without positivity.
+
+\subsection{4. Exact occupation bounds and edge-pair contribution}\label{exact-occupation-bounds-and-edge-pair-contribution}
+
+Let \(S=G(I-2P_0)\), \(S_N=\chi_NS\chi_N\). For a unit interval-supported vector \(v\), write \(b=\langle v,P_0v\rangle\), \(q=\langle v,Gv\rangle\), \(s=\langle v,Sv\rangle\). Since \([G,P_0]=0\) and \(0\le2G\le I\), \[
+\boxed{0\le q+s\le1-b,\qquad0\le q-s\le b.}
+\tag{8}
+\] Indeed, \(q+s=2\langle (I-P_0)v,G(I-P_0)v\rangle\) and \(q-s=2\langle P_0v,GP_0v\rangle\).
+
+Define \(D=\mathrm{diag}((-1)^j)_{j=0}^{N-1}\). Directly from the half-filled kernel and the even-displacement majorant, \[
+DJ_ND=-J_N,\quad DB_ND=I-B_N,\quad DG_ND=G_N,
+\quad DS_ND=-S_N.
+\tag{9}
+\] If \(\eta\) is the odd reference scaling function, the self-adjoint discrepancy \[
+E_N=\log(I-B_N)-\log B_N+N\eta(J_N/N)
+\] also satisfies \(DE_ND=-E_N\). Thus the bottom paired Jacobi vector has \(b\mapsto1-b\), \(q\mapsto q\), \(s\mapsto-s\) and \(e\mapsto-e\), with no ambiguity in the pair signs.
+
+The classical Slepian fixed-index concentration asymptotic, with the discrete-prolate index correspondence, gives \[
+1-b_{N,k}=O_k\bigl(N^{k+1/2}e^{-2N\operatorname{arsinh}1}\bigr)
+\quad\text{for fixed }k.
+\] For each fixed \(k\), the paired modular discrepancy has the finite limit \[
+\lim_{N\to\infty}e_{N,k}=c_k
+=\tfrac12\log\pi-\log(k!)-k\log2
++\bigl(k+\tfrac12\bigr)[\log(2k+1)-1].
+\tag{10}
+\]
+
+\textbf{Theorem 2.} For every fixed positive integer \(K\), the top and bottom \(K\) pairs contribute to the original longitudinal trace by \[
+\boxed{
+\sum_{k=0}^{K-1}
+\bigl(s_{N,k}e_{N,k}+s_{N,N-1-k}e_{N,N-1-k}\bigr)
+=-\frac{\mu^2}{\sqrt2\,N^3}
+\sum_{k=0}^{K-1}(2k+1)c_k+o_{\mu,K}(N^{-3}).
+}
+\tag{11}
+\]
+
+\emph{Proof.} From (8), \(s_{N,k}=-q_{N,k}+O(1-b_{N,k})\) at each fixed top index. The complementary occupations decay exponentially in \(N\), so Theorem 1 and (10) imply \(s_{N,k}e_{N,k}=-\mu^2(2k+1)c_k/(2\sqrt2N^3)+o(N^{-3})\). Equation (9) gives an identical contribution from the paired bottom index. Summing over the fixed set proves (11). \(\square\)
+
+\subsection{5. Scope of the result}\label{scope-of-the-result}
+
+The fixed-index error constants may depend on \(k\) and \(\mu\), and no estimate is asserted for \(K=K(N)\to\infty\). In particular, neither the fixed-index results nor the conformal boundary-energy bound establishes by itself the longitudinal estimate \[
+\operatorname{Tr}(S_NE_N)=o_\mu(\log N).
+\] The separate argument in \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law} establishes this longitudinal estimate with the stronger bound \(O_\mu(1)\) and yields the leading entropy law. For the specified fixed-\(\mu\) Wilson comparison, the finite part is Theorem 1 of \emph{Finite Part of Wilson--Dirac Relative Entropy}. Corollary 4 of \emph{Uniform Modular Control and Nonlinear Convergence for Wilson--Dirac Intervals} strengthens the longitudinal estimate to \(O_\mu(N^{-1})\). Neither conclusion supplies uniform error bounds for the present fixed-index formulas with \(K=K(N)\to\infty\). Numerical tests are supplementary evidence, not interval-certified enclosures or proof of moving-index uniformity.
+
+\newpage
+
+\subsection{References}\label{references}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  D. Slepian, ``Prolate spheroidal wave functions, Fourier analysis, and uncertainty V: The discrete case,'' \emph{Bell System Technical Journal} \textbf{57} (1978), 1371--1430. DOI: 10.1002/j.1538-7305.1978.tb02104.x; equation (14), equation (21), and §4.1, equations (129)--(131), pp.~1403--1404.
+\item
+  F. A. Grünbaum, ``Eigenvectors of a Toeplitz matrix: discrete version of the prolate spheroidal wave functions,'' \emph{SIAM Journal on Algebraic Discrete Methods} \textbf{2} (1981), 136--141. DOI: 10.1137/0602017.
+\item
+  B. Adcock, D. Huybrechs, J. Martín-Vaquero, ``On the numerical stability of Fourier extensions,'' §3.2, https://arxiv.org/abs/1206.4111.
+\item
+  K. Justus, \emph{Fixed-Index Jacobi Spectral Expansion Through Inverse-Square Order} (2026), §5, for the corrected finite-Hermite quasimode construction and oscillator spectral-index argument.
+\item
+  K. Justus, \emph{Exact Spectral Majorants for a Wilson--Dirac Interval} (2026), for the interval-preserving scalarization and full-line inequalities.
+\end{enumerate}
+
+\subsection{Contributions and acknowledgments}\label{contributions-and-acknowledgments}
+
+Kirtus Justus directs the scientific program and its publication decisions. ChatGPT (OpenAI) supplied AI-assisted derivations, verification and manuscript preparation for this study. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for broader project participation without attributing unverified contributions to this specific theorem. No degree, institutional affiliation, external peer review, formal proof verification, or experimental validation is represented.
+
+\end{document}

@@ -1,0 +1,540 @@
+{
+  "scope": "stipulated finite K4 gain graph with Z_n transport and a separately assumed one-dimensional unitary character; no emergent physics",
+  "claims": {
+    "K4_cover_primitive": "PROVED_BY_CONNECTIVITY_AND_ODD_CYCLE; finite checks for n=2..8",
+    "K4_growth": "PROVED_BY_PERRON_FROBENIUS; for every n>=2, each (vertex,gain) count is asymptotic to 3^k/(4n)",
+    "cylinder_consistency": "REFUTED for the GH-1 K4 pair kernel under natural extension: D_1(w1,w2)=0 but D_2(Ext w1,Ext w2)=1+omega != 0",
+    "probability_step_compatibility": "FAIL: normalized one-step singleton 1/3 vs normalized mass of all two-step extensions 1/5",
+    "first_order_endpoint_aware": "NONNEGATIVE gauge-invariant additive closed-walk rule distinguishes trivial and nontrivial holonomy, outside endpoint-blind Lemma 3.1",
+    "no_gain_negative_control": "PASS disconnected 3-sector cover; no gain reachability",
+    "G7_proof_sign": "ALGEBRAIC_CORRECTION alpha_final=-arg B (not +arg B); consequently T=exp(+i arg B) U_perp; determinant identity unchanged"
+  },
+  "trials": [
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 2,
+      "vertices": 8,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 3,
+      "second_spectral_radius": 2.23606797749979,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 3,
+      "vertices": 12,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 4,
+      "second_spectral_radius": 2.514136929335291,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 4,
+      "vertices": 16,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 6,
+      "second_spectral_radius": 2.7092753594369237,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 5,
+      "vertices": 20,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 7,
+      "second_spectral_radius": 2.809550475286932,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 6,
+      "vertices": 24,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 9,
+      "second_spectral_radius": 2.8661982625090214,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 7,
+      "vertices": 28,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 10,
+      "second_spectral_radius": 2.901036101200888,
+      "Perron_root": 3
+    },
+    {
+      "control": "cover_primitive",
+      "cyclic_order": 8,
+      "vertices": 32,
+      "connected": true,
+      "bipartite": false,
+      "first_all_positive_matrix_power": 12,
+      "second_spectral_radius": 2.9239093349502117,
+      "Perron_root": 3
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 0,
+      "counts_by_gain_then_vertex": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_count": 0,
+      "max_count": 1,
+      "total": 1
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 1,
+      "counts_by_gain_then_vertex": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_count": 0,
+      "max_count": 1,
+      "total": 3
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 2,
+      "counts_by_gain_then_vertex": [
+        3,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "min_count": 0,
+      "max_count": 3,
+      "total": 9
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 3,
+      "counts_by_gain_then_vertex": [
+        4,
+        5,
+        6,
+        6,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "min_count": 0,
+      "max_count": 6,
+      "total": 27
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 4,
+      "counts_by_gain_then_vertex": [
+        17,
+        16,
+        10,
+        10,
+        2,
+        2,
+        2,
+        8,
+        2,
+        2,
+        8,
+        2
+      ],
+      "min_count": 2,
+      "max_count": 17,
+      "total": 81
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 5,
+      "counts_by_gain_then_vertex": [
+        36,
+        37,
+        41,
+        41,
+        12,
+        12,
+        6,
+        14,
+        12,
+        12,
+        14,
+        6
+      ],
+      "min_count": 6,
+      "max_count": 41,
+      "total": 243
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 6,
+      "counts_by_gain_then_vertex": [
+        119,
+        118,
+        87,
+        87,
+        32,
+        32,
+        30,
+        65,
+        32,
+        32,
+        65,
+        30
+      ],
+      "min_count": 30,
+      "max_count": 119,
+      "total": 729
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 7,
+      "counts_by_gain_then_vertex": [
+        292,
+        293,
+        302,
+        302,
+        127,
+        127,
+        94,
+        151,
+        127,
+        127,
+        151,
+        94
+      ],
+      "min_count": 94,
+      "max_count": 302,
+      "total": 2187
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 8,
+      "counts_by_gain_then_vertex": [
+        897,
+        896,
+        736,
+        736,
+        372,
+        372,
+        348,
+        556,
+        372,
+        372,
+        556,
+        348
+      ],
+      "min_count": 348,
+      "max_count": 897,
+      "total": 6561
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 9,
+      "counts_by_gain_then_vertex": [
+        2368,
+        2369,
+        2349,
+        2349,
+        1276,
+        1276,
+        1092,
+        1480,
+        1276,
+        1276,
+        1480,
+        1092
+      ],
+      "min_count": 1092,
+      "max_count": 2369,
+      "total": 19683
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 10,
+      "counts_by_gain_then_vertex": [
+        7067,
+        7066,
+        6217,
+        6217,
+        3848,
+        3848,
+        3644,
+        4901,
+        3848,
+        3848,
+        4901,
+        3644
+      ],
+      "min_count": 3644,
+      "max_count": 7067,
+      "total": 59049
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 11,
+      "counts_by_gain_then_vertex": [
+        19500,
+        19501,
+        19034,
+        19034,
+        12393,
+        12393,
+        11340,
+        13913,
+        12393,
+        12393,
+        13913,
+        11340
+      ],
+      "min_count": 11340,
+      "max_count": 19501,
+      "total": 177147
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 12,
+      "counts_by_gain_then_vertex": [
+        57569,
+        57568,
+        52914,
+        52914,
+        37646,
+        37646,
+        36126,
+        43820,
+        37646,
+        37646,
+        43820,
+        36126
+      ],
+      "min_count": 36126,
+      "max_count": 57569,
+      "total": 531441
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 13,
+      "counts_by_gain_then_vertex": [
+        163396,
+        163397,
+        158957,
+        158957,
+        117592,
+        117592,
+        111418,
+        128206,
+        117592,
+        117592,
+        128206,
+        111418
+      ],
+      "min_count": 111418,
+      "max_count": 163397,
+      "total": 1594323
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 14,
+      "counts_by_gain_then_vertex": [
+        481311,
+        481310,
+        454999,
+        454999,
+        357216,
+        357216,
+        346602,
+        394141,
+        357216,
+        357216,
+        394141,
+        346602
+      ],
+      "min_count": 346602,
+      "max_count": 481311,
+      "total": 4782969
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 15,
+      "counts_by_gain_then_vertex": [
+        1391308,
+        1391309,
+        1356762,
+        1356762,
+        1097959,
+        1097959,
+        1061034,
+        1169431,
+        1097959,
+        1097959,
+        1169431,
+        1061034
+      ],
+      "min_count": 1061034,
+      "max_count": 1391309,
+      "total": 14348907
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 16,
+      "counts_by_gain_then_vertex": [
+        4104833,
+        4104832,
+        3952048,
+        3952048,
+        3328424,
+        3328424,
+        3256952,
+        3552680,
+        3328424,
+        3328424,
+        3552680,
+        3256952
+      ],
+      "min_count": 3256952,
+      "max_count": 4104833,
+      "total": 43046721
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 17,
+      "counts_by_gain_then_vertex": [
+        12008928,
+        12008929,
+        11762345,
+        11762345,
+        10138056,
+        10138056,
+        9913800,
+        10608896,
+        10138056,
+        10138056,
+        10608896,
+        9913800
+      ],
+      "min_count": 9913800,
+      "max_count": 12008929,
+      "total": 129140163
+    },
+    {
+      "control": "all_voltage_walk_counts",
+      "step": 18,
+      "counts_by_gain_then_vertex": [
+        35533619,
+        35533618,
+        34626753,
+        34626753,
+        30660752,
+        30660752,
+        30189912,
+        32038457,
+        30660752,
+        30660752,
+        32038457,
+        30189912
+      ],
+      "min_count": 30189912,
+      "max_count": 35533619,
+      "total": 387420489
+    }
+  ],
+  "exact": {
+    "omega": "-1/2 + sqrt(3)*I/2",
+    "A_complex_Z3": [
+      [
+        "0",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "-1/2 - sqrt(3)*I/2"
+      ],
+      [
+        "1",
+        "1",
+        "-1/2 + sqrt(3)*I/2",
+        "0"
+      ]
+    ],
+    "v2": [
+      "3",
+      "2",
+      "1/2 - sqrt(3)*I/2",
+      "1/2 + sqrt(3)*I/2"
+    ],
+    "total_masses_k0_k1_k2": [
+      "1",
+      "3",
+      "15"
+    ],
+    "D1_two_singletons": "0",
+    "D2_extensions": "1/2 + sqrt(3)*I/2",
+    "squared_abs_D2": "1",
+    "normalized_singleton_at_k1": "1/3",
+    "normalized_all_extensions_at_k2": "1/5",
+    "additive_closed_walk_weights": {
+      "trivial": "2",
+      "twisted": "1/2",
+      "I2": "0",
+      "I3": "0"
+    },
+    "Bargmann_example": {
+      "B": "9/16 + 3*I/16",
+      "phase": "sqrt(10)*(3 + I)/10",
+      "horizontal_lift_terminal_phase": "sqrt(10)*(3 - I)/10",
+      "det_T_for_n1": "(3 + I)**2/10"
+    }
+  }
+}

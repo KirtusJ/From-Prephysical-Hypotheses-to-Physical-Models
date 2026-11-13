@@ -1,0 +1,155 @@
+FROM PREPHYSICAL HYPOTHESES TO PHYSICAL MODELS
+Collections, Mathematical Supplement and accompanying materials
+10 November 2026
+
+Kirtus Justus
+Port Coquitlam, British Columbia, Canada
+
+Research direction and scholarly responsibility: Kirtus Justus.
+Substantial mathematical, computational and editorial assistance: ChatGPT
+(OpenAI). Assistance does not imply provider endorsement or external peer review.
+
+1. Reading the collection
+
+Begin with the Collections volume. Its opening study distinguishes questions
+about foundational primitives, mathematical model construction and physical
+correspondence, then examines identification from restricted observations.
+A synthesis and six collected articles follow. The Mathematical Supplement
+contains six opening studies, five further studies and the detailed articles,
+supporting proofs and mathematical terminology.
+
+The five further studies address abstract Gaussian capacity, stochastic
+recovery, calibration uncertainty, joint calibration and uniform limits, and
+statistical precision under weak readout gain. Their constructions supply
+mathematical implications and counterexamples under explicit assumptions.
+They do not report observations of a physical substrate.
+
+Two separate diagrams serve distinct purposes:
+  Program Questions, Models and Physical Correspondence
+  Structure, Observation and Physical Identification
+
+The first organizes parallel research approaches and their requirements for
+physical interpretation. The signed-sector signal proposal is one exploratory
+approach. The second connects selected model assumptions, admitted observations,
+conditional inferences and prospective physical tests. Neither figure asserts
+an exhaustive ontology, a physical derivation or an observed test outcome.
+
+2. Main files and navigation
+
+From_Prephysical_Hypotheses_to_Physical_Models_Collections.pdf
+From_Prephysical_Hypotheses_to_Physical_Models_Mathematical_Supplement.pdf
+From_Prephysical_Hypotheses_to_Physical_Models_Program_Questions_Models_and_Physical_Correspondence.pdf
+From_Prephysical_Hypotheses_to_Physical_Models_Structure_Observation_and_Physical_Identification.pdf
+
+Each volume has linked contents, bookmarks and global page numbers. Equation
+and theorem numbering remains local to each study. Global folios replace
+component page numbers and repeated edition footers; component PDFs retain
+their own pagination. Contents tables reproduced inside individual articles
+retain local article page numbers. Use the main contents, bookmarks or article
+ranges to locate them in the assembled volume. Cite a result by article title and theorem or section;
+add the assembled page when useful. CONTENTS.txt gives actual article ranges.
+VOLUME_CONTENTS.json identifies the components and their locations. A source
+filename is a locator, not a scholarly authority.
+
+3. Sources and supporting materials
+
+Studies/Source and Studies/Compiled contain the opening studies. New_Studies/
+contains the five further studies and their typesetting dependencies.
+Collections/ and Mathematical_Supplement/ contain the other article, proof
+and terminology components. There are 85 such component units in all, in
+addition to the opening studies.
+
+All 83 components of the preceding collection remain represented. Seventy-eight
+retain their exact PDF bytes; five have limited prose corrections described in
+SOURCE_EDITING_NOTE.txt. Two further studies have been added. The inherited
+article set accounts for forty original manuscripts, thirty-three supporting
+proof items, six additional detailed articles and one terminology reference.
+All thirty-three supporting proofs remain visible pages. Some were supplied
+only as PDF excerpts; inclusion does not create missing editable source.
+
+Editable_Articles/ and Typesetting_Source/ contain available manuscript and
+typesetting sources. Related_Source_Editions/ retains selected overlapping
+treatments, eighteen cited mathematical notes, and the supplied scientific
+assessment with the dependencies of its accepted companion calculation.
+SOURCE_EDITION_NOTES.txt distinguishes these sources from the present account.
+Complete superseded input editions are preserved separately. Their earlier
+open-status statements do not govern the current mathematical summaries.
+
+Computational_Material/ contains programs, certificates and outputs.
+COMPUTATIONAL_SCOPE.txt identifies current exact calculations, inherited
+execution accounts and source-reported outputs. Counts of successful program
+predicates are not theorem counts, independent proofs or physical sample sizes.
+
+FILE_MANIFEST.json gives relative paths, byte sizes and SHA-256 digests for
+every payload file except itself. It identifies exact bytes; it is not an
+external signature or a certificate of scientific correctness.
+ASSEMBLY_CHECKS.json records the scope of the completed document checks,
+including retained text, article destinations, URI actions and figure copies.
+
+4. Rebuilding the volumes
+
+The PDFs are ready to read. Assembly from component PDFs needs Python 3.10 or
+later, PyMuPDF, ReportLab and DejaVu Serif fonts. It does not need TeX.
+Recompiling the opening studies also needs a complete XeLaTeX installation,
+DejaVu Serif, DejaVu Sans, DejaVu Sans Mono and Latin Modern Math fonts.
+
+The preparation used Python 3.12.14, PyMuPDF 1.26.6 and ReportLab 4.4.9.
+Selected inherited computations use SymPy 1.14.0 and mpmath 1.3.0. The two
+current exact calculation programs use Python's standard library.
+requirements.txt records these packages; individual sources retain any
+additional dependencies. The program-scope figure uses matplotlib for fonts.
+
+Recompile the two opening-study documents:
+  python tools/build_studies.py
+
+Assemble with those recompiled studies:
+  python tools/assemble_volumes.py --studies-dir Recompiled_Studies --output Rebuilt_From_Source
+
+Assemble from the supplied compiled studies:
+  python tools/assemble_volumes.py --output Rebuilt_Volumes
+
+Check an unmodified extracted packet, without executing the scientific programs:
+  python tools/verify_packet.py --strict-file-set
+
+The strict file-set option expects only the distributed files. Run it before
+creating additional working directories inside the extracted packet. The check
+compares source link destinations and URI actions; it does not test whether
+external websites are available or whether the scientific claims are true.
+
+Commands resolve inputs relative to the package and require a new output
+directory. Use --font-dir if the system DejaVu location is unsuitable.
+The assembler checks component hashes, computes pagination, creates linked
+contents and bookmarks, and writes both diagrams. It does not recompile all
+85 components. After editing a component, compile its available source and
+update its page count and digest in VOLUME_CONTENTS.json. Some excerpts lack
+editable source. Inspect rebuilt pages because fonts can change line breaks.
+
+5. Scientific scope
+
+Preparation for scholarly assessment does not imply independent peer review,
+empirical replication, novelty or institutional endorsement. The substantive
+checks concern identified statements and dependencies. They are not an
+exhaustive new verification of every historical proof.
+
+Abstract channel capacity follows after specifying a state space, stochastic
+kernel, input class, cost and output access. It needs no physical clock.
+Selection of these ingredients from foundational hypotheses and their
+physical interpretation require additional arguments and evidence.
+
+Population identification, confidence coverage and useful precision are
+different properties. The joint calibration example has exact coverage on
+its declared finite family but can return nearly every admitted target.
+The weak-readout study gives a two-point confidence-diameter obstruction for
+its specified symmetric Bernoulli pair, and a constructive upper bound under
+a warranted positive population gain restriction. The complete joint sampling
+law matters. No optimal constants or physical sample recommendation is claimed.
+
+The Wilson articles retain their stated infinite-chain, filling and scaling
+conditions. The added uniform consequence is conditional on the named analytic
+input estimates and a common onset over bounded scaled masses. Its additive
+error bound does not establish a relative leading law for every sequence of
+vanishing masses. Fixed-mass and varying-mass statements remain distinct.
+
+A physical application requires warranted preparations, observation access,
+calibration, units and controlled evidence. The collection establishes neither
+a prephysical substrate nor a unique physical ontology.

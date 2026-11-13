@@ -1,0 +1,62 @@
+{
+ "P1_means_on_the_central_rays": {
+  "passed": true,
+  "rows": [
+   {
+    "delta": 0.1,
+    "m": 316,
+    "h": 0.00010000000000000002,
+    "mass_negative": 0.49916848789271734,
+    "mass_positive": 0.5003778168771019,
+    "mean_negative": -1.9499390392330196,
+    "mean_positive": 1.996574943096782,
+    "width_negative": 0.7708765335401389,
+    "width_positive": 0.7746880648856462,
+    "central_ray": 2.0,
+    "relative_error_against_central_ray": 0.025030480383490206,
+    "word_probability_over_zero_field": 0.9740070961917457
+   },
+   {
+    "delta": 0.05,
+    "m": 1788,
+    "h": 6.250000000000001e-06,
+    "mass_negative": 0.4999156598699357,
+    "mass_positive": 0.5000485076392353,
+    "mean_negative": -1.9834508406653601,
+    "mean_positive": 2.00262049404286,
+    "width_negative": 0.6660650690476134,
+    "width_positive": 0.6666814111065891,
+    "central_ray": 2.0,
+    "relative_error_against_central_ray": 0.008274579667319926,
+    "word_probability_over_zero_field": 0.9815596892663748
+   }
+  ]
+ },
+ "P2_equal_masses": {
+  "passed": true
+ },
+ "P3_yield": {
+  "passed": true
+ },
+ "_unmodified_preparation_for_comparison": [
+  {
+   "delta": 0.1,
+   "mean_negative": -2.5536,
+   "mean_positive": 2.6035,
+   "mass_difference": 0.0316,
+   "yield_ratio": 0.9
+  },
+  {
+   "delta": 0.05,
+   "mean_negative": -2.4258,
+   "mean_positive": 2.4454,
+   "mass_difference": 0.0112,
+   "yield_ratio": 0.928
+  }
+ ],
+ "_summary": {
+  "predicates": 3,
+  "passed": 3,
+  "numpy": "2.5.3"
+ }
+}

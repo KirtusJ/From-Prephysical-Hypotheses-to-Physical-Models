@@ -1,0 +1,231 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,pdfpages,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom\sloppy
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={History-dependent readout tree},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{History-dependent readout tree}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{Model}\label{model}
+
+Let the null have fresh independent ideal bits \(Z_1,\dots,Z_4\), each with success probability \(s=131/320\). Let \(Y_i\) be the reported bit, and let \(w=Y_1\cdots Y_{i-1}\) denote a prior reported prefix. At \emph{every} position and every positive-probability reported prefix, assume
+
+\[
+\Pr(Y_i=1\mid Z_i=0,w)\leq\varepsilon,\qquad
+\Pr(Y_i=0\mid Z_i=1,w)\leq\varepsilon,
+\]
+
+where the probabilities are those of the same null process and the ideal bit is fresh even after conditioning on \(w\): \(\Pr(Z_i=1\mid w)=s\). Independence of the ideal bit from reported history is a substantive condition. Nothing here bounds a quantum instrument's postmeasurement state or guarantees that the same caps hold in different device time blocks or experimental paths.
+
+At one node, the next reported-one rate \(q(w)=\Pr(Y_i=1\mid w)\) obeys the sharp interval
+
+\[
+ a_\varepsilon=s(1-\varepsilon)\ \leq q(w)\leq\ b_\varepsilon=s+(1-s)\varepsilon.\tag{1}
+\]
+
+The interval is also sufficient, because any \(q\geq s\) is realized by false-positive probability \((q-s)/(1-s)\) and zero false negatives, while any \(q\leq s\) is realized by false-negative probability \((s-q)/s\) and zero false positives. Choosing such a channel separately after each observed prefix realizes the entire corresponding tree law by induction. These are classical, causal reporting rules; they need not be physically available as a particular quantum readout.
+
+The stipulated alternative is fixed throughout the analysis. Write
+
+\[
+ e_0=\frac1{100},\quad m=s+(1-2s)e_0=\frac{6579}{16000},\quad
+ A=\frac14\biggl[\frac{37}{100}\frac{15}{16}(1-2e_0)\biggr]^4.
+\]
+
+For a length-four binary word \(y\) containing \(j\) ones, its probability is
+
+\[
+ Q(y)=m^j(1-m)^{4-j}-A(-1)^j.\tag{2}
+\]
+
+All proper marginals of this alternative equal the corresponding product Bernoulli(\(m\)) marginals.
+
+\subsection{Proposition: exact whole-word compatibility threshold}\label{proposition-exact-whole-word-compatibility-threshold}
+
+\textbf{Claim (proved for the specified finite model).} The law \(Q\) in (2) can be reproduced exactly by a four-step causal reporting process with the independent ideal rate \(s\) and a common upper cap \(\varepsilon\) on both error directions at \emph{every} reported history and position \textbf{if and only if}
+
+\[
+ \boxed{\displaystyle
+ \varepsilon\geq\varepsilon_{\mathrm{full}}
+ =\frac{10396360128757}{92107698697800}
+ =0.1128717824431468\ldots.}\tag{3}
+\]
+
+\textbf{Proof.} Marginalizing at least one future bit in (2) cancels the alternating term. At depths 0, 1, and 2, each conditional next-one rate is therefore \(m\). At depth 3, for a prefix \(w\) with \(j\) ones,
+
+\[
+ Q(w)=m^j(1-m)^{3-j},\quad
+ q(w)=m+\frac{(-1)^j A}{m^j(1-m)^{3-j}}.\tag{4}
+\]
+
+Every target prefix has positive mass. By (1), a necessary and sufficient global cap is the largest of the one-node requirements
+
+\[
+ \max\!\left\{0,\frac{q(w)-s}{1-s},\frac{s-q(w)}{s}\right\}
+\]
+
+across all 15 prefixes. Among the last-step prefixes, the four distinct one-rates and their required bounds are:
+
+\begin{longtable}[]{@{}rrr@{}}
+\toprule\noalign{}
+Number of prefix ones & Target next-one rate & Least directional cap \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 0.427540794200 & 0.030756900233 \\
+1 & 0.387769900872 & 0.052775814663 \\
+2 & 0.444721046342 & 0.059845157827 \\
+3 & \textbf{0.363168114062} & \textbf{0.112871782443} \\
+\end{longtable}
+
+Earlier positions require only \((m-s)/(1-s)=29/9450\approx0.003068783\). The largest of all requirements is therefore at \(w=111\). Its next-one probability is exactly
+
+\[
+ q(111)=\frac{81711338569043}{224995905216000}
+ =0.3631681140623368\ldots,
+\]
+
+so \((s-q(111))/s\) reduces to (3). Necessity follows because a smaller cap violates (1) at this positive-mass prefix. At the threshold all nodes satisfy (1), and the explicit one-sided flipping construction above realizes every conditional rate in (4), proving sufficiency. \(\square\)
+
+The proposition is \emph{not} a claim that the supplied alternative itself uses this large error rate. It instead quantifies how much freedom a distinct classical readout model would require to impersonate the same observed data.
+
+\subsection{What parity misses}\label{what-parity-misses}
+
+Let \(O_i\) be the probability of odd parity after \(i\) reports under an allowed null, with \(O_0=0\). At each step, choose reported-one rate \(b_\varepsilon\) following an even prefix and \(a_\varepsilon\) following an odd prefix. Since \(s<1/2\), this attains the sharp recurrence
+
+\[
+ O_i=b_\varepsilon+(1-a_\varepsilon-b_\varepsilon)O_{i-1},
+\]
+
+and hence
+
+\[
+ O_4^{\max}(\varepsilon)
+ =b_\varepsilon\frac{1-[(1-2s)(1-\varepsilon)]^4}
+ {1-(1-2s)(1-\varepsilon)}.\tag{5}
+\]
+
+The alternative has \(Q(\text{odd})=0.526209351956162\ldots\). Equation (5) first reaches that value at
+
+\[
+ \boxed{\varepsilon_{\mathrm{parity}}\approx0.044121657500400.}\tag{6}
+\]
+
+At and above this smaller allowance, an allowed null can match the \textbf{single odd-parity probability}. Therefore parity-only population observations cannot distinguish the alternative from the null class. Nevertheless, throughout
+
+\[
+ 0.044121657500400\lesssim\varepsilon<0.112871782443147,
+\]
+
+the full law remains incompatible with the null because the \(111\) prefix still violates its conditional lower bound. This is an exact distinction between compressing the four-bit output to one parity bit and retaining the whole word. It does not prescribe a finite-shot optimal full-word test.
+
+A predeclared bounded score detecting this surviving direction is
+
+\[
+ X_\varepsilon(W,Y)=\mathbf1\{W=111\}(a_\varepsilon-Y).
+\]
+
+Every admissible null satisfies \(\mathbb E X_\varepsilon\leq0\). Under the target, \(\mathbb E_Q X_\varepsilon=Q(111)[a_\varepsilon-q(111)]\), positive whenever \(\varepsilon<\varepsilon_{\mathrm{full}}\). For example this population excess is 0.00178935619623 at a \textbf{5\%} directional cap. A small excess and a relatively rare prefix make the corresponding finite-sample efficiency a separate question.
+
+\subsection{Calibration uncertainty changes the statistical accounting}\label{calibration-uncertainty-changes-the-statistical-accounting}
+
+The four-step tree contains \(2(1+2+4+8)=30\) directional history cells. The familiar 6,343 figure assumes the cap is already valid, uses a fixed 5\% hypothesis-test size, and omits the cost of checking reference preparations and readout under those conditions.
+
+For a deliberately optimistic illustration, suppose each cell has \(n\) genuinely independent known-ideal reference trials, \textbf{zero} observed directional mistakes, stable behavior, and faithful transport to the device's gate path. A one-sided exact binomial upper bound at per-cell failure allocation \(\gamma/30\) is
+
+\[
+ u_n=1-(\gamma/30)^{1/n}.
+\]
+
+To place all 30 upper limits at or below 1\% using the union bound with total calibration allowance \(\gamma=0.01\), the zero-error case requires at least
+
+\[
+ n=\left\lceil\frac{\log(0.01/30)}{\log(0.99)}\right\rceil=797
+\]
+
+observations \textbf{in each cell}, or 23,910 classified cell observations across the 30 cells. This is not 23,910 necessarily distinct four-use records; records can contribute observations at several positions, and rare histories need sufficient representation. Even this optimistic criterion is unlikely to succeed when actual error rates sit near the 1\% cap, and it does not prove stationarity or instrument transport.
+
+If a total false-rejection budget of 5\% is split into 1\% for possible calibration-coverage failure and 4\% for a held-out fixed-horizon parity test, the latter's first 95\%-power crossing moves from 6,343 to \textbf{6,758} independent four-use records, assuming the population alternative and all conditional test premises. At 6,757 records the recalculated test power is 0.949974789382334; at 6,758 it is 0.950018042462656. This is a mathematical design illustration, not a physically justified or globally optimal photon or preparation budget. Allocation of coverage and multiple testing must be registered before collecting the held-out data.
+
+Most importantly, even perfect past calibration cannot establish arbitrary future-history bounds without a justified stability or exchangeability/conditional model. For a true error rate exactly at the 1\% boundary, a valid upper confidence limit does not typically fall below 1\%; a practical certification task needs a real performance margin and directly relevant calibration data.
+
+\end{document}

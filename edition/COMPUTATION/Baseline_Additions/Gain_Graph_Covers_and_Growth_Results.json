@@ -1,0 +1,100 @@
+{
+ "C1_Z4_coincidence_count_is_mean_of_character_measures": {
+  "passed": true,
+  "event_size": 219,
+  "coincidences": 9557,
+  "character_measures": [
+   9557.0,
+   9557.0,
+   9557.0,
+   9557.0
+  ]
+ },
+ "C1_S3_coincidence_count_is_dimension_weighted_mean": {
+  "passed": true,
+  "event_size": 92,
+  "coincidences": 930,
+  "irreducible_measures": [
+   1710.0,
+   878.0,
+   1496.0
+  ]
+ },
+ "C1_coincidence_count_is_trivial_gain_pair_measure_on_the_cover": {
+  "passed": true
+ },
+ "C2_reached_gains_are_cosets_of_the_augmented_holonomy_group_and_counts_grow": {
+  "passed": true,
+  "cases": [
+   {
+    "case": "random Z4",
+    "order_of_augmented_holonomy_group": 8,
+    "reached_set_equals_coset_prediction": true,
+    "smallest_count_at_lengths_9_to_12": [
+     1046,
+     5329,
+     17107,
+     74372
+    ],
+    "every_gain_reached_at_each_reached_vertex": true
+   },
+   {
+    "case": "random Z3",
+    "order_of_augmented_holonomy_group": 6,
+    "reached_set_equals_coset_prediction": true,
+    "smallest_count_at_lengths_9_to_12": [
+     543,
+     4651,
+     11570,
+     74144
+    ],
+    "every_gain_reached_at_each_reached_vertex": true
+   },
+   {
+    "case": "gains in the subgroup {0,2} of Z4",
+    "order_of_augmented_holonomy_group": 2,
+    "reached_set_equals_coset_prediction": true,
+    "smallest_count_at_lengths_9_to_12": [
+     148,
+     356,
+     984,
+     2229
+    ],
+    "every_gain_reached_at_each_reached_vertex": false
+   },
+   {
+    "case": "Z4, every odd closed walk has odd gain",
+    "order_of_augmented_holonomy_group": 4,
+    "reached_set_equals_coset_prediction": true,
+    "smallest_count_at_lengths_9_to_12": [
+     1585,
+     5880,
+     20045,
+     71116
+    ],
+    "every_gain_reached_at_each_reached_vertex": false
+   },
+   {
+    "case": "bipartite graph, Z4",
+    "order_of_augmented_holonomy_group": 4,
+    "reached_set_equals_coset_prediction": true,
+    "smallest_count_at_lengths_9_to_12": [
+     124,
+     424,
+     1344,
+     4184
+    ],
+    "every_gain_reached_at_each_reached_vertex": true
+   }
+  ],
+  "seed": 2026111234
+ },
+ "C2_growth_condition_holds_exactly_when_predicted": {
+  "passed": true,
+  "note": "cases 3 and 4 fail the condition for the full group; case 5 (bipartite graph) satisfies it when the holonomy group is the whole group; cases 1 and 2 are recorded as drawn"
+ },
+ "_summary": {
+  "predicates": 5,
+  "passed": 5
+ }
+}

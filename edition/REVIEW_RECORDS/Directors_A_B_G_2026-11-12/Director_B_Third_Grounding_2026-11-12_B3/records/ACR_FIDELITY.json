@@ -1,0 +1,19 @@
+{
+  "delivery": "ABSORBED_TEXT",
+  "grounding": "EXTERNAL_INSPECTED",
+  "execution": "EXECUTED",
+  "observability": "INSPECTABLE",
+  "reasoning_trace": "NONE",
+  "extent": [
+    "acr.core 1.0 sha256 94de9a3e78600fb5aa6eede9e76c5939f89dce5182c4b2727ab37052579f5608",
+    "acr.mathematics 1.0 sha256 0c30c90f853e1ece3127dd7360c54618ac14b6a5bce3063600a4b01539194e3b",
+    "acr.science 1.0 sha256 dd02839e0ab8f29eb9e13abbbd0d76029a94ca63f102c4c375c81a89d0277995"
+  ],
+  "claims": [
+    {"kind":"MECHANICAL_CHECK","disposition":"SUPPORTED_IN_SCOPE","satisfied":true,"execution":"EXECUTED","grounding":"SUPPLIED_ONLY"},
+    {"kind":"EXTERNAL_FACT","disposition":"SUPPORTED_IN_SCOPE","grounding":"EXTERNAL_INSPECTED","execution":"REASONED"},
+    {"kind":"ENFORCEMENT","asserted":false},
+    {"kind":"INTERNAL_PROCESS","asserted":false,"basis":"SELF_REPORT"}
+  ],
+  "notes": "PCP/ACR primarily absorbed as text. Local extracted source lookup and source verifiers were used as inspection aides; no integrated CLI plugin, host enforcement, independent agents or behavioral validation."
+}

@@ -1,0 +1,164 @@
+{
+  "binomial_coverage_controls": [
+    {
+      "alpha": "1/20",
+      "minimum_on_grid": "95860758147/100000000000",
+      "n_values": [
+        1,
+        12
+      ],
+      "p_grid": "i/20, i=0,...,20"
+    },
+    {
+      "alpha": "1/10",
+      "minimum_on_grid": "116698831029/128000000000",
+      "n_values": [
+        1,
+        12
+      ],
+      "p_grid": "i/20, i=0,...,20"
+    },
+    {
+      "alpha": "1/60",
+      "minimum_on_grid": "1007444430391509/1024000000000000",
+      "n_values": [
+        1,
+        12
+      ],
+      "p_grid": "i/20, i=0,...,20"
+    }
+  ],
+  "elapsed_seconds": 0.362922805998096,
+  "finite_predicates": 11807,
+  "illustrative_counts": {
+    "a": {
+      "display": [
+        0.7451443051431852,
+        0.9242406743196625
+      ],
+      "endpoint_brackets": [
+        [
+          "204823706969/274877906944",
+          "819294827877/1099511627776"
+        ],
+        [
+          "1016213368277/1099511627776",
+          "508106684139/549755813888"
+        ]
+      ],
+      "error_allocation": "1/60",
+      "k": 85,
+      "n": 100,
+      "outer_interval": [
+        "204823706969/274877906944",
+        "508106684139/549755813888"
+      ]
+    },
+    "b": {
+      "display": [
+        0.0757593256803375,
+        0.2548556948568148
+      ],
+      "endpoint_brackets": [
+        [
+          "41649129749/549755813888",
+          "83298259499/1099511627776"
+        ],
+        [
+          "280216799899/1099511627776",
+          "70054199975/274877906944"
+        ]
+      ],
+      "error_allocation": "1/60",
+      "k": 15,
+      "n": 100,
+      "outer_interval": [
+        "41649129749/549755813888",
+        "70054199975/274877906944"
+      ]
+    },
+    "q": {
+      "display": [
+        0.341164107444456,
+        0.5120434162972742
+      ],
+      "endpoint_brackets": [
+        [
+          "375113903115/1099511627776",
+          "93778475779/274877906944"
+        ],
+        [
+          "17593677817/34359738368",
+          "562997690145/1099511627776"
+        ]
+      ],
+      "error_allocation": "1/60",
+      "k": 85,
+      "n": 200,
+      "outer_interval": [
+        "375113903115/1099511627776",
+        "562997690145/1099511627776"
+      ]
+    }
+  },
+  "limits": [
+    "Counts are stipulated examples, not experimental data.",
+    "Finite-grid checks do not prove coverage for all real probabilities; the study supplies that proof.",
+    "Bonferroni projection is conservative; no shortest-region or optimality claim.",
+    "No claim applies automatically to drift, dependent repetitions, adaptive stopping or unanchored calibration labels."
+  ],
+  "projected_confidence_display_outward_6dp": [
+    "0.128936",
+    "0.651769"
+  ],
+  "projected_confidence_outer_interval": [
+    "94897103215/735996568378",
+    "479699430647/735996568378"
+  ],
+  "projection_grid": {
+    "cases": 11025,
+    "constructed_feasible_witnesses": 5321,
+    "interval_endpoint_grid": "i/4, i=0,...,4",
+    "theta_grid": "i/20, i=0,...,20"
+  },
+  "python": "3.12.14",
+  "root_inversion": {
+    "arithmetic": "Python arbitrary-precision integers and Fraction",
+    "bisection_steps": 40,
+    "checked_semantics": "Exact binomial tail inequalities bracket each endpoint; outer directions retained.",
+    "maximum_endpoint_bracket_width": "1/1099511627776"
+  },
+  "sharp_rectangular_example": {
+    "fixed_q_17_40_interval": [
+      "9/28",
+      "13/28"
+    ],
+    "parameter_interval": [
+      "2/7",
+      "1/2"
+    ]
+  },
+  "source_sha256": "2077ff9b19b74fa329f7811ebe716b39bf39f8edd10463cd1b41cfb956cfcfcd",
+  "status": "PASS",
+  "zero_radius_adverse_control": {
+    "coverage": "0",
+    "outcomes": [
+      {
+        "probability": "1/2",
+        "projected_set": "empty",
+        "sample_count": 0,
+        "sample_size": 1
+      },
+      {
+        "probability": "1/2",
+        "projected_set": "empty",
+        "sample_count": 1,
+        "sample_size": 1
+      }
+    ],
+    "true_a": "4/5",
+    "true_b": "1/5",
+    "true_q": "1/2",
+    "true_theta": "1/2"
+  }
+}

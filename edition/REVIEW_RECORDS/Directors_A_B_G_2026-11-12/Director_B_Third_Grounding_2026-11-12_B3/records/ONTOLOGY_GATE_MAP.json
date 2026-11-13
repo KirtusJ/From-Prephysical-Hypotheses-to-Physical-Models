@@ -1,0 +1,159 @@
+{
+  "root_G1": "OPEN",
+  "ontology_selected": false,
+  "stage": "INITIAL_EXTERNAL_GROUNDING",
+  "scope": "obligations and conditional mathematical steps, not a claimed physical ontology",
+  "nodes": [
+    {
+      "id": "primitive",
+      "label": "Prephysical relational primitives",
+      "status": "OPEN"
+    },
+    {
+      "id": "linear",
+      "label": "Finite linearization and odd-cycle alternator",
+      "status": "CONDITIONAL_MATH"
+    },
+    {
+      "id": "classical",
+      "label": "Classical simplex countercompletion",
+      "status": "CONDITIONAL_MATH"
+    },
+    {
+      "id": "op",
+      "label": "Operational outcomes and probability",
+      "status": "OPEN"
+    },
+    {
+      "id": "geom",
+      "label": "Complex projective geometry and holonomy",
+      "status": "CONDITIONAL_MATH"
+    },
+    {
+      "id": "comp",
+      "label": "Admissible composite state/effect cones",
+      "status": "OPEN"
+    },
+    {
+      "id": "parallel",
+      "label": "All-arity composition closure",
+      "status": "OPEN"
+    },
+    {
+      "id": "selective",
+      "label": "Selective filters and state conditioning",
+      "status": "OPEN"
+    },
+    {
+      "id": "entangling",
+      "label": "Entangling transformations",
+      "status": "OPEN"
+    },
+    {
+      "id": "dynamics",
+      "label": "Physical dynamics and clocks",
+      "status": "OPEN"
+    },
+    {
+      "id": "limit",
+      "label": "Classical Hamiltonian limit",
+      "status": "OPEN"
+    },
+    {
+      "id": "evidence",
+      "label": "Independent empirical map",
+      "status": "OPEN"
+    },
+    {
+      "id": "total",
+      "label": "Total ontology",
+      "status": "NOT_IDENTIFIED"
+    }
+  ],
+  "edges": [
+    {
+      "source": "primitive",
+      "target": "linear",
+      "status": "selected_functor",
+      "condition": "No privilege for linearization"
+    },
+    {
+      "source": "primitive",
+      "target": "classical",
+      "status": "countercompletion",
+      "condition": "Same label set permits classical effects"
+    },
+    {
+      "source": "primitive",
+      "target": "op",
+      "status": "OPEN",
+      "condition": "No physical bridge"
+    },
+    {
+      "source": "op",
+      "target": "geom",
+      "status": "OPEN",
+      "condition": "Born geometry not derived"
+    },
+    {
+      "source": "geom",
+      "target": "comp",
+      "status": "NONIDENTIFIED",
+      "condition": "Single-system geometry does not select composition"
+    },
+    {
+      "source": "op",
+      "target": "comp",
+      "status": "OPEN",
+      "condition": "Need identified joint instruments"
+    },
+    {
+      "source": "comp",
+      "target": "parallel",
+      "status": "OPEN",
+      "condition": "G uniform interpolation counterexample"
+    },
+    {
+      "source": "comp",
+      "target": "selective",
+      "status": "OPEN",
+      "condition": "B conditional filter counterexample"
+    },
+    {
+      "source": "parallel",
+      "target": "entangling",
+      "status": "OPEN",
+      "condition": "All-arity process closure"
+    },
+    {
+      "source": "selective",
+      "target": "entangling",
+      "status": "OPEN",
+      "condition": "Physical instrument set unknown"
+    },
+    {
+      "source": "entangling",
+      "target": "dynamics",
+      "status": "OPEN",
+      "condition": "No physical generator"
+    },
+    {
+      "source": "dynamics",
+      "target": "limit",
+      "status": "OPEN",
+      "condition": "No classical Hamiltonian emergence"
+    },
+    {
+      "source": "limit",
+      "target": "evidence",
+      "status": "OPEN",
+      "condition": "Missing empirical calibrated correspondence"
+    },
+    {
+      "source": "evidence",
+      "target": "total",
+      "status": "OPEN",
+      "condition": "Missing complete experimental map"
+    }
+  ]
+}

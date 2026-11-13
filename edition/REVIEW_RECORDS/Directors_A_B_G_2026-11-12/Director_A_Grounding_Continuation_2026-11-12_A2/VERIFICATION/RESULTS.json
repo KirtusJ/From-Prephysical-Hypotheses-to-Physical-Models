@@ -1,0 +1,53 @@
+{
+  "status": "PASS_SCOPED_ALGEBRA_AND_FLOATING_POINT_CONTROLS",
+  "participant": "single AI assistant with source inspection; no independent expert",
+  "cycle": {
+    "P": "Matrix([[0, 0, 1], [1, 0, 0], [0, 1, 0]])",
+    "C": "Matrix([[0, -1, 1], [1, 0, -1], [-1, 1, 0]])",
+    "P_restricted": "Matrix([[0, -1], [1, -1]])",
+    "C_restricted": "Matrix([[1, -2], [2, -1]])",
+    "reflection_restricted": "Matrix([[-1, 1], [0, 1]])",
+    "identities": [
+      "P^3=I",
+      "C^2=-3Q",
+      "RPR=P^2",
+      "RCR=-C"
+    ],
+    "commutant_C3": "(c + d, -c, c, d)",
+    "commutant_S3": "(d, 0, 0, d)",
+    "symplectic_pairing_on_lattice_basis": "-3",
+    "field_isomorphism": "Q[C|V] is Q[t]/(t^2+3), isomorphic to Q(sqrt(-3)); selected linearization functor required"
+  },
+  "phase_after_extra_assumptions": {
+    "root_of_unity": "-1/2 + sqrt(3)*I/2",
+    "B": "1/8 + sqrt(3)*I/8",
+    "probabilities": [
+      "1/2",
+      "1/4",
+      "1/2"
+    ],
+    "assumed_completion": "two copies V_R, Euclidean metric, diagonal J, normalized rays, Born-style squared overlaps, Hopf quotient"
+  },
+  "director_G_exact_witness": "9/16 + 3*I/16",
+  "gram": {
+    "seed": 2026111202,
+    "trial_count": 271,
+    "max_abs_det_residual": 2.220446049250313e-16,
+    "min_recorded_eigenvalue": -2.0816681711746057e-17,
+    "full_trials_file": "ALL_GRAM_PHASE_TRIALS.csv",
+    "equal_probabilities_example": "p12=p23=p31=1/4: det=(1+cos(phi))/4, CP2 all phases, CP1 only phase pi"
+  },
+  "mutation_controls": {
+    "valid_cycle_identity": true,
+    "false_cycle_identity_rejected": true,
+    "orientation_reversal_detected": true,
+    "false_qubit_phase_rank_rejected": true,
+    "valid_qubit_rank_accepted": true
+  },
+  "scientific_limitations": [
+    "not independent source verification",
+    "not quantum emergence",
+    "not a physical observation",
+    "no time, frequency, Born probability, composite dynamics or classical Hamiltonian mechanics derived"
+  ]
+}

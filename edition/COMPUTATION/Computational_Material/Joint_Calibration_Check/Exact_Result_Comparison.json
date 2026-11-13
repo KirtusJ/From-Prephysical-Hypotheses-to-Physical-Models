@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "fresh_execution": "Only the newly authored formula-based checker was executed. Supplied programs were read in full, not rerun.",
+  "comparisons": [
+    {
+      "source": "primary",
+      "counts": {
+        "whole_set": 135,
+        "point": 189,
+        "empty_probability": 135,
+        "expected_cardinality": 135,
+        "true_law_admission": 45,
+        "identified_set": 45
+      },
+      "exact_numeric_comparisons": 639
+    },
+    {
+      "source": "second",
+      "counts": {
+        "whole_set": 135,
+        "point": 189,
+        "empty_probability": 0,
+        "expected_cardinality": 0,
+        "true_law_admission": 45,
+        "identified_set": 45
+      },
+      "exact_numeric_comparisons": 369
+    }
+  ],
+  "appendix_rounded_numeric_comparisons": 135,
+  "mismatches": [],
+  "strict_vs_closed_candidate_triples": 51,
+  "strict_vs_closed_differences_in_declared_design": [],
+  "nondegenerate_example": {
+    "count_triples": 2025,
+    "identified_targets": [
+      "1/2"
+    ],
+    "law": {
+      "f": "1/5",
+      "p": "1/2",
+      "s": "4/5"
+    },
+    "methods": {
+      "joint": {
+        "empty_probability": {
+          "decimal": 6.345752531366312e-06,
+          "fraction": "1498348453135473964905133/236118324143482260684800000000"
+        },
+        "expected_cardinality": {
+          "decimal": 6.982079623717679,
+          "fraction": "13188775518308589322258128077/1888946593147858085478400000"
+        },
+        "point_coverage": {
+          "1/2": {
+            "decimal": 0.9999935613608011,
+            "fraction": "59029200965696209047436626763/59029581035870565171200000000"
+          }
+        },
+        "whole_set_coverage": {
+          "decimal": 0.9999935613608011,
+          "fraction": "59029200965696209047436626763/59029581035870565171200000000"
+        }
+      },
+      "known": {
+        "empty_probability": {
+          "decimal": 5.375095844566712e-14,
+          "fraction": "32490460747/604462909807314587353088"
+        },
+        "expected_cardinality": {
+          "decimal": 2.3223649406950253,
+          "fraction": "701891734843503280262981/302231454903657293676544"
+        },
+        "point_coverage": {
+          "1/2": {
+            "decimal": 0.9670073815735238,
+            "fraction": "146130023917771092009925/151115727451828646838272"
+          }
+        },
+        "whole_set_coverage": {
+          "decimal": 0.9670073815735238,
+          "fraction": "146130023917771092009925/151115727451828646838272"
+        }
+      },
+      "plugin": {
+        "empty_probability": {
+          "decimal": 0.04942273640665981,
+          "fraction": "2917403423731395986973865571/59029581035870565171200000000"
+        },
+        "expected_cardinality": {
+          "decimal": 2.128226001130457,
+          "fraction": "251256578392754120691559770171/118059162071741130342400000000"
+        },
+        "point_coverage": {
+          "1/2": {
+            "decimal": 0.5624238222293604,
+            "fraction": "33199642590792090007891863749/59029581035870565171200000000"
+          }
+        },
+        "whole_set_coverage": {
+          "decimal": 0.5624238222293604,
+          "fraction": "33199642590792090007891863749/59029581035870565171200000000"
+        }
+      }
+    },
+    "true_law_admission": {
+      "decimal": 0.9871506704086004,
+      "fraction": "227621447240228255981880477/230584300921369395200000000"
+    }
+  },
+  "source_scope": "Comparison of the declared-model exact result with two supplied result files, all retained in this package; not independent research provenance.",
+  "sources": [
+    {
+      "path": "Computational_Material/Joint_Calibration_Check/Declared_Calibration_Exact_Checks.json",
+      "sha256": "aab29257720e3c18cdaf23986eb4733e855940e08a7fea8788f531776100cfb8"
+    },
+    {
+      "path": "Related_Source_Editions/Assessment_and_Further_Results/computations/results/joint_calibration_results.json",
+      "sha256": "d7088126ec15a1f4cd126a50ab01b6d32a71fe7154b4ac391d82f562504072e0"
+    },
+    {
+      "path": "Related_Source_Editions/Assessment_and_Further_Results/computations/results/Joint_Calibration_Independent_Arithmetic.json",
+      "sha256": "1044c3b8342331f68b5588664e7c501dcc9f63467ebe5c8763decbb7a217c92d"
+    }
+  ]
+}

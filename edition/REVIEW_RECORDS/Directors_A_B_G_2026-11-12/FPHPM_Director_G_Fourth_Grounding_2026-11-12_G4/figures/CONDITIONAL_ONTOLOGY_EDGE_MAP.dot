@@ -1,0 +1,37 @@
+digraph Grounding {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=13, bgcolor="white", nodesep=0.4, ranksep=0.8, pad=0.2, label="Finite-carrier conditional construction: exact mathematics vs open physical bridges", labelloc="t"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, color="#627181", fillcolor="#F3F6F9", margin="0.16,0.10"];
+  edge [fontname="Helvetica", fontsize=9, color="#45566A", arrowsize=.65];
+  base [label="Five-vertex Z3\ngain graph", fillcolor="#DDE8F2"];
+  rep [label="Chosen complex character\n& coherent addition", fillcolor="#F2EEE5"];
+  lift [label="Exact lift B^5 > 0\nAll gains grow", fillcolor="#DFEFE4"];
+  lattice [label="All Eisenstein\nlattice vectors", fillcolor="#DFEFE4"];
+  rays [label="Dense CP^4 rays\nUniform finite net", fillcolor="#DFEFE4"];
+  instrument [label="Physical probability, effect\n& record map: OPEN", style="rounded,dashed", fillcolor="#FFFFFF", color="#B56F62"];
+  additive [label="Closed-loop additive\ngauge-invariant weights", fillcolor="#F8E8E4"];
+  grade [label="Quadratic rule\nnot uniquely selected", fillcolor="#F8E8E4"];
+  sync [label="Synchronized C4 x C4", fillcolor="#F2EEE5"];
+  parity [label="8/16 joint sectors\nParity obstruction", fillcolor="#F8E8E4"];
+  comp [label="All-arity independent\ncomposition: OPEN", style="rounded,dashed", fillcolor="#FFFFFF", color="#B56F62"];
+  formal [label="Formal exp(-isH)\nunitary flow", fillcolor="#DFEFE4"];
+  clock [label="Physical time, energy\nand dynamics: OPEN", style="rounded,dashed", fillcolor="#FFFFFF", color="#B56F62"];
+  classical [label="Classical Hamiltonian\nlimit: OPEN", style="rounded,dashed", fillcolor="#FFFFFF", color="#B56F62"];
+  bridge [label="Complete empirical map\n& total ontology: OPEN", shape=box, style="rounded,dashed", color="#B56F62", fillcolor="#FFFFFF"];
+  base -> lift [label="exact certificate"];
+  base -> additive [label="same carrier"];
+  rep -> lattice [label="assumed rule"];
+  lift -> lattice [label="walk supply"];
+  lattice -> rays [label="mathematical limit"];
+  rays -> instrument [style=dashed, color="#B56F62", label="missing bridge"];
+  additive -> grade [label="countermodel"];
+  grade -> instrument [style=dashed, color="#B56F62"];
+  base -> sync [style=dotted, label="alternative carrier"];
+  sync -> parity [label="exact rank"];
+  parity -> comp [style=dashed, color="#B56F62"];
+  rep -> formal [label="Hermitian adjacency"];
+  formal -> clock [style=dashed, color="#B56F62"];
+  clock -> classical [style=dashed, color="#B56F62"];
+  instrument -> bridge [style=dashed, color="#B56F62"];
+  comp -> bridge [style=dashed, color="#B56F62"];
+  classical -> bridge [style=dashed, color="#B56F62"];
+}

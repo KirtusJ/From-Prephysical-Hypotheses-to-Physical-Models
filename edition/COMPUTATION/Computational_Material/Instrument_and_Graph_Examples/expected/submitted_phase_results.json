@@ -1,0 +1,55 @@
+{
+  "choi": {
+    "Y_plus_C1": "1/2",
+    "Y_plus_C2": "3/4",
+    "all_four_basis_outputs_equal": true,
+    "endpoint_phase_click": "1/4",
+    "purity_C1": "3/8",
+    "purity_C2": "1/2"
+  },
+  "graphs": {
+    "continuous_scale_TV": "(3+4log(2))*|cos(phase)|/64",
+    "edge_pair_class_counts": {
+      "common_edges": 32,
+      "common_nonedges": 56,
+      "rook_only": 16,
+      "shrikhande_only": 16
+    },
+    "necessary_95pct_power_attempts_c_0_1": 2380,
+    "rook": {
+      "cliques4": 8,
+      "laplacian_multiplicities": {
+        "0": 1,
+        "4": 6,
+        "8": 9
+      }
+    },
+    "scale_TV_coefficient": "0.090196698784996582",
+    "shrikhande": {
+      "cliques4": 0,
+      "laplacian_multiplicities": {
+        "0": 1,
+        "4": 6,
+        "8": 9
+      }
+    },
+    "spectral_TV": "|cos(phase)|/4",
+    "spectral_affinity_at_c_0_1": "0.999651141590166929172117903633101962329411686717056187376773"
+  },
+  "simple_law_bayes_thresholds": {
+    "one_per_1000": {
+      "certificate": "exact rational partial sums and rational geometric binomial tail bound",
+      "error_at_N": "0.049997825576749",
+      "error_preceding_N": "0.050010384319166",
+      "omitted_tail_bound": "3.012e-78",
+      "threshold_attempts": 7065
+    },
+    "one_per_2000": {
+      "certificate": "exact rational partial sums and rational geometric binomial tail bound",
+      "error_at_N": "0.049997641122865",
+      "error_preceding_N": "0.050003919731712",
+      "omitted_tail_bound": "4.142e-78",
+      "threshold_attempts": 14131
+    }
+  }
+}

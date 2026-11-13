@@ -1,0 +1,159 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,pdfpages,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom\sloppy
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Realizable graph moment witness},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Realizable graph moment witness}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{1. A graph witness with fixed inverse moments}\label{a-graph-witness-with-fixed-inverse-moments}
+
+Let the test input be \texttt{u=(e0-e1)/sqrt(2)}. On the 16-vertex rook graph, its positive-Laplacian spectral measure consists of weights \texttt{1/4} at \texttt{lambda=4} and \texttt{3/4} at \texttt{lambda=8}, hence transformed inverse-eigenvalue moments
+
+\texttt{m0=1,\ m1=5/32,\ m2=7/256,\ m3=11/2048,\ m4=19/16384}.
+
+Construct a connected four-vertex complete weighted graph with fixed weights \texttt{w01=w03=w23=1/50}, and unknown \texttt{(w02,w12,w13)}. With \texttt{S={[}e0-e3,e1-e3,e2-e3{]}}, \texttt{B=(S\^{}T\ S)\^{}\{-1\}S\^{}T\ L\ S}, \texttt{G=S\^{}TS}, \texttt{h=(1,-1,0)\^{}T}, and \texttt{d=det\ B}, define three integer/rational polynomial equations
+
+\texttt{P\_j=0.5\ h\^{}T\ G\ adj(B)\^{}j\ h\ -\ m\_j\^{}(rook)\ d\^{}j=0}, \texttt{j=1,2,3}.
+
+Use the full exact rational centre recorded with the certificate and the radius \(r=10^{-34}\). Let \(C\) be the inverse Jacobian at that centre. Exact rational polynomial-coefficient bounds for the Hessians on this box give a contraction factor \(q\) and centre displacement \(\rho\) satisfying \(0\le q<1\) and \(\rho+qr<r\). Their displayed numerical values are approximately \(q=4.479010085739296\times10^{-27}\) and \(\rho=3.689057310400891\times10^{-63}\); the proof uses the exact inequalities, not those rounded renderings. Banach's fixed-point theorem therefore gives a unique root in the box. Exact characteristic-polynomial sign changes at the rational centre locate its three positive eigenvalues in \((0.084,0.086)\), \((5.58,5.59)\), and \((33.81,33.82)\). Perturbing the three conductances by at most \(r\) changes the Laplacian operator norm by at most \(6r\), so the root has spectral gap greater than \(0.08\). A direct polynomial numerator-and-determinant derivative bound, with a strictly positive determinant lower bound on the box, proves exactly \(0.006804564875115<m_4<0.006804564875116\).
+
+The computed root is approximately:
+
+\[
+\begin{pmatrix}
+15.6899984582831346064112477306\\
+3.9688719037812073827601821080\\
+0.0235628563734151668852330800
+\end{pmatrix}.
+\]
+
+Its positive eigenvalues are approximately \texttt{(0.084748449338,5.585135434187,33.814982553350)}, with pair weights \texttt{(3.060828e-7,0.84746316616,0.15253652775)}. The slow mode dominates m4 despite tiny weight: its m4 contribution is approximately \texttt{0.005933513}.
+
+\textbf{Sixteen-site lift.} Add 12 new vertices; reduce every old four-site edge weight by \texttt{3epsilon} with \texttt{epsilon=3/500}, connect every old vertex to every new vertex with weight \texttt{epsilon}, and connect all new pairs with weight \texttt{1/100}. Every edge stays positive (the smallest old adjusted weight is \texttt{0.002}). The cross block annihilates original four-site zero-sum vectors. On those vectors, the old-site block agrees with the original L. Hence the selected pair's entire spectral measure is preserved. The additional eigenvalues are \texttt{16epsilon=0.096} (one copy) and \texttt{0.12+4epsilon=0.144} (eleven copies), so the original low eigenvalue remains the 16-graph spectral gap. Both candidate graphs have 16 vertices, matching m0..m3 for the one specified pair but differing at m4.
+
+This is \textbf{exact conditional nonidentifiability} from four transformed moments of one pair, not complete-data indistinguishability, a new physical law, or a first-in-literature claim.
+
+\subsection{2. A threshold measurement for the graph witness}\label{a-threshold-measurement-for-the-graph-witness}
+
+Let \texttt{g\_lambda(s)=4lambda\^{}2\ s\ exp(-2lambda\ s)} be the calibrated scale density for a positive eigenmode. Rook-edge density:
+
+\texttt{p\_R(s)=(1/4)g\_4(s)+(3/4)g\_8(s)}.
+
+Alternative density:
+
+\texttt{p\_A(s)=sum\_\{j=1\}\^{}3\ w\_j\ g\_(lambda\_j)(s)} with the certified eigenvalue and weight intervals.
+
+Numerical evaluation of the full distributions gives numerical total-variation distance \texttt{0.104957402798} (four detected density crossings) and Bhattacharyya coefficient \texttt{0.990246324123}. These latter integrals are high-accuracy numerical calculations, not outward-certified integral bounds.
+
+A separate \textbf{fully certified} binary experiment requires much less: record the bit \texttt{Y=1\{s\textgreater{}3/100\}}. The exact rational graph eigenvalue/weight enclosures together with rational Taylor bounds for exponentials prove
+
+\texttt{P\_R(Y=1)\textgreater{}930704/1000000}, \texttt{P\_A(Y=1)\textless{}870032/1000000}.
+
+For \texttt{p\textgreater{}q}, the binary Bhattacharyya coefficient \texttt{sqrt(pq)+sqrt((1-p)(1-q))} is maximized by reducing p and increasing q. Exact rational square comparisons then show \texttt{B\textless{}994759/1000000}. Tensorization and the classical Bhattacharyya bound give
+
+\texttt{P\_e(M)\ \textless{}=\ (1/2)\ B\^{}M\ \textless{}\ (1/2)(994759/1000000)\^{}307\ \textless{}\ 1/10}.
+
+Thus \textbf{307 independent photon trials suffice for \textless=10\% equal-prior Bayes error} under this exact scale-threshold measurement contract, for this graph pair, with no detector loss and calibrated known source. This is a conservative sufficient guarantee, not the minimum and not a general physical resource bound.
+
+The submitted \texttt{57,291,466} Cantelli guarantee concerns \textbf{a different} three-atom positive-measure witness \emph{and} the fourth-moment estimator. Comparing those trial counts as if they were the same alternative/model/estimator would be invalid.
+
+This illustrates a central lesson: matching several moments does not imply closeness of complete distributions. The tiny slow-mode spectral weight makes m4 sensitive to rare long-scale outcomes, while much larger spectral-weight rearrangements cause readily testable differences at short scales.
+
+\subsection{3. Statistical threshold calculations}\label{statistical-threshold-calculations}
+
+The simple equal-phase and antisymmetric rook-edge/nonedge scale densities give the following tests:
+
+\begin{itemize}
+\tightlist
+\item
+  For a single identically repeated upper-threshold bit, equal-phase pair: \texttt{M=165}, \texttt{t=0.22943}, risk \texttt{0.099786766829}, whereas the numerically optimized \texttt{M=164} risk is \textasciitilde{}\texttt{0.10046967}.
+\item
+  Antisymmetric pair: \texttt{M=173}, \texttt{t=0.23077}, risk \texttt{0.099493720411}; numeric optimized \texttt{M=172} risk \textasciitilde{}\texttt{0.10017110}.
+\item
+  The source's \textbf{exact rational sweep certificates} exclude every upper threshold at M=164 and M=172, respectively. The threshold distributions were checked numerically. The claimed global minimum rests on the supplied exact interval-sweep certificate; numerical agreement alone is insufficient.
+\item
+  Fourier-likelihood inversion reproduces \texttt{M=116:0.10022951}, \texttt{M=117:0.09926536} for equal phase, and \texttt{M=126:0.10028047}, \texttt{M=127:0.09939238} for antisymmetric. These full-distribution crossings are \textbf{numerical}.
+\item
+  For the antisymmetric sample-mean Chernoff statistic at threshold \texttt{0.1711}, the prescribed positive and negative exponential tilts give \texttt{0.0998551584} and \texttt{0.0998533841} at M=375. The source supplies stronger rational exponential enclosures; The reported floating values agree with those enclosures.
+\end{itemize}
+
+\subsection{4. Quantum information, phase access and calibration rank}\label{quantum-information-phase-access-and-calibration-rank}
+
+For \texttt{a\_lambda(s)=2lambda\ sqrt(s)\ e\^{}(-lambda\ s)} in \texttt{L\^{}2(ds)}, the pure-state quantum Fisher information for \texttt{lambda} equals \texttt{2/lambda\^{}2}; classical measurement of s achieves the same FI. Multiplying the amplitude by a \emph{parameter-dependent} phase \texttt{exp(i\ b\ lambda\ s)} preserves all scale probabilities but changes the QFI to \texttt{2(1+b\^{}2)/lambda\^{}2}. Thus coefficient two is \textbf{not} a universal quantum-physical ceiling. This agrees with Braunstein--Caves 1994. The phase dependence is an additional physical instrument assumption, not a free resource.
+
+Maximizing the specified three-port real-amplitude local-FI objective along equal scales gives \texttt{0.8279358531658}. For the quoted equal-scale alias parameters, the ideal continuous-register overlap is \texttt{0.3429323662853}, one ideal pure photon has optimal error \texttt{0.0303199514}, and a coherent known-amplitude input requires mean energy \texttt{0.7774323335} to reach 10\% error. These apply to distinct measurement contracts. The source report contains an analytic global-optimum proof of the three-port class; the numerical calculation checks its value and does not replace the analytic global-uniqueness proof.
+
+On the rook and Shrikhande graphs, take \texttt{k=128L\^{}+=24I+4A-3J}. The exact calculation constructs all 120 contrast-perturbation residual derivatives, collects 120 off-diagonal components per derivative, and eliminates the resulting \textbf{integer} \texttt{120\ x\ 120} matrix modulo \texttt{1,000,003}. Both ranks equal \textbf{119}. Both matrices have zero column sums. This proves rank \textgreater=119 over rational numbers and rank \textless=119 from the exact column sum identity, hence \textbf{rational rank=119}. It supports the revised distinction between \texttt{d-1} constraints for common spectral functions and locally 119 directions for pair-specific contrast perturbations.
+
+For the deterministic power-law readout \(S^{\prime}=\kappa S^p\), the transformed inverse-moment relation persists under the stated common coherence contrasts; consequently a zero quadratic residual alone does not identify linear scale calibration. A classification of all measurable readout functions preserving that graph-moment relation requires a separate argument. The controlled density-ratio theorem in \emph{Detector Transfer Ambiguity} instead addresses recovery of the dimensionless incident coordinate under one common standard-Borel subprobability response kernel, known control multipliers and per-preparation normalization. Its zero-conditional-variance criterion does not establish the power-law classification.
+
+\end{document}

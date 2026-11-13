@@ -1,0 +1,55 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[margin=0.84in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\linespread{0.97}\usepackage{fancyhdr}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Finite-relation mathematical control}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb{R}}\newcommand{\CC}{\mathbb{C}}\newcommand{\VV}{\mathcal{V}}
+\title{\textbf{Odd Directed Cycles, Polar Complex Structures and Reflection Obstructions}\\[3pt]\large A Generalization of the Finite Three-Cycle Algebraic Control}
+\author{Kirtus Justus\\\small Research direction and scholarly responsibility\\\small Port Coquitlam, British Columbia, Canada\\[3pt]\small AI-assisted internal mathematical analysis: ChatGPT (GPT-6), Director G}
+\date{12 November 2026, B.C. Pacific Time\\\small Initial External Grounding open; no total ontology identified}
+\begin{document}\maketitle
+\begin{abstract}
+A directed three-cycle has been used as a finite algebraic source of a complex structure on its real contrast representation. We generalize the observation to every odd directed cycle, expose the parity obstruction on the full contrast module of even cycles, and prove that a reflection destroys equivariance of the canonical polar complex structure. The results show why a complex algebra can arise from minimal finite combinatorial data while making explicit why its presence does not select quantum probability, a physical time variable, a privileged complex orientation or the quantum composition law.
+\end{abstract}
+\section{Finite data and imported representation}
+Fix the static directed cycle $C_N$ on $N\ge3$ abstract vertices. Choose its permutation representation $P$ on the real vector space $\RR^N$ with the standard counting inner product, and its contrast subspace
+\[
+\VV_N=\{x\in\RR^N: \sum_{j=0}^{N-1}x_j=0\},\qquad A=P-P^T.
+\]
+The free real linearization, the scalar product, the eigenvalue calculus and the continuum field $\RR$ are mathematical choices. The cycle arrows are \emph{not} asserted to be temporal processes. We ask what they can generate and which symmetry they do not respect.
+\begin{theorem}[Parity and polar construction]\label{th:parity}
+The skew-adjoint $A$ has spectral eigenvalues
+\[
+\lambda_j(A)=2i\sin(2\pi j/N),\qquad 0\le j<N.
+\]
+For odd $N$, $A|_{\VV_N}$ is invertible and the real polar factor
+\begin{equation}\label{eq:J}
+J_N=A|_{\VV_N}\bigl(-A^2|_{\VV_N}\bigr)^{-1/2}
+\end{equation}
+is a compatible orthogonal complex structure: $J_N^2=-I$, $J_N^T=-J_N$, and $[J_N,P]=0$. The bilinear alternating form $\Omega_N(x,y)=\langle J_N x,y\rangle$ is nondegenerate on $\VV_N$. For even $N$, the full contrast space has odd real dimension and admits \emph{no} real endomorphism $J$ obeying $J^2=-I$; the vector with alternating coordinates belongs to $\ker A|_{\VV_N}$.
+\end{theorem}
+\begin{proof}
+Fourier diagonalization of the cyclic shift gives eigenvalues $e^{2\pi ij/N}$ for $P$ and therefore $e^{2\pi ij/N}-e^{-2\pi ij/N}=2i\sin(2\pi j/N)$ for $A$. On the contrast subspace the Fourier index zero is removed. If $N$ is odd, the sine is nonzero at every remaining index; hence $-A^2$ is positive definite on $\VV_N$. The real spectral positive inverse square root commutes with $A$, and multiplication gives $J_N^2=-I$. Skew-adjointness and orthogonality follow from the polar expression, and nondegeneracy of $\Omega_N$ follows from invertibility of $J_N$. For even $N$, Fourier index $N/2$ is a zero eigenvalue with alternating eigenvector in the contrast subspace; moreover its dimension $N-1$ is odd, so no real complex structure can exist there at all.
+\end{proof}
+\begin{theorem}[Reflection symmetry prevents complex equivariance]\label{th:ref}
+Let $S$ reverse the order of the vertices, so $SPS^{-1}=P^{-1}$. For all odd $N\ge3$, $S J_N S^{-1}=-J_N$. More strongly, there is no \emph{real linear} complex structure on $\VV_N$ commuting with both $P$ and $S$.
+\end{theorem}
+\begin{proof}
+As $SAS^{-1}=-A$ and $S(-A^2)S^{-1}=-A^2$, the functional calculus in~\eqref{eq:J} gives the sign reversal. For the stronger assertion, decompose the real contrast space into the distinct two-dimensional real Fourier frequency planes indexed by $1\le j\le(N-1)/2$. Because their rotation characters are distinct, every real endomorphism commuting with $P$ preserves each plane, and on each is $a_j I+b_jJ_j$, where $J_j$ is the standard quarter-turn. The reflection acts on that plane by conjugation and sends $J_j\mapsto-J_j$. An endomorphism commuting with both generators must therefore have $b_j=0$ on each plane. A real scalar $a_j$ cannot have square $-1$. Thus no such complex structure exists.
+\end{proof}
+\begin{remark}[Even cycles and discarded modes]
+For even $N$, restricting further to the complement of both the constant and alternating modes leaves a real even-dimensional invariant subspace on which a polar complex structure can be made. This \emph{changes the representation and discards a mode}; it does not remove the obstruction to defining one on the full contrast module. Such projections are extra choices and cannot be hidden as primitive consequences.
+\end{remark}
+\section{A classical control and the physical gap}
+The very same $N$ vertex labels and cyclic permutation support the classical simplex $\Delta_{N-1}=\{p_j\ge0,\sum p_j=1\}$ with affine probability effects and deterministic reversible relabeling by $P$. Its probability model is classical even when the selected contrast representation admits $J_N$. Therefore neither the algebraic existence of a complex structure nor its canonical polar construction, on its declared represented space, selects ordinary complex quantum mechanics. In particular, the existence of an antisymmetric matrix does not supply physical transition probabilities, observably oriented phase, tensor composition, a clock, or Hamiltonian mechanics.
+
+For $N=3$, $-A^2=3I$ on the contrast plane and $J_3=A/\sqrt3$, reproducing the specific two-dimensional complex-type relation. For larger odd $N$ the construction gives complex dimension $(N-1)/2$ after choosing the real representation and metric. Nothing in the finite cycle singles out $N=3$, or determines how the resulting vectors are prepared, read out, or empirically calibrated.
+
+\section{Computational verification and review limits}
+A separate deterministic implementation tests every $N=3,\ldots,18$ without exclusions, including eight odd and eight even lengths. It checks the Fourier minimum singular values, reflection identities, and the polar complex-structure residuals. The maximum observed squared-complex-structure residual is less than $1.3\times10^{-14}$ in the tested floating-point runs. These numerical checks do not prove the general theorems: the above finite-dimensional Fourier arguments provide their mathematical basis. The full CSV, exact hypotheses and code are in the accompanying research packet.
+
+This is a theoretical control at the finite-relation/representation boundary. It does not identify a prephysical substance, nor supply the bridge to explained quantum and classical mechanics. Separate research work is still needed to identify physically admissible representations, measurement rules, global consistency and experimental correspondence.
+\end{document}

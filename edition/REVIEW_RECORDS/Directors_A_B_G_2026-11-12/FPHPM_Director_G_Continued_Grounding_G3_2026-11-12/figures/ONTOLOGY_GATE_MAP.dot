@@ -1,0 +1,31 @@
+digraph Ontology {
+ graph [rankdir=TB, splines=polyline, nodesep=0.60, ranksep=0.58, pad="0.33", bgcolor="white", fontname="DejaVu Sans", fontsize=11, label="ONTOLOGY OBLIGATIONS | INITIAL EXTERNAL GROUNDING OPEN", labelloc=t, labeljust=c];
+ node [shape=box,style="rounded,filled",color="#95a5ae",fillcolor="#f7f9fa",fontname="DejaVu Sans",fontsize=11,penwidth=1.1,width=2.20,height=0.72,margin="0.12,0.12"];
+ edge [fontname="DejaVu Sans",fontsize=9,color="#667783",arrowsize=0.72];
+  p [label="Prephysical primitive\nUNIDENTIFIED",fillcolor="#fff2df"];
+  l [label="Finite cycle plus\nchosen linearization"];
+  j [label="Odd polar complex J\nMATHEMATICAL"];
+  geom [label="Continuous CP¹ metric\nIMPORTED",fillcolor="#fff2df"];
+  pure [label="Pure Born effect table\nF family STIPULATED"];
+  tom [label="All mixed states separated\nADDITIONAL POSTULATE",fillcolor="#fff2df"];
+  k1 [label="Bloch K₁: dimension 3\npositive theorem",fillcolor="#e7f3ed"];
+  k3 [label="Veronese K₃: dimension 10\nexact countermodel",fillcolor="#f1ebf7"];
+  extra [label="Additional cubic E effect\nexact probability gap 1/8",fillcolor="#f1ebf7"];
+  comp [label="Physical quantum tensor\nand entangling dynamics\nOPEN",fillcolor="#fff2df"];
+  clock [label="Clock, energy and\nclassical mechanics\nOPEN",fillcolor="#fff2df"];
+  obs [label="Calibrated experimental\nprephysical-to-physical map\nOPEN",fillcolor="#fff2df"];
+  {rank=same;p;l;j}
+  {rank=same;geom;pure;tom}
+  {rank=same;k1;k3;extra}
+  {rank=same;comp;clock;obs}
+  p->l [label="not derived",style=dashed,constraint=false];l->j[constraint=false];
+  geom->pure [label="probability rule",style=dashed,constraint=false];pure->tom[style=dashed,label="tomography?",constraint=false];
+  k1->k3[style=invis,constraint=false];k3->extra[label="separates",constraint=false];
+  comp->clock[style=dashed,constraint=false];clock->obs[style=dashed,constraint=false];
+  p->geom [style=dashed,label="bridge missing"];
+  l->pure [style=dashed,label="continuum imports"];
+  j->tom[style=dashed,label="does not select"];
+  geom->k1[style=dashed];pure->k3[label="same pure tests"];
+  tom->extra[style=dotted,label="if not complete"];
+  k1->comp[style=dashed];k3->clock[style=dashed];extra->obs[style=dashed,label="requires readout"];
+}

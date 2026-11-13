@@ -1,0 +1,381 @@
+{
+  "study": "Stochastic Recovery from Information Loss and Equality of Channel Capacity",
+  "timestamp": "2026-11-10T14:13:01.369288+00:00",
+  "timestamp_convention": "UTC execution timestamp",
+  "implementation": "New transparent implementation; no archived code executed",
+  "environment": {
+    "python": "3.12.14",
+    "mpmath": "1.3.0",
+    "decimal_digits": 80
+  },
+  "script_sha256": "1b68f74276fc1ca03320577382cace9b4048b831b57ad6d0e17d2e8a3f96d57b",
+  "checks": [
+    {
+      "name": "three-input channel and merger are stochastic",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "coarse rows",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ]
+    },
+    {
+      "name": "candidate minimax recovery is stochastic",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        [
+          "3/4",
+          "1/4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "3/4",
+          "1/4"
+        ]
+      ]
+    },
+    {
+      "name": "all three attained recovery errors are one quarter",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "name": "convex-relation obstruction is one half",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": {
+        "gap": "1/2",
+        "lower_bound_gap_over_two": "1/4",
+        "proof_role": "Triangle inequality and convexity in the manuscript give the universal lower bound."
+      }
+    },
+    {
+      "name": "coarse third row is average of first two",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "exact reconstruction of first two rows leaves third error one half",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "attained anchor tradeoff at rho=0",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "name": "attained anchor tradeoff at rho=1/10",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        "1/10",
+        "1/10",
+        "2/5"
+      ]
+    },
+    {
+      "name": "attained anchor tradeoff at rho=1/4",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "name": "attained anchor tradeoff at rho=1/2",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": [
+        "1/2",
+        "1/2",
+        "0"
+      ]
+    },
+    {
+      "name": "original capacity is attained by first two equally",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "all original rows have two equiprobable entries",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "four-input full-support optimizer has uniform original output",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "four-input third and fourth coarse rows coincide but original rows differ",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "four-input uniform-prior information values",
+      "passed": true,
+      "kind": "80-digit logarithmic check; capacity proof is analytic",
+      "details": {
+        "original_bits": "1.0",
+        "coarse_bits": "0.5"
+      }
+    },
+    {
+      "name": "strictly positive original-optimizer counterexample",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "positive counterexample has equal row-entropy patterns and uniform average",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "positive coarse first two rows are a binary symmetric channel",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "positive counterexample still cannot recover its distinct equal-coarse rows",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "positive four-row exact minimax witness",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": {
+        "separation_lower_bound": "1/4"
+      }
+    },
+    {
+      "name": "recoverable positive control",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe reverse and row errors at eps=1/3",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe loss identity at eps=1/3",
+      "passed": true,
+      "kind": "80-digit logarithmic check; formula and 0<loss<eps proved analytically",
+      "details": null
+    },
+    {
+      "name": "rare-probe reverse and row errors at eps=1/10",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe loss identity at eps=1/10",
+      "passed": true,
+      "kind": "80-digit logarithmic check; formula and 0<loss<eps proved analytically",
+      "details": null
+    },
+    {
+      "name": "rare-probe reverse and row errors at eps=1/100",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe loss identity at eps=1/100",
+      "passed": true,
+      "kind": "80-digit logarithmic check; formula and 0<loss<eps proved analytically",
+      "details": null
+    },
+    {
+      "name": "rare-probe reverse and row errors at eps=1/10000",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe loss identity at eps=1/10000",
+      "passed": true,
+      "kind": "80-digit logarithmic check; formula and 0<loss<eps proved analytically",
+      "details": null
+    },
+    {
+      "name": "rare-probe reverse and row errors at eps=1/100000000",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "rare-probe loss identity at eps=1/100000000",
+      "passed": true,
+      "kind": "80-digit logarithmic check; formula and 0<loss<eps proved analytically",
+      "details": null
+    },
+    {
+      "name": "general stochastic reference joint is a law",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "recovered marginal identity x=0,y=0",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "recovered marginal identity x=0,y=1",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "recovered marginal identity x=1,y=0",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "recovered marginal identity x=1,y=1",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    },
+    {
+      "name": "general stochastic KL-loss identity and marginal inequality",
+      "passed": true,
+      "kind": "80-digit logarithmic check, not a universal or interval certificate",
+      "details": {
+        "loss_bits": "0.089081505599029943949283250082916087080082066310932",
+        "joint_KL_bits": "0.089081505599029943949283250082916087080082066310932",
+        "weighted_row_KL_bits": "0.063792270921939535888290163769883209458026017239529"
+      }
+    },
+    {
+      "name": "general stochastic weighted Pinsker bound",
+      "passed": true,
+      "kind": "80-digit numerical check of a proved inequality",
+      "details": {
+        "weighted_squared_TV": "0.020732370510396975425330812854442344045368620037807",
+        "bound": "0.030873297223001293800002732722456919651614299392324"
+      }
+    },
+    {
+      "name": "zero-output-mass reverse row is harmless",
+      "passed": true,
+      "kind": "exact rational check",
+      "details": null
+    }
+  ],
+  "counts": {
+    "total": 40,
+    "exact_rational": 32,
+    "numerical": 8
+  },
+  "rare_probe_examples": [
+    {
+      "epsilon": "1/3",
+      "loss_bits": "0.25162916738782284812040561061448317542648107435915",
+      "bayesian_row_errors": [
+        "1/6",
+        "1/6",
+        "1/3"
+      ],
+      "minimax_error": "1/4"
+    },
+    {
+      "epsilon": "1/10",
+      "loss_bits": "0.092774453987808293652304704237169190694221086976375",
+      "bayesian_row_errors": [
+        "1/20",
+        "1/20",
+        "9/20"
+      ],
+      "minimax_error": "1/4"
+    },
+    {
+      "epsilon": "1/100",
+      "loss_bits": "0.0099278640456615920110647440285681961029468900423316",
+      "bayesian_row_errors": [
+        "1/200",
+        "1/200",
+        "99/200"
+      ],
+      "minimax_error": "1/4"
+    },
+    {
+      "epsilon": "1/10000",
+      "loss_bits": "0.000099992786524783532724241035846579734937345067927597",
+      "bayesian_row_errors": [
+        "1/20000",
+        "1/20000",
+        "9999/20000"
+      ],
+      "minimax_error": "1/4"
+    },
+    {
+      "epsilon": "1/100000000",
+      "loss_bits": "0.0000000099999999278652479555518284297578985424358389055624",
+      "bayesian_row_errors": [
+        "1/200000000",
+        "1/200000000",
+        "99999999/200000000"
+      ],
+      "minimax_error": "1/4"
+    }
+  ],
+  "all_passed": true,
+  "scope_limits": [
+    "No proof assistant was used.",
+    "No physical observations or calibrated apparatus were assessed.",
+    "Finite checks corroborate displayed algebra only; the manuscript supplies universal proofs.",
+    "High-precision logarithms are approximate checks, not certified interval enclosures.",
+    "Same model lineage and common source exposure; no independent replication claim."
+  ]
+}

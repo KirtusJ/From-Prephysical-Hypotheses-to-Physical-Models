@@ -1,0 +1,374 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=0.86in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\R}{\mathbb R}
+\setlength{\emergencystretch}{2em}
+\title{Concentration Eigenvalues from Logarithmic Connection Coefficients}
+\author{Kirtus Justus (Theoretical Physicist)\\
+\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Concentration Eigenvalues from Logarithmic Connection Coefficients},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a finite sine kernel at arbitrary filling, we express each concentration
+odds ratio exactly as a ratio of derivatives of logarithmic connection
+coefficients for complementary Sturm--Liouville equations. A Lagrange
+identity identifies those derivatives with positive norming integrals.
+The formula includes the parity factor $(-1)^{N-1}$; the familiar minus sign
+at half filling therefore requires even matrix size. Dividing out the finite
+Jacobi characteristic polynomial gives an equivalent formula without
+derivatives. We also give quantitative criteria converting relative
+connection or solution-norm errors into concentration-logit errors.
+These are finite identities and sufficient error criteria. Identification
+with a formal quantum period, including a uniform spectral remainder,
+is supplied at half filling on fixed interior intervals by the separate companion \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law}. A general-filling uniform remainder remains a separate problem.
+\end{abstract}
+
+\section{Finite model and conventions}
+Let $N\ge1$, $0<\theta<\pi$, $m_j=j-(N-1)/2$ for $0\le j<N$,
+and $\alpha=(N^2-1)/4$. Define the real symmetric matrices
+\begin{align}
+(B_\theta)_{jk}&=
+\begin{cases}
+\theta/\pi,&j=k,\\
+\sin[\theta(j-k)]/[\pi(j-k)],&j\ne k,
+\end{cases} \label{eq:B}\\
+(H_\theta)_{jj}&=\cos\theta\,m_j^2,\qquad
+(H_\theta)_{j-1,j}=(H_\theta)_{j,j-1}=\frac{j(N-j)}2.
+\label{eq:H}
+\end{align}
+Here $\theta=2\pi W$ in the bandwidth convention $0<W<1/2$.
+The concentration formulation and its commuting tridiagonal operator are
+classical; see Slepian \cite{slepian} and the explicit free-fermion formulation
+in Eisler--Peschel \cite{eisler}. Our diagonal convention differs from a
+frequently used one by a scalar shift. All normalizations needed below
+are proved directly.
+
+For $U_v(x)=\sum_j v_j e^{im_jx}$, Parseval's identity gives
+\begin{equation}
+v^*B_\theta v=\frac1{2\pi}\int_{-\theta}^{\theta}|U_v(x)|^2\,\dd x,
+\qquad
+\|v\|^2=\frac1{2\pi}\int_{-\theta}^{2\pi-\theta}|U_v(x)|^2\,\dd x.
+\label{eq:parseval}
+\end{equation}
+Consequently $0<B_\theta<I$: a nonzero finite Fourier polynomial cannot
+vanish on an open interval. A concentration eigenvalue is denoted $\zeta$,
+and its logit is
+\begin{equation}
+\mathcal P=\log\frac{\zeta}{1-\zeta}=-\varepsilon.
+\label{eq:logit}
+\end{equation}
+All logarithms are natural. No physical time or energy scale is assigned
+to the differential-equation parameters by these definitions.
+
+\begin{lemma}[Exact Fourier equation and commutation]
+Put $p_\theta(x)=\cos x-\cos\theta$ and
+$\mathcal L_\theta U=(p_\theta U')'+\alpha\cos x\,U$.
+Then $\mathcal L_\theta U_v=U_{H_\theta v}$ and
+$[H_\theta,B_\theta]=0$.
+For each eigenpair $H_\theta v=\beta v$, the Fourier function satisfies
+\begin{equation}
+(p_\theta U')'+(\alpha\cos x-\beta)U=0,\qquad
+U(x+2\pi)=\sigma U(x),\quad \sigma=(-1)^{N-1}.
+\label{eq:ode}
+\end{equation}
+The eigenvalues of $H_\theta$ are simple, so its eigenvectors are also
+eigenvectors of $B_\theta$.
+\end{lemma}
+\begin{proof}
+For a Fourier monomial $e^{imx}$, the coefficients at frequencies $m+1,m-1$
+are respectively $[\alpha-m(m+1)]/2$ and $[\alpha-m(m-1)]/2$.
+The coefficient at $m$ is $\cos\theta\,m^2$. These are precisely
+\eqref{eq:H}; the two outer coefficients vanish at the ends of the finite
+frequency set. Integration by parts on $[-\theta,\theta]$ gives
+$H_\theta B_\theta=B_\theta H_\theta$, since $p_\theta$ vanishes at
+both endpoints and the Fourier functions and their derivatives are bounded.
+The positive off-diagonal entries make $H_\theta$ an irreducible Jacobi
+matrix, with simple spectrum; $N=1$ is immediate.
+Finally $e^{2\pi i m_j}=\sigma$.
+\end{proof}
+
+\section{A normalized connection coefficient and its derivative}
+For a complex spectral parameter $b$, let $u_\theta(x;b)$ be the solution of
+\begin{equation}
+(p_\theta u')'+(\alpha\cos x-b)u=0
+\label{eq:param}
+\end{equation}
+analytic at $x=-\theta$, with $u_\theta(-\theta;b)=1$.
+At either endpoint the indicial root is zero with multiplicity two.
+The analytic solution with specified endpoint value is unique:
+its Taylor recurrence divides the coefficient of degree $k$ by
+$k^2\sin\theta\ne0$. In particular, an analytic solution that vanishes
+at an endpoint vanishes identically.
+
+Set $v_\theta(x;b)=u_\theta(-x;b)$, the analytic solution normalized to one
+at the right endpoint. Define $C_\theta(b)$ by the local form
+\begin{equation}
+u_\theta(x;b)=C_\theta(b)v_\theta(x;b)\log(\theta-x)
++a_\theta(x;b),
+\label{eq:C}
+\end{equation}
+where $a_\theta$ is analytic near $\theta$. This fixes the logarithmic
+normalization. All derivatives of $C_\theta$ below are with respect to
+its own argument $b$, holding $\alpha$ and $\theta$ fixed.
+
+\begin{lemma}[Wronskian and norming identities]
+The function $C_\theta$ is entire in $b$, and
+\begin{equation}
+C_\theta(b)=-\frac{2(1-\cos\theta)}{\sin\theta}
+u_\theta(0;b)\,\partial_xu_\theta(0;b).
+\label{eq:W}
+\end{equation}
+At a real zero $b_0$ of $C_\theta$, write $h=u_\theta(\theta;b_0)$.
+Then $h\in\{-1,1\}$ and
+\begin{equation}
+M_\theta(b_0):=\int_{-\theta}^{\theta}u_\theta(x;b_0)^2\,\dd x
+=-\sin\theta\,h\,C_\theta'(b_0)>0.
+\label{eq:norm}
+\end{equation}
+In particular, every real zero of $C_\theta$ is simple.
+\end{lemma}
+\begin{proof}
+The Wronskian $p_\theta(uv'-u'v)$ is constant. Its right-endpoint limit
+is $\sin\theta\,C_\theta$, while its value at zero is
+$-2(1-\cos\theta)u_\theta(0)\partial_xu_\theta(0)$.
+This proves \eqref{eq:W}. The endpoint series is analytic in $b$;
+continuation across compact subintervals preserves that dependence.
+Thus both factors in \eqref{eq:W}, and hence $C_\theta$, are entire.
+
+At a real zero the solution is real and analytic at both endpoints,
+and $h\ne0$ by endpoint uniqueness. Reflection and uniqueness give
+$u_\theta(-x;b_0)=h\,u_\theta(x;b_0)$; evaluation at the other endpoint
+gives $h^2=1$.
+Let $w=\partial_bu_\theta|_{b_0}$.
+Differentiating \eqref{eq:param} and subtracting the two equations yields
+\[
+\bigl[p_\theta(uw'-u'w)\bigr]'=u^2.
+\]
+The left endpoint contributes zero. At the right endpoint,
+$w=C_\theta'(b_0)v_\theta\log(\theta-x)+O(1)$, and the boundary
+term is $-\sin\theta\,h\,C_\theta'(b_0)$.
+Integration proves \eqref{eq:norm}, including its sign and nonvanishing.
+\end{proof}
+
+\section{Exact concentration formula at every filling}
+\begin{theorem}[Complementary-band connection formula]
+For every eigenmode $H_\theta v=\beta v$, $B_\theta v=\zeta v$, set
+$\bar\theta=\pi-\theta$. Then
+\begin{equation}
+\boxed{\quad
+\frac{\zeta}{1-\zeta}
+=(-1)^{N-1}\frac{C_\theta'(\beta)}{C_{\bar\theta}'(-\beta)}.
+\quad} \label{eq:main}
+\end{equation}
+Both denominator and numerator are nonzero. Equivalently,
+\begin{equation}
+\mathcal P=\log|C_\theta'(\beta)|-\log|C_{\bar\theta}'(-\beta)|.
+\label{eq:logC}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The entire Fourier solution of \eqref{eq:ode} is nonzero at both
+$-\theta$ and $\theta$; otherwise endpoint uniqueness would make it
+identically zero. Therefore
+$u_\theta(x;\beta)=U(x)/U(-\theta)$ is the real normalized regular
+solution, $C_\theta(\beta)=0$, and $U(\theta)=hU(-\theta)$ with $h=\pm1$.
+
+Translate the complementary arc by $x=\pi+y$. Since
+$p_\theta(\pi+y)=-p_{\bar\theta}(y)$, the translated equation is
+\eqref{eq:param} with $(\theta,b)$ replaced by $(\bar\theta,-\beta)$.
+Its near-normalized solution is $U(\pi+y)/U(\theta)$, and its far value is
+\[
+\bar h=\frac{U(2\pi-\theta)}{U(\theta)}
+=\frac{\sigma}{h}=\sigma h.
+\]
+The two arc normalizations have equal absolute value.
+Equation \eqref{eq:parseval} therefore gives
+$\zeta/(1-\zeta)=M_\theta(\beta)/M_{\bar\theta}(-\beta)$.
+Apply \eqref{eq:norm}, using $\sin\bar\theta=\sin\theta$ and
+$h/\bar h=\sigma$, to obtain \eqref{eq:main}.
+\end{proof}
+
+At half filling $\theta=\pi/2$, translating $s=x+\pi/2$ gives
+\[
+(\sin s\,u')'+(\alpha\sin s-b)u=0,\qquad 0<s<\pi.
+\]
+If $J$ has bonds $j(N-j)/N$ and zero diagonal, then
+$H_{\pi/2}=NJ/2$ and $\beta=N\lambda/2$.
+For even $N$, \eqref{eq:main} is precisely
+$\zeta/(1-\zeta)=-C'(\beta)/C'(-\beta)$.
+For odd $N$, the sign is positive. For example, at the central mode
+$\beta=0$ one has $\zeta=1/2$; a fixed minus sign would give $-1$
+instead of $1$. More explicitly, for $N=2m+1$ the regular central
+solution is $P_m(\cos s)$ and
+\begin{equation}
+C'(0)=-(-1)^m\int_0^\pi P_m(\cos s)^2\,\dd s\ne0.
+\label{eq:central}
+\end{equation}
+The norming integral here uses $\dd s$, not $\sin s\,\dd s$.
+
+\begin{corollary}[Removal of the finite characteristic polynomial]
+Let $D_\theta(b)=\det(bI-H_\theta)$ and
+$R_\theta(b)=C_\theta(b)/D_\theta(b)$, with removable values filled in.
+Then $R_\theta$ is entire, is nonzero at every eigenvalue of $H_\theta$,
+and at each such eigenvalue
+\begin{equation}
+\frac{\zeta}{1-\zeta}
+=\frac{R_\theta(\beta)}{R_{\bar\theta}(-\beta)}
+=(-1)^N\lim_{b\to\beta}\frac{C_\theta(b)}{C_{\bar\theta}(-b)}.
+\label{eq:deflate}
+\end{equation}
+\end{corollary}
+\begin{proof}
+The $N$ distinct zeros of $D_\theta$ are simple zeros of $C_\theta$,
+so division removes only simple zeros.
+For $E_{jj}=(-1)^j$, $H_{\bar\theta}=-EH_\theta E$, whence
+$D_{\bar\theta}(-b)=(-1)^ND_\theta(b)$ and
+$D_{\bar\theta}'(-\beta)=\sigma D_\theta'(\beta)$.
+Substitute $C_\theta'(\beta)=D_\theta'(\beta)R_\theta(\beta)$
+into \eqref{eq:main}. The last expression follows by taking the limit.
+\end{proof}
+This does not identify the full zero set of $C_\theta$ with the finite
+matrix spectrum. Nor is \eqref{eq:deflate} asserted to be a concentration
+formula away from those spectral points.
+
+\section{Quantitative routes to a period remainder}
+The exact formula isolates the missing asymptotic task without solving it.
+Two elementary stability statements specify sufficient accuracy.
+
+\begin{theorem}[Relative-error criteria]
+At an exact eigenvalue $\beta$, put
+$d_+=C_\theta'(\beta)$, $d_-=C_{\bar\theta}'(-\beta)$.
+If nonzero approximations $\widehat d_\pm$ satisfy
+$|\widehat d_\pm/d_\pm-1|\le q_\pm<1$, then
+\begin{equation}
+\left|\mathcal P-\log\left|\frac{\widehat d_+}{\widehat d_-}\right|\right|
+\le-\log(1-q_+)-\log(1-q_-).
+\label{eq:relative}
+\end{equation}
+Alternatively let $u_\pm$ be the two near-normalized regular arc solutions
+in the theorem above. For approximants $f_\pm$ with $F_\pm=\|f_\pm\|_2>0$,
+suppose
+$\|u_\pm-f_\pm\|_2\le\delta_\pm F_\pm$, $0\le\delta_\pm<1$.
+Writing $\widehat{\mathcal P}=\log(F_+^2/F_-^2)$ gives
+\begin{align}
+2\log(1-\delta_+)-2\log(1+\delta_-)
+&\le\mathcal P-\widehat{\mathcal P}\nonumber\\
+&\le2\log(1+\delta_+)-2\log(1-\delta_-).
+\label{eq:L2}
+\end{align}
+\end{theorem}
+\begin{proof}
+The reverse triangle inequality bounds
+$|\widehat d_\pm/d_\pm|$ between $1-q_\pm$ and $1+q_\pm$.
+Apply \eqref{eq:logC} and
+$\log(1+q)\le-\log(1-q)$.
+For the second assertion,
+$(1-\delta_\pm)F_\pm\le\|u_\pm\|_2\le(1+\delta_\pm)F_\pm$.
+Square, take the ratio, and use the norm formula in the proof of
+\eqref{eq:main}.
+\end{proof}
+
+These bounds do not contain a factor $1/[\zeta(1-\zeta)]$:
+relative norming data control the logit directly even near concentration
+endpoints. But the hypotheses require the correct endpoint normalization
+and the actual spectral parameter. A small residual for a homogeneous
+ODE alone cannot set the normalization: multiplying a solution by a
+constant preserves that equation and changes its squared norm.
+Use of an approximate $\beta$ also needs an independent eigenvalue and
+parameter-sensitivity bound.
+
+For the half-filled model with even $N$, set $t=2\beta/N^2$ and define the finite
+formal-period truncation
+\begin{equation}
+P_N^{[5]}(t)=N\eta(t)-\frac{\varphi_1(t)}N
+-\frac{\varphi_3(t)}{N^3}-\frac{\varphi_5(t)}{N^5}.
+\label{eq:period}
+\end{equation}
+Here $\eta(t)=\pi t\,{}_3F_2(1/4,1/2,3/4;1,3/2;4t^2)$ and the
+$\varphi_k$ are the explicitly defined formal cycle coefficients
+in \cite{periods}. For a compact $K\subset(-1/2,0)\cup(0,1/2)$, sufficient
+conditions for the desired spectral theorem are uniform
+$q_\pm=O_K(N^{-7})$ in \eqref{eq:relative} and
+\[
+\log|\widehat d_+/\widehat d_-|
+=P_N^{[5]}(t)+O_K(N^{-7})
+\]
+at the modes with $t\in K$. Equation \eqref{eq:L2} provides an alternative
+through normalized solution norms. Either set of conditions implies
+\begin{equation}
+\left|e-\frac{\varphi_1(t)}N-\frac{\varphi_3(t)}{N^3}
+-\frac{\varphi_5(t)}{N^5}\right|\le C_KN^{-7},
+\qquad e=-\mathcal P+N\eta(t).
+\label{eq:target}
+\end{equation}
+The implication is proved; the stated uniform approximation hypotheses
+have not been established here. A formal all-orders series also needs a
+defined summation before it can be called an exact period function.
+
+\section{Verification and scope}
+The identities above have analytic proofs independent of the numerical
+checks. A separate computation obtains $\beta$ and $\zeta$ from the
+finite matrices and computes $C$ and $C'$ from a parameter-differentiated
+Frobenius recurrence and the midpoint Wronskian \eqref{eq:W}.
+The concentration eigenvalue is not used in that connection calculation.
+At 90 decimal digits and Taylor degree $380$, 74 cases at
+$\theta/\pi=1/4,1/2,3/4$, with selected sizes $1\le N\le25$, gave a
+largest relative odds discrepancy below $3.43\times10^{-73}$.
+These comprised 48 half-filled cases and 26 other-filling cases.
+Four repetitions at 120 digits and degree $500$ gave discrepancies below
+$9.77\times10^{-114}$; separate complex-step checks tested the parameter
+derivative. Exact low-order solutions also fix the logarithmic normalization.
+Ordinary multiprecision agreement is not interval validation.
+
+These results refine the finite reference problem in
+\emph{From Prephysical Hypotheses to Physical Models}.
+They do not establish the uniform period expansion, the full Wilson
+relative-entropy law, or a Yang--Mills mass-gap theorem.
+The exact complementary-band formula and the sufficient error criteria
+are the established conclusions here. The whole-line construction in \emph{Uniform Bulk Modular Asymptotics
+and the Leading Wilson Entropy Law} proves the half-filled
+fixed-interior expansion. For interval restrictions of the specified
+infinite-chain Wilson--Dirac projectors with \(m=\mu/L\) and fixed
+\(\mu>0\), Theorem 1 of \emph{Finite Part of Wilson--Dirac Relative
+Entropy} determines the finite part with remainder \(O_\mu(1/\log L)\).
+Theorem 3 of \emph{Uniform Modular Control and Nonlinear Convergence for
+Wilson--Dirac Intervals} also proves \(\|E_N\|\le7\) for even \(N\ge2\).
+These conclusions do not establish the sufficient endpoint approximation
+hypotheses stated in this article, a general-filling expansion, or a
+moving-edge expansion.
+
+\paragraph{Acknowledgments and provenance.}
+The even-$N$, half-filled connection formula was supplied in research
+correspondence prepared with Claude (Anthropic).
+The present derivation, parity clarification, complementary-band extension,
+and checks were developed with ChatGPT (OpenAI).
+The wider research program has also used Gemini (Google),
+Grok (SpaceXAI), and DeepSeek (High-Flyer); no specific derivation in this
+paper is attributed to those systems. Assistance does not imply
+independent external peer review or endorsement. No priority claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{slepian} D. Slepian, Prolate spheroidal wave functions, Fourier
+analysis, and uncertainty---V: The discrete case,
+\emph{Bell Syst. Tech. J.} \textbf{57} (1978), 1371--1430.
+Original source cited following \cite{eisler}; its full text was not
+independently re-read for this note.
+\bibitem{eisler} V. Eisler and I. Peschel,
+Analytical results for the entanglement Hamiltonian of a free-fermion chain,
+\emph{J. Phys. A} \textbf{50} (2017), 284003,
+\href{https://arxiv.org/abs/1703.08126}{arXiv:1703.08126},
+especially equations (3), (6)--(10).
+\bibitem{periods} K. Justus,
+\emph{Higher-Order Modular Periods for the Half-Filled Sine Kernel},
+research manuscript, October 2026.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,107 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Source range},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Source range}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{Proposition 1: exact range recovery}\label{proposition-1-exact-range-recovery}
+
+Let B be a d-by-n isometry, B* B = I\_n.~Let Sigma \textgreater= 0 have rank r and support Q\_s. Define C = B Sigma B\emph{. Then C C\^{}+ = B Q\_s B}. If the experiment combines several source preparations with sum of covariances Sigma supported on the entire desired observable subspace Q, then C C\^{}+ = B Q B\emph{. This follows immediately from the range of B Sigma B}. In the specified three-port passive quantum Ricker isometry B=(W\_s,W\_t,sqrt(I-W\_s\textsuperscript{2-W\_t}2))\^{}T, the first and second diagonal blocks of the latter projection are W\_s\^{}2 and W\_t\^{}2. Positive square roots recover W\_s and W\_t. This proof assumes full access to all three output groups, vacuum-floor subtraction, and sufficiently excited source modes.
+
+\subsection{Theorem 2: quantitative range-projector stability}\label{theorem-2-quantitative-range-projector-stability}
+
+Let C=B Sigma B* be positive semidefinite and of rank r. Let mu\textgreater0 denote its smallest nonzero eigenvalue. If a Hermitian observed matrix Chat=C+E satisfies \textbar\textbar E\textbar\textbar\_op \textless= delta \textless{} mu/2, and Phat projects onto the r largest eigenvalues of Chat, then, for P=CC\^{}+,
+
+\begin{verbatim}
+||Phat-P||_op <= delta/(mu-delta).
+\end{verbatim}
+
+Proof: Weyl's theorem places the r signal eigenvalues of Chat above mu-delta and the remainder in {[}-delta,delta{]}. Thus Phat is correctly ranked and Chat is invertible on Ran Phat with inverse norm \textless=1/(mu-delta). Since (I-P)C=0, (I-P)Chat Phat=(I-P)E Phat. Postmultiply by the restricted inverse and take norms. Equal-rank orthogonal-projector geometry gives \textbar\textbar P-Phat\textbar\textbar=\textbar\textbar(I-P)Phat\textbar\textbar. QED.
+
+Interpretation: for an isometric B, mu equals the smallest strictly positive eigenvalue of Sigma. The previously reported rank jump as epsilon approaches zero is therefore compatible with strong instability at finite noise. The proof is a specific Davis-Kahan/Wedin-type estimate, not a claimed novel matrix perturbation theorem.
+
+\subsection{Theorem 3: exact Gaussian information loss from subspace rotation}\label{theorem-3-exact-gaussian-information-loss-from-subspace-rotation}
+
+Let P\_1 and P\_2 be real orthogonal projections of equal rank r in dimension d, and let S\_i=v I+epsilon P\_i for v,epsilon\textgreater0. Write G\_i=N(0,S\_i). Then
+
+\begin{verbatim}
+D_KL(G_1 || G_2) = D_KL(G_2 || G_1)
+                   = epsilon^2 ||P_1-P_2||_F^2 / [4 v (v+epsilon)]
+                   = epsilon^2 sum_j sin^2(theta_j) / [2 v (v+epsilon)].
+\end{verbatim}
+
+Proof: det S\_1=det S\_2=v\textsuperscript{(d-r)(v+epsilon)}r and S\_i\textsuperscript{(-1)=v}(-1)I-epsilon P\_i/{[}v(v+epsilon){]}. Substitute into Gaussian KL and use \textbar\textbar P\_1-P\_2\textbar\textbar\_F\^{}2 = 2(r-tr(P\_1P\_2)). QED.
+
+Corollary (fixed dimension and fixed known candidate projectors): M independent preparations yield KL equal to M times the single-preparation expression. If M epsilon\^{}2 -\textgreater{} 0 for fixed v, Pinsker gives asymptotically zero total-variation separation. If M epsilon\^{}2 -\textgreater{} infinity, a likelihood-ratio test distinguishes the two fixed alternatives consistently. The epsilon\^{}-2 statistical threshold pertains to this homodyne Gaussian observation contract, not all quantum probes.
+
+\end{document}

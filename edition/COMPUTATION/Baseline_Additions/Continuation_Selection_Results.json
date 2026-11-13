@@ -1,0 +1,435 @@
+{
+ "S1_only_p_equal_2_is_consistent_under_continuation_on_the_ring": {
+  "passed": true,
+  "rows": [
+   {
+    "p": 1,
+    "events": 255,
+    "worst_relative_violation": 1.0,
+    "worst_event": [
+     0,
+     2
+    ]
+   },
+   {
+    "p": 1.5,
+    "events": 255,
+    "worst_relative_violation": 0.5857864376269049,
+    "worst_event": [
+     0,
+     2
+    ]
+   },
+   {
+    "p": 2,
+    "events": 255,
+    "worst_relative_violation": 0.0,
+    "worst_event": null
+   },
+   {
+    "p": 3,
+    "events": 255,
+    "worst_relative_violation": 2.0,
+    "worst_event": [
+     0,
+     2
+    ]
+   },
+   {
+    "p": 4,
+    "events": 255,
+    "worst_relative_violation": 6.0,
+    "worst_event": [
+     0,
+     2
+    ]
+   }
+  ],
+  "walks": 8,
+  "note": "c = 2 is forced by the single-walk events; for p = 2 the identity is A*A = 2; the two-walk event {(x,L),(x,R)} gives 2^p against 4"
+ },
+ "S1_decisive_two_walk_event": {
+  "passed": true,
+  "event_vertices": [
+   2,
+   3
+  ],
+  "mu_p_of_event": {
+   "1": 2.0,
+   "2": 2.0,
+   "4": 2.0
+  },
+  "mu_p_of_extension": {
+   "1": 2.0,
+   "2": 4.0,
+   "4": 16.0
+  },
+  "note": "the event of the two walks arriving at the two arcs of one site with equal phase: its extension has one nonzero entry 2 (or two entries 0 and 2), so mu_p(Ext S) = 2^p against 2 mu_p(S) = 4"
+ },
+ "S2_non_monomial_unitary_is_no_p_isometry_and_signed_permutation_is": {
+  "passed": true,
+  "rows": [
+   {
+    "p": 1,
+    "p_norm_of_U_e0": 1.414213562373095,
+    "expected_if_isometry": 1.0
+   },
+   {
+    "p": 1.5,
+    "p_norm_of_U_e0": 1.1224620483093728,
+    "expected_if_isometry": 1.0
+   },
+   {
+    "p": 3,
+    "p_norm_of_U_e0": 0.8908987181403393,
+    "expected_if_isometry": 1.0
+   },
+   {
+    "p": 4,
+    "p_norm_of_U_e0": 0.8408964152537145,
+    "expected_if_isometry": 1.0
+   }
+  ],
+  "control": "a random signed permutation matrix preserves every p-norm (seed reported)",
+  "seed": 20261113
+ },
+ "S3_additive_rule_consistent_under_continuation_is_constant": {
+  "passed": true,
+  "cases": {
+   "K4_Z3": {
+    "out_degree": 3,
+    "consistent_factors": {
+     "3": {
+      "dimension": 1,
+      "all_solutions_constant": true,
+      "example": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   },
+   "ring_arc_Z2": {
+    "out_degree": 2,
+    "consistent_factors": {
+     "2": {
+      "dimension": 1,
+      "all_solutions_constant": true,
+      "example": [
+       -0.57735,
+       -0.57735,
+       -0.57735
+      ]
+     }
+    }
+   },
+   "two_triangles_Z3": {
+    "out_degree": null,
+    "consistent_factors": {}
+   }
+  },
+  "note": "unknowns F_o and F_c(g); equations sum_e F(we) = c F(w) for all walks of length at most 4 from vertex 0; for constant out-degree d the only solutions have c = d and F constant; with degrees 2 and 4 (two triangles) no additive rule is consistent for any c tried"
+ },
+ "S4_exact_translation_iff_constant_gain_ratio": {
+  "passed": true,
+  "random_Z4": [
+   {
+    "trial": 0,
+    "largest_defect_of_scalar_fit": 1.9464979789354604,
+    "distinct_ratios": 4
+   },
+   {
+    "trial": 1,
+    "largest_defect_of_scalar_fit": 2.0,
+    "distinct_ratios": 4
+   },
+   {
+    "trial": 2,
+    "largest_defect_of_scalar_fit": 1.9639127734628434,
+    "distinct_ratios": 4
+   },
+   {
+    "trial": 3,
+    "largest_defect_of_scalar_fit": 2.0,
+    "distinct_ratios": 4
+   },
+   {
+    "trial": 4,
+    "largest_defect_of_scalar_fit": 2.0,
+    "distinct_ratios": 4
+   }
+  ],
+  "linear_gain_defect": 6.367167763562643e-16,
+  "seed": 20261113,
+  "note": "the commutation relation with the translation is equivalent to m(x-1)/m(x) being one number e^{i Phi}; e^{i Phi} must then lie in the image of the character, so a translation by Phi needs a gain group of order at least 2 pi / Phi"
+ },
+ "S5_sparse_step_agrees_with_ring_step": {
+  "passed": true
+ },
+ "S5_linear_gain_oscillates_and_periodic_staircase_drifts": {
+  "passed": false,
+  "rows": {
+   "linear": [
+    {
+     "t": 64,
+     "displacement": 1.5421328498632647e-05,
+     "rms_width": 16.670779970283654
+    },
+    {
+     "t": 128,
+     "displacement": 3.084555191890104e-05,
+     "rms_width": 16.67078930642091
+    },
+    {
+     "t": 192,
+     "displacement": 4.627267026080517e-05,
+     "rms_width": 16.670798675717553
+    },
+    {
+     "t": 256,
+     "displacement": 6.170268352434505e-05,
+     "rms_width": 16.67080807817352
+    },
+    {
+     "t": 320,
+     "displacement": 7.713559216426802e-05,
+     "rms_width": 16.670817513788744
+    },
+    {
+     "t": 384,
+     "displacement": 9.257139527107938e-05,
+     "rms_width": 16.670826982563167
+    },
+    {
+     "t": 448,
+     "displacement": 0.00010801009375427384,
+     "rms_width": 16.67083648449672
+    },
+    {
+     "t": 512,
+     "displacement": 0.00012345168715910404,
+     "rms_width": 16.670846019589344
+    },
+    {
+     "t": 576,
+     "displacement": 0.00013889617548556998,
+     "rms_width": 16.67085558784098
+    },
+    {
+     "t": 640,
+     "displacement": 0.00015434355918841902,
+     "rms_width": 16.67086518925155
+    },
+    {
+     "t": 704,
+     "displacement": 0.0001697938378129038,
+     "rms_width": 16.670874823821006
+    },
+    {
+     "t": 768,
+     "displacement": 0.00018524701135902433,
+     "rms_width": 16.670884491549266
+    },
+    {
+     "t": 832,
+     "displacement": 0.00020070307937203324,
+     "rms_width": 16.67089419243628
+    },
+    {
+     "t": 896,
+     "displacement": 0.0002161620432161726,
+     "rms_width": 16.670903926481976
+    },
+    {
+     "t": 960,
+     "displacement": 0.00023162390152720036,
+     "rms_width": 16.67091369368629
+    },
+    {
+     "t": 1024,
+     "displacement": 0.00024708865566935856,
+     "rms_width": 16.670923494049163
+    }
+   ],
+   "staircase_period_64": [
+    {
+     "t": 64,
+     "displacement": 3.8622066275711404,
+     "rms_width": 4096.03908479746
+    },
+    {
+     "t": 128,
+     "displacement": -3.5495188533338933,
+     "rms_width": 18.174481912456322
+    },
+    {
+     "t": 192,
+     "displacement": -1.169635266669502,
+     "rms_width": 17.129217075551495
+    },
+    {
+     "t": 256,
+     "displacement": 4.00222172406302,
+     "rms_width": 4096.039318863604
+    },
+    {
+     "t": 320,
+     "displacement": -2.0689219161990877,
+     "rms_width": 17.986214150259322
+    },
+    {
+     "t": 384,
+     "displacement": -1.3828817875519235,
+     "rms_width": 17.422110956685138
+    },
+    {
+     "t": 448,
+     "displacement": 2.450785503804582,
+     "rms_width": 4096.039750160002
+    },
+    {
+     "t": 512,
+     "displacement": -1.2682112393172247,
+     "rms_width": 18.02191152890677
+    },
+    {
+     "t": 576,
+     "displacement": -0.39771565298110545,
+     "rms_width": 17.782268624073993
+    },
+    {
+     "t": 640,
+     "displacement": 1.6899793753700578,
+     "rms_width": 4096.039690826641
+    },
+    {
+     "t": 704,
+     "displacement": -2.0487500492097297,
+     "rms_width": 17.75393097731085
+    },
+    {
+     "t": 768,
+     "displacement": 0.20661976936025894,
+     "rms_width": 4096.037999587424
+    },
+    {
+     "t": 832,
+     "displacement": 1.6593234589818167,
+     "rms_width": 4096.041202517517
+    },
+    {
+     "t": 896,
+     "displacement": -2.659181868141559,
+     "rms_width": 17.7914614583967
+    },
+    {
+     "t": 960,
+     "displacement": 0.12186247456747878,
+     "rms_width": 17.222292999531557
+    },
+    {
+     "t": 1024,
+     "displacement": 2.5308039742321853,
+     "rms_width": 4096.039282126928
+    }
+   ],
+   "quasiperiodic_rounded": [
+    {
+     "t": 64,
+     "displacement": -5.8670741867958895,
+     "rms_width": 17.85473492938318
+    },
+    {
+     "t": 128,
+     "displacement": -6.598754881882314,
+     "rms_width": 20.622832621790668
+    },
+    {
+     "t": 192,
+     "displacement": -1.6637388403673867,
+     "rms_width": 21.613503048318755
+    },
+    {
+     "t": 256,
+     "displacement": 4.049534334911186,
+     "rms_width": 4096.049416857497
+    },
+    {
+     "t": 320,
+     "displacement": 5.752802611017614,
+     "rms_width": 4096.038183447378
+    },
+    {
+     "t": 384,
+     "displacement": 2.1985426465353157,
+     "rms_width": 4096.037294350532
+    },
+    {
+     "t": 448,
+     "displacement": -2.588125355013517,
+     "rms_width": 19.244924674585132
+    },
+    {
+     "t": 512,
+     "displacement": -4.632774047914609,
+     "rms_width": 20.325445762833496
+    },
+    {
+     "t": 576,
+     "displacement": -2.82342622924466,
+     "rms_width": 20.950101947405336
+    },
+    {
+     "t": 640,
+     "displacement": 0.7345407053171584,
+     "rms_width": 4096.052676487309
+    },
+    {
+     "t": 704,
+     "displacement": 2.1475398578959357,
+     "rms_width": 4096.042055947865
+    },
+    {
+     "t": 768,
+     "displacement": 1.671977702913864,
+     "rms_width": 4096.041490629968
+    },
+    {
+     "t": 832,
+     "displacement": 0.07447946484171553,
+     "rms_width": 19.76326718583853
+    },
+    {
+     "t": 896,
+     "displacement": -0.757532931759215,
+     "rms_width": 19.919646544149174
+    },
+    {
+     "t": 960,
+     "displacement": -0.6637060130922237,
+     "rms_width": 20.628225323363502
+    },
+    {
+     "t": 1024,
+     "displacement": -0.7543850303959516,
+     "rms_width": 20.5343924284654
+    }
+   ]
+  },
+  "note": "displacements sampled every 64 steps (one Bloch period of the mean field) over 1024 steps: the linear gain returns to its start each period; the staircase, whose gains repeat every 64 sites, is invariant under translation by 64 sites and moves ballistically"
+ },
+ "S5_superlattice_bands_have_nonzero_group_velocity": {
+  "passed": false,
+  "largest_band_velocity_sites_per_step": 1.4178172524914599e-06,
+  "rms_band_velocity": 3.2996616419557656e-07,
+  "note": "eigenphases of the 128 x 128 Bloch matrix of the 64-site supercell, differentiated numerically (sorted phases; crossings can mix branches, which lowers but does not create a velocity); by Grimmett-Janson-Scudo X_t / t converges to the distribution of these velocities"
+ },
+ "_summary": {
+  "predicates": 8,
+  "passed": 6,
+  "seed": 20261113,
+  "numpy": "2.5.3"
+ }
+}

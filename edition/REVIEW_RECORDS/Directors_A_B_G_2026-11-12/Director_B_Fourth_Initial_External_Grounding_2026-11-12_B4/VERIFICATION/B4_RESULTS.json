@@ -1,0 +1,134 @@
+{
+  "additivity": {
+    "all_switch_cases": 64,
+    "different_measure_values": [
+      0,
+      1
+    ],
+    "gain_assignments": 8,
+    "scope": "closed-loop endpoint-aware additive measure; does not contradict Lemma 3.1 as written",
+    "switchings_per_assignment": 8
+  },
+  "cylinder": {
+    "normalized_single_one_step": "1/2",
+    "normalized_single_two_step": "1/3",
+    "one_step_cross": 0,
+    "one_step_single": 1,
+    "same_K4_dense_rays_example_has_nonzero_refined_cross_term": "2 (versus zero at one step)",
+    "scalar_rescaling_cannot_restore_cross_zero": true,
+    "two_step_cross": 1,
+    "two_step_single": 2,
+    "whole_one_step": 2,
+    "whole_two_step": 6
+  },
+  "false_controls_rejected": [
+    "FALSE_all_additive_rules_are_gain_blind",
+    "FALSE_k3_cylinder_cross_term_consistent",
+    "FALSE_k3_unitary",
+    "FALSE_horizontal_end_phase_is_B",
+    "FALSE_K4_all_gains_identity"
+  ],
+  "g7_sign": {
+    "bargmann": "(1+i)/4",
+    "bargmann_phase": "pi/4",
+    "det_lc_holonomy_cp1": "i",
+    "formula": "det T = (B/|B|)^(n+1) remains correct; intermediate horizontal lift sign in G7 proof is incorrect",
+    "horizontal_end_lift": "(1-i)/sqrt(2)"
+  },
+  "involution": {
+    "condition": "undirected reciprocal-gain adjacency: A*=A; A/sqrt(c) unitary => A^2=cI",
+    "nonempty_zero_diagonal_unitary_necessitates_even_number_vertices": true,
+    "positive_control": "two-vertex edge has U=X and U^2=I"
+  },
+  "k4": {
+    "base_paths": [
+      {
+        "gain": 0,
+        "length": 0,
+        "vertex": 0
+      },
+      {
+        "gain": 1,
+        "length": 3,
+        "vertex": 0
+      },
+      {
+        "gain": 2,
+        "length": 6,
+        "vertex": 0
+      },
+      {
+        "gain": 0,
+        "length": 1,
+        "vertex": 1
+      },
+      {
+        "gain": 1,
+        "length": 4,
+        "vertex": 1
+      },
+      {
+        "gain": 2,
+        "length": 7,
+        "vertex": 1
+      },
+      {
+        "gain": 0,
+        "length": 1,
+        "vertex": 2
+      },
+      {
+        "gain": 1,
+        "length": 4,
+        "vertex": 2
+      },
+      {
+        "gain": 2,
+        "length": 7,
+        "vertex": 2
+      },
+      {
+        "gain": 0,
+        "length": 7,
+        "vertex": 3
+      },
+      {
+        "gain": 1,
+        "length": 1,
+        "vertex": 3
+      },
+      {
+        "gain": 2,
+        "length": 4,
+        "vertex": 3
+      }
+    ],
+    "group": "Z3",
+    "independent_bruteforce_walk_count_checks": 108,
+    "max_length": 40,
+    "minimum_counts": {
+      "0": 0,
+      "1": 0,
+      "10": 3644,
+      "16": 3256952,
+      "2": 0,
+      "24": 23003866452,
+      "3": 0,
+      "32": 153567546936816,
+      "4": 2,
+      "40": 1011780055885341260,
+      "5": 6,
+      "6": 30,
+      "8": 348
+    },
+    "rows": 492,
+    "special_edge": "oriented (0,3) gain +1",
+    "total_walks_k40": "12157665459056928801",
+    "verified_exponential_lower_bound": "min_(v,g) N_k(v,g) >= 3^floor((k-10)/2) for k>=10, proven for all k by root-bounce padding",
+    "vertices": 4
+  },
+  "ontology": "not identified",
+  "root": "G1 OPEN",
+  "scope": "exact finite mathematical test only; no physical ontology or empirical observation",
+  "status": "PASS"
+}

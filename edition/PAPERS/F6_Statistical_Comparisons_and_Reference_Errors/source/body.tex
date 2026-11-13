@@ -1,0 +1,206 @@
+\section{Statistical Comparisons and Reference Errors}
+\label{sam:chapter}
+
+An observation may preserve an algebraic distinction while leaving it difficult to estimate. Conversely, an exactly consistent report can erase the distinction altogether. This chapter separates source sampling, query sampling, report errors and errors in the comparison reference. All numerical guarantees concern the specified mathematical experiments. They are not results of physical trials.
+
+\subsection{Collision statistics under a specified source}
+\label{sam:collisions}
+Let $X_1,\ldots,X_n$ be independent labels with a common discrete distribution $p=(p_j)$, and let $s_m=\sum_jp_j^m$. For $2\le m\le n$, define
+\[
+ U_{n,m}=\binom nm^{-1}\sum_{|S|=m}\mathbf1\{X_i\text{ are all equal for }i\in S\}.
+\]
+Then $\mathbb E U_{n,m}=s_m$. Counting pairs of subsets by their intersection gives the exact variance
+\begin{equation}
+ \operatorname{Var}(U_{n,m})=
+ \sum_{r=1}^m\frac{\binom mr\binom{n-m}{m-r}}{\binom nm}
+ (s_{2m-r}-s_m^2).
+ \label{sam:uvariance}
+\end{equation}
+Indeed, disjoint subsets have independent indicators. If the intersection has $r\ge1$ positions, the two all-equal events together require all $2m-r$ positions to have one label. For $m=3$, this becomes
+\begin{equation}
+ V_p(n)=\frac{9(n-3)(n-4)(s_5-s_3^2)+18(n-3)(s_4-s_3^2)+6(s_3-s_3^2)}{n(n-1)(n-2)}.
+ \label{sam:v3}
+\end{equation}
+
+Consider two fixed sources with finite cores $(1,4,6,7)/36$ and $(2,3,5,8)/36$, respectively, and in each case a common tail $p_j=2^{-j-1}$, $j\ge1$. Each core and tail has total mass $1/2$. Their moments are
+\[
+ s_m=\sum_{a\text{ in core}}(a/36)^m+\frac1{2^m(2^m-1)}.
+\]
+The means of the triple statistic are $\mu_0=425/13608$ and $\mu_1=439/13608$, with gap $\Delta=1/972$. Their pair-equality probabilities agree. Thus pair agreement alone cannot separate these two sources, whereas triple agreement can.
+
+For a threshold $c$ between the means, the one-sided variance inequality gives
+\begin{equation}
+ \alpha\le\frac{V_0(n)}{V_0(n)+(c-\mu_0)^2},\qquad
+ \beta\le\frac{V_1(n)}{V_1(n)+(\mu_1-c)^2}.
+ \label{sam:cantelli}
+\end{equation}
+At the midpoint $c=2/63$, $n=365450$ makes both displayed bounds at most $1/20$. Allowing an unequal division of the gap improves this sufficient certificate: a threshold meeting both bounds exists exactly when
+\[
+ \sqrt{19V_0(n)}+\sqrt{19V_1(n)}\le\Delta.
+\]
+The first integer satisfying this inequality is $329180$. The admissible interval is
+$[\mu_0+\sqrt{19V_0(n)},\,\mu_1-\sqrt{19V_1(n)}]$.
+These are optima of the stated variance-based certificate, not minimum sample sizes among all tests. The inequality can be checked without floating-point decisions: put $a=19V_0$, $b=19V_1$; require $\Delta^2-a-b\ge0$ and $(\Delta^2-a-b)^2\ge4ab$. A complete $U$-statistic is the average of its leave-one-out versions, so Jensen's inequality proves that its variance cannot increase with sample size. Checking the preceding integer therefore establishes the first sufficient size for this certificate.
+
+Changing $r$ raw labels can affect at most the fraction
+$1-\binom{n-r}{3}/\binom n3$ of triples. This is a label-replacement bound. It must not be used as a bound for an arbitrary number of erroneous pair reports: those are different error models.
+
+\subsection{Extending a statistic to inconsistent pair reports}
+\label{sam:extension}
+Let $z_{ij}\in\{0,1\}$ be arbitrary pair reports, where one means equality. They need not define an equivalence relation. For a $k$-set $S$, let $m_S(z)$ count its negative reports and set
+\[
+ \phi_k(z|_S)=\max\{0,1-m_S(z)/(k-1)\},\qquad
+ W_{n,k}(z)=\binom nk^{-1}\sum_{|S|=k}\phi_k(z|_S).
+\]
+For $k=3$, a triple with zero, one, two or three positive reports receives score $0,0,1/2,1$.
+
+\begin{proposition}[Sharp report sensitivity]
+On every genuine equality graph, $W_{n,k}=U_{n,k}$. Moreover,
+\[
+ |W_{n,k}(z)-W_{n,k}(z')|
+ \le\min\left\{1,\frac{k\,d_H(z,z')}{n(n-1)}\right\}.
+\]
+The coefficient $k/[n(n-1)]$ is the least possible global single-report Lipschitz constant among real-valued extensions agreeing with $U_{n,k}$ on every equality graph.
+\end{proposition}
+\begin{proof}
+A nonconstant equality pattern on $k$ positions has at least $k-1$ unequal pairs, so its score is zero; a constant pattern has score one. Each pair lies in $\binom{n-2}{k-2}$ subsets and changes each local score by at most $1/(k-1)$, giving the upper bound by telescoping edits. The all-equal partition and the partition consisting of a singleton and a block of $n-1$ differ on $n-1$ reports and have statistic difference $k/n$. Along a shortest edit path any agreeing extension therefore has an edge difference at least $k/[n(n-1)]$. The displayed extension attains it, for example by removing a single edge from the all-equal graph.
+\end{proof}
+This is an extension and sensitivity result. It asserts neither uniqueness of the extension nor optimal testing risk.
+
+Consistency of reports alone does not warrant their accuracy. The two finite cores above can both be deterministically grouped into weights $(5,13)/36$, leaving their common tails unchanged: group $(1,4)$ and $(6,7)$ in the first case and $(2,3)$ and $(5,8)$ in the second. The complete observed equality laws are then identical at every sample size. The reported comparisons remain perfectly transitive. Each implementation's pair-error probability against true equality is $23/324$, while their mutual disagreement can be zero. This construction distinguishes calibration against a warranted reference from agreement between implementations.
+
+\subsection{Sparse random queries and the complete variance}
+\label{sam:sparse}
+The experiment is specified as follows. Draw $n$ independent source labels. Fix a complete potential pair-report graph $z$, possibly as a function of that entire sample and detector randomness. Its number of incorrect entries is at most $\rho\binom n2$. After this assignment is fixed, draw $B$ triples independently and uniformly with replacement, independently of the graph, and average their half-credit scores to obtain $\widehat W_{n,B}$. Persistent sample identity and stable access to the same report assignment are premises.
+
+Conditional on the sample and fixed graph, the sampled scores are independent and have mean $W_{n,3}(z)$ and variance $v(z)/B$. They are generally dependent after averaging over the original source sample. In the error-free case,
+\[
+ \operatorname{Var}(\widehat W_{n,B})=\left(1-\frac1B\right)V_i(n)+\frac{\mu_i(1-\mu_i)}B.
+\]
+This follows by conditional variance; it is also the usual incomplete-$U$-statistic variance identity~\cite{clemencon}. Increasing $B$ alone does not remove $V_i(n)$.
+
+Put $b=\min\{1,3\rho/2\}$. The preceding sensitivity bound gives
+$|W_{n,3}(z)-U_{n,3}|\le b$. Introduce the analytical variable
+$R=U_{n,3}+\widehat W_{n,B}-W_{n,3}(z)$.
+Its mean is $\mu_i$ and its query noise is uncorrelated with $U_{n,3}$ by conditional centering. Since scores lie in $[0,1]$,
+\[
+ \operatorname{Var}R=V_i(n)+\frac{\mathbb Ev(z)}B
+ \le V_i(n)+\frac{\mu_i+b}B=:A_i.
+\]
+For $d_0=c-\mu_0-b>0$ and $d_1=\mu_1-c-b>0$, the unconditional guarantees are
+\begin{equation}
+ \alpha\le\frac{A_0}{A_0+d_0^2},\qquad
+ \beta\le\frac{A_1}{A_1+d_1^2}.
+ \label{sam:sparseerrors}
+\end{equation}
+No independence among report errors is assumed. The variable $R$ is a proof device, not a correction available to an observer without the true labels.
+
+For the two specified sources choose
+\[
+ n=2000000,\quad B=10000000,\quad\rho=1/10000,\quad
+ b=3/20000,\quad c=99179/3125000.
+\]
+Exact substitution into \eqref{sam:sparseerrors} gives
+\begin{align*}
+ \alpha_s&=\frac{25032226015092744528840625}{634998927977903024107964257}
+ =0.0394208949215168\ldots,\\
+ \beta_s&=\frac{27900695463010851341340625}{699384194430517969365104257}
+ =0.0398932313386483\ldots.
+\end{align*}
+At most thirty million pair-query calls are needed, compared with
+$M=\binom n2=1999999000000$ potential pair entries. This trades more raw samples and additional query variance for fewer queried entries. It is not an optimum in total physical resources. The computation evaluates exact moments and inequalities; it does not simulate or experimentally collect those millions of observations.
+
+The requirement that the graph precede the query randomization is essential. After learning the chosen triples, an adversary could mark every queried pair positive, changing at most $3B=30000000$ entries. This is below the admitted error budget $199999900$, yet every queried triple would score one. The complete graph average still obeys the deterministic sensitivity bound; the query average is no longer an unbiased sample of a previously fixed graph. Stable repeated responses do not repair a graph selected after disclosure of the query indices.
+
+\subsection{Reference sampling with a quality gap}
+\label{sam:quality}
+Suppose a further, separately warranted reference reveals the true equality of a sampled pair. If a fixed report population has $E$ errors among $M$ entries, a uniform sample of $s$ distinct entries has hypergeometric discrepancy count $K$. In particular,
+\[
+ \Pr(K=0)=\frac{\binom{M-E}s}{\binom Ms}\le(1-E/M)^s.
+\]
+A zero-discrepancy acceptance rule with $s=46050$ has false-pass probability below $1/100$ for error fraction at least $10^{-4}$. At that same boundary its probability of accepting a good-enough graph is also at most about one percent. Consequently this particular rule cannot ensure high power for a subsequent detector throughout that boundary class.
+
+A separated pair of quality requirements permits useful guarantees. Sample $s=200000$ distinct entries and accept when $K\le8$. For error fraction at least $10^{-4}$ and at most $10^{-5}$, respectively,
+\begin{align}
+ \Pr(\mathrm{pass})&\le(49997/50000)^{200000}(5/2)^8<47/5000,
+ \label{sam:badpass}\\
+ \Pr(\mathrm{fail})&\le(200007/200000)^{200000}(2/9)^9<29/20000.
+ \label{sam:goodfail}
+\end{align}
+To derive these bounds, compare the convex exponential moment of a sample without replacement with that of independent draws from the same finite population, as in Hoeffding's Theorem 4~\cite{hoeffding}. For the lower tail take $e^{-t}=2/5$, so
+$\Pr(K\le8)\le e^{8t}(1-p+pe^{-t})^s$.
+For the upper tail take $e^t=9/2$, giving
+$\Pr(K\ge9)\le e^{-9t}(1-p+pe^t)^s$.
+Monotonicity in $p$ supplies the two boundary substitutions. The strict decimal-free comparisons in \eqref{sam:badpass}--\eqref{sam:goodfail} are integer inequalities.
+
+If detection occurs only after acceptance, \eqref{sam:sparseerrors} and the quality bounds yield
+\[
+ \alpha_{\rm total}\le\alpha_s+47/5000<1/20,
+ \qquad
+ \mathrm{power}_{\rm total}\ge1-\beta_s-29/20000>19/20,
+\]
+where the power statement assumes a uniformly good alternative class with actual report fraction at most $10^{-5}$. The graph must be fixed before both independent randomizations. A data-dependent good/bad event does not justify conditioning the original sample as if it remained independent. For a rigorous unconditional argument let $G=\{E\le M/10000\}$ and replace $R$ by
+\[
+ R^*=U_{n,3}+\mathbf1_G(\widehat W_{n,B}-W_{n,3}(z)).
+\]
+Conditional centering still gives mean $\mu_i$ and variance at most $A_i$, since
+$\mathbb E[\mathbf1_Gv(z)]\le\mathbb E[\mathbf1_GW_{n,3}(z)]\le\mu_i+b$.
+On $G$ the sparse error event is controlled as before; on its complement the false-pass bound holds pointwise in the fixed sample and graph. The power bound follows by a union bound under the stronger actual-quality premise.
+
+Acceptance is a repeated-sampling statement about a fixed finite population. It is not a posterior probability that a particular accepted graph is good, and it does not certify future observations under drift. If the reference $r$ itself can err relative to truth $t$, then
+$d_H(z,t)\le d_H(z,r)+d_H(r,t)$.
+The second term needs its own warrant; agreement with a shared coarsening does not provide one.
+
+\subsection{The cost of separating adjacent error counts}
+\label{sam:adjacent}
+The next result concerns a different demand: uniform separation of two adjacent finite counts, with no quality gap. Fix an unknown binary error vector of length $M=1999999000000$, fixed before the randomization. A truthful query reveals one entry. There are no auxiliary features, structural restrictions on error locations, or informative side channels. Put $E_0=M/10000=199999900$. Require acceptance probability at least $19/20$ for every vector with at most $E_0$ errors and at most $1/100$ for every vector with at least $E_0+1$ errors. Randomized decisions are allowed.
+
+\begin{proposition}[Minimum worst-case query cap]
+In this experiment the exact minimum number of distinct queries is
+\[
+ s_{\min}=M-105=1999998999895.
+\]
+The same minimum applies to adaptive index selection with that worst-case cap, when choices use only previously revealed answers and private randomness. It is not a bound on expected stopping time.
+\end{proposition}
+\begin{proof}
+Average any proposed procedure over a uniform permutation of the population labels. Uniform guarantees are preserved. Under the uniform arrangement of $E$ marked entries, after $t$ queries with $k$ observed errors any unqueried index has conditional error probability $(E-k)/(M-t)$. Therefore adaptivity cannot change the answer-sequence law. A rule using at most $s$ queries can be padded to $s$ distinct queries. The sufficient statistic is the count
+\[
+ P_E(K=k)=\frac{\binom Ek\binom{M-E}{s-k}}{\binom Ms}.
+\]
+This averaging proves a minimax necessity; it does not assume that nature selects a random arrangement.
+
+Write $r=M-s$ and let $U_E$ count errors in the omitted set of $r$ positions. Then $K=E-U_E$ and
+$\Pr(U_E=u)=\binom Eu\binom{M-E}{r-u}/\binom Mr$.
+At the two boundary counts set
+\[
+ g_r=\Pr(U_{E_0}=0),\quad b_0=\Pr(U_{E_0+1}=0),\quad b_1=\Pr(U_{E_0+1}=1).
+\]
+On the common support, at $K=E_0-u$, the bad-to-good likelihood ratio is
+\[
+ \frac{(E_0+1)(r-u)}{(M-E_0)(u+1)},
+\]
+which increases with $K$. Exchanging accepted probability mass between two counts shows that accepting smaller counts first minimizes bad acceptance at a given good-acceptance requirement. At $r=105,106$, acceptance on $K<E_0$ alone gives less than $19/20$, and acceptance at $K=E_0$ with probability
+$\gamma_r=1-1/(20g_r)$ attains that requirement exactly. Its minimum bad acceptance is
+\[
+ B_r=1-b_0-b_1+\gamma_rb_1.
+\]
+Exact rational evaluation gives $B_{105}=0.00992053452729221435\ldots<1/100$ but
+$B_{106}=0.01001448946901366265\ldots>1/100$.
+At $r=105$, the simpler decision accepting all $K<E_0$, accepting $K=E_0$ with probability $19/20$, and rejecting larger counts has boundary acceptance probabilities
+$0.9505222793491606\ldots$ and $0.00992601900893398\ldots$.
+A monotone coupling in $E$ extends those guarantees to every required count. Less information cannot improve the attainable testing region, since a larger sample can simulate a smaller one by discarding observations. Thus the failure at $r=106$ proves necessity for every smaller cap, and the rule at $r=105$ proves sufficiency.
+\end{proof}
+
+For perspective, adjacent hypergeometric laws satisfy the exact identity
+\[
+ \operatorname{TV}(P_E,P_{E+1})=\frac{s}{M}\max_k h(k),\qquad
+ h=\operatorname{Hypergeom}(M-1,E,s-1).
+\]
+Coupling inclusion of the additional marked position gives
+$P_{E+1}(k)-P_E(k)=(s/M)[h(k-1)-h(k)]$; unimodality telescopes the absolute differences. The weaker bound $\operatorname{TV}\le s/M$ alone does not yield the sharp cap above. Knowledge of a specified changed location, a constrained error pattern, additional reference data, an expected-cost objective, or a nonzero quality gap defines a different experiment.
+
+\subsection{Interpretation and reproducibility}
+\label{sam:interpretation}
+The sufficient detection budgets and the nearly complete inspection requirement are compatible: the former permits separated quality classes, while the latter requires uniform classification across a one-entry boundary. Both depend on a truthful reference and a specified observation mechanism. Neither establishes a prephysical source law, an independently available copy mechanism, or a physical clock. Rejecting one of the two specified paintboxes is evidence within that source comparison, not a test of every proposed relational foundation.
+
+The accompanying computations reconstruct the collision moments, variance bounds, sensitivity examples, rational sparse-error certificate and omitted-count probabilities. Strict decisions use rational or integer inequalities. Displayed decimal expansions aid reading. The unrestricted sensitivity, conditional-variance and minimax assertions rest on the proofs above; finite computation is a check on their instances, not a substitute for them.

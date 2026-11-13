@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm,headheight=15pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,microtype,xcolor,fancyhdr}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage[colorlinks=true,linkcolor=teal!55!black,urlcolor=teal!55!black,citecolor=teal!55!black]{hyperref}
+\definecolor{ink}{HTML}{173C4C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\sffamily Uniform Sobolev bound for the cross-block interpolants}\fancyhead[R]{\small Paper D8}\fancyfoot[C]{\thepage}
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newcommand{\Prob}{\mathbb P}\newcommand{\E}{\mathbb E}\newcommand{\Iset}{\mathcal I}\newcommand{\Cset}{\mathcal C}
+
+\title{\color{ink}\sffamily\large From Prephysical Hypotheses to Physical Models\\[9pt]\LARGE A Uniform Sobolev Bound for the Continuum Cross-Block Interpolants}
+\author{Kirtus Justus\\\small Theoretical Physicist\\\small Port Coquitlam, British Columbia, Canada}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The entropy-difference estimate (B9) of \emph{Cross-Boundary Trace-Class Estimates for Wilson--Dirac Quasifree States} uses a constant $M_s$ that bounds the continuum cross-block interpolants on a fractional Sobolev space. This note defines the relevant space, proves $M_s\le \tfrac12+\max\{c_s,c_s'\}$ for $0\le s<1/2$, where $c_s$ and $c_s'$ are the pointwise-multiplier norms of the indicators of the unit interval and of its complement on $H^s(\mathbb R)$, and records that the bound is independent of the interpolation parameter, the scaled mass and the lattice size. The only external input is the classical multiplier theorem for indicators of half-lines.
+\end{abstract}
+
+\section{Setting}
+Notation follows \cite{cross}. Let $H^s=H^s(\mathbb R;\mathbb C^2)$ with $\|f\|_s^2=\int_{\mathbb R}(1+u^2)^s|\hat f(u)|^2\,du$, and $\chi=\mathbf 1_{(0,1)}$. For $b\ge0$ let $P_b^c$ be the Fourier multiplier with symbol
+\[
+p_b(u)=\tfrac12\Bigl[I-\frac{u\sigma_x+b\sigma_z}{\sqrt{u^2+b^2}}\Bigr],
+\]
+an orthogonal projection on $\mathbb C^2$ for every $(u,b)\ne(0,0)$. Put $X_b=\chi P_b^c(1-\chi)$, $Z_\mu=X_\mu-X_0$ and
+\[
+\mathbb H(X)=\begin{pmatrix}0&X\\X^*&0\end{pmatrix},\qquad
+\mathbb D_\mu=\mathbb H(Z_\mu),\qquad A_\theta=\mathbb H(X_0)+\theta\,\mathbb D_\mu,\qquad Y_\theta=A_\theta+\tfrac12 I,\qquad 0\le\theta\le1 .
+\]
+The block form refers to $L^2(\mathbb R;\mathbb C^2)=L^2((0,1);\mathbb C^2)\oplus L^2(\mathbb R\setminus(0,1);\mathbb C^2)$, $f=f_{\rm in}+f_{\rm out}$ with $f_{\rm in}=\chi f$. Since $A_\theta=(1-\theta)\mathbb H(X_0)+\theta\,\mathbb H(X_\mu)$,
+\begin{equation}\label{eq:action}
+\mathbb H(X_b)f=\chi P_b^c f_{\rm out}\;+\;(1-\chi)P_b^c f_{\rm in}.
+\end{equation}
+
+\begin{definition}[Block Sobolev space]
+For $0\le s<1/2$ let $\mathcal H^s$ be the space of $f\in L^2(\mathbb R;\mathbb C^2)$ whose parts $f_{\rm in},f_{\rm out}$, extended by zero, belong to $H^s$, with
+$\|f\|_{\mathcal H^s}^2=\|f_{\rm in}\|_s^2+\|f_{\rm out}\|_s^2$.
+\end{definition}
+
+The classical theorem of Shamir and Strichartz \cite{strichartz,meyries} states that multiplication by the indicator of a half-line is bounded on $H^s(\mathbb R)$ exactly for $-1/2<s<1/2$. Let $\kappa_s$ be the norm of multiplication by $\mathbf 1_{(0,\infty)}$ on $H^s(\mathbb R)$, $0\le s<1/2$. The $H^s$ norm is invariant under translation and reflection, and $\chi=\mathbf 1_{(0,\infty)}-\mathbf 1_{[1,\infty)}$. Hence the multiplier norms
+\[
+c_s=\|\chi\|_{H^s\to H^s}\le 2\kappa_s,\qquad c_s'=\|1-\chi\|_{H^s\to H^s}\le 1+2\kappa_s
+\]
+are finite, and both are at least one because each multiplier fixes smooth functions supported inside $(0,1)$, respectively outside $[0,1]$. Consequently $\mathcal H^s=H^s$ as sets, with
+$(c_s^2+c_s'^2)^{-1/2}\|f\|_{\mathcal H^s}\le\|f\|_s\le\sqrt2\,\|f\|_{\mathcal H^s}$.
+
+\section{The bound}
+\begin{lemma}[Projection multipliers]\label{lem:proj}
+For every $b\ge0$ and $s\in\mathbb R$, $\|P_b^c f\|_s\le\|f\|_s$.
+\end{lemma}
+\begin{proof}
+$\widehat{P_b^cf}(u)=p_b(u)\hat f(u)$ and $|p_b(u)v|\le|v|$ for almost every $u$; the value at $(u,b)=(0,0)$ is irrelevant. Multiply by $(1+u^2)^s$ and integrate.
+\end{proof}
+
+\begin{theorem}[Uniform bound for the interpolants]\label{thm:Ms}
+Let $0\le s<1/2$. For all $b\ge0$,
+\[
+\|\mathbb H(X_b)\|_{\mathcal H^s\to\mathcal H^s}\le\max\{c_s,c_s'\}.
+\]
+Consequently, for all $\theta\in[0,1]$ and all $\mu\ge0$,
+\[
+\|Y_\theta\|_{\mathcal H^s\to\mathcal H^s}\le M_s:=\tfrac12+\max\{c_s,c_s'\}\le\tfrac32+2\kappa_s ,
+\]
+and $M_s$ depends only on $s$.
+\end{theorem}
+\begin{proof}
+By \eqref{eq:action} the inner part of $\mathbb H(X_b)f$ is $\chi P_b^cf_{\rm out}$ and its outer part is $(1-\chi)P_b^cf_{\rm in}$. Lemma~\ref{lem:proj} and the definitions of $c_s,c_s'$ give
+$\|\chi P_b^cf_{\rm out}\|_s\le c_s\|f_{\rm out}\|_s$ and $\|(1-\chi)P_b^cf_{\rm in}\|_s\le c_s'\|f_{\rm in}\|_s$. Therefore
+$\|\mathbb H(X_b)f\|_{\mathcal H^s}^2\le c_s^2\|f_{\rm out}\|_s^2+c_s'^2\|f_{\rm in}\|_s^2\le\max\{c_s,c_s'\}^2\|f\|_{\mathcal H^s}^2$.
+The second claim follows from $Y_\theta=\tfrac12I+(1-\theta)\mathbb H(X_0)+\theta\,\mathbb H(X_\mu)$ and the triangle inequality.
+\end{proof}
+
+\begin{corollary}[Use in the entropy-difference estimate]\label{cor:B9}
+Let $0<s<1/2$, let $Y_{L,\theta}$ be the lattice interpolant of \cite{cross}, and assume its estimate (B8), $\|\widetilde P_{L,\mu}-P_\mu^c\|_{H^s\to L^2}\le C_sL^{-s}$ uniformly in $\mu\ge0$. Then for integers $k\ge1$,
+\[
+\bigl\|(Y_{L,\theta}^k-Y_\theta^k)\mathbb D_\mu\bigr\|_1\le \sqrt2\,C_s\,k\,M_s^{\,k-1}L^{-s}\,\|\mathbb D_\mu\|_{\mathcal S_1(L^2,\mathcal H^s)} .
+\]
+If a polynomial $\sum_{k\le n}a_kY^k$ has $\sum_k|a_k|\le C7^n$, the corresponding difference of traces against $\mathbb D_\mu$ is at most $\sqrt2\,C\,C_s\,n\,(7M_s)^nL^{-s}\|\mathbb D_\mu\|_{\mathcal S_1(L^2,\mathcal H^s)}$. With $s=1/4$ and $n=\lfloor\log L/(8\log(7M_{1/4}))\rfloor$ one has $(7M_{1/4})^n\le L^{1/8}$, so this term is $O(n\,L^{-1/8})$ times the nuclear norm, uniformly in $\theta$ and $\mu$.
+\end{corollary}
+\begin{proof}
+Write $Y_{L}^k-Y^k=\sum_{j=0}^{k-1}Y_L^{\,j}(Y_L-Y)Y^{k-1-j}$. The lattice interpolants are $L^2$ contractions \cite{cross}. By \eqref{eq:action} and its lattice analogue, $(Y_L-Y)f$ is a convex combination of terms $\chi(\widetilde P-P^c)f_{\rm out}+(1-\chi)(\widetilde P-P^c)f_{\rm in}$, whose $L^2$ norm is at most $C_sL^{-s}(\|f_{\rm out}\|_s+\|f_{\rm in}\|_s)\le\sqrt2\,C_sL^{-s}\|f\|_{\mathcal H^s}$. Theorem~\ref{thm:Ms} bounds $Y^{k-1-j}$ on $\mathcal H^s$ by $M_s^{\,k-1-j}\le M_s^{\,k-1}$, since $M_s\ge3/2$. The ideal property of the nuclear norm gives the first display; summing over $k\le n$ gives the second. The choice of $n$ gives $n\log(7M_{1/4})\le\tfrac18\log L$.
+\end{proof}
+
+\paragraph{Scope.} The theorem supplies the constant written $M_s$ in the display preceding (B9) of \cite{cross} and shows that it does not depend on $\theta$, $\mu$ or $L$. The corollary uses (B8), the contraction property of the lattice interpolants and the polynomial coefficient bound as stated there; it does not re-prove them, the nuclear estimate (B7), the trace-norm comparison (B6) or the Chebyshev approximation rate. The constants $c_s,c_s'$ are not evaluated numerically here. A finite-grid computation at $s=1/4$ (accompanying program \texttt{check\_Ms\_bound.py}) is consistent with the inequality; it is a sanity check and not part of the proof.
+
+\section*{Research and computational disclosure}
+This is an AI-assisted mathematical research manuscript prepared within the research program \emph{From Prephysical Hypotheses to Physical Models}. Research direction and scholarly responsibility: Kirtus Justus. The argument was drafted by Claude (Anthropic) at the author's direction and is presented for examination; it has not been independently refereed. Assistance does not imply provider endorsement.
+
+\begin{thebibliography}{9}
+\bibitem{cross} K. Justus, \emph{Cross-Boundary Trace-Class Estimates for Wilson--Dirac Quasifree States}, manuscript (23 October 2026), equations (B6)--(B9) and the finite cross-block trace-path lemma.
+\bibitem{strichartz} R. S. Strichartz, ``Multipliers on fractional Sobolev spaces,'' \emph{Journal of Mathematics and Mechanics} 16 (1967), 1031--1060.
+\bibitem{meyries} M. Meyries and M. Veraar, ``Pointwise multiplication on vector-valued function spaces with power weights,'' \emph{Journal of Fourier Analysis and Applications} 21 (2015), 95--136, \href{https://arxiv.org/abs/1311.7404}{arXiv:1311.7404}; the introduction states the Shamir--Strichartz range $-1/p'<s<1/p$ for $H^{s,p}(\mathbb R^d)$.
+\end{thebibliography}
+\end{document}

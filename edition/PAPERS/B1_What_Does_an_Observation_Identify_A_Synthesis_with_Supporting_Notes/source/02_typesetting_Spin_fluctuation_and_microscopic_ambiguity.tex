@@ -1,0 +1,218 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Spin fluctuation and microscopic ambiguity},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Spin fluctuation and microscopic ambiguity}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{I. Standard spin-fluctuation contraction: exact finite-size identities}\label{i.-standard-spin-fluctuation-contraction-exact-finite-size-identities}
+
+For each positive integer \texttt{N} let the microscopic algebra be \texttt{M\_2(C)\^{}\{⊗N\}} with conventional Pauli matrices. Choose the \textbf{declared physical spin product state}
+
+\[
+\rho_{m,N}=\rho_m^{\otimes N},\qquad \rho_m=(I+m\sigma_z)/2,\quad 0<m\le1.
+\]
+
+Define collective, centered transverse fluctuations
+
+\[
+Q_N=(2mN)^{-1/2}\sum_{j=1}^{N}\sigma_x^{(j)},\qquad
+P_N=(2mN)^{-1/2}\sum_{j=1}^{N}\sigma_y^{(j)}.
+\]
+
+Then precisely, \textbf{at every finite N},
+
+\[
+[Q_N,P_N]=\frac{i}{mN}\sum_{j=1}^N\sigma_z^{(j)},\qquad
+\langle[Q_N,P_N]\rangle=i.
+\]
+
+Because independent \texttt{sigma\_z} variables have variance \texttt{1-m²} in the product state,
+
+\[
+\left\langle([Q_N,P_N]-iI)^\dagger([Q_N,P_N]-iI)\right\rangle
+=\frac{1-m^2}{Nm^2}.
+\]
+
+\textbf{Convergence qualification:} this is mean-square convergence \emph{relative to the chosen sequence of states}, not operator-norm convergence. In fact \texttt{\textbar{}\textbar{}{[}Q\_N,P\_N{]}-iI\textbar{}\textbar{}\ =\ 1+1/m} for every \texttt{N} (the all-down eigenvector realizes the maximum), so the operator-norm claim is false even for \texttt{m=1}.
+
+For real \texttt{u,v} let \texttt{a=u/sqrt(2mN)}, \texttt{b=v/sqrt(2mN)}. Different sites commute and the single-site spin expectation is obtained by multiplying the two Pauli exponentials. Thus the \textbf{exact} finite-N ordered characteristic function is
+
+\[
+C_N(u,v)=\langle e^{iuQ_N}e^{ivP_N}\rangle
+=\left(\cos a\cos b-im\sin a\sin b\right)^N.
+\]
+
+For every fixed \texttt{m\textgreater{}0}, \texttt{u,v}, taking the logarithm and using the uniform small-angle expansion gives
+
+\[
+\lim_{N\to\infty}C_N(u,v)
+=\exp\left[-\frac{u^2+v^2}{4m}-\frac{iuv}{2}\right].
+\]
+
+The reversed product has the opposite imaginary Weyl phase. More generally, the analogous single-site expansion for any \textbf{finite word} in transverse Weyl exponentials yields the standard Gaussian Weyl algebra, with limiting \texttt{{[}Q,P{]}=iI} in the regular quasi-free fluctuation representation. This reproduces known quantum central-limit results; it is not a new theorem. Its limiting covariance is \texttt{V=(1/(2m))\ I\_2}, with symplectic matrix \texttt{Omega={[}{[}0,1{]},{[}-1,0{]}{]}}, and \texttt{V+iOmega/2\ \textgreater{}=0} because \texttt{0\textless{}m\textless{}=1}. The corresponding effective oscillator thermal occupancy is \texttt{nbar=(1-m)/(2m)}. This does not mean the original spins were thermal harmonic oscillators.
+
+\textbf{Numerical controls.} The accompanying fluctuation calculation builds full \texttt{2\^{}N\ ×\ 2\^{}N} tensor-product spin matrices for \texttt{N=2,3,4,6}; their traces of the ordered exponential products agree with the factorized exact formula to \texttt{\textless{}2e-13}. High-precision direct formula checks at \texttt{N=2,4,16,64,256,1024,4096} approach the displayed limit. For \texttt{m=.8,u=v=.7}, the limit is approximately \texttt{0.7142175684315161\ -0.17857058381200364\ i} and the absolute errors are \texttt{0.0024151} at \texttt{N=16}, \texttt{0.00014976} at \texttt{N=256}, and \texttt{9.36e-6} at \texttt{N=4096}. No numerical evidence is being used as a substitute for the elementary limit proof.
+
+\subsubsection{The unpolarized/tracial negative control}\label{the-unpolarizedtracial-negative-control}
+
+At \texttt{m=0}, the preceding \texttt{Q\_N,P\_N} scaling is undefined. The appropriate unrescaled-variance fluctuations are \texttt{F\_x=N\^{}-1/2\ sum\ sigma\_x}, \texttt{F\_y=N\^{}-1/2\ sum\ sigma\_y} in the maximally mixed state \texttt{rho\_0=I/2}. They obey
+
+\[
+\langle e^{iuF_x}e^{ivF_y}\rangle
+=\left[\cos(u/\sqrt N)\cos(v/\sqrt N)\right]^N
+\longrightarrow e^{-(u^2+v^2)/2},
+\]
+
+and \texttt{E({[}F\_x,F\_y{]})=0}, \texttt{E({[}F\_x,F\_y{]}†{[}F\_x,F\_y{]})=4/N}. The limit is the characteristic function of \textbf{two commuting, independent classical Gaussians}, even though the microscopic operators do not commute. This is a statement about this specific Gaussian fluctuation sector, not a no-go for quantum behavior in all unpolarized systems or other scaling limits.
+
+For a state sequence with \texttt{m\_N→0}, the normalized CCR commutator variance is \texttt{(1-m\_N²)/(N\ m\_N²)}, so it is \textbf{not} uniform in polarization. Its decay would require \texttt{N\ m\_N²→∞}, and the oscillator covariance \texttt{1/(2m\_N)} diverges regardless. One cannot extrapolate the fixed-\texttt{m} regular oscillator limit all the way to \texttt{m=0} using the same normalization.
+
+\subsection{II. Exact microscopic non-identification under complete collective controls}\label{ii.-exact-microscopic-non-identification-under-complete-collective-controls}
+
+Compare two distinct microscopic systems initialized in their maximally polarized product states:
+
+\begin{itemize}
+\tightlist
+\item
+  Model A: \texttt{n} spin-1 sites, full space dimension \texttt{3\^{}n}.
+\item
+  Model B: \texttt{2n} spin-1/2 sites, full space dimension \texttt{2\^{}(2n)}.
+\end{itemize}
+
+The initial state in both models is the highest-weight state of \textbf{total spin \texttt{J=n}}. Under the total-spin generators \texttt{J\_x,J\_y,J\_z}, both cyclic subspaces carry the unique spin-\texttt{J=n} irreducible representation, of dimension \texttt{2n+1}. The SU(2) raising/lowering relations on a highest-weight vector uniquely determine all matrix elements within this irrep:
+
+\[
+J_\pm|J,M\rangle=\sqrt{(J\mp M)(J\pm M+1)}\,|J,M\pm1\rangle.
+\]
+
+Therefore an intertwining unitary between these \emph{cyclic irreducible subspaces} maps the initial vectors and every polynomial and bounded functional calculus of the \textbf{collective} \texttt{J\_a} to each other. All corresponding collective preparations, collective gates (including nonlinear functions such as \texttt{J\_z²}), and collective effects give \textbf{exactly equal outcome probabilities}, not merely asymptotically equal ones. This is familiar angular-momentum representation theory, not publication novelty.
+
+For \texttt{n=3}, the complete microscopic Hilbert spaces have dimensions \texttt{27} versus \texttt{64}, but all collective experiments restricted to the common seven-dimensional \texttt{J=3} irrep agree. A full-matrix implementation checks noncommuting rotation sequences and nonlinear collective evolution for \texttt{n=1,2,3}; discrepancies are below \texttt{1e-15}.
+
+\textbf{Scope of equivalence:} no claim of equality of full observable algebras. A physically calibrated site-resolved intervention, or operations accessing another total-spin sector, can distinguish the models. The comparison demonstrates that knowing the collective bosonic limit, and even far more than that limit, does not identify microscopic constituent number/type without an adequate observation toolbox.
+
+\subsection{III. Ricker-filtered emergent bosons do not select geometry}\label{iii.-ricker-filtered-emergent-bosons-do-not-select-geometry}
+
+This section deliberately reconnects to the program's \emph{negative controls} only; it does not use a wavelet as a particle ontology. Supply a connected graph with real symmetric positive Laplacian \texttt{L}, and define the mathematical scale-response operator
+
+\[
+W_s=s L e^{-sL},\quad s>0.
+\]
+
+Place \texttt{N} independent spins at \textbf{each already identified graph vertex} and take the \texttt{N→∞} polarized fluctuation limit at fixed \texttt{m\textgreater{}0}. It yields an independent canonical pair \texttt{Q\_i,P\_i} at every \emph{assumed} vertex. The filtered fields \texttt{Q\_s=W\_s\ Q}, \texttt{P\_t=W\_t\ P} satisfy
+
+\[
+[Q_s(i),P_t(j)] = i(W_sW_t)_{ij}
+\]
+
+in the limit. The full 4-site spin matrix calculation verifies the same relation for the \textbf{finite-N commutator expectation} without invoking the limit. The scale labels remain redundant/noncanonical; the exact Laplacian zero mode is removed.
+
+An aggregate, mode-blind multiscale commutator measures only
+
+\[
+\mathcal A(s,t)=\frac1{V}\frac1i\sum_i\langle [Q_s(i),P_t(i)]\rangle
+=\frac1V\operatorname{Tr}(W_sW_t),
+\]
+
+which depends on the eigenvalues of the supplied \texttt{L} alone. In the previous exact graph test, the nonisomorphic 16-vertex rook and Shrikhande graphs have identical Laplacian spectra \texttt{0\^{}(1),4\^{}(6),8\^{}(9)}. Both therefore yield
+
+\[
+\boxed{\mathcal A(s,t)=st\,[6e^{-4(s+t)}+36e^{-8(s+t)}]}
+\]
+
+\textbf{for every pair of mathematical scales}, despite different labeled connectivity. At \texttt{s=.12,t=.31}, both values are \texttt{0.0829085908049164}, with spectral-formula residual \texttt{\textless{}5e-17}. The full labeled filtered commutator kernels differ in Frobenius norm by \texttt{0.0604811368} under the exhibited fixed vertex labeling.
+
+The latter distinction is physically actionable \textbf{only if that vertex identification and spatial measurement protocol have independent meaning}. There is no emergent local measurement basis or spatial metric from CCR or the aggregate wavelet result. Thus bosonic algebra plus multi-scale spectral data does not resolve the already identified inverse-geometry ambiguity. This is a synthesis of known quantum-fluctuation and cospectral-graph phenomena, not a novel theorem.
+
+\subsection{IV. Microscopic dynamics is a separate ingredient, and bosons do not imply Lorentz invariance}\label{iv.-microscopic-dynamics-is-a-separate-ingredient-and-bosons-do-not-imply-lorentz-invariance}
+
+As a controlled physical \emph{example}, supply a one-dimensional periodic spin-1/2 chain with independently calibrated hopping \texttt{J\textgreater{}0}, on-site energy \texttt{Delta=2J+mu} and an independently specified physical evolution parameter:
+
+\[
+H=\Delta\sum_j n_j-J\sum_j(\sigma^-_j\sigma^+_{j+1}+\sigma^+_j\sigma^-_{j+1}),\quad
+n_j=(I-\sigma_z^{(j)})/2.
+\]
+
+In the \textbf{single-down-spin excitation sector}, the exact restricted Hamiltonian is \texttt{Delta\ I-J\ A\_cycle}, giving
+
+\[
+E(k)=\mu+2J[1-\cos(ka)]=\mu+Ja^2k^2+O(k^4a^4).
+\]
+
+For \texttt{J=.75,mu=.2} on a six-site ring, the independent full \texttt{2\^{}6} spin matrix has one-excitation energies \texttt{{[}.2,.95,.95,2.45,2.45,3.2{]}}, matching the formula to \texttt{\textless{}9e-16}. At \texttt{mu=0}, the one-particle band touches zero with \textbf{quadratic} long-wavelength dispersion (\texttt{z=2}), not the \texttt{z=1} linear spectrum of a relativistic massless scalar. Calling this toy band's touching point a Goldstone boson would require a separate symmetry-breaking argument; none is asserted for the tuned XY model.
+
+In actual symmetry-broken nonrelativistic many-body theories, Watanabe and Murayama (2012, 2014) show that pairs of broken generators with nonzero commutator expectation can describe a single low-energy mode, often with nonrelativistic dispersion. This is structurally suggestive of the same spin commutator mechanism, but \textbf{our product-state central limit is not by itself a spontaneous-symmetry-breaking theorem}.
+
+Ricker filtering \texttt{W\_s} on such an already-defined spatial generator only reweights wave numbers; it neither changes \texttt{E(k)} nor supplies the physical space, time, sources or causality needed for a field theory.
+
+\end{document}

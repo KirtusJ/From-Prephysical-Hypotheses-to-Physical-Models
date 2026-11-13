@@ -1,0 +1,661 @@
+\section{Finite Signed Graphs and Binary Extension Constraints}
+\label{fin:chapter}
+
+The models in this section are finite mathematical comparators.  The
+graph, real or binary variables, variational functional, probability
+measure, and any quantum representation are specified separately.
+Absence of a time parameter from a functional is not a derivation of
+physical activity without time.  In particular, a variational minimum
+does not itself choose a sampling law or an observation instrument.
+
+\subsection{A graph double well and its exact threshold}
+\label{fin:graph-action}
+
+For a finite undirected simple graph \(G=(V,E)\), let \(A_G,D_G\)
+be its adjacency and degree matrices and \(Q_G=D_G+A_G\) its signless
+Laplacian.  For real amplitudes \(a_i\), define
+\[
+ S(a)=\frac{\kappa}{2}\sum_{\{i,j\}\in E}(a_i+a_j)^2
+       +\frac{\lambda}{4}\sum_i(a_i^2-m^2)^2,
+ \qquad \kappa,\lambda,m>0 .
+\]
+The signless-Laplacian quadratic form is standard graph theory
+\cite{fin:signless}.
+
+\begin{theorem}[Threshold, bipartiteness, and balance]\label{fin:threshold}
+Let \(q_{\min}\) be the least eigenvalue of \(Q_G\).
+The origin is the unique global minimum of \(S\) if
+\(\kappa q_{\min}\ge\lambda m^2\).
+If \(\kappa q_{\min}<\lambda m^2\), global nonzero minimizers exist and
+the origin is not a global minimum.
+For connected \(G\), a zero-action configuration exists exactly when
+\(G\) is bipartite.  In that case its only zero-action configurations
+are the two alternating assignments of magnitude \(m\).
+They have zero signed total exactly when the two bipartition classes
+have equal size.
+\end{theorem}
+\begin{proof}
+Expanding the squares gives
+\[
+ S(a)-S(0)=\frac12a^T(\kappa Q_G-\lambda m^2 I)a
+                    +\frac{\lambda}{4}\sum_i a_i^4 .
+\]
+When the quadratic form is nonnegative, the quartic term is strictly
+positive for every nonzero \(a\), even at equality of the threshold.
+When the least quadratic coefficient is negative, substitute \(a=tv\)
+for a corresponding unit eigenvector.  The negative order-\(t^2\)
+term dominates the positive order-\(t^4\) term for sufficiently small
+nonzero \(t\).  The functional is coercive, so it attains its global
+minimum, which is then nonzero.
+Every term of the original functional is nonnegative.  Zero action
+requires \(|a_i|=m\) and \(a_i=-a_j\) on every edge.
+On a connected graph these relations propagate a unique sign choice
+up to global reversal and are consistent precisely when there is no
+odd cycle, equivalently when the graph is bipartite.
+For bipartition \(U\sqcup W\), the signed sums are
+\(\pm m(|U|-|W|)\).
+\end{proof}
+
+On the four-cycle the minima are \(\pm(m,-m,m,-m)\).
+Their Hessian is \(\kappa Q_G+2\lambda m^2I\), with eigenvalues
+\[
+ 2\lambda m^2,\quad
+ 2\kappa+2\lambda m^2\ \text{(twice)},\quad
+ 4\kappa+2\lambda m^2 .
+\]
+The signed sum is zero, the mean square is \(m^2\), and
+\(\sum_{\{i,j\}\in E}(a_i-a_j)^2=16m^2\).
+These are positive relational variation and a strict variational
+minimum with zero action.  They do not describe evolution under a
+physical equation of motion.  On \(K_{1,3}\), the zero-action
+configurations instead have total signed amplitudes \(\pm2m\).
+An equally weighted ensemble of them has mean zero, which is a
+different statement from configurationwise balance.
+
+If the amplitudes are additionally restricted to \(a_i=m\sigma_i\),
+\(\sigma_i\in\{-1,+1\}\), the onsite term vanishes and
+\[
+ S(\sigma)=2\kappa m^2 f_G(\sigma),\qquad
+ \min_\sigma S=2\kappa m^2(|E|-\operatorname{MaxCut}(G)),
+\]
+where \(f_G\) counts equal-sign edges.  This discrete restriction and
+its Ising/MaxCut problem are not the unrestricted continuous
+minimization problem.
+
+\subsection{Action-count statistics and graph identification}
+\label{fin:partitions}
+
+An additional Gibbs stipulation gives
+\[
+ Z_G(z)=\sum_{\sigma\in\{\pm1\}^V}z^{f_G(\sigma)},\qquad
+ p_G(\sigma)=z^{f_G(\sigma)}/Z_G(z),\qquad z>0.
+\]
+No probability law has been inferred from the extrema alone.
+
+\begin{proposition}[Trees, cycles, and the even-subgraph formula]
+\label{fin:partition-theorem}
+Every \(n\)-vertex tree has \(Z_G(z)=2(1+z)^{n-1}\).
+For a cycle of length \(n\),
+\[
+ Z_{C_n}(z)=(1+z)^n+(z-1)^n .
+\]
+For any finite graph,
+\[
+ Z_G(z)=2^{|V|}\left(\frac{1+z}{2}\right)^{|E|}
+ \sum_{\substack{F\subseteq E\\\deg_F(v)\text{ even for all }v}}
+       \left(\frac{z-1}{z+1}\right)^{|F|}.
+\]
+\end{proposition}
+\begin{proof}
+On a rooted tree, choose the root sign and, independently as
+combinatorial coordinates, whether each edge joins equal signs.
+These choices bijectively determine the entire configuration.
+Summing their weights gives \(2(1+z)^{n-1}\).
+On a cycle the transfer matrix
+\(\left(\begin{smallmatrix}z&1\\1&z\end{smallmatrix}\right)\)
+has eigenvalues \(1+z,z-1\); its \(n\)th-power trace counts all closed
+sign sequences and gives the stated formula.
+Finally, for each edge,
+\[
+ z^{\mathbf1_{\{\sigma_i=\sigma_j\}}}
+ =\frac{1+z}{2}\left(1+\frac{z-1}{z+1}\sigma_i\sigma_j\right).
+\]
+Expand the product over edges.  Summing over each vertex sign kills
+every term in which its degree in the selected edge set is odd;
+all remaining terms contribute \(2^{|V|}\).
+\end{proof}
+
+Summing out a pendant vertex contributes \(1+z\), regardless of where
+it was attached.  In particular, a connected unicyclic graph with
+cycle length \(\ell\) has
+\((1+z)^{n-\ell}Z_{C_\ell}(z)\).
+Thus action-count statistics can lose graph shape.  Such
+partition-function equivalence is an established graph-identification
+issue \cite{fin:ising}.
+
+\subsubsection{A stipulated quantum observation of the action count}
+
+To make one observation map explicit, take an orthonormal configuration
+register and a two-dimensional sign register, and stipulate
+\[
+ |\Psi_G\rangle=\sum_\sigma\sqrt{p_G(\sigma)}\,|\sigma\rangle
+          |\chi_{f_G(\sigma)}\rangle,\qquad
+ |\chi_f\rangle=
+ \frac{e^{i\theta f}|+\rangle+e^{-i\theta f}|-\rangle}{\sqrt2}.
+\]
+The Hilbert spaces, phase rule, tensor product and Born measurements are
+additional inputs.
+
+\begin{proposition}[Reduced sign law and conditional mixedness]
+\label{fin:graph-readout}
+The reduced sign state and two-copy SWAP-test probability are
+\[
+ \rho_G=\frac12\begin{pmatrix}1&C_G\\\overline C_G&1\end{pmatrix},
+ \qquad C_G=\frac{Z_G(ze^{2i\theta})}{Z_G(z)},\qquad
+ p_{\rm SWAP+}=\frac{3+|C_G|^2}{4}.
+\]
+Graphs with identical \(Z_G\) have identical sign-register laws for
+all common parameters and all measurements on independently prepared
+copies.  The pure conditional-sign ansatz is not in general closed
+under eliminating graph vertices by ordinary partial trace.
+\end{proposition}
+\begin{proof}
+Tracing the orthonormal configuration labels gives
+\(\rho_G=\sum_\sigma p_G(\sigma)|\chi_f\rangle\langle\chi_f|\).
+Its off-diagonal entry is half the characteristic function
+\(E e^{2i\theta f}\), proving the ratio formula.
+The SWAP identity is
+\(p_{\rm SWAP+}=(1+\operatorname{Tr}\rho_G^2)/2\), and
+\(\operatorname{Tr}\rho_G^2=(1+|C_G|^2)/2\).
+Equality of the reduced state gives equality of all its independently
+prepared tensor powers.
+
+For the failure of closure, eliminate vertex three of a triangle and
+fix either fully specified equal-sign configuration of the retained
+vertices.  The eliminated sign has action counts \(f=1,3\) with
+relative weights \(z,z^3\).  The conditional visibility is
+\[
+ C_{\rm eq}=\frac{e^{2i\theta}+z^2e^{6i\theta}}{1+z^2},\qquad
+ |C_{\rm eq}|^2=
+ \frac{1+z^4+2z^2\cos(4\theta)}{(1+z^2)^2}.
+\]
+For \(z>0\) and \(e^{4i\theta}\ne1\), this is strictly less than one.
+The resulting conditional sign state is mixed, whereas the original
+ansatz assigns a pure sign state to every complete graph configuration.
+Retuning the smaller graph's parameters cannot remove that difference
+while retaining this pure conditional ansatz.
+\end{proof}
+
+At \(z=1/2,\theta=\pi/8\), the equal retained-sign event has probability
+\(5/13\); its conditional state has \(|C_{\rm eq}|^2=17/25\) and
+purity \(21/25\).  Its distance from the nearest pure qubit state is
+\((5-\sqrt{17})/10\), since the Bloch-vector length is \(\sqrt{17}/5\).
+For the complete triangle and square sign states, respectively,
+\[
+ |C_{C_3}|^2=145/169,\quad |C_{C_4}|^2=801/1681,\qquad
+ p_{C_3}=163/169,\quad p_{C_4}=1461/1681.
+\]
+An enlarged family of arbitrary joint density matrices is closed under
+partial trace; this is a valid positive comparison, but it replaces
+the restricted pure conditional ansatz with ordinary mixed-state
+quantum theory.
+
+The reduced state already has a conventional random-phase preparation:
+\[
+ \sum_fP(f)e^{i\theta fZ}|+\!x\rangle\langle+\!x|e^{-i\theta fZ}.
+\]
+It is not a classical simulation of all quantum experiments.
+Writing \(F,F'\) for independent action counts also gives
+\[
+ 1-|C_G|^2=E[1-\cos(2\theta(F-F'))]
+ \le4\theta^2\operatorname{Var}(F).
+\]
+Thus \(1-p_{\rm SWAP+}\le\theta^2\operatorname{Var}(F)\);
+the leading small-phase term is
+\(\theta^2\operatorname{Var}(F)\).
+At \(\theta=0\), or as \(z\to0^+\) for a fixed finite graph, the
+SWAP probability tends to one.  The nonzero finite-parameter contrast
+does not persist uniformly in those limits.
+
+\begin{example}[Graph aliases with different squared magnetization]
+\label{fin:graph-aliases}
+Let \(M=\sum_i\sigma_i\).
+On vertices \(0,\ldots,4\), take edge sets
+\[
+ A_5=\{01,12,20,03,04\},\qquad
+ B_5=\{01,12,20,03,34\}.
+\]
+Their degree sequences differ, so they are nonisomorphic, but
+both have \(Z_5=2z(1+z)^2(3+z^2)\).
+On vertices \(0,\ldots,5\), take
+\[
+ A_6=\{01,05,12,15,23,24,34,45\},\qquad
+ B_6=\{01,04,05,12,15,23,25,34\}.
+\]
+Both have degree sequence \((3,3,3,3,2,2)\).
+Their two degree-two vertices are nonadjacent in \(A_6\) and adjacent
+in \(B_6\), proving nonisomorphism.  Both have
+\[
+ Z_6=2z^2(1+z)^2(1+z^2)(z^2-2z+5).
+\]
+Here an edge \(ij\) denotes the unordered pair \(\{i,j\}\).
+\end{example}
+
+For a complete finite check of the last claims, let
+\(W_G(u)=\sum_{\sigma:M^2=u}z^{f_G(\sigma)}\).
+Fixing the sign at vertex zero and doubling enumerates all
+configurations.  The resulting polynomials for the two \(A\) graphs are
+\[
+\begin{array}{c|l}
+u&W_{A_5}(u)\\ \hline
+1&4z^3+12z^2+4z\\
+9&4z^4+4z^3+2z\\
+25&2z^5
+\end{array}
+\qquad
+\begin{array}{c|l}
+u&W_{A_6}(u)\\ \hline
+0&2z^6+4z^4+8z^3+6z^2\\
+4&8z^5+10z^4+8z^3+4z^2\\
+16&4z^6+8z^5\\
+36&2z^8 .
+\end{array}
+\]
+For the five-vertex pair the only differences \(W_{A_5}-W_{B_5}\)
+are \(+2z(1+z)(1-z)^2\) at \(u=9\) and its negative at \(u=1\).
+For the six-vertex pair they are \(+2z^2(1+z)(1-z)^3\) at \(u=4\)
+and its negative at \(u=0\).
+These identities specify all the \(B\) polynomials as well and prove
+the equal partition functions by summation.  Dividing by the common
+normalization gives, for \(0<z\le1\),
+\[
+ \operatorname{TV}_5=
+ \frac{(1-z)^2}{(1+z)(3+z^2)},\qquad
+ \operatorname{TV}_6=
+ \frac{(1-z)^3}{(1+z)(1+z^2)(z^2-2z+5)}.
+\]
+At \(z=1/2\), these are \(2/39\) and \(4/255\).
+The differences of \(E M^2\) are respectively eight and four times
+these distances.  The six-vertex distance decays cubically as \(z\to1\),
+with leading term \((1-z)^3/16\).
+Observing \(M^2\) uses configuration-sensitive information absent from
+the reduced sign register.  These are exact distributional contrasts,
+not measured effects or instrumental precision claims.
+
+\subsubsection{Complete labelled sign observations recover adjacency}
+\label{fin:labelled-sign-recovery}
+
+The graph aliases above concern a restricted observation.  There is a
+positive identification result when the entire labelled sign law
+\(p_G(\sigma)=z^{f_G(\sigma)}/Z_G(z)\) is available, with known
+\(0<z<1\) and a finite simple graph on a fixed labelled vertex set.
+Fix distinct vertices \(i,j\) and any assignment \(\tau\) of all other
+signs.  Write \(p_{ab}=p_G(\sigma_i=a,\sigma_j=b,\tau)\) for
+\(a,b\in\{+,-\}\).  Strict positivity makes the ratio well defined, and
+\[
+ \frac{p_{++}p_{--}}{p_{+-}p_{-+}}
+       =z^{\,2A_{ij}},\qquad
+ A_{ij}=\frac{\log(p_{++}p_{--}/p_{+-}p_{-+})}{2\log z}.
+\]
+Indeed, an edge not joining \(i\) and \(j\) contributes equally to the
+two numerator and two denominator exponents: edges to a fixed outside
+sign have one equal and one unequal endpoint assignment in either
+product.  The edge \(ij\), if present, contributes two in the numerator
+and zero in the denominator.  Normalization cancels.  Thus the ratio
+is \(z^2\) on an edge and one otherwise, recovering every labelled
+adjacency entry.
+
+At \(z=1\) the law is uniform for every graph, so the contrast vanishes.
+The zero-temperature endpoint can have support zeros and does not obey
+this positivity argument.  Unlabelled observations or the reduced
+action-count register do not supply these four probabilities.  Exact
+population recovery therefore preserves the graph-alias counterexamples
+and makes no finite-sample or physical-access guarantee.
+
+\subsection{Opposite-sign adjacency and an operator-dependent spectrum}
+\label{fin:spectra}
+
+\begin{proposition}[Complete-bipartite spectra]\label{fin:bipartite-spectrum}
+The rule \(i\sim j\) exactly when \(\sigma_i\ne\sigma_j\) produces
+an empty graph or a complete bipartite graph \(K_{p,q}\).
+For \(p,q>0\), \(N=p+q\), the symmetric normalized Laplacian has spectrum
+\[
+ \{0,\ 1^{(N-2)},\ 2\},
+\]
+whereas the unnormalized Laplacian has eigenvalues
+\[
+ 0,\quad q\ \text{with multiplicity }p-1,\quad
+ p\ \text{with multiplicity }q-1,\quad N.
+\]
+\end{proposition}
+\begin{proof}
+The two sign classes determine all edges, giving \(K_{p,q}\).
+Its normalized adjacency matrix has off-diagonal blocks
+\(J_{p,q}/\sqrt{pq}\) and its transpose.  On vectors constant within
+each part its eigenvalues are \(+1,-1\); on the within-part
+zero-sum spaces it vanishes.  Subtracting from identity proves the
+normalized spectrum.
+For the unnormalized Laplacian, a vector supported on the first part
+and summing to zero has eigenvalue \(q\), and analogously the other
+part gives \(p\).  The remaining two-dimensional constant-on-parts
+space has eigenvalues \(0,N\).
+\end{proof}
+
+Thus \(K_{1,3}\) and \(K_{2,2}\) are normalized-Laplacian isospectral,
+while their unnormalized spectra are \((0,1,1,4)\) and \((0,2,2,4)\).
+The normalized heat trace and its formal dimension diagnostic are
+\[
+ K_N(s)=\frac{1+(N-2)e^{-s}+e^{-2s}}N,\qquad
+ d_{\rm spec}(s)=
+ \frac{2s[(N-2)e^{-s}+2e^{-2s}]}
+      {1+(N-2)e^{-s}+e^{-2s}}.
+\]
+At each fixed \(s>0\), \(d_{\rm spec}(s)\to2s\) as \(N\to\infty\).
+Choosing \(s=1\) gives the number two while the ordinary graph diameter
+stays at most two.  There is no scale-independent plateau in this
+fixed-\(s\) limit.  A chosen graph operator and one diffusion-scale
+number therefore do not establish a physical spatial dimension or
+a local continuum.
+
+\subsection{One four-sign law and its exact extensions}
+\label{fin:four-law}
+
+For four signs, put \(M_4=\sum_i\sigma_i\) and
+\[
+ P_4(\sigma)=\frac{2^{-M_4^2/4}}{81/8}.
+\]
+Let \(K_N\) count the plus signs among \(N\) coordinates.  Grouping
+the sixteen configurations by \(K_4\) gives
+\begin{equation}\label{fin:target}
+ P_4(K_4=k)=
+ \left(\frac1{162},\frac{16}{81},\frac{16}{27},
+                    \frac{16}{81},\frac1{162}\right)_k .
+\end{equation}
+The law is exchangeable and invariant under global sign reversal.
+Its signed mean is zero and \(E M_4^2=16/9\).
+Since \(M_4^2=4+2\sum_{i<j}\sigma_i\sigma_j\),
+every distinct pair has correlation \(-5/27\).
+Finite extendibility is a conventional probability problem
+\cite{fin:extendibility}; its requirements should be stated for
+complete marginals, not inferred from a few moments.
+
+\begin{theorem}[Unique five- and six-coordinate extensions]
+\label{fin:rigidity}
+If every four-coordinate marginal of a law on \(N=5\) or \(6\)
+labelled signs equals the complete law \(P_4\), then the larger law
+is unique, even without assuming exchangeability.
+For \(N=5\), each configuration with \(K_5=2\) or \(3\) has probability
+\(4/81\); the all-minus and all-plus configurations each have probability
+\(1/162\); all others have probability zero.
+For \(N=6\), each configuration with \(K_6=3\) has probability \(4/81\),
+the two all-equal configurations have probability \(1/162\), and all
+others have probability zero.
+\end{theorem}
+\begin{proof}
+Let \(p_j\) be the count law of a uniformly selected four-coordinate
+subset and \(q_j=P(K_N=j)\).
+Conditional on \(K_N=k\), this sampled count has probability
+\(\binom kj\binom{N-k}{4-j}/\binom N4\), regardless of exchangeability.
+For \(N=5\), the nonnegative integer-count polynomial
+\[
+ Q_5(k)=k(5-k)(k-2)(k-3)
+\]
+equals \(8\) at \(k=1,4\) and zero otherwise.  Direct substitution in
+the hypergeometric probabilities gives
+\[
+ E Q_5(K_5)=8(q_1+q_4)
+          =10(p_1+p_3)-\frac{20}{3}p_2 .
+\]
+The right side is zero for \eqref{fin:target}, so the support is
+\(\{0,2,3,5\}\).
+A specified four-coordinate pattern with one plus and three minuses
+has probability \(4/81\).  Its missing sign must be plus because
+total count one is forbidden.  This fixes each individual
+two-plus configuration at \(4/81\).  Global sign reversal of the
+argument fixes the three-plus configurations; no symmetry assumption
+on the candidate law is needed because the prescribed marginal itself
+has the reversed pattern probabilities.  An all-plus four-pattern
+can extend only to the all-plus five-pattern, fixing its mass at
+\(1/162\); likewise for all minus.
+
+For \(N=6\), use
+\[
+ Q_6(k)=k(6-k)(k-3)^2,\qquad
+ E Q_6(K_6)=20(q_1+q_5)+8(q_2+q_4)
+          =30(p_1+p_3)-20p_2 .
+\]
+It is nonnegative and its expectation is zero, forcing support
+\(\{0,3,6\}\).
+A four-coordinate pattern with three pluses and one minus then forces
+both omitted signs to be minus.  This fixes every three-plus
+configuration at \(4/81\), and the extreme patterns fix the remaining
+two masses at \(1/162\).
+For existence in either size, the listed probabilities sum to one.
+For a specified four-pattern with \(k=0,1,2,3,4\) pluses, summing over
+the omitted coordinates gives, respectively,
+\((1/162,4/81,8/81,4/81,1/162)\) per pattern, exactly \(P_4\).
+\end{proof}
+
+The corresponding count masses are
+\[
+ \begin{array}{c|l}
+ N=5&(q_0,q_2,q_3,q_5)=(1/162,40/81,40/81,1/162)\\
+ N=6&(q_0,q_3,q_6)=(1/162,80/81,1/162).
+ \end{array}
+\]
+This conclusion requires all four-coordinate marginals.
+A single designated marginal always has an extension by
+adjoining an independent sign, and no uniqueness assertion applies to
+that different problem.
+The displayed exact extensions require zero probabilities.
+Everywhere finite Gibbs actions with counting measure give strictly
+positive probabilities, so cannot realize these exact extensions.
+
+\begin{corollary}[No seven-coordinate exact extension]\label{fin:no-seven}
+No law on seven labelled signs has every four-coordinate marginal
+equal to \(P_4\).
+\end{corollary}
+\begin{proof}
+Every pair would have correlation \(-5/27\), hence
+\[
+ E M_7^2=7+42(-5/27)=-7/9,
+\]
+contradicting nonnegativity.
+\end{proof}
+
+\subsection{Sharp finite and infinite approximation distances}
+\label{fin:distances}
+
+\begin{theorem}[Odd-even finite-extension staircase]\label{fin:staircase}
+Let \(N=2m-1\) or \(2m\), \(m\ge4\).
+The minimum total variation from \(P_4\) to the four-coordinate
+marginal of an exchangeable \(N\)-sign law is
+\[
+ d_N=\frac{16}{27}
+ -\frac{3m(m-1)}{2(2m-1)(2m-3)}.
+\]
+In particular \(d_7=d_8=74/945\).
+The corresponding minimum over infinitely exchangeable laws is
+\(47/216\).
+\end{theorem}
+\begin{proof}
+Conditional on a population total \(k\), the balance event \(B=\{K_4=2\}\)
+has probability
+\[
+ h_N(k)=\frac{\binom k2\binom{N-k}2}{\binom N4}.
+\]
+For interior \(k\), the ratio \(h_N(k+1)/h_N(k)\) is
+\((k+1)(N-k-2)/[(k-1)(N-k)]\); it is at least one precisely up to
+the central count.  Thus its maximum is attained at the central
+count or counts and equals
+\[
+ h_{\max}=\frac{3m(m-1)}{2(2m-1)(2m-3)}.
+\]
+Every mixture over counts obeys the same bound.
+Since \(P_4(B)=16/27\), the balance-event deficit is a total variation
+lower bound.
+
+For even \(N=2m\), choose exactly \(m\) pluses uniformly over positions.
+For odd \(N=2m-1\), mix the two central counts \(m-1,m\) equally and
+uniformly within each count.  Both have the same four-count law:
+\[
+ q_0=q_4=\frac{(m-2)(m-3)}
+                    {4(2m-1)(2m-3)},\qquad
+ q_1=q_3=\frac{m(m-2)}{(2m-1)(2m-3)},\qquad q_2=h_{\max}.
+\]
+For \(m\ge4\), the outer probabilities are at least \(1/70>1/162\),
+the next pair at least \(8/35>16/81\), and the center is below \(16/27\).
+For example, the first two lower comparisons reduce respectively to
+\((m-4)(9m-17)\ge0\) and \((m-4)(m+2)\ge0\).
+Only the central category is deficient, so total variation equals
+the central deficit.  Exchangeable laws are uniform within each count
+class, so their full-pattern total variation equals their count-law
+total variation.
+
+For an infinite exchangeable law, restriction to every \(N\) yields
+the same four-law, so the finite balance bounds imply
+\(Q(B)\le\lim_Nh_{\max}=3/8\).
+Consequently the distance is at least \(16/27-3/8=47/216\).
+Iid fair signs attain it: their count law
+\((1,4,6,4,1)/16\) has all four noncentral categories above the target.
+\end{proof}
+
+The next plateaus are \(d_9=d_{10}=22/189\) and
+\(d_{11}=d_{12}=41/297\), increasing to \(47/216\).
+For an arbitrary, possibly nonexchangeable \(N\)-sign law, uniformly
+sampling four indices still obeys the same balance-event bound.
+At least one four-coordinate marginal must therefore be at least
+\(d_N\) from the target, by data processing and convexity.
+These are distances between ideal distributions.  They are not
+experimental detector tolerances or physical population limits.
+
+\subsection{A sharp bounded-action approximation}
+\label{fin:bounded-action}
+
+Let \(R\ge1\).  Consider all strictly positive probability laws \(p\)
+on five signs satisfying
+\(\max_\sigma p(\sigma)/\min_\sigma p(\sigma)\le R\).
+For a Gibbs law \(p\propto e^{-s(\sigma)}\) relative to counting measure,
+this is exactly an action-range bound
+\(\max s-\min s\le\log R\).
+Let \(d_*(R)\) be the minimum, over such laws, of the largest total
+variation distance between any of their five complete four-coordinate
+marginals and \(P_4\).
+
+\begin{theorem}[Exact action-range tradeoff]\label{fin:range-theorem}
+The minimum is attained and equals
+\[
+ d_*(R)=
+ \begin{cases}
+ \displaystyle\frac{16}{27}-\frac{3R}{3+5R},
+                       &1\le R\le78/5,\\[6pt]
+ \displaystyle\frac{32}{27(5R+2)},&R\ge78/5 .
+ \end{cases}
+\]
+\end{theorem}
+\begin{proof}
+Average any admissible law over coordinate permutations and global
+sign reversal.  The constraints \(p(\sigma)\le R p(\tau)\) are linear
+and invariant under these transformations, so the ratio bound
+survives.  Convexity of total variation and symmetry of the target
+show that the largest marginal error cannot increase.
+Thus it suffices to consider per-configuration probabilities \(a,b,c\)
+for count classes \(\{0,5\},\{1,4\},\{2,3\}\), respectively.
+They obey
+\[
+ 2a+10b+20c=1,\qquad
+ q=(a+b,\ 4(b+c),\ 12c,\ 4(b+c),\ a+b).
+\]
+
+First, \(a,b\ge c/R\) implies
+\(c\le R/[4(5R+3)]\).  The central event therefore gives
+\[
+ \operatorname{TV}(P_4,q)\ge16/27-3R/(5R+3).
+\]
+Set
+\[
+ a=b=\frac1{4(5R+3)},\qquad c=\frac{R}{4(5R+3)}.
+\]
+These weights are positive, normalized and have ratio \(R\).
+For \(1\le R\le78/5\), \(q_0=q_4\ge1/162\) and
+\(q_1=q_3>16/81\), while \(q_2<16/27\).
+Hence the total variation is exactly the central deficit, attaining
+the first formula.
+
+For the second lower bound, put \(v=3R/(5R+2)\in[0,1]\) and use
+the test function \(f(2)=1\), \(f(0)=f(4)=v\), \(f(1)=f(3)=0\).
+After eliminating \(a\) with normalization,
+\[
+ E_qf=12c+2v(a+b)
+     =v+\frac{24(c-Rb)}{5R+2}\le v.
+\]
+Since \(E_{P_4}f=16/27+v/81\), the bounded-function characterization
+of total variation gives
+\[
+ \operatorname{TV}(P_4,q)\ge16/27+v/81-v
+                          =\frac{32}{27(5R+2)}.
+\]
+For \(R\ge78/5\), choose
+\[
+ b=\frac{20}{81(5R+2)},\qquad
+ c=Rb,\qquad
+ a=\frac1{162}-b=\frac{5R-38}{162(5R+2)}.
+\]
+They are positive and normalized.  Here \(b\le a\le c\), so their
+maximum-to-minimum ratio is \(R\).
+The outer marginal masses exactly match \(1/162\);
+each near-central mass exceeds its target by
+\(16/[27(5R+2)]\), while the central deficit is
+\(32/[27(5R+2)]\).  The lower bound is attained.
+At \(R=78/5\) the constructions and formulas agree.
+\end{proof}
+
+Thus the error is positive for every finite action range and decays
+as \((32/135)R^{-1}+O(R^{-2})\) for large \(R\).
+This concerns all four-subset marginals simultaneously.  An exact
+extension of only one designated marginal can instead be formed by
+adjoining an independent sign, with finite positive weights.
+The probability-ratio optimization does not postulate a physical
+action law or calibrate an instrument.
+
+\subsection{Quadratic weights are not closed under deletion}
+\label{fin:quadratic}
+
+\begin{proposition}[A five-to-four closure obstruction]
+\label{fin:quadratic-closure}
+For \(b>0\), the size-dependent quadratic family
+\[
+ P_N(\sigma)\ \propto\ \exp[-b M_N^2/(2N)]
+\]
+is not projectively consistent under ordinary coordinate deletion.
+Even allowing an adjusted quadratic coefficient at size four does not
+make the five-to-four marginal a pure quadratic weight.
+\end{proposition}
+\begin{proof}
+For retained magnetization \(M\in\{0,\pm2,\pm4\}\), summing the fifth
+sign gives
+\[
+ w_b(M)=2e^{-b(M^2+1)/10}\cosh(bM/5).
+\]
+Every weight \(w(M)=C e^{-\alpha M^2}\) necessarily satisfies
+\(w(4)w(0)^3/w(2)^4=1\), because both its constant and quadratic
+exponents cancel.  Here the ratio is
+\[
+ \frac{\cosh(4b/5)}{\cosh^4(2b/5)}
+ =1-\tanh^4(2b/5)<1.
+\]
+To obtain the identity, set \(x=2b/5\), use
+\(\cosh(2x)=2\cosh^2x-1\), and divide by \(\cosh^4x\).
+\end{proof}
+
+The multiplicative defect is \(16b^4/625+O(b^6)\), so a lower-order
+expansion can miss it.  At \(b=0\) the iid fair family is exactly
+projective.  There is also a small-size exception: after reducing a
+three-sign law to two signs, only two retained values of \(M^2\) remain, so a
+normalization and a retuned quadratic coefficient can fit both
+positive weights.  Three distinct \(M^2\) values in the five-to-four
+experiment impose the extra compatibility equation that fails.
+The valid bare probability extensions of Theorem~\ref{fin:rigidity}
+are therefore not generated by simply reusing the positive quadratic
+action.  Their existence and this particular action's failure are
+compatible facts.

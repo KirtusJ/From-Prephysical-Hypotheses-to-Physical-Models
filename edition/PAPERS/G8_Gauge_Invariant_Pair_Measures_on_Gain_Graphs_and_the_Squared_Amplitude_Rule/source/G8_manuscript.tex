@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+\input{Scientific_Preamble.tex}
+\hypersetup{pdftitle={Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule},pdfauthor={Kirtus Justus}}
+\begin{document}
+\begin{titlepage}
+{\small\sffamily \ProgramTitle\hfill Paper G8\par}
+\vspace*{8mm}
+{\LARGE\bfseries\raggedright\hyphenpenalty=10000 Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule\par}
+\vspace{9mm}
+{\large Kirtus Justus\par}
+\vspace{1mm}
+Theoretical Physicist\par
+\AuthorLocation\par
+\vspace{2mm}
+12 November 2026\par
+\vspace{8mm}
+\textbf{Abstract}\par
+A gain graph is a finite graph with a group element on each oriented edge, considered up to the changes of these elements induced by a choice of group element at each vertex. It is a transport on a finite carrier, and its only invariant content is its holonomy. This paper determines which set functions on walks can depend on the transport. An additive function given by one function of the gain for all walks cannot; one that treats the walks returning to their starting vertex separately can, through a class function of their gains, and has no interference. A function additive in pairs of walks with a common end vertex, given by one rule for all graphs, is invariant exactly when it is a class function of the holonomy of the closed walk formed by the pair, and it is strongly positive exactly when that class function is a combination of irreducible characters with non-negative coefficients. The extreme cases assign to a set of walks the squared norm of the sum of the representation matrices of their gains. Interference of second order is then present and interference of third order absent; the representation is of real, complex or quaternionic type; a character and its conjugate give the same values. The construction of Dowker, Johnston and Sorkin yields a Hilbert space and a transition probability on classes of walk sets; the product of gain graphs yields the tensor product at each walk length; walks that leave distinct records yield the counting measure. The measure of the indicator of the identity counts coincidences of walks on the covering graph of the transport and is the dimension-weighted mean of the irreducible measures. The events of long walks give a dense set of rays exactly as far as the gains of closed walks of even length allow. These are conditional statements. The second order of the rule, the role of end vertices as records, the group and the representation are assumptions; the measures at different walk lengths are not related by continuation and walk length is not a unitary evolution; for cyclic gains of order other than $1,2,3,4,6$ the values depend on a choice of character. Neither quantum nor classical mechanics is derived, and no physical correspondence is asserted.\par
+\vfill
+{\small Research direction and scholarly responsibility: Kirtus Justus.\par
+Mathematical, computational and editorial assistance: Claude (Anthropic).
+The construction of an imaginary quadratic field from a directed three-cycle recorded in Section~\ref{sec:char} follows a review record prepared with GPT-6 (OpenAI) as LLM Director A. The additive rule for returning walks in Lemma~\ref{lem:first} and the examples after Proposition~\ref{prop:growth} follow records of Directors A, B and G; the restriction of the composite over all lengths in Section~\ref{sec:compo} follows a record of Director G; the failure of continuation in Section~\ref{sec:limits} follows records of Directors A and B.
+Assistance does not imply provider endorsement.\par
+This manuscript is prepared for scholarly assessment. Such preparation does not establish independent peer review,
+experimental replication or institutional endorsement.\par}
+\end{titlepage}
+\setcounter{page}{2}
+\input{body.tex}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{bn} P. Bo\"es and M. Navascu\'es. Composing decoherence functionals. \emph{Physical Review A} \textbf{95}, 022114 (2017); cited as described in \cite{dw}.
+\bibitem{cdd} M. Cavaleri and A. Donno. On cospectrality of gain graphs. \url{https://arxiv.org/abs/2111.12428} (2021).
+\bibitem{comp2} K. Justus. Program \texttt{verify\_gain\_graph\_pair\_measures.py} and its result file, in \texttt{COMPUTATION/Baseline\_Additions} of the program collection (November 2026).
+\bibitem{djs} F. Dowker, S. Johnston and R. D. Sorkin. Hilbert spaces from path integrals. \url{https://arxiv.org/abs/1002.0589} (2010).
+\bibitem{dw} F. Dowker and H. Wilkes. An argument for strong positivity of the decoherence functional in the path integral approach to the foundations of quantum theory. \emph{AVS Quantum Science} \textbf{4}, no.~1 (2022). \url{https://doi.org/10.1116/5.0073587}.
+\bibitem{g3} K. Justus. \emph{Finite Signed Graphs and Binary Extension Constraints}. Paper G3 of the program collection (2026).
+\bibitem{g6} K. Justus. \emph{Invariant Relational Selection and Approximate Symmetry}. Paper G6 of the program collection (2026).
+\bibitem{comp4} K. Justus. Programs \texttt{verify\_gain\_graph\_covers\_and\_growth.py} and \texttt{verify\_fourth\_round\_director\_items.py} with their result files, in \texttt{COMPUTATION/Baseline\_Additions} of the program collection (November 2026).
+\bibitem{g7} K. Justus. \emph{Transport, Holonomy and Monodromy as Bridge Candidates between Classical and Quantum Models}. Paper G7 of the program collection (2026).
+\bibitem{g9} K. Justus. \emph{Reversible Steps on Gain Digraphs: Arc Structure, Complex Structure and the Ray Limit}. Paper G9 of the program collection (2026).
+\bibitem{huang} H. Huang. Induced subgraphs of hypercubes and a proof of the Sensitivity Conjecture. \emph{Annals of Mathematics} \textbf{190}, 949--955 (2019).
+\bibitem{reff} N. Reff. Spectral properties of complex unit gain graphs. \url{https://arxiv.org/abs/1110.4554} (2011).
+\bibitem{serre} J.-P. Serre. \emph{Linear Representations of Finite Groups}. Springer (1977).
+\bibitem{sinha} U. Sinha, C. Couteau, T. Jennewein, R. Laflamme and G. Weihs. Ruling out multi-order interference in quantum mechanics. \emph{Science} \textbf{329}, 418--421 (2010).
+\bibitem{sorkin} R. D. Sorkin. Quantum mechanics as quantum measure theory. \emph{Modern Physics Letters A} \textbf{9}, 3119--3127 (1994).
+\bibitem{zaslavsky} T. Zaslavsky. Biased graphs. I. Bias, balance, and gains. \emph{Journal of Combinatorial Theory, Series B} \textbf{47}, 32--52 (1989).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,215 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\title{Abstract Channels and Gaussian Capacity}
+\author{Kirtus Justus}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We formulate Gaussian channel capacity as a property of an abstract probability kernel and a quadratic cost. The finite-vector calculation requires no assignment of physical duration, frequency, or energy. We state the additional assumptions needed for asymptotic coding, distinguish real and complex coordinate conventions, and give exact counterexamples to capacity formulas based only on total noise variance and input cost. We also prove invariance under transported relabelling and monotonicity under output coarse-graining. The results identify the mathematical content of an abstract channel representation and the further obligations required for a foundational or physical interpretation.
+\end{abstract}
+
+\section{The mathematical model}
+Let \(E\) be a real Euclidean vector space of finite dimension \(d\ge1\). Its inner product is mathematical data, without an assigned physical spatial or energetic interpretation. Let \(X\) be an \(E\)-valued random variable and let
+\[
+Z\sim\mathcal N(0,\sigma^2I_d),\qquad Z\perp X,
+\qquad Y=X+Z,\qquad \sigma^2>0.
+\]
+The channel is the conditional probability kernel \(W(dy\mid x)=\mathcal N(x,\sigma^2I_d)(dy)\). Its input-output direction specifies a conditional law; it does not independently assert a fundamental causal order. Permit every input distribution satisfying
+\[
+\mathbb E\|X\|^2\le dP,\qquad P\ge0,
+\]
+and retain the full real-vector output. No additional quantizer, erasure map, finite input alphabet, or peak-amplitude constraint is imposed.
+
+Define
+\[
+\mathcal C_d(P,\sigma^2)
+=\sup_{P_X:\,\mathbb E\|X\|^2\le dP} I(X;Y),
+\qquad
+I(X;Y)=D_2(P_{XY}\Vert P_X\otimes P_Y),
+\]
+where \(D_2\) is relative entropy using base-2 logarithms. The quantity is expressed in bits per vector block. Probability spaces, measurable maps, a covariance, and a cost are required. Physical clocks, energy units, and apparatus are not part of this mathematical definition.
+
+Coordinates may be indexed by a finite set without a preferred order. Permutation of those labelled coordinates preserves the isotropic kernel and cost. Quotienting away coordinate identity would be a different observation problem. Mathematical dimension is not identified here with physical dimension.
+
+\section{The finite-vector Gaussian calculation}
+\begin{theorem}[Isotropic Gaussian information capacity]
+Under the preceding model,
+\[
+\mathcal C_d(P,\sigma^2)
+=\frac d2\log_2\!\left(1+\frac P{\sigma^2}\right).
+\]
+For \(P>0\), a centered Gaussian input with covariance \(PI_d\) attains the supremum. At \(P=0\), the value is zero.
+\end{theorem}
+
+\begin{proof}
+Let \(K=\operatorname{Cov}(X)\). Independence gives
+\[
+\operatorname{Cov}(Y)=K+\sigma^2I_d,
+\qquad I(X;Y)=h_2(Y)-h_2(Z).
+\]
+Gaussian convolution gives a bounded output density, and the finite second moment gives a finite Gaussian cross-entropy upper bound; the entropy difference is well defined. Nonnegativity of relative entropy from the law of \(Y\) to the Gaussian with the same mean and covariance gives
+\[
+h_2(Y)\le\frac12\log_2\!\left((2\pi e)^d\det(K+\sigma^2I_d)\right).
+\]
+If \(\lambda_1,\ldots,\lambda_d\) are the nonnegative eigenvalues of \(K\), then
+\[
+\sum_{j=1}^d\lambda_j=\operatorname{Tr}K
+\le\mathbb E\|X\|^2\le dP.
+\]
+The arithmetic-geometric mean inequality therefore yields
+\[
+\det(K+\sigma^2I_d)
+=\prod_{j=1}^d(\lambda_j+\sigma^2)
+\le\left(\sigma^2+\frac{\operatorname{Tr}K}{d}\right)^d
+\le(\sigma^2+P)^d.
+\]
+Subtract \(h_2(Z)=\frac d2\log_2(2\pi e\sigma^2)\) to obtain the claimed upper bound. If \(X\sim\mathcal N(0,PI_d)\), all inequalities are equalities. If \(P=0\), nonnegativity of \(\|X\|^2\) forces \(X=0\) almost surely.
+\end{proof}
+
+The calculation is a finite-dimensional form of the standard Gaussian capacity argument \cite{shannon,polyanskiy17}. Gaussianity, independence, the full-vector output, and the admissible cost class are substantive premises. No time variable or physical energy interpretation enters the proof.
+
+\section{The coefficient and the real-complex convention}
+For one real coordinate the value is \(\frac12\log_2(1+P/\sigma^2)\) bits per use. For a complex coordinate, let \(Z\sim\mathcal{CN}(0,N)\), \(N>0\), be circularly symmetric complex Gaussian noise independent of \(X\), and impose \(\mathbb E|X|^2\le S\). The real and imaginary parts of the noise are independent and have variance \(N/2\), so the value is
+\[
+\log_2(1+S/N)\quad\text{bits per complex use}.
+\]
+These conventions agree; the factor of two counts real coordinates \cite{polyanskiy17}.
+
+For a real \(d\)-vector define
+\[
+B_{\mathrm{abs}}=d/2,\qquad S_{\mathrm{abs}}=P,
+\qquad N_{\mathrm{abs}}=\sigma^2.
+\]
+Then
+\[
+\mathcal C_d=B_{\mathrm{abs}}
+\log_2\!\left(1+\frac{S_{\mathrm{abs}}}{N_{\mathrm{abs}}}\right).
+\]
+Here \(B_{\mathrm{abs}}\) is a positive half-integer multiplicity. An \(m\)-coordinate complex block instead has coefficient \(m\). Arbitrary real coefficients need a specified normalization or a different model; they are not automatically finite vector-space dimensions.
+
+The ratio compares second moments in the same coordinate units. A simultaneous nonzero change of units scales both moments equally. It does not turn them into physical signal or noise powers.
+
+In the engineering formula, bandwidth in hertz and capacity in bits per second arise from a waveform and duration interpretation. Shannon's Theorem 17 states a white thermal-noise model with a transmitter-power constraint \cite{shannon}. A conversion through an effective count near \(2BT\) requires its boundary and limiting conventions: exact finite time support and exact finite band support cannot both hold for a nonzero signal \cite{polyanskiy19}. The finite-vector proof above does not invoke that conversion.
+
+\section{Information capacity and achievable codes}
+The theorem gives a mutual-information supremum. It does not assert that one finite block transmits that many error-free message bits. To formulate the ordinary Gaussian coding result, add \(n\) independent copies of the same \(d\)-dimensional kernel, a uniformly distributed message on \(M_n\) values, an encoder into \(E^n\), and a decoder observing the entire output. Require every codeword to satisfy
+\[
+\sum_{i=1}^n\|x_i\|^2\le ndP.
+\]
+Define rate \(\log_2M_n/n\) in bits per vector block, and require the error probability to tend to zero as \(n\to\infty\). Under this contract, the supremum achievable rate equals \(\mathcal C_d\) \cite{polyanskiy17}.
+
+For the converse, Fano's inequality, data processing, and the finite-vector bound in dimension \(nd\) give
+\[
+(1-\epsilon_n)\log_2M_n-h_{\mathrm b}(\epsilon_n)
+\le I(W;Y^n)
+\le I(X^n;Y^n)
+\le n\mathcal C_d.
+\]
+Here \(h_{\mathrm b}\) denotes binary entropy. Taking \(\epsilon_n\to0\) proves the rate bound. For achievability when \(P>0\), use independent Gaussian codewords with a strictly smaller budget \(0<P'<P\). The empirical quadratic cost concentrates below the allowed value, and the information density per block converges to \(\mathcal C_d(P',\sigma^2)\). Threshold decoding and the standard constrained random-coding bound give vanishing error below that rate. Removing excess-cost and high-error codewords does not change the asymptotic rate. Finally let \(P'\uparrow P\). At \(P=0\), only the zero codeword is permitted and capacity is zero. These are the standard constrained Gaussian coding steps, rather than a new coding theorem.
+
+The copy index counts factors in a product model. It need not represent physical temporal succession. If only one finite block is admitted, if the kernel varies arbitrarily across copies, or if the detector observes a restricted output, this coding conclusion needs a different analysis.
+
+For nondegenerate Gaussian noise, distinct finite codewords induce everywhere positive output densities. A decoder cannot separate two such laws with probability one under both. Thus nontrivial finite-block zero-error transmission is impossible in this model, despite its positive vanishing-error asymptotic capacity.
+
+\section{Variance and cost do not determine the Gaussian law}
+\begin{proposition}[Finite variance with unbounded information capacity]
+Let \(Z\) be independent of \(X\), with \(P(Z=1)=P(Z=-1)=1/2\), and observe \(Y=X+Z\) exactly. For every \(P>0\),
+\[
+\sup_{\mathbb E X^2\le P}I(X;Y)=\infty,
+\qquad \operatorname{Var}(Z)=1.
+\]
+\end{proposition}
+\begin{proof}
+Choose \(0<a<\min\{1,\sqrt P\}\). For each integer \(M\ge2\), choose distinct \(x_1,\ldots,x_M\) in \((-a,a)\) and select them uniformly. Every input has square smaller than \(P\). Since \(a<1\), the two translated output intervals have opposite signs, and
+\[
+Z=\operatorname{sign}(Y),\qquad X=Y-\operatorname{sign}(Y).
+\]
+The output determines the input exactly, giving \(I(X;Y)=\log_2M\). Let \(M\to\infty\).
+\end{proof}
+
+This example assumes discrete non-Gaussian noise and ideal unquantized real output. It does not assign unlimited precision to a physical detector. A finite output alphabet would bound mutual information by its logarithmic cardinality. The counterexample shows that an additive form, a finite noise variance, and a finite cost budget do not imply the Gaussian logarithm. General discrete-noise behavior is also discussed after the non-Gaussian comparison in \cite{polyanskiy17}.
+
+\begin{proposition}[Equal total Gaussian variance, different capacities]
+For two real coordinates under total input second-moment budget two, independent Gaussian noise of variances \((1,1)\) has capacity one bit per block. Noise of variances \((1/2,3/2)\), with the same total variance, has capacity \(\frac12\log_2(16/3)\).
+\end{proposition}
+\begin{proof}
+The isotropic case follows from the theorem. In the anisotropic case, entropy maximization reduces the problem to a Gaussian input covariance \(K\) with \(\operatorname{Tr}K\le2\). For fixed diagonal entries, the off-diagonal covariance subtracts a nonnegative square from \(\det(K+\operatorname{diag}(1/2,3/2))\), so an optimal input can be diagonal. The full budget is used. With allocation \((p,2-p)\), \(0\le p\le2\), the determinant ratio is
+\[
+\frac{(p+1/2)(7/2-p)}{(1/2)(3/2)}.
+\]
+The numerator is a concave quadratic with maximum at \(p=3/2\). The corresponding output variances are \((2,2)\), and the ratio is \(16/3\).
+\end{proof}
+
+This is a concrete instance of the parallel Gaussian allocation theorem \cite{polyanskiy17}. Total input and noise moments alone omit the covariance structure and allocation geometry. Without any quadratic budget, even isotropic Gaussian capacity is unbounded as the input variance grows. Peak-amplitude and finite-alphabet constraints define different optimization problems.
+
+\section{Relabelling, coarse-graining, and units}
+Let \(W(y\mid x)\) be a channel between finite alphabets, \(c(x)\ge0\) a cost, and \(\mathcal A\) a specified family of admissible input distributions. Set
+\[
+\mathcal C(W,c,E;\mathcal A)
+=\sup\{I_p(X;Y):p\in\mathcal A,\ \mathbb E_pc(X)\le E\}.
+\]
+Assume the cost-feasible subset of \(\mathcal A\) is nonempty. The family \(\mathcal A\) is part of the model. It may not be silently enlarged under a change of notation.
+
+\begin{proposition}[Transported relabelling]
+Let \(f\) and \(g\) be bijections of input and output alphabets onto new alphabets. Transport the channel by \(W'(g(y)\mid f(x))=W(y\mid x)\), the cost by \(c'(f(x))=c(x)\), and the admissible family by \(\mathcal A'=\{f_*p:p\in\mathcal A\}\). Then the two constrained capacities are equal.
+\end{proposition}
+\begin{proof}
+The transported input-output joint law has the same atom probabilities under a bijection. The sum defining relative entropy, hence mutual information, is unchanged. The cost expectation is also unchanged. Bijection of feasible input distributions therefore preserves the supremum.
+\end{proof}
+
+\begin{proposition}[Output coarse-graining]
+For a stochastic map \(K(v\mid y)\), let \(W_K(v\mid x)=\sum_yW(y\mid x)K(v\mid y)\). With the same input cost and admissible family,
+\[
+\mathcal C(W_K,c,E;\mathcal A)
+\le\mathcal C(W,c,E;\mathcal A).
+\]
+\end{proposition}
+\begin{proof}
+For each input law, \(X\to Y\to V\) is a Markov chain. The chain rule gives
+\[
+I(X;Y)-I(X;V)=I(X;Y\mid V)\ge0.
+\]
+Taking suprema over the same feasible family proves the assertion.
+\end{proof}
+
+The loss can be strict. A noiseless binary channel with zero cost and all binary input distributions admissible has capacity one bit; mapping both outputs to one value gives capacity zero. A sufficient condition for equality is a stochastic recovery map \(L\) satisfying \(W_KL=W\): data processing in both directions then gives equality. Equality of capacities alone does not establish such recovery or equality of all other observable properties.
+
+\begin{proposition}[Equal capacity without recovery]
+There is a finite channel whose output can be irreversibly coarse-grained without changing its unconstrained capacity.
+\end{proposition}
+\begin{proof}
+Take three inputs and four outputs, with zero cost, all input distributions admissible, and channel matrix
+\[
+W=\begin{pmatrix}
+1/2&1/2&0&0\\
+0&0&1/2&1/2\\
+1/2&0&1/2&0
+\end{pmatrix}.
+\]
+Every row has entropy one bit, whereas the output entropy is at most two bits. Thus \(I(X;Y)\le1\). A uniform input on the first two rows produces the uniform four-output law and attains one bit. Now merge outputs one and two, and merge outputs three and four. The first two inputs then form a noiseless binary channel, so the coarse-grained capacity remains one bit. A recovery map would have to send these two deterministic outputs to the first and second rows of \(W\), respectively. For the third input, the coarse output is uniform on those two values, so that recovery would produce the uniform four-output law. This differs from the third row of \(W\). No common stochastic recovery map exists.
+\end{proof}
+
+Consequently, even equality of a capacity before and after an observation map does not establish equivalence of the full experiments. The example compares only mathematical channels and their admitted readouts.
+
+For Gaussian coordinates, the invertible Borel change \((X,Y,Z)\mapsto(aX,aY,aZ)\), \(a\ne0\), preserves mutual information and transports the feasible input class. The quadratic budget and noise variance become \(a^2P\) and \(a^2\sigma^2\). Thus the ratio and capacity are invariant. Holding a numerical cost budget fixed while rescaling the input would change the problem, rather than merely its representation.
+
+\section{Scope of a foundational application}
+An afrequent description leaves physical frequency unassigned. It therefore does not prohibit the mathematical structures used above. It also does not determine them. A derivation from a particular foundational proposal must explain why the proposal selects this probability kernel, independence, additive Gaussian perturbation, quadratic cost, coordinate multiplicity, admissible encodings, retained outcomes, and composition of copies. Those ingredients may arise at an effective representational level, but their derivation must be supplied.
+
+A claim of physical bandwidth imposes further obligations concerning duration, frequency, power, calibration, and observation. These belong to a stronger interpretation than abstract capacity. The theorem establishes an available mathematical representation; it does not select a unique ontology or an empirical model.
+
+\section{Computational controls}
+The accompanying verifier checks six exact finite constellations for the discrete-noise decoder, rational covariance allocations, real-complex normalization, and Gaussian information density evaluated directly by quadrature. The latter agrees with the analytic values to within \(3\times10^{-15}\) bits in the retained examples. These finite checks guard the displayed constructions and factors. The universal assertions rest on the proofs. No physical measurements are used and no priority is claimed for the established Gaussian capacity or data-processing results.
+
+\section*{Acknowledgments}
+Kirtus Justus directed the research. ChatGPT (OpenAI) assisted with the mathematical derivations, primary-source inspection, computational controls, and manuscript preparation. The assistance does not imply provider endorsement or independent empirical confirmation.
+
+\begin{thebibliography}{99}
+\bibitem{shannon} C. E. Shannon, ``A Mathematical Theory of Communication,'' \emph{Bell System Technical Journal} \textbf{27} (1948), 379--423 and 623--656, especially Section 24, Theorem 17. Original second installment: \texttt{https://academicweb.nd.edu/\~{}powers/ame.20231/shannon1948b.pdf}.
+\bibitem{polyanskiy17} Y. Polyanskiy and Y. Wu, \emph{Information Theory}, MIT 6.441, Spring 2016, Chapter 17, Sections 17.1--17.3.2. Official course notes: \texttt{https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/}.
+\bibitem{polyanskiy19} Y. Polyanskiy and Y. Wu, same course, Chapter 19, Sections 19.2--19.3, especially the qualification following Theorem 19.2.
+\end{thebibliography}
+\end{document}
