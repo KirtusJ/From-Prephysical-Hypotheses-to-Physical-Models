@@ -1,0 +1,36 @@
+RecordWeights.lean:123:2: error: invalid field 'flatMap', the environment does not contain 'List.flatMap'
+  paths
+has type
+  List RecordWeights.PathEntry
+RecordWeights.lean:139:36: error: invalid field 'sum', the environment does not contain 'List.sum'
+  List.map RecordWeights.PathEntry.sign (List.filter (RecordWeights.sameEndpoint u) selected)
+has type
+  List Int
+RecordWeights.lean:149:48: error: tactic 'decide' failed for proposition
+  RecordWeights.multiplicities RecordWeights.before true = (1, 0, 0) ∧
+    RecordWeights.multiplicities RecordWeights.before false = (3, 0, 0) ∧
+      RecordWeights.multiplicities RecordWeights.after true = (8, 0, 0) ∧
+        RecordWeights.multiplicities RecordWeights.after false = (20, 1, 0)
+since its 'Decidable' instance
+  instDecidableAnd
+did not reduce to 'isTrue' or 'isFalse'.
+
+After unfolding the instances 'decEq', 'instDecidableAnd', 'instDecidableEqNat', 'instDecidableEqProd' and 'Nat.decEq', reduction got stuck at the 'Decidable' instance
+  match h :
+    (List.filter (fun x => x == 1)
+            (List.map (fun u => sorryAx Nat true)
+              (List.foldl (fun seen u => if seen.any (RecordWeights.sameEndpoint u) = true then seen else u :: seen) []
+                (List.filter (fun v => v.yes == true) RecordWeights.before)))).length.beq
+      1 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+RecordWeights.lean:149:55: error: unexpected token '+'; expected command
+RecordWeights.lean:212:28: error: unknown constant 'Int.natCast_succ'
+RecordWeights.lean:215:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b - c ≥ 1
+  a ≥ 0
+where
+ a := ↑n
+ b := g (s + ↑(n + 1))
+ c := g (s + (↑n + 1))
