@@ -12,6 +12,7 @@ A running log, newest last. One entry per change of the parent-child structure o
 | Editions Z14 to Z17 | Proof search delegated: director states a conjecture with exact evidence, a general-purpose sub-agent proves or refutes it | Four theorems (5.12, 5.14, 5.16, 5.18), two of them stronger than the conjecture | The director's own first versions were wrong twice; the sub-agent's statement must be reread line by line before it enters the paper |
 | Editions Z14 to Z17 | Challenger is also sent the corollaries and the summary paragraph | Every edition since: the proof stood, the summary was wrong | The correction was applied where the challenger pointed and not to the same sentence elsewhere (the word "finite" in the introduction, one edition late) |
 | After Z17 | Full comb: two readers over the whole paper, a rerun of every program, a scan of all result files and registers | Found stale abstract and assumptions list, unrecorded failed predicates in reviewer programs, a folder named in the records and never copied | Reveals that propagation was upward only for the statement under review; nothing propagated sideways to summaries, README counts and older register entries |
+| Edition Z18 | The director's rewritten summaries were sent to a third sub-agent before issue | Nine further errors found in the rewriting, two of them false sentences | The director twice re-submitted a register call file through a diagnostic command, and miscounted reruns by one; both found only because the register and a counting script were consulted |
 
 ## Current rules that follow from the log
 
@@ -20,5 +21,7 @@ A running log, newest last. One entry per change of the parent-child structure o
 3. Every third edition, or when a result changes what is assumed, run the full comb.
 4. Check the child session's status at the start of each working period; a trigger that reports success only says the wake was delivered.
 5. Report counts as "met, failed, measured only", never as "n of n" when a predicate has no verdict.
+6. A register call file is submitted once, with its output saved to a file and read afterwards. Counts come from a program, not from reading a listing.
+7. A rewriting by the director is new text and goes to a challenger like any other.
 
 All reviewers in this hierarchy are of the director's model family. Their agreement reduces exposure and is not independent review.

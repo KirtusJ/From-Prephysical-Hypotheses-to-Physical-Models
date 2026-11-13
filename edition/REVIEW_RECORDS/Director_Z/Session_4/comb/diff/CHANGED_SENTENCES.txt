@@ -1,0 +1,247 @@
+=== body.tex ===
+OLD: The present paper asks what the same requirement decides about the rule itself, and returns to the two open items. \begin{enumerate}[label=(\roman*)]
+\item On a digraph in which every vertex has an outgoing arc, a family of set functions on walks of each length from one vertex defines one function on sets of unending walks exactly when it is consistent under continuation (Lemma~\ref{lem:cyl}).
+NEW: The present paper asks what the same requirement decides about the rule itself, and returns to the last two of these open items. \begin{enumerate}[label=(\roman*)]
+\item On a digraph in which every vertex has an outgoing arc, a family of set functions on walks of each length from one vertex defines one function on sets of unending walks exactly when it is consistent under continuation, the function at each length being rescaled by a power of the factor (Lemma~\ref{lem:cyl}).
+
+=== body.tex ===
+OLD: \item An additive rule that is consistent under continuation is a multiple of the number of walks:
+NEW: \item On a digraph without loops and of constant out-degree, an additive switching-invariant rule that is consistent under continuation is a multiple of the number of walks:
+
+=== body.tex ===
+OLD: For gains in the $q$-th roots of unity the consistent rules of this form are exactly the combinations of the squared moduli in the conjugate characters;
+NEW: On a norm-preserving carrier of degree two with gains in the $q$-th roots of unity, $q$ even, on which every gain reaches both vertices of a block in abundance, the consistent rules of this form are exactly the combinations of the squared moduli in the conjugate characters;
+
+=== body.tex ===
+OLD: Without any choice of records, for any finite abelian group of gains and any degree, the consistent switching-invariant pair rules of \cite{g8} are exactly the mixtures of the squared-norm rules of the characters for which the step is norm-preserving (Theorem~\ref{thm:kernel}).
+NEW: Without any choice of records, for any finite abelian group of gains and any degree, and under a hypothesis on the quotients of gains that reach two vertices with a common successor, the consistent switching-invariant pair rules of \cite{g8} are exactly the real combinations of the squared-norm rules of the characters for which the step is norm-preserving (Theorem~\ref{thm:kernel}).
+
+=== body.tex ===
+OLD: For blocks of degree three and four with gains of order $3$, $6$ or $4$ a consistent rule that adds a function of the modulus over end vertices is again the square (Proposition~\ref{prop:deg34}); for blocks $\rho_z\kappa_yw^{zy}$ of every degree $d$ dividing $q$ the consistent rules of that form are exactly the combinations of the conjugate squared moduli, as in degree two (Theorem~\ref{thm:fourier}).
+NEW: For blocks of degree three and four with gains of order $3$, $6$ or $4$, with disjoint successor sets and abundant gains, a consistent rule that adds a function of the modulus over end vertices is again the square (Proposition~\ref{prop:deg34}); for blocks $\rho_z\kappa_yw^{zy}$ of every degree $d$ dividing $q$, under the same conditions, the consistent rules of that form are exactly the combinations of the conjugate squared moduli, as in degree two (Theorem~\ref{thm:fourier}).
+
+=== body.tex ===
+OLD: On carriers with full blocks, which include every finite norm-preserving digraph of degree two, the modulus is not needed either: a consistent rule that adds over end vertices any function of the summed gains is a quadratic form, and if it is unchanged by switching it is a combination of the conjugate squared moduli (Theorem~\ref{thm:block}, Corollary~\ref{cor:block}).
+NEW: On carriers with a full block, that is, $d$ vertices with one common set of $d$ successors, and with abundant gains, the modulus is not needed either; every finite norm-preserving digraph of degree two consists of such blocks. A consistent rule that adds over end vertices any function of the summed gains that vanishes at zero is a quadratic form, and if it is unchanged by switching it is a combination of the conjugate squared moduli (Theorem~\ref{thm:block}, Corollary~\ref{cor:block}).
+
+=== body.tex ===
+OLD: for any $d\times d$ matrix of gains in a cyclic group, $d\ge2$, a function of the multiset of gains that satisfies the block law is an additive function plus a quadratic form, and if the entries generate the group it is a combination of the count and of squared moduli of gains summed through characters (Theorem~\ref{thm:multiset}, Corollaries~\ref{cor:multiset}, \ref{cor:multicar}).
+NEW: for any $d\times d$ matrix of gains in a cyclic group, $d\ge2$, a function of the multiset of gains that satisfies the block law is an additive function plus a quadratic form, and if the entries generate the group it is a combination of the count and of squared moduli of gains summed through characters; on a carrier with such a block and abundant gains this holds for the consistent rules (Theorem~\ref{thm:multiset}, Corollaries~\ref{cor:multiset}, \ref{cor:multicar}).
+
+=== body.tex ===
+OLD: The statements are mathematical and concern the constructed trials GH-1 and GH-2 of the program collection.
+NEW: The statements are mathematical and concern the constructed trials of the program collection named GH-1 and GH-2 there (gain graphs and gain digraphs with a reversible step, the carriers of \cite{g8} and \cite{g9}).
+
+=== body.tex ===
+OLD: on the complete graph on four vertices with one gain of order three the ratios in \eqref{eq:addcons} take the values $1.5$, $2.5$ and $4$ on walks of length two \cite{comp4s}.
+NEW: on the complete graph on four vertices with one gain of order three, with $a=1$, $F_{\mathrm c}(1)=2$ and $F_{\mathrm c}(\omega)=F_{\mathrm c}(\omega^{-1})=1/2$, the ratios in \eqref{eq:addcons} take the values $1.5$, $2.5$ and $4$ on walks of length two \cite{comp4s}.
+
+=== body.tex ===
+OLD: 
+NEW: A rule \eqref{eq:phi} is said below to be of the \emph{record-sum form}.
+
+=== body.tex ===
+OLD: The hypothesis on the pair of walks is the hypothesis of Lemma~3.1(b) of \cite{g9} together with a common successor;
+NEW: The hypothesis of Theorem~\ref{thm:power} on the pair of walks is the hypothesis of Lemma~3.1(b) of \cite{g9} together with a common successor;
+
+=== body.tex ===
+OLD: a norm-preserving digraph of degree two in which two distinct vertices have a common successor needs $-1$ among its gains, since two columns with two entries of modulus one are orthogonal only if they share both rows with opposite relative signs;
+NEW: a norm-preserving digraph of degree two in which two distinct vertices have a common successor needs $-1$ in the group generated by its gains, since two columns with two entries of modulus one are orthogonal only if they share both rows and the quotients of their entries in the two rows differ by the factor $-1$;
+
+=== body.tex ===
+OLD: Corollary~\ref{cor:lift} adds that on the signed lift this mean is the only consistent rule of the record-sum form.
+NEW: Corollary~\ref{cor:lift} adds that on the signed lift the mean over the characters in which $-1$ acts as $-1$ is the only consistent rule of the record-sum form.
+
+=== body.tex ===
+OLD: The instance of Section~\ref{sec:mod} on five sheets shows both readings:
+NEW: The instance on five sheets ($q=10$) shows both readings:
+
+=== body.tex ===
+OLD: the consistent rules are the mixtures of the squared-norm rules of the characters for which the step is norm-preserving. On a tree every character qualifies and every kernel is consistent, which is the example of Director~G after Theorem~\ref{thm:power}.
+NEW: under the hypothesis on the quotients, the consistent rules are the real combinations of the squared-norm rules of the characters for which the step is norm-preserving. On a tree every character qualifies and every kernel is consistent, which is the example of Director~G after Theorem~\ref{thm:deg2}.
+
+=== body.tex ===
+OLD: \begin{enumerate}[label=(\alph*)]
+\item the consistent kernels are the combinations of $\operatorname{Re}\chi_j$, $\chi_j(\zeta)=\zeta^j$, $j$ odd, one from each pair $\pm j$, a space of dimension $\lceil q/4\rceil$;
+NEW: \begin{enumerate}[label=(\alph*)]
+\item under the hypothesis of Theorem~\ref{thm:kernel}(ii) the consistent kernels are the combinations of $\operatorname{Re}\chi_j$, $\chi_j(\zeta)=\zeta^j$, $j$ odd, one from each pair $\pm j$, a space of dimension $\lceil q/4\rceil$;
+
+=== body.tex ===
+OLD: \item on a carrier that satisfies the hypothesis of Theorem~\ref{thm:conj}, a consistent rule \eqref{eq:kernel} that is multiplicative on products, where gains are multiplied in $C$ as in Proposition~\ref{prop:compo}, is zero or $\lVert v^{(j)}_S\rVert^2$ for one odd $j$, which need not be prime to $q$.
+NEW: \item on a carrier that satisfies the hypotheses of Theorem~\ref{thm:conj} and of Theorem~\ref{thm:kernel}(ii), a consistent rule \eqref{eq:kernel} that is multiplicative on products, where gains are multiplied in $C$ as in Proposition~\ref{prop:compo}, is zero or $\lVert v^{\chi_j}_S\rVert^2$ for one odd $j$, which need not be prime to $q$.
+
+=== body.tex ===
+OLD: Other blocks, other degrees and gains of higher order are not treated; for gains of higher order in these degrees the conjugate characters will enter as in Theorem~\ref{thm:conj}.
+NEW: Other blocks, other degrees and gains of higher order are not treated by this proposition; they are the subject of Theorems~\ref{thm:fourier} and \ref{thm:vsl} and of Corollary~\ref{cor:block}.
+
+=== body.tex ===
+OLD: Blocks that are not of this form, such as real Hadamard blocks of degree four with other sign patterns or blocks from other groups, are not treated.
+NEW: Blocks that are not of this form, such as real Hadamard blocks of degree four with other sign patterns or blocks from other groups, are not treated by this theorem; Corollaries~\ref{cor:vsl} and \ref{cor:block} cover them where their hypotheses hold.
+
+=== body.tex ===
+OLD: \end{proof}
+
+So on a finite carrier with $\hat D$ strongly connected the classification needs no hypothesis on events:
+NEW: \end{proof}
+
+So on a finite carrier with $A^*A=d$, $d\ge2$, for the faithful character, with a merging pair and with $\hat D$ strongly connected, the classification needs no hypothesis on events:
+
+=== body.tex ===
+OLD: where the gains of closed walks generate a proper subgroup, $\hat D$ is not strongly connected and the proposition applies with that subgroup in place of $C$.
+NEW: where the gains of closed walks generate a proper subgroup, $\hat D$ is not strongly connected and the proposition applies, after a switching that brings all gains into that subgroup, with the subgroup in place of $C$.
+
+=== body.tex ===
+OLD: \begin{theorem}[Block law]\label{thm:block}
+Let $q\ge2$, $d\ge2$, and let $B$ be a $d\times d$ matrix whose entries are $q$-th roots of unity, with $B^*B=d$.
+NEW: \begin{theorem}[Block law]\label{thm:block}
+In this theorem $V=R\otimes\mathbb{R}$, a real vector space of dimension $\varphi(q)$ that contains $R$ as a lattice. Let $q\ge2$, $d\ge2$, and let $B$ be a $d\times d$ matrix whose entries are $q$-th roots of unity, with $B^*B=d$.
+
+=== body.tex ===
+OLD: a rule that adds over end vertices \emph{any} function of the summed gains, and is unchanged by switching, is a combination of the conjugate squared moduli;
+NEW: a consistent rule that adds over end vertices \emph{any} function of the summed gains vanishing at zero, and is unchanged by switching, is a combination of the conjugate squared moduli;
+
+=== body.tex ===
+OLD: with two inputs only the conclusion is false for $d\ge3$, since for the Fourier block with $d=q=3$ the function $\operatorname{Re}(c\,a^3)$ satisfies every two-input instance of \eqref{eq:BL} and is invariant under the cube roots of unity, while it fails with three inputs (the coefficient of $\beta_0\beta_1\beta_2$ in $\sum_z(\beta_0+\omega^z\beta_1+\omega^{2z}\beta_2)^3$ is $18$).
+NEW: with two inputs only the conclusion can fail, as it does for $d=q=3$: for the Fourier block with $d=q=3$ the function $\operatorname{Re}(c\,a^3)$ satisfies every two-input instance of \eqref{eq:BL} and is invariant under the cube roots of unity, while it fails with three inputs (the coefficient of $\beta_0\beta_1\beta_2$ in $\sum_z(\beta_0+\omega^z\beta_1+\omega^{2z}\beta_2)^3$ is $18$).
+
+=== body.tex ===
+OLD: For $j\in\mathbb{Z}/q$ let $\sigma_j(m)=\sum_hn_h\chi(h)^j$, so that $\sigma_0(m)=|m|$, $\sigma_{-j}=\overline{\sigma_j}$ on $M$ and $\sigma_j(k\cdot m)=\chi(k)^j\sigma_j(m)$. For a $d\times d$ matrix $B$ with entries in $C$ write $B^{(j)}$ for the complex matrix $(\chi(B_{zy})^j)_{z,y}$, and
+\[
+J_0=\{j\in\mathbb{Z}/q:\ B^{(j)}\text{ is the all-ones matrix}\},\qquad
+U=\{j\in\mathbb{Z}/q:\ B^{(j)*}B^{(j)}=d\}.
+NEW: For $j\in\mathbb{Z}/q$ let $\sigma_j(m)=\sum_hn_h\chi(h)^j$ (for $j$ prime to $q$ this is the automorphism $\sigma_j$ of Section~\ref{sec:mod} applied to the sum of the gains; here every residue $j$ is allowed), so that $\sigma_0(m)=|m|$, $\sigma_{-j}=\overline{\sigma_j}$ on $M$ and $\sigma_j(k\cdot m)=\chi(k)^j\sigma_j(m)$. For a $d\times d$ matrix $B$ with entries in $C$ write $B^{(j)}$ for the complex matrix $(\chi(B_{zy})^j)_{z,y}$, and
+\[
+J_0=\{j\in\mathbb{Z}/q:\ B^{(j)}\text{ is the all-ones matrix}\},\qquad
+\mathcal{U}=\{j\in\mathbb{Z}/q:\ B^{(j)*}B^{(j)}=d\}.
+
+=== body.tex ===
+OLD: $U=-U$, $U+J_0=U$, and $0\notin U$ when $d\ge2$.
+NEW: $\mathcal{U}=-\mathcal{U}$, $\mathcal{U}+J_0=\mathcal{U}$, and $0\notin \mathcal{U}$ when $d\ge2$.
+
+=== body.tex ===
+OLD: The forms $L$ are exactly the real-valued combinations $\sum_{j\in J_0}l_j\sigma_j$ with complex $l_j$, and the forms $Q$ are exactly the real-valued combinations
+\[
+\sum c_{jk}\,\sigma_j\overline{\sigma_k}\qquad\text{over pairs }(j,k)\text{ with }j\in U\text{ and }j-k\in J_0,
+\]
+with complex $c_{jk}$;
+NEW: The forms $L$ are exactly the real-valued combinations $\sum_{j\in J_0}l_j\sigma_j$ with complex $l_j$, and the forms $Q$ are exactly the real-valued combinations
+\[
+\sum c_{jk}\,\sigma_j\overline{\sigma_k}\qquad\text{over pairs }(j,k)\text{ with }j\in \mathcal{U}\text{ and }j-k\in J_0,
+\]
+with complex $c_{jk}$;
+
+=== body.tex ===
+OLD: The real vector space of solutions of \eqref{eq:MBL} has dimension $|J_0|+\#\bigl\{\{j,l\}:\ j,l\in\mathbb{Z}/q,\ j+l\in J_0,\ j\in U\bigr\}$, the second term counting unordered pairs, $j=l$ allowed.
+NEW: The real vector space of solutions of \eqref{eq:MBL} has dimension $|J_0|+\#\bigl\{\{j,l\}:\ j,l\in\mathbb{Z}/q,\ j+l\in J_0,\ j\in \mathcal{U}\bigr\}$, the second term counting unordered pairs, $j=l$ allowed.
+
+=== body.tex ===
+OLD: Then the solutions $F\colon M\to\mathbb{R}$ of \eqref{eq:MBL} are exactly
+\[
+F(m)=a\,|m|+\sum_{j\in U/\pm}c_j\,|\sigma_j(m)|^2,\qquad a,c_j\in\mathbb{R},
+\]
+the sum over one representative of each class $\{j,-j\}$ in $U$, and these functions are linearly independent. If moreover $B^*B=d$ for $B=B^{(1)}$, then $U$ contains every $j$ coprime to $q$.
+NEW: Then the solutions $F\colon M\to\mathbb{R}$ of \eqref{eq:MBL} are exactly
+\[
+F(m)=a\,|m|+\sum_{j\in \mathcal{U}/\pm}c_j\,|\sigma_j(m)|^2,\qquad a,c_j\in\mathbb{R},
+\]
+the sum over one representative of each class $\{j,-j\}$ in $\mathcal{U}$, and these functions are linearly independent. If moreover $B^*B=d$ for $B=B^{(1)}$, then $\mathcal{U}$ contains every $j$ coprime to $q$.
+
+=== body.tex ===
+OLD: for $q=6$ and $B=\bigl(\begin{smallmatrix}1&1&-1\\1&\omega&-\omega^2\\1&\omega^2&-\omega\end{smallmatrix}\bigr)$ with $\omega=\zeta^2$, $U=\{1,2,4,5\}$, and for $q=6$, $d=4$ and the matrix with rows $(1,1,1,1)$, $(1,1,-1,-1)$, $(1,-1,\zeta,-\zeta)$, $(1,-1,-\zeta,\zeta)$, $U=\{1,3,5\}$. If $U$ is empty, the only solutions are the multiples of $|m|$. \end{corollary}
+
+So where the gains of a block generate the group, counting and the squared moduli of the summed gains, taken through the characters $\chi^j$ with $j\in U$, are the only rules, and no hypothesis that the rule depends on a sum is needed.
+NEW: for $q=6$ and $B=\bigl(\begin{smallmatrix}1&1&-1\\1&\omega&-\omega^2\\1&\omega^2&-\omega\end{smallmatrix}\bigr)$ with $\omega=\zeta^2$, $\mathcal{U}=\{1,2,4,5\}$, and for $q=6$, $d=4$ and the matrix with rows $(1,1,1,1)$, $(1,1,-1,-1)$, $(1,-1,\zeta,-\zeta)$, $(1,-1,-\zeta,\zeta)$, $\mathcal{U}=\{1,3,5\}$. If $\mathcal{U}$ is empty, the only solutions are the multiples of $|m|$. \end{corollary}
+
+So where the gains of a block generate the group, counting and the squared moduli of the summed gains, taken through the characters $\chi^j$ with $j\in \mathcal{U}$, are the only rules, and no hypothesis that the rule depends on a sum is needed.
+
+=== body.tex ===
+OLD: that condition decides only whether $j=1$ belongs to $U$.
+NEW: that condition decides only whether $j=1$ belongs to $\mathcal{U}$.
+
+=== body.tex ===
+OLD: then $\chi(B_{zy'})^l=\overline{\chi(B_{zy'})^{j}}$ and $\Gamma_{jl}(y,y')$ is the entry $(y',y)$ of $B^{(j)*}B^{(j)}$, so the remaining condition is $j\in U$. With $k=-l$ and $\sigma_l=\overline{\sigma_k}$ on $M$ this is the stated list, and the monomials $\sigma_j\sigma_l$ over the unordered pairs with $j+l\in J_0$ and $j\in U$ (a condition symmetric in $j$ and $l$, since $j+l\in J_0$ gives $B^{(l)}=\overline{B^{(j)}}$) are a basis of the complex solutions of degree two.
+NEW: then $\chi(B_{zy'})^l=\overline{\chi(B_{zy'})^{j}}$ and $\Gamma_{jl}(y,y')$ is the entry $(y',y)$ of $B^{(j)*}B^{(j)}$, so the remaining condition is $j\in \mathcal{U}$. With $k=-l$ and $\sigma_l=\overline{\sigma_k}$ on $M$ this is the stated list, and the monomials $\sigma_j\sigma_l$ over the unordered pairs with $j+l\in J_0$ and $j\in \mathcal{U}$ (a condition symmetric in $j$ and $l$, since $j+l\in J_0$ gives $B^{(l)}=\overline{B^{(j)}}$) are a basis of the complex solutions of degree two.
+
+=== body.tex ===
+OLD: By the theorem every complex solution is $l_0\sigma_0+\sum_{j\in U}c_j\sigma_j\overline{\sigma_j}$, and $\sigma_j\overline{\sigma_j}=|\sigma_j|^2=|\sigma_{-j}|^2$ on $M$.
+NEW: By the theorem every complex solution is $l_0\sigma_0+\sum_{j\in \mathcal{U}}c_j\sigma_j\overline{\sigma_j}$, and $\sigma_j\overline{\sigma_j}=|\sigma_j|^2=|\sigma_{-j}|^2$ on $M$.
+
+=== body.tex ===
+OLD: if the entries of $B$ generate $C$, then $F(m)=a|m|+\sum_{j\in U/\pm}c_j|\sigma_j(m)|^2$.
+NEW: if the entries of $B$ generate $C$, then $F(m)=a|m|+\sum_{j\in \mathcal{U}/\pm}c_j|\sigma_j(m)|^2$.
+
+=== body.tex ===
+OLD: the count itself is excluded because it is not a function of the sum (the multiset of $1$ and $-1$ has sum zero and count two).
+NEW: the count itself is excluded because it is not a function of the sum (for even $q$ the multiset of $1$ and $-1$ has sum zero and count two; for any $q\ge2$ the multiset of the roots of unity of a prime order dividing $q$ has sum zero).
+
+=== body.tex ===
+OLD: on a carrier with a block whose entries generate the group, and with abundant gains, a rule that sees a walk only through its end vertex and its gain, and adds a function of what it sees over end vertices, is a combination of the count and of the squares $|\sigma_j|^2$, $j\in U$.
+NEW: on a carrier with a block whose entries generate the group, and with abundant gains, a consistent rule that sees a walk only through its end vertex and its gain, and adds over end vertices a function of what it sees that vanishes on the empty multiset, is a combination of the count and of the squares $|\sigma_j|^2$, $j\in \mathcal{U}$.
+
+=== body.tex ===
+OLD: positivity restricts them as in Proposition~\ref{prop:compo}, and nothing here selects between them or among the $j\in U$.
+NEW: positivity restricts them as in Proposition~\ref{prop:compo}, and nothing here selects between them or among the $j\in \mathcal{U}$.
+
+=== body.tex ===
+OLD: A rule of first order is the count and is blind to the gains. A rule of the form \eqref{eq:phi} that is consistent on a finite connected signed norm-preserving carrier of degree two is the squared modulus, and on a norm-preserving carrier in which two walks of equal length merge it is the only consistent power.
+NEW: A switching-invariant rule of first order on a carrier without loops and of constant out-degree is the count and is blind to the gains. A rule of the form \eqref{eq:phi} that is consistent on a finite connected signed norm-preserving carrier of degree two is the squared modulus, and on a norm-preserving carrier in which two walks of equal length merge it is the only consistent power; with gains in the roots of unity and abundance of gains every consistent rule of that form is a combination of the conjugate squared moduli (Corollaries~\ref{cor:vsl}, \ref{cor:abund}), and on carriers with a full block the modulus need not be assumed (Corollary~\ref{cor:block}).
+
+=== body.tex ===
+OLD: On carriers with a block whose entries generate the group and with abundant gains the form \eqref{eq:phi}, with the gains taken through a character, is itself a consequence, up to the count, for rules that add over end vertices a function of the multiset of gains (Corollary~\ref{cor:multicar}).
+NEW: On carriers with a block whose entries generate the group and with abundant gains the dependence on sums of gains is itself a consequence, up to the count: the rule is a combination of squared moduli of gains summed through the characters $\chi^j$, $j\in\mathcal{U}$, which need not be faithful, for rules that add over end vertices a function of the multiset of gains (Corollary~\ref{cor:multicar}).
+
+=== body.tex ===
+OLD: an exact translation of the quasi-momentum by $\Phi=2\pi/n$ per step requires gains of order at least $n$;
+NEW: an exact translation of the quasi-momentum by $\Phi=2\pi/n$ per step, that is, $\lambda=e^{\pm i\Phi}$, requires gains of order at least $n$;
+
+=== body.tex ===
+OLD: In these instances a winding gain of order $3$, $4$ or $6$ either is a strong field, or holds the walk within a block, or leaks slowly; in none does a packet follow the ray of the mean field.
+NEW: In these instances a winding gain of order $3$, $4$ or $6$ either is a strong field, or holds the walk within a block, or leaks slowly. Where the displacement of a packet was computed, for order $4$, it does not follow the ray of the mean field; for orders $3$ and $6$ the statement rests on the distances of Table~\ref{tab:stair}.
+
+=== body.tex ===
+OLD: (2) The form \eqref{eq:phi}: summed gains at a common end vertex, a function of their modulus, addition over end vertices.
+NEW: (2) The rule is a sum over end vertices, and it depends on the walks that end at a vertex only through their gains. Up to Corollary~\ref{cor:abund} it is further assumed to have the form \eqref{eq:phi}: the gains at a common end vertex are summed and the rule is a function of the modulus of the sum. Corollary~\ref{cor:block} drops the modulus and Corollary~\ref{cor:multicar} drops the sum, each on the carriers named there.
+
+=== body.tex ===
+OLD: (4) The group and the character, as in \cite{g8}.
+NEW: For Theorems~\ref{thm:conj}, \ref{thm:fourier} and \ref{thm:vsl}, Proposition~\ref{prop:deg34} and the corollaries on blocks, in addition an abundance of gains at one length, which Proposition~\ref{prop:abund} decides for finite carriers; for Theorem~\ref{thm:kernel}(ii) a hypothesis on the quotients of gains; for the last conclusion of Corollary~\ref{cor:multicar} a block whose entries generate the group. (4) The group and the character, as in \cite{g8}; in Theorem~\ref{thm:multiset} a cyclic group.
+
+=== body.tex ===
+OLD: the classification of the consistent pair rules with a kernel.
+NEW: the classification of the consistent pair rules with a kernel; on carriers with a full block and abundant gains, the modulus and the second order for rules that add a function of the summed gains; and, where the entries of the block generate the group, the addition of gains through a character for every part other than the count of a rule that adds a function of the multiset of gains.
+
+=== body.tex ===
+OLD: for orders other than $2,4,6$ every conjugate character, and every combination, is consistent;
+NEW: in degree two with abundant gains, for orders other than $2,4,6$ every conjugate character, and every combination, is consistent;
+
+=== body.tex ===
+OLD: 
+NEW: Nothing selects between the count and the squares in Corollary~\ref{cor:multicar}, or among the characters that occur there.
+
+=== body.tex ===
+OLD: (6) A classification of consistent rules outside the form \eqref{eq:phi}.
+NEW: (6) A classification of consistent rules that are not sums over end vertices, or that depend on more of a walk than its end vertex and its gain; Theorem~\ref{thm:multiset} for groups that are not cyclic; which of the solutions of Theorem~\ref{thm:multiset} are consistent on a whole carrier when the entries of the block do not generate the group.
+
+=== body.tex ===
+OLD: cylinder sets of histories, the parallelogram identity as a characterization of the square, the isometries of $\ell_p$, band spectra of a walk with a piecewise constant phase, and the semiclassical motion in a band with its Berry connection.
+NEW: cylinder sets of histories, the parallelogram identity as a characterization of the square, the isometries of $\ell_p$, characters of finite abelian groups and their linear independence, the Nullstellensatz, finite differences and polynomial functions on lattices, Hadamard matrices of Butson type, periods of digraphs, band spectra of a walk with a piecewise constant phase, and the semiclassical motion in a band with its Berry connection.
+
+=== G10_manuscript.tex ===
+OLD: Under that condition an additive rule is a multiple of the number of walks, so the weighting of returning walks by their holonomy that invariance under switching allows is excluded.
+NEW: Under that condition an additive rule that is invariant under switching, on a digraph without loops and of constant out-degree, is a multiple of the number of walks, so the weighting of returning walks by their holonomy that invariance under switching allows is excluded.
+
+=== G10_manuscript.tex ===
+OLD: For gains in the $q$-th roots of unity the rules of this form that satisfy it are exactly the combinations of the squared moduli in the conjugate characters, a space of dimension $\varphi(q)/2$, of dimension one for $q=2$, so that the rule is unique up to a factor exactly for the orders $2$, $4$ and $6$:
+NEW: In degree two, for gains in the $q$-th roots of unity with $q$ even that reach the vertices of a block in abundance, the rules of this form that satisfy it are exactly the combinations of the squared moduli in the conjugate characters, a space of dimension $\varphi(q)/2$, of dimension one for $q=2$, so that the rule is unique up to a factor exactly for the orders $2$, $4$ and $6$:
+
+=== G10_manuscript.tex ===
+OLD: Among the switching-invariant pair rules, with no choice of records and for any finite abelian group of gains and any degree, the consistent ones are exactly the mixtures over the characters for which the step is norm-preserving;
+NEW: Among the switching-invariant pair rules, with no choice of records and for any finite abelian group of gains and any degree, the consistent ones are, under a hypothesis on the quotients of gains, exactly the real combinations over the characters for which the step is norm-preserving;
+
+=== G10_manuscript.tex ===
+OLD: 
+NEW: On carriers with a full block and abundant gains neither the modulus nor the sum need be assumed: a consistent rule that adds over end vertices any function of the summed gains, vanishing at zero, is a quadratic form, and a consistent rule that adds any function of the multiset of gains of the walks ending at a vertex is, when the gains of the block generate the group, a combination of the count of walks and of squared moduli of gains summed through characters. Nothing selects between the count and the squares.
+
+=== G10_manuscript.tex ===
+OLD: Programs \texttt{verify\_continuation\_selection.py}, \texttt{verify\_bounded\_order\_confinement.py}, \texttt{verify\_modulus\_rules\_and\_local\_spectra.py}, \texttt{verify\_fourth\_session\_corrections.py}, \texttt{verify\_ray\_error\_scaling.py}, \texttt{verify\_ray\_averaged\_prediction.py}, \texttt{verify\_degree\_two\_quadratic\_rule.py}, \texttt{verify\_degree\_two\_quadratic\_rule\_followup.py}, \texttt{verify\_cyclotomic\_modulus\_rules.py}, \texttt{verify\_composition\_selects\_one\_character.py}, \texttt{verify\_signed\_lift\_rule.py}, \texttt{verify\_kernel\_rules.py}, \texttt{verify\_kernel\_rules\_followup.py}, \texttt{verify\_kernel\_rules\_general.py} and its two follow-ups with their result files, \texttt{verify\_record\_sum\_higher\_degree.py}, \texttt{verify\_fourier\_blocks\_any\_degree.py} and its follow-up, and the programs \texttt{t1\_poly.py}, \texttt{t1b\_multi.py}, \texttt{t2\_lattice.py} and \texttt{t3\_cert.py} of the folder \texttt{Vanishing\_Sums} and \texttt{abund.py}, \texttt{abund\_v2.py} of the folder \texttt{Abundance}, \texttt{gauge\_bl.py}, \texttt{poly\_bl.py} of the folder \texttt{Block\_Law}, with their result files, and the Lean files \texttt{SignedLineRecursion.lean}, \texttt{ParallelogramInt.lean}, \texttt{ParallelogramGroup.lean} and \texttt{ThreeLaw.lean} (core library), and \texttt{PowerSumConvexity.lean}, \texttt{MkGeneral.lean}, \texttt{Parallelogram.lean}, \texttt{ThreeLaw.lean}, \texttt{FourLaw.lean} and \texttt{CharacterIndependence.lean} (Mathlib), in \texttt{COMPUTATION/Baseline\_Additions} of the program collection (November 2026).
+NEW: Programs \texttt{verify\_continuation\_selection.py}, \texttt{verify\_bounded\_order\_confinement.py}, \texttt{verify\_modulus\_rules\_and\_local\_spectra.py}, \texttt{verify\_fourth\_session\_corrections.py}, \texttt{verify\_ray\_error\_scaling.py}, \texttt{verify\_ray\_averaged\_prediction.py}, \texttt{verify\_degree\_two\_quadratic\_rule.py}, \texttt{verify\_degree\_two\_quadratic\_rule\_followup.py}, \texttt{verify\_cyclotomic\_modulus\_rules.py}, \texttt{verify\_composition\_selects\_one\_character.py}, \texttt{verify\_signed\_lift\_rule.py}, \texttt{verify\_kernel\_rules.py}, \texttt{verify\_kernel\_rules\_followup.py}, \texttt{verify\_kernel\_rules\_general.py} and its two follow-ups with their result files, \texttt{verify\_record\_sum\_higher\_degree.py}, \texttt{verify\_fourier\_blocks\_any\_degree.py} and its follow-up, and the programs \texttt{t1\_poly.py}, \texttt{t1b\_multi.py}, \texttt{t2\_lattice.py} and \texttt{t3\_cert.py} of the folder \texttt{Vanishing\_Sums} and \texttt{abund.py}, \texttt{abund\_v2.py} of the folder \texttt{Abundance}, \texttt{gauge\_bl.py}, \texttt{poly\_bl.py} of the folder \texttt{Block\_Law}, \texttt{verify\_multiset.py} and its follow-up of the folder \texttt{Multiset\_Law}, \texttt{verify\_k4\_additive\_ratios.py}, with their result files, and the Lean files \texttt{SignedLineRecursion.lean}, \texttt{ParallelogramInt.lean}, \texttt{ParallelogramGroup.lean} and \texttt{ThreeLaw.lean} (core library), and \texttt{PowerSumConvexity.lean}, \texttt{MkGeneral.lean}, \texttt{Parallelogram.lean}, \texttt{ThreeLaw.lean}, \texttt{FourLaw.lean}, \texttt{MkSmall.lean}, \texttt{CharacterIndependence.lean}, \texttt{VslCertificates.lean}, \texttt{GaugeBlock.lean} and \texttt{MultisetBlock.lean} (Mathlib), in \texttt{COMPUTATION/Baseline\_Additions} of the program collection (November 2026).

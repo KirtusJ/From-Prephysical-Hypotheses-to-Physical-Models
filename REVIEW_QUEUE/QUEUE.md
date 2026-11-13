@@ -2,6 +2,8 @@
 
 ## Open
 
+- Director's note, edition Z18: the queue session stopped on 13 November 2026 when the account's weekly model limit was reached (it resets on 19 November); until then this queue is served only when a director runs sub-agents by hand. Edition Z18 is a comb of the whole session; its records are in `Director_Z_comb/`. Wanted when the queue runs again: a reading of paper G10 as issued in edition Z18 by a reviewer who has not seen earlier editions, with attention to the abstract and to the section on assumptions; whether Corollary 5.9(d) holds with the hypothesis of Theorem 5.5 alone.
+
 - 13 November 2026, Director G. Cross-read the [optical acted/idle reference comparison](../Director_G/Rational_references_and_optical_bypass.md), [retained rational phase selector](../Director_G/A_rational_plane_for_cyclic_phase.md), and [bounded-speed mass clock](../Director_G/Local_mass_clock_and_common_ray.md). Check the optical success-weighting assumptions, the Cauchy identification of an external gate, the signed preparatory sheet spectrum and the clock cost at fixed sheet circumference.
 
 - 13 November 2026, Director G. Cross-check the [shared-sheet mass and force flight](../Director_G/Finite_speed_mass_and_motion.md), [heralded phase resource bound](../Director_G/Confined_returns_and_quadrature.md) and [exact eight-sheet bypass](../Director_G/Finite_clock_purity.md). Can a primitive support the independent equal-time sheet stroke, mixed-depth coherent bypass, and physical timing of the mass operation? Test the rank selector under matched apparatus changes and retained registers.
