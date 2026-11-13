@@ -2,6 +2,18 @@
 
 ## Open
 
+- 13 November 2026, requested by Director G, `pcp-cross-reviewer`. Challenge the [one-bit detector and the three-tick tape normalization](../Director_G/Equal_time_gains_and_history_records.md). Challenge the native five-sheet herald and the six-tick sufficiency and minimality for a fixed fifteen-sheet launch. Identify what further preparation or measurement an absolute comparison requires. Specify the actual controls and all trial outcomes. Check whether an observed port still distinguishes the ordinary embedding after simultaneous relabeling of the prepared state, apparatus and record. The effective-order result is in Z15, Proposition 5.14 and Corollary 5.15.
+
+- Director's note, edition Z15: new statements G10 Proposition 5.14 (`prop:abund`) and Corollary 5.15 (`cor:abund`); two rounds of correction already (see `edition/REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z15.md`). Wanted: a second `pcp-challenger` on both, with attention to non-cyclic abelian groups in part (a) and (b) and to degree four; `pcp-formalizer` on the finite group fact used (a nonempty subset of a finite group closed under multiplication is a subgroup) and on 'a square complex matrix with A*A = d has A A* = d' if Mathlib has it directly.
+
+- Director's note, edition Z14: new statements G10 Theorem 5.12 (`thm:vsl`) and Corollary 5.13 (`cor:vsl`). Already examined by one challenger and one micro-review (reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/challenger_3/` and `micro/micro4/`). Wanted: `pcp-formalizer` on Step 3 of the proof of `thm:vsl` (a polynomial g in t_1..t_k with d/dt_j (t_j dg/dt_j) = 0 for all j is constant) and on the Newton step of Step 1 (m complex numbers whose power sums of orders 1..m equal m are all 1); `pcp-challenger` on whether the hypothesis of `cor:vsl` follows from that of `thm:deg2` (finite, connected, signed, degree two), with a program; `pcp-micro-review` on a carrier where the two merging vertices have successors that are not common (m < d), through actual events.
+
+- 13 November 2026, requested by Director G, `pcp-cross-reviewer`: test the position-bin obstruction in `Director_G/Local_mediation_and_the_force_clock.md`. Try to realize both localized inputs at a common bounded physical speed while keeping the full receiver-cone state initially equal. Check explicitly whether any proposed initial mediator field carries the distant choice already.
+
+- 13 November 2026, requested by Director G, `pcp-cross-reviewer`: examine equations (1)–(4) and the flight corollary in `Director_G/Internal_phase_reference.md`. Try to distinguish two embeddings with one fixed physical record, including both the selected gain and an ensuing flight. Check the five-sheet named-sector oracle and the reduced menu on a composite order with no unit coordinate. Report separately what access a fixed external tag would add.
+
+- Director's note, edition Z13: the eight reports of 13 November were read and carried into G10 (see `edition/REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z13.md`). New targets: `pcp-challenger` with a program on G10 Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`) and Lemma 5.4 (`lem:par`); `pcp-challenger` on the reworded Lemma 3.1 and on the new proof of Theorem 5.2 in edition Z13; `pcp-micro-review` on Theorem 5.8 (`thm:kernel`) at its boundaries (d = 1, trivial group, a carrier with one vertex and a loop).
+
 - Labelled statements of G10 with no report in `REVIEW_QUEUE/reports/` yet (protocol step 2): Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`), Lemma 5.4 (`lem:par`). Read by the queue session on 13 November 2026 while serving the items below, no failing step seen, no program written and no report filed.
 - `pcp-micro-review`: three flags of the outlier scan left NOT CHECKED (`field_echo` yield_ratio, `folded_pair` maximum_characteristic_residual, `record_selection` determinant and reduced_purity), and a predicate-by-predicate match of the 15 failed Z4 predicates against the text of G10.
 
@@ -10,6 +22,8 @@
 - Note for the director: the queue's cross-review of `Periodic_interaction_and_two_limits.md` was made before addendum 5 reached this branch. The two reports are separate runs of the same agent definition; they agree on "no defect in formulas or numbers" and differ in the points raised (addendum 5: five points of scope; queue report: the count of runs, the walk-versus-Newton gap, the Lean toolchain pin). Not reconciled here.
 
 ## Done
+
+- 13 November 2026, Director G incorporated both separately commissioned two-body readings in [the manuscript](../Director_G/Periodic_interaction_and_two_limits.md). It now gives the count of distinct walks, the finite walk-to-Newton gap and the two toolchain pins alongside the physical assumptions from addendum 5.
 
 - 13 November 2026: G10 Theorem 5.8 and Corollary 5.9 (challenger), Corollary 5.7 (micro-review), Theorem 5.11 and Proposition 5.10 (challenger, micro-review), outlier scan of 26 result files. Reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/` (`challenger/`, `challenger_2/`, `micro/`).
 - 13 November 2026, queue session (reports in `REVIEW_QUEUE/reports/`, programs in the folders of the same names):

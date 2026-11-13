@@ -16,6 +16,16 @@ A file-based queue that lets review work run without the director present. Any C
 6. Do not edit papers, registers, `edition/`, `Director_G/` or `.pcp/`. A defect is reported, not repaired: the director reads the queue, verifies each report and carries findings into the next edition.
 7. Stop after the items you can finish in the time you have. Leave unfinished items under **Open** with a one-line note.
 
+## Efficiency and periodic reports
+
+- Budget per item: challenger 10 minutes, cross-reviewer 12, formalizer 5, micro-review 2. Stop an item at twice its budget, file what you have and mark it partial.
+- Do not redo work that exists: before an item, list `REVIEW_QUEUE/reports/`, `Director_Z_cross_review/` and `edition/REVIEW_RECORDS/Director_Z/Session_4/` for the same target and commit; if a report exists for an unchanged statement, skip it.
+- Run items in parallel as sub-agents when they do not share files. Give each sub-agent only the file paths and line ranges it needs.
+- Reuse: keep one scratch library of carrier builders, exact cyclotomic arithmetic and consistency-equation solvers under `REVIEW_QUEUE/lib/` and import it, in place of rewriting them per item. Keep one Lean project with the Mathlib cache between items.
+- Programs: sample sizes just large enough for the predicate; no run above three minutes without a stated reason.
+- At the end of every working period write `REVIEW_QUEUE/STATUS.md` (replace it) with: date and commits covered; a table of items with minutes spent, tool calls, outcome; what was slow or wasted and why; one concrete change made to the workflow this period and its measured effect on the next comparable item; what is open. Append the same table to `REVIEW_QUEUE/STATUS_LOG.md`.
+- If the same kind of defect is found twice (a hypothesis outside a statement, an untested hypothesis in a predicate, a missing structural condition), add a one-line check for it to the matching file in `.claude/agents/` on the queue branch and say so in `STATUS.md`; the director merges it.
+
 ## Standing of the reports
 
 Reviewers served by this queue are of the director's model family unless a report says otherwise. A report reduces exposure to the author's notes; it is not independent review. The director rechecks every report before using it.

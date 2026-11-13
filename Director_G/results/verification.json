@@ -1,5 +1,5 @@
 {
-  "research_rerun": "Eighteen checkers completed in fresh output directories with bundled Python 3.12.14 and NumPy 2.3.5 on Windows. All 32 final output files and all 18 checker sources match both research copies byte for byte. The geometry checker has a final rerun with additional finite-locality controls.",
+  "research_rerun": "All twenty research checkers ran in new directories with bundled Python 3.12.14 and NumPy 2.3.5 on Windows. Thirty-four final outputs and twenty sources match both research copies byte for byte. An additional single-thread BLAS variant and its differing norm are recorded below.",
   "output_sha256": {
     "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
     "band_preparation_flights.csv": "f4b28a7341f91fe3104a3605986b6c48e1017d5b9a95d94ca3c90bf342afe2ae",
@@ -13,6 +13,7 @@
     "folded_pair.json": "275b1cdb05854229b7d2adfff74e929fd6d3322329e026ce906003a64f923bd6",
     "forced_envelope.json": "55d392fa72b9b1c58a80e16d5d35b7bdcc3b73473348c46a693ed85c0269a9b7",
     "forced_envelope_trials.csv": "30bdb10633d16d174531a90b6085204b78d2177702fc02fde87d79e2a1fcd063",
+    "internal_reference.json": "c20d6e603f09392bf34725b646873bf529d8276bcdfe52dcd8fbcdfda3fd1b03",
     "native_embedding.json": "5e8b2424fbcadeb36abb48afd06b6d88a75d81022d1f6b748e90aa89da7e9011",
     "native_record_tree.csv": "9c86d63e96ae4e514e3b0dec2a821c13f0684717004cbe14014a3fd7ecea0689",
     "periodic_force.json": "c5202800998fff24e0eb791dc22d59f9402bf9ace470a42a7c9a01167e766c76",
@@ -26,6 +27,7 @@
     "radial_trials.csv": "27453646536d2431a3d29715931be841653f33aaec2d81cc8c65d26c34aaf834",
     "record_branch_trials.csv": "9b2dd74583236ba75df2fcfa719f05346187125b534235ec39aa44089ac92cb2",
     "record_selection.json": "dfa348a6adc1527865439627db1431d41a823fd1fe2e512b3b2e54cd6347c1ef",
+    "reference_comparison.json": "f4d6913a338c1b23636c1f79d6e70f3109c8560f69b6da60c4412bebcf035100",
     "refinement_geometry.json": "4ab89a0c6e9f6b04a0dc52ad9f3af067f9ae8a3ffc25b4ed2610cb68cdb5e8d6",
     "relative_transport.csv": "c250b655e3d7e93c765efdf982f96957a9562807a2bbc5b73cdce7b7fdd44fa4",
     "relative_transport.json": "15c53165421a78ab25c433f43b8e4fcde816eafd785ba53427d04467306413c1",
@@ -92,7 +94,7 @@
     "affected": "first written phase-control expression",
     "first_run_pass": false
   },
-  "review_limits": "The original physical correspondence is unresolved. Director Z’s recorded reviews cover the listed earlier heads. The coin, sector and Bell extensions received same-session mathematical, numerical and formal checks from participants in one model family. The CHSH statistic is a prediction for the stated source and all-output analyzer.",
+  "review_limits": "The original physical correspondence is unresolved. Director Z’s recorded reviews cover the listed earlier heads. The coin, sector and Bell extensions received same-session mathematical, numerical and formal checks from participants in one model family. The CHSH statistic is a prediction for the stated source and all-output analyzer. The reference comparison is a finite instrument calculation. The review receipts establish the reported worker operations; the mathematical checks have their own evidence and scope.",
   "probability_selection_checks": {
     "character_recursion": true,
     "tag_permutation": true,
@@ -120,6 +122,7 @@
     "fixed_transport": "7dfe9f64bd71bf6cebcbcef2508ed33988417bc69e86d4f16d4c0f6a45a09689",
     "folded_pair": "9cf75dc2d256ef798db8bf43c5535112abd7bef2df24c2822616bb8f8ac8aac2",
     "forced_envelope": "3462858d011c092027af36e6f8d4811da503123ea4f68d4f3ee4384a1ce30363",
+    "internal_reference": "93b4e28434bf435aca6323fac30921d818f307790b8c8e61feef2d3c9f4fe4a8",
     "native_embedding": "e05dae50ff867ee08d4f6058353031ca97a487e121553ea4aab5a894a469095b",
     "periodic_force": "515cce7b5eb093384852e9eb4196888bd356bf96f79b98bd9c2ba8cd6a97d09f",
     "position_records": "4fb7276d4194a083be04de5e0d9453e73c87a29ce569de16899ef10175bbd0d1",
@@ -127,6 +130,7 @@
     "radial_bell": "788d320930cd2f65893d277f330b94d195b0c64633249cea62cded0318a87eef",
     "radial_records": "b48099253ea9e85442eedde825bef43caefb1a44c283881d42688d02a25012d8",
     "record_selection": "fa40e68def5bcd8b688eb207f4aed854be63326ce450d571130cb14f98eb6816",
+    "reference_comparison": "4e8051f53d4947cab463cca0bb658ea271223ae3f237e4540e9ad0699d2a763e",
     "refinement_geometry": "7ef2cebe2cf21320f2c2f0b58578bb413d12478827139580dbc2b9a3b32e1273",
     "relative_transport": "e15e6a5397e782b483df74e1170f0df948cb880f402eb883a37f8740b7d239f7",
     "simultaneous_sectors": "2e8d93887ccc57ecdf0961466fae7a173bb3a84647f4fbe0f24217277d16d5bb",
@@ -299,8 +303,8 @@
     "event_ready_source": true
   },
   "fresh_rerun": {
-    "checkers": 18,
-    "outputs": 32,
+    "checkers": 20,
+    "outputs": 34,
     "csv_files": 14,
     "bindings": {
       "check_band_preparation.py": [
@@ -329,6 +333,9 @@
         "forced_envelope.json",
         "forced_envelope_trials.csv"
       ],
+      "check_internal_reference.py": [
+        "internal_reference.json"
+      ],
       "check_native_embedding.py": [
         "native_embedding.json",
         "native_record_tree.csv"
@@ -356,6 +363,9 @@
         "record_branch_trials.csv",
         "record_selection.json"
       ],
+      "check_reference_comparison.py": [
+        "reference_comparison.json"
+      ],
       "check_refinement_geometry.py": [
         "refinement_geometry.json"
       ],
@@ -372,8 +382,68 @@
         "ray_trials.csv"
       ]
     },
-    "previous_release_outputs_matching": 26,
-    "final_geometry_output": "The final geometry run supersedes the earlier run from the same batch. The output_sha256 table binds the run that includes the finite-locality cases."
+    "previous_release_outputs_matching": 32,
+    "final_geometry_output": "The current full rerun includes the final geometry checker with finite-locality controls and reproduces the prior release output.",
+    "result_runs": {
+      "initial_batch": {
+        "checker_exit_codes": {
+          "check_band_preparation.py": 0,
+          "check_coin_qubit.py": 0,
+          "check_cycle_interaction.py": 0,
+          "check_field_echo.py": 0,
+          "check_fixed_transport.py": 0,
+          "check_folded_pair.py": 0,
+          "check_forced_envelope.py": 0,
+          "check_internal_reference.py": 0,
+          "check_native_embedding.py": 0,
+          "check_periodic_force.py": 0,
+          "check_position_records.py": 0,
+          "check_probability_selection.py": 0,
+          "check_radial_bell.py": 0,
+          "check_radial_records.py": 0,
+          "check_record_selection.py": 0,
+          "check_reference_comparison.py": 0,
+          "check_refinement_geometry.py": 0,
+          "check_relative_transport.py": 0,
+          "check_simultaneous_sectors.py": 0,
+          "check_walk.py": 0
+        },
+        "output_count": 34,
+        "byte_matches": 33,
+        "blas_setting": "OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1, OMP_NUM_THREADS=1"
+      },
+      "repeated_checker": "check_record_selection.py",
+      "repeat_exit_code": 0,
+      "repeat_blas_setting": "Host default as in published run",
+      "repeat_matching_files": 2,
+      "single_thread_variant": {
+        "file": "record_selection.json",
+        "path": "shared_sheet[2].full_norm",
+        "value": 1.0,
+        "published_default": 1.0000000000000002,
+        "single_thread_sha256": "2b8e2ee33e3a33bef30dda9efc30d98041dafdfd0d98952283f3656bddb09d0c",
+        "default_sha256": "dfa348a6adc1527865439627db1431d41a823fd1fe2e512b3b2e54cd6347c1ef",
+        "unchanged_passed_predicates": 13
+      }
+    },
+    "final_article_checkers": {
+      "verified": {
+        "check_internal_reference.py": {
+          "exit_code": 0,
+          "source_sha256": "93b4e28434bf435aca6323fac30921d818f307790b8c8e61feef2d3c9f4fe4a8",
+          "output": "internal_reference.json",
+          "output_sha256": "c20d6e603f09392bf34725b646873bf529d8276bcdfe52dcd8fbcdfda3fd1b03"
+        },
+        "check_reference_comparison.py": {
+          "exit_code": 0,
+          "source_sha256": "4e8051f53d4947cab463cca0bb658ea271223ae3f237e4540e9ad0699d2a763e",
+          "output": "reference_comparison.json",
+          "output_sha256": "f4d6913a338c1b23636c1f79d6e70f3109c8560f69b6da60c4412bebcf035100"
+        }
+      },
+      "source_revision": "One surplus LF at the end of check_internal_reference.py was removed after the full batch. Appending that byte exactly reproduces the previous source SHA-256. Both article checkers were rerun in fresh directories and matched both current output files.",
+      "previous_internal_reference_source_sha256": "08fc7c0b29e99e7b14aacda6e00690bb9109464db8a5dc8a0d0eb5448c422a97"
+    }
   },
   "scientific_controls": {
     "coin_qubit": "Literal integer mirror paths of radii 1 through 8, state-independent acceptance, full-sheet tomography, destructive arm labels and earlier postselected/fallback contact controls.",
@@ -388,25 +458,29 @@
       "shorter_cap_20": "8386371/4194304"
     },
     "simultaneous_sectors": "Two finite five-sheet words; original integer counts, Fourier weights and posterior under the localized input. The records do not establish a uniform synthesis cost.",
-    "refinement_geometry": "Finite cycle metric and divisor inclusions, 2,006 units in finite locality controls, 19 sharp equal-budget examples, a coherent CRT counterexample and tagged square-root-of-two sign controls."
+    "refinement_geometry": "Finite cycle metric and divisor inclusions, 2,006 units in finite locality controls, 19 sharp equal-budget examples, a coherent CRT counterexample and tagged square-root-of-two sign controls.",
+    "internal_reference": "Five fixed spatial-graph cases and 289 exact five-sheet count outcomes. Named-port oracle compares literal diamond h with fold(r dot h). Original double-index naming error retained separately.",
+    "reference_comparison": "Seven compressed scans, four pairs of unequal orders, signed joint record-moment controls, and four separately declared phase-fixed coherent-bypass controls. The three-setting dark probability is 3/256 with a shared reference and 1/64 with fresh references."
   },
   "retained_adverse_artifacts": {
     "sha256": {
       "orientation_oracle_first_run.json": "50a88c835025e7807ad46ef3b07beb48f6f6f2ebb7c3ffc1bfe76546f0de9f71",
       "band_preparation_first_oracle.json": "c837b5a1550443b627b18288fc75f18b6c47386bea9effae1677b5dc3a695112",
       "radial_first_oracle.json": "36edc477a1d3c0c001ae49c728814fb0a3af166dee558972092680324700e7e6",
-      "radial_trials_first_oracle.csv": "6bf515bde28c46ce4d032fd38dd2db9625449980b120df1187ef99a56256019f"
+      "radial_trials_first_oracle.csv": "6bf515bde28c46ce4d032fd38dd2db9625449980b120df1187ef99a56256019f",
+      "internal_reference_first_index.json": "e4ee943f0d2fa657e780c88c896e0d3a40d41cae43b5108625ab35db2850c955"
     },
     "radial_original_tree_predicate": false,
     "radial_original_trials": 256,
-    "description": "Historical first comparisons, separate from the 32 current rerun files. The first radial analytic oracle double-counted the left split sign."
+    "description": "Historical first comparisons are retained separately from the 34 current rerun outputs. The first radial analytic oracle double-counted the left split sign. The first internal-reference report used twice the physical diamond index, interchanging the two named five-sheet planes while preserving the aggregate probability."
   },
   "lean_compilation": {
     "compiler": "Lean 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94",
-    "checks": 7,
+    "checks": 8,
     "exit_codes": {
       "CoinInterferometer.lean": 0,
       "CorridorCounts.lean": 0,
+      "InternalReference.lean": 0,
       "RadialBell.lean": 0,
       "RadialRecords.lean": 0,
       "RecordWeights.lean": 0,
@@ -416,13 +490,14 @@
     "source_sha256": {
       "CoinInterferometer.lean": "1f5eedae7c3fa666cfa5e8b58e80738368ec3c9f5d9069753b9571e66e774abc",
       "CorridorCounts.lean": "3928ab7d6b1fcd9cebb320c96c39ecaa6447f5051767ae9048a66e23e41f34fc",
+      "InternalReference.lean": "012a823aa3b2934885ba98964701dc2bbf038d746c7dd0ac804de4b7f8051ee0",
       "RadialBell.lean": "d83a85939be25e7892e07bf76cb2a98b3f757f2b4ad392bfbe6fcf3a35a6c9a3",
       "RadialRecords.lean": "cc9548f2112ddc822785e6533ba569aafe60b58343d7d12d43fab8a3c7e17afe",
       "RecordWeights.lean": "66b4d7e773bc6ed055fea4f166a10c457be2f9b7a02c4c0b857e73b36b09f6a2",
       "RefinementLocality.lean": "baa2945feb0cefae838d7d103d27d2748d39a2cb9541a4f86dbe565853d655b9",
       "SharedSheet.lean": "4521b54f95aab9a7423324e48863fc7166bdfbbb99cead10f4f63905d9352d92"
     },
-    "coverage": "RecordWeights, SharedSheet and CorridorCounts cover earlier conditional finite statements. CoinInterferometer and RadialRecords cover mirror paths and radius updates. RadialBell covers the finite source/correlation arithmetic and strict bounded CHSH inequality. RefinementLocality covers signed integer bounds and sharpness. Scope of each statement is in lean/README.md."
+    "coverage": "RecordWeights, SharedSheet and CorridorCounts cover earlier conditional finite statements. CoinInterferometer and RadialRecords cover mirror paths and radius updates. RadialBell covers the finite source/correlation arithmetic and strict bounded CHSH inequality. RefinementLocality covers signed integer bounds and sharpness. Scope of each statement is in lean/README.md. InternalReference verifies folded adjacent residues at every modulus greater than two, cancellation in integer-valued path sums under simultaneous inverse relabeling, and exact three-site coherent versus marked control ports. Coherent control of pulse timing is an extra instrument."
   },
   "edition_z11": {
     "edition": "FPHPM-BASELINE-2026-11-13-Z11",
@@ -438,25 +513,32 @@
   },
   "manuscript_links": {
     "local_research": {
-      "markdown_files": 18,
-      "relative_file_link_occurrences": 119,
+      "markdown_files": 19,
+      "relative_file_link_occurrences": 139,
       "missing_local_targets": 0
     },
     "published_checkout": {
-      "markdown_files": 19,
-      "relative_file_link_occurrences": 136,
+      "markdown_files": 20,
+      "relative_file_link_occurrences": 157,
       "missing_local_targets": 0
     },
-    "scope": "Local file targets from the research manuscripts and Lean README, with the additional research index in the checkout. Relative files only; external URLs and within-document anchors were outside this check."
+    "scope": "Local file targets from the research manuscripts and Lean README, with the additional research index in the checkout. Relative files only; external URLs and within-document anchors were outside this check.",
+    "line_ending_only_mirror_differences": [
+      "Coin_qubit_review.md",
+      "Native_preparations_and_probability_embeddings.md"
+    ]
   },
   "gate_map_check": {
     "original_disposition": "UNRESOLVED",
     "gates": 13,
-    "local_sha256": "f88dd088a061419d8aba6e2af2b786cc66fbd9505d655330bbb69bd568ffec3b",
-    "published_sha256": "8fd5ae575c000a8c66fdd6a4b8812919e76b939c720716a594034ad1323e085a",
+    "local_sha256": "c377bcf1c60016bb27304d2f30d7c49bd51cc05e4e40c6b32e3c85f04bc452ff",
+    "published_sha256": "c741c14bcf94240af6a1128719bb969be4318d66a05d1d38d101a2db3ab0b0bd",
     "original_gate_map_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
-    "comparison_commit": "081ad6238e2089fa855d049ae3eaf119c2ac402f",
-    "basis": "The two gate maps differ only in their edition-specific original-source locator. Both resolve to the same source bytes. Four damaged occurrences of Schrödinger in each current map were restored in UTF-8. Earlier evidence and all newly appended scientific text are preserved."
+    "comparison_commit": "9e8b73a7dabb2070e6ab4ef0ece3c33d5dce4a56",
+    "basis": "The maps differ only in their edition-specific baseline locator. Both resolve to the same source bytes. Both list the internal phase reference, its Lean check and all thirteen open gates. The published LF-content SHA-256 and Git blob object ID are independent of working-copy line endings.",
+    "previous_comparison_commit": "081ad6238e2089fa855d049ae3eaf119c2ac402f",
+    "published_lf_content_sha256": "c741c14bcf94240af6a1128719bb969be4318d66a05d1d38d101a2db3ab0b0bd",
+    "published_git_blob_oid": "4d90eeeff3abd387b6e08614a41c3a4b04f8f8ea"
   },
   "edition_z12": {
     "edition": "FPHPM-BASELINE-2026-11-13-Z12",
@@ -469,5 +551,1145 @@
     "legacy_components": 85,
     "result": "BASELINE_CHECK_PASS",
     "method": "The supplied edition/verify_baseline.py ran with PyMuPDF. In memory only, enumerated Windows relative paths were compared using forward slashes, as in the manifest. Checks included digests, extra files, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
+  },
+  "worker_evidence": {
+    "files": {
+      "pcp_worker_trial.json": "352cfee96a63d2ac7e09cb8b6a2fde20a124a1331bd389627df8b3415b477955",
+      "embedding_worker_reviews.json": "5f403047e9268367dad5142a68cd09eadf961689d89b1ab51cd6232bca3431e6"
+    },
+    "embedding_review_attempts": 4,
+    "verified_consultations": 3,
+    "scope": "Archived operational trials, separate from deterministic checker output. One of four reference-review parents did not complete a verified consultation. The recorded startup failures and subsequent replay outcomes remain in the source report; these were not rerun in this closure."
+  },
+  "internal_phase_reference_article": {
+    "file": "Internal_phase_reference.md",
+    "sha256": "296bd0f1599654a0bd68160c2c4ab27d3830f0b3163eee26f890eeb8c27a8a01",
+    "local_file_link_occurrences": 14,
+    "evidence_sha256": {
+      "check_internal_reference.py": "93b4e28434bf435aca6323fac30921d818f307790b8c8e61feef2d3c9f4fe4a8",
+      "check_reference_comparison.py": "4e8051f53d4947cab463cca0bb658ea271223ae3f237e4540e9ad0699d2a763e",
+      "lean/InternalReference.lean": "012a823aa3b2934885ba98964701dc2bbf038d746c7dd0ac804de4b7f8051ee0",
+      "results/internal_reference.json": "c20d6e603f09392bf34725b646873bf529d8276bcdfe52dcd8fbcdfda3fd1b03",
+      "results/internal_reference_first_index.json": "e4ee943f0d2fa657e780c88c896e0d3a40d41cae43b5108625ab35db2850c955",
+      "results/reference_comparison.json": "f4d6913a338c1b23636c1f79d6e70f3109c8560f69b6da60c4412bebcf035100",
+      "results/embedding_worker_reviews.json": "5f403047e9268367dad5142a68cd09eadf961689d89b1ab51cd6232bca3431e6"
+    },
+    "numerical_claims": {
+      "fixed_graph_cases": 5,
+      "five_sheet_count_pairs": 289,
+      "literal_named_single_port_checks": 50,
+      "named_plane_count_checks": 578,
+      "acceptance": 0.7738719426,
+      "wrong_given_acceptance": 0.0251790845,
+      "observed_next_dark": 0.1797835195,
+      "compressed_scan_cases": 7,
+      "unequal_order_cases": 4,
+      "surviving_three_tick_return_orders": [
+        3
+      ],
+      "three_dark_same_sheet": "3/256",
+      "three_dark_fresh_sheets": "1/64"
+    },
+    "scope": "Checked the article-specific finite tables, source/output bindings, Lean file and local references. Identifying an externally named cyclotomic root, building the masks or a phase-fixed bypass, and selecting an empirical probability law remain separate assumptions.",
+    "uniform_yield_bound": "For d >= 2 and odd M >= 3, adjoining all integer factors from 3 to M bounds the prime-divisor product below by the telescoping 2(M+1)/(3M) > 2/3. The finite rational product identity was also checked at M=3 through 105."
+  },
+  "edition_z13": {
+    "edition": "FPHPM-BASELINE-2026-11-13-Z13",
+    "checkout_head": "9e8b73a7dabb2070e6ab4ef0ece3c33d5dce4a56",
+    "manifest_sha256": "dec515b8a412bfdf3099ff677fe3994a5ab2d8a90a847661e7ae08a84f1fc334",
+    "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+    "manifest_payloads": 1165,
+    "paper_index_entries": 41,
+    "assembled_pdf_front_matter_checked": 40,
+    "registry_rows": 396,
+    "legacy_components": 85,
+    "result": "BASELINE_CHECK_PASS",
+    "method": "The supplied edition/verify_baseline.py ran with PyMuPDF. In memory only, enumerated Windows relative paths were compared using forward slashes, as in the manifest. Checks included digests, extra files, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
+  },
+  "local_mediation_verification_addendum": {
+    "scope": "Addendum to the previous 20-checker closure. Earlier fields, including fresh_rerun, lean_compilation, gate_map_check, manuscript_links and edition_z13, describe that prior snapshot. The paths, clock witness, article bindings and link counts below were rechecked for this addendum.",
+    "prior_manifest_raw_sha256": "66b5c2fd715a7a2824e3a3b71aebcc24eb6f55c0a65a52acf7f8d559c907e25f",
+    "incremental_rerun": {
+      "checker": "check_local_mediator.py",
+      "output": "results/local_mediator.json",
+      "fresh_directories": 2,
+      "independent_mirror_exit_codes": [
+        0,
+        0
+      ],
+      "python": "3.12.14",
+      "output_bytes": 65622,
+      "output_byte_identical_both_fresh_runs_and_both_mirrors": true,
+      "prior_20_checkers_rerun_in_this_addendum": false,
+      "distinct_checkers_cumulatively": 21,
+      "distinct_generated_outputs_cumulatively": 35,
+      "prior_to_addendum_lean_files": 8,
+      "distinct_lean_files_cumulatively": 9
+    },
+    "evidence_raw_sha256": {
+      "check_local_mediator.py": "2e8312b569c042d3e4c69e092c7b73048c7f6b626dc068011851b1ae7865a170",
+      "check_cycle_interaction.py": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+      "lean/LocalMediator.lean": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+      "results/local_mediator.json": "69e5557a128fb9ed889bde9eb54be379a35f3f969087667b63c351a20d01a64f",
+      "results/mediator_worker_review.json": "70a3916717ffe7959337425ee12d2d9b72f912b885b73a22f91d89d225a4a0e6",
+      "Local_mediation_and_the_force_clock.md": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714"
+    },
+    "local_mediator_predicates": {
+      "exact_basis_gain_and_reset": true,
+      "full_walk_on_every_basis_input": true,
+      "signed_counts_all_macrosteps": true,
+      "count_profile_arithmetic": true,
+      "complete_register_permutation": true,
+      "orientation_witness": true,
+      "short_route_leaves_token": true,
+      "stalled_counter_changes_gain": true,
+      "busy_workspace_changes_target": true,
+      "forced_erase_noninjective": true,
+      "lightcone_control": true
+    },
+    "moving_classical_packet_predicates": {
+      "attraction_separates": true,
+      "null_and_opposite_controls": true,
+      "time_reversal_preserves_position_separation": true,
+      "sampled_enclosures_and_probabilities": true,
+      "refinements_agree": true,
+      "sender_support_outside_read_cone": true
+    },
+    "finite_evidence": {
+      "rings": 4,
+      "gain_profiles": 10,
+      "basis_site_sheet_inputs": 1732,
+      "full_walk_basis_columns": 6928,
+      "signed_vector_comparisons": 60,
+      "full_register_columns": 2880,
+      "moving_trials": 16,
+      "moving_cases": 6,
+      "attractive_trial_times": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "attractive_binary_total_variations": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "initial_packet_half_width": 0.0009765625,
+      "fixed_read_bin": [
+        0.015625,
+        0.53125
+      ],
+      "minimum_initial_bin_to_changed_sender_support": 1.0385697642948966,
+      "max_flow_refinement_difference": 1.923507580881001e-06,
+      "scope": "Numerical classical product ensembles, analytic support enclosures and strict-speed-one cone comparison. No new finite quantum packet trajectory simulation."
+    },
+    "lean": {
+      "compiler": "Lean 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94",
+      "file": "lean/LocalMediator.lean",
+      "research_exit": 0,
+      "checkout_exit": 0,
+      "coverage": "One-signal cyclic tour, exact encounter and reset, inverse tick, first-response time, termwise release, arbitrary finite release words and last-cell truncated-tour control. The full-symbol-register test and the Newton trajectories are separate."
+    },
+    "worker_receipt": {
+      "id": "281f36e5ba64f366d530",
+      "run_result_sha256": "79ad8e7fca335fd0921f08fc2f7b76cdaf9d969abc34a4e502eb058fd66ab7e3",
+      "register_sha256": {
+        "parent": "a793e96677639d05bdc2fe12cf9042113737df70a93b9991288aeff3d466bef6",
+        "child": "68e6810cff7e81dca0150489f032b0f486125c01cc901e873cbbc7cb55751150"
+      },
+      "recorded_rust_exit_codes": [
+        0,
+        0
+      ],
+      "register_event_counts": [
+        7,
+        7
+      ],
+      "portable_text_digests_match_local_raw_objects": true,
+      "phase_differences_positive_exponent": [
+        -2.221441469079183,
+        -0.9201511845106103
+      ],
+      "X_expectations": [
+        -0.6056998670788134,
+        0.6056998670788133
+      ],
+      "binary_total_variation": 0.6056998670788134,
+      "assessment": "The stored child all-zero answer failed. The stored parent got the two X expectations and TV right but reversed the sign of the second relative phase. Local raw consultation, register, result and output-object bytes were checked against the portability record. This addendum checked the saved Rust replays."
+    },
+    "article": {
+      "file": "Local_mediation_and_the_force_clock.md",
+      "bindings": {
+        "local_research": {
+          "raw_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "lf_content_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "git_blob_oid_sha1": "3851c64ef57fc53e125940c4fdb71281091fe0cf"
+        },
+        "published_checkout": {
+          "raw_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "lf_content_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "git_blob_oid_sha1": "3851c64ef57fc53e125940c4fdb71281091fe0cf"
+        }
+      }
+    },
+    "current_manuscript_links": {
+      "local_research": {
+        "markdown_files": 20,
+        "relative_file_link_occurrences": 152,
+        "missing_local_targets": 0,
+        "article_relative_file_link_occurrences": 10
+      },
+      "published_checkout": {
+        "markdown_files": 21,
+        "relative_file_link_occurrences": 171,
+        "missing_local_targets": 0,
+        "article_relative_file_link_occurrences": 10
+      }
+    },
+    "current_gate_maps": {
+      "bindings": {
+        "local_research": {
+          "raw_sha256": "bb9e528b8653516ef692172679dc481dc66d000eb3d2171f531d75ec7224f3b3",
+          "lf_content_sha256": "bb9e528b8653516ef692172679dc481dc66d000eb3d2171f531d75ec7224f3b3",
+          "git_blob_oid_sha1": "cb380a0bcd0073acd5b0d5839271eef77e20e55b"
+        },
+        "published_checkout": {
+          "raw_sha256": "16938c5d4ef16ac0a026f0331a3206fd16601b076c9dc5b49c5057b2ceee70d3",
+          "lf_content_sha256": "16938c5d4ef16ac0a026f0331a3206fd16601b076c9dc5b49c5057b2ceee70d3",
+          "git_blob_oid_sha1": "4b6029a5bb891b1d4fea118aadf71ba22bae0775"
+        }
+      },
+      "baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "semantic_equality_except_baseline_locators": true,
+      "original_disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "digest_convention": "Raw SHA-256 fingerprints working copy bytes. LF-content SHA-256 and Git SHA-1 object IDs use LF-normalized payloads, with the standard Git blob header for the latter."
+  },
+  "final_signal_integration_addendum": {
+    "scope": "The new three-tick and moving-source checkers ran from both final mirrors in fresh directories. Earlier addenda, link counts, map and article fingerprints, the Z13 edition and the previous 21-checker and nine-Lean-file closure are historical. Those earlier checkers and proof files were not rerun for this addition.",
+    "prior_manifest_raw_sha256": "23c5b44cbf940e0deffe8245c02bd009abaa9dd4304ecccaf74d3b6342b645b2",
+    "merge_reference": {
+      "pull_request": 4,
+      "merge_commit": "8a4d8585ab40dccf9729ae2b2688652007fcd4c8",
+      "first_parent": "cf1a47a30a405d627c6aa3bb0d9ec85c617bcd02",
+      "worker_source_and_result_blob_oids": {
+        "check_moving_source_records.py": "b9731a08c54d43d761d20600e60f58cce98565c1",
+        "results/moving_source_records.json": "e3300c82f4abb6046a658b514d73833c4721657a"
+      },
+      "scope": "Checked the canonical local merge tree against the worker source and result, alongside the two supplied mirrors."
+    },
+    "totals": {
+      "checkers": 23,
+      "generated_outputs": 37,
+      "lean_files": 9,
+      "new_checks": 2,
+      "fresh_checker_processes": 4,
+      "new_lean_files": 0
+    },
+    "final_bindings": {
+      "Local_mediation_and_the_force_clock.md": {
+        "raw_sha256": "1a8ad9f2d370f2f52e505272ecc0286f3a9a79055e58d5b0b1b613589dfbe848",
+        "lf_content_sha256": "1a8ad9f2d370f2f52e505272ecc0286f3a9a79055e58d5b0b1b613589dfbe848",
+        "git_blob_oid_sha1": "df5f3bd3ec8d108d556f7891e6e99b84d03f04a7"
+      },
+      "check_moving_source_records.py": {
+        "raw_sha256": "497857baba73bacb9663c31bbb9ccf1265a9423c834ba0b7ce7d1dd3327e28a7",
+        "lf_content_sha256": "497857baba73bacb9663c31bbb9ccf1265a9423c834ba0b7ce7d1dd3327e28a7",
+        "git_blob_oid_sha1": "b9731a08c54d43d761d20600e60f58cce98565c1"
+      },
+      "check_three_tick_signal.py": {
+        "raw_sha256": "a443132d0513c92ee5f5175c309256edd803cbaedf7d65533a5a4a0173dcf3d3",
+        "lf_content_sha256": "a443132d0513c92ee5f5175c309256edd803cbaedf7d65533a5a4a0173dcf3d3",
+        "git_blob_oid_sha1": "524cc7acecb4743122ff6aaeffcb9cb9a42a2f09"
+      },
+      "results/moving_source_records.json": {
+        "raw_sha256": "9a18e29859bb573db8f56944bf3c63b4c76406587105c7543c8fe46c209db59b",
+        "lf_content_sha256": "9a18e29859bb573db8f56944bf3c63b4c76406587105c7543c8fe46c209db59b",
+        "git_blob_oid_sha1": "e3300c82f4abb6046a658b514d73833c4721657a"
+      },
+      "results/three_tick_signal.json": {
+        "raw_sha256": "5d5a01cdc29d9f307a685a573bf697cd64754ad8f6bf703cff7a80168dfc4842",
+        "lf_content_sha256": "c614dc95258efeab14dff0c0768f5139e6eb0c064903b1abd5305ce1e35a1357",
+        "git_blob_oid_sha1": "52be41196ae63298b99ae03beb49b63fbd1b5f8b"
+      },
+      "check_periodic_force.py": {
+        "raw_sha256": "515cce7b5eb093384852e9eb4196888bd356bf96f79b98bd9c2ba8cd6a97d09f",
+        "lf_content_sha256": "515cce7b5eb093384852e9eb4196888bd356bf96f79b98bd9c2ba8cd6a97d09f",
+        "git_blob_oid_sha1": "665228421e8b87f8d36fd8c734bb5da441f84b40"
+      },
+      "check_cycle_interaction.py": {
+        "raw_sha256": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+        "lf_content_sha256": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+        "git_blob_oid_sha1": "5372d5ba22fc8610d7f425bee786f135fee0dc6b"
+      },
+      "check_local_mediator.py": {
+        "raw_sha256": "2e8312b569c042d3e4c69e092c7b73048c7f6b626dc068011851b1ae7865a170",
+        "lf_content_sha256": "2e8312b569c042d3e4c69e092c7b73048c7f6b626dc068011851b1ae7865a170",
+        "git_blob_oid_sha1": "23a139c9e9c2826449b67a362a72033ff26e16b4"
+      },
+      "lean/LocalMediator.lean": {
+        "raw_sha256": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+        "lf_content_sha256": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+        "git_blob_oid_sha1": "464624e48b64f344166d809a83e04088efc77b81"
+      },
+      "results/local_mediator.json": {
+        "raw_sha256": "69e5557a128fb9ed889bde9eb54be379a35f3f969087667b63c351a20d01a64f",
+        "lf_content_sha256": "6d5458a7afd4a843fdb8744fdc335ae87789587f625113a1f40f502ca1a48d2f",
+        "git_blob_oid_sha1": "e52d77ef34bd4c77e294e600ac3fcc53ca2a67cc"
+      },
+      "results/mediator_worker_review.json": {
+        "raw_sha256": "70a3916717ffe7959337425ee12d2d9b72f912b885b73a22f91d89d225a4a0e6",
+        "lf_content_sha256": "70a3916717ffe7959337425ee12d2d9b72f912b885b73a22f91d89d225a4a0e6",
+        "git_blob_oid_sha1": "e046bff5a005cf49b7e4eed640fcd4fc1999defb"
+      }
+    },
+    "published_index": {
+      "raw_sha256": "eca7927e03eceeaf8332b858d931f3439bbb2afb51688a89b6f24142cef68f9d",
+      "lf_content_sha256": "eca7927e03eceeaf8332b858d931f3439bbb2afb51688a89b6f24142cef68f9d",
+      "git_blob_oid_sha1": "888bb5bf08307014045de52aed71b7b7a79b5ab5"
+    },
+    "current_gate_maps": {
+      "local_research": {
+        "raw_sha256": "f0f55aec61bc767be427313e9c94d7e256e9547aa55e18cc7abc46d26c3bf87b",
+        "lf_content_sha256": "f0f55aec61bc767be427313e9c94d7e256e9547aa55e18cc7abc46d26c3bf87b",
+        "git_blob_oid_sha1": "2544855a31b46f744d4da8bce48af65df9f36774"
+      },
+      "published_checkout": {
+        "raw_sha256": "20a77d2b4e12dcc1f7c8ded9327d312d288c1cbc3559a0d71e623907bc34dd0b",
+        "lf_content_sha256": "20a77d2b4e12dcc1f7c8ded9327d312d288c1cbc3559a0d71e623907bc34dd0b",
+        "git_blob_oid_sha1": "381264cd6c2785113a2b5cd6cb3068fe5f3f772d"
+      }
+    },
+    "current_relative_links": {
+      "local_research": {
+        "markdown_files": 20,
+        "relative_file_link_occurrences": 154,
+        "missing_local_targets": 0,
+        "article_local_file_link_occurrences": 12
+      },
+      "published_checkout": {
+        "markdown_files": 21,
+        "relative_file_link_occurrences": 173,
+        "missing_local_targets": 0,
+        "article_local_file_link_occurrences": 12
+      }
+    },
+    "gate_review": {
+      "gates_open": 13,
+      "original_disposition": "UNRESOLVED",
+      "baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "same_content_except_baseline_locators": true
+    },
+    "fresh_runs": {
+      "runtime": {
+        "python": "3.12.14",
+        "numpy": "2.3.5"
+      },
+      "order": [
+        "check_three_tick_signal.py",
+        "check_moving_source_records.py"
+      ],
+      "research_exit_codes": [
+        0,
+        0
+      ],
+      "checkout_exit_codes": [
+        0,
+        0
+      ],
+      "all_outputs_identical_to_both_stored_snapshots": true
+    },
+    "three_tick": {
+      "scenarios": 7,
+      "mass_checks": 56,
+      "read_probabilities": [
+        "1/4",
+        "1/2"
+      ],
+      "binary_total_variation": "1/4",
+      "minimum_worst_input_error": "1/8",
+      "arbitrary_sheet_autocorrelation_rechecked": true,
+      "controls": [
+        "opposite global sheet gain",
+        "zero interaction",
+        "constant sheet character (sheet factored out exactly)",
+        "local contact-only gain; initial walkers cannot meet before last departure",
+        "finite count-profile rounding near half-integer",
+        "previous floating-point rounded cosine pilot, not the finite count profile"
+      ]
+    },
+    "moving_source": {
+      "primary_sizes": [
+        32,
+        64,
+        96,
+        128
+      ],
+      "exploratory_sizes": [
+        192,
+        256
+      ],
+      "finite_joint_flights": 24,
+      "binary_comparisons": 24,
+      "independent_recalculation": "A/B probabilities, signed contrasts, binary total variation, cone trace distances, and positive-excess lower bounds agreed with the saved rows.",
+      "positive_excess_size_bin_index_and_worst_error": [
+        [
+          192,
+          1,
+          0.005248431573930068
+        ],
+        [
+          256,
+          1,
+          0.03295048701274479
+        ]
+      ],
+      "free_controls_within_2e_12": true,
+      "N256": {
+        "ticks": 260,
+        "elapsed": 0.9997311000702706,
+        "bin": [
+          -0.4,
+          0.18
+        ],
+        "probabilities": [
+          0.2305974059127978,
+          0.39103646676419446
+        ],
+        "TV": 0.16043906085139667,
+        "cone_trace_distance": 0.09453808682590709,
+        "worst_input_error_lower_bound": 0.03295048701274479
+      },
+      "scope": "Positive excess occurred only for the second bin in the two exploratory sizes. Values are finite floating-point estimates for the specified preparations, local encoding, common clock and speed-one bound."
+    },
+    "edition_z14": {
+      "edition": "FPHPM-BASELINE-2026-11-13-Z14",
+      "predecessor": "FPHPM-BASELINE-2026-11-13-Z13",
+      "manifest_sha256": "96fdb04f328860b9e3ab507ee3361f46018db2ce8ac1ebb2048d0d1fe4d78925",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "manifest_payloads": 1183,
+      "paper_index_entries": 41,
+      "assembled_pdf_front_matter_checked": 40,
+      "registry_rows": 398,
+      "legacy_components": 85,
+      "pymupdf": "2.1",
+      "verifier_exit": 0,
+      "result": "BASELINE_CHECK_PASS",
+      "method": "Ran the supplied verifier with the Windows enumerated-path separators normalized in memory. The checks include payloads, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
+    }
+  },
+  "equal_time_gains_and_history_records_addendum": {
+    "scope": "New checker and proof executions for the equal-time gain and history-record supplement. All earlier entries, counts, edition results and bindings keep their original snapshot scopes. New comparisons of worker outputs check the recorded local objects and replay receipts; inference was not rerun. Archive-wide historical checkers were not rerun.",
+    "prior_manifest_raw_sha256": "34eda9819c0cb8bbfd86f21b1631f930731509a552eb17fe5468702624ebd946",
+    "totals": {
+      "checkers": 26,
+      "generated_outputs": 40,
+      "lean_files": 10,
+      "new_checkers": 3,
+      "new_generated_outputs": 3,
+      "new_lean_files": 1,
+      "fresh_checker_processes": 6,
+      "fresh_lean_compilations": 2,
+      "historical_prior": {
+        "checkers": 23,
+        "generated_outputs": 37,
+        "lean_files": 9
+      },
+      "counting_scope": "Worker review is an extra evidence object outside the generated-checker output total."
+    },
+    "hash_scope": "Git blob OIDs use repository path attributes. LF canonical SHA-256 and git blob OIDs separately hash normalized line endings. The -text gain JSON preserves its raw CRLF when Git stores it.",
+    "bindings": {
+      "Equal_time_gains_and_history_records.md": {
+        "raw_sha256": "06c04d6cde881015476882bb1179e2da2b6ad628f0698137dfb2a7561efaf736",
+        "lf_content_sha256": "06c04d6cde881015476882bb1179e2da2b6ad628f0698137dfb2a7561efaf736",
+        "git_blob_oid_sha1": "36153a1ee7c0b3a5edd22035e597bd36f415e2d2",
+        "lf_git_blob_oid_sha1": "36153a1ee7c0b3a5edd22035e597bd36f415e2d2",
+        "bytes": 22102
+      },
+      "lean/README.md": {
+        "raw_sha256": "3267d61f48478f501cd5ada35f8037156f1e3f8dda15c32fbecd9609c38317cd",
+        "lf_content_sha256": "3267d61f48478f501cd5ada35f8037156f1e3f8dda15c32fbecd9609c38317cd",
+        "git_blob_oid_sha1": "442a802b45810ac1d3075a983722c7addc607f2a",
+        "lf_git_blob_oid_sha1": "442a802b45810ac1d3075a983722c7addc607f2a",
+        "bytes": 6232
+      },
+      "lean/lean-toolchain": {
+        "raw_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "lf_content_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "lf_git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "bytes": 25
+      },
+      "lean/GainAbundance.lean": {
+        "raw_sha256": "8e382d9846dec11854ceff278055e83892fbca523627ce17cbc2df536ea8d71b",
+        "lf_content_sha256": "8e382d9846dec11854ceff278055e83892fbca523627ce17cbc2df536ea8d71b",
+        "git_blob_oid_sha1": "2d1b6eb931522b74eb20a0b971dae857f0e9c3cf",
+        "lf_git_blob_oid_sha1": "2d1b6eb931522b74eb20a0b971dae857f0e9c3cf",
+        "bytes": 8896
+      },
+      "results/abundance_worker_review.json": {
+        "raw_sha256": "1bb598cd8e730cab33d85f358c782b6acc0f5093857c3d858588facb052a00d2",
+        "lf_content_sha256": "1bb598cd8e730cab33d85f358c782b6acc0f5093857c3d858588facb052a00d2",
+        "git_blob_oid_sha1": "89efcfe0fca6217ee714c6a13067acc5f683cd47",
+        "lf_git_blob_oid_sha1": "89efcfe0fca6217ee714c6a13067acc5f683cd47",
+        "bytes": 19598
+      },
+      "check_gain_abundance.py": {
+        "raw_sha256": "5fb8ee5601d0095c4a35c531806a6bbb2cc1a981814e43fab1eaa718c3c3b717",
+        "lf_content_sha256": "5fb8ee5601d0095c4a35c531806a6bbb2cc1a981814e43fab1eaa718c3c3b717",
+        "git_blob_oid_sha1": "87418e33f772901cdcd6759b38fcb705da4e8f6e",
+        "lf_git_blob_oid_sha1": "87418e33f772901cdcd6759b38fcb705da4e8f6e",
+        "bytes": 26133
+      },
+      "check_history_flags.py": {
+        "raw_sha256": "d56ec054dacf05156d7f25543b07f56f4c31fb248db69a89a9ab0ff137d12b2e",
+        "lf_content_sha256": "d56ec054dacf05156d7f25543b07f56f4c31fb248db69a89a9ab0ff137d12b2e",
+        "git_blob_oid_sha1": "0205eccc659d1e76f34c8ddd532bfc804547c1c1",
+        "lf_git_blob_oid_sha1": "0205eccc659d1e76f34c8ddd532bfc804547c1c1",
+        "bytes": 15721
+      },
+      "check_relative_gain_readout.py": {
+        "raw_sha256": "4959f9e6122452456d9c323a878083c523b7209bdee504b07c2f54e5887a48f2",
+        "lf_content_sha256": "4959f9e6122452456d9c323a878083c523b7209bdee504b07c2f54e5887a48f2",
+        "git_blob_oid_sha1": "76fc0e4618dd41dc1062bb88434cdb1ebc1c6142",
+        "lf_git_blob_oid_sha1": "76fc0e4618dd41dc1062bb88434cdb1ebc1c6142",
+        "bytes": 10423
+      },
+      "results/gain_abundance.json": {
+        "raw_sha256": "f9f5e25545397ee672e1949f95b67bd491637a0aa128604c04f3f19a005a9b5c",
+        "lf_content_sha256": "46c4741e9c07c9b0758ac70dafd7f62c92b20a966ed76511d460f95cb7ec11a0",
+        "git_blob_oid_sha1": "88a13741c8cde37e62db50c8e500c474eee2bbca",
+        "lf_git_blob_oid_sha1": "0516d84b2a56d6deff5fc70c7d0062ed099dcccf",
+        "bytes": 212281
+      },
+      "results/history_flags.json": {
+        "raw_sha256": "55478eafb93ef2958b939185aa65e501e4e9d2047d7766917eb9feb4ff968a12",
+        "lf_content_sha256": "55478eafb93ef2958b939185aa65e501e4e9d2047d7766917eb9feb4ff968a12",
+        "git_blob_oid_sha1": "b074cf20c46ff7dfe4ef2625211fd20f3124317d",
+        "lf_git_blob_oid_sha1": "b074cf20c46ff7dfe4ef2625211fd20f3124317d",
+        "bytes": 32848
+      },
+      "results/relative_gain_readout.json": {
+        "raw_sha256": "a242b6d6336178f90cfaf35cecc5d212a45a9f1b46f598d3276894415439f4e5",
+        "lf_content_sha256": "a242b6d6336178f90cfaf35cecc5d212a45a9f1b46f598d3276894415439f4e5",
+        "git_blob_oid_sha1": "1a4c30b932e4214accfcc038c81c8a1e13d2a56a",
+        "lf_git_blob_oid_sha1": "1a4c30b932e4214accfcc038c81c8a1e13d2a56a",
+        "bytes": 32274
+      }
+    },
+    "checkout_raw_sha256_if_different": {},
+    "published_index": {
+      "raw_sha256": "13720ed80158d3f307e838be81a2b957a2974122210b048d6c0d2f4028fe6393",
+      "lf_content_sha256": "13720ed80158d3f307e838be81a2b957a2974122210b048d6c0d2f4028fe6393",
+      "git_blob_oid_sha1": "d9131eb8270e910d280970dec6e287fba0070d4b",
+      "lf_git_blob_oid_sha1": "d9131eb8270e910d280970dec6e287fba0070d4b",
+      "bytes": 6067
+    },
+    "current_gate_maps": {
+      "research": {
+        "raw_sha256": "f7749efc90a2c875bf8e97e3876324706cca4a7f3893521290e8aae134519f1b",
+        "lf_content_sha256": "f7749efc90a2c875bf8e97e3876324706cca4a7f3893521290e8aae134519f1b",
+        "git_blob_oid_sha1": "96b7d5125da1e19b9aea8233f8ee088fd2184b4e",
+        "lf_git_blob_oid_sha1": "96b7d5125da1e19b9aea8233f8ee088fd2184b4e",
+        "bytes": 33605
+      },
+      "checkout": {
+        "raw_sha256": "533868c4f0cce212994387eb72bdab95f4e35dc57f2b3b5974b7f14c25d68430",
+        "lf_content_sha256": "533868c4f0cce212994387eb72bdab95f4e35dc57f2b3b5974b7f14c25d68430",
+        "git_blob_oid_sha1": "0c8c9995a868f971a4bc72d36103eacee8ecfdc6",
+        "lf_git_blob_oid_sha1": "0c8c9995a868f971a4bc72d36103eacee8ecfdc6",
+        "bytes": 33685
+      }
+    },
+    "gate_review": {
+      "open_gates": 13,
+      "original_disposition": "UNRESOLVED",
+      "baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "same_content_except_baseline_locator": true,
+      "both_baseline_payloads_rechecked": true
+    },
+    "links": {
+      "all_local_manuscript_targets": {
+        "research": {
+          "markdown_files": 21,
+          "relative_file_link_occurrences": 170,
+          "missing_local_targets": 0,
+          "article_local_file_link_occurrences": 13
+        },
+        "checkout": {
+          "markdown_files": 22,
+          "relative_file_link_occurrences": 190,
+          "missing_local_targets": 0,
+          "article_local_file_link_occurrences": 13
+        }
+      },
+      "article_repository_blob_targets_verified": [
+        "3b61b19:ADDENDUM_EDITION_Z15_SESSION_4.md",
+        "cf1a47a:ADDENDUM_EDITION_Z14_SESSION_4.md",
+        "3b61b19:edition/PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex",
+        "cf1a47a:edition/PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex"
+      ]
+    },
+    "fresh_runs": {
+      "python": "3.12.14",
+      "checkers_per_mirror": {
+        "research": {
+          "gain_abundance": {
+            "exit": 0,
+            "raw_output_sha256": "f9f5e25545397ee672e1949f95b67bd491637a0aa128604c04f3f19a005a9b5c"
+          },
+          "history_flags": {
+            "exit": 0,
+            "raw_output_sha256": "55478eafb93ef2958b939185aa65e501e4e9d2047d7766917eb9feb4ff968a12"
+          },
+          "relative_gain_readout": {
+            "exit": 0,
+            "raw_output_sha256": "a242b6d6336178f90cfaf35cecc5d212a45a9f1b46f598d3276894415439f4e5"
+          }
+        },
+        "checkout": {
+          "gain_abundance": {
+            "exit": 0,
+            "raw_output_sha256": "f9f5e25545397ee672e1949f95b67bd491637a0aa128604c04f3f19a005a9b5c"
+          },
+          "history_flags": {
+            "exit": 0,
+            "raw_output_sha256": "55478eafb93ef2958b939185aa65e501e4e9d2047d7766917eb9feb4ff968a12"
+          },
+          "relative_gain_readout": {
+            "exit": 0,
+            "raw_output_sha256": "a242b6d6336178f90cfaf35cecc5d212a45a9f1b46f598d3276894415439f4e5"
+          }
+        }
+      },
+      "all_output_bytes_match_both_stored_snapshots": true
+    },
+    "lean": {
+      "version": "Lean (version 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94, Release)",
+      "command": "lean lean/GainAbundance.lean",
+      "mirror_exit_codes": [
+        0,
+        0
+      ],
+      "diagnostics": [],
+      "scope": "Distinct equal-length gain histories, assuming an actual pair of closed edge words whose difference generates the cyclic group and adequate exit paths. The certificate counts histories independently of an event instrument."
+    },
+    "gain_controls": {
+      "graph_trials": 22,
+      "checks": {
+        "algebra_and_boolean_coverage": true,
+        "all_lifted_eventual_cells": true,
+        "boolean_and_integer_support": true,
+        "sums_and_branch_multiplicity": true,
+        "growing_common_time_witnesses": true,
+        "pure_switch_all_labels_is_nonunitary": true,
+        "unitary_layers_distinguish_cross_time_gains": true,
+        "all_native_sheet_order_formulas": true,
+        "all_native_ring_coins_are_scaled_isometries": true,
+        "periods_from_reachable_lift": true,
+        "Z15_four_vertex_period_obstruction": true,
+        "Z15_nonfaithful_projection": true
+      },
+      "Z15_nonabundant_four_vertex_control": {
+        "base_period": 1,
+        "reachable_lift_period": 2,
+        "equal_time_gain_subgroup": [
+          0,
+          2
+        ],
+        "unrestricted_closed_gains": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "nonfaithful_control": {
+        "full_group_same_time_all_four": false,
+        "threshold_time": 13,
+        "projected_character_histories_per_target": [
+          2080,
+          2016
+        ],
+        "exact_pushforward_checked_every_tick": true
+      }
+    },
+    "history_flags": {
+      "ring_orders": [
+        1,
+        5
+      ],
+      "formal_subsets_tested_before_tape_variants": 552,
+      "counts_per_order_per_depth": [
+        4,
+        16,
+        256
+      ],
+      "native_three_tick_masks_over_unit": {
+        "1": [
+          223,
+          247
+        ],
+        "5": []
+      },
+      "tape_pair_Fourier_recovery": [
+        "1/10",
+        "3/10",
+        "3/5"
+      ]
+    },
+    "one_label_qubit": {
+      "ticks": 10,
+      "singleton_plus": "1/4096",
+      "exact_first_failure_and_outcome_normalization": true,
+      "separate_sheet_coordinate_and_cosine_checks": true,
+      "sheet_inputs": [
+        {
+          "input": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "moments": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "zero_and_conjugate_pair_masses": [
+            0.2,
+            0.4,
+            0.4
+          ]
+        },
+        {
+          "input": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "moments": [
+            "1",
+            "2/5",
+            "0",
+            "0",
+            "2/5"
+          ],
+          "zero_and_conjugate_pair_masses": [
+            0.36,
+            0.49888543819998316,
+            0.14111456180001677
+          ]
+        },
+        {
+          "input": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "moments": [
+            "1",
+            "-1/2",
+            "0",
+            "0",
+            "-1/2"
+          ],
+          "zero_and_conjugate_pair_masses": [
+            0.0,
+            0.27639320225002106,
+            0.7236067977499789
+          ]
+        }
+      ],
+      "scope": "Relative data with supplied label controls and known sheet preparations. Simultaneous character relabeling leaves their physical readings invariant."
+    },
+    "retained_nested_review": {
+      "attempt": "20261113T112823214495Z",
+      "receipt": "d991df6ab45b3ca6a6fa",
+      "child_response": "The exact squared norm of the summed final-coordinate path amplitudes is 1. [end of text]",
+      "correct_exact_weight": "9/8",
+      "max_two_tick_word_set_weight": "5/4",
+      "both_output_hashes_and_register_file_hashes_rechecked": true,
+      "recorded_Python_and_Rust_passes": true,
+      "physical_scope": "Standalone two-state H example; the ring-with-shifts controls are separate."
+    },
+    "edition_z15": {
+      "edition": "FPHPM-BASELINE-2026-11-13-Z15",
+      "source_commit": "3b61b19eeb73ab9c33795e48692b0cac00662e5c",
+      "predecessor": "FPHPM-BASELINE-2026-11-13-Z14",
+      "manifest_sha256": "38c20c9e8fe1c84ff2115219208073b88e45728d359f54e2980deabaf0cfb291",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "manifest_payloads": 1196,
+      "paper_index_entries": 41,
+      "assembled_pdf_front_matter_checked": 40,
+      "registry_rows": 400,
+      "legacy_components": 85,
+      "pymupdf": "2.1",
+      "verifier_exit": 0,
+      "result": "BASELINE_CHECK_PASS",
+      "method": "Ran the release verifier with its one enumerated os.path.relpath normalized to forward slash in memory on Windows; PyMuPDF was required in this check."
+    }
+  },
+  "uninterrupted_gain_ports_addendum": {
+    "scope": "Two new checker executions. An additional exact path expansion reconstructs every fifteen-sheet port and every positive-probability five-sheet record, including heralding and both route directions. Historical checks, raw bindings and edition verification remain scoped to their prior addenda.",
+    "prior_manifest_raw_sha256": "0193c2a36fea7b582b810c13d35f2dbe1b98f2882c5cf3422ec7f33f7a4f4ca2",
+    "totals": {
+      "checkers": 27,
+      "generated_outputs": 41,
+      "lean_files": 10,
+      "new_checkers": 1,
+      "new_generated_outputs": 1,
+      "new_lean_files": 0,
+      "fresh_checker_processes": 2
+    },
+    "bindings": {
+      "research": {
+        "Equal_time_gains_and_history_records.md": {
+          "raw_sha256": "812262e1aa0bd417be06705305386695c109d98e131a311f85142bd82c50cd22",
+          "lf_content_sha256": "812262e1aa0bd417be06705305386695c109d98e131a311f85142bd82c50cd22",
+          "git_blob_oid_sha1": "42a4841b716b204095002f665f67b9e3c714000c",
+          "lf_git_blob_oid_sha1": "42a4841b716b204095002f665f67b9e3c714000c",
+          "bytes": 27549
+        },
+        "check_native_gain_ports.py": {
+          "raw_sha256": "a08817ecb25c2b8c2825fd343a3d00382a01aed88a7acb277ce0d0d666c0275e",
+          "lf_content_sha256": "a08817ecb25c2b8c2825fd343a3d00382a01aed88a7acb277ce0d0d666c0275e",
+          "git_blob_oid_sha1": "bbfc06f7661b0ff88aa5282ad77f4ae851095b52",
+          "lf_git_blob_oid_sha1": "bbfc06f7661b0ff88aa5282ad77f4ae851095b52",
+          "bytes": 13499
+        },
+        "results/native_gain_ports.json": {
+          "raw_sha256": "c1c1ac85c9b8270f84dbac1eee6b40252a1b0c6759077d37725f9afb6049fbff",
+          "lf_content_sha256": "1f6e0e222e5c8c54c42bd103b31c2fa8969352f91ceae2cad7ed01787ded2a2c",
+          "git_blob_oid_sha1": "246054b94d5df5db72e67260020b15f8a394a095",
+          "lf_git_blob_oid_sha1": "e4d9458fbb77f09325893103ffeef26b702e1642",
+          "bytes": 32738
+        },
+        "Director_exchange.md": {
+          "raw_sha256": "e05291d0def1a4bf0c1b39e8844c473b55a29add72017a541553e75ea33c9799",
+          "lf_content_sha256": "47ffa226045d6d4d1a81d24da0fa1baa6325ac5a9ad2da5e74b4eb433fe37442",
+          "git_blob_oid_sha1": "50adfb169ad12121fbe25690a0fc66f56a410f34",
+          "lf_git_blob_oid_sha1": "50adfb169ad12121fbe25690a0fc66f56a410f34",
+          "bytes": 12616
+        },
+        "ontology_gate_map.json": {
+          "raw_sha256": "f85dc41206176ec165bfc0111bae4c36d28f608fe59a6e0d81911b10afdeee29",
+          "lf_content_sha256": "f85dc41206176ec165bfc0111bae4c36d28f608fe59a6e0d81911b10afdeee29",
+          "git_blob_oid_sha1": "a6cf621304b186e7caa06b5e6b8e793f9cca070a",
+          "lf_git_blob_oid_sha1": "a6cf621304b186e7caa06b5e6b8e793f9cca070a",
+          "bytes": 34073
+        }
+      },
+      "checkout": {
+        "Equal_time_gains_and_history_records.md": {
+          "raw_sha256": "812262e1aa0bd417be06705305386695c109d98e131a311f85142bd82c50cd22",
+          "lf_content_sha256": "812262e1aa0bd417be06705305386695c109d98e131a311f85142bd82c50cd22",
+          "git_blob_oid_sha1": "42a4841b716b204095002f665f67b9e3c714000c",
+          "lf_git_blob_oid_sha1": "42a4841b716b204095002f665f67b9e3c714000c",
+          "bytes": 27549
+        },
+        "check_native_gain_ports.py": {
+          "raw_sha256": "a08817ecb25c2b8c2825fd343a3d00382a01aed88a7acb277ce0d0d666c0275e",
+          "lf_content_sha256": "a08817ecb25c2b8c2825fd343a3d00382a01aed88a7acb277ce0d0d666c0275e",
+          "git_blob_oid_sha1": "bbfc06f7661b0ff88aa5282ad77f4ae851095b52",
+          "lf_git_blob_oid_sha1": "bbfc06f7661b0ff88aa5282ad77f4ae851095b52",
+          "bytes": 13499
+        },
+        "results/native_gain_ports.json": {
+          "raw_sha256": "c1c1ac85c9b8270f84dbac1eee6b40252a1b0c6759077d37725f9afb6049fbff",
+          "lf_content_sha256": "1f6e0e222e5c8c54c42bd103b31c2fa8969352f91ceae2cad7ed01787ded2a2c",
+          "git_blob_oid_sha1": "246054b94d5df5db72e67260020b15f8a394a095",
+          "lf_git_blob_oid_sha1": "e4d9458fbb77f09325893103ffeef26b702e1642",
+          "bytes": 32738
+        },
+        "Director_exchange.md": {
+          "raw_sha256": "e05291d0def1a4bf0c1b39e8844c473b55a29add72017a541553e75ea33c9799",
+          "lf_content_sha256": "47ffa226045d6d4d1a81d24da0fa1baa6325ac5a9ad2da5e74b4eb433fe37442",
+          "git_blob_oid_sha1": "50adfb169ad12121fbe25690a0fc66f56a410f34",
+          "lf_git_blob_oid_sha1": "50adfb169ad12121fbe25690a0fc66f56a410f34",
+          "bytes": 12616
+        },
+        "ontology_gate_map.json": {
+          "raw_sha256": "a0e363db5f2f1929de9cca392381a915447951cadf17fb6c619a6043b7a8dde7",
+          "lf_content_sha256": "a0e363db5f2f1929de9cca392381a915447951cadf17fb6c619a6043b7a8dde7",
+          "git_blob_oid_sha1": "381f6a2b1e2d6c9ac99d38041bc8a9a3f3689f62",
+          "lf_git_blob_oid_sha1": "381f6a2b1e2d6c9ac99d38041bc8a9a3f3689f62",
+          "bytes": 34153
+        }
+      }
+    },
+    "published_index": {
+      "raw_sha256": "ee5c263464d51dad686179643c3407faf860fdd8eeb60f580864e0ad3641e5e3",
+      "lf_content_sha256": "ee5c263464d51dad686179643c3407faf860fdd8eeb60f580864e0ad3641e5e3",
+      "git_blob_oid_sha1": "408aa285c265e1876665644b8c6c268bd9e5dd66",
+      "lf_git_blob_oid_sha1": "408aa285c265e1876665644b8c6c268bd9e5dd66",
+      "bytes": 6245
+    },
+    "review_queue_index": {
+      "raw_sha256": "d3c1bde0d55087e9b6d0c1606d4d6470a7b52901204a8b6af29109ae66335a40",
+      "lf_content_sha256": "83891a4044ce1a40c1936a8276223b436bd649277dea341555afe4d151352949",
+      "git_blob_oid_sha1": "3dd798298b5952e86b81379f268d90b04b377dd5",
+      "lf_git_blob_oid_sha1": "3dd798298b5952e86b81379f268d90b04b377dd5",
+      "bytes": 6762
+    },
+    "current_relative_links": {
+      "research": {
+        "markdown_files": 21,
+        "relative_file_link_occurrences": 175,
+        "article_local_file_link_occurrences": 18,
+        "missing_local_targets": 0
+      },
+      "checkout": {
+        "markdown_files": 22,
+        "relative_file_link_occurrences": 195,
+        "article_local_file_link_occurrences": 18,
+        "missing_local_targets": 0
+      }
+    },
+    "gate_review": {
+      "open_gates": 13,
+      "original_disposition": "UNRESOLVED",
+      "mirrors_differ_only_in_baseline_locators": true
+    },
+    "fresh_runs": {
+      "runtime": "Python 3.12.14",
+      "command": "python -X utf8 -B check_native_gain_ports.py <fresh-directory>",
+      "mirror_exit_codes": [
+        0,
+        0
+      ],
+      "both_generated_sha256": "c1c1ac85c9b8270f84dbac1eee6b40252a1b0c6759077d37725f9afb6049fbff",
+      "both_match_both_saved_files": true,
+      "checker_predicates": {
+        "complete_six_tick_scan": true,
+        "first_distinction_at_tick_five": true,
+        "single_start_tomography_rank_and_inverse": true,
+        "path_words_equal_incremental_propagation": true,
+        "four_tick_native_herald": true,
+        "single_and_double_dark_match_sheet_difference_norms": true,
+        "all_record_mass_exact": true,
+        "both_routing_directions_at_each_return": true
+      }
+    },
+    "raw_integer_port_validation": {
+      "total_start_time_end_cells": 1792,
+      "nonzero_and_zero_ports_reconstructed": true,
+      "at_each_start_and_tick_total_autocorrelation": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "normalization_of_previous_vector": "after dividing by 2^tick",
+      "unequal_character_1_and_4_cells_by_tick": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        64,
+        128
+      ],
+      "cumulative_ranks_all_localized_starts": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        6,
+        8
+      ],
+      "cumulative_ranks_fixed_0R": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        5,
+        8
+      ],
+      "rational_inverse_product_checked": true,
+      "supplementary_floating_mixture_check": {
+        "input_weights": "(1,2,3,4,5,6,7,8)/36",
+        "direct_sparse_port_probabilities": [
+          1.0,
+          0.24438182642795175,
+          0.1843075495330068,
+          0.06303648783745644,
+          0.18966784987020582,
+          0.09202483814907875,
+          0.111018573168127,
+          0.15606047716907193
+        ],
+        "maximum_absolute_recovery_error": 9.71445146547012e-16
+      },
+      "five_tick_witness": {
+        "initial": [
+          0,
+          1
+        ],
+        "port": [
+          1,
+          -1
+        ],
+        "tick": 5,
+        "signed_polynomial": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            11,
+            -1
+          ]
+        ],
+        "autocorrelation": [
+          [
+            0,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            -2
+          ],
+          [
+            7,
+            -1
+          ],
+          [
+            8,
+            -1
+          ],
+          [
+            10,
+            -2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "phi15_remainder_before_normalization": [
+          2,
+          -2,
+          1,
+          1,
+          -2,
+          2,
+          0,
+          -3
+        ],
+        "probabilities_approx": [
+          0.3497613493427313,
+          0.24680646139943985
+        ],
+        "exact_difference": "(cos(4*pi/15)-cos(14*pi/15))/16 > 0"
+      }
+    },
+    "five_sheet_herald_and_record_controls": {
+      "herald_start": [
+        6,
+        1
+      ],
+      "herald_port": [
+        0,
+        1
+      ],
+      "herald_ticks": 4,
+      "herald_sheet_numerators": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "herald_probability": "5/16",
+      "complement_probability": "11/16",
+      "herald_and_one_dark": "3/64",
+      "herald_and_two_dark": "7/512",
+      "all_four_tree_schedules": [
+        {
+          "input": "coherent",
+          "start": [
+            1,
+            1
+          ],
+          "terminal_leaves": 19,
+          "leaf_probability_sum": "1",
+          "one_dark": "3/20",
+          "two_dark": "7/160",
+          "second_given_first": "7/24",
+          "independent_reset_joint": "9/400"
+        },
+        {
+          "input": "coherent",
+          "start": [
+            0,
+            1
+          ],
+          "terminal_leaves": 38,
+          "leaf_probability_sum": "1",
+          "one_dark": "3/20",
+          "two_dark": "7/160",
+          "second_given_first": "7/24",
+          "independent_reset_joint": "9/400"
+        },
+        {
+          "input": "localized",
+          "start": [
+            1,
+            1
+          ],
+          "terminal_leaves": 19,
+          "leaf_probability_sum": "1",
+          "one_dark": "1/4",
+          "two_dark": "3/32",
+          "second_given_first": "3/8",
+          "independent_reset_joint": "1/16"
+        },
+        {
+          "input": "localized",
+          "start": [
+            0,
+            1
+          ],
+          "terminal_leaves": 38,
+          "leaf_probability_sum": "1",
+          "one_dark": "1/4",
+          "two_dark": "3/32",
+          "second_given_first": "3/8",
+          "independent_reset_joint": "1/16"
+        }
+      ],
+      "both_directions_each_route_and_every_terminal_mass_reconstructed": true,
+      "interpretation": "The same-sheet conditional second read differs from a fresh independent reset. The fifteen-sheet uninterrupted single-flight ranks refer to relative folded masses including normalization, not selection of an absolute cyclotomic label."
+    }
   }
 }

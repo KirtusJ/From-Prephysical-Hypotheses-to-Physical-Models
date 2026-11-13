@@ -1,0 +1,395 @@
+{
+  "question": "Can every coherent fixed-depth path subset become a raw unconditional yes/no flag probability?",
+  "walk": "Two named basis coordinates, H=[[1,1],[1,-1]]/sqrt(2), input |0>. Each bit word gives the successive post-step basis coordinates; a 1->1 transition alone supplies a minus sign. No motion or additional measurements between gates.",
+  "finite_checks": {
+    "all_two_tick_subsets": [
+      {
+        "histories": [],
+        "endpoint_amplitude_numerators": [
+          0,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "0"
+      },
+      {
+        "histories": [
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          0,
+          -1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "10"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "10",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          -1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/2"
+      },
+      {
+        "histories": [
+          "01"
+        ],
+        "endpoint_amplitude_numerators": [
+          0,
+          1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "01",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          0,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "0"
+      },
+      {
+        "histories": [
+          "01",
+          "10"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/2"
+      },
+      {
+        "histories": [
+          "01",
+          "10",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "00"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "00",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          -1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/2"
+      },
+      {
+        "histories": [
+          "00",
+          "10"
+        ],
+        "endpoint_amplitude_numerators": [
+          2,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1"
+      },
+      {
+        "histories": [
+          "00",
+          "10",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          2,
+          -1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "5/4"
+      },
+      {
+        "histories": [
+          "00",
+          "01"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/2"
+      },
+      {
+        "histories": [
+          "00",
+          "01",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          1,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1/4"
+      },
+      {
+        "histories": [
+          "00",
+          "01",
+          "10"
+        ],
+        "endpoint_amplitude_numerators": [
+          2,
+          1
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "5/4"
+      },
+      {
+        "histories": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "endpoint_amplitude_numerators": [
+          2,
+          0
+        ],
+        "amplitude_denominator_squared": 4,
+        "weight": "1"
+      }
+    ],
+    "disjoint_additivity_controls": [
+      {
+        "parts": [
+          "00",
+          "10"
+        ],
+        "sum_of_weights": "1/2",
+        "union_weight": "1"
+      },
+      {
+        "parts": [
+          "01",
+          "11"
+        ],
+        "sum_of_weights": "1/2",
+        "union_weight": "0"
+      },
+      {
+        "parts": [
+          "00",
+          "01"
+        ],
+        "sum_of_weights": "1/2",
+        "union_weight": "1/2"
+      }
+    ],
+    "parent_delegated_three_tick_test": {
+      "histories": [
+        "000",
+        "010",
+        "100"
+      ],
+      "endpoint_amplitude_numerators": [
+        3,
+        0
+      ],
+      "amplitude_denominator_squared": 8,
+      "weight": "9/8"
+    }
+  },
+  "technical_adjudication": {
+    "normalization": "A separate S-specific yes/no instrument still has a yes probability at most one. The positive two-tick subset {00,01,10} gives (2,1)/2 and weight 5/4 on the fixed input. Its literal coherent complement {11} adds another 1/4. The three-tick delegated subset gives 9/8 in the single final coordinate 0.",
+    "additivity": "A single Boolean record measure must add on disjoint sets. The two constructive histories 00 and 10 give 1/4 each, union 1. The destructive pair 01,11 gives 1/4 each, union 0. The pair 00,01 ends in orthogonal coordinates and is additive.",
+    "fixed_input": "A scalar in [0,1] can be reproduced by an unrelated calibrated coin on that input. This does not realize an amplitude map or the other Boolean events. Probability greater than one already excludes even that weaker separate-instrument interpretation.",
+    "operator_boundary": "For a linear yes map specified on all inputs, K_S must be a contraction; adjoining the positive square root of I-K_S^*K_S supplies some no map. If the no map is prescribed as K_complement, both effects must instead sum to I on the stated input domain. Full which-path recording changes interference. A final-coordinate event has K_S=P U and is implementable without attenuation.",
+    "physical_scope": "The counterexamples address path-set availability within the supplied signed H walk and conventional normalized flag semantics. They do not dispute the existence of abstract history events or the combinatorial count of histories; a separate moving-site walk requires its own endpoint words."
+  },
+  "runtime_evidence": {
+    "attempt": "20261113T112823214495Z",
+    "commission": "event_selector",
+    "exact_commission": {
+      "task": "Review this candidate operational premise from first principles. Start a synchronous two-state walk at a single basis state, use the real signed H=(1/sqrt(2))*[[1,1],[1,-1]] at each tick with no intervening observation, and label histories by their successive basis states. For a chosen set S of fixed-depth histories, K_S is the sum of their path amplitudes into the final coordinate vector. Can a physical yes/no flag for every S reproduce the raw value ||K_S psi||^2 as its unconditional yes probability on the localized input, without attenuation? Assess separately (i) arbitrary separate instruments whose no effect is unspecified and (ii) a single Boolean event family, additivity on disjoint history sets, or an instrument whose complementary output must realize K_complement. Try H twice and longer if useful. Check raw single-event normalization and disjoint-event additivity independently, with exact amplitudes and a legitimate comparison or constructive sufficient condition. Distinguish history sets, measurements along the way, and interfering paths. Delegate exactly one tiny self-contained numerical check to the single PCP reviewer. Keep the delegated question under 400 characters, omit any proposed solution, and request one factual output. Independently check it, quote its authentic receipt, and preserve a disagreement if present. No other tools. At most 650 words.",
+      "child_scope": "Answer the precise finite arithmetic question in at most two lines. Use exact values. No background discussion.",
+      "tool_scope": "Check one small numerical example about signed Hadamard history amplitudes.",
+      "max_delegations": 1,
+      "max_depth_below_parent": 1,
+      "acceptance": "Parent actually calls MCP, child returns an ACR-on result, parent quotes unseen receipt, and both records verify."
+    },
+    "verified_consultation": true,
+    "parent_provider_time_ns": [
+      1794569305974492600,
+      1794569354257169300
+    ],
+    "item_types": [
+      "agent_message",
+      "mcp_tool_call",
+      "agent_message"
+    ],
+    "mcp_call": {
+      "id": "item_1",
+      "type": "mcp_tool_call",
+      "server": "pcp_child",
+      "tool": "consult_pcp_reviewer",
+      "arguments": {
+        "question": "For H=[[1,1],[1,-1]]/sqrt(2), start in |0> and take three ticks. Histories list the three successive states. For S={000,010,100}, what is the exact squared norm of the summed final-coordinate path amplitudes? Return one factual value."
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"receipt\": \"d991df6ab45b3ca6a6fa\", \"reviewer_reply\": \"The exact squared norm of the summed final-coordinate path amplitudes is 1. [end of text]\", \"output_sha256\": \"f4434bf817c622474b68f13cab67d952a59ac19c5ff09ea1efb6555f06bb5864\"}"
+          }
+        ],
+        "structured_content": null
+      },
+      "error": null,
+      "status": "completed"
+    },
+    "parent_exit": 0,
+    "runs": {
+      "parent": {
+        "prompt": "Review this candidate operational premise from first principles. Start a synchronous two-state walk at a single basis state, use the real signed H=(1/sqrt(2))*[[1,1],[1,-1]] at each tick with no intervening observation, and label histories by their successive basis states. For a chosen set S of fixed-depth histories, K_S is the sum of their path amplitudes into the final coordinate vector. Can a physical yes/no flag for every S reproduce the raw value ||K_S psi||^2 as its unconditional yes probability on the localized input, without attenuation? Assess separately (i) arbitrary separate instruments whose no effect is unspecified and (ii) a single Boolean event family, additivity on disjoint history sets, or an instrument whose complementary output must realize K_complement. Try H twice and longer if useful. Check raw single-event normalization and disjoint-event additivity independently, with exact amplitudes and a legitimate comparison or constructive sufficient condition. Distinguish history sets, measurements along the way, and interfering paths. Delegate exactly one tiny self-contained numerical check to the single PCP reviewer. Keep the delegated question under 400 characters, omit any proposed solution, and request one factual output. Independently check it, quote its authentic receipt, and preserve a disagreement if present. No other tools. At most 650 words.",
+        "reply": "**Refuted for every history set \\(S\\), in both (i) and (ii).** Two ticks already suffice. The reasons differ: raw single-event probabilities can exceed one, while disjoint-event additivity can fail even when each value lies within \\([0,1]\\).\n\nI calculated the path amplitudes directly, without inserting measurements. Write a history as the successive states after the ticks, with the initial state fixed at \\(|0\\rangle\\). After two ticks:\n\n| History | Final-coordinate amplitude |\n|---|---:|\n| \\(00\\) | \\(+\\tfrac12|0\\rangle\\) |\n| \\(01\\) | \\(+\\tfrac12|1\\rangle\\) |\n| \\(10\\) | \\(+\\tfrac12|0\\rangle\\) |\n| \\(11\\) | \\(-\\tfrac12|1\\rangle\\) |\n\nThe full sum is \\(|0\\rangle\\), consistent with \\(H^2=I\\).\n\n**(i) Separate instruments, unspecified no effect.** For a particular \\(S\\), let \\(p_S=\\|K_S|0\\rangle\\|^2\\). A physical yes/no instrument reproducing just this probability on the localized input exists **if and only if** \\(0\\le p_S\\le1\\). Sufficiency is constructive: use effects\n\\[\nE_{\\rm yes}=p_S I,\\qquad E_{\\rm no}=(1-p_S)I.\n\\]\nThis construction reproduces the requested probability; it does not establish that histories are physical alternatives.\n\nBut choose \\(S=\\{00,10,01\\}\\). Then\n\\[\nK_S|0\\rangle=|0\\rangle+\\tfrac12|1\\rangle,\\qquad p_S=\\tfrac54.\n\\]\nThus even arbitrary separate instruments cannot realize **every \\(S\\)** without attenuation. No choice of the no effect repairs a yes probability exceeding one.\n\nIf the instrument must implement \\(K_S\\) itself on **all inputs**, the stronger necessary and sufficient condition is \\(K_S^\\dagger K_S\\le I\\). Testing one localized input alone does not establish that condition.\n\n**(ii) Boolean events, disjoint additivity, or prescribed complementary output.** Independently of the preceding normalization failure, take the disjoint sets \\(A=\\{00\\}\\), \\(B=\\{10\\}\\):\n\\[\np_A=p_B=\\tfrac14,\\qquad p_{A\\cup B}=1\\ne\\tfrac12.\n\\]\nAll three numbers are individually valid probabilities, but they cannot belong to one additive Boolean probability family.\n\nFor an instrument whose complementary output must realize \\(K_{\\bar S}\\), completeness requires, at least on the given input,\n\\[\n\\|K_S|0\\rangle\\|^2+\\|K_{\\bar S}|0\\rangle\\|^2=1.\n\\]\nFor the earlier three-history \\(S\\), this sum is \\(5/4+1/4=3/2\\), so such an instrument is impossible. On all inputs, the condition is the operator identity \\(K_S^\\dagger K_S+K_{\\bar S}^\\dagger K_{\\bar S}=I\\).\n\nA legitimate sufficient condition for additivity is orthogonality of the branch vectors being combined: their cross terms then vanish. Recording each successive basis state supplies distinguishable records and gives additive history probabilities. Here each recorded two-tick history has probability \\(1/4\\), so the three-history set has probability \\(3/4\\). That is a different physical experiment from unobserved, interfering paths.\n\n**Delegated check and preserved disagreement.** I requested exactly one numerical output for three ticks, \\(S=\\{000,010,100\\}\\). Authentic receipt `d991df6ab45b3ca6a6fa` states: “The exact squared norm of the summed final-coordinate path amplitudes is 1. [end of text]”\n\nMy independent calculation disagrees: each listed history contributes \\(+|0\\rangle/(2\\sqrt2)\\), giving squared norm **\\(9/8\\)**. The reviewer’s reported value remains an unresolved disagreement with that receipt; it supplies no support for the premise.",
+        "model": "Codex CLI",
+        "participant": "parent-codex",
+        "run": "R1",
+        "bytes": 3353,
+        "sha256": "e1f708c42c865a1e4a7353d7e1704f14a1c8d84a852f5a6ae5e758815f429598",
+        "method_exposures": [
+          {
+            "sha256": "2fdd306d50ac6182cbdbf9f65b86b819c3384e25dd7f2dd01597fbc9929f92e3",
+            "what": "task"
+          },
+          {
+            "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+            "what": "kernel card"
+          }
+        ],
+        "acr_in_use": true,
+        "usage": null,
+        "python": {
+          "altered_objects": [],
+          "anchor": null,
+          "events": 7,
+          "guard_problems": [],
+          "head": "3d5acb37c3e49c03b4fd3ff24522b5c75f5c789b6c3e1a81da7388f0666d3437",
+          "objects_by_reference_only": 0,
+          "ok": true
+        },
+        "rust": {
+          "workspace": "parent",
+          "register_sha256": "bcd844e4b80c5e62cab65b59f30897b1e58f1ac978bf102b3366b749e4ccc988",
+          "snapshot_events": 7,
+          "model_outputs": [
+            "e1f708c42c865a1e4a7353d7e1704f14a1c8d84a852f5a6ae5e758815f429598"
+          ],
+          "tasks": [],
+          "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+          "verification": {
+            "command": "/pcpos verify worker-register.jsonl",
+            "exit": 0,
+            "stdout": "chain intact: 7 events, head 3d5acb37c3e49c03b4fd3ff24522b5c75f5c789b6c3e1a81da7388f0666d3437\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: bcd844e4b80c5e62cab65b59f30897b1e58f1ac978bf102b3366b749e4ccc988\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+          },
+          "staging_exit_codes": [
+            0,
+            0
+          ]
+        }
+      },
+      "child": {
+        "prompt": "Answer the precise finite arithmetic question in at most two lines. Use exact values. No background discussion. The requesting model's question follows.\nFor H=[[1,1],[1,-1]]/sqrt(2), start in |0> and take three ticks. Histories list the three successive states. For S={000,010,100}, what is the exact squared norm of the summed final-coordinate path amplitudes? Return one factual value.",
+        "reply": "The exact squared norm of the summed final-coordinate path amplitudes is 1. [end of text]",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+        "participant": "child-qwen",
+        "run": "R1",
+        "bytes": 89,
+        "sha256": "f4434bf817c622474b68f13cab67d952a59ac19c5ff09ea1efb6555f06bb5864",
+        "method_exposures": [
+          {
+            "sha256": "2df9b5d4acd2d636cc4e7c0f0814a0a6124c4a95de3bd870c812d5b485c884cc",
+            "what": "task"
+          },
+          {
+            "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+            "what": "kernel card"
+          }
+        ],
+        "acr_in_use": true,
+        "usage": null,
+        "python": {
+          "altered_objects": [],
+          "anchor": null,
+          "events": 7,
+          "guard_problems": [],
+          "head": "b868635f52ebf20364138cbdc9073a3842106a83fcd9f2e0798b616df1b86588",
+          "objects_by_reference_only": 0,
+          "ok": true
+        },
+        "rust": {
+          "workspace": "child",
+          "register_sha256": "5e89707712d9cbb3eea45258f88283da46e05a7484f2a95cbb353ca5ff306bb0",
+          "snapshot_events": 7,
+          "model_outputs": [
+            "f4434bf817c622474b68f13cab67d952a59ac19c5ff09ea1efb6555f06bb5864"
+          ],
+          "tasks": [],
+          "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+          "verification": {
+            "command": "/pcpos verify worker-register.jsonl",
+            "exit": 0,
+            "stdout": "chain intact: 7 events, head b868635f52ebf20364138cbdc9073a3842106a83fcd9f2e0798b616df1b86588\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: 5e89707712d9cbb3eea45258f88283da46e05a7484f2a95cbb353ca5ff306bb0\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+          },
+          "staging_exit_codes": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "child_process_time_ns": [
+      1794569314123165700,
+      1794569317766936000
+    ],
+    "child_pid": 38632,
+    "receipt": "d991df6ab45b3ca6a6fa",
+    "content_assessment": "The local child returned 1 for the specified three histories; exact enumeration gives 9/8. The parent performed its own derivation and the child response is retained verbatim."
+  }
+}

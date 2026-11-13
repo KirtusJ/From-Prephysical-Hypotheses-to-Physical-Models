@@ -1,0 +1,157 @@
+{
+ "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+ "host": "acr_host.Host of the ACR 1.0 implementation packet; registers by pcpos 1.0.22",
+ "bounded_checks_each_worker_alone": {
+  "claude": [
+   {
+    "question_sha256": "0a8e739f4434cf6123c2f50d8ed0380e9ab4d4d6e3b6430b4867a3ac91269547",
+    "reply": "391",
+    "verdict": "CORRECT"
+   },
+   {
+    "question_sha256": "513d08f37a0761b13271d44a52b3bdf696da79a422803380c4aedd041d9703ef",
+    "reply": "4",
+    "verdict": "CORRECT"
+   },
+   {
+    "question_sha256": "0a88757c6c2abd6dbe719fa2bd9d72ee7359ff8a3f3716bc395ac85b6c313aea",
+    "reply": "**The claim is false (refuted): the distances are 3 and 4, so the inverse's image exceeds 3.**\n\nI worked this by hand; no code was run.\n\n**Setup.** On the cycle graph on Z/11Z (edges between x and x\u00b11), the shortest-path distance from 0 to x is min(x, 11 \u2212 x), taking x in {0,\u2026,10}.\n\n**Multiplication by 3.**\n- 3 \u00b7 1 = 3 (mod 11).\n- Distance = min(3, 8) = **3**.\n\n**Multiplication by the inverse of 3",
+    "verdict": "CORRECT"
+   }
+  ],
+  "qwen": [
+   {
+    "question_sha256": "0a8e739f4434cf6123c2f50d8ed0380e9ab4d4d6e3b6430b4867a3ac91269547",
+    "reply": "17*23 = 379",
+    "verdict": "INCORRECT"
+   },
+   {
+    "question_sha256": "513d08f37a0761b13271d44a52b3bdf696da79a422803380c4aedd041d9703ef",
+    "reply": "3",
+    "verdict": "INCORRECT"
+   },
+   {
+    "question_sha256": "0a88757c6c2abd6dbe719fa2bd9d72ee7359ff8a3f3716bc395ac85b6c313aea",
+    "reply": "To calculate the shortest-path distances from 0 in the image of unit displacement 1 under multiplication by 3 and under its multiplicative inverse, we need to understand the properties of these operations in the finite field Z/11Z.\n\n### Step 1: Understanding the Field Z/11Z\n- **Z/11Z** is a field with 11 elements, denoted as \\(\\mathbb{Z}_{11}\\).\n- The operations are defined as follows:\n  - Multipl",
+    "verdict": "INCORRECT"
+   }
+  ]
+ },
+ "nested": {
+  "question": "Independently calculate this finite case: on Z/11Z with unit cycle edges, what are the shortest-path distances from 0 of the image of unit displacement 1 under multiplication by 3 and under its multiplicative inverse? Is the claim that both distances are at most 3 true? Provide the calculation.",
+  "parent": "claude (headless CLI)",
+  "child_model": "Qwen2.5-0.5B-Instruct GGUF Q4_0",
+  "parent_chose_to_delegate": false,
+  "child": null,
+  "parent_answer": "**Calculation** (done by hand, no tools run)\n\nThe graph is the 11-cycle on Z/11Z with edges between x and x\u00b11, so the shortest-path distance from 0 is d(0, x) = min(x mod 11, 11 \u2212 (x mod 11)).\n\n- **Multiplication by 3:** 3 \u00b7 1 = 3, and d(0, 3) = min(3, 8) = **3**.\n- **Multiplicative inverse of 3:** 3 \u00b7 4 = 12 \u2261 1 (mod 11), so 3\u207b\u00b9 = 4. Then 4 \u00b7 1 = 4, and d(0, 4) = min(4, 7) = **4**.\n\n**Verdict:** the claim that both distances are at most 3 is **false (refuted)**. The image under multiplication by 3 is at distance 3, but the image under the inverse is at distance 4, which exceeds 3.\n\nI did not consult the reviewer, so there is no receipt ID to quote.",
+  "parent_quotes_receipt": false,
+  "host_log": [],
+  "effects": [],
+  "content_score": {
+   "parent": "CORRECT",
+   "child": null
+  },
+  "parent_register": {
+   "events": 8,
+   "head": "90529eed223322656805e69f4b4fbbc6f958faa22777909f0b7ae22746406fd3",
+   "guard_problems": 0,
+   "written": 3,
+   "register_sha256": "8e15c0bcd1b8a5f9d03b31b2a2b7ff2a5aac6cdfb2648c831a80d83af4368095"
+  },
+  "child_register": null
+ },
+ "asynchronous": {
+  "overlap_seconds_of_the_two_model_workers": 9.18,
+  "tasks": {
+   "enumerator": {
+    "result_sha256": "1792c7c31d4f127df229571a75abe9d7b2743bb404c57ec85aee95a505d6cfa6",
+    "read_back_sha256": "1792c7c31d4f127df229571a75abe9d7b2743bb404c57ec85aee95a505d6cfa6",
+    "read_back_matches": true,
+    "seconds": 0.0,
+    "verdict": "EXACT"
+   },
+   "qwen": {
+    "result_sha256": "0fe30c880d47d4167947e5a26e7ec6f74976e7273f616efe39e570b070718864",
+    "read_back_sha256": "0fe30c880d47d4167947e5a26e7ec6f74976e7273f616efe39e570b070718864",
+    "read_back_matches": true,
+    "seconds": 9.18,
+    "verdict": "INCORRECT"
+   },
+   "claude": {
+    "result_sha256": "89608b5531ed9717339599d7e9abe458e6c031434357ac205c3d92ca6f9a3ecc",
+    "read_back_sha256": "89608b5531ed9717339599d7e9abe458e6c031434357ac205c3d92ca6f9a3ecc",
+    "read_back_matches": true,
+    "seconds": 10.71,
+    "verdict": "CORRECT"
+   }
+  },
+  "register": {
+   "events": 9,
+   "head": "8a5aa9d2533a2ca2ca6184b4811403dd19724dd835210f3dccb1842cd7eb9c5f",
+   "guard_problems": 0,
+   "written": 4,
+   "register_sha256": "a6dc38ee953e93438691c02ef3547e78467e918d66676af1950bf015f08a2036"
+  }
+ },
+ "model_invocations": [
+  {
+   "model": "claude (headless CLI)",
+   "prompt_sha256": "6c84bd5212b22e4e0725bc10ac42f73e96c9e2fe5d8464609a3b28b5d91ddc19",
+   "reply_sha256": "a934c244755c66aebb0d6f9f5687038ffae8f00b00b28b4e17521016393f38b9",
+   "seconds": 6.12,
+   "exit": 0
+  },
+  {
+   "model": "claude (headless CLI)",
+   "prompt_sha256": "a710857f325f1116489df1725c426466b084ff8785f3f985897efad85954e7dc",
+   "reply_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+   "seconds": 5.69,
+   "exit": 0
+  },
+  {
+   "model": "claude (headless CLI)",
+   "prompt_sha256": "077a5f5e06704efdbef35583418c3a716dd7c89da8a0c846c6ae2898ebf9ef67",
+   "reply_sha256": "04e4e04bcbdb06e8758d2b691fe5c06281f4489849f7250949fd213cab851574",
+   "seconds": 12.63,
+   "exit": 0
+  },
+  {
+   "model": "Qwen2.5-0.5B-Instruct GGUF Q4_0 (llama.cpp, local)",
+   "prompt_sha256": "9532ae7f0e422c9bc5585153859a503a191d2d97387860fc0ceb0faf80812de4",
+   "reply_sha256": "c40847b26ec136eb4f521aa74670665423f5d07c743b2815c72b0f750d9c5017",
+   "seconds": 1.83
+  },
+  {
+   "model": "Qwen2.5-0.5B-Instruct GGUF Q4_0 (llama.cpp, local)",
+   "prompt_sha256": "77fc691fa15ffd01d057cbe41d5953b715b348176f32c91e3688d460f0a19a20",
+   "reply_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+   "seconds": 0.13
+  },
+  {
+   "model": "Qwen2.5-0.5B-Instruct GGUF Q4_0 (llama.cpp, local)",
+   "prompt_sha256": "ac33afc005a4308b2eeeeabedfa1f2ab3a0efe9352dea1119b1227b4c4c7bbb7",
+   "reply_sha256": "63aea68beabe30bc4d44024ce5545eee85af3c7d13e872ae3b2cd27ac3236a24",
+   "seconds": 6.0
+  },
+  {
+   "model": "claude (headless CLI)",
+   "prompt_sha256": "a752f060e02e27cd1fa9912c34e5434902120aad3509dab0b4834f66724aa40d",
+   "reply_sha256": "722a726e6c104c7b459c90d4fb57d59405e8bc567a18d318fe9a3ccdd1e08bfb",
+   "seconds": 9.8,
+   "exit": 0
+  },
+  {
+   "model": "Qwen2.5-0.5B-Instruct GGUF Q4_0 (llama.cpp, local)",
+   "prompt_sha256": "ac33afc005a4308b2eeeeabedfa1f2ab3a0efe9352dea1119b1227b4c4c7bbb7",
+   "reply_sha256": "0fe30c880d47d4167947e5a26e7ec6f74976e7273f616efe39e570b070718864",
+   "seconds": 9.18
+  },
+  {
+   "model": "claude (headless CLI)",
+   "prompt_sha256": "077a5f5e06704efdbef35583418c3a716dd7c89da8a0c846c6ae2898ebf9ef67",
+   "reply_sha256": "89608b5531ed9717339599d7e9abe458e6c031434357ac205c3d92ca6f9a3ecc",
+   "seconds": 10.71,
+   "exit": 0
+  }
+ ]
+}

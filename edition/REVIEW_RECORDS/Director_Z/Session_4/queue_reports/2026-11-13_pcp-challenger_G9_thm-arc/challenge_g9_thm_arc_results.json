@@ -1,0 +1,100 @@
+{
+ "predicates": {
+  "T1": {
+   "counts": {
+    "Z2 n=2": {
+     "found": 8,
+     "table": 8
+    },
+    "Z2 n=3": {
+     "found": 0,
+     "table": 0
+    },
+    "Z2 n=4": {
+     "found": 1152,
+     "table": 1152
+    },
+    "Z2 n=5": {
+     "found": 0,
+     "table": 0
+    },
+    "Z2 n=6": {
+     "found": 691200,
+     "table": 691200
+    },
+    "Z4 n=3": {
+     "found": 0,
+     "table": 0
+    },
+    "Z4 n=4": {
+     "found": 73728,
+     "table": 73728
+    },
+    "Z3 n=4": {
+     "found": 0,
+     "table": 0
+    },
+    "Z3 n=6": {
+     "found": 0,
+     "table": 0
+    }
+   },
+   "met": true
+  },
+  "T2": {
+   "violations": {
+    "a_in": 0,
+    "b_pair": 0,
+    "b_partition": 0,
+    "b_onlypred": 0,
+    "c": 0
+   },
+   "extra_cases": {
+    "Z6 n=2": 216,
+    "Z6 n=4": 839808,
+    "Z8 n=2": 512
+   },
+   "met": true
+  },
+  "T3": {
+   "matrices_checked": 916806,
+   "violations": 0,
+   "met": true
+  },
+  "T4": {
+   "with_zigzag_norm_preserving": 300,
+   "of": 300,
+   "D0_with_loop": 257,
+   "D0_with_parallel_arcs": 200,
+   "broken_not_norm_preserving": 300,
+   "met": true
+  },
+  "T5": {
+   "odd_q_counts": {
+    "Z3 n=2": 0,
+    "Z3 n=4": 0,
+    "Z5 n=2": 0,
+    "Z5 n=4": 0,
+    "Z7 n=2": 0,
+    "Z7 n=4": 0,
+    "Z9 n=2": 0,
+    "Z9 n=4": 0
+   },
+   "met": true
+  },
+  "T6": {
+   "n2_count": 8,
+   "n4_matrices_with_a_vertex_that_is_its_own_successor": 762240,
+   "D0_loop_cases": 257,
+   "D0_parallel_cases": 200,
+   "met": true
+  },
+  "T7": {
+   "columns_orthogonal_with_two_entries": true,
+   "every_nonroot_vertex_has_one_incoming_arc": true,
+   "met": true,
+   "note": "A*A = 2 holds on a countable tree with all gains +1, where (a), (b), 'the image of chi contains -1' all fail; the theorem needs V finite (G9 Section 2 says so)"
+  }
+ },
+ "all_met": true
+}

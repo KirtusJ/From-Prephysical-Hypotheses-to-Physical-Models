@@ -381,8 +381,8 @@
    "from": "PRE-ARC",
    "to": "QMS",
    "type": "exact_correspondence",
-   "statement": "Among rules that add over end vertices a function of the modulus of the summed gains, consistency under continuation admits only the square on the signed arc digraph of the line, and only the second power on any norm-preserving gain digraph with a merging pair of walks (merging is necessary: on the countable binary tree every such rule is the count; Director G). With trivial gains the count is consistent on the same digraph. Edition Z5: the square is the only consistent rule of this form on every finite connected signed gain digraph that is norm-preserving of degree two (G10-01-07); observed, not proved, for gains of order four. Edition Z6: for gains in the q-th roots of unity the consistent rules are exactly the combinations of the squared moduli in the conjugate characters (G10-01-09); this replaces the sentence on gains of order four. Edition Z11: the square is forced also on blocks of degree three and four with gains of order 3, 6 or 4 (G10-01-14). Edition Z12: for Fourier blocks of every degree the consistent rules are the conjugate squared moduli (G10-01-15); the condition of disjoint successor sets, missing from G10-01-14 as first issued, is necessary.",
-   "locator": "Paper G10, G10-01-03, G10-01-04; verify_fourth_session_corrections.py M1 and controls; G10-01-07; verify_degree_two_quadratic_rule_followup.py; G10-01-09; verify_cyclotomic_modulus_rules.py; G10-01-14; G10-01-15",
+   "statement": "Among rules that add over end vertices a function of the modulus of the summed gains, consistency under continuation admits only the square on the signed arc digraph of the line, and only the second power on any norm-preserving gain digraph with a merging pair of walks (merging is necessary: on the countable binary tree every such rule is the count; Director G). With trivial gains the count is consistent on the same digraph. Edition Z5: the square is the only consistent rule of this form on every finite connected signed gain digraph that is norm-preserving of degree two (G10-01-07); observed, not proved, for gains of order four. Edition Z6: for gains in the q-th roots of unity the consistent rules are exactly the combinations of the squared moduli in the conjugate characters (G10-01-09); this replaces the sentence on gains of order four. Edition Z11: the square is forced also on blocks of degree three and four with gains of order 3, 6 or 4 (G10-01-14). Edition Z12: for Fourier blocks of every degree the consistent rules are the conjugate squared moduli (G10-01-15); the condition of disjoint successor sets, missing from G10-01-14 as first issued, is necessary. Edition Z14: the same holds on every norm-preserving carrier with gains in the roots of unity that has a merging pair of vertices with abundance of gains, whatever the degree and the form of the blocks (G10-01-16, G10-01-17).",
+   "locator": "Paper G10, G10-01-03, G10-01-04; verify_fourth_session_corrections.py M1 and controls; G10-01-07; verify_degree_two_quadratic_rule_followup.py; G10-01-09; verify_cyclotomic_modulus_rules.py; G10-01-14; G10-01-15; G10-01-16; G10-01-17",
    "status": "PROOF_IN_MANUSCRIPT; conditional on the event structure, the record-sum form and the carrier, all supplied"
   },
   {
@@ -607,6 +607,9 @@
    0.00025,
    3.3e-07
   ],
-  "even_character_residual_outlier_in_first_kernel_run": 0.86
+  "even_character_residual_outlier_in_first_kernel_run": 0.86,
+  "rms_width_artefact_in_continuation_selection_staircase_rows": 4096.04,
+  "vanishing_sum_box_runs_failed_at_smallest_box_of_36": 3,
+  "carriers_with_derived_period_unequal_to_carrier_period_of_483": 130
  }
 }

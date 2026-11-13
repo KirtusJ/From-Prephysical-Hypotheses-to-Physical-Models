@@ -1,0 +1,2425 @@
+{
+ "initial": "Site 0, incoming R, sheet 0, all tape/flag/work bits blank.",
+ "word_convention": "R=0, L=1; a mask includes each t-bit word indexed by its binary integer.",
+ "instrument": "Signed Hadamard walk, native departure translation, XOR of outgoing coin into a blank bit, reversible membership flag (oracle action with scratch returned), Hadamard on each copied bit, record flag and tape in coordinates. This assumes tape, controlled gates and squared-norm readout as supplied operations.",
+ "normalization": "The walker contributes 2^(-t/2), tape erasure 2^(-k/2). All outcome numerators use denominator 2^(t+k). In compressed mode k=t-1 the last direction is in the base output. Summing tape outcomes gives path counts.",
+ "continuation": "For all endpoints together, Ext gives the same scaled class weight. At the next depth, the zero-tape joint probability is halved in either tape design. A fixed partial endpoint need not be conserved.",
+ "cases": [
+  {
+   "order": 1,
+   "departure_gains": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "N": 10,
+   "exhaustive": [
+    {
+     "ticks": 1,
+     "subsets": 4,
+     "both_tape_lengths": [
+      0,
+      1
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2
+     ],
+     "raw_class_denominator": 2,
+     "above_unit_class_weight": []
+    },
+    {
+     "ticks": 2,
+     "subsets": 16,
+     "both_tape_lengths": [
+      1,
+      2
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4
+     ],
+     "raw_class_denominator": 4,
+     "above_unit_class_weight": []
+    },
+    {
+     "ticks": 3,
+     "subsets": 256,
+     "both_tape_lengths": [
+      2,
+      3
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      5,
+      6,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      5,
+      6,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      4,
+      5,
+      5,
+      6,
+      7,
+      8,
+      8,
+      9,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      7,
+      8,
+      8,
+      9,
+      3,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8
+     ],
+     "raw_class_denominator": 8,
+     "above_unit_class_weight": [
+      223,
+      247
+     ]
+    }
+   ],
+   "named": [
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0
+      ],
+      [
+       2
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "1",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2
+      ],
+      [
+       0
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "0",
+     "no_zero": "1",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "1/2",
+     "no_zero": "1/2",
+     "scaled_yes": "1/2",
+     "conditional_yes_given_tape_zero": "1/2"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "1/2",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "0",
+     "no_zero": "1/2",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "1/4",
+     "no_zero": "1/4",
+     "scaled_yes": "1/2",
+     "conditional_yes_given_tape_zero": "1/2"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "1/2",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       4,
+       4
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "0",
+     "no_zero": "1/2",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "1/8",
+     "no_zero": "3/8",
+     "scaled_yes": "1/4",
+     "conditional_yes_given_tape_zero": "1/4"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       4,
+       4,
+       4,
+       4
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "1/4",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       4,
+       4,
+       4,
+       4
+      ],
+      [
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "0",
+     "no_zero": "1/4",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       3,
+       3,
+       3,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "1/16",
+     "no_zero": "3/16",
+     "scaled_yes": "1/4",
+     "conditional_yes_given_tape_zero": "1/4"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       8,
+       8,
+       8,
+       8
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "1/4",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       8,
+       8,
+       8,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "0",
+     "no_zero": "1/4",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       7,
+       7,
+       7,
+       7
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "1/32",
+     "no_zero": "7/32",
+     "scaled_yes": "1/8",
+     "conditional_yes_given_tape_zero": "1/8"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "all_except_RLL",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       9,
+       5,
+       5,
+       9
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "9/32",
+     "no_zero": "1/32",
+     "scaled_yes": "9/8",
+     "conditional_yes_given_tape_zero": "9/10"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "1/8",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "0",
+     "no_zero": "1/8",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "1/64",
+     "no_zero": "7/64",
+     "scaled_yes": "1/8",
+     "conditional_yes_given_tape_zero": "1/8"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "all_except_RLL",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       9,
+       9,
+       5,
+       5,
+       5,
+       5,
+       9,
+       9
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "9/64",
+     "no_zero": "1/64",
+     "scaled_yes": "9/8",
+     "conditional_yes_given_tape_zero": "9/10"
+    },
+    {
+     "ticks": 4,
+     "tape_bits": 3,
+     "event": "continuation_except_RLL_prefix",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      [
+       18,
+       18,
+       10,
+       10,
+       10,
+       10,
+       18,
+       18
+      ]
+     ],
+     "denominator": 128,
+     "yes_zero": "9/64",
+     "no_zero": "1/64",
+     "scaled_yes": "9/8",
+     "conditional_yes_given_tape_zero": "9/10"
+    },
+    {
+     "ticks": 4,
+     "tape_bits": 4,
+     "event": "continuation_except_RLL_prefix",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      [
+       18,
+       18,
+       18,
+       18,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       18,
+       18,
+       18,
+       18
+      ]
+     ],
+     "denominator": 256,
+     "yes_zero": "9/128",
+     "no_zero": "1/128",
+     "scaled_yes": "9/8",
+     "conditional_yes_given_tape_zero": "9/10"
+    }
+   ]
+  },
+  {
+   "order": 5,
+   "departure_gains": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "N": 10,
+   "exhaustive": [
+    {
+     "ticks": 1,
+     "subsets": 4,
+     "both_tape_lengths": [
+      0,
+      1
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2
+     ],
+     "raw_class_denominator": 2,
+     "above_unit_class_weight": []
+    },
+    {
+     "ticks": 2,
+     "subsets": 16,
+     "both_tape_lengths": [
+      1,
+      2
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4
+     ],
+     "raw_class_denominator": 4,
+     "above_unit_class_weight": []
+    },
+    {
+     "ticks": 3,
+     "subsets": 256,
+     "both_tape_lengths": [
+      2,
+      3
+     ],
+     "raw_class_numerator_by_subset_mask": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      4,
+      5,
+      5,
+      6,
+      5,
+      6,
+      6,
+      7,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      4,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      4,
+      5,
+      5,
+      6,
+      5,
+      6,
+      6,
+      7,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      4,
+      5,
+      5,
+      6,
+      5,
+      6,
+      6,
+      7,
+      3,
+      4,
+      4,
+      5,
+      4,
+      5,
+      5,
+      6,
+      4,
+      5,
+      5,
+      6,
+      5,
+      6,
+      6,
+      7,
+      4,
+      5,
+      5,
+      6,
+      5,
+      6,
+      6,
+      7,
+      5,
+      6,
+      6,
+      7,
+      6,
+      7,
+      7,
+      8
+     ],
+     "raw_class_denominator": 8,
+     "above_unit_class_weight": []
+    }
+   ],
+   "named": [
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0
+      ],
+      [
+       2
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "1",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2
+      ],
+      [
+       0
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "0",
+     "no_zero": "1",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 0,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "denominator": 2,
+     "yes_zero": "1/2",
+     "no_zero": "1/2",
+     "scaled_yes": "1/2",
+     "conditional_yes_given_tape_zero": "1/2"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "1/2",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "0",
+     "no_zero": "1/2",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 1,
+     "tape_bits": 1,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "denominator": 4,
+     "yes_zero": "1/4",
+     "no_zero": "1/4",
+     "scaled_yes": "1/2",
+     "conditional_yes_given_tape_zero": "1/2"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "1/2",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       4,
+       4
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "0",
+     "no_zero": "1/2",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 1,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "denominator": 8,
+     "yes_zero": "1/8",
+     "no_zero": "3/8",
+     "scaled_yes": "1/4",
+     "conditional_yes_given_tape_zero": "1/4"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       4,
+       4,
+       4,
+       4
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "1/4",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       4,
+       4,
+       4,
+       4
+      ],
+      [
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "0",
+     "no_zero": "1/4",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 2,
+     "tape_bits": 2,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       3,
+       3,
+       3,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 16,
+     "yes_zero": "1/16",
+     "no_zero": "3/16",
+     "scaled_yes": "1/4",
+     "conditional_yes_given_tape_zero": "1/4"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       8,
+       8,
+       8,
+       8
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "1/4",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       8,
+       8,
+       8,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "0",
+     "no_zero": "1/4",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       7,
+       7,
+       7,
+       7
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "1/32",
+     "no_zero": "7/32",
+     "scaled_yes": "1/8",
+     "conditional_yes_given_tape_zero": "1/8"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 2,
+     "event": "all_except_RLL",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       7,
+       7,
+       7,
+       7
+      ]
+     ],
+     "denominator": 32,
+     "yes_zero": "7/32",
+     "no_zero": "1/32",
+     "scaled_yes": "7/8",
+     "conditional_yes_given_tape_zero": "7/8"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "full",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "1/8",
+     "no_zero": "0",
+     "scaled_yes": "1",
+     "conditional_yes_given_tape_zero": "1"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "empty",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "0",
+     "no_zero": "1/8",
+     "scaled_yes": "0",
+     "conditional_yes_given_tape_zero": "0"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "singleton_Rs",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "1/64",
+     "no_zero": "7/64",
+     "scaled_yes": "1/8",
+     "conditional_yes_given_tape_zero": "1/8"
+    },
+    {
+     "ticks": 3,
+     "tape_bits": 3,
+     "event": "all_except_RLL",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7
+      ]
+     ],
+     "denominator": 64,
+     "yes_zero": "7/64",
+     "no_zero": "1/64",
+     "scaled_yes": "7/8",
+     "conditional_yes_given_tape_zero": "7/8"
+    },
+    {
+     "ticks": 4,
+     "tape_bits": 3,
+     "event": "continuation_except_RLL_prefix",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      [
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14
+      ]
+     ],
+     "denominator": 128,
+     "yes_zero": "7/64",
+     "no_zero": "1/64",
+     "scaled_yes": "7/8",
+     "conditional_yes_given_tape_zero": "7/8"
+    },
+    {
+     "ticks": 4,
+     "tape_bits": 4,
+     "event": "continuation_except_RLL_prefix",
+     "all_tape_numerators_by_flag_no_yes": [
+      [
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      [
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14,
+       14
+      ]
+     ],
+     "denominator": 256,
+     "yes_zero": "7/128",
+     "no_zero": "1/128",
+     "scaled_yes": "7/8",
+     "conditional_yes_given_tape_zero": "7/8"
+    }
+   ]
+  }
+ ],
+ "five_sheet_full_event_yes_zero_ports": [
+  {
+   "port": "constructive",
+   "base": [
+    1,
+    0
+   ],
+   "denominator": 32,
+   "signed_point_sheet_amplitudes": [
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "lag_coefficients": [
+    2,
+    1,
+    0,
+    0,
+    1
+   ],
+   "character_numerators_in_Q_zeta5_basis": [
+    [
+     4,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     -1,
+     -1
+    ],
+    [
+     2,
+     0,
+     1,
+     1
+    ],
+    [
+     2,
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     -1,
+     -1
+    ]
+   ],
+   "localized_sheet_joint_probability": "1/16"
+  },
+  {
+   "port": "destructive",
+   "base": [
+    9,
+    1
+   ],
+   "denominator": 32,
+   "signed_point_sheet_amplitudes": [
+    1,
+    -1,
+    0,
+    0,
+    0
+   ],
+   "lag_coefficients": [
+    2,
+    -1,
+    0,
+    0,
+    -1
+   ],
+   "character_numerators_in_Q_zeta5_basis": [
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     0,
+     1,
+     1
+    ],
+    [
+     2,
+     0,
+     -1,
+     -1
+    ],
+    [
+     2,
+     0,
+     -1,
+     -1
+    ],
+    [
+     3,
+     0,
+     1,
+     1
+    ]
+   ],
+   "localized_sheet_joint_probability": "1/16"
+  }
+ ],
+ "five_sheet_pair_tomography": {
+  "N": 8,
+  "M": 5,
+  "departure_gains": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "ticks": 10,
+  "tape_bits": 9,
+  "endpoint": [
+   0,
+   0
+  ],
+  "positive_words_available": [
+   6,
+   13,
+   18,
+   15,
+   24
+  ],
+  "negative_words_available": [
+   10,
+   7,
+   14,
+   21,
+   8
+  ],
+  "singleton_yes_zero": "1/524288",
+  "full_yes_zero": "1/512",
+  "basis": "1,z,z^2,z^3 with z=exp(2 pi i/5); every row is a pair/singleton ratio.",
+  "folded_input_weights": [
+   "1/10",
+   "3/10",
+   "3/5"
+  ],
+  "recovered_by_inverse_DFT": [
+   "1/10",
+   "3/10",
+   "3/5"
+  ],
+  "order_10_indices_for_sheet_k_0_to_4": [
+   5,
+   1,
+   7,
+   3,
+   9
+  ],
+  "rows": [
+   {
+    "sheet_lag": 0,
+    "sign": 1,
+    "exponent_mod_10": 0,
+    "words": [
+     "RLRLLRRLLR",
+     "RLLRRLRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 4,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      4,
+      0,
+      0,
+      0
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     40,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "sheet_lag": 1,
+    "sign": 1,
+    "exponent_mod_10": 2,
+    "words": [
+     "RLRLLRRLLR",
+     "RRRRRRRLRR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     19,
+     0,
+     3,
+     3
+    ]
+   },
+   {
+    "sheet_lag": 2,
+    "sign": 1,
+    "exponent_mod_10": 4,
+    "words": [
+     "RLRLLRRLLR",
+     "RRRRRRRRLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     16,
+     0,
+     -3,
+     -3
+    ]
+   },
+   {
+    "sheet_lag": 3,
+    "sign": 1,
+    "exponent_mod_10": 6,
+    "words": [
+     "RLRLLRRLLR",
+     "RRLRLLRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     16,
+     0,
+     -3,
+     -3
+    ]
+   },
+   {
+    "sheet_lag": 4,
+    "sign": 1,
+    "exponent_mod_10": 8,
+    "words": [
+     "RLRLLRRLLR",
+     "RRLLRLRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      4,
+      0,
+      0,
+      0
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      1,
+      1
+     ],
+     [
+      1,
+      0,
+      -1,
+      -1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     19,
+     0,
+     3,
+     3
+    ]
+   },
+   {
+    "sheet_lag": 0,
+    "sign": -1,
+    "exponent_mod_10": 5,
+    "words": [
+     "RLRLLRRLLR",
+     "RLRLRLRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 0,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "sheet_lag": 1,
+    "sign": -1,
+    "exponent_mod_10": 7,
+    "words": [
+     "RLRLLRRLLR",
+     "LLRLRLRLRR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     21,
+     0,
+     -3,
+     -3
+    ]
+   },
+   {
+    "sheet_lag": 2,
+    "sign": -1,
+    "exponent_mod_10": 9,
+    "words": [
+     "RLRLLRRLLR",
+     "RRRLRLLLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     24,
+     0,
+     3,
+     3
+    ]
+   },
+   {
+    "sheet_lag": 3,
+    "sign": -1,
+    "exponent_mod_10": 1,
+    "words": [
+     "RLRLLRRLLR",
+     "RRRLLLRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     24,
+     0,
+     3,
+     3
+    ]
+   },
+   {
+    "sheet_lag": 4,
+    "sign": -1,
+    "exponent_mod_10": 3,
+    "words": [
+     "RLRLLRRLLR",
+     "RRLLLRRLLR"
+    ],
+    "point_sheet_numerator_about_singleton": 2,
+    "five_character_ratios_in_Q_zeta5_basis": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      2,
+      0,
+      -1,
+      -1
+     ],
+     [
+      3,
+      0,
+      1,
+      1
+     ]
+    ],
+    "weighted_ratio_in_Q_zeta5_basis_over_10": [
+     21,
+     0,
+     -3,
+     -3
+    ]
+   }
+  ]
+ },
+ "scope": "Character rows assume a prepared character, or its conjugate pair on real records, and the same sheet-blind instrument. A point sheet gives their equal mean. This is an exact finite calculation, with no empirical readout assumed verified."
+}

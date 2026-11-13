@@ -1,0 +1,76 @@
+{
+  "subject": "Local signalling test for a frozen cosine kick at action pi",
+  "run_result_sha256": "79ad8e7fca335fd0921f08fc2f7b76cdaf9d969abc34a4e502eb058fd66ab7e3",
+  "commission": {
+    "task": "Review this narrow causal-signaling claim. In a ring of N=8q sites two distinct walkers undergo U|x,y> = exp(iπ[1−cos(2π(x−y)/N)])|x,y>. Alice is prepared as (|0>+|q>)/sqrt(2); Bob's alternatives are |2q> and |4q>. Alice reads Pauli X on the two occupied modes inside [0,q]. Use the single consult_pcp_reviewer MCP tool ONCE to ask the local reviewer a bounded numerical/sign question (less than 350 characters). Independently check its answer. Report the two X expectations, induced binary total variation, whether flipping every phase to its complex conjugate preserves it, and what deterministic bounded-range ring circuitry can realize outside Alice's backward light cone. Distinguish input support, readout and relevant distance. Quote the actual received receipt ID. Do not request network or more tools.",
+    "child_scope": "Evaluate the real interference on each branch from the stated phases. Answer in at most two lines. The task concerns the N=8q ring with Alice modes 0 and q, Bob alternatives 2q and 4q, action π, and potential 1−cos(2π(x−y)/N).",
+    "tool_scope": "One independent local reviewer for the two cosine-phase values and X measurement on the finite ring.",
+    "max_delegations": 1,
+    "max_depth_below_parent": 1,
+    "acceptance": "Parent actually calls MCP, child returns an ACR-on result, parent quotes unseen receipt, and both records verify."
+  },
+  "delegated_question": "For N=8q and U_xy=exp(i*pi*(1-cos(2*pi*(x-y)/N))), Alice=(|0>+|q>)/sqrt(2), Bob fixed at y=2q or 4q: compute Alice's Pauli-X expectations, binary total variation, and whether complex-conjugating all phases changes these. Check phase-difference signs.",
+  "tool_receipt": "281f36e5ba64f366d530",
+  "consultation_verified": true,
+  "parent": {
+    "participant": "parent-codex",
+    "run": "R1",
+    "head": "2b201655c84315a4feb772e766f5fd6c261408432e737e2983162959d84b9e52",
+    "sha256": "645767f905adf8b439c771ebb7a6a6681aad48d6e8207b1d52e1203dd6fa9c2e",
+    "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+    "text": "**The claimed signaling is supported for the specified \\(U\\).** The reviewer’s all-zero answer is incorrect. Actual received receipt ID: `281f36e5ba64f366d530`.\n\nI made the single requested consultation and independently checked the phases algebraically. Writing \\(\\phi(x,y)=\\pi[1-\\cos(2\\pi(x-y)/N)]\\),\n\\[\n\\langle X\\rangle_y=\\cos[\\phi(q,y)-\\phi(0,y)].\n\\]\n\n| Bob’s input | Phase difference | Alice’s \\(\\langle X\\rangle\\) |\n|---|---:|---:|\n| \\(|2q\\rangle\\) | \\(-\\pi/\\sqrt2\\) | \\(-0.605699867\\ldots\\) |\n| \\(|4q\\rangle\\) | \\(\\pi(1-1/\\sqrt2)\\) | \\(+0.605699867\\ldots\\) |\n\nSince \\(P(X=+1)=(1+\\langle X\\rangle)/2\\), the induced binary total variation is\n\\[\n\\mathrm{TV}=\\tfrac12|\\langle X\\rangle_{2q}-\\langle X\\rangle_{4q}|\n=0.605699867\\ldots.\n\\]\nComplex-conjugating every phase reverses both phase differences; cosine is even, so both expectations and TV are preserved.\n\nThe locality distinction is:\n\n- **Input support:** Alice occupies \\(\\{0,q\\}\\); Bob’s alternatives occupy \\(\\{2q,4q\\}\\).\n- **Readout:** \\(X=|0\\rangle\\langle q|+|q\\rangle\\langle0|\\) coherently connects Alice’s endpoints. Its support is those endpoints, separated by ring distance \\(q\\); being inside \\([0,q]\\) does not make it a single-site readout.\n- **Relevant distance:** Bob’s closest alternative is distance \\(q\\) from the readout support; \\(4q\\) is distance \\(3q\\).\n\nA deterministic circuit of depth \\(D\\), with gates of ring diameter at most \\(r\\), cannot make this readout depend on input changes outside its backward light cone. Thus \\(rD<q\\) forces TV \\(=0\\) for these alternatives and cannot reproduce the stated \\(U\\)’s statistics. Reaching \\(rD\\ge q\\) is a necessary geometric condition, not a sufficient construction. Any circuitry needed to collect the coherent readout must also be counted.\n\nThis locality conclusion assumes strict bounded-range gates and otherwise identical inputs and ancillary resources. I did not inspect the full Core Specification, so this is a narrow calculation and causal assessment, not certification of full Core compliance."
+  },
+  "child": {
+    "participant": "child-qwen",
+    "run": "R1",
+    "head": "d206f84184ecb700d783929fa92b7a8c179cd732dcfb5914fb1af8dd3bbaf31d",
+    "sha256": "4d167a4ae1ee0111cb50285414c9734fb8a33fbe2b1e04a2868a3c1f14aebb30",
+    "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+    "text": "- Alice's Pauli-X expectations: 0\r\n- Binary total variation: 0\r\n- Complex-conjugating all phases changes 0\r\n- Phase-difference signs: 0 [end of text]"
+  },
+  "rust_verification": {
+    "parent": {
+      "workspace": "parent",
+      "register_sha256": "a793e96677639d05bdc2fe12cf9042113737df70a93b9991288aeff3d466bef6",
+      "snapshot_events": 7,
+      "model_outputs": [
+        "645767f905adf8b439c771ebb7a6a6681aad48d6e8207b1d52e1203dd6fa9c2e"
+      ],
+      "tasks": [],
+      "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+      "verification": {
+        "command": "/pcpos verify worker-register.jsonl",
+        "exit": 0,
+        "stdout": "chain intact: 7 events, head 2b201655c84315a4feb772e766f5fd6c261408432e737e2983162959d84b9e52\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: a793e96677639d05bdc2fe12cf9042113737df70a93b9991288aeff3d466bef6\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+      },
+      "staging_exit_codes": [
+        0,
+        0
+      ]
+    },
+    "child": {
+      "workspace": "child",
+      "register_sha256": "68e6810cff7e81dca0150489f032b0f486125c01cc901e873cbbc7cb55751150",
+      "snapshot_events": 7,
+      "model_outputs": [
+        "4d167a4ae1ee0111cb50285414c9734fb8a33fbe2b1e04a2868a3c1f14aebb30"
+      ],
+      "tasks": [],
+      "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+      "verification": {
+        "command": "/pcpos verify worker-register.jsonl",
+        "exit": 0,
+        "stdout": "chain intact: 7 events, head d206f84184ecb700d783929fa92b7a8c179cd732dcfb5914fb1af8dd3bbaf31d\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: 68e6810cff7e81dca0150489f032b0f486125c01cc901e873cbbc7cb55751150\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+      },
+      "staging_exit_codes": [
+        0,
+        0
+      ]
+    }
+  },
+  "assessment": {
+    "child": "The all-zero result is incorrect for both inputs.",
+    "parent": "The binary total variation, conjugation test and cone bound are correct. With the positive phase convention in the commission, the second relative phase is pi*(1/sqrt(2)-1). The parent used its negative; the cosine and signal magnitude agree.",
+    "evidence_scope": "Host calls, receipt and replay document the actual consultation. Exact symbolic evaluation in the paper supplies the mathematical check."
+  }
+}
