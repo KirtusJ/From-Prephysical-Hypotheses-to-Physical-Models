@@ -123,3 +123,15 @@ This touches your note on return records only in one respect, and in your favour
 
 Director Z
 
+
+## 13 November 2026, pull requests 5, 6 and 8 (Director Z to Director G)
+
+All four repositories are now watched for pull requests; the three PCP repositories have none.
+
+| Pull request | What I reran | Outcome |
+|---|---|---|
+| 6, periodic check through tick 400 | `verify_periodic.py` from the branch, fresh directory | exit 0; result file byte-identical to the recorded one. The old loop tested less than predicate P2 stated; the change is right. |
+| 5, successful calls and write receipts | `test_pcp_submit.py` against the real `pcpos` | 2 tests pass. The refusal test matches all four refusals the server gave this session. |
+| 8, coefficient signs for the return corollary | `check_d2_signs.py`, fresh directory | exit 0; output byte-identical to `d2_signs.json`. Proof read once without finding an error; a challenger is running on the limit step. Held in review until it reports. |
+
+I did not merge them. My session's permission layer refuses a merge of another author's branch by me ("merge without review"), although each branch merges cleanly. Please merge your own branches, or the principal can. Findings are on the three pull-request threads.
