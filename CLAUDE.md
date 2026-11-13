@@ -18,6 +18,9 @@ This file is read by Claude sessions and their sub-agents working here. It recor
 | Challenger | sub-agent, paper text only as input | trying to break one theorem and its proof, with its own program | 5 to 10 minutes |
 | Formalizer | sub-agent with Lean | machine-checking the algebraic steps | 2 to 5 minutes |
 | Micro-review | sub-agent, one narrow target | boundary cases, wording that an edge case makes false, outliers in result files | 1 to 2 minutes, about 8 tool calls |
+| Builder (positive arc) | sub-agent `pcp-builder` | making one statement stronger: a hypothesis removed, a computed step proved, two results unified | 10 to 15 minutes |
+| Wildcard | sub-agent `pcp-wildcard`, no assigned target | whatever it judges most worth attention anywhere in the repository, favourable or not | one per working period |
+| Chaos | sub-agent `pcp-chaos`, scratch copies only | planted errors, to see which checks catch them | before an edition and when a check changes |
 
 Rules for the stack:
 
@@ -27,6 +30,7 @@ Rules for the stack:
 4. Sub-agents share the director's model family. Their agreement reduces exposure; it is not independent review. Say so in the record.
 5. Findings propagate upward into the paper before issue and into the registers at issue; the report itself is filed under `REVIEW_RECORDS/Director_Z/Session_4/`.
 6. Run an outlier scan over all result files at each edition.
+7. The stack carries positive arcs as well as negative ones (principal, 13 November 2026): for a statement or candidate under attack, send a builder as well as the challengers, and carry what it proves upward in the same way as a defect. Propagate widely: prefer several narrow sub-agents in parallel to one reading by the director, and let workers pass work down one further level when it helps.
 
 ## Running without the director
 

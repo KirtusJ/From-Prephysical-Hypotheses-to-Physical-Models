@@ -96,3 +96,9 @@ Working rule drawn from this: at most two levels below the director (sub-agent, 
 ## Pull requests from the stack (13 November 2026)
 
 Principal: sub-agents and workers may open pull requests on all repositories and branches when necessary. Adopted as: patch file from sub-agents without GitHub tools, pull request from workers that have them, author never merges. Observed the same day: the director's own merge of another author's branch (Director G's pull requests 5, 6, 8) was refused by the session's permission layer, so merging is by the author or the principal. To watch: whether any worker opens one, and whether it was needed.
+
+## Wider propagation, positive arcs, wildcard and chaos roles (13 November 2026)
+
+Principal: propagate among the stack more and see if it works; not only negative arcs but positive ones; include wildcard parrots and chaos parrots. Adopted as three agent definitions (`pcp-builder`, `pcp-wildcard`, `pcp-chaos`) and rule 7 of the stack in `CLAUDE.md`.
+
+First use, on Director G's candidate G1 and pull request 22: six narrow agents in parallel (theorem, premises, citations, mechanics, Lean and fixed rings, the parity note) in place of one reading by the director, then one builder, one wildcard and one chaos agent. What to record when they report: how many findings were new to the director, how many reports needed correction on recheck, wall time against a single reading, and for the chaos agent the count caught / survived.
