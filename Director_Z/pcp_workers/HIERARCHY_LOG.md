@@ -26,3 +26,22 @@ A running log, newest last. One entry per change of the parent-child structure o
 7. A rewriting by the director is new text and goes to a challenger like any other.
 
 All reviewers in this hierarchy are of the director's model family. Their agreement reduces exposure and is not independent review.
+
+## How the sub-agents work with the workflow (observations, newest last)
+
+Looked at from time to time, at the principal's request. Figures are those the harness reports when an agent finishes.
+
+| Tier | Typical cost per run | What they do well | Where they drift | Change made |
+|---|---|---|---|---|
+| Challenger | 45 to 60 thousand tokens, 5 to 12 tool calls, 3 to 6 minutes | Read every step; write an own program without being told how; keep failed predicates and say which were their own fault; end with what was not checked | Rarely look outside the lines they were pointed at, so stale sentences elsewhere survive; a first predicate often fails through the reviewer's own expectation and costs a follow-up | Prompt now names the summary paragraph and asks for a list of hypotheses with where each is stated |
+| Micro-review | about 35 thousand tokens, 4 tool calls, 1 to 2 minutes | Cheapest check that still finds real wording faults (spans versus bases; j = -j) | Needs the cases listed for it; left alone it picks easy ones | Cases are listed in the prompt; an unlisted case is asked for |
+| Formalizer | 20 to 35 thousand tokens, 3 to 7 tool calls, 1 to 3 minutes | Returns statements more general than asked and says exactly what was not proved; twice a shorter argument | Proves the lemma as phrased; whether the lemma is the step the paper uses is the director's check, not its | The prompt quotes the paper's sentence and asks which form (row or column, left or right) that sentence needs |
+| Cross-reviewer | 55 to 85 thousand tokens, 9 to 12 tool calls, 5 to 13 minutes, over its 12-minute budget about half the time | Reproduces numbers exactly; reruns a checker byte for byte; separates what the Lean file proves from what the note says | Tried the wrong Lean version until told; the long ones spend their time on a second or third note in one request | Lean version stated in the agent definition; one request is split when it names more than two notes |
+| Proof search (general agent) | 120 to 150 thousand tokens, 11 to 15 tool calls, 8 to 15 minutes | Explores exactly first, then proves; states hypotheses its proof uses; twice proved more than was conjectured | Writes examples and remarks that go beyond what it checked (an example true under one of four conventions); labels in its programs are sometimes wrong while the numbers are right | Everything it writes beyond the theorem goes to a challenger as separate items |
+
+Across about forty runs: no report was found false on recheck of its files. The errors that reached an edition or a status note were the director's (a rewritten summary with nine faults, a miscount of reruns, two duplicate register submissions). The stack therefore protects the paper better than it protects the director's own prose and bookkeeping; rules 6 and 7 above are aimed at that.
+
+Things that cost time without benefit: an agent lost at a session restart with nothing on disk (now asked to append findings to a file as it goes); two programs timing out at four minutes and needing a second pass (the limit is now set from the stored run time); reports longer than asked, which is harmless.
+
+Not yet tried, worth trying: giving the challenger the previous challenger's list of what was not checked, so the second one starts there; a fixed report skeleton (verdict table first) so that reports can be compared by a script.
+
