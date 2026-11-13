@@ -107,3 +107,11 @@ REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_two_rays.
 REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_two_rays_followup.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z9
 REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_sheet_filter_cost.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z9
 "Director G, pull request 2, commit d4f6fea: check_band_preparation.py rerun",RAN_OK,yes,six checks true; 1300 flight rows within 2.7e-13; 107 numbers of the report differ by at most 1.3e-15,reproduction on Linux of results recorded on Windows; rerun for edition Z9
+Baseline_Additions/verify_kernel_rules_general.py (fresh directory),RAN_OK,yes,result file byte-identical,"4 predicates, 1 failed and kept; added in edition Z10"
+Baseline_Additions/verify_kernel_rules_general_followup.py (fresh directory),RAN_OK,yes,result file byte-identical,"3 predicates, 1 failed and kept; added in edition Z10"
+Baseline_Additions/verify_kernel_rules_general_followup_2.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z10
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_relative_transport.py (fresh directory),RAN_OK,yes,result file byte-identical,"4 predicates, exact integers; added in edition Z10"
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_position_records.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; about four minutes; added in edition Z10
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_offset_free_preparation.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z10
+COMPUTATION/Lean: three files checked with Lean 4.12.0,RAN_OK,not applicable,exit code 0 for each; axioms propext and Quot.sound only,added in edition Z10
+"Director G, pull request 2, commit 6bb2d14: check_relative_transport.py and check_position_records.py rerun",RAN_OK,yes,"all checks true; two outputs identical apart from line endings, two within 8e-15",rerun for edition Z10

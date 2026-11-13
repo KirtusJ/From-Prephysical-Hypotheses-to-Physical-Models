@@ -2,7 +2,7 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-13-Z9, 13 November 2026
+Baseline FPHPM-BASELINE-2026-11-13-Z10, 13 November 2026
 
 A constructed trial is a model built from stated primitives in order to test which parts of the target structure follow from them and which have to be supplied. It is a test object. It is not a candidate ontology and is not evidence for or against any physical claim. Withdrawn and wholly stipulated constructions are in `NEGATIVE_CONTROLS/`.
 
@@ -28,7 +28,7 @@ A constructed trial is a model built from stated primitives in order to test whi
 | classical counting measure | derived for walks that leave distinct records | G8 Proposition 7.1 |
 | second order of the rule | derived, conditional on events being sets of histories, on the record-sum form of the rule and on a norm-preserving carrier in which walks merge (on a tree every such rule is the count: Director G); otherwise supplied. With trivial gains the count is consistent on the same carrier | G8 Section 9 (1); G10 Theorems 5.1, 5.2, 5.3 (every connected signed carrier of degree two) |
 | end vertices as records | supplied | G8 Section 9 (2) |
-| group, representation, ordering of values | supplied; for cyclic orders other than 1, 2, 3, 4, 6 the values depend on the character; consistency on histories admits every conjugate character and every combination of them, and is unique exactly for the orders 2, 4, 6 (derived); multiplicativity on products leaves one conjugate character (derived; Director G); if the gain of a walk is itself a record (signed lift) the rule is unique for every order and no character is chosen (derived; whether the gain is a record is supplied); among pair rules with a kernel the consistent ones are the mixtures of the characters in which -1 acts as -1, and faithfulness is supplied (derived) | G8 Proposition 8.1; G10 Theorem 5.5, Proposition 5.6, Corollary 5.7, Theorem 5.8 |
+| group, representation, ordering of values | supplied; for cyclic orders other than 1, 2, 3, 4, 6 the values depend on the character; consistency on histories admits every conjugate character and every combination of them, and is unique exactly for the orders 2, 4, 6 (derived); multiplicativity on products leaves one conjugate character (derived; Director G); if the gain of a walk is itself a record (signed lift) the rule is unique for every order and no character is chosen (derived; whether the gain is a record is supplied); among pair rules with a kernel the consistent ones are the mixtures of the characters in which -1 acts as -1, and faithfulness is supplied (derived); for any finite abelian group and any degree the consistent pair rules are the mixtures over the characters for which the step is norm-preserving (derived) | G8 Proposition 8.1; G10 Theorem 5.5, Proposition 5.6, Corollary 5.7, Theorem 5.8, Corollary 5.9 |
 | relation between the measures at successive lengths | absent in general (Directors A and B); it is the statement that events are sets of histories; see GH-2 | G8 Section 9 (5); G10 Lemma 3.1 |
 | reversible dynamics, clock | absent; walk length is not unitary; on an undirected gain graph a norm-preserving step is an involution | G8 Section 9 (5); G9 Proposition 4.2 |
 | classical Hamiltonian mechanics | absent | G8 Section 9 (6) |
