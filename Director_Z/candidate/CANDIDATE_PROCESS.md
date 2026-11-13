@@ -31,6 +31,10 @@ A standing candidate has, each in its own file under `Director_Z/candidate/<name
 
 Anyone may attack: sub-agents, the review queue, Director G, the director. The director attacks too and reports his own kills first.
 
+## Who may run the process
+
+Sub-agents, queue workers and other directors may do everything the director does here (principal, 13 November 2026): formulate a candidate, steelman it, attack it, and abandon it. A worker's candidate goes in its own folder `Director_Z/candidate/<name>/` (or under `REVIEW_QUEUE/candidates/<name>/` for the queue session, which commits only there), with the same parts and the same marks. A worker that breaks its own or anyone's candidate says so first and abandons it; it does not wait for the director. The director checks the files of a kill afterwards and records it in the ledger. Names are not reused.
+
 ## On abandonment
 
 - The candidate's folder is moved to `Director_Z/candidate/abandoned/<name>/` unchanged, with a file `WHY_ABANDONED.md`: the attack, its verdict, the files, and what survived.
