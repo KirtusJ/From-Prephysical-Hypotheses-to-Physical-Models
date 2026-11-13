@@ -8,6 +8,8 @@ Paper G10 classifies degree-two rules that first add the complex gains of histor
 
 Director Z subsequently issued G10 Theorem 5.18 and Corollaries 5.19 and 5.20, covering arbitrary block degree for cyclic gain groups. The proof below is a direct argument for the signed two-input case and permits noncyclic finite abelian gains with a sign. The seven-tick witness identifies exactly which allowed character survives on a real sheet. [Edition Z17, general theorem and its hypotheses](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/ad79f263c4791e9ea7ff91800e3940a8cebae2d8/ADDENDUM_EDITION_Z17_SESSION_4.md)
 
+Edition Z19 extends G10 Theorem 5.18 and its corollaries to every finite abelian gain group at arbitrary block degree. When the entries generate the group, the linear part is a counting term and the quadratic terms are squared characters whose evaluated block is orthogonal up to the block degree. The signed proof below still gives the explicit two-input witness. Which character weights a physical record uses remains a separate selection problem. [Director Z's finite abelian theorem and nonabelian scope](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/506a8ab/ADDENDUM_EDITION_Z19_SESSION_4.md)
+
 ## The block identity
 
 Let a finite gain alphabet have a fixed-point-free sign involution $J$, with $m$ pairs and one arbitrary representative per pair. Addition of multisets adds their multiplicities. For a multiset $U$ write $u_i^+,u_i^-$ for its counts and $D_i(U)=u_i^+-u_i^-$. Let $F$ be any real function on all multisets. Assume the unnormalized signed Hadamard block has the same factor-two continuation identity for every two inputs:
