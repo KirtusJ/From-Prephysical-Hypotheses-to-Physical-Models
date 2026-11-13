@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Recording the first direction in site parity](First_direction_in_site_parity.md) | One adjacent rail swap stores a permanent direction bit. A radius-one marker agrees on every isolated sharp launch and gives 1/24 at a port dark under on-site routing. |
 | [A local marker calibrated from one sharp launch](Marker_kernel_from_one_launch.md) | Dense bare rail directions determine a shared continuous routing function. Two tagged-marker models predict 9/16 and 5/16 at the same four-tick detector. |
 | [Flight-window preparation](Flight_window_preparation.md) | One binary displacement record selects a terminal position ray from a sharp launch, with an explicit preparation time and success probability. |
 | [Four-tick linear potential](Four_tick_force.md) | A coherent displacement bit prepares a moving source. Programmable rail rotations bend the conditional terminal position toward the constant-force Newtonian trajectory. |
@@ -162,6 +163,7 @@ python -B check_finite_record_memory.py rerun
 python -B check_return_memory_bound.py rerun
 python -B check_flight_window.py rerun
 python -B check_marker_replay.py rerun
+python -B check_parity_direction.py rerun
 python -B check_folded_free_field.py rerun
 python -B check_folded_gaussian.py rerun
 ```
