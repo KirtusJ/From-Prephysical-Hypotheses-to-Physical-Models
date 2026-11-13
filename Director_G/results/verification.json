@@ -1691,5 +1691,582 @@
       "both_directions_each_route_and_every_terminal_mass_reconstructed": true,
       "interpretation": "The same-sheet conditional second read differs from a fresh independent reset. The fifteen-sheet uninterrupted single-flight ranks refer to relative folded masses including normalization, not selection of an absolute cyclotomic label."
     }
+  },
+  "protected_coordinate_weight_comparison_addendum": {
+    "scope": "Incremental audit of protected-coordinate weights, finite real signed-table synthesis and two supplied routing models. Each frozen new checker ran from both mirrors. Source and generated output digests, finite positive and adverse controls, and a separately replayed worker receipt are bound here.",
+    "prior_manifest_raw_sha256": "4be863a41b8c6658afbeb335516f91aef36cdba9504b341477f47abe94603b3e",
+    "totals": {
+      "checkers": 31,
+      "generated_outputs": 45,
+      "lean_files": 12,
+      "new_checkers": 4,
+      "new_generated_outputs": 4,
+      "new_lean_files": 2,
+      "fresh_checker_processes": 8,
+      "fresh_lean_compilations": 4,
+      "prior": {
+        "checkers": 27,
+        "generated_outputs": 41,
+        "lean_files": 10
+      },
+      "separate_new_worker_evidence_objects": 1
+    },
+    "mirror_bindings": {
+      "Protected_records_and_coordinate_weights.md": {
+        "raw_sha256": "879763a85abb4edce8d8ed27a41ee9441824f686c8d89882ae60c12ecff4b99d",
+        "lf_content_sha256": "879763a85abb4edce8d8ed27a41ee9441824f686c8d89882ae60c12ecff4b99d",
+        "git_blob_oid_sha1": "2976bed24f57716642c85f3559f005818aeef2c6",
+        "lf_git_blob_oid_sha1": "2976bed24f57716642c85f3559f005818aeef2c6",
+        "bytes": 26966
+      },
+      "Director_exchange.md": {
+        "raw_sha256": "c40f9a7ca9ca337153faa04f27de78a18ac18eae1501f3e804ff60f65c426a79",
+        "lf_content_sha256": "51497fe43dc91fa5a8ff56a6b5c4b88b7be0d893462439908427e178499569d3",
+        "git_blob_oid_sha1": "1a816d5620fed7a0d69c91a60ac3c3be58659ec5",
+        "lf_git_blob_oid_sha1": "1a816d5620fed7a0d69c91a60ac3c3be58659ec5",
+        "bytes": 13163
+      },
+      "lean/README.md": {
+        "raw_sha256": "928008173c30566ff86c5706bc7ae420c39dd972029915e5a5acdf36ce6f78af",
+        "lf_content_sha256": "928008173c30566ff86c5706bc7ae420c39dd972029915e5a5acdf36ce6f78af",
+        "git_blob_oid_sha1": "4dd408d238c3da6f18aa37a080bb6ed0b8205f89",
+        "lf_git_blob_oid_sha1": "4dd408d238c3da6f18aa37a080bb6ed0b8205f89",
+        "bytes": 6786
+      },
+      "lean/lean-toolchain": {
+        "raw_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "lf_content_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "lf_git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "bytes": 25
+      },
+      "publication_metadata.json": {
+        "raw_sha256": "c6a47f47442c205d8cf3e6524f0f626daf1947cc8f3bb2a2f93814b5149791b9",
+        "lf_content_sha256": "c7a9db852de7312f9a1f642efe59d0dcadb30940a6c75b65c2a688a913f58e19",
+        "git_blob_oid_sha1": "3b32648f8848c2442da6c0f0e13fe3b73427340c",
+        "lf_git_blob_oid_sha1": "3b32648f8848c2442da6c0f0e13fe3b73427340c",
+        "bytes": 2550
+      },
+      "results/comparison_worker_review.json": {
+        "raw_sha256": "dfbfa7d1d33c444b96f9b47abbb84cbbbc46e4ade375eeaa03dade51ba19f729",
+        "lf_content_sha256": "dfbfa7d1d33c444b96f9b47abbb84cbbbc46e4ade375eeaa03dade51ba19f729",
+        "git_blob_oid_sha1": "660010593da750f42390539f358ba52837c14ce4",
+        "lf_git_blob_oid_sha1": "660010593da750f42390539f358ba52837c14ce4",
+        "bytes": 17595
+      },
+      "check_heralded_weights.py": {
+        "raw_sha256": "36b42ef5e5941322d433b6390d646e971683fd7e694171cf481ba1cbeaca4c95",
+        "lf_content_sha256": "36b42ef5e5941322d433b6390d646e971683fd7e694171cf481ba1cbeaca4c95",
+        "git_blob_oid_sha1": "e679672a28f1bc9d2df7878f5733242b7668c5ac",
+        "lf_git_blob_oid_sha1": "e679672a28f1bc9d2df7878f5733242b7668c5ac",
+        "bytes": 9073
+      },
+      "check_coherent_comparison.py": {
+        "raw_sha256": "bdee120d610e20d8a11e8c48b71ce27daf3d865683173423121778552496d103",
+        "lf_content_sha256": "bdee120d610e20d8a11e8c48b71ce27daf3d865683173423121778552496d103",
+        "git_blob_oid_sha1": "d0b9d3cc2d7aefaa70f4f77b4edd8ad7137603e5",
+        "lf_git_blob_oid_sha1": "d0b9d3cc2d7aefaa70f4f77b4edd8ad7137603e5",
+        "bytes": 12834
+      },
+      "check_walk_router.py": {
+        "raw_sha256": "b3de69ac41162f6302792b0b7b690586b066bae0e90abe038dc7287b67652587",
+        "lf_content_sha256": "b3de69ac41162f6302792b0b7b690586b066bae0e90abe038dc7287b67652587",
+        "git_blob_oid_sha1": "81992be7fd48eccb409f8b00be1e99007e7352ce",
+        "lf_git_blob_oid_sha1": "81992be7fd48eccb409f8b00be1e99007e7352ce",
+        "bytes": 10370
+      },
+      "check_local_comparison_router.py": {
+        "raw_sha256": "daee53e9aa8b17276c0cfcef9ea07e47f5ed357da3ade258ed1713606d37fc13",
+        "lf_content_sha256": "daee53e9aa8b17276c0cfcef9ea07e47f5ed357da3ade258ed1713606d37fc13",
+        "git_blob_oid_sha1": "6061274419c08a9c933626f0a2cff64bdef1bed0",
+        "lf_git_blob_oid_sha1": "6061274419c08a9c933626f0a2cff64bdef1bed0",
+        "bytes": 23081
+      },
+      "results/heralded_weights.json": {
+        "raw_sha256": "88966180d96316e56c2142cc5a359678d8ed9456ea52831c2884e80753b5f47c",
+        "lf_content_sha256": "f6a5227d8736d8723556487d8055c0729f75cde3627ce322407596daca63c70d",
+        "git_blob_oid_sha1": "1e6238d33cca548b33117646831d19508bfcf415",
+        "lf_git_blob_oid_sha1": "dbcb4e7f8258edcecb44e8191287251fb573dca4",
+        "bytes": 22644
+      },
+      "results/coherent_comparison.json": {
+        "raw_sha256": "d1f7cb792e95d4284e3054bb43124d456756e95bc97483bdf43be498dca923f0",
+        "lf_content_sha256": "abf7a6720e67faebc08bc012e22b8e6fb08448374d7a6fcad68d7abafe74fa99",
+        "git_blob_oid_sha1": "fa9b56879793ba405627834b435300629a25506d",
+        "lf_git_blob_oid_sha1": "8df5695adeb21e18a7e0a9df30c6d310a9affe2f",
+        "bytes": 91500
+      },
+      "results/walk_router.json": {
+        "raw_sha256": "e0dbb981ffe0f219d6d09eb674fc42c89da301dff331a364cbdcc2bdd59e756d",
+        "lf_content_sha256": "e0dbb981ffe0f219d6d09eb674fc42c89da301dff331a364cbdcc2bdd59e756d",
+        "git_blob_oid_sha1": "7c50cccb75fb750452b865297a1ef3239cd9fe1f",
+        "lf_git_blob_oid_sha1": "7c50cccb75fb750452b865297a1ef3239cd9fe1f",
+        "bytes": 11299
+      },
+      "results/local_comparison_router.json": {
+        "raw_sha256": "e93a7a4afab791247041563dbc6cf07c044f19c6ac8cda0d8ba8fec9e22e85ac",
+        "lf_content_sha256": "e280ecbd7c167211ae9ff492578856f5c4b5edf7cdd16da7a1b841c893d14ab6",
+        "git_blob_oid_sha1": "f231bf3215d847ddf95d3ffb417753887e1adab7",
+        "lf_git_blob_oid_sha1": "602e3dbadb635540220bad86229d841a7f9cbbe9",
+        "bytes": 69233
+      },
+      "lean/HeraldedWeights.lean": {
+        "raw_sha256": "f9b88672ee28bf5e5ae90bbed7dbae691ae10d10dc3672e08fbb913c72a05536",
+        "lf_content_sha256": "f9b88672ee28bf5e5ae90bbed7dbae691ae10d10dc3672e08fbb913c72a05536",
+        "git_blob_oid_sha1": "4511ba9336638023d3922d87679f3d1b74babc01",
+        "lf_git_blob_oid_sha1": "4511ba9336638023d3922d87679f3d1b74babc01",
+        "bytes": 8520
+      },
+      "lean/CoherentComparison.lean": {
+        "raw_sha256": "4861b975db9978dd40a02529d0caed9c71cf261081650dadcefbb36e58d03566",
+        "lf_content_sha256": "4861b975db9978dd40a02529d0caed9c71cf261081650dadcefbb36e58d03566",
+        "git_blob_oid_sha1": "0371f7f67728e14fa3dea70e4605000f69a21f16",
+        "lf_git_blob_oid_sha1": "0371f7f67728e14fa3dea70e4605000f69a21f16",
+        "bytes": 7550
+      }
+    },
+    "digest_convention": "The listed mirrored files have equal raw bytes. Git blob OIDs apply repository path attributes; LF SHA-256 and LF blob OIDs are separate normalized digests. Results, checker sources and Lean sources use -text. Existing historical scopes and raw manifest content preceding this addendum are preserved.",
+    "fresh_runs": {
+      "runtime": "bundled Python 3.12.14 on Windows; -X utf8 -B check_<name>.py <fresh-directory>",
+      "checkers_per_mirror": [
+        "heralded_weights",
+        "coherent_comparison",
+        "walk_router",
+        "local_comparison_router"
+      ],
+      "exit_codes_per_mirror": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_eight_outputs_match_both_saved_files": true,
+      "generated_raw_sha256": {
+        "heralded_weights.json": "88966180d96316e56c2142cc5a359678d8ed9456ea52831c2884e80753b5f47c",
+        "coherent_comparison.json": "d1f7cb792e95d4284e3054bb43124d456756e95bc97483bdf43be498dca923f0",
+        "walk_router.json": "e0dbb981ffe0f219d6d09eb674fc42c89da301dff331a364cbdcc2bdd59e756d",
+        "local_comparison_router.json": "e93a7a4afab791247041563dbc6cf07c044f19c6ac8cda0d8ba8fec9e22e85ac"
+      },
+      "prior_output_files_compared_across_both_copies": 41,
+      "historical_first_run_objects_matched_prior_sha256": [
+        "orientation_oracle_first_run.json",
+        "band_preparation_first_oracle.json",
+        "radial_first_oracle.json",
+        "radial_trials_first_oracle.csv",
+        "internal_reference_first_index.json"
+      ]
+    },
+    "lean": {
+      "toolchain": "leanprover/lean4:v4.19.0",
+      "platform": "x86_64-w64-windows-gnu, commit 6caaee842e94",
+      "command": "lean lean/<file>.lean from each supplement directory",
+      "files": [
+        "HeraldedWeights.lean",
+        "CoherentComparison.lean"
+      ],
+      "exit_codes_per_mirror": [
+        0,
+        0
+      ],
+      "stdout_and_stderr_empty": true,
+      "scope": [
+        "Heralded finite common multiple, square-count equalizer, failure scalar and cancellation conditional on positive success.",
+        "Protected equal-entry comparison and normalized dyadic coordinate weights from the supplied joint marginals and calibrator tables; exact signed equal-parity fold. Native physical comparison gates are a separate premise."
+      ]
+    },
+    "records": {
+      "herald": {
+        "cases": [
+          "odd_three_and_seven_units",
+          "four_tick_walk_herald",
+          "mixed_signs_and_zero",
+          "two_distinct_odd_factors",
+          "single_occupied_flag",
+          "equal_magnitudes",
+          "common_odd_factor"
+        ],
+        "predicates": {
+          "exact_forward_columns": true,
+          "each_ancilla_tick_a_perfect_pair_matching": true,
+          "signed_success_cells_equal": true,
+          "all_failure_tag_states_restore_input": true,
+          "squared_norm_conserved": true,
+          "quartic_countercontrol": true,
+          "zero_success_cancellation_boundary": true
+        },
+        "quartic_before_after_on_odd_three": [
+          "81/88",
+          "162/239"
+        ],
+        "zero_success_leaves_nonquadratic_candidate_unconstrained": true
+      },
+      "coherent": {
+        "input_comparisons": 17,
+        "quartic_protected_marginal_failures": 15,
+        "unchanged_controls": [
+          "depth_zero",
+          "localized_power_two"
+        ],
+        "width_eight_depths": [
+          0,
+          14
+        ],
+        "compiled_reference_pairs": 424,
+        "signed_depth_value_cases": 877,
+        "markov_control": {
+          "two_H_from_cell_zero_classical": [
+            "1/2",
+            "1/2"
+          ],
+          "coherent": [
+            "1",
+            "0"
+          ]
+        },
+        "predicates": {
+          "synchronized_integer_endpoint_equality": true,
+          "all_old_coordinate_masks_exact": true,
+          "parity_matching_reductions": true,
+          "stable_zero_padding": true,
+          "native_walk_full_norm": true,
+          "markov_reversal_countercontrol": true,
+          "width_eight_inference_all_integer_amplitudes": true,
+          "quartic_protected_countercontrol": true
+        },
+        "independent_reference_equation_check": {
+          "method": "For each saved normalizer, both recurrence vectors and each large-amplitude completion, assemble one equation on f(1)..f(floor(sqrt(2^t))) and the total mass. Set f(0)=0. Sparse rational Gaussian elimination gives the rank; every primitive row separately annihilates (1^2,...,m^2,2^t).",
+          "depths": [
+            {
+              "t": 0,
+              "primitive_rows_including_repeated_rows": 2,
+              "rank": 1,
+              "nullity": 1
+            },
+            {
+              "t": 1,
+              "primitive_rows_including_repeated_rows": 1,
+              "rank": 1,
+              "nullity": 1
+            },
+            {
+              "t": 2,
+              "primitive_rows_including_repeated_rows": 4,
+              "rank": 2,
+              "nullity": 1
+            },
+            {
+              "t": 3,
+              "primitive_rows_including_repeated_rows": 3,
+              "rank": 2,
+              "nullity": 1
+            },
+            {
+              "t": 4,
+              "primitive_rows_including_repeated_rows": 7,
+              "rank": 4,
+              "nullity": 1
+            },
+            {
+              "t": 5,
+              "primitive_rows_including_repeated_rows": 8,
+              "rank": 5,
+              "nullity": 1
+            },
+            {
+              "t": 6,
+              "primitive_rows_including_repeated_rows": 14,
+              "rank": 8,
+              "nullity": 1
+            },
+            {
+              "t": 7,
+              "primitive_rows_including_repeated_rows": 18,
+              "rank": 11,
+              "nullity": 1
+            },
+            {
+              "t": 8,
+              "primitive_rows_including_repeated_rows": 28,
+              "rank": 16,
+              "nullity": 1
+            },
+            {
+              "t": 9,
+              "primitive_rows_including_repeated_rows": 37,
+              "rank": 22,
+              "nullity": 1
+            },
+            {
+              "t": 10,
+              "primitive_rows_including_repeated_rows": 55,
+              "rank": 32,
+              "nullity": 1
+            },
+            {
+              "t": 11,
+              "primitive_rows_including_repeated_rows": 76,
+              "rank": 45,
+              "nullity": 1
+            },
+            {
+              "t": 12,
+              "primitive_rows_including_repeated_rows": 110,
+              "rank": 64,
+              "nullity": 1
+            },
+            {
+              "t": 13,
+              "primitive_rows_including_repeated_rows": 153,
+              "rank": 90,
+              "nullity": 1
+            },
+            {
+              "t": 14,
+              "primitive_rows_including_repeated_rows": 219,
+              "rank": 128,
+              "nullity": 1
+            }
+          ]
+        }
+      }
+    },
+    "routers": {
+      "single_rail_module": {
+        "homogeneous_through_48": [
+          {
+            "N": 4,
+            "homogeneous_full_identity_through_48": [
+              8,
+              16,
+              24,
+              32,
+              40,
+              48
+            ]
+          },
+          {
+            "N": 6,
+            "homogeneous_full_identity_through_48": []
+          },
+          {
+            "N": 8,
+            "homogeneous_full_identity_through_48": [
+              24,
+              48
+            ]
+          },
+          {
+            "N": 10,
+            "homogeneous_full_identity_through_48": []
+          },
+          {
+            "N": 12,
+            "homogeneous_full_identity_through_48": []
+          },
+          {
+            "N": 16,
+            "homogeneous_full_identity_through_48": []
+          }
+        ],
+        "mod_two_through_128": [
+          {
+            "N": 4,
+            "odd_part": 1,
+            "first_zero_column_mod_2_through_128": 3
+          },
+          {
+            "N": 6,
+            "odd_part": 3,
+            "first_zero_column_mod_2_through_128": null
+          },
+          {
+            "N": 8,
+            "odd_part": 1,
+            "first_zero_column_mod_2_through_128": 5
+          },
+          {
+            "N": 10,
+            "odd_part": 5,
+            "first_zero_column_mod_2_through_128": null
+          },
+          {
+            "N": 12,
+            "odd_part": 3,
+            "first_zero_column_mod_2_through_128": null
+          },
+          {
+            "N": 14,
+            "odd_part": 7,
+            "first_zero_column_mod_2_through_128": null
+          },
+          {
+            "N": 15,
+            "odd_part": 15,
+            "first_zero_column_mod_2_through_128": null
+          },
+          {
+            "N": 16,
+            "odd_part": 1,
+            "first_zero_column_mod_2_through_128": 9
+          },
+          {
+            "N": 18,
+            "odd_part": 9,
+            "first_zero_column_mod_2_through_128": null
+          }
+        ],
+        "logical_widths_and_program_ticks": [
+          [
+            8,
+            1467
+          ],
+          [
+            16,
+            6628
+          ]
+        ],
+        "scope": "No result for inhomogeneous routing on a lone power-of-two ring of size >=16. Homogeneous nonperiodicity outside sizes 2,4,8 is known; the finite table only checks 48 ticks. The intermodule connector is an added local operation and is not part of the original isolated ring."
+      },
+      "two_orientations": {
+        "small_ring_sizes": [
+          2,
+          4,
+          6,
+          10,
+          18
+        ],
+        "predicate_results": {
+          "base_and_both_echo_orders": true,
+          "all_isolated_generators": true,
+          "within_parity_routing": true,
+          "full_requested_matchings": true,
+          "missing_switch_detected": true,
+          "mistaken_forward_echo_small_ring_exception": true,
+          "destructive_and_constructive_superpositions": true,
+          "entire_literal_comparison": true
+        },
+        "full_trial": {
+          "ring_sites": 32,
+          "logical_depth": 3,
+          "logical_data_width": 8,
+          "physical_modes": 128,
+          "joint_squared_numerator_norm": 16,
+          "squared_denominator": 16,
+          "common_stage_count": 11,
+          "positive_W_ticks": 19803,
+          "on_site_J_layers": 19794,
+          "serial_layers": 39597,
+          "both_vectors_identical_and_blank_minus_rail_at_completion": true,
+          "first_fixed_site_patch_change_each_route": [
+            1644,
+            1644
+          ],
+          "omitted_middle_phase_bad_cells": [
+            34,
+            38,
+            42,
+            46,
+            50,
+            54,
+            58,
+            62
+          ],
+          "record_scope": "After the selector, the stationary physical read on the two input-embedding coordinates for the protected flag's cell zero, on both rails, can change during routed W ticks. All eight encoded protected masks were checked at each padded logical boundary. Their intermediate Heisenberg pullbacks need not be site masks."
+        }
+      }
+    },
+    "nested_review": {
+      "worker_evidence_excluded_from_generated_output_count": true,
+      "portable_receipt_sha256": "dfbfa7d1d33c444b96f9b47abbb84cbbbc46e4ade375eeaa03dade51ba19f729",
+      "attempt": "20261113T120852555350Z",
+      "receipt": "6a844c6ebb2096e567cb",
+      "unmodified_runner_exit": 1,
+      "unmodified_runner_verified": false,
+      "all_mcp_calls": 3,
+      "reviewer_calls": 1,
+      "extra_empty_resource_list_calls": 2,
+      "independent_unique_consultation_verified": true,
+      "python_and_rust_registers": {
+        "parent": {
+          "python_ok": true,
+          "head": "f003d5556436b957ca498e8889c26c0daeff5c2a8ab1822894e888c81dee3b80",
+          "rust_exit": 0,
+          "sha256_output": "bf2a9ce84b46d2ce56cee95a8b4518798972a41bffe98f8b7928213d98662bc1"
+        },
+        "child": {
+          "python_ok": true,
+          "head": "759a8d2604ac1384178674e3b829e2b3b676df183abe9fddc238a97b2fa8e02b",
+          "rust_exit": 0,
+          "sha256_output": "91cc8f9771d75f166e55168357f524fbf7ddfe2459427b0c11ffc4bcf2b1e2d7"
+        }
+      },
+      "portable_path_normalization": "Reconstructed the evidence against both Python registers and saved Rust replays; substituting %LOCALAPPDATA% for the detached process executable prefix yields the entire portable object.",
+      "adverse_evidence": "Qwen returned 1.0 for one x unit entry. The parent corrected it to 1/20. Ordinary selector-first joint masses are 1/40 and 1/16 under the fourth-power candidate. Its direct coherent control gives 1/28 and 1/28 and changes block masses to 5/7 and 2/7."
+    },
+    "current_gate_maps": {
+      "research": {
+        "raw_sha256": "67f6498907399a09c7f3ea88861a39c8fb31fee284fdaa67fa41aee88aa0f721",
+        "lf_content_sha256": "67f6498907399a09c7f3ea88861a39c8fb31fee284fdaa67fa41aee88aa0f721",
+        "git_blob_oid_sha1": "e894506b093a9bc85d6f7dfe7bdcd1a2ce5f58aa",
+        "lf_git_blob_oid_sha1": "e894506b093a9bc85d6f7dfe7bdcd1a2ce5f58aa",
+        "bytes": 35005
+      },
+      "checkout": {
+        "raw_sha256": "1af655568acddf22fbef671c96106c20c5b0234841950e6d00949befa3890e0a",
+        "lf_content_sha256": "1af655568acddf22fbef671c96106c20c5b0234841950e6d00949befa3890e0a",
+        "git_blob_oid_sha1": "5a95fc03651eb4d9181b43c7ac3d553c94aa4c41",
+        "lf_git_blob_oid_sha1": "5a95fc03651eb4d9181b43c7ac3d553c94aa4c41",
+        "bytes": 35085
+      }
+    },
+    "gate_review": {
+      "open_gates": 13,
+      "original_disposition": "UNRESOLVED",
+      "mirrors_differ_only_in_baseline_and_archive_member_locators": true,
+      "both_baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "publication_metadata_matches_raw_bytes": true
+    },
+    "published_index": {
+      "raw_sha256": "1622e2f8121c3733f4f315eaa91297d588396e45a5b4cd87d9469aedfe132b4e",
+      "lf_content_sha256": "1622e2f8121c3733f4f315eaa91297d588396e45a5b4cd87d9469aedfe132b4e",
+      "git_blob_oid_sha1": "5c9f7bf88033ac059ec3fd8c483829c345cd9714",
+      "lf_git_blob_oid_sha1": "5c9f7bf88033ac059ec3fd8c483829c345cd9714",
+      "bytes": 6792
+    },
+    "review_queue_index": {
+      "raw_sha256": "d8bd31317e36497695467f0bf029c93ef73b7015a6af3bf5047e825f520cde19",
+      "lf_content_sha256": "5769f49ff1e5dfd73c007f9fc6e280dd8f742983b50bb92798d269c4141d501f",
+      "git_blob_oid_sha1": "b6d9334b356565582ee475951bc0e80537856a25",
+      "lf_git_blob_oid_sha1": "b6d9334b356565582ee475951bc0e80537856a25",
+      "bytes": 7293
+    },
+    "current_markdown_links": {
+      "research": {
+        "markdown_files": 22,
+        "local_file_link_occurrences": 198,
+        "article_local_link_occurrences": 19,
+        "missing_local_targets": 0
+      },
+      "checkout": {
+        "markdown_files": 23,
+        "local_file_link_occurrences": 219,
+        "article_local_link_occurrences": 19,
+        "missing_local_targets": 0
+      }
+    },
+    "edition_z15": {
+      "edition": "FPHPM-BASELINE-2026-11-13-Z15",
+      "manifest_sha256": "38c20c9e8fe1c84ff2115219208073b88e45728d359f54e2980deabaf0cfb291",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "result": "BASELINE_CHECK_PASS",
+      "verifier_exit": 0,
+      "manifest_payloads": 1196,
+      "paper_index_entries": 41,
+      "assembled_pdfs_with_front_matter_checked": 40,
+      "registry_rows": 400,
+      "legacy_components": 85,
+      "pymupdf": "2.1",
+      "method": "Fresh release verifier in bundled Python 3.12.14 with the isolated PyMuPDF 2.1 package. The runtime normalized the single enumerating os.path.relpath result to forward slashes on Windows. First dependency probe in default Python 3.14 lacked PyMuPDF and halted before checking any payload."
+    }
   }
 }
