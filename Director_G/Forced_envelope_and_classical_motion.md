@@ -67,3 +67,5 @@ Run the [fibre checker](check_forced_envelope.py) with a destination directory a
 The root review remains G1 OPEN. This conditional link between a lattice update, a forced quantum equation and a limiting classical position record addresses part of P7, P9 and P10. The program's original ontology claim remains unresolved.
 
 A subsequent construction treats smooth position-dependent interaction on two periodic lattices. [Periodic two-body limits](Periodic_interaction_and_two_limits.md)
+
+If a balanced, independently counted path component survives preparation with weight c, its physical displacement has variance at most t times epsilon in this scaling. A nonzero such fraction leaves mass at the initial position in the shrinking-action limit, even when the selected coherent component moves. [Counting and the classical position law](Counting_and_character_records.md)

@@ -1,0 +1,386 @@
+{
+  "record_mixture": "A clock-blind instrument diagonal in Fourier label k has Kraus blocks K_h(k) for every finite transcript. With independent fresh raw inputs, tracing the clock gives P(h)=sum_k w_k P_k(h), including common history-dependent choices. If the good blocks have the same complete record law Q, joint TV(P,Q)<=e for any n. One must specify Q under the same adaptive policy. If ideal products with fresh random orientations are requested, good-sector equality for single marginals alone does not establish that comparison. Classical labels are a sampling representation.",
+  "homogeneous_integer_examples": {
+    "clock_size": 4,
+    "good_clock": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "bad_clock": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "input_counts": [
+      5,
+      1,
+      -3,
+      1
+    ],
+    "wrong_fraction": "1/9",
+    "unit_shift_bright_good": "1/2",
+    "unit_shift_bright_bad": "1",
+    "trials": [
+      {
+        "number": 1,
+        "initial_offsets": [
+          1
+        ],
+        "zero_current_setting_if_previous_minus": false,
+        "coherent_integer_tree_nonzero_histories": 2,
+        "joint_TV_to_all_good": "1/18",
+        "shared_count_distribution": [
+          "4/9",
+          "5/9"
+        ],
+        "same_single_shot_mean_shared_and_fresh": "5/9",
+        "shared_sample_mean_variance": "20/81",
+        "fresh_sample_mean_variance": "20/81",
+        "TV_shared_vs_refreshed_counts": "0",
+        "rare_all_plus_joint": "5/9",
+        "wrong_given_all_plus": "1/5",
+        "joint_TV_formula_verified": true
+      },
+      {
+        "number": 1,
+        "initial_offsets": [
+          2
+        ],
+        "zero_current_setting_if_previous_minus": true,
+        "coherent_integer_tree_nonzero_histories": 2,
+        "joint_TV_to_all_good": "1/9"
+      },
+      {
+        "number": 2,
+        "initial_offsets": [
+          1,
+          1
+        ],
+        "zero_current_setting_if_previous_minus": false,
+        "coherent_integer_tree_nonzero_histories": 4,
+        "joint_TV_to_all_good": "1/12",
+        "shared_count_distribution": [
+          "2/9",
+          "4/9",
+          "1/3"
+        ],
+        "same_single_shot_mean_shared_and_fresh": "5/9",
+        "shared_sample_mean_variance": "11/81",
+        "fresh_sample_mean_variance": "10/81",
+        "TV_shared_vs_refreshed_counts": "4/81",
+        "rare_all_plus_joint": "1/3",
+        "wrong_given_all_plus": "1/3",
+        "joint_TV_formula_verified": true
+      },
+      {
+        "number": 2,
+        "initial_offsets": [
+          1,
+          2
+        ],
+        "zero_current_setting_if_previous_minus": true,
+        "coherent_integer_tree_nonzero_histories": 3,
+        "joint_TV_to_all_good": "1/9"
+      },
+      {
+        "number": 4,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "zero_current_setting_if_previous_minus": false,
+        "coherent_integer_tree_nonzero_histories": 16,
+        "joint_TV_to_all_good": "5/48",
+        "shared_count_distribution": [
+          "1/18",
+          "2/9",
+          "1/3",
+          "2/9",
+          "1/6"
+        ],
+        "same_single_shot_mean_shared_and_fresh": "5/9",
+        "shared_sample_mean_variance": "13/162",
+        "fresh_sample_mean_variance": "5/81",
+        "TV_shared_vs_refreshed_counts": "755/6561",
+        "rare_all_plus_joint": "1/6",
+        "wrong_given_all_plus": "2/3",
+        "joint_TV_formula_verified": true
+      },
+      {
+        "number": 4,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "zero_current_setting_if_previous_minus": true,
+        "coherent_integer_tree_nonzero_histories": 6,
+        "joint_TV_to_all_good": "1/9"
+      },
+      {
+        "number": 8,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "zero_current_setting_if_previous_minus": false,
+        "coherent_integer_tree_nonzero_histories": 256,
+        "joint_TV_to_all_good": "85/768",
+        "shared_count_distribution": [
+          "1/288",
+          "1/36",
+          "7/72",
+          "7/36",
+          "35/144",
+          "7/36",
+          "7/72",
+          "1/36",
+          "11/96"
+        ],
+        "same_single_shot_mean_shared_and_fresh": "5/9",
+        "shared_sample_mean_variance": "17/324",
+        "fresh_sample_mean_variance": "5/162",
+        "TV_shared_vs_refreshed_counts": "122979511/688747536",
+        "rare_all_plus_joint": "11/96",
+        "wrong_given_all_plus": "32/33",
+        "joint_TV_formula_verified": true
+      },
+      {
+        "number": 8,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "zero_current_setting_if_previous_minus": true,
+        "coherent_integer_tree_nonzero_histories": 35,
+        "joint_TV_to_all_good": "1/9"
+      },
+      {
+        "number": 10,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "zero_current_setting_if_previous_minus": false,
+        "coherent_integer_tree_nonzero_histories": 1024,
+        "joint_TV_to_all_good": "341/3072",
+        "shared_count_distribution": [
+          "1/1152",
+          "5/576",
+          "5/128",
+          "5/48",
+          "35/192",
+          "7/32",
+          "35/192",
+          "5/48",
+          "5/128",
+          "5/576",
+          "43/384"
+        ],
+        "same_single_shot_mean_shared_and_fresh": "5/9",
+        "shared_sample_mean_variance": "19/405",
+        "fresh_sample_mean_variance": "2/81",
+        "TV_shared_vs_refreshed_counts": "86752348507/446308403328",
+        "rare_all_plus_joint": "43/384",
+        "wrong_given_all_plus": "128/129",
+        "joint_TV_formula_verified": true
+      },
+      {
+        "number": 10,
+        "initial_offsets": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "zero_current_setting_if_previous_minus": true,
+        "coherent_integer_tree_nonzero_histories": 90,
+        "joint_TV_to_all_good": "1/9"
+      }
+    ],
+    "strong_marker_control": {
+      "shift": 2,
+      "number": 6,
+      "shared_all_minus": "8/9",
+      "shared_all_plus": "1/9",
+      "shared_TV_to_ideal": "1/9",
+      "fresh_TV_to_ideal": "269297/531441"
+    }
+  },
+  "real_memory_control": {
+    "clock_size": 4,
+    "initial_exact_conjugate_plane": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "flight": "Fresh |+> path and controlled one-cell T. An independent oriented quadrature is unnecessary for the final joint Bell measurement: it is a real signed basis.",
+    "after_one_flight_clock_purity": "1/2",
+    "fidelity_with_initial_standing_wave": "1/2",
+    "both_single_base_reduced": "I/2",
+    "clock_coord_probabilities_if_initial": [
+      "1/2",
+      "0",
+      "1/2",
+      "0"
+    ],
+    "clock_coord_probabilities_after_one": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "single_coordinate_read_TV_before_vs_after": "1/2",
+    "oriented_exact_character_factorizes": true,
+    "two_flight_control": {
+      "refreshed": {
+        "two_qubit_reduced": [
+          [
+            "1/4",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/4",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/4"
+          ]
+        ],
+        "real_Bell_law": {
+          "Phi+": "1/4",
+          "Phi-": "1/4",
+          "Psi+": "1/4",
+          "Psi-": "1/4"
+        },
+        "positive_Y_tensor_Y": "1/2"
+      },
+      "retained": {
+        "two_qubit_reduced": [
+          [
+            "1/4",
+            "0",
+            "0",
+            "-1/4"
+          ],
+          [
+            "0",
+            "1/4",
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "1/4",
+            "1/4",
+            "0"
+          ],
+          [
+            "-1/4",
+            "0",
+            "0",
+            "1/4"
+          ]
+        ],
+        "real_Bell_law": {
+          "Phi+": "0",
+          "Phi-": "1/2",
+          "Psi+": "1/2",
+          "Psi-": "0"
+        },
+        "positive_Y_tensor_Y": "1"
+      }
+    },
+    "joint_TV_retained_vs_refreshed_real_Bell": "1/2",
+    "qualification": "At order 8, applying T^2 on the abstract exact k=+-1 plane has the same pi/2 conditional phase. Literal integer tests use order 4. The addition of a comparator retaining both emitted qubits changes the allowed observation. For signed real per-flight readouts the two orientations have identical conditional laws."
+  },
+  "moving_frame_signed_loop": {
+    "clock_size": 128,
+    "duration": 7,
+    "two_direction_histories": [
+      [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "common_initial_and_final_base_modes": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "native_departure_sums": [
+      9,
+      -9
+    ],
+    "cyclic_holonomy_distance_before_and_after_position_time_gauge": 18,
+    "maximum_difference_if_all_physical_shifts_have_speed_one": 14,
+    "general": "Take R^a L^a R and L^a R^a R on a line with g(x)=x. Both go from (0,R) to (1,R) in 2a+1 steps with gain sums +/-a^2. Every time-,site-, and direction-dependent translation of the local sheet frame telescopes between the same endpoints. For M>4a^2 the cycle distance of 2a^2 exceeds 2v(2a+1) when a is large enough for any fixed v. There is then no such gauge making the exact whole lift bounded-speed in one tick per base step. This tests the exact transport, not a lower bound on observed coarse probabilities, a separate simulator, or an arbitrarily selected force packet."
+  },
+  "no_broadcast_scope": "For a unitary preserving each of two pure programs c,d uncorrelated while starting a target in the same pure input, inner-product conservation gives <c|d>=<c|d><out_c|out_d> (up to phase). Thus distinguishable pure outputs require orthogonal program states. Exactly distinct character programs are orthogonal: there is no such obstruction to their repeated controlled translations. For an arbitrary family of noncommuting programs one cannot infer a universal independent copy. A dephased orientation mixture may keep its own marginal exactly yet correlate all signals.",
+  "bounds_and_costs": "For independently prepared real bases and individual clock-blind real records the good orientation laws coincide even for common adaptive feedback. If eta is the per-flight comparison error to a continuum law, using the same good clock for n independent ideal flights gives joint error <=e+n eta (or the sum of uniform conditional errors under feedback). Mean frequency error per flight is at most e+eta. A rare final herald E may increase the wrong posterior by up to e/P(E). Reuse lowers amortized setup only: an expected O(M r) preparation at tau per tick costs O(r/delta) mechanical time and O(r/(n delta)) per flight in the cited force scaling. The first usable clock still has its original causal latency. Correlated product-transcript estimates use e+n eta. To make both available upper bounds vanish one needs n delta/r -> infinity and n eta -> 0, feasible when r eta / delta -> 0. A convergence theorem with no quantitative rate does not give this tradeoff. Flights sharing a clock cannot be counted as independent calibrations. A translation of the support centre, even if record-dependent, does not change the sharp arc spectral bound. Sequential reuse assumes all flights can couple to this same physical register. Local travel, transport delay, and concurrent geographical copies require a separate physical account. This checker does not implement long-range couplings or new units."
+}

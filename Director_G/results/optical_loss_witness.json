@@ -1,0 +1,1715 @@
+{
+  "source": {
+    "article": "Peng Xue, Hao Qin and Bao Tang, Scientific Reports 4, 4825 (2014)",
+    "primary": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001091/",
+    "figure": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsrep04825/MediaObjects/41598_2014_Article_BFsrep04825_Fig3_HTML.jpg",
+    "figure_SHA256": "5a428e3e6478a1c0b808267e45da8902638ae68c21de3f32c172d477dc90535b",
+    "original_dimensions": [
+      1378,
+      538
+    ],
+    "panel": "Fig. 3(b), recurrence inset",
+    "phases_deg": [
+      0,
+      45,
+      90,
+      135,
+      180
+    ],
+    "vertical_marker_extent_pixels": [
+      [
+        239,
+        244
+      ],
+      [
+        156,
+        161
+      ],
+      [
+        87,
+        95
+      ],
+      [
+        82,
+        91
+      ],
+      [
+        86,
+        95
+      ]
+    ],
+    "pixel_conversion": "(265.5-y)/280, bounds expanded by two pixels at both ends.",
+    "printed_135": "0.660 +/- 0.012, authors' reported statistical uncertainty. The printed and graphic summaries are evaluated as alternate readings of the same experiment."
+  },
+  "bounds": {
+    "graphic": [
+      [
+        "39/560",
+        "57/560"
+      ],
+      [
+        "41/112",
+        "223/560"
+      ],
+      [
+        "337/560",
+        "361/560"
+      ],
+      [
+        "69/112",
+        "53/80"
+      ],
+      [
+        "337/560",
+        "363/560"
+      ]
+    ],
+    "printed135_and_other_graphic": [
+      [
+        "39/560",
+        "57/560"
+      ],
+      [
+        "41/112",
+        "223/560"
+      ],
+      [
+        "337/560",
+        "361/560"
+      ],
+      [
+        "81/125",
+        "84/125"
+      ],
+      [
+        "337/560",
+        "363/560"
+      ]
+    ]
+  },
+  "inputs": "Every model is a normalized probability distribution BEFORE detection. Count propagates classical path multiplicities. Alternate and ordinary are the two fixed-label signed eighth-root evaluations in check_optical_walk_records.phase_sweep. The 22 listed site/polarization pairs include two unreachable outer-edge modes. Pure count has return 63/256 under equal efficiency and a setting-independent detected return under any common fixed efficiencies.",
+  "proof": "Write h_j=1 at the centre, zero elsewhere. For fixed efficiencies e_j>=0, positive total collected mass at both settings, and component probabilities P_sj, the upper bound at 0 deg gives sum e_j(h_j-U)P_0j<=0 and the lower bound at 135 deg gives sum e_j(L-h_j)P_135j<=0. Their positive combination defines D_j=lambda(h_j-U)P_0j +(L-h_j)P_135j with lambda=L/(4U). Exact signs below show that at w=0 all coefficients are nonnegative with both count and alternate strictly positive on both central modes. The positive observed central rate makes exclusion strict. This w=0 argument also works with component-specific fixed efficiencies, since each component's coefficients are tested separately. Under component-INDEPENDENT common mode efficiencies put w=raw ordinary fraction. At each mode the worst other coefficient is m=min(D_count,D_alt). If D_ord<0 the first possible zero of w D_ord+(1-w)m is m/(m-D_ord); other modes need no threshold. The minimum of those ratios occurs at the centre. For w below that floor all modes are nonnegative, both central modes strictly positive, contradicting the two inequalities.",
+  "certificates": {
+    "graphic": {
+      "U_at_zero_degrees": "57/560",
+      "L_at_135_degrees": "69/112",
+      "multiplier": "115/76",
+      "sharp_two_setting_ordinary_floor": {
+        "a": "1/2",
+        "b": "-36403/392160",
+        "decimal": 0.3687229286233482
+      },
+      "limiting_centre_modes": [
+        [
+          0,
+          "H"
+        ],
+        [
+          0,
+          "V"
+        ]
+      ],
+      "all_mode_coefficients_and_signs": [
+        {
+          "x": -10,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "alternate": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "ordinary": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -10,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 0,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            0,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -8,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "1863/458752",
+              "b": "0",
+              "decimal": 0.004061017717633929
+            },
+            "alternate": {
+              "a": "9591/458752",
+              "b": "69/8192",
+              "decimal": 0.032818431756176845
+            },
+            "ordinary": {
+              "a": "9591/458752",
+              "b": "-69/8192",
+              "decimal": 0.008995009929091012
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -8,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "alternate": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "ordinary": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -6,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "1863/114688",
+              "b": "0",
+              "decimal": 0.016244070870535716
+            },
+            "alternate": {
+              "a": "4071/57344",
+              "b": "207/3584",
+              "decimal": 0.15267290943393713
+            },
+            "ordinary": {
+              "a": "4071/57344",
+              "b": "-207/3584",
+              "decimal": -0.010687697380365707
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "2457/10151",
+            "b": "2592/10151",
+            "decimal": 0.6031564923328798
+          }
+        },
+        {
+          "x": -6,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "1863/458752",
+              "b": "0",
+              "decimal": 0.004061017717633929
+            },
+            "alternate": {
+              "a": "4899/458752",
+              "b": "345/57344",
+              "decimal": 0.019187337454986013
+            },
+            "ordinary": {
+              "a": "4899/458752",
+              "b": "-345/57344",
+              "decimal": 0.0021706075784961327
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -4,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "621/16384",
+              "b": "0",
+              "decimal": 0.03790283203125
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -4,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "1863/114688",
+              "b": "0",
+              "decimal": 0.016244070870535716
+            },
+            "alternate": {
+              "a": "69/7168",
+              "b": "69/7168",
+              "decimal": 0.023239499972620474
+            },
+            "ordinary": {
+              "a": "69/7168",
+              "b": "-69/7168",
+              "decimal": -0.003987267829763332
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "-297/391",
+            "b": "432/391",
+            "decimal": 0.8029162632868979
+          }
+        },
+        {
+          "x": -2,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "1863/32768",
+              "b": "0",
+              "decimal": 0.056854248046875
+            },
+            "alternate": {
+              "a": "1863/114688",
+              "b": "-69/7168",
+              "decimal": 0.002630686969343812
+            },
+            "ordinary": {
+              "a": "1863/114688",
+              "b": "69/7168",
+              "decimal": 0.029857454771727618
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -2,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "621/16384",
+              "b": "0",
+              "decimal": 0.03790283203125
+            },
+            "alternate": {
+              "a": "207/57344",
+              "b": "0",
+              "decimal": 0.0036097935267857145
+            },
+            "ordinary": {
+              "a": "207/57344",
+              "b": "0",
+              "decimal": 0.0036097935267857145
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 0,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "74709/622592",
+              "b": "0",
+              "decimal": 0.11999672337582237
+            },
+            "alternate": {
+              "a": "-36403/2179072",
+              "b": "645/14336",
+              "decimal": 0.046922037296178484
+            },
+            "ordinary": {
+              "a": "-36403/2179072",
+              "b": "-645/14336",
+              "decimal": -0.08033350786713712
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "1/2",
+            "b": "-36403/392160",
+            "decimal": 0.3687229286233482
+          }
+        },
+        {
+          "x": 0,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "74709/622592",
+              "b": "0",
+              "decimal": 0.11999672337582237
+            },
+            "alternate": {
+              "a": "-36403/2179072",
+              "b": "645/14336",
+              "decimal": 0.046922037296178484
+            },
+            "ordinary": {
+              "a": "-36403/2179072",
+              "b": "-645/14336",
+              "decimal": -0.08033350786713712
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "1/2",
+            "b": "-36403/392160",
+            "decimal": 0.3687229286233482
+          }
+        },
+        {
+          "x": 2,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "621/16384",
+              "b": "0",
+              "decimal": 0.03790283203125
+            },
+            "alternate": {
+              "a": "207/57344",
+              "b": "0",
+              "decimal": 0.0036097935267857145
+            },
+            "ordinary": {
+              "a": "207/57344",
+              "b": "0",
+              "decimal": 0.0036097935267857145
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 2,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "1863/32768",
+              "b": "0",
+              "decimal": 0.056854248046875
+            },
+            "alternate": {
+              "a": "1863/114688",
+              "b": "-69/7168",
+              "decimal": 0.002630686969343812
+            },
+            "ordinary": {
+              "a": "1863/114688",
+              "b": "69/7168",
+              "decimal": 0.029857454771727618
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 4,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "1863/114688",
+              "b": "0",
+              "decimal": 0.016244070870535716
+            },
+            "alternate": {
+              "a": "69/7168",
+              "b": "69/7168",
+              "decimal": 0.023239499972620474
+            },
+            "ordinary": {
+              "a": "69/7168",
+              "b": "-69/7168",
+              "decimal": -0.003987267829763332
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "-297/391",
+            "b": "432/391",
+            "decimal": 0.8029162632868979
+          }
+        },
+        {
+          "x": 4,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "621/16384",
+              "b": "0",
+              "decimal": 0.03790283203125
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 6,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "1863/458752",
+              "b": "0",
+              "decimal": 0.004061017717633929
+            },
+            "alternate": {
+              "a": "4899/458752",
+              "b": "345/57344",
+              "decimal": 0.019187337454986013
+            },
+            "ordinary": {
+              "a": "4899/458752",
+              "b": "-345/57344",
+              "decimal": 0.0021706075784961327
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 6,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "1863/114688",
+              "b": "0",
+              "decimal": 0.016244070870535716
+            },
+            "alternate": {
+              "a": "4071/57344",
+              "b": "207/3584",
+              "decimal": 0.15267290943393713
+            },
+            "ordinary": {
+              "a": "4071/57344",
+              "b": "-207/3584",
+              "decimal": -0.010687697380365707
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "2457/10151",
+            "b": "2592/10151",
+            "decimal": 0.6031564923328798
+          }
+        },
+        {
+          "x": 8,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "alternate": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "ordinary": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 8,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "1863/458752",
+              "b": "0",
+              "decimal": 0.004061017717633929
+            },
+            "alternate": {
+              "a": "9591/458752",
+              "b": "69/8192",
+              "decimal": 0.032818431756176845
+            },
+            "ordinary": {
+              "a": "9591/458752",
+              "b": "-69/8192",
+              "decimal": 0.008995009929091012
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 10,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 0,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            0,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 10,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "alternate": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            },
+            "ordinary": {
+              "a": "207/458752",
+              "b": "0",
+              "decimal": 0.0004512241908482143
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        }
+      ],
+      "two_setting_extremizer": {
+        "ordinary": {
+          "a": "1/2",
+          "b": "-36403/392160",
+          "decimal": 0.3687229286233482
+        },
+        "alternate": {
+          "a": "1/2",
+          "b": "36403/392160",
+          "decimal": 0.6312770713766518
+        },
+        "count": "0",
+        "efficiencies": {
+          "(-4, 0)": "1",
+          "(0, 0)": "76/1509",
+          "(0, 1)": "76/1509"
+        },
+        "remaining_efficiencies": "0",
+        "all_five_detected_returns": [
+          {
+            "a": "57/560",
+            "b": "0",
+            "decimal": 0.10178571428571428
+          },
+          {
+            "a": "1292/2801",
+            "b": "0",
+            "decimal": 0.46126383434487683
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "decimal": 1.0
+          },
+          {
+            "a": "69/112",
+            "b": "0",
+            "decimal": 0.6160714285714286
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "decimal": 1.0
+          }
+        ],
+        "within_each_saved_interval": [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        "meaning": "Attains the sharp two-setting floor; other measured settings reject these efficiencies."
+      }
+    },
+    "printed135_and_other_graphic": {
+      "U_at_zero_degrees": "57/560",
+      "L_at_135_degrees": "81/125",
+      "multiplier": "756/475",
+      "sharp_two_setting_ordinary_floor": {
+        "a": "1/2",
+        "b": "-21563/401280",
+        "decimal": 0.4240064617089039
+      },
+      "limiting_centre_modes": [
+        [
+          0,
+          "H"
+        ],
+        [
+          0,
+          "V"
+        ]
+      ],
+      "all_mode_coefficients_and_signs": [
+        {
+          "x": -10,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "alternate": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "ordinary": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -10,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 0,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            0,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -8,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "2187/512000",
+              "b": "0",
+              "decimal": 0.004271484375
+            },
+            "alternate": {
+              "a": "11259/512000",
+              "b": "567/64000",
+              "decimal": 0.034519282654149136
+            },
+            "ordinary": {
+              "a": "11259/512000",
+              "b": "-567/64000",
+              "decimal": 0.009461186095850862
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -8,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "alternate": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "ordinary": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -6,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "2187/128000",
+              "b": "0",
+              "decimal": 0.0170859375
+            },
+            "alternate": {
+              "a": "4779/64000",
+              "b": "243/4000",
+              "decimal": 0.16058534891416554
+            },
+            "ordinary": {
+              "a": "4779/64000",
+              "b": "-243/4000",
+              "decimal": -0.011241598914165526
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "2457/10151",
+            "b": "2592/10151",
+            "decimal": 0.6031564923328798
+          }
+        },
+        {
+          "x": -6,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "2187/512000",
+              "b": "0",
+              "decimal": 0.004271484375
+            },
+            "alternate": {
+              "a": "5751/512000",
+              "b": "81/12800",
+              "decimal": 0.020181742074392245
+            },
+            "ordinary": {
+              "a": "5751/512000",
+              "b": "-81/12800",
+              "decimal": 0.002283101675607758
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -4,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "5103/128000",
+              "b": "0",
+              "decimal": 0.0398671875
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -4,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "2187/128000",
+              "b": "0",
+              "decimal": 0.0170859375
+            },
+            "alternate": {
+              "a": "81/8000",
+              "b": "81/8000",
+              "decimal": 0.024443912319027587
+            },
+            "ordinary": {
+              "a": "81/8000",
+              "b": "-81/8000",
+              "decimal": -0.004193912319027588
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "-297/391",
+            "b": "432/391",
+            "decimal": 0.8029162632868979
+          }
+        },
+        {
+          "x": -2,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "15309/256000",
+              "b": "0",
+              "decimal": 0.05980078125
+            },
+            "alternate": {
+              "a": "2187/128000",
+              "b": "-81/8000",
+              "decimal": 0.00276702518097241
+            },
+            "ordinary": {
+              "a": "2187/128000",
+              "b": "81/8000",
+              "decimal": 0.03140484981902759
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": -2,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "5103/128000",
+              "b": "0",
+              "decimal": 0.0398671875
+            },
+            "alternate": {
+              "a": "243/64000",
+              "b": "0",
+              "decimal": 0.003796875
+            },
+            "ordinary": {
+              "a": "243/64000",
+              "b": "0",
+              "decimal": 0.003796875
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 0,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "644931/4864000",
+              "b": "0",
+              "decimal": 0.13259272203947367
+            },
+            "alternate": {
+              "a": "-21563/2432000",
+              "b": "33/800",
+              "decimal": 0.04946994431631123
+            },
+            "ordinary": {
+              "a": "-21563/2432000",
+              "b": "-33/800",
+              "decimal": -0.06720267457946913
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "1/2",
+            "b": "-21563/401280",
+            "decimal": 0.4240064617089039
+          }
+        },
+        {
+          "x": 0,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "644931/4864000",
+              "b": "0",
+              "decimal": 0.13259272203947367
+            },
+            "alternate": {
+              "a": "-21563/2432000",
+              "b": "33/800",
+              "decimal": 0.04946994431631123
+            },
+            "ordinary": {
+              "a": "-21563/2432000",
+              "b": "-33/800",
+              "decimal": -0.06720267457946913
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "1/2",
+            "b": "-21563/401280",
+            "decimal": 0.4240064617089039
+          }
+        },
+        {
+          "x": 2,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "5103/128000",
+              "b": "0",
+              "decimal": 0.0398671875
+            },
+            "alternate": {
+              "a": "243/64000",
+              "b": "0",
+              "decimal": 0.003796875
+            },
+            "ordinary": {
+              "a": "243/64000",
+              "b": "0",
+              "decimal": 0.003796875
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 2,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "15309/256000",
+              "b": "0",
+              "decimal": 0.05980078125
+            },
+            "alternate": {
+              "a": "2187/128000",
+              "b": "-81/8000",
+              "decimal": 0.00276702518097241
+            },
+            "ordinary": {
+              "a": "2187/128000",
+              "b": "81/8000",
+              "decimal": 0.03140484981902759
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 4,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "2187/128000",
+              "b": "0",
+              "decimal": 0.0170859375
+            },
+            "alternate": {
+              "a": "81/8000",
+              "b": "81/8000",
+              "decimal": 0.024443912319027587
+            },
+            "ordinary": {
+              "a": "81/8000",
+              "b": "-81/8000",
+              "decimal": -0.004193912319027588
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "-297/391",
+            "b": "432/391",
+            "decimal": 0.8029162632868979
+          }
+        },
+        {
+          "x": 4,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "5103/128000",
+              "b": "0",
+              "decimal": 0.0398671875
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 6,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "2187/512000",
+              "b": "0",
+              "decimal": 0.004271484375
+            },
+            "alternate": {
+              "a": "5751/512000",
+              "b": "81/12800",
+              "decimal": 0.020181742074392245
+            },
+            "ordinary": {
+              "a": "5751/512000",
+              "b": "-81/12800",
+              "decimal": 0.002283101675607758
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 6,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "2187/128000",
+              "b": "0",
+              "decimal": 0.0170859375
+            },
+            "alternate": {
+              "a": "4779/64000",
+              "b": "243/4000",
+              "decimal": 0.16058534891416554
+            },
+            "ordinary": {
+              "a": "4779/64000",
+              "b": "-243/4000",
+              "decimal": -0.011241598914165526
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": -1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": {
+            "a": "2457/10151",
+            "b": "2592/10151",
+            "decimal": 0.6031564923328798
+          }
+        },
+        {
+          "x": 8,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "alternate": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "ordinary": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 8,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "2187/512000",
+              "b": "0",
+              "decimal": 0.004271484375
+            },
+            "alternate": {
+              "a": "11259/512000",
+              "b": "567/64000",
+              "decimal": 0.034519282654149136
+            },
+            "ordinary": {
+              "a": "11259/512000",
+              "b": "-567/64000",
+              "decimal": 0.009461186095850862
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 10,
+          "rail": "H",
+          "D": {
+            "count": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "alternate": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            },
+            "ordinary": {
+              "a": "0",
+              "b": "0",
+              "decimal": 0.0
+            }
+          },
+          "sign_D": {
+            "count": 0,
+            "alternate": 0,
+            "ordinary": 0
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            0,
+            0
+          ],
+          "threshold_if_ordinary_D_negative": null
+        },
+        {
+          "x": 10,
+          "rail": "V",
+          "D": {
+            "count": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "alternate": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            },
+            "ordinary": {
+              "a": "243/512000",
+              "b": "0",
+              "decimal": 0.000474609375
+            }
+          },
+          "sign_D": {
+            "count": 1,
+            "alternate": 1,
+            "ordinary": 1
+          },
+          "sign_at_bound_against_count_and_alternate": [
+            1,
+            1
+          ],
+          "threshold_if_ordinary_D_negative": null
+        }
+      ],
+      "two_setting_extremizer": {
+        "ordinary": {
+          "a": "1/2",
+          "b": "-21563/401280",
+          "decimal": 0.4240064617089039
+        },
+        "alternate": {
+          "a": "1/2",
+          "b": "21563/401280",
+          "decimal": 0.5759935382910961
+        },
+        "count": "0",
+        "efficiencies": {
+          "(-4, 0)": "1",
+          "(0, 0)": "76/1509",
+          "(0, 1)": "76/1509"
+        },
+        "remaining_efficiencies": "0",
+        "all_five_detected_returns": [
+          {
+            "a": "57/560",
+            "b": "0",
+            "decimal": 0.10178571428571428
+          },
+          {
+            "a": "1292/2801",
+            "b": "0",
+            "decimal": 0.46126383434487683
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "decimal": 1.0
+          },
+          {
+            "a": "81/125",
+            "b": "0",
+            "decimal": 0.648
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "decimal": 1.0
+          }
+        ],
+        "within_each_saved_interval": [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        "meaning": "Attains the sharp two-setting floor; other measured settings reject these efficiencies."
+      }
+    }
+  },
+  "ordinary_only_common_efficiency_witness": {
+    "efficiencies": {
+      "(-10, 0)": "1/751",
+      "(-10, 1)": "1/751",
+      "(-8, 0)": "1/751",
+      "(-8, 1)": "1/751",
+      "(-6, 0)": "1/751",
+      "(-6, 1)": "1",
+      "(-4, 0)": "1/751",
+      "(-4, 1)": "1/751",
+      "(-2, 0)": "78/751",
+      "(-2, 1)": "217/751",
+      "(0, 0)": "101/751",
+      "(0, 1)": "1/751",
+      "(2, 0)": "1/751",
+      "(2, 1)": "1/751",
+      "(4, 0)": "1/751",
+      "(4, 1)": "1/751",
+      "(6, 0)": "1/751",
+      "(6, 1)": "1/751",
+      "(8, 0)": "1/751",
+      "(8, 1)": "1/751",
+      "(10, 0)": "1/751",
+      "(10, 1)": "1/751"
+    },
+    "predicted_returns": [
+      {
+        "a": "1836/21893",
+        "b": "0",
+        "decimal": 0.0838624217786507
+      },
+      {
+        "a": "612/1583",
+        "b": "0",
+        "decimal": 0.38660770688566015
+      },
+      {
+        "a": "5780/9123",
+        "b": "0",
+        "decimal": 0.633563520771676
+      },
+      {
+        "a": "160983132/483139289",
+        "b": "111647568/483139289",
+        "decimal": 0.6600097407345656
+      },
+      {
+        "a": "5780/9123",
+        "b": "0",
+        "decimal": 0.633563520771676
+      }
+    ],
+    "all_five_inside_both_versions": true,
+    "interpretation": "Illustrative strictly positive fitted efficiency pattern, not instrument calibration."
+  },
+  "limits": "The floor is sharp for two graphic inequalities and conservative for the five settings together. Exact signs concern specified graphic extents and the alternative printed tolerance, not simultaneous confidence bounds or raw-count hypotheses. With independent efficiencies per component raw positive weight may be arbitrarily small, e.g. attenuate all other components while maintaining the ordinary-only detected profile. Changes in efficiencies with plate setting, additional modes, incoherence, offsets, or background require other models.",
+  "exact_field": "Each record {a,b,decimal} means a+b sqrt(2); signs and all comparisons use rational arithmetic, including signs of opposite terms checked by squaring."
+}

@@ -1,0 +1,1419 @@
+{
+  "setup": "Physical C5 sheet; two native force ticks g(x)=x from (0,R,0). The four orthogonal old position/coin modes retain their labels. A separate initialized R probe coin then takes five ordinary +/-1, signed H, sheet steps. A detector couples only to the named physical cell and selected arriving rail(s); all other coordinates are unread. Counterfactual counting propagates history multiplicities and divides by 2 per H. The signed law squares the summed real amplitudes separately in each complete cell. Both use the same routing and detector.",
+  "readout": "A terminal controlled-X flips a carried zero bit at the chosen site and rail(s). Afterwards every walker can continue through a common streaming-only step; only the bit is read. The port-conditioned permutation is local on each sheet fibre. If old bases are separate physical places, the marker coupling must be present there or the modes coherently brought to one device. Marker placement, gating/clock, clean bit and readout of that bit are supplied.",
+  "row_columns": [
+    "probe_ticks",
+    "denominator",
+    "terminal_no",
+    "terminal_yes",
+    "parity_even",
+    "parity_odd"
+  ],
+  "instruments": "Always-on XOR measures visit parity without intermediate read. The sink swaps a hit on each tick into distinct initially blank outgoing modes carrying time and rails. A finite stopped sink and a reversible single-bit OR are different: overwriting two inputs by one output loses reversibility, so a destructive sink pays a reservoir/reset cost. All first bins and no-capture probability are retained. Numerators use the denominators for their actual number of H layers, including the initial two force layers.",
+  "settings": {
+    "marker0_both": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            8,
+            8
+          ],
+          [
+            3,
+            32,
+            20,
+            12,
+            20,
+            12
+          ],
+          [
+            4,
+            64,
+            60,
+            4,
+            36,
+            28
+          ],
+          [
+            5,
+            128,
+            112,
+            16,
+            72,
+            56
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            4,
+            4,
+            4,
+            4
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            8,
+            8
+          ],
+          [
+            3,
+            32,
+            20,
+            12,
+            20,
+            12
+          ],
+          [
+            4,
+            64,
+            60,
+            4,
+            36,
+            28
+          ],
+          [
+            5,
+            128,
+            88,
+            40,
+            64,
+            64
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            4,
+            0,
+            4,
+            4,
+            0
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              2,
+              2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "survival_numerators": [
+            4,
+            8,
+            12,
+            20,
+            40
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            4,
+            0,
+            4,
+            4,
+            8
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              2,
+              2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "survival_numerators": [
+            4,
+            8,
+            12,
+            20,
+            32
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "1/8",
+          "count_click": "5/16",
+          "count_minus_signed": "3/16"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "51/400",
+          "count_click": "243/800",
+          "count_minus_signed": "141/800"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "7/8",
+          "count_click": "11/16",
+          "count_minus_signed": "-3/16"
+        }
+      ]
+    },
+    "marker0_R": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            6,
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            22,
+            10,
+            22,
+            10
+          ],
+          [
+            4,
+            64,
+            62,
+            2,
+            42,
+            22
+          ],
+          [
+            5,
+            128,
+            128,
+            0,
+            84,
+            44
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            6,
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            26,
+            6,
+            22,
+            10
+          ],
+          [
+            4,
+            64,
+            62,
+            2,
+            42,
+            22
+          ],
+          [
+            5,
+            128,
+            108,
+            20,
+            80,
+            48
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            2,
+            0,
+            4,
+            2,
+            2
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "survival_numerators": [
+            6,
+            12,
+            20,
+            38,
+            74
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            2,
+            0,
+            4,
+            2,
+            10
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ],
+          "survival_numerators": [
+            6,
+            12,
+            20,
+            38,
+            66
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "0",
+          "count_click": "5/32",
+          "count_minus_signed": "5/32"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "1/100",
+          "count_click": "251/1600",
+          "count_minus_signed": "47/320"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "1",
+          "count_click": "27/32",
+          "count_minus_signed": "-5/32"
+        }
+      ]
+    },
+    "marker0_L": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            6,
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            30,
+            2,
+            22,
+            10
+          ],
+          [
+            4,
+            64,
+            62,
+            2,
+            42,
+            22
+          ],
+          [
+            5,
+            128,
+            112,
+            16,
+            100,
+            28
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            6,
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            16,
+            16,
+            0,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            26,
+            6,
+            22,
+            10
+          ],
+          [
+            4,
+            64,
+            62,
+            2,
+            42,
+            22
+          ],
+          [
+            5,
+            128,
+            108,
+            20,
+            80,
+            48
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            2,
+            0,
+            4,
+            2,
+            2
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "survival_numerators": [
+            6,
+            12,
+            20,
+            38,
+            74
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            2,
+            0,
+            4,
+            2,
+            10
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "survival_numerators": [
+            6,
+            12,
+            20,
+            38,
+            66
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "1/8",
+          "count_click": "5/32",
+          "count_minus_signed": "1/32"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "51/400",
+          "count_click": "251/1600",
+          "count_minus_signed": "47/1600"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "7/8",
+          "count_click": "27/32",
+          "count_minus_signed": "-1/32"
+        }
+      ]
+    },
+    "marker1_both": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            10,
+            6,
+            10,
+            6
+          ],
+          [
+            3,
+            32,
+            30,
+            2,
+            18,
+            14
+          ],
+          [
+            4,
+            64,
+            40,
+            24,
+            36,
+            28
+          ],
+          [
+            5,
+            128,
+            114,
+            14,
+            70,
+            58
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            10,
+            6,
+            10,
+            6
+          ],
+          [
+            3,
+            32,
+            30,
+            2,
+            18,
+            14
+          ],
+          [
+            4,
+            64,
+            44,
+            20,
+            40,
+            24
+          ],
+          [
+            5,
+            128,
+            114,
+            14,
+            74,
+            54
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            0,
+            6,
+            2,
+            12,
+            6
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            10,
+            18,
+            24,
+            42
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            0,
+            6,
+            2,
+            8,
+            10
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              8
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            10,
+            18,
+            28,
+            46
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "7/64",
+          "count_click": "7/64",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "361/3200",
+          "count_click": "361/3200",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "57/64",
+          "count_click": "57/64",
+          "count_minus_signed": "0"
+        }
+      ]
+    },
+    "marker1_R": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            12,
+            4,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            32,
+            0,
+            24,
+            8
+          ],
+          [
+            4,
+            64,
+            44,
+            20,
+            36,
+            28
+          ],
+          [
+            5,
+            128,
+            124,
+            4,
+            68,
+            60
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            12,
+            4,
+            12,
+            4
+          ],
+          [
+            3,
+            32,
+            32,
+            0,
+            24,
+            8
+          ],
+          [
+            4,
+            64,
+            52,
+            12,
+            44,
+            20
+          ],
+          [
+            5,
+            128,
+            124,
+            4,
+            84,
+            44
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            0,
+            4,
+            0,
+            16,
+            4
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            12,
+            24,
+            32,
+            60
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            0,
+            4,
+            0,
+            8,
+            4
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            12,
+            24,
+            40,
+            76
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "1/32",
+          "count_click": "1/32",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "63/1600",
+          "count_click": "63/1600",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "31/32",
+          "count_click": "31/32",
+          "count_minus_signed": "0"
+        }
+      ]
+    },
+    "marker1_L": {
+      "ticks": {
+        "signed": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            14,
+            2,
+            14,
+            2
+          ],
+          [
+            3,
+            32,
+            30,
+            2,
+            26,
+            6
+          ],
+          [
+            4,
+            64,
+            60,
+            4,
+            52,
+            12
+          ],
+          [
+            5,
+            128,
+            118,
+            10,
+            102,
+            26
+          ]
+        ],
+        "count": [
+          [
+            1,
+            8,
+            8,
+            0,
+            8,
+            0
+          ],
+          [
+            2,
+            16,
+            14,
+            2,
+            14,
+            2
+          ],
+          [
+            3,
+            32,
+            30,
+            2,
+            26,
+            6
+          ],
+          [
+            4,
+            64,
+            56,
+            8,
+            48,
+            16
+          ],
+          [
+            5,
+            128,
+            118,
+            10,
+            90,
+            38
+          ]
+        ]
+      },
+      "sink": {
+        "signed": {
+          "first_capture_numerators": [
+            0,
+            2,
+            2,
+            2,
+            4
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            14,
+            26,
+            50,
+            96
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        },
+        "count": {
+          "first_capture_numerators": [
+            0,
+            2,
+            2,
+            6,
+            8
+          ],
+          "first_capture_by_R_L_numerators": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "survival_numerators": [
+            8,
+            14,
+            26,
+            46,
+            84
+          ],
+          "time_denominators": [
+            8,
+            16,
+            32,
+            64,
+            128
+          ]
+        }
+      },
+      "terminal_bit_readout_error_controls": [
+        {
+          "false_positive": "0",
+          "false_negative": "0",
+          "signed_click": "5/64",
+          "count_click": "5/64",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/100",
+          "false_negative": "1/20",
+          "signed_click": "267/3200",
+          "count_click": "267/3200",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1/2",
+          "false_negative": "1/2",
+          "signed_click": "1/2",
+          "count_click": "1/2",
+          "count_minus_signed": "0"
+        },
+        {
+          "false_positive": "1",
+          "false_negative": "1",
+          "signed_click": "59/64",
+          "count_click": "59/64",
+          "count_minus_signed": "0"
+        }
+      ]
+    }
+  },
+  "terminal_origin_5_by_orthogonal_force_mode": [
+    {
+      "old_mode": [
+        2,
+        1
+      ],
+      "force_amplitude_numerator": 1,
+      "terminal_marked_R_L_signed_numerators": [
+        0,
+        -2
+      ],
+      "terminal_marked_R_L_word_counts": [
+        4,
+        6
+      ]
+    },
+    {
+      "old_mode": [
+        0,
+        -1
+      ],
+      "force_amplitude_numerator": 1,
+      "terminal_marked_R_L_signed_numerators": [
+        0,
+        -2
+      ],
+      "terminal_marked_R_L_word_counts": [
+        4,
+        6
+      ]
+    },
+    {
+      "old_mode": [
+        0,
+        1
+      ],
+      "force_amplitude_numerator": 1,
+      "terminal_marked_R_L_signed_numerators": [
+        0,
+        2
+      ],
+      "terminal_marked_R_L_word_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "old_mode": [
+        -2,
+        -1
+      ],
+      "force_amplitude_numerator": -1,
+      "terminal_marked_R_L_signed_numerators": [
+        0,
+        -2
+      ],
+      "terminal_marked_R_L_word_counts": [
+        6,
+        4
+      ]
+    }
+  ],
+  "uniform_independent_false_marker_t5": {
+    "signed": {
+      "both": "1/5",
+      "R": "9/80",
+      "L": "7/80"
+    },
+    "count": {
+      "both": "1/5",
+      "R": "1/10",
+      "L": "1/10"
+    }
+  },
+  "readout_error_equation": "With false-positive f and false-negative g, click frequency is f+(1-f-g)p. Rates here are illustrative settings, not a measured detector calibration.",
+  "staircase": {
+    "gain": "floor(x/2) on the centred base of C32, initial (0,R,0), C11 sheet. Terminal flip at the single complete physical cell (1,R,-1 mod 11).",
+    "five_tick_denominator": 32,
+    "two_histories": [
+      {
+        "directions": [
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "sheet_displacement": -1,
+        "sign": -1
+      },
+      {
+        "directions": [
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "sheet_displacement": -1,
+        "sign": 1
+      }
+    ],
+    "laws": {
+      "signed": {
+        "terminal_bits_no_yes": [
+          32,
+          0
+        ],
+        "endpoint_1R_sheet_numerators": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "count": {
+        "terminal_bits_no_yes": [
+          30,
+          2
+        ],
+        "endpoint_1R_sheet_numerators": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2
+        ]
+      }
+    }
+  },
+  "claim_scope": "This comparison is already on an explicitly supplied physical signed lift and record instrument. If the normalized rule is a mixture with counting weight a and this physical signed-square weight 1-a, marker0_R at probe time five has mass 5a/32. The experiment cannot distinguish the odd-character labels on all-real gates, does not determine other multiset weights without their instrument model, and does not derive the squared-coordinate probability law from the detector circuit."
+}

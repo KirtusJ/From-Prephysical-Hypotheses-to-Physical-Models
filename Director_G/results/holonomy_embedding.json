@@ -1,0 +1,1690 @@
+{
+  "launch_and_read": "Two independently reset (0,R,0) launches, three signed Hadamard ticks with the physical departure translation g_k(x)=kx mod M. Read position, direction, and physical sheet coordinate in each run. A line base or C_lcm(8,M) suffices.",
+  "predeclared_event": "Both base readouts equal the same port in {(1,R),(-1,L)}, and the two sheets have distance exactly 2 in the independently fixed unoriented unit-edge cycle.",
+  "three_tick_integer_paths": [
+    {
+      "port": [
+        1,
+        1
+      ],
+      "sheet_exponents_and_signs": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    {
+      "port": [
+        -1,
+        -1
+      ],
+      "sheet_exponents_and_signs": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    }
+  ],
+  "law": "The exponents are multiplied by k. With unit k and M>=3 the +/-k cells are distinct. At each chosen port they each have squared mass 1/8. In the product record the two opposite-sheet orders have total mass 2/64=1/32 per port iff fold_M(2k)=2; otherwise the contribution is zero. Thus the full probability is 1/16 or zero.",
+  "general_unit_classification": "For M>=5 this is equivalent to 2k=+/-2 mod M, or k=+/-1 mod M/gcd(2,M). At odd M only +/-1 pass. At M=2 mod 4 only +/-1 are units in that class; at M divisible by 4, +/-1+M/2 also pass, with overlaps at M=4.",
+  "per_endpoint_encoding": {
+    "ports": [
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    "ordered_pair_denominator": 64,
+    "numerators_for_each_listed_unit": [
+      2,
+      2
+    ],
+    "numerators_for_every_other_unit": [
+      0,
+      0
+    ]
+  },
+  "finite_orders": [
+    {
+      "order": 3,
+      "units_checked": 2,
+      "nonzero_at_both_ports": [],
+      "nonzero_ruler_stride1": [
+        1,
+        2
+      ],
+      "unit_gain_stride_pairs": 4,
+      "nonzero_unit_gain_stride_pairs": 4,
+      "anchored_nonzero_stride1": [
+        1,
+        2
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 4
+    },
+    {
+      "order": 4,
+      "units_checked": 2,
+      "nonzero_at_both_ports": [
+        1,
+        3
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        3
+      ],
+      "unit_gain_stride_pairs": 4,
+      "nonzero_unit_gain_stride_pairs": 4,
+      "anchored_nonzero_stride1": [
+        1,
+        3
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 4
+    },
+    {
+      "order": 5,
+      "units_checked": 4,
+      "nonzero_at_both_ports": [
+        1,
+        4
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        4
+      ],
+      "unit_gain_stride_pairs": 16,
+      "nonzero_unit_gain_stride_pairs": 8,
+      "anchored_nonzero_stride1": [
+        1,
+        4
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 8
+    },
+    {
+      "order": 6,
+      "units_checked": 2,
+      "nonzero_at_both_ports": [
+        1,
+        5
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        5
+      ],
+      "unit_gain_stride_pairs": 4,
+      "nonzero_unit_gain_stride_pairs": 4,
+      "anchored_nonzero_stride1": [
+        1,
+        5
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 4
+    },
+    {
+      "order": 7,
+      "units_checked": 6,
+      "nonzero_at_both_ports": [
+        1,
+        6
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        6
+      ],
+      "unit_gain_stride_pairs": 36,
+      "nonzero_unit_gain_stride_pairs": 12,
+      "anchored_nonzero_stride1": [
+        1,
+        6
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 12
+    },
+    {
+      "order": 8,
+      "units_checked": 4,
+      "nonzero_at_both_ports": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "unit_gain_stride_pairs": 16,
+      "nonzero_unit_gain_stride_pairs": 16,
+      "anchored_nonzero_stride1": [
+        1,
+        7
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 8
+    },
+    {
+      "order": 9,
+      "units_checked": 6,
+      "nonzero_at_both_ports": [
+        1,
+        8
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        8
+      ],
+      "unit_gain_stride_pairs": 36,
+      "nonzero_unit_gain_stride_pairs": 12,
+      "anchored_nonzero_stride1": [
+        1,
+        8
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 12
+    },
+    {
+      "order": 10,
+      "units_checked": 4,
+      "nonzero_at_both_ports": [
+        1,
+        9
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        9
+      ],
+      "unit_gain_stride_pairs": 16,
+      "nonzero_unit_gain_stride_pairs": 8,
+      "anchored_nonzero_stride1": [
+        1,
+        9
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 8
+    },
+    {
+      "order": 11,
+      "units_checked": 10,
+      "nonzero_at_both_ports": [
+        1,
+        10
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        10
+      ],
+      "unit_gain_stride_pairs": 100,
+      "nonzero_unit_gain_stride_pairs": 20,
+      "anchored_nonzero_stride1": [
+        1,
+        10
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 20
+    },
+    {
+      "order": 12,
+      "units_checked": 4,
+      "nonzero_at_both_ports": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "unit_gain_stride_pairs": 16,
+      "nonzero_unit_gain_stride_pairs": 16,
+      "anchored_nonzero_stride1": [
+        1,
+        11
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 8
+    },
+    {
+      "order": 13,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        12
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        12
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 24,
+      "anchored_nonzero_stride1": [
+        1,
+        12
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 14,
+      "units_checked": 6,
+      "nonzero_at_both_ports": [
+        1,
+        13
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        13
+      ],
+      "unit_gain_stride_pairs": 36,
+      "nonzero_unit_gain_stride_pairs": 12,
+      "anchored_nonzero_stride1": [
+        1,
+        13
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 12
+    },
+    {
+      "order": 15,
+      "units_checked": 8,
+      "nonzero_at_both_ports": [
+        1,
+        14
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        14
+      ],
+      "unit_gain_stride_pairs": 64,
+      "nonzero_unit_gain_stride_pairs": 16,
+      "anchored_nonzero_stride1": [
+        1,
+        14
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 16
+    },
+    {
+      "order": 16,
+      "units_checked": 8,
+      "nonzero_at_both_ports": [
+        1,
+        7,
+        9,
+        15
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        7,
+        9,
+        15
+      ],
+      "unit_gain_stride_pairs": 64,
+      "nonzero_unit_gain_stride_pairs": 32,
+      "anchored_nonzero_stride1": [
+        1,
+        15
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 16
+    },
+    {
+      "order": 17,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        16
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        16
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 32,
+      "anchored_nonzero_stride1": [
+        1,
+        16
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 18,
+      "units_checked": 6,
+      "nonzero_at_both_ports": [
+        1,
+        17
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        17
+      ],
+      "unit_gain_stride_pairs": 36,
+      "nonzero_unit_gain_stride_pairs": 12,
+      "anchored_nonzero_stride1": [
+        1,
+        17
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 12
+    },
+    {
+      "order": 19,
+      "units_checked": 18,
+      "nonzero_at_both_ports": [
+        1,
+        18
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        18
+      ],
+      "unit_gain_stride_pairs": 324,
+      "nonzero_unit_gain_stride_pairs": 36,
+      "anchored_nonzero_stride1": [
+        1,
+        18
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 36
+    },
+    {
+      "order": 20,
+      "units_checked": 8,
+      "nonzero_at_both_ports": [
+        1,
+        9,
+        11,
+        19
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        9,
+        11,
+        19
+      ],
+      "unit_gain_stride_pairs": 64,
+      "nonzero_unit_gain_stride_pairs": 32,
+      "anchored_nonzero_stride1": [
+        1,
+        19
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 16
+    },
+    {
+      "order": 21,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        20
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        20
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 24,
+      "anchored_nonzero_stride1": [
+        1,
+        20
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 22,
+      "units_checked": 10,
+      "nonzero_at_both_ports": [
+        1,
+        21
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        21
+      ],
+      "unit_gain_stride_pairs": 100,
+      "nonzero_unit_gain_stride_pairs": 20,
+      "anchored_nonzero_stride1": [
+        1,
+        21
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 20
+    },
+    {
+      "order": 23,
+      "units_checked": 22,
+      "nonzero_at_both_ports": [
+        1,
+        22
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        22
+      ],
+      "unit_gain_stride_pairs": 484,
+      "nonzero_unit_gain_stride_pairs": 44,
+      "anchored_nonzero_stride1": [
+        1,
+        22
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 44
+    },
+    {
+      "order": 24,
+      "units_checked": 8,
+      "nonzero_at_both_ports": [
+        1,
+        11,
+        13,
+        23
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        11,
+        13,
+        23
+      ],
+      "unit_gain_stride_pairs": 64,
+      "nonzero_unit_gain_stride_pairs": 32,
+      "anchored_nonzero_stride1": [
+        1,
+        23
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 16
+    },
+    {
+      "order": 25,
+      "units_checked": 20,
+      "nonzero_at_both_ports": [
+        1,
+        24
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        24
+      ],
+      "unit_gain_stride_pairs": 400,
+      "nonzero_unit_gain_stride_pairs": 40,
+      "anchored_nonzero_stride1": [
+        1,
+        24
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 40
+    },
+    {
+      "order": 26,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        25
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        25
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 24,
+      "anchored_nonzero_stride1": [
+        1,
+        25
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 27,
+      "units_checked": 18,
+      "nonzero_at_both_ports": [
+        1,
+        26
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        26
+      ],
+      "unit_gain_stride_pairs": 324,
+      "nonzero_unit_gain_stride_pairs": 36,
+      "anchored_nonzero_stride1": [
+        1,
+        26
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 36
+    },
+    {
+      "order": 28,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        13,
+        15,
+        27
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        13,
+        15,
+        27
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 48,
+      "anchored_nonzero_stride1": [
+        1,
+        27
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 29,
+      "units_checked": 28,
+      "nonzero_at_both_ports": [
+        1,
+        28
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        28
+      ],
+      "unit_gain_stride_pairs": 784,
+      "nonzero_unit_gain_stride_pairs": 56,
+      "anchored_nonzero_stride1": [
+        1,
+        28
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 56
+    },
+    {
+      "order": 30,
+      "units_checked": 8,
+      "nonzero_at_both_ports": [
+        1,
+        29
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        29
+      ],
+      "unit_gain_stride_pairs": 64,
+      "nonzero_unit_gain_stride_pairs": 16,
+      "anchored_nonzero_stride1": [
+        1,
+        29
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 16
+    },
+    {
+      "order": 31,
+      "units_checked": 30,
+      "nonzero_at_both_ports": [
+        1,
+        30
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        30
+      ],
+      "unit_gain_stride_pairs": 900,
+      "nonzero_unit_gain_stride_pairs": 60,
+      "anchored_nonzero_stride1": [
+        1,
+        30
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 60
+    },
+    {
+      "order": 32,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        15,
+        17,
+        31
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        15,
+        17,
+        31
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 64,
+      "anchored_nonzero_stride1": [
+        1,
+        31
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 33,
+      "units_checked": 20,
+      "nonzero_at_both_ports": [
+        1,
+        32
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        32
+      ],
+      "unit_gain_stride_pairs": 400,
+      "nonzero_unit_gain_stride_pairs": 40,
+      "anchored_nonzero_stride1": [
+        1,
+        32
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 40
+    },
+    {
+      "order": 34,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        33
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        33
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 32,
+      "anchored_nonzero_stride1": [
+        1,
+        33
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 35,
+      "units_checked": 24,
+      "nonzero_at_both_ports": [
+        1,
+        34
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        34
+      ],
+      "unit_gain_stride_pairs": 576,
+      "nonzero_unit_gain_stride_pairs": 48,
+      "anchored_nonzero_stride1": [
+        1,
+        34
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 48
+    },
+    {
+      "order": 36,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        17,
+        19,
+        35
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        17,
+        19,
+        35
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 48,
+      "anchored_nonzero_stride1": [
+        1,
+        35
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 37,
+      "units_checked": 36,
+      "nonzero_at_both_ports": [
+        1,
+        36
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        36
+      ],
+      "unit_gain_stride_pairs": 1296,
+      "nonzero_unit_gain_stride_pairs": 72,
+      "anchored_nonzero_stride1": [
+        1,
+        36
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 72
+    },
+    {
+      "order": 38,
+      "units_checked": 18,
+      "nonzero_at_both_ports": [
+        1,
+        37
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        37
+      ],
+      "unit_gain_stride_pairs": 324,
+      "nonzero_unit_gain_stride_pairs": 36,
+      "anchored_nonzero_stride1": [
+        1,
+        37
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 36
+    },
+    {
+      "order": 39,
+      "units_checked": 24,
+      "nonzero_at_both_ports": [
+        1,
+        38
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        38
+      ],
+      "unit_gain_stride_pairs": 576,
+      "nonzero_unit_gain_stride_pairs": 48,
+      "anchored_nonzero_stride1": [
+        1,
+        38
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 48
+    },
+    {
+      "order": 40,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        19,
+        21,
+        39
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        19,
+        21,
+        39
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 64,
+      "anchored_nonzero_stride1": [
+        1,
+        39
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 41,
+      "units_checked": 40,
+      "nonzero_at_both_ports": [
+        1,
+        40
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        40
+      ],
+      "unit_gain_stride_pairs": 1600,
+      "nonzero_unit_gain_stride_pairs": 80,
+      "anchored_nonzero_stride1": [
+        1,
+        40
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 80
+    },
+    {
+      "order": 42,
+      "units_checked": 12,
+      "nonzero_at_both_ports": [
+        1,
+        41
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        41
+      ],
+      "unit_gain_stride_pairs": 144,
+      "nonzero_unit_gain_stride_pairs": 24,
+      "anchored_nonzero_stride1": [
+        1,
+        41
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 24
+    },
+    {
+      "order": 43,
+      "units_checked": 42,
+      "nonzero_at_both_ports": [
+        1,
+        42
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        42
+      ],
+      "unit_gain_stride_pairs": 1764,
+      "nonzero_unit_gain_stride_pairs": 84,
+      "anchored_nonzero_stride1": [
+        1,
+        42
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 84
+    },
+    {
+      "order": 44,
+      "units_checked": 20,
+      "nonzero_at_both_ports": [
+        1,
+        21,
+        23,
+        43
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        21,
+        23,
+        43
+      ],
+      "unit_gain_stride_pairs": 400,
+      "nonzero_unit_gain_stride_pairs": 80,
+      "anchored_nonzero_stride1": [
+        1,
+        43
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 40
+    },
+    {
+      "order": 45,
+      "units_checked": 24,
+      "nonzero_at_both_ports": [
+        1,
+        44
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        44
+      ],
+      "unit_gain_stride_pairs": 576,
+      "nonzero_unit_gain_stride_pairs": 48,
+      "anchored_nonzero_stride1": [
+        1,
+        44
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 48
+    },
+    {
+      "order": 46,
+      "units_checked": 22,
+      "nonzero_at_both_ports": [
+        1,
+        45
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        45
+      ],
+      "unit_gain_stride_pairs": 484,
+      "nonzero_unit_gain_stride_pairs": 44,
+      "anchored_nonzero_stride1": [
+        1,
+        45
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 44
+    },
+    {
+      "order": 47,
+      "units_checked": 46,
+      "nonzero_at_both_ports": [
+        1,
+        46
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        46
+      ],
+      "unit_gain_stride_pairs": 2116,
+      "nonzero_unit_gain_stride_pairs": 92,
+      "anchored_nonzero_stride1": [
+        1,
+        46
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 92
+    },
+    {
+      "order": 48,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        23,
+        25,
+        47
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        23,
+        25,
+        47
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 64,
+      "anchored_nonzero_stride1": [
+        1,
+        47
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 49,
+      "units_checked": 42,
+      "nonzero_at_both_ports": [
+        1,
+        48
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        48
+      ],
+      "unit_gain_stride_pairs": 1764,
+      "nonzero_unit_gain_stride_pairs": 84,
+      "anchored_nonzero_stride1": [
+        1,
+        48
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 84
+    },
+    {
+      "order": 50,
+      "units_checked": 20,
+      "nonzero_at_both_ports": [
+        1,
+        49
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        49
+      ],
+      "unit_gain_stride_pairs": 400,
+      "nonzero_unit_gain_stride_pairs": 40,
+      "anchored_nonzero_stride1": [
+        1,
+        49
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 40
+    },
+    {
+      "order": 51,
+      "units_checked": 32,
+      "nonzero_at_both_ports": [
+        1,
+        50
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        50
+      ],
+      "unit_gain_stride_pairs": 1024,
+      "nonzero_unit_gain_stride_pairs": 64,
+      "anchored_nonzero_stride1": [
+        1,
+        50
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 64
+    },
+    {
+      "order": 52,
+      "units_checked": 24,
+      "nonzero_at_both_ports": [
+        1,
+        25,
+        27,
+        51
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        25,
+        27,
+        51
+      ],
+      "unit_gain_stride_pairs": 576,
+      "nonzero_unit_gain_stride_pairs": 96,
+      "anchored_nonzero_stride1": [
+        1,
+        51
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 48
+    },
+    {
+      "order": 53,
+      "units_checked": 52,
+      "nonzero_at_both_ports": [
+        1,
+        52
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        52
+      ],
+      "unit_gain_stride_pairs": 2704,
+      "nonzero_unit_gain_stride_pairs": 104,
+      "anchored_nonzero_stride1": [
+        1,
+        52
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 104
+    },
+    {
+      "order": 54,
+      "units_checked": 18,
+      "nonzero_at_both_ports": [
+        1,
+        53
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        53
+      ],
+      "unit_gain_stride_pairs": 324,
+      "nonzero_unit_gain_stride_pairs": 36,
+      "anchored_nonzero_stride1": [
+        1,
+        53
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 36
+    },
+    {
+      "order": 55,
+      "units_checked": 40,
+      "nonzero_at_both_ports": [
+        1,
+        54
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        54
+      ],
+      "unit_gain_stride_pairs": 1600,
+      "nonzero_unit_gain_stride_pairs": 80,
+      "anchored_nonzero_stride1": [
+        1,
+        54
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 80
+    },
+    {
+      "order": 56,
+      "units_checked": 24,
+      "nonzero_at_both_ports": [
+        1,
+        27,
+        29,
+        55
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        27,
+        29,
+        55
+      ],
+      "unit_gain_stride_pairs": 576,
+      "nonzero_unit_gain_stride_pairs": 96,
+      "anchored_nonzero_stride1": [
+        1,
+        55
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 48
+    },
+    {
+      "order": 57,
+      "units_checked": 36,
+      "nonzero_at_both_ports": [
+        1,
+        56
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        56
+      ],
+      "unit_gain_stride_pairs": 1296,
+      "nonzero_unit_gain_stride_pairs": 72,
+      "anchored_nonzero_stride1": [
+        1,
+        56
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 72
+    },
+    {
+      "order": 58,
+      "units_checked": 28,
+      "nonzero_at_both_ports": [
+        1,
+        57
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        57
+      ],
+      "unit_gain_stride_pairs": 784,
+      "nonzero_unit_gain_stride_pairs": 56,
+      "anchored_nonzero_stride1": [
+        1,
+        57
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 56
+    },
+    {
+      "order": 59,
+      "units_checked": 58,
+      "nonzero_at_both_ports": [
+        1,
+        58
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        58
+      ],
+      "unit_gain_stride_pairs": 3364,
+      "nonzero_unit_gain_stride_pairs": 116,
+      "anchored_nonzero_stride1": [
+        1,
+        58
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 116
+    },
+    {
+      "order": 60,
+      "units_checked": 16,
+      "nonzero_at_both_ports": [
+        1,
+        29,
+        31,
+        59
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        29,
+        31,
+        59
+      ],
+      "unit_gain_stride_pairs": 256,
+      "nonzero_unit_gain_stride_pairs": 64,
+      "anchored_nonzero_stride1": [
+        1,
+        59
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 32
+    },
+    {
+      "order": 61,
+      "units_checked": 60,
+      "nonzero_at_both_ports": [
+        1,
+        60
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        60
+      ],
+      "unit_gain_stride_pairs": 3600,
+      "nonzero_unit_gain_stride_pairs": 120,
+      "anchored_nonzero_stride1": [
+        1,
+        60
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 120
+    },
+    {
+      "order": 62,
+      "units_checked": 30,
+      "nonzero_at_both_ports": [
+        1,
+        61
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        61
+      ],
+      "unit_gain_stride_pairs": 900,
+      "nonzero_unit_gain_stride_pairs": 60,
+      "anchored_nonzero_stride1": [
+        1,
+        61
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 60
+    },
+    {
+      "order": 63,
+      "units_checked": 36,
+      "nonzero_at_both_ports": [
+        1,
+        62
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        62
+      ],
+      "unit_gain_stride_pairs": 1296,
+      "nonzero_unit_gain_stride_pairs": 72,
+      "anchored_nonzero_stride1": [
+        1,
+        62
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 72
+    },
+    {
+      "order": 64,
+      "units_checked": 32,
+      "nonzero_at_both_ports": [
+        1,
+        31,
+        33,
+        63
+      ],
+      "nonzero_ruler_stride1": [
+        1,
+        31,
+        33,
+        63
+      ],
+      "unit_gain_stride_pairs": 1024,
+      "nonzero_unit_gain_stride_pairs": 128,
+      "anchored_nonzero_stride1": [
+        1,
+        63
+      ],
+      "anchored_nonzero_unit_gain_stride_pairs": 64
+    }
+  ],
+  "complete_relative_stride": {
+    "protocol": "Use separate identically prepared launches for each fixed probe horizon t. After the two force ticks, start one new R coin on the current sheet, leave the previous base registers orthogonal, and repeat the same fixed-stride H walk for t ticks. No which-path read before the final equality comparison with the retained start marker.",
+    "formula": "d=fold_M(k*l^{-1}) is recovered as the first horizon with positive terminal return. All t<d give zero, including t=0. At t=d both force lobes have a unique shortest ballistic path; its mass is 2^{-d}. The lobes each have mass 1/2, so their unconditional sum is also 2^{-d}. A unit cannot be antipodal for M>=3. Changing both hardware strides together keeps d=1; reversing either cannot choose orientation in this statistic. These are support identifications in the exact record law. At large d detecting the first positive signal may require order 2^d independent trials at that horizon. A finite sequence of null observations does not certify a true zero.",
+    "unit_pairs_checked": 2028,
+    "orders": [
+      {
+        "M": 3,
+        "unit_pairs": 4,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 4
+        }
+      },
+      {
+        "M": 4,
+        "unit_pairs": 4,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 4
+        }
+      },
+      {
+        "M": 5,
+        "unit_pairs": 16,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 8,
+          "2": 8
+        }
+      },
+      {
+        "M": 6,
+        "unit_pairs": 4,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 4
+        }
+      },
+      {
+        "M": 7,
+        "unit_pairs": 36,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 12,
+          "2": 12,
+          "3": 12
+        }
+      },
+      {
+        "M": 8,
+        "unit_pairs": 16,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 8,
+          "3": 8
+        }
+      },
+      {
+        "M": 9,
+        "unit_pairs": 36,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 12,
+          "2": 12,
+          "4": 12
+        }
+      },
+      {
+        "M": 10,
+        "unit_pairs": 16,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 8,
+          "3": 8
+        }
+      },
+      {
+        "M": 11,
+        "unit_pairs": 100,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 20,
+          "2": 20,
+          "3": 20,
+          "4": 20,
+          "5": 20
+        }
+      },
+      {
+        "M": 12,
+        "unit_pairs": 16,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 8,
+          "5": 8
+        }
+      },
+      {
+        "M": 13,
+        "unit_pairs": 144,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 24,
+          "2": 24,
+          "3": 24,
+          "4": 24,
+          "5": 24,
+          "6": 24
+        }
+      },
+      {
+        "M": 14,
+        "unit_pairs": 36,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 12,
+          "3": 12,
+          "5": 12
+        }
+      },
+      {
+        "M": 15,
+        "unit_pairs": 64,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 16,
+          "2": 16,
+          "4": 16,
+          "7": 16
+        }
+      },
+      {
+        "M": 16,
+        "unit_pairs": 64,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 16,
+          "3": 16,
+          "5": 16,
+          "7": 16
+        }
+      },
+      {
+        "M": 17,
+        "unit_pairs": 256,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 32,
+          "2": 32,
+          "3": 32,
+          "4": 32,
+          "5": 32,
+          "6": 32,
+          "7": 32,
+          "8": 32
+        }
+      },
+      {
+        "M": 18,
+        "unit_pairs": 36,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 12,
+          "5": 12,
+          "7": 12
+        }
+      },
+      {
+        "M": 19,
+        "unit_pairs": 324,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 36,
+          "2": 36,
+          "3": 36,
+          "4": 36,
+          "5": 36,
+          "6": 36,
+          "7": 36,
+          "8": 36,
+          "9": 36
+        }
+      },
+      {
+        "M": 20,
+        "unit_pairs": 64,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 16,
+          "3": 16,
+          "7": 16,
+          "9": 16
+        }
+      },
+      {
+        "M": 21,
+        "unit_pairs": 144,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 24,
+          "2": 24,
+          "4": 24,
+          "5": 24,
+          "8": 24,
+          "10": 24
+        }
+      },
+      {
+        "M": 22,
+        "unit_pairs": 100,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 20,
+          "3": 20,
+          "5": 20,
+          "7": 20,
+          "9": 20
+        }
+      },
+      {
+        "M": 23,
+        "unit_pairs": 484,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 44,
+          "2": 44,
+          "3": 44,
+          "4": 44,
+          "5": 44,
+          "6": 44,
+          "7": 44,
+          "8": 44,
+          "9": 44,
+          "10": 44,
+          "11": 44
+        }
+      },
+      {
+        "M": 24,
+        "unit_pairs": 64,
+        "number_of_pairs_by_first_positive_t": {
+          "1": 16,
+          "5": 16,
+          "7": 16,
+          "11": 16
+        }
+      }
+    ],
+    "compact_encoding": "Each counted pair at first horizon d has the full prefix of marker numerators (0 repeated d times, followed by 4), with denominator 4*2^t. The per-order counts group numerically verified physical runs by their first horizon.",
+    "signed_example": {
+      "order": 11,
+      "k": 4,
+      "l": 1,
+      "joint_marker_numerators_by_t": [
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "denominators_by_t": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "first_hit_lobes": [
+        {
+          "seed": 4,
+          "physical_marker_rail_signed_counts": [
+            0,
+            -1
+          ]
+        },
+        {
+          "seed": 7,
+          "physical_marker_rail_signed_counts": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    "monitoring_control": {
+      "M": 7,
+      "k": 1,
+      "l": 1,
+      "horizons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "common_denominators": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "numerators": {
+        "first_detection": [
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        "terminal_read": [
+          4,
+          0,
+          12,
+          0,
+          16
+        ]
+      },
+      "meaning": "Terminal probabilities for independent launches vs unconditioned first-click probabilities when testing the same origin after every tick and continuing only on no click."
+    }
+  },
+  "anchored_one_launch": {
+    "event": "Start base (0,R) on a physically marked sheet y0. After two force ticks coherently couple a fresh R coin to the current sheet and let it make one balanced +/-l hop. Keep the previous base position and direction as orthogonal registers. Read whether the final sheet equals the original physical marker. No intermediate sheet measurement or second independent launch is necessary.",
+    "law": "The two-tick sheet displacements +k and -k have masses 1/2 each. The appended fresh hop sends half of each to each sign of l. For all M>=3 and unit k,l, exactly one half returns if k=+/-l mod M and no path returns otherwise. These are 4 or 0 of 8 squared path-numerator units. A translation of the whole experiment with its marker keeps the same return probability.",
+    "same_drive_control": "With l=k every unit map passes with 1/2. On M=8 a fixed ruler l=1 separates k=1 from k=5 even though all the three-tick relative reads alias them.",
+    "anchor_loss": "If the marker is replaced by an independent uniformly chosen sheet, equality has probability 1/M for every k,l by normalization; tracing every sheet without an address comparison gives total mass one. Averaging a common shift of launch AND marker does not destroy the relation. The uniform randomized marker is a separately specified control.",
+    "unit_pairs_checked": 37700,
+    "nonzero_unit_pairs": 2516
+  },
+  "physical_ruler": {
+    "event": "Both launches have the same designated ambiguous port; their recorded sheet cells y1,y2 differ; a fresh R-coin two-tick H walk of physical stride l from y1 ends at y2. The address comparison alone defines this event. The two cyclic edges of this apparatus specify a physical generator up to orientation.",
+    "joint_denominator": 256,
+    "per_port_numerator": "2 times the count of signs s in +/-1 with 2k=s*2l mod M. If +/-2l are distinct the nonzero total is 1/64, including M=3; at M=4 the two signs coincide and give 1/32. A matched stride l=k passes for all unit k.",
+    "unit_gain_stride_pairs_checked": 37700,
+    "preparation": "A nondestructive first sheet read can leave a localized sheet for the fresh probe coin. If the read consumes the walker, a separately prepared fresh probe must be placed at the recorded cell in the same apparatus. Resetting only to a fixed address does not implement this operation. The second independently initialized launch supplies the recorded target cell.",
+    "interference": "Sequentially apply the signed Hadamard matrices, add amplitudes in identical complete cells, then square and sum over unresolved final directions. With a localized R coin and unit stride here, coincident extreme positions on C4 have different final directions, so probabilities add. There is no forced visibility of a two-tick path interference fringe. Coherent input-coin and dephased-coin controls differ."
+  },
+  "unit_force_settings_checked": 1258,
+  "exceptions": {
+    "M3_literal_distance_2": "Impossible on C3; probability zero for both units. Changing the observable to the folded distance of two unit steps (distance 1) gives 1/16 for either unit.",
+    "M4": "The two units 1 and 3 are reflections; both pass via the antipodal distance 2 and cannot be distinguished by this measurement."
+  },
+  "general_symmetries": "For a fixed base launch x0, the departure at time t obeys x_t = x0+t mod 2, independent of direction history. For even M replacing k by k+M/2 shifts every branch at depth n by the same C=(M/2)(n*x0+n(n-1)/2) mod M, preserving all base outputs and relative sheet distances at the same horizon. A marked sheet origin can recover the difference at horizons with C nonzero. A translated start y0 only shifts both experiments. Replacing k by -k reflects every sheet through y0; relative distances are invariant. The even alias is between two unit multipliers iff 4 divides M.",
+  "symmetry_start_setting_horizon_checks": 3240,
+  "controls": {
+    "M8_k1_vs_k5_fixed_origin_laws_identical": false,
+    "M8_three_tick_common_output_shift_for_k5": 4,
+    "M4_nonunit_k2_port_masses_in_eighths": [
+      4,
+      0
+    ],
+    "M5_physical_k2_event": "0",
+    "M5_k2_with_transported_metric_event": "1/16",
+    "M5_k2_physical_ruler_stride1_vs_stride2": [
+      "0",
+      "1/64"
+    ],
+    "M8_actual_versus_lost_anchor": {
+      "k1_stride1": {
+        "return_numerator_over8": 4,
+        "output_histogram_over8": {
+          "2": 2,
+          "0": 4,
+          "6": 2
+        },
+        "independently_randomized_anchor_probability": "1/8"
+      },
+      "k5_stride1": {
+        "return_numerator_over8": 0,
+        "output_histogram_over8": {
+          "6": 2,
+          "4": 4,
+          "2": 2
+        },
+        "independently_randomized_anchor_probability": "1/8"
+      },
+      "k5_stride5": {
+        "return_numerator_over8": 4,
+        "output_histogram_over8": {
+          "2": 2,
+          "0": 4,
+          "6": 2
+        },
+        "independently_randomized_anchor_probability": "1/8"
+      }
+    },
+    "M5_coherent_vs_dephased_initial_coin_two_tick_ruler_site_numerators_over8": {
+      "coherent_R_plus_L": {
+        "2": 4,
+        "0": 4
+      },
+      "dephased_R_plus_L": {
+        "2": 2,
+        "0": 4,
+        "3": 2
+      }
+    },
+    "M7_two_cell_input_0R_plus_2R_probe_site_numerators_over8": {
+      "coherent": {
+        "2": 5,
+        "0": 1,
+        "5": 1,
+        "4": 1
+      },
+      "which_path_after_first_tick": {
+        "2": 3,
+        "0": 3,
+        "5": 1,
+        "4": 1
+      }
+    }
+  },
+  "interpretation": "The graph, gain, local metric and shared device calibration are physical inputs. A fixed metric can compare two physical force maps. Applying a unit multiplication to both the graph coordinates and their calibration transports the metric too, restoring the original event. No choice of abstract embedding follows. Reversing sqrt(2) changes only the common sign on each synchronized branch and leaves squared records unchanged."
+}
