@@ -88,3 +88,27 @@ J=P(-1)-P(+1)-4[P(-2)-P(+2)]
 vanishes separately on each normalized single-arm row and hence on every mixture of those two rows, even if the mixture weight changes between settings. It equals \(\cos\phi/2\) in the coherent model. A real sign reversal therefore exchanges the two central peaks and takes \(J\) from \(+1/2\) to \(-1/2\). The outer wells are essential for rejecting a change in arm weights. The comparison assumes calibrated well responses and records all endpoints and arm yields. This intervention goes beyond the reported cesium experiment. Separately, site-dependent polarization-independent phase shifters have been implemented in a photonic walk. [Xue et al., experimental apparatus](https://doi.org/10.1088/1367-2630/16/5/053009) [Exact arm and interference terms](results/cesium_negative_read.json)
 
 Two competing mechanisms specify what additional control is needed. A random real sign chosen positive with probability \((1+\cos\phi)/2\) reproduces the full phase scan with real analyzers. Under linear composition, a separately calibrated downstream \(+\pi/2\) phase reference on the same arm distinguishes this ensemble from a coherent \(+\pi/2\) input. Their predicted \(J\) values are \(0\) and \(-1/2\), respectively. A separate detector counterexample starts with the phase-independent diagonal distribution \((1,6,2,6,1)/16\). Give the detectors at \(-1,+1\) efficiencies \((3+2\cos\phi)/5,(3-2\cos\phi)/5\) and the others \(3/5\). The total yield is always \(3/5\), and normalizing reproduces the entire coherent fringe. Running a single populated arm through the same sign settings and readout tests this particular gain change, since it changes the two central detector odds by a factor of 25 between settings. These controls require a physical implementation and data.
+
+### Comparing three wells with unknown detector efficiencies
+
+A prospective experiment can use the wells $-2,-1,0$ and four preparations. Prepare each first arm alone, giving reference settings $L$ and $R$. Then prepare both arms, once with an identity operation and once with an equal-duration sign reversal. Let the expected count in setting $s$ and well $j$ be $Y_s(j)=B_s\eta_jP_s(j)$. The source brightness $B_s>0$ may change independently in every setting. Each efficiency $\eta_j>0$ may differ between wells and must be shared across preparations and unresolved spin at that well.
+
+Use well 0 as a reference with positive expected counts in all four settings. For either other well, form the position of the joint run between the two single-arm odds,
+$$
+r_s(j)=Y_s(j)/Y_s(0),\qquad
+h_j=\frac{r_s(j)-r_R(j)}{r_L(j)-r_R(j)},\qquad
+D=h_{-1}-h_{-2}.
+$$
+The source brightness cancels in each ratio and the fixed factor $\eta_j/\eta_0$ cancels in $h_j$. The two sharp odds are distinct at each comparison well. For any incoherent mixture $P_s=w_sP_L+(1-w_s)P_R$, both positions equal $w_sP_L(0)/[w_sP_L(0)+(1-w_s)P_R(0)]$. Therefore $D=0$ even if arm populations change between the identity and reversal settings. For this walk both sharp arms have $P(0)=1/8$, so the common position is $w_s$ itself.
+
+For the balanced coherent preparation, $h_{-2}=1/2$ and $h_{-1}=(1+\cos\phi)/2$. The outer well fixes the arm population and the inner well carries the interference term.
+
+| Both-arm setting | $h_{-2}$ | $h_{-1}$ | Predicted $D$ |
+|---|---:|---:|---:|
+| Identity | 1/2 | 1 | +1/2 |
+| Sign reversal | 1/2 | 0 | −1/2 |
+| Any incoherent mixture of the measured arms | $w_s$ | $w_s$ | 0 |
+
+For a normalized two-arm state with left population $w$ and real off-diagonal entry $c=\operatorname{Re}\rho_{LR}$, the three site masses are $w/8$, $(1+4w+4c)/8$ and $1/8$. Thus $D=c$ under the stated walk. The signed-word checker and a Lean calculation in physical coordinates verify the coefficients. Lean also verifies how a two-row determinant scales with the two row brightnesses and well gains. [Exact checker](check_three_well_phase.py) · [Recorded cases](results/three_well_phase.json) · [Integer identities checked with Lean 4.19.0](lean/ThreeWellPhase.lean)
+
+An explicit counterexample shows why gain stability must extend to the joint preparations. Keep the diagonal input for both sign settings and give the single-arm preparations a flat efficiency of $3/5$. Apply the sign-dependent efficiencies above only when both arms are populated. This reproduces both coherent five-well rows, their total yield and both single-arm controls. Restoring the flat gain on joint inputs gives $D=0$. A randomized real sign also survives this real-analyzer scan. The published experiment did not take the reversal data. The ratios describe expected counts. An experiment can retain every site count, including zeros, and estimate uncertainty from the joint count tables before comparing the predicted signs. [Original measurement settings, Fig. 3](https://doi.org/10.1103/PhysRevX.5.011003)
