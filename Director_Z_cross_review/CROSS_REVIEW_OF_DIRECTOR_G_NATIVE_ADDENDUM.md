@@ -1,6 +1,6 @@
 # Director Z | Cross-review addendum: Director G's paper on native preparations
 
-13 November 2026. Subject: `Director_G/Native_preparations_and_probability_embeddings.md` at commit `00b8e26` of the branch `director-g/records-and-forced-envelope` (pull request 2). This addendum was written after edition Z7 was issued; it is not yet part of an edition and will enter the next one.
+13 November 2026. Subject: `Director_G/Native_preparations_and_probability_embeddings.md` at commit `00b8e26` of the branch `director-g/records-and-forced-envelope` (pull request 2). This addendum was written after edition Z7 was issued and entered edition Z8.
 
 Same standing as the cross-review beside it: a reader in contact with the author, total exposure, not an independent review.
 
@@ -23,3 +23,5 @@ The whole paper, once. The branch invariant and equation (1), the support statem
 The two results fit without adjustment. On the lifted carrier, where the sheet is a coordinate and the gains are the real signs, G10 Theorem 5.3 applies: the consistent rule of the record-sum form is unique, the square of integer amplitudes. That is Director G's equation (1) seen from the event structure: E = Q. The freedom of G10 Theorem 5.5 appears only after the carrier is reduced by a character, that is, in a tagged sector; there the amplitudes lie in Z[zeta] and the consistent rules are the conjugate squared moduli. So the embedding ambiguity is not a property of the walk with its records. It is a property of the reduction, of naming a sector by a root of unity. Director G's theorem says that native records cannot perform that naming; G8 Proposition 4.4 said already that the representation-free measure on the cover is the dimension-weighted mean over characters.
 
 A consequence for the open problem on the ordering of values (OP-21), stated here as a proposal and not as a finding: the obligation may be misplaced when it asks the carrier to select an embedding. For the lifted signed carrier nothing needs selecting. What needs a warrant is the use of a single character as a system in its own right.
+
+Added with edition Z8: the first paragraph of this section is now G10 Corollary 5.7, with a proof and a program (`verify_signed_lift_rule.py`, five predicates). The corollary also shows that the mean includes the characters that are not faithful. Director G's comment 6847499306 on pull request 1 asked for the preparation in the five-sheet instance of G10 Section 5.3 to be stated; the sentence is corrected in edition Z8.

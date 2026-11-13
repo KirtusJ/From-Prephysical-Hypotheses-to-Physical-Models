@@ -1,7 +1,7 @@
 {
  "title": "Bridge Candidate Register: typed map segment for From Prephysical Hypotheses to Physical Models",
  "date": "2026-11-13",
- "author": "LLM Director D (Claude, Anthropic) and LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus; entries marked Director A, B or G follow review records prepared with GPT-6 (OpenAI); entries of edition Z7 marked Director G (Codex) follow the research supplements of pull request 2, commit b626c0d",
+ "author": "LLM Director D (Claude, Anthropic) and LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus; entries marked Director A, B or G follow review records prepared with GPT-6 (OpenAI); entries of edition Z7 marked Director G (Codex) follow the research supplements of pull request 2, commit b626c0d; entries of edition Z8 marked Director G (Codex) follow the supplement on native preparations, pull request 2, commit 00b8e26",
  "reading_rule": "Nodes are model classes. Edges are typed. Nothing in this file asserts a physical derivation or a selected ontology; it records checked relations, postulates that would have to be supplied, obstructions, discriminators and untested proposals so that the search space is explicit.",
  "edge_types": {
   "exact_correspondence": "proved relation within or between mathematical models, with a locator",
@@ -397,8 +397,8 @@
    "from": "PRE-ARC",
    "to": "QT",
    "type": "obstruction",
-   "statement": "Consistency on history events forces the order of the rule and does not select the embedding of the amplitudes: for gains of order q the consistent rules of the record-sum form are the real combinations of the squared moduli in the phi(q)/2 conjugate characters; the rule is unique exactly for q = 2, 4, 6. A combination with unequal weights is a consistent rule that is the squared modulus of no character. Edition Z7: positivity confines the weights to a cone; multiplicativity on products selects one conjugate character (G10-01-10; Director G's classification on Q(zeta, sqrt 2), obtained first). The Galois group on one character remains.",
-   "locator": "Paper G10, G10-01-08, G10-01-09; verify_cyclotomic_modulus_rules.py; compare G8-01-08 and G7-01-13; G10-01-10; Director G, Probability_from_record_composition.md",
+   "statement": "Consistency on history events forces the order of the rule and does not select the embedding of the amplitudes: for gains of order q the consistent rules of the record-sum form are the real combinations of the squared moduli in the phi(q)/2 conjugate characters; the rule is unique exactly for q = 2, 4, 6. A combination with unequal weights is a consistent rule that is the squared modulus of no character. Edition Z7: positivity confines the weights to a cone; multiplicativity on products selects one conjugate character (G10-01-10; Director G's classification on Q(zeta, sqrt 2), obtained first). The Galois group on one character remains. Edition Z8: if the gain of a walk is a record (signed lift) the rule is unique for every order and is the equal-weight mean over the characters in which -1 acts as -1 (G10-01-11); the choice of an embedding belongs to the reduction by a character. Director G: native records from a localized sheet have one rational law under every embedding law (obtained first).",
+   "locator": "Paper G10, G10-01-08, G10-01-09; verify_cyclotomic_modulus_rules.py; compare G8-01-08 and G7-01-13; G10-01-10; Director G, Probability_from_record_composition.md; G10-01-11; Director G, Native_preparations_and_probability_embeddings.md",
    "status": "PROOF_IN_MANUSCRIPT under a growth hypothesis on one block; exact computation for q = 2, 4, 6, 8, 10, 12"
   },
   {
@@ -579,6 +579,7 @@
    2,
    2
   ],
-  "director_g_rerun_largest_relative_difference_of_floating_outputs": 1.49e-06
+  "director_g_rerun_largest_relative_difference_of_floating_outputs": 1.49e-06,
+  "signed_lifts_with_two_connected_components_of_30": 2
  }
 }
