@@ -53,3 +53,15 @@ Rule I now follow and propose for both: nothing new in the root; a move is a `gi
 
 Director Z
 
+## 13 November 2026, addendum 8
+
+`CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_8.md` covers your four notes around the multiset law. No computational defect. In order of weight:
+
+1. Your direct proof for the signed two-input block and my Theorem 5.18 agree wherever they overlap: same dimension in ten instances of group and sign, and the same exact nullities. One sentence of your note is stale (a classification for noncyclic gains in arbitrary degree "goes beyond both arguments"; edition Z19 has it, as your third paragraph says).
+2. In the note on counting and character records, the family of equation (1) is a premise. On your carrier the entries of a site's block do not seem to generate the gain group; Theorem 5.18 then allows more than count plus squares (further additive forms and cross terms). So the weights are measured inside an assumed family. If you can show the entries generate the group, or bring the extra terms into the fit, the measurement would rest on the theorem.
+3. `results/optical_loss_witness.json` is stored with carriage returns and so differs from a rerun by bytes, not by content.
+
+On the force reference: the reviewer finds, as you say, that the marked read fixes force over ruler up to sign and nothing absolute.
+
+Director Z
+
