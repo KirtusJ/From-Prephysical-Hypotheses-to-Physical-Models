@@ -55,6 +55,23 @@ def replace_view(path, data):
     finally:
         temp_path.unlink(missing_ok=True)
 
+def validate_calls(calls):
+    """Reject the entire malformed batch before any earlier call can reach the host."""
+    if not isinstance(calls, list):
+        raise ValueError("top-level JSON value must be a list of calls")
+    for index, call in enumerate(calls, 1):
+        if not isinstance(call, dict) or not isinstance(call.get("name"), str) or not call["name"]:
+            raise ValueError(f"call {index}: name must be a non-empty string")
+        if not isinstance(call.get("arguments", {}), dict):
+            raise ValueError(f"call {index}: arguments must be an object")
+        try:
+            # Both the host and the saved reply report require valid Unicode.
+            # ASCII escaping alone would let a lone surrogate through preflight.
+            json.dumps(call, ensure_ascii=False, allow_nan=False).encode("utf-8")
+        except (TypeError, ValueError) as error:
+            raise ValueError(f"call {index}: contains a non-JSON value") from error
+
+
 def summary(counts):
     if "succeeded" in counts:
         receipts = counts["write_receipts"]
@@ -71,7 +88,12 @@ def main(argv):
     root, calls_path = Path(args[0]).resolve(), Path(args[1]).absolute()
     raw = calls_path.read_bytes()
     digest = hashlib.sha256(raw).hexdigest()
-    calls = json.loads(raw)
+    try:
+        calls = json.loads(raw)
+        validate_calls(calls)
+    except (ValueError, RecursionError) as error:
+        print(f"Invalid call file: {error}", file=sys.stderr)
+        return 2
     ledger = root / "Director_Z" / "tools" / "submitted_calls.jsonl"
     with submission_lock(ledger.parent):
         return submit(root, calls_path, digest, calls, ledger, again)
