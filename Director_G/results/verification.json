@@ -5840,5 +5840,75 @@
         "exit": 0
       }
     ]
+  },
+  "shared_phase_contact_and_source_network": {
+    "scope": "Two-source contact with signed real planes, source cuts, finite signed realization of the network read and limitations of any embedding inference. Independent referee here means a different task within the same Codex family; Director Z has not yet endorsed the new results.",
+    "totals": {
+      "checkers": 75,
+      "generated_outputs": 89,
+      "lean_files": 24,
+      "new_checker_programs": 4,
+      "new_generated_outputs": 4
+    },
+    "checks": {
+      "fresh_processes": 8,
+      "replayed_outputs": "All four outputs from each copy matched both frozen byte streams.",
+      "lean_compilations": 2,
+      "toolchain": "Lean 4.19.0 on Windows x86_64, commit 6caaee842e94, -j1, both copies exit zero.",
+      "checker_runtime": "Bundled Windows Python runtime, independent fresh output directories.",
+      "markdown_internal_links_per_copy": {
+        "Phase_contact_and_shared_walks.md": 16,
+        "Network_phase_and_probability_records.md": 8
+      }
+    },
+    "source_and_output_lf_sha256": {
+      "Phase_contact_and_shared_walks.md": "32343233ca18177327671830ad8120899f7fbd02508aa14df0a5b6504ce74e38",
+      "Network_phase_and_probability_records.md": "a96ee2e3c7c5a0d3871c2c2809fab92eacd40eb0fcab0cd15229fe575ee81173",
+      "lean/PhaseContact.lean": "863907ce8dae2ca06f5971a1dae2effe782ac0dd2e8d7ea5526f7348f8d873ab",
+      "check_phase_contact.py": "4ece023498cf04b58db75c79a4acb77c59162750d49c80adfd1c35f2b9835360",
+      "check_distributed_complex_walk.py": "f79f49ffbd01a3fbe1e415400c4510ec0041a7782064fbf69834be8c2899c733",
+      "check_independent_source_phase.py": "494d6945d442780ef33631d0203d8cf68d9861ae836f4b1bc20ad61917f0000b",
+      "check_rational_network_ports.py": "94ff220bf1881ae8e6c48abbe23aa470e3477dfde90a9a7cce6bba1e76c75b43",
+      "results/phase_contact.json": "4bd048f195697b18e1f938b50561310a7b8fb083a3d761a957e6b742ff9d65df",
+      "results/distributed_complex_walk.json": "56ec1d1586680baf6321a5d6eb4b322c2dae55e5a2cf9c3efa77644d3afcdf8b",
+      "results/independent_source_phase.json": "89db3fec2a1f5f0302826db79a8c89956290691d28fbdeac2daf3b9b616e62ff",
+      "results/rational_network_ports.json": "8f2905a39a84cf7c4f3471b12da151927d16f18e99d970532d846926f623b8e7"
+    },
+    "windows_output_bytes_sha256": {
+      "phase_contact": "4bd048f195697b18e1f938b50561310a7b8fb083a3d761a957e6b742ff9d65df",
+      "distributed_complex_walk": "56ec1d1586680baf6321a5d6eb4b322c2dae55e5a2cf9c3efa77644d3afcdf8b",
+      "independent_source_phase": "89db3fec2a1f5f0302826db79a8c89956290691d28fbdeac2daf3b9b616e62ff",
+      "rational_network_ports": "8f2905a39a84cf7c4f3471b12da151927d16f18e99d970532d846926f623b8e7"
+    },
+    "network": {
+      "comparison_bound": "15321/2000",
+      "reference": "Renou et al., supplementary Theorem 3, Eq. E4, numerical SDP",
+      "finite_score": "2106619826745/274877906944",
+      "seven_call_gap": "114702575061/34359738368000",
+      "all_deadlines": [
+        "105/32",
+        "374745/65536",
+        "938841225/134217728",
+        "2106619826745/274877906944",
+        "4511653131968745/562949953421312"
+      ],
+      "timeouts": "Fresh fair sign with all Bell labels included",
+      "experiments": "Model calculations; published optical coincidences reported separately."
+    },
+    "review": {
+      "resource": "Two conjugate diagonal weights in each real block independently checked. Real-classical mixing allowed. Access to a coherent cross-block measurement changes the separability premise.",
+      "data": "Both relative grades retained; a negative result changes already-loaded Y data in the held convention. Correcting a matched sheet requires its reflection.",
+      "revisions": "The initial two-decimal comparison was replaced by 7.6605 from Eq. E4. The paper now distinguishes the simple Bell-operator range bound from the sharper numerical SDP and identifies the source representation and four-photon sampling assumptions."
+    },
+    "pcp_nested": {
+      "verified": true,
+      "attempt": "20261113T183013192664Z",
+      "calls": 1,
+      "receipt": "9dfcd04058352113edc6",
+      "question": "Let J_A,J_B be commuting real complex structures, J_A^2=J_B^2=-I. K=-J_A J_B has k=±1 with equal probability from independent real-coordinate starts. On grade k, J_B=k J_A. Check yields: retain only + (1/2); retain both with record (1); or for - apply a local reflection R_B anticommuting with J_B before later gates (1). Do independent raw sources thereby share orientation in every run? Distinguish selection and correction; does any case choose absolute complex chirality or probability embedding?",
+      "output_sha256": "1064e933f98bf2aecc0dc6c09620c180c4618a7983ff450dc55b534b5b176e3d",
+      "adjudication": "Child echoed the proposed calculation. The parent checked K^2 and projector identities independently; the echoed response is not independent scientific support."
+    },
+    "open_physical_gates": 13
   }
 }
