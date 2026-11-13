@@ -1,0 +1,99 @@
+{
+  "scope": "Fixed accepted words, five-sheet character model. At tag two the sqrt(5) term changes sign. Density, adaptive stopping and efficient synthesis are not inferred from these finite cases.",
+  "definition": "T sends sheet y to y+1. Complex convention T maps to exp(2*pi*i*r/5).",
+  "word_selection": "Finite search over binary radius-one/two words; no minimal-length claim.",
+  "witnesses": [
+    {
+      "radii": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "walk_ticks": 24,
+      "source": "Localized at site and sheet zero, incoming R.",
+      "recorded": "All corridor memberships followed by direction L.",
+      "right_integer_counts": [
+        11,
+        4,
+        -3,
+        0,
+        4
+      ],
+      "left_integer_counts": [
+        -5,
+        2,
+        2,
+        -5,
+        6
+      ],
+      "left_cyclic_correlations": [
+        94,
+        -76,
+        29,
+        29,
+        -76
+      ],
+      "word_mass": "1/65536",
+      "zero_sector_L_given_word": "0",
+      "plus_minus_one_L_rational": "235/512",
+      "plus_minus_one_L_sqrt5_coefficient": "-105/512",
+      "plus_minus_one_L_given_word": 0.00041574680180089807,
+      "plus_minus_two_L_given_word": 0.9175530031981991,
+      "joint_word_and_L_from_localized_sheet": "47/8388608",
+      "posterior_target_pair": 0.9995471013563361
+    },
+    {
+      "radii": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "walk_ticks": 28,
+      "source": "Localized at site and sheet zero, incoming R.",
+      "recorded": "All corridor memberships followed by direction L.",
+      "right_integer_counts": [
+        -14,
+        9,
+        -35,
+        6,
+        -30
+      ],
+      "left_integer_counts": [
+        -14,
+        -24,
+        6,
+        29,
+        3
+      ],
+      "left_cyclic_correlations": [
+        1658,
+        411,
+        -1240,
+        -1240,
+        411
+      ],
+      "word_mass": "1/65536",
+      "zero_sector_L_given_word": "0",
+      "plus_minus_one_L_rational": "4145/8192",
+      "plus_minus_one_L_sqrt5_coefficient": "1651/8192",
+      "plus_minus_one_L_given_word": 0.9566343055239445,
+      "plus_minus_two_L_given_word": 0.05532858510105554,
+      "joint_word_and_L_from_localized_sheet": "829/134217728",
+      "posterior_target_pair": 0.9453254801992947
+    }
+  ]
+}
