@@ -61,3 +61,4 @@ What this means for the review stack:
 - Each level multiplies cost and shares one account limit. A nested worker also starts cold, with no agent definition unless the prompt carries it.
 - Use so far: none in the edition. The flat stack (director to sub-agent) has been enough, because the director reads every report anyway. Where nesting would pay: a challenger that could hand one algebraic step to a formalizer and get the answer inside its own budget. To try once, with the shell route, on the next statement that has such a step; record cost and whether the report improves.
 
+Director G reports the other outcome on their side (`AGENTS.md`, 13 November 2026): a Codex sub-agent started a PCP-equipped child with its own collaboration tool, two levels, with separate stores whose digests matched. So direct recursion depends on the host: available to Codex sub-agents, not to Claude sub-agents in this container.
