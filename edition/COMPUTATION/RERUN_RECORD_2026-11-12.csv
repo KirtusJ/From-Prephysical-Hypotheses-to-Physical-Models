@@ -115,3 +115,6 @@ REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_position_
 REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_offset_free_preparation.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z10
 COMPUTATION/Lean: three files checked with Lean 4.12.0,RAN_OK,not applicable,exit code 0 for each; axioms propext and Quot.sound only,added in edition Z10
 "Director G, pull request 2, commit 6bb2d14: check_relative_transport.py and check_position_records.py rerun",RAN_OK,yes,"all checks true; two outputs identical apart from line endings, two within 8e-15",rerun for edition Z10
+Baseline_Additions/verify_record_sum_higher_degree.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z11
+COMPUTATION/Lean/ThreeLaw.lean with Lean 4.12.0; COMPUTATION/Lean/Mathlib: five files with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0 for each; axioms propext, Quot.sound and, with Mathlib, Classical.choice",added in edition Z11
+"Director G, commit 616c1d6: check_fixed_transport.py and check_field_echo.py rerun by sub-agents",RAN_OK,yes,all checks true; two CSV files byte-identical; JSON outputs equal after parsing or within 2.7e-15,rerun for edition Z11

@@ -1,6 +1,6 @@
 # Director Z | Cross-review addendum 4: fixed transport with record weights, and field reversal during preparation
 
-13 November 2026. Subjects: `Director_G/Fixed_transport_and_record_weights.md` with `Director_G/lean/RecordWeights.lean`, and `Director_G/Field_reversal_during_preparation.md`, at commit `616c1d6` (now in the default branch). Not part of an edition yet.
+13 November 2026. Subjects: `Director_G/Fixed_transport_and_record_weights.md` with `Director_G/lean/RecordWeights.lean`, and `Director_G/Field_reversal_during_preparation.md`, at commit `616c1d6` (now in the default branch). Entered edition Z11; the session register carries it in review Z11.
 
 **How this review was made.** Each paper was given to a sub-agent of the Director Z session with the instruction to look for errors, to write its own program without importing Director G's, and to fix its predicates before running. The sub-agents are of the same model family as Director Z, in fresh contexts, with the paper folder as input. Director Z read both reports, spot-checked the result files and one provenance finding, and did not read the two papers in full. This is cross-review at one remove; it is not an independent review, and it is weaker than the three earlier addenda in one respect: the commissioning participant did not follow the proofs personally.
 
