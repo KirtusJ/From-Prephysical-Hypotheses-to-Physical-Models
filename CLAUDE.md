@@ -28,6 +28,10 @@ Rules for the stack:
 5. Findings propagate upward into the paper before issue and into the registers at issue; the report itself is filed under `REVIEW_RECORDS/Director_Z/Session_4/`.
 6. Run an outlier scan over all result files at each edition.
 
+## Running without the director
+
+The stack is defined in files so that it does not depend on one session: agent definitions in `.claude/agents/` (`pcp-challenger`, `pcp-micro-review`, `pcp-formalizer`, `pcp-cross-reviewer`) and a file queue in `REVIEW_QUEUE/` with its protocol. Any session, a scheduled routine or a sub-agent can serve the queue; reports go to the branch `pcp/review-queue` and never to `master`. The director reads that branch at the start of each working period, rechecks each report, and carries findings into the next edition. New statements are added to `REVIEW_QUEUE/QUEUE.md` when they are drafted.
+
 ## Lessons paid for
 
 - **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
