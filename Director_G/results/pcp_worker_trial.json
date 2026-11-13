@@ -1,0 +1,68 @@
+{
+  "host": "PCP OS build 22 Python command provider on Windows; separate replay using the released x86-64 Rust program in an offline Linux guest.",
+  "asynchronous": {
+    "process_overlap_seconds": 7.3693971,
+    "tasks": {
+      "codex": {
+        "id": "T2",
+        "outcome": "DONE",
+        "result": "d1413002f99399fa614d5c168f4303f2579c2e2559a5bec3fc3d7ffad1c04166",
+        "read_back": "d1413002f99399fa614d5c168f4303f2579c2e2559a5bec3fc3d7ffad1c04166"
+      },
+      "codex-and-enumerator": {
+        "id": "T1",
+        "outcome": "DONE",
+        "result": "2501d5b831f1f821061e8367d6c7e16f826a53c776b78f35d56f0a5317df6439",
+        "read_back": "2501d5b831f1f821061e8367d6c7e16f826a53c776b78f35d56f0a5317df6439"
+      },
+      "enumerator": {
+        "id": "T3",
+        "outcome": "DONE",
+        "result": "1b9218084624cc5fa573c7f492780f93e3f28a6122d70ef121caa0710b8b3571",
+        "read_back": "1b9218084624cc5fa573c7f492780f93e3f28a6122d70ef121caa0710b8b3571"
+      },
+      "qwen-offline": {
+        "id": "T4",
+        "outcome": "DONE",
+        "result": "7746bc6fb837e9afe8b96325a63210062a49a12bc99304656d3b1a34c9e1564b",
+        "read_back": "7746bc6fb837e9afe8b96325a63210062a49a12bc99304656d3b1a34c9e1564b"
+      }
+    },
+    "register": {
+      "head": "dc3f56dfe8ce83d5edf649eb1845ca235897773ff8273042ded88f18132c5896",
+      "events": 17,
+      "register_sha256": "ce333037196b5605d5a77bad6597215ec05dc57df12a1e09e2745d936b63f075",
+      "rust_guard_problems": 0
+    }
+  },
+  "nested": {
+    "question": "Independently calculate this finite case: on Z/11Z with unit cycle edges, what are the shortest-path distances from 0 of the image of unit displacement 1 under multiplication by 3 and under its multiplicative inverse? Is the claim that both distances are at most 3 true? Provide calculation and receipt ID.",
+    "receipt": "01ab0c15f2e5eabf04c7",
+    "parent_participant": "parent-codex",
+    "child_participant": "child-qwen",
+    "child_answer": "0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) = 0(1) = 0(3) =",
+    "parent_answer": "**Verdict: refuted.** On the eleven-site cycle, displacement \\(k\\) has distance \\(\\min(k,11-k)\\).\n\n- Multiplication by three sends \\(1\\) to \\(3\\): distance **3**.\n- Its inverse is multiplication by \\(4\\), since \\(3\\cdot4\\equiv1\\pmod{11}\\). It sends \\(1\\) to \\(4\\): distance **4**.\n\nI inspected the separate reviewer’s response; it contained repetitive expressions and no usable calculation, so it provides no support for the claim.\n\nReturned receipt ID: `01ab0c15f2e5eabf04c7`.",
+    "completed_tool": "consult_pcp_reviewer",
+    "child_model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF Q4_0",
+    "card_sha256_both": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+    "parent_register": {
+      "head": "3b68e9f45c692e504627d0144b007bd69f6286864f7bfdd349f698538ff7d2ce",
+      "events": 7,
+      "register_sha256": "6b655674f8de4b81599aaba86f7c995a5572d3109f4eabb9fe7fb453175b6247",
+      "rust_guard_problems": 0
+    },
+    "child_register": {
+      "head": "ccf462ec04e1dc2d2377e616b945092874b2e55f63b688e7a55bedff134d67dc",
+      "events": 7,
+      "register_sha256": "43a21ab74c8fe8ee1ee979fa4978df63b5b968c30d2e8b50e16cc784e5de8cf5",
+      "rust_guard_problems": 0
+    },
+    "parent_output_sha256": "b58dca29132fef63a7fe2d20a6c2a99d907243115ed2c7059e4dfa8cb8e859cc",
+    "child_output_sha256": "66dd74bc6b1fa3f0e85b74384d300b883a54b0f36a7902c88d1b23b47478da77",
+    "post_exit_child_output_matched_mcp_and_parent_receipt": true,
+    "content_score": {
+      "child": "incorrect/incomplete",
+      "parent": "correct; checked inverse 4 and independently rejected child response"
+    }
+  }
+}
