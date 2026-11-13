@@ -1,0 +1,825 @@
+{
+  "predicates": {
+    "full_bins_and_return": true,
+    "dark_split": true,
+    "unselected_continuation": true,
+    "rectangles": true
+  },
+  "vertices": [
+    [
+      0,
+      "L"
+    ],
+    [
+      0,
+      "R"
+    ],
+    [
+      1,
+      "L"
+    ],
+    [
+      1,
+      "R"
+    ],
+    [
+      2,
+      "L"
+    ],
+    [
+      2,
+      "R"
+    ],
+    [
+      3,
+      "L"
+    ],
+    [
+      3,
+      "R"
+    ]
+  ],
+  "forward_states": 16,
+  "backward_states": 16,
+  "gram": [
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  ],
+  "terminal_rows": [
+    {
+      "t": 0,
+      "count_by_port": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 1,
+      "count_by_port": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 2,
+      "count_by_port": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        1,
+        1,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 3,
+      "count_by_port": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 4,
+      "count_by_port": [
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 5,
+      "count_by_port": [
+        0,
+        0,
+        8,
+        8,
+        0,
+        0,
+        8,
+        8
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 6,
+      "count_by_port": [
+        16,
+        16,
+        0,
+        0,
+        16,
+        16,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        -4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 7,
+      "count_by_port": [
+        0,
+        0,
+        32,
+        32,
+        0,
+        0,
+        32,
+        32
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        8
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 8,
+      "count_by_port": [
+        64,
+        64,
+        0,
+        0,
+        64,
+        64,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 9,
+      "count_by_port": [
+        0,
+        0,
+        128,
+        128,
+        0,
+        0,
+        128,
+        128
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        16,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 10,
+      "count_by_port": [
+        256,
+        256,
+        0,
+        0,
+        256,
+        256,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        16,
+        16,
+        0,
+        0,
+        -16,
+        16,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 11,
+      "count_by_port": [
+        0,
+        0,
+        512,
+        512,
+        0,
+        0,
+        512,
+        512
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        32,
+        32,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 12,
+      "count_by_port": [
+        1024,
+        1024,
+        0,
+        0,
+        1024,
+        1024,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 13,
+      "count_by_port": [
+        0,
+        0,
+        2048,
+        2048,
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        64,
+        0,
+        0,
+        0,
+        0,
+        64
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 14,
+      "count_by_port": [
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        -64,
+        64,
+        0,
+        0,
+        64,
+        64,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 15,
+      "count_by_port": [
+        0,
+        0,
+        8192,
+        8192,
+        0,
+        0,
+        8192,
+        8192
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        128,
+        128
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 16,
+      "count_by_port": [
+        16384,
+        16384,
+        0,
+        0,
+        16384,
+        16384,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 17,
+      "count_by_port": [
+        0,
+        0,
+        32768,
+        32768,
+        0,
+        0,
+        32768,
+        32768
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        256,
+        0,
+        0,
+        256,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 18,
+      "count_by_port": [
+        65536,
+        65536,
+        0,
+        0,
+        65536,
+        65536,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        256,
+        256,
+        0,
+        0,
+        -256,
+        256,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 19,
+      "count_by_port": [
+        0,
+        0,
+        131072,
+        131072,
+        0,
+        0,
+        131072,
+        131072
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        512,
+        512,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 20,
+      "count_by_port": [
+        262144,
+        262144,
+        0,
+        0,
+        262144,
+        262144,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1024,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 21,
+      "count_by_port": [
+        0,
+        0,
+        524288,
+        524288,
+        0,
+        0,
+        524288,
+        524288
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        1024,
+        0,
+        0,
+        0,
+        0,
+        1024
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 22,
+      "count_by_port": [
+        1048576,
+        1048576,
+        0,
+        0,
+        1048576,
+        1048576,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        -1024,
+        1024,
+        0,
+        0,
+        1024,
+        1024,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 23,
+      "count_by_port": [
+        0,
+        0,
+        2097152,
+        2097152,
+        0,
+        0,
+        2097152,
+        2097152
+      ],
+      "signed_by_port": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    },
+    {
+      "t": 24,
+      "count_by_port": [
+        4194304,
+        4194304,
+        0,
+        0,
+        4194304,
+        4194304,
+        0,
+        0
+      ],
+      "signed_by_port": [
+        0,
+        4096,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "equal": true,
+      "size_ok": true,
+      "total_ok": true
+    }
+  ],
+  "dark_bin_count_signed": [
+    2,
+    0
+  ],
+  "counterexample": {
+    "selected": [
+      [
+        "LLRR",
+        [
+          0,
+          "R"
+        ],
+        -1
+      ],
+      [
+        "LRLR",
+        [
+          0,
+          "R"
+        ],
+        1
+      ],
+      [
+        "RLLR",
+        [
+          0,
+          "R"
+        ],
+        -1
+      ],
+      [
+        "LLLL",
+        [
+          0,
+          "L"
+        ],
+        -1
+      ]
+    ],
+    "ordinary": 2,
+    "altered": 33,
+    "ordinary_next": 4,
+    "altered_next": 4,
+    "normalized_altered": "33/16"
+  },
+  "rectangles_tested": 65536,
+  "failed_rectangles": []
+}

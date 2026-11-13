@@ -93,13 +93,13 @@ def check(c, N, rng):
                 ne += 1; ok = ok and {G.add(g, G.neg(f[0])) for g in f} == C0s
         ok = ok and ne * r0 == r
     P["P1"] = ok
-    # P2
+    # P2 checks class membership through tick 400, even after every first realization.
     cnt = {(0, 0): 1}; found = {}; ok = True
     for n in range(0, 401):
         if any(cls[u] != n % r for u in cnt): ok = False
         i = n % r
         if i not in found and all(cnt.get((y, g), 0) >= N for y in range(c.nv) for g in fib[(y, i)]): found[i] = n
-        if len(found) == r and n >= 2 * r + 4: break
+        if n == 400: break
         new = {}
         for (y, g), k in cnt.items():
             for z, a in c.out[y]:

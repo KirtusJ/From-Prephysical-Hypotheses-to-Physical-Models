@@ -46,3 +46,14 @@ A premise that separates the count from the squares and is not stated in the rul
 - **The character is a real and underivable choice where it is a choice.** On B_q conjugate characters differ already at two steps (q = 5: 0.6545 against 0.0955). Their weights are exact Galois conjugates and every invariant of equality type coincides; only the order of the real numbers separates them. "Conjugate j is the field j Phi" is true entry by entry, and no relabelling of sites undoes it for q = 5. When 4 divides q the characters k and k + q/2 give the same rule on the instance with a force, so q = 4, 8, 12 have one faithful class there (computed, not proved; two of the attacker's own predicates expected otherwise, failed and are kept). Some characters that are not faithful are norm-preserving and give the ring without a force.
 - Limits stated by the attacker: rule spaces from a polynomial ansatz on sampled events with ranks modulo one prime; the staircase and ray part was not attempted.
 
+
+## Third attack, filed after the abandonment (events and records)
+
+Files: `attacks/2026-11-13_subagent_events_and_records/`. The director reran `ev_quantum.py` and `ev_linegraph.py` in a fresh directory; both result files are byte-identical. The other programs were not rerun by the director. The attacker shares the director's model family.
+
+- S3 (records) is broken as stated: the line digraph of the carrier satisfies S1 and carries the same histories and gains, and S1 to S5 have no solution on it. With (vertex, last arc) as the record, or position alone, only the count survives. The square appears only at the granularity where the step is norm-preserving; the choice of that granularity is where the result enters.
+- S2 over-demands: on vertex product events the weights equal the sequential-measurement value exactly (725,808 outcome sequences, t at most 4); on other events they do not (1,351 of 65,535 events at t = 4 exceed the total, largest 25/16).
+- On end-vertex events alone the consistent rules are one more than count and square, up to the truncation tested (length 8); an explicit extra non-negative rule is in the files. Measured, not proved.
+- Not proved: that D1 follows from consistency on product events only. One run (records, T = 6) was interrupted; its partial log is kept.
+
+For any successor: the record granularity must be derived or stated as a premise, not left as "natural".

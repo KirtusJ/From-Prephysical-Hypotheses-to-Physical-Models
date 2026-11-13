@@ -1,0 +1,23 @@
+**WOUND — the near-return stipulation S5 can be replaced on Z1-R by a comparison of two bright clicks.**
+
+# A three-tick test of the count fraction on the signed ring
+
+**Kirtus Justus**, Theoretical Physicist  
+Port Coquitlam, British Columbia, Canada  
+Attack prepared by Director G (OpenAI Codex), independent computational assessment, 13 November 2026.
+
+On any of the candidate’s rings with $N\ge3$, make fresh launches at $(0,R)$, apply the same signed walk for either one or three ticks, and read the same complete endpoint $b=(1,R)$. Keep the paths coherent until that terminal read. The added premise is just $P_3(b)\ge P_1(b)$. It concerns two ordinary terminal frequencies and prescribes neither their numerical values nor a return to the launch. [Candidate Z1 v0.1, §§1–2 and attack sheet](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/bd5f4b8/Director_Z/candidate/CANDIDATE_MODEL_Z1.md)
+
+Under D1 the signed ring has $\mu(S)=a|S|+c\sum_y v_S(y)^2$. A singleton of weight one gives $a+c=1$. At tick one the bright port has one positive walk. At tick three exactly RLR and LRR reach it, both positive. At $d=(-1,L)$ the only walks are RLL and LRL, with signs $-$ and $+$. This census is unchanged by wrapping for all $N\ge3$ because the other possible displacement for each last rail differs from the named one by two. Thus
+
+$$
+P_1(b)=\tfrac12,\qquad P_3(b)=\tfrac12-\tfrac a4,\qquad P_3(d)=\tfrac a4.
+$$
+
+Nonnegativity of the single dark class gives $a\ge0$. The bright comparison gives $a\le0$, hence $a=0$ and $c=1$. Once D1 is available, singleton normalization and that one nonnegative class suffice in place of full S4. No separate sign assumption on $c$, S6 or S7 enters. An exact bright equality or an exact dark null alone also sets $a=0$ after singleton normalization. With population tolerance $P_1(b)-P_3(b)\le\delta$, the sharp bound is $a\le\min(1,4\delta)$ for a convex mixture. A finite sample must bound the population difference with sampling and apparatus uncertainty.
+
+**What the attack establishes.** Within S1–S4 on Z1-R, the bright comparison and S5 are equivalent because each selects the same coefficient. Its operational scope is smaller: two specified measurements suffice. The count rule and every convex mixture satisfy S1–S4. Continuation doubles the count and the signed norm square separately, by two outgoing edges and $A^*A=2I$ respectively. At any positive tick at most one arc from each predecessor reaches the starting port, so its normalized count return is at most $1/2$. For $a>0$ the mixed return is at most $1-a/2$. Thus S5 is independent of S1–S4. Recurrence of the finite amplitude matrix alone gives no recurrence for the count component. A separately established recurrence of the *measured* return supplies an independent premise. Corollary 5.29 survives this attack, and a single test has no such selection guarantee on a carrier with several eligible characters. [G10, return-weight corollary](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/bd5f4b8/edition/PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex)
+
+**Controls.** The operational distinction is strict beyond the D1 class. Use squared readout, make the first three ticks coherent, then copy the complete endpoint after tick three and every subsequent tick into fresh retained orthogonal records. The early bright comparison holds exactly. After each copy, the next marginal is the count transition applied to the previous marginal. The probability of any named return is then at most $1/2$, since each predecessor contributes at most half its mass. The earlier return probabilities at ticks one through three also obey that bound. This is a different record instrument. Conversely, recording every path from the outset gives $1/4$ at each of the two three-tick ports. This comparison requires registered endpoints; the sign words alone are evidence about the model’s coefficients, not observed dark clicks.
+
+A position-only detector leaves positive count admissible. Usually $P_3(x=1)-P_1(x=1)=1/8-a/4$. On the four-site ring RRL and LLL land together at $(1,L)$, both positive, so the difference is $(1-a)/2$ and even pure count passes. The first run incorrectly predicted an incoherent wrap correction. It failed this control while passing the endpoint comparison on every ring. The original output and the corrected wrap test are both retained. [First run, 59/60](s5_finite_contrast_first_run.json) · [Checker and declared predicates](s5_finite_contrast.py) · [Final census, 65/66 including the retained failure](s5_finite_contrast.json)

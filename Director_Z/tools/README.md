@@ -4,6 +4,8 @@ Programs written when a recurring step of the workflow needed one. Each states i
 
 | Program | Purpose |
 |---|---|
-| `pcp_submit.py` | submits a call file to the PCP OS register exactly once, keeps a ledger of digests, and saves the server's output to a file. Written after the director submitted the same call file twice in reviews Z16 and Z18. Tested against a stand-in server and used on the register from review Z22 on |
+| `pcp_submit.py` | submits a PCP OS call file, skips a digest already in the completed-submission ledger and saves the server's replies. Written after the director submitted the same call file twice in reviews Z16 and Z18. Tested against a stand-in server and used on the register from review Z22 on |
 
-Not here: the edition update scripts, which are kept in `edition/tools/` with the edition they produced.
+The ledger counts successful calls, refusals and replies bearing the host's explicit `WRITTEN as event` receipt. A status lookup can succeed, and a session can begin, without such a receipt. Older ledger entries stored successful calls in `written`. Use the register itself when counting appended events.
+
+The edition update scripts are kept in `edition/tools/` with the edition they produced.
