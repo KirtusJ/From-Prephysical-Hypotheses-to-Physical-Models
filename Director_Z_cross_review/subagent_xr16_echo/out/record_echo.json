@@ -1,0 +1,2253 @@
+{
+ "source": "Localized wire 0, private bit zero. The 216-tick four-layer preparation is replayed in full. Every arm uses an identical prefix without intervening measurements.",
+ "source_logical_layers": [
+  [
+   [
+    1,
+    5
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    3,
+    6
+   ]
+  ],
+  [
+   [
+    6,
+    1
+   ],
+   [
+    5,
+    0
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    7,
+    2
+   ]
+  ],
+  [
+   [
+    3,
+    5
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    0,
+    6
+   ]
+  ],
+  [
+   [
+    2,
+    7
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    1,
+    5
+   ]
+  ]
+ ],
+ "instrument": "Each adjacent wire permutation P is PH_r followed by H_r. At the echo, H acts on the selected two wires separately for each private r while all other wires mix their private bits; the next tick repeats this same pairing. The matched idle gate mixes private bits on every wire twice. Restore the routing.",
+ "output_coordinates": "Mode 2*j+r represents wire j, private value r. Each snapshot lists all 16 outcomes separately; final comparison uses all launches.",
+ "controls": [
+  {
+   "case": "original equal positive witness",
+   "initial_wires": [
+    3,
+    7
+   ],
+   "outward_adjacent_swaps": [
+    6,
+    5,
+    4
+   ],
+   "route_ticks_each_way": 6,
+   "native_echo_ticks": 2,
+   "depth_from_launch": 230,
+   "all_identity_columns_checked_each_arm": 16,
+   "route_wire_marginal_checks_both_laws_per_arm": 192,
+   "stages": {
+    "common_query": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      3,
+      7
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "5/656",
+      "1/16"
+     ]
+    },
+    "in_place_before": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0"
+     ],
+     "selected_wire_labels": [
+      3,
+      4
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "5/656",
+      "1/16"
+     ]
+    },
+    "after_first_H": {
+     "amplitude_numerators": [
+      -2,
+      -2,
+      0,
+      0,
+      -1,
+      -1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      3
+     ],
+     "squared_denominator": 32,
+     "born_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "1/8",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/32",
+      "9/32"
+     ],
+     "local_fourth_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "23/328",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/1312",
+      "405/1312"
+     ],
+     "selected_wire_labels": [
+      3,
+      4
+     ],
+     "born_pair": [
+      "1/8",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "23/328",
+      "0"
+     ]
+    },
+    "after_second_H": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "23/656",
+      "0",
+      "23/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0"
+     ],
+     "selected_wire_labels": [
+      3,
+      4
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "23/656",
+      "23/656"
+     ]
+    },
+    "final_echo": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "23/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "23/656",
+      "0"
+     ],
+     "selected_wire_labels": [
+      3,
+      7
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "23/656",
+      "23/656"
+     ]
+    },
+    "final_matched_idle": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      3,
+      7
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "5/656",
+      "1/16"
+     ]
+    }
+   },
+   "total_variation_local_fourth_echo_vs_idle": "9/328",
+   "reciprocal_local_fourth_flows_possible": false,
+   "reciprocal_born_flows_possible": true
+  },
+  {
+   "case": "opposite same magnitude",
+   "initial_wires": [
+    2,
+    3
+   ],
+   "outward_adjacent_swaps": [],
+   "route_ticks_each_way": 0,
+   "native_echo_ticks": 2,
+   "depth_from_launch": 218,
+   "all_identity_columns_checked_each_arm": 16,
+   "route_wire_marginal_checks_both_laws_per_arm": 0,
+   "stages": {
+    "common_query": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "1/16",
+      "5/656"
+     ]
+    },
+    "in_place_before": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "1/16",
+      "5/656"
+     ]
+    },
+    "after_first_H": {
+     "amplitude_numerators": [
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      1,
+      1
+     ],
+     "squared_denominator": 32,
+     "born_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/8",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/32",
+      "9/32",
+      "1/32",
+      "1/32"
+     ],
+     "local_fourth_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "0",
+      "0",
+      "23/328",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/1312",
+      "405/1312",
+      "1/32",
+      "1/32"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "0",
+      "1/8"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "23/328"
+     ]
+    },
+    "after_second_H": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "23/656",
+      "0",
+      "23/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "23/656",
+      "23/656"
+     ]
+    },
+    "final_echo": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "23/656",
+      "0",
+      "23/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "23/656",
+      "23/656"
+     ]
+    },
+    "final_matched_idle": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      2,
+      3
+     ],
+     "born_pair": [
+      "1/16",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "1/16",
+      "5/656"
+     ]
+    }
+   },
+   "total_variation_local_fourth_echo_vs_idle": "9/328",
+   "reciprocal_local_fourth_flows_possible": false,
+   "reciprocal_born_flows_possible": true
+  },
+  {
+   "case": "unequal live magnitudes",
+   "initial_wires": [
+    0,
+    6
+   ],
+   "outward_adjacent_swaps": [
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "route_ticks_each_way": 10,
+   "native_echo_ticks": 2,
+   "depth_from_launch": 238,
+   "all_identity_columns_checked_each_arm": 16,
+   "route_wire_marginal_checks_both_laws_per_arm": 320,
+   "stages": {
+    "common_query": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      0,
+      6
+     ],
+     "born_pair": [
+      "1/4",
+      "9/16"
+     ],
+     "local_fourth_pair": [
+      "1/4",
+      "405/656"
+     ]
+    },
+    "in_place_before": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      3,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "9/16",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "405/656",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      0,
+      1
+     ],
+     "born_pair": [
+      "1/4",
+      "9/16"
+     ],
+     "local_fourth_pair": [
+      "1/4",
+      "405/656"
+     ]
+    },
+    "after_first_H": {
+     "amplitude_numerators": [
+      1,
+      0,
+      -5,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ],
+     "squared_denominator": 32,
+     "born_all": [
+      "1/32",
+      "0",
+      "25/32",
+      "0",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "1/32",
+      "1/32",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/32",
+      "1/32"
+     ],
+     "local_fourth_all": [
+      "569/410656",
+      "0",
+      "355625/410656",
+      "0",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "5/1312",
+      "5/1312",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/32",
+      "1/32"
+     ],
+     "selected_wire_labels": [
+      0,
+      1
+     ],
+     "born_pair": [
+      "1/32",
+      "25/32"
+     ],
+     "local_fourth_pair": [
+      "569/410656",
+      "355625/410656"
+     ]
+    },
+    "after_second_H": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      3,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "9/16",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "569/3977",
+      "0",
+      "46089/63632",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      0,
+      1
+     ],
+     "born_pair": [
+      "1/4",
+      "9/16"
+     ],
+     "local_fourth_pair": [
+      "569/3977",
+      "46089/63632"
+     ]
+    },
+    "final_echo": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "569/3977",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "46089/63632",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      0,
+      6
+     ],
+     "born_pair": [
+      "1/4",
+      "9/16"
+     ],
+     "local_fourth_pair": [
+      "569/3977",
+      "46089/63632"
+     ]
+    },
+    "final_matched_idle": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      0,
+      6
+     ],
+     "born_pair": [
+      "1/4",
+      "9/16"
+     ],
+     "local_fourth_pair": [
+      "1/4",
+      "405/656"
+     ]
+    }
+   },
+   "total_variation_local_fourth_echo_vs_idle": "1701/15908",
+   "reciprocal_local_fourth_flows_possible": false,
+   "reciprocal_born_flows_possible": true
+  },
+  {
+   "case": "single occupied input",
+   "initial_wires": [
+    1,
+    2
+   ],
+   "outward_adjacent_swaps": [],
+   "route_ticks_each_way": 0,
+   "native_echo_ticks": 2,
+   "depth_from_launch": 218,
+   "all_identity_columns_checked_each_arm": 16,
+   "route_wire_marginal_checks_both_laws_per_arm": 0,
+   "stages": {
+    "common_query": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "0",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "1/16"
+     ]
+    },
+    "in_place_before": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "0",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "1/16"
+     ]
+    },
+    "after_first_H": {
+     "amplitude_numerators": [
+      -2,
+      -2,
+      -1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      1,
+      1
+     ],
+     "squared_denominator": 32,
+     "born_all": [
+      "1/8",
+      "1/8",
+      "1/32",
+      "0",
+      "1/32",
+      "0",
+      "1/32",
+      "1/32",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/32",
+      "9/32",
+      "1/32",
+      "1/32"
+     ],
+     "local_fourth_all": [
+      "1/8",
+      "1/8",
+      "1/32",
+      "0",
+      "1/32",
+      "0",
+      "5/1312",
+      "5/1312",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/1312",
+      "405/1312",
+      "1/32",
+      "1/32"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "1/32",
+      "1/32"
+     ],
+     "local_fourth_pair": [
+      "1/32",
+      "1/32"
+     ]
+    },
+    "after_second_H": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "0",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "1/16"
+     ]
+    },
+    "final_echo": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "0",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "1/16"
+     ]
+    },
+    "final_matched_idle": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      1,
+      2
+     ],
+     "born_pair": [
+      "0",
+      "1/16"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "1/16"
+     ]
+    }
+   },
+   "total_variation_local_fourth_echo_vs_idle": "0",
+   "reciprocal_local_fourth_flows_possible": true,
+   "reciprocal_born_flows_possible": true
+  },
+  {
+   "case": "two empty inputs",
+   "initial_wires": [
+    4,
+    5
+   ],
+   "outward_adjacent_swaps": [],
+   "route_ticks_each_way": 0,
+   "native_echo_ticks": 2,
+   "depth_from_launch": 218,
+   "all_identity_columns_checked_each_arm": 16,
+   "route_wire_marginal_checks_both_laws_per_arm": 0,
+   "stages": {
+    "common_query": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    },
+    "in_place_before": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    },
+    "after_first_H": {
+     "amplitude_numerators": [
+      -2,
+      -2,
+      0,
+      0,
+      -1,
+      -1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      1,
+      1
+     ],
+     "squared_denominator": 32,
+     "born_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "1/32",
+      "1/32",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/32",
+      "9/32",
+      "1/32",
+      "1/32"
+     ],
+     "local_fourth_all": [
+      "1/8",
+      "1/8",
+      "0",
+      "0",
+      "1/32",
+      "1/32",
+      "5/1312",
+      "5/1312",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/1312",
+      "405/1312",
+      "1/32",
+      "1/32"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    },
+    "after_second_H": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    },
+    "final_echo": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    },
+    "final_matched_idle": {
+     "amplitude_numerators": [
+      -2,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ],
+     "squared_denominator": 16,
+     "born_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "1/16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/16",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "local_fourth_all": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "0",
+      "5/656",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "405/656",
+      "0",
+      "1/16",
+      "0"
+     ],
+     "selected_wire_labels": [
+      4,
+      5
+     ],
+     "born_pair": [
+      "0",
+      "0"
+     ],
+     "local_fourth_pair": [
+      "0",
+      "0"
+     ]
+    }
+   },
+   "total_variation_local_fourth_echo_vs_idle": "0",
+   "reciprocal_local_fourth_flows_possible": true,
+   "reciprocal_born_flows_possible": true
+  }
+ ],
+ "premises": "Local signed balanced gates and programmed reversible wiring are supplied. Per-edge nonnegative flow constrains the direct undisturbed marginals, dark output cells are sharp, and an occupied single pair input has a calibrated fair split in its surrounding context. Using this echo to infer an earlier equality also needs equality of the returned marginal with the direct/matched-idle read and no dependence of the shared prefix on its later setting.",
+ "reciprocal_flow": "For two reciprocal H cells, a reverse coupling equal to the transpose of the forward coupling suffices locally: its returned marginal reproduces the initial one. Merely existing forward supported couplings at each time does not require this transpose or identify pre- and post-echo marginals. Reciprocal flow is a possible local dynamical assumption; echo readout equality needs no particular choice of underlying coupling."
+}

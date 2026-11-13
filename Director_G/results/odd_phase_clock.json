@@ -1,0 +1,7019 @@
+{
+  "assumptions": "Odd periodic cycle, localized launch, real normalized squared coordinate law, balanced branch Hadamards, a clean transport direction bit, reversible control by the preserved branch and addressed reversible branch erasure. One microscopic motion tick streams every occupied cell by exactly one edge. Local gate, record and classical setting generation layers have separate costs.",
+  "fixed_frame": "For u the least signed representative of h/2 modulo M, route 0 and 1 oppositely for |u| ticks, then both in sign(u) for |u| ticks. Branch 0 stays and branch 1 advances by 2u overall. XOR the clean motor before and after every hop. Add common (+1,-1) pairs to equalize the physical duration of every setting at M-1 hops. Analyze b with H and retain both final ports.",
+  "depth_proof": "At n ticks each arm displacement lies in {-n,-n+2,...,n}. The two-arm displacement difference is even with magnitude at most 2n, giving n>=|u| up to a common translation. Opposite ballistic arms attain it. For fixed endpoints 0,h, even n allows the shortest even lift 2u, requiring n>=2|u|. An odd n reaching 0 on an odd ring requires n>=M, whereas 2|u|<=M-1. For an even ring odd relative shifts are impossible at any common elapsed time from one parity.",
+  "score": "Each fresh, independent uniform h in Z/M multiplies the measured +/-1 port sign by +1 if |h|_M<=floor(M/4), else -1. Conditional on any character k, the Z expectation is cos(2*pi*k*h/M). The sheet persists and the likelihoods multiply on a character. Accept iff 2*sum(X)>n after n probes; this is the integer threshold mean >1/2. The guarantee is averaged over the random settings and ports; an arbitrarily selected recorded setting string need not separate any sectors.",
+  "gap_proof": "Let L=2 floor(M/4)+1=(M +/-1)/2. The mean at k=0 is (2L-M)/M. At folded k>=1 it is 2*sin(pi*k*L/M)/(M*sin(pi*k/M)). Thus mu_1=1/(M*sin(pi/(2M)))>=2/pi>5/8. For k=2, the absolute mean is 1/(M*cos(pi/M))<1/3 when M>=5. For k>=3, M*sin(pi*k/M)>=2k for k<=M/2, giving absolute mean <=1/k<=1/3. At M=3 the sole distractor is k=0. Hoeffding for X in [-1,1] gives each-class error <= exp(-n/128). The alternative threshold 23/48 uses equal conservative margins 7/48 and yields exp(-49n/4608).",
+  "yield_bound": "For prior W and per-class error eta, true joint acceptance >= W(1-eta); wrong joint acceptance <= (1-W)eta. For positive acceptance the posterior wrong fraction is <= (1-W)eta/[W(1-eta)+(1-W)eta] when the denominator is positive. A localized seed has W=2/M. Without a lower bound on W there is no positive uniform yield of correctly prepared target and no promised purity upon acceptance.",
+  "box_proof": "For odd M>=5, B is the largest power of two <= M/4, hence M/8<B<=M/4. Put equal signed amplitudes on 0,2,...,2(B-1) using log2(B) Hadamards and addressed XOR erasure after each fixed-frame fanout at cost 2(B-1) motion ticks. For M=3 put B=1. The target pair weight is 2 sin^2(2*pi*B/M)/(M B sin^2(2*pi/M)). On [pi/4,pi/2] concavity gives sin^2(x)>=2x/pi; sin(2*pi/M)<=2*pi/M. Hence W>=2/pi^2 uniformly; M=3 gives 2/3 directly. The same ring and physical T read are used throughout. An untracked address-dependent phase or retained route tag changes the prepared spectrum.",
+  "setting_source": "Draw b=ceil(log2(M)) independent fair bits. Reject candidate integers >=M and try again; each accepted label has probability 1/M. The number of attempts is geometric independent of the accepted label, with finite mean 2^b/M<2. Generate all settings before launch if fixed elapsed walk time matters. A cap retains a pending outcome; sampling by remainder alone is biased. Calibration, random settings and coherent controls are supplied physical premises.",
+  "cost": "At fixed eta and target prior W>=2/pi^2 the scheduled motion depth 2(B-1)+n(M-1) is linear in M; each probe additionally needs two comparison Hadamards and motor/branch gates. Compiled motor toggles have bounded local depth per hop. Counting each motor control as time adds only a constant factor. Fresh independent launches may be needed for a specified eventual successful output; arbitrary input has no prior guarantee.",
+  "physical_ports": [
+    {
+      "M": 3,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 2,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 2,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 2,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "7/10",
+              "minus": "3/10",
+              "plus_counts": [
+                -2,
+                -3,
+                -1
+              ],
+              "minus_counts": [
+                -2,
+                1,
+                1
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 2,
+              "plus": "7/10",
+              "minus": "3/10",
+              "plus_counts": [
+                -3,
+                -1,
+                -2
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                2
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "M": 5,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 4,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 4,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0,
+            1,
+            2
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 4,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                1,
+                3
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/4",
+              "minus": "3/4",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                2
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                2
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 4,
+              "plus": "1/4",
+              "minus": "3/4",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 4,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "M": 7,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 6,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 6,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 6,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "19/30",
+              "minus": "11/30",
+              "plus_counts": [
+                -3,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                -4,
+                -2,
+                -2,
+                0,
+                2,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                -3,
+                -3
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "4/15",
+              "minus": "11/15",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                -1,
+                1,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                3,
+                3,
+                -2,
+                -2
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 6,
+              "plus": "4/15",
+              "minus": "11/15",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                0,
+                -3,
+                -1
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                4,
+                -1,
+                -1
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 6,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 6,
+              "plus": "19/30",
+              "minus": "11/30",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "M": 9,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 8,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 8,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1,
+            0,
+            1
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 8,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                -1,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                -3,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "9/32",
+              "minus": "23/32",
+              "plus_counts": [
+                -2,
+                0,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "11/32",
+              "minus": "21/32",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "11/16",
+              "minus": "5/16",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                0,
+                -3,
+                -1,
+                1,
+                3
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                4,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 8,
+              "plus": "11/16",
+              "minus": "5/16",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                -4,
+                -2,
+                0,
+                2
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 8,
+              "plus": "11/32",
+              "minus": "21/32",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                -3,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 8,
+              "plus": "9/32",
+              "minus": "23/32",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                2,
+                2
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 8,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                -1
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                3
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "M": 11,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 10,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 10,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 10,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "7/12",
+              "minus": "5/12",
+              "plus_counts": [
+                -4,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0
+              ],
+              "minus_counts": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "7/24",
+              "minus": "17/24",
+              "plus_counts": [
+                0,
+                -3,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "11/48",
+              "minus": "37/48",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "19/48",
+              "minus": "29/48",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "19/24",
+              "minus": "5/24",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 10,
+              "plus": "19/24",
+              "minus": "5/24",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -3,
+                -1,
+                1,
+                3,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                -4
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 10,
+              "plus": "19/48",
+              "minus": "29/48",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -2,
+                0,
+                2,
+                -1
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                2,
+                2,
+                2,
+                -3
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 10,
+              "plus": "11/48",
+              "minus": "37/48",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                -1,
+                1,
+                -2
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                3,
+                3,
+                -2
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 10,
+              "plus": "7/24",
+              "minus": "17/24",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                4,
+                -1
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 10,
+              "plus": "7/12",
+              "minus": "5/12",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -4
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "M": 17,
+      "inputs": {
+        "localized": {
+          "seed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 16,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 11,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 12,
+              "even_lift": 12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 13,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 14,
+              "even_lift": 14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 15,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 16,
+              "even_lift": 16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "box": {
+          "seed": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 16,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "7/8",
+              "minus": "1/8",
+              "plus_counts": [
+                1,
+                0,
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                2,
+                0,
+                2,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "5/8",
+              "minus": "3/8",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                2,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1
+              ]
+            },
+            {
+              "h": 11,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "5/8",
+              "minus": "3/8",
+              "plus_counts": [
+                2,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 12,
+              "even_lift": 12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1
+              ]
+            },
+            {
+              "h": 13,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "3/4",
+              "minus": "1/4",
+              "plus_counts": [
+                2,
+                0,
+                2,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 14,
+              "even_lift": 14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ]
+            },
+            {
+              "h": 15,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "7/8",
+              "minus": "1/8",
+              "plus_counts": [
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ]
+            },
+            {
+              "h": 16,
+              "even_lift": 16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "1/2",
+              "minus": "1/2",
+              "plus_counts": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "minus_counts": [
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ]
+            }
+          ]
+        },
+        "signed": {
+          "seed": [
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            -2,
+            -1
+          ],
+          "rows": [
+            {
+              "h": 0,
+              "even_lift": 0,
+              "min_hops": 0,
+              "scheduled_hops": 16,
+              "plus": "1",
+              "minus": "0",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 1,
+              "even_lift": -16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "39/70",
+              "minus": "31/70",
+              "plus_counts": [
+                -3,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1
+              ]
+            },
+            {
+              "h": 2,
+              "even_lift": 2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "5/14",
+              "minus": "9/14",
+              "plus_counts": [
+                -4,
+                -2,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3
+              ]
+            },
+            {
+              "h": 3,
+              "even_lift": -14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "9/35",
+              "minus": "26/35",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2
+              ]
+            },
+            {
+              "h": 4,
+              "even_lift": 4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "2/5",
+              "minus": "3/5",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1
+              ]
+            },
+            {
+              "h": 5,
+              "even_lift": -12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "11/14",
+              "minus": "3/14",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 6,
+              "even_lift": 6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "39/70",
+              "minus": "31/70",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1
+              ]
+            },
+            {
+              "h": 7,
+              "even_lift": -10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "4/7",
+              "minus": "3/7",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3
+              ]
+            },
+            {
+              "h": 8,
+              "even_lift": 8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "23/70",
+              "minus": "47/70",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2
+              ]
+            },
+            {
+              "h": 9,
+              "even_lift": -8,
+              "min_hops": 8,
+              "scheduled_hops": 16,
+              "plus": "23/70",
+              "minus": "47/70",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1
+              ]
+            },
+            {
+              "h": 10,
+              "even_lift": 10,
+              "min_hops": 10,
+              "scheduled_hops": 16,
+              "plus": "4/7",
+              "minus": "3/7",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 11,
+              "even_lift": -6,
+              "min_hops": 6,
+              "scheduled_hops": 16,
+              "plus": "39/70",
+              "minus": "31/70",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1
+              ]
+            },
+            {
+              "h": 12,
+              "even_lift": 12,
+              "min_hops": 12,
+              "scheduled_hops": 16,
+              "plus": "11/14",
+              "minus": "3/14",
+              "plus_counts": [
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                0,
+                2,
+                4,
+                -4,
+                -2,
+                -2,
+                0,
+                2,
+                -1,
+                1
+              ],
+              "minus_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                -3,
+                -3
+              ]
+            },
+            {
+              "h": 13,
+              "even_lift": -4,
+              "min_hops": 4,
+              "scheduled_hops": 16,
+              "plus": "2/5",
+              "minus": "3/5",
+              "plus_counts": [
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                -1,
+                1,
+                -2,
+                0
+              ],
+              "minus_counts": [
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                1,
+                1,
+                -4,
+                1,
+                1,
+                3,
+                3,
+                -2,
+                -2
+              ]
+            },
+            {
+              "h": 14,
+              "even_lift": 14,
+              "min_hops": 14,
+              "scheduled_hops": 16,
+              "plus": "9/35",
+              "minus": "26/35",
+              "plus_counts": [
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                0,
+                -3,
+                -1
+              ],
+              "minus_counts": [
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                2,
+                -3,
+                -3,
+                2,
+                2,
+                4,
+                -1,
+                -1
+              ]
+            },
+            {
+              "h": 15,
+              "even_lift": -2,
+              "min_hops": 2,
+              "scheduled_hops": 16,
+              "plus": "5/14",
+              "minus": "9/14",
+              "plus_counts": [
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -2,
+                0,
+                2,
+                -1,
+                1,
+                -4,
+                -2
+              ],
+              "minus_counts": [
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                -2,
+                -2,
+                -2,
+                3,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "h": 16,
+              "even_lift": 16,
+              "min_hops": 16,
+              "scheduled_hops": 16,
+              "plus": "39/70",
+              "minus": "31/70",
+              "plus_counts": [
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -1,
+                1,
+                3,
+                0,
+                -3,
+                -3
+              ],
+              "minus_counts": [
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                4,
+                -1,
+                1
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "all_record_trees": [
+    {
+      "M": 3,
+      "reports": 1,
+      "accept": "2/3",
+      "reject": "1/3",
+      "live_accept_leaves": 3,
+      "live_reject_leaves": 2,
+      "zero_mass_leaves": 1,
+      "all_setting_port_histories": 6,
+      "independent_spectral_accept": 0.6666666666666666
+    },
+    {
+      "M": 3,
+      "reports": 2,
+      "accept": "1/2",
+      "reject": "1/2",
+      "live_accept_leaves": 9,
+      "live_reject_leaves": 16,
+      "zero_mass_leaves": 11,
+      "all_setting_port_histories": 36,
+      "independent_spectral_accept": 0.4999999999999999
+    },
+    {
+      "M": 3,
+      "reports": 3,
+      "accept": "43/108",
+      "reject": "65/108",
+      "live_accept_leaves": 27,
+      "live_reject_leaves": 98,
+      "zero_mass_leaves": 91,
+      "all_setting_port_histories": 216,
+      "independent_spectral_accept": 0.398148148148148
+    },
+    {
+      "M": 5,
+      "reports": 1,
+      "accept": "3/5",
+      "reject": "2/5",
+      "live_accept_leaves": 5,
+      "live_reject_leaves": 4,
+      "zero_mass_leaves": 1,
+      "all_setting_port_histories": 10,
+      "independent_spectral_accept": 0.6000000000000001
+    },
+    {
+      "M": 5,
+      "reports": 2,
+      "accept": "2/5",
+      "reject": "3/5",
+      "live_accept_leaves": 25,
+      "live_reject_leaves": 56,
+      "zero_mass_leaves": 19,
+      "all_setting_port_histories": 100,
+      "independent_spectral_accept": 0.4
+    },
+    {
+      "M": 5,
+      "reports": 3,
+      "accept": "36/125",
+      "reject": "89/125",
+      "live_accept_leaves": 125,
+      "live_reject_leaves": 604,
+      "zero_mass_leaves": 271,
+      "all_setting_port_histories": 1000,
+      "independent_spectral_accept": 0.2880000000000001
+    },
+    {
+      "M": 9,
+      "reports": 1,
+      "accept": "11/18",
+      "reject": "7/18",
+      "live_accept_leaves": 9,
+      "live_reject_leaves": 8,
+      "zero_mass_leaves": 1,
+      "all_setting_port_histories": 18,
+      "independent_spectral_accept": 0.611111111111111
+    },
+    {
+      "M": 9,
+      "reports": 2,
+      "accept": "127/324",
+      "reject": "197/324",
+      "live_accept_leaves": 81,
+      "live_reject_leaves": 208,
+      "zero_mass_leaves": 35,
+      "all_setting_port_histories": 324,
+      "independent_spectral_accept": 0.3919753086419753
+    }
+  ],
+  "exact_depths": [
+    {
+      "M": 3,
+      "relative_minimum_by_h": [
+        0,
+        1,
+        1
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "M": 4,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 5,
+      "relative_minimum_by_h": [
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "M": 6,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 7,
+      "relative_minimum_by_h": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        6,
+        2,
+        4,
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "M": 8,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 9,
+      "relative_minimum_by_h": [
+        0,
+        4,
+        1,
+        3,
+        2,
+        2,
+        3,
+        1,
+        4
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        8,
+        2,
+        6,
+        4,
+        4,
+        6,
+        2,
+        8
+      ]
+    },
+    {
+      "M": 10,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 11,
+      "relative_minimum_by_h": [
+        0,
+        5,
+        1,
+        4,
+        2,
+        3,
+        3,
+        2,
+        4,
+        1,
+        5
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        10,
+        2,
+        8,
+        4,
+        6,
+        6,
+        4,
+        8,
+        2,
+        10
+      ]
+    },
+    {
+      "M": 12,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        6,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 13,
+      "relative_minimum_by_h": [
+        0,
+        6,
+        1,
+        5,
+        2,
+        4,
+        3,
+        3,
+        4,
+        2,
+        5,
+        1,
+        6
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        12,
+        2,
+        10,
+        4,
+        8,
+        6,
+        6,
+        8,
+        4,
+        10,
+        2,
+        12
+      ]
+    },
+    {
+      "M": 14,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        3,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        6,
+        null,
+        6,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 15,
+      "relative_minimum_by_h": [
+        0,
+        7,
+        1,
+        6,
+        2,
+        5,
+        3,
+        4,
+        4,
+        3,
+        5,
+        2,
+        6,
+        1,
+        7
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        14,
+        2,
+        12,
+        4,
+        10,
+        6,
+        8,
+        8,
+        6,
+        10,
+        4,
+        12,
+        2,
+        14
+      ]
+    },
+    {
+      "M": 16,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        4,
+        null,
+        3,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        6,
+        null,
+        8,
+        null,
+        6,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 17,
+      "relative_minimum_by_h": [
+        0,
+        8,
+        1,
+        7,
+        2,
+        6,
+        3,
+        5,
+        4,
+        4,
+        5,
+        3,
+        6,
+        2,
+        7,
+        1,
+        8
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        16,
+        2,
+        14,
+        4,
+        12,
+        6,
+        10,
+        8,
+        8,
+        10,
+        6,
+        12,
+        4,
+        14,
+        2,
+        16
+      ]
+    },
+    {
+      "M": 18,
+      "relative_minimum_by_h": [
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        4,
+        null,
+        4,
+        null,
+        3,
+        null,
+        2,
+        null,
+        1,
+        null
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        null,
+        2,
+        null,
+        4,
+        null,
+        6,
+        null,
+        8,
+        null,
+        8,
+        null,
+        6,
+        null,
+        4,
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "M": 19,
+      "relative_minimum_by_h": [
+        0,
+        9,
+        1,
+        8,
+        2,
+        7,
+        3,
+        6,
+        4,
+        5,
+        5,
+        4,
+        6,
+        3,
+        7,
+        2,
+        8,
+        1,
+        9
+      ],
+      "fixed_minimum_by_h": [
+        0,
+        18,
+        2,
+        16,
+        4,
+        14,
+        6,
+        12,
+        8,
+        10,
+        10,
+        8,
+        12,
+        6,
+        14,
+        4,
+        16,
+        2,
+        18
+      ]
+    }
+  ],
+  "direct_score_means": [
+    {
+      "M": 3,
+      "interval_length": 1,
+      "folded_score_means": [
+        -0.3333333333333333,
+        0.6666666666666666
+      ],
+      "direct_sum_max_abs_error": 0.0
+    },
+    {
+      "M": 5,
+      "interval_length": 3,
+      "folded_score_means": [
+        0.2,
+        0.6472135954999579,
+        -0.24721359549995792
+      ],
+      "direct_sum_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "M": 7,
+      "interval_length": 3,
+      "folded_score_means": [
+        -0.14285714285714285,
+        0.6419941724907049,
+        0.15855946631067752,
+        -0.22912506737281088
+      ],
+      "direct_sum_max_abs_error": 3.0531133177191805e-16
+    },
+    {
+      "M": 9,
+      "interval_length": 5,
+      "folded_score_means": [
+        0.1111111111111111,
+        0.6398633870159592,
+        -0.11824197471954577,
+        -0.22222222222222235,
+        0.14504525437025317
+      ],
+      "direct_sum_max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "M": 11,
+      "interval_length": 5,
+      "folded_score_means": [
+        -0.09090909090909091,
+        0.6387885621211155,
+        0.09474701056603686,
+        -0.2188392043228299,
+        -0.10806384444311641,
+        0.13882202153333958
+      ],
+      "direct_sum_max_abs_error": 4.996003610813204e-16
+    },
+    {
+      "M": 13,
+      "interval_length": 7,
+      "folded_score_means": [
+        0.07692307692307693,
+        0.6381715238891351,
+        -0.07922521776536354,
+        -0.21692616129638911,
+        0.08687396628909932,
+        0.1354125165585779,
+        -0.10276816613659791
+      ],
+      "direct_sum_max_abs_error": 5.134781488891349e-16
+    },
+    {
+      "M": 15,
+      "interval_length": 7,
+      "folded_score_means": [
+        -0.06666666666666667,
+        0.6377848155670418,
+        0.06815603965766862,
+        -0.21573786516665264,
+        -0.07297575190040312,
+        0.1333333333333333,
+        0.08240453183331935,
+        -0.09963176999097383
+      ],
+      "direct_sum_max_abs_error": 4.996003610813204e-16
+    },
+    {
+      "M": 17,
+      "interval_length": 9,
+      "folded_score_means": [
+        0.058823529411764705,
+        0.6375265557329072,
+        -0.05984246103039924,
+        -0.21494879302557715,
+        0.06308341155568774,
+        0.13196874051658838,
+        -0.06918647830037587,
+        -0.09761060161624241,
+        0.0795978614615291
+      ],
+      "direct_sum_max_abs_error": 6.661338147750939e-16
+    },
+    {
+      "M": 19,
+      "interval_length": 9,
+      "folded_score_means": [
+        -0.05263157894736842,
+        0.6373455571284746,
+        0.05335933066899672,
+        -0.2143979245387381,
+        -0.05564666896189564,
+        0.13102359578239564,
+        0.059844399989387745,
+        -0.09622772865355839,
+        -0.06669481330723458,
+        0.07771004136585605
+      ],
+      "direct_sum_max_abs_error": 3.191891195797325e-16
+    },
+    {
+      "M": 21,
+      "interval_length": 11,
+      "folded_score_means": [
+        0.047619047619047616,
+        0.6372138095073692,
+        -0.048156920634072134,
+        -0.21399805749690162,
+        0.049832987429850255,
+        0.1303413644871461,
+        -0.05285315543689246,
+        -0.09523809523809529,
+        0.05763351842022801,
+        0.07637502245760357,
+        -0.06495999730575973
+      ],
+      "direct_sum_max_abs_error": 2.42861286636753e-16
+    },
+    {
+      "M": 23,
+      "interval_length": 11,
+      "folded_score_means": [
+        -0.043478260869565216,
+        0.6371149366776918,
+        0.04388702700741747,
+        -0.21369857895680602,
+        -0.04515264336910935,
+        0.1298325108169489,
+        0.04740266588320784,
+        -0.09450459675001985,
+        -0.05088632191428623,
+        0.07539404276899349,
+        0.05604953981020793,
+        -0.0636994515394635
+      ],
+      "direct_sum_max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "M": 25,
+      "interval_length": 13,
+      "folded_score_means": [
+        0.04,
+        0.6370388443963462,
+        -0.0403179188323719,
+        -0.21346845649169838,
+        0.041297434856693606,
+        0.12944271909999158,
+        -0.04302109228088983,
+        -0.09394538624217412,
+        0.04564612014368966,
+        0.07465098866802271,
+        -0.049442719099991546,
+        -0.06275258014021479,
+        0.05487204592259665
+      ],
+      "direct_sum_max_abs_error": 5.204170427930421e-16
+    },
+    {
+      "M": 27,
+      "interval_length": 13,
+      "folded_score_means": [
+        -0.037037037037037035,
+        0.6369790354712722,
+        0.03728917308554013,
+        -0.2132877956719864,
+        -0.038063030962762374,
+        0.12913744620984136,
+        0.03941399157318193,
+        -0.09350903583743155,
+        -0.041445483709763524,
+        0.07407407407407408,
+        0.04432983525445077,
+        -0.062022111967654246,
+        -0.048348418123417725,
+        0.053970839123174304
+      ],
+      "direct_sum_max_abs_error": 6.591949208711867e-16
+    },
+    {
+      "M": 29,
+      "interval_length": 15,
+      "folded_score_means": [
+        0.034482758620689655,
+        0.6369311743010957,
+        -0.034686089966219205,
+        -0.21314336177970955,
+        0.035308245786018266,
+        0.12889385405024403,
+        -0.03638753044813888,
+        -0.09316185895242984,
+        0.03799437255935301,
+        0.0736168600402959,
+        -0.04024329792617062,
+        -0.061446103713068856,
+        0.043314984272755395,
+        0.0532645800988979,
+        -0.04749720763326818
+      ],
+      "direct_sum_max_abs_error": 9.71445146547012e-16
+    },
+    {
+      "M": 31,
+      "interval_length": 15,
+      "folded_score_means": [
+        -0.03225806451612903,
+        0.6368922779138126,
+        0.03242442374858737,
+        -0.21302607122497114,
+        -0.03293218834626108,
+        0.1286963440003576,
+        0.033808549747589504,
+        -0.0928810153370824,
+        -0.03510287861774028,
+        0.07324816735652637,
+        0.03689390902931663,
+        -0.060983476921595656,
+        -0.03930251141386135,
+        0.052700129447954304,
+        0.04251429217211801,
+        -0.046820919296685845
+      ],
+      "direct_sum_max_abs_error": 9.43689570931383e-16
+    },
+    {
+      "M": 33,
+      "interval_length": 17,
+      "folded_score_means": [
+        0.030303030303030304,
+        0.6368602394086407,
+        -0.03044086891441736,
+        -0.21292952070703852,
+        0.030860723785245448,
+        0.12853396303962608,
+        -0.03158233685534557,
+        -0.09265056105058206,
+        0.03264118591923151,
+        0.07294640144094333,
+        -0.0340929587685638,
+        -0.06060606060606072,
+        0.03602128148103875,
+        0.052241478039510854,
+        -0.03855086953502301,
+        -0.04627400717778009,
+        0.041870395349059106
+      ],
+      "direct_sum_max_abs_error": 7.28583859910259e-16
+    }
+  ],
+  "spectral_orders": [
+    {
+      "M": 3,
+      "box_width": 1,
+      "preparation_hops": 0,
+      "target_prior": 0.6666666666666666,
+      "full_weight_sum": 1.0,
+      "settings_per_probe": 3,
+      "hop_depth_per_probe": 2,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.6666666666666666,
+          "target_and_accept": 0.5555555555555555,
+          "conditional_target": 0.8333333333333333,
+          "total_scheduled_hops": 2
+        },
+        {
+          "probes": 7,
+          "accept": 0.4488168724279834,
+          "target_and_accept": 0.4465306355738453,
+          "conditional_target": 0.9949060808659662,
+          "total_scheduled_hops": 14
+        },
+        {
+          "probes": 63,
+          "accept": 0.6326917122243552,
+          "target_and_accept": 0.6326917122229827,
+          "conditional_target": 0.9999999999978307,
+          "total_scheduled_hops": 126
+        }
+      ]
+    },
+    {
+      "M": 5,
+      "box_width": 1,
+      "preparation_hops": 0,
+      "target_prior": 0.4,
+      "full_weight_sum": 1.0,
+      "settings_per_probe": 5,
+      "hop_depth_per_probe": 4,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.6000000000000001,
+          "target_and_accept": 0.3294427190999916,
+          "conditional_target": 0.549071198499986,
+          "total_scheduled_hops": 4
+        },
+        {
+          "probes": 7,
+          "accept": 0.2941000000000001,
+          "target_and_accept": 0.2569808101111721,
+          "conditional_target": 0.8737871816088814,
+          "total_scheduled_hops": 28
+        },
+        {
+          "probes": 63,
+          "accept": 0.36986768601549297,
+          "target_and_accept": 0.36883001538712273,
+          "conditional_target": 0.9971944815197326,
+          "total_scheduled_hops": 252
+        }
+      ]
+    },
+    {
+      "M": 7,
+      "box_width": 1,
+      "preparation_hops": 0,
+      "target_prior": 0.2857142857142857,
+      "full_weight_sum": 1.0,
+      "settings_per_probe": 7,
+      "hop_depth_per_probe": 6,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5714285714285714,
+          "target_and_accept": 0.23457059607010067,
+          "conditional_target": 0.4104985431226762,
+          "total_scheduled_hops": 6
+        },
+        {
+          "probes": 7,
+          "accept": 0.22782538373831115,
+          "target_and_accept": 0.18146549732153533,
+          "conditional_target": 0.7965113208367223,
+          "total_scheduled_hops": 42
+        },
+        {
+          "probes": 63,
+          "accept": 0.2615354276412768,
+          "target_and_accept": 0.26098209297057706,
+          "conditional_target": 0.9978842840693128,
+          "total_scheduled_hops": 378
+        }
+      ]
+    },
+    {
+      "M": 9,
+      "box_width": 2,
+      "preparation_hops": 2,
+      "target_prior": 0.2608107061482068,
+      "full_weight_sum": 0.9999999999999999,
+      "settings_per_probe": 9,
+      "hop_depth_per_probe": 8,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.611111111111111,
+          "target_and_accept": 0.21384696397711123,
+          "conditional_target": 0.3499313955989093,
+          "total_scheduled_hops": 10
+        },
+        {
+          "probes": 7,
+          "accept": 0.24031881400443952,
+          "target_and_accept": 0.16486951385165602,
+          "conditional_target": 0.6860449712797364,
+          "total_scheduled_hops": 58
+        },
+        {
+          "probes": 63,
+          "accept": 0.23793324660134457,
+          "target_and_accept": 0.23726823920535622,
+          "conditional_target": 0.9972050673645345,
+          "total_scheduled_hops": 506
+        }
+      ]
+    },
+    {
+      "M": 11,
+      "box_width": 2,
+      "preparation_hops": 2,
+      "target_prior": 0.2573481841821612,
+      "full_weight_sum": 1.0,
+      "settings_per_probe": 11,
+      "hop_depth_per_probe": 10,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5909090909090908,
+          "target_and_accept": 0.21086963036018197,
+          "conditional_target": 0.35685629753261566,
+          "total_scheduled_hops": 12
+        },
+        {
+          "probes": 7,
+          "accept": 0.2217335157319654,
+          "target_and_accept": 0.1622931463799977,
+          "conditional_target": 0.7319288013102175,
+          "total_scheduled_hops": 72
+        },
+        {
+          "probes": 63,
+          "accept": 0.23404255380799943,
+          "target_and_accept": 0.23362732218677237,
+          "conditional_target": 0.9982258285321579,
+          "total_scheduled_hops": 632
+        }
+      ]
+    },
+    {
+      "M": 17,
+      "box_width": 4,
+      "preparation_hops": 6,
+      "target_prior": 0.22346640201231324,
+      "full_weight_sum": 0.9999999999999998,
+      "settings_per_probe": 17,
+      "hop_depth_per_probe": 16,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.588235294117647,
+          "target_and_accept": 0.18296608380462423,
+          "conditional_target": 0.3110423424678612,
+          "total_scheduled_hops": 22
+        },
+        {
+          "probes": 7,
+          "accept": 0.20414933473593164,
+          "target_and_accept": 0.1405310470402077,
+          "conditional_target": 0.6883737692409599,
+          "total_scheduled_hops": 118
+        },
+        {
+          "probes": 63,
+          "accept": 0.20250605667825175,
+          "target_and_accept": 0.20236044898932798,
+          "conditional_target": 0.9992809711901353,
+          "total_scheduled_hops": 1014
+        }
+      ]
+    },
+    {
+      "M": 31,
+      "box_width": 4,
+      "preparation_hops": 6,
+      "target_prior": 0.2091004040598996,
+      "full_weight_sum": 0.9999999999999999,
+      "settings_per_probe": 31,
+      "hop_depth_per_probe": 30,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.564516129032258,
+          "target_and_accept": 0.17113741835715385,
+          "conditional_target": 0.30315771251838686,
+          "total_scheduled_hops": 36
+        },
+        {
+          "probes": 7,
+          "accept": 0.18098862495754725,
+          "target_and_accept": 0.13131100257078507,
+          "conditional_target": 0.7255207480668214,
+          "total_scheduled_hops": 216
+        },
+        {
+          "probes": 63,
+          "accept": 0.1891514904929593,
+          "target_and_accept": 0.18910943645485906,
+          "conditional_target": 0.9997776700675706,
+          "total_scheduled_hops": 1896
+        }
+      ]
+    },
+    {
+      "M": 33,
+      "box_width": 8,
+      "preparation_hops": 14,
+      "target_prior": 0.21103972244772085,
+      "full_weight_sum": 0.9999999999999993,
+      "settings_per_probe": 33,
+      "hop_depth_per_probe": 32,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5757575757575755,
+          "target_and_accept": 0.17272126530525472,
+          "conditional_target": 0.2999895660564952,
+          "total_scheduled_hops": 46
+        },
+        {
+          "probes": 7,
+          "accept": 0.18901960349772928,
+          "target_and_accept": 0.132519390004465,
+          "conditional_target": 0.7010880752697006,
+          "total_scheduled_hops": 238
+        },
+        {
+          "probes": 63,
+          "accept": 0.1909054826478843,
+          "target_and_accept": 0.19085096529479,
+          "conditional_target": 0.9997144275149246,
+          "total_scheduled_hops": 2030
+        }
+      ]
+    },
+    {
+      "M": 65,
+      "box_width": 16,
+      "preparation_hops": 30,
+      "target_prior": 0.20633033574402745,
+      "full_weight_sum": 0.999999999999999,
+      "settings_per_probe": 65,
+      "hop_depth_per_probe": 64,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5692307692307688,
+          "target_and_accept": 0.16884854655732284,
+          "conditional_target": 0.29662582503313495,
+          "total_scheduled_hops": 94
+        },
+        {
+          "probes": 7,
+          "accept": 0.18236312430232887,
+          "target_and_accept": 0.12951063241575464,
+          "conditional_target": 0.7101799385770927,
+          "total_scheduled_hops": 478
+        },
+        {
+          "probes": 63,
+          "accept": 0.18655780073043454,
+          "target_and_accept": 0.18652456082213267,
+          "conditional_target": 0.9998218251492474,
+          "total_scheduled_hops": 4062
+        }
+      ]
+    },
+    {
+      "M": 127,
+      "box_width": 16,
+      "preparation_hops": 30,
+      "target_prior": 0.2037121085930649,
+      "full_weight_sum": 0.9999999999999996,
+      "settings_per_probe": 127,
+      "hop_depth_per_probe": 126,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5629921259842517,
+          "target_and_accept": 0.16670128571272996,
+          "conditional_target": 0.296098787210024,
+          "total_scheduled_hops": 156
+        },
+        {
+          "probes": 7,
+          "accept": 0.17712995354768682,
+          "target_and_accept": 0.127854163812028,
+          "conditional_target": 0.7218099550712476,
+          "total_scheduled_hops": 912
+        },
+        {
+          "probes": 63,
+          "accept": 0.18416385320965475,
+          "target_and_accept": 0.18414055031454543,
+          "conditional_target": 0.9998734665098324,
+          "total_scheduled_hops": 7968
+        }
+      ]
+    },
+    {
+      "M": 129,
+      "box_width": 32,
+      "preparation_hops": 62,
+      "target_prior": 0.20435678267537535,
+      "full_weight_sum": 0.9999999999999984,
+      "settings_per_probe": 129,
+      "hop_depth_per_probe": 128,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5658914728682162,
+          "target_and_accept": 0.16722878308973202,
+          "conditional_target": 0.29551387696678716,
+          "total_scheduled_hops": 190
+        },
+        {
+          "probes": 7,
+          "accept": 0.17928489089837987,
+          "target_and_accept": 0.1282586324425189,
+          "conditional_target": 0.715390079999641,
+          "total_scheduled_hops": 958
+        },
+        {
+          "probes": 63,
+          "accept": 0.18474962992578783,
+          "target_and_accept": 0.1847231001330781,
+          "conditional_target": 0.9998564013756326,
+          "total_scheduled_hops": 8126
+        }
+      ]
+    },
+    {
+      "M": 255,
+      "box_width": 32,
+      "preparation_hops": 62,
+      "target_prior": 0.20313529196307767,
+      "full_weight_sum": 0.9999999999999983,
+      "settings_per_probe": 255,
+      "hop_depth_per_probe": 254,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5627450980392149,
+          "target_and_accept": 0.16622802657301847,
+          "conditional_target": 0.29538778241198443,
+          "total_scheduled_hops": 316
+        },
+        {
+          "probes": 7,
+          "accept": 0.17672439823361624,
+          "target_and_accept": 0.1274886698265849,
+          "conditional_target": 0.7213982398630355,
+          "total_scheduled_hops": 1840
+        },
+        {
+          "probes": 63,
+          "accept": 0.18363693673278772,
+          "target_and_accept": 0.18361459661929175,
+          "conditional_target": 0.9998783462962657,
+          "total_scheduled_hops": 16064
+        }
+      ]
+    },
+    {
+      "M": 511,
+      "box_width": 64,
+      "preparation_hops": 126,
+      "target_prior": 0.2028785035018515,
+      "full_weight_sum": 0.9999999999999986,
+      "settings_per_probe": 511,
+      "hop_depth_per_probe": 510,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.562622309197651,
+          "target_and_accept": 0.16601758681263915,
+          "conditional_target": 0.2950782151695955,
+          "total_scheduled_hops": 636
+        },
+        {
+          "probes": 7,
+          "accept": 0.17654555115885162,
+          "target_and_accept": 0.12732664937102342,
+          "conditional_target": 0.721211316486009,
+          "total_scheduled_hops": 3696
+        },
+        {
+          "probes": 63,
+          "accept": 0.18340340194262425,
+          "target_and_accept": 0.18338135786216903,
+          "conditional_target": 0.99987980549858,
+          "total_scheduled_hops": 32256
+        }
+      ]
+    },
+    {
+      "M": 1025,
+      "box_width": 256,
+      "preparation_hops": 510,
+      "target_prior": 0.20284232451343212,
+      "full_weight_sum": 0.9999999999999751,
+      "settings_per_probe": 1025,
+      "hop_depth_per_probe": 1024,
+      "reads": [
+        {
+          "probes": 1,
+          "accept": 0.5629268292682803,
+          "target_and_accept": 0.16598790475842323,
+          "conditional_target": 0.294865862005871,
+          "total_scheduled_hops": 1534
+        },
+        {
+          "probes": 7,
+          "accept": 0.17673536202590423,
+          "target_and_accept": 0.1273037294601131,
+          "conditional_target": 0.7203070624963785,
+          "total_scheduled_hops": 7678
+        },
+        {
+          "probes": 63,
+          "accept": 0.18337072436646998,
+          "target_and_accept": 0.18334837500772974,
+          "conditional_target": 0.9998781192645803,
+          "total_scheduled_hops": 65022
+        }
+      ]
+    }
+  ],
+  "fair_bit_samplers": [
+    {
+      "M": 3,
+      "bits_per_draw": 2,
+      "accept_per_draw": "3/4",
+      "expected_draws": "4/3",
+      "pending_after_three_draws": "1/64",
+      "fixed_bits_modulo_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "M": 5,
+      "bits_per_draw": 3,
+      "accept_per_draw": "5/8",
+      "expected_draws": "8/5",
+      "pending_after_three_draws": "27/512",
+      "fixed_bits_modulo_counts": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "M": 7,
+      "bits_per_draw": 3,
+      "accept_per_draw": "7/8",
+      "expected_draws": "8/7",
+      "pending_after_three_draws": "1/512",
+      "fixed_bits_modulo_counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "M": 9,
+      "bits_per_draw": 4,
+      "accept_per_draw": "9/16",
+      "expected_draws": "16/9",
+      "pending_after_three_draws": "343/4096",
+      "fixed_bits_modulo_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "M": 17,
+      "bits_per_draw": 5,
+      "accept_per_draw": "17/32",
+      "expected_draws": "32/17",
+      "pending_after_three_draws": "3375/32768",
+      "fixed_bits_modulo_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ]
+    }
+  ],
+  "adverse": {
+    "pure_constant_M5_one_probe_accept": "3/5",
+    "pure_constant_M5_conditional_target": "0",
+    "force_setting_to_zero": "At h=0 the + port has probability one for all inputs and the score is +1. The empirical gap needs uniform independent settings.",
+    "leaked_route_tag": "If a disjoint unread tag marks the two interfering routes, the split outcomes are 1/2 independent of k, and each full score has mean zero.",
+    "modulo_sampling": "The sampler rows include nonuniform counts when fixed-width random bits are reduced modulo M."
+  }
+}

@@ -1,0 +1,47 @@
+P1 hypothesis B*B=d: True
+P1 Z(q=2) N=6 unknowns=13 eqs=73 full_dim=1 inner_window(|x|<=3)_dim=1
+  predicate P1 (dim=1): PASS
+P1 Z(q=2) N=10 unknowns=21 eqs=201 full_dim=1 inner_window(|x|<=5)_dim=1
+  predicate P1 (dim=1): PASS
+P1 Z(q=2) N=20 unknowns=41 eqs=801 full_dim=1 inner_window(|x|<=10)_dim=1
+  predicate P1 (dim=1): PASS
+P1 Z(q=2) N=40 unknowns=81 eqs=3201 full_dim=1 inner_window(|x|<=20)_dim=1
+  predicate P1 (dim=1): PASS
+P4/P1 Z(q=2) coset-quadratic family: params=6 cosets=2 solution_dim=1
+  predicate P4/P1 (dim=1): PASS
+P2 hypothesis B*B=d: True
+P2 Z[i](q=4) N=2 unknowns=25 eqs=145 full_dim=1 inner_window(|x|<=1)_dim=1
+  predicate P2 (dim=1): PASS
+P2 Z[i](q=4) N=4 unknowns=81 eqs=1601 full_dim=1 inner_window(|x|<=2)_dim=1
+  predicate P2 (dim=1): PASS
+P2 Z[i](q=4) N=6 unknowns=169 eqs=7057 full_dim=1 inner_window(|x|<=3)_dim=1
+  predicate P2 (dim=1): PASS
+P4/P2 Z[i](q=4) coset-quadratic family: params=24 cosets=4 solution_dim=1
+  predicate P4/P2 (dim=1): PASS
+P2b hypothesis B*B=d: True
+P2b Z[i](q=4) N=2 unknowns=25 eqs=145 full_dim=3 inner_window(|x|<=1)_dim=3
+  predicate P2b (dim=3): PASS
+P2b Z[i](q=4) N=4 unknowns=81 eqs=1601 full_dim=3 inner_window(|x|<=2)_dim=3
+  predicate P2b (dim=3): PASS
+P2b Z[i](q=4) N=6 unknowns=169 eqs=7057 full_dim=3 inner_window(|x|<=3)_dim=3
+  predicate P2b (dim=3): PASS
+P4/P2b Z[i](q=4) coset-quadratic family: params=24 cosets=4 solution_dim=3
+  predicate P4/P2b (dim=3): PASS
+P3 hypothesis B*B=d: True
+P3 Z[w](q=3) N=2 unknowns=25 eqs=305 full_dim=1 inner_window(|x|<=1)_dim=1
+  predicate P3 (dim=1): PASS
+P3 Z[w](q=3) N=3 unknowns=49 eqs=2285 full_dim=1 inner_window(|x|<=1)_dim=1
+  predicate P3 (dim=1): PASS
+P3 Z[w](q=3) N=4 unknowns=81 eqs=9990 full_dim=1 inner_window(|x|<=2)_dim=1
+  predicate P3 (dim=1): PASS
+P4/P3 Z[w](q=3) coset-quadratic family: params=54 cosets=9 solution_dim=1
+  predicate P4/P3 (dim=1): PASS
+qualifying blocks: 4 of 4
+P3b two-input Z[w](q=3) N=2 unknowns=25 eqs=131 full_dim=3 inner_window(|x|<=1)_dim=3
+  predicate P3b (dim>1): PASS
+P3b two-input Z[w](q=3) N=3 unknowns=49 eqs=549 full_dim=3 inner_window(|x|<=1)_dim=3
+  predicate P3b (dim>1): PASS
+P3b two-input Z[w](q=3) N=4 unknowns=81 eqs=1576 full_dim=3 inner_window(|x|<=2)_dim=3
+  predicate P3b (dim>1): PASS
+P3b two-input Z[w](q=3) N=6 unknowns=169 eqs=7079 full_dim=3 inner_window(|x|<=3)_dim=3
+  predicate P3b (dim>1): PASS

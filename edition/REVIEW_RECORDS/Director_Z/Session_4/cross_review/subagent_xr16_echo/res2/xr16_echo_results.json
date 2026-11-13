@@ -1,0 +1,393 @@
+{
+ "summary": {
+  "seed": 20261113,
+  "met": 15,
+  "failed": [
+   "P14"
+  ],
+  "total": 16
+ },
+ "predicates": {
+  "P1": {
+   "passed": true,
+   "ticks": 216,
+   "reduced_wire_amplitudes": [
+    -2,
+    0,
+    -1,
+    1,
+    0,
+    0,
+    3,
+    1
+   ],
+   "norm": 16
+  },
+  "P2": {
+   "passed": true,
+   "wires_3_7": [
+    "5/656",
+    "1/16"
+   ],
+   "e6": [
+    "1/1168",
+    "1/16"
+   ]
+  },
+  "P3": {
+   "passed": true,
+   "ticks": 230,
+   "mid4": [
+    "23/328",
+    "0"
+   ],
+   "post4": [
+    "23/656",
+    "23/656"
+   ],
+   "tv": {
+    "2": "0",
+    "4": "9/328",
+    "6": "9/292"
+   },
+   "same_map": true
+  },
+  "P3c": {
+   "passed": true,
+   "opposite_tv": "9/328",
+   "opposite_mid": [
+    "0",
+    "23/328"
+   ],
+   "single_tv": "0",
+   "empty_tv": "0",
+   "unequal_tv": "1701/15908",
+   "opposite_tv_e2": "0",
+   "unequal_tv_e2": "0"
+  },
+  "P8": {
+   "passed": true,
+   "pre": [
+    "5/656",
+    "1/16"
+   ],
+   "post": [
+    "23/656",
+    "23/656"
+   ],
+   "transpose_bright_row": [
+    "5/656",
+    "1/16"
+   ],
+   "forward_fair_row": [
+    "23/656",
+    "23/656"
+   ]
+  },
+  "P6": {
+   "passed": true,
+   "ticks": 432
+  },
+  "P5": {
+   "passed": true,
+   "dark_checked": 35322,
+   "dark_failed": 0,
+   "single_checked": 3642,
+   "single_failed": 0,
+   "conserve_checked": 23136,
+   "conserve_failed": 0
+  },
+  "P4": {
+   "passed": true,
+   "random_preparations_compared": 10
+  },
+  "P7": {
+   "passed": true,
+   "preparations": 300,
+   "preparations_meeting_forward_hypotheses": 300,
+   "preparations_with_a_qualifying_pair": 289,
+   "stats": {
+    "2": {
+     "qualifying": 1187,
+     "equal_mass": 1187,
+     "unequal_mass": 0,
+     "equiv_fail": 0,
+     "tv_formula_fail": 0
+    },
+    "4": {
+     "qualifying": 1187,
+     "equal_mass": 1010,
+     "unequal_mass": 177,
+     "equiv_fail": 0,
+     "tv_formula_fail": 0
+    },
+    "6": {
+     "qualifying": 1187,
+     "equal_mass": 1010,
+     "unequal_mass": 177,
+     "equiv_fail": 0,
+     "tv_formula_fail": 0
+    }
+   },
+   "first_e4_counterexample": {
+    "layers": [
+     [
+      [
+       1,
+       3
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       7,
+       0
+      ],
+      [
+       5,
+       4
+      ]
+     ],
+     [
+      [
+       3,
+       1
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     [
+      [
+       0,
+       6
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     [
+      [
+       2,
+       7
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       6,
+       3
+      ]
+     ],
+     [
+      [
+       2,
+       5
+      ],
+      [
+       0,
+       7
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       4,
+       3
+      ]
+     ]
+    ],
+    "wires": [
+     0,
+     1
+    ],
+    "amplitudes": [
+     1,
+     1
+    ],
+    "masses": [
+     "569/410656",
+     "1/32"
+    ],
+    "tv": "1533/102664"
+   }
+  },
+  "P9": {
+   "passed": true,
+   "instances": 499,
+   "excluded_zero_pairs": 1,
+   "failures": 0
+  },
+  "P10": {
+   "passed": true,
+   "h_range": [
+    2,
+    30
+   ],
+   "failures": 0
+  },
+  "P11": {
+   "passed": true,
+   "n": 46562,
+   "bound_at_n": 0.04999800321169884,
+   "bound_at_n_minus_1": 0.05000270887057509
+  },
+  "P12": {
+   "passed": true,
+   "layouts": 200,
+   "edges": 1812,
+   "failures": 0
+  },
+  "P13": {
+   "passed": true,
+   "46": {
+    "bijection": true,
+    "JVJ_is_Vinv": true,
+    "forward_marginals": true,
+    "doubled_states": 276,
+    "bright_predecessors": [
+     5,
+     41
+    ],
+    "bright_forward_successors": [
+     23,
+     23
+    ],
+    "couplings": [
+     [
+      [
+       5,
+       0
+      ],
+      [
+       41,
+       0
+      ]
+     ],
+     [
+      [
+       23,
+       23
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      [
+       5,
+       18
+      ],
+      [
+       0,
+       23
+      ]
+     ]
+    ]
+   },
+   "92": {
+    "bijection": true,
+    "JVJ_is_Vinv": true,
+    "forward_marginals": true,
+    "doubled_states": 552,
+    "bright_predecessors": [
+     10,
+     82
+    ],
+    "bright_forward_successors": [
+     46,
+     46
+    ],
+    "couplings": [
+     [
+      [
+       10,
+       0
+      ],
+      [
+       82,
+       0
+      ]
+     ],
+     [
+      [
+       46,
+       46
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      [
+       10,
+       36
+      ],
+      [
+       0,
+       46
+      ]
+     ]
+    ]
+   }
+  },
+  "P14": {
+   "passed": false,
+   "note": "backward-sheet response of the bright fibre vs forward-sheet response of the same fibre",
+   "backward": {
+    "46": [
+     5,
+     41
+    ],
+    "92": [
+     10,
+     82
+    ]
+   },
+   "forward": {
+    "46": [
+     23,
+     23
+    ],
+    "92": [
+     46,
+     46
+    ]
+   }
+  },
+  "P15": {
+   "passed": true,
+   "half": [
+    "7/23",
+    "16/23"
+   ]
+  }
+ }
+}

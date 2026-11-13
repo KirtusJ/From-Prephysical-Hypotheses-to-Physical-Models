@@ -1,0 +1,110 @@
+{
+  "source": "https://doi.org/10.1038/srep04825",
+  "detection": "Identical efficiencies for all terminal modes for the mixture polygons. All outcomes enter each conditional detected distribution. The last pure-count control allows arbitrary fixed mode efficiencies and requires nonzero counts.",
+  "model": "Two phase embeddings of the fixed named mu8 scalar signed-H apparatus and the gain-blind history count, with nonnegative common weights summing to one. The phase-setting changes gains alone. This is not a fit to an unspecified physical lift.",
+  "count_probability": "63/256",
+  "chart_intervals": {
+    "0": [
+      0.06964285714285715,
+      0.10178571428571428
+    ],
+    "45": [
+      0.36607142857142855,
+      0.3982142857142857
+    ],
+    "90": [
+      0.6017857142857143,
+      0.6446428571428572
+    ],
+    "135": [
+      0.6160714285714286,
+      0.6625
+    ],
+    "180": [
+      0.6017857142857143,
+      0.6482142857142857
+    ]
+  },
+  "printed_interval": [
+    0.648,
+    0.672
+  ],
+  "plotted_only_vertices": [
+    {
+      "count": 0.04646194926568748,
+      "alternate": -0.0,
+      "ordinary": 0.9535380507343125,
+      "active": [
+        "alternate>=0",
+        "90 upper"
+      ]
+    },
+    {
+      "count": 0.12181905665884911,
+      "alternate": 0.0,
+      "ordinary": 0.8781809433411509,
+      "active": [
+        "alternate>=0",
+        "135 lower"
+      ]
+    },
+    {
+      "count": 0.04646194926568749,
+      "alternate": 0.04789161201250642,
+      "ordinary": 0.9056464387218061,
+      "active": [
+        "90 upper",
+        "135 lower"
+      ]
+    }
+  ],
+  "printed_only_vertices": [
+    {
+      "count": 0.0,
+      "alternate": 0.0,
+      "ordinary": 1.0,
+      "active": [
+        "count>=0",
+        "alternate>=0"
+      ]
+    },
+    {
+      "count": -0.0,
+      "alternate": 0.02925544553807575,
+      "ordinary": 0.9707445544619242,
+      "active": [
+        "count>=0",
+        "135 lower"
+      ]
+    },
+    {
+      "count": 0.04603323334933588,
+      "alternate": 0.0,
+      "ordinary": 0.9539667666506642,
+      "active": [
+        "alternate>=0",
+        "135 lower"
+      ]
+    }
+  ],
+  "printed_only_minimum_ordinary": 0.9539667666506642,
+  "mixed_sources_vertices": [],
+  "empty_mixed_sources": {
+    "c_lower_from_90": 0.04646194926568748,
+    "maximum_135": 0.6478193819614271,
+    "shortfall_at_printed_lower": 0.0001806180385729439
+  },
+  "count_only_fixed_detection": {
+    "zero_degree": [
+      0.06964285714285715,
+      0.10178571428571428
+    ],
+    "phase_135": [
+      0.6160714285714286,
+      0.6625
+    ],
+    "disjoint": true,
+    "setting_invariant": true
+  },
+  "scope": "Expanded marker extents use two pixels of graphical reading allowance. The reported one-statistical-SD interval is a separate deterministic sensitivity range. These are two readings of the same optical experiment, not independent observations, a common confidence region, or a systematic-error budget."
+}

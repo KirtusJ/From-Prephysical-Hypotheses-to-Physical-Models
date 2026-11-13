@@ -1,0 +1,893 @@
+{
+  "model": "Five sheets on an integer line, initial (0,R); each Hadamard contributes one common 1/sqrt(2). Gain floor(x/2) is applied on departure through tick 3. Afterwards, the tick-3 positive-site read decides between floor(x/2) and x. A second base/rail pointer at tick 5 depends on the first outcome, followed by a terminal base/rail parity flag at tick 7. All eight transcripts, including any zero support, use unnormalized branch masses; no probabilities are conditioned or silently postselected.",
+  "dilation": "On a fixed ideal graph with unit-modulus gain and physical coherent blocks unitary in each allowed signed character, initialize an orthogonal, unobserved count or character label with the declared nonnegative probabilities. In the count sector the signed physical walk writes a distinct outgoing branch to a clean tape cell at each branching tick (distinguishable history or edge labels as required). The trace over the tape sums path squares. In each character sector, the unmarked signed walk applies its own gain phase and adds amplitudes at common final ports. The sector label persists. Reading only the specified common output projectors and tracing this label produces the count-plus-character law on each transcript by linearity of density operators. This can also be purified by retaining the label. It presupposes a Born carrier, a fresh orthogonal tape and a common block/instrument model, not an independent rule for all conceivable operations.",
+  "read_scope": "Pointer copies of an already available base or rail predicate commute with the hidden-sector split; a pointer physically copied and then ignored is traced, so its differing outcomes dephase alternatives. A reversible uncomputation can restore that coherence.  For a fine sheet pointer use a real localized sheet register in the lifted model as in the dark example. Applying history masks to a scalar-character-only port as if they were automatically harmless changes its Kraus operators and can change the coarse weight. A sheet-insensitive unmarked localized physical lift reproduces the uniform character mixture by Fourier decomposition; a probe that mixes those characters requires the physical joint state and cannot in general be replaced by classical independently evolving scalar sectors.",
+  "scalar_format": "Each pair [a,b] denotes the exact number a+b*sqrt(5). Character signs multiply the fifth-root gain; phase conjugation does not change norms.",
+  "hidden_sectors": [
+    "count",
+    "k=0 sign",
+    "k=1",
+    "k=2",
+    "k=3",
+    "k=4"
+  ],
+  "prior": [
+    "1/3",
+    "1/6",
+    "1/6",
+    "1/12",
+    "1/12",
+    "1/6"
+  ],
+  "adaptive_transcript_rows": [
+    {
+      "record": [
+        0,
+        0,
+        0
+      ],
+      "conditional_sector_weights": [
+        [
+          "15/64",
+          "0"
+        ],
+        [
+          "3/64",
+          "0"
+        ],
+        [
+          "9/32",
+          "-1/64"
+        ],
+        [
+          "9/32",
+          "1/64"
+        ],
+        [
+          "9/32",
+          "1/64"
+        ],
+        [
+          "9/32",
+          "-1/64"
+        ]
+      ],
+      "mixture": [
+        "29/128",
+        "-1/384"
+      ]
+    },
+    {
+      "record": [
+        0,
+        0,
+        1
+      ],
+      "conditional_sector_weights": [
+        [
+          "5/64",
+          "0"
+        ],
+        [
+          "1/64",
+          "0"
+        ],
+        [
+          "3/32",
+          "-1/64"
+        ],
+        [
+          "3/32",
+          "1/64"
+        ],
+        [
+          "3/32",
+          "1/64"
+        ],
+        [
+          "3/32",
+          "-1/64"
+        ]
+      ],
+      "mixture": [
+        "29/384",
+        "-1/384"
+      ]
+    },
+    {
+      "record": [
+        0,
+        1,
+        0
+      ],
+      "conditional_sector_weights": [
+        [
+          "13/128",
+          "0"
+        ],
+        [
+          "7/128",
+          "0"
+        ],
+        [
+          "29/256",
+          "-5/256"
+        ],
+        [
+          "29/256",
+          "5/256"
+        ],
+        [
+          "29/256",
+          "5/256"
+        ],
+        [
+          "29/256",
+          "-5/256"
+        ]
+      ],
+      "mixture": [
+        "51/512",
+        "-5/1536"
+      ]
+    },
+    {
+      "record": [
+        0,
+        1,
+        1
+      ],
+      "conditional_sector_weights": [
+        [
+          "11/128",
+          "0"
+        ],
+        [
+          "17/128",
+          "0"
+        ],
+        [
+          "19/256",
+          "-3/256"
+        ],
+        [
+          "19/256",
+          "3/256"
+        ],
+        [
+          "19/256",
+          "3/256"
+        ],
+        [
+          "19/256",
+          "-3/256"
+        ]
+      ],
+      "mixture": [
+        "45/512",
+        "-1/512"
+      ]
+    },
+    {
+      "record": [
+        1,
+        0,
+        0
+      ],
+      "conditional_sector_weights": [
+        [
+          "17/64",
+          "0"
+        ],
+        [
+          "27/64",
+          "0"
+        ],
+        [
+          "53/256",
+          "7/256"
+        ],
+        [
+          "53/256",
+          "-7/256"
+        ],
+        [
+          "53/256",
+          "-7/256"
+        ],
+        [
+          "53/256",
+          "7/256"
+        ]
+      ],
+      "mixture": [
+        "403/1536",
+        "7/1536"
+      ]
+    },
+    {
+      "record": [
+        1,
+        0,
+        1
+      ],
+      "conditional_sector_weights": [
+        [
+          "9/64",
+          "0"
+        ],
+        [
+          "19/64",
+          "0"
+        ],
+        [
+          "31/256",
+          "5/256"
+        ],
+        [
+          "31/256",
+          "-5/256"
+        ],
+        [
+          "31/256",
+          "-5/256"
+        ],
+        [
+          "31/256",
+          "5/256"
+        ]
+      ],
+      "mixture": [
+        "241/1536",
+        "5/1536"
+      ]
+    },
+    {
+      "record": [
+        1,
+        1,
+        0
+      ],
+      "conditional_sector_weights": [
+        [
+          "9/128",
+          "0"
+        ],
+        [
+          "3/128",
+          "0"
+        ],
+        [
+          "21/256",
+          "3/256"
+        ],
+        [
+          "21/256",
+          "-3/256"
+        ],
+        [
+          "21/256",
+          "-3/256"
+        ],
+        [
+          "21/256",
+          "3/256"
+        ]
+      ],
+      "mixture": [
+        "35/512",
+        "1/512"
+      ]
+    },
+    {
+      "record": [
+        1,
+        1,
+        1
+      ],
+      "conditional_sector_weights": [
+        [
+          "3/128",
+          "0"
+        ],
+        [
+          "1/128",
+          "0"
+        ],
+        [
+          "7/256",
+          "1/256"
+        ],
+        [
+          "7/256",
+          "-1/256"
+        ],
+        [
+          "7/256",
+          "-1/256"
+        ],
+        [
+          "7/256",
+          "1/256"
+        ]
+      ],
+      "mixture": [
+        "35/1536",
+        "1/1536"
+      ]
+    }
+  ],
+  "localization_control": {
+    "target": {
+      "site": 1,
+      "direction": "R",
+      "sheet": 4,
+      "ticks": 5
+    },
+    "probabilities_conditional_on_sector": {
+      "count": "1/16",
+      "ordinary_localized_sheet": "0"
+    },
+    "all_complete_output_numerators_over32": [
+      {
+        "x": -5,
+        "direction": -1,
+        "sheet": 4,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -3,
+        "direction": -1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -3,
+        "direction": -1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -3,
+        "direction": -1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -3,
+        "direction": -1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -3,
+        "direction": 1,
+        "sheet": 4,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": -1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": -1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": -1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": -1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": -1,
+        "sheet": 4,
+        "count": 2,
+        "lifted": 4
+      },
+      {
+        "x": -1,
+        "direction": 1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": 1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": 1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": -1,
+        "direction": 1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": -1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": -1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": -1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": -1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": 1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": 1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": 1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": 1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 1,
+        "direction": 1,
+        "sheet": 4,
+        "count": 2,
+        "lifted": 0
+      },
+      {
+        "x": 3,
+        "direction": -1,
+        "sheet": 4,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 3,
+        "direction": 1,
+        "sheet": 0,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 3,
+        "direction": 1,
+        "sheet": 1,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 3,
+        "direction": 1,
+        "sheet": 2,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 3,
+        "direction": 1,
+        "sheet": 3,
+        "count": 1,
+        "lifted": 1
+      },
+      {
+        "x": 5,
+        "direction": 1,
+        "sheet": 4,
+        "count": 1,
+        "lifted": 1
+      }
+    ],
+    "count_prior": "1/3",
+    "one_read_dark": "1/48",
+    "two_read_joint": {
+      "00": {
+        "retained_sector": "737/768",
+        "reset_sector": "2209/2304"
+      },
+      "01": {
+        "retained_sector": "5/256",
+        "reset_sector": "47/2304"
+      },
+      "10": {
+        "retained_sector": "5/256",
+        "reset_sector": "47/2304"
+      },
+      "11": {
+        "retained_sector": "1/768",
+        "reset_sector": "1/2304"
+      }
+    },
+    "two_singletons_raw_parity_control": {
+      "separation": 1,
+      "coherently_summed_sector_k": [
+        [
+          "4",
+          "0"
+        ],
+        [
+          "3/2",
+          "1/2"
+        ],
+        [
+          "3/2",
+          "-1/2"
+        ],
+        [
+          "3/2",
+          "-1/2"
+        ],
+        [
+          "3/2",
+          "1/2"
+        ]
+      ],
+      "distinguishable_sheet_outputs_raw_sum": "2",
+      "average_over_all_character_k": "2"
+    }
+  },
+  "echo": {
+    "clock_slots": [
+      "Hadamard",
+      "copy rail to tag",
+      "copy to environment or aligned identity",
+      "uncompute tag or aligned identity",
+      "Hadamard"
+    ],
+    "output_normalization": "The two Hadamards give denominator 2 for amplitudes and 4 for squared weights.",
+    "controls": [
+      {
+        "exposed_tag_uncomputed": false,
+        "inaccessible_copy": false,
+        "basis_order": [
+          "0,0",
+          "0,1",
+          "1,0",
+          "1,1"
+        ],
+        "ordinary_Born_over4": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "linear_count_over4": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "environment_resolved_amplitude_numerators": [
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": -1
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          }
+        ]
+      },
+      {
+        "exposed_tag_uncomputed": false,
+        "inaccessible_copy": true,
+        "basis_order": [
+          "0,0",
+          "0,1",
+          "1,0",
+          "1,1"
+        ],
+        "ordinary_Born_over4": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "linear_count_over4": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "environment_resolved_amplitude_numerators": [
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 1
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": -1
+          }
+        ]
+      },
+      {
+        "exposed_tag_uncomputed": true,
+        "inaccessible_copy": false,
+        "basis_order": [
+          "0,0",
+          "0,1",
+          "1,0",
+          "1,1"
+        ],
+        "ordinary_Born_over4": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "linear_count_over4": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "environment_resolved_amplitude_numerators": [
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 2
+          },
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          }
+        ]
+      },
+      {
+        "exposed_tag_uncomputed": true,
+        "inaccessible_copy": true,
+        "basis_order": [
+          "0,0",
+          "0,1",
+          "1,0",
+          "1,1"
+        ],
+        "ordinary_Born_over4": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "linear_count_over4": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "environment_resolved_amplitude_numerators": [
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 0,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": 1
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 0,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 0,
+            "numerator": 1
+          },
+          {
+            "rail": 1,
+            "tag": 0,
+            "hidden": 1,
+            "numerator": -1
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 0,
+            "numerator": 0
+          },
+          {
+            "rail": 1,
+            "tag": 1,
+            "hidden": 1,
+            "numerator": 0
+          }
+        ]
+      }
+    ],
+    "scope": "Only when the tagged rail still distinguishes the alternatives and every other record of it is absent or coherently erased does a final dark port distinguish unitary coherent evolution from counting the two histories as exclusive. An inaccessible surviving copy reproduces the linear-count statistics in this read, even if the accessible tag was fully uncomputed. It is not a unilateral unitary erasure of two orthogonal states after they have merged. Independent settings can repeat the test only under a specified model for environmental memory and resets."
+  },
+  "independence": "A fresh visible preparation does not imply a reset of a persistent hidden sector. Conversely, a product preparation with independent, deliberately prepared sector labels realizes the redraw model. The examples quantify that experimental distinction without assuming either memory model is compulsory."
+}

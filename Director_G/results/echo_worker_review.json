@@ -1,0 +1,613 @@
+{
+  "question": "Does a Hadamard echo with sharp dark outcomes and forward single-arm fairness by itself force equal earlier record weights?",
+  "finite_check": {
+    "witness_origin": "causal_wires.json / fourth_power_regrouping / equal_live_witness",
+    "earlier_record": {
+      "modes": [
+        6,
+        14
+      ],
+      "same_amplitude": "1/4",
+      "distinct_local_probabilities": [
+        "5/656",
+        "1/16"
+      ]
+    },
+    "exact_return_per_port": "23/656",
+    "outside_component_spectator": "305/328",
+    "equal_signs": {
+      "bright_port_zero_based": 0,
+      "input_masses": [
+        "5/656",
+        "1/16"
+      ],
+      "first_joint_input_rows": [
+        [
+          "5/656",
+          "0"
+        ],
+        [
+          "1/16",
+          "0"
+        ]
+      ],
+      "bright_and_dark_stage_in_named_order": [
+        "23/328",
+        "0"
+      ],
+      "second_joint_input_rows": [
+        [
+          "23/656",
+          "23/656"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "returned_masses": [
+        "23/656",
+        "23/656"
+      ],
+      "return_minus_original": [
+        "9/328",
+        "-9/328"
+      ],
+      "reverse_bright_shares": [
+        "5/46",
+        "41/46"
+      ],
+      "same_joint_reverse_equal_flows": false,
+      "named_echo_marginals_restored": false
+    },
+    "opposite_signs": {
+      "bright_port_zero_based": 1,
+      "input_masses": [
+        "5/656",
+        "1/16"
+      ],
+      "first_joint_input_rows": [
+        [
+          "0",
+          "5/656"
+        ],
+        [
+          "0",
+          "1/16"
+        ]
+      ],
+      "bright_and_dark_stage_in_named_order": [
+        "0",
+        "23/328"
+      ],
+      "second_joint_input_rows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "23/656",
+          "23/656"
+        ]
+      ],
+      "returned_masses": [
+        "23/656",
+        "23/656"
+      ],
+      "return_minus_original": [
+        "9/328",
+        "-9/328"
+      ],
+      "reverse_bright_shares": [
+        "5/46",
+        "41/46"
+      ],
+      "same_joint_reverse_equal_flows": false,
+      "named_echo_marginals_restored": false
+    },
+    "already_equal_positive_controls": [
+      {
+        "bright_port_zero_based": 0,
+        "input_masses": [
+          "23/656",
+          "23/656"
+        ],
+        "first_joint_input_rows": [
+          [
+            "23/656",
+            "0"
+          ],
+          [
+            "23/656",
+            "0"
+          ]
+        ],
+        "bright_and_dark_stage_in_named_order": [
+          "23/328",
+          "0"
+        ],
+        "second_joint_input_rows": [
+          [
+            "23/656",
+            "23/656"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "returned_masses": [
+          "23/656",
+          "23/656"
+        ],
+        "return_minus_original": [
+          "0",
+          "0"
+        ],
+        "reverse_bright_shares": [
+          "1/2",
+          "1/2"
+        ],
+        "same_joint_reverse_equal_flows": true,
+        "named_echo_marginals_restored": true
+      },
+      {
+        "bright_port_zero_based": 1,
+        "input_masses": [
+          "23/656",
+          "23/656"
+        ],
+        "first_joint_input_rows": [
+          [
+            "0",
+            "23/656"
+          ],
+          [
+            "0",
+            "23/656"
+          ]
+        ],
+        "bright_and_dark_stage_in_named_order": [
+          "0",
+          "23/328"
+        ],
+        "second_joint_input_rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "23/656",
+            "23/656"
+          ]
+        ],
+        "returned_masses": [
+          "23/656",
+          "23/656"
+        ],
+        "return_minus_original": [
+          "0",
+          "0"
+        ],
+        "reverse_bright_shares": [
+          "1/2",
+          "1/2"
+        ],
+        "same_joint_reverse_equal_flows": true,
+        "named_echo_marginals_restored": true
+      }
+    ],
+    "zero_total_controls": [
+      {
+        "bright_port_zero_based": 0,
+        "input_masses": [
+          "0",
+          "0"
+        ],
+        "first_joint_input_rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "bright_and_dark_stage_in_named_order": [
+          "0",
+          "0"
+        ],
+        "second_joint_input_rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "returned_masses": [
+          "0",
+          "0"
+        ],
+        "return_minus_original": [
+          "0",
+          "0"
+        ],
+        "reverse_bright_shares": null,
+        "same_joint_reverse_equal_flows": true,
+        "named_echo_marginals_restored": true
+      },
+      {
+        "bright_port_zero_based": 1,
+        "input_masses": [
+          "0",
+          "0"
+        ],
+        "first_joint_input_rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "bright_and_dark_stage_in_named_order": [
+          "0",
+          "0"
+        ],
+        "second_joint_input_rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "returned_masses": [
+          "0",
+          "0"
+        ],
+        "return_minus_original": [
+          "0",
+          "0"
+        ],
+        "reverse_bright_shares": null,
+        "same_joint_reverse_equal_flows": true,
+        "named_echo_marginals_restored": true
+      }
+    ]
+  },
+  "technical_adjudication": {
+    "sharp_dark": "Nonnegativity and a zero output marginal make both entries of that column zero, so both input masses go to the sole bright column. Under reverse single-bright fairness of this same joint, the two flows are equal, hence the previous marginals are equal. This conclusion includes total zero.",
+    "forward_echo": "On H followed by H, a fair return from the single bright intermediate port gives equal returned marginals. Named record restoration on this echo implies equal earlier masses. Mere amplitude restoration leaves room for the displayed unequal input and equal returns.",
+    "scope": "These are local conditional implications framed as record constraints. They do not establish reverse fairness or operational echo restoration from signed evolution or joint-flow existence alone.",
+    "models": "Both parent processes identified the logical gap and correct return. The local child in the second attempt supplied a wrong value. The first dispatch failed before any local model task started."
+  },
+  "limits": {
+    "maximum_children_per_attempt": 1,
+    "maximum_question_characters": 600,
+    "child_generation_tokens": 144,
+    "parent_provider_timeout_seconds": 205,
+    "portable_path": "Only the detached child executable prefix is represented by %LOCALAPPDATA%; raw register and output object hashes are unchanged."
+  },
+  "attempts": [
+    {
+      "attempt": "20261113T122859728255Z",
+      "commission": "echo_first_attempt",
+      "exact_commission": {
+        "task": "Independently test a local two-port echo. Two coherent input amplitudes are equal (or opposite), so a signed real Hadamard maps them to one bright and one sharp zero output; the second identical H restores the amplitudes. Each tick permits a nonnegative joint record with its endpoint marginals in this isolated component. Decide whether support, sharp darks and a fair forward split when there is only one occupied input already force equal earlier recorded weights, or whether one additionally needs named marginal restoration of the local echo (alternatively reverse single-bright-input fairness for that same first joint). Test starting record masses 5/656 and 1/16. Compute the first joint directions, returned fair masses, and include the zero-total boundary and the opposite-sign orientation. Does amplitude restoration by itself guarantee record restoration in a history-dependent law? Use exactly one tool call to consult_pcp_reviewer. Ask the child only for the exact reduced fraction (5/656 + 1/16)/2, with no answer, hints or alternatives. Do not use other tools. Independently evaluate its reply and state its exact receipt ID.",
+        "child_scope": "Compute the single rational expression specified by the caller. Show exact arithmetic and the reduced fraction. Do not estimate.",
+        "tool_scope": "Check one numerical value blindly with a separate local PCP arithmetic reviewer.",
+        "max_delegations": 1,
+        "max_depth_below_parent": 1,
+        "acceptance": "Parent actually calls MCP, child returns an ACR-on result, parent quotes unseen receipt, and both records verify."
+      },
+      "verified_consultation": false,
+      "parent_provider_time_ns": [
+        1794572942495801600,
+        1794572970504471400
+      ],
+      "item_types": [
+        "agent_message",
+        "mcp_tool_call",
+        "agent_message"
+      ],
+      "mcp_call": {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "pcp_child",
+        "tool": "consult_pcp_reviewer",
+        "arguments": {
+          "prompt": "What is the exact reduced fraction (5/656 + 1/16)/2?"
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "A bounded question is required"
+            }
+          ],
+          "structured_content": null
+        },
+        "error": null,
+        "status": "failed"
+      },
+      "parent_exit": 0,
+      "runs": {
+        "parent": {
+          "prompt": "Independently test a local two-port echo. Two coherent input amplitudes are equal (or opposite), so a signed real Hadamard maps them to one bright and one sharp zero output; the second identical H restores the amplitudes. Each tick permits a nonnegative joint record with its endpoint marginals in this isolated component. Decide whether support, sharp darks and a fair forward split when there is only one occupied input already force equal earlier recorded weights, or whether one additionally needs named marginal restoration of the local echo (alternatively reverse single-bright-input fairness for that same first joint). Test starting record masses 5/656 and 1/16. Compute the first joint directions, returned fair masses, and include the zero-total boundary and the opposite-sign orientation. Does amplitude restoration by itself guarantee record restoration in a history-dependent law? Use exactly one tool call to consult_pcp_reviewer. Ask the child only for the exact reduced fraction (5/656 + 1/16)/2, with no answer, hints or alternatives. Do not use other tools. Independently evaluate its reply and state its exact receipt ID.",
+          "reply": "The constraints **do not force equal earlier recorded weights**. One additionally needs marginal restoration of the local echo, or reverse single-bright-input fairness imposed on that same first joint.\n\nI checked this algebraically. Let rows denote earlier ports and columns later ports, and write\n\\[\na=\\frac5{656},\\qquad b=\\frac1{16}=\\frac{41}{656},\\qquad s=a+b=\\frac{23}{328}.\n\\]\n\nFor equal-sign amplitudes, the first Hadamard makes port 1 bright. Support and the sharp dark force\n\\[\nJ_1=\\begin{pmatrix}a&0\\\\b&0\\end{pmatrix}.\n\\]\nForward, both occupied inputs go to port 1. Looking backward from that bright port, the recorded proportions are \\(5/46\\) and \\(41/46\\), which are unequal.\n\nThe second Hadamard has one occupied input, so forward fairness gives\n\\[\nJ_2=\\begin{pmatrix}s/2&s/2\\\\0&0\\end{pmatrix},\n\\qquad\n\\text{returned masses}=\n\\left(\\frac{23}{656},\\frac{23}{656}\\right).\n\\]\nThese differ from the starting masses. Requiring the returned marginal to equal the starting marginal would therefore force \\(a=b\\). Reverse fairness on \\(J_1\\) would independently force the same equality.\n\nFor opposite-sign amplitudes, port 2 is bright instead:\n\\[\nJ_1=\\begin{pmatrix}0&a\\\\0&b\\end{pmatrix},\n\\qquad\nJ_2=\\begin{pmatrix}0&0\\\\s/2&s/2\\end{pmatrix}.\n\\]\nThe conclusion and returned masses are unchanged.\n\nAt zero total, nonnegativity forces every joint entry and endpoint mass to zero. Restoration holds trivially; conditional split probabilities are undefined.\n\nThus **amplitude restoration alone does not guarantee record restoration in a history-dependent law**. The displayed joints are a counterexample: the amplitudes return, while the recorded marginal changes.\n\nI made exactly one reviewer consultation attempt. It returned the error “A bounded question is required,” with no fraction and **no receipt ID**. There is therefore no numerical reviewer reply to evaluate. Independently,\n\\[\n\\boxed{\\frac{5/656+1/16}{2}=\\frac{23}{656}}.\n\\]",
+          "model": "Codex CLI",
+          "participant": "parent-codex",
+          "run": "R1",
+          "bytes": 1940,
+          "sha256": "916ece35f698c1594f1d526f4ba98381c488f43b3f9b43ae0b16b8648ff1317c",
+          "method_exposures": [
+            {
+              "sha256": "49df584cc3b42a78c5fb7ba9a9cf5833b633fc4663e1f832feda32c382f33005",
+              "what": "task"
+            },
+            {
+              "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+              "what": "kernel card"
+            }
+          ],
+          "acr_in_use": true,
+          "usage": null,
+          "python": {
+            "altered_objects": [],
+            "anchor": null,
+            "events": 7,
+            "guard_problems": [],
+            "head": "77e2464c50483aa5db31b50fc712e23a3bae5c22298bf807f7ebf31e412fcf34",
+            "objects_by_reference_only": 0,
+            "ok": true
+          },
+          "rust": {
+            "workspace": "parent",
+            "register_sha256": "80a0b34230cd372bca5629c03c18258b82d66218c7f9e4d9756cbf08776abe76",
+            "snapshot_events": 7,
+            "model_outputs": [
+              "916ece35f698c1594f1d526f4ba98381c488f43b3f9b43ae0b16b8648ff1317c"
+            ],
+            "tasks": [],
+            "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+            "verification": {
+              "command": "/pcpos verify worker-register.jsonl",
+              "exit": 0,
+              "stdout": "chain intact: 7 events, head 77e2464c50483aa5db31b50fc712e23a3bae5c22298bf807f7ebf31e412fcf34\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: 80a0b34230cd372bca5629c03c18258b82d66218c7f9e4d9756cbf08776abe76\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+            },
+            "staging_exit_codes": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "child_process_time_ns": null,
+      "child_pid": null,
+      "receipt": null,
+      "content_assessment": "Parent obtained the correct general and numerical verdict, but used prompt in place of the MCP question parameter. The child task did not start. The tool error and absence of receipt are retained.",
+      "prepared_child_without_model_run": {
+        "event_kinds": [
+          "WORKSPACE_CREATED",
+          "PARTICIPANT_ADDED",
+          "METHOD_PINNED",
+          "PARTICIPANT_ADDED",
+          "ADOPTED"
+        ],
+        "python": {
+          "altered_objects": [],
+          "anchor": null,
+          "events": 5,
+          "guard_problems": [],
+          "head": "fc442100268923f862b156f5e026cf86f3c14e362f0c443ad49885ce7d2a088e",
+          "objects_by_reference_only": 0,
+          "ok": true
+        },
+        "rust": {
+          "register_sha256": "96c4407ce09904e7d8e6f4669ccf3a1b8561ef7cce4bc97167a1056fff12fa50",
+          "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+          "verification": {
+            "command": "/pcpos verify worker-register.jsonl",
+            "exit": 0,
+            "stdout": "chain intact: 5 events, head fc442100268923f862b156f5e026cf86f3c14e362f0c443ad49885ce7d2a088e\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: 96c4407ce09904e7d8e6f4669ccf3a1b8561ef7cce4bc97167a1056fff12fa50\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+          },
+          "snapshot_events": 5,
+          "model_outputs": []
+        }
+      },
+      "wrapper_exit_observed": 1
+    },
+    {
+      "attempt": "20261113T123001083191Z",
+      "commission": "echo_retry",
+      "exact_commission": {
+        "task": "Independently test a local two-port echo. Two coherent input amplitudes are equal (or opposite), so a signed real Hadamard maps them to one bright and one sharp zero output; the second identical H restores the amplitudes. Each tick permits a nonnegative joint record with its endpoint marginals in this isolated component. Decide whether support, sharp darks and a fair forward split when there is only one occupied input already force equal earlier recorded weights, or whether one additionally needs named marginal restoration of the local echo (alternatively reverse single-bright-input fairness for that same first joint). Test starting record masses 5/656 and 1/16. Compute the first joint directions, returned fair masses, and include the zero-total boundary and the opposite-sign orientation. Does amplitude restoration by itself guarantee record restoration in a history-dependent law? Use exactly one tool call to consult_pcp_reviewer. Ask the child only for the exact reduced fraction (5/656 + 1/16)/2, with no answer, hints or alternatives. Do not use other tools. Independently evaluate its reply and state its exact receipt ID. For the tool call, use the required JSON property named question, not prompt or text. The complete arguments object is {\"question\":\"What exact reduced fraction equals (5/656 + 1/16)/2?\"}.",
+        "child_scope": "Compute the single rational expression specified by the caller. Show exact arithmetic and the reduced fraction. Do not estimate.",
+        "tool_scope": "Check one numerical value blindly with a separate local PCP arithmetic reviewer.",
+        "max_delegations": 1,
+        "max_depth_below_parent": 1,
+        "acceptance": "Parent actually calls MCP, child returns an ACR-on result, parent quotes unseen receipt, and both records verify."
+      },
+      "verified_consultation": true,
+      "parent_provider_time_ns": [
+        1794573004494766200,
+        1794573040399896100
+      ],
+      "item_types": [
+        "agent_message",
+        "mcp_tool_call",
+        "agent_message"
+      ],
+      "mcp_call": {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "pcp_child",
+        "tool": "consult_pcp_reviewer",
+        "arguments": {
+          "question": "What exact reduced fraction equals (5/656 + 1/16)/2?"
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"receipt\": \"65c31e462e5e1076e150\", \"reviewer_reply\": \"5/656 + 1/16 = 1/16 + 1/16 = 2/16 = 1/8 [end of text]\", \"output_sha256\": \"302d157c693e1005a4788ec351f118140191cfc7534e784342c4857705924ac5\"}"
+            }
+          ],
+          "structured_content": null
+        },
+        "error": null,
+        "status": "completed"
+      },
+      "parent_exit": 0,
+      "runs": {
+        "parent": {
+          "prompt": "Independently test a local two-port echo. Two coherent input amplitudes are equal (or opposite), so a signed real Hadamard maps them to one bright and one sharp zero output; the second identical H restores the amplitudes. Each tick permits a nonnegative joint record with its endpoint marginals in this isolated component. Decide whether support, sharp darks and a fair forward split when there is only one occupied input already force equal earlier recorded weights, or whether one additionally needs named marginal restoration of the local echo (alternatively reverse single-bright-input fairness for that same first joint). Test starting record masses 5/656 and 1/16. Compute the first joint directions, returned fair masses, and include the zero-total boundary and the opposite-sign orientation. Does amplitude restoration by itself guarantee record restoration in a history-dependent law? Use exactly one tool call to consult_pcp_reviewer. Ask the child only for the exact reduced fraction (5/656 + 1/16)/2, with no answer, hints or alternatives. Do not use other tools. Independently evaluate its reply and state its exact receipt ID. For the tool call, use the required JSON property named question, not prompt or text. The complete arguments object is {\"question\":\"What exact reduced fraction equals (5/656 + 1/16)/2?\"}.",
+          "reply": "**The stated conditions do not force equal earlier recorded weights.** That conclusion additionally needs named marginal restoration of the local echo, or reverse single-bright-input fairness applied to that same first joint.\n\nTake\n\\[\nH=\\frac1{\\sqrt2}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix},\\qquad H^2=I.\n\\]\nWrite each joint with rows as its input ports and columns as its output ports. Let earlier record masses be \\(a,b\\ge0\\), with \\(T=a+b\\).\n\nFor equal nonzero amplitudes, port 1 becomes bright and port 2 sharply dark. Nonnegativity and the dark output marginal uniquely give\n\\[\nJ_1=\\begin{pmatrix}a&0\\\\b&0\\end{pmatrix}.\n\\]\nThus the first joint directions carry \\(a\\) from \\(1\\to1\\) and \\(b\\) from \\(2\\to1\\). Neither support nor the sharp dark requires \\(a=b\\). Forward single-occupied-input fairness does not constrain this first tick, whose two inputs are occupied.\n\nOn the return tick, the sole bright input splits fairly:\n\\[\nJ_2=\\begin{pmatrix}T/2&T/2\\\\0&0\\end{pmatrix}.\n\\]\nThe returned record masses are therefore \\((T/2,T/2)\\). **If record restoration is additionally required**, these must equal \\((a,b)\\), forcing \\(a=b\\). Alternatively, reverse fairness for the same \\(J_1\\) requires its bright column to divide equally between its two earlier endpoints, again forcing \\(a=b\\).\n\nFor the requested starting masses,\n\\[\na=\\frac5{656},\\qquad b=\\frac1{16}=\\frac{41}{656},\\qquad\nT=\\frac{23}{328}.\n\\]\nConsequently,\n\\[\nJ_1=\\frac1{656}\\begin{pmatrix}5&0\\\\41&0\\end{pmatrix},\n\\qquad\nJ_2=\\frac1{656}\\begin{pmatrix}23&23\\\\0&0\\end{pmatrix}.\n\\]\nBoth returned masses are **\\(23/656\\)**, differing from the starting masses by \\(+18/656\\) and \\(-18/656\\).\n\nFor opposite amplitudes \\((u,-u)\\), port 2 is bright instead:\n\\[\nJ_1=\\begin{pmatrix}0&a\\\\0&b\\end{pmatrix},\n\\qquad\nJ_2=\\begin{pmatrix}0&0\\\\T/2&T/2\\end{pmatrix}.\n\\]\nThe conclusion is unchanged; the second \\(H\\) restores the signed amplitudes exactly.\n\nAt the **zero-total boundary**, nonnegativity forces \\(a=b=0\\), both joints vanish, and restoration holds trivially. Conditional fractions obtained by dividing by \\(T\\) are undefined there.\n\n**Amplitude restoration alone does not guarantee record restoration in a history-dependent law.** The displayed joints provide a counterexample: amplitudes return exactly while unequal record masses return equalized.\n\nI inspected the supplied conditions and computed these joints algebraically. The sole reviewer consultation returned an incorrect calculation: it replaced \\(5/656\\) with \\(1/16\\) and did not correctly evaluate the requested average. Independently,\n\\[\n\\frac{5/656+1/16}{2}=\\frac{46}{1312}=\\boxed{\\frac{23}{656}},\n\\]\nwhich is reduced. Exact receipt ID: `65c31e462e5e1076e150`.",
+          "model": "Codex CLI",
+          "participant": "parent-codex",
+          "run": "R1",
+          "bytes": 2683,
+          "sha256": "235f52a7bba8102df502735bbbc4ca12f824275b3a745774ac45008e3c029cdf",
+          "method_exposures": [
+            {
+              "sha256": "0291db362fd85d5fdbba5526f9e04f0b81ea3fc75345ff1135569d1a3a26f315",
+              "what": "task"
+            },
+            {
+              "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+              "what": "kernel card"
+            }
+          ],
+          "acr_in_use": true,
+          "usage": null,
+          "python": {
+            "altered_objects": [],
+            "anchor": null,
+            "events": 7,
+            "guard_problems": [],
+            "head": "7ecfe43bf727fe884a5bb267f67dbc62fd7b918a9ad328c87d487176198713b8",
+            "objects_by_reference_only": 0,
+            "ok": true
+          },
+          "rust": {
+            "workspace": "parent",
+            "register_sha256": "a1a129a427d5b789be5f6c63a9c47409c7f884d712edbd58988c34e76175d89a",
+            "snapshot_events": 7,
+            "model_outputs": [
+              "235f52a7bba8102df502735bbbc4ca12f824275b3a745774ac45008e3c029cdf"
+            ],
+            "tasks": [],
+            "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+            "verification": {
+              "command": "/pcpos verify worker-register.jsonl",
+              "exit": 0,
+              "stdout": "chain intact: 7 events, head 7ecfe43bf727fe884a5bb267f67dbc62fd7b918a9ad328c87d487176198713b8\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: a1a129a427d5b789be5f6c63a9c47409c7f884d712edbd58988c34e76175d89a\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+            },
+            "staging_exit_codes": [
+              0,
+              0
+            ]
+          }
+        },
+        "child": {
+          "prompt": "Compute the single rational expression specified by the caller. Show exact arithmetic and the reduced fraction. Do not estimate. The requesting model's question follows.\nWhat exact reduced fraction equals (5/656 + 1/16)/2?",
+          "reply": "5/656 + 1/16 = 1/16 + 1/16 = 2/16 = 1/8 [end of text]",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+          "participant": "child-qwen",
+          "run": "R1",
+          "bytes": 53,
+          "sha256": "302d157c693e1005a4788ec351f118140191cfc7534e784342c4857705924ac5",
+          "method_exposures": [
+            {
+              "sha256": "860e33fd3d6a13b1281a54af52df5c06eacd5fcb76f76fe18d6ba96bc7b85129",
+              "what": "task"
+            },
+            {
+              "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+              "what": "kernel card"
+            }
+          ],
+          "acr_in_use": true,
+          "usage": null,
+          "python": {
+            "altered_objects": [],
+            "anchor": null,
+            "events": 7,
+            "guard_problems": [],
+            "head": "d15cb1601330a104f7f440a81b0ae0e649b85f53bbd9725f375b213363f360d6",
+            "objects_by_reference_only": 0,
+            "ok": true
+          },
+          "rust": {
+            "workspace": "child",
+            "register_sha256": "cd318785384556f59e307fd2d39520f15697cf11be87234909f97631e3b7d32f",
+            "snapshot_events": 7,
+            "model_outputs": [
+              "302d157c693e1005a4788ec351f118140191cfc7534e784342c4857705924ac5"
+            ],
+            "tasks": [],
+            "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+            "verification": {
+              "command": "/pcpos verify worker-register.jsonl",
+              "exit": 0,
+              "stdout": "chain intact: 7 events, head d15cb1601330a104f7f440a81b0ae0e649b85f53bbd9725f375b213363f360d6\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: cd318785384556f59e307fd2d39520f15697cf11be87234909f97631e3b7d32f\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+            },
+            "staging_exit_codes": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "child_process_time_ns": [
+        1794573010670096700,
+        1794573014443120400
+      ],
+      "child_pid": 38216,
+      "receipt": "65c31e462e5e1076e150",
+      "content_assessment": "Parent used the required MCP parameter and obtained one local-child object. The child replaced 5/656 by 1/16 and did not divide its answer by two. Parent independently computed the correct reduced fraction and both signed cases.",
+      "detached_child_events": [
+        {
+          "event": "process_started",
+          "pid": 38216,
+          "supervisor_pid": 5140,
+          "utc": "2026-11-13T12:30:10.670078+00:00",
+          "time_ns": 1794573010670096700,
+          "binary": "%LOCALAPPDATA%\\CodexResearchTools\\offline-inference\\llama-b12110\\llama-completion.exe",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+          "system_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+          "prompt_sha256": "141cb42a4865647c3bee500c7f2951b41ef2d99380776e6570aebf1e7570a771"
+        },
+        {
+          "event": "process_exit",
+          "pid": 38216,
+          "supervisor_pid": 5140,
+          "utc": "2026-11-13T12:30:14.443109+00:00",
+          "time_ns": 1794573014443120400,
+          "returncode": 0,
+          "timeout": false
+        },
+        {
+          "event": "reply_readback",
+          "pid": 38216,
+          "supervisor_pid": 5140,
+          "utc": "2026-11-13T12:30:14.444986+00:00",
+          "time_ns": 1794573014444995200,
+          "sha256": "302d157c693e1005a4788ec351f118140191cfc7534e784342c4857705924ac5",
+          "normalized_utf8_bytes": 53
+        }
+      ],
+      "raw_event_log_sha256": "2e33533f794bf75451ba77b754726f559bd444d05b476bf2effab75805a28b06",
+      "wrapper_exit_observed": 0
+    }
+  ]
+}

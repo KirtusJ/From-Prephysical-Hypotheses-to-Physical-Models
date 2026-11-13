@@ -1,0 +1,964 @@
+{
+  "clock": "Ordinary clock T|j>=|j+1 mod 8>, with T^8=I. All clocks below are integer walk ticks. The bank is not the minus-twisted T^8=-I clock.",
+  "fixed_native_graph": {
+    "sites": 8,
+    "clock_size": 8,
+    "departure_shifts": [
+      0,
+      4,
+      0,
+      5,
+      0,
+      1,
+      0,
+      0
+    ],
+    "oracle": [
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          1,
+          1
+        ],
+        "kind": "bright",
+        "signed_translations": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          1,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          3,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          5,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          7,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": 1,
+        "h": 4,
+        "port": [
+          7,
+          -1
+        ],
+        "kind": "dark",
+        "signed_translations": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          1,
+          1
+        ],
+        "kind": "dark",
+        "signed_translations": [
+          [
+            0,
+            -1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          1,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          3,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          5,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          7,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 0,
+        "incoming": -1,
+        "h": 4,
+        "port": [
+          7,
+          -1
+        ],
+        "kind": "bright",
+        "signed_translations": [
+          [
+            0,
+            -1
+          ],
+          [
+            4,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          1,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          1,
+          -1
+        ],
+        "kind": "dark",
+        "signed_translations": [
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          3,
+          1
+        ],
+        "kind": "bright",
+        "signed_translations": [
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          3,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          5,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": 1,
+        "h": 1,
+        "port": [
+          7,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          1,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          1,
+          -1
+        ],
+        "kind": "bright",
+        "signed_translations": [
+          [
+            4,
+            -1
+          ],
+          [
+            5,
+            -1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          3,
+          1
+        ],
+        "kind": "dark",
+        "signed_translations": [
+          [
+            4,
+            -1
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          3,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          5,
+          1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "centre": 2,
+        "incoming": -1,
+        "h": 1,
+        "port": [
+          7,
+          -1
+        ],
+        "kind": "null",
+        "signed_translations": [
+          [
+            4,
+            -1
+          ]
+        ]
+      }
+    ],
+    "basis_and_coherent_checks": "Both incoming directions at both centres, eight clock basis columns, an odd dipole and one fully signed unequal vector."
+  },
+  "protocol": "At centre 0 take complete three-tick port reads until informative (difference 4). Four nulls have probability 1/8 each and only translate. For a localized launch the bright/even and dark/odd informative outcomes have equal chances. Flip the sign of one tracked occupied clock cell on the even branch. Both now have the same odd dipole up to sign/translation. Route to centre 2; on each informative difference-1 probe, add +1 for bright and -1 for dark, retrying all nulls. At +m stop; at -m apply D|j>=(-1)^j|j> then stop. Route to each requested centre after previous probes by reading every single base hop; these act by a known translation and sign. All four null outcomes, verdict signs, and deadlines are counted. Coherences and orientation inside conjugate pairs are not claimed to be standardized.",
+  "algebra": "Low k={1,7}; high={3,5}. In the odd sector an informative bright probability is (2+sqrt(2))/4 or its complement. The untouched sector is a sampling representation. Each stopped branch has the same residual high weight epsilon, and each verdict has marginal probability 1/2 in the symmetric initial odd ensemble. In JSON a,b encode a+b sqrt(2). A finite cap records the surviving mass jointly.",
+  "threshold_trials": [
+    {
+      "threshold": 1,
+      "informative_cap": 3,
+      "literal_sheet_tree_checked": true,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-1/4",
+        "decimal": 0.1464466094067262
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "1",
+        "b": "0",
+        "decimal": 1.0
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "2",
+        "b": "0",
+        "decimal": 2.0
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "1/2",
+          "b": "0",
+          "decimal": 0.5
+        },
+        "stop_high_verdict": {
+          "a": "1/2",
+          "b": "0",
+          "decimal": 0.5
+        },
+        "timeout": {
+          "a": "0",
+          "b": "0",
+          "decimal": 0.0
+        },
+        "corrected_low": {
+          "a": "1/2",
+          "b": "1/4",
+          "decimal": 0.8535533905932737
+        },
+        "corrected_high": {
+          "a": "1/2",
+          "b": "-1/4",
+          "decimal": 0.1464466094067262
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "1/4",
+        "b": "0",
+        "decimal": 0.25
+      },
+      "reset_only_accept_by_four_capped_rounds": "175/256"
+    },
+    {
+      "threshold": 2,
+      "informative_cap": 8,
+      "literal_sheet_tree_checked": true,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-1/3",
+        "decimal": 0.028595479208968322
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "8/3",
+        "b": "0",
+        "decimal": 2.6666666666666665
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "16/3",
+        "b": "0",
+        "decimal": 5.333333333333333
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "255/512",
+          "b": "0",
+          "decimal": 0.498046875
+        },
+        "stop_high_verdict": {
+          "a": "255/512",
+          "b": "0",
+          "decimal": 0.498046875
+        },
+        "timeout": {
+          "a": "1/256",
+          "b": "0",
+          "decimal": 0.00390625
+        },
+        "corrected_low": {
+          "a": "255/512",
+          "b": "85/256",
+          "decimal": 0.9676099718816917
+        },
+        "corrected_high": {
+          "a": "255/512",
+          "b": "-85/256",
+          "decimal": 0.028483778118308267
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "255/1024",
+        "b": "0",
+        "decimal": 0.2490234375
+      },
+      "reset_only_accept_by_four_capped_rounds": "749803795455/1099511627776"
+    },
+    {
+      "threshold": 3,
+      "informative_cap": 10,
+      "literal_sheet_tree_checked": true,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-7/20",
+        "decimal": 0.00502525316941671
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "21/5",
+        "b": "0",
+        "decimal": 4.2
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "42/5",
+        "b": "0",
+        "decimal": 8.4
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "4015/8192",
+          "b": "0",
+          "decimal": 0.4901123046875
+        },
+        "stop_high_verdict": {
+          "a": "4015/8192",
+          "b": "0",
+          "decimal": 0.4901123046875
+        },
+        "timeout": {
+          "a": "81/4096",
+          "b": "0",
+          "decimal": 0.019775390625
+        },
+        "corrected_low": {
+          "a": "4015/8192",
+          "b": "5621/16384",
+          "decimal": 0.975298732549998
+        },
+        "corrected_high": {
+          "a": "4015/8192",
+          "b": "-5621/16384",
+          "decimal": 0.004925876825001951
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "4015/16384",
+        "b": "0",
+        "decimal": 0.24505615234375
+      },
+      "reset_only_accept_by_four_capped_rounds": "48650992710478015/72057594037927936"
+    },
+    {
+      "threshold": 4,
+      "informative_cap": 12,
+      "literal_sheet_tree_checked": true,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-6/17",
+        "decimal": 0.0008658015153781284
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "96/17",
+        "b": "0",
+        "decimal": 5.647058823529412
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "192/17",
+        "b": "0",
+        "decimal": 11.294117647058824
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "32249/65536",
+          "b": "0",
+          "decimal": 0.4920806884765625
+        },
+        "stop_high_verdict": {
+          "a": "32249/65536",
+          "b": "0",
+          "decimal": 0.4920806884765625
+        },
+        "timeout": {
+          "a": "519/32768",
+          "b": "0",
+          "decimal": 0.015838623046875
+        },
+        "corrected_low": {
+          "a": "32249/65536",
+          "b": "5691/16384",
+          "decimal": 0.9833092885415823
+        },
+        "corrected_high": {
+          "a": "32249/65536",
+          "b": "-5691/16384",
+          "decimal": 0.0008520884115427174
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "32249/131072",
+        "b": "0",
+        "decimal": 0.24604034423828125
+      },
+      "reset_only_accept_by_four_capped_rounds": "199773435733109587615/295147905179352825856"
+    },
+    {
+      "threshold": 6,
+      "informative_cap": 30,
+      "literal_sheet_tree_checked": false,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-35/99",
+        "decimal": 2.550825193603501e-05
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "280/33",
+        "b": "0",
+        "decimal": 8.484848484848484
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "560/33",
+        "b": "0",
+        "decimal": 16.96969696969697
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "17590719063159/35184372088832",
+          "b": "0",
+          "decimal": 0.4999583058849737
+        },
+        "stop_high_verdict": {
+          "a": "17590719063159/35184372088832",
+          "b": "0",
+          "decimal": 0.4999583058849737
+        },
+        "timeout": {
+          "a": "1466981257/17592186044416",
+          "b": "0",
+          "decimal": 8.338823005260565e-05
+        },
+        "corrected_low": {
+          "a": "17590719063159/35184372088832",
+          "b": "6218941082935/17592186044416",
+          "decimal": 0.9998911056450993
+        },
+        "corrected_high": {
+          "a": "17590719063159/35184372088832",
+          "b": "-6218941082935/17592186044416",
+          "decimal": 2.5506124848084788e-05
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "17590719063159/70368744177664",
+        "b": "0",
+        "decimal": 0.24997915294248685
+      },
+      "reset_only_accept_by_four_capped_rounds": "16760807345642455406472992912055676467197973690842884191/24519928653854221733733552434404946937899825954937634816"
+    },
+    {
+      "threshold": 8,
+      "informative_cap": 48,
+      "literal_sheet_tree_checked": false,
+      "low_posterior_error_each_stopped_branch": {
+        "a": "1/2",
+        "b": "-204/577",
+        "decimal": 7.509114186565746e-07
+      },
+      "mean_informative_reads_uncapped": {
+        "a": "6528/577",
+        "b": "0",
+        "decimal": 11.31369150779896
+      },
+      "mean_native_three_tick_attempts_uncapped": {
+        "a": "13056/577",
+        "b": "0",
+        "decimal": 22.62738301559792
+      },
+      "finite_joint": {
+        "stop_low_verdict": {
+          "a": "73786930246729677175/147573952589676412928",
+          "b": "0",
+          "decimal": 0.49999968796587935
+        },
+        "stop_high_verdict": {
+          "a": "73786930246729677175/147573952589676412928",
+          "b": "0",
+          "decimal": 0.49999968796587935
+        },
+        "timeout": {
+          "a": "46048108529289/73786976294838206464",
+          "b": "0",
+          "decimal": 6.240682413287928e-07
+        },
+        "corrected_low": {
+          "a": "73786930246729677175/147573952589676412928",
+          "b": "6521895047804529525/18446744073709551616",
+          "decimal": 0.9999986250208086
+        },
+        "corrected_high": {
+          "a": "73786930246729677175/147573952589676412928",
+          "b": "-6521895047804529525/18446744073709551616",
+          "decimal": 7.509109500869471e-07
+        }
+      },
+      "reset_only_complete_attempt_accept_any_low_verdict_after_odd_parity": {
+        "a": "73786930246729677175/295147905179352825856",
+        "b": "0",
+        "decimal": 0.24999984398293967
+      },
+      "reset_only_accept_by_four_capped_rounds": "5187483599926790669764384575394193046273158172848630813760267591367031040597908575/7588550360256754183279148073529370729071901715047420004889892225542594864082845696"
+    }
+  ],
+  "resolved_cell_restart_control": {
+    "input": "odd dipole following four consecutive informative dark outcomes",
+    "signed_clock_integers": [
+      0,
+      -4,
+      6,
+      -4,
+      0,
+      4,
+      -6,
+      4
+    ],
+    "high_weight_before_coordinate_read": {
+      "a": "1/2",
+      "b": "6/17",
+      "decimal": 0.9991341984846218
+    },
+    "coordinate_read_probabilities": [
+      "0",
+      "2/17",
+      "9/34",
+      "2/17",
+      "0",
+      "2/17",
+      "9/34",
+      "2/17"
+    ],
+    "low_weight_after_each_occupied_resolved_cell": "1/4",
+    "relative_state_each_new_parity_probe": "Localized at its actual read coordinate; measuring the clock is essential for the reset-only procedure."
+  },
+  "exact_elapsed_clock_trials": [
+    {
+      "threshold": 2,
+      "hard_total_walk_ticks": 12,
+      "initial_base": [
+        0,
+        1
+      ],
+      "stop_low_verdict": {
+        "a": "3/512",
+        "b": "0",
+        "decimal": 0.005859375
+      },
+      "stop_high_verdict": {
+        "a": "3/512",
+        "b": "0",
+        "decimal": 0.005859375
+      },
+      "pending": {
+        "a": "253/256",
+        "b": "0",
+        "decimal": 0.98828125
+      },
+      "corrected_low_and_stopped": {
+        "a": "3/512",
+        "b": "1/256",
+        "decimal": 0.011383646728019902
+      },
+      "corrected_high_and_stopped": {
+        "a": "3/512",
+        "b": "-1/256",
+        "decimal": 0.0003351032719800971
+      },
+      "convention": "A probe that cannot complete by this integer tick is pending. All measured routing hops, parity, probe nulls, both classifications and each three-tick block are counted. Auxiliary sign masks are instantaneous controls in this model."
+    },
+    {
+      "threshold": 2,
+      "hard_total_walk_ticks": 36,
+      "initial_base": [
+        0,
+        1
+      ],
+      "stop_low_verdict": {
+        "a": "50508477/536870912",
+        "b": "0",
+        "decimal": 0.09407936967909336
+      },
+      "stop_high_verdict": {
+        "a": "50508477/536870912",
+        "b": "0",
+        "decimal": 0.09407936967909336
+      },
+      "pending": {
+        "a": "217926979/268435456",
+        "b": "0",
+        "decimal": 0.8118412606418133
+      },
+      "corrected_low_and_stopped": {
+        "a": "50508477/536870912",
+        "b": "16836159/268435456",
+        "decimal": 0.182778250038884
+      },
+      "corrected_high_and_stopped": {
+        "a": "50508477/536870912",
+        "b": "-16836159/268435456",
+        "decimal": 0.0053804893193027115
+      },
+      "convention": "A probe that cannot complete by this integer tick is pending. All measured routing hops, parity, probe nulls, both classifications and each three-tick block are counted. Auxiliary sign masks are instantaneous controls in this model."
+    },
+    {
+      "threshold": 2,
+      "hard_total_walk_ticks": 72,
+      "initial_base": [
+        0,
+        1
+      ],
+      "stop_low_verdict": {
+        "a": "145288149038620371/576460752303423488",
+        "b": "0",
+        "decimal": 0.25203476291851196
+      },
+      "stop_high_verdict": {
+        "a": "145288149038620371/576460752303423488",
+        "b": "0",
+        "decimal": 0.25203476291851196
+      },
+      "pending": {
+        "a": "142942227113091373/288230376151711744",
+        "b": "0",
+        "decimal": 0.49593047416297614
+      },
+      "corrected_low_and_stopped": {
+        "a": "145288149038620371/576460752303423488",
+        "b": "48429383012873457/288230376151711744",
+        "decimal": 0.4896554161910768
+      },
+      "corrected_high_and_stopped": {
+        "a": "145288149038620371/576460752303423488",
+        "b": "-48429383012873457/288230376151711744",
+        "decimal": 0.014414109645947137
+      },
+      "convention": "A probe that cannot complete by this integer tick is pending. All measured routing hops, parity, probe nulls, both classifications and each three-tick block are counted. Auxiliary sign masks are instantaneous controls in this model."
+    },
+    {
+      "threshold": 2,
+      "hard_total_walk_ticks": 120,
+      "initial_base": [
+        0,
+        1
+      ],
+      "stop_low_verdict": {
+        "a": "247920256741984307042092926843/633825300114114700748351602688",
+        "b": "0",
+        "decimal": 0.3911491963122148
+      },
+      "stop_high_verdict": {
+        "a": "247920256741984307042092926843/633825300114114700748351602688",
+        "b": "0",
+        "decimal": 0.3911491963122148
+      },
+      "pending": {
+        "a": "68992393315073043332082874501/316912650057057350374175801344",
+        "b": "0",
+        "decimal": 0.21770160737557043
+      },
+      "corrected_low_and_stopped": {
+        "a": "247920256741984307042092926843/633825300114114700748351602688",
+        "b": "82640085580661435680697642281/316912650057057350374175801344",
+        "decimal": 0.7599281952029284
+      },
+      "corrected_high_and_stopped": {
+        "a": "247920256741984307042092926843/633825300114114700748351602688",
+        "b": "-82640085580661435680697642281/316912650057057350374175801344",
+        "decimal": 0.022370197421501148
+      },
+      "convention": "A probe that cannot complete by this integer tick is pending. All measured routing hops, parity, probe nulls, both classifications and each three-tick block are counted. Auxiliary sign masks are instantaneous controls in this model."
+    }
+  ],
+  "never_stop_or_dark_record_controls": {
+    "initial_low_mass": "1/4",
+    "odd_dipole_low_mass": "1/2",
+    "no_high_correction_low_mass_given_any_stop": "1/2",
+    "translation_only_target_success_bound": "From a localized clock and no clock read, repreparation, or symmetry-breaking mixing, sum of target weights over any stopped prefixes is at most 1/4. If accepted purity is >=1-eps, success is at most (1/4)/(1-eps). Character-preserving controls commute with the projector.",
+    "reset_only": "At even parity or high verdict read the actual clock coordinate and repeat from that physical coordinate. Every basis clock is Fourier-uniform; no translation back to the origin is needed for these weights. Without caps a complete round succeeds with probability 1/4; first at round r has mass (3/4)^(r-1)/4, full eventual yield, mean four rounds. In a capped informative tree p=Pr(stop)/4 and (1-p)^r survive r whole attempts if timeouts also reset. The returned low weight is 1-eps.",
+    "parity_only_retry": "Without the sparse sign, coordinate-read and retry the even half. After r uncapped parity trials fail with probability 2^-r.",
+    "finite_exact_purity": "On every finite homogeneous-clock branch a localized input gives integer coefficients times one common scalar. If the clock polynomial vanishes at a primitive eighth root for k=3 it is divisible over Q by X^4+1, also killing k=1. Apply to each unresolved base component. A finite or almost-sure finite stopping record cannot prepare a nonzero exactly pure low state. The epsilon limit costs time."
+  },
+  "resources": {
+    "parity_sign": "One sign inversion of either occupied j or j+4, selected using the known translation offset (or a fixed address plus translation control).",
+    "high_to_low_sign": "Flip the signs on sites 1,3,5,7. This is an actual clock-position operation. It cannot arise from translations alone since D T = -T D.",
+    "permutation_alternative": [
+      0,
+      3,
+      6,
+      1,
+      4,
+      7,
+      2,
+      5
+    ],
+    "physical_reindexing": "j->3j conjugates T to T^3. This is an extra wire permutation, not a power of a locked T. The fixed-gain graph above keeps its drive unchanged; a resolved clock-coordinate read plus restarts also works without either sign or a drive rewire.",
+    "routing": "For any routed hop the measured base direction is fair. A specified site has mean hitting time j(8-j)<=16; in any four hops the chance to have hit it is at least 1/16. These ticks and the three-tick native blocks are separate from the informative-sample count. Clock sign operations, read electronics and reset costs are not assigned a fabricated duration."
+  },
+  "finite_physical_deadline_example": {
+    "threshold": 4,
+    "maximum_informative_samples": 12,
+    "native_attempts_per_informative_read": 16,
+    "maximum_routing_hops_per_visit": 256,
+    "maximum_walk_ticks_including_parity": 53872,
+    "threshold_timeout": "519/32768",
+    "bound_on_any_null_deadline": "13/65536",
+    "bound_on_any_routing_deadline": 3.956740610168533e-07,
+    "total_timeout_union_upper": 0.016037382978748516,
+    "scope": "Union bounds; successful physical deadlines may select different path lengths, but routing factors and nulls are sector-independent conditional on informative signs. Posterior bounds hold for each successful transcript."
+  },
+  "flight_scope": "A sheet-blind sector-preserving flight compares with its own normalized projected low state (or oriented-launch laws known to coincide) with TV <= epsilon. For the uniform g(x)=x field on an even ring, changing k by 4 adds pi to the field and gives identical position/coin counts by the spatial parity gauge. An eight-clock example is finite; no classical limiting scaling or oriented complex-state preparation follows."
+}

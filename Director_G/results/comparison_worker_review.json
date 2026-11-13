@@ -1,0 +1,370 @@
+{
+  "question": "Does a persistent classical fair selector with symmetry within each preparation suffice for coherent cross-block comparison?",
+  "exact_fraction_check": {
+    "block_numerators": [
+      [
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "block_amplitude_denominator_squared": 8,
+    "direct_joint_amplitude_denominator_squared": 16,
+    "fourth_power_numerator_sums": [
+      20,
+      8
+    ],
+    "classically_selected_conditional_fourth_masses": [
+      [
+        "4/5",
+        "1/20",
+        "1/20",
+        "1/20",
+        "1/20",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    ],
+    "classically_selected_joint_masses": {
+      "all_coordinate_masses": [
+        "2/5",
+        "1/40",
+        "1/40",
+        "1/40",
+        "1/40",
+        "0",
+        "0",
+        "0",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16"
+      ],
+      "block_masses": [
+        "1/2",
+        "1/2"
+      ],
+      "two_equal_unit_masses": [
+        "1/40",
+        "1/16"
+      ]
+    },
+    "coherent_joint_fourth_masses": {
+      "all_coordinate_masses": [
+        "4/7",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28",
+        "0",
+        "0",
+        "0",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28",
+        "1/28"
+      ],
+      "block_masses": [
+        "5/7",
+        "2/7"
+      ],
+      "two_equal_unit_masses": [
+        "1/28",
+        "1/28"
+      ]
+    },
+    "coherent_joint_square_masses": {
+      "all_coordinate_masses": [
+        "1/4",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "0",
+        "0",
+        "0",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16",
+        "1/16"
+      ],
+      "block_masses": [
+        "1/2",
+        "1/2"
+      ],
+      "two_equal_unit_masses": [
+        "1/16",
+        "1/16"
+      ]
+    }
+  },
+  "adjudication": {
+    "sufficiency": "False in the measured-selector experiment. Recording an independent fair selector and using normalized fourth powers within the selected block respects zero support, normalization, persistence of that bit, and equality of coordinates within each block.",
+    "construction_boundary": "Identifying the selected preparations with the same coherent vector requires additional preparation and record constraints. The global fourth-power assignment obeys full equal-entry symmetry, and fails protected block marginals. These finite tests exclude that candidate under the combined premises and do not establish uniqueness of square weights by themselves.",
+    "worker": "The child returned its numerator without normalization and omitted the fourth-power sum. The parent independently corrected it and gave all measured and coherent control fractions correctly."
+  },
+  "runtime": {
+    "attempt": "20261113T120852555350Z",
+    "commission": {
+      "task": "Falsify or defend this sufficiency claim: persistence of a classically recorded fair selector and symmetry of equal entries within each preparation block already force coherent cross-block equal-entry comparison, hence ordinary square weights. Use x=(2,1,1,1,1,0,0,0)/sqrt(8) and y=(1,1,1,1,1,1,1,1)/sqrt(8). Examine the candidate that first fixes the fair selector, then assigns each conditional coordinate its normalized absolute-amplitude fourth power. Compare corresponding amplitude-one numerator joint masses. As a control also assign normalized fourth powers directly to the single coherent vector (x,y)/sqrt(2) and compute its two block masses. Can both routes describe the same coherent preparation with protected block marginals AND cross-block symmetry? Do not assume a physical coherent control when only a classical selector is specified. Use the single available consult_pcp_reviewer call for a micro-calculation; send the child just the x integer vector and ask for the normalized fourth-power weight of one numerator-one coordinate, with no suggested result and no alternatives. Independently audit its response. Report exact fractions, the scope of any counterexample, and the actual child receipt ID. Never invent an ID.",
+      "child_scope": "You are the child arithmetic reviewer. Calculate using the provided integer vector. Show the sum of fourth powers and the weight as a reduced fraction. Keep the answer short.",
+      "tool_scope": "Obtain one independent, local arithmetic check for a single normalized vector, without suggesting its answer.",
+      "max_delegations": 1,
+      "max_depth_below_parent": 1,
+      "acceptance": "Parent actually calls MCP, child returns an ACR-on result, parent quotes unseen receipt, and both records verify."
+    },
+    "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+    "acceptance": {
+      "unmodified_runner_verified": false,
+      "unmodified_runner_exit": 1,
+      "parent_model_exit": 0,
+      "all_mcp_call_count": 3,
+      "reviewer_call_count": 1,
+      "independently_verified_specific_consultation": true,
+      "details": "The unmodified runner counts every MCP tool call. Two empty resource-discovery calls accompanied the only reviewer call. Its one-call gate returned false. Applying the same receipt, prompt, model-output and chronology checks to the reviewer call alone passes. The original status and all calls are retained."
+    },
+    "provider_time_ns": [
+      1794571735364151700,
+      1794571768351581000
+    ],
+    "child_consult_time_ns": [
+      1794571744160306000,
+      1794571748740200300
+    ],
+    "child_native_process_events": [
+      {
+        "event": "process_started",
+        "pid": 4464,
+        "supervisor_pid": 28452,
+        "utc": "2026-11-13T12:09:04.671192+00:00",
+        "time_ns": 1794571744671209500,
+        "binary": "%LOCALAPPDATA%\\CodexResearchTools\\offline-inference\\llama-b12110\\llama-completion.exe",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+        "system_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+        "prompt_sha256": "c319be44c1b114eaa8e64eefd12e585a36284c47df548755954ac7cd0facf698"
+      },
+      {
+        "event": "process_exit",
+        "pid": 4464,
+        "supervisor_pid": 28452,
+        "utc": "2026-11-13T12:09:08.333064+00:00",
+        "time_ns": 1794571748333080200,
+        "returncode": 0,
+        "timeout": false
+      },
+      {
+        "event": "reply_readback",
+        "pid": 4464,
+        "supervisor_pid": 28452,
+        "utc": "2026-11-13T12:09:08.335112+00:00",
+        "time_ns": 1794571748335124500,
+        "sha256": "91cc8f9771d75f166e55168357f524fbf7ddfe2459427b0c11ffc4bcf2b1e2d7",
+        "normalized_utf8_bytes": 45
+      }
+    ],
+    "receipt": "6a844c6ebb2096e567cb",
+    "provider_items": [
+      "agent_message",
+      "mcp_tool_call",
+      "mcp_tool_call",
+      "mcp_tool_call",
+      "agent_message"
+    ],
+    "mcp_calls": [
+      {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "codex",
+        "tool": "list_mcp_resources",
+        "arguments": {},
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"resources\":[]}"
+            }
+          ],
+          "structured_content": null
+        },
+        "error": null,
+        "status": "completed"
+      },
+      {
+        "id": "item_2",
+        "type": "mcp_tool_call",
+        "server": "pcp_child",
+        "tool": "consult_pcp_reviewer",
+        "arguments": {
+          "question": "For the integer vector (2,1,1,1,1,0,0,0), what is the normalized absolute-amplitude fourth-power weight of one numerator-one coordinate?"
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"receipt\": \"6a844c6ebb2096e567cb\", \"reviewer_reply\": \"The fourth power weight is 1.0. [end of text]\", \"output_sha256\": \"91cc8f9771d75f166e55168357f524fbf7ddfe2459427b0c11ffc4bcf2b1e2d7\"}"
+            }
+          ],
+          "structured_content": null
+        },
+        "error": null,
+        "status": "completed"
+      },
+      {
+        "id": "item_3",
+        "type": "mcp_tool_call",
+        "server": "codex",
+        "tool": "list_mcp_resource_templates",
+        "arguments": {},
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"resourceTemplates\":[]}"
+            }
+          ],
+          "structured_content": null
+        },
+        "error": null,
+        "status": "completed"
+      }
+    ],
+    "runs": {
+      "parent": {
+        "prompt": "Falsify or defend this sufficiency claim: persistence of a classically recorded fair selector and symmetry of equal entries within each preparation block already force coherent cross-block equal-entry comparison, hence ordinary square weights. Use x=(2,1,1,1,1,0,0,0)/sqrt(8) and y=(1,1,1,1,1,1,1,1)/sqrt(8). Examine the candidate that first fixes the fair selector, then assigns each conditional coordinate its normalized absolute-amplitude fourth power. Compare corresponding amplitude-one numerator joint masses. As a control also assign normalized fourth powers directly to the single coherent vector (x,y)/sqrt(2) and compute its two block masses. Can both routes describe the same coherent preparation with protected block marginals AND cross-block symmetry? Do not assume a physical coherent control when only a classical selector is specified. Use the single available consult_pcp_reviewer call for a micro-calculation; send the child just the x integer vector and ask for the normalized fourth-power weight of one numerator-one coordinate, with no suggested result and no alternatives. Independently audit its response. Report exact fractions, the scope of any counterexample, and the actual child receipt ID. Never invent an ID.",
+        "reply": "**Verdict: the sufficiency claim is refuted as stated.** A persistent classical fair selector and equal-entry symmetry within each block permit the proposed fourth-power rule. They do not force cross-block symmetry for a coherent preparation.\n\nFix the classical selector with \\(P(X)=P(Y)=1/2\\), and set\n\\[\nP(i\\mid b)=\\frac{|b_i|^4}{\\sum_j|b_j|^4}.\n\\]\nThe common amplitude normalization cancels. For \\(x\\), the fourth-power numerator sum is \\(16+4=20\\); for \\(y\\), it is \\(8\\).\n\n| Quantity | \\(x\\) block | \\(y\\) block |\n|---|---:|---:|\n| Conditional weight of one numerator-one coordinate | \\(1/20\\) | \\(1/8\\) |\n| Its joint mass with the selector | \\(1/40\\) | \\(1/16\\) |\n| Block marginal | \\(1/2\\) | \\(1/2\\) |\n\nThis preserves the fair selector and symmetry of equal entries within each preparation block. Corresponding numerator-one entries across blocks nevertheless have unequal joint masses.\n\nFor the control, assign normalized fourth powers directly to\n\\[\nz=(x,y)/\\sqrt2=(2,1,1,1,1,0,0,0;\\,1,1,1,1,1,1,1,1)/4.\n\\]\nThe fourth-power numerator sum is \\(20+8=28\\). Every numerator-one coordinate now has mass \\(1/28\\), while the block masses are\n\\[\nP_z(X)=\\frac{20}{28}=\\frac57,\\qquad\nP_z(Y)=\\frac8{28}=\\frac27.\n\\]\n\nThus **the two routes cannot describe the same coherent preparation with protected block marginals AND cross-block symmetry**: the selector-first route preserves the marginals but violates cross-block symmetry; the direct coherent route preserves equal-entry symmetry but changes the marginals.\n\nThe counterexample’s scope is the claimed implication from classical selector persistence and within-block symmetry. A classical selector alone specifies no physical coherent control. Adding coherent compatibility imposes an additional requirement; this calculation excludes the fourth-power candidate under that requirement, but does not alone prove a general uniqueness theorem for square weights. Ordinary square weights do satisfy this example: each numerator-one joint mass is \\(1/16\\), and both block masses are \\(1/2\\).\n\nI used the single reviewer call exactly for the requested \\(x\\)-vector micro-calculation. Its reply, “The fourth power weight is 1.0,” is incorrect: independent arithmetic gives \\(1/(2^4+4)=1/20\\). Actual child receipt ID: `6a844c6ebb2096e567cb`.\n\nI inspected the supplied card and queried the available resource listings; both listings were empty. The full Core Specification was unavailable, so compliance with its additional clauses remains unverified. ACR is untested and not peer reviewed (1.1).",
+        "model": "Codex CLI",
+        "participant": "parent-codex",
+        "run": "R1",
+        "sha256": "bf2a9ce84b46d2ce56cee95a8b4518798972a41bffe98f8b7928213d98662bc1",
+        "bytes": 2544,
+        "exposures": [
+          {
+            "sha256": "cb276a5b18b78cc97fb7933fb5f491fb8adee5730af7d50ca120a3cbeb9b0da2",
+            "what": "task"
+          },
+          {
+            "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+            "what": "kernel card"
+          }
+        ],
+        "acr_in_use": true,
+        "kernel_sent": true,
+        "python": {
+          "altered_objects": [],
+          "anchor": null,
+          "events": 7,
+          "guard_problems": [],
+          "head": "f003d5556436b957ca498e8889c26c0daeff5c2a8ab1822894e888c81dee3b80",
+          "objects_by_reference_only": 0,
+          "ok": true
+        },
+        "rust": {
+          "workspace": "parent",
+          "register_sha256": "d568ac1e232cd173c7913248db819af45e0d3f537311c6804ed23d388ad4f3e5",
+          "snapshot_events": 7,
+          "model_outputs": [
+            "bf2a9ce84b46d2ce56cee95a8b4518798972a41bffe98f8b7928213d98662bc1"
+          ],
+          "tasks": [],
+          "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+          "verification": {
+            "command": "/pcpos verify worker-register.jsonl",
+            "exit": 0,
+            "stdout": "chain intact: 7 events, head f003d5556436b957ca498e8889c26c0daeff5c2a8ab1822894e888c81dee3b80\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: d568ac1e232cd173c7913248db819af45e0d3f537311c6804ed23d388ad4f3e5\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+          },
+          "staging_exit_codes": [
+            0,
+            0
+          ]
+        }
+      },
+      "child": {
+        "prompt": "You are the child arithmetic reviewer. Calculate using the provided integer vector. Show the sum of fourth powers and the weight as a reduced fraction. Keep the answer short. The requesting model's question follows.\nFor the integer vector (2,1,1,1,1,0,0,0), what is the normalized absolute-amplitude fourth-power weight of one numerator-one coordinate?",
+        "reply": "The fourth power weight is 1.0. [end of text]",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+        "participant": "child-qwen",
+        "run": "R1",
+        "sha256": "91cc8f9771d75f166e55168357f524fbf7ddfe2459427b0c11ffc4bcf2b1e2d7",
+        "bytes": 45,
+        "exposures": [
+          {
+            "sha256": "ac89d29870ea742636c14887b49cfc8014b10d49dd3eea52deefc0a6b355594c",
+            "what": "task"
+          },
+          {
+            "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+            "what": "kernel card"
+          }
+        ],
+        "acr_in_use": true,
+        "kernel_sent": true,
+        "python": {
+          "altered_objects": [],
+          "anchor": null,
+          "events": 7,
+          "guard_problems": [],
+          "head": "759a8d2604ac1384178674e3b829e2b3b676df183abe9fddc238a97b2fa8e02b",
+          "objects_by_reference_only": 0,
+          "ok": true
+        },
+        "rust": {
+          "workspace": "child",
+          "register_sha256": "7eddb561e557d2644d6fc7df589194425ed3e4ca230d10502d31a436fac9ed0f",
+          "snapshot_events": 7,
+          "model_outputs": [
+            "91cc8f9771d75f166e55168357f524fbf7ddfe2459427b0c11ffc4bcf2b1e2d7"
+          ],
+          "tasks": [],
+          "rust_host_sha256": "c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd",
+          "verification": {
+            "command": "/pcpos verify worker-register.jsonl",
+            "exit": 0,
+            "stdout": "chain intact: 7 events, head 759a8d2604ac1384178674e3b829e2b3b676df183abe9fddc238a97b2fa8e02b\nguards replayed: 0 problem(s)\nThe guards are those of pcpos 1.0.22. A register is read under the rules of the program that reads it: an event an earlier build accepted may be reported here, and its bytes are unchanged.\nregister file SHA-256: 7eddb561e557d2644d6fc7df589194425ed3e4ca230d10502d31a436fac9ed0f\nA pass is a fact about these bytes. It authenticates nobody and establishes nothing about whether a finding is right.\n"
+          },
+          "staging_exit_codes": [
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -126,3 +126,7 @@ Baseline_Additions/verify_continuation_selection.py,RAN_OK,yes,unchanged,edition
 "Baseline_Additions/Vanishing_Sums: t1_poly.py, t1b_multi.py, t2_lattice.py, t3_cert.py",RAN_OK,no,not rerun in a fresh directory; logs and two result files kept as produced by the sub-agent,"edition Z14; 60 of 63 predicates met, three small boxes failed and kept"
 COMPUTATION/Lean/Mathlib/VslCertificates.lean with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z14
 "Baseline_Additions/Abundance: abund.py, abund_v2.py",RAN_OK,yes,second version rerun byte-identical by the sub-agent; first version kept with two failed predicates,edition Z15; 660 carriers
+"Baseline_Additions/Block_Law: gauge_bl.py, poly_bl.py",RAN_OK,yes,rerun identical by the sub-agent apart from a timing field; two crashed first runs and one killed run kept as logs,edition Z16; needs python-flint
+COMPUTATION/Lean/Mathlib/GaugeBlock.lean with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z16
+"Baseline_Additions/Multiset_Law: verify_multiset.py, verify_multiset_followup.py, explore.py",RAN_OK,yes,first program rerun byte-identical by the sub-agent; follow-up and exploration not rerun,edition Z17; needs python-flint
+COMPUTATION/Lean/Mathlib/MultisetBlock.lean with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z17

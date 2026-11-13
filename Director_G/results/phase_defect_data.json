@@ -1,0 +1,1159 @@
+{
+ "source": {
+  "article": "Peng Xue, Hao Qin, Bao Tang. Scientific Reports 4, 4825 (2014).",
+  "doi": "https://doi.org/10.1038/srep04825",
+  "publisher_pdf": "https://www.nature.com/articles/srep04825.pdf",
+  "open_text": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001091/",
+  "preprint": "https://arxiv.org/pdf/1401.6109",
+  "update_check": "Publisher, PMID 24769869, and Crossref work record showed no linked correction in the inspection; Crossref relation {}. The preprint's Fig. 4 explanatory paragraph shows a real sign where the published version gives -i. Fig. 4 describes theory. The measured configurations in Figs. 2,3,5,6 use the antisymmetric circular input. A real-input experiment was not identified in this paper."
+ },
+ "apparatus": "Source localized at site 0, circular (H-iV)/sqrt(2) in H/V order. Eq. (1) coin C(theta)=[[cos2theta,sin2theta],[sin2theta,-cos2theta]]. At the defect n multiply both outgoing amplitudes by exp(+i phi) on departure, H goes left and V right. Eq. (2)'s two explicitly stated basis actions and the polarization-independent phase plate specify this convention. Its symbol S-dagger is not literally the inverse of the stated left shift.",
+ "alternative": "At each physical site split its actual incoming probability between coin outputs in proportion to their complex modulus to the fourth power, then stream; zero-total cells carry zero mass. Born uses the same coherent amplitudes. Sum both outgoing coin weights at a final site. For nonbalanced HWP settings this explicitly extends the tested rule. Equal initial circular moduli give initial weights 1/2,1/2.",
+ "measurement": "Site coincidence counts divided by total detected counts at the respective step. 7 ns coincidence window, roughly 300 coincidences/s collected over 60 s as an apparatus statement, visibility 0.998 per interferometer pair. No absolute detection probabilities, per-bin raw counts or covariance matrix were obtained. Common attenuation cancels; unequal efficiencies, dephasing, state errors and drift need independent calibration.",
+ "printed_observations": [
+  {
+   "name": "Fig. 2a,c, origin, tick 4, 180 degree phase",
+   "metric": "recurrence",
+   "reported": 0.615,
+   "reported_statistical_SD": 0.011,
+   "born": 0.625,
+   "local_fourth": 0.7211538461538461,
+   "signed_residual_in_quoted_SD": {
+    "born": 0.90909090909091,
+    "local_fourth": 9.650349650349652
+   },
+   "midpoint_equal_absolute_error": 0.6730769230769231,
+   "required_observation_shift_to_midpoint": 0.05807692307692314,
+   "center_vs_rest_detection_efficiency_needed_for_exact_fit": {
+    "born": 0.9584415584415584,
+    "local_fourth": 0.6176623376623377
+   }
+  },
+  {
+   "name": "Fig. 2b, tick 10, 180 degree phase",
+   "metric": "variance",
+   "reported": 9.586,
+   "reported_statistical_SD": 0.463,
+   "born": 9.546875,
+   "local_fourth": 10.627566299357893,
+   "signed_residual_in_quoted_SD": {
+    "born": -0.08450323974082137,
+    "local_fourth": 2.2496032383539797
+   },
+   "midpoint_equal_absolute_error": 10.087220649678946,
+   "required_observation_shift_to_midpoint": 0.5012206496789453
+  },
+  {
+   "name": "Fig. 3b inset, origin, tick 10, 135 degree phase",
+   "metric": "recurrence",
+   "reported": 0.66,
+   "reported_statistical_SD": 0.012,
+   "born": 0.6673938036811949,
+   "local_fourth": 0.837400758138191,
+   "signed_residual_in_quoted_SD": {
+    "born": 0.6161503067662425,
+    "local_fourth": 14.783396511515917
+   },
+   "midpoint_equal_absolute_error": 0.752397280909693,
+   "required_observation_shift_to_midpoint": 0.09239728090969301,
+   "center_vs_rest_detection_efficiency_needed_for_exact_fit": {
+    "born": 0.9674158176247211,
+    "local_fourth": 0.3769208701690023
+   }
+  }
+ ],
+ "error_semantics": "Statistical-only Monte Carlo standard deviations. The discrepancy/SD ratios use the printed standard deviations as units; they are not calibrated p-values and the different plot entries are not independent trials.",
+ "fig2_mean_TV": {
+  "printed": 0.046,
+  "ideal_separation": 0.06993374047706322,
+  "exact_ideal_separation": "3688932484852826213853/52748965802318527306240",
+  "interpretation": "If the stated average is the equally weighted average over depths 1\u201310, the triangle lower bound on empirical/quartic TV is below the reported empirical/Born TV. The average alone does not rank these two predictions.",
+  "nominal_lower_bound": 0.023933740477063217
+ },
+ "fig2_exact_by_depth": [
+  {
+   "tick": 1,
+   "born": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "1"
+   },
+   "local_fourth": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "1"
+   },
+   "position_TV": "0",
+   "sites": [
+    -1,
+    1
+   ],
+   "born_positions": [
+    "1/2",
+    "1/2"
+   ],
+   "quartic_positions": [
+    "1/2",
+    "1/2"
+   ]
+  },
+  {
+   "tick": 2,
+   "born": {
+    "recurrence": "1/2",
+    "mean": "0",
+    "variance": "2"
+   },
+   "local_fourth": {
+    "recurrence": "1/2",
+    "mean": "0",
+    "variance": "2"
+   },
+   "position_TV": "0",
+   "sites": [
+    -2,
+    0,
+    2
+   ],
+   "born_positions": [
+    "1/4",
+    "1/2",
+    "1/4"
+   ],
+   "quartic_positions": [
+    "1/4",
+    "1/2",
+    "1/4"
+   ]
+  },
+  {
+   "tick": 3,
+   "born": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "3"
+   },
+   "local_fourth": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "3"
+   },
+   "position_TV": "0",
+   "sites": [
+    -3,
+    -1,
+    1,
+    3
+   ],
+   "born_positions": [
+    "1/8",
+    "3/8",
+    "3/8",
+    "1/8"
+   ],
+   "quartic_positions": [
+    "1/8",
+    "3/8",
+    "3/8",
+    "1/8"
+   ]
+  },
+  {
+   "tick": 4,
+   "born": {
+    "recurrence": "5/8",
+    "mean": "0",
+    "variance": "3"
+   },
+   "local_fourth": {
+    "recurrence": "75/104",
+    "mean": "0",
+    "variance": "34/13"
+   },
+   "position_TV": "5/52",
+   "sites": [
+    -4,
+    -2,
+    0,
+    2,
+    4
+   ],
+   "born_positions": [
+    "1/16",
+    "1/8",
+    "5/8",
+    "1/8",
+    "1/16"
+   ],
+   "quartic_positions": [
+    "1/16",
+    "1/13",
+    "75/104",
+    "1/13",
+    "1/16"
+   ]
+  },
+  {
+   "tick": 5,
+   "born": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "4"
+   },
+   "local_fourth": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "47/13"
+   },
+   "position_TV": "5/104",
+   "sites": [
+    -5,
+    -3,
+    -1,
+    1,
+    3,
+    5
+   ],
+   "born_positions": [
+    "1/32",
+    "3/32",
+    "3/8",
+    "3/8",
+    "3/32",
+    "1/32"
+   ],
+   "quartic_positions": [
+    "1/32",
+    "29/416",
+    "83/208",
+    "83/208",
+    "29/416",
+    "1/32"
+   ]
+  },
+  {
+   "tick": 6,
+   "born": {
+    "recurrence": "5/8",
+    "mean": "0",
+    "variance": "19/4"
+   },
+   "local_fourth": {
+    "recurrence": "2075/2704",
+    "mean": "0",
+    "variance": "1323/338"
+   },
+   "position_TV": "385/2704",
+   "sites": [
+    -6,
+    -4,
+    -2,
+    0,
+    2,
+    4,
+    6
+   ],
+   "born_positions": [
+    "1/64",
+    "3/32",
+    "5/64",
+    "5/8",
+    "5/64",
+    "3/32",
+    "1/64"
+   ],
+   "quartic_positions": [
+    "1/64",
+    "447/5408",
+    "15/832",
+    "2075/2704",
+    "15/832",
+    "447/5408",
+    "1/64"
+   ]
+  },
+  {
+   "tick": 7,
+   "born": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "25/4"
+   },
+   "local_fourth": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "1079887/180154"
+   },
+   "position_TV": "115521/2882464",
+   "sites": [
+    -7,
+    -5,
+    -3,
+    -1,
+    1,
+    3,
+    5,
+    7
+   ],
+   "born_positions": [
+    "1/128",
+    "11/128",
+    "3/128",
+    "49/128",
+    "49/128",
+    "3/128",
+    "11/128",
+    "1/128"
+   ],
+   "quartic_positions": [
+    "1/128",
+    "24547/281216",
+    "39189/11529856",
+    "356095/886912",
+    "356095/886912",
+    "39189/11529856",
+    "24547/281216",
+    "1/128"
+   ]
+  },
+  {
+   "tick": 8,
+   "born": {
+    "recurrence": "85/128",
+    "mean": "0",
+    "variance": "55/8"
+   },
+   "local_fourth": {
+    "recurrence": "2572786375/3278913664",
+    "mean": "0",
+    "variance": "4684235782198/679682939429"
+   },
+   "position_TV": "248364975225/1673065697056",
+   "sites": [
+    -8,
+    -6,
+    -4,
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8
+   ],
+   "born_positions": [
+    "1/256",
+    "9/128",
+    "3/128",
+    "9/128",
+    "85/128",
+    "9/128",
+    "3/128",
+    "9/128",
+    "1/256"
+   ],
+   "quartic_positions": [
+    "1/256",
+    "1859753/22075456",
+    "41655181/5883109024",
+    "3448118155/277068204608",
+    "2572786375/3278913664",
+    "3448118155/277068204608",
+    "41655181/5883109024",
+    "1859753/22075456",
+    "1/256"
+   ]
+  },
+  {
+   "tick": 9,
+   "born": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "67/8"
+   },
+   "local_fourth": {
+    "recurrence": 0,
+    "mean": "0",
+    "variance": "233597232125948130/24855325411979101"
+   },
+   "position_TV": "3535759798599087/61182339475640864",
+   "sites": [
+    -9,
+    -7,
+    -5,
+    -3,
+    -1,
+    1,
+    3,
+    5,
+    7,
+    9
+   ],
+   "born_positions": [
+    "1/512",
+    "27/512",
+    "5/128",
+    "1/128",
+    "51/128",
+    "51/128",
+    "1/128",
+    "5/128",
+    "27/512",
+    "1/512"
+   ],
+   "quartic_positions": [
+    "1/512",
+    "7636989/101364224",
+    "524183341275/29674401917056",
+    "10339475671977/32798779925085824",
+    "13007828482593/32139911734528",
+    "13007828482593/32139911734528",
+    "10339475671977/32798779925085824",
+    "524183341275/29674401917056",
+    "7636989/101364224",
+    "1/512"
+   ]
+  },
+  {
+   "tick": 10,
+   "born": {
+    "recurrence": "85/128",
+    "mean": "0",
+    "variance": "611/64"
+   },
+   "local_fourth": {
+    "recurrence": "325195712064825/417818852548864",
+    "mean": "0",
+    "variance": "7007414141083779352427/659362072528981591328"
+   },
+   "position_TV": "877786318578074037125/5274896580231852730624",
+   "sites": [
+    -10,
+    -8,
+    -6,
+    -4,
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "born_positions": [
+    "1/1024",
+    "19/512",
+    "57/1024",
+    "0",
+    "19/256",
+    "85/128",
+    "19/256",
+    "0",
+    "57/1024",
+    "19/512",
+    "1/1024"
+   ],
+   "quartic_positions": [
+    "1/1024",
+    "5309580437/84030941696",
+    "6060888306816621/196800633513915392",
+    "0",
+    "2083586974455009/131195119700343296",
+    "325195712064825/417818852548864",
+    "2083586974455009/131195119700343296",
+    "0",
+    "6060888306816621/196800633513915392",
+    "5309580437/84030941696",
+    "1/1024"
+   ]
+  }
+ ],
+ "fig2_no_defect_controls": {
+  "printed_theory_variance_Q": 29.951,
+  "our_Q_variance": 29.95312500000002,
+  "printed_classical_random_walk_variance": 10,
+  "defect_theory_variance_printed": 9.547,
+  "defect_our_variance": 9.546875
+ },
+ "graphic_provenance": {
+  "url_template": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsrep04825/MediaObjects/41598_2014_Article_BFsrep04825_Fig{number}_HTML.jpg",
+  "file_sha256": {
+   "2": "7b2daa43df39e8f0d6ca972995f5bc082d721593f28e170f3005ace53c7fa95e",
+   "3": "5a428e3e6478a1c0b808267e45da8902638ae68c21de3f32c172d477dc90535b",
+   "5": "11951db56833779738b80fd9fafc5b60800b01e349013903b7671515d9ba5b06",
+   "6": "7ac4df121e2521cd3f2980fa85345c7b84bbe893f3a033d90bbe4b21b735bfd9"
+  },
+  "dimensions_px": {
+   "2": [
+    1985,
+    558
+   ],
+   "3": [
+    1378,
+    538
+   ],
+   "5": [
+    1362,
+    501
+   ],
+   "6": [
+    1382,
+    546
+   ]
+  },
+  "method": "Secondary readings from publisher JPEG. Red marker/visible caps in narrow x window; centre is midrange of inclusive y bounds. Pixel coordinates from top left. Linear axis anchors and two-pixel scale are included; this scale describes digitization only. Do not treat cap bounds as independent counts or assign plotted centres printed precision. 3D occluded histograms not converted into raw per-position data; Fig. 2a model profiles at all ten depths are included independently."
+ },
+ "digitized_secondary": [
+  {
+   "panel": "2b",
+   "setting_axis": "tick",
+   "statistic": "variance",
+   "y_calibration": [
+    409,
+    0,
+    41.5,
+    12
+   ],
+   "readings": [
+    {
+     "setting": 0,
+     "clock": 0,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      405,
+      412
+     ],
+     "estimated_centre": 0.0163265306122449,
+     "squared_prediction": 0,
+     "local_fourth_prediction": 0,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    },
+    {
+     "setting": 2,
+     "clock": 2,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      343,
+      351
+     ],
+     "estimated_centre": 2.0244897959183676,
+     "squared_prediction": 2.0000000000000004,
+     "local_fourth_prediction": 2.0,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    },
+    {
+     "setting": 4,
+     "clock": 4,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      312,
+      320
+     ],
+     "estimated_centre": 3.0367346938775515,
+     "squared_prediction": 3.0000000000000013,
+     "local_fourth_prediction": 2.615384615384615,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    },
+    {
+     "setting": 6,
+     "clock": 6,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      254,
+      268
+     ],
+     "estimated_centre": 4.83265306122449,
+     "squared_prediction": 4.750000000000002,
+     "local_fourth_prediction": 3.914201183431952,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    },
+    {
+     "setting": 8,
+     "clock": 8,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      185,
+      198
+     ],
+     "estimated_centre": 7.102040816326531,
+     "squared_prediction": 6.875000000000002,
+     "local_fourth_prediction": 6.891795439404754,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    },
+    {
+     "setting": 10,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      90,
+      120
+     ],
+     "estimated_centre": 9.9265306122449,
+     "squared_prediction": 9.546875000000005,
+     "local_fourth_prediction": 10.627566299357893,
+     "pixel_geometry_scale_2px": 0.0653061224489796
+    }
+   ]
+  },
+  {
+   "panel": "2c",
+   "setting_axis": "tick",
+   "statistic": "recurrence",
+   "y_calibration": [
+    451,
+    0.4,
+    76,
+    1
+   ],
+   "readings": [
+    {
+     "setting": 0,
+     "clock": 0,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      72,
+      79
+     ],
+     "estimated_centre": 1.0008,
+     "squared_prediction": 1,
+     "local_fourth_prediction": 1,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    },
+    {
+     "setting": 2,
+     "clock": 2,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      381,
+      395
+     ],
+     "estimated_centre": 0.5008,
+     "squared_prediction": 0.5000000000000001,
+     "local_fourth_prediction": 0.5,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    },
+    {
+     "setting": 4,
+     "clock": 4,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      308,
+      324
+     ],
+     "estimated_centre": 0.616,
+     "squared_prediction": 0.6250000000000001,
+     "local_fourth_prediction": 0.7211538461538463,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    },
+    {
+     "setting": 6,
+     "clock": 6,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      311,
+      327
+     ],
+     "estimated_centre": 0.6112,
+     "squared_prediction": 0.6250000000000001,
+     "local_fourth_prediction": 0.7673816568047338,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    },
+    {
+     "setting": 8,
+     "clock": 8,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      293,
+      316
+     ],
+     "estimated_centre": 0.6344,
+     "squared_prediction": 0.6640625000000003,
+     "local_fourth_prediction": 0.7846459646825273,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    },
+    {
+     "setting": 10,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      297,
+      317
+     ],
+     "estimated_centre": 0.6304000000000001,
+     "squared_prediction": 0.6640625000000004,
+     "local_fourth_prediction": 0.7783174695947769,
+     "pixel_geometry_scale_2px": 0.0031999999999999997
+    }
+   ]
+  },
+  {
+   "panel": "3b",
+   "setting_axis": "phase",
+   "statistic": "variance",
+   "y_calibration": [
+    437,
+    5,
+    79,
+    30
+   ],
+   "readings": [
+    {
+     "setting": 0,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 0,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      94,
+      120
+     ],
+     "estimated_centre": 28.044692737430164,
+     "squared_prediction": 29.95312500000002,
+     "local_fourth_prediction": 44.97548935593373,
+     "pixel_geometry_scale_2px": 0.13966480446927373
+    },
+    {
+     "setting": 45,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 45,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      263,
+      283
+     ],
+     "estimated_centre": 16.452513966480446,
+     "squared_prediction": 17.125000000000014,
+     "local_fourth_prediction": 26.542466053090944,
+     "pixel_geometry_scale_2px": 0.13966480446927373
+    },
+    {
+     "setting": 90,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 90,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      364,
+      379
+     ],
+     "estimated_centre": 9.574022346368714,
+     "squared_prediction": 9.546875000000005,
+     "local_fourth_prediction": 10.627566299357893,
+     "pixel_geometry_scale_2px": 0.13966480446927373
+    },
+    {
+     "setting": 135,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 135,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      363,
+      379
+     ],
+     "estimated_centre": 9.608938547486034,
+     "squared_prediction": 8.829485722895209,
+     "local_fourth_prediction": 7.686449720261055,
+     "pixel_geometry_scale_2px": 0.13966480446927373
+    },
+    {
+     "setting": 180,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      358,
+      373
+     ],
+     "estimated_centre": 9.993016759776536,
+     "squared_prediction": 9.546875000000005,
+     "local_fourth_prediction": 10.627566299357893,
+     "pixel_geometry_scale_2px": 0.13966480446927373
+    }
+   ]
+  },
+  {
+   "panel": "3b inset",
+   "setting_axis": "phase",
+   "statistic": "recurrence",
+   "y_calibration": [
+    265.5,
+    0,
+    41.5,
+    0.8
+   ],
+   "readings": [
+    {
+     "setting": 0,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 0,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      239,
+      244
+     ],
+     "estimated_centre": 0.08571428571428572,
+     "squared_prediction": 0.07031250000000006,
+     "local_fourth_prediction": 0.010762723454802543,
+     "pixel_geometry_scale_2px": 0.0071428571428571435
+    },
+    {
+     "setting": 45,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 45,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      156,
+      161
+     ],
+     "estimated_centre": 0.3821428571428572,
+     "squared_prediction": 0.3984375000000005,
+     "local_fourth_prediction": 0.41267657020179793,
+     "pixel_geometry_scale_2px": 0.0071428571428571435
+    },
+    {
+     "setting": 90,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 90,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      87,
+      95
+     ],
+     "estimated_centre": 0.6232142857142857,
+     "squared_prediction": 0.6640625000000004,
+     "local_fourth_prediction": 0.7783174695947769,
+     "pixel_geometry_scale_2px": 0.0071428571428571435
+    },
+    {
+     "setting": 135,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 135,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      82,
+      91
+     ],
+     "estimated_centre": 0.6392857142857143,
+     "squared_prediction": 0.6673938036811949,
+     "local_fourth_prediction": 0.837400758138191,
+     "pixel_geometry_scale_2px": 0.0071428571428571435
+    },
+    {
+     "setting": 180,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      86,
+      95
+     ],
+     "estimated_centre": 0.6250000000000001,
+     "squared_prediction": 0.6640625000000004,
+     "local_fourth_prediction": 0.7783174695947769,
+     "pixel_geometry_scale_2px": 0.0071428571428571435
+    }
+   ]
+  },
+  {
+   "panel": "5b inset",
+   "setting_axis": "angle",
+   "statistic": "recurrence",
+   "y_calibration": [
+    203,
+    0,
+    28,
+    0.8
+   ],
+   "readings": [
+    {
+     "setting": 9,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 9,
+     "symbol_y_extent": [
+      181,
+      185
+     ],
+     "estimated_centre": 0.09142857142857144,
+     "squared_prediction": 0.07454161456256297,
+     "local_fourth_prediction": 0.008996567886656894,
+     "pixel_geometry_scale_2px": 0.009142857142857144
+    },
+    {
+     "setting": 18,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 18,
+     "symbol_y_extent": [
+      100,
+      107
+     ],
+     "estimated_centre": 0.4548571428571429,
+     "squared_prediction": 0.4732173672652661,
+     "local_fourth_prediction": 0.41524402284400647,
+     "pixel_geometry_scale_2px": 0.009142857142857144
+    },
+    {
+     "setting": 22.5,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      63,
+      69
+     ],
+     "estimated_centre": 0.6262857142857143,
+     "squared_prediction": 0.6640625000000004,
+     "local_fourth_prediction": 0.7783174695947769,
+     "pixel_geometry_scale_2px": 0.009142857142857144
+    },
+    {
+     "setting": 30,
+     "clock": 10,
+     "defect_site": 0,
+     "phase_degrees": 180,
+     "HWP_degrees": 30,
+     "symbol_y_extent": [
+      28,
+      35
+     ],
+     "estimated_centre": 0.784,
+     "squared_prediction": 0.836654663085937,
+     "local_fourth_prediction": 0.9834867670293876,
+     "pixel_geometry_scale_2px": 0.009142857142857144
+    }
+   ]
+  },
+  {
+   "panel": "6b",
+   "setting_axis": "offsite_angle",
+   "statistic": "variance",
+   "y_calibration": [
+    460,
+    0,
+    99.5,
+    50
+   ],
+   "readings": [
+    {
+     "setting": 9,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 9,
+     "symbol_y_extent": [
+      109,
+      134
+     ],
+     "estimated_centre": 46.94868238557559,
+     "squared_prediction": 50.90081479241131,
+     "local_fourth_prediction": 76.95294878270397,
+     "pixel_geometry_scale_2px": 0.27739251040221913
+    },
+    {
+     "setting": 18,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 18,
+     "symbol_y_extent": [
+      314,
+      332
+     ],
+     "estimated_centre": 19.00138696255201,
+     "squared_prediction": 19.228946640699085,
+     "local_fourth_prediction": 32.46903121180747,
+     "pixel_geometry_scale_2px": 0.27739251040221913
+    },
+    {
+     "setting": 22.5,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      354,
+      367
+     ],
+     "estimated_centre": 13.800277392510402,
+     "squared_prediction": 11.874023437500005,
+     "local_fourth_prediction": 14.415781486469335,
+     "pixel_geometry_scale_2px": 0.27739251040221913
+    },
+    {
+     "setting": 30,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 30,
+     "symbol_y_extent": [
+      399,
+      408
+     ],
+     "estimated_centre": 7.836338418862691,
+     "squared_prediction": 5.9925794452428836,
+     "local_fourth_prediction": 6.0659673520397455,
+     "pixel_geometry_scale_2px": 0.27739251040221913
+    }
+   ]
+  },
+  {
+   "panel": "6b inset",
+   "setting_axis": "offsite_angle",
+   "statistic": "recurrence",
+   "y_calibration": [
+    226.5,
+    0,
+    38,
+    0.6
+   ],
+   "readings": [
+    {
+     "setting": 9,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 9,
+     "symbol_y_extent": [
+      199,
+      203
+     ],
+     "estimated_centre": 0.08116710875331565,
+     "squared_prediction": 0.06921616946679898,
+     "local_fourth_prediction": 0.008181467020451444,
+     "pixel_geometry_scale_2px": 0.00636604774535809
+    },
+    {
+     "setting": 18,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 18,
+     "symbol_y_extent": [
+      130,
+      137
+     ],
+     "estimated_centre": 0.29602122015915117,
+     "squared_prediction": 0.2998959388144774,
+     "local_fourth_prediction": 0.27738719385048,
+     "pixel_geometry_scale_2px": 0.00636604774535809
+    },
+    {
+     "setting": 22.5,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 22.5,
+     "symbol_y_extent": [
+      103,
+      111
+     ],
+     "estimated_centre": 0.3803713527851459,
+     "squared_prediction": 0.3984375000000002,
+     "local_fourth_prediction": 0.44902901734449835,
+     "pixel_geometry_scale_2px": 0.00636604774535809
+    },
+    {
+     "setting": 30,
+     "clock": 9,
+     "defect_site": 1,
+     "phase_degrees": 180,
+     "HWP_degrees": 30,
+     "symbol_y_extent": [
+      56,
+      64
+     ],
+     "estimated_centre": 0.5299734748010609,
+     "squared_prediction": 0.45721435546874994,
+     "local_fourth_prediction": 0.49727737727866345,
+     "pixel_geometry_scale_2px": 0.00636604774535809
+    }
+   ]
+  }
+ ],
+ "adverse_controls": {
+  "fourth_neutral_depths": [
+   1,
+   2,
+   3
+  ],
+  "Fig2b_printed_and_plotted": "Printed tick-10 variance 9.586; Fig. 2b red marker reads about 9.93. Those central values are retained separately. The difference is within the printed SD.",
+  "Fig3b_printed_and_plotted": "The written 135-degree return is 0.660 +/- 0.012; the inset's 135-degree red symbol is near 0.639. Both are preserved. Its plotted centre is still nearer the squared prediction; the point estimates are not independent measurements.",
+  "Fig6b_offsite_control": "At balanced angle 22.5 degrees the digitized offsite variance near 13.8 is closer to 14.416 (local fourth) than 11.874 (squared). For the same setting the return near 0.38 is closer to 0.398 (squared) than 0.449 (local fourth).",
+  "wrong_literal_adjoint_origin_tick4": {
+   "born": {
+    "recurrence": 0.12500000000000006,
+    "mean": 0.0,
+    "variance": 5.000000000000002
+   },
+   "local_fourth": {
+    "recurrence": 0.028846153846153806,
+    "mean": -1.1102230246251565e-16,
+    "variance": 5.384615384615385
+   },
+   "position_TV": 0.09615384615384615
+  },
+  "real_initial_alternative_135degrees_tick10": {
+   "born": {
+    "recurrence": 0.5329156518405979,
+    "mean": 1.7187220989260312,
+    "variance": 10.023237208110908
+   },
+   "local_fourth": {
+    "recurrence": 0.6448483769855706,
+    "mean": 1.8126398523499565,
+    "variance": 10.781331236546517
+   },
+   "position_TV": 0.18137932017264774
+  },
+  "opposite_phase_and_conjugate_input_tick10": {
+   "born": {
+    "recurrence": 0.6673938036811949,
+    "mean": 0.0,
+    "variance": 8.829485722895209
+   },
+   "local_fourth": {
+    "recurrence": 0.837400758138191,
+    "mean": -1.2620113287731272e-16,
+    "variance": 7.686449720261055
+   },
+   "position_TV": 0.20252353511688248
+  },
+  "efficiency_assumption": "Ratio e_center/e_rest that would bring each prediction to the observed conditional recurrence is computed holding all noncentre efficiencies common. These ratios are sensitivity controls, not measured optical efficiencies.",
+  "selection": "Published scalars take priority. No threshold, likelihood, sigma rejection, or raw-data confidence interval is claimed. Some nonbalanced/offsite plotted variances are closer to quartic; report all tabulated settings irrespective of which rule fits better."
+ }
+}

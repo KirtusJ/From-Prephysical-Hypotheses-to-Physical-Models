@@ -1,0 +1,1394 @@
+{
+ "model": "A line of wires, a private two-state bit on every wire, a programmed finite clock and local signed balanced scatterers. The wire/bit output basis is read. A neighboring wire swap P is implemented as (P H_bit) then H_bit; every tick has two signed edges per input, with disjoint two-input/two-output cells.",
+ "premise": "The marginals for each unmeasured clock phase have a nonnegative coupling on the actual single-step edges. It may depend on the full state and controls. This logical condition does not identify a measured pair of times with the undisturbed marginals or supply a physical apparatus.",
+ "circuit": {
+  "logical_wires": 16,
+  "physical_modes": 32,
+  "native_ticks": 186,
+  "stage_timetable": [
+   {
+    "name": "target prep 1",
+    "from_tick": 0,
+    "to_tick": 1,
+    "protected_wire_sets": []
+   },
+   {
+    "name": "target prep 2",
+    "from_tick": 1,
+    "to_tick": 6,
+    "protected_wire_sets": []
+   },
+   {
+    "name": "target prep 3",
+    "from_tick": 6,
+    "to_tick": 19,
+    "protected_wire_sets": []
+   },
+   {
+    "name": "duplicate target",
+    "from_tick": 19,
+    "to_tick": 132,
+    "protected_wire_sets": [
+     [
+      0,
+      8
+     ],
+     [
+      1,
+      9
+     ],
+     [
+      2,
+      10
+     ],
+     [
+      3,
+      11
+     ],
+     [
+      4,
+      12
+     ],
+     [
+      5,
+      13
+     ],
+     [
+      6,
+      14
+     ],
+     [
+      7,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 1",
+    "from_tick": 132,
+    "to_tick": 145,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 2",
+    "from_tick": 145,
+    "to_tick": 150,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 3",
+    "from_tick": 150,
+    "to_tick": 151,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 4",
+    "from_tick": 151,
+    "to_tick": 152,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 5",
+    "from_tick": 152,
+    "to_tick": 161,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   },
+   {
+    "name": "mixed comparison 6",
+    "from_tick": 161,
+    "to_tick": 186,
+    "protected_wire_sets": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5
+     ],
+     [
+      6
+     ],
+     [
+      7
+     ],
+     [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    ]
+   }
+  ],
+  "maximum_step_distance": 1,
+  "counts": {
+   "Born": 2868,
+   "local_fourth": 2868,
+   "protected_equalities_Born": 1390,
+   "protected_equalities_local_fourth": 1390
+  },
+  "snapshots": [
+   {
+    "stage": "target prep 3",
+    "tick": 19,
+    "depth": 3,
+    "numerators": [
+     2,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "born": [
+     "1/2",
+     "0",
+     "0",
+     "0",
+     "1/8",
+     "0",
+     "1/8",
+     "0",
+     "0",
+     "0",
+     "1/8",
+     "0",
+     "1/8",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    "local_fourth": [
+     "1/2",
+     "0",
+     "0",
+     "0",
+     "1/8",
+     "0",
+     "1/8",
+     "0",
+     "0",
+     "0",
+     "1/8",
+     "0",
+     "1/8",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   {
+    "stage": "duplicate target",
+    "tick": 132,
+    "depth": 4,
+    "numerators": [
+     2,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "born": [
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0"
+    ],
+    "local_fourth": [
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   {
+    "stage": "mixed comparison 6",
+    "tick": 186,
+    "depth": 4,
+    "numerators": [
+     2,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0
+    ],
+    "born": [
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0"
+    ],
+    "local_fourth": [
+     "1/4",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "0",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0",
+     "1/16",
+     "0"
+    ]
+   }
+  ],
+  "target": {
+   "Born": [
+    "1/2",
+    "0",
+    "0",
+    "0",
+    "1/8",
+    "0",
+    "1/8",
+    "0",
+    "0",
+    "0",
+    "1/8",
+    "0",
+    "1/8",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "local_fourth": [
+    "1/2",
+    "0",
+    "0",
+    "0",
+    "1/8",
+    "0",
+    "1/8",
+    "0",
+    "0",
+    "0",
+    "1/8",
+    "0",
+    "1/8",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  "local_fourth_final_equal_live_disparities": [],
+  "global_fourth_flow_violations": [
+   {
+    "tick": 13,
+    "stage": "target prep 3",
+    "component_count": 3,
+    "first": [
+     0,
+     2,
+     0,
+     2,
+     "1/2",
+     "4/5"
+    ]
+   },
+   {
+    "tick": 139,
+    "stage": "mixed comparison 1",
+    "component_count": 8,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "2/5",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 140,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 141,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 142,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 143,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 144,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 145,
+    "stage": "mixed comparison 1",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 146,
+    "stage": "mixed comparison 2",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 147,
+    "stage": "mixed comparison 2",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 151,
+    "stage": "mixed comparison 3",
+    "component_count": 6,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/37"
+    ]
+   },
+   {
+    "tick": 152,
+    "stage": "mixed comparison 4",
+    "component_count": 6,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/37",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 158,
+    "stage": "mixed comparison 5",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 159,
+    "stage": "mixed comparison 5",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 160,
+    "stage": "mixed comparison 5",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 161,
+    "stage": "mixed comparison 5",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 162,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 163,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 164,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 165,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 166,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 167,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 168,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 169,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 170,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 171,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 172,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   },
+   {
+    "tick": 173,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/7",
+     "4/13"
+    ]
+   },
+   {
+    "tick": 174,
+    "stage": "mixed comparison 6",
+    "component_count": 9,
+    "first": [
+     0,
+     1,
+     0,
+     1,
+     "4/13",
+     "4/7"
+    ]
+   }
+  ]
+ },
+ "direct_matching": {
+  "width": 8,
+  "columns": 16,
+  "ticks": 53,
+  "ordered_pairs": [
+   [
+    0,
+    7
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    3,
+    4
+   ]
+  ],
+  "all_columns_exact": true,
+  "maximum_step_distance": 1
+ },
+ "fourth_power_regrouping": {
+  "ordered_layers": [
+   [
+    [
+     1,
+     5
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     7,
+     2
+    ],
+    [
+     3,
+     6
+    ]
+   ],
+   [
+    [
+     6,
+     1
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     7,
+     2
+    ]
+   ],
+   [
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     6
+    ]
+   ],
+   [
+    [
+     2,
+     7
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     1,
+     5
+    ]
+   ]
+  ],
+  "ticks": 216,
+  "numerators": [
+   -2,
+   0,
+   0,
+   0,
+   -1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   3,
+   0,
+   1,
+   0
+  ],
+  "depth": 4,
+  "local_fourth": [
+   "1/4",
+   "0",
+   "0",
+   "0",
+   "1/16",
+   "0",
+   "5/656",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "405/656",
+   "0",
+   "1/16",
+   "0"
+  ],
+  "global_fourth": [
+   "4/25",
+   "0",
+   "0",
+   "0",
+   "1/100",
+   "0",
+   "1/100",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "81/100",
+   "0",
+   "1/100",
+   "0"
+  ],
+  "equal_live_witness": {
+   "modes": [
+    6,
+    14
+   ],
+   "same_amplitude": "1/4",
+   "distinct_local_probabilities": [
+    "5/656",
+    "1/16"
+   ]
+  },
+  "global_fourth_flow_violations": [
+   {
+    "tick": 131,
+    "components": [
+     [
+      0,
+      2,
+      0,
+      2,
+      "1/2",
+      "4/5"
+     ],
+     [
+      4,
+      6,
+      4,
+      6,
+      "1/4",
+      "1/10"
+     ],
+     [
+      12,
+      14,
+      12,
+      14,
+      "1/4",
+      "1/10"
+     ]
+    ]
+   },
+   {
+    "tick": 190,
+    "components": [
+     [
+      0,
+      2,
+      0,
+      2,
+      "1/20",
+      "1/50"
+     ],
+     [
+      4,
+      6,
+      4,
+      6,
+      "1/10",
+      "4/25"
+     ],
+     [
+      8,
+      10,
+      8,
+      10,
+      "17/20",
+      "41/50"
+     ]
+    ]
+   }
+  ]
+ },
+ "sign_sensitive_H": [
+  {
+   "input": [
+    1,
+    1
+   ],
+   "born_input": [
+    "1/2",
+    "1/2"
+   ],
+   "born_output": [
+    "1",
+    "0"
+   ],
+   "fourth_output": [
+    "1",
+    "0"
+   ],
+   "fringe_contrast": "1",
+   "fourth_H2_reset": [
+    "1/2",
+    "1/2"
+   ]
+  },
+  {
+   "input": [
+    1,
+    -1
+   ],
+   "born_input": [
+    "1/2",
+    "1/2"
+   ],
+   "born_output": [
+    "0",
+    "1"
+   ],
+   "fourth_output": [
+    "0",
+    "1"
+   ],
+   "fringe_contrast": "-1",
+   "fourth_H2_reset": [
+    "1/2",
+    "1/2"
+   ]
+  },
+  {
+   "input": [
+    2,
+    1
+   ],
+   "born_input": [
+    "4/5",
+    "1/5"
+   ],
+   "born_output": [
+    "9/10",
+    "1/10"
+   ],
+   "fourth_output": [
+    "81/82",
+    "1/82"
+   ],
+   "fringe_contrast": "4/5",
+   "fourth_H2_reset": [
+    "16/17",
+    "1/17"
+   ]
+  }
+ ],
+ "boundaries": "Local per-block fourth-power normalization admits supported couplings and sharp zeros but breaks active equal-entry symmetry across cells. Global fourth-power normalization has equal leaves and sharp zeros but can violate edge-supported mass conservation. A single common Markov kernel for all coherent inputs cannot implement the H fringe."
+}
