@@ -1,0 +1,90 @@
+{
+  "research_rerun": "Four research checkers ran separately into fresh temporary destinations. All nine generated result files matched the working copies byte for byte.",
+  "output_sha256": {
+    "checks.json": "83dba60d1cbf7662e669655fbb221155ac1962adcd941f0bb6b5debc6a59194b",
+    "filter_trials.csv": "91da8b349fad6ed65376f9c3ffd394a53c2fbe512e927b57395578bdce55db31",
+    "ray_trials.csv": "3b998a848fa82f1c5e48d98a3a7138519c24b9279b057981dde399a61005a844",
+    "record_branch_trials.csv": "9b2dd74583236ba75df2fcfa719f05346187125b534235ec39aa44089ac92cb2",
+    "record_selection.json": "dfa348a6adc1527865439627db1431d41a823fd1fe2e512b3b2e54cd6347c1ef",
+    "probability_selection.json": "112b3c2ba1b87fcc0e83a32f37d9229c1afe84badf894828787bc80c6aa5ea10",
+    "probability_walk_trials.csv": "817fe0750a5a2e8cc01cc617a2a2485a52fdc772b6b99766d3f900c42a832868",
+    "forced_envelope.json": "55d392fa72b9b1c58a80e16d5d35b7bdcc3b73473348c46a693ed85c0269a9b7",
+    "forced_envelope_trials.csv": "30bdb10633d16d174531a90b6085204b78d2177702fc02fde87d79e2a1fcd063"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "computed_predicates": {
+    "lift_all_steps": true,
+    "three_step_record_and_mixture": true,
+    "lift_norm": true,
+    "free_envelope_bound": true,
+    "opposite_sign_velocities": true,
+    "all_ray_steps_within_bound": true,
+    "odd_cover_holonomy_modes": true,
+    "parity_field_alias": true,
+    "dipole_cost": true,
+    "filter_certificate": true,
+    "filter_target": true
+  },
+  "row_counts": {
+    "filter_trials.csv": 1524,
+    "ray_trials.csv": 3968,
+    "record_branch_trials.csv": 11148,
+    "probability_walk_trials.csv": 2920,
+    "forced_envelope_trials.csv": 54774
+  },
+  "baseline_payloads_rechecked": 967,
+  "map_gates": 13,
+  "calibration_record_sha256": "dc80a00ba16beaf8344dfe1bc7d2b437d4c8a7b33704075c7de266fd929ace87",
+  "root_review": "G1 OPEN",
+  "scope": "Local byte identity, numeric controls and record consistency. The proof was reasoned by its authoring participant.",
+  "record_selection_checks": {
+    "all_three_step_blocks": true,
+    "three_class_law": true,
+    "posterior_propagation": true,
+    "branch_probability": true,
+    "prepared_pair": true,
+    "identification_bound": true,
+    "real_and_referenced_phase": true,
+    "real_and_complex_matrix_blocks": true,
+    "triangle_synchronization": true,
+    "classifier_full_sampling_law": true,
+    "one_shared_sheet_product": true,
+    "collision_interaction": true,
+    "parity_invisible_to_full_records": true
+  },
+  "record_selection_source_sha256": "fa40e68def5bcd8b688eb207f4aed854be63326ce450d571130cb14f98eb6816",
+  "retained_failed_oracle": {
+    "file": "orientation_oracle_first_run.json",
+    "sha256": "50a88c835025e7807ad46ef3b07beb48f6f6f2ebb7c3ffc1bfe76546f0de9f71",
+    "affected": "first written phase-control expression",
+    "first_run_pass": false
+  },
+  "review_limits": "Numerical controls and the algebraic self-review address the declared models. No empirical correspondence or independent proof assessment was established.",
+  "probability_selection_checks": {
+    "character_recursion": true,
+    "tag_permutation": true,
+    "localized_sheet_parseval": true,
+    "total_mass": true,
+    "three_step_witness": true,
+    "conjugate_orientation": true,
+    "all_algebraic_pairs": true,
+    "collision_and_free_controls": true,
+    "flag_witness": true,
+    "opposite_convergence": true,
+    "five_sheet_dilation_selector": true
+  },
+  "forced_envelope_checks": {
+    "frame": true,
+    "dispersion": true,
+    "envelope": true,
+    "norm": true
+  },
+  "source_sha256": {
+    "walk": "b2130f1f411d1dad91510c05e44e47050715e894f5cff4b6948431dd0fc2ed12",
+    "record_selection": "fa40e68def5bcd8b688eb207f4aed854be63326ce450d571130cb14f98eb6816",
+    "probability_selection": "a740fa5c385acc90f00ff588c0eda117e596814d09f0f8c6d6130a204bd16d62",
+    "forced_envelope": "3462858d011c092027af36e6f8d4811da503123ea4f68d4f3ee4384a1ce30363"
+  },
+  "calibration_record_sha256_scope": "External fingerprint of the local session calibration record. The shared scientific packet includes the research controls."
+}
