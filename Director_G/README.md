@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Edge Record Walk, candidate G1](candidates/edge_record_walk/README.md) | Two testable detector assumptions select squared signed totals for one-particle terminal records on a family of rings. |
 | [Electric-string controls and probability](Electric_string_controls_and_probability.md) | All finite pair analyzers in closure, an exact protected-port experiment, and a calibrated residue law predicting a different two-hop return |
 | [Return records and reversible dynamics](Return_records_and_reversible_dynamics.md) | Terminal sheet coarsening and autonomous recurrence select the signed-square staircase readout under explicit closure assumptions; short and long forward tests also separate permanent hop records in a finite electric string |
 | [Local electric string and records](Gauss_string_records.md) | Explicit link bits, adjacent pair creation, interference and causal receiver trials |
