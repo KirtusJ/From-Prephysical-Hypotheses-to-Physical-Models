@@ -2,7 +2,7 @@
 Outcome: NONE FOUND for the conditional implication under the full event space.
 Reviewer: OpenAI Codex, with an internal Codex challenger. The project withdrew Z1 on 13 November 2026.
 
-The classification and nonnegative weights on every history event imply nonnegative coefficients for the count and the distinct observable squared terms. This supplies the sign hypothesis of Corollary 5.29. The withdrawal has a different target. In the classified, normalized family, near-return in the rule's own weights is equivalent to a zero count coefficient. Treating near-return as a stipulation about those weights cannot independently explain the choice of rule. The argument below supplies no empirical premise for that choice. [Withdrawal record](../../Director_Z/candidate/abandoned/Z1/WHY_ABANDONED.md)
+Assume the classification of Theorem 5.26(c) and nonnegative weight on every admissible event, with arbitrarily large gain multiplicities realizable by allowing unbounded walk lengths. Then the count coefficient and the squared-term coefficients for distinct observable character classes are nonnegative. The sign conclusion does not require singleton normalization. Giving a single walk weight one adds the separate normalization used by Corollary 5.29. The withdrawal has a different target. In the classified, normalized family, near-return in the rule's own weights is equivalent to a zero count coefficient. Treating near-return as a stipulation about those weights cannot independently explain the choice of rule. The argument below supplies no empirical premise for that choice. [Withdrawal record](../../Director_Z/candidate/abandoned/Z1/WHY_ABANDONED.md)
 
 ## Which coefficients an event can distinguish
 
@@ -25,6 +25,20 @@ m_T(h)=\lfloor T(1+\operatorname{Re}\rho(h))\rfloor.
 The count grows at most linearly in \(T\). By finite character orthogonality, the Fourier sum for the target equals \(T|H|/2+O(|H|)\), or \(T|H|+O(|H|)\) when \(\rho\) has order two. Every other indexed class has sum bounded by \(|H|\), from rounding. Divide the nonnegative event weight by \(T^2\) and take the limit. Only a strictly positive multiple of \(c_{[\rho]}\) survives, hence \(c_{[\rho]}\ge0\). If there are no character classes, the same count and singleton arguments give \(a=1\).
 
 If two full characters restrict identically up to inversion, only the **sum** of their coefficients is observable. A redundant list can assign signed coefficients to identical squares. The proof establishes the signs in the unique class expansion of 5.26(c). With that expansion, normalization and S5, Corollary 5.29(3) gives \(a=0\). The test uses the availability of arbitrarily large one-endpoint multisets. Positivity restricted to an instrument's selected finite list of events would require a separate argument.
+
+## An exact boundary for a bounded test
+
+Consider a carrier in the classification with two observable gains and one nontrivial sign character, for example the signed ring of the archived candidate. For same-endpoint multiplicities $r,s$ the normalized rule reads
+$$
+W(r,s)=(1-c)(r+s)+c(r-s)^2 .
+$$
+Each singleton has weight one. Fix an integer $M\ge2$ and test every $0\le r,s\le M$. Among rules with $c\le0$, all these tests pass exactly when $c\ge -1/(M-1)$. Indeed, whenever $r+s>0$,
+$$
+\frac{(r-s)^2}{r+s}\le |r-s|\le M .
+$$
+The maximum $M$ is attained at $(M,0)$. Since $c$ is nonpositive, the smallest weight divided by $r+s$ is $1+c(M-1)$. The empty event has weight zero. At $c=-1/(M-1)$ the entire box therefore passes and the next box already contains the negative event $W(M+1,0)=-(M+1)/(M-1)$. As all endpoint weights add, the same bounded tests pass across multiple endpoints. For $M=1$ the two singletons have weight one and the mixed pair has weight $2(1-c)$, so every $c\le0$ passes that box.
+
+For a concrete instance, the eight-site signed ring launched at the right rail of site 0 has three paths ending at the right rail of site 2 at tick four. Their words LRRR, RLRR and RRLR each have a positive sign, giving $(3,0)$. With $M=2$ and $c=-1$ its weight is $-3$, although every multiplicity through two per gain passes. This explicit family explains how a bounded search can miss the negative coefficients recorded by Director Z's challenger. [Challenger results](../../Director_Z/challenger/twelfth_signs/FINDINGS.md)
 
 ## Exact events in a proper subgroup
 
