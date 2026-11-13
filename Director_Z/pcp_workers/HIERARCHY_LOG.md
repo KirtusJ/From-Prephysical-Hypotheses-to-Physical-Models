@@ -45,3 +45,19 @@ Things that cost time without benefit: an agent lost at a session restart with n
 
 Not yet tried, worth trying: giving the challenger the previous challenger's list of what was not checked, so the second one starts there; a fixed report skeleton (verdict table first) so that reports can be compared by a script.
 
+## Can sub-agents work recursively? (tested 13 November 2026, at the principal's request)
+
+| Route | Depth below the director | Result |
+|---|---|---|
+| A sub-agent started with the director's Agent tool, asked to start its own sub-agent | 1 | Not possible. A sub-agent of any type, general-purpose included, has no Agent tool and is offered no agent types. The `pcp-*` definitions also list only Bash, Read, Grep, Glob, Write. The test agent stopped and said so; it did not simulate delegation |
+| A headless worker (`claude -p`) started from a shell, asked to start a sub-agent | 2 from whoever runs the shell | Works. The worker has the Agent tool; its sub-agent wrote the test file (`NESTED OK`). Since every `pcp-*` sub-agent has a shell, a sub-agent can reach depth 3 this way (director, sub-agent, headless worker, its sub-agent) |
+| The unattended cloud session (the review queue) starting sub-agents | 2 | Works and was used: its formalizer and three cross-reviewers of the second batch were sub-agents of that session |
+| A sub-agent starting a new cloud session | not tried | The tool is visible to sub-agents; it spends the account's limit, which is what stopped the queue session |
+
+What this means for the review stack:
+
+- Recursion is available, but not through the ordinary sub-agent call. It needs the shell route or a cloud session.
+- PCP OS does not see any of it: its task events come from hooks, which do not fire for headless workers or for sub-agents' shells (found earlier in this session). A nested worker therefore leaves no register event unless the parent submits one for it.
+- Each level multiplies cost and shares one account limit. A nested worker also starts cold, with no agent definition unless the prompt carries it.
+- Use so far: none in the edition. The flat stack (director to sub-agent) has been enough, because the director reads every report anyway. Where nesting would pay: a challenger that could hand one algebraic step to a formalizer and get the answer inside its own budget. To try once, with the shell route, on the next statement that has such a step; record cost and whether the report improves.
+
