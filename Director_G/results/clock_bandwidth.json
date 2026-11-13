@@ -1,0 +1,1747 @@
+{
+  "scope": "Fixed-coordinate clock preparation and discrimination of the unordered Fourier pair k=\u00b11 using square-weight statistics. Coordinate-controlled erasure supplies an address resource. Once initialized the analyzer uses only integer translations and balanced real coins.",
+  "cycle": "M=2^q, q>=2. M=4 has only the desired odd pair and no analyzer probes. M=2 has one self-conjugate frequency and is outside the pair construction.",
+  "protocol": "Initialize sheet 0 and coin 0. For d=M/2,...,1 use a single balanced split, add a minus to the upper half at the first split, and conditionally move forward d unit ticks with the other arm held. At the endpoints coherently XOR the known address bit into the coin to uncompute it. The resulting signed sheet is +1 then -1 on the two halves, divided by sqrt(M). At scale j=3,...,q use controlled shift d=M/2^j between two Hadamards, read the coin and reset it. Repeat r odd times per scale and accept its majority-plus at every scale. A real state leaves conjugate orientations equally populated.",
+  "clock": "Every microscopic sheet displacement is <=1, including the controlled stationary arm. Preparation uses M\u22121 unit shifts, q Hadamards, q address-conditioned local XOR layers and one sign flip. Analyzer uses r(M/4\u22121) unit shifts, 2r(q\u22122) balanced ticks and r(q\u22122) report/reset operations, scheduled equally for all histories. Read/reset and local address decoding must be priced separately if not single layers. No position measurement is made during fanout. The runtime resource is one coherent coin qubit along with the M-site clock and a classical record/counter. A free guess of an absolute clock site is not entailed by an unaddressed walk.",
+  "spectrum": "For odd k the initial mass is 4/[M^2 sin^2(pi k/M)]; even k have zero. Desired pair total 8/[M^2 sin^2(pi/M)] is >=8/pi^2. Conditional on a character, the plus probability at scale j is cos^2(pi k/2^j). Orthogonality of characters makes complete-record likelihoods a mixture of independent Bernoulli likelihoods at fixed k.",
+  "guarantee": "Every other odd k has a first j where it ceases to be \u00b11 mod 2^j. At that j it equals 2^(j\u22121)\u00b11 mod 2^j. Its plus probability is the target\u2019s minus probability. The majority tail bound [2 sqrt(p(1-p))]^r follows from Markov on the binomial generating function (with the trivial p=0 limit). The remaining target rejection series is bounded by sin x<=x. Hence at fixed r time O(Mr), and as r increases acceptance tends uniformly to the initial target mass while conditional purity tends uniformly to 1. For a prescribed error e, r=O(log(1/e)) and finite expected retries; exponent, confidence bounds and all tabulated resources concern ideal gates only.",
+  "translation_only": "With a localized sheet and initially uncorrelated auxiliary registers, a complete translation-commuting instrument preserves sector populations when all outcomes are included. The prior mass of \u00b11 is 2/M. A herald whose conditional target weight is >=1\u2212e can therefore have yield at most 2/[M(1\u2212e)], also for adaptive multi-outcome selection. The deterministic addressed erasures in the preparation break that symmetry. A minus half-turn projector on a localized seed consumes M/2 unit shifts and has yield 1/2; localized control probabilities below include that success. For uniform odd prior each majority scale halves the surviving mass exactly: the residues k and k+2^(j\u22121) within every lift at scale j agree at prior scales and have complementary plus probabilities. Their majority probabilities sum to one for odd r. Thus the absolute yield from the localized seed with the preliminary odd herald is exactly 2/M including all target-report histories, for every r. Omitting that herald gives 4/M including even aliases.",
+  "alternate_filter": "The all-plus block-of-length M/2 average uses M/2\u22121 unit shifts per pass. At odd k its amplitude magnitude is 1/[(M/2)sin(pi k/M)]. For M>=8 each undesired odd sector is suppressed relative to target by at most [sin(pi/8)/sin(3pi/8)]^2 per pass. Target acceptance per pass >=4/pi^2, and repeated all-plus herald yield tends to zero for fixed M>=8. The majority analyzer instead collects many accepted records.",
+  "adverse": "The addressable protocol assumes aligned integer translations, a coherent stationary arm, reliable record readouts, and ideal address masks. Bare balanced steps forced to move on every sublattice need not implement the control. A persistent readout-flip floor makes all-scale acceptance of a target vanish at fixed r as log M grows. If flips are independent with probability c>0, every scale has false-rejection probability >=Pr(Bin(r,c)>r/2). Different clock-origin labeling or gain direction changes the named reference; the construction concentrates an unordered pair relative to the supplied geometry.",
+  "finite_integer_checks": [
+    {
+      "M": 4,
+      "repeats_per_scale": 1,
+      "initial": "addressed",
+      "accepted_exact": "1",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 1.0,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 4,
+      "repeats_per_scale": 1,
+      "initial": "localized_odd",
+      "accepted_exact": "1/2",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 0.5,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 4,
+      "repeats_per_scale": 1,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 0.5,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 4,
+      "repeats_per_scale": 3,
+      "initial": "addressed",
+      "accepted_exact": "1",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 1.0,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 4,
+      "repeats_per_scale": 3,
+      "initial": "localized_odd",
+      "accepted_exact": "1/2",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 0.5,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 4,
+      "repeats_per_scale": 3,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1",
+      "rejected_exact_after_initial_preparation": "0",
+      "target_joint_direct_dft": 0.5,
+      "number_of_grouped_complete_records": 1,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 1,
+      "initial": "addressed",
+      "accepted_exact": "3/4",
+      "rejected_exact_after_initial_preparation": "1/4",
+      "target_joint_direct_dft": 0.7285533905932737,
+      "number_of_grouped_complete_records": 2,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 1,
+      "initial": "localized_odd",
+      "accepted_exact": "1/4",
+      "rejected_exact_after_initial_preparation": "1/4",
+      "target_joint_direct_dft": 0.2133883476483185,
+      "number_of_grouped_complete_records": 2,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 1,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/2",
+      "rejected_exact_after_initial_preparation": "1/2",
+      "target_joint_direct_dft": 0.21338834764831843,
+      "number_of_grouped_complete_records": 2,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 3,
+      "initial": "addressed",
+      "accepted_exact": "13/16",
+      "rejected_exact_after_initial_preparation": "3/16",
+      "target_joint_direct_dft": 0.8039975644174329,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 3,
+      "initial": "localized_odd",
+      "accepted_exact": "1/4",
+      "rejected_exact_after_initial_preparation": "1/4",
+      "target_joint_direct_dft": 0.23548543456039803,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 8,
+      "repeats_per_scale": 3,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/2",
+      "rejected_exact_after_initial_preparation": "1/2",
+      "target_joint_direct_dft": 0.23548543456039808,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 1,
+      "initial": "addressed",
+      "accepted_exact": "11/16",
+      "rejected_exact_after_initial_preparation": "5/16",
+      "target_joint_direct_dft": 0.6741509347960103,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 1,
+      "initial": "localized_odd",
+      "accepted_exact": "1/8",
+      "rejected_exact_after_initial_preparation": "3/8",
+      "target_joint_direct_dft": 0.10263336862925071,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 1,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/4",
+      "rejected_exact_after_initial_preparation": "3/4",
+      "target_joint_direct_dft": 0.10263336862925071,
+      "number_of_grouped_complete_records": 4,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 3,
+      "initial": "addressed",
+      "accepted_exact": "397/512",
+      "rejected_exact_after_initial_preparation": "115/512",
+      "target_joint_direct_dft": 0.7701215226344644,
+      "number_of_grouped_complete_records": 16,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 3,
+      "initial": "localized_odd",
+      "accepted_exact": "1/8",
+      "rejected_exact_after_initial_preparation": "3/8",
+      "target_joint_direct_dft": 0.1172440206521102,
+      "number_of_grouped_complete_records": 16,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 16,
+      "repeats_per_scale": 3,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/4",
+      "rejected_exact_after_initial_preparation": "3/4",
+      "target_joint_direct_dft": 0.1172440206521102,
+      "number_of_grouped_complete_records": 16,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 1,
+      "initial": "addressed",
+      "accepted_exact": "43/64",
+      "rejected_exact_after_initial_preparation": "21/64",
+      "target_joint_direct_dft": 0.6612595386676795,
+      "number_of_grouped_complete_records": 8,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 1,
+      "initial": "localized_odd",
+      "accepted_exact": "1/16",
+      "rejected_exact_after_initial_preparation": "7/16",
+      "target_joint_direct_dft": 0.05082366646475463,
+      "number_of_grouped_complete_records": 8,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 1,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/8",
+      "rejected_exact_after_initial_preparation": "7/8",
+      "target_joint_direct_dft": 0.05082366646475463,
+      "number_of_grouped_complete_records": 8,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 3,
+      "initial": "addressed",
+      "accepted_exact": "1571/2048",
+      "rejected_exact_after_initial_preparation": "477/2048",
+      "target_joint_direct_dft": 0.7625128397713986,
+      "number_of_grouped_complete_records": 64,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 3,
+      "initial": "localized_odd",
+      "accepted_exact": "1/16",
+      "rejected_exact_after_initial_preparation": "7/16",
+      "target_joint_direct_dft": 0.05860588162057557,
+      "number_of_grouped_complete_records": 64,
+      "exactly_zero_mass_groups": 0
+    },
+    {
+      "M": 32,
+      "repeats_per_scale": 3,
+      "initial": "localized_unfiltered",
+      "accepted_exact": "1/8",
+      "rejected_exact_after_initial_preparation": "7/8",
+      "target_joint_direct_dft": 0.05860588162057557,
+      "number_of_grouped_complete_records": 64,
+      "exactly_zero_mass_groups": 0
+    }
+  ],
+  "uniform_guarantees": {
+    "1": {
+      "odd_false_acceptance_upper": 0.7071067811865476,
+      "target_rejection_upper": 1,
+      "target_joint_lower": 0.0,
+      "acceptance_lower": 0.0,
+      "conditional_target_lower": 0.0
+    },
+    "3": {
+      "odd_false_acceptance_upper": 0.3535533905932738,
+      "target_rejection_upper": 0.42276382961180015,
+      "target_joint_lower": 0.4678900161992206,
+      "acceptance_lower": 0.4678900161992206,
+      "conditional_target_lower": 0.8747834427575818
+    },
+    "5": {
+      "odd_false_acceptance_upper": 0.1767766952966369,
+      "target_rejection_upper": 0.1864169323425442,
+      "target_joint_lower": 0.6594655952513407,
+      "acceptance_lower": 0.6594655952513407,
+      "conditional_target_lower": 0.9516750378891106
+    },
+    "9": {
+      "odd_false_acceptance_upper": 0.04419417382415922,
+      "target_rejection_upper": 0.04441670354963484,
+      "target_joint_lower": 0.7745666453215836,
+      "acceptance_lower": 0.7745666453215836,
+      "conditional_target_lower": 0.989307299121892
+    },
+    "15": {
+      "odd_false_acceptance_upper": 0.005524271728019903,
+      "target_rejection_upper": 0.0055250862663751964,
+      "target_joint_lower": 0.806091002896821,
+      "acceptance_lower": 0.806091002896821,
+      "conditional_target_lower": 0.9987034851351329
+    }
+  },
+  "finite_spectral_tables": [
+    {
+      "M": 4,
+      "first_conflict_other_odd_residues": 0,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.9999999999999998,
+          "accepted": 0.9999999999999998,
+          "accepted_target": 0.9999999999999998,
+          "accepted_wrong": 0.0,
+          "target_given_accepted": 1.0,
+          "target_acceptance": 1.0,
+          "preparation_unit_shifts": 3,
+          "analyzer_unit_shifts": 0,
+          "total_unit_shifts": 3,
+          "split_hadamards": 2,
+          "analyzer_hadamards": 0,
+          "analyzer_reads": 0,
+          "expected_unit_shifts_per_accept": 3.000000000000001
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.9999999999999998,
+          "accepted": 0.9999999999999998,
+          "accepted_target": 0.9999999999999998,
+          "accepted_wrong": 0.0,
+          "target_given_accepted": 1.0,
+          "target_acceptance": 1.0,
+          "preparation_unit_shifts": 3,
+          "analyzer_unit_shifts": 0,
+          "total_unit_shifts": 3,
+          "split_hadamards": 2,
+          "analyzer_hadamards": 0,
+          "analyzer_reads": 0,
+          "expected_unit_shifts_per_accept": 3.000000000000001
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.9999999999999998,
+          "accepted": 0.9999999999999998,
+          "accepted_target": 0.9999999999999998,
+          "accepted_wrong": 0.0,
+          "target_given_accepted": 1.0,
+          "target_acceptance": 1.0,
+          "preparation_unit_shifts": 3,
+          "analyzer_unit_shifts": 0,
+          "total_unit_shifts": 3,
+          "split_hadamards": 2,
+          "analyzer_hadamards": 0,
+          "analyzer_reads": 0,
+          "expected_unit_shifts_per_accept": 3.000000000000001
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.9999999999999998,
+          "accepted": 0.9999999999999998,
+          "accepted_target": 0.9999999999999998,
+          "accepted_wrong": 0.0,
+          "target_given_accepted": 1.0,
+          "target_acceptance": 1.0,
+          "preparation_unit_shifts": 3,
+          "analyzer_unit_shifts": 0,
+          "total_unit_shifts": 3,
+          "split_hadamards": 2,
+          "analyzer_hadamards": 0,
+          "analyzer_reads": 0,
+          "expected_unit_shifts_per_accept": 3.000000000000001
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.9999999999999998,
+          "accepted": 0.9999999999999998,
+          "accepted_target": 0.9999999999999998,
+          "accepted_wrong": 0.0,
+          "target_given_accepted": 1.0,
+          "target_acceptance": 1.0,
+          "preparation_unit_shifts": 3,
+          "analyzer_unit_shifts": 0,
+          "total_unit_shifts": 3,
+          "split_hadamards": 2,
+          "analyzer_hadamards": 0,
+          "analyzer_reads": 0,
+          "expected_unit_shifts_per_accept": 3.000000000000001
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.4999999999999998,
+          "conditional_target": 1.0,
+          "analyzer_unit_steps": 1,
+          "single_target_pass": 0.4999999999999999
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.1249999999999999,
+          "conditional_target": 1.0,
+          "analyzer_unit_steps": 3,
+          "single_target_pass": 0.4999999999999999
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.0019531249999999965,
+          "conditional_target": 1.0,
+          "analyzer_unit_steps": 9,
+          "single_target_pass": 0.4999999999999999
+        }
+      ]
+    },
+    {
+      "M": 8,
+      "first_conflict_other_odd_residues": 2,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.8535533905932735,
+          "accepted": 0.7499999999999998,
+          "accepted_target": 0.7285533905932735,
+          "accepted_wrong": 0.02144660940672627,
+          "target_given_accepted": 0.9714045207910317,
+          "target_acceptance": 0.8535533905932737,
+          "preparation_unit_shifts": 7,
+          "analyzer_unit_shifts": 1,
+          "total_unit_shifts": 8,
+          "split_hadamards": 3,
+          "analyzer_hadamards": 2,
+          "analyzer_reads": 1,
+          "expected_unit_shifts_per_accept": 10.66666666666667
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.8535533905932735,
+          "accepted": 0.8124999999999998,
+          "accepted_target": 0.8039975644174328,
+          "accepted_wrong": 0.008502435582567025,
+          "target_given_accepted": 0.9895354638983791,
+          "target_acceptance": 0.9419417382415922,
+          "preparation_unit_shifts": 7,
+          "analyzer_unit_shifts": 3,
+          "total_unit_shifts": 10,
+          "split_hadamards": 3,
+          "analyzer_hadamards": 6,
+          "analyzer_reads": 3,
+          "expected_unit_shifts_per_accept": 12.307692307692312
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.8535533905932735,
+          "accepted": 0.8359374999999998,
+          "accepted_target": 0.8322891296014925,
+          "accepted_wrong": 0.0036483703985072946,
+          "target_given_accepted": 0.9956355942896361,
+          "target_acceptance": 0.9750873686097117,
+          "preparation_unit_shifts": 7,
+          "analyzer_unit_shifts": 5,
+          "total_unit_shifts": 12,
+          "split_hadamards": 3,
+          "analyzer_hadamards": 10,
+          "analyzer_reads": 5,
+          "expected_unit_shifts_per_accept": 14.355140186915891
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.8535533905932735,
+          "accepted": 0.8499755859374997,
+          "accepted_target": 0.8492345983315281,
+          "accepted_wrong": 0.0007409876059715215,
+          "target_given_accepted": 0.9991282248358295,
+          "target_acceptance": 0.9949402201322831,
+          "preparation_unit_shifts": 7,
+          "analyzer_unit_shifts": 9,
+          "total_unit_shifts": 16,
+          "split_hadamards": 3,
+          "analyzer_hadamards": 18,
+          "analyzer_reads": 9,
+          "expected_unit_shifts_per_accept": 18.8240700847336
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999998,
+          "initial_target": 0.8535533905932735,
+          "accepted": 0.8531885147094725,
+          "accepted_target": 0.8531129464396459,
+          "accepted_wrong": 7.556826982668685e-05,
+          "target_given_accepted": 0.9999114284023708,
+          "target_acceptance": 0.9994839875765458,
+          "preparation_unit_shifts": 7,
+          "analyzer_unit_shifts": 15,
+          "total_unit_shifts": 22,
+          "split_hadamards": 3,
+          "analyzer_hadamards": 30,
+          "analyzer_reads": 15,
+          "expected_unit_shifts_per_accept": 25.78562606118934
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.37499999999999983,
+          "conditional_target": 0.9714045207910317,
+          "analyzer_unit_steps": 3,
+          "single_target_pass": 0.4267766952966369
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.06640624999999993,
+          "conditional_target": 0.9991341984846218,
+          "analyzer_unit_steps": 9,
+          "single_target_pass": 0.4267766952966369
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00040090084075927626,
+          "conditional_target": 0.9999999778952157,
+          "analyzer_unit_steps": 27,
+          "single_target_pass": 0.4267766952966369
+        }
+      ]
+    },
+    {
+      "M": 16,
+      "first_conflict_other_odd_residues": 6,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999987,
+          "initial_target": 0.8210669490340043,
+          "accepted": 0.6874999999999989,
+          "accepted_target": 0.6741509347960093,
+          "accepted_wrong": 0.013349065203989596,
+          "target_given_accepted": 0.980583177885106,
+          "target_acceptance": 0.8210669490340056,
+          "preparation_unit_shifts": 15,
+          "analyzer_unit_shifts": 3,
+          "total_unit_shifts": 18,
+          "split_hadamards": 4,
+          "analyzer_hadamards": 4,
+          "analyzer_reads": 2,
+          "expected_unit_shifts_per_accept": 26.181818181818223
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999987,
+          "initial_target": 0.8210669490340043,
+          "accepted": 0.7753906249999988,
+          "accepted_target": 0.7701215226344633,
+          "accepted_wrong": 0.005269102365535461,
+          "target_given_accepted": 0.9932045833472187,
+          "target_acceptance": 0.9379521652168815,
+          "preparation_unit_shifts": 15,
+          "analyzer_unit_shifts": 9,
+          "total_unit_shifts": 24,
+          "split_hadamards": 4,
+          "analyzer_hadamards": 12,
+          "analyzer_reads": 6,
+          "expected_unit_shifts_per_accept": 30.952141057934558
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999987,
+          "initial_target": 0.8210669490340043,
+          "accepted": 0.8024902343749988,
+          "accepted_target": 0.800195422866937,
+          "accepted_wrong": 0.002294811508061767,
+          "target_given_accepted": 0.9971403869981682,
+          "target_acceptance": 0.9745799947353587,
+          "preparation_unit_shifts": 15,
+          "analyzer_unit_shifts": 15,
+          "total_unit_shifts": 30,
+          "split_hadamards": 4,
+          "analyzer_hadamards": 20,
+          "analyzer_reads": 10,
+          "expected_unit_shifts_per_accept": 37.38363249163377
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999987,
+          "initial_target": 0.8210669490340043,
+          "accepted": 0.8173867389559732,
+          "accepted_target": 0.8169053034326985,
+          "accepted_wrong": 0.0004814355232747314,
+          "target_given_accepted": 0.9994110064424465,
+          "target_acceptance": 0.9949314174609001,
+          "preparation_unit_shifts": 15,
+          "analyzer_unit_shifts": 27,
+          "total_unit_shifts": 42,
+          "split_hadamards": 4,
+          "analyzer_hadamards": 36,
+          "analyzer_reads": 18,
+          "expected_unit_shifts_per_accept": 51.38326571537667
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999987,
+          "initial_target": 0.8210669490340043,
+          "accepted": 0.820693802126867,
+          "accepted_target": 0.8206432500073881,
+          "accepted_wrong": 5.055211947890825e-05,
+          "target_given_accepted": 0.9999384031908759,
+          "target_acceptance": 0.9994839653123114,
+          "preparation_unit_shifts": 15,
+          "analyzer_unit_shifts": 45,
+          "total_unit_shifts": 60,
+          "split_hadamards": 4,
+          "analyzer_hadamards": 60,
+          "analyzer_reads": 30,
+          "expected_unit_shifts_per_accept": 73.10887427747979
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.34374999999999883,
+          "conditional_target": 0.9805831778851062,
+          "analyzer_unit_steps": 7,
+          "single_target_pass": 0.4105334745170029
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.056823730468749604,
+          "conditional_target": 0.9997572298079628,
+          "analyzer_unit_steps": 21,
+          "single_target_pass": 0.4105334745170029
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.0002719667081691976,
+          "conditional_target": 0.9999999991870256,
+          "analyzer_unit_steps": 63,
+          "single_target_pass": 0.4105334745170029
+        }
+      ]
+    },
+    {
+      "M": 32,
+      "first_conflict_other_odd_residues": 14,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999981,
+          "initial_target": 0.813178663436072,
+          "accepted": 0.6718749999999986,
+          "accepted_target": 0.6612595386676781,
+          "accepted_wrong": 0.010615461332320497,
+          "target_given_accepted": 0.9842002435984066,
+          "target_acceptance": 0.8131786634360739,
+          "preparation_unit_shifts": 31,
+          "analyzer_unit_shifts": 7,
+          "total_unit_shifts": 38,
+          "split_hadamards": 5,
+          "analyzer_hadamards": 6,
+          "analyzer_reads": 3,
+          "expected_unit_shifts_per_accept": 56.55813953488384
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999981,
+          "initial_target": 0.813178663436072,
+          "accepted": 0.7670898437499983,
+          "accepted_target": 0.7625128397713969,
+          "accepted_wrong": 0.0045770039786013905,
+          "target_given_accepted": 0.9940332882570492,
+          "target_acceptance": 0.9376941059292093,
+          "preparation_unit_shifts": 31,
+          "analyzer_unit_shifts": 21,
+          "total_unit_shifts": 52,
+          "split_hadamards": 5,
+          "analyzer_hadamards": 18,
+          "analyzer_reads": 9,
+          "expected_unit_shifts_per_accept": 67.78866963717392
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999981,
+          "initial_target": 0.813178663436072,
+          "accepted": 0.7945513725280743,
+          "accepted_target": 0.7925007306791043,
+          "accepted_wrong": 0.0020506418489699696,
+          "target_given_accepted": 0.9974191198708205,
+          "target_acceptance": 0.9745714764949766,
+          "preparation_unit_shifts": 31,
+          "analyzer_unit_shifts": 35,
+          "total_unit_shifts": 66,
+          "split_hadamards": 5,
+          "analyzer_hadamards": 30,
+          "analyzer_reads": 15,
+          "expected_unit_shifts_per_accept": 83.06574286065812
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999981,
+          "initial_target": 0.813178663436072,
+          "accepted": 0.8094937146984174,
+          "accepted_target": 0.8090569921814228,
+          "accepted_wrong": 0.0004367225169945588,
+          "target_given_accepted": 0.9994604991872515,
+          "target_acceptance": 0.9949314075245984,
+          "preparation_unit_shifts": 31,
+          "analyzer_unit_shifts": 63,
+          "total_unit_shifts": 94,
+          "split_hadamards": 5,
+          "analyzer_hadamards": 54,
+          "analyzer_reads": 27,
+          "expected_unit_shifts_per_accept": 116.12196400440288
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999981,
+          "initial_target": 0.813178663436072,
+          "accepted": 0.8128051321292434,
+          "accepted_target": 0.8127590350380933,
+          "accepted_wrong": 4.609709115011018e-05,
+          "target_given_accepted": 0.9999432864172138,
+          "target_acceptance": 0.9994839653118718,
+          "preparation_unit_shifts": 31,
+          "analyzer_unit_shifts": 105,
+          "total_unit_shifts": 136,
+          "split_hadamards": 5,
+          "analyzer_hadamards": 90,
+          "analyzer_reads": 45,
+          "expected_unit_shifts_per_accept": 167.32177815330866
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.3359374999999985,
+          "conditional_target": 0.9842002435984066,
+          "analyzer_unit_steps": 15,
+          "single_target_pass": 0.40658933171803696
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.05466747283935499,
+          "conditional_target": 0.9998271247235225,
+          "analyzer_unit_steps": 45,
+          "single_target_pass": 0.40658933171803696
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00024693905857257355,
+          "conditional_target": 0.9999999996288196,
+          "analyzer_unit_steps": 135,
+          "single_target_pass": 0.40658933171803696
+        }
+      ]
+    },
+    {
+      "M": 64,
+      "first_conflict_other_odd_residues": 30,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 1.0000000000000007,
+          "initial_target": 0.8112208246716835,
+          "accepted": 0.6679687500000007,
+          "accepted_target": 0.6580792263810057,
+          "accepted_wrong": 0.009889523618994978,
+          "target_given_accepted": 0.9851946313072356,
+          "target_acceptance": 0.8112208246716828,
+          "preparation_unit_shifts": 63,
+          "analyzer_unit_shifts": 15,
+          "total_unit_shifts": 78,
+          "split_hadamards": 6,
+          "analyzer_hadamards": 8,
+          "analyzer_reads": 4,
+          "expected_unit_shifts_per_accept": 116.77192982456128
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 1.0000000000000007,
+          "initial_target": 0.8112208246716835,
+          "accepted": 0.7650985717773445,
+          "accepted_target": 0.7606637788527693,
+          "accepted_wrong": 0.00443479292457527,
+          "target_given_accepted": 0.9942036319395119,
+          "target_acceptance": 0.9376778254683296,
+          "preparation_unit_shifts": 63,
+          "analyzer_unit_shifts": 45,
+          "total_unit_shifts": 108,
+          "split_hadamards": 6,
+          "analyzer_hadamards": 24,
+          "analyzer_reads": 12,
+          "expected_unit_shifts_per_accept": 141.15828206176505
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 1.0000000000000007,
+          "initial_target": 0.8112208246716835,
+          "accepted": 0.7925908621400602,
+          "accepted_target": 0.7905925669237195,
+          "accepted_wrong": 0.001998295216340762,
+          "target_given_accepted": 0.9974787809047594,
+          "target_acceptance": 0.9745713409707983,
+          "preparation_unit_shifts": 63,
+          "analyzer_unit_shifts": 75,
+          "total_unit_shifts": 138,
+          "split_hadamards": 6,
+          "analyzer_hadamards": 40,
+          "analyzer_reads": 20,
+          "expected_unit_shifts_per_accept": 174.11252966932864
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 1.0000000000000007,
+          "initial_target": 0.8112208246716835,
+          "accepted": 0.8075356163422677,
+          "accepted_target": 0.8071090768957022,
+          "accepted_wrong": 0.00042653944656545484,
+          "target_given_accepted": 0.9994718010723819,
+          "target_acceptance": 0.9949314075145378,
+          "preparation_unit_shifts": 63,
+          "analyzer_unit_shifts": 135,
+          "total_unit_shifts": 198,
+          "split_hadamards": 6,
+          "analyzer_hadamards": 72,
+          "analyzer_reads": 36,
+          "expected_unit_shifts_per_accept": 245.19042379435962
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 1.0000000000000007,
+          "initial_target": 0.8112208246716835,
+          "accepted": 0.8108472710308879,
+          "accepted_target": 0.810802206586421,
+          "accepted_wrong": 4.5064444466946796e-05,
+          "target_given_accepted": 0.9999444230176545,
+          "target_acceptance": 0.9994839653118718,
+          "preparation_unit_shifts": 63,
+          "analyzer_unit_shifts": 225,
+          "total_unit_shifts": 288,
+          "split_hadamards": 6,
+          "analyzer_hadamards": 120,
+          "analyzer_reads": 60,
+          "expected_unit_shifts_per_accept": 355.1840282250011
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.3339843750000006,
+          "conditional_target": 0.9851946313072356,
+          "analyzer_unit_steps": 31,
+          "single_target_pass": 0.4056104123358413
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.05414216220378896,
+          "conditional_target": 0.9998406292035674,
+          "analyzer_unit_steps": 93,
+          "single_target_pass": 0.4056104123358413
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00024105766600032957,
+          "conditional_target": 0.9999999996941411,
+          "analyzer_unit_steps": 279,
+          "single_target_pass": 0.4056104123358413
+        }
+      ]
+    },
+    {
+      "M": 256,
+      "first_conflict_other_odd_residues": 126,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999947,
+          "initial_target": 0.8106101604684641,
+          "accepted": 0.6667480468749957,
+          "accepted_target": 0.6570888322547135,
+          "accepted_wrong": 0.009659214620282186,
+          "target_given_accepted": 0.9855129465087236,
+          "target_acceptance": 0.8106101604684695,
+          "preparation_unit_shifts": 255,
+          "analyzer_unit_shifts": 63,
+          "total_unit_shifts": 318,
+          "split_hadamards": 8,
+          "analyzer_hadamards": 12,
+          "analyzer_reads": 6,
+          "expected_unit_shifts_per_accept": 476.9417795679269
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999947,
+          "initial_target": 0.8106101604684641,
+          "accepted": 0.7644851505756327,
+          "accepted_target": 0.7600902940700572,
+          "accepted_wrong": 0.004394856505575473,
+          "target_given_accepted": 0.9942512205733933,
+          "target_acceptance": 0.9376767417161281,
+          "preparation_unit_shifts": 255,
+          "analyzer_unit_shifts": 189,
+          "total_unit_shifts": 444,
+          "split_hadamards": 8,
+          "analyzer_hadamards": 36,
+          "analyzer_reads": 18,
+          "expected_unit_shifts_per_accept": 580.7830271990009
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999947,
+          "initial_target": 0.8106101604684641,
+          "accepted": 0.7919800405780627,
+          "accepted_target": 0.7899974293410399,
+          "accepted_wrong": 0.0019826112370228133,
+          "target_given_accepted": 0.9974966398956523,
+          "target_acceptance": 0.97457133881037,
+          "preparation_unit_shifts": 255,
+          "analyzer_unit_shifts": 315,
+          "total_unit_shifts": 570,
+          "split_hadamards": 8,
+          "analyzer_hadamards": 60,
+          "analyzer_reads": 30,
+          "expected_unit_shifts_per_accept": 719.7151074463436
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999947,
+          "initial_target": 0.8106101604684641,
+          "accepted": 0.8069249355472834,
+          "accepted_target": 0.8065015079004663,
+          "accepted_wrong": 0.00042342764681713163,
+          "target_given_accepted": 0.9994752576997389,
+          "target_acceptance": 0.9949314075145278,
+          "preparation_unit_shifts": 255,
+          "analyzer_unit_shifts": 567,
+          "total_unit_shifts": 822,
+          "split_hadamards": 8,
+          "analyzer_hadamards": 108,
+          "analyzer_reads": 54,
+          "expected_unit_shifts_per_accept": 1018.6821150129562
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999947,
+          "initial_target": 0.8106101604684641,
+          "accepted": 0.8102366053700363,
+          "accepted_target": 0.8101918575071132,
+          "accepted_wrong": 4.4747862923077975e-05,
+          "target_given_accepted": 0.9999447718572247,
+          "target_acceptance": 0.9994839653118718,
+          "preparation_unit_shifts": 255,
+          "analyzer_unit_shifts": 945,
+          "total_unit_shifts": 1200,
+          "split_hadamards": 8,
+          "analyzer_hadamards": 180,
+          "analyzer_reads": 90,
+          "expected_unit_shifts_per_accept": 1481.0488591193164
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.33337402343749567,
+          "conditional_target": 0.9855129465087236,
+          "analyzer_unit_steps": 127,
+          "single_target_pass": 0.4053050802342348
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.053979105821780136,
+          "conditional_target": 0.9998445854665384,
+          "analyzer_unit_steps": 381,
+          "single_target_pass": 0.4053050802342348
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00023924918637168615,
+          "conditional_target": 0.999999999712038,
+          "analyzer_unit_steps": 1143,
+          "single_target_pass": 0.4053050802342348
+        }
+      ]
+    },
+    {
+      "M": 1024,
+      "first_conflict_other_odd_residues": 510,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999999978,
+          "initial_target": 0.8105720122749999,
+          "accepted": 0.6666717529296871,
+          "accepted_target": 0.6570269870835425,
+          "accepted_wrong": 0.009644765846144598,
+          "target_given_accepted": 0.9855329616055267,
+          "target_acceptance": 0.8105720122749998,
+          "preparation_unit_shifts": 1023,
+          "analyzer_unit_shifts": 255,
+          "total_unit_shifts": 1278,
+          "split_hadamards": 10,
+          "analyzer_hadamards": 16,
+          "analyzer_reads": 8,
+          "expected_unit_shifts_per_accept": 1916.9853745622681
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999999978,
+          "initial_target": 0.8105720122749999,
+          "accepted": 0.7644469876540821,
+          "accepted_target": 0.760054519962359,
+          "accepted_wrong": 0.00439246769172319,
+          "target_given_accepted": 0.9942540584727756,
+          "target_acceptance": 0.9376767374796775,
+          "preparation_unit_shifts": 1023,
+          "analyzer_unit_shifts": 765,
+          "total_unit_shifts": 1788,
+          "split_hadamards": 10,
+          "analyzer_hadamards": 48,
+          "analyzer_reads": 24,
+          "expected_unit_shifts_per_accept": 2338.945706996602
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999999978,
+          "initial_target": 0.8105720122749999,
+          "accepted": 0.7919418918388331,
+          "accepted_target": 0.789960251204634,
+          "accepted_wrong": 0.0019816406341991444,
+          "target_given_accepted": 0.9974977449044931,
+          "target_acceptance": 0.9745713388098416,
+          "preparation_unit_shifts": 1023,
+          "analyzer_unit_shifts": 1275,
+          "total_unit_shifts": 2298,
+          "split_hadamards": 10,
+          "analyzer_hadamards": 80,
+          "analyzer_reads": 40,
+          "expected_unit_shifts_per_accept": 2901.7280480821723
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999999978,
+          "initial_target": 0.8105720122749999,
+          "accepted": 0.8068867872898607,
+          "accepted_target": 0.8064635530646488,
+          "accepted_wrong": 0.00042323422521195475,
+          "target_given_accepted": 0.999475472604238,
+          "target_acceptance": 0.9949314075145279,
+          "preparation_unit_shifts": 1023,
+          "analyzer_unit_shifts": 2295,
+          "total_unit_shifts": 3318,
+          "split_hadamards": 10,
+          "analyzer_hadamards": 144,
+          "analyzer_reads": 72,
+          "expected_unit_shifts_per_accept": 4112.101043498762
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999999978,
+          "initial_target": 0.8105720122749999,
+          "accepted": 0.8101984571709062,
+          "accepted_target": 0.81015372899944,
+          "accepted_wrong": 4.4728171466168476e-05,
+          "target_given_accepted": 0.9999447935612932,
+          "target_acceptance": 0.9994839653118718,
+          "preparation_unit_shifts": 1023,
+          "analyzer_unit_shifts": 3825,
+          "total_unit_shifts": 4848,
+          "split_hadamards": 10,
+          "analyzer_hadamards": 240,
+          "analyzer_reads": 120,
+          "expected_unit_shifts_per_accept": 5983.719121026844
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.3333358764648434,
+          "conditional_target": 0.9855329616055268,
+          "analyzer_unit_steps": 511,
+          "single_target_pass": 0.40528600613749993
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.05396893214118398,
+          "conditional_target": 0.9998448288424089,
+          "analyzer_unit_steps": 1533,
+          "single_target_pass": 0.40528600613749993
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00023913661695048794,
+          "conditional_target": 0.9999999997131203,
+          "analyzer_unit_steps": 4599,
+          "single_target_pass": 0.40528600613749993
+        }
+      ]
+    },
+    {
+      "M": 4096,
+      "first_conflict_other_odd_residues": 2046,
+      "majority": [
+        {
+          "repeats_per_scale": 1,
+          "initial_total": 0.9999999999997867,
+          "initial_target": 0.8105696280842256,
+          "accepted": 0.6666669845579316,
+          "accepted_target": 0.6570231219727737,
+          "accepted_wrong": 0.009643862585157925,
+          "target_given_accepted": 0.9855342130200841,
+          "target_acceptance": 0.8105696280844401,
+          "preparation_unit_shifts": 4095,
+          "analyzer_unit_shifts": 1023,
+          "total_unit_shifts": 5118,
+          "split_hadamards": 12,
+          "analyzer_hadamards": 20,
+          "analyzer_reads": 10,
+          "expected_unit_shifts_per_accept": 7676.9963393248845
+        },
+        {
+          "repeats_per_scale": 3,
+          "initial_total": 0.9999999999997867,
+          "initial_target": 0.8105696280842256,
+          "accepted": 0.7644446033903284,
+          "accepted_target": 0.7600522843487179,
+          "accepted_wrong": 0.004392319041610526,
+          "target_given_accepted": 0.9942542350065257,
+          "target_acceptance": 0.9376767374631282,
+          "preparation_unit_shifts": 4095,
+          "analyzer_unit_shifts": 3069,
+          "total_unit_shifts": 7164,
+          "split_hadamards": 12,
+          "analyzer_hadamards": 60,
+          "analyzer_reads": 30,
+          "expected_unit_shifts_per_accept": 9371.509679350871
+        },
+        {
+          "repeats_per_scale": 5,
+          "initial_total": 0.9999999999997867,
+          "initial_target": 0.8105696280842256,
+          "accepted": 0.7919395076460195,
+          "accepted_target": 0.7899579276406392,
+          "accepted_wrong": 0.00198158000538029,
+          "target_given_accepted": 0.9974978139286542,
+          "target_acceptance": 0.9745713388098417,
+          "preparation_unit_shifts": 4095,
+          "analyzer_unit_shifts": 5115,
+          "total_unit_shifts": 9210,
+          "split_hadamards": 12,
+          "analyzer_hadamards": 100,
+          "analyzer_reads": 50,
+          "expected_unit_shifts_per_accept": 11629.676144553048
+        },
+        {
+          "repeats_per_scale": 9,
+          "initial_total": 0.9999999999997867,
+          "initial_target": 0.8105696280842256,
+          "accepted": 0.806884403098838,
+          "accepted_target": 0.806461180958366,
+          "accepted_wrong": 0.00042322214047196827,
+          "target_given_accepted": 0.9994754860313986,
+          "target_acceptance": 0.994931407514528,
+          "preparation_unit_shifts": 4095,
+          "analyzer_unit_shifts": 9207,
+          "total_unit_shifts": 13302,
+          "split_hadamards": 12,
+          "analyzer_hadamards": 180,
+          "analyzer_reads": 90,
+          "expected_unit_shifts_per_accept": 16485.63282288478
+        },
+        {
+          "repeats_per_scale": 15,
+          "initial_total": 0.9999999999997867,
+          "initial_target": 0.8105696280842256,
+          "accepted": 0.81019607298011,
+          "accepted_target": 0.8101513460389909,
+          "accepted_wrong": 4.472694111912201e-05,
+          "target_given_accepted": 0.9999447949174147,
+          "target_acceptance": 0.9994839653118717,
+          "preparation_unit_shifts": 4095,
+          "analyzer_unit_shifts": 15345,
+          "total_unit_shifts": 19440,
+          "split_hadamards": 12,
+          "analyzer_hadamards": 300,
+          "analyzer_reads": 150,
+          "expected_unit_shifts_per_accept": 23994.19183617451
+        }
+      ],
+      "all_plus_block": [
+        {
+          "repeats": 1,
+          "raw_acceptance": 0.33333349227887904,
+          "conditional_target": 0.98553421302008,
+          "analyzer_unit_steps": 2047,
+          "single_target_pass": 0.4052848140422202
+        },
+        {
+          "repeats": 3,
+          "raw_acceptance": 0.05396829635373968,
+          "conditional_target": 0.9998448440384876,
+          "analyzer_unit_steps": 6141,
+          "single_target_pass": 0.4052848140422202
+        },
+        {
+          "repeats": 9,
+          "raw_acceptance": 0.00023912958315506862,
+          "conditional_target": 0.9999999997131879,
+          "analyzer_unit_steps": 18423,
+          "single_target_pass": 0.4052848140422202
+        }
+      ]
+    }
+  ],
+  "adverse_readouts": [
+    {
+      "M": 8,
+      "localized_odd_then_majority": {
+        "initial_total": 0.5,
+        "initial_target": 0.25,
+        "accepted": 0.25,
+        "accepted_target": 0.24873505503307078,
+        "accepted_wrong": 0.0012649449669292212,
+        "target_given_accepted": 0.9949402201322831,
+        "target_acceptance": 0.9949402201322831
+      },
+      "localized_accept_even_alias": {
+        "initial_total": 1.0,
+        "initial_target": 0.25,
+        "accepted": 0.5,
+        "accepted_target": 0.24873505503307078,
+        "accepted_wrong": 0.2512649449669292,
+        "target_given_accepted": 0.49747011006614156,
+        "target_acceptance": 0.9949402201322831
+      },
+      "addressed_without_drift": {
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.8124999999999998,
+        "accepted_target": 0.8039975644174328,
+        "accepted_wrong": 0.008502435582567025,
+        "target_given_accepted": 0.9895354638983791,
+        "target_acceptance": 0.9419417382415922
+      },
+      "every_delay_one_site_too_long": {
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.49999999999999983,
+        "accepted_target": 0.42677669529663675,
+        "accepted_wrong": 0.07322330470336308,
+        "target_given_accepted": 0.8535533905932738,
+        "target_acceptance": 0.5
+      },
+      "every_delay_half_a_cycle_too_long": {
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.1875,
+        "accepted_target": 0.04955582617584078,
+        "accepted_wrong": 0.13794417382415922,
+        "target_given_accepted": 0.26429773960448416,
+        "target_acceptance": 0.05805826175840781
+      },
+      "independent_ten_percent_record_flip": {
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.7679999999999998,
+        "accepted_target": 0.7502813126546314,
+        "accepted_wrong": 0.01771868734536841,
+        "target_given_accepted": 0.9769287925190515,
+        "target_acceptance": 0.8790092347159895
+      }
+    },
+    {
+      "M": 16,
+      "localized_odd_then_majority": {
+        "initial_total": 0.5,
+        "initial_target": 0.125,
+        "accepted": 0.125,
+        "accepted_target": 0.12436642718261251,
+        "accepted_wrong": 0.0006335728173874899,
+        "target_given_accepted": 0.9949314174609001,
+        "target_acceptance": 0.9949314174609001
+      },
+      "localized_accept_even_alias": {
+        "initial_total": 1.0,
+        "initial_target": 0.125,
+        "accepted": 0.25,
+        "accepted_target": 0.12436642718261251,
+        "accepted_wrong": 0.1256335728173875,
+        "target_given_accepted": 0.49746570873045004,
+        "target_acceptance": 0.9949314174609001
+      },
+      "addressed_without_drift": {
+        "initial_total": 0.9999999999999987,
+        "initial_target": 0.8210669490340043,
+        "accepted": 0.7753906249999988,
+        "accepted_target": 0.7701215226344633,
+        "accepted_wrong": 0.005269102365535461,
+        "target_given_accepted": 0.9932045833472187,
+        "target_acceptance": 0.9379521652168815
+      },
+      "every_delay_one_site_too_long": {
+        "initial_total": 0.9999999999999987,
+        "initial_target": 0.8210669490340043,
+        "accepted": 0.6074218749999991,
+        "accepted_target": 0.5978375287656552,
+        "accepted_wrong": 0.009584346234343899,
+        "target_given_accepted": 0.9842212692219161,
+        "target_acceptance": 0.7281227547510207
+      },
+      "every_delay_half_a_cycle_too_long": {
+        "initial_total": 0.9999999999999987,
+        "initial_target": 0.8210669490340043,
+        "accepted": 0.05664062499999999,
+        "accepted_target": 0.0002019040251437356,
+        "accepted_wrong": 0.056438720974856256,
+        "target_given_accepted": 0.0035646503749514704,
+        "target_acceptance": 0.00024590446050870546
+      },
+      "independent_ten_percent_record_flip": {
+        "initial_total": 0.9999999999999987,
+        "initial_target": 0.8210669490340043,
+        "accepted": 0.6997839999999989,
+        "accepted_target": 0.6880853856702407,
+        "accepted_wrong": 0.011698614329758161,
+        "target_given_accepted": 0.9832825352826613,
+        "target_acceptance": 0.8380380996699256
+      }
+    },
+    {
+      "M": 32,
+      "localized_odd_then_majority": {
+        "initial_total": 0.5,
+        "initial_target": 0.0625,
+        "accepted": 0.06249999999999999,
+        "accepted_target": 0.062183212970287394,
+        "accepted_wrong": 0.00031678702971259937,
+        "target_given_accepted": 0.9949314075245984,
+        "target_acceptance": 0.9949314075245983
+      },
+      "localized_accept_even_alias": {
+        "initial_total": 1.0,
+        "initial_target": 0.0625,
+        "accepted": 0.12499999999999999,
+        "accepted_target": 0.062183212970287394,
+        "accepted_wrong": 0.06281678702971259,
+        "target_given_accepted": 0.4974657037622992,
+        "target_acceptance": 0.9949314075245983
+      },
+      "addressed_without_drift": {
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.7670898437499983,
+        "accepted_target": 0.7625128397713969,
+        "accepted_wrong": 0.0045770039786013905,
+        "target_given_accepted": 0.9940332882570492,
+        "target_acceptance": 0.9376941059292093
+      },
+      "every_delay_one_site_too_long": {
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.6984252929687483,
+        "accepted_target": 0.6933264432080637,
+        "accepted_wrong": 0.005098849760684643,
+        "target_given_accepted": 0.9926995058569381,
+        "target_acceptance": 0.8526126844971867
+      },
+      "every_delay_half_a_cycle_too_long": {
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.0126953125,
+        "accepted_target": 5.501627539848023e-08,
+        "accepted_wrong": 0.012695257483724602,
+        "target_given_accepted": 4.333589692926443e-06,
+        "target_acceptance": 6.765582752258886e-08
+      },
+      "independent_ten_percent_record_flip": {
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.6689540319999984,
+        "accepted_target": 0.6594690343752498,
+        "accepted_wrong": 0.009484997624748526,
+        "target_given_accepted": 0.9858211518713912,
+        "target_acceptance": 0.8109768050094615
+      }
+    },
+    {
+      "M": 256,
+      "localized_odd_then_majority": {
+        "initial_total": 0.5,
+        "initial_target": 0.0078125,
+        "accepted": 0.0078125,
+        "accepted_target": 0.007772901621207248,
+        "accepted_wrong": 3.959837879275157e-05,
+        "target_given_accepted": 0.9949314075145278,
+        "target_acceptance": 0.9949314075145278
+      },
+      "localized_accept_even_alias": {
+        "initial_total": 1.0,
+        "initial_target": 0.0078125,
+        "accepted": 0.015625,
+        "accepted_target": 0.007772901621207248,
+        "accepted_wrong": 0.007852098378792752,
+        "target_given_accepted": 0.4974657037572639,
+        "target_acceptance": 0.9949314075145278
+      },
+      "addressed_without_drift": {
+        "initial_total": 0.9999999999999947,
+        "initial_target": 0.8106101604684641,
+        "accepted": 0.7644851505756327,
+        "accepted_target": 0.7600902940700572,
+        "accepted_wrong": 0.004394856505575473,
+        "target_given_accepted": 0.9942512205733933,
+        "target_acceptance": 0.9376767417161281
+      },
+      "every_delay_one_site_too_long": {
+        "initial_total": 0.9999999999999947,
+        "initial_target": 0.8106101604684641,
+        "accepted": 0.756729293090752,
+        "accepted_target": 0.7536433094483959,
+        "accepted_wrong": 0.003085983642356127,
+        "target_given_accepted": 0.995921945046224,
+        "target_acceptance": 0.9297234925020601
+      },
+      "every_delay_half_a_cycle_too_long": {
+        "initial_total": 0.9999999999999947,
+        "initial_target": 0.8106101604684641,
+        "accepted": 0.00020888447761535636,
+        "accepted_target": 7.045770344084293e-26,
+        "accepted_wrong": 0.00020888447761535636,
+        "target_given_accepted": 3.373046396036426e-22,
+        "target_acceptance": 8.691934406561637e-26
+      },
+      "independent_ten_percent_record_flip": {
+        "initial_total": 0.9999999999999947,
+        "initial_target": 0.8106101604684641,
+        "accepted": 0.6108686394731229,
+        "accepted_target": 0.602843699094127,
+        "accepted_wrong": 0.008024940378995815,
+        "target_given_accepted": 0.986863067015656,
+        "target_acceptance": 0.743691269235676
+      }
+    }
+  ],
+  "independent_readout_noise": {
+    "proof": "Each ideal report is flipped independently with symmetric probability c. The true Kraus update is unchanged; only the recorded label can flip. For c<1/2 the target's unfavorable probability and each wrong residue's favorable probability at its first conflict are bounded by d'=c+(1\u22122c)sin\u00b2(pi/8)<1/2. Let beta=2 sqrt(d'(1\u2212d')). With r_j=r+2(j\u22123) and odd r, the majority tail at that scale is at most beta^r_j. The target's total rejection is at most beta^r/(1\u2212beta\u00b2), by the union bound. Each wrong odd residue has acceptance at most beta^r. This applies for every cycle size without independence between potential failures across settings once their conditional bounds hold. The Bernoulli calculation does require independent flips within a scale and the stated ideal instrument.",
+    "clock": "For q=log2 M and s=q\u22122 scales, sum of r_j is s(r+s\u22121). Analyzer shifts cost at most M(r/4+1/2); the M\u22121 addressable preparation shifts are additional. At fixed c<1/2 and prescribed error this gives O(M) shift cost and O(r log M+log\u00b2 M) readout, reset, and Hadamard overhead. The bounds deteriorate as c approaches 1/2. Pure phase errors, correlated flips, changes to the physical projection, and coherent gate errors require separate models.",
+    "uniform_examples": {
+      "0.0": {
+        "r": 15,
+        "dark_upper": 0.14644660940672624,
+        "beta": 0.7071067811865476,
+        "target_rejection_upper": 0.011048543456039818,
+        "wrong_acceptance_upper": 0.005524271728019908,
+        "target_joint_lower": 0.8016138571347842,
+        "conditional_purity_lower": 0.9986962533262751
+      },
+      "0.05": {
+        "r": 17,
+        "dark_upper": 0.18180194846605363,
+        "beta": 0.7713624310270757,
+        "target_rejection_upper": 0.029918456572961463,
+        "wrong_acceptance_upper": 0.01211697491204939,
+        "target_joint_lower": 0.7863184816769075,
+        "conditional_purity_lower": 0.9970894182036659
+      },
+      "0.2": {
+        "r": 49,
+        "dark_upper": 0.2878679656440358,
+        "beta": 0.9055385138137417,
+        "target_rejection_upper": 0.042970150848732666,
+        "wrong_acceptance_upper": 0.007734627152771872,
+        "target_joint_lower": 0.775739176776435,
+        "conditional_purity_lower": 0.9981148143019201
+      },
+      "0.5": {
+        "r": 15,
+        "dark_upper": 0.5,
+        "beta": 1.0,
+        "criterion": "The reports are independent fair bits; sector likelihoods coincide."
+      }
+    },
+    "finite_cases": [
+      {
+        "M": 8,
+        "flip_probability": 0.0,
+        "base_repeats": 15,
+        "repeats": [
+          15
+        ],
+        "analyzer_unit_shifts": 15,
+        "total_unit_shifts": 22,
+        "probes": 15,
+        "analyzer_hadamards": 30,
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.8531885147094725,
+        "accepted_target": 0.8531129464396459,
+        "accepted_wrong": 7.556826982668685e-05,
+        "target_given_accepted": 0.9999114284023708,
+        "target_acceptance": 0.9994839875765458
+      },
+      {
+        "M": 32,
+        "flip_probability": 0.0,
+        "base_repeats": 15,
+        "repeats": [
+          15,
+          17,
+          19
+        ],
+        "analyzer_unit_shifts": 113,
+        "total_unit_shifts": 144,
+        "probes": 51,
+        "analyzer_hadamards": 102,
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.8128054662190329,
+        "accepted_target": 0.8127590506368609,
+        "accepted_wrong": 4.641558217199915e-05,
+        "target_given_accepted": 0.9999428945988911,
+        "target_acceptance": 0.9994839844943324
+      },
+      {
+        "M": 4096,
+        "flip_probability": 0.0,
+        "base_repeats": 15,
+        "repeats": [
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33
+        ],
+        "analyzer_unit_shifts": 17371,
+        "total_unit_shifts": 21466,
+        "probes": 240,
+        "analyzer_hadamards": 480,
+        "initial_total": 0.9999999999997867,
+        "initial_target": 0.8105696280842256,
+        "accepted": 0.8101964076690913,
+        "accepted_target": 0.810151361587711,
+        "accepted_wrong": 4.504608138033994e-05,
+        "target_given_accepted": 0.9999444010354107,
+        "target_acceptance": 0.9994839844943324
+      },
+      {
+        "M": 8,
+        "flip_probability": 0.05,
+        "base_repeats": 17,
+        "repeats": [
+          17
+        ],
+        "analyzer_unit_shifts": 17,
+        "total_unit_shifts": 24,
+        "probes": 17,
+        "analyzer_hadamards": 34,
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.8526500531034384,
+        "accepted_target": 0.8524629657835936,
+        "accepted_wrong": 0.0001870873198448475,
+        "target_given_accepted": 0.9997805813543741,
+        "target_acceptance": 0.9987224878704752
+      },
+      {
+        "M": 32,
+        "flip_probability": 0.05,
+        "base_repeats": 17,
+        "repeats": [
+          17,
+          19,
+          21
+        ],
+        "analyzer_unit_shifts": 127,
+        "total_unit_shifts": 158,
+        "probes": 57,
+        "analyzer_hadamards": 114,
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.8122533122143092,
+        "accepted_target": 0.8121391516153036,
+        "accepted_wrong": 0.00011416059900559716,
+        "target_given_accepted": 0.9998594519747855,
+        "target_acceptance": 0.99872166859817
+      },
+      {
+        "M": 4096,
+        "flip_probability": 0.05,
+        "base_repeats": 17,
+        "repeats": [
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          35
+        ],
+        "analyzer_unit_shifts": 19417,
+        "total_unit_shifts": 23512,
+        "probes": 260,
+        "analyzer_hadamards": 520,
+        "initial_total": 0.9999999999997867,
+        "initial_target": 0.8105696280842256,
+        "accepted": 0.8096442175558615,
+        "accepted_target": 0.8095334511767363,
+        "accepted_wrong": 0.00011076637912521559,
+        "target_given_accepted": 0.9998631912922696,
+        "target_acceptance": 0.9987216682298615
+      },
+      {
+        "M": 8,
+        "flip_probability": 0.2,
+        "base_repeats": 49,
+        "repeats": [
+          49
+        ],
+        "analyzer_unit_shifts": 49,
+        "total_unit_shifts": 56,
+        "probes": 49,
+        "analyzer_hadamards": 98,
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.8529448812171831,
+        "accepted_target": 0.8528188547989792,
+        "accepted_wrong": 0.00012602641820391725,
+        "target_given_accepted": 0.9998522455307732,
+        "target_acceptance": 0.9991394377875018
+      },
+      {
+        "M": 32,
+        "flip_probability": 0.2,
+        "base_repeats": 49,
+        "repeats": [
+          49,
+          51,
+          53
+        ],
+        "analyzer_unit_shifts": 351,
+        "total_unit_shifts": 382,
+        "probes": 153,
+        "analyzer_hadamards": 306,
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.8125501253389005,
+        "accepted_target": 0.8124725674050629,
+        "accepted_wrong": 7.75579338375687e-05,
+        "target_given_accepted": 0.9999045499700031,
+        "target_acceptance": 0.9991316840163691
+      },
+      {
+        "M": 4096,
+        "flip_probability": 0.2,
+        "base_repeats": 49,
+        "repeats": [
+          49,
+          51,
+          53,
+          55,
+          57,
+          59,
+          61,
+          63,
+          65,
+          67
+        ],
+        "analyzer_unit_shifts": 52153,
+        "total_unit_shifts": 56248,
+        "probes": 580,
+        "analyzer_hadamards": 1160,
+        "initial_total": 0.9999999999997867,
+        "initial_target": 0.8105696280842256,
+        "accepted": 0.8099403197273084,
+        "accepted_target": 0.8098650696892212,
+        "accepted_wrong": 7.525003808717123e-05,
+        "target_given_accepted": 0.9999070918730005,
+        "target_acceptance": 0.9991307860909252
+      },
+      {
+        "M": 8,
+        "flip_probability": 0.5,
+        "base_repeats": 15,
+        "repeats": [
+          15
+        ],
+        "analyzer_unit_shifts": 15,
+        "total_unit_shifts": 22,
+        "probes": 15,
+        "analyzer_hadamards": 30,
+        "initial_total": 0.9999999999999998,
+        "initial_target": 0.8535533905932735,
+        "accepted": 0.4999999999999999,
+        "accepted_target": 0.42677669529663675,
+        "accepted_wrong": 0.07322330470336313,
+        "target_given_accepted": 0.8535533905932737,
+        "target_acceptance": 0.5
+      },
+      {
+        "M": 32,
+        "flip_probability": 0.5,
+        "base_repeats": 15,
+        "repeats": [
+          15,
+          17,
+          19
+        ],
+        "analyzer_unit_shifts": 113,
+        "total_unit_shifts": 144,
+        "probes": 51,
+        "analyzer_hadamards": 102,
+        "initial_total": 0.9999999999999981,
+        "initial_target": 0.813178663436072,
+        "accepted": 0.12499999999999976,
+        "accepted_target": 0.101647332929509,
+        "accepted_wrong": 0.02335266707049076,
+        "target_given_accepted": 0.8131786634360736,
+        "target_acceptance": 0.125
+      },
+      {
+        "M": 4096,
+        "flip_probability": 0.5,
+        "base_repeats": 15,
+        "repeats": [
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33
+        ],
+        "analyzer_unit_shifts": 17371,
+        "total_unit_shifts": 21466,
+        "probes": 240,
+        "analyzer_hadamards": 480,
+        "initial_total": 0.9999999999997867,
+        "initial_target": 0.8105696280842256,
+        "accepted": 0.0009765624999997917,
+        "accepted_target": 0.0007915719024260016,
+        "accepted_wrong": 0.00018499059757379015,
+        "target_given_accepted": 0.8105696280843985,
+        "target_acceptance": 0.0009765625
+      }
+    ]
+  }
+}

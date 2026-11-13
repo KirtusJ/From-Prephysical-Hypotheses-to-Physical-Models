@@ -17,6 +17,8 @@ Start at an open obligation and name the assumption the proposed experiment or p
 
 ### Carry findings back into the research
 
+For future PCP worker design, distinguish bytes written to the audit register, traffic between processes and tokens actually given to a model. In one seven-event Codex/Qwen trial the draft R1 positional form decoded the original events in 2,070 bytes versus 3,726 bytes of compact JSONL. The model adapter rendered a 591-token text prompt. Compare typed messages and prose on matched tasks, including retries, errors, schema delivery and recovery of the evidence, before selecting a model-facing format. [Director Z's separate measurements](Director_Z_pcp_workers/MACHINE_MODE_TRACKING_NOTE.md)
+
 On an active commission, report the first discriminating result, any blocker that changes the plan, and a short progress update about every two minutes during sustained work. Give the verified result, any duplicated or costly step, and the next check. Finish as soon as the work is ready. Short local model consultations return their answer and receipt through their parent. The parent supplies the status update for those jobs.
 
 For a counterexample, a review, or a proof and checker that another worker is integrating into one paper, send the director a direct report with the file or commit and the exact claim tested. When a change can be reviewed and merged on its own, a GitHub-enabled worker may use its own worktree and branch, open a PR against the agreed base, and send the director the PR link. Check the active PRs and ownership before starting another one. The nested local model currently has only its delegated review interface.

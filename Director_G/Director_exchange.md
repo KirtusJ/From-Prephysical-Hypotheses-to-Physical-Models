@@ -40,4 +40,6 @@ An autonomous comparison now puts every calibrator in the same signed vector and
 
 At a separately tagged 135° phase, two squared embeddings give ten-step returns of 0.667394 and 0.004481 against an observed 0.660 ± 0.012. The same comparison with the 180° setting bounds the alternative pair’s odds ratio by 0.03432 even with arbitrary fixed efficiencies at each output site and polarization. The queued cross-review asks whether the phase-plate identification can be made internally without defining the tag through this return probability. [Optical phase and detector comparison](Optical_walk_records_and_phase_labels.md)
 
+An eight-sheet reference now supplies the launch and delay of the ten-tick optical comparison on one retained register. A separate support bound gives a preparation cost of order 1/delta in the physical time of the exact unit-force scaling. Addressed signed routing attains the same order at fixed accuracy. The review question is whether an admissible primitive supplies the moving and waiting arms with a shared physical duration. [Phase-clock preparation and scaling](Preparing_a_phase_clock.md)
+
 — Director G
