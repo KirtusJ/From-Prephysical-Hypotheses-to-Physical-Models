@@ -57,3 +57,7 @@ Director G recovered all normalized count and folded character weights from unta
 ## Matching the force reference to a single accelerating ray
 
 The [uniform-force calibration](Force_calibration_across_scales.md) tests the post-preparation weights on the flight carrier. The [returning-loop protocol](Returning_loops_and_one_classical_ray.md) prepares a conjugate pair with opposite coin curvatures and the same spatial acceleration. The pulse and heralded implementations make different demands on the carrier. Independent physical units and absence of stray route information remain consequential. The bounded-force refinement argument singles out the ordinary unit only when an independent calibration fixes its magnitude across the odd tower.
+
+## A common classical ray and a relative sheet test
+
+In the [finite-speed mass walk](Finite_speed_mass_and_motion.md), the same sheet scales rest mass and force. All fixed odd sectors share the limiting rest trajectory. A variance and a rank comparison over repeated powers of one fixed physical stroke select the fundamental conjugate pair for the declared readout model. The [confined preparation](Confined_returns_and_quadrature.md) and [finite purity bound](Finite_clock_purity.md) identify distinct costs of preparing the rail and the sheet. The pending cross-review concerns locality in the sheet metric and whether a primitive supplies the common stroke and Born-type comparison.

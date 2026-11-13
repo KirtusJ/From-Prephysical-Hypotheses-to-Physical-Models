@@ -1,0 +1,969 @@
+{
+  "external_hardware": "One real onsite tunable rotation R_y(theta)=exp(-i theta sigma_y), nearest-neighbor R/L stream, preassigned uniform force phase at each site on the covering line, squared rail statistics. Fourier-character preparation is an independent resource. No dynamic interparticle force is included.",
+  "controls": "Grouping both position rails after a fixed time; explicit compact momentum-source model on grid, Born normalization, upper/lower energy and conjugate sign settings. Main grid represents a periodicization of the line packet in the accelerating representation; the restored wave on the physical core can carry a time-dependent boundary twist. Independent compact starts have zero cone leakage at every tick.",
+  "characteristic_oracle": "Ideal scalar action exp(-i \u03bb integral of E(p-fs)/epsilon) and a parallel band eigenvector, with all phases retained. The supplied bound is for the full spinor. Uniform nonrelativistic error bound is for a centre launched at rest, at fixed c; it does not tend to zero just by refining the grid.",
+  "grids": [
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": 1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 43,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9956928336905764,
+        -0.0024439826822103636
+      ],
+      "first_harmonic_distance": 0.006796108422947816,
+      "total": 1.000000000000002,
+      "max_spinor_error_bound": 0.5142845869120796,
+      "observed_spinor_error": 0.19468584837236688,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.46875,
+        "endpoint_time": 0.0078125,
+        "split": 0.03772208691207961
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": -1,
+      "branch": -1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 43,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9956928336905764,
+        -0.0024439826822103636
+      ],
+      "first_harmonic_distance": 0.006796108422947816,
+      "total": 1.000000000000002,
+      "max_spinor_error_bound": 0.5142845869120796,
+      "observed_spinor_error": 0.19468584837236688,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.46875,
+        "endpoint_time": 0.0078125,
+        "split": 0.03772208691207961
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": -1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 43,
+      "analytic_ray": 0.11803398874989485,
+      "newton": 0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9956928336905764,
+        0.002443982682210367
+      ],
+      "first_harmonic_distance": 0.0067961084229478125,
+      "total": 1.000000000000002,
+      "max_spinor_error_bound": 0.5142845869120796,
+      "observed_spinor_error": 0.19468584837236688,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.46875,
+        "endpoint_time": 0.0078125,
+        "split": 0.03772208691207961
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": 3,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 43,
+      "analytic_ray": -0.2675918792439982,
+      "newton": -0.375,
+      "newton_error_upper_at_rest": 0.2109375,
+      "finite_position_character": [
+        0.9956615920257408,
+        -0.006815779293748422
+      ],
+      "first_harmonic_distance": 0.011486692537872866,
+      "total": 1.0000000000000024,
+      "max_spinor_error_bound": 2.81115958691208,
+      "observed_spinor_error": 0.4028609697608641,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 2.71875,
+        "endpoint_time": 0.0234375,
+        "split": 0.06897208691207961
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": 0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 43,
+      "analytic_ray": 0.0,
+      "newton": 0.0,
+      "newton_error_upper_at_rest": 0.0,
+      "finite_position_character": [
+        0.9956969981501812,
+        1.0091906001375415e-18
+      ],
+      "first_harmonic_distance": 0.004303001849818799,
+      "total": 1.0000000000000029,
+      "max_spinor_error_bound": 0.02209708691207961,
+      "observed_spinor_error": 0.004726253777517048,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.0,
+        "endpoint_time": 0.0,
+        "split": 0.02209708691207961
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "tau": 0.015625,
+      "cell": 0.015625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 32,
+      "t": 0.5,
+      "field": 1.0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "constant_edge",
+      "momentum_modes": 43,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9954518566449391,
+        -0.0024307400930725074
+      ],
+      "first_harmonic_distance": 0.006960365268145235,
+      "total": 1.0000000000000022,
+      "max_spinor_error_bound": 0.6030187330064741,
+      "observed_spinor_error": 0.21097074787831668,
+      "terms": {
+        "initial_spin": 0.08873414609439459,
+        "continuum_band": 0.46875,
+        "endpoint_time": 0.0078125,
+        "split": 0.03772208691207961
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": 1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 61,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9978599886172892,
+        -0.006206823158444763
+      ],
+      "first_harmonic_distance": 0.0025996887170774566,
+      "total": 0.9999999999999722,
+      "max_spinor_error_bound": 0.251953125,
+      "observed_spinor_error": 0.10039768258560808,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.234375,
+        "endpoint_time": 0.001953125,
+        "split": 0.015625
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": -1,
+      "branch": -1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 61,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9978599886172892,
+        -0.006206823158444763
+      ],
+      "first_harmonic_distance": 0.0025996887170774566,
+      "total": 0.9999999999999725,
+      "max_spinor_error_bound": 0.251953125,
+      "observed_spinor_error": 0.10039768258560809,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.234375,
+        "endpoint_time": 0.001953125,
+        "split": 0.015625
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": -1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 61,
+      "analytic_ray": 0.11803398874989485,
+      "newton": 0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9978599886172876,
+        0.0062068231584447575
+      ],
+      "first_harmonic_distance": 0.0025996887170787217,
+      "total": 0.999999999999972,
+      "max_spinor_error_bound": 0.251953125,
+      "observed_spinor_error": 0.1003976825856081,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.234375,
+        "endpoint_time": 0.001953125,
+        "split": 0.015625
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": 3,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 61,
+      "analytic_ray": -0.2675918792439982,
+      "newton": -0.375,
+      "newton_error_upper_at_rest": 0.2109375,
+      "finite_position_character": [
+        0.9977799630872473,
+        -0.01461595476745931
+      ],
+      "first_harmonic_distance": 0.0035586139311251552,
+      "total": 0.9999999999999732,
+      "max_spinor_error_bound": 1.396484375,
+      "observed_spinor_error": 0.19894959695645478,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 1.359375,
+        "endpoint_time": 0.005859375,
+        "split": 0.03125
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": 0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 61,
+      "analytic_ray": 0.0,
+      "newton": 0.0,
+      "newton_error_upper_at_rest": 0.0,
+      "finite_position_character": [
+        0.9978725144698625,
+        -2.1428865337467558e-18
+      ],
+      "first_harmonic_distance": 0.0021274855301375295,
+      "total": 0.9999999999999729,
+      "max_spinor_error_bound": 0.0078125,
+      "observed_spinor_error": 0.0008793372624091789,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.0,
+        "endpoint_time": 0.0,
+        "split": 0.0078125
+      }
+    },
+    {
+      "epsilon": 0.25,
+      "tau": 0.001953125,
+      "cell": 0.001953125,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 256,
+      "t": 0.5,
+      "field": 1.0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "constant_edge",
+      "momentum_modes": 61,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9977865340910705,
+        -0.006066144916620695
+      ],
+      "first_harmonic_distance": 0.002742404811062529,
+      "total": 0.9999999999999725,
+      "max_spinor_error_bound": 0.3155643566447487,
+      "observed_spinor_error": 0.12197509438089646,
+      "terms": {
+        "initial_spin": 0.06361123164474868,
+        "continuum_band": 0.234375,
+        "endpoint_time": 0.001953125,
+        "split": 0.015625
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": 1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 87,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9989196894289131,
+        -0.007344765831539552
+      ],
+      "first_harmonic_distance": 0.0011172470973378164,
+      "total": 0.9999999999998486,
+      "max_spinor_error_bound": 0.12434416711400995,
+      "observed_spinor_error": 0.04595637309907873,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.1171875,
+        "endpoint_time": 0.00048828125,
+        "split": 0.006668385864009951
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": -1,
+      "branch": -1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 87,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9989196894289131,
+        -0.007344765831539552
+      ],
+      "first_harmonic_distance": 0.0011172470973378164,
+      "total": 0.9999999999998486,
+      "max_spinor_error_bound": 0.12434416711400995,
+      "observed_spinor_error": 0.04595637309907873,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.1171875,
+        "endpoint_time": 0.00048828125,
+        "split": 0.006668385864009951
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": -1,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 87,
+      "analytic_ray": 0.11803398874989485,
+      "newton": 0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9989196894289627,
+        0.007344765831539472
+      ],
+      "first_harmonic_distance": 0.0011172470972911827,
+      "total": 0.9999999999998487,
+      "max_spinor_error_bound": 0.12434416711400995,
+      "observed_spinor_error": 0.04595637309907873,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.1171875,
+        "endpoint_time": 0.00048828125,
+        "split": 0.006668385864009951
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": 3,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 87,
+      "analytic_ray": -0.2675918792439982,
+      "newton": -0.375,
+      "newton_error_upper_at_rest": 0.2109375,
+      "finite_position_character": [
+        0.9988085237187552,
+        -0.016447030805694467
+      ],
+      "first_harmonic_distance": 0.001487906770640758,
+      "total": 0.9999999999998477,
+      "max_spinor_error_bound": 0.69563322961401,
+      "observed_spinor_error": 0.1172579014706259,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.6796875,
+        "endpoint_time": 0.00146484375,
+        "split": 0.014480885864009951
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": 0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "eigenframe",
+      "momentum_modes": 87,
+      "analytic_ray": 0.0,
+      "newton": 0.0,
+      "newton_error_upper_at_rest": 0.0,
+      "finite_position_character": [
+        0.9989438155006255,
+        -4.792200706393009e-19
+      ],
+      "first_harmonic_distance": 0.0010561844993745018,
+      "total": 0.9999999999998808,
+      "max_spinor_error_bound": 0.0027621358640099515,
+      "observed_spinor_error": 0.00013832574678040096,
+      "terms": {
+        "initial_spin": 0.0,
+        "continuum_band": 0.0,
+        "endpoint_time": 0.0,
+        "split": 0.0027621358640099515
+      }
+    },
+    {
+      "epsilon": 0.125,
+      "tau": 0.000244140625,
+      "cell": 0.000244140625,
+      "c": 1.0,
+      "m": 1.0,
+      "length": 96.0,
+      "ticks": 2048,
+      "t": 0.5,
+      "field": 1.0,
+      "branch": 1,
+      "initial_p": 0.0,
+      "source": "constant_edge",
+      "momentum_modes": 87,
+      "analytic_ray": -0.11803398874989485,
+      "newton": -0.125,
+      "newton_error_upper_at_rest": 0.0078125,
+      "finite_position_character": [
+        0.9989039195198783,
+        -0.007349103553433282
+      ],
+      "first_harmonic_distance": 0.001130636784972869,
+      "total": 0.9999999999998478,
+      "max_spinor_error_bound": 0.16964898332501663,
+      "observed_spinor_error": 0.06219995914224311,
+      "terms": {
+        "initial_spin": 0.04530481621100669,
+        "continuum_band": 0.1171875,
+        "endpoint_time": 0.00048828125,
+        "split": 0.006668385864009951
+      }
+    }
+  ],
+  "dispersion": [
+    {
+      "tau_over_epsilon": 0.25,
+      "p": -2,
+      "energy": 2.2169602006164046,
+      "dirac_energy": 2.23606797749979,
+      "velocity": -0.8826216461661295,
+      "dirac_velocity": -0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": -1,
+      "energy": 1.406766890418028,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": -0.6958553886479587,
+      "dirac_velocity": -0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": -0.25,
+      "energy": 1.0301417978711436,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": -0.23760530297567808,
+      "dirac_velocity": -0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": 0,
+      "energy": 1.0000000000000009,
+      "dirac_energy": 1.0,
+      "velocity": 0.0,
+      "dirac_velocity": 0.0
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": 0.25,
+      "energy": 1.0301417978711436,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": 0.23760530297567808,
+      "dirac_velocity": 0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": 1,
+      "energy": 1.406766890418028,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": 0.6958553886479587,
+      "dirac_velocity": 0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.25,
+      "p": 2,
+      "energy": 2.2169602006164046,
+      "dirac_energy": 2.23606797749979,
+      "velocity": 0.8826216461661295,
+      "dirac_velocity": 0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": -2,
+      "energy": 2.2313802614565623,
+      "dirac_energy": 2.23606797749979,
+      "velocity": -0.8915939518293795,
+      "dirac_velocity": -0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": -1,
+      "energy": 1.412367096785387,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": -0.7043320346131975,
+      "dirac_velocity": -0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": -0.25,
+      "energy": 1.030618318508702,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": -0.24130794570908187,
+      "dirac_velocity": -0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": 0,
+      "energy": 1.000000000000003,
+      "dirac_energy": 1.0,
+      "velocity": 0.0,
+      "dirac_velocity": 0.0
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": 0.25,
+      "energy": 1.030618318508702,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": 0.24130794570908187,
+      "dirac_velocity": 0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": 1,
+      "energy": 1.412367096785387,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": 0.7043320346131975,
+      "dirac_velocity": 0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.125,
+      "p": 2,
+      "energy": 2.2313802614565623,
+      "dirac_energy": 2.23606797749979,
+      "velocity": 0.8915939518293795,
+      "dirac_velocity": 0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": -2,
+      "energy": 2.23490153708158,
+      "dirac_energy": 2.23606797749979,
+      "velocity": -0.8937260493831021,
+      "dirac_velocity": -0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": -1,
+      "energy": 1.4137528915969482,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": -0.7064154601211974,
+      "dirac_velocity": -0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": -0.25,
+      "energy": 1.0307369195228593,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": -0.24222901018310938,
+      "dirac_velocity": -0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": 0,
+      "energy": 1.0000000000000084,
+      "dirac_energy": 1.0,
+      "velocity": 0.0,
+      "dirac_velocity": 0.0
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": 0.25,
+      "energy": 1.0307369195228593,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": 0.24222901018310938,
+      "dirac_velocity": 0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": 1,
+      "energy": 1.4137528915969482,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": 0.7064154601211974,
+      "dirac_velocity": 0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.0625,
+      "p": 2,
+      "energy": 2.23490153708158,
+      "dirac_energy": 2.23606797749979,
+      "velocity": 0.8937260493831021,
+      "dirac_velocity": 0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": -2,
+      "energy": 2.2357767090522453,
+      "dirac_energy": 2.23606797749979,
+      "velocity": -0.8942523502631285,
+      "dirac_velocity": -0.8944271909999159
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": -1,
+      "energy": 1.4140984537086034,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": -0.706934098518137,
+      "dirac_velocity": -0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": -0.25,
+      "energy": 1.0307665368746386,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": -0.2424589903632289,
+      "dirac_velocity": -0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": 0,
+      "energy": 0.999999999999965,
+      "dirac_energy": 1.0,
+      "velocity": 0.0,
+      "dirac_velocity": 0.0
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": 0.25,
+      "energy": 1.0307665368746386,
+      "dirac_energy": 1.0307764064044151,
+      "velocity": 0.2424589903632289,
+      "dirac_velocity": 0.24253562503633297
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": 1,
+      "energy": 1.4140984537086034,
+      "dirac_energy": 1.4142135623730951,
+      "velocity": 0.706934098518137,
+      "dirac_velocity": 0.7071067811865475
+    },
+    {
+      "tau_over_epsilon": 0.03125,
+      "p": 2,
+      "energy": 2.2357767090522453,
+      "dirac_energy": 2.23606797749979,
+      "velocity": 0.8942523502631285,
+      "dirac_velocity": 0.8944271909999159
+    }
+  ],
+  "spatial_control": [
+    {
+      "sites": 64,
+      "field": -1.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4654271728031458e-15,
+      "max_norm_error": 1.6653345369377348e-15
+    },
+    {
+      "sites": 64,
+      "field": -1.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4438913986031029e-15,
+      "max_norm_error": 1.9984014443252818e-15
+    },
+    {
+      "sites": 64,
+      "field": 0.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4591161706915072e-15,
+      "max_norm_error": 1.3322676295501878e-15
+    },
+    {
+      "sites": 64,
+      "field": 0.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4584331021582163e-15,
+      "max_norm_error": 1.3322676295501878e-15
+    },
+    {
+      "sites": 64,
+      "field": 1.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4317561858765252e-15,
+      "max_norm_error": 1.9984014443252818e-15
+    },
+    {
+      "sites": 64,
+      "field": 1.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4515467210155522e-15,
+      "max_norm_error": 1.6653345369377348e-15
+    },
+    {
+      "sites": 80,
+      "field": -1.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4596061074183937e-15,
+      "max_norm_error": 1.5543122344752192e-15
+    },
+    {
+      "sites": 80,
+      "field": -1.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4307092143014278e-15,
+      "max_norm_error": 1.7763568394002505e-15
+    },
+    {
+      "sites": 80,
+      "field": 0.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.5133885257689544e-15,
+      "max_norm_error": 1.3322676295501878e-15
+    },
+    {
+      "sites": 80,
+      "field": 0.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.5169432411429673e-15,
+      "max_norm_error": 1.3322676295501878e-15
+    },
+    {
+      "sites": 80,
+      "field": 1.0,
+      "branch": -1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4357086857566346e-15,
+      "max_norm_error": 1.7763568394002505e-15
+    },
+    {
+      "sites": 80,
+      "field": 1.0,
+      "branch": 1,
+      "steps": 12,
+      "cone_max": 0.0,
+      "max_full_wave_discrepancy": 1.4608813799574251e-15,
+      "max_norm_error": 1.5543122344752192e-15
+    }
+  ],
+  "quadrature_routes": [
+    {
+      "arm": 1024,
+      "M": 8388608,
+      "physical_cell": "1/4096",
+      "tau": "1/4096",
+      "epsilon_times_pi": "1/4",
+      "relative_phase_turns": "1/4",
+      "continuum_speed": 1,
+      "prep_time": "1/2",
+      "radius": "1/4",
+      "tau_over_epsilon_squared_times_inverse_pi_squared": "1/256"
+    },
+    {
+      "arm": 32768,
+      "M": 8589934592,
+      "physical_cell": "1/262144",
+      "tau": "1/262144",
+      "epsilon_times_pi": "1/16",
+      "relative_phase_turns": "1/4",
+      "continuum_speed": 1,
+      "prep_time": "1/4",
+      "radius": "1/8",
+      "tau_over_epsilon_squared_times_inverse_pi_squared": "1/1024"
+    },
+    {
+      "arm": 1048576,
+      "M": 8796093022208,
+      "physical_cell": "1/16777216",
+      "tau": "1/16777216",
+      "epsilon_times_pi": "1/64",
+      "relative_phase_turns": "1/4",
+      "continuum_speed": 1,
+      "prep_time": "1/8",
+      "radius": "1/16",
+      "tau_over_epsilon_squared_times_inverse_pi_squared": "1/4096"
+    },
+    {
+      "arm": 33554432,
+      "M": 9007199254740992,
+      "physical_cell": "1/1073741824",
+      "tau": "1/1073741824",
+      "epsilon_times_pi": "1/256",
+      "relative_phase_turns": "1/4",
+      "continuum_speed": 1,
+      "prep_time": "1/16",
+      "radius": "1/32",
+      "tau_over_epsilon_squared_times_inverse_pi_squared": "1/16384"
+    }
+  ]
+}

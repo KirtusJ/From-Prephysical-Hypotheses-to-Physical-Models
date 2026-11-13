@@ -4776,5 +4776,529 @@
       "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
       "fresh_full_replay": false
     }
+  },
+  "confined_quadrature_and_finite_speed_mass_flight_addendum": {
+    "scope": "Finite-radius quadrature and a strictly causal base walk with an external uniform field. The Dirac and low-velocity limits, accepted source costs, and physical locality of sheet gates are kept distinct. Earlier edition and historical investigations retain their recorded scope.",
+    "totals": {
+      "checkers": 65,
+      "generated_outputs": 79,
+      "lean_files": 22,
+      "added_checkers": 8,
+      "added_outputs": 8,
+      "added_lean_files": 1,
+      "fresh_checker_processes": 16,
+      "fresh_lean_compilations": 2
+    },
+    "sources_and_outputs": {
+      "Confined_returns_and_quadrature.md": {
+        "lf_sha256": "42c7235b713a389cdb70c2de3a821bf010d901f9d7af6cde7846510f6d14ca67",
+        "raw_bytes_by_mirror": {
+          "research": 8398,
+          "checkout": 8398
+        }
+      },
+      "Finite_speed_mass_and_motion.md": {
+        "lf_sha256": "0c70baf4667d87525714eef2a87290ac0d52636bd571745ed6d62759420179cf",
+        "raw_bytes_by_mirror": {
+          "research": 16541,
+          "checkout": 16541
+        }
+      },
+      "Finite_clock_purity.md": {
+        "lf_sha256": "64d8ec8cf1f82a9b31d8786907735a14c402aa902a5d238ef17d1e57511e4893",
+        "raw_bytes_by_mirror": {
+          "research": 7348,
+          "checkout": 7348
+        }
+      },
+      "lean/ConfinedReturn.lean": {
+        "lf_sha256": "1dc508903e960ac903a40abd09de6ad26552f48ac6ea3656d4dfeda54f21e457",
+        "raw_bytes_by_mirror": {
+          "research": 11295,
+          "checkout": 11295
+        }
+      },
+      "check_confined_loop.py": {
+        "lf_sha256": "5ecd487d2ee193f03fce01e6ab2eab7fbddd898fcb436d2f6683c237709e412f",
+        "raw_bytes_by_mirror": {
+          "research": 13706,
+          "checkout": 13706
+        }
+      },
+      "check_causal_mass_flight.py": {
+        "lf_sha256": "df264b116d7fc606ac4c46ad2589c68ae81d6044f8e2cdaba598f707edad2777",
+        "raw_bytes_by_mirror": {
+          "research": 10375,
+          "checkout": 10375
+        }
+      },
+      "check_sheet_mass_coin.py": {
+        "lf_sha256": "93ac1f83d82c5b22d26b5e30388c341358171b961f9b88e9646540471230f386",
+        "raw_bytes_by_mirror": {
+          "research": 6054,
+          "checkout": 6054
+        }
+      },
+      "check_quadrature_locality.py": {
+        "lf_sha256": "4f6778c4eb63eb55c605282bb58dbfce5798d13394f41fa0592490139969d42c",
+        "raw_bytes_by_mirror": {
+          "research": 5030,
+          "checkout": 5030
+        }
+      },
+      "check_causal_packet_source.py": {
+        "lf_sha256": "3a41e73e8b2f518229cad2491b030141161928408dcc0369e94db45822a091a0",
+        "raw_bytes_by_mirror": {
+          "research": 10737,
+          "checkout": 10737
+        }
+      },
+      "check_shared_mass_force.py": {
+        "lf_sha256": "68c96599a7676c14febb1fc9f492eecda1f77282f964b23635b5e399857ff1c1",
+        "raw_bytes_by_mirror": {
+          "research": 24173,
+          "checkout": 24173
+        }
+      },
+      "check_clock_galois_support.py": {
+        "lf_sha256": "b8bdd00b7cef25a615f0d43e702d854f6559b85d5d2ee4d1b5a3c76bc5aa01db",
+        "raw_bytes_by_mirror": {
+          "research": 15637,
+          "checkout": 15637
+        }
+      },
+      "check_random_power_read.py": {
+        "lf_sha256": "3433276c051867f9d4a5ee8602faf8e39259bff8e050d16dcd03a6d3ae0c972c",
+        "raw_bytes_by_mirror": {
+          "research": 11820,
+          "checkout": 11820
+        }
+      },
+      "results/confined_loop.json": {
+        "lf_sha256": "d46ae256fa77c9e2ed55297671725d1527ec95c11383341ffb8ace9563b742ed",
+        "raw_bytes_by_mirror": {
+          "research": 51389,
+          "checkout": 51389
+        }
+      },
+      "results/causal_mass_flight.json": {
+        "lf_sha256": "4cedd9624b44bb5a79561142370284b4e8e34cb0ed20306ddff44d2d60ffc51b",
+        "raw_bytes_by_mirror": {
+          "research": 26798,
+          "checkout": 26798
+        }
+      },
+      "results/sheet_mass_coin.json": {
+        "lf_sha256": "b89d5a933fdd9661958d2749c4f410d9b2ea01eaff0e4aeda46de141e1364b49",
+        "raw_bytes_by_mirror": {
+          "research": 19448,
+          "checkout": 19448
+        }
+      },
+      "results/quadrature_locality.json": {
+        "lf_sha256": "9f11e7e9317d0f2f2d846b0dd21f87fee80dd29c2afacb157cb23921f0140b14",
+        "raw_bytes_by_mirror": {
+          "research": 33043,
+          "checkout": 33043
+        }
+      },
+      "results/causal_packet_source.json": {
+        "lf_sha256": "1e854a431cfaf7a941ae561d812583efab69b88674f89eec582d1e672469e60c",
+        "raw_bytes_by_mirror": {
+          "research": 20070,
+          "checkout": 20070
+        }
+      },
+      "results/shared_mass_force.json": {
+        "lf_sha256": "29dafd6034fdd121beca2e30cd9f3a6db38307894e44c416e734a23456995e4c",
+        "raw_bytes_by_mirror": {
+          "research": 116513,
+          "checkout": 116513
+        }
+      },
+      "results/clock_galois_support.json": {
+        "lf_sha256": "be11e588e16d40224d20ec2ae72fa0b8790d66d56a5b9a3c9da156f4c350ecc6",
+        "raw_bytes_by_mirror": {
+          "research": 45536,
+          "checkout": 45536
+        }
+      },
+      "results/random_power_read.json": {
+        "lf_sha256": "f1e4ff82bcffef2acf30209e698d2735bace4d60cd8c1bfe7e53dfef3858b949",
+        "raw_bytes_by_mirror": {
+          "research": 137013,
+          "checkout": 137013
+        }
+      },
+      "Director_exchange.md": {
+        "lf_sha256": "642c9b3eb76ce65e57b8cd9f9dbe5a2d855c7c2faf5d8bd546da75e6c86b457e",
+        "raw_bytes_by_mirror": {
+          "research": 18821,
+          "checkout": 18821
+        }
+      },
+      "Force_calibration_across_scales.md": {
+        "lf_sha256": "ee7ee2fa068e993a52156a3dba37a3d29e229f447f4aa94985160a5d5e3c6f8c",
+        "raw_bytes_by_mirror": {
+          "research": 11813,
+          "checkout": 11813
+        }
+      },
+      "Native_preparations_and_probability_embeddings.md": {
+        "lf_sha256": "192a8bf6bba7a48fb0955adcbcb9ad180aa63d727ab9bf457dd60bde33b107b1",
+        "raw_bytes_by_mirror": {
+          "research": 16104,
+          "checkout": 16175
+        }
+      },
+      "Returning_loops_and_one_classical_ray.md": {
+        "lf_sha256": "454e625c20e154260ce273ebd1e4e24aeff56a77b1e86377ce7d9118a258fb8d",
+        "raw_bytes_by_mirror": {
+          "research": 13099,
+          "checkout": 13099
+        }
+      },
+      "lean/README.md": {
+        "lf_sha256": "f88fa317c1be3aa910b6d0d7cc5e17718a6de6e30830aa3600dbd179765fc59c",
+        "raw_bytes_by_mirror": {
+          "research": 10332,
+          "checkout": 10332
+        }
+      }
+    },
+    "runs": {
+      "research": [
+        {
+          "source": "check_confined_loop.py",
+          "source_lf_sha256": "5ecd487d2ee193f03fce01e6ab2eab7fbddd898fcb436d2f6683c237709e412f",
+          "exit": 0,
+          "output": "confined_loop.json",
+          "output_lf_sha256": "d46ae256fa77c9e2ed55297671725d1527ec95c11383341ffb8ace9563b742ed",
+          "generated_lf_sha256": "d46ae256fa77c9e2ed55297671725d1527ec95c11383341ffb8ace9563b742ed",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_causal_mass_flight.py",
+          "source_lf_sha256": "df264b116d7fc606ac4c46ad2589c68ae81d6044f8e2cdaba598f707edad2777",
+          "exit": 0,
+          "output": "causal_mass_flight.json",
+          "output_lf_sha256": "4cedd9624b44bb5a79561142370284b4e8e34cb0ed20306ddff44d2d60ffc51b",
+          "generated_lf_sha256": "4cedd9624b44bb5a79561142370284b4e8e34cb0ed20306ddff44d2d60ffc51b",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_sheet_mass_coin.py",
+          "source_lf_sha256": "93ac1f83d82c5b22d26b5e30388c341358171b961f9b88e9646540471230f386",
+          "exit": 0,
+          "output": "sheet_mass_coin.json",
+          "output_lf_sha256": "b89d5a933fdd9661958d2749c4f410d9b2ea01eaff0e4aeda46de141e1364b49",
+          "generated_lf_sha256": "b89d5a933fdd9661958d2749c4f410d9b2ea01eaff0e4aeda46de141e1364b49",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_quadrature_locality.py",
+          "source_lf_sha256": "4f6778c4eb63eb55c605282bb58dbfce5798d13394f41fa0592490139969d42c",
+          "exit": 0,
+          "output": "quadrature_locality.json",
+          "output_lf_sha256": "9f11e7e9317d0f2f2d846b0dd21f87fee80dd29c2afacb157cb23921f0140b14",
+          "generated_lf_sha256": "9f11e7e9317d0f2f2d846b0dd21f87fee80dd29c2afacb157cb23921f0140b14",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_causal_packet_source.py",
+          "source_lf_sha256": "3a41e73e8b2f518229cad2491b030141161928408dcc0369e94db45822a091a0",
+          "exit": 0,
+          "output": "causal_packet_source.json",
+          "output_lf_sha256": "1e854a431cfaf7a941ae561d812583efab69b88674f89eec582d1e672469e60c",
+          "generated_lf_sha256": "1e854a431cfaf7a941ae561d812583efab69b88674f89eec582d1e672469e60c",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_shared_mass_force.py",
+          "source_lf_sha256": "68c96599a7676c14febb1fc9f492eecda1f77282f964b23635b5e399857ff1c1",
+          "exit": 0,
+          "output": "shared_mass_force.json",
+          "output_lf_sha256": "29dafd6034fdd121beca2e30cd9f3a6db38307894e44c416e734a23456995e4c",
+          "generated_lf_sha256": "29dafd6034fdd121beca2e30cd9f3a6db38307894e44c416e734a23456995e4c",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_clock_galois_support.py",
+          "source_lf_sha256": "b8bdd00b7cef25a615f0d43e702d854f6559b85d5d2ee4d1b5a3c76bc5aa01db",
+          "exit": 0,
+          "output": "clock_galois_support.json",
+          "output_lf_sha256": "be11e588e16d40224d20ec2ae72fa0b8790d66d56a5b9a3c9da156f4c350ecc6",
+          "generated_lf_sha256": "be11e588e16d40224d20ec2ae72fa0b8790d66d56a5b9a3c9da156f4c350ecc6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_random_power_read.py",
+          "source_lf_sha256": "3433276c051867f9d4a5ee8602faf8e39259bff8e050d16dcd03a6d3ae0c972c",
+          "exit": 0,
+          "output": "random_power_read.json",
+          "output_lf_sha256": "f1e4ff82bcffef2acf30209e698d2735bace4d60cd8c1bfe7e53dfef3858b949",
+          "generated_lf_sha256": "f1e4ff82bcffef2acf30209e698d2735bace4d60cd8c1bfe7e53dfef3858b949",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "ConfinedReturn.lean",
+          "source_lf_sha256": "1dc508903e960ac903a40abd09de6ad26552f48ac6ea3656d4dfeda54f21e457",
+          "exit": 0
+        }
+      ],
+      "checkout": [
+        {
+          "source": "check_confined_loop.py",
+          "source_lf_sha256": "5ecd487d2ee193f03fce01e6ab2eab7fbddd898fcb436d2f6683c237709e412f",
+          "exit": 0,
+          "output": "confined_loop.json",
+          "output_lf_sha256": "d46ae256fa77c9e2ed55297671725d1527ec95c11383341ffb8ace9563b742ed",
+          "generated_lf_sha256": "d46ae256fa77c9e2ed55297671725d1527ec95c11383341ffb8ace9563b742ed",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_causal_mass_flight.py",
+          "source_lf_sha256": "df264b116d7fc606ac4c46ad2589c68ae81d6044f8e2cdaba598f707edad2777",
+          "exit": 0,
+          "output": "causal_mass_flight.json",
+          "output_lf_sha256": "4cedd9624b44bb5a79561142370284b4e8e34cb0ed20306ddff44d2d60ffc51b",
+          "generated_lf_sha256": "4cedd9624b44bb5a79561142370284b4e8e34cb0ed20306ddff44d2d60ffc51b",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_sheet_mass_coin.py",
+          "source_lf_sha256": "93ac1f83d82c5b22d26b5e30388c341358171b961f9b88e9646540471230f386",
+          "exit": 0,
+          "output": "sheet_mass_coin.json",
+          "output_lf_sha256": "b89d5a933fdd9661958d2749c4f410d9b2ea01eaff0e4aeda46de141e1364b49",
+          "generated_lf_sha256": "b89d5a933fdd9661958d2749c4f410d9b2ea01eaff0e4aeda46de141e1364b49",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_quadrature_locality.py",
+          "source_lf_sha256": "4f6778c4eb63eb55c605282bb58dbfce5798d13394f41fa0592490139969d42c",
+          "exit": 0,
+          "output": "quadrature_locality.json",
+          "output_lf_sha256": "9f11e7e9317d0f2f2d846b0dd21f87fee80dd29c2afacb157cb23921f0140b14",
+          "generated_lf_sha256": "9f11e7e9317d0f2f2d846b0dd21f87fee80dd29c2afacb157cb23921f0140b14",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_causal_packet_source.py",
+          "source_lf_sha256": "3a41e73e8b2f518229cad2491b030141161928408dcc0369e94db45822a091a0",
+          "exit": 0,
+          "output": "causal_packet_source.json",
+          "output_lf_sha256": "1e854a431cfaf7a941ae561d812583efab69b88674f89eec582d1e672469e60c",
+          "generated_lf_sha256": "1e854a431cfaf7a941ae561d812583efab69b88674f89eec582d1e672469e60c",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_shared_mass_force.py",
+          "source_lf_sha256": "68c96599a7676c14febb1fc9f492eecda1f77282f964b23635b5e399857ff1c1",
+          "exit": 0,
+          "output": "shared_mass_force.json",
+          "output_lf_sha256": "29dafd6034fdd121beca2e30cd9f3a6db38307894e44c416e734a23456995e4c",
+          "generated_lf_sha256": "29dafd6034fdd121beca2e30cd9f3a6db38307894e44c416e734a23456995e4c",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_clock_galois_support.py",
+          "source_lf_sha256": "b8bdd00b7cef25a615f0d43e702d854f6559b85d5d2ee4d1b5a3c76bc5aa01db",
+          "exit": 0,
+          "output": "clock_galois_support.json",
+          "output_lf_sha256": "be11e588e16d40224d20ec2ae72fa0b8790d66d56a5b9a3c9da156f4c350ecc6",
+          "generated_lf_sha256": "be11e588e16d40224d20ec2ae72fa0b8790d66d56a5b9a3c9da156f4c350ecc6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_random_power_read.py",
+          "source_lf_sha256": "3433276c051867f9d4a5ee8602faf8e39259bff8e050d16dcd03a6d3ae0c972c",
+          "exit": 0,
+          "output": "random_power_read.json",
+          "output_lf_sha256": "f1e4ff82bcffef2acf30209e698d2735bace4d60cd8c1bfe7e53dfef3858b949",
+          "generated_lf_sha256": "f1e4ff82bcffef2acf30209e698d2735bace4d60cd8c1bfe7e53dfef3858b949",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "ConfinedReturn.lean",
+          "source_lf_sha256": "1dc508903e960ac903a40abd09de6ad26552f48ac6ea3656d4dfeda54f21e457",
+          "exit": 0
+        }
+      ]
+    },
+    "method": "Each checker and the Lean file ran serially below normal priority, from both mirrors in fresh temporary directories. Bundled Python 3.12.14 with NumPy 2.3.5 and one BLAS thread for the initial units and packet source; standard Python 3.14.7 for the final three standard-library programs; Lean 4.19.0 -j 1. The stored output and newly generated bytes were compared locally; cross-mirror hashes use LF normalization.",
+    "independent_checks": {
+      "confined": "Independent dynamic programming tracked position, number of positive field slots, exact number of schedules, and minimum/maximum signed area. All 35 finite closed-path census entries match, including their absolute count after removing the binomial factor. The source also records 1,144 short programs and 22 scalable signed-coordinate trials.",
+      "continuous_flight": "Direct real-space streaming of a compact initial state at 12 settings compared with a complex Fourier recurrence on every tick, with the output twist restored. Across 144 updates, cone leakage is exactly zero and maximum full-wave discrepancy is 1.52e-15. All 18 periodized envelope cases satisfy the supplied spinor bound. At c=m=1 and T=1/2 the f=3 positive-band ray is -0.267592, distinct from Newton -0.375. Nearest-neighbour causality at speed c applies to the base, with a supplied external field; finite-speed transport of the force source is a separate physical question.",
+      "sheet_coin": "Separate direct enumeration of the two internal Hadamard choices and their signed cyclic increments, compared with a rail-matrix recurrence at each sector. 1,520 sector/tick cases across 25 circuits match within 4.62e-14. At stride zero or a half turn the alias is retained, and a quarter-cycle conditional translation needs separate physical clockwork if the sheet itself has a local metric.",
+      "locality": "For 144 complex-auxiliary test states a second formula d=(1/2)acos(|<K\u03c8,\u03c8>|) matched the published distances within 5.3e-9; the largest discrepancy is a nearly unit argument of acos. A real filter reaches p=2sin\u00b2\u03b1, \u03b7=0 for 0<\u03b1\u2264\u03c0/4. These tests condition on the same frame, a real initial state and gate set, an unread sheet sector, and record-compatible acceptance. Probabilities of rare heralds and discarded tails enter the bound explicitly.",
+      "packet": "Independent enumeration of the signed binary distances gave the uniform box. Counted 21,845 ordered pairs of occupied leaves across all eight box sizes and reconstructed every triangular site coefficient, accepted mass, and nearest even-site correlation / folded sine-squared moment; all failure probabilities and the herald sum to one. The bounded-speed source assumes synchronized real onsite exchanges and an unread sheet.",
+      "shared_mass_force": "Direct enumeration of the two internal rails per mass step reconstructed all 432 position bins at 1,4,10 ticks for nine characters, to within 4.92e-13 of the rounded table. The k+M/2 phase relation requires a rail gauge on the incoming and outgoing spinor when M=4 mod 8; extending the alias to a mismatched initial spinor or a fixed off-diagonal rail read would fail. Integer folded-residue minimization independently gave the full list of maximizing powers, the first identity power and the selector verdict for all 137 tested pure sectors. At rest, conjugate signs and a shared mass-to-force scale give the same continuum ray; equal nonzero unscaled initial momenta need not.",
+      "random_power": "Independent position-space cyclic autocorrelations reconstructed all 231 measured contrasts and both retained and independently redrawn same-setting sign products for 33 literal laws at orders 2 through 12. All original discrepancy and wrong-setting tables retained. The target-pair score has variance at most 2 on nonsingletons for a uniformly random physical power and costs (M-1)/2 expected forward sheet hops; calibrated readout, fresh matched inputs and the power schedule remain premises.",
+      "clock_galois": "Independent modular evaluation at eight split primes for each of 66 integer-array cases reproduced all 528 reduced real field norm products. CRT modulus exceeded the a priori coefficient bound on the integer norm at each order. Full equal-depth real Hadamard gives a common normalization and constant support on folded primitive orbits; a coherent inactive bypass can introduce sqrt(2) and invalidate the full orbit claim. The M8 example retains only 1 and 7. Direct eight-site squared sums give (2+sqrt(2))/4 at (frequency,stride)=(1,1),(3,3), and (2-sqrt(2))/4 when only frequency or stride changes.",
+      "scope": "No empirical observation or physical force source is supplied. Finite characteristic-grid tests use a common accelerating-frame phase. Conditional results keep the mass-band assumptions and accepted preparation yield; a finite-c Dirac trajectory is Newtonian only to the stated low-momentum approximation."
+    },
+    "nested_trials": {
+      "20261113T174131697765Z": {
+        "verified": false,
+        "mcp_attempts": 2,
+        "statuses": [
+          "completed",
+          "failed"
+        ],
+        "receipt_id": "cc5dca07827fcba865da",
+        "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+        "files_sha256": {
+          "commission.json": "3445f652574c9c138333274c4f56ea3b25b4199dbf943cfff098089c12c16ec5",
+          "consultation.json": "5b14882203a8fa8046f89b80f8b1396c6a9a076adaad82fcdeebe9a893b51b22",
+          "parent-provider.json": "ee2882edb6c040fc04aa1cb680345b4dab21f957237b9517a27c2f5f877c102b",
+          "result.json": "15b98feaf8023157887e2b5f0e6b1accfc6027213593c7967cde727c0b7b7b28",
+          "child-process.jsonl": "78a52df1f33c6309d88ef22702b07b26e620623660482dd89d645b4c3cbad373"
+        },
+        "participants": {
+          "parent": {
+            "participant": "parent-codex",
+            "model": "Codex CLI",
+            "head": "eeaebd27014336d519a21e9e2f3fa7bbf7e5eecd87cbd91fca9f680e7f2660b5",
+            "reply_sha256": "73e4073472c8800ca5909ee68487f2832d74cdcb7f7130c083f2ba844367a872",
+            "reply_bytes": 1157,
+            "events": 7,
+            "reply_text": "For a sharp momentum centre, \\(p(t)=Ft\\), so\n\\[\nv(t)=\\frac{cFt}{\\sqrt{m^2c^2+F^2t^2}}.\n\\]\nTripling both parameters gives\n\\[\nv_{\\rm new}(t)=\\frac{c(3F)t}{\\sqrt{(3m)^2c^2+(3F)^2t^2}}=v(t).\n\\]\nIndependently, integrating gives\n\\[\nx(t)-x(0)=\\frac{mc^2}{F}\n\\left[\\sqrt{1+\\left(\\frac{Ft}{mc}\\right)^2}-1\\right],\n\\]\nwhich is also unchanged. The trajectory determines \\(F/m\\), **neither parameter separately**.\n\nThere is a packet qualification: for finite momentum spread, the actual centre velocity is\n\\[\n\\langle v\\rangle=\\int dp_0\\,\\rho(p_0)\n\\frac{c(p_0+Ft)}{\\sqrt{m^2c^2+(p_0+Ft)^2}}.\n\\]\nThe same invariance holds if initial momenta also scale by three. Keeping the same finite momentum distribution generally breaks it. \u201cFrom rest\u201d alone does not specify that distribution.\n\n**Reviewer receipt:** `cc5dca07827fcba865da`. I requested the delegated calculation, but its returned answer was truncated before any result; a retry failed with \u201cFile exists.\u201d Thus no completed reviewer answer was available to verify. The equations above are my independent calculation. Receipt output SHA-256: `1de37a0999d46b6a974cfd03339df83694da3a21d6694e66ec2d24731dcdd350`."
+          },
+          "child": {
+            "participant": "child-qwen",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+            "head": "21dca57c04f1943f768288e9638a1a277c1df5bc161c11d9bc99f1142c7c35f9",
+            "reply_sha256": "1de37a0999d46b6a974cfd03339df83694da3a21d6694e66ec2d24731dcdd350",
+            "reply_bytes": 619,
+            "events": 7,
+            "reply_text": "To calculate the ratio of the two velocities from Hamilton's equation at a positive time after both mass and force triple, we need to follow the steps outlined in the question. Let's break it down:\r\n\r\n1. **Initial Conditions**: The packet is initially at rest, so the initial velocity is zero.\r\n2. **Force and Mass**: The force \\( F \\) is constant and \\( m \\) is tripled.\r\n3. **Time Calculation**: We need to calculate the velocity at a positive time after both the mass and the force triple.\r\n\r\n### Step-by-Step Calculation\r\n\r\n#### Step 1: Initial Conditions\r\n- Initial velocity \\( v_0 = 0 \\)\r\n- Mass \\( m \\) is triple"
+          }
+        },
+        "failed_retry": "[Errno 17] File exists (single-dispatch request file already present)",
+        "assessment": "The child response truncates before a ratio or physical conclusion. The same MCP consultation was attempted a second time and failed on the existing single-dispatch request file. The parent independently derived equality of the two velocities; workflow acceptance failed."
+      },
+      "20261113T174937915173Z": {
+        "verified": true,
+        "mcp_attempts": 1,
+        "statuses": [
+          "completed"
+        ],
+        "receipt_id": "a589e12038391b4da4d5",
+        "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+        "files_sha256": {
+          "commission.json": "e32166f39c5f41a63c85954f4a9b77968f543e6a2bd85460aa9f112f8ffb4fd9",
+          "consultation.json": "e195f43ac2640c4dfa5b3b26fdf5b63f5e7ddf5dc6172ff0c3489cd56c387d84",
+          "parent-provider.json": "66b01963a8a3fcbcf80263497cef20ebf8f857cf9198321a3a7464177a675262",
+          "result.json": "58865f2a5ba622af16b1f89b9ef4e127cf880bdc7e929d29e47342c18c5eede3",
+          "child-process.jsonl": "a22e23d7d89aef3abfda6924d10c3170dfe62fffe94bd6ac8beafa6b0c89460a"
+        },
+        "participants": {
+          "parent": {
+            "participant": "parent-codex",
+            "model": "Codex CLI",
+            "head": "6ad6ec80dc4c022194be7d41a671b2f0202475bfc9c931eabc915e174fdd9727",
+            "reply_sha256": "53de7f1b5dbe3b2686d1a97a00526bffba9e69793caaf691db4ac4d673db1ce1",
+            "reply_bytes": 1240,
+            "events": 7,
+            "reply_text": "Receipt ID: `a589e12038391b4da4d5`\n\nThe reviewer\u2019s first reply is incorrect: velocity is \\(dE/dp\\), and tripling force and positive mass does not reverse its direction. I checked this independently by differentiation:\n\\[\nv(p)=\\frac{c^2p}{\\sqrt{m^2c^4+c^2p^2}}.\n\\]\nStarting from rest, \\(p=Ft\\). Thus\n\\[\nv_{\\rm new}(t)=\n\\frac{c^2(3Ft)}{\\sqrt{(3m)^2c^4+c^2(3Ft)^2}}\n=\\frac{c^2Ft}{\\sqrt{m^2c^4+c^2F^2t^2}}\n=v(t).\n\\]\nFor the same initial position, the trajectories therefore coincide:\n\\[\nx(t)-x(0)=\\frac{mc^2}{F}\n\\left[\\sqrt{1+\\left(\\frac{Ft}{mc}\\right)^2}-1\\right],\n\\]\nwith \\(x(t)=x(0)\\) when \\(F=0\\).\n\n**Parameter identification:** this trajectory depends only on \\(F/m\\). Sharing it identifies neither force nor mass separately.\n\n**Packet qualification \u2014 conditional:** these equations describe a sharp-momentum or narrow-packet centre. For a finite-width quantum packet, the exact centre velocity is \\(\\langle dE/dp\\rangle\\); zero mean initial momentum alone is insufficient. Exact trajectory invariance follows if the initial momentum distribution also scales by three. Keeping its absolute width fixed need not preserve the centre trajectory.\n\nI inspected the single reviewer reply and performed the algebra above; I ran no simulation."
+          },
+          "child": {
+            "participant": "child-qwen",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+            "head": "ec0ff076fae16098e29c2821cbb21477fa5ae4c7f0b5b469b4707d593a0536d9",
+            "reply_sha256": "29f7b3309cf689624fbbfa5b62a60b6d5497ba90cfa554fe2a145c9dd2f48d4b",
+            "reply_bytes": 235,
+            "events": 7,
+            "reply_text": "The velocity of the packet is v = sqrt(mc^2 + c^2p^2). For (F, m), the packet moves to the right, and for (3F, 3m), it moves to the left. The packet-width assumption is that the packet moves in the direction of the force. [end of text]"
+          }
+        },
+        "failed_retry": null,
+        "assessment": "The child substituted energy for velocity and incorrectly reversed the direction after a positive triple scaling. The parent rejected both claims, differentiated the dispersion relation and obtained the unchanged velocity. This verifies delivery, attribution and reassessment; the model exchange is not empirical evidence."
+      }
+    },
+    "gate_maps": {
+      "lf_sha256": {
+        "research": "fff4da71e0a90aa3da3f540e2ccd119c08ce960779420f1fe9deb09fe5618bc8",
+        "checkout": "8d1eaa5319dd3a2c0af5d8e62fa09ca94c12ddb317d7dc6bbd94efd36746de2f"
+      },
+      "new_keys": [
+        "confined_return_resource",
+        "finite_speed_mass_flight",
+        "finite_sheet_purity",
+        "confined_return_lean"
+      ],
+      "disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "index_lf_sha256": {
+      "lean_index": "f88fa317c1be3aa910b6d0d7cc5e17718a6de6e30830aa3600dbd179765fc59c",
+      "publication": "c7a85d6930ec86a4784effa5c47e9c54aa4ef137ba47c74dd798b453c0ba17a0",
+      "queue": "d3ad493b674626abea88f600a2f48cbd454d506aa3cb7646575eb3664593bce9",
+      "project_worker_instructions": "5863c844177ed2427c1ebaa1d20a0057b8d5d2539a6e64b8f552398bb8b67c26"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 35,
+        "local_link_occurrences": 415,
+        "new_article_local_links": {
+          "Confined_returns_and_quadrature.md": 6,
+          "Finite_speed_mass_and_motion.md": 17,
+          "Finite_clock_purity.md": 8
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 36,
+        "local_link_occurrences": 449,
+        "new_article_local_links": {
+          "Confined_returns_and_quadrature.md": 6,
+          "Finite_speed_mass_and_motion.md": 17,
+          "Finite_clock_purity.md": 8
+        },
+        "missing": 0
+      }
+    },
+    "edition_z17": {
+      "historical_verification": "moving_odd_clocks_reuse_and_holonomy_addendum.edition_z17",
+      "baseline_commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "review_head": "29d404612ed49f82ffbe12b441745ed80f681c37",
+      "edition_tree_unchanged_from_baseline": true,
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "fresh_full_replay": false
+    }
   }
 }

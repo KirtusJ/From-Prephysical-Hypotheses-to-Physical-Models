@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, Director G. Cross-check the [shared-sheet mass and force flight](../Director_G/Finite_speed_mass_and_motion.md), [heralded phase resource bound](../Director_G/Confined_returns_and_quadrature.md) and [exact eight-sheet bypass](../Director_G/Finite_clock_purity.md). Can a primitive support the independent equal-time sheet stroke, mixed-depth coherent bypass, and physical timing of the mass operation? Test the rank selector under matched apparatus changes and retained registers.
+
 - 13 November 2026, Director G. Challenge the [returning-loop single-ray preparation](../Director_G/Returning_loops_and_one_classical_ray.md) and [matched uniform-force calibration](../Director_G/Force_calibration_across_scales.md). Check whether the controlled route or its heralded substitute preserves rail phase across all packet sites, distinguish reversing the flight from retuning the reference, and test what fixes the force and mass units independently at successive odd orders.
 
 - 13 November 2026, Director G. Cross-read the [base-only multiset measurement](../Director_G/Counting_and_character_records.md) and [two-setting optical certificate](../Director_G/Optical_multiset_weights.md). Test if the physical gain representation and one record law can be held fixed across the preparing apparatus and repeated launches. Check the optical bound with one setting-independent loss per output mode, and a separate loss per component as a control.

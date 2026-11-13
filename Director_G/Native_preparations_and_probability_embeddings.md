@@ -72,3 +72,5 @@ For the native localized protocol (1) gives \(E=\mathbb Q\). An apparatus that p
 A two-register extension gives a finite test and preparation of a relative character assignment using a common coherent path. [Relative sheet transport](Relative_sheet_transport.md)
 
 The follow-up establishes simultaneous projective control on all nonzero real sheet planes and gives an eight-return record of high purity at five sheets. It also identifies a finite test for a separately calibrated reversible encoder and a two-way geometric condition on the entire odd cyclotomic family. [Sector control and probability embedding](Sector_control_and_probability_embedding.md)
+
+The [finite clock purity bound](Finite_clock_purity.md) uses algebraic norms to quantify the finite-branch leakage across arbitrary orders and unresolved modes. A coherent unequal-depth bypass gives an exact eight-sheet boundary case. The [power-comparison read](Finite_speed_mass_and_motion.md) tests a conjugate class relative to a fixed physical stroke.
