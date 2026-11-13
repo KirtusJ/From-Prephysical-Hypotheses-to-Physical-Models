@@ -65,7 +65,9 @@ def validate_calls(calls):
         if not isinstance(call.get("arguments", {}), dict):
             raise ValueError(f"call {index}: arguments must be an object")
         try:
-            json.dumps(call, allow_nan=False)
+            # Both the host and the saved reply report require valid Unicode.
+            # ASCII escaping alone would let a lone surrogate through preflight.
+            json.dumps(call, ensure_ascii=False, allow_nan=False).encode("utf-8")
         except (TypeError, ValueError) as error:
             raise ValueError(f"call {index}: contains a non-JSON value") from error
 
@@ -89,7 +91,7 @@ def main(argv):
     try:
         calls = json.loads(raw)
         validate_calls(calls)
-    except ValueError as error:
+    except (ValueError, RecursionError) as error:
         print(f"Invalid call file: {error}", file=sys.stderr)
         return 2
     ledger = root / "Director_Z" / "tools" / "submitted_calls.jsonl"

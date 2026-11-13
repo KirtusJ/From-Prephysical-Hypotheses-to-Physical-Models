@@ -53,6 +53,9 @@ class ReplyFiles(unittest.TestCase):
             [{"name": "acr_status"}, None],
             [{"name": "acr_status"}, {"arguments": {}}],
             [{"name": "acr_status"}, {"name": "acr_submit", "arguments": []}],
+            [{"name": "acr_status"}, {"name": "\ud800"}],
+            [{"name": "acr_status"}, {"name": "acr_submit", "arguments": {"kind": "\udfff"}}],
+            [{"name": "acr_status"}, {"name": "acr_submit", "arguments": {"value": float("nan")}}],
             [{"name": ""}],
             [{"name": 3}],
             {"name": "acr_status"},
@@ -63,7 +66,8 @@ class ReplyFiles(unittest.TestCase):
                 self.assertEqual(self.run_submit(), 2)
                 self.assertEqual(self.started, 0)
                 self.assertFalse(self.ledger.exists())
-        self.request.write_text('[{"name":"acr_status"}]', encoding="utf-8")
+        valid = [{"name": "acr_status", "arguments": {"label": "\U0001f30e"}}]
+        self.request.write_text(json.dumps(valid), encoding="utf-8")
         self.assertEqual(self.run_submit(), 0)
         self.assertEqual(self.started, 1)
         self.assertEqual(len(self.entries()), 1)
@@ -169,6 +173,13 @@ class SubmitAccounting(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout)
         self.assertIn("3 succeeded, 0 refused, 0 write receipts", result.stdout)
         self.assertEqual(before, self.register.read_bytes())
+
+        ledger_before = self.ledger.read_bytes()
+        result = self.submit("invalid", [{"name": "acr_artifact", "arguments": artifact},
+                                         {"name": "\ud800"}])
+        self.assertEqual(result.returncode, 2, result.stderr)
+        self.assertEqual(before, self.register.read_bytes())
+        self.assertEqual(ledger_before, self.ledger.read_bytes())
 
         calls = [{"name": "acr_artifact", "arguments": artifact},
                  {"name": "acr_submit", "arguments": {"kind": "GATE_COMMITTED",
