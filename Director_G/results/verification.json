@@ -4176,5 +4176,293 @@
       "card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
       "assessment": "The child echoed the delegated question and did not calculate a spectrum. The parent derived amplitudes 1/sqrt(2) on bins 1 and 9 on the sixteen-cycle, so the measured bin pair 1 and 15 carries weight 1/2."
     }
+  },
+  "counting_character_tomography_and_optical_loss_addendum": {
+    "scope": "Incremental audit of native count/character identifiability and optical mixture/loss constraints on named finite instruments. Earlier sections and Z17 evidence are retained.",
+    "prior_manifest_raw_sha256": "d3b51ade21f76f60938f7f49769819219dded32a56929b494b414595e4979fae",
+    "totals": {
+      "checkers": 53,
+      "generated_outputs": 67,
+      "lean_files": 19,
+      "added_checkers": 5,
+      "added_outputs": 5,
+      "added_lean_files": 1,
+      "fresh_checker_processes": 10,
+      "fresh_lean_compilations": 2
+    },
+    "artifact_bindings": {
+      "Counting_and_character_records.md": {
+        "lf_sha256": "fb7b58bc0ddee149419d88f4538576d3635f21f339c51ed6f9cdc011b85c9fe0",
+        "raw_bytes_by_mirror": {
+          "research": 12719,
+          "checkout": 12719
+        }
+      },
+      "Optical_multiset_weights.md": {
+        "lf_sha256": "490a4e5b345b9c52ba79c323ca11358007c69f7890ecf2122eb9c4bb478f5572",
+        "raw_bytes_by_mirror": {
+          "research": 7420,
+          "checkout": 7420
+        }
+      },
+      "lean/NativeWeightRead.lean": {
+        "lf_sha256": "8b7043864e75a16f3a0cb73dc838fb3246617f6cb6e80eec5a094035bff4eed3",
+        "raw_bytes_by_mirror": {
+          "research": 13608,
+          "checkout": 13608
+        }
+      },
+      "check_local_clock_detector.py": {
+        "lf_sha256": "2856bd0699e14034a74dd47ef3501dbcc8ef7a35d5f6c4dbec80a5aa8edaca4d",
+        "raw_bytes_by_mirror": {
+          "research": 14167,
+          "checkout": 14167
+        }
+      },
+      "check_character_tomography.py": {
+        "lf_sha256": "33dfd2ebab7ce66703b4914affb819bc53e2b376e15fdaeacce1d46895aeb7f9",
+        "raw_bytes_by_mirror": {
+          "research": 18206,
+          "checkout": 18206
+        }
+      },
+      "check_record_dilation.py": {
+        "lf_sha256": "e3ee043063bd1e8e5015f4de60452fc4ce7afa1b3fd819a0547cda4f4b9fd6fb",
+        "raw_bytes_by_mirror": {
+          "research": 13869,
+          "checkout": 13869
+        }
+      },
+      "check_optical_multiset_mixture.py": {
+        "lf_sha256": "20e52101c1f768911084b4b15f44a61d9b8f67b6a3677b139a02cea65283fcee",
+        "raw_bytes_by_mirror": {
+          "research": 6344,
+          "checkout": 6344
+        }
+      },
+      "check_optical_loss_witness.py": {
+        "lf_sha256": "b37d15277c745c98bb44c76c5937aef84c87229461767010d56f1d7d8f8f9d85",
+        "raw_bytes_by_mirror": {
+          "research": 11767,
+          "checkout": 11767
+        }
+      },
+      "results/local_clock_detector.json": {
+        "lf_sha256": "c7cde49cca3970d209a4b6511fabdc19c75c47d6ad52ac3065065d66f83b42d6",
+        "raw_bytes_by_mirror": {
+          "research": 28472,
+          "checkout": 28472
+        }
+      },
+      "results/character_tomography.json": {
+        "lf_sha256": "25bc27c2039f0b1f07bf6aa256d3701acb924986e144ce98f334cb490162b5f0",
+        "raw_bytes_by_mirror": {
+          "research": 475182,
+          "checkout": 475182
+        }
+      },
+      "results/record_dilation.json": {
+        "lf_sha256": "f6039981d57897a1a267d6114c1f106585e36860bfdf905fe1548a007604d719",
+        "raw_bytes_by_mirror": {
+          "research": 18575,
+          "checkout": 18575
+        }
+      },
+      "results/optical_multiset_mixture.json": {
+        "lf_sha256": "accbc6a1bfd7944658ef4898ae6873ef58b2b4acdf31cb43f41b4bdf8dabeac0",
+        "raw_bytes_by_mirror": {
+          "research": 2947,
+          "checkout": 2947
+        }
+      },
+      "results/optical_loss_witness.json": {
+        "lf_sha256": "a3a2b095f387d5b1c466b4f00efc16106989e7f70dd38a0971f57879ad8e9a8c",
+        "raw_bytes_by_mirror": {
+          "research": 46217,
+          "checkout": 46217
+        }
+      },
+      "check_clock_feedback.py": {
+        "lf_sha256": "8dd9aec61d75a9a1ef14f067317ed5293c9c67c696c8200a6af7a7c178d9fef4",
+        "raw_bytes_by_mirror": {
+          "research": 22688,
+          "checkout": 22688
+        }
+      },
+      "check_optical_walk_records.py": {
+        "lf_sha256": "4f15ff59d10792878d46e8266291d5b8bab97606320bdd487ee4fca9da1eaff5",
+        "raw_bytes_by_mirror": {
+          "research": 13777,
+          "checkout": 13777
+        }
+      },
+      "results/phase_defect_data.json": {
+        "lf_sha256": "17cfd496ec83ea19a3d14dcda08d68f0bfca484d86c3243e434fcdb9955b9579",
+        "raw_bytes_by_mirror": {
+          "research": 27921,
+          "checkout": 27921
+        }
+      },
+      "Director_exchange.md": {
+        "lf_sha256": "1eda428741a5c4c27802d71e85b2a7e6b70fc5fe08f04150d74bc0ed6eab98ac",
+        "raw_bytes_by_mirror": {
+          "research": 17460,
+          "checkout": 17460
+        }
+      },
+      "Forced_envelope_and_classical_motion.md": {
+        "lf_sha256": "7160d8c6f606729cdff2013a38f116c7ccbd3c6e2f1f5679e0a44e7f6a8b9424",
+        "raw_bytes_by_mirror": {
+          "research": 10406,
+          "checkout": 10406
+        }
+      },
+      "Multiset_block_law.md": {
+        "lf_sha256": "6ffeb0f3f8c20f3ac6a9ef0f1c5305ab9fed6b84b9d37b93f87fb4d46a758570",
+        "raw_bytes_by_mirror": {
+          "research": 10163,
+          "checkout": 10163
+        }
+      },
+      "Optical_walk_records_and_phase_labels.md": {
+        "lf_sha256": "c7d6538c6a510dabafc249bf43cb85f17fda5f8d6757fc36d95564fc72b81320",
+        "raw_bytes_by_mirror": {
+          "research": 15375,
+          "checkout": 15375
+        }
+      },
+      "lean/README.md": {
+        "lf_sha256": "dab6f71d2729fea1a477d4128ceb8accf8717fab4439b3c0d7afd973c017fd3e",
+        "raw_bytes_by_mirror": {
+          "research": 9382,
+          "checkout": 9382
+        }
+      }
+    },
+    "reruns": {
+      "python": "3.14.7",
+      "lean": "Lean (version 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94, Release)",
+      "convention": "Serial, below-normal priority, one thread, fresh temporary destinations, Python -B and Lean -j 1. Each new JSON matched its complete saved value and LF content.",
+      "outputs_per_mirror": {
+        "research": {
+          "local_clock_detector.json": true,
+          "character_tomography.json": true,
+          "record_dilation.json": true,
+          "optical_multiset_mixture.json": true,
+          "optical_loss_witness.json": true
+        },
+        "checkout": {
+          "local_clock_detector.json": true,
+          "character_tomography.json": true,
+          "record_dilation.json": true,
+          "optical_multiset_mixture.json": true,
+          "optical_loss_witness.json": true
+        }
+      },
+      "all_exits_zero": true
+    },
+    "independent_checks": {
+      "tomography": {
+        "orders": 26,
+        "exact_cyclotomic_inversions": 104,
+        "separate_oracle": "Explicit complete words plus trigonometric DFT independently matched all 120 saved one-left polynomial evaluations for the four mixture types at M=3,4,8,11 (maximum error 3.5e-13). M=64 first cumulative position-only rank 33 occurs at t=14. Undersampled count/uniform ports coincide until the wrap."
+      },
+      "detector": {
+        "separate_oracle": "A backwards site-index H recurrence separately propagated no tag, continuous parity and absorbing detection. All 60 signed/count settings x depths matched terminal bit, parity bit, first capture and survival numerators. Fresh node-local detector and reversed/dead bit response are distinct apparatus settings.",
+        "both_bases_kept": "All four original base modes are orthogonal. With marked sheet 0 and R rail the signed/count click probabilities at probe depth 5 are 0 and 5/32.",
+        "staircase_dark": "The localized staircase marked (1,R,-1 mod 11) contains exactly two words with opposite sign at t=5. Signed probability 0 versus counting 1/16."
+      },
+      "dilation": {
+        "separate_oracle": "Complex spectral amplitudes and independent Markov branch transport recovered eight adaptive transcript probabilities in each of six sectors; the fixed mixture normalized to one. Correlated hidden labels across launches differ from independent resets. An inaccessible route copy leaves an echo classified like counting."
+      },
+      "optical_mixture": {
+        "separate_oracle": "60-digit decimal interval elimination directly from the five source pixel extents recovered all three plotted-data vertices. Printed 135 degree interval alone gives ordinary >=0.95396676665. Combining printed 135 with other graphical bands has a 0.00018061804 shortfall under equal efficiencies. The two readings share one experiment."
+      },
+      "optical_loss": {
+        "separate_oracle": "Enumerated all 22 final site/rail bins of an independent complex-amplitude recurrence for ordinary and alternate embeddings (source and plate transformed together) and a binomial counting law. All 15 model/setting distributions normalized. Recalculated mode coefficients, both sharp two-boundary extremizers and five strictly positive fixed-efficiency witness returns.",
+        "two_setting_raw_ordinary_floor": {
+          "graphic": 0.3687229286233482,
+          "printed135_and_other_graphic": 0.4240064617089039
+        },
+        "five_observations": [
+          0.0838624217786507,
+          0.38660770688566015,
+          0.633563520771676,
+          0.6600097407345656,
+          0.633563520771676
+        ],
+        "scope": "Necessary for all five settings, sharp only for 0/135 degree bounds. A positive raw floor requires common mode efficiencies across components; positive detection and a setting-independent component-specific response can still exclude exactly zero ordinary weight. The 751:1 strictly positive fitted witness is not a measured calibration."
+      },
+      "lean_scope": "Kernel-checked integer path and normalized finite-difference identities, five-tick port dark cell, period read and coefficient cancellation (NativeWeightRead). Optical field certificates are exact arithmetic in Python."
+    },
+    "nested_trial": {
+      "attempt": "20261113T165553567595Z",
+      "receipt": "90874a2d8b1ef036deec",
+      "completed_tool_calls": 1,
+      "runs": {
+        "parent": {
+          "head": "e6289ff95394c977ef2efd00eec29d6bc8a8d142521228efe32d2b173c391105",
+          "reply_sha256": "77bf922db10287f0f15e52754aa7b0ed09149054dbd15beef9a71b67c449f257",
+          "reply_bytes": 1123,
+          "events": 7,
+          "model": "Codex CLI"
+        },
+        "child": {
+          "head": "7e74a4bb9c41bca19c5b636bc9131ddc90dfe1bff59c88c32356614bd84123df",
+          "reply_sha256": "290dfe472c92c3e4c3346f75168d95a9eedf18ddc6c0729588e2eeb9f3cb0854",
+          "reply_bytes": 715,
+          "events": 7,
+          "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0"
+        }
+      },
+      "card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+      "assessment": "The child answered probability one and inferred a spurious zero from locality; its response was truncated. The parent rejected these and obtained c/4 from two opposite histories among eight at the nominated port."
+    },
+    "gate_maps": {
+      "lf_sha256": {
+        "research": "0fe9d9ae9dddbf04d7254eb66dbc62629e93840f2f93777f34c9700ea36a3b22",
+        "checkout": "c765b96b9a88d85c8d4cb489bacea8dae780b8a861f1acb57764c81cac14bb17"
+      },
+      "new_keys": [
+        "count_character_records",
+        "optical_multiset_weights",
+        "native_weight_lean"
+      ],
+      "disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "index_lf_sha256": {
+      "publication": "2faba5e6b31fccab52bfc1db2a44a05a8d6264c0d197d8d5f594bae5626fc2bd",
+      "queue": "97535a1830221cda804e7d4ccd9b8e912d590ad1f7f06f78339e53d9d9aac3fe"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 30,
+        "local_link_occurrences": 338,
+        "new_article_local_links": {
+          "Counting_and_character_records.md": 14,
+          "Optical_multiset_weights.md": 7
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 31,
+        "local_link_occurrences": 367,
+        "new_article_local_links": {
+          "Counting_and_character_records.md": 14,
+          "Optical_multiset_weights.md": 7
+        },
+        "missing": 0
+      }
+    },
+    "edition_z17": {
+      "historical_verification": "moving_odd_clocks_reuse_and_holonomy_addendum.edition_z17",
+      "baseline_commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "review_head": "0901b0070ee2c0e05921528f92d96c2d3204e568",
+      "edition_tree_unchanged_from_baseline": true,
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "fresh_full_replay": false
+    }
   }
 }
