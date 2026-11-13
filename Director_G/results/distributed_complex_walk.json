@@ -1,0 +1,1092 @@
+{
+  "representation": "E(psi)=Re(psi) tensor e0 + Im(psi) tensor e1. e0,e1 are the normalized even-cosine and odd-sine coefficient vectors of the local product (|0>+i|1>)^n. Every J_i e0=e1, J_i e1=-e0. The signed local map A tensor I+B tensor J_i intertwines with A+iB for any matrix, including Kraus operators. Thus all joint sequential probabilities agree when the same encoded preparation and Born rule apply. Mixed states admit R(rho)/2 on the code.",
+  "measured_chains": [
+    {
+      "sites": 2,
+      "unmeasured_blank_zero": "1/2",
+      "uncorrected_zero": "1/2",
+      "corrected_zero": "1",
+      "postselect_all_plus_yield": "1/2",
+      "all_branches": [
+        {
+          "edge_signs": [
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1
+          ],
+          "weight": "1/2",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1
+          ],
+          "weight": "1/2",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        }
+      ]
+    },
+    {
+      "sites": 3,
+      "unmeasured_blank_zero": "1/2",
+      "uncorrected_zero": "1/2",
+      "corrected_zero": "1",
+      "postselect_all_plus_yield": "1/4",
+      "all_branches": [
+        {
+          "edge_signs": [
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1
+          ],
+          "weight": "1/4",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1
+          ],
+          "weight": "1/4",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1
+          ],
+          "weight": "1/4",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1
+          ],
+          "weight": "1/4",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        }
+      ]
+    },
+    {
+      "sites": 4,
+      "unmeasured_blank_zero": "1/2",
+      "uncorrected_zero": "1/2",
+      "corrected_zero": "1",
+      "postselect_all_plus_yield": "1/8",
+      "all_branches": [
+        {
+          "edge_signs": [
+            1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "weight": "1/8",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        }
+      ]
+    },
+    {
+      "sites": 5,
+      "unmeasured_blank_zero": "1/2",
+      "uncorrected_zero": "1/2",
+      "corrected_zero": "1",
+      "postselect_all_plus_yield": "1/16",
+      "all_branches": [
+        {
+          "edge_signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "0",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": -1
+        },
+        {
+          "edge_signs": [
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "relative_vertex_signs": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "weight": "1/16",
+          "unfixed_zero": "1",
+          "corrected_zero": "1",
+          "optional_ring_closure_edge": 1
+        }
+      ]
+    }
+  ],
+  "deterministic_growth": [
+    {
+      "sites": 1,
+      "disjoint_contact_layers": [],
+      "depth": 0,
+      "code_norm_chosen_denominator": 1,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 2,
+      "disjoint_contact_layers": [
+        [
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "depth": 1,
+      "code_norm_chosen_denominator": 2,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 3,
+      "disjoint_contact_layers": [
+        [
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 2,
+      "code_norm_chosen_denominator": 4,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 4,
+      "disjoint_contact_layers": [
+        [
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 2,
+      "code_norm_chosen_denominator": 8,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 5,
+      "disjoint_contact_layers": [
+        [
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 3,
+      "code_norm_chosen_denominator": 16,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 6,
+      "disjoint_contact_layers": [
+        [
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 3,
+      "code_norm_chosen_denominator": 32,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 7,
+      "disjoint_contact_layers": [
+        [
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 4,
+      "code_norm_chosen_denominator": 64,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 8,
+      "disjoint_contact_layers": [
+        [
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 4,
+      "code_norm_chosen_denominator": 128,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 9,
+      "disjoint_contact_layers": [
+        [
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            7
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            7,
+            8
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 5,
+      "code_norm_chosen_denominator": 256,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 10,
+      "disjoint_contact_layers": [
+        [
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            7
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            7,
+            8
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            8,
+            9
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 5,
+      "code_norm_chosen_denominator": 512,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    },
+    {
+      "sites": 11,
+      "disjoint_contact_layers": [
+        [
+          [
+            5,
+            6
+          ]
+        ],
+        [
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        [
+          [
+            7,
+            8
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            8,
+            9
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            9,
+            10
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "depth": 6,
+      "code_norm_chosen_denominator": 1024,
+      "max_unconditioned_endpoint_overlap_before_contact": "1/2"
+    }
+  ],
+  "source_order": {
+    "columns_little_endian": [
+      "++",
+      "-+",
+      "+-",
+      "--"
+    ],
+    "late_alignment": [
+      {
+        "syndrome": 1,
+        "weight": "1/2",
+        "corrected_then_held_Y_read": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "syndrome": -1,
+        "weight": "1/2",
+        "corrected_then_held_Y_read": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      }
+    ],
+    "late_unconditional": [
+      "1/2",
+      "0",
+      "1/2",
+      "0"
+    ],
+    "align_before_program": [
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "bell_two_local_Y": {
+    "source": "H and nearest-neighbor CNOT on real 00, followed by two local Y measurements",
+    "order": [
+      "++",
+      "-+",
+      "+-",
+      "--"
+    ],
+    "unmeasured_blanks": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "syndrome_rows": [
+      {
+        "syndrome": 1,
+        "weight": "1/2",
+        "uncorrected": [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "corrected": [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "syndrome": -1,
+        "weight": "1/2",
+        "uncorrected": [
+          "1/2",
+          "0",
+          "0",
+          "1/2"
+        ],
+        "corrected": [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      }
+    ]
+  },
+  "complex_instrument": {
+    "sites": 3,
+    "source_data": "real localized 000; alternatively eight arbitrary Gaussian integer entries",
+    "operations": [
+      "H0",
+      "CX01",
+      "diag(1,(3+4i)/5)_1",
+      "CX12",
+      "S0",
+      "amplitude damping instrument on 1 with survival 3/5",
+      "conditional S2",
+      "H0 H1 H2",
+      "all base bits"
+    ],
+    "unused_choice_of_plane_on_each_two_site_gate_gives_same_state": true,
+    "every_branch_checked_against_independent_complex_update": true,
+    "all_records": [
+      {
+        "damping_record": 0,
+        "weight": "17/25",
+        "joint_data_records": [
+          "1/40",
+          "29/200",
+          "29/200",
+          "1/40",
+          "29/200",
+          "1/40",
+          "1/40",
+          "29/200"
+        ]
+      },
+      {
+        "damping_record": 1,
+        "weight": "8/25",
+        "joint_data_records": [
+          "1/25",
+          "1/25",
+          "1/25",
+          "1/25",
+          "1/25",
+          "1/25",
+          "1/25",
+          "1/25"
+        ]
+      }
+    ]
+  },
+  "depth": "With two-site nearest-neighbor gates in disjoint matching layers, one input site can influence an interval of width at most 2d for d>=1 after d layers. Without a common input ancestor the end cones of an independent real product preparation factor, and each real one-point expectation of antisymmetric J vanishes. P(Q_end=+) is then 1/2, whereas the aligned code gives 1. Consequently ceil(n/2) contact layers are necessary for n>=2 on a chain and the paired center-out attachment achieves them. An attachment is one two-site orthogonal gate or a local H followed by a controlled signed permutation.",
+  "measured_cost": "On a chain two edge colors suffice for local nondemolition syndrome acquisition if a disjoint-contact read is a layer. Site Z corrections need prefix parity relative to a shared root, propagated at the communication speed. Constant acquisition depth can instead herald the all-plus sector with weight 2^(1-n); identifying that global success still requires comparison. All contacts and corrections must precede protected data preparation unless frame conjugations of past data are independently handled.",
+  "scope": "Distributed realification with physical signed quarter-turn control, neighboring real reversible contact circuits, clean meter, and Born/read/feedback. A held signed travelling-qubit comparator transports its data by nearest-neighbor SWAPs. Not an experiment or a derivation of Born weights; an acquired entangled reference changes the resource assumptions for strictly independent source networks. One cannot identify absolute complex conjugation from jointly transported preparations and reads.",
+  "prior_work": [
+    "https://doi.org/10.1103/PhysRevLett.102.020505",
+    "https://doi.org/10.1038/s41586-021-04160-4",
+    "Records_and_complex_structure.md, section on orientation of independent planes"
+  ]
+}
