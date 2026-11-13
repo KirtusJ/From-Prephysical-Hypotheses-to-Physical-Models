@@ -1,0 +1,51 @@
+# Working method for Director Z sessions on this repository
+
+This file is read by Claude sessions and their sub-agents working here. It records how the work is done and what has gone wrong before. It is method, not findings; findings live in `edition/`.
+
+## Goal and standing limits
+
+- Goal: an emergent, explained quantum and classical mechanics with a full map, pursued under the working assumption that it will not be reached. Never state that a gate is passed or an ontology obtained unless it is. No gate is passed today; the root review is open.
+- Authorship line on every paper: Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Assistance is credited as assistance.
+- Keep every failed predicate and every outlier. Do not delete or edit them away; add a follow-up.
+- Reports to the principal: outcomes and blocks only. Say at once when the network or a tool blocks the work. Do not narrate corrections that are already recorded in the edition.
+
+## The review stack, top to bottom
+
+| Tier | Who | Used for | Budget |
+|---|---|---|---|
+| Director | this session | choosing questions, proofs, reading every report, issuing editions | whole session |
+| Cross-director | Director G (Codex), same repository | reading each other's results; findings on the pull-request or issue thread | per result |
+| Challenger | sub-agent, paper text only as input | trying to break one theorem and its proof, with its own program | 5 to 10 minutes |
+| Formalizer | sub-agent with Lean | machine-checking the algebraic steps | 2 to 5 minutes |
+| Micro-review | sub-agent, one narrow target | boundary cases, wording that an edge case makes false, outliers in result files | 1 to 2 minutes, about 8 tool calls |
+
+Rules for the stack:
+
+1. A new statement gets, before issue: a program with predicates fixed first, a challenger, a micro-review of its boundary cases, and Lean for any step that is pure algebra.
+2. Give a sub-agent the paper text and definitions, never the director's notes. Tell it to write its own program and to keep failed predicates.
+3. Read every report and recheck its files (rerun Lean, open the result file) before using it. A sub-agent's "all pass" is a claim.
+4. Sub-agents share the director's model family. Their agreement reduces exposure; it is not independent review. Say so in the record.
+5. Findings propagate upward into the paper before issue and into the registers at issue; the report itself is filed under `REVIEW_RECORDS/Director_Z/Session_4/`.
+6. Run an outlier scan over all result files at each edition.
+
+## Lessons paid for
+
+- **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
+- **No thresholds without a basis.** State where a tolerance comes from, or measure a separation instead.
+- **State conventions.** A difference of 1.8e-3 between two runs was whether the origin site counts as positive. Say which side zero is on.
+- **Let Lean find the proof.** Twice the formal proof was shorter than the hand proof, and once it exposed an arithmetic slip. Ask for the statement in general form first.
+- **Summaries are where errors hide.** Three of the corrections from other readers were to summary sentences, corollary wording or attributions, not to proofs. Send summaries and corollaries to a challenger too.
+- **Scope of a hypothesis.** A theorem stated with "a faithful character" silently excluded non-cyclic groups. State hypotheses in the form the proof uses.
+
+## Mechanics
+
+- Edition: unpacked tree `edition/`; `python3 edition/verify_baseline.py` must pass before a push. Each edition is produced from the previous one by a script kept in `edition/tools/`, names its predecessor by digest, and lists every changed file.
+- Programs: predicates in the docstring before the first run; result file that the program refuses to overwrite; fixed seed; rerun in a fresh directory and compare bytes.
+- Register: `.pcp/register.jsonl`, written through the `pcpos` tool server; one review per edition; objections that stand are recorded open. Copy the register into the edition in the same commit.
+- Lean: 4.12.0. Core-only files in `edition/COMPUTATION/Lean/`; Mathlib v4.12.0 files in `edition/COMPUTATION/Lean/Mathlib/` with their lakefile. A pass is exit code 0 with only `propext`, `Quot.sound` and `Classical.choice`.
+- Branches: work on the session branch, fetch before every push, fast-forward `master` only. Never rewrite history. Do not touch `Director_G/`.
+- Identifiers: Director Z owns paper G10, findings `Z-…`, open problems to OP-30; Director G owns `Director_G/`, papers G11 on, OP-31 on.
+
+## What to work on
+
+Prefer, in order: a statement that removes an assumption from the map; a generalization that makes two results one; a machine check of a step already used; a cross-review of the other director's newest result. Do not issue an edition for bookkeeping alone.
