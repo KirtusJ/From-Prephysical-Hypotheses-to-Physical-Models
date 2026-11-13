@@ -70,3 +70,5 @@ The manuscript proves projective density and adaptive hitting. The physical orig
 [ContactComposition.lean](ContactComposition.lean) checks the one-particle identity and the two-particle path coefficients for the two rational rotations on four sites, including distinct double-occupation phases on the outer bonds. The general unit-phase selection and robustness estimates use these amplitudes and the [analytic port identities](../Occupation_contact_from_composition.md).
 
 [GaussString.lean](GaussString.lean) proves the ordered two-charge flux law, support size, and adjacent-hop update. The endpoint result extends over finite histories with spectator registers. The [electric-string paper](../Electric_string_quantum_and_classical_motion.md) gives the separate continuum and collision arguments.
+
+[StaircaseAbundance.lean](StaircaseAbundance.lean) constructs at least 2^k physical histories of a common length for every signed residue at both merging inputs of the staircase carrier. The [weight classification](../Counting_and_character_records.md) also assumes a single endpoint function and consistent continuation of arbitrary selected histories.

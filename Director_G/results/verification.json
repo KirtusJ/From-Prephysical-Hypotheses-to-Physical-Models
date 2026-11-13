@@ -6101,5 +6101,63 @@
       "parent_adjudication": "Child failed prefix parity and did not supply either energy. Parent supplied both complements; independently verified using XOR of [0,1,0,1,0] cumulants in the two boundary sectors. One model-selected tool invocation, two local PCP instances."
     },
     "open_gates": 13
+  },
+  "staircase_abundance_and_director_z_review_8": {
+    "review_commit": "078e5ac",
+    "scope": "G10 classification applied to the actual staircase departure block at x=2. Whole-carrier continuation of arbitrary subsets, one common endpoint function, normalization and positivity are physical assumptions. Finite base histograms alone do not establish them or choose the ordinary embedding.",
+    "totals": {
+      "checkers": 89,
+      "generated_outputs": 103,
+      "lean_files": 29
+    },
+    "checked": {
+      "staircase_orders": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        15,
+        16
+      ],
+      "minimum_requested_per_class": 7,
+      "lean": "Actual physical steps, line-to-ring periodicity, all words and two exits. An injection gives at least 2^k histories for each signed class and rail at 12k+6M+8 ticks for any M>0. Lean 4.19.0, fresh success in both copies.",
+      "reruns": "Both staircase outputs matched fresh Python processes. The optical checker also reproduced the 46,217-byte CRLF file in both locations on Windows. Director Z recorded 44,502 bytes under LF; all differences are 1,715 carriage returns.",
+      "optics": "The primary sharp-mode witness still uses an eighth-root model and the stated detector assumptions. Unexpanded pixel extents give ordinary-weight floor 0.41279749.",
+      "path_area": "Direction-word enumeration reproduced D9=31/256, D10=65/512, D11=355/2048, D12=111/512 on both rails.",
+      "signed_block": "Switching depends on the chosen order-two element. C2 x C4 gives switched dimensions 3,4,4 and unswitched dimension 14. Integer Lean iff, real classification and global switching kept distinct."
+    },
+    "source_and_output_sha256_LF": {
+      "Counting_and_character_records.md": "c317e70b9cdfa637eeab62420833727c4dca5a2ddb2e2dcc4adc28dfdc109a02",
+      "Multiset_block_law.md": "536e6219b2776257e262c654b1f6ad38e2db15fdd1328e81c7ca29ebd445a50f",
+      "Optical_multiset_weights.md": "23f228e9a248b70448c60ee055ec5cb7a49d48c6299129225c6e8862d38f408b",
+      "Path_area_and_the_force_clock.md": "f08451ed04eaf7d2b590c732c6d5524ac0a7d6690264ed36c1efbea7604d8b50",
+      "check_staircase_abundance.py": "f036b9037526e47e080a5c23370fb2ddd2de52c88e524fd7b9d074e0128da4d5",
+      "results/staircase_abundance.json": "34e44c9838914fbadc0199e3d1cfb517e4e9c32f210963b3e8641208db478feb",
+      "lean/StaircaseAbundance.lean": "5d3ff98ba5c68f987755582eae92c0e6e2e9fb328b956c31e97497022915cec5"
+    },
+    "checked_links": {
+      "Counting_and_character_records.md": {
+        "local": 19,
+        "git_pinned": 2
+      },
+      "Multiset_block_law.md": {
+        "local": 5,
+        "git_pinned": 7
+      },
+      "Optical_multiset_weights.md": {
+        "local": 8,
+        "git_pinned": 2
+      },
+      "Path_area_and_the_force_clock.md": {
+        "local": 19,
+        "git_pinned": 3
+      }
+    },
+    "open_gates": 13
   }
 }
