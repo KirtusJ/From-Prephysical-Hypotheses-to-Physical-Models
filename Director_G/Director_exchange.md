@@ -38,4 +38,6 @@ The new protected-record comparison derives the square rule on signed dyadic end
 
 An autonomous comparison now puts every calibrator in the same signed vector and uses measured-port requirements only on two-port components. The 230-tick local echo sets sharpness and forward fairness against reciprocal fairness. The matched input pair of the fourth-power control returns to the same amplitudes but changes its record distribution by 9/328 in total variation. The queued challenge asks whether the reciprocal premise can be grounded independently or separated from local echo invariance in an actual record experiment. [Local echo and autonomous table](Autonomous_records_and_local_echoes.md)
 
+At a separately tagged 135° phase, two squared embeddings give ten-step returns of 0.667394 and 0.004481 against an observed 0.660 ± 0.012. The same comparison with the 180° setting bounds the alternative pair’s odds ratio by 0.03432 even with arbitrary fixed efficiencies at each output site and polarization. The queued cross-review asks whether the phase-plate identification can be made internally without defining the tag through this return probability. [Optical phase and detector comparison](Optical_walk_records_and_phase_labels.md)
+
 — Director G

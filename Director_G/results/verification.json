@@ -3154,5 +3154,405 @@
       "pymupdf": "2.1",
       "method": "Fresh verifier under bundled Python 3.12.14 with the isolated PyMuPDF package. Only the one relpath used to enumerate manifest names was converted to forward slashes in memory on Windows."
     }
+  },
+  "empirical_optical_walk_records_and_phase_labels_addendum": {
+    "scope": "Incremental verification of four empirical optical analyses. Published frequencies, digitized charts and aggregate statistics have distinct precision and calibration assumptions. The finite optical reference and detector comparisons do not establish a native probability embedding or physical ontology.",
+    "prior_manifest_raw_sha256": "5649f9fd0252c31752cf8e4501354f321cb70507f58e768698ba24cf95fabb46",
+    "totals": {
+      "checkers": 39,
+      "generated_outputs": 53,
+      "lean_files": 14,
+      "new_checkers": 4,
+      "new_generated_outputs": 4,
+      "new_lean_files": 1,
+      "fresh_checker_processes_on_final_sources": 8,
+      "fresh_lean_compilations": 2,
+      "prior": {
+        "checkers": 35,
+        "generated_outputs": 49,
+        "lean_files": 13
+      },
+      "nested_consultations_embedded_in_addendum": 1
+    },
+    "mirror_bindings": {
+      "Optical_walk_records_and_phase_labels.md": {
+        "raw_sha256": "ec3891957b1291ccbbf1df418a28792c9fa4bff6b46bf881da9074f0214873a4",
+        "lf_content_sha256": "ec3891957b1291ccbbf1df418a28792c9fa4bff6b46bf881da9074f0214873a4",
+        "git_blob_oid_sha1": "ba52d45fe799a527b1948431da07e5ec5507622c",
+        "lf_git_blob_oid_sha1": "ba52d45fe799a527b1948431da07e5ec5507622c",
+        "bytes": 14387
+      },
+      "Director_exchange.md": {
+        "raw_sha256": "ab50f9a8fedb174507086019f7367b1b5b352ca75b863948e5b31285ebedad8e",
+        "lf_content_sha256": "96bc24587db7a0d4746d24976e7bb5f2db8bb5f4c31be1babcc4b20990046948",
+        "git_blob_oid_sha1": "e76e63b20aa24ab62eedfecb27339ae34e1958ba",
+        "lf_git_blob_oid_sha1": "e76e63b20aa24ab62eedfecb27339ae34e1958ba",
+        "bytes": 14327
+      },
+      "lean/README.md": {
+        "raw_sha256": "39e514f861add4d171e86c4fa0df31f97dab67f0802d7a2d79e11583b8ccc5b3",
+        "lf_content_sha256": "39e514f861add4d171e86c4fa0df31f97dab67f0802d7a2d79e11583b8ccc5b3",
+        "git_blob_oid_sha1": "8eafca51b32a0285ebb62ddd920e11fc1620835c",
+        "lf_git_blob_oid_sha1": "8eafca51b32a0285ebb62ddd920e11fc1620835c",
+        "bytes": 7676
+      },
+      "lean/lean-toolchain": {
+        "raw_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "lf_content_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+        "git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "lf_git_blob_oid_sha1": "7aca1d8a939cc24c413eddd793671cdce7070b74",
+        "bytes": 25
+      },
+      "lean/OpticalPhaseRead.lean": {
+        "raw_sha256": "ff82cd42e4325093f0a24c03579e8bc0151ced662bbbb30c040c547f05003c12",
+        "lf_content_sha256": "ff82cd42e4325093f0a24c03579e8bc0151ced662bbbb30c040c547f05003c12",
+        "git_blob_oid_sha1": "d1d2ddf975c88b6e794adde5b713655c77df7d0d",
+        "lf_git_blob_oid_sha1": "d1d2ddf975c88b6e794adde5b713655c77df7d0d",
+        "bytes": 3701
+      },
+      "check_optical_walk_records.py": {
+        "raw_sha256": "4f15ff59d10792878d46e8266291d5b8bab97606320bdd487ee4fca9da1eaff5",
+        "lf_content_sha256": "4f15ff59d10792878d46e8266291d5b8bab97606320bdd487ee4fca9da1eaff5",
+        "git_blob_oid_sha1": "fec3a20142ac9e5cb9a5d522cddb4526a23f053c",
+        "lf_git_blob_oid_sha1": "fec3a20142ac9e5cb9a5d522cddb4526a23f053c",
+        "bytes": 13777
+      },
+      "check_detector_envelope.py": {
+        "raw_sha256": "11fcf46a7ea34b6ccf914316ee6b042b6afd54b2c5a54eb3788a4aac1f8a2d13",
+        "lf_content_sha256": "11fcf46a7ea34b6ccf914316ee6b042b6afd54b2c5a54eb3788a4aac1f8a2d13",
+        "git_blob_oid_sha1": "7db5e9c80f080ad3a709cfa18c17576ab3c8a3dd",
+        "lf_git_blob_oid_sha1": "7db5e9c80f080ad3a709cfa18c17576ab3c8a3dd",
+        "bytes": 13073
+      },
+      "check_phase_defect_data.py": {
+        "raw_sha256": "d82a4b8147fb46b38aee729b743ef37057723cce25b6b1d9e616bfee888dd867",
+        "lf_content_sha256": "d82a4b8147fb46b38aee729b743ef37057723cce25b6b1d9e616bfee888dd867",
+        "git_blob_oid_sha1": "3e1adcc8333f65b582de0cf0d1e625c7394dada7",
+        "lf_git_blob_oid_sha1": "3e1adcc8333f65b582de0cf0d1e625c7394dada7",
+        "bytes": 14932
+      },
+      "check_unambiguous_walk_data.py": {
+        "raw_sha256": "60b0b609bab692be3f776d5f7773283db7e0cb201c1d358adb9f37ef85d3614b",
+        "lf_content_sha256": "60b0b609bab692be3f776d5f7773283db7e0cb201c1d358adb9f37ef85d3614b",
+        "git_blob_oid_sha1": "d940ea6a38b10fb645dc70115146320539558c89",
+        "lf_git_blob_oid_sha1": "d940ea6a38b10fb645dc70115146320539558c89",
+        "bytes": 15917
+      },
+      "results/optical_walk_records.json": {
+        "raw_sha256": "ad6ac435903ca7195bf460e4391bed4897b962d4ef6253e868813ce9450aab3e",
+        "lf_content_sha256": "ad6ac435903ca7195bf460e4391bed4897b962d4ef6253e868813ce9450aab3e",
+        "git_blob_oid_sha1": "a1031645c8d098535ecf17fd18cbf1c901aba0f3",
+        "lf_git_blob_oid_sha1": "a1031645c8d098535ecf17fd18cbf1c901aba0f3",
+        "bytes": 39327
+      },
+      "results/detector_envelope.json": {
+        "raw_sha256": "c84b7b5d413096bb08baef55637baabbd194e2b9c25c27279ea0140ecf49fe9f",
+        "lf_content_sha256": "c84b7b5d413096bb08baef55637baabbd194e2b9c25c27279ea0140ecf49fe9f",
+        "git_blob_oid_sha1": "32fcdee1959de397bb9ddecc282f7b15eb503b26",
+        "lf_git_blob_oid_sha1": "32fcdee1959de397bb9ddecc282f7b15eb503b26",
+        "bytes": 27207
+      },
+      "results/phase_defect_data.json": {
+        "raw_sha256": "17cfd496ec83ea19a3d14dcda08d68f0bfca484d86c3243e434fcdb9955b9579",
+        "lf_content_sha256": "17cfd496ec83ea19a3d14dcda08d68f0bfca484d86c3243e434fcdb9955b9579",
+        "git_blob_oid_sha1": "50f0ec4b7945e08c2cbc13717be4c8cc3038b3ac",
+        "lf_git_blob_oid_sha1": "50f0ec4b7945e08c2cbc13717be4c8cc3038b3ac",
+        "bytes": 27921
+      },
+      "results/unambiguous_walk_data.json": {
+        "raw_sha256": "8484f68c8933ec9123ad56a2ac7d0438a631149709d4b286253c4850e80d3001",
+        "lf_content_sha256": "59ae169aafcab667be270e907541ca32c0a4e2a5d59cf4c00d728c8f1fb85389",
+        "git_blob_oid_sha1": "6d4e650c107fab6fab053fec6342ded1b06ae526",
+        "lf_git_blob_oid_sha1": "252b096ed803c341d7996cc9bba5a0f0d135cdcc",
+        "bytes": 28322
+      }
+    },
+    "digest_convention": "Identical raw scientific inputs and outputs in both trees. Raw SHA-256, normalized LF SHA-256, repository-attribute Git blob OID and LF Git blob OID identify distinct byte conventions. Checker sources, numerical results and Lean files use the published -text attributes. Historical manifest sections retain their original verification scope.",
+    "fresh_runs": {
+      "runtime": "Bundled Python 3.12.14 on Windows. Fresh separate output directories per source tree, -X utf8 -B, four standalone scripts. Optical figure recheck used the isolated PyMuPDF 2.1 installation. Earlier preliminary optical data preceded the added phase-label tests.",
+      "checker_order": [
+        "optical_walk_records",
+        "detector_envelope",
+        "phase_defect_data",
+        "unambiguous_walk_data"
+      ],
+      "exit_codes_per_mirror": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_eight_final_outputs_equal_both_stored_bytes": true,
+      "generated_raw_sha256": {
+        "optical_walk_records": "ad6ac435903ca7195bf460e4391bed4897b962d4ef6253e868813ce9450aab3e",
+        "detector_envelope": "c84b7b5d413096bb08baef55637baabbd194e2b9c25c27279ea0140ecf49fe9f",
+        "phase_defect_data": "17cfd496ec83ea19a3d14dcda08d68f0bfca484d86c3243e434fcdb9955b9579",
+        "unambiguous_walk_data": "8484f68c8933ec9123ad56a2ac7d0438a631149709d4b286253c4850e80d3001"
+      },
+      "all_prior_nonmanifest_result_files_identical_across_trees": 60,
+      "retained_historical_first_run_digests": {
+        "orientation_oracle_first_run.json": "50a88c835025e7807ad46ef3b07beb48f6f6f2ebb7c3ffc1bfe76546f0de9f71",
+        "band_preparation_first_oracle.json": "c837b5a1550443b627b18288fc75f18b6c47386bea9effae1677b5dc3a695112",
+        "radial_first_oracle.json": "36edc477a1d3c0c001ae49c728814fb0a3af166dee558972092680324700e7e6",
+        "radial_trials_first_oracle.csv": "6bf515bde28c46ce4d032fd38dd2db9625449980b120df1187ef99a56256019f",
+        "internal_reference_first_index.json": "e4ee943f0d2fa657e780c88c896e0d3a40d41cae43b5108625ab35db2850c955"
+      }
+    },
+    "primary_source_controls": {
+      "Broome": {
+        "optional": "--figure fig2.pdf",
+        "author_figure_sha256": "b5c9e17b1e83ff9de18a3f220273c5872337eee08332d028d9ed8d15b8350eac",
+        "vertical_edges": 216,
+        "bar_count_per_series": 27,
+        "series": 2,
+        "mean_distance_from_graphic": {
+          "figure_tv_square": 0.03058212703685118,
+          "figure_tv_quartic": 0.11011194111403279,
+          "figure_precision_tv_bound": 0.000837801031417279
+        }
+      },
+      "Bian": {
+        "optional": "--verify-source re-fetched the pinned author archive and checked Table I and the source figure in both final checker runs.",
+        "archive_sha256": "000e29893522740edebbd9679be45b30b849ce7c702abdd372f0c219a2e2c6b8",
+        "tex_sha256": "662615a530339c727cda5c42cd1657bd45d7e25f8a1b8ea3f34e7631d63322e9",
+        "figure_sha256": "1718aab957b01b0a0c97ffda6fb02b4e5dab29b7fd60904665474d2f4505c275",
+        "transcribed_rows": 12
+      },
+      "Xue": {
+        "publisher_graphics_sha256": {
+          "2": "7b2daa43df39e8f0d6ca972995f5bc082d721593f28e170f3005ace53c7fa95e",
+          "3": "5a428e3e6478a1c0b808267e45da8902638ae68c21de3f32c172d477dc90535b",
+          "5": "11951db56833779738b80fd9fafc5b60800b01e349013903b7671515d9ba5b06",
+          "6": "7ac4df121e2521cd3f2980fa85345c7b84bbe893f3a033d90bbe4b21b735bfd9"
+        },
+        "quoted_scalars": 3,
+        "secondary_marker_centres": 34,
+        "graphic_validation": "Four publisher file bytes checked, predictions and entered marker geometry reproduced. Marker extents are graphical uncertainty only."
+      },
+      "Fenwick": {
+        "author_paper": "https://arxiv.org/html/2404.02238v1",
+        "source_readback": "Fig. 3 states joint fidelity above 97 percent through both single-time-bin 18-step runs; equation (6) sums over both polarizations and time bins. Appendix A gives mean photon number 0.8 and Appendix D defines peak sampling."
+      }
+    },
+    "empirical_controls": {
+      "balanced_walk": {
+        "exact_six_depth_ideal_TV": "14855/159198",
+        "two_independent_calculations_agree_at_every_bin": true,
+        "finite_fit_witnesses_checked": 48,
+        "first_three_ideal_position_distributions_equal": true,
+        "rounded_ideal_quartic_residual_lower": "9840263/159198000",
+        "per_depth_contrast_boundaries": {
+          "assumed_Born_mean_radius": "63/2000",
+          "strict_closer_to_Born_boundary": {
+            "R_lower": "401396097/200000000",
+            "R_upper": "1003490243/500000000",
+            "target_mean_TV": "63/1000",
+            "distance_at_lower": "8548435302118511266731404911401887/135689449227124554494567764306419339",
+            "distance_at_upper": "934985110961129544473593995717822431/14841033512370091954345520270744970207"
+          },
+          "exact_fit_within_radius_boundary": {
+            "R_lower": "3282595061/1000000000",
+            "R_upper": "1641297531/500000000",
+            "target_mean_TV": "63/2000",
+            "distance_at_lower": "4835011939455361506297506464433218373/153492442437488519954876661575747219881",
+            "distance_at_upper": "604376492119771107357039524054476103/19186555308351581276599997876110009191"
+          }
+        },
+        "shared_fixed_signed_site_lower": "2685795628068056131/51236171999385819072",
+        "shared_fixed_physical_path_lower": "1084316012505336979/23010128521197299376",
+        "symmetry_check": "For symmetric Born and quartic profiles, a common reflected efficiency vector has the same normalization at every depth. Averaging the two vectors produces the average of the two tilted profiles. Convexity of total variation gives the lower-bound reduction. Fixed path indices use their own unsymmetrized certificate."
+      },
+      "Xue": {
+        "raw_origin_spinors_135_k1": [
+          [
+            -12,
+            -10,
+            0,
+            10
+          ],
+          [
+            0,
+            10,
+            12,
+            10
+          ]
+        ],
+        "denominator": 2048,
+        "independent_path_verification": "Exhausted 2 initial polarizations times 1024 ten-tick words at the 135 and 180 degree settings. Position and polarization marginal odds were also checked separately.",
+        "origin_sqrt2_coefficient": "15/64 for k=1,7 and -15/64 for k=3,5; rational term 43/128",
+        "common_site_efficiency_other_pair_supremum": "(6061-4142 sqrt(2))/11645",
+        "common_mode_efficiency_other_pair_supremum": "(3-2 sqrt(2))/5",
+        "fig3_inset_double_odds": {
+          "centres": "537/505",
+          "expanded_graphic_extent": [
+            0.8708437439938497,
+            1.2989339487855809
+          ],
+          "scope": "Both full symbol extents expanded by two pixels. Graphic sensitivity only."
+        },
+        "adverse": "The central 180-degree ten-depth reported mean alone does not rank the models. At nine ticks and offsite defect, the balanced-coin plotted variance favors ordinary quartic while the return favors squared. The printed 135-degree recurrence and the digitized Fig. 3 marker differ and both are retained."
+      },
+      "Bian": {
+        "nominal_rmse": {
+          "squared": 0.007091179718460182,
+          "quartic_preparation_and_local_plates": 0.15550784654021246,
+          "squared_preparation_quartic_walk_plate": 0.07909749640988704
+        },
+        "combined_extreme_pure_H": 0.8296,
+        "predictions_pure_H": [
+          0.8285560812517423,
+          0.9589424622150559
+        ],
+        "adverse": "Both 90-degree settings share the same ideal limit; full residuals and reported statistical errors, prose/tabular disagreement and figure/equation port labels are retained."
+      },
+      "Fenwick": {
+        "final_position_model_TV": 0.47962979600359934,
+        "aggregate_measured_to_square_upper": 0.17320508075688773,
+        "aggregate_measured_to_quartic_lower": 0.3064247152467116,
+        "sample": "Attenuated laser pulses; normalized peak samples, with joint and position readouts kept distinct."
+      }
+    },
+    "lean": {
+      "file": "lean/OpticalPhaseRead.lean",
+      "version": "Lean 4.19.0 x86_64-w64-windows-gnu, release 6caaee842e94",
+      "pinned_toolchain": "leanprover/lean4:v4.19.0",
+      "command": "lean lean/OpticalPhaseRead.lean",
+      "both_exit_codes": [
+        0,
+        0
+      ],
+      "source_theorems": [
+        "root_and_radical",
+        "origin_amplitudes_135",
+        "radical_form",
+        "fixed_label_split",
+        "complete_denominator",
+        "rational_phase_controls"
+      ],
+      "method": "Concrete finite polynomial recurrence and kernel decision. Covers origin signed amplitudes, square-root action, two squared weights, total denominator and four null settings."
+    },
+    "nested_worker": {
+      "attempt": "20261113T125046553690Z",
+      "receipt": "dd4771a1430d29564231",
+      "original_verified": true,
+      "kernel_card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+      "commission": "Two ideal distributions have total variation distance 0.093, averaged with equal weight across six preparations. A paper reports a mean total variation of 0.031 between the first ideal model and observed relative frequencies, rounded to three decimals. Use the single consult_pcp_reviewer tool to ask your child for the conservative triangle-inequality bound on the observed mean distance to the second model, under rounding to nearest. Recompute the bound yourself. Does it rank the two ideal predictions? Is it a sampling significance level, and does it constrain each preparation separately? Report the actual child receipt ID and any disagreement.",
+      "delegated_question": "Six preparations have equal weights. Mean TV distance between ideal models A and B is 0.093. Reported mean TV(A, observed relative frequencies) is 0.031 rounded to three decimals, nearest rounding. Give conservative triangle-inequality bounds on mean TV(B, observed), explain whether these rank empirical fit, are a sampling significance level, or constrain every preparation separately. Include your receipt ID.",
+      "runs": {
+        "parent": {
+          "participant": "parent-codex",
+          "model": "Codex CLI",
+          "head": "93c54ccd2dc4fc2fee62c07318bceaa4962598d7459a936afec229b8f0a317b5",
+          "register_sha256": "eeba3919064da2ec7ce331b82f8350c0bd70adbca52ae3291294aa844b40b13f",
+          "events": 7,
+          "raw_reply_sha256": "5f9452b75270d0ff645644ebc291bebff82e58b2396426c014bc6274d26a5951",
+          "reply_utf8_bytes": 1329,
+          "python_ok": true,
+          "rust_exit": 0,
+          "acr_in_use": true,
+          "kernel_sent": true,
+          "exposures": [
+            {
+              "sha256": "61c28f62a19858b1fed44844d62a055e1ac942c6cdc0b6865d7a92be4b58a930",
+              "what": "task"
+            },
+            {
+              "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+              "what": "kernel card"
+            }
+          ],
+          "reply_text": "The conservative bound is **0.0615 ≤ mean TV(observed, second model) ≤ 0.1245**.\n\nI consulted the child and independently recomputed it. Let \\(a\\) be the unrounded mean distance to the first model. Rounding to nearest gives the conservative enclosure\n\\[\n0.0305\\le a\\le0.0315.\n\\]\nAveraging the triangle and reverse triangle inequalities with the same six equal weights gives\n\\[\n0.093-a\\le b\\le0.093+a,\n\\]\nhence the stated bound. Exact endpoint inclusion depends on the tie-breaking convention; the closed enclosure is conservative.\n\n- **Ranking:** The first model is closer to these observed frequencies on the stated mean-TV measure: its maximum \\(0.0315\\) is below the second model’s minimum \\(0.0615\\). This does not establish which model better predicts the underlying population.\n- **Significance:** This is a deterministic distance bound, not a sampling significance level or p-value.\n- **Preparations:** The interval bounds the six-preparation mean. It does not apply to each preparation separately or establish their individual rankings.\n\n**Child receipt ID:** `dd4771a1430d29564231`.\n\n**Disagreement:** The child reported the bounds as “0.031 rounded to three decimals,” which is incorrect. Its statement that the bounds rank empirical fit agrees with my calculation only in the aggregate sense specified above."
+        },
+        "child": {
+          "participant": "child-qwen",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+          "head": "28bcf91742a8a11c9b0d9fa4181858ad1d091b6daf41cc759d221505c837a4c5",
+          "register_sha256": "476fa867121c383ef07bcd37635bf51160bba0b242f684521625aae4b0143174",
+          "events": 7,
+          "raw_reply_sha256": "bfcc3a5477f9597aa9e043e9f0e5077ffacf569804842e3a037d747d6635619e",
+          "reply_utf8_bytes": 165,
+          "python_ok": true,
+          "rust_exit": 0,
+          "acr_in_use": true,
+          "kernel_sent": true,
+          "exposures": [
+            {
+              "sha256": "7baec16ca189259f9eb70bbfa5a443a9afcf1c976cdafa1be737ee278bcac189",
+              "what": "task"
+            },
+            {
+              "sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+              "what": "kernel card"
+            }
+          ],
+          "reply_text": "Conservative triangle-inequality bounds on mean TV(B, observed) are 0.031 rounded to three decimals, nearest rounding. These bounds rank empirical fit. [end of text]"
+        }
+      },
+      "adjudication": "The smaller model gave 0.031 as the bound and erred. The parent rejected that arithmetic and correctly obtained a conservative [0.0615,0.1245] for the deliberately simplified exact ideal gap 0.093. The paper uses 14855/159198. Neither calculation is a sampling test or a per-depth constraint."
+    },
+    "current_gate_maps": {
+      "research": {
+        "raw_sha256": "d1abb7b76afd55ab3febf1fe57f92ac78a0a19647f2e70dde55e62a761646b7b",
+        "lf_content_sha256": "d1abb7b76afd55ab3febf1fe57f92ac78a0a19647f2e70dde55e62a761646b7b",
+        "git_blob_oid_sha1": "eb6bb15405b356d6b4ba9ec39b15799b512d79dd",
+        "lf_git_blob_oid_sha1": "eb6bb15405b356d6b4ba9ec39b15799b512d79dd",
+        "bytes": 37455
+      },
+      "checkout": {
+        "raw_sha256": "7d2d03dbb6c9a7a2331ae2cc50241191f72ce1ddb798fc7bd39e87b37e901769",
+        "lf_content_sha256": "7d2d03dbb6c9a7a2331ae2cc50241191f72ce1ddb798fc7bd39e87b37e901769",
+        "git_blob_oid_sha1": "3c3689da3048d6beb77c81b938658f22fa5c5b7b",
+        "lf_git_blob_oid_sha1": "3c3689da3048d6beb77c81b938658f22fa5c5b7b",
+        "bytes": 37535
+      }
+    },
+    "gate_review": {
+      "open_gates": 13,
+      "original_disposition": "UNRESOLVED",
+      "mirror_maps_differ_only_in_baseline_archive_locators": true,
+      "both_baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd"
+    },
+    "published_index": {
+      "raw_sha256": "d2bc3c72424a0a62d765a8a38caff0276d9b5c072caabc8eed30caf966fd1e87",
+      "lf_content_sha256": "d2bc3c72424a0a62d765a8a38caff0276d9b5c072caabc8eed30caf966fd1e87",
+      "git_blob_oid_sha1": "70575fefbd7a4cbd312c746ae30b2e5a3faad7df",
+      "lf_git_blob_oid_sha1": "70575fefbd7a4cbd312c746ae30b2e5a3faad7df",
+      "bytes": 7948
+    },
+    "review_queue_index": {
+      "raw_sha256": "b8b42cac75a89c49ce63ae58629d5751219ffe66eb8f00b3e95477883ec9e39d",
+      "lf_content_sha256": "d3e86ae9b6b8d5ad1dbc8bdf4783a4f53786f4c147df9c2cf67b87216ecf153c",
+      "git_blob_oid_sha1": "7cd7cd9a828ba30d6730d6016dd83b4a602172a1",
+      "lf_git_blob_oid_sha1": "7cd7cd9a828ba30d6730d6016dd83b4a602172a1",
+      "bytes": 8299
+    },
+    "current_markdown_links": {
+      "research": {
+        "markdown_files": 24,
+        "local_file_link_occurrences": 241,
+        "article_local_link_occurrences": 18,
+        "missing_local_targets": 0
+      },
+      "checkout": {
+        "markdown_files": 25,
+        "local_file_link_occurrences": 264,
+        "article_local_link_occurrences": 18,
+        "missing_local_targets": 0
+      }
+    },
+    "edition_z15": {
+      "edition": "FPHPM-BASELINE-2026-11-13-Z15",
+      "manifest_sha256": "38c20c9e8fe1c84ff2115219208073b88e45728d359f54e2980deabaf0cfb291",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "result": "BASELINE_CHECK_PASS",
+      "verifier_exit": 0,
+      "manifest_payloads": 1196,
+      "paper_index_entries": 41,
+      "assembled_pdfs_with_front_matter_checked": 40,
+      "registry_rows": 400,
+      "legacy_components": 85,
+      "pymupdf": "2.1",
+      "method": "Fresh verifier under bundled Python 3.12.14 with the isolated PyMuPDF package. Only the one relpath used to enumerate manifest names was converted to forward slashes in memory on Windows."
+    }
   }
 }

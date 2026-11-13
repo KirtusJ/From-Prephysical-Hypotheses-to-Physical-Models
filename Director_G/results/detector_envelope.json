@@ -1,0 +1,1077 @@
+{
+  "source": {
+    "article": "Broome et al., Phys. Rev. Lett. 104, 153602 (2010), Fig. 2a",
+    "doi": "https://doi.org/10.1103/PhysRevLett.104.153602",
+    "manuscript": "https://arxiv.org/pdf/1002.4923",
+    "observed": "The six-step-depth mean total variation of detected position histograms from coherent theory is reported as 0.031. The paper normalizes counts separately at each depth. Its figure compares each of depths one to six; the reported mean is a single statistic. No raw event counts enter this checker."
+  },
+  "arrays": [
+    {
+      "t": 1,
+      "positions": [
+        -1,
+        1
+      ],
+      "Born": [
+        "1/2",
+        "1/2"
+      ],
+      "local_fourth": [
+        "1/2",
+        "1/2"
+      ],
+      "TV": "0",
+      "exact_match_efficiency_ratio": "1"
+    },
+    {
+      "t": 2,
+      "positions": [
+        -2,
+        0,
+        2
+      ],
+      "Born": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "local_fourth": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "TV": "0",
+      "exact_match_efficiency_ratio": "1"
+    },
+    {
+      "t": 3,
+      "positions": [
+        -3,
+        -1,
+        1,
+        3
+      ],
+      "Born": [
+        "1/8",
+        "3/8",
+        "3/8",
+        "1/8"
+      ],
+      "local_fourth": [
+        "1/8",
+        "3/8",
+        "3/8",
+        "1/8"
+      ],
+      "TV": "0",
+      "exact_match_efficiency_ratio": "1"
+    },
+    {
+      "t": 4,
+      "positions": [
+        -4,
+        -2,
+        0,
+        2,
+        4
+      ],
+      "Born": [
+        "1/16",
+        "3/8",
+        "1/8",
+        "3/8",
+        "1/16"
+      ],
+      "local_fourth": [
+        "1/16",
+        "11/26",
+        "3/104",
+        "11/26",
+        "1/16"
+      ],
+      "TV": "5/52",
+      "exact_match_efficiency_ratio": "44/9"
+    },
+    {
+      "t": 5,
+      "positions": [
+        -5,
+        -3,
+        -1,
+        1,
+        3,
+        5
+      ],
+      "Born": [
+        "1/32",
+        "11/32",
+        "1/8",
+        "1/8",
+        "11/32",
+        "1/32"
+      ],
+      "local_fourth": [
+        "1/32",
+        "2369/5408",
+        "83/2704",
+        "83/2704",
+        "2369/5408",
+        "1/32"
+      ],
+      "TV": "255/1352",
+      "exact_match_efficiency_ratio": "4738/913"
+    },
+    {
+      "t": 6,
+      "positions": [
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6
+      ],
+      "Born": [
+        "1/64",
+        "9/32",
+        "9/64",
+        "1/8",
+        "9/64",
+        "9/32",
+        "1/64"
+      ],
+      "local_fourth": [
+        "1/64",
+        "355587/849056",
+        "85287/1698112",
+        "83/2704",
+        "85287/1698112",
+        "355587/849056",
+        "1/64"
+      ],
+      "TV": "58395/212264",
+      "exact_match_efficiency_ratio": "237058/39093"
+    }
+  ],
+  "propagation": "Exact complex continuation of the pair-local rule. A pair carries its incoming record total into the two signed Hadamard outputs in proportion to their fourth powers of the complex moduli. Initial input is the reported circular state, the shift is H-left/V-right, and both polarizations are summed at every reported position.",
+  "ideal_equal_depth_mean_TV": "14855/159198",
+  "ideal_quartic_residual_lower_at_rounded_bound": "9840263/159198000",
+  "efficiency_model": "Only terminal positive multiplicative position efficiency varies. Per depth, normalize eta_i*q_i by its sum and bound max(eta)/min(eta) by R. The six independent depth adjustments give the exact lower envelope over all such response families and a lower bound for a common detector with the same maximum contrast.",
+  "theorem": "For any fixed normalization factor a in [1/R,1], a*q_i <= h_i <= R*a*q_i. Its TV from b is at least both the bottom excess sum(a*q_i-b_i)_+ and the top deficit sum(b_i-R*a*q_i)_+. The first increases and the second decreases with a. Their crossing is attained by clipping b_i to the interval and normalizing through choice of a. The rational breakpoints b_i/q_i, b_i/(R*q_i) make the normalization piecewise linear. Empty coordinates of q remain empty; if q_i=b_i=0 the coordinate can be omitted. R=1 fixes h=q.",
+  "bounds": "The average TV obeys the triangle inequality across six normalized histograms of equal weight. If E(R)>2r then every detected profile within r of unadjusted Born lies strictly nearer to Born than to any allowed tilted quartic profile. When E(R)<=2r, a convex midpoint of Born and an ideal fitted quartic witness shows why that ranking no longer follows from the summary alone. If E(R)<=r a tilted quartic profile itself fits in the Born ball. These are necessary information boundaries for this summary; no significance level or repeated-trial distribution is inferred.",
+  "depth_independent_nuisance": {
+    "efficiency_eta_plus2_over_eta_0_for_exact_match_at_steps_2_and_4": [
+      "1",
+      "9/44"
+    ],
+    "exact_all_depth_match_impossible": true,
+    "common_bin_certificate": {
+      "signed_lattice_lower_bound_all_positive_contrasts": "2685795628068056131/51236171999385819072",
+      "physical_path_index_lower_bound_all_positive_contrasts": "1084316012505336979/23010128521197299376",
+      "certificates": [
+        {
+          "convention": "signed_lattice",
+          "position_groups": [
+            0,
+            2
+          ],
+          "depths": [
+            2,
+            4,
+            6
+          ],
+          "lower_bound_sum_over_depths": "424728858813/3371735558752",
+          "value_of_group_bound_at_ratio_one": "2919815/23160592"
+        },
+        {
+          "convention": "signed_lattice",
+          "position_groups": [
+            1,
+            3
+          ],
+          "depths": [
+            3,
+            5
+          ],
+          "lower_bound_sum_over_depths": "1910131/10130524",
+          "value_of_group_bound_at_ratio_one": "255/1352"
+        },
+        {
+          "convention": "physical_path_index",
+          "position_groups": [
+            1,
+            2
+          ],
+          "depths": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lower_bound_sum_over_depths": "1084316012505336979/3835021420199549896",
+          "value_of_group_bound_at_ratio_one": "9543062255/33740211856"
+        }
+      ],
+      "ratio_partition": "0 to 2 by 1/1000; 2 to 16 by 1/100; [16,infinity]",
+      "proof": "For common signed-lattice efficiencies, reflection-symmetric input position probabilities at every depth permit symmetrizing efficiencies. A separate physical-port convention fixes efficiencies at path indices j=(t+x)/2; it uses bins 1 and 2 directly, without symmetrizing. For two retained groups with fixed efficiency ratio r, f=q_l/(q_l+r*q_r) is the corrected conditional left fraction. Scores 1-f, -f and 0 on the left, right and other groups have oscillation one and corrected expectation zero. Thus TV is at least |b_l-(b_l+b_r)*f| regardless of other efficiencies. On each interval use monotonicity to bound each absolute value, sum on the indicated depths, minimize, and divide by six. Signed even and odd contributions can be added because their depths are disjoint. These lower bounds do not optimize every remaining efficiency."
+    },
+    "scope": "Independent per-depth fits need not be jointly realizable by a shared detector. Contradictory pair ratios prohibit an exact common fixed-bin fit across depths even with unbounded positive efficiency. The two-group certificate separately proves a quantitative lower bound on the best possible shared positive-efficiency fit. If the six setups are adjusted independently the independent-depth envelope is exact."
+  },
+  "nominal_and_rounded_boundaries": [
+    {
+      "assumed_Born_mean_radius": "31/1000",
+      "strict_closer_to_Born_boundary": {
+        "R_lower": "1021792417/500000000",
+        "R_upper": "408716967/200000000",
+        "target_mean_TV": "31/500",
+        "distance_at_lower": "927316632643898928935306306805365029/14956719878631268145441049640294842413",
+        "distance_at_upper": "59348264475711184051122228394180079/957230072435125595586086960351834763"
+      },
+      "exact_fit_within_radius_boundary": {
+        "R_lower": "1652533731/500000000",
+        "R_upper": "3305067463/1000000000",
+        "target_mean_TV": "31/1000",
+        "distance_at_lower": "597340024026455109899124386682467903/19269033027839825011071028066351033791",
+        "distance_at_upper": "4778720189698972791780534427113571951/154152264252117339949835885351331159147"
+      }
+    },
+    {
+      "assumed_Born_mean_radius": "63/2000",
+      "strict_closer_to_Born_boundary": {
+        "R_lower": "401396097/200000000",
+        "R_upper": "1003490243/500000000",
+        "target_mean_TV": "63/1000",
+        "distance_at_lower": "8548435302118511266731404911401887/135689449227124554494567764306419339",
+        "distance_at_upper": "934985110961129544473593995717822431/14841033512370091954345520270744970207"
+      },
+      "exact_fit_within_radius_boundary": {
+        "R_lower": "3282595061/1000000000",
+        "R_upper": "1641297531/500000000",
+        "target_mean_TV": "63/2000",
+        "distance_at_lower": "4835011939455361506297506464433218373/153492442437488519954876661575747219881",
+        "distance_at_upper": "604376492119771107357039524054476103/19186555308351581276599997876110009191"
+      }
+    }
+  ],
+  "examples": [
+    {
+      "R": "1",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "best_TV": "5/52",
+          "tilted_position_histogram": [
+            "1/16",
+            "11/26",
+            "3/104",
+            "11/26",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "best_TV": "255/1352",
+          "tilted_position_histogram": [
+            "1/32",
+            "2369/5408",
+            "83/2704",
+            "83/2704",
+            "2369/5408",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "best_TV": "58395/212264",
+          "tilted_position_histogram": [
+            "1/64",
+            "355587/849056",
+            "85287/1698112",
+            "83/2704",
+            "85287/1698112",
+            "355587/849056",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "mean_best_TV": "14855/159198"
+    },
+    {
+      "R": "6/5",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "6/5",
+            "6/5"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "6/5",
+            "6/5",
+            "6/5"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "6/5",
+            "6/5",
+            "6/5",
+            "6/5"
+          ]
+        },
+        {
+          "best_TV": "83/916",
+          "tilted_position_histogram": [
+            "1/16",
+            "385/916",
+            "63/1832",
+            "385/916",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "458/455",
+            "1",
+            "6/5",
+            "1",
+            "458/455"
+          ]
+        },
+        {
+          "best_TV": "4553/25682",
+          "tilted_position_histogram": [
+            "1/32",
+            "177675/410912",
+            "3735/102728",
+            "3735/102728",
+            "177675/410912",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "12841/12675",
+            "1",
+            "6/5",
+            "6/5",
+            "1",
+            "12841/12675"
+          ]
+        },
+        {
+          "best_TV": "5700103/22527808",
+          "tilted_position_histogram": [
+            "1/64",
+            "18371995/45055616",
+            "2643897/45055616",
+            "403961/11263904",
+            "2643897/45055616",
+            "18371995/45055616",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "4223964/4112615",
+            "1",
+            "6/5",
+            "6/5",
+            "6/5",
+            "1",
+            "4223964/4112615"
+          ]
+        }
+      ],
+      "mean_best_TV": "34508374592971/397470146393472"
+    },
+    {
+      "R": "3/2",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "3/2",
+            "3/2"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "3/2",
+            "3/2",
+            "3/2"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "3/2",
+            "3/2",
+            "3/2",
+            "3/2"
+          ]
+        },
+        {
+          "best_TV": "61/740",
+          "tilted_position_histogram": [
+            "1/16",
+            "77/185",
+            "63/1480",
+            "77/185",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "185/182",
+            "1",
+            "3/2",
+            "1",
+            "185/182"
+          ]
+        },
+        {
+          "best_TV": "6737/41888",
+          "tilted_position_histogram": [
+            "1/32",
+            "35535/83776",
+            "3735/83776",
+            "3735/83776",
+            "35535/83776",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "2618/2535",
+            "1",
+            "3/2",
+            "3/2",
+            "1",
+            "2618/2535"
+          ]
+        },
+        {
+          "best_TV": "2079613/9367440",
+          "tilted_position_histogram": [
+            "1/64",
+            "3674399/9367440",
+            "881299/12489920",
+            "403961/9367440",
+            "881299/12489920",
+            "3674399/9367440",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "1756395/1645046",
+            "1",
+            "3/2",
+            "3/2",
+            "3/2",
+            "1",
+            "1756395/1645046"
+          ]
+        }
+      ],
+      "mean_best_TV": "422180139599/5444318658240"
+    },
+    {
+      "R": "2",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "2",
+            "2"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "2",
+            "2",
+            "2"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "2",
+            "2",
+            "2",
+            "2"
+          ]
+        },
+        {
+          "best_TV": "13/188",
+          "tilted_position_histogram": [
+            "1/16",
+            "77/188",
+            "21/376",
+            "77/188",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "94/91",
+            "1",
+            "2",
+            "1",
+            "94/91"
+          ]
+        },
+        {
+          "best_TV": "364/2701",
+          "tilted_position_histogram": [
+            "1/32",
+            "35535/86432",
+            "1245/21608",
+            "1245/21608",
+            "35535/86432",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "2701/2535",
+            "1",
+            "2",
+            "2",
+            "1",
+            "2701/2535"
+          ]
+        },
+        {
+          "best_TV": "2618349/14941952",
+          "tilted_position_histogram": [
+            "1/64",
+            "11023197/29883904",
+            "2643897/29883904",
+            "403961/7470976",
+            "2643897/29883904",
+            "11023197/29883904",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "933872/822523",
+            "1",
+            "2",
+            "2",
+            "2",
+            "1",
+            "933872/822523"
+          ]
+        }
+      ],
+      "mean_best_TV": "239727551821/3793671961088"
+    },
+    {
+      "R": "3",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "3",
+            "3"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "3",
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "best_TV": "17/388",
+          "tilted_position_histogram": [
+            "1/16",
+            "77/194",
+            "63/776",
+            "77/194",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "97/91",
+            "1",
+            "3",
+            "1",
+            "97/91"
+          ]
+        },
+        {
+          "best_TV": "1999/22936",
+          "tilted_position_histogram": [
+            "1/32",
+            "35535/91744",
+            "3735/45872",
+            "3735/45872",
+            "35535/91744",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "2867/2535",
+            "1",
+            "3",
+            "3",
+            "1",
+            "2867/2535"
+          ]
+        },
+        {
+          "best_TV": "33671/348407",
+          "tilted_position_histogram": [
+            "1/64",
+            "3674399/11149024",
+            "2643897/22298048",
+            "403961/5574512",
+            "2643897/22298048",
+            "3674399/11149024",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "1045221/822523",
+            "1",
+            "3",
+            "3",
+            "3",
+            "1",
+            "1045221/822523"
+          ]
+        }
+      ],
+      "mean_best_TV": "176430151499/4650798638064"
+    },
+    {
+      "R": "4",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "4",
+            "4"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "4",
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "best_TV": "1/50",
+          "tilted_position_histogram": [
+            "1/16",
+            "77/200",
+            "21/200",
+            "77/200",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "100/91",
+            "1",
+            "4",
+            "1",
+            "100/91"
+          ]
+        },
+        {
+          "best_TV": "181/4044",
+          "tilted_position_histogram": [
+            "1/32",
+            "11845/32352",
+            "415/4044",
+            "415/4044",
+            "11845/32352",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "1011/845",
+            "1",
+            "4",
+            "4",
+            "1",
+            "1011/845"
+          ]
+        },
+        {
+          "best_TV": "121029/3261688",
+          "tilted_position_histogram": [
+            "1/64",
+            "3911457/13046752",
+            "9/64",
+            "143341/1630844",
+            "9/64",
+            "3911457/13046752",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "407711/291863",
+            "1",
+            "1223133/312719",
+            "4",
+            "1223133/312719",
+            "1",
+            "407711/291863"
+          ]
+        }
+      ],
+      "mean_best_TV": "8397575809/494634985200"
+    },
+    {
+      "R": "6",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "6",
+            "6"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "6",
+            "6",
+            "6"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "6",
+            "6",
+            "6",
+            "6"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/16",
+            "3/8",
+            "1/8",
+            "3/8",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "18/13",
+            "27/22",
+            "6",
+            "27/22",
+            "18/13"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/32",
+            "11/32",
+            "1/8",
+            "1/8",
+            "11/32",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "249/169",
+            "2739/2369",
+            "6",
+            "6",
+            "2739/2369",
+            "249/169"
+          ]
+        },
+        {
+          "best_TV": "625/578364",
+          "tilted_position_histogram": [
+            "1/64",
+            "1303819/4626912",
+            "9/64",
+            "143341/1156728",
+            "9/64",
+            "1303819/4626912",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "433773/291863",
+            "1",
+            "1301319/312719",
+            "6",
+            "1301319/312719",
+            "1",
+            "433773/291863"
+          ]
+        }
+      ],
+      "mean_best_TV": "625/3470184"
+    },
+    {
+      "R": "7",
+      "depths": [
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/2",
+            "1/2"
+          ],
+          "relative_efficiencies": [
+            "7",
+            "7"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/4",
+            "1/2",
+            "1/4"
+          ],
+          "relative_efficiencies": [
+            "7",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "relative_efficiencies": [
+            "7",
+            "7",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/16",
+            "3/8",
+            "1/8",
+            "3/8",
+            "1/16"
+          ],
+          "relative_efficiencies": [
+            "21/13",
+            "63/44",
+            "7",
+            "63/44",
+            "21/13"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/32",
+            "11/32",
+            "1/8",
+            "1/8",
+            "11/32",
+            "1/32"
+          ],
+          "relative_efficiencies": [
+            "581/338",
+            "6391/4738",
+            "7",
+            "7",
+            "6391/4738",
+            "581/338"
+          ]
+        },
+        {
+          "best_TV": "0",
+          "tilted_position_histogram": [
+            "1/64",
+            "9/32",
+            "9/64",
+            "1/8",
+            "9/64",
+            "9/32",
+            "1/64"
+          ],
+          "relative_efficiencies": [
+            "581/338",
+            "273651/237058",
+            "273651/56858",
+            "7",
+            "273651/56858",
+            "273651/237058",
+            "581/338"
+          ]
+        }
+      ],
+      "mean_best_TV": "0"
+    }
+  ],
+  "loss_and_sampling_scope": "For positive entries, exact single-histogram compensation needs ratio max_i(b_i/q_i)/min_i(b_i/q_i). With finite strictly positive response, exact supports must match. A positive measured bin where the model is structurally zero cannot be generated by pure diagonal efficiencies; a zero counted bin can also be a finite-sample zero or a censored bin. Unknown fully lost bins require a separate outcome or conditioning on a declared observed set. Without a total-rate measurement the absolute efficiency scale is unidentifiable. Intermediate polarization-dependent losses can change the coherent amplitudes and the conditional physical walk, and background counts mix in a separate distribution. The table does not model either of those mechanisms."
+}
