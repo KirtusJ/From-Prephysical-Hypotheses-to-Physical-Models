@@ -102,3 +102,13 @@ Principal: sub-agents and workers may open pull requests on all repositories and
 Principal: propagate among the stack more and see if it works; not only negative arcs but positive ones; include wildcard parrots and chaos parrots. Adopted as three agent definitions (`pcp-builder`, `pcp-wildcard`, `pcp-chaos`) and rule 7 of the stack in `CLAUDE.md`.
 
 First use, on Director G's candidate G1 and pull request 22: six narrow agents in parallel (theorem, premises, citations, mechanics, Lean and fixed rings, the parity note) in place of one reading by the director, then one builder, one wildcard and one chaos agent. What to record when they report: how many findings were new to the director, how many reports needed correction on recheck, wall time against a single reading, and for the chaos agent the count caught / survived.
+
+### Result of the first wide fan-out (13 November 2026, about 23:00 UTC)
+
+It did not work as launched. Eleven sub-agents started within a few minutes, with the queue session woken at the same time, used up the account's five-hour model allowance in about six minutes of wall time; all eleven stopped with rate-limit errors (reset 01:30 UTC) and none delivered a report. What was saved: the agents that had been told to append to `FINDINGS.md` as they went left usable partial work (citations: 11 of 11 links assessed; theorem: hypothesis list; mechanics: 4 of 8 items; pull request 22: rerun, own program and a patch); the agents that had not yet written anything left programs without findings.
+
+What changes:
+- Width is limited by the allowance, not by the tool. At most three sub-agents at once, and the queue session is not woken in the same window.
+- The rule "append to FINDINGS.md after each item" is what made the stop survivable; it stays in every prompt, and the first item of every prompt is now the cheapest one that yields a usable result.
+- Long prompts with eight items cost more than they return when the agent is cut off; prefer one or two items per agent.
+- Stopped agents are resumed by message with their saved context, not relaunched.
