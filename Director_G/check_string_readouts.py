@@ -106,6 +106,38 @@ def xy_changes(weights):
     return [(x, -y) for x, y in weights]
 
 
+def exact_routing():
+    """Compare the path-matching invariant with the physical source and output labels."""
+    other = (4, 3)
+    for pair in PAIRS:
+        for j in range(N - 1):
+            transpose = {j: j + 1, j + 1: j}
+            swapped = tuple(sorted(transpose.get(x, x) for x in pair))
+            for gate, expected in [(R, (pair, swapped)), (other, (swapped, pair))]:
+                amplitudes = execute(pair, rotation(j, gate))
+                actual = tuple(PAIRS[colour(amplitudes, p)] for p in (2, 3))
+                assert actual == expected
+            two_tilts = execute(pair, rotation(j, R) + rotation(j, other))
+            assert two_tilts == execute(pair, rotation(j, SWAP))
+        phased = execute(pair, [("field", -1, W[0], W[1])])
+        assert all(PAIRS[colour(phased, p)] == pair for p in (2, 3))
+
+    counts = []
+    for n in range(3, 13):
+        # The occupancies of all adjacent-bond components, plus the isolated
+        # endpoint in the other matching, already identify each pair.
+        labels = list(combinations(range(n), 2))
+        signatures = set()
+        for pair in labels:
+            occupations = [int(j in pair) + int(j + 1 in pair) for j in range(n - 1)]
+            signatures.add((int(0 in pair), *occupations))
+        assert len(signatures) == len(labels)
+        counts.append([n, len(signatures)])
+    return dict(path_sites_and_distinct_pair_signatures=counts,
+                four_site_source_bond_checks=len(PAIRS)*(N-1),
+                both_positive_tilts_equal_signed_quarter_turn=True)
+
+
 def context_test():
     source = (0, 1)
     base = rotation(1, R) + distance_kick(IDENTITY, 1)
@@ -225,7 +257,7 @@ def main():
                 probabilities="Exact rational strings. The mixture uses mass 9/25 on the 1+i color and 16/25 on the 3 color. "
                               "No shots or sampling. Fractions for the two read times are joint, including all zero bins.",
                 same_port_contexts=context_test(), residue_controls=single_and_joint(),
-                dressed_selective_rotation=selective_word())
+                dressed_selective_rotation=selective_word(), exact_routing=exact_routing())
 
 
 if __name__ == "__main__":
