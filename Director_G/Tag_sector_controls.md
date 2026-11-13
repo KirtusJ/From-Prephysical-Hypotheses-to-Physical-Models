@@ -81,4 +81,38 @@ For a finite example take all panels of \(O\) through tick eight. Its contributi
 
 The two analytic rules agree with every autonomous cell up to and including tick eight. Calibrated relative efficiencies at the two named detectors would allow their odds to be tested on fresh terminal reads. Physical implementation and sampling uncertainty remain open.
 
-The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, compares both initial labels, and tests the spacetime relabeling. It verifies the tick-eight and tick-nine differences separately. The stored 464 cells across five settings and 24 four-tick panels also give the larger-norm probabilities by checked equality to the autonomous column. [Standard-library checker](check_tag_sector_controls.py) · [Exact four-tick panels](results/tag_sector_controls.json)
+## Reversing the sign of the other tag
+
+Repeat setting \(O\) with a matched identity plate (\(+\)) and a plate that reverses the entire signed field of tag zero (\(-\)) immediately after the tick-one XOR. Both plates preserve the marker, its bit and all ports. Use the same subsequent ticks and a common local routing law in both settings. At native tick \(n+2\), site \(n\), the tag-one pair is \((n,1)\) and the other pair is \((\pm1,0)\), by the edge count above. For each setting separately let \(q_n^\pm=R_\pm/(R_\pm+L_\pm)\), where \(R_\pm,L_\pm\) are the joint masses of its two tag-one daughters at the next native tick. The pure right frontier supplies a positive parent in each setting. These ratios require faithful reads or independently calibrated relative efficiencies. The sign and identity settings must also match in elapsed time and other apparatus effects.
+
+Write \(g(y,z)=K((1,y),(z,0))\) for the common aggregate **right** fraction. Homogeneity gives \(q_n^\pm=g(1/n,\pm1/n)\). Pure calibration gives \(g(y,0)=1/2+y/(1+y^2)\), hence \(g(0,0)=1/2\) and \(\partial_y g(0,0)=1\). If \(g\) is jointly differentiable at the origin, let \(\gamma=\partial_z g(0,0)\). The first-order expansion on the two rays gives \(q_n^\pm=1/2+(1\pm\gamma)/n+o(1/n)\). Therefore
+
+\[
+n\left(\frac{q_n^++q_n^-}{2}-\frac12\right)\longrightarrow1,
+\qquad \frac n2(q_n^+-q_n^-)\longrightarrow\gamma .
+\]
+
+The mean recovers the pure slope. The contrast measures sensitivity to the other tag's sign. If each sector's sign is a freely changeable convention for the entire apparatus, \(g(y,z)=g(y,-z)\), the contrast is identically zero and either setting suffices. Testing a sign-sensitive rule requires a physical relative-sign reference.
+
+There is also a finite bound for \(n\ge1\). Put \(d=1/n\) and suppose that \(|\partial_z^2g(d,z)|\le M\) throughout \(-d\le z\le d\). Taylor's formula about \(z=0\) cancels the two first-order terms in the mean, giving
+
+\[
+\left|\frac{q_n^++q_n^-}{2}-\left(\frac12+\frac{n}{n^2+1}\right)\right|
+\le \frac{M}{2n^2}.
+\]
+
+The constant concerns this specific coordinate and segment. Establishing it separately is an experimental or model obligation. Equivalently, the measured discrepancy gives a *lower* bound on the supremum of the absolute curvature over the segment. If both fractions have simultaneous absolute error bounds \(e_+,e_-\), their mean has error at most \((e_++e_-)/2\). At \(n=6\) the pure value is \(49/74\). The two analytic rules above are even in the spectator sign and give \(43/74\) and \(40/74\). They therefore require curvature at least \(216/37\) and \(324/37\), respectively. An independently justified cap of 6 in these coordinates excludes the second prediction. The first clears this necessary test only. No physical cap is supplied.
+
+**Why the two settings must be normalized separately.** For selected rails \((u,v)\) and spectator rails \((a,b)\), one possible analytic response sends the marker right with fraction
+
+\[
+K=\frac12+\frac{u(v-a)}{u^2+(v-a)^2+a^2+b^2}.
+\]
+
+The denominator is positive off the vacuum, and \(2|u(v-a)|\le u^2+(v-a)^2\). The rule is homogeneous, agrees with the occupied pure calibration and uses the same expression for either selected bit. It allows sensitivity to relative sign. It gives \(q_n^+=1/2\) and \(q_n^-=1/2+2n/(n^2+5)\). At \(n=2\) the parent masses are \(3/16\) and \(13/48\). The equal mean of the two right fractions is \(13/18\). Pooling the daughter counts over equal numbers of launches instead gives \(151/198\).
+
+This bias persists at large depth. Let \(m_n^\pm\) be the tag-one parent mass and \(X_n^\pm=2^{n+2}m_n^\pm\). It receives the right daughter of the preceding inner-edge parent and a left daughter from the pure right frontier. Thus \(X_0^\pm=1\) and \(X_{n+1}^\pm=2q_n^\pm X_n^\pm+1\). Here \(X_n^+=n+1\), while \(2q_n^-\ge1+2/n\) for \(n\ge3\), giving \(X_n^-\ge X_3^- n(n+1)/12\). The minus setting consequently dominates the pooled ratio. Its scaled excess tends to 2 while the equal-setting mean has scaled excess 1.
+
+Joint differentiability matters even if independent sector signs are unobservable. For \(S=u^2+v^2+a^2+b^2>0\), take \(K=1/2+\operatorname{clip}((uv-|ua|)/S,-1/2,1/2)\), with ordinary clipping to the indicated interval. This rule is Lipschitz on the normalized field sphere and agrees with every occupied pure-tag response. Its two edge fractions are exactly \(1/2\) at every depth. The absolute value introduces a cusp at the pure right input. All sign-control results here are predictions from the stated instruments and laws.
+
+The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, and checks the labels in a varying spacetime frame. It verifies the tick-eight and tick-nine differences, the sign and matched-identity panels, and the weighting example. The stored 464 cells across five settings and 24 four-tick panels also give the larger-norm probabilities by checked equality to the autonomous column. [Standard-library checker](check_tag_sector_controls.py) · [Exact four-tick panels](results/tag_sector_controls.json)
