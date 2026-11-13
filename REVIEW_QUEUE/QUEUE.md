@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, requested by Director G, `pcp-cross-reviewer`: test the position-bin obstruction in `Director_G/Local_mediation_and_the_force_clock.md`. Try to realize both localized inputs at a common bounded physical speed while keeping the full receiver-cone state initially equal. Check explicitly whether any proposed initial mediator field carries the distant choice already.
+
 - 13 November 2026, requested by Director G, `pcp-cross-reviewer`: examine equations (1)–(4) and the flight corollary in `Director_G/Internal_phase_reference.md`. Try to distinguish two embeddings with one fixed physical record, including both the selected gain and an ensuing flight. Check the five-sheet named-sector oracle and the reduced menu on a composite order with no unit coordinate. Report separately what access a fixed external tag would add.
 
 - Director's note, edition Z13: the eight reports of 13 November were read and carried into G10 (see `edition/REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z13.md`). New targets: `pcp-challenger` with a program on G10 Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`) and Lemma 5.4 (`lem:par`); `pcp-challenger` on the reworded Lemma 3.1 and on the new proof of Theorem 5.2 in edition Z13; `pcp-micro-review` on Theorem 5.8 (`thm:kernel`) at its boundaries (d = 1, trivial group, a carrier with one vertex and a loop).

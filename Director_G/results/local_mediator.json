@@ -1,0 +1,1925 @@
+{
+  "checks": {
+    "exact_basis_gain_and_reset": true,
+    "full_walk_on_every_basis_input": true,
+    "signed_counts_all_macrosteps": true,
+    "count_profile_arithmetic": true,
+    "complete_register_permutation": true,
+    "orientation_witness": true,
+    "short_route_leaves_token": true,
+    "stalled_counter_changes_gain": true,
+    "busy_workspace_changes_target": true,
+    "forced_erase_noninjective": true,
+    "lightcone_control": true
+  },
+  "finite_rings": [
+    {
+      "N": 3,
+      "M": 5,
+      "cases": [
+        {
+          "profile": "oriented_polynomial",
+          "gains": [
+            -1,
+            4,
+            13
+          ],
+          "basis_site_sheet_inputs": 45,
+          "basis_failures": [],
+          "full_walk_basis_columns": 180,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "b9615c76b396788eb58dfe75c020d8d0772f9413e87e8b57ea1cb8404d0eb105",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "771485a14ce235b070e3869d12d5f9facea2ae03c7747bd7de069d24bc2e3493",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 52,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "3d063a473477bcea0352654b6674b348c1fe0a7082845681e4555c6b9bc723bf",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 2480,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 146,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "dbc85bb3dcf2fd3a9ae24b5cbedf13904060a9fe9d00050abf09920eb53fbada",
+                  "squared_count": 9920,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 175,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "5aca4bc968b66ea5bee11de7aa39518518555685ff76731f83970eeba8f9f821",
+                  "squared_count": 39680,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 180,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c02c3189fe695404e684cb0624b08e9a5e4e5d26dd7677b70caea7a8d303c714",
+                  "squared_count": 158720,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "zero",
+          "gains": [
+            0,
+            0,
+            0
+          ],
+          "basis_site_sheet_inputs": 45,
+          "basis_failures": [],
+          "full_walk_basis_columns": 180,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "323eb953877d14977df18ee31b6bd17bb3083d110e650cbc3d550baf9ebcaad2",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "aeef5d6c269907b9abeb793c27a6e013f5c2ad19d81764972c6d2be7f1aa945e",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 25,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "3081263941658b690aedba3627ec483f6b73168b6fb4ba9c1b7a5dd27f3320c2",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 2480,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 146,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "3d829ff145edf37e5397112d4ebfb6a781e6e5571d8b2bd13c9cf9468ece329e",
+                  "squared_count": 9920,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 175,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "626b709f49db563c706953e1ac72ffb51440d8bb1a9eeb1226fb4b45573288ea",
+                  "squared_count": 39680,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 171,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "dbecf27e967750b176554e353c8bb77980012265564b3cded5f075fca6bfcddb",
+                  "squared_count": 158720,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "count_construction": null
+    },
+    {
+      "N": 4,
+      "M": 7,
+      "cases": [
+        {
+          "profile": "oriented_polynomial",
+          "gains": [
+            -1,
+            4,
+            13,
+            26
+          ],
+          "basis_site_sheet_inputs": 112,
+          "basis_failures": [],
+          "full_walk_basis_columns": 448,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "a77b7f407891ca9ee968069aa25a9439d28b81c6492c8baa4a1fa177e6dde952",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "27f6c24f1b18a93b82f1429eed49d2225b6d0d41ff960a84f35d15b1e9839440",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "b79c5ad00184b9017855c3031a3ed5910ac8e8e6c61d10a7411c059836d24968",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 6252,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 361,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c00b7b82a2ae731ab3de95b65191ea94387d443b0c8a3165d9cd4a020f2f63f6",
+                  "squared_count": 25008,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 440,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c72e73a1382e7bd321a8acd04a59f5bc1922773022b750096cbb7a7f90b3909a",
+                  "squared_count": 100032,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 397,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "cbfc26ee32fe8dcfcf1f941faacb78298b84fe28aa38e4203cdae822aa329244",
+                  "squared_count": 400128,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "zero",
+          "gains": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "basis_site_sheet_inputs": 112,
+          "basis_failures": [],
+          "full_walk_basis_columns": 448,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "92c5fe676de0710cc3b0b42e19060ccc7404655e166b0a81e16413779d3b9d5c",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "483654cdffb6e2010116af3dc27878d576b6db69675d58c629a58570a261a251",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "5a93771e96e9cb9d76349a057ef684f9eafeed305354c4e0a3b2067da9c424a8",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 6252,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 361,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "faf003f758521a0eee31a5a9abf5b20cc64172cbf51a613e90958cd6735d75a0",
+                  "squared_count": 25008,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 440,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "4108b7d009285bcaf3ed88c01f1a4facd405ddfc06d6089ba520ed25ea1374d2",
+                  "squared_count": 100032,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 370,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "15ee0e6b84ddf26e6a5adc9e74d4374577a9bc86fdabe38bd625680c8f495579",
+                  "squared_count": 400128,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "symmetric_cycle_counts",
+          "gains": [
+            0,
+            7,
+            14,
+            7
+          ],
+          "basis_site_sheet_inputs": 112,
+          "basis_failures": [],
+          "full_walk_basis_columns": 448,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "92c5fe676de0710cc3b0b42e19060ccc7404655e166b0a81e16413779d3b9d5c",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "483654cdffb6e2010116af3dc27878d576b6db69675d58c629a58570a261a251",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "5a93771e96e9cb9d76349a057ef684f9eafeed305354c4e0a3b2067da9c424a8",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 6252,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 361,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "faf003f758521a0eee31a5a9abf5b20cc64172cbf51a613e90958cd6735d75a0",
+                  "squared_count": 25008,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 440,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "4108b7d009285bcaf3ed88c01f1a4facd405ddfc06d6089ba520ed25ea1374d2",
+                  "squared_count": 100032,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 370,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "15ee0e6b84ddf26e6a5adc9e74d4374577a9bc86fdabe38bd625680c8f495579",
+                  "squared_count": 400128,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "count_construction": {
+        "depth": 16,
+        "scale": 7,
+        "counts": [
+          1073774592,
+          1073741824,
+          1073709056,
+          1073741824
+        ],
+        "normalization": 65536,
+        "binomial_recurrence_exact": true,
+        "sum_equals_four_to_depth": true
+      }
+    },
+    {
+      "N": 5,
+      "M": 11,
+      "cases": [
+        {
+          "profile": "oriented_polynomial",
+          "gains": [
+            -1,
+            4,
+            13,
+            26,
+            43
+          ],
+          "basis_site_sheet_inputs": 275,
+          "basis_failures": [],
+          "full_walk_basis_columns": 1100,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "b610006bafa745c5d924c63d137ded31928c624c52fd4f320572887539d14297",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "567f92359c0b6cf31b0251046f13bed0352858a17696c2923f38d406f96d034e",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 44,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "e97c0f277c2b592098375e9639036306dc369fad0619e9158894b190889f93fd",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 15398,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 888,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "f4cdbf01e600a50ba55163b420421aedf704fb7d9ae5b1750ab1f5d66943da04",
+                  "squared_count": 61592,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 1080,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "be8bf9b8e4a8bd7214c6015286da18ecd1732ebcba190451b075be0950c73eba",
+                  "squared_count": 246368,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 1090,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "dd5d6787d296d2df4cc190da417c218158fd3d9fcd012cb5a50ccb3a6788b7eb",
+                  "squared_count": 985472,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "zero",
+          "gains": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "basis_site_sheet_inputs": 275,
+          "basis_failures": [],
+          "full_walk_basis_columns": 1100,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "acc339d1abf3288bb4545b3acdc30a5d2e0d27304f19392a8d171aa37645faf8",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "691238e38a93066e95883262d2e7c8cc87e813d93ca369aacc4a52af32347c1c",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 25,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "103f6734756b2fa65fdb2696df64c0361fb71bb3b8c13b17916af7d7174449f3",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 15398,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 888,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "ff810f08d50005278310ca7fea08abf943df0b8f366132c78388d18f83c1e8f8",
+                  "squared_count": 61592,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 1072,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "a1b47f203d1ac6b40d30129111e3763462295252bdbfa9c03d247b8b018d3005",
+                  "squared_count": 246368,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 1030,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "fa3433cff067e7269ff2b5f32c84e47f3768867fc0b8efc137b438217e8408b4",
+                  "squared_count": 985472,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "count_construction": null
+    },
+    {
+      "N": 6,
+      "M": 7,
+      "cases": [
+        {
+          "profile": "oriented_polynomial",
+          "gains": [
+            -1,
+            4,
+            13,
+            26,
+            43,
+            64
+          ],
+          "basis_site_sheet_inputs": 252,
+          "basis_failures": [],
+          "full_walk_basis_columns": 1008,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "60a657829c5bde39971f88d76a7000a500d4d96104f8c3deb5d397156599c126",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "662e934c26fe20c4ae502d714dcca989897b273f9b7560ec9553f5d16e8cde69",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 58,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c039ec8c739db5bf53f7dc6220fb1fdc55bfeae238097c1b431e0f7780d66be8",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 14120,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 814,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "94bf64677ccd8bec5e82f633d0575ab58316592ff145e3db4ffa1a1cfc498e0d",
+                  "squared_count": 56480,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 979,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c614d479ff62931f54c8556b72441a46cef53484c8c08c0e480fac879fdd6132",
+                  "squared_count": 225920,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 990,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "c303f9073d07512b0d848594eb755bce6079c2bb8c7d778bc17783cbab93eb64",
+                  "squared_count": 903680,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "zero",
+          "gains": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "basis_site_sheet_inputs": 252,
+          "basis_failures": [],
+          "full_walk_basis_columns": 1008,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "b2d62a2677932834a1746617a96918a031122d7b5c2987f333e79b120f005994",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "cb3ba13b4aee734ba11048cbeadf5fd95570bd7158e5aaad69cdba0d75cc3018",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 25,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "436d9a8c7aef420aaec097bcc577ffb9864ab28e5596da466cb0f87b2cc13190",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 14120,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 814,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "12016f1e753e1541f602eea50f5684b0dcdf9f1a205ae02bf187c5bd4077da48",
+                  "squared_count": 56480,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 983,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "1790b3abc5556b92c9ea6d2e6a44be8ddeea05767fd0baa30d4a86e803465cf3",
+                  "squared_count": 225920,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 967,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "88df02ce41cb1364442950adfd0485eadbf45b89f6daf27af795cbfd24ba460d",
+                  "squared_count": 903680,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "profile": "symmetric_cycle_counts",
+          "gains": [
+            0,
+            4,
+            11,
+            14,
+            11,
+            4
+          ],
+          "basis_site_sheet_inputs": 252,
+          "basis_failures": [],
+          "full_walk_basis_columns": 1008,
+          "full_walk_basis_failures": [],
+          "walk_tests": [
+            {
+              "input": "one localized site pair and sheet",
+              "initial_squared_count": 1,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 4,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "b2d62a2677932834a1746617a96918a031122d7b5c2987f333e79b120f005994",
+                  "squared_count": 4,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 16,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "621ee9ab7c56a4b30acf71836c8b53cc7ae1a686eb84cdf48b7ea7cbc18d572e",
+                  "squared_count": 16,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 52,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "f16fda176ad1dd12f97eb5ecf445fab6644e098e3cb11380e8fc5b028f1c48d5",
+                  "squared_count": 64,
+                  "norm_exact": true
+                }
+              ]
+            },
+            {
+              "input": "dense signed integer counts",
+              "initial_squared_count": 14120,
+              "trials": [
+                {
+                  "macrostep": 1,
+                  "occupied_joint_outputs": 814,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "df97cfb06b341407dee014b1362f5fd14f55f82dd1375fc51437c13c455d9346",
+                  "squared_count": 56480,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 2,
+                  "occupied_joint_outputs": 987,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "be946ab0cc649ed495fae428efffff6b386f82968e725c61e0132a4c3d99bb23",
+                  "squared_count": 225920,
+                  "norm_exact": true
+                },
+                {
+                  "macrostep": 3,
+                  "occupied_joint_outputs": 993,
+                  "maximum_signed_count_error": 0,
+                  "nonvacuum_squared_count": 0,
+                  "signed_coordinate_sha256": "65a7dba57acad331d4f4690569d33723ee707055b214ed34e0edcb384fd20bbd",
+                  "squared_count": 903680,
+                  "norm_exact": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "count_construction": {
+        "depth": 36,
+        "scale": 7,
+        "counts": [
+          787111112023373201990,
+          787086096250823702136,
+          787036064705724702429,
+          787011048933175202576,
+          787036064705724702429,
+          787086096250823702136
+        ],
+        "normalization": 100063090197999414,
+        "binomial_recurrence_exact": true,
+        "sum_equals_four_to_depth": true
+      }
+    }
+  ],
+  "full_register_test": {
+    "N": 3,
+    "M": 5,
+    "register_states_per_position_pair": 64,
+    "round_columns": 2880,
+    "circuit_columns": 2880,
+    "emitter_involution": true,
+    "round_inverse": true,
+    "circuit_injective": true
+  },
+  "adverse_controls": {
+    "wrong_schedules": [
+      {
+        "case": "wrong_orientation",
+        "trials": 25,
+        "wrong_sheet": 20,
+        "nonvacuum": 0,
+        "first_mismatch": {
+          "A": 0,
+          "B": 1,
+          "actual_sheet": 4,
+          "expected_sheet": 10,
+          "ancilla": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      },
+      {
+        "case": "wrong_orientation_symmetric_table",
+        "trials": 25,
+        "wrong_sheet": 0,
+        "nonvacuum": 0,
+        "first_mismatch": null
+      },
+      {
+        "case": "omitted_final_round",
+        "trials": 25,
+        "wrong_sheet": 5,
+        "nonvacuum": 25,
+        "first_mismatch": {
+          "A": 0,
+          "B": 0,
+          "actual_sheet": 10,
+          "expected_sheet": 10,
+          "ancilla": [
+            0,
+            -1,
+            -1,
+            -1,
+            4
+          ]
+        }
+      },
+      {
+        "case": "counter_stuck_at_zero",
+        "trials": 25,
+        "wrong_sheet": 15,
+        "nonvacuum": 0,
+        "first_mismatch": {
+          "A": 0,
+          "B": 2,
+          "actual_sheet": 10,
+          "expected_sheet": 4,
+          "ancilla": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      }
+    ],
+    "busy_inputs": [
+      {
+        "case": "zero_token_at_emitter",
+        "register": [
+          0,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "wrong_sheet": 5,
+        "cases": [
+          {
+            "A": 0,
+            "sheet": 0,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          },
+          {
+            "A": 1,
+            "sheet": 0,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 2,
+            "sheet": 0,
+            "expected_clean_gain": 2,
+            "ancilla_restored": true
+          },
+          {
+            "A": 3,
+            "sheet": 0,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 4,
+            "sheet": 0,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          }
+        ]
+      },
+      {
+        "case": "nonzero_token_at_emitter",
+        "register": [
+          2,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "wrong_sheet": 4,
+        "cases": [
+          {
+            "A": 0,
+            "sheet": 2,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          },
+          {
+            "A": 1,
+            "sheet": 4,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 2,
+            "sheet": 10,
+            "expected_clean_gain": 2,
+            "ancilla_restored": true
+          },
+          {
+            "A": 3,
+            "sheet": 10,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 4,
+            "sheet": 4,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          }
+        ]
+      },
+      {
+        "case": "one_token_away_from_emitter",
+        "register": [
+          -1,
+          3,
+          -1,
+          -1,
+          -1
+        ],
+        "wrong_sheet": 5,
+        "cases": [
+          {
+            "A": 0,
+            "sheet": 1,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          },
+          {
+            "A": 1,
+            "sheet": 8,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 2,
+            "sheet": 1,
+            "expected_clean_gain": 2,
+            "ancilla_restored": true
+          },
+          {
+            "A": 3,
+            "sheet": 3,
+            "expected_clean_gain": 4,
+            "ancilla_restored": true
+          },
+          {
+            "A": 4,
+            "sheet": 3,
+            "expected_clean_gain": 10,
+            "ancilla_restored": true
+          }
+        ]
+      }
+    ],
+    "forced_erase_counterexample": {
+      "distinct_tags": [
+        0,
+        1
+      ],
+      "same_output": true
+    }
+  },
+  "causal_witness": {
+    "N": 8,
+    "M": 11,
+    "tests": [
+      {
+        "B": 0,
+        "A": 4,
+        "rounds": [
+          {
+            "t": 0,
+            "token_site": 0,
+            "counter": 0,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 1,
+            "token_site": 1,
+            "counter": 1,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 2,
+            "token_site": 2,
+            "counter": 2,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 3,
+            "token_site": 3,
+            "counter": 3,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 4,
+            "token_site": 4,
+            "counter": 4,
+            "y_before_collision": 0,
+            "y_after_collision": 5
+          },
+          {
+            "t": 5,
+            "token_site": 5,
+            "counter": 5,
+            "y_before_collision": 5,
+            "y_after_collision": 5
+          },
+          {
+            "t": 6,
+            "token_site": 6,
+            "counter": 6,
+            "y_before_collision": 5,
+            "y_after_collision": 5
+          },
+          {
+            "t": 7,
+            "token_site": 7,
+            "counter": 7,
+            "y_before_collision": 5,
+            "y_after_collision": 5
+          }
+        ]
+      },
+      {
+        "B": 7,
+        "A": 4,
+        "rounds": [
+          {
+            "t": 0,
+            "token_site": 7,
+            "counter": 0,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 1,
+            "token_site": 0,
+            "counter": 1,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 2,
+            "token_site": 1,
+            "counter": 2,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 3,
+            "token_site": 2,
+            "counter": 3,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 4,
+            "token_site": 3,
+            "counter": 4,
+            "y_before_collision": 0,
+            "y_after_collision": 0
+          },
+          {
+            "t": 5,
+            "token_site": 4,
+            "counter": 5,
+            "y_before_collision": 0,
+            "y_after_collision": 6
+          },
+          {
+            "t": 6,
+            "token_site": 5,
+            "counter": 6,
+            "y_before_collision": 6,
+            "y_after_collision": 6
+          },
+          {
+            "t": 7,
+            "token_site": 6,
+            "counter": 7,
+            "y_before_collision": 6,
+            "y_after_collision": 6
+          }
+        ]
+      }
+    ],
+    "first_local_sheet_difference_round": 4,
+    "distance_to_input_difference": 3,
+    "direct_oracle_sheet_outputs_at_t0": [
+      5,
+      6
+    ],
+    "nearest_neighbour_streaming": true,
+    "no_precone_signal": true
+  },
+  "conventions": "Blanks carry -1; token counters are 0..N-1. A carries the cyclic sheet and B controls the local blank/zero-token swap. The two walkers stay at their recorded or coherently superposed sites during the circuit. Moving A then carries its sheet with it.",
+  "scope": "Integer coherent signed counts and a reversible physical-site token register; no observation of courier position or stored counter. One nearest-neighbour move per round, plus local emission and absorption. A programmable cyclic counter, message alphabet, idle controls and gain table per ring are supplied. This checks macro-operation equivalence without identifying physical durations or supplying a uniform gate alphabet.",
+  "moving_packets": {
+    "checks": {
+      "attraction_separates": true,
+      "null_and_opposite_controls": true,
+      "time_reversal_preserves_position_separation": true,
+      "sampled_enclosures_and_probabilities": true,
+      "refinements_agree": true,
+      "sender_support_outside_read_cone": true
+    },
+    "trials": [
+      {
+        "case": "attractive",
+        "elapsed": 0.25,
+        "speed_one_radius": 0.25,
+        "gap_beyond_backward_cone": 0.7885697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.031245931793818633,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.030025228668818647,
+              0.032466634918818627
+            ],
+            "A_analytic_enclosure": [
+              0.029314399800748573,
+              0.032860079365918095
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 2.4260383146845754e-09
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 3.827021247335481e-18,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0012874948084656004,
+              0.0012874948084656073
+            ],
+            "A_analytic_enclosure": [
+              -0.001610079365918094,
+              0.001610079365918094
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 8.433787002104509e-11
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "attractive",
+        "elapsed": 0.5,
+        "speed_one_radius": 0.5,
+        "gap_beyond_backward_cone": 0.5385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.12474039468762636,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.12327555093762639,
+              0.12620523843762638
+            ],
+            "A_analytic_enclosure": [
+              0.11713709456856214,
+              0.12765457209810455
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 7.44277602882093e-08
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 1.5308084989341924e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0017610471581000744,
+              0.0017610471581001104
+            ],
+            "A_analytic_enclosure": [
+              -0.0026545720981045362,
+              0.0026545720981045362
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 8.152459039876409e-10
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "attractive",
+        "elapsed": 1.0,
+        "speed_one_radius": 1.0,
+        "gap_beyond_backward_cone": 0.03856976429489656,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.48411943447696554,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.4821663094769656,
+              0.48607255947696554
+            ],
+            "A_analytic_enclosure": [
+              0.4094507915700547,
+              0.5072158750966119
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 1.9235075807699786e-06
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 6.12323399573677e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0034633576595745697,
+              0.0034633576595746985
+            ],
+            "A_analytic_enclosure": [
+              -0.007215875096611963,
+              0.007215875096611963
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 1.0500121216949765e-08
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "zero_force",
+        "elapsed": 0.25,
+        "speed_one_radius": 0.25,
+        "gap_beyond_backward_cone": 0.7885697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001220703125,
+              0.001220703125
+            ],
+            "A_analytic_enclosure": [
+              -0.001610079365918094,
+              0.001610079365918094
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001220703125,
+              0.001220703125
+            ],
+            "A_analytic_enclosure": [
+              -0.001610079365918094,
+              0.001610079365918094
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "zero_force",
+        "elapsed": 0.5,
+        "speed_one_radius": 0.5,
+        "gap_beyond_backward_cone": 0.5385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.00146484375,
+              0.00146484375
+            ],
+            "A_analytic_enclosure": [
+              -0.0026545720981045362,
+              0.0026545720981045362
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.00146484375,
+              0.00146484375
+            ],
+            "A_analytic_enclosure": [
+              -0.0026545720981045362,
+              0.0026545720981045362
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "zero_force",
+        "elapsed": 1.0,
+        "speed_one_radius": 1.0,
+        "gap_beyond_backward_cone": 0.03856976429489656,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001953125,
+              0.001953125
+            ],
+            "A_analytic_enclosure": [
+              -0.007215875096611963,
+              0.007215875096611963
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001953125,
+              0.001953125
+            ],
+            "A_analytic_enclosure": [
+              -0.007215875096611963,
+              0.007215875096611963
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "opposite_force",
+        "elapsed": 0.25,
+        "speed_one_radius": 0.25,
+        "gap_beyond_backward_cone": 0.7885697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": -0.031245931793818633,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.032466634918818627,
+              -0.030025228668818647
+            ],
+            "A_analytic_enclosure": [
+              -0.032860079365918095,
+              -0.029314399800748573
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 2.4260383146845754e-09
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": -3.827021247335481e-18,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001220703125,
+              0.001220703125
+            ],
+            "A_analytic_enclosure": [
+              -0.001610079365918094,
+              0.001610079365918094
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 8.165644267525696e-11
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "opposite_force",
+        "elapsed": 0.5,
+        "speed_one_radius": 0.5,
+        "gap_beyond_backward_cone": 0.5385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": -0.12474039468762636,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.12620523843762638,
+              -0.12327555093762639
+            ],
+            "A_analytic_enclosure": [
+              -0.12765457209810455,
+              -0.11713709456856214
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 7.44277602882093e-08
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": -1.5308084989341924e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.00146484375,
+              0.00146484375
+            ],
+            "A_analytic_enclosure": [
+              -0.0026545720981045362,
+              0.0026545720981045362
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 7.14583004964367e-10
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "opposite_force",
+        "elapsed": 1.0,
+        "speed_one_radius": 1.0,
+        "gap_beyond_backward_cone": 0.03856976429489656,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": -0.48411943447696554,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.48607255947696554,
+              -0.4821663094769656
+            ],
+            "A_analytic_enclosure": [
+              -0.5072158750966119,
+              -0.4094507915700547
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 1.923507580881001e-06
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": -6.12323399573677e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.001953125,
+              0.001953124999999889
+            ],
+            "A_analytic_enclosure": [
+              -0.007215875096611963,
+              0.007215875096611963
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 6.14181028279516e-09
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "time_reversed",
+        "elapsed": -0.25,
+        "speed_one_radius": 0.25,
+        "gap_beyond_backward_cone": 0.7885697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.031245931793818633,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.030025228668818647,
+              0.032466634918818627
+            ],
+            "A_analytic_enclosure": [
+              0.029314399800748573,
+              0.032860079365918095
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 2.4260383146845754e-09
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 3.827021247335481e-18,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0012874948084656004,
+              0.0012874948084656073
+            ],
+            "A_analytic_enclosure": [
+              -0.001610079365918094,
+              0.001610079365918094
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 8.433787002104509e-11
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "time_reversed",
+        "elapsed": -0.5,
+        "speed_one_radius": 0.5,
+        "gap_beyond_backward_cone": 0.5385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.12474039468762636,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.12327555093762639,
+              0.12620523843762638
+            ],
+            "A_analytic_enclosure": [
+              0.11713709456856214,
+              0.12765457209810455
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 7.44277602882093e-08
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 1.5308084989341924e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0017610471581000744,
+              0.0017610471581001104
+            ],
+            "A_analytic_enclosure": [
+              -0.0026545720981045362,
+              0.0026545720981045362
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 8.152459039876409e-10
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "time_reversed",
+        "elapsed": -1.0,
+        "speed_one_radius": 1.0,
+        "gap_beyond_backward_cone": 0.03856976429489656,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.48411943447696554,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.4821663094769656,
+              0.48607255947696554
+            ],
+            "A_analytic_enclosure": [
+              0.4094507915700547,
+              0.5072158750966119
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 1.9235075807699786e-06
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 6.12323399573677e-17,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0034633576595745697,
+              0.0034633576595746985
+            ],
+            "A_analytic_enclosure": [
+              -0.007215875096611963,
+              0.007215875096611963
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 1.0500121216949765e-08
+          }
+        ],
+        "binary_read_total_variation": 1.0
+      },
+      {
+        "case": "same_sender",
+        "elapsed": 0.25,
+        "speed_one_radius": 0.25,
+        "gap_beyond_backward_cone": 0.7885697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.031245931793818633,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.030025228668818647,
+              0.032466634918818627
+            ],
+            "A_analytic_enclosure": [
+              0.029314399800748573,
+              0.032860079365918095
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 2.4260383146845754e-09
+          },
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.031245931793818633,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.030025228668818647,
+              0.032466634918818627
+            ],
+            "A_analytic_enclosure": [
+              0.029314399800748573,
+              0.032860079365918095
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 2.4260383146845754e-09
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "same_sender",
+        "elapsed": 0.5,
+        "speed_one_radius": 0.5,
+        "gap_beyond_backward_cone": 0.5385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.12474039468762636,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.12327555093762639,
+              0.12620523843762638
+            ],
+            "A_analytic_enclosure": [
+              0.11713709456856214,
+              0.12765457209810455
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 7.44277602882093e-08
+          },
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.12474039468762636,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.12327555093762639,
+              0.12620523843762638
+            ],
+            "A_analytic_enclosure": [
+              0.11713709456856214,
+              0.12765457209810455
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 7.44277602882093e-08
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "same_sender",
+        "elapsed": 1.0,
+        "speed_one_radius": 1.0,
+        "gap_beyond_backward_cone": 0.03856976429489656,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.48411943447696554,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.4821663094769656,
+              0.48607255947696554
+            ],
+            "A_analytic_enclosure": [
+              0.4094507915700547,
+              0.5072158750966119
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 1.9235075807699786e-06
+          },
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.48411943447696554,
+            "sample_count": 16,
+            "A_sample_range": [
+              0.4821663094769656,
+              0.48607255947696554
+            ],
+            "A_analytic_enclosure": [
+              0.4094507915700547,
+              0.5072158750966119
+            ],
+            "bin_probability": 1.0,
+            "bin_probability_analytic": 1,
+            "coarse_fine_state_sup_difference": 1.9235075807699786e-06
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      },
+      {
+        "case": "initial_read",
+        "elapsed": 0.0,
+        "speed_one_radius": 0.0,
+        "gap_beyond_backward_cone": 1.0385697642948966,
+        "sources": [
+          {
+            "B_center": 1.5707963267948966,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0009765625,
+              0.0009765625
+            ],
+            "A_analytic_enclosure": [
+              -0.0009765625,
+              0.0009765625
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          },
+          {
+            "B_center": 3.141592653589793,
+            "A_center": 0.0,
+            "sample_count": 16,
+            "A_sample_range": [
+              -0.0009765625,
+              0.0009765625
+            ],
+            "A_analytic_enclosure": [
+              -0.0009765625,
+              0.0009765625
+            ],
+            "bin_probability": 0.0,
+            "bin_probability_analytic": 0,
+            "coarse_fine_state_sup_difference": 0.0
+          }
+        ],
+        "binary_read_total_variation": 0.0
+      }
+    ],
+    "packet_half_width": 0.0009765625,
+    "fixed_A_read_bin": [
+      0.015625,
+      0.53125
+    ],
+    "min_distance_read_bin_to_changed_sender_support": 1.0385697642948966,
+    "speed_assumption": 1,
+    "coarse_and_fine_steps": [
+      256,
+      1024
+    ],
+    "witness": "A, B move with unit masses and opposite forces, relative acceleration -2 kappa sin(A-B). Each compact classical ensemble assigns equal normalized mass to the endpoints of four independent initial position and velocity intervals. The analytic enclosures cover their entire Cartesian product. The binary read has total variation one at positive coupling. A common local prediction for its two probabilities then has worst-case error at least 1/2.",
+    "clock": "Elapsed time is the signed classical flow parameter. A hypothetical local process with physical speed v has backward radius v*abs(elapsed). Distances are physical torus lengths. No identification with the parked courier's N rounds or a microscopic tick duration is assumed.",
+    "scope": "Point trajectories and finite classical ensembles. Quantum packet propagation and finite walk approximation are separate questions."
+  }
+}

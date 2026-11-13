@@ -22,6 +22,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Preparing and measuring a coin qubit](Operational_coin_qubit.md) | Three tomographic settings, all-outcome radial feedback and an exact finite CHSH prediction including timeout records |
 | [Sector control and the probability embedding](Sector_control_and_probability_embedding.md) | Separate control of all conjugate character pairs, a rare five-sheet record, and the reversible metric condition on compatible odd cyclotomic embeddings |
 | [A phase reference prepared by the walk](Internal_phase_reference.md) | Native records select and compare relative phase units, recover cyclotomic squared moduli and bound errors in a later flight. Absolute embedding labels give identical native records. |
+| [Local mediation and the force clock](Local_mediation_and_the_force_clock.md) | A reversible nearest-neighbor signal implements the two-body gain. Two initial packets test finite-speed realizations on the continuum clock. |
 | [Cross-review with Director Z](Director_exchange.md) | Hypothesis checks for G10 and a counterexample to the broader prose summary |
 
 Run each checker with Python and an output directory. The walk, record, envelope and position-simulation checks require NumPy. The exact embedding and joint-transport checks use the standard library. The commands assume the current directory contains this file.
@@ -47,6 +48,7 @@ python -B check_simultaneous_sectors.py rerun
 python -B check_refinement_geometry.py rerun
 python -B check_internal_reference.py rerun
 python -B check_reference_comparison.py rerun
+python -B check_local_mediator.py rerun
 ```
 
-All twenty checkers reproduced thirty-four result files byte for byte on the recorded Windows runtime. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. [Verification record](results/verification.json)
+The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. The local-mediator checker adds a separately rerun thirty-fifth output. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. [Verification record](results/verification.json)

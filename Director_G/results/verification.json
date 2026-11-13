@@ -605,5 +605,165 @@
     "legacy_components": 85,
     "result": "BASELINE_CHECK_PASS",
     "method": "The supplied edition/verify_baseline.py ran with PyMuPDF. In memory only, enumerated Windows relative paths were compared using forward slashes, as in the manifest. Checks included digests, extra files, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
+  },
+  "local_mediation_verification_addendum": {
+    "scope": "Addendum to the previous 20-checker closure. Earlier fields, including fresh_rerun, lean_compilation, gate_map_check, manuscript_links and edition_z13, describe that prior snapshot. The paths, clock witness, article bindings and link counts below were rechecked for this addendum.",
+    "prior_manifest_raw_sha256": "66b5c2fd715a7a2824e3a3b71aebcc24eb6f55c0a65a52acf7f8d559c907e25f",
+    "incremental_rerun": {
+      "checker": "check_local_mediator.py",
+      "output": "results/local_mediator.json",
+      "fresh_directories": 2,
+      "independent_mirror_exit_codes": [
+        0,
+        0
+      ],
+      "python": "3.12.14",
+      "output_bytes": 65622,
+      "output_byte_identical_both_fresh_runs_and_both_mirrors": true,
+      "prior_20_checkers_rerun_in_this_addendum": false,
+      "distinct_checkers_cumulatively": 21,
+      "distinct_generated_outputs_cumulatively": 35,
+      "prior_to_addendum_lean_files": 8,
+      "distinct_lean_files_cumulatively": 9
+    },
+    "evidence_raw_sha256": {
+      "check_local_mediator.py": "2e8312b569c042d3e4c69e092c7b73048c7f6b626dc068011851b1ae7865a170",
+      "check_cycle_interaction.py": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+      "lean/LocalMediator.lean": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+      "results/local_mediator.json": "69e5557a128fb9ed889bde9eb54be379a35f3f969087667b63c351a20d01a64f",
+      "results/mediator_worker_review.json": "70a3916717ffe7959337425ee12d2d9b72f912b885b73a22f91d89d225a4a0e6",
+      "Local_mediation_and_the_force_clock.md": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714"
+    },
+    "local_mediator_predicates": {
+      "exact_basis_gain_and_reset": true,
+      "full_walk_on_every_basis_input": true,
+      "signed_counts_all_macrosteps": true,
+      "count_profile_arithmetic": true,
+      "complete_register_permutation": true,
+      "orientation_witness": true,
+      "short_route_leaves_token": true,
+      "stalled_counter_changes_gain": true,
+      "busy_workspace_changes_target": true,
+      "forced_erase_noninjective": true,
+      "lightcone_control": true
+    },
+    "moving_classical_packet_predicates": {
+      "attraction_separates": true,
+      "null_and_opposite_controls": true,
+      "time_reversal_preserves_position_separation": true,
+      "sampled_enclosures_and_probabilities": true,
+      "refinements_agree": true,
+      "sender_support_outside_read_cone": true
+    },
+    "finite_evidence": {
+      "rings": 4,
+      "gain_profiles": 10,
+      "basis_site_sheet_inputs": 1732,
+      "full_walk_basis_columns": 6928,
+      "signed_vector_comparisons": 60,
+      "full_register_columns": 2880,
+      "moving_trials": 16,
+      "moving_cases": 6,
+      "attractive_trial_times": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "attractive_binary_total_variations": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "initial_packet_half_width": 0.0009765625,
+      "fixed_read_bin": [
+        0.015625,
+        0.53125
+      ],
+      "minimum_initial_bin_to_changed_sender_support": 1.0385697642948966,
+      "max_flow_refinement_difference": 1.923507580881001e-06,
+      "scope": "Numerical classical product ensembles, analytic support enclosures and strict-speed-one cone comparison. No new finite quantum packet trajectory simulation."
+    },
+    "lean": {
+      "compiler": "Lean 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94",
+      "file": "lean/LocalMediator.lean",
+      "research_exit": 0,
+      "checkout_exit": 0,
+      "coverage": "One-signal cyclic tour, exact encounter and reset, inverse tick, first-response time, termwise release, arbitrary finite release words and last-cell truncated-tour control. The full-symbol-register test and the Newton trajectories are separate."
+    },
+    "worker_receipt": {
+      "id": "281f36e5ba64f366d530",
+      "run_result_sha256": "79ad8e7fca335fd0921f08fc2f7b76cdaf9d969abc34a4e502eb058fd66ab7e3",
+      "register_sha256": {
+        "parent": "a793e96677639d05bdc2fe12cf9042113737df70a93b9991288aeff3d466bef6",
+        "child": "68e6810cff7e81dca0150489f032b0f486125c01cc901e873cbbc7cb55751150"
+      },
+      "recorded_rust_exit_codes": [
+        0,
+        0
+      ],
+      "register_event_counts": [
+        7,
+        7
+      ],
+      "portable_text_digests_match_local_raw_objects": true,
+      "phase_differences_positive_exponent": [
+        -2.221441469079183,
+        -0.9201511845106103
+      ],
+      "X_expectations": [
+        -0.6056998670788134,
+        0.6056998670788133
+      ],
+      "binary_total_variation": 0.6056998670788134,
+      "assessment": "The stored child all-zero answer failed. The stored parent got the two X expectations and TV right but reversed the sign of the second relative phase. Local raw consultation, register, result and output-object bytes were checked against the portability record. This addendum checked the saved Rust replays."
+    },
+    "article": {
+      "file": "Local_mediation_and_the_force_clock.md",
+      "bindings": {
+        "local_research": {
+          "raw_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "lf_content_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "git_blob_oid_sha1": "3851c64ef57fc53e125940c4fdb71281091fe0cf"
+        },
+        "published_checkout": {
+          "raw_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "lf_content_sha256": "89d00e28b4835d6608924b5757e81d7beca085757e8a1056ca6b4bb5fae7b714",
+          "git_blob_oid_sha1": "3851c64ef57fc53e125940c4fdb71281091fe0cf"
+        }
+      }
+    },
+    "current_manuscript_links": {
+      "local_research": {
+        "markdown_files": 20,
+        "relative_file_link_occurrences": 152,
+        "missing_local_targets": 0,
+        "article_relative_file_link_occurrences": 10
+      },
+      "published_checkout": {
+        "markdown_files": 21,
+        "relative_file_link_occurrences": 171,
+        "missing_local_targets": 0,
+        "article_relative_file_link_occurrences": 10
+      }
+    },
+    "current_gate_maps": {
+      "bindings": {
+        "local_research": {
+          "raw_sha256": "bb9e528b8653516ef692172679dc481dc66d000eb3d2171f531d75ec7224f3b3",
+          "lf_content_sha256": "bb9e528b8653516ef692172679dc481dc66d000eb3d2171f531d75ec7224f3b3",
+          "git_blob_oid_sha1": "cb380a0bcd0073acd5b0d5839271eef77e20e55b"
+        },
+        "published_checkout": {
+          "raw_sha256": "16938c5d4ef16ac0a026f0331a3206fd16601b076c9dc5b49c5057b2ceee70d3",
+          "lf_content_sha256": "16938c5d4ef16ac0a026f0331a3206fd16601b076c9dc5b49c5057b2ceee70d3",
+          "git_blob_oid_sha1": "4b6029a5bb891b1d4fea118aadf71ba22bae0775"
+        }
+      },
+      "baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "semantic_equality_except_baseline_locators": true,
+      "original_disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "digest_convention": "Raw SHA-256 fingerprints working copy bytes. LF-content SHA-256 and Git SHA-1 object IDs use LF-normalized payloads, with the standard Git blob header for the latter."
   }
 }

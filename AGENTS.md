@@ -17,6 +17,10 @@ Start at an open obligation and name the assumption the proposed experiment or p
 
 ### Carry findings back into the research
 
+On an active commission, report the first discriminating result, any blocker that changes the plan, and a short progress update about every two minutes during sustained work. Give the verified result, any duplicated or costly step, and the next check. Finish as soon as the work is ready. Short local model consultations return their answer and receipt through their parent. The parent supplies the status update for those jobs.
+
+For a counterexample, a review, or a proof and checker that another worker is integrating into one paper, send the director a direct report with the file or commit and the exact claim tested. When a change can be reviewed and merged on its own, a GitHub-enabled worker may use its own worktree and branch, open a PR against the agreed base, and send the director the PR link. Check the active PRs and ownership before starting another one. The nested local model currently has only its delegated review interface.
+
 Fix the test predicate and its scope before a confirmatory run. Retain exploratory settings, tails, failed comparisons and missed deadlines with their denominators. Justify a tolerance from the question being tested. Remove conditioning on local success when the claim requires all outcomes. For example, reinstating timeout outputs and checking synchronous source routing both changed the interpretation of the [finite Bell result](Director_G/Operational_coin_qubit.md).
 
 Reproduce a material finding from a second representation when feasible. An integer sheet calculation can catch a sign error in a complex matrix, while a finite counterexample can expose a hidden premise in an asymptotic theorem. Trace the correction through the paper, computational record, verification index and affected gate-map entries. Keep physical assumptions open until supported by a physical argument or data. Use the smallest review that can change the decision; expand it when a failed control or a narrow margin warrants another independent check.
