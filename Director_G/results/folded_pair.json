@@ -1,0 +1,3379 @@
+{
+  "checks": {
+    "exact_integer_preparations": true,
+    "alias_positive_controls": true,
+    "spectral_profile": true,
+    "curvature_masses": true,
+    "count_mass": true,
+    "mass": true,
+    "conjugate_sectors": true,
+    "real_vs_fourier_solver": true,
+    "classical_step_doubling": true
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "centres": [
+    1.5707963267948966,
+    0.0
+  ],
+  "direction_state": "R tensor R",
+  "preparation_field": 0,
+  "admissible_sizes": "Four divides N, even m",
+  "branch_order": [
+    "++",
+    "+-",
+    "-+",
+    "--"
+  ],
+  "trials": 24,
+  "folded_yield_positive_controls": [
+    {
+      "N": 16,
+      "blocks": 8,
+      "counts_equal_folded_binomials": true,
+      "exact_alias_sum_matches": true,
+      "ring_yield": "1609/8192",
+      "line_yield": "6435/32768",
+      "ring_yield_decimal": 0.1964111328125,
+      "alias_relative_gain": 0.0001554001554001554,
+      "strict_alias_gain": true,
+      "pair_success": 0.038577333092689514,
+      "fourier_yield": 0.1964111328124999,
+      "unfitted_fourier_distance": 3.279780341722647e-16,
+      "one_particle_chart_weights": [
+        {
+          "edge": "positive_edge",
+          "band": "plus",
+          "curvature": -1,
+          "mass": 0.24999999999999997
+        },
+        {
+          "edge": "positive_edge",
+          "band": "minus",
+          "curvature": 1,
+          "mass": 0.24999999999999997
+        },
+        {
+          "edge": "negative_edge",
+          "band": "plus",
+          "curvature": 1,
+          "mass": 0.2499999999999997
+        },
+        {
+          "edge": "negative_edge",
+          "band": "minus",
+          "curvature": -1,
+          "mass": 0.24999999999999972
+        }
+      ],
+      "pair_curvature_weights": [
+        {
+          "curvatures": [
+            1,
+            1
+          ],
+          "mass": 0.24999999999999967
+        },
+        {
+          "curvatures": [
+            1,
+            -1
+          ],
+          "mass": 0.24999999999999967
+        },
+        {
+          "curvatures": [
+            -1,
+            1
+          ],
+          "mass": 0.24999999999999967
+        },
+        {
+          "curvatures": [
+            -1,
+            -1
+          ],
+          "mass": 0.24999999999999967
+        }
+      ]
+    },
+    {
+      "N": 16,
+      "blocks": 16,
+      "counts_equal_folded_binomials": true,
+      "exact_alias_sum_matches": true,
+      "ring_yield": "4860289/33554432",
+      "line_yield": "300540195/2147483648",
+      "ring_yield_decimal": 0.14484789967536926,
+      "alias_relative_gain": 0.034997984213060086,
+      "strict_alias_gain": true,
+      "pair_success": 0.02098091404036584,
+      "fourier_yield": 0.14484789967536918,
+      "unfitted_fourier_distance": 3.5000792652514203e-16,
+      "one_particle_chart_weights": [
+        {
+          "edge": "positive_edge",
+          "band": "plus",
+          "curvature": -1,
+          "mass": 0.24999999999999992
+        },
+        {
+          "edge": "positive_edge",
+          "band": "minus",
+          "curvature": 1,
+          "mass": 0.25
+        },
+        {
+          "edge": "negative_edge",
+          "band": "plus",
+          "curvature": 1,
+          "mass": 0.24999999999999972
+        },
+        {
+          "edge": "negative_edge",
+          "band": "minus",
+          "curvature": -1,
+          "mass": 0.2499999999999998
+        }
+      ],
+      "pair_curvature_weights": [
+        {
+          "curvatures": [
+            1,
+            1
+          ],
+          "mass": 0.24999999999999972
+        },
+        {
+          "curvatures": [
+            1,
+            -1
+          ],
+          "mass": 0.24999999999999972
+        },
+        {
+          "curvatures": [
+            -1,
+            1
+          ],
+          "mass": 0.24999999999999972
+        },
+        {
+          "curvatures": [
+            -1,
+            -1
+          ],
+          "mass": 0.24999999999999972
+        }
+      ]
+    },
+    {
+      "N": 16,
+      "blocks": 32,
+      "counts_equal_folded_binomials": true,
+      "exact_alias_sum_matches": true,
+      "ring_yield": "71255475299329/562949953421312",
+      "line_yield": "916312070471295267/9223372036854775808",
+      "ring_yield_decimal": 0.12657515089267868,
+      "alias_relative_gain": 0.27407435187854845,
+      "strict_alias_gain": true,
+      "pair_success": 0.016021268823504378,
+      "fourier_yield": 0.12657515089267868,
+      "unfitted_fourier_distance": 1.9041168200346323e-16,
+      "one_particle_chart_weights": [
+        {
+          "edge": "positive_edge",
+          "band": "plus",
+          "curvature": -1,
+          "mass": 0.24999999999999994
+        },
+        {
+          "edge": "positive_edge",
+          "band": "minus",
+          "curvature": 1,
+          "mass": 0.25000000000000006
+        },
+        {
+          "edge": "negative_edge",
+          "band": "plus",
+          "curvature": 1,
+          "mass": 0.2499999999999999
+        },
+        {
+          "edge": "negative_edge",
+          "band": "minus",
+          "curvature": -1,
+          "mass": 0.25
+        }
+      ],
+      "pair_curvature_weights": [
+        {
+          "curvatures": [
+            1,
+            1
+          ],
+          "mass": 0.24999999999999994
+        },
+        {
+          "curvatures": [
+            1,
+            -1
+          ],
+          "mass": 0.24999999999999994
+        },
+        {
+          "curvatures": [
+            -1,
+            1
+          ],
+          "mass": 0.24999999999999994
+        },
+        {
+          "curvatures": [
+            -1,
+            -1
+          ],
+          "mass": 0.24999999999999994
+        }
+      ]
+    }
+  ],
+  "flights": [
+    {
+      "N": 32,
+      "delta": 0.44311346272637897,
+      "tau": 0.08700512495049541,
+      "preparation": {
+        "N": 32,
+        "blocks": 8,
+        "counts_equal_folded_binomials": true,
+        "exact_alias_sum_matches": true,
+        "ring_yield": "6435/32768",
+        "line_yield": "6435/32768",
+        "ring_yield_decimal": 0.196380615234375,
+        "alias_relative_gain": 0.0,
+        "strict_alias_gain": false,
+        "pair_success": 0.03856534603983164,
+        "fourier_yield": 0.19638061523437486,
+        "unfitted_fourier_distance": 3.035315421498782e-16,
+        "one_particle_chart_weights": [
+          {
+            "edge": "positive_edge",
+            "band": "plus",
+            "curvature": -1,
+            "mass": 0.2499999999999999
+          },
+          {
+            "edge": "positive_edge",
+            "band": "minus",
+            "curvature": 1,
+            "mass": 0.2499999999999999
+          },
+          {
+            "edge": "negative_edge",
+            "band": "plus",
+            "curvature": 1,
+            "mass": 0.2499999999999996
+          },
+          {
+            "edge": "negative_edge",
+            "band": "minus",
+            "curvature": -1,
+            "mass": 0.24999999999999967
+          }
+        ],
+        "pair_curvature_weights": [
+          {
+            "curvatures": [
+              1,
+              1
+            ],
+            "mass": 0.2499999999999995
+          },
+          {
+            "curvatures": [
+              1,
+              -1
+            ],
+            "mass": 0.24999999999999953
+          },
+          {
+            "curvatures": [
+              -1,
+              1
+            ],
+            "mass": 0.24999999999999953
+          },
+          {
+            "curvatures": [
+              -1,
+              -1
+            ],
+            "mass": 0.24999999999999956
+          }
+        ]
+      },
+      "count_interaction": {
+        "sheet_order": 3400001,
+        "depth": 410,
+        "amplitude_scale": 106250,
+        "integer_gain": [
+          0,
+          2042,
+          8088,
+          17907,
+          31121,
+          47222,
+          65591,
+          85523,
+          106251,
+          126980,
+          146911,
+          165280,
+          181381,
+          194594,
+          204412,
+          210458,
+          212500,
+          210458,
+          204412,
+          194594,
+          181381,
+          165280,
+          146911,
+          126980,
+          106251,
+          85523,
+          65591,
+          47222,
+          31121,
+          17907,
+          8088,
+          2042
+        ],
+        "count_sum_exact": true,
+        "angle_error_vs_smooth": 2.986247805675246e-06
+      },
+      "trials": [
+        {
+          "sheet_sign": 1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": 0.0,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                6.030874584450618e-17,
+                0.920924579654548
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.07907542034545201
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9209245796545478,
+                -1.6037891229902373e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.07907542034545223
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -5.378998028243709e-17,
+                0.8481020814119054
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.15189791858809465
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                1.682681771697503e-16,
+                0.8481020814119054
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.15189791858809465
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.6613529396078042,
+                2.7735670341368437e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.33864706039219583
+            }
+          ],
+          "maximum_characteristic_residual": 0.33864706039219583,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                6.030874584450618e-17,
+                0.920924579654548
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.07907542034545201
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9209245796545478,
+                -1.6037891229902373e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.07907542034545223
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -5.378998028243709e-17,
+                0.8481020814119054
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.15189791858809465
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                1.682681771697503e-16,
+                0.8481020814119054
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.15189791858809465
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.6613529396078042,
+                2.7735670341368437e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.33864706039219583
+            }
+          ],
+          "maximum_characteristic_residual": 0.33864706039219583,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": 2.1136341333997227e-15,
+          "classical_positions": [
+            [
+              1.2679872227893128,
+              0.30280910400558253
+            ],
+            [
+              1.2642157102050173,
+              -0.30658061658987834
+            ],
+            [
+              1.8773769433847758,
+              0.30658061658987834
+            ],
+            [
+              1.8736054308004804,
+              -0.30280910400558253
+            ]
+          ],
+          "classical_max_refinement": 1.6144419134889176e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.00757431914066909,
+                0.812281275382445
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.953936843391075
+              ],
+              "distance": 0.14185792278999543
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8122813878556997,
+                0.007574251848867135
+              ],
+              "classical_equal_mixture": [
+                0.9539368433910753,
+                0.0
+              ],
+              "distance": 0.14185780688423477
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.6907365181463227e-07,
+                0.6595656537963192
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.911075163605197
+              ],
+              "distance": 0.2515095098089347
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.013864854030281242,
+                0.6582316712133497
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9089164788547055
+              ],
+              "distance": 0.25106793295732643
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.33158256238767125,
+                0.01682443368634552
+              ],
+              "classical_equal_mixture": [
+                -0.7841788729439363,
+                1.6653345369377348e-16
+              ],
+              "distance": 0.45290891125921706
+            }
+          ],
+          "maximum_characteristic_residual": 0.45290891125921706,
+          "ticks": 9,
+          "time": 0.7830461245544587,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.8736054308004804,
+              -0.30280910400558253
+            ],
+            [
+              1.8773769433847758,
+              0.30658061658987834
+            ],
+            [
+              1.2642157102050173,
+              -0.30658061658987834
+            ],
+            [
+              1.2679872227893128,
+              0.30280910400558253
+            ]
+          ],
+          "classical_max_refinement": 1.6144419134889176e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.00757431914066909,
+                0.812281275382445
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.953936843391075
+              ],
+              "distance": 0.14185792278999543
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8122813878556997,
+                0.007574251848867135
+              ],
+              "classical_equal_mixture": [
+                0.9539368433910753,
+                0.0
+              ],
+              "distance": 0.14185780688423477
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.6907365181463227e-07,
+                0.6595656537963192
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.911075163605197
+              ],
+              "distance": 0.2515095098089347
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.013864854030281242,
+                0.6582316712133497
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9089164788547055
+              ],
+              "distance": 0.25106793295732643
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.33158256238767125,
+                0.01682443368634552
+              ],
+              "classical_equal_mixture": [
+                -0.7841788729439363,
+                1.6653345369377348e-16
+              ],
+              "distance": 0.45290891125921706
+            }
+          ],
+          "maximum_characteristic_residual": 0.45290891125921706,
+          "ticks": 9,
+          "time": 0.7830461245544587,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 1.0,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": 3.672772712338238e-15,
+          "classical_positions": [
+            [
+              0.6189087620184852,
+              0.9518875647764127
+            ],
+            [
+              0.47694696636928424,
+              -1.093849360425612
+            ],
+            [
+              2.664645687220509,
+              1.093849360425612
+            ],
+            [
+              2.522683891571307,
+              -0.9518875647764127
+            ]
+          ],
+          "classical_max_refinement": 1.4010458349034138e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.019035419218183587,
+                0.5146228019878911
+              ],
+              "classical_equal_mixture": [
+                2.220446049250313e-16,
+                0.5196078409881617
+              ],
+              "distance": 0.01967734226581985
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.5146231313514241,
+                0.019034473174102364
+              ],
+              "classical_equal_mixture": [
+                0.519607840988161,
+                0.0
+              ],
+              "distance": 0.01967634364352789
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.2597067291647557e-06,
+                0.24763536004549178
+              ],
+              "classical_equal_mixture": [
+                -8.326672684688674e-17,
+                0.3365701699448035
+              ],
+              "distance": 0.08893480990823319
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.029823388099517113,
+                0.25392507858327557
+              ],
+              "classical_equal_mixture": [
+                3.3306690738754696e-16,
+                0.21074434886849058
+              ],
+              "distance": 0.05247866134378576
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.1392792046354896,
+                0.029486228801627844
+              ],
+              "classical_equal_mixture": [
+                0.2501653852274459,
+                -7.216449660063518e-16
+              ],
+              "distance": 0.1147396301859734
+            }
+          ],
+          "maximum_characteristic_residual": 0.1147396301859734,
+          "ticks": 17,
+          "time": 1.479087124158422,
+          "target_time": 1.5
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 1.0,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              2.522683891571307,
+              -0.9518875647764127
+            ],
+            [
+              2.664645687220509,
+              1.093849360425612
+            ],
+            [
+              0.47694696636928424,
+              -1.093849360425612
+            ],
+            [
+              0.6189087620184852,
+              0.9518875647764127
+            ]
+          ],
+          "classical_max_refinement": 1.4010458349034138e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.019035419218183587,
+                0.5146228019878911
+              ],
+              "classical_equal_mixture": [
+                2.220446049250313e-16,
+                0.5196078409881617
+              ],
+              "distance": 0.01967734226581985
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.5146231313514241,
+                0.019034473174102364
+              ],
+              "classical_equal_mixture": [
+                0.519607840988161,
+                0.0
+              ],
+              "distance": 0.01967634364352789
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.2597067291647557e-06,
+                0.24763536004549178
+              ],
+              "classical_equal_mixture": [
+                -8.326672684688674e-17,
+                0.3365701699448035
+              ],
+              "distance": 0.08893480990823319
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.029823388099517113,
+                0.25392507858327557
+              ],
+              "classical_equal_mixture": [
+                3.3306690738754696e-16,
+                0.21074434886849058
+              ],
+              "distance": 0.05247866134378576
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.1392792046354896,
+                0.029486228801627844
+              ],
+              "classical_equal_mixture": [
+                0.2501653852274459,
+                -7.216449660063518e-16
+              ],
+              "distance": 0.1147396301859734
+            }
+          ],
+          "maximum_characteristic_residual": 0.1147396301859734,
+          "ticks": 17,
+          "time": 1.479087124158422,
+          "target_time": 1.5
+        }
+      ]
+    },
+    {
+      "N": 48,
+      "delta": 0.3618006272791338,
+      "tau": 0.04735959136351273,
+      "preparation": {
+        "N": 48,
+        "blocks": 12,
+        "counts_equal_folded_binomials": true,
+        "exact_alias_sum_matches": true,
+        "ring_yield": "676039/4194304",
+        "line_yield": "676039/4194304",
+        "ring_yield_decimal": 0.1611802577972412,
+        "alias_relative_gain": 0.0,
+        "strict_alias_gain": false,
+        "pair_success": 0.025979075503585136,
+        "fourier_yield": 0.16118025779724127,
+        "unfitted_fourier_distance": 3.2508686279341055e-16,
+        "one_particle_chart_weights": [
+          {
+            "edge": "positive_edge",
+            "band": "plus",
+            "curvature": -1,
+            "mass": 0.25000000000000006
+          },
+          {
+            "edge": "positive_edge",
+            "band": "minus",
+            "curvature": 1,
+            "mass": 0.2500000000000001
+          },
+          {
+            "edge": "negative_edge",
+            "band": "plus",
+            "curvature": 1,
+            "mass": 0.2500000000000004
+          },
+          {
+            "edge": "negative_edge",
+            "band": "minus",
+            "curvature": -1,
+            "mass": 0.2500000000000003
+          }
+        ],
+        "pair_curvature_weights": [
+          {
+            "curvatures": [
+              1,
+              1
+            ],
+            "mass": 0.25000000000000044
+          },
+          {
+            "curvatures": [
+              1,
+              -1
+            ],
+            "mass": 0.2500000000000004
+          },
+          {
+            "curvatures": [
+              -1,
+              1
+            ],
+            "mass": 0.2500000000000004
+          },
+          {
+            "curvatures": [
+              -1,
+              -1
+            ],
+            "mass": 0.25000000000000033
+          }
+        ]
+      },
+      "count_interaction": {
+        "sheet_order": 6400001,
+        "depth": 922,
+        "amplitude_scale": 133333,
+        "integer_gain": [
+          0,
+          1141,
+          4543,
+          10150,
+          17864,
+          27553,
+          39053,
+          52166,
+          66668,
+          82310,
+          98826,
+          115931,
+          133335,
+          150738,
+          167844,
+          184359,
+          200001,
+          214502,
+          227615,
+          239114,
+          248803,
+          256517,
+          262123,
+          265525,
+          266666,
+          265525,
+          262123,
+          256517,
+          248803,
+          239114,
+          227615,
+          214502,
+          200001,
+          184359,
+          167844,
+          150738,
+          133335,
+          115931,
+          98826,
+          82310,
+          66668,
+          52166,
+          39053,
+          27553,
+          17864,
+          10150,
+          4543,
+          1141
+        ],
+        "count_sum_exact": true,
+        "angle_error_vs_smooth": 1.823339904630239e-06
+      },
+      "trials": [
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                1.2054819380601513e-16,
+                0.9477379339177114
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.05226206608228856
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9477379339177113,
+                -2.332383306114541e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.05226206608228867
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -6.976094532159453e-17,
+                0.8982071913866126
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.10179280861338735
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                3.6045047672065363e-16,
+                0.8982071913866128
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.10179280861338724
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.7642612335891179,
+                8.326660773287853e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.2357387664108821
+            }
+          ],
+          "maximum_characteristic_residual": 0.2357387664108821,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                1.2054819380601513e-16,
+                0.9477379339177114
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.05226206608228856
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9477379339177113,
+                -2.332383306114541e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.05226206608228867
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -6.976094532159453e-17,
+                0.8982071913866126
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.10179280861338735
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                3.6045047672065363e-16,
+                0.8982071913866128
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.10179280861338724
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.7642612335891179,
+                8.326660773287853e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.2357387664108821
+            }
+          ],
+          "maximum_characteristic_residual": 0.2357387664108821,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999991,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.2868052986448504,
+              0.2839910281500461
+            ],
+            [
+              1.2837011723476766,
+              -0.28709515444722006
+            ],
+            [
+              1.8578914812421166,
+              0.28709515444722006
+            ],
+            [
+              1.8547873549449427,
+              -0.2839910281500461
+            ]
+          ],
+          "classical_max_refinement": 1.2756462552943049e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.06406811284498463,
+                0.8537739712264025
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.9595076612941769
+              ],
+              "distance": 0.12362983579567617
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.853774032244647,
+                0.06406812418771614
+              ],
+              "classical_equal_mixture": [
+                0.9595076612941769,
+                0.0
+              ],
+              "distance": 0.1236297894882791
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.7506683776605247e-07,
+                0.7338056704345486
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9214941036828443
+              ],
+              "distance": 0.1876884332483774
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.10948973920952892,
+                0.722941244116913
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9198161827391802
+              ],
+              "distance": 0.22527260030836455
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.45326593577663443,
+                -0.05809040378966754
+              ],
+              "classical_equal_mixture": [
+                -0.8087850004945334,
+                5.551115123125783e-17
+              ],
+              "distance": 0.3602336747034295
+            }
+          ],
+          "maximum_characteristic_residual": 0.3602336747034295,
+          "ticks": 16,
+          "time": 0.7577534618162037,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999991,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.8547873549449427,
+              -0.2839910281500461
+            ],
+            [
+              1.8578914812421166,
+              0.28709515444722006
+            ],
+            [
+              1.2837011723476766,
+              -0.28709515444722006
+            ],
+            [
+              1.2868052986448504,
+              0.2839910281500461
+            ]
+          ],
+          "classical_max_refinement": 1.2756462552943049e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.06406811284498463,
+                0.8537739712264025
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.9595076612941769
+              ],
+              "distance": 0.12362983579567617
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.853774032244647,
+                0.06406812418771614
+              ],
+              "classical_equal_mixture": [
+                0.9595076612941769,
+                0.0
+              ],
+              "distance": 0.1236297894882791
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.7506683776605247e-07,
+                0.7338056704345486
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9214941036828443
+              ],
+              "distance": 0.1876884332483774
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.10948973920952892,
+                0.722941244116913
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9198161827391802
+              ],
+              "distance": 0.22527260030836455
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.45326593577663443,
+                -0.05809040378966754
+              ],
+              "classical_equal_mixture": [
+                -0.8087850004945334,
+                5.551115123125783e-17
+              ],
+              "distance": 0.3602336747034295
+            }
+          ],
+          "maximum_characteristic_residual": 0.3602336747034295,
+          "ticks": 16,
+          "time": 0.7577534618162037,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999984,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              0.5837347322898312,
+              0.9870615945050661
+            ],
+            [
+              0.4224157090060162,
+              -1.1483806177888802
+            ],
+            [
+              2.719176944583777,
+              1.1483806177888802
+            ],
+            [
+              2.5578579212999615,
+              -0.9870615945050663
+            ]
+          ],
+          "classical_max_refinement": 1.5959137344978558e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.06282399193685798,
+                0.4778775653380871
+              ],
+              "classical_equal_mixture": [
+                1.1102230246251565e-16,
+                0.4805545449694074
+              ],
+              "distance": 0.06288100017357322
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.47787794074234896,
+                0.06282210557918183
+              ],
+              "classical_equal_mixture": [
+                0.480554544969407,
+                -2.7755575615628914e-17
+              ],
+              "distance": 0.06287909954500126
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.4616837357230303e-06,
+                0.21364551831711381
+              ],
+              "classical_equal_mixture": [
+                -5.551115123125783e-17,
+                0.3037597876832394
+              ],
+              "distance": 0.09011426939974895
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.05878925175715554,
+                0.2079029012989634
+              ],
+              "classical_equal_mixture": [
+                1.942890293094024e-16,
+                0.16807131624412844
+              ],
+              "distance": 0.07101219113748562
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.16307081184055797,
+                -0.008111474083856793
+              ],
+              "classical_equal_mixture": [
+                0.28690278591598606,
+                -2.7755575615628914e-16
+              ],
+              "distance": 0.12409735619758615
+            }
+          ],
+          "maximum_characteristic_residual": 0.12409735619758615,
+          "ticks": 32,
+          "time": 1.5155069236324075,
+          "target_time": 1.5
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999984,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              2.5578579212999615,
+              -0.9870615945050663
+            ],
+            [
+              2.719176944583777,
+              1.1483806177888802
+            ],
+            [
+              0.4224157090060162,
+              -1.1483806177888802
+            ],
+            [
+              0.5837347322898312,
+              0.9870615945050661
+            ]
+          ],
+          "classical_max_refinement": 1.5959137344978558e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.06282399193685798,
+                0.4778775653380871
+              ],
+              "classical_equal_mixture": [
+                1.1102230246251565e-16,
+                0.4805545449694074
+              ],
+              "distance": 0.06288100017357322
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.47787794074234896,
+                0.06282210557918183
+              ],
+              "classical_equal_mixture": [
+                0.480554544969407,
+                -2.7755575615628914e-17
+              ],
+              "distance": 0.06287909954500126
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.4616837357230303e-06,
+                0.21364551831711381
+              ],
+              "classical_equal_mixture": [
+                -5.551115123125783e-17,
+                0.3037597876832394
+              ],
+              "distance": 0.09011426939974895
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.05878925175715554,
+                0.2079029012989634
+              ],
+              "classical_equal_mixture": [
+                1.942890293094024e-16,
+                0.16807131624412844
+              ],
+              "distance": 0.07101219113748562
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.16307081184055797,
+                -0.008111474083856793
+              ],
+              "classical_equal_mixture": [
+                0.28690278591598606,
+                -2.7755575615628914e-16
+              ],
+              "distance": 0.12409735619758615
+            }
+          ],
+          "maximum_characteristic_residual": 0.12409735619758615,
+          "ticks": 32,
+          "time": 1.5155069236324075,
+          "target_time": 1.5
+        }
+      ]
+    },
+    {
+      "N": 64,
+      "delta": 0.31332853432887503,
+      "tau": 0.030760956925239093,
+      "preparation": {
+        "N": 64,
+        "blocks": 18,
+        "counts_equal_folded_binomials": true,
+        "exact_alias_sum_matches": true,
+        "ring_yield": "2268783825/17179869184",
+        "line_yield": "2268783825/17179869184",
+        "ring_yield_decimal": 0.13206059957155958,
+        "alias_relative_gain": 0.0,
+        "strict_alias_gain": false,
+        "pair_success": 0.017440001959199803,
+        "fourier_yield": 0.13206059957155958,
+        "unfitted_fourier_distance": 3.7062234195125836e-16,
+        "one_particle_chart_weights": [
+          {
+            "edge": "positive_edge",
+            "band": "plus",
+            "curvature": -1,
+            "mass": 0.25
+          },
+          {
+            "edge": "positive_edge",
+            "band": "minus",
+            "curvature": 1,
+            "mass": 0.25
+          },
+          {
+            "edge": "negative_edge",
+            "band": "plus",
+            "curvature": 1,
+            "mass": 0.24999999999999994
+          },
+          {
+            "edge": "negative_edge",
+            "band": "minus",
+            "curvature": -1,
+            "mass": 0.24999999999999997
+          }
+        ],
+        "pair_curvature_weights": [
+          {
+            "curvatures": [
+              1,
+              1
+            ],
+            "mass": 0.24999999999999994
+          },
+          {
+            "curvatures": [
+              1,
+              -1
+            ],
+            "mass": 0.24999999999999997
+          },
+          {
+            "curvatures": [
+              -1,
+              1
+            ],
+            "mass": 0.24999999999999997
+          },
+          {
+            "curvatures": [
+              -1,
+              -1
+            ],
+            "mass": 0.25
+          }
+        ]
+      },
+      "count_interaction": {
+        "sheet_order": 9800001,
+        "depth": 1639,
+        "amplitude_scale": 153125,
+        "integer_gain": [
+          0,
+          737,
+          2942,
+          6594,
+          11656,
+          18081,
+          25807,
+          34759,
+          44850,
+          55985,
+          68055,
+          80944,
+          94528,
+          108677,
+          123254,
+          138118,
+          153127,
+          168136,
+          183000,
+          197577,
+          211725,
+          225309,
+          238198,
+          250268,
+          261402,
+          271493,
+          280444,
+          288170,
+          294594,
+          299657,
+          303308,
+          305513,
+          306250,
+          305513,
+          303308,
+          299657,
+          294594,
+          288170,
+          280444,
+          271493,
+          261402,
+          250268,
+          238198,
+          225309,
+          211725,
+          197577,
+          183000,
+          168136,
+          153127,
+          138118,
+          123254,
+          108677,
+          94528,
+          80944,
+          68055,
+          55985,
+          44850,
+          34759,
+          25807,
+          18081,
+          11656,
+          6594,
+          2942,
+          737
+        ],
+        "count_sum_exact": true,
+        "angle_error_vs_smooth": 1.4060113176089795e-06
+      },
+      "trials": [
+        {
+          "sheet_sign": 1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                7.948991281419822e-17,
+                0.9563518651516624
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.04364813484833763
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9563518651516624,
+                -1.6800817614402549e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.04364813484833763
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -6.074564279172199e-17,
+                0.9146088899790635
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.08539111002093647
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                2.1681011336456714e-16,
+                0.9146088899790634
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.08539111002093658
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.7998252653436061,
+                5.5511142894828216e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.2001747346563939
+            }
+          ],
+          "maximum_characteristic_residual": 0.2001747346563939,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 1.0000000000000002,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                7.948991281419822e-17,
+                0.9563518651516624
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.04364813484833763
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9563518651516624,
+                -1.6800817614402549e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.04364813484833763
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -6.074564279172199e-17,
+                0.9146088899790635
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.08539111002093647
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                2.1681011336456714e-16,
+                0.9146088899790634
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.08539111002093658
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.7998252653436061,
+                5.5511142894828216e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.2001747346563939
+            }
+          ],
+          "maximum_characteristic_residual": 0.2001747346563939,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.3009393042370512,
+              0.2698570225578443
+            ],
+            [
+              1.2982802231594486,
+              -0.2725161036354475
+            ],
+            [
+              1.8433124304303445,
+              0.2725161036354475
+            ],
+            [
+              1.840653349352742,
+              -0.2698570225578443
+            ]
+          ],
+          "classical_max_refinement": 1.0600853528330845e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.051009494537930945,
+                0.8698232435307309
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.96345287276094
+              ],
+              "distance": 0.10662305568122517
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8698232754563977,
+                0.05100953184744387
+              ],
+              "classical_equal_mixture": [
+                0.9634528727609403,
+                0.0
+              ],
+              "distance": 0.10662304549536275
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.2000149933900223e-07,
+                0.7599508139335379
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.9289278329961651
+              ],
+              "distance": 0.1689770190626698
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.0887326522085132,
+                0.7523759399368798
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9275552967525702
+              ],
+              "distance": 0.19637028956111452
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.49584991127661004,
+                -0.046850283962490774
+              ],
+              "classical_equal_mixture": [
+                -0.8264528810627522,
+                1.1102230246251565e-16
+              ],
+              "distance": 0.33390608371034936
+            }
+          ],
+          "maximum_characteristic_residual": 0.33390608371034936,
+          "ticks": 24,
+          "time": 0.7382629662057383,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.840653349352742,
+              -0.2698570225578443
+            ],
+            [
+              1.8433124304303445,
+              0.2725161036354475
+            ],
+            [
+              1.2982802231594486,
+              -0.2725161036354475
+            ],
+            [
+              1.3009393042370512,
+              0.2698570225578443
+            ]
+          ],
+          "classical_max_refinement": 1.0600853528330845e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.051009494537930945,
+                0.8698232435307309
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.96345287276094
+              ],
+              "distance": 0.10662305568122517
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8698232754563977,
+                0.05100953184744387
+              ],
+              "classical_equal_mixture": [
+                0.9634528727609403,
+                0.0
+              ],
+              "distance": 0.10662304549536275
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.2000149933900223e-07,
+                0.7599508139335379
+              ],
+              "classical_equal_mixture": [
+                5.551115123125783e-17,
+                0.9289278329961651
+              ],
+              "distance": 0.1689770190626698
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.0887326522085132,
+                0.7523759399368798
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9275552967525702
+              ],
+              "distance": 0.19637028956111452
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.49584991127661004,
+                -0.046850283962490774
+              ],
+              "classical_equal_mixture": [
+                -0.8264528810627522,
+                1.1102230246251565e-16
+              ],
+              "distance": 0.33390608371034936
+            }
+          ],
+          "maximum_characteristic_residual": 0.33390608371034936,
+          "ticks": 24,
+          "time": 0.7382629662057383,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              0.591631181304888,
+              0.9791651454900075
+            ],
+            [
+              0.4348394434117156,
+              -1.1359568833831735
+            ],
+            [
+              2.706753210178084,
+              1.1359568833831735
+            ],
+            [
+              2.5499614722849033,
+              -0.9791651454900075
+            ]
+          ],
+          "classical_max_refinement": 1.5509250550493903e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.02358034699916306,
+                0.4776855294937068
+              ],
+              "classical_equal_mixture": [
+                -3.3306690738754696e-16,
+                0.48949024450961764
+              ],
+              "distance": 0.026370135782885034
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.4776857958011984,
+                0.02357862590829518
+              ],
+              "classical_equal_mixture": [
+                0.4894902445096225,
+                0.0
+              ],
+              "distance": 0.026368477563809847
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.286339107863966e-06,
+                0.20978109227110747
+              ],
+              "classical_equal_mixture": [
+                -1.6653345369377348e-15,
+                0.311046798728851
+              ],
+              "distance": 0.10126570648355357
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.02540223167946291,
+                0.21145930123355403
+              ],
+              "classical_equal_mixture": [
+                1.4988010832439613e-15,
+                0.17746402495826238
+              ],
+              "distance": 0.04243762697572276
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.17537228109303363,
+                0.022071122298722583
+              ],
+              "classical_equal_mixture": [
+                0.27898978524513196,
+                -2.220446049250313e-15
+              ],
+              "distance": 0.10594206721711344
+            }
+          ],
+          "maximum_characteristic_residual": 0.10594206721711344,
+          "ticks": 49,
+          "time": 1.5072868893367155,
+          "target_time": 1.5
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999997,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              2.5499614722849033,
+              -0.9791651454900075
+            ],
+            [
+              2.706753210178084,
+              1.1359568833831735
+            ],
+            [
+              0.4348394434117156,
+              -1.1359568833831735
+            ],
+            [
+              0.591631181304888,
+              0.9791651454900075
+            ]
+          ],
+          "classical_max_refinement": 1.5509250550493903e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.02358034699916306,
+                0.4776855294937068
+              ],
+              "classical_equal_mixture": [
+                -3.3306690738754696e-16,
+                0.48949024450961764
+              ],
+              "distance": 0.026370135782885034
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.4776857958011984,
+                0.02357862590829518
+              ],
+              "classical_equal_mixture": [
+                0.4894902445096225,
+                0.0
+              ],
+              "distance": 0.026368477563809847
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.286339107863966e-06,
+                0.20978109227110747
+              ],
+              "classical_equal_mixture": [
+                -1.6653345369377348e-15,
+                0.311046798728851
+              ],
+              "distance": 0.10126570648355357
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.02540223167946291,
+                0.21145930123355403
+              ],
+              "classical_equal_mixture": [
+                1.4988010832439613e-15,
+                0.17746402495826238
+              ],
+              "distance": 0.04243762697572276
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.17537228109303363,
+                0.022071122298722583
+              ],
+              "classical_equal_mixture": [
+                0.27898978524513196,
+                -2.220446049250313e-15
+              ],
+              "distance": 0.10594206721711344
+            }
+          ],
+          "maximum_characteristic_residual": 0.10594206721711344,
+          "ticks": 49,
+          "time": 1.5072868893367155,
+          "target_time": 1.5
+        }
+      ]
+    },
+    {
+      "N": 96,
+      "delta": 0.2558316769866221,
+      "tau": 0.016744144103681854,
+      "preparation": {
+        "N": 96,
+        "blocks": 30,
+        "counts_equal_folded_binomials": true,
+        "exact_alias_sum_matches": true,
+        "ring_yield": "7391536347803839/72057594037927936",
+        "line_yield": "7391536347803839/72057594037927936",
+        "ring_yield_decimal": 0.10257817300856951,
+        "alias_relative_gain": 0.0,
+        "strict_alias_gain": false,
+        "pair_success": 0.01052228157777602,
+        "fourier_yield": 0.10257817300856954,
+        "unfitted_fourier_distance": 4.646539679254897e-16,
+        "one_particle_chart_weights": [
+          {
+            "edge": "positive_edge",
+            "band": "plus",
+            "curvature": -1,
+            "mass": 0.24999999999999975
+          },
+          {
+            "edge": "positive_edge",
+            "band": "minus",
+            "curvature": 1,
+            "mass": 0.2499999999999998
+          },
+          {
+            "edge": "negative_edge",
+            "band": "plus",
+            "curvature": 1,
+            "mass": 0.25000000000000033
+          },
+          {
+            "edge": "negative_edge",
+            "band": "minus",
+            "curvature": -1,
+            "mass": 0.2500000000000002
+          }
+        ],
+        "pair_curvature_weights": [
+          {
+            "curvatures": [
+              1,
+              1
+            ],
+            "mass": 0.2500000000000001
+          },
+          {
+            "curvatures": [
+              1,
+              -1
+            ],
+            "mass": 0.25000000000000006
+          },
+          {
+            "curvatures": [
+              -1,
+              1
+            ],
+            "mass": 0.25000000000000006
+          },
+          {
+            "curvatures": [
+              -1,
+              -1
+            ],
+            "mass": 0.25
+          }
+        ]
+      },
+      "count_interaction": {
+        "sheet_order": 18000001,
+        "depth": 3687,
+        "amplitude_scale": 187500,
+        "integer_gain": [
+          0,
+          401,
+          1604,
+          3603,
+          6389,
+          9951,
+          14273,
+          19337,
+          25121,
+          31600,
+          38747,
+          46531,
+          54919,
+          63874,
+          73359,
+          83332,
+          93752,
+          104573,
+          115749,
+          127232,
+          138974,
+          150923,
+          163029,
+          175240,
+          187503,
+          199766,
+          211976,
+          224082,
+          236031,
+          247772,
+          259255,
+          270431,
+          281252,
+          291671,
+          301644,
+          311129,
+          320084,
+          328471,
+          336255,
+          343401,
+          349880,
+          355664,
+          360728,
+          365050,
+          368611,
+          371397,
+          373396,
+          374599,
+          375000,
+          374599,
+          373396,
+          371397,
+          368611,
+          365050,
+          360728,
+          355664,
+          349880,
+          343401,
+          336255,
+          328471,
+          320084,
+          311129,
+          301644,
+          291671,
+          281252,
+          270431,
+          259255,
+          247772,
+          236031,
+          224082,
+          211976,
+          199766,
+          187503,
+          175240,
+          163029,
+          150923,
+          138974,
+          127232,
+          115749,
+          104573,
+          93752,
+          83332,
+          73359,
+          63874,
+          54919,
+          46531,
+          38747,
+          31600,
+          25121,
+          19337,
+          14273,
+          9951,
+          6389,
+          3603,
+          1604,
+          401
+        ],
+        "count_sum_exact": true,
+        "angle_error_vs_smooth": 1.0740739101525176e-06
+      },
+      "trials": [
+        {
+          "sheet_sign": 1,
+          "mass": 1.0,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                1.396204274479849e-16,
+                0.9678501741930925
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.032149825806907506
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9678501741930926,
+                -3.410331605309636e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.032149825806907395
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.260285775214626e-16,
+                0.9367339596855994
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.06326604031440064
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                4.2908293479111567e-16,
+                0.9367339596855996
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.06326604031440042
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.8492005272514447,
+                5.551115117415692e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.15079947274855532
+            }
+          ],
+          "maximum_characteristic_residual": 0.15079947274855532,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 1.0,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ],
+            [
+              1.5707963267948966,
+              0.0
+            ]
+          ],
+          "classical_max_refinement": 0.0,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                1.396204274479849e-16,
+                0.9678501741930925
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.032149825806907506
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.9678501741930926,
+                -3.410331605309636e-16
+              ],
+              "classical_equal_mixture": [
+                1.0,
+                0.0
+              ],
+              "distance": 0.032149825806907395
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.260285775214626e-16,
+                0.9367339596855994
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.06326604031440064
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                4.2908293479111567e-16,
+                0.9367339596855996
+              ],
+              "classical_equal_mixture": [
+                6.123233995736766e-17,
+                1.0
+              ],
+              "distance": 0.06326604031440042
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.8492005272514447,
+                5.551115117415692e-17
+              ],
+              "classical_equal_mixture": [
+                -1.0,
+                1.2246467991473532e-16
+              ],
+              "distance": 0.15079947274855532
+            }
+          ],
+          "maximum_characteristic_residual": 0.15079947274855532,
+          "ticks": 0,
+          "time": 0.0,
+          "target_time": 0.0
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.999999999999999,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.2899271796297536,
+              0.2808691471651411
+            ],
+            [
+              1.2869253855079714,
+              -0.28387094128692525
+            ],
+            [
+              1.8546672680818217,
+              0.28387094128692525
+            ],
+            [
+              1.8516654739600396,
+              -0.2808691471651411
+            ]
+          ],
+          "classical_max_refinement": 1.2255529924232178e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.012210844166678362,
+                0.8759309490636193
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.960396682899149
+              ],
+              "distance": 0.08534380415494408
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8759309997149962,
+                0.012210896737620004
+              ],
+              "classical_equal_mixture": [
+                0.9603966828991493,
+                0.0
+              ],
+              "distance": 0.08534376154648055
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.293032320313068e-07,
+                0.7682880895721858
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9231652367305501
+              ],
+              "distance": 0.1548771471584183
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.02156889223527267,
+                0.7654464999331871
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9215586900971571
+              ],
+              "distance": 0.157595155477725
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.5070967635467671,
+                -0.0019227696357190516
+              ],
+              "classical_equal_mixture": [
+                -0.8127487149500263,
+                1.1102230246251565e-16
+              ],
+              "distance": 0.3056579991423296
+            }
+          ],
+          "maximum_characteristic_residual": 0.3056579991423296,
+          "ticks": 45,
+          "time": 0.7534864846656835,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.999999999999999,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              1.8516654739600396,
+              -0.2808691471651411
+            ],
+            [
+              1.8546672680818217,
+              0.28387094128692525
+            ],
+            [
+              1.2869253855079714,
+              -0.28387094128692525
+            ],
+            [
+              1.2899271796297536,
+              0.2808691471651411
+            ]
+          ],
+          "classical_max_refinement": 1.2255529924232178e-11,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.012210844166678362,
+                0.8759309490636193
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.960396682899149
+              ],
+              "distance": 0.08534380415494408
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.8759309997149962,
+                0.012210896737620004
+              ],
+              "classical_equal_mixture": [
+                0.9603966828991493,
+                0.0
+              ],
+              "distance": 0.08534376154648055
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -1.293032320313068e-07,
+                0.7682880895721858
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9231652367305501
+              ],
+              "distance": 0.1548771471584183
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.02156889223527267,
+                0.7654464999331871
+              ],
+              "classical_equal_mixture": [
+                8.326672684688674e-17,
+                0.9215586900971571
+              ],
+              "distance": 0.157595155477725
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                -0.5070967635467671,
+                -0.0019227696357190516
+              ],
+              "classical_equal_mixture": [
+                -0.8127487149500263,
+                1.1102230246251565e-16
+              ],
+              "distance": 0.3056579991423296
+            }
+          ],
+          "maximum_characteristic_residual": 0.3056579991423296,
+          "ticks": 45,
+          "time": 0.7534864846656835,
+          "target_time": 0.75
+        },
+        {
+          "sheet_sign": 1,
+          "mass": 0.9999999999999982,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              0.5919332561864057,
+              0.9788630706084915
+            ],
+            [
+              0.4353125616471954,
+              -1.135483765147701
+            ],
+            [
+              2.706280091942597,
+              1.135483765147701
+            ],
+            [
+              2.549659397403387,
+              -0.9788630706084914
+            ]
+          ],
+          "classical_max_refinement": 1.549216643859097e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.02128401399351363,
+                0.47076797158240946
+              ],
+              "classical_equal_mixture": [
+                1.1102230246251565e-16,
+                0.4898301184991735
+              ],
+              "distance": 0.028572271466447783
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.470768061908077,
+                0.02128224847612909
+              ],
+              "classical_equal_mixture": [
+                0.48983011849917313,
+                2.7755575615628914e-17
+              ],
+              "distance": 0.02857089606018419
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.461776187186182e-06,
+                0.2048362909999953
+              ],
+              "classical_equal_mixture": [
+                1.942890293094024e-16,
+                0.31132650735314915
+              ],
+              "distance": 0.10649021638160876
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.020936068074588032,
+                0.2014996580450871
+              ],
+              "classical_equal_mixture": [
+                0.0,
+                0.17782568927218365
+              ],
+              "distance": 0.031603413484688515
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.184204602018738,
+                0.009426243059308687
+              ],
+              "classical_equal_mixture": [
+                0.2786832251560355,
+                -1.6653345369377348e-16
+              ],
+              "distance": 0.09494769237918661
+            }
+          ],
+          "maximum_characteristic_residual": 0.10649021638160876,
+          "ticks": 90,
+          "time": 1.506972969331367,
+          "target_time": 1.5
+        },
+        {
+          "sheet_sign": -1,
+          "mass": 0.9999999999999982,
+          "conjugate_sector_unfitted_state_error": 0.0,
+          "spectral_vs_real_unfitted_state_error": null,
+          "classical_positions": [
+            [
+              2.549659397403387,
+              -0.9788630706084914
+            ],
+            [
+              2.706280091942597,
+              1.135483765147701
+            ],
+            [
+              0.4353125616471954,
+              -1.135483765147701
+            ],
+            [
+              0.5919332561864057,
+              0.9788630706084915
+            ]
+          ],
+          "classical_max_refinement": 1.549216643859097e-09,
+          "characteristics": [
+            {
+              "frequencies": [
+                1,
+                0
+              ],
+              "walk": [
+                -0.02128401399351363,
+                0.47076797158240946
+              ],
+              "classical_equal_mixture": [
+                1.1102230246251565e-16,
+                0.4898301184991735
+              ],
+              "distance": 0.028572271466447783
+            },
+            {
+              "frequencies": [
+                0,
+                1
+              ],
+              "walk": [
+                0.470768061908077,
+                0.02128224847612909
+              ],
+              "classical_equal_mixture": [
+                0.48983011849917313,
+                2.7755575615628914e-17
+              ],
+              "distance": 0.02857089606018419
+            },
+            {
+              "frequencies": [
+                1,
+                -1
+              ],
+              "walk": [
+                -2.461776187186182e-06,
+                0.2048362909999953
+              ],
+              "classical_equal_mixture": [
+                1.942890293094024e-16,
+                0.31132650735314915
+              ],
+              "distance": 0.10649021638160876
+            },
+            {
+              "frequencies": [
+                1,
+                1
+              ],
+              "walk": [
+                -0.020936068074588032,
+                0.2014996580450871
+              ],
+              "classical_equal_mixture": [
+                0.0,
+                0.17782568927218365
+              ],
+              "distance": 0.031603413484688515
+            },
+            {
+              "frequencies": [
+                2,
+                -1
+              ],
+              "walk": [
+                0.184204602018738,
+                0.009426243059308687
+              ],
+              "classical_equal_mixture": [
+                0.2786832251560355,
+                -1.6653345369377348e-16
+              ],
+              "distance": 0.09494769237918661
+            }
+          ],
+          "maximum_characteristic_residual": 0.10649021638160876,
+          "ticks": 90,
+          "time": 1.506972969331367,
+          "target_time": 1.5
+        }
+      ]
+    }
+  ],
+  "finite_accuracy": {
+    "metric": "Maximum of five complex joint-characteristic residuals below 0.1",
+    "count": 0,
+    "positive_sector_trials": 12
+  },
+  "scope": "Unmeasured evolution before one time-slice read, conditional on both prepared base words in a specified shared sector. No path measurement, full-sheet population or tracking rate inferred."
+}

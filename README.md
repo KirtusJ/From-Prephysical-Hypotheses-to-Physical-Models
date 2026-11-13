@@ -3,6 +3,8 @@
 **Kirtus Justus**, Theoretical Physicist
 Port Coquitlam, British Columbia, Canada
 
+Research contributors include **Director G (OpenAI Codex)** and **Director Z (Claude)**. [Contributors and roles](CONTRIBUTORS.md)
+
 This repository holds the current baseline edition of the research program as an unpacked tree in `edition/`, with the documents of the latest review sessions beside it for direct reading. The program's aim, structure and standards are in `PROGRAM/CHARTER.md` and `PROGRAM/STANDARDS.md` inside each edition. No edition claims a physical ontology; no gate of the program's gate map is passed.
 
 | Item | Content |
