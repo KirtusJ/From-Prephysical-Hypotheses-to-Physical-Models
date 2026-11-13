@@ -7,6 +7,9 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Whole-multiset block law](Multiset_block_law.md) | Signed degree-two classification into a count and quadratic character weights, with a seven-tick record that distinguishes the sign channel |
+| [Force strides and path area](Path_area_and_the_force_clock.md) | Exact anchored and common-frame ruler tests, equal-sum history multisets and the terminal discrepancy for a unit-speed sheet |
+| [Always-moving phase clocks](Moving_phase_clocks_and_reuse.md) | Equal-time delay, physical Fourier read, odd-cycle preparation and repeated use |
 | [Preparing a phase clock](Preparing_a_phase_clock.md) | Internally prepared ten-tick return, fixed-gain feedback and matched lower and upper bounds on preparation time |
 | [Optical walk records and phase labels](Optical_walk_records_and_phase_labels.md) | Four experimental comparisons, a named eighth-root embedding test, and bounds for unknown terminal detector efficiencies |
 | [Signed walk and weak field](Signed_walk_and_weak_field.md) | Real sheet transport, classical displacement bound, free envelope |
@@ -75,6 +78,12 @@ python -B check_unambiguous_walk_data.py rerun
 python -B check_clock_feedback.py rerun
 python -B check_clock_support.py rerun
 python -B check_clock_bandwidth.py rerun
+python -B check_moving_phase_clock.py rerun
+python -B check_odd_phase_clock.py rerun
+python -B check_clock_reuse.py rerun
+python -B check_holonomy_cone.py rerun
+python -B check_holonomy_embedding.py rerun
+python -B check_multiset_fibres.py rerun
 ```
 
-The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing that verification to 23 programs and 37 generated outputs. Three subsequent gain and flag checkers and the native port calculation bring the cumulative count to 27 programs and 41 generated outputs. Four further programs verify protected coordinate comparisons and their local routing, bringing the total to 31 checkers and 45 generated outputs. Four further checkers cover autonomous calibration, edge-supported record flows, a local echo and its reversible microscopic countermodel, bringing the total to 35 checkers and 49 outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. Four further checkers cover the optical data and detector gains, bringing the cumulative counts to 39 checkers and 53 generated outputs. Three clock studies add physical port counts, sharp support bounds and a dyadic preparation schedule, for 42 checkers and 56 generated outputs. [Verification record](results/verification.json)
+The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing that verification to 23 programs and 37 generated outputs. Three subsequent gain and flag checkers and the native port calculation bring the cumulative count to 27 programs and 41 generated outputs. Four further programs verify protected coordinate comparisons and their local routing, bringing the total to 31 checkers and 45 generated outputs. Four further checkers cover autonomous calibration, edge-supported record flows, a local echo and its reversible microscopic countermodel, bringing the total to 35 checkers and 49 outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. Four further checkers cover the optical data and detector gains, bringing the cumulative counts to 39 checkers and 53 generated outputs. Three clock studies add physical port counts, sharp support bounds and a dyadic preparation schedule, for 42 checkers and 56 generated outputs. Six further programs check the alternative clock transports, reuse, the finite force cone, the marked ruler and equal-sum history events, bringing the totals to 48 checkers and 62 generated outputs. [Verification record](results/verification.json)

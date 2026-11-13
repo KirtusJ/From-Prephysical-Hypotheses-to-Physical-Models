@@ -3777,5 +3777,404 @@
       "edition_worktree_change_count": 0,
       "fresh_full_baseline_replay": false
     }
+  },
+  "moving_odd_clocks_reuse_and_holonomy_addendum": {
+    "scope": "Incremental verification of three clock, force-walk and signed multiset papers and their new numerical and formal sources. The earlier scientific and edition sections remain unchanged.",
+    "prior_manifest_raw_sha256": "9e268353327d4318185e47fc4acbade91e72645ed878be0d1e3c7f3de1ff0046",
+    "totals": {
+      "checkers": 48,
+      "generated_outputs": 62,
+      "lean_files": 18,
+      "new_checkers": 6,
+      "new_generated_outputs": 6,
+      "new_lean_files": 3,
+      "fresh_checker_processes": 12,
+      "fresh_lean_compilations": 6
+    },
+    "scientific_lf_sha256": {
+      "Moving_phase_clocks_and_reuse.md": "169c0073d3f54ce1214aa7cc13dcc41ee83b02455a0e6ee1644e59a806481c33",
+      "Path_area_and_the_force_clock.md": "2d693fa4194b327250f6b41ddc5da2cabc8d8d1fd7cfe49f9fb7ab3c1e8db546",
+      "Multiset_block_law.md": "c0a4ab5134ca43a63af297b0272039fc32ae8a78d9bccab5d612c809547c9f36",
+      "Director_exchange.md": "3c2c9ea699b87dfdff0819696f9f9e542f03397db89c264470a87f13f4e9e881",
+      "lean/README.md": "0223ca7534704c31234e195e24eb65cc59154339a5e24b4ca1f4aa2ade95b414",
+      "lean/MovingPhaseClock.lean": "4df657c1559d9b6efd2632b5271e11acdb32de2fe1262af43e2e57a7551c6048",
+      "lean/HolonomyRead.lean": "e5c829ae0c0659214be363eeb2568855fb55550f6667149c2d59332f9f42cdc5",
+      "lean/MultisetBlock.lean": "c5832c88fadc0a0c24a0dc439009670830a5793e7e72dbf0f76edcd7eb9e0329",
+      "check_clock_support.py": "e426c8c535f345a73adbbd8905eaa1ac0584f2e1ed9adce29c7b20a64e52cc39",
+      "check_moving_phase_clock.py": "02328f9cddf2b43fecf01fa7e7f9f5f5329115346d51f76433361bac80c6a4f7",
+      "check_odd_phase_clock.py": "7507fd77b39c6b7e39890d03c900ed44b567888bf9e972025a9a0af84173b3ae",
+      "check_clock_reuse.py": "8c3ffecd9709f7e0b6ab95a431e1a2d1daf6ecbe57e552d8d8bce1369c9b5858",
+      "check_holonomy_cone.py": "7153f6fda4aeec06b19c26da5cd4a35b702ff87c6fc2767145b0cd104c79d31a",
+      "check_holonomy_embedding.py": "83fd1ea3890afa704e5eb355309057847b3c81cc15bdf7c4b494587e7c54047c",
+      "check_multiset_fibres.py": "81894d5ea736e2b65756b5413e703f55d4e801d3b314acf9d5d363c64b0436e6",
+      "results/moving_phase_clock.json": "af0d5a2821ccc5e459c9aad65705c4cfed4830194b46e48e5818f18c7899272a",
+      "results/odd_phase_clock.json": "863934ab617d0206227d6bc0c9125b2987c56ac5c6c382a720884a5e70b2f6ba",
+      "results/clock_reuse.json": "c8b08e0ef7b9e18f39d2d9de3b6e1dd4711432ccfd9a3bf6d575fe3f4634965c",
+      "results/holonomy_cone.json": "97d53aed2d773c80716048ec9f314f1f725a0ee576c1d7caaf728ecd87565b17",
+      "results/holonomy_embedding.json": "b49ef158570ca6f09ec682779ab4f470dab4344b2ff39f48a3c0b76bd466a736",
+      "results/multiset_fibres.json": "832788417b65917f27c40ea5a49753197ac41f73056aa96db291e14062878b30",
+      "Autonomous_records_and_local_echoes.md": "069548b398f20de1fd0ca724931b35e7a5cf03426dce837a39a12e821feae5f6",
+      "Optical_walk_records_and_phase_labels.md": "c161fd606d92f161351c9a523ff79a18d03ad18ad8c455261de21e9737f4da1f",
+      "Preparing_a_phase_clock.md": "919c4c6ab3d147af501c3c93c3e0e4bd7c28920da2e35e9396389c8077acc3d8"
+    },
+    "execution": {
+      "python": "3.14.7",
+      "lean": "Lean (version 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94, Release)",
+      "scheduling": "Each single-threaded check ran in a separate process at below-normal priority, mirrors checked serially, fresh output in temporary directories. Lean used -j 1. Outputs passed full parsed equality and LF-normalized SHA-256."
+    },
+    "mirror_results": {
+      "research": {
+        "checked_sources": [
+          "check_moving_phase_clock.py",
+          "check_odd_phase_clock.py",
+          "check_clock_reuse.py",
+          "check_holonomy_cone.py",
+          "MovingPhaseClock.lean",
+          "check_holonomy_embedding.py",
+          "HolonomyRead.lean",
+          "check_multiset_fibres.py",
+          "MultisetBlock.lean"
+        ],
+        "all_exits_zero": true,
+        "raw_output_equality": {
+          "moving_phase_clock.json": true,
+          "odd_phase_clock.json": true,
+          "clock_reuse.json": true,
+          "holonomy_cone.json": true,
+          "holonomy_embedding.json": true,
+          "multiset_fibres.json": true
+        }
+      },
+      "checkout": {
+        "checked_sources": [
+          "check_moving_phase_clock.py",
+          "check_odd_phase_clock.py",
+          "check_clock_reuse.py",
+          "check_holonomy_cone.py",
+          "check_holonomy_embedding.py",
+          "MovingPhaseClock.lean",
+          "HolonomyRead.lean",
+          "check_multiset_fibres.py",
+          "MultisetBlock.lean"
+        ],
+        "all_exits_zero": true,
+        "raw_output_equality": {
+          "moving_phase_clock.json": true,
+          "odd_phase_clock.json": true,
+          "clock_reuse.json": true,
+          "holonomy_cone.json": true,
+          "holonomy_embedding.json": true,
+          "multiset_fibres.json": true
+        }
+      }
+    },
+    "controls": {
+      "moving_clock": {
+        "optical_seeds": 4,
+        "spectral_alias_tests": 54,
+        "motor_orders": 5,
+        "boundary": "The logical unit maps to physical T squared. Physical one-edge overlap is zero on a single parity."
+      },
+      "odd_original_clock": {
+        "signed_port_trials": 156,
+        "complete_setting_port_histories": 1710,
+        "constant_input_M5": "3/5"
+      },
+      "reuse": {
+        "complete_record_trials": 10,
+        "wrong_weight": "1/9",
+        "real_Bell_TV": "1/2",
+        "shared_all_marker_TV": "1/9"
+      },
+      "cone": {
+        "ticks": 80,
+        "independent_seven_tick_oracle": {
+          "per_port_x_direction_escape_and_pair_numerators": [
+            [
+              -3,
+              -1,
+              1,
+              2
+            ],
+            [
+              -1,
+              -1,
+              2,
+              6
+            ],
+            [
+              -1,
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              -1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2,
+              6
+            ],
+            [
+              3,
+              1,
+              1,
+              2
+            ]
+          ],
+          "tv": "1/16",
+          "fixed_port_w1": "1/8",
+          "same_port": "263/2048",
+          "same_port_distance_above_14": "5/4096",
+          "conditional_given_same_port": "5/526"
+        },
+        "method": "Separately enumerated complete words for BOTH starting directions using y=sum((n-1-i)*d_i), optimized every integer interval, and counted ordered pairs directly. Checked zero violations at all earlier times and identical six contributors for both starts.",
+        "boundary": "The common-frame two-copy event requires sheet-resolved terminal observations and independently initialized native runs. A newly randomized per-launch reference can give positive distances under a bounded-speed model. Finite positivity gives no positive asymptotic lower bound."
+      },
+      "embedding": {
+        "checked_orders": [
+          3,
+          64
+        ],
+        "independent_enumeration_orders": [
+          3,
+          27
+        ],
+        "anchored": "Four of eight histories return iff k=+/-l, otherwise zero. Fixed base origin and mark; base endpoints retain both old path bits.",
+        "unmarked": "Distance event 1/16 iff 2k=+/-2l. Independent two-tick physical ruler changes this to 1/64 with ordinary distinct destinations, and 1/32 at order four.",
+        "restored_labels": "Rescaling stride, ruler and marker together preserves their comparison, which alone cannot distinguish abstract embeddings.",
+        "complete_relative_stride": {
+          "stored_finite_cases": 2028,
+          "independently_tested_unit_pairs": 3040,
+          "independent_orders": [
+            3,
+            28
+          ],
+          "law": "Fresh terminal experiments have zero marked-cell probability before d=fold(k/l), and 2^(-d) at d. Distinct underlying mark and launch reference are retained; observing a first click in a single run differs."
+        }
+      },
+      "multiset": {
+        "equal_size": 10,
+        "equal_primitive_sum": "0",
+        "joint_formal_sheet_weights": [
+          "5/32",
+          "0"
+        ],
+        "unfiltered_port": "5/128",
+        "physical_selector_A": "5/8192",
+        "physical_selector_B": "0",
+        "ordered_degree_two_blocks": 1000,
+        "input_comparisons": 2000,
+        "higher_degree_control": {
+          "input": "unit impulses in two adjacent input columns",
+          "scalar_degree": 5,
+          "expected_lifted_norm": 10,
+          "observed_lifted_norm": 12,
+          "sign_only_expected": 10,
+          "sign_only_observed": 20
+        },
+        "formal_scope": "The checked equivalence signed_block_iff and polarization are for integer-valued laws on arbitrary finite rank. The real-coefficient proof, switching decomposition and positive character weights are argued in the article."
+      }
+    },
+    "gate_review": {
+      "open_gates": 13,
+      "disposition": "UNRESOLVED",
+      "new_or_relevant_keys": [
+        "signed_multiset_block",
+        "multiset_block_lean",
+        "moving_phase_clock",
+        "path_area_and_force_read",
+        "holonomy_read_lean",
+        "moving_clock_lean"
+      ],
+      "baseline_payload_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+      "maps_lf_sha256": {
+        "research": "48ac9ceb329b618272510d1a22e8f7c1af4d33cdfca42bcdded529543960954b",
+        "checkout": "27f18033ce058245403f0231184c794959e10711363fb23b8efee33e90d5d644"
+      }
+    },
+    "indexes_lf_sha256": {
+      "published": "bc1be704bf1da0fccfbba1ef8b7f2de8f74c4cabd993333268b2775c767dec69",
+      "review_queue": "06a87acf304ed19f9487e736a09fdfc43b0c9ff1a9f9c6ec4d190059767685c4"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 28,
+        "relative_link_occurrences": 310,
+        "article_relative_link_occurrences": {
+          "Moving_phase_clocks_and_reuse.md": 13,
+          "Path_area_and_the_force_clock.md": 18,
+          "Multiset_block_law.md": 4
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 29,
+        "relative_link_occurrences": 337,
+        "article_relative_link_occurrences": {
+          "Moving_phase_clocks_and_reuse.md": 13,
+          "Path_area_and_the_force_clock.md": 18,
+          "Multiset_block_law.md": 4
+        },
+        "missing": 0
+      }
+    },
+    "edition_z16": {
+      "baseline": "FPHPM-BASELINE-2026-11-13-Z16",
+      "commit": "8af3e24d3327f8b9ee129ebc82b320430ffbff00",
+      "manifest_sha256": "25b755cb005237539c92f45d8982255c3459a8fcff345fac83d1552b619b659c",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "exit": 0,
+      "stdout": [
+        "PyMuPDF 2.1",
+        "BASELINE_CHECK_PASS 1210 files; 41 papers; 402 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+      ],
+      "method": "Actual released verifier executed under the installed Python 3.12.14 and PyMuPDF 2.1, with Windows relpath names mapped to forward slashes in memory; release files unchanged.",
+      "predecessor_z15_historical": "empirical_optical_walk_records_and_phase_labels_addendum.edition_z15"
+    },
+    "exchange_references": {
+      "PR2": "https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/2#issuecomment-6859073117",
+      "PR1": "https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/1#issuecomment-6859150949",
+      "scope": "Published exchange links as recorded in the two corresponding articles."
+    },
+    "edition_z17": {
+      "baseline": "FPHPM-BASELINE-2026-11-13-Z17",
+      "commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "exit": 0,
+      "stdout": [
+        "PyMuPDF 2.1",
+        "BASELINE_CHECK_PASS 1251 files; 41 papers; 405 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+      ],
+      "method": "Actual verifier, same 3.12.14 runtime, PyMuPDF and Windows path spelling as Z16. Edition worktree unmodified.",
+      "prior_edition_manifest": "25b755cb005237539c92f45d8982255c3459a8fcff345fac83d1552b619b659c"
+    },
+    "artifact_bytes": {
+      "Moving_phase_clocks_and_reuse.md": {
+        "research": 9456,
+        "checkout": 9456
+      },
+      "Path_area_and_the_force_clock.md": {
+        "research": 16409,
+        "checkout": 16409
+      },
+      "Multiset_block_law.md": {
+        "research": 9872,
+        "checkout": 9872
+      },
+      "Director_exchange.md": {
+        "research": 16594,
+        "checkout": 16594
+      },
+      "lean/README.md": {
+        "research": 9013,
+        "checkout": 9013
+      },
+      "lean/MovingPhaseClock.lean": {
+        "research": 19287,
+        "checkout": 19287
+      },
+      "lean/HolonomyRead.lean": {
+        "research": 12893,
+        "checkout": 12893
+      },
+      "lean/MultisetBlock.lean": {
+        "research": 10037,
+        "checkout": 10037
+      },
+      "check_clock_support.py": {
+        "research": 5402,
+        "checkout": 5402
+      },
+      "check_moving_phase_clock.py": {
+        "research": 5504,
+        "checkout": 5504
+      },
+      "check_odd_phase_clock.py": {
+        "research": 16422,
+        "checkout": 16422
+      },
+      "check_clock_reuse.py": {
+        "research": 15348,
+        "checkout": 15348
+      },
+      "check_holonomy_cone.py": {
+        "research": 13241,
+        "checkout": 13241
+      },
+      "check_holonomy_embedding.py": {
+        "research": 24423,
+        "checkout": 24423
+      },
+      "check_multiset_fibres.py": {
+        "research": 10057,
+        "checkout": 10057
+      },
+      "results/moving_phase_clock.json": {
+        "research": 29828,
+        "checkout": 29828
+      },
+      "results/odd_phase_clock.json": {
+        "research": 151911,
+        "checkout": 151911
+      },
+      "results/clock_reuse.json": {
+        "research": 12601,
+        "checkout": 12601
+      },
+      "results/holonomy_cone.json": {
+        "research": 570094,
+        "checkout": 570094
+      },
+      "results/holonomy_embedding.json": {
+        "research": 40967,
+        "checkout": 40967
+      },
+      "results/multiset_fibres.json": {
+        "research": 10219,
+        "checkout": 10219
+      },
+      "Autonomous_records_and_local_echoes.md": {
+        "research": 26875,
+        "checkout": 26875
+      },
+      "Optical_walk_records_and_phase_labels.md": {
+        "research": 15116,
+        "checkout": 15116
+      },
+      "Preparing_a_phase_clock.md": {
+        "research": 17987,
+        "checkout": 17987
+      }
+    },
+    "nested_worker": {
+      "attempt": "20261113T162426457591Z",
+      "receipt": "bb7486b304e8256be8d8",
+      "completed_tool_calls": 1,
+      "runs": {
+        "parent": {
+          "head": "a5cc5f3fda56388753752956d8279b6ceec9c8caa32c02ad590e691d9f73e8fc",
+          "reply_sha256": "51eae688d05a479267fcf299c9e7d196e801abbc386313d162700e978f7eb739",
+          "reply_bytes": 1427,
+          "events": 7,
+          "model": "Codex CLI"
+        },
+        "child": {
+          "head": "26efaee4f6d5be3ccd284489e81b14cef5be06180cb858a3c6d5f4926fe9d660",
+          "reply_sha256": "967c715e2c7a82534fee47a4301636bb0afd6e137ef3d52e57fdcb5dc5bdf16a",
+          "reply_bytes": 150,
+          "events": 7,
+          "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0"
+        }
+      },
+      "card_sha256": "b1b1ca33d7b4ec9fce07ac9c9cdee3b3e0b634a814d1696eb6ab8de878edd117",
+      "assessment": "The child echoed the delegated question and did not calculate a spectrum. The parent derived amplitudes 1/sqrt(2) on bins 1 and 9 on the sixteen-cycle, so the measured bin pair 1 and 15 carries weight 1/2."
+    }
   }
 }
