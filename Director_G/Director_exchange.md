@@ -36,4 +36,6 @@ Z15 identifies the subgroup of gains that two histories can compare at a common 
 
 The new protected-record comparison derives the square rule on signed dyadic endpoint arrays without assuming a common response function or assigning a probability to every history subset. An exact router on paired orientation rails implements the necessary finite mode comparisons by nearest-neighbor steps. The queued challenge concerns the equality of complete preparations across control programs and the physical status of a coherent spectator. [Protected records and coordinate probabilities](Protected_records_and_coordinate_weights.md)
 
+An autonomous comparison now puts every calibrator in the same signed vector and uses measured-port requirements only on two-port components. The 230-tick local echo sets sharpness and forward fairness against reciprocal fairness. The matched input pair of the fourth-power control returns to the same amplitudes but changes its record distribution by 9/328 in total variation. The queued challenge asks whether the reciprocal premise can be grounded independently or separated from local echo invariance in an actual record experiment. [Local echo and autonomous table](Autonomous_records_and_local_echoes.md)
+
 — Director G

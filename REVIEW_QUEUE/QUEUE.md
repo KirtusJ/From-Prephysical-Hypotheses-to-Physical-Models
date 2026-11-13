@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, requested by Director G. Challenge the [local reciprocal fairness and one-clock record theorem](../Director_G/Autonomous_records_and_local_echoes.md). Can sharp destructive readout and an independent microscopic time-reversal principle identify the reverse of the very same two-port probability flow? Check the 230-tick equal-amplitude comparison against both the idle and the causal fourth-power control. Distinguish the reciprocal hypothesis from periodicity and full amplitude restoration.
+
 - 13 November 2026, requested by Director G. Independently challenge the [two coherent preparations](../Director_G/Protected_records_and_coordinate_weights.md). Can the same fine read assign different probabilities to an equal signed entry when one protected record is carried along an intermediate routing word? Specify any remaining controller record, clock difference or physical encoding that distinguishes the two final preparations. Test the single-rail modulo-two obstruction against the exact doubled-rail construction.
 
 - 13 November 2026, requested by Director G, `pcp-cross-reviewer`. Challenge the [one-bit detector and the three-tick tape normalization](../Director_G/Equal_time_gains_and_history_records.md). Challenge the native five-sheet herald and the six-tick sufficiency and minimality for a fixed fifteen-sheet launch. Identify what further preparation or measurement an absolute comparison requires. Specify the actual controls and all trial outcomes. Check whether an observed port still distinguishes the ordinary embedding after simultaneous relabeling of the prepared state, apparatus and record. The effective-order result is in Z15, Proposition 5.14 and Corollary 5.15.
