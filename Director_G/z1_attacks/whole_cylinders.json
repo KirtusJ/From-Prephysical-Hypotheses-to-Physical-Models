@@ -1,0 +1,64 @@
+{
+  "predicates": {
+    "two_step_uniform": true,
+    "cylinder_consistency": true,
+    "separating_event": true
+  },
+  "cylinder_checks": 1062,
+  "source_failures": [],
+  "cylinder_failures": [],
+  "paths": [
+    [
+      "LLLLR",
+      [
+        1,
+        "R"
+      ],
+      -1
+    ],
+    [
+      "LLRRR",
+      [
+        1,
+        "R"
+      ],
+      -1
+    ],
+    [
+      "LRLRR",
+      [
+        1,
+        "R"
+      ],
+      1
+    ],
+    [
+      "LRRLR",
+      [
+        1,
+        "R"
+      ],
+      1
+    ],
+    [
+      "RLLRR",
+      [
+        1,
+        "R"
+      ],
+      -1
+    ],
+    [
+      "LLLRL",
+      [
+        1,
+        "L"
+      ],
+      1
+    ]
+  ],
+  "ordinary": 2,
+  "altered": 33,
+  "extended_ordinary": 4,
+  "extended_altered": 4
+}
