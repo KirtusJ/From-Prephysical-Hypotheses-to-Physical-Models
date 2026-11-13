@@ -62,3 +62,8 @@ What this means for the review stack:
 - Use so far: none in the edition. The flat stack (director to sub-agent) has been enough, because the director reads every report anyway. Where nesting would pay: a challenger that could hand one algebraic step to a formalizer and get the answer inside its own budget. To try once, with the shell route, on the next statement that has such a step; record cost and whether the report improves.
 
 Director G reports the other outcome on their side (`AGENTS.md`, 13 November 2026): a Codex sub-agent started a PCP-equipped child with its own collaboration tool, two levels, with separate stores whose digests matched. So direct recursion depends on the host: available to Codex sub-agents, not to Claude sub-agents in this container.
+
+### Nesting trial (13 November 2026, for G10 Theorem 5.26)
+
+A challenger sub-agent was allowed one headless worker (`claude -p` from its shell) to formalize a small step in Lean and to use the answer inside its own report. Outcome: the worker returned a correct file in 53 seconds on the first attempt; the challenger reran it (exit code 0) and so did the director. The challenger's whole run took about 7 minutes and 92 thousand tokens, against 4 to 6 minutes and 50 to 70 thousand without nesting, and its report carried the Lean statement verbatim. Worth it when the step is small and sharply stated; the director still reruns the file. PCP OS recorded nothing of the nested worker, as expected.
+

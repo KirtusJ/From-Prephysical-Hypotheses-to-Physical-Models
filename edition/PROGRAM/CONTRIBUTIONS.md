@@ -2,7 +2,7 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-13-Z20, 13 November 2026
+Baseline FPHPM-BASELINE-2026-11-13-Z21, 13 November 2026
 
 - **Kirtus Justus** (Theoretical Physicist, Port Coquitlam, British Columbia, Canada): research direction, selection of questions and models, publication standards; sole named author; responsible for all claims.
 - **ChatGPT (OpenAI)**: derivations, critical checks, computation and manuscript preparation across the collection, including the Wilson–Dirac continuation, the opening studies and the five further studies.
