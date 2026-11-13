@@ -72,6 +72,21 @@ def positive(p):
     return sum(y for x,y in p.items() if x > 0)
 
 
+def common_target(p, q):
+    # Faithful sites, arbitrary setting-dependent removal, a shared target.
+    upper = {j:max(p[j],q[j]) for j in SITES}
+    retained = 1/sum(upper.values())
+    target = {j:retained*upper[j] for j in SITES}
+    require(sum(target.values()) == 1 and 1/retained == 1+tv(p,q), "common-target mass")
+    gains = []
+    for observed in (p,q):
+        response = {j:observed[j]/upper[j] if upper[j] else F(0) for j in SITES}
+        require(all(0 <= response[j] <= 1 and target[j]*response[j] == retained*observed[j]
+                    for j in SITES), "selection witness failed")
+        gains.append(response)
+    return dict(target=target, retention=retained, loss=1-retained, response=gains)
+
+
 def compare(panels):
     blank, left, right = [p["counts"] for p in panels]
     # The marked drop regions in panels (b),(c) are at +4..+8, -8..-4.
@@ -93,6 +108,14 @@ def compare(panels):
     require(surplus == [-3,-1] and tv(p,pooled) == F(21981,91310), "observed TV")
     ratio = F(q[1]*blank[-1], q[-1]*blank[1])
     arm_ratios = [F(z[1]*blank[-1],z[-1]*blank[1]) for z in (b,c)]
+    event = (-3,-1,2)
+    event_mass = [sum(v[x] for x in event) for v in (p,qb,qc)]
+    require(event_mass == [F(147,230),F(107,201),F(13,49)] and
+            {x for x in SITES if p[x] > qb[x]} == set(event), "arm-mixture certificate")
+    pooled_witness = common_target(p,pooled)
+    arm_witness = common_target(p,qb)
+    require([w["loss"] for w in (pooled_witness,arm_witness)] ==
+            [F(21981,113291),F(4937,51167)], "sharp loss values")
     return dict(retained_b=b, retained_c=c, displaced_counts=[sum(left.values())-sum(b.values()),
                 sum(right.values())-sum(c.values())], printed_K="1.435 +/- 0.074 (bootstrap)",
                 printed_K_alternate_uncertainty="0.068 (Monte Carlo)",
@@ -100,7 +123,9 @@ def compare(panels):
                 positive_blank=positive(p), positive_retained=positive(pooled),
                 positive_difference=delta, reconstructed_K=1+2*delta,
                 TV=tv(p,pooled), blank_surplus_sites=surplus, free_mixture_breakpoints_and_TV=mixtures,
-                odds_ratio=ratio, limits_from_each_pure_arm=arm_ratios)
+                odds_ratio=ratio, limits_from_each_pure_arm=arm_ratios, event_mass=event_mass,
+                blank_minus_retained={x:p[x]-pooled[x] for x in SITES},
+                common_target_pooled=pooled_witness, common_target_negative_arm=arm_witness)
 
 
 def ideal():
@@ -130,7 +155,33 @@ def ideal():
               for x in range(-2,3)}
     require(sum(shield.values()) == 1 and 1+2*(positive(shield)-positive(bare)) == F(3,2),
             "author fair-coin prediction")
+    # Group the blank words by first arm *and* final spin before forming any square.
+    ports = Counter()
+    for word, j, spin, sign, displaced in reported["unobserved"]["words"]:
+        ports[j,spin,word[0]] += sign
+    def observable(law):
+        return law[-1]-law[1]-4*(law[-2]-law[2])
+    support = range(-2,3)
+    diagonal, interference, arms = {}, {}, []
+    for arm in (0,1):
+        row = {j:sum(F(ports[j,spin,arm]**2,8) for spin in (0,1)) for j in support}
+        require(sum(row.values()) == 1 and observable(row) == 0, "tagged arm observable")
+        arms.append(row)
+    for j in support:
+        diagonal[j] = (arms[0][j]+arms[1][j])/2
+        interference[j] = sum(F(2*ports[j,spin,0]*ports[j,spin,1],16) for spin in (0,1))
+    require(diagonal == shield and [16*interference[j] for j in support] == [0,4,0,-4,0],
+            "sign-plate cross term")
+    require(all(diagonal[j]+interference[j] == bare[j] for j in support) and
+            observable(interference) == F(1,2), "phase observable")
+    # These affine identities also cover every intermediate projection cos(phi).
+    for t in (-1,0,1):
+        phase = {j:diagonal[j]+t*interference[j] for j in support}
+        gains = {-2:F(3,5), -1:F(3+2*t,5), 0:F(3,5), 1:F(3-2*t,5), 2:F(3,5)}
+        require(all(diagonal[j]*gains[j] == F(3,5)*phase[j] for j in support),
+                "phase-linked response counterexample")
     return dict(panels=reported, shield_pooled=shield, blank_positive=positive(bare),
+                proposed_phase=dict(single_arm_laws=arms, diagonal=diagonal, cosine_term=interference),
                 shield_positive=positive(shield), K=1+2*(positive(shield)-positive(bare)),
                 TV=tv(bare,shield), two_port_odds_ratio=shield[1]*bare[-1]/(shield[-1]*bare[1]))
 
