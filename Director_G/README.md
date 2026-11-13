@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [A local marker calibrated from one sharp launch](Marker_kernel_from_one_launch.md) | Dense bare rail directions determine a shared continuous routing function. Two tagged-marker models predict 9/16 and 5/16 at the same four-tick detector. |
 | [Flight-window preparation](Flight_window_preparation.md) | One binary displacement record selects a terminal position ray from a sharp launch, with an explicit preparation time and success probability. |
 | [Four-tick linear potential](Four_tick_force.md) | A coherent displacement bit prepares a moving source. Programmable rail rotations bend the conditional terminal position toward the constant-force Newtonian trajectory. |
 | [Folded field and native Gaussian](Folded_field_and_native_gaussian.md) | The two real rails encode a complex free field on the occupied parity. Repeated direction selection prepares a Gaussian at fixed action. |
@@ -160,6 +161,7 @@ python -B check_residue_frames.py rerun
 python -B check_finite_record_memory.py rerun
 python -B check_return_memory_bound.py rerun
 python -B check_flight_window.py rerun
+python -B check_marker_replay.py rerun
 python -B check_folded_free_field.py rerun
 python -B check_folded_gaussian.py rerun
 ```
