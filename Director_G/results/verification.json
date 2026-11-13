@@ -5979,5 +5979,80 @@
       "adjudication": "One verified call. The child reported -15i; the parent recalculated the determinant as 1, confirmed by exact minors and Lean. The raw result is retained."
     },
     "open_gates": 13
+  },
+  "gate_composition_contact_threshold_and_review_7": {
+    "scope": "Local two-particle contact rule conditional on two implementation-equivalence records, finite band-edge condition, weak-phase quantum limit and reconciliation of cross-review 7.",
+    "totals": {
+      "checkers": 84,
+      "generated_outputs": 98,
+      "lean_files": 27
+    },
+    "replay": {
+      "fresh_checker_processes": 8,
+      "lean_compilations": 2,
+      "runtime": "Bundled Windows Python, single-thread BLAS, two independent output directories; all four stored byte streams matched both copies.",
+      "toolchain": "Lean 4.19.0 Windows x86_64; both fresh compiles exit zero.",
+      "local_links_checked_per_copy": {
+        "Occupation_contact_from_composition.md": 11,
+        "Contact_threshold_on_the_ring.md": 3,
+        "Network_phase_and_probability_records.md": 9,
+        "Rational_references_and_optical_bypass.md": 7,
+        "Local_mass_clock_and_common_ray.md": 10,
+        "Interacting_occupation_walk.md": 16
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Occupation_contact_from_composition.md": "99df94e772f03ba8fce432572c5fea07b06742f19ba61d656283d00dc40cd2c3",
+      "Contact_threshold_on_the_ring.md": "fc232a8826a9a6239f5caf8640c0ef6c2b7e7c3cf31ed0bc6a278552948acab2",
+      "lean/ContactComposition.lean": "01a670a279b317dc2f895a9a8b6dbe322e6cb083e7cbbafd0e7958224a632268",
+      "check_contact_compilation.py": "0a50ec4b19f1d5486a99f09b126e4def82655bf9bafa0b01102bd12c18bf691b",
+      "check_contact_exchange.py": "8663081878bdfe8c52ced7c73bb5739001e79ddda13ce50b9426bcdc0ae91b6d",
+      "check_contact_continuum.py": "dccf5b31038941e123fb00bfafab6ade0bb9650727e1282150b201b89ff7d17c",
+      "check_network_functional.py": "887f24c18cc1ade46d16122e5f7d68ae038d65d80682fa3d5554ef60377bd083",
+      "results/contact_compilation.json": "4106a41bd72be14ce0d5db6f0ef40c4e3c587764d0be82b2331299856c1862fe",
+      "results/contact_exchange.json": "165fb0bbc7fa365d448aa0004ce7fd5607c54887af93297c6690224fa167629d",
+      "results/contact_continuum.json": "fb140e2ace80da314eeed86d41adf113271152b3c7768d8dacf745969d399f2e",
+      "results/network_functional.json": "2171a146c1b19155c1d7b9963cbb9e15d62e2588b0b30228491ccf6a2eee8733"
+    },
+    "controls": {
+      "swap_probability": "d²|1+s|²",
+      "post_swap_pair_difference": "d²(2|1−g0|²+2|1−g2|²+|g0−g2|²)",
+      "reference_probability": "331776/390625",
+      "gate_compiler": "Real-sign all-pass ports in four or six eight-label rotations. Failure subspaces retained. No equality claimed for the entire failure channel.",
+      "fixed_negative_threshold": "Exactly one for every even ring at zero total momentum and z*=((24−7i)/25)^2; infinite-line fixed-negative contact law open.",
+      "network": "288 signed coefficients, 54 tables, 15552 input bins; all comparison maps agree with published Eq. E3 after matching Bob bits. External SDP not rerun."
+    },
+    "cross_director_7": {
+      "source": "e610e08",
+      "reviewed_at": "fd8c6a7",
+      "standing": "Review in contact with author by Director Z; finite results separated from third-party bound. The new contact-selection and band-edge derivations have not received Director Z review.",
+      "contact_predicates": {
+        "met": 9,
+        "failed": 0,
+        "measured_only": 4
+      },
+      "product_controls": {
+        "drawn": 200,
+        "qualifying": 198,
+        "K_zero": 198,
+        "end_to_end": 3
+      },
+      "unread_sensitivity": "refer to M3_no_record_at_charlie in source JSON",
+      "optical_float_control": [
+        "0.2433225959241921",
+        "0.24332259592419214"
+      ],
+      "rational_bypass_cross_review": "Same parsed content; one-byte serialization difference retained by reviewers.",
+      "out_of_hypothesis_controls": 3787
+    },
+    "nested_model": {
+      "attempt": "20261113T190642420301Z",
+      "receipt": "9772390fff2bcc7feacc",
+      "output_sha256": "1149df27653fe7820e07c6c90fa22fa810e2de595972121a4cebec0930971cc1",
+      "question": "For a four-mode occupation experiment, two equivalent one-particle schedules give a monitored two-particle probability proportional to |2+u+v|^2 or 16. Check the concrete unit phases u=i and v=-i: compute |2+u+v|^2 and compare with 16. Then determine precisely which unit complex u,v make |2+u+v|^2=16, and whether agreement of the one-particle schedules alone establishes that equality. Give your reasoning.",
+      "returned": "The requested complex squared modulus is 16. The two equivalent one-particle schedules give a monitored two-particle probability proportional to |2+u+v|^2 or 16. The concrete unit phases u=i and v=-i. The one-particle schedules are not specified, but the two-particle probability is given. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is",
+      "parent_evaluation": "With u=i,v=−i the true squared modulus is 4. Child reported 16. Parent corrected it and verified the equality condition; the first receipt and answer were retained."
+    },
+    "open_gates": 13
   }
 }

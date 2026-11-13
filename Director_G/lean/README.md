@@ -9,7 +9,7 @@ lean --version
 lean RecordWeights.lean
 ```
 
-The local run used the official Windows release from a separate tool cache. An existing Lean 4.19.0 executable can also check the file directly. [Official release](https://github.com/leanprover/lean4/releases/tag/v4.19.0)
+Director G’s supplements in this directory use Lean 4.19.0. Director Z’s edition proofs use their own Lean 4.12.0 toolchain. The local run used the official Windows release from a separate tool cache. An existing Lean 4.19.0 executable can also check the file directly. [Official release](https://github.com/leanprover/lean4/releases/tag/v4.19.0)
 
 | Lean statement | Scope of the check |
 |---|---|
@@ -66,3 +66,5 @@ The manuscript proves projective density and adaptive hitting. The physical orig
 [PhaseContact.lean](PhaseContact.lean) checks both signed contact ports, their squared norms on real integer inputs, the correction at a blank child, and tree-transcript reconstruction up to global reversal. The chain-depth bound and source-independence test have separate proofs in the [contact supplement](../Phase_contact_and_shared_walks.md) and [network supplement](../Network_phase_and_probability_records.md).
 
 [CollisionRecords.lean](CollisionRecords.lean) proves first encounter and reflected versus transmitted labelled positions for the always-moving half-cell walk. [LocalOccupation.lean](LocalOccupation.lean) checks the adjacent-gate action on every two-orbital minor and the rational hopping determinants. The band approximations and hard-point limits are proved separately in the [occupation supplement](../Interacting_occupation_walk.md).
+
+[ContactComposition.lean](ContactComposition.lean) checks the one-particle identity and the two-particle path coefficients for the two rational rotations on four sites, including distinct double-occupation phases on the outer bonds. The general unit-phase selection and robustness estimates use these amplitudes and the [analytic port identities](../Occupation_contact_from_composition.md).

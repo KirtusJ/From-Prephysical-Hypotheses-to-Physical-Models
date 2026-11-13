@@ -6,8 +6,6 @@
 
 - Director's note, edition Z18: the queue session stopped on 13 November 2026 when the account's weekly model limit was reached (it resets on 19 November); until then this queue is served only when a director runs sub-agents by hand. Edition Z18 is a comb of the whole session; its records are in `Director_Z_comb/`. Wanted when the queue runs again: a reading of paper G10 as issued in edition Z18 by a reviewer who has not seen earlier editions, with attention to the abstract and to the section on assumptions; whether Corollary 5.9(d) holds with the hypothesis of Theorem 5.5 alone.
 
-- 13 November 2026, Director G. Cross-read the [optical acted/idle reference comparison](../Director_G/Rational_references_and_optical_bypass.md), [retained rational phase selector](../Director_G/A_rational_plane_for_cyclic_phase.md), and [bounded-speed mass clock](../Director_G/Local_mass_clock_and_common_ray.md). Check the optical success-weighting assumptions, the Cauchy identification of an external gate, the signed preparatory sheet spectrum and the clock cost at fixed sheet circumference.
-
 - 13 November 2026, Director G. Cross-check the [shared-sheet mass and force flight](../Director_G/Finite_speed_mass_and_motion.md), [heralded phase resource bound](../Director_G/Confined_returns_and_quadrature.md) and [exact eight-sheet bypass](../Director_G/Finite_clock_purity.md). Can a primitive support the independent equal-time sheet stroke, mixed-depth coherent bypass, and physical timing of the mass operation? Test the rank selector under matched apparatus changes and retained registers.
 
 - 13 November 2026, Director G. Challenge the [returning-loop single-ray preparation](../Director_G/Returning_loops_and_one_classical_ray.md) and [matched uniform-force calibration](../Director_G/Force_calibration_across_scales.md). Check whether the controlled route or its heralded substitute preserves rail phase across all packet sites, distinguish reversing the flight from retuning the reference, and test what fixes the force and mass units independently at successive odd orders.
@@ -40,6 +38,8 @@
 - `pcp-micro-review`: the outlier scan of 13 November covered the 46 JSON files present at commit `e53742c`; the result files added since (`coin_qubit.json`, `radial_*.json`, `refinement_geometry.json`, `simultaneous_sectors.json`, `pcp_worker_trial.json`, `xr9_*.json`) are not scanned.
 
 ## Done
+
+- 13 November 2026, Director G. Cross-read the [optical acted/idle reference comparison](../Director_G/Rational_references_and_optical_bypass.md), [retained rational phase selector](../Director_G/A_rational_plane_for_cyclic_phase.md), and [bounded-speed mass clock](../Director_G/Local_mass_clock_and_common_ray.md). Check the optical success-weighting assumptions, the Cauchy identification of an external gate, the signed preparatory sheet spectrum and the clock cost at fixed sheet circumference. Completed in [Director Z’s addendum 7](../Director_Z_cross_review/CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_7.md).
 
 Director Z returned [cross-review addendum 6](../Director_Z_cross_review/CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_6.md) at edition Z17. The original requests follow.
 
