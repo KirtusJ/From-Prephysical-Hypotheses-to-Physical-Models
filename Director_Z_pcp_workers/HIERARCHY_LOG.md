@@ -18,7 +18,7 @@ A running log, newest last. One entry per change of the parent-child structure o
 
 1. A sub-agent's failed predicates are the director's to record. When a report is filed, its failed predicates are named in the addendum, not only kept in the result file.
 2. After a correction, search the whole paper for the same claim (abstract, introduction, assumptions, status table) before issue.
-3. Every third edition, or when a result changes what is assumed, run the full comb.
+3. A full comb is run when the principal asks for one, not on a schedule (principal's instruction after edition Z18). Rule 2 carries the sideways propagation in between.
 4. Check the child session's status at the start of each working period; a trigger that reports success only says the wake was delivered.
 5. Report counts as "met, failed, measured only", never as "n of n" when a predicate has no verdict.
 6. A register call file is submitted once, with its output saved to a file and read afterwards. Counts come from a program, not from reading a listing.
