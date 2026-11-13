@@ -50,6 +50,33 @@ If \(|z-\lambda|<d^2/(8m)\), each of \(1,z,\ldots,z^m\) would have one of the \(
 
 For three states the read count is attained. Start in state 0, move deterministically \(0\to1\to2\), and from state 2 go to states 0 and 2 with probabilities \(779/900,121/900\). Give the states read probabilities \(1,9/25,49/625\). The model agrees at \(k=0,1,2,3\), including \(q_3=13689/15625\). At \(k=4\) it gives \(167729/390625\) against \(277729/390625\), a gap of \(176/625\). The bound need not be optimal for other state counts, and its displayed tolerance can be very small. A statistical application requires uncertainty below the relevant gap and evidence for the memory bound and reproducibility of the gate. [Exact finite checks](check_return_memory_bound.py) · [Fractions and controls](results/return_memory_bound.json)
 
+## A sharp three-read test for two-state mixtures
+
+Prepare the same sharp pair and read the same return port after zero, one or two tilts on fresh trials. Allow a random classical detector type to be chosen before the tilt count is specified and retained throughout a run. Each type may have its own initial distribution, time-homogeneous transition matrix on at most two states, and fixed terminal read probabilities. The mixing distribution is arbitrary and common to the three read times.
+
+Write $t=p_0$, $s=p_1$. Define $L(0,s)=0$ and, for $t>0$,
+$$
+L(t,s)=\frac{\max(0,t+s-1)^2}{t}.
+$$
+For every $0\le t,s\le 1$, the attainable third reads form exactly the interval
+$$
+L(t,s)\le p_2\le 1-L(1-t,1-s).
+$$
+
+**Proof.** Split each type into point launches and binary read columns. This preserves all three expectations because the read is terminal and the expectations are linear in the initial distribution and in the read column separately. A type whose launch state clicks has first-step click probability $x$. With one click state and one dark state, its two-step probability is $x^2+(1-x)y$, where $y$ is the probability to move from dark to click in one step. This is at least $x^2$. The constant click column satisfies the same inequality.
+
+The types that click at launch have total mass $t$. Their contribution $m$ to $s$ is at least $\max(0,t+s-1)$ because the remaining mass can contribute at most $1-t$. For $t>0$, Cauchy–Schwarz gives $p_2\ge\int_{\text{click at launch}} x^2\,d\mu\ge m^2/t$ for the probability distribution $\mu$ over types. For $t=0$ the trivial lower bound is attained.
+
+For $s\le1-t$, mix the triples $(1,0,0)$, $(0,1,0)$ and $(0,0,0)$ with masses $t,s,1-t-s$. The first comes from a click state that moves to an absorbing dark state. The second starts dark and swaps the states at every tick. For $s>1-t$, take the first type with a click-state self-loop of probability $x=(s+t-1)/t$ and an absorbing dark state. Mix its triple $(1,x,x^2)$ with the swap triple $(0,1,0)$ using masses $t,1-t$. This attains the lower bound. Complementing the terminal click gives the upper bound, and mixing the two boundary realizations at fixed $t,s$ gives the entire interval.
+
+**Consequence for the string tilt.** Its first three coherent return probabilities are $1,9/25,49/625$. A two-state mixture that matches the first two has $p_2\ge81/625$. If all three entries can vary, their smallest possible maximum absolute error is
+$$
+r_* = \frac{16}{369+\sqrt{111161}} = 0.0227787787\ldots.
+$$
+The lower boundary is nondecreasing in both arguments. At fixed $s$, its positive branch is $t-2(1-s)+(1-s)^2/t$ for $t>1-s$. Therefore any model within $r<9/50$ requires $(9/25-2r)^2\le(1-r)(49/625+r)$, or $3125r^2-1476r+32\le0$. The smaller root is $r_*$. The lower-bound construction attains the triple $(1-r_*,9/25-r_*,49/625+r_*)$. This gives a sharp model distance in probability units. A simpler rational check for every such mixture is $625p_2-336p_0-400p_1+400\ge0$. It follows by bounding $x^2$ from below by its tangent at $x=8/25$ in the click-launch argument above. The coherent panel gives $-31$, so this linear check alone guarantees a maximum discrepancy of at least $31/1361$. Using these checks with data requires a joint uncertainty region for the three true probabilities. For instance, simultaneous bounds $p_0\ge t_-,p_1\ge s_-,p_2\le u_+$ contradict the model whenever $u_+<L(t_-,s_-)$.
+
+Every pair of launch and first-step probabilities $(p_0,p_1)$ is possible with two-state mixtures. A homogeneous deterministic three-state chain $0\to1\to2\to2$ with read column $(1,9/25,49/625)$ reproduces this entire three-read comparison. Thus the test addresses a cap of two states per type and a type distribution independent of the requested read time. The accompanying checker evaluates finite rational controls and the polynomial certificate. The analytic interval and distance are derived above. An internal Codex challenger separately recovered the boundary, attainment and distance from the assumptions. This comparison has no empirical counts or Lean proof. [Exact checks](check_return_memory_bound.py) · [Results](results/return_memory_bound.json)
+
 ## A single detector over arbitrarily long runs
 
 Suppose each prepared trial draws a fixed type independently of the word that will be requested, and its return response for repeated tilts is periodic with some finite period. Finite reversible classical state models, including reductions modulo any fixed finite ring, have this property. The distribution over periods may be unbounded. Given \(\varepsilon>0\), choose \(M\) so that at most \(\varepsilon\) of the mass lies on periods above \(M\); take \(L=\operatorname{lcm}(1,\ldots,M)\). At every \(Lr\) the averaged return is at least \(p_0-\varepsilon\), because the selected types return to their own launch response. For \(p_0=1\) and irrational \(\theta/\pi\), ordinary returns approach zero at some such multiples, so their supremum discrepancy is one. Stability of just this return near the signed transfer that empties the launch port would already rule out this family: for each \(L\), the powers \(R^{Lr}\) approach that transfer on the active bond. [Lean finite-mass bound](lean/PeriodicReadout.lean)
