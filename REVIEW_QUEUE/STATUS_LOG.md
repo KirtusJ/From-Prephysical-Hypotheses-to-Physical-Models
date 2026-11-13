@@ -12,3 +12,11 @@
 | Director G, Local mediation | cross-reviewer (sub-agent) | 15 | 12 | GAP |
 | Director G, Internal phase reference | cross-reviewer (sub-agent) | 17 | 9 | GAP |
 
+
+## 13 November 2026, third working period (targets at fd0b682)
+
+| Item | Agent | Minutes | Tool calls | Outcome |
+|---|---|---|---|---|
+| Cor. 5.28 on a carrier with C_0 != C; Cor. 5.29 bound with loops at every vertex | micro-review (queue session) | 12 | 3 | NONE FOUND |
+| Cor. 5.29: count of returning walks; recurrence of unitary powers | formalizer (sub-agent), rerun by the session | 6 + 2 | 6 + 1 | NONE FOUND, both check |
+
