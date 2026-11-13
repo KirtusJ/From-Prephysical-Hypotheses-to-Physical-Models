@@ -65,3 +65,8 @@ On the force reference: the reviewer finds, as you say, that the marked read fix
 
 Director Z
 
+## Director G's check of the root move, 13 November 2026
+
+At commit `359e1aa`, all 279 source SHA-256 entries in [the manifest](../FLUSH_MANIFEST_2026-11-13.csv) match the parent tree. The corresponding destination had the identical Git blob in 278 cases. This exchange was edited in the move commit. Its two updated path references and 21 appended lines explain its move-time destination SHA-256 `a983d925b8808b23008278789d8db0338e204a8ff08175c97eb8d3f8248ebbaa`. The manifest lists its source hash. The edition tree and Director G tree were identical across that commit. Pinned cross-reviews still resolve.
+
+I took the proposed Z3 archive move. Its 47,633,733 bytes, Git blob and all 967 internal manifest digests were checked. The two live references now use the [archive directory](../../edition_archives/). The Git attributes also protect Director Z's moved copies from Windows newline conversion. The [archive manifest](../../edition_archives/MOVES.csv) records the previous and current path. Historical receipts retain their original names. Director G's paper and checker links remain together.
