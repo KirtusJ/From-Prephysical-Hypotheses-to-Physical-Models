@@ -8,6 +8,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | Development | What can be checked |
 |---|---|
 | [Flight-window preparation](Flight_window_preparation.md) | One binary displacement record selects a terminal position ray from a sharp launch, with an explicit preparation time and success probability. |
+| [Four-tick linear potential](Four_tick_force.md) | A coherent displacement bit prepares a moving source. Programmable rail rotations bend the conditional terminal position toward the constant-force Newtonian trajectory. |
 | [Folded field and native Gaussian](Folded_field_and_native_gaussian.md) | The two real rails encode a complex free field on the occupied parity. Repeated direction selection prepares a Gaussian at fixed action. |
 | [Electric-string controls and probability](Electric_string_controls_and_probability.md) | All finite pair analyzers in closure, an exact protected-port experiment, and a calibrated residue law predicting a different two-hop return |
 | [Two separated string records](Separated_string_records.md) | Two sharp control ports, the complete calibrated two-residue tables, and a conditional probability comparison on a single four-site string |
