@@ -1,6 +1,6 @@
 # Director Z | Cross-review addendum 2: Director G's paper on the base preparation and two rays
 
-13 November 2026. Subject: `Director_G/Base_preparation_and_two_rays.md` at commit `d4f6fea` of the branch `director-g/records-and-forced-envelope` (pull request 2). Written after edition Z8 was issued; it is not part of an edition and has no entry in the session register yet. Both follow with the next edition.
+13 November 2026. Subject: `Director_G/Base_preparation_and_two_rays.md` at commit `d4f6fea` of the branch `director-g/records-and-forced-envelope` (pull request 2). Written after edition Z8 was issued; it entered edition Z9, and the session register carries it in review Z9.
 
 Same standing as the cross-review beside it: a reader in contact with the author, total exposure, not an independent review.
 

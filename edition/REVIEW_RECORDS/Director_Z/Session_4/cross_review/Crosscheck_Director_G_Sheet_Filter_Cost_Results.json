@@ -1,0 +1,76 @@
+{
+ "C1_five_sheet_formula_reproduced": {
+  "passed": true,
+  "largest_difference": 1.1102230246251565e-16
+ },
+ "C2_records_needed_grow_as_the_square_of_the_sheet_order": {
+  "passed": true,
+  "reference": 0.20235409322136133,
+  "rows": [
+   {
+    "M": 9,
+    "least_s": 15,
+    "s_over_M2": 0.18518518518518517,
+    "log2_joint_probability": -23.946738122341,
+    "log2_over_s": -1.5964492081560666,
+    "weight_outside": 0.007633965580705894
+   },
+   {
+    "M": 15,
+    "least_s": 44,
+    "s_over_M2": 0.19555555555555557,
+    "log2_joint_probability": -55.230435894583024,
+    "log2_over_s": -1.2552371794223414,
+    "weight_outside": 0.009279152246602912
+   },
+   {
+    "M": 25,
+    "least_s": 125,
+    "s_over_M2": 0.2,
+    "log2_joint_probability": -138.47746973371645,
+    "log2_over_s": -1.1078197578697315,
+    "weight_outside": 0.009655218695616915
+   },
+   {
+    "M": 45,
+    "least_s": 408,
+    "s_over_M2": 0.20148148148148148,
+    "log2_joint_probability": -424.03179699507064,
+    "log2_over_s": -1.0392936200859575,
+    "weight_outside": 0.009868621909957426
+   },
+   {
+    "M": 75,
+    "least_s": 1135,
+    "s_over_M2": 0.20177777777777778,
+    "log2_joint_probability": -1153.243776841976,
+    "log2_over_s": -1.0160738121955735,
+    "weight_outside": 0.009966476283797222
+   },
+   {
+    "M": 135,
+    "least_s": 3680,
+    "s_over_M2": 0.201920438957476,
+    "log2_joint_probability": -3700.788590604817,
+    "log2_over_s": -1.0056490735339176,
+    "weight_outside": 0.009996564120523887
+   }
+  ]
+ },
+ "C3_joint_probability_halves_with_each_record": {
+  "passed": true
+ },
+ "_extrapolation_not_a_predicate": {
+  "delta": 0.2,
+  "F": 1,
+  "sheet_order": 1963.4954084936203,
+  "records_by_the_fitted_law": 780138.6129046849,
+  "log2_joint_probability_by_the_fitted_law": -780138.6129046849,
+  "note": "tolerance 0.01 only; the paper needs a tolerance that decreases with delta, which adds a logarithmic factor"
+ },
+ "_summary": {
+  "predicates": 3,
+  "passed": 3,
+  "numpy": "2.5.3"
+ }
+}

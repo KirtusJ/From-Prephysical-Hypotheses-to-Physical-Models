@@ -13,7 +13,7 @@
    "id": "GH1-A1",
    "text": "the set function is of second order (additive in pairs of walks)",
    "standing": "CONDITIONALLY_DERIVED (edition Z4); otherwise SUPPLIED",
-   "note": "for one weight function applied to all walks order one cannot depend on gains; returning walks admit a first-order class-function weight without interference (Lemma 3.1, revised; Directors A, B, G); higher even orders exist; edition Z4: if events are sets of histories, a rule adding over end vertices a function of the modulus of the summed gains is consistent only for the square on the signed line and only for the second power on a norm-preserving gain digraph with merging walks (G10-01-03, G10-01-04), and the first-order weighting of returning walks is excluded (G10-01-02); with trivial gains the count is consistent; edition Z7: the carrier must have merging walks; on the countable binary tree every rule of the form is the count (Director G); edition Z8: which objects are records (end vertex only, or end vertex and gain) is part of this assumption and changes the classification (G10 Corollary 5.7)"
+   "note": "for one weight function applied to all walks order one cannot depend on gains; returning walks admit a first-order class-function weight without interference (Lemma 3.1, revised; Directors A, B, G); higher even orders exist; edition Z4: if events are sets of histories, a rule adding over end vertices a function of the modulus of the summed gains is consistent only for the square on the signed line and only for the second power on a norm-preserving gain digraph with merging walks (G10-01-03, G10-01-04), and the first-order weighting of returning walks is excluded (G10-01-02); with trivial gains the count is consistent; edition Z7: the carrier must have merging walks; on the countable binary tree every rule of the form is the count (Director G); edition Z8: which objects are records (end vertex only, or end vertex and gain) is part of this assumption and changes the classification (G10 Corollary 5.7); edition Z9: within pair rules consistency excludes the characters in which -1 acts trivially and leaves the others; faithfulness of the character is not obtained (G10 Theorem 5.8)"
   },
   {
    "id": "GH1-A2",
@@ -118,6 +118,10 @@
   {
    "id": "G10-01-11",
    "text": "signed lift: with the gain recorded the record-sum rule is unique for every order, the mean over the characters in which -1 acts as -1"
+  },
+  {
+   "id": "G10-01-12",
+   "text": "pair rules with a kernel: consistent exactly when the kernel changes sign under -1; mixtures of the characters in which -1 acts as -1"
   }
  ],
  "absent": [
@@ -135,5 +139,5 @@
   "conditional statements of paper G8": "SUPPORTED_IN_SCOPE (mathematics, unrefereed, self-assessed)",
   "with events as sets of histories, a gain graph yields quantum mechanics": "NOT_IDENTIFIED_IN_SCOPE (the count is consistent with trivial gains)"
  },
- "revised": "2026-11-13, edition Z8"
+ "revised": "2026-11-13, edition Z9"
 }

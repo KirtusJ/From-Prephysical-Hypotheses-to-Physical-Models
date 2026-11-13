@@ -101,3 +101,9 @@ REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g.py (fresh
 "Director G, pull request 2, commit b626c0d: four checkers rerun (check_walk, check_record_selection, check_probability_selection, check_forced_envelope)",RAN_OK,yes,"two exact outputs identical apart from line endings; seven floating-point outputs differ by at most 1.5e-6 relative, no predicate changed",reproduction on Linux of results recorded on Windows; rerun for edition Z7
 Baseline_Additions/verify_signed_lift_rule.py (fresh directory),RAN_OK,yes,result file byte-identical,5 predicates; added in edition Z8
 REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_native.py (fresh directory),RAN_OK,yes,result file byte-identical,"5 predicates, exact arithmetic; added in edition Z8"
+Baseline_Additions/verify_kernel_rules.py (fresh directory),RAN_OK,yes,result file byte-identical,"4 predicates, 3 failed and kept; added in edition Z9"
+Baseline_Additions/verify_kernel_rules_followup.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z9
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_two_rays.py (fresh directory),RAN_OK,yes,result file byte-identical,"5 predicates, 1 failed and kept; added in edition Z9"
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_two_rays_followup.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z9
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g_sheet_filter_cost.py (fresh directory),RAN_OK,yes,result file byte-identical,3 predicates; added in edition Z9
+"Director G, pull request 2, commit d4f6fea: check_band_preparation.py rerun",RAN_OK,yes,six checks true; 1300 flight rows within 2.7e-13; 107 numbers of the report differ by at most 1.3e-15,reproduction on Linux of results recorded on Windows; rerun for edition Z9

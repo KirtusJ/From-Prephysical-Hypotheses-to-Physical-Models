@@ -1,7 +1,7 @@
 {
  "title": "Bridge Candidate Register: typed map segment for From Prephysical Hypotheses to Physical Models",
  "date": "2026-11-13",
- "author": "LLM Director D (Claude, Anthropic) and LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus; entries marked Director A, B or G follow review records prepared with GPT-6 (OpenAI); entries of edition Z7 marked Director G (Codex) follow the research supplements of pull request 2, commit b626c0d; entries of edition Z8 marked Director G (Codex) follow the supplement on native preparations, pull request 2, commit 00b8e26",
+ "author": "LLM Director D (Claude, Anthropic) and LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus; entries marked Director A, B or G follow review records prepared with GPT-6 (OpenAI); entries of edition Z7 marked Director G (Codex) follow the research supplements of pull request 2, commit b626c0d; entries of edition Z8 marked Director G (Codex) follow the supplement on native preparations, pull request 2, commit 00b8e26; the edge of edition Z9 marked Director G (Codex) follows the supplement on the base preparation and two rays, pull request 2, commit d4f6fea",
  "reading_rule": "Nodes are model classes. Edges are typed. Nothing in this file asserts a physical derivation or a selected ontology; it records checked relations, postulates that would have to be supplied, obstructions, discriminators and untested proposals so that the search space is explicit.",
  "edge_types": {
   "exact_correspondence": "proved relation within or between mathematical models, with a locator",
@@ -397,8 +397,8 @@
    "from": "PRE-ARC",
    "to": "QT",
    "type": "obstruction",
-   "statement": "Consistency on history events forces the order of the rule and does not select the embedding of the amplitudes: for gains of order q the consistent rules of the record-sum form are the real combinations of the squared moduli in the phi(q)/2 conjugate characters; the rule is unique exactly for q = 2, 4, 6. A combination with unequal weights is a consistent rule that is the squared modulus of no character. Edition Z7: positivity confines the weights to a cone; multiplicativity on products selects one conjugate character (G10-01-10; Director G's classification on Q(zeta, sqrt 2), obtained first). The Galois group on one character remains. Edition Z8: if the gain of a walk is a record (signed lift) the rule is unique for every order and is the equal-weight mean over the characters in which -1 acts as -1 (G10-01-11); the choice of an embedding belongs to the reduction by a character. Director G: native records from a localized sheet have one rational law under every embedding law (obtained first).",
-   "locator": "Paper G10, G10-01-08, G10-01-09; verify_cyclotomic_modulus_rules.py; compare G8-01-08 and G7-01-13; G10-01-10; Director G, Probability_from_record_composition.md; G10-01-11; Director G, Native_preparations_and_probability_embeddings.md",
+   "statement": "Consistency on history events forces the order of the rule and does not select the embedding of the amplitudes: for gains of order q the consistent rules of the record-sum form are the real combinations of the squared moduli in the phi(q)/2 conjugate characters; the rule is unique exactly for q = 2, 4, 6. A combination with unequal weights is a consistent rule that is the squared modulus of no character. Edition Z7: positivity confines the weights to a cone; multiplicativity on products selects one conjugate character (G10-01-10; Director G's classification on Q(zeta, sqrt 2), obtained first). The Galois group on one character remains. Edition Z8: if the gain of a walk is a record (signed lift) the rule is unique for every order and is the equal-weight mean over the characters in which -1 acts as -1 (G10-01-11); the choice of an embedding belongs to the reduction by a character. Director G: native records from a localized sheet have one rational law under every embedding law (obtained first). Edition Z9: among switching-invariant pair rules, with no choice of records, the consistent ones are exactly those whose kernel changes sign under -1 (G10-01-12); composition then leaves one character in which -1 acts as -1, not necessarily faithful.",
+   "locator": "Paper G10, G10-01-08, G10-01-09; verify_cyclotomic_modulus_rules.py; compare G8-01-08 and G7-01-13; G10-01-10; Director G, Probability_from_record_composition.md; G10-01-11; Director G, Native_preparations_and_probability_embeddings.md; G10-01-12",
    "status": "PROOF_IN_MANUSCRIPT under a growth hypothesis on one block; exact computation for q = 2, 4, 6, 8, 10, 12"
   },
   {
@@ -408,6 +408,14 @@
    "statement": "Signed line walk under a linear gain, packet near the band edge k = -pi/2: the full spinor stays within E(t) = 2|F| t delta + t delta^2 L^4/(6 eps) + t |F| L delta^2/2 of a constant-force Schroedinger envelope, and for a shrinking packet the scaled lattice position law converges weakly to the Newtonian trajectory Y0 + p0 t - F t^2/2.",
    "locator": "Director G (Codex), Forced_envelope_and_classical_motion.md, pull request 2, commit b626c0d; cross-check: REVIEW_RECORDS/Director_Z/Session_4/cross_review",
    "status": "Director G record; proof read and bound checked by a real-space walk by Director Z; unrefereed; conditional on the band preparation, the readout, the scaling and gains of growing order"
+  },
+  {
+   "from": "PRE-ARC",
+   "to": "CM-SYMP",
+   "type": "exact_correspondence",
+   "statement": "Signed line walk under a linear gain, prepared by a coherent projection on the direction with the sites unread, alternated every two steps: in the scaling eps = delta, h = F delta^4, about delta^(-5/2) blocks, the sheet-unresolved position law at scaled time t tends to equal point masses at -F t^2/2 and +F t^2/2, the two band curvatures at the two edges. Full site-and-direction readings cannot prepare the packet (flat momentum density).",
+   "locator": "Director G (Codex), Base_preparation_and_two_rays.md, pull request 2, commit d4f6fea; cross-check: REVIEW_RECORDS/Director_Z/Session_4/cross_review/CROSS_REVIEW_OF_DIRECTOR_G_TWO_RAYS_ADDENDUM.md",
+   "status": "Director G record; read once and checked by real-space runs at five scales by Director Z; unrefereed; conditional on the direction instrument, a weak-field sheet plane, the readout and gains of growing order; a law at one time, not a trajectory"
   }
  ],
  "obligations_for_any_prephysical_candidate": [
@@ -580,6 +588,8 @@
    2
   ],
   "director_g_rerun_largest_relative_difference_of_floating_outputs": 1.49e-06,
-  "signed_lifts_with_two_connected_components_of_30": 2
+  "signed_lifts_with_two_connected_components_of_30": 2,
+  "two_ray_mass_of_positive_half_at_delta_0p2": 0.5437860483779331,
+  "kernel_rule_first_run_predicates_failed_of_4": 3
  }
 }
