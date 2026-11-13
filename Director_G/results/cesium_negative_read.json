@@ -1143,5 +1143,41 @@
     "K": "3/2",
     "TV": "1/4",
     "two_port_odds_ratio": "5"
+  },
+  "positive_side_uncertainty": {
+    "counts": {
+      "blank_positive": [
+        49,
+        230
+      ],
+      "retention_b": [
+        201,
+        404
+      ],
+      "retention_c": [
+        196,
+        404
+      ],
+      "positive_given_b": [
+        31,
+        201
+      ],
+      "positive_given_c": [
+        140,
+        196
+      ]
+    },
+    "confidence_at_least": "19/20",
+    "grid": 10000,
+    "blank_positive_upper": "707/2500",
+    "retention_b_upper": "1113/2000",
+    "retention_c_lower": "533/1250",
+    "positive_given_b_lower": "499/5000",
+    "positive_given_c_lower": "6327/10000",
+    "weight_b_upper": "5565/9829",
+    "retained_positive_lower": "16266099/49145000",
+    "positive_gap_lower": "2367893/49145000",
+    "common_target_loss_lower": "2367893/51512893",
+    "matching_free_weight_b": "162207/181240"
   }
 }
