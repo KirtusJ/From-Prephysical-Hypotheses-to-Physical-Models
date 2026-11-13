@@ -6,6 +6,7 @@ import argparse
 from fractions import Fraction as F
 from itertools import product
 import json
+from math import prod
 from pathlib import Path
 
 
@@ -63,6 +64,21 @@ def encode(tick, x, tag, translated):
     return tag ^ int(flip)
 
 
+def right_fraction(model, u, v, selected, other):
+    """A custom denominator receives the two squared sector norms."""
+    if callable(model):
+        denominator = model(selected, other)
+    elif model == "sector":
+        denominator = selected
+    elif model == "spectator":
+        denominator = selected + other
+    elif model == "max_norm":
+        denominator = max(selected, other)
+    else:
+        raise ValueError(f"Unknown model {model}")
+    return F(1, 2) + (F(u*v, denominator) if denominator else 0)
+
+
 def panels(setting, model, translated=False, last_tick=LAST_TICK):
     start, origin, initial_tag, enabled = setting
     masses = {(origin, encode(start, origin, initial_tag, translated), 0): F(1)}
@@ -83,14 +99,9 @@ def panels(setting, model, translated=False, last_tick=LAST_TICK):
         future = {}
         for x, b in product(range(origin-(tick-start), origin+(tick-start)+1), (0, 1)):
             u, v = (signed.get((x, b, r), 0) for r in (0, 1))
-            norm = u*u + v*v
-            if model in ("spectator", "max_norm"):
-                other_norm = sum(signed.get((x, b^1, r), 0)**2 for r in (0, 1))
-                if model == "spectator":
-                    norm += other_norm
-                else:
-                    norm = max(norm, other_norm)
-            right = F(1, 2) + (F(u*v, norm) if norm else 0)
+            selected = u*u + v*v
+            other = sum(signed.get((x, b^1, r), 0)**2 for r in (0, 1))
+            right = right_fraction(model, u, v, selected, other)
             require(0 <= right <= 1, "conditional probability")
             mass = sum(masses.get((x, b, r), F(0)) for r in (0, 1))
             for rail, chance in enumerate((right, 1-right)):
@@ -104,7 +115,57 @@ def panels(setting, model, translated=False, last_tick=LAST_TICK):
     return records
 
 
+def check_finite_calibration():
+    setting = SETTINGS["overlap_0"]
+    final_tick = 9
+    reference = panels(setting, "sector", last_tick=final_tick)
+    # Panels ending at tick eight only use splitters at ticks zero through seven.
+    fractions = {F(1)}
+    for tick in range(8):
+        raw, _ = reference[tick]
+        for (x, b, rail), u in raw.items():
+            v = raw.get((x, b, 1), 0)
+            if rail == 0 and u*v:
+                selected = u*u + v*v
+                other = sum(raw.get((x, b^1, r), 0)**2 for r in (0, 1))
+                fractions.add(F(selected, selected + other))
+
+    def polynomial(r):
+        return prod((r - a)**2 for a in fractions)
+
+    target = F(37, 38)
+    require(len(fractions) == 12 and target not in fractions, "eight-tick calibration set")
+    for tick in range(3, 9):
+        raw, _ = reference[tick]
+        x = tick - 2
+        require((raw[x, 1, 0], raw[x, 1, 1]) == (x, 1), "right-first inner edge")
+        require((raw[x, 0, 0], raw.get((x, 0, 1), 0)) == (1, 0), "left-first inner edge")
+
+    right_port, left_port = (7, 1, 0), (5, 1, 1)
+    _, autonomous = reference[final_tick]
+    require((autonomous[right_port], autonomous[left_port]) == (F(49, 512), F(25, 512)),
+            "autonomous tick-nine daughters")
+    for multiplier, right, left in ((1, F(43, 512), F(31, 512)),
+                                     (3, F(40, 512), F(34, 512))):
+        scale = multiplier * target / polynomial(target)
+
+        def denominator(selected, other):
+            total = selected + other
+            if total == 0:
+                return 0
+            return selected + total * scale * polynomial(F(selected, total))
+
+        require(denominator(0, 1) > 0, "empty selected sector on the unit sphere")
+        analytic = panels(setting, denominator, last_tick=final_tick)
+        require(all(analytic[t] == reference[t] for t in range(9)), "entire calibration prefix")
+        require(analytic == panels(setting, denominator, True, final_tick), "analytic tag relabel")
+        _, output = analytic[final_tick]
+        require((output[right_port], output[left_port]) == (right, left),
+                "two positive tick-nine daughters")
+
+
 def run():
+    check_finite_calibration()
     all_panels, saved = {}, {}
     for name, setting in SETTINGS.items():
         start, origin, _, _ = setting
