@@ -40,8 +40,8 @@ def cells(tick, origin, start):
     return product(range(origin-depth, origin+depth+1), (0, 1), (0, 1))
 
 
-def words(setting, tick):
-    """Sum the signed direction words. A scheduled XOR occurs on arrival."""
+def words(setting, tick, *, flip_tag_zero=False):
+    """Sum the signed words. At tick one the optional sign plate follows the XOR."""
     start, origin, initial_tag, enabled = setting
     tally = {}
     for path in product((0, 1), repeat=tick-start):
@@ -52,6 +52,8 @@ def words(setting, tick):
             rail = direction
             x += 1-2*rail
             tag ^= masked(time, x, enabled)
+            if flip_tag_zero and enabled and time == 1 and tag == 0:
+                sign = -sign
         port = x, tag, rail
         tally[port] = tally.get(port, 0) + sign
     return tally
@@ -64,8 +66,17 @@ def encode(tick, x, tag, translated):
     return tag ^ int(flip)
 
 
-def right_fraction(model, u, v, selected, other):
+def right_fraction(model, u, v, a, b):
     """A custom denominator receives the two squared sector norms."""
+    selected = u*u + v*v
+    other = a*a + b*b
+    if model == "relative_sign":
+        denominator = u*u + (v-a)**2 + other
+        return F(1, 2) + (F(u*(v-a), denominator) if denominator else 0)
+    if model == "cusp":
+        total = selected + other
+        bias = F(u*v - abs(u*a), total) if total else 0
+        return F(1, 2) + min(F(1, 2), max(-F(1, 2), bias))
     if callable(model):
         denominator = model(selected, other)
     elif model == "sector":
@@ -79,12 +90,12 @@ def right_fraction(model, u, v, selected, other):
     return F(1, 2) + (F(u*v, denominator) if denominator else 0)
 
 
-def panels(setting, model, translated=False, last_tick=LAST_TICK):
+def panels(setting, model, translated=False, last_tick=LAST_TICK, *, flip_tag_zero=False):
     start, origin, initial_tag, enabled = setting
     masses = {(origin, encode(start, origin, initial_tag, translated), 0): F(1)}
     records = {}
     for tick in range(start, last_tick+1):
-        raw = words(setting, tick)
+        raw = words(setting, tick, flip_tag_zero=flip_tag_zero)
         signed = {(x, encode(tick, x, b, translated), r): v for (x, b, r), v in raw.items()}
         decoded = {(x, b, r): masses.get((x, encode(tick, x, b, translated), r), F(0))
                    for x, b, r in cells(tick, origin, start)}
@@ -99,9 +110,8 @@ def panels(setting, model, translated=False, last_tick=LAST_TICK):
         future = {}
         for x, b in product(range(origin-(tick-start), origin+(tick-start)+1), (0, 1)):
             u, v = (signed.get((x, b, r), 0) for r in (0, 1))
-            selected = u*u + v*v
-            other = sum(signed.get((x, b^1, r), 0)**2 for r in (0, 1))
-            right = right_fraction(model, u, v, selected, other)
+            other_u, other_v = (signed.get((x, b^1, r), 0) for r in (0, 1))
+            right = right_fraction(model, u, v, other_u, other_v)
             require(0 <= right <= 1, "conditional probability")
             mass = sum(masses.get((x, b, r), F(0)) for r in (0, 1))
             for rail, chance in enumerate((right, 1-right)):
@@ -145,6 +155,7 @@ def check_finite_calibration():
     _, autonomous = reference[final_tick]
     require((autonomous[right_port], autonomous[left_port]) == (F(49, 512), F(25, 512)),
             "autonomous tick-nine daughters")
+    required_curvatures = []
     for multiplier, right, left in ((1, F(43, 512), F(31, 512)),
                                      (3, F(40, 512), F(34, 512))):
         scale = multiplier * target / polynomial(target)
@@ -162,10 +173,57 @@ def check_finite_calibration():
         _, output = analytic[final_tick]
         require((output[right_port], output[left_port]) == (right, left),
                 "two positive tick-nine daughters")
+        flipped = panels(setting, denominator, last_tick=final_tick, flip_tag_zero=True)
+        require(all(flipped[t][1] == analytic[t][1] for t in analytic), "sign-even analytic panels")
+        local_split = right / (right + left)
+        required_curvatures.append(2 * 6**2 * abs(F(49, 74) - local_split))
+    require(required_curvatures == [F(216, 37), F(324, 37)], "necessary curvature at tick eight")
+
+
+def check_sign_control():
+    setting = SETTINGS["overlap_0"]
+    for name in ("pure_0", "pure_1"):
+        calibrated = panels(SETTINGS[name], "sector")
+        for model in ("relative_sign", "cusp"):
+            require(panels(SETTINGS[name], model) == calibrated, "pure-tag sign controls")
+    total_right = F(0)
+    total_parent = F(0)
+    local_splits = []
+    for flipped in (False, True):
+        sign = -1 if flipped else 1
+        records = panels(setting, "relative_sign", last_tick=9, flip_tag_zero=flipped)
+        cusp = panels(setting, "cusp", last_tick=9, flip_tag_zero=flipped)
+        require(records == panels(setting, "relative_sign", True, 9, flip_tag_zero=flipped),
+                "physical sign operation in a different tag frame")
+        scaled_mass = F(1)  # At t=2, x=0, the tag-one parent has mass 1/4.
+        for n in range(7):
+            tick = n + 2
+            raw, parent = records[tick]
+            require((raw.get((n, 1, 0), 0), raw.get((n, 1, 1), 0)) == (n, 1),
+                    "selected edge signed words")
+            require((raw.get((n, 0, 0), 0), raw.get((n, 0, 1), 0)) == (sign, 0),
+                    "spectator edge signed words")
+            mass = sum(parent[n, 1, rail] for rail in (0, 1))
+            require(2**tick * mass == scaled_mass, "edge marker recurrence")
+            _, daughters = records[tick + 1]
+            right, left = daughters[n + 1, 1, 0], daughters[n - 1, 1, 1]
+            expected = F(1, 2) + (F(2*n, n*n + 5) if flipped else 0)
+            require(right + left == mass and right / mass == expected, "conditional sign response")
+            _, cusp_daughters = cusp[tick + 1]
+            require(cusp_daughters[n + 1, 1, 0] == cusp_daughters[n - 1, 1, 1] > 0,
+                    "sign-even cusp has zero edge slope")
+            scaled_mass = 2 * expected * scaled_mass + 1
+            if n == 2:
+                total_right += right
+                total_parent += mass
+                local_splits.append(right / mass)
+    require(sum(local_splits) / 2 == F(13, 18) and total_right / total_parent == F(151, 198),
+            "equal-setting mean and pooled counts")
 
 
 def run():
     check_finite_calibration()
+    check_sign_control()
     all_panels, saved = {}, {}
     for name, setting in SETTINGS.items():
         start, origin, _, _ = setting
