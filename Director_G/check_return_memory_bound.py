@@ -6,6 +6,7 @@ read and recurrence residual uses exact rational arithmetic.
 import argparse
 import json
 from fractions import Fraction
+from itertools import product
 from pathlib import Path
 
 from check_string_readouts import PAIRS, R, execute, rotation, squared
@@ -66,6 +67,85 @@ def example(name, matrix, initial, emissions, chi, native, bounds):
                 ordinary_recurrence_residuals=target_residuals)
 
 
+def three_read_panel(persistence, recovery, launch, bright, dark):
+    """Emit three terminal probabilities for a two-state transition matrix."""
+    result = []
+    for _ in range(3):
+        result.append(launch * bright + (1 - launch) * dark)
+        launch = launch * persistence + (1 - launch) * recovery
+    return result
+
+
+def lower_third_read(first, second):
+    if first == 0:
+        return Fraction(0)
+    return max(Fraction(0), first + second - 1) ** 2 / first
+
+
+def attaining_panel(first, second):
+    """Realize the lower face with absorbing-dark and periodic-swap types."""
+    if second <= 1 - first:
+        persistence = Fraction(0)
+        swap_weight = second
+    else:
+        persistence = (first + second - 1) / first
+        swap_weight = 1 - first
+    absorbing = three_read_panel(persistence, 0, 1, 1, 0)
+    swap = three_read_panel(0, 1, 0, 1, 0)
+    # The unused mixture mass, when present, has an always-dark read.
+    return [first * a + swap_weight * b for a, b in zip(absorbing, swap)]
+
+
+def two_state_mixture_checks(native):
+    """Test the analytic boundaries, equality constructions and sharp error bracket."""
+    grid = [Fraction(i, 4) for i in range(5)]
+    lower_hits = upper_hits = 0
+    for params in product(grid, repeat=5):
+        first, second, third = three_read_panel(*params)
+        lower = lower_third_read(first, second)
+        upper = 1 - lower_third_read(1 - first, 1 - second)
+        if not lower <= third <= upper or 625*third - 336*first - 400*second + 400 < 0:
+            raise ValueError(f"Two-state boundary failed for {params}")
+        lower_hits += third == lower
+        upper_hits += third == upper
+
+    endpoints_checked = 0
+    for first, second in product(grid, repeat=2):
+        lower = attaining_panel(first, second)
+        upper = [1 - p for p in attaining_panel(1 - first, 1 - second)]
+        if lower != [first, second, lower_third_read(first, second)]:
+            raise ValueError("Lower-bound construction failed")
+        if upper != [first, second, 1 - lower_third_read(1 - first, 1 - second)]:
+            raise ValueError("Complementary upper-bound construction failed")
+        endpoints_checked += 2
+
+    q0, q1, q2 = native[:3]
+    floor = lower_third_read(q0, q1)
+    if (q0, q1, q2, floor) != (1, Fraction(9, 25), Fraction(49, 625), Fraction(81, 625)):
+        raise ValueError("Wrong native panel or exact threshold")
+    native_margin = 625*q2 - 336*q0 - 400*q1 + 400
+    if native_margin != -31:
+        raise ValueError("Wrong linear witness at the coherent panel")
+    # Expand 625*((q1-2r)^2-(1-r)*(q2+r)), in descending powers of r.
+    polynomial = [3125, 625 * (q2 - 1 - 4*q1), 625 * (q1*q1 - q2)]
+    if polynomial != [3125, -1476, 32]:
+        raise ValueError("Distance polynomial disagrees with the native reads")
+    polynomial = [int(coefficient) for coefficient in polynomial]
+    bounds = [Fraction(2277877, 100000000), Fraction(2277878, 100000000)]
+    for error, feasible in zip(bounds, (False, True)):
+        perturbed = attaining_panel(q0 - error, q1 - error)
+        fits = max(abs(p - q) for p, q in zip(perturbed, native[:3])) <= error
+        value = polynomial[0]*error**2 + polynomial[1]*error + polynomial[2]
+        derivative = 2*polynomial[0]*error + polynomial[1]
+        if fits != feasible or (value <= 0) != feasible or derivative >= 0:
+            raise ValueError("Rational certificate failed near the smaller root")
+    return dict(models_checked=len(grid)**5, lower_hits=lower_hits, upper_hits=upper_hits,
+                boundary_realizations=endpoints_checked, native=[q0, q1, q2],
+                lower_at_first_two_reads=floor, gap_at_fixed_first_two=floor - q2,
+                linear_witness_at_native=native_margin, distance_polynomial=polynomial,
+                sharp_error_bracket=bounds)
+
+
 def calculate():
     native, chords = native_returns(MAX_STATES+1)
     bounds = [bound_row(m, native, chords) for m in range(1, MAX_STATES+1)]
@@ -90,7 +170,8 @@ def calculate():
     return dict(source="Four-site vacuum Gauss sector, localized pair 01, repeated real rotation R on bond 12.",
                 time_order="Fresh terminal return probabilities from k=0 upward.",
                 ordinary=native, bounds=bounds, examples=examples,
-                scope="The examples are exact instances. The universal bound uses the eigenvector and recurrence proof.")
+                scope="The examples are exact instances. The universal bound uses the eigenvector and recurrence proof.",
+                two_state_mixtures=two_state_mixture_checks(native))
 
 
 if __name__ == "__main__":
@@ -101,4 +182,4 @@ if __name__ == "__main__":
     data = calculate()
     (directory/"return_memory_bound.json").write_bytes(
         (json.dumps(data, default=str, indent=2) + "\n").encode("utf-8"))
-    print("Verified 14 return times, bounds for 1–12 states and four stochastic examples.")
+    print("Verified 14 return times, bounds for 1–12 states, four stochastic examples and the three-read bounds for two-state mixtures.")
