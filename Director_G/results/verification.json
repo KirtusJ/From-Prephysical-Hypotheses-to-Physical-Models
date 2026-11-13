@@ -6159,5 +6159,55 @@
       }
     },
     "open_gates": 13
+  },
+  "terminal_sheet_coarsening_and_reversible_returns": {
+    "scope": "One localized staircase launch. Nonnegative stationary multiset functions per port, arbitrary history subset continuation, terminal coarsening and reversible finite-dimensional compact operational closure. Finite return experiments separate laws conditional on their preparations. Electric string comparison assumes a two-component marked/coherent family.",
+    "totals": {
+      "checkers": 93,
+      "generated_outputs": 107,
+      "lean_files": 29
+    },
+    "proof": {
+      "g10": "Edition Z20 481a04f; apply the global-law statement after combining the two disjoint parity equations. A common horizon for both parities is impossible.",
+      "lean": "Lean 4.19.0, Windows, two successful compilations. Directed step, floor periodicity, uniform arbitrary signed gain multiplicity at each target site/rail of one parity at 12k+10M+10+p, opposite parity obstruction. No formalization of the operational axioms or recurrence.",
+      "recurrence": "Minkowski norm of K-K makes the affine automorphism isometric; joint returns of finite coherent blocks attain the limsup. Infinite iid tape and finite H-bit prefix controls delimit the closure hypothesis."
+    },
+    "checks": {
+      "replay": "Four fresh processes per working copy, byte-identical outputs; after the last extra rail-recovery predicate, two further ring-recurrence processes were rerun. All four stored current outputs independently reproduced in both trees.",
+      "scope_of_numerics": "22,510 local subsets, 18,334 disagreements with pure zero character, all sheet/position/rail outcomes kept. Formal removal of one cancelling history yields 33/32 each in 14 tested orders. All 1,336 basis columns in the two exact inverse circuits checked. Nine finite-visibility rows.",
+      "string": "Four phase models scanned over ticks 1..32768 for each of six launches; maximal difference between the two scan implementations <5e-11. Exact early pointer and unmarked distributions; geometry n=2..10 includes one-state exception.",
+      "finite_tape": "All inverse states on five finite tapes and all words through tape length; exact launch ensemble return periods 12,36,24,60,180 at order 3.",
+      "per_copy_local_links": {
+        "Return_records_and_reversible_dynamics.md": 15,
+        "Counting_and_character_records.md": 20,
+        "Electric_string_quantum_and_classical_motion.md": 19,
+        "Native_preparations_and_probability_embeddings.md": 9
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Return_records_and_reversible_dynamics.md": "fdcddd60a36c439503c3a85f6be26beff7acbeed02d6882e06c576a2e5a19e69",
+      "Counting_and_character_records.md": "50672dfc47adeb8b89399116f89fafb9b262a66578d923b4f7950973509c1f46",
+      "Electric_string_quantum_and_classical_motion.md": "50391027608cf1d2d519fcdedfb2b1d1ae2b88c51bca6f053211b41b96a44d33",
+      "Native_preparations_and_probability_embeddings.md": "2eb65f46d52086d814ea2395332df33c8cce0411b27310d46638cb02665909e8",
+      "lean/StaircaseAbundance.lean": "82807066687875e9cce8d69b55c51bed28c53131063caa739b93734b818eeec8",
+      "check_sheet_coarsening.py": "d22dda971e46a5f432de87051c296b0ec22fc3148977d9fce3ad96fba645927c",
+      "check_ring_recurrence.py": "70a4884c5cb3267e7c6e45a873f6482a9175ff30e1f18241460cab31335104e7",
+      "check_staircase_echo.py": "9e4899d6eaad38bda549fcb5651e9902ce3854e968a78b6e504ebada7b4aa8a1",
+      "check_string_return_law.py": "3645b7a6fc0d39b2ed68d33f93a4be9a6ed7f253eb28a012b6c654ad32e516c4",
+      "results/sheet_coarsening.json": "024f9133e45c2ad2c40f9cebd79b9cebc3c9bb6d813952d77752182ea45c347e",
+      "results/ring_recurrence.json": "9aa07c6e43c0fa0bc385370586c081bd86dc4522468b519c4c283995773312db",
+      "results/staircase_echo.json": "a3924a582c650efb752d758b402e632a1a3c29c68c3a6dafa1faafdae842a030",
+      "results/string_return_law.json": "05252a7f2940afe47d50061880774fbccb0f0508c754f2c26e2e3acdbcd3f2ca"
+    },
+    "nested_pcp": {
+      "receipt": "7f1c2ab75879084d13e5",
+      "child_head": "5a55ec7d10b81c43f94e7beda6fdf2d04884aea675f742ac0a01d2c7fedf7075",
+      "parent_head": "41ea26616e4850247abbdfb10d87c59abc8fee929acacb492526fe2e7c3bc332",
+      "request": "For H=2 independent fair tape bits b1,b2, compare reversible counting walk (x,c)->(x+(-1)^b,c+1), reading b at c, with two fresh fair \u00b11 steps, start (0,0). Enumerate all direction prefixes and terminal x distributions. Then reset x=0,c=0 and reuse the identical tape: compare joint terminal observations with fresh independent tape. Does a finite terminal record rule out the counter? Give a short calculation and receipt ID.",
+      "child_answer": "1. 2\r\n2. 1\r\n3. 1\r\n4. 1\r\n5. 1\r\n6. 1\r\n7. 1\r\n8. 1\r\n9. 1\r\n10. 1 [end of text]",
+      "parent_answer": "The first consultation returned receipt ID `7f1c2ab75879084d13e5`. Its reply, quoted in full:\n\n> 1. 2  \n> 2. 1  \n> 3. 1  \n> 4. 1  \n> 5. 1  \n> 6. 1  \n> 7. 1  \n> 8. 1  \n> 9. 1  \n> 10. 1 [end of text]\n\nThis calculation is unusable: it provides no identifiable comparison or reasoning. I used no further consultation.\n\nMy independent check uses a fixed tape \\(b\\), integer counter \\(c\\), and transition\n\\[\n(x,c)\\mapsto(x+(-1)^{b_c},c+1).\n\\]\nThis is reversible: from \\((y,d)\\), recover \\((y-(-1)^{b_{d-1}},d-1)\\).\n\nFor two independent fair tape bits, every direction prefix is:\n\n| Prefix | Position | Probability |\n|---|---:|---:|\n| empty | 0 | 1 |\n| \\(+\\) | 1 | \\(1/2\\) |\n| \\(-\\) | \u22121 | \\(1/2\\) |\n| \\(++\\) | 2 | \\(1/4\\) |\n| \\(+-\\) | 0 | \\(1/4\\) |\n| \\(-+\\) | 0 | \\(1/4\\) |\n| \\(--\\) | \u22122 | \\(1/4\\) |\n\nThese match fresh fair steps exactly, including all prefixes. Both terminal distributions are \\(P(-2)=1/4,\\ P(0)=1/2,\\ P(2)=1/4\\).\n\n**Using the same tape again:** if both position and counter are restored to their starting values, the entire path repeats. For successive terminal observations \\((X,Y)\\):\n\n| Pair | Same tape, restarted | Independent fresh tapes |\n|---|---:|---:|\n| \\((-2,-2)\\) | \\(1/4\\) | \\(1/16\\) |\n| \\((0,0)\\) | \\(1/2\\) | \\(1/4\\) |\n| \\((2,2)\\) | \\(1/4\\) | \\(1/16\\) |\n| Any unequal pair, collectively | 0 | \\(5/8\\) |\n\nRestoring the starting state is an externally stipulated operation; it is not supplied by the reversible walk itself. Without resetting the counter, another two steps read subsequent bits, whose values the H=2 calculation does not specify.\n\n**Assessment: conditional.** Finite terminal observations do not generally rule out a counting component: this explicit reversible counting model matches the fresh walk for H=2. An unequal pair would refute this particular deterministic same-tape restart model under the stated exact assumptions. Equal pairs remain compatible with both models. The consultation supplies no support; the conclusions above come from the displayed enumeration.",
+      "adjudication": "The child returned an unlabelled list; no usable calculation. Parent enumerated all four two-bit words with equal weights for its separate tape/counter example and distinguished repeated versus fresh samples. The paper uses a fully reversible swap and cyclic pointer rather than treating repeated measurements on reused tapes as independent."
+    },
+    "open_gates": 13
   }
 }

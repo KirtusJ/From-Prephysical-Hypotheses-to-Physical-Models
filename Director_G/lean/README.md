@@ -72,3 +72,5 @@ The manuscript proves projective density and adaptive hitting. The physical orig
 [GaussString.lean](GaussString.lean) proves the ordered two-charge flux law, support size, and adjacent-hop update. The endpoint result extends over finite histories with spectator registers. The [electric-string paper](../Electric_string_quantum_and_classical_motion.md) gives the separate continuum and collision arguments.
 
 [StaircaseAbundance.lean](StaircaseAbundance.lean) constructs at least 2^k physical histories of a common length for every signed residue at both merging inputs of the staircase carrier. The [weight classification](../Counting_and_character_records.md) also assumes a single endpoint function and consistent continuation of arbitrary selected histories.
+
+The extended [staircase proof](StaircaseAbundance.lean) reaches every site and either rail of one parity with every signed gain, at a common time for that parity. It proves clock parity on arbitrary physical words as well. The [Z20 application](../Return_records_and_reversible_dynamics.md) combines the two parity equations analytically.
