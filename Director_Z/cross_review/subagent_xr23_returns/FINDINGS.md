@@ -1,0 +1,12 @@
+# xr23 returns: cross-review findings log (Return_records_and_reversible_dynamics.md)
+- Read note in full. G10 thm:vertexlaw / cor:vertexlaw / thm:periodic statements read in edition body.tex.
+- Hand check s2: lambda=2 (two predecessors per lifted port, sum h>0), max principle, even+odd addition (needs F_v(0)=0, time independence): follow.
+- Hand check s3: 2c=2c' follows; distinct-residue pair gives only sum_psi c_psi Re psi(l)=0, i.e. the symmetric weight; note says "symmetric weight": follows.
+- Hand check s4: q_t formula, q_2=1/4, 1-3c/4, K-K norm isometry, near-return, c=0 for N>=2: follow given automorphism (onto K) and P_t = e(tau^t s0) at all t.
+- Stored sheet_coarsening.json recurrence_scope says "at most 1-c/2" while note says 1-3c/4 (different port: full port vs position+rail R). staircase_abundance.json scope says "G10 application assumes a common F" while the note says that assumption is removed.
+- Own program xr23_returns.py (M=3,4,5; F1/F3/F5 also M=6,7): 81 met, 0 failed, 3 measured only (R3: no exact R_t>0.99 for even t<=3000; max 0.9556@2088 (M=3), 0.8134@696 (M=4), 0.8719@2650 (M=5)). Float scan to t=400000: M=3 first >0.99 at t=11736 (0.99568); M=4 max 0.98660@126024; M=5 max 0.97864@14320 (none >0.99).
+- Tick six (2,L): M=4 gives count 5, square 3; M=3,5,6 give 5,5.
+- Lean 4.19.0 on copy of StaircaseAbundance.lean: exit 0, no sorry, axioms propext/Classical.choice/Quot.sound. Formalizes abundance + clock parity only; nothing of sections 3, 4.
+- check_ring_recurrence.py rerun from copy: byte-identical to stored ring_recurrence.json (sha256 9aa07c6e...). Stored tapes returns 12,36,24,60,180 match the note; stored curves agree with my q_t, R_t at t=2..12 for M=3,4,5.
+- GAP (summary): "finite closed reversible system" in the lead vs body premise "compact convex K of finite affine dimension + affine automorphism"; note's own tape countermodel shows reversibility with finite position/rail alphabets does not suffice.
+- GAP: identification P_t = e(tau^t s0) with one effect for all t and one tick = one tau, and validity of the c-law at all depths, not written as a premise in the recurrence paragraph.
