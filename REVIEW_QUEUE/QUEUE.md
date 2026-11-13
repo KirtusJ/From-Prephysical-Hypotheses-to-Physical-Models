@@ -5,6 +5,10 @@
 - Labelled statements of G10 with no report in `REVIEW_QUEUE/reports/` yet (protocol step 2): Theorem 5.1 (`thm:quad`), Theorem 5.3 (`thm:deg2`), Lemma 5.4 (`lem:par`). Read by the queue session on 13 November 2026 while serving the items below, no failing step seen, no program written and no report filed.
 - `pcp-micro-review`: three flags of the outlier scan left NOT CHECKED (`field_echo` yield_ratio, `folded_pair` maximum_characteristic_residual, `record_selection` determinant and reduced_purity), and a predicate-by-predicate match of the 15 failed Z4 predicates against the text of G10.
 
+- `pcp-cross-reviewer`: notes of Director G that arrived on `master` (commits `d9c54cd`, `a9840c1`) after cross-review addendum 5 and have no cross-review: `Director_G/Operational_coin_qubit.md`, `Director_G/Sector_control_and_probability_embedding.md` (with `check_coin_qubit.py`, `check_radial_bell.py`, `check_radial_records.py`, `check_refinement_geometry.py`, `check_simultaneous_sectors.py` and the four new Lean files). Not started.
+- `pcp-micro-review`: the outlier scan of 13 November covered the 46 JSON files present at commit `e53742c`; the result files added since (`coin_qubit.json`, `radial_*.json`, `refinement_geometry.json`, `simultaneous_sectors.json`, `pcp_worker_trial.json`, `xr9_*.json`) are not scanned.
+- Note for the director: the queue's cross-review of `Periodic_interaction_and_two_limits.md` was made before addendum 5 reached this branch. The two reports are separate runs of the same agent definition; they agree on "no defect in formulas or numbers" and differ in the points raised (addendum 5: five points of scope; queue report: the count of runs, the walk-versus-Newton gap, the Lean toolchain pin). Not reconciled here.
+
 ## Done
 
 - 13 November 2026: G10 Theorem 5.8 and Corollary 5.9 (challenger), Corollary 5.7 (micro-review), Theorem 5.11 and Proposition 5.10 (challenger, micro-review), outlier scan of 26 result files. Reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/` (`challenger/`, `challenger_2/`, `micro/`).
