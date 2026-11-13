@@ -49,6 +49,8 @@ python -B check_refinement_geometry.py rerun
 python -B check_internal_reference.py rerun
 python -B check_reference_comparison.py rerun
 python -B check_local_mediator.py rerun
+python -B check_three_tick_signal.py rerun
+python -B check_moving_source_records.py rerun
 ```
 
-The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. The local-mediator checker adds a separately rerun thirty-fifth output. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. [Verification record](results/verification.json)
+The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing the total to 23 programs and 37 generated outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. [Verification record](results/verification.json)
