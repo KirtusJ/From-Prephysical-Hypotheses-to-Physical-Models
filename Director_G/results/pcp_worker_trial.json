@@ -64,5 +64,104 @@
       "child": "incorrect/incomplete",
       "parent": "correct; checked inverse 4 and independently rejected child response"
     }
+  },
+  "codex_subagent_delegates_to_pcp_grandchild": {
+    "host": "Codex collaboration API, native Windows PCP Python host 1.0.22 and separate Rust 1.0.22 replay.",
+    "hierarchy": [
+      "/root/calibration_assessor",
+      "/root/calibration_assessor/signed_staircase_audit"
+    ],
+    "handoff": "Codex collaboration.spawn_agent succeeded on the parent path; roles are declared in PCP. No second independent PCP-provider model invocation was made.",
+    "question": "On the 24-site ring choose representatives x\u2208{0,\u2026,23}, use departure gain g(x)=floor(x/2) mod 6 and a minus sign exactly on L\u2192L. From (0,R) compare the two fixed chronological words RRLLR and LLRRR. Determine their signed terminal gains in \u03bc12 (write exponent relative to \u03b612=e^(2\u03c0i/12) with each sheet gain unit \u03b612\u00b2), their common final base/rail, and the relative gain of the first word divided by the second. List departure positions and Hadamard signs.",
+    "question_sha256": "ea1945fbc05cc0674a2f70b72f5937eb9d055f978a5e01bd3342aef87f680433",
+    "parent_receipt_sha256": "bd7de1b5dc4d08bbd86066ba6db7046a77d7574c33534b8d0433a78b2930055f",
+    "child_receipt_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+    "parent": {
+      "events": 34,
+      "head": "f89cef4b69edb3c554fde9d48f3877d7f2839888890df008c05ca957a05554e7",
+      "register_sha256": "c7769ab0f98db643f568d36ff6bd711901c7d520dd6513211edd2e93e6c4534b",
+      "result_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+      "read_back_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+      "verifier_exit": 1,
+      "guard_problems": 0,
+      "review_state": "CLOSED_COMPLETE"
+    },
+    "child": {
+      "events": 20,
+      "head": "66d5c6525ceceb552f949fc2415aedc2c815443c7dc925960e21592eb4ad7fa4",
+      "register_sha256": "5a09dfb697674fab0809c458148fe0f2be4e108aedd24e6d571f6427f3e37d7a",
+      "result_sha256": "87c36e8ece11a12f1fccf1e1721418924930a4234950d2be2372f3bfa57a7cc8",
+      "read_back_sha256": "87c36e8ece11a12f1fccf1e1721418924930a4234950d2be2372f3bfa57a7cc8",
+      "verifier_exit": 0,
+      "guard_problems": 0,
+      "review_state": "CLOSED_COMPLETE"
+    },
+    "supervisor_readback": "After child FINAL_ANSWER and host collaboration.list_agents reported completed, parent opened child receipt/calculation, verified object bytes, compared all word fields and both question files, and reran Rust verification on both registers.",
+    "calculation": {
+      "first": {
+        "word": "RRLLR",
+        "departures": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "sheet_terms": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "sheet": 1,
+        "exponent": 8,
+        "port": [
+          1,
+          "R"
+        ]
+      },
+      "second": {
+        "word": "LLRRR",
+        "departures": [
+          0,
+          23,
+          22,
+          23,
+          0
+        ],
+        "sheet_terms": [
+          0,
+          5,
+          5,
+          5,
+          0
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "sheet": 3,
+        "exponent": 0,
+        "port": [
+          1,
+          "R"
+        ]
+      },
+      "ratio_exponent": 8,
+      "reverse_ratio_exponent": 4
+    },
+    "limitation": "Native Rust parent exit 1 marks the accurately relayed adoption as attention. Both chains and guard replays pass, both reviews closed and both tasks ended. Actor authentication remains DECLARED. Build-17 Enterprise adapter cards and build-22 native method have distinct method releases; kernel cards are byte-identical.",
+    "workflow": "Send the actual coordinate convention and a bounded task. Keep the parent responsible for independently recomputing the answer and checking the returned object after child exit. A spare collaboration slot was needed; an extra reviewer dispatch during the trial hit the agent thread limit."
   }
 }

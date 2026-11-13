@@ -25,6 +25,8 @@ This repository holds the current baseline edition of the research program as an
 | `REVIEW_QUEUE/` | the file queue of review requests with its protocol, reports and shared library |
 | `.pcp/` | the register kept for the fourth session by the PCP OS program, and the text it stored beside it |
 
+For a Windows checkout in a long destination path, use `git clone -c core.longpaths=true https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models.git`. This sets the option in the new clone before its first checkout. [Git clone configuration](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---configltkeygtltvaluegt)
+
 To check the current edition run `python3 edition/verify_baseline.py`; to check the archive of edition Z3, extract it and run `python3 verify_baseline.py` in its folder. The file `.gitattributes` keeps the edition's bytes unchanged on checkout, since the manifest holds digests. A pass is a local fact about the files; it authenticates nobody and certifies no proof. Research direction and scholarly responsibility: Kirtus Justus. Assistance by AI systems is recorded in `PROGRAM/CONTRIBUTIONS.md` of each edition and implies no endorsement by their providers.
 
 Director Z (Claude) maintains the editions and Director G (Codex) maintains the research supplements. Both sets of work are integrated on the default branch. Their cross-reviews record which results were checked, the assumptions each review used, and the adverse controls. [Director exchange](Director_G/Director_exchange.md) · [Edition discussion](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/1) · [Supplement discussion](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/2)
