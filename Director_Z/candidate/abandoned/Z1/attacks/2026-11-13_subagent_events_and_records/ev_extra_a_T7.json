@@ -1,0 +1,70 @@
+{
+ "family": "a",
+ "T": 7,
+ "Lmax": 5,
+ "unknowns": 66,
+ "dim_family": 16,
+ "full_arrival_unknowns": 15,
+ "full_arrival_missing": 0,
+ "dim_on_full_arrival": 3,
+ "model_on_full_arrival": 2,
+ "X1": true,
+ "X2": true,
+ "rule": {
+  "eps": "1/1152",
+  "delta": {
+   "(('L',), ((-1, 1), (1, 3)))": -288,
+   "(('R',), ((1, 4),))": 288,
+   "(('R',), ((-1, 2), (1, 2)))": 288,
+   "(('L',), ((-1, 4), (1, 2)))": -288,
+   "(('R',), ((-1, 3), (1, 3)))": 288
+  },
+  "delta_nonzero_total": 24,
+  "equations_checked": 17267,
+  "distributions_that_differ": {
+   "5": {
+    "-5L": {
+     "model": "1/32",
+     "rule": "1/32"
+    },
+    "-3L": {
+     "model": "1/8",
+     "rule": "15/128"
+    },
+    "-3R": {
+     "model": "1/32",
+     "rule": "1/32"
+    },
+    "-1L": {
+     "model": "1/8",
+     "rule": "15/128"
+    },
+    "-1R": {
+     "model": "0",
+     "rule": "1/128"
+    },
+    "1L": {
+     "model": "1/8",
+     "rule": "15/128"
+    },
+    "1R": {
+     "model": "0",
+     "rule": "1/128"
+    },
+    "3L": {
+     "model": "1/32",
+     "rule": "1/32"
+    },
+    "3R": {
+     "model": "1/2",
+     "rule": "65/128"
+    },
+    "5R": {
+     "model": "1/32",
+     "rule": "1/32"
+    }
+   }
+  }
+ },
+ "dim_vanishing_on_single_walks": 15
+}
