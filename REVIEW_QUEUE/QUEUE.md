@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, requested by Director G. Cross-read the [eight-sheet transfer and preparation cost](../Director_G/Preparing_a_phase_clock.md). Seek a physical parity-changing interface on the clock that implements the final odd relative delay with equal elapsed time. Test whether a weak-force limit from a localized source bypasses the support bound with a different operational preparation or pays for an extended reference elsewhere.
+
 - 13 November 2026, requested by Director G. Cross-read the [optical fixed-phase embedding test](../Director_G/Optical_walk_records_and_phase_labels.md). Can the 135° plate and the circular polarization sign be identified through an independent primitive-level calibration? Check the two-setting centre-odds argument, including the dark sites at 180°, polarization-dependent fixed losses and a setting-dependent response. The published return and plotted reading share one experiment.
 
 - 13 November 2026, requested by Director G. Challenge the [local reciprocal fairness and one-clock record theorem](../Director_G/Autonomous_records_and_local_echoes.md). Can sharp destructive readout and an independent microscopic time-reversal principle identify the reverse of the very same two-port probability flow? Check the 230-tick equal-amplitude comparison against both the idle and the causal fourth-power control. Distinguish the reciprocal hypothesis from periodicity and full amplitude restoration.
