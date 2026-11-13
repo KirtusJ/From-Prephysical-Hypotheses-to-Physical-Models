@@ -5699,5 +5699,146 @@
       "child_register": "c99a44f79ee66e0102d6790f97eb7946b5b1d1503156d5cc019bbc4cf688ec64",
       "interpretation": "Child echoed the question without producing either probability. Parent computed 3/8 under retention and 1/4 under replacement. This records the workflow only. Independent checker evidence is above."
     }
+  },
+  "review_queue_second_period_response": {
+    "source_branch": "pcp/review-queue",
+    "review_commit": "e37e86fa1ec9e424c8cd8d98a8000d717852f6f3",
+    "review_target": "b84056e",
+    "prior_manifest_sha256": "23a9c25644709e520b6c1d3826060ee8c2b324c2d738da8b3ea20c6693cc21d9",
+    "review_sha256": {
+      "Equal_time_gains": "5483c262af18cbba62e0be164593d09fe961e32f1587d9dd8e75eecc25f146e3",
+      "Internal_phase_reference": "fe9299bd7fcee10910dfdb99b59c2c11b8f4960ef7d14ae1c007bf9e1f75a86a",
+      "Local_mediation": "6fe500143e04e048534c0bda749f084f9a9eb303db5617d7df0c44a95f88783d"
+    },
+    "revised_manuscripts_lf_sha256": {
+      "Director_exchange.md": "f9ca6d0b5988c6a2e66cdafac1448a571a1681fd5139fdcd44048affe8542d6b",
+      "Equal_time_gains_and_history_records.md": "74d078b92ae711bcaafd6a6f0df5424ad1b694110d397150cab7ec9e7518a110",
+      "Internal_phase_reference.md": "11e1d81f5be640c0e619c81188b86f3b4b7eab912d5fb8a197736b6aca502fff",
+      "Local_mediation_and_the_force_clock.md": "fcd6a03d1546dec44c4a43ec7bc4b94511c866742ff6f5b131d3647b7ee766da"
+    },
+    "review_rank_by_localized_launch": {
+      "(0, 1)": 6,
+      "(0, -1)": 6,
+      "(1, 1)": 7,
+      "(1, -1)": 7,
+      "(2, 1)": 8,
+      "(2, -1)": 8,
+      "(3, 1)": 7,
+      "(3, -1)": 7,
+      "(4, 1)": 6,
+      "(4, -1)": 6,
+      "(5, 1)": 7,
+      "(5, -1)": 7,
+      "(6, 1)": 8,
+      "(6, -1)": 8,
+      "(7, 1)": 7,
+      "(7, -1)": 7
+    },
+    "tape_zero_range_three": [
+      "3/16",
+      "5/16"
+    ],
+    "tape_zero_range_four": [
+      "3/32",
+      "7/32"
+    ],
+    "amplitude_rows": [
+      {
+        "L": 1,
+        "B8": [
+          "1/2",
+          "0"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 2,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 3,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 4,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 6,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 12,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/4",
+          "1/4"
+        ]
+      },
+      {
+        "L": 30,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/4",
+          "1/4"
+        ]
+      }
+    ],
+    "timing": "The review queue's primary runs were against b84056e. The targeted checks here re-read the released review results, verified the N=192 cone excess from our stored finite flight, and compiled the original three unmodified proofs in the pinned environment. The external review programs were not independently replayed for this note.",
+    "exploratory_second_bin_N192": 0.010496863147860136,
+    "lean_4_19_0": [
+      {
+        "file": "GainAbundance.lean",
+        "source_lf_sha256": "8e382d9846dec11854ceff278055e83892fbca523627ce17cbc2df536ea8d71b",
+        "exit": 0
+      },
+      {
+        "file": "LocalMediator.lean",
+        "source_lf_sha256": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+        "exit": 0
+      },
+      {
+        "file": "InternalReference.lean",
+        "source_lf_sha256": "012a823aa3b2934885ba98964701dc2bbf038d746c7dd0ac804de4b7f8051ee0",
+        "exit": 0
+      }
+    ]
   }
 }
