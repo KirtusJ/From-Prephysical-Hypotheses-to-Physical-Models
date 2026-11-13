@@ -74,3 +74,5 @@ The manuscript proves projective density and adaptive hitting. The physical orig
 [StaircaseAbundance.lean](StaircaseAbundance.lean) constructs at least 2^k physical histories of a common length for every signed residue at both merging inputs of the staircase carrier. The [weight classification](../Counting_and_character_records.md) also assumes a single endpoint function and consistent continuation of arbitrary selected histories.
 
 The extended [staircase proof](StaircaseAbundance.lean) reaches every site and either rail of one parity with every signed gain, at a common time for that parity. It proves clock parity on arbitrary physical words as well. The [Z20 application](../Return_records_and_reversible_dynamics.md) combines the two parity equations analytically.
+
+[StringControl.lean](StringControl.lean) checks the two site-layout responses of the uniform separation energy, their difference for every occupied pair, and the diagonal contrast on each hopping edge. The [control and detector proof](../Electric_string_controls_and_probability.md) gives the Lie closure and the operational premises for probabilities.

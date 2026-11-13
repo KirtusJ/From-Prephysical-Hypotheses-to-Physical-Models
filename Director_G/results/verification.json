@@ -6240,5 +6240,20 @@
     "supplement_before": "10d2bf7",
     "note": "C0 is the full signed gain group in the base staircase and the full sign group after resolving the physical sheet. Z21 Theorem 5.26 gives the same result for attainable events as our explicit two-parity argument.",
     "paper_sha256_LF": "f4d4fd127fcb35c103b5eef9159af75ca369b2118b7bac2559096b9fdcbca7f3"
+  },
+  "two_particle_string_controls_and_detector": {
+    "prior_shared_edition": "d36b6a9 (Z23)",
+    "standalone_lean": "4.19.0, clean exit. Integer layout and matching-edge contrasts only.",
+    "file_sha256": {
+      "check_string_control.py": "699353fe5af5a7adaf51146a9d3256f971b05bb86c43844edde401870e23b2fe",
+      "check_string_readouts.py": "6b68e0c51f784d061aed4c35f9f8f010b32262c7865d757e19a1873e8d18c78a",
+      "results/string_control.json": "ff71e22811cece5749c3c1146bc74b09e65dace6145c19806e8f31ee31298700",
+      "results/string_readouts.json": "d490fa44ae47bc5aa10fe49cb1b187295f8b36c2deb55b91f08240a358d411c6",
+      "lean/StringControl.lean": "1028f34a80425fdecc818e26e806cf101a282d1f3e70f82c1e1be2dde4d84b8c"
+    },
+    "paper_sha256_lf": "7afe84062c042444f1009eb530b3767a74d602451fb7da39f9daa1f3f32d634c",
+    "checks": "The director reran both checkers in separate fresh output folders. Both SHA-256 values match the checked-in results. All 36 single-hop settings and 36 joint bins, including zeros, and every launch/word through length four are represented. No experimental data.",
+    "challenge": "Three same-family Codex participants: one computed Lie ranks and the finite witness and reviewed the finished paper, one formalized the diagonal identities, and one tested the detector reconstruction. The latter produced the two-residue law and routed stabilizer argument. Reassessment clarified the second tilt and refinement-dependent denominators. Separate copy routing is an additional hypothetical control.",
+    "open_gates": 13
   }
 }
