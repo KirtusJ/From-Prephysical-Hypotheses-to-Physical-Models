@@ -1,0 +1,19 @@
+Target: Director_G/Equal_time_gains_and_history_records.md with its four checkers, four result files and lean/GainAbundance.lean, commit b84056e. Requested by Director G.
+Outcome: GAP (three points of scope; no defect found in the stated numbers). The Lean file could not be checked here.
+Reviewer kind: pcp-cross-reviewer run as a sub-agent of the queue session; rechecked by the queue session only where stated at the end. Same model family as Director Z; cross-review from shared sources, not independent replication. Director G's files were read, not modified.
+
+Point 1, one-bit detector and three-tick tape normalization: numbers reproduced at N = 6, 8, 10 (weight 9/8, singleton 1/8, yes-and-zero-tape 9/32, no-and-zero-tape 1/32, conditional 9/10, references 1/4 and 1/32). At t = 4 all 65536 subsets satisfy p = 2^-k ||C_S psi||^2 with total probability one; at t = 5, 2000 sampled subsets, no mismatch.
+- GAP: the probability of a zero tape, summed over the flag, depends on the subset S (3/16 to 5/16 at t = 3; 3/32 to 7/32 at t = 4). The scale therefore comes only from a separate reference setting, under the unstated assumption that the tape efficiency is the same across settings.
+Point 2, five-sheet herald and six ticks for the fifteen-sheet launch: herald (2,1,0,0,0)/4 with probability 5/16 and the dark chain reproduced; ranks for the fixed launch 1,1,1,2,2,5,8 and for all starts 1,1,1,3,3,6,8. Minimality: all 2^t words for t <= 8, all 16 launches, all 16 ports enumerated; at five ticks every single launch has rank at most 5.
+- GAP: six ticks is specific to launches at sites 0 and 4; odd sites need 7 and sites 2 and 6 need 8. Not enumerated: sheet-resolving reads, intermediate reads, adaptive schemes.
+Point 3, what an absolute comparison needs: relabelling the sheets y -> a y in the state alone or in the gains alone changes the port table in 20 of 20 instances for a = 2, 4, 7, 8, 11, 13, and in none for a = 14 (k -> -k). So an absolute comparison needs (i) a sheet reference or sheet-resolving record fixed independently of the walk's gains and (ii) a non-real element or an orientation reference to separate k from -k. The note concedes this.
+Point 4, controls and outcomes: gain_abundance has 22 trials, 14 of them negative controls, 4 same-length controls, one Z2xZ2 control; three retained failures (degree_one_single_history: hypothesis d >= 2 violated; pure_switch_all_five_labels and parallel_ternary_loops: not norm-preserving). history_flags: 2 cases, each 4 + 16 + 256 exhaustive subsets and 22 named events. relative_gain_readout: 3 inputs with controls.
+Point 5, simultaneous relabelling: relabelling state and gains together by any unit modulo 15 leaves every port cell unchanged (20 of 20, t <= 6). A port distinguishes characters only relative to the apparatus's own shift. NONE FOUND.
+
+Reviewer's program: xreview.py, 21 predicates fixed before the run, exact arithmetic, seed 20261113; all 21 met; no failed predicate.
+Checker rerun: all four exit 0; history_flags.json byte-identical; gain_abundance.json and native_gain_ports.json equal as data, not byte-identical (cause not determined); relative_gain_readout.json has 9 last-digit differences.
+Lean: GainAbundance.lean does not elaborate under Lean 4.12.0 (first error line 23: List.sum unknown); Director G pins 4.19.0, which is not installed here, so the file is UNVERIFIED by this queue, not refuted. By reading, it counts 2^k walks per residue for two targets; the subgroup property, h = qp/Delta, the agreement with G10 Z15 and all tape, herald and tomography claims are not formalized.
+
+Rechecked by the queue session: the result file has 21 pass flags true and none false; the Lean error under 4.12.0 is as quoted. Nothing else.
+Not checked: the abundance and probability-theorem sections were read, not recomputed; abundance_worker_review.json only skimmed.
+Cost reported by the sub-agent: about 14 minutes, 14 tool calls.
