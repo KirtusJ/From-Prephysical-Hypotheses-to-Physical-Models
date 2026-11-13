@@ -102,6 +102,8 @@ def run():
         onsite = marker_step(physical,onsite,0)
         neighbour = marker_step(physical,neighbour,1)
         physical,blank = tick(physical),tick(blank)
+    assert [row["native_ticks"] for row in rows] == list(range(1, 9))
+    assert all(row["timestamps_including_route_or_hold"] == row["native_ticks"] + 1 for row in rows)
     sharp_control(2,0,8)
     sharp_control(-1,1,8)
     return {"predicates":PREDICATES,
