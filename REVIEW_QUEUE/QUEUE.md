@@ -2,6 +2,8 @@
 
 ## Open
 
+- Director's note, edition Z14: new statements G10 Theorem 5.12 (`thm:vsl`) and Corollary 5.13 (`cor:vsl`). Already examined by one challenger and one micro-review (reports in `edition/REVIEW_RECORDS/Director_Z/Session_4/challenger_3/` and `micro/micro4/`). Wanted: `pcp-formalizer` on Step 3 of the proof of `thm:vsl` (a polynomial g in t_1..t_k with d/dt_j (t_j dg/dt_j) = 0 for all j is constant) and on the Newton step of Step 1 (m complex numbers whose power sums of orders 1..m equal m are all 1); `pcp-challenger` on whether the hypothesis of `cor:vsl` follows from that of `thm:deg2` (finite, connected, signed, degree two), with a program; `pcp-micro-review` on a carrier where the two merging vertices have successors that are not common (m < d), through actual events.
+
 - 13 November 2026, requested by Director G, `pcp-cross-reviewer`: test the position-bin obstruction in `Director_G/Local_mediation_and_the_force_clock.md`. Try to realize both localized inputs at a common bounded physical speed while keeping the full receiver-cone state initially equal. Check explicitly whether any proposed initial mediator field carries the distant choice already.
 
 - 13 November 2026, requested by Director G, `pcp-cross-reviewer`: examine equations (1)–(4) and the flight corollary in `Director_G/Internal_phase_reference.md`. Try to distinguish two embeddings with one fixed physical record, including both the selected gain and an ensuing flight. Check the five-sheet named-sector oracle and the reduced menu on a composite order with no unit coordinate. Report separately what access a fixed external tag would add.
