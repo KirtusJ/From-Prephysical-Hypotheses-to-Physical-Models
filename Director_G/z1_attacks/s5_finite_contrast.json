@@ -1,0 +1,657 @@
+{
+  "candidate": "Director Z, Candidate model Z1 v0.1, Z1-R. Starting vertex (0,R).",
+  "predetermined": {
+    "S1": "Each tested carrier has two distinct successors, and its signed lift is strongly connected.",
+    "characters": "The signed columns have Gram matrix 2I; the unsigned columns fail this test.",
+    "S2_S3_S4_samples": "On all 2^8 subsets at tick 3 the proposed mixture weights are nonnegative, give unit singleton weight, add over distinct terminal labels, and double on continuation. The empty event has zero weight.",
+    "first_contrast": "All full-record endpoint laws agree at ticks 0,1,2. At tick 3 the bright and dark signed path pairs are precisely LRR/RLR and LRL/RLL. Both count probabilities are 1/4.",
+    "identified_a": "For each tested mixture p1(bright)-p3(bright)=p3(dark)=a/4. The nondecrease holds exactly at a=0, and both raw sufficient statistics recover a.",
+    "in_range": "On each tested ring, at least one in-range count/character mixture with positive a obeys the finite S1-S4 checks while failing the bright test. The population endpoints a=0,1 attain the predicted extremes.",
+    "unsharp_controls": "A slope tolerance of 1/16 admits a=1/4: the exact bound a<=4 delta is attained. If positivity is discarded, a=-1/2 passes the one-sided bright test but gives a negative dark probability.",
+    "monitored_control": "With a fresh full path record at every tick, both bright and dark masses are 1/4 at tick three, even when the native gates have the same signs.",
+    "coarse_read": "A position-only meter gives P3(x=1)-P1(x=1)=1/8-a/4, plus 1/8 on N=4 where the ballistic -3 also wraps to 1. Nondecrease allows a=1/2 on every ring.",
+    "coarse_recheck": "Registered after the first run: on N=4 RRL and LLL both have sign + and reach (1,L); the coarse drift is (1-a)/2 there. It is 1/8-a/4 on the other tested rings. Compare all contributing words.",
+    "late_register_control": "An actual pointer first copied after tick three and on each later tick retains the whole early unmarked table, but under squared-coordinate readout has return <=1/2 at all positive times. Check the first 16 late steps against the analytic bound."
+  },
+  "tested_coefficients": [
+    "0",
+    "1/7",
+    "1/2",
+    "1"
+  ],
+  "rows": [
+    {
+      "ring": 3,
+      "graph": {
+        "forward": 12,
+        "backward": 12,
+        "lift_size": 12,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/8",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "5/56",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "-1/8",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "1/8",
+        "1/16",
+        "7/32",
+        "9/64",
+        "23/128",
+        "41/256",
+        "87/512",
+        "169/1024",
+        "343/2048",
+        "681/4096",
+        "1367/8192",
+        "2729/16384",
+        "5463/32768",
+        "10921/65536",
+        "21847/131072",
+        "43689/262144",
+        "87383/524288"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": true,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    },
+    {
+      "ring": 4,
+      "graph": {
+        "forward": 16,
+        "backward": 16,
+        "lift_size": 16,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1,
+        "LLL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/2",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "3/7",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "1/4",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0",
+        "1/4",
+        "0"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": false,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    },
+    {
+      "ring": 5,
+      "graph": {
+        "forward": 20,
+        "backward": 20,
+        "lift_size": 20,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/8",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "5/56",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "-1/8",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "0",
+        "1/16",
+        "1/32",
+        "1/8",
+        "9/128",
+        "31/256",
+        "21/256",
+        "117/1024",
+        "181/2048",
+        "7/64",
+        "757/8192",
+        "1739/16384",
+        "1557/16384",
+        "6817/65536",
+        "12681/131072",
+        "3363/32768",
+        "51313/524288"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": true,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    },
+    {
+      "ring": 6,
+      "graph": {
+        "forward": 24,
+        "backward": 24,
+        "lift_size": 24,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/8",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "5/56",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "-1/8",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "0",
+        "1/16",
+        "0",
+        "9/64",
+        "0",
+        "41/256",
+        "0",
+        "169/1024",
+        "0",
+        "681/4096",
+        "0",
+        "2729/16384",
+        "0",
+        "10921/65536",
+        "0",
+        "43689/262144",
+        "0"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": true,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    },
+    {
+      "ring": 8,
+      "graph": {
+        "forward": 32,
+        "backward": 32,
+        "lift_size": 32,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/8",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "5/56",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "-1/8",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "0",
+        "1/16",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0",
+        "1/8",
+        "0"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": true,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    },
+    {
+      "ring": 16,
+      "graph": {
+        "forward": 64,
+        "backward": 64,
+        "lift_size": 64,
+        "distinct_two": true,
+        "signed_gram": true,
+        "unsigned_gram": false
+      },
+      "checked_t3_subsets": 256,
+      "paths": {
+        "bright": {
+          "RLR": 1,
+          "LRR": 1
+        },
+        "dark": {
+          "RLL": -1,
+          "LRL": 1
+        }
+      },
+      "additional_paths_at_position_1_finishing_L": {
+        "RRL": 1
+      },
+      "mixture_samples": [
+        {
+          "a": "0",
+          "p1_b": "1/2",
+          "p3_b": "1/2",
+          "p3_d": "0",
+          "position_change": "1/8",
+          "bright_nondecrease": true,
+          "recovered_a": "0"
+        },
+        {
+          "a": "1/7",
+          "p1_b": "1/2",
+          "p3_b": "13/28",
+          "p3_d": "1/28",
+          "position_change": "5/56",
+          "bright_nondecrease": false,
+          "recovered_a": "1/7"
+        },
+        {
+          "a": "1/2",
+          "p1_b": "1/2",
+          "p3_b": "3/8",
+          "p3_d": "1/8",
+          "position_change": "0",
+          "bright_nondecrease": false,
+          "recovered_a": "1/2"
+        },
+        {
+          "a": "1",
+          "p1_b": "1/2",
+          "p3_b": "1/4",
+          "p3_d": "1/4",
+          "position_change": "-1/8",
+          "bright_nondecrease": false,
+          "recovered_a": "1"
+        }
+      ],
+      "late_marked_return_at_t3_through_19": [
+        "0",
+        "1/16",
+        "0",
+        "1/8",
+        "0",
+        "31/256",
+        "0",
+        "29/256",
+        "0",
+        "217/2048",
+        "0",
+        "51/512",
+        "0",
+        "1543/16384",
+        "0",
+        "1467/16384",
+        "0"
+      ],
+      "controls": {
+        "delta": "1/16",
+        "tolerance_saturating_a": "1/4",
+        "negative_a": "-1/2",
+        "negative_dark": "-1/8",
+        "path_marked_bright": "1/4",
+        "path_marked_dark": "1/4"
+      },
+      "predicates": {
+        "S1": true,
+        "characters": true,
+        "S2_S3_S4_samples": true,
+        "first_contrast": true,
+        "identified_a": true,
+        "in_range": true,
+        "unsharp_controls": true,
+        "monitored_control": true,
+        "coarse_read": true,
+        "coarse_recheck": true,
+        "late_register_control": true
+      }
+    }
+  ],
+  "failed_predicates": [
+    [
+      4,
+      "coarse_read"
+    ]
+  ],
+  "checks": 66,
+  "expected_retained_first_run_failure": [
+    [
+      4,
+      "coarse_read"
+    ]
+  ],
+  "failure_set_reproduced": true
+}

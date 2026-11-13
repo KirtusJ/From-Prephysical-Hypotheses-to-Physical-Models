@@ -1,0 +1,341 @@
+{
+  "source": "Four-site vacuum Gauss sector, localized pair 01, repeated real rotation R on bond 12.",
+  "time_order": "Fresh terminal return probabilities from k=0 upward.",
+  "ordinary": [
+    "1",
+    "9/25",
+    "49/625",
+    "13689/15625",
+    "277729/390625",
+    "56169/9765625",
+    "138133009/244140625",
+    "5843532249/6103515625",
+    "27169917889/152587890625",
+    "850225993929/3814697265625",
+    "93185949904369/95367431640625",
+    "1215763267633209/2384185791015625",
+    "1032040875404449/59604644775390625",
+    "1133048018286082089/1490116119384765625"
+  ],
+  "bounds": [
+    {
+      "states": 1,
+      "last_read": 2,
+      "minimum_chord_squared": "64/25",
+      "minimizing_powers": [
+        1
+      ],
+      "eigenvalue_distance_bound": "8/25",
+      "probability_error_bound": "6/25"
+    },
+    {
+      "states": 2,
+      "last_read": 3,
+      "minimum_chord_squared": "64/25",
+      "minimizing_powers": [
+        1
+      ],
+      "eigenvalue_distance_bound": "4/25",
+      "probability_error_bound": "12/625"
+    },
+    {
+      "states": 3,
+      "last_read": 4,
+      "minimum_chord_squared": "7744/15625",
+      "minimizing_powers": [
+        3
+      ],
+      "eigenvalue_distance_bound": "968/46875",
+      "probability_error_bound": "468512/18310546875"
+    },
+    {
+      "states": 4,
+      "last_read": 5,
+      "minimum_chord_squared": "7744/15625",
+      "minimizing_powers": [
+        3
+      ],
+      "eigenvalue_distance_bound": "242/15625",
+      "probability_error_bound": "10629366/95367431640625"
+    },
+    {
+      "states": 5,
+      "last_read": 6,
+      "minimum_chord_squared": "7744/15625",
+      "minimizing_powers": [
+        3
+      ],
+      "eigenvalue_distance_bound": "968/78125",
+      "probability_error_bound": "329255241216/931322574615478515625"
+    },
+    {
+      "states": 6,
+      "last_read": 7,
+      "minimum_chord_squared": "7744/15625",
+      "minimizing_powers": [
+        3
+      ],
+      "eigenvalue_distance_bound": "484/46875",
+      "probability_error_bound": "1659995174464/1885928213596343994140625"
+    },
+    {
+      "states": 7,
+      "last_read": 8,
+      "minimum_chord_squared": "1039933504/6103515625",
+      "minimizing_powers": [
+        7
+      ],
+      "eigenvalue_distance_bound": "129991688/42724609375",
+      "probability_error_bound": "452339773454463830272997383357396182870534414336/152057768572267426438978689395842280873694107867777347564697265625"
+    },
+    {
+      "states": 8,
+      "last_read": 9,
+      "minimum_chord_squared": "1039933504/6103515625",
+      "minimizing_powers": [
+        7
+      ],
+      "eigenvalue_distance_bound": "16248961/6103515625",
+      "probability_error_bound": "897223063673146735109442606845261186158713592248963/504870979341447555463506281780983186990852118469774723052978515625000000"
+    },
+    {
+      "states": 9,
+      "last_read": 10,
+      "minimum_chord_squared": "1039933504/6103515625",
+      "minimizing_powers": [
+        7
+      ],
+      "eigenvalue_distance_bound": "129991688/54931640625",
+      "probability_error_bound": "636963720175090752818191341993633690362693854631179149964869632/690874741513190481064147332305061542386564912669733029559893111581914126873016357421875"
+    },
+    {
+      "states": 10,
+      "last_read": 11,
+      "minimum_chord_squared": "8725926945024/95367431640625",
+      "minimizing_powers": [
+        10
+      ],
+      "eigenvalue_distance_bound": "545370434064/476837158203125",
+      "probability_error_bound": "50015613418861238852676453999562169724383542011993075559805235803550374571621704873706075127173183700992/31861838222649045540577607955354236111822091103852375721477717067723258030261163218861797494403653718819668938522227108478546142578125"
+    },
+    {
+      "states": 11,
+      "last_read": 12,
+      "minimum_chord_squared": "8725926945024/95367431640625",
+      "minimizing_powers": [
+        10
+      ],
+      "eigenvalue_distance_bound": "1090740868128/1049041748046875",
+      "probability_error_bound": "13965842841713447361366496801737497276692834074572003078048425595638856505556540028608914684139639396511138318024441856/40352247390098606894206396109909095380680512340445500776882385876254043744822592642958121755391869521035078994565525878357448164024390280246734619140625"
+    },
+    {
+      "states": 12,
+      "last_read": 13,
+      "minimum_chord_squared": "8725926945024/95367431640625",
+      "minimizing_powers": [
+        10
+      ],
+      "eigenvalue_distance_bound": "90895072344/95367431640625",
+      "probability_error_bound": "10250971689056748460186550636491887434953889246764995745502701220175369596898788879901942464008369352320965640420589568/148368246027496855429269410461905580534702591150311640098121562356703253603825174359892483308928337501453556765440046361081982695395709015429019927978515625"
+    }
+  ],
+  "examples": [
+    {
+      "name": "one static state",
+      "transition": [
+        [
+          1
+        ]
+      ],
+      "initial": [
+        1
+      ],
+      "emission": [
+        1
+      ],
+      "characteristic_low_to_high": [
+        -1,
+        1
+      ],
+      "predictions": [
+        1,
+        1,
+        1
+      ],
+      "absolute_errors": [
+        "0",
+        "16/25",
+        "576/625"
+      ],
+      "ordinary_recurrence_residuals": [
+        "-16/25",
+        "-176/625"
+      ]
+    },
+    {
+      "name": "two-state absorbing transition",
+      "transition": [
+        [
+          "9/25",
+          "16/25"
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        0
+      ],
+      "emission": [
+        1,
+        0
+      ],
+      "characteristic_low_to_high": [
+        "9/25",
+        "-34/25",
+        1
+      ],
+      "predictions": [
+        1,
+        "9/25",
+        "81/625",
+        "729/15625"
+      ],
+      "absolute_errors": [
+        "0",
+        "0",
+        "32/625",
+        "2592/3125"
+      ],
+      "ordinary_recurrence_residuals": [
+        "-32/625",
+        "14048/15625"
+      ]
+    },
+    {
+      "name": "three-state calibrated prefix",
+      "transition": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          "779/900",
+          0,
+          "121/900"
+        ]
+      ],
+      "initial": [
+        1,
+        0,
+        0
+      ],
+      "emission": [
+        "1",
+        "9/25",
+        "49/625"
+      ],
+      "characteristic_low_to_high": [
+        "-779/900",
+        0,
+        "-121/900",
+        1
+      ],
+      "predictions": [
+        "1",
+        "9/25",
+        "49/625",
+        "13689/15625",
+        "167729/390625"
+      ],
+      "absolute_errors": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "176/625"
+      ],
+      "ordinary_recurrence_residuals": [
+        "0",
+        "176/625"
+      ]
+    },
+    {
+      "name": "four-state deterministic cycle",
+      "transition": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "initial": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "emission": [
+        "1",
+        "9/25",
+        "49/625",
+        "13689/15625"
+      ],
+      "characteristic_low_to_high": [
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "predictions": [
+        "1",
+        "9/25",
+        "49/625",
+        "13689/15625",
+        "1",
+        "9/25"
+      ],
+      "absolute_errors": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "112896/390625",
+        "3459456/9765625"
+      ],
+      "ordinary_recurrence_residuals": [
+        "-112896/390625",
+        "-3459456/9765625"
+      ]
+    }
+  ],
+  "scope": "The examples are exact instances. The universal bound uses the eigenvector and recurrence proof."
+}
