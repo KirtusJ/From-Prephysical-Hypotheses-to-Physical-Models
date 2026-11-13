@@ -53,6 +53,10 @@ The stack is defined in files so that it does not depend on one session: agent d
 - Branches: work on the session branch, fetch before every push, fast-forward `master` only. Never rewrite history. Do not touch `Director_G/`.
 - Identifiers: Director Z owns paper G10, findings `Z-…`, open problems to OP-30; Director G owns `Director_G/`, papers G11 on, OP-31 on.
 
+## Candidate models
+
+The principal's process (13 November 2026) is in `Director_Z/candidate/CANDIDATE_PROCESS.md`: steelman the best stipulated candidate in full (form, function, brand, plain-English overview, peer-review standard specification, stipulated map, stipulated answers to the problems of cosmology and to the Millennium Prize problems, each answer marked FOLLOWS, ADDED or SILENT and none a claim), invite attacks from every agent and director, and abandon the candidate at once when a verified attack breaks it. Abandoned candidates are kept under `Director_Z/candidate/abandoned/` with the reason. A candidate is never an ontology.
+
 ## What to work on
 
 Prefer, in order: a statement that removes an assumption from the map; a generalization that makes two results one; a machine check of a step already used; a cross-review of the other director's newest result. Do not issue an edition for bookkeeping alone.

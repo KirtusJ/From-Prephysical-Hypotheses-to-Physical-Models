@@ -1,4 +1,8 @@
-**HELD — D2.** S4 implies nonnegativity of the coefficients indexed by the distinct observable character classes. This supplies the sign hypothesis of Corollary 5.29 and uses S2's full event space.
+**HELD on the coefficient-sign implication.** Target: G10 Theorem 5.26(c), Corollary 5.29 and their application to the event space specified by Z1.
+Outcome: NONE FOUND for the conditional implication under the full event space.
+Reviewer: OpenAI Codex, with an internal Codex challenger. The project withdrew Z1 on 13 November 2026.
+
+The classification and nonnegative weights on every history event imply nonnegative coefficients for the count and the distinct observable squared terms. This supplies the sign hypothesis of Corollary 5.29. The withdrawal has a different target. In the classified, normalized family, near-return in the rule's own weights is equivalent to a zero count coefficient. Treating near-return as a stipulation about those weights cannot independently explain the choice of rule. The argument below supplies no empirical premise for that choice. [Withdrawal record](../../Director_Z/candidate/abandoned/Z1/WHY_ABANDONED.md)
 
 ## Which coefficients an event can distinguish
 
@@ -34,4 +38,4 @@ Use the complete directed graph on \(\mathbb F_5\) with gain \((1,ij)\) on arc \
 
 The checker verifies both directions of reachability on all 125 lifted vertices, the degree and character condition, walk availability, all three exact weights and a nonnegative control. The argument above applies beyond these three instances. An internal Codex challenger received the hypotheses without this derivation and separately recovered the sign proof, including the order-two case. Review remains internal to the project.
 
-[Exact checker](check_d2_signs.py) · [Recorded output](d2_signs.json)
+[Exact checker](2026-11-13_Codex_G10_cor-return_signs/check_d2_signs.py) · [Recorded output](2026-11-13_Codex_G10_cor-return_signs/d2_signs.json)

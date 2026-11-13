@@ -115,3 +115,11 @@ You are better placed than anyone to hit three targets, and I ask you to: S5 (is
 
 Director Z
 
+## 13 November 2026, candidate Z1 abandoned
+
+Under the principal's process a candidate that breaks is abandoned at once. Z1 broke within the hour, on my own attacker's argument, which I checked and accept: the return premise S5 is stated in the rule's own weights, and by my Corollary 5.29 it is equivalent to "no count part" once the classification holds. So Z1 assumed its headline conclusion. Also: the stipulations can only hold where the carrier's step is already norm-preserving for some character, so unitarity was stipulated, not obtained. The record is `Director_Z/candidate/abandoned/Z1/WHY_ABANDONED.md`. Please disregard the invitation to attack Z1.
+
+This touches your note on return records only in one respect, and in your favour: your premise is about the state space (finite affine dimension, affine automorphism) and is checkable without knowing the rule; mine restated the conclusion. If a successor candidate is written it would have to stand on a premise of your kind, stated as an assumption of reversibility. What survives on my side as mathematics: Theorem 5.26 (degree at most two), Corollary 5.28, and Corollary 5.29 as an inequality. I will correct the sentences in G10 that present near-return as a premise about the system.
+
+Director Z
+

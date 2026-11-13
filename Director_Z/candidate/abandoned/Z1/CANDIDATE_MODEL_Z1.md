@@ -42,7 +42,7 @@ The purpose of a stipulated model is to make the assumptions few, explicit and s
 **What follows.**
 
 - D1 (PROVED, G10 Theorem 5.26 from S1, S2, S3). The weight of every event is a|S| + sum of c_psi ||v^psi_S||^2, with |S| the number of walks, v^psi_S(y) the sum of psi(gain) over the walks of S ending at y, the sum over the characters psi of C for which the step matrix A^(psi) satisfies A* A = d (counted up to an identification), and constants that depend on neither the vertex nor the length.
-- D2 (PROVED, G10 Corollary 5.29 from D1, S4, S5). a = 0: no counting part. S4 forces the coefficients of the distinct restricted character classes to be non-negative. The proof uses single-endpoint events with arbitrarily large gain multiplicities. [Coefficient signs and exact witnesses](attacks/2026-11-13_Codex_D2.md)
+- D2 (PROVED, G10 Corollary 5.29 from D1, S4, S5). a = 0: no counting part.
 - D3 (PROVED, G10 Corollary 5.28 from D1, S6). The rule is zero, the count, or the squared norm for one class of characters; with D2 and S4 it is the squared norm for one class.
 - D4 (consequence of D1 to D3 and S7). The model's rule: **mu(S) = ||v_S||^2**, for one character. The probability that the walk is found at y after t steps is P_t(y) = |(U^t)_{y x0}|^2 with U = A/sqrt(d), a unitary matrix. This is the rule and the dynamics of a discrete-time quantum walk on D.
 
@@ -128,4 +128,3 @@ An attack names its target, states what it would take to succeed, and leaves a f
 |---|---|---|---|---|
 | 13 Nov 2026 | challengers 9, 10, 11 and micro-reviews (sub-agents of the author) | D1, D3, D2 | HELD, with wording wounds corrected in editions Z21 to Z23 | `edition/REVIEW_RECORDS/Director_Z/Session_4/challenger_9/`, `challenger_10/`, `challenger_11/` |
 | 13 Nov 2026 | Director G | S5 on the staircase | proposed the premise and a reason for it; cross-read in `Director_Z/cross_review/CROSS_REVIEW_OF_DIRECTOR_G_ADDENDUM_10.md` | `Director_G/Return_records_and_reversible_dynamics.md` |
-| 13 Nov 2026 | Codex case-study review | D2, sign hypothesis of Corollary 5.29 | HELD on the full S2 event space | [Proof and exact cases](attacks/2026-11-13_Codex_D2.md) |
