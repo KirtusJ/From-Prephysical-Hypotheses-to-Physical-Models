@@ -1,0 +1,198 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,pdfpages,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom\sloppy
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Freshness versus reporting error},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Freshness versus reporting error}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{1. Observation contract}\label{observation-contract}
+
+Let \texttt{Z=(Z\_1,Z\_2,Z\_3,Z\_4)} denote ideal binary match outcomes from four sequential uses of a known gate-or-reset selector, and \texttt{Y} the reported record. The independent reference selector has gate probability \texttt{t=37/100}; a complete reset produces an ideal match with probability \texttt{r=1/16}. Under the memoryless selector, ideal outputs are independent Bernoulli variables with
+
+\[
+ s=t+(1-t)r=\frac{131}{320}.
+\]
+
+For the comparison process, each reported ideal bit independently flips with probability \texttt{e=1/100}. Define
+
+\[
+ m=s+(1-2s)e=\frac{6579}{16000},\qquad
+ A=\frac{t^4}{4}\big[(1-r)(1-2e)\big]^4.
+\]
+
+The target four-bit law is
+
+\[
+ Q(y)=\prod_{i=1}^4m^{y_i}(1-m)^{1-y_i}
+       -A\prod_{i=1}^4(2y_i-1),\qquad y\in\{0,1\}^4.
+\]
+
+All 16 entries of \texttt{Q} are strictly positive and sum to one. Its proper marginals are independent Bernoulli(\texttt{m}). These equations are mathematical and dimensionless. A genuine experiment must separately justify ideal-state preparation, gate/controller independence, reporting calibration, trial initialization, and the meaning of observation time.
+
+\subsection{2. Total-variation freshness theorem}\label{total-variation-freshness-theorem}
+
+\textbf{Theorem 1 (error-freshness tradeoff).} For any joint law of reported prefix \texttt{W=(Y\_1,Y\_2,Y\_3)}, final reported bit \texttt{Y\_4}, and final ideal bit \texttt{Z\_4}, fix a reference \texttt{s\ in\ {[}0,1{]}}. Put
+
+\[
+ \begin{aligned}
+ L_s(Q)&=\sum_{w\in\{0,1\}^3}|Q(w,1)-sQ_W(w)|,\\
+ \epsilon_4&=\Pr(Y_4\ne Z_4),\\
+ \eta&=\operatorname{TV}\!\left(\mathcal L(W,Z_4),
+                           Q_W\otimes\operatorname{Bern}(s)\right).
+ \end{aligned}
+\]
+
+Then
+
+\[
+ \boxed{L_s(Q)\le\epsilon_4+\eta.}
+\]
+
+\emph{Proof.} Since \texttt{Z\_4} and \texttt{Y\_4} are coupled on the same probability space, replacing one with the other changes the joint distribution with the prefix by at most \texttt{Pr(Y\_4\ !=\ Z\_4)} in total variation. Applying the triangle inequality with the reference product law gives the claim. Because the last variable is binary, \texttt{L\_s(Q)} is precisely the total variation between \texttt{Q\_\{W,Y\_4\}} and \texttt{Q\_W\ x\ Bern(s)}. The definition of \texttt{eta} also equals \texttt{sum\_w\ \textbar{}Pr(W=w,Z\_4=1)-sQ\_W(w)\textbar{}}. No detector-Markov assumption is required. QED.
+
+\emph{Interpretation.} Exact conditional freshness \texttt{Pr(Z\_4=1\ \textbar{}\ W=w)=s} gives \texttt{eta=0} and forces reporting error \texttt{epsilon\_4\ \textgreater{}=\ L\_s(Q)}. If an independent experiment establishes \texttt{epsilon\_4\ \textless{}=\ e\_max}, then any model reproducing the reported target must satisfy \texttt{eta\ \textgreater{}=\ (L\_s(Q)-e\_max)\_+}. Dependence can arise because early reports were buffered until after \texttt{Z\_4}, or because the supposedly independent ideal final outcome is actually statistically predictable. The inequality by itself cannot distinguish those mechanisms.
+
+\textbf{Theorem 2 (closed form).} Suppose a length-\texttt{k} target has law \texttt{Q(y)=prod\_i\ Bern\_m(y\_i)-A\ prod\_i(2y\_i-1)} with \texttt{A\textgreater{}0}, and put \texttt{p\_m(w)=prod\_\{i=1\}\^{}\{k-1\}Bern\_m(w\_i)}. If \texttt{A\textgreater{}\textbar{}m-s\textbar{}\ max\_w\ p\_m(w)}, then
+
+\[
+ \boxed{L_s(Q)=2^{k-1}A-(m-s)(2m-1)^{k-1}.}
+\]
+
+\emph{Proof.} Each difference \texttt{Q(w,1)-sQ\_W(w)} equals \texttt{(m-s)p\_m(w)-A\ prod\_i(2w\_i-1)}. Under the stipulated inequality its sign is the negative of the parity product. Summing absolute values yields the formula, since the mean parity product under independent Bernoulli(\texttt{m}) variables is \texttt{(2m-1)\^{}\{k-1\}}. QED.
+
+For the supplied four-use law, exact rational arithmetic yields
+
+\[
+ \boxed{L_s(Q)=\frac{875470225373317}{32768000000000000}
+        =0.026717230998941559\ldots .}
+\]
+
+Hence if the final bit is misreported at most 1\% of the time, every reproducing detector/controller model must have
+
+\[
+ \boxed{\eta\ge\frac{547790225373317}{32768000000000000}
+         =0.016717230998941558\ldots .}
+\]
+
+\subsubsection{A physically stronger, history-by-history calibration}\label{a-physically-stronger-history-by-history-calibration}
+
+For the reported prefix \texttt{W=111}, its target probability is approximately \texttt{0.06952159242} and the final click probability conditional on that prefix is approximately \texttt{0.36316811406}. Its distance from the fresh probability \texttt{s} is approximately \texttt{0.04620688594}. If a laboratory can certify an error cap of 1\% \textbf{conditional on that particular prefix}, it must also permit at least \texttt{0.03620688594} conditional freshness deviation on this prefix to reproduce the target. This stronger statement uses a stronger calibration contract than an average 1\% last-bit error rate.
+
+\subsection{3. Exact sharpness certificate with a buffered detector}\label{exact-sharpness-certificate-with-a-buffered-detector}
+
+The accompanying exact rational transport certificate specifies 36 strictly positive rational joint masses \texttt{T(z,y)} on the 16 ideal and 16 reported words. The accompanying verifier checks all of the following with exact rational arithmetic:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{sum\_y\ T(z,y)=prod\_i\ Bern\_s(z\_i)} for every ideal word \texttt{z};
+\item
+  \texttt{sum\_z\ T(z,y)=Q(y)} for every reported word \texttt{y};
+\item
+  for each of the four bits \texttt{i} and both true values \texttt{b}, \texttt{Pr(Y\_i\ !=\ Z\_i,\ Z\_i=b)=e\ Pr(Z\_i=b)};
+\item
+  \texttt{epsilon\_4=e=1/100};
+\item
+  the measured history-future total variation is \textbf{exactly} \texttt{eta=L\_s(Q)-e}.
+\end{enumerate}
+
+Thus Theorem 1 is sharp even under all eight calibrated per-bit conditional flip constraints and an independent Bernoulli ideal input process. The joint law defines a valid classical buffered reporting kernel \texttt{T(y\textbar{}z)}, because its ideal-word marginals are positive. It is a mathematical countermodel, not an assertion that any physical device implements the kernel.
+
+The accompanying executable check also evaluates two exponential tail expressions at 75-digit working precision. For the specified 8,982-record test it returns approximately 0.04999520376305833929 and 0.049985875128356778308. These are numerical evaluations, not outward-rounded interval certificates. They are separate from, and are not needed for, the exact rational transport identities and saturation proof above.
+
+\textbf{Information-theoretic corollary.} With the certified ideal marginal \texttt{Z\_4\ \textasciitilde{}\ Bern(s)}, \texttt{eta} measures dependence between the reported prefix and the ideal final bit. Pinsker's inequality gives
+
+\[
+ I(Z_4;W)\ge 2\eta^2\ge 0.0005589316245439451\ \text{nats}
+     \approx 0.0008063678829256\ \text{bits}.
+\]
+
+This is a \emph{minimum predictive information requirement} for any 1\%-accurate reproducing apparatus under the model. It is not evidence of backwards-in-time physical causation: a buffered detector can record earlier labels only after seeing the final outcome.
+
+\subsection{4. Direct signed-predictability witness}\label{direct-signed-predictability-witness}
+
+Define \texttt{f(w)=sgn{[}Q(w,1)-sQ\_W(w){]}}. For the stipulated target, \texttt{f(w)=-prod\_i(2w\_i-1)} and
+
+\[
+ \mathbb E_Q\big[f(W)(Y_4-s)\big]=L_s(Q).
+\]
+
+For any joint implementation, replacing \texttt{Y\_4} by \texttt{Z\_4} changes this expectation by at most \texttt{epsilon\_4}. Therefore
+
+\[
+ \boxed{\mathbb E[f(W)(Z_4-s)]\ge L_s(Q)-\epsilon_4.}
+\]
+
+The rational transport certificate saturates the bound at \texttt{epsilon\_4=0.01}. This single signed statistic is an informative calibration target if a trusted independent path can observe or challenge the final ideal bit. It does not estimate the entire correlation law and is not justified if the reference path changes the detector's behavior.
+
+\end{document}

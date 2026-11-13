@@ -1,0 +1,721 @@
+\documentclass[10pt]{article}
+
+\usepackage{microtype,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=0.88in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\artanh}{\operatorname{artanh}}
+\newcommand{\ph}{\varphi}
+\newcommand{\RR}{\mathbb R}
+\setlength{\emergencystretch}{2em}
+\title{Uniform Bulk Modular Asymptotics\\and the Leading Wilson Entropy Law}
+\author{Kirtus Justus (Theoretical Physicist)\\\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\usepackage{fontspec,unicode-math,mathtools}
+\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}\setmonofont{DejaVu Sans Mono}\setmathfont{Latin Modern Math}
+\begin{document}
+\maketitle
+\begin{abstract}
+The previously derived modular period coefficients can be connected to the
+finite concentration spectrum with a uniform remainder on every fixed
+interior interval of the scaled Jacobi spectrum. An exact positive
+realization of the omitted differential spectrum becomes, after a second
+change of variable, a smooth whole-line equation with potential bounded
+away from zero. Its recessive logarithmic derivative gives an exact
+integral for the concentration logit. An integrable Riccati residual
+then proves an asymptotic expansion to every fixed finite order.
+Deformation of the coefficient contours identifies its terms with the
+original even WKB periods. In particular the expansion through $N^{-5}$
+has a uniform $O(N^{-7})$ remainder for $|\lambda/N|\le\tau<1/2$.
+A conservative explicit constant is supplied for $\tau=1/4$.
+A separate global linear envelope then bounds the positive-majorant-weighted
+modular discrepancy uniformly. Combined with the established Wilson
+covariance and boundary-entropy estimates, this gives the fixed-scaled-mass
+relative entropy $\mu^2\log L/6+O_\mu(1)$. Neither a limiting finite part
+nor a uniform spectral edge expansion is obtained.
+\end{abstract}
+
+\section{Statement and conventions}
+
+Let $N\ge2$ be even. For $0\le j,k<N$, define
+\begin{equation}
+B_{jk}=\begin{cases}1/2,&j=k,\\
+\sin[\pi(j-k)/2]/[\pi(j-k)],&j\ne k,\end{cases}
+\qquad J_{j-1,j}=J_{j,j-1}=\frac{j(N-j)}N,\quad J_{jj}=0.
+\label{eq:model}
+\end{equation}
+These matrices commute, $J$ has simple spectrum, and $0<B<I$.
+For their common modes write
+\begin{equation}
+Jv=\lambda v,\quad Bv=\zeta v,\qquad
+t=\lambda/N,\quad \varepsilon=\log\frac{1-\zeta}{\zeta},\quad
+e=\varepsilon+N\eta(t),
+\label{eq:conventions}
+\end{equation}
+where
+\begin{equation}
+\eta(t)=\pi t\,{}_3F_2\!\left(\tfrac14,\tfrac12,\tfrac34;1,\tfrac32;4t^2\right),
+\qquad |t|<1/2.
+\label{eq:eta}
+\end{equation}
+The alternating-sign involution sends $(t,\zeta,\varepsilon,e)$ to
+$(-t,1-\zeta,-\varepsilon,-e)$. All logarithms are natural.
+
+\begin{theorem}[Uniform interior expansion]\label{thm:main}
+For every $0<\tau<1/2$ and integer $K\ge1$, there are finite constants
+$C_{\tau,K}$ and $N_{\tau,K}$ such that every common mode of
+\eqref{eq:model} with $|t|\le\tau$ and even $N\ge N_{\tau,K}$ satisfies
+\begin{equation}
+\left|e-\sum_{j=1}^K\frac{\ph_{2j-1}(t)}{N^{2j-1}}\right|
+\le C_{\tau,K}N^{-2K-1}.
+\label{eq:main}
+\end{equation}
+Here the $\ph_{2j-1}$ are the even WKB period coefficients defined in
+Section~\ref{sec:periods}. They are real analytic and odd on $(-1/2,1/2)$.
+For $K=3$ they are precisely the previously reduced functions
+\begin{equation}
+\ph_1=\tfrac t2\eta'+(t^2-\tfrac16)\eta'',\qquad
+\ph_3=A_3\eta'+B_3\eta'',\qquad
+\ph_5=A_5\eta'+B_5\eta'',
+\label{eq:closed}
+\end{equation}
+with the rational coefficients in \eqref{eq:AB3}--\eqref{eq:B5}.
+For $|t|\le1/4$ one admissible, deliberately conservative bound is
+\begin{equation}
+\left|e-\frac{\ph_1(t)}N-\frac{\ph_3(t)}{N^3}-\frac{\ph_5(t)}{N^5}\right|
+\le \frac{2273823860\,\pi}{N^7},\qquad N\ge16.
+\label{eq:explicit}
+\end{equation}
+\end{theorem}
+
+This proves the fixed-interior spectral statement left open in
+\cite{periods}. The bounds apply also across $t=0$; the apparent
+singularities there in \eqref{eq:closed} are removable. The constants
+depend on the distance from $|t|=1/2$. No convergence of the full
+inverse-power series is asserted. The exact identities used from
+\cite{tails,moments} are stated next, so the dependence on those
+earlier results is explicit.
+
+\section{Exact spectral input and a whole-line resolvent}
+
+On $I=(-\pi/2,\pi/2)$ let $p(x)=\cos x$ and let
+\[
+A_N=-(p u')'-\frac{N^2-1}{4}p u
+\]
+have its Friedrichs realization. Its simple eigenvalues are
+$\mu_{N,0}<\mu_{N,1}<\cdots$. The first $N$ eigenvalues are
+$-\operatorname{spec}(NJ/2)$. The remaining spectrum is positive,
+and the exact tail formula of \cite{tails} is
+\begin{align}
+F_N(b)&=\sum_{k\ge N}\log\frac{\mu_{N,k}+b}{\mu_{N,k}-b}
+       =2\sum_{k\ge N}\artanh\frac b{\mu_{N,k}},\label{eq:tail}\\
+F_N(N\lambda/2)&=\log\frac\zeta{1-\zeta}.\label{eq:mode}
+\end{align}
+The series converges locally uniformly for $|b|<\mu_{N,N}$.
+In \cite{moments} the same tail is realized exactly by
+\begin{equation}
+T_N=-D_z^2+\frac{4N^2-1}{16p(z)}+\frac{p(z)}{16},\qquad
+\frac{\dd z}{\dd x}=p^{-1/2},
+\label{eq:positive}
+\end{equation}
+with its Friedrichs realization on the finite $z$ interval.
+In particular $\mu_{N,N}>N^2/4$ and $T_N^{-1}$ is trace class.
+
+These are operator and boundary-condition statements, not just formal
+differential substitutions. Briefly, the finite Fourier subspace
+exhausts the first $N$ modes by a nodal-count argument.
+The logarithmic derivative of the endpoint connection coefficient is
+the resolvent trace of $A_N$. Removing its finite spectral polynomial
+and integrating that trace from $-b$ to $b$ gives \eqref{eq:tail}--\eqref{eq:mode},
+without an unspecified entire factor. Successive ground-state
+Darboux deletions realize the omitted spectrum. The transformed
+Fourier Wronskian is a nonzero constant times $p^{N^2/4}$, yielding
+\eqref{eq:positive}. At the initial critical endpoint the
+Friedrichs condition excludes the logarithmic branch; each deletion
+raises the selected exponent by one. The final endpoints are limit
+point. These domain arguments are proved in \cite{tails,moments};
+the algebraic deletion itself belongs to the classical framework
+of Crum~\cite{crum}.
+
+Undoing the Liouville transformation in \eqref{eq:positive} gives
+the unitarily equivalent operator on $L^2(I,\dd x)$
+\begin{equation}
+\widetilde T_N=-(p u')'+\left(\frac{N^2}{4p}+\frac p4\right)u.
+\label{eq:tilde}
+\end{equation}
+Indeed its Liouville correction is
+$p_{xx}/4-p_x^2/(16p)=-3p/16-1/(16p)$.
+
+Introduce the second coordinate
+\begin{equation}
+r=\log(\sec x+\tan x),\qquad p=\sech r,\qquad \dd x=p\,\dd r,
+\qquad h=N^{-1}.
+\label{eq:coordinate}
+\end{equation}
+For $b=N^2t/2$, the quadratic form of $\widetilde T_N-b$ becomes
+\begin{equation}
+\int_{\RR}\left\{|u_r|^2+
+ \left(\frac{N^2}4+\frac{p^2}4-bp\right)|u|^2\right\}\dd r.
+\label{eq:form}
+\end{equation}
+It acts in $L^2(\RR,p\,\dd r)$ and its form domain is $H^1(\RR)$
+when $|t|\le\tau<1/2$. Define on ordinary $L^2(\RR,\dd r)$
+\begin{equation}
+P_h(t)=-h^2D_r^2+Q_t+h^2v,\qquad
+Q_t=\frac{1-2t\sech r}{4},\qquad v=\frac{\sech^2r}{4}.
+\label{eq:wholeline}
+\end{equation}
+Put $s_0=\sqrt{1-2\tau}/2$. Then $Q_t\ge s_0^2>0$.
+All derivatives of $Q_t-1/4$ and $v$ decay exponentially, uniformly
+for $|t|\le\tau$.
+
+\begin{lemma}[Weighted resolvent identity]\label{lem:resolvent}
+Let $Uu=\sqrt p\,u$ map $L^2(p\,\dd r)$ unitarily to $L^2(\dd r)$.
+Then
+\begin{equation}
+U(\widetilde T_N-N^2t/2)^{-1}U^{-1}
+=h^2p^{1/2}P_h(t)^{-1}p^{1/2}.
+\label{eq:weightedresolvent}
+\end{equation}
+If $G_h(t;r,s)$ is the Green kernel of $P_h(t)$ and
+$\mathcal F_N(t)=F_N(N^2t/2)$, then
+\begin{equation}
+\mathcal F_N'(t)=\frac12\int_{\RR}p(r)
+ [G_h(t;r,r)+G_h(-t;r,r)]\,\dd r.
+\label{eq:Fprime}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The identity follows first on compactly supported tests from
+\eqref{eq:form}: the weak equation is $N^2P_h(t)u=p f$.
+Coercivity and density extend it to the closed forms and their
+bounded inverses. This is a weighted resolvent identity; it does
+not identify the ordinary whole-line spectrum of $P_h(t)$ with
+the discrete tail spectrum.
+Positivity and the diagonal bound proved below give
+$0<G_h(t;r,r)\le(2hs_0)^{-1}$. Since $\int_{\RR}p\,\dd r=\pi$,
+the weighted diagonal is integrable. On compact intervals the
+positive continuous kernel has trace equal to its diagonal integral;
+exhaustion gives the same identity on the line. Equivalently,
+trace class also follows directly from the left side of
+\eqref{eq:weightedresolvent}. Differentiating \eqref{eq:tail} gives
+$\mathcal F_N'=(N^2/2)\Tr[(T_N-b)^{-1}+(T_N+b)^{-1}]$.
+Substitute \eqref{eq:weightedresolvent} and $N^2h^2=1$.
+\end{proof}
+
+\section{An exact Riccati integral for the logit}
+
+Let $u_-(r;t,h)$ be the solution of $P_h(t)u=0$ normalized by
+$u_-(r)\sim e^{r/(2h)}$ as $r\to-\infty$. Set
+\begin{equation}
+w=h\frac{u_-'}{u_-},\qquad
+hw'+w^2=Q_t+h^2v,\qquad w(-\infty)=1/2.
+\label{eq:riccati}
+\end{equation}
+The potential is strictly positive. For precision, $w$ can be
+constructed by solving \eqref{eq:riccati} from $r=-R$ with value
+$1/2$ and letting $R\to\infty$. Lower and upper constant barriers
+give $s_0\le w\le\max(1/2,\sqrt{\sup(Q_t+h^2v)})$.
+The difference of two such solutions satisfies a first-order
+equation with damping at least $2s_0/h$, giving convergence on
+compact sets and uniqueness of the bounded solution with the
+declared left limit. Comparing with $1/2$ gives
+\begin{equation}
+h(w-1/2)'+(w+1/2)(w-1/2)=-tp/2+h^2v.
+\label{eq:integrable}
+\end{equation}
+The right side is integrable. The integrating-factor formula
+therefore shows $w-1/2\in L^1(\RR)$, uniformly on compact $t$
+intervals for fixed $h$, and $w\to1/2$ at both ends.
+Reconstruction by integration fixes the required normalization of
+$u_-$ and proves that it is positive. Define
+\begin{equation}
+\mathcal A_h(t)=\int_{\RR}(w(r;t,h)-1/2)\,\dd r.
+\label{eq:A}
+\end{equation}
+
+\begin{proposition}[Exact connection formula]\label{prop:exact}
+For $|t|<1/2$,
+\begin{equation}
+\boxed{\quad\mathcal F_N(t)=
+\frac{\mathcal A_h(-t)-\mathcal A_h(t)}h.\quad}
+\label{eq:exactRiccati}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Difference quotients in $t$ satisfy a damped first-order equation
+with source $-p/2$. Its integrating-factor formula is dominated
+in $L^1$ by an exponential convolution of $p$.
+Taking the limit justifies differentiation and gives
+\begin{equation}
+\partial_t w(r)=-\frac1{2h}\int_{-\infty}^r p(s)
+ \exp\!\left[-\frac2h\int_s^r w(a)\,\dd a\right]\dd s.
+\label{eq:derivativew}
+\end{equation}
+Reduction of order constructs the right recessive solution as
+$u_-(r)\int_r^\infty u_-(a)^{-2}\dd a$. Its Wronskian with
+$u_-$ is $-1$, so
+\begin{equation}
+G_h(t;s,s)=\frac1{h^2}\int_s^\infty
+ \exp\!\left[-\frac2h\int_s^r w(a)\,\dd a\right]\dd r
+\le\frac1{2hs_0}.
+\label{eq:green}
+\end{equation}
+Absolute integrability, or Tonelli applied to the nonnegative
+integrands, permits integration of \eqref{eq:derivativew} in $r$:
+\[
+\mathcal A_h'(t)=-\frac h2\int_{\RR}p(s)G_h(t;s,s)\,\dd s.
+\]
+The derivative of the right side of \eqref{eq:exactRiccati} is
+therefore \eqref{eq:Fprime}. Both sides vanish at $t=0$.
+This determines the integration constant exactly.
+\end{proof}
+
+\section{A uniform residual estimate}
+
+Smooth positive-potential Liouville--Green expansions and their
+error bounds are classical \cite{dlmf,dunster}. Here an elementary
+$L^1$ estimate suffices and keeps the constants tied directly to
+the exact logit.
+
+For fixed $K$, recursively choose $a_j(r,t)$ so that
+\begin{align}
+S_K&=\sqrt{Q_t}\left(1+\sum_{j=1}^Kh^{2j}a_j\right),\label{eq:S}\\
+\mathcal R_K&=S_K^2-Q_t-h^2v
+ -\frac{h^2}2(\log S_K)''
+ +\frac{h^2}4[(\log S_K)']^2\label{eq:residual}
+\end{align}
+has zero coefficients through $h^{2K}$. Primes in this section
+mean $r$ derivatives. At order $h^{2j}$ the new unknown occurs
+only as $2Q_t a_j$, so the recursion is unique. Every $a_j$ is
+rational in $p=\sech r$ and $t$, with possible denominators only
+powers of $1-2tp$. Moreover $a_j(0,t)=0$ when regarded as a
+function of $p$. These facts follow inductively using
+\begin{equation}
+D_r^2f=p^2(1-p^2)f_{pp}+p(1-2p^2)f_p,
+\qquad (D_rf)(D_rg)=p^2(1-p^2)f_pg_p.
+\label{eq:derivativealgebra}
+\end{equation}
+Thus $a_j$ and every fixed $r$ derivative are $O(p)$ uniformly
+for $|t|\le\tau$. In particular all integrals below converge.
+
+Choose $h_0>0$ so small that, for $0<h\le h_0$,
+\begin{equation}
+\sum_{j=1}^Kh^{2j}\|a_j\|_\infty\le\tfrac12,
+\qquad
+h\left(\tfrac12\|Q_t'/Q_t\|_\infty+
+       2\sum_{j=1}^Kh^{2j}\|a_j'\|_\infty\right)\le s_0/2.
+\label{eq:hsmall}
+\end{equation}
+Here the norms include the supremum over $|t|\le\tau$.
+They are finite, so such an $h_0$ exists. Then $S_K\ge s_0/2$ and
+\begin{equation}
+w_K=S_K-\frac h2(\log S_K)'\ge s_0/4,
+\qquad hw_K'+w_K^2-(Q_t+h^2v)=\mathcal R_K.
+\label{eq:wK}
+\end{equation}
+
+\begin{lemma}[Integrated stability bound]\label{lem:stability}
+Under \eqref{eq:hsmall},
+\begin{equation}
+\|w-w_K\|_1\le s_0^{-1}\|\mathcal R_K\|_1.
+\label{eq:stability}
+\end{equation}
+Consequently
+\begin{align}
+\left|\mathcal F_N(t)-\frac1h\int_{\RR}
+ [S_K(r;-t,h)-S_K(r;t,h)]\,\dd r\right|
+\le\frac{\|\mathcal R_K(\cdot,t,h)\|_1+
+             \|\mathcal R_K(\cdot,-t,h)\|_1}{hs_0}.
+\label{eq:certificate}
+\end{align}
+\end{lemma}
+\begin{proof}
+For $d=w-w_K$ the exact equation is
+\[
+hd'+(w+w_K)d=-\mathcal R_K,\qquad d(-\infty)=0.
+\]
+The integrating factor and $w+w_K\ge s_0$ yield
+\[
+|d(r)|\le\frac1h\int_{-\infty}^r
+ |\mathcal R_K(s)|e^{-s_0(r-s)/h}\,\dd s.
+\]
+Integrating gives \eqref{eq:stability}. Also $S_K\to1/2$ at both
+ends, so $\int_{\RR}(\log S_K)'\dd r=0$. Substitute
+\eqref{eq:wK} into \eqref{eq:A} and use \eqref{eq:exactRiccati}.
+\end{proof}
+
+The cancellation defining $a_j$ is sufficient for an actual
+uniform integrable residual, not merely a pointwise formal one.
+Indeed put $z=h^2$ and $A=1+\sum_{j=1}^K z^ja_j$.
+If
+\[
+R_0=-\tfrac14(\log Q_t)''+\tfrac1{16}[(\log Q_t)']^2,
+\]
+then direct calculation gives the finite polynomial identity
+\begin{equation}
+A^2\mathcal R_K=Q_t(A^4-A^2)+z(R_0-v)A^2
+ -\frac z2 AA''+\frac{3z}4(A')^2
+ +\frac z4(\log Q_t)'AA'.
+\label{eq:cleared}
+\end{equation}
+Its coefficients through $z^K$ vanish. Each remaining coefficient
+is $O(p)$, uniformly on $0\le p\le1$, $|t|\le\tau$; this follows
+from \eqref{eq:derivativealgebra} and $a_j(0,t)=0$.
+The denominators are bounded away from zero. Since $A\ge1/2$,
+there is a finite $M_{\tau,K}$, given by these finitely many
+rational functions, for which
+\begin{equation}
+|\mathcal R_K(r,t,h)|\le M_{\tau,K}p(r)h^{2K+2},
+\quad \|\mathcal R_K\|_1\le\pi M_{\tau,K}h^{2K+2}.
+\label{eq:L1residual}
+\end{equation}
+Equation~\eqref{eq:certificate} now gives a uniform $O(h^{2K+1})$
+logit error. The residual formula also provides a direct finite-$h$
+bound whenever its norms and the positivity conditions are bounded.
+
+Define
+\begin{equation}
+\Phi_{2j-1}(t)=\int_{\RR}
+ [\sqrt{Q_t}\,a_j(r,t)-\sqrt{Q_{-t}}\,a_j(r,-t)]\,\dd r.
+\label{eq:realcoeff}
+\end{equation}
+The uniformly convergent binomial expansion and
+$\int_{\RR}\sech^m r\,\dd r=
+\sqrt\pi\,\Gamma(m/2)/\Gamma((m+1)/2)$ give
+\begin{equation}
+\int_{\RR}[\sqrt{Q_{-t}}-\sqrt{Q_t}]\,\dd r=\eta(t).
+\label{eq:leading}
+\end{equation}
+It follows that the exact spectral interpolation
+$\mathfrak e_N(t)=N\eta(t)-\mathcal F_N(t)$ obeys
+\begin{equation}
+\mathfrak e_N(t)=\sum_{j=1}^K\Phi_{2j-1}(t)N^{1-2j}
+ +O_{\tau,K}(N^{-2K-1})
+\label{eq:preperiod}
+\end{equation}
+on the whole interval $[-\tau,\tau]$. The integrals in
+\eqref{eq:realcoeff} are odd and real analytic there. At a common
+finite mode, \eqref{eq:mode} identifies $\mathfrak e_N(t)$ with $e$.
+
+\section{Identification with the original periods}\label{sec:periods}
+
+For completeness, the finite Fourier equation for an eigenmode is
+\[
+(\cos\xi\,U')'+\left[\frac{N^2-1}{4}\cos\xi-\frac{N\lambda}2\right]U=0.
+\]
+Writing $u=\cos\xi$ and $V=\sqrt u\,U$ gives
+\begin{equation}
+V''+[N^2q(u,t)+r_0(u)]V=0,\qquad
+q=\frac{u-2t}{4u},\qquad r_0=\frac1{4u^2}.
+\label{eq:originalode}
+\end{equation}
+The formal even momentum is
+\begin{equation}
+W=N\sqrt q\left(1+\sum_{j\ge1}N^{-2j}f_j(u,t)\right),\qquad
+W^2+\tfrac12(\log W)_{\xi\xi}
+ -\tfrac14[(\log W)_\xi]^2=N^2q+r_0.
+\label{eq:originalmomentum}
+\end{equation}
+For $0<|t|<1/2$, let $\Gamma$ be counterclockwise around the cut
+joining $0$ and $2t$, excluding $\pm1$, and put
+\begin{equation}
+\ph_{2j-1}=i\oint_\Gamma\sqrt q\,f_j\,\dd\xi,
+\qquad \dd\xi=-\frac{\dd u}{\sqrt{1-u^2}}.
+\label{eq:perioddef}
+\end{equation}
+The branch of $\sqrt{1-u^2}$ is positive on $(-1,1)$ with cuts
+on the outer real rays; $\sqrt q\sim1/2$ at infinity and has its
+cut between $0$ and $2t$. These conventions agree with \cite{periods}.
+
+\begin{proposition}[Exact equality of coefficient integrals]\label{prop:periods}
+For every $j\ge1$ and $|t|<1/2$,
+$\Phi_{2j-1}(t)=\ph_{2j-1}(t)$, with the latter extended at zero.
+\end{proposition}
+\begin{proof}
+In \eqref{eq:originalmomentum} set $\xi=ir$, so that
+$u=\cosh r=1/p$. Second derivatives and products of first
+derivatives change sign, while $q=Q_t$ and $r_0=v$.
+The resulting even-momentum equation is exactly
+\eqref{eq:residual} with its residual set formally to zero.
+Uniqueness of the coefficient recursion gives
+\begin{equation}
+a_j(p,t)=f_j(1/p,t).
+\label{eq:inversion}
+\end{equation}
+In particular $f_j(u,t)=O(1/u)$ at infinity. It is rational,
+with possible poles only at $0$ and $2t$, and it satisfies
+$f_j(-u,t)=f_j(u,-t)$.
+
+For $j\ge1$ the differential in \eqref{eq:perioddef} is
+$O(u^{-2})\dd u$ at infinity. Thus $\Gamma$ can be deformed
+to the two outer branch cuts: the circle at infinity contributes
+zero, and the small arcs about $\pm1$ vanish because their
+singularities have order $1/2$. On the upper bank of the positive
+outer cut, $\sqrt{1-u^2}=-i\sqrt{u^2-1}$; on the upper bank of the
+negative cut it is $+i\sqrt{u^2-1}$. The lower values have opposite
+signs. With the stated counterclockwise orientation this yields
+\begin{equation}
+\ph_{2j-1}=2\int_1^\infty
+ \frac{\sqrt{q(u,t)}f_j(u,t)-\sqrt{q(u,-t)}f_j(u,-t)}
+ {\sqrt{u^2-1}}\,\dd u.
+\label{eq:outercuts}
+\end{equation}
+Substitute $u=\cosh r$ and use evenness in $r$ to obtain
+\eqref{eq:realcoeff}. The analytic continuation through $t=0$
+follows from that uniformly convergent real integral.
+The leading coefficient is handled separately by
+\eqref{eq:leading}; the unsubtracted leading differential
+does not have the decay needed for this contour deformation.
+\end{proof}
+
+Together, \eqref{eq:preperiod}, Proposition~\ref{prop:periods}
+and \eqref{eq:mode} prove \eqref{eq:main}.
+For the first three functions the exact rational reductions of
+\cite{periods} give \eqref{eq:closed}, with
+\begin{align}
+A_3&=\frac{108t^4-83t^2+7}{120t(4t^2-1)^2},&
+B_3&=\frac{708t^6-789t^4+153t^2-14}{360t^2(4t^2-1)^2},\label{eq:AB3}\\
+A_5&=-\frac{\begin{gathered}6384t^{10}-51320t^8+26567t^6\\[-2pt]
+-13594t^4+2019t^2-124\end{gathered}}{1680t^3(4t^2-1)^4},\label{eq:A5}\\
+B_5&=-\frac{\begin{gathered}38304t^{12}-374688t^{10}+267522t^8\\[-2pt]
+-170573t^6+39472t^4-4937t^2+248\end{gathered}}{5040t^4(4t^2-1)^4}.
+\label{eq:B5}
+\end{align}
+These formulae were proved by exact derivatives on the period
+curve; the present argument supplies their spectral connection
+and remainder. Their small-$t$ behavior includes
+$\ph_1(t)=\pi t/4+O(t^3)$, consistent with the separately proved
+plunge-law sign $e\simeq-\varepsilon/(4N^2)$ in this convention.
+The absolute uniform bound above alone is not a relative error
+bound for arbitrarily small nonzero $t$.
+
+\begin{corollary}[Interior spectral projection]
+Let $\Pi_{N,\tau}=\mathbf1_{[-\tau,\tau]}(J/N)$ and
+$E_N=\log(I-B)-\log B+N\eta(J/N)$. Under the conditions of
+Theorem~\ref{thm:main},
+\[
+\left\|\Pi_{N,\tau}\left[E_N-
+ \sum_{j=1}^KN^{1-2j}\ph_{2j-1}(J/N)\right]\Pi_{N,\tau}\right\|
+\le C_{\tau,K}N^{-2K-1}.
+\]
+\end{corollary}
+\begin{proof}
+Apply \eqref{eq:main} in the common orthonormal eigenbasis.
+\end{proof}
+
+\input{Weighted_Consequences.tex}
+
+\section{Numerical checks and remaining scope}
+
+The proof does not use fitted constants or numerical mode values.
+As a separate check of its exact normalization, set $z=e^r$ and
+$u_-=z^{N/2}f(z)$. Equation~\eqref{eq:wholeline} becomes
+\begin{equation}
+z(1+z^2)^2f''+(N+1)(1+z^2)^2f'
+ +[N^2t(1+z^2)-z]f=0,\qquad f(0)=1.
+\label{eq:numericalODE}
+\end{equation}
+Frobenius expansion followed by overlapping Taylor expansions
+computes $f(1),f'(1)$. Evenness of the potential gives the growing
+connection coefficient
+\[
+\mathfrak a_h(t)=\frac{2f(1)[Nf(1)/2+f'(1)]}{N},\qquad
+\mathcal F_N(t)=\log\mathfrak a_h(-t)-\log\mathfrak a_h(t).
+\]
+Here $\log\mathfrak a_h=\mathcal A_h/h$, as follows by integrating
+$w-1/2$ over the line. This computation uses the whole-line
+equation, whereas the retained reference values were computed
+from finite Jacobi eigenvectors and concentration quadratic forms.
+For four $N=160$ modes, at $t$ approximately
+$-0.04909,-0.12511,-0.25111,-0.40225$, the absolute differences
+in the logits are respectively
+$3.90\times10^{-89}$, $7.61\times10^{-90}$,
+$2.27\times10^{-88}$ and $4.78\times10^{-88}$.
+This is consistent with the retained input precision. Separately, direct
+110-digit finite-matrix calculations at every mode for
+$N=2,4,8,16,32,64$ satisfy both global logit bounds, the discrepancy
+envelope, and the particle--hole sign convention.
+
+Exact symbolic substitution verifies \eqref{eq:inversion} for
+$j=1,2,3$ and the four vanishing coefficients of
+\eqref{eq:cleared} below $h^8$. Real quadrature of
+\eqref{eq:realcoeff} at six points between $-0.3$ and $0.45$
+agrees with \eqref{eq:closed} to absolute errors below
+$6\times10^{-66}$. A further check evaluates the exact
+interpolation at fixed $t$; these points need not be finite
+Jacobi eigenvalues. Table~\ref{tab:remainder} displays the scaled
+remainder after the first three terms.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+$N$ & $t=0.125$ & $t=0.3$ & $t=0.45$\\
+\midrule
+16  & $-2.756381$ & $-286.9294$ & $-2.020035\times10^6$\\
+32  & $-2.854713$ & $-327.4185$ & $-4.221313\times10^6$\\
+64  & $-2.881067$ & $-340.4583$ & $-6.240675\times10^6$\\
+128 & $-2.887778$ & $-343.9819$ & $-7.261610\times10^6$\\
+\bottomrule
+\end{tabular}
+\caption{$N^7[\mathfrak e_N(t)-\ph_1(t)/N-\ph_3(t)/N^3-\ph_5(t)/N^5]$
+from the exact whole-line interpolation. The much larger values
+near $t=1/2$ illustrate the importance of fixing the interior interval.}
+\label{tab:remainder}
+\end{table}
+
+All decimal checks use multiprecision arithmetic with increased
+precision and truncation for replication; they are not outward-rounded
+interval enclosures. The constant in \eqref{eq:explicit}, by contrast,
+comes from exact rational inequalities in the appendix. It is much
+larger than the observed errors and is not presented as a sharp bound.
+
+The result resolves the fixed-interior period connection and
+remainder problem for the half-filled sine kernel. It leaves open
+uniform control in a moving edge window $1/2-|t|\to0$.
+Consequently the earlier coefficient-level Stirling limits do not
+yet become a uniform spectral edge theorem. The bound on the
+interior projection does not by itself control $\|E_N\|$ on the full
+spectrum. The separate global envelope and Wilson spectral tail
+suffice for the leading entropy law, but do not establish a limiting
+finite part or the proposed inverse-logarithmic rate.
+General filling and the continuum prolate problem require separate
+exact operators and domain analysis; they are not covered by
+Theorem~\ref{thm:main}. Within \emph{From Prephysical Hypotheses to
+Physical Models}, these are dimensionless reference-model results.
+They neither select a physical clock nor establish a universal
+physical model or a quantum-field-theoretic mass gap.
+
+\appendix
+\section{A finite rational certificate for the explicit constant}
+
+Here $K=3$, $|t|\le1/4$, $p\in[0,1]$, $z=h^2$ and
+$A=1+za+z^2b+z^3c$. The first three coefficients can be generated by
+\begin{align*}
+R_0&=-\tfrac14(\log Q)''+\tfrac1{16}[(\log Q)']^2,
+&a&=(v-R_0)/(2Q),\\
+R_1&=-\tfrac12a''+\tfrac14(\log Q)'a',
+&b&=-(Qa^2+R_1)/(2Q),\\
+L_2&=b-a^2/2,\qquad
+R_2=-\tfrac12L_2''+\tfrac14(\log Q)'L_2'+\tfrac14(a')^2,
+&c&=-(2Qab+R_2)/(2Q).
+\end{align*}
+Each $a_j=n_j(p,t)/(1-2pt)^{3j}$ for a polynomial $n_j$
+divisible by $p$. For example
+\[
+a=\frac{p(p^3t^2-pt^2+p-2t)}{2(1-2pt)^3}.
+\]
+For a polynomial $n=\sum n_{ab}p^at^b$, the rational number
+$\sum|n_{ab}|4^{-b}$ bounds $|n|$ on this whole rectangle.
+Applying this to $n_j/p$, $n_j$, and its first two $p$ derivatives,
+and using $1-2pt\ge1/2$, gives the following uniform majorants:
+\begin{center}
+\begin{tabular}{crrr}
+\toprule
+$j$ & $|a_j|/p\le M_j$ & $|D_ra_j|/p\le D_j$
+ & $|D_r^2a_j|/p\le E_j$\\
+\midrule
+1 & $13/2$ & $31$ & $379/2$\\
+2 & $7353/8$ & $17595/2$ & $386379/4$\\
+3 & $6923583/16$ & $49698847/8$ & $1566168253/16$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For example, with $m=3j$, $\delta=1/2$ and the indicated
+polynomial norms,
+\begin{align*}
+\|\partial_pa_j\|_\infty
+&\le\|n_j'\|\delta^{-m}+2m\tau\|n_j\|\delta^{-m-1},\\
+\|\partial_p^2a_j\|_\infty
+&\le\|n_j''\|\delta^{-m}+4m\tau\|n_j'\|\delta^{-m-1}
+ +4m(m+1)\tau^2\|n_j\|\delta^{-m-2}.
+\end{align*}
+Equation~\eqref{eq:derivativealgebra} then bounds $D_j$ by the
+first expression and $E_j$ by the sum of these two expressions.
+
+Take $h_0=1/16$ and replace $s_0$ conservatively by $s_*=1/3$.
+The two left sides of \eqref{eq:hsmall} are bounded, respectively, by
+\[
+\frac{17504063}{268435456}<\frac12,\qquad
+\frac{117523487}{1073741824}<\frac16=\frac{s_*}2.
+\]
+Thus $A\ge1/2$ and the stability argument applies for every
+$h\le1/16$.
+
+To specify the residual bound without a long expanded polynomial,
+let $M(z)=1+\sum_{j=1}^3M_jz^j$,
+$D(z)=\sum_{j=1}^3D_jz^j$, and $E(z)=\sum_{j=1}^3E_jz^j$.
+Write $[z^k]$ for coefficient extraction. Since
+$Q\le3/8$, $|R_0-v|/p\le13/16$, and
+$|(\log Q)'|/p\le1$, the coefficient of $z^k$ in the
+right side of \eqref{eq:cleared}, for $4\le k\le12$, has
+absolute value at most $p C_k$, where
+\begin{equation}
+C_k=[z^k]\left\{\tfrac38(M^4+M^2)
+ +z\left[\tfrac{13}{16}M^2+\tfrac12ME
+                    +\tfrac34D^2+\tfrac14MD\right]\right\}.
+\label{eq:Ck}
+\end{equation}
+Every product in these positive-power coefficients contains a
+factor vanishing at $p=0$, so the single factor $p$ is retained.
+The coefficients for $k<4$ vanish exactly by the recurrence.
+Since $A^{-2}\le4$,
+\[
+\|\mathcal R_3\|_1\le4\pi h^8
+ \sum_{k=4}^{12}C_k h_0^{2k-8}.
+\]
+The two signs in \eqref{eq:certificate} and $s_*=1/3$ give
+a multiplier $24\pi\sum_{k=4}^{12}C_k16^{-2k+8}$.
+Exact rational evaluation of this finite expression yields
+\[
+24\sum_{k=4}^{12}C_k16^{-2k+8}<2273823860.
+\]
+This proves \eqref{eq:explicit} using finite rational inequalities.
+
+\paragraph{Acknowledgments and computational assistance.}
+ChatGPT (OpenAI) assisted with the present analysis, symbolic
+identities, numerical implementations and proof scrutiny. The
+earlier endpoint connection proposal was supplied through work
+with Claude (Anthropic); the precise identities and assumptions
+used here are recorded in \cite{tails,moments}. The broader program
+has also used Gemini (Google), Grok (SpaceXAI) and DeepSeek
+(High-Flyer). This does not attribute the present checks to those
+systems or imply endorsement. The mathematical argument and
+reproduction materials remain open to independent review;
+AI-assisted checking is not independent human peer review.
+
+\begin{thebibliography}{9}
+\bibitem{periods} K. Justus, \emph{Higher-Order Modular Periods for the
+Half-Filled Sine Kernel}, research manuscript, October 2026.
+\bibitem{tails} K. Justus, \emph{Spectral Tails and Exact Concentration
+Logits}, research manuscript, October 2026.
+\bibitem{moments} K. Justus, \emph{Positive Moment Bounds and Growing
+Plunge Windows}, research manuscript, October 2026.
+\bibitem{crum} M. M. Crum, Associated Sturm--Liouville systems,
+\emph{Quart. J. Math. Oxford (2)} \textbf{6} (1955), 121--127.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\S2.7(iii), Liouville--Green (WKBJ) Approximation.
+\url{https://dlmf.nist.gov/2.7#iii}.
+\bibitem{dunster} T. M. Dunster, \emph{Liouville--Green expansions
+of exponential form, with an application to modified Bessel functions},
+2017. \href{https://arxiv.org/abs/1708.00548}{arXiv:1708.00548}.
+\bibitem{majorants} K. Justus, \emph{Exact Spectral Majorants for a
+Wilson--Dirac Interval}, research manuscript, 23 October 2026.
+\bibitem{entropy} K. Justus, \emph{Relative Entropy of Finite-Interval
+Wilson--Dirac Quasifree States}, research manuscript, 23 October 2026;
+the bounded nonlinear, boundary-entropy and leading-order reduction
+theorems, distinct from the conditional finite-part theorem.
+\bibitem{positivetrace} K. Justus, \emph{Positive Reference-Modular
+Trace for Wilson--Dirac Intervals}, research manuscript, October 2026;
+the independent finite trace reduction, not its later asymptotic consequence.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,208 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs,array,enumitem,xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue!55!black,linkcolor=blue!55!black,pdftitle={Transition-Probability Geometry: Holonomy Identities and Selection Obstructions},pdfauthor={Kirtus Justus}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Grounding research note}\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Counterexample}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\FS}{\mathrm{FS}}
+\begin{document}
+\begin{center}
+{\large\bfseries From Prephysical Hypotheses to Physical Models}\\[5pt]
+{\LARGE\bfseries Transition-Probability Geometry:\\[2pt] Holonomy Identities and Selection Obstructions}\\[11pt]
+{\large Kirtus Justus}\\
+Theoretical Physicist\\
+Port Coquitlam, British Columbia, Canada\\[5pt]
+12 November 2026, B.C. Pacific Time\\[7pt]
+{\footnotesize Internal, AI-assisted research note. No independent refereeing, ontology selection or empirical physical correspondence.}
+\end{center}
+
+\begin{abstract}
+A determinant formula on complex projective space links Levi-Civita tangent holonomy around geodesic polygons to the Bargmann invariant. We give a local proof, and then test what this identity does \emph{not} establish. Complex conjugation preserves all transition probabilities but reverses oriented Bargmann phase. In \(\CP^2\), three fixed pairwise probabilities permit a continuous interval of triple phases. With the usual transition-probability normalization, the pure-state manifolds \(\RP^2\) (real three-level theory) and \(\CP^1\) (complex two-level theory) already differ in local curvature, independently of monodromy. Gelander's theorem rules out the Gromov--Hausdorff approximation of a positive-dimensional projective pure-state manifold by \emph{finite homogeneous metric spaces}, while explicit nonhomogeneous nets converge when the geometry is imported. Finally, classical spin provides a countermodel to the unrestricted suggestion that a symplectic pure-state manifold and vanishing third-order interference select complex quantum theory. Static projective geometry also fails to select its dynamical generator. All findings are mathematical and scoped; none supplies a prephysical--physical bridge.
+\end{abstract}
+
+\section{Question, conventions and limits}
+The research target is a justified emergence of quantum and classical mechanics, with a complete correspondence map. No starting substrate, probability law, phase convention, composition law, clock or physical scale has yet been identified as emerging from prephysical primitives. It would be circular to count a derivation \emph{within} an imported quantum geometry as a derivation \emph{of} that geometry.
+
+For unit vectors \(u,v\in\mathbb C^{n+1}\), write \([u]\in\CP^n\) for rays, and use the Fubini--Study normalization
+\begin{equation}
+ d_{\FS}([u],[v])=\arccos |\langle u,v\rangle|,
+ \qquad \Delta(u,v,w)=\langle u,v\rangle\langle v,w\rangle\langle w,u\rangle .\label{eq:basic}
+\end{equation}
+In a product with more than three rays, \(\Delta\) denotes the product of neighboring overlaps in the oriented cyclic order. A factor vanishing makes its phase undefined. We restrict geodesic polygon sides to unique shortest segments with nonorthogonal endpoints, and use only loops contained in a single affine chart for the local proof. Alternative Berry-connection conventions reverse both sides of the phase formulas.
+
+\section{A supported identity \emph{within} complex quantum geometry}
+\begin{proposition}[determinant of tangent holonomy]\label{prop:hol}
+On \(\CP^n\) with the metric above, let \(\gamma\) be an oriented polygon of unique shortest Fubini--Study geodesics, with nonzero consecutive overlaps and contained in an affine chart. If \(H_\gamma\in U(n)\) is Levi-Civita parallel transport on the \emph{complex} tangent space, then
+\begin{equation}
+ \det_{\mathbb C}H_\gamma=\left(\frac{\Delta_\gamma}{|\Delta_\gamma|}\right)^{n+1}.\label{eq:det}
+\end{equation}
+The complex determinant uses the chosen projective complex structure. The formula is not a selection principle for that structure.
+\end{proposition}
+\begin{proof}
+In affine coordinates \(z\in\mathbb C^n\), set \(D=1+\|z\|^2\). The K\"ahler potential \(\log D\) gives
+\[
+ g_{i\bar j}=\frac{\delta_{ij}}D-\frac{\bar z_i z_j}{D^2},\qquad
+ \det(g_{i\bar j})=D^{-(n+1)}.
+\]
+For the Chern connection, which equals Levi-Civita transport on this K\"ahler manifold, \(\operatorname{tr}\Gamma=\partial\log\det g=-(n+1)\sum_k\bar z_k\,dz^k/D\). Hence the determinant of the transported tangent frame around the closed loop is
+\[
+ \det_{\mathbb C}H_\gamma
+ =\exp\left((n+1)\oint_\gamma\frac{\sum_k\bar z_k\,dz^k}{D}\right)
+ =\exp\left(i(n+1)\oint_\gamma A\right),\quad
+ A=\frac{\operatorname{Im}\sum_k\bar z_k\,dz^k}{D}.
+\]
+The real part is the integral of \(\tfrac12d\log D\) around a loop, hence vanishes. The unit-ray chart lift \(\psi(z)=(1,z)/\sqrt D\) has \(\langle\psi,d\psi\rangle=iA\). The horizontal lift of a shortest ray geodesic has zero phase accumulation along its interior; joining consecutive horizontal lifts at polygon vertices contributes precisely the oriented product of overlaps. Consequently \(\exp(i\oint A)=\Delta_\gamma/|\Delta_\gamma|\), with the orientation in \eqref{eq:basic}. Substitution proves \eqref{eq:det}. The determinant formula is also consistent with \(c_1(T\CP^n)=(n+1)[\omega_{\FS}]/\pi\), after matching the chosen normalization and sign conventions \cite{font,bengtsson}.
+\end{proof}
+
+\paragraph{Scope.} This proves an identity given the complex projective state space, its transition-probability metric, its complex tangent bundle and the chosen representation of parallel transport. None of those was obtained from a prephysical object. Numerical Schild-ladder agreement would corroborate an implementation in this geometry, not identify physical quantum dynamics; correct convergence of ladder schemes can also require scaling the displaced tangent vector \cite{guigui}.
+
+\section{Two exact phase nonidentification witnesses}
+\begin{theorem}[orientation obstruction]\label{thm:conj}
+There is no rule determined invariantly by \emph{only} the projective transition-probability metric (or its full, unoriented Riemannian isometry class) that returns the \emph{signed} non-real Bargmann phase of every ordered triangle in \(\CP^n\), \(n\geq1\), without a further orientation-sensitive choice.
+\end{theorem}
+\begin{proof}
+Complex conjugation \(\kappa:[u]\mapsto[\bar u]\) is a global isometry because
+\( |\langle\bar u,\bar v\rangle|=|\langle u,v\rangle|\). But
+\(\Delta(\bar u,\bar v,\bar w)=\overline{\Delta(u,v,w)}\). There are ordered triangles with \(\operatorname{Im}\Delta\neq0\). If a signed phase came from isometry-invariant, unoriented metric data, it would be unchanged by \(\kappa\); for those triangles it must instead change sign. This is impossible. The real Levi-Civita transport is isometry-covariant, but converting its tangent holonomy into a \emph{complex} determinant requires choosing between conjugate compatible complex structures \(J\) and \(-J\).
+\end{proof}
+
+The theorem does \emph{not} say that complex quantum phases are unmeasurable when physical phase references and ordered experimental operations are supplied. It says those references do not emerge automatically from the transition-probability metric. Nor does it assert that conjugate representations are distinct physical ontologies.
+
+\begin{proposition}[fixed distances, varying phases]\label{prop:gram}
+In the single space \(\CP^2\), there are triples with \( |\langle u_i,u_j\rangle|^2=1/4\) for all three pairs and \(\arg\Delta\) equal to \emph{any} angle in \([ -\pi,\pi]\).
+\end{proposition}
+\begin{proof}
+For \(\phi\in[-\pi,\pi]\) take the Hermitian Gram matrix
+\[
+G_\phi=\begin{pmatrix}
+1&\frac12&\frac12e^{-i\phi}\\
+\frac12&1&\frac12\\
+\frac12e^{i\phi}&\frac12&1
+\end{pmatrix}.
+\]
+Its \(1\times1\) principal minors are 1, its \(2\times2\) principal minors are \(3/4\), and
+\(\det G_\phi=\frac14(1+\cos\phi)\geq0\). Thus \(G_\phi\succeq0\), and three unit vectors in \(\mathbb C^3\) realize it. Their three pairwise transition probabilities are all \(1/4\), while \(\Delta=\tfrac18e^{i\phi}\). The rank drops from three to two at \(\phi=\pm\pi\), but the triples remain within \(\CP^2\).
+\end{proof}
+
+A distance table for three vertices is therefore insufficient even to fix the magnitude of a nonzero oriented phase in \(\CP^2\). Full knowledge of a smooth metric and an oriented geodesic path contains additional information beyond three distances, but it does not remove the conjugation obstruction without added orientation-sensitive data.
+
+\section{A local metric discriminator that does not need monodromy}
+\begin{proposition}[real three-level versus complex two-level]\label{prop:curv}
+For the same normalization \(d([u],[v])=\arccos|\langle u,v\rangle|\), the standard real pure-state space \(\RP^2\) has constant Gaussian curvature \(K=1\), whereas \(\CP^1\) has \(K=4\). A three-distance experiment in a local neighborhood mathematically separates them.
+\end{proposition}
+\begin{proof}
+The real projective plane is the antipodal quotient of the unit round \(S^2\), which locally preserves curvature 1 \cite{katz}. Complex projective \(\CP^1\) with the stated Fubini--Study normalization is the round \(S^2\) of radius \(1/2\), hence curvature 4 \cite{bengtsson}. An explicit check avoids relying only on curvature classification.
+
+In \(\mathbb R^3\), choose \(p=(1,0,0)\), \(q=(\cos\epsilon,\sin\epsilon,0)\) and \(r=(\cos\epsilon,0,\sin\epsilon)\). The first two projective distances from \(p\) are \(\epsilon\) and
+\[
+ d_{\RP^2}([q],[r])=\arccos(\cos^2\epsilon).
+\]
+In \(\mathbb C^2\), instead choose \(p=(1,0)\), \(q=(\cos\epsilon,\sin\epsilon)\), and \(r=(\cos\epsilon,i\sin\epsilon)\). The first two distances are again \(\epsilon\), but
+\[
+ d_{\CP^1}([q],[r])=\arccos\sqrt{\cos^4\epsilon+\sin^4\epsilon}
+ =\tfrac12\arccos(\cos^2(2\epsilon)).
+\]
+For sufficiently small positive \(\epsilon\), each is a right geodesic triangle and
+\[
+ d_{\RP^2}=\sqrt2\,\epsilon-\frac{\epsilon^3}{6\sqrt2}+O(\epsilon^5),\quad
+ d_{\CP^1}=\sqrt2\,\epsilon-\frac{4\epsilon^3}{6\sqrt2}+O(\epsilon^5).
+\]
+They differ by \(\epsilon^3/(2\sqrt2)+O(\epsilon^5)\), before any noncontractible loop is considered.
+\end{proof}
+
+The distinction may disappear for a \emph{particular coarse holonomy summary}, such as restricted holonomy in real dimension two. Thus the narrow statement ``global holonomy detects an orientation-reversing loop'' may remain useful. The broad statement ``only monodromy distinguishes these two standard transition-probability geometries'' does not survive this calculation. An actual physical test needs sufficiently precise operational distances and calibrated preparation/measurement, which this research has not supplied.
+
+\section{Finite homogeneous spaces: precise obstruction and escape control}
+\begin{theorem}[finite homogeneous metric obstruction, by Gelander]\label{thm:gel}
+No \(\CP^n\) with \(n\geq1\), equipped with its Fubini--Study metric, is a Gromov--Hausdorff limit of finite \emph{homogeneous metric spaces}.
+\end{theorem}
+\begin{proof}
+Gelander's Corollary 1.3 establishes that a manifold which is a Gromov--Hausdorff limit of finite homogeneous metric spaces must be a torus \cite{gelander}. Positive-dimensional \(\CP^n\) is not a torus, for example it has Euler characteristic \(n+1\), whereas a positive-dimensional torus has Euler characteristic zero. The conclusion follows.
+\end{proof}
+
+\begin{proposition}[nonhomogeneous nets: positive control, not emergence]\label{prop:nets}
+There is a sequence of finite metric subspaces \(F_N\subset\CP^1\), not required to be homogeneous, whose Gromov--Hausdorff distance from \(\CP^1\) is at most \(\pi/(2N)\), and hence tends to zero.
+\end{proposition}
+\begin{proof}
+Represent \(\CP^1\) as the round \(S^2\) of radius \(1/2\). Use grid points of spherical polar coordinates \(\theta_j=j\pi/N\), \(j=0,\dots,N\), and \(\varphi_k=k\pi/N\), \(k=0,\dots,2N-1\), discarding duplicate points at the poles. For each sphere point, choose the nearest latitude and longitude grid values, both within \(\pi/(2N)\). A meridian segment then a latitude segment gives an \emph{upper bound} on unit-sphere geodesic length \(\pi/N\), since \(|\sin\theta|\leq1\). On the radius-\(1/2\) sphere this is \(\pi/(2N)\). The intrinsic point-to-point distance inherited from the target is an isometric embedding of \(F_N\); thus its Hausdorff distance, and hence its Gromov--Hausdorff distance, obey the claimed bound.
+\end{proof}
+
+This is an explicit way around the \emph{exact finite-stage homogeneity} requirement, not a counterexample to Gelander's theorem. The sphere, its metric, scale and embedding were stipulated in constructing the net. No Born rule, dynamics, composite systems, or physical clock was derived. Approximate symmetry can be investigated, but must not be silently counted as exact homogeneity.
+
+\section{Symplecticity and no third-order interference do not select quantum theory in an unrestricted class}
+\begin{example}[classical spin]\label{ex:spin}
+Take the classical spin phase space \(S^2\) with its nondegenerate area form \(\omega=s\sin\theta\,d\theta\wedge d\varphi\), \(s\neq0\), and ordinary classical probability measures on this phase space. Its pure states are the point measures \(\delta_x\), parametrized by the sphere, and rotations act continuously and transitively. For three disjoint classical slit events \(A,B,C\), ordinary additivity gives
+\[
+I_3=\mu(A\cup B\cup C)-\mu(A\cup B)-\mu(A\cup C)-\mu(B\cup C)
++\mu(A)+\mu(B)+\mu(C)-\mu(\emptyset)=0.
+\]
+The pure-state manifold has a symplectic form and the classical system has no third-order interference; it is not complex quantum theory. It does \emph{not} possess the complex quantum transition-probability metric derived from a Hilbert inner product. Thus the example refutes the \emph{unrestricted} discriminator, but not a theorem with explicit irreducible Jordan, transition-probability, filter, and finite-dimensional hypotheses. Reconstructions based on absence of higher-order interference explicitly require additional postulates \cite{barnum}.
+\end{example}
+
+\section{Static geometry does not select dynamics or a classical limit}
+\begin{proposition}[generator nonselection]\label{prop:gen}
+The full Fubini--Study distance function, Levi-Civita connection and holonomy on a fixed \(\CP^1\) do not determine a unique one-parameter quantum dynamics or a dimensionful Hamiltonian.
+\end{proposition}
+\begin{proof}
+On the \emph{same} ray space, choose the two strongly continuous unitary families
+\[
+ U_0(t)=I,\qquad U_1(t)=\exp(-it\,\sigma_z/2),\quad
+ \sigma_z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+Each acts by isometries of the same fixed projective metric and preserves its intrinsic connection and geometric holonomy. Their orbits differ, for example on the ray of \((1,1)/\sqrt2\): the former is fixed, while the latter traces a nonconstant circle. Hence the static geometry does not choose either family. Even after choosing a generator, simultaneously replacing \(H\) by \(aH\) and a time parameter \(t\) by \(t/a\), \(a>0\), leaves the ray paths unchanged. A dimensionful unit of time or energy must therefore be supplied by an additional operational bridge.
+\end{proof}
+
+Similarly, dephasing in a prescribed basis produces a stochastic transition law, not automatically a classical Hamiltonian law. For example, applying the Hadamard unitary and then discarding phase gives the column-stochastic matrix
+\[
+ T_{jk}=|U_{jk}|^2=\begin{pmatrix}1/2&1/2\\1/2&1/2\end{pmatrix},
+\]
+which has rank one and maps different initial distributions to the same final distribution. In contrast, a deterministic Hamiltonian flow on a smooth symplectic phase space is invertible, for as long as the flow exists. Identifying the two kinds of dynamics would require a declared coarse-graining, domain, approximation, error and clock relation. A loss of information caused by stipulated dephasing is not the emergence of reversible classical mechanics.
+
+\section{Map of what is, and is not, carried across}
+\small
+\begin{tabular}{p{0.25\linewidth}p{0.38\linewidth}p{0.27\linewidth}}
+\toprule
+\textbf{Region} & \textbf{Mathematically available} & \textbf{Essential missing bridge}\\\midrule
+Finite relational data & Defined structures, gauge invariants, obstructions & Intrinsic selection of state space and observation law\\
+Finite-to-continuum limits & Nonhomogeneous \(\CP^1\) metric nets, if geometry imported & Primitive-derived metric, symmetry, topology and controlled convergence\\
+Complex projective geometry & Proposition \ref{prop:hol}; exact phase/holonomy identity & Origin of complex structure and orientation-sensitive operations\\
+Pure-state selection & Curvature distinguishes two standard projective families & General alternative elimination without restrictive imported class\\
+Interference and effects & Gram phases; classical countermodel & Operational filters, effect cone, validated interference law\\
+Composites & No selection from this note & Tensor/composition law, tomographic locality, entanglement\\
+Dynamics and clocks & Formal transport, phase geometry & Empirical time, dimensionful calibration, generator rule\\
+Classical mechanics & Symplectic classical spin example & Controlled quantum-to-classical limit and Hamiltonian trajectories\\
+Spacetime and gravity & Existing external geometry templates & Causal, conformal, inertial and clock identification\\
+Physical universe & None identified & Observational correspondence and discriminating experiments\\
+\bottomrule
+\end{tabular}
+\normalsize
+
+\section{Checks, boundaries and research disposition}
+The accompanying implementation constructs five positive-semidefinite Gram matrices (including their rank drop at \(\phi=\pi\)); tests six holonomies in \(\CP^1\), \(\CP^2\) and \(\CP^3\) using both polygon products and an independently integrated tangent-frame ODE; evaluates four local real/complex metric triangles; and checks five nonhomogeneous nets with 20,000 samples each. The largest observed complex determinant difference in the six tests is \(7.36\times10^{-13}\); the largest tangent-metric residual is \(3.77\times10^{-13}\). These are floating-point residuals, not rigorous enclosures. The proofs, not the tests, support the stated mathematical claims. A local review performed by one AI assistant is a self-check, not an independent referee.
+
+The geometric identity is supported \emph{within} its explicit mathematical assumptions. The metric-only signed-phase selector is excluded by an isometry counterexample. The unrestricted ``symplectic plus no third-order interference'' selector is excluded by a classical model. The finite homogeneous Gromov--Hausdorff route to \(\CP^n\) is obstructed, while a nonhomogeneous sequence exists by construction. These facts refine a search map; no ontology, physical emergence, interpretation of a formal step as time, or experimental identification follows.
+
+\paragraph{Acknowledgments and provenance.} Research direction and scholarly responsibility: Kirtus Justus. Technical derivation, adversarial checking, computation and preparation of this note: ChatGPT (GPT-6, OpenAI), acting as internal LLM Director A. Prior work in the program involved other AI assistants; no independent human assessment or provider endorsement is implied. This note was written against the supplied 12 November baseline and a \emph{quoted} Director Z disposition; the separate Director Z paper and edition were not furnished for line-by-line checking. The mathematical references below are independently retrieved publications, not validation of the program or its method.
+
+\begin{thebibliography}{9}\small
+\bibitem{gelander} T. Gelander, ``Limits of Finite Homogeneous Metric Spaces,'' \emph{L'Enseignement Math\'ematique} \textbf{59} (2013), 195--206, Thm. 1.1 and Cor. 1.3. \url{https://ems.press/content/serial-article-files/44250}.
+\bibitem{bengtsson} I. Bengtsson and K. \.{Z}yczkowski, \emph{Geometry of Quantum States}, Cambridge University Press (2006), especially \S4.5 and \S4.8 (Fubini--Study geometry and Bargmann phase).
+\bibitem{font} A. Font and S. Theisen, ``Introduction to String Compactification,'' \emph{Lecture Notes in Physics} \textbf{668} (2005), 101--181, equations (3.25)--(3.29). \url{https://s3.cern.ch/inspire-prod-files-3/3d09e41fe8e986fd8a31547a79514fc6}.
+\bibitem{katz} M. Katz, differential geometry notes, section on the real projective plane and curvature \(K=1\). \url{https://u.cs.biu.ac.il/~katzmik/sgtdirectory/egreglong.pdf}.
+\bibitem{barnum} H. Barnum, M. P. M\"uller and C. Ududec, ``Higher-order interference and single-system postulates characterizing quantum theory,'' \emph{New Journal of Physics} \textbf{16} (2014), 123029. \url{https://doi.org/10.1088/1367-2630/16/12/123029}.
+\bibitem{guigui} N. Guigui and X. Pennec, ``Numerical Accuracy of Ladder Schemes for Parallel Transport on Manifolds,'' \emph{Foundations of Computational Mathematics} \textbf{22} (2022), 757--790, see the convergence conditions. \url{https://doi.org/10.1007/s10208-021-09515-x}.
+\end{thebibliography}
+\end{document}

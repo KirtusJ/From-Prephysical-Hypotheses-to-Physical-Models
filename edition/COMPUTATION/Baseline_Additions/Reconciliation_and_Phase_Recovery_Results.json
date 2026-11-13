@@ -1,0 +1,383 @@
+{
+ "A1_exact_triple": {
+  "B": "9/16 + 3*I/16",
+  "B_conjugated_states": "9/16 - 3*I/16",
+  "probabilities": [
+   "3/4",
+   "5/8",
+   "3/4"
+  ]
+ },
+ "A2_gram_det": "cos(theta)/4 + 1/4",
+ "A3_curvature_from_holonomy": {
+  "RP2": 1.0000000000002827,
+  "CP1": 3.999999999998844,
+  "CP2_complex_line": 3.9999999999998206,
+  "CP2_totally_real": 1.0000000000003693
+ },
+ "A4_caps_deg": {
+  "O3": 10.475313843229452,
+  "SO3": 14.835111581975733
+ },
+ "A4_235_triangle": {
+  "sides_deg": {
+   "s35": 37.37736814064971,
+   "s25": 31.717474411460998,
+   "s23": 20.905157447889323
+  },
+  "circumradius_deg": 18.712547237843452,
+  "circumcentre_inside": true,
+  "min_enclosing_cap_deg": 18.712547237844323,
+  "half_hypotenuse_deg": 18.688684070324854,
+  "chord_of_circumradius": 0.32514598629289615,
+  "note": "Lavi (arXiv 2001.03885) proves that a fundamental triangle of a reflection group is the Dirichlet cell of any orbit point inside it, and finds Euclidean Hausdorff distance 0.3208 for orbit points allowed off the sphere; on the sphere the optimum for [3,5] is the circumradius"
+ },
+ "A5_composition": {
+  "singlet_T_det": -0.9999999999999993,
+  "mirrored_T_det": 0.9999999999999993,
+  "min_eig_singlet": 0.0,
+  "min_eig_mirrored": -0.49999999999999983,
+  "chsh_singlet": 2.8284271247461894
+ },
+ "A5_orientation_cocycle_products": {
+  "()": 1,
+  "(0,)": 1,
+  "(1,)": 1,
+  "(2,)": 1,
+  "(0, 1)": 1,
+  "(0, 2)": 1,
+  "(1, 2)": 1,
+  "(0, 1, 2)": 1
+ },
+ "A5_pt_spectra_W_state": {
+  "()": -7.015291768752561e-17,
+  "(0,)": -0.4714045207910317,
+  "(0, 1)": -0.4714045207910317,
+  "(0, 1, 2)": -7.015291768752561e-17
+ },
+ "B_phase_recovery": [
+  {
+   "n": 2,
+   "vertices": 3,
+   "spans": true,
+   "bargmann_phase": 0.24779504367565083,
+   "principal_root_of_whole_polygon": 0.24779504367565086,
+   "fan_N4": {
+    "recovered": 0.24779504367565044,
+    "residual": 4.002966042486721e-16,
+    "conj_structure_residual_to_conjugate": 4.002966042486721e-16,
+    "max_cell_det_phase": 0.200585149612703,
+    "root_condition_met": true
+   },
+   "fan_N16": {
+    "recovered": 0.2477950436756504,
+    "residual": 5.551115123125783e-16,
+    "conj_structure_residual_to_conjugate": 5.551115123125783e-16,
+    "max_cell_det_phase": 0.053261195360141865,
+    "root_condition_met": true
+   },
+   "fan_N64": {
+    "recovered": 0.24779504367565167,
+    "residual": 1.0007415106216803e-15,
+    "conj_structure_residual_to_conjugate": 1.0007415106216803e-15,
+    "max_cell_det_phase": 0.013557895981337253,
+    "root_condition_met": true
+   }
+  },
+  {
+   "n": 2,
+   "vertices": 4,
+   "spans": true,
+   "bargmann_phase": -0.297712420139105,
+   "principal_root_of_whole_polygon": -0.29771242013910487,
+   "fan_N4": {
+    "recovered": -0.29771242013910515,
+    "residual": 3.1401849173675503e-16,
+    "conj_structure_residual_to_conjugate": 3.1401849173675503e-16,
+    "max_cell_det_phase": 0.9742839114384865,
+    "root_condition_met": true
+   },
+   "fan_N16": {
+    "recovered": -0.29771242013910526,
+    "residual": 6.280369834735101e-16,
+    "conj_structure_residual_to_conjugate": 6.280369834735101e-16,
+    "max_cell_det_phase": 0.2785079011560159,
+    "root_condition_met": true
+   },
+   "fan_N64": {
+    "recovered": -0.29771242013910915,
+    "residual": 4.1485069582976884e-15,
+    "conj_structure_residual_to_conjugate": 4.1485069582976884e-15,
+    "max_cell_det_phase": 0.0720272642336453,
+    "root_condition_met": true
+   }
+  },
+  {
+   "n": 3,
+   "vertices": 4,
+   "spans": true,
+   "bargmann_phase": 0.09482506981569885,
+   "principal_root_of_whole_polygon": 0.09482506981569867,
+   "fan_N4": {
+    "recovered": 0.09482506981569906,
+    "residual": 2.482534153247273e-16,
+    "conj_structure_residual_to_conjugate": 2.482534153247273e-16,
+    "max_cell_det_phase": 0.8280834509108355,
+    "root_condition_met": true
+   },
+   "fan_N16": {
+    "recovered": 0.09482506981569973,
+    "residual": 9.097098972217435e-16,
+    "conj_structure_residual_to_conjugate": 9.097098972217435e-16,
+    "max_cell_det_phase": 0.22913222756232263,
+    "root_condition_met": true
+   },
+   "fan_N64": {
+    "recovered": 0.09482506981570028,
+    "residual": 1.4432899320127035e-15,
+    "conj_structure_residual_to_conjugate": 1.4432899320127035e-15,
+    "max_cell_det_phase": 0.05889740610112213,
+    "root_condition_met": true
+   }
+  },
+  {
+   "n": 3,
+   "vertices": 5,
+   "spans": true,
+   "bargmann_phase": -0.7834102836345666,
+   "principal_root_of_whole_polygon": -0.7834102836345663,
+   "fan_N4": {
+    "recovered": -0.7834102836345661,
+    "residual": 4.710277376051325e-16,
+    "conj_structure_residual_to_conjugate": 4.710277376051325e-16,
+    "max_cell_det_phase": 0.7828001619182927,
+    "root_condition_met": true
+   },
+   "fan_N16": {
+    "recovered": -0.7834102836345666,
+    "residual": 3.1401849173675503e-16,
+    "conj_structure_residual_to_conjugate": 3.1401849173675503e-16,
+    "max_cell_det_phase": 0.2282317438477152,
+    "root_condition_met": true
+   },
+   "fan_N64": {
+    "recovered": -0.7834102836345663,
+    "residual": 2.482534153247273e-16,
+    "conj_structure_residual_to_conjugate": 2.482534153247273e-16,
+    "max_cell_det_phase": 0.05972928526761702,
+    "root_condition_met": true
+   }
+  },
+  {
+   "n": 4,
+   "vertices": 5,
+   "spans": true,
+   "bargmann_phase": 2.7155815486360044,
+   "principal_root_of_whole_polygon": 0.2023074257641692,
+   "fan_N4": {
+    "recovered": 2.715581548636005,
+    "residual": 2.482534153247273e-16,
+    "conj_structure_residual_to_conjugate": 2.482534153247273e-16,
+    "max_cell_det_phase": 3.0096834567656234,
+    "root_condition_met": true
+   },
+   "fan_N16": {
+    "recovered": 2.715581548636005,
+    "residual": 4.577566798522237e-16,
+    "conj_structure_residual_to_conjugate": 4.577566798522237e-16,
+    "max_cell_det_phase": 0.8098216041565136,
+    "root_condition_met": true
+   },
+   "fan_N64": {
+    "recovered": 2.715581548636005,
+    "residual": 6.661338147750939e-16,
+    "conj_structure_residual_to_conjugate": 6.661338147750939e-16,
+    "max_cell_det_phase": 0.2030177310576944,
+    "root_condition_met": true
+   }
+  }
+ ],
+ "C_generators_vs_observables": [
+  {
+   "theory": "real, 2 levels",
+   "pure_states": "RP^1",
+   "generators": 1,
+   "traceless_observables": 2,
+   "equal": false
+  },
+  {
+   "theory": "complex, 2 levels",
+   "pure_states": "CP^1",
+   "generators": 3,
+   "traceless_observables": 3,
+   "equal": true
+  },
+  {
+   "theory": "quaternionic, 2 levels",
+   "pure_states": "HP^1",
+   "generators": 10,
+   "traceless_observables": 5,
+   "equal": false
+  },
+  {
+   "theory": "real, 3 levels",
+   "pure_states": "RP^2",
+   "generators": 3,
+   "traceless_observables": 5,
+   "equal": false
+  },
+  {
+   "theory": "complex, 3 levels",
+   "pure_states": "CP^2",
+   "generators": 8,
+   "traceless_observables": 8,
+   "equal": true
+  },
+  {
+   "theory": "quaternionic, 3 levels",
+   "pure_states": "HP^2",
+   "generators": 21,
+   "traceless_observables": 14,
+   "equal": false
+  },
+  {
+   "theory": "real, 4 levels",
+   "pure_states": "RP^3",
+   "generators": 6,
+   "traceless_observables": 9,
+   "equal": false
+  },
+  {
+   "theory": "complex, 4 levels",
+   "pure_states": "CP^3",
+   "generators": 15,
+   "traceless_observables": 15,
+   "equal": true
+  },
+  {
+   "theory": "quaternionic, 4 levels",
+   "pure_states": "HP^3",
+   "generators": 36,
+   "traceless_observables": 27,
+   "equal": false
+  },
+  {
+   "theory": "real, 5 levels",
+   "pure_states": "RP^4",
+   "generators": 10,
+   "traceless_observables": 14,
+   "equal": false
+  },
+  {
+   "theory": "complex, 5 levels",
+   "pure_states": "CP^4",
+   "generators": 24,
+   "traceless_observables": 24,
+   "equal": true
+  },
+  {
+   "theory": "quaternionic, 5 levels",
+   "pure_states": "HP^4",
+   "generators": 55,
+   "traceless_observables": 44,
+   "equal": false
+  },
+  {
+   "theory": "real, 6 levels",
+   "pure_states": "RP^5",
+   "generators": 15,
+   "traceless_observables": 20,
+   "equal": false
+  },
+  {
+   "theory": "complex, 6 levels",
+   "pure_states": "CP^5",
+   "generators": 35,
+   "traceless_observables": 35,
+   "equal": true
+  },
+  {
+   "theory": "quaternionic, 6 levels",
+   "pure_states": "HP^5",
+   "generators": 78,
+   "traceless_observables": 65,
+   "equal": false
+  },
+  {
+   "theory": "octonionic, 3 levels",
+   "pure_states": "OP^2",
+   "generators": 52,
+   "traceless_observables": 26,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 2",
+   "pure_states": "S^1",
+   "generators": 1,
+   "traceless_observables": 2,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 3",
+   "pure_states": "S^2",
+   "generators": 3,
+   "traceless_observables": 3,
+   "equal": true
+  },
+  {
+   "theory": "ball of dimension 4",
+   "pure_states": "S^3",
+   "generators": 6,
+   "traceless_observables": 4,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 5",
+   "pure_states": "S^4",
+   "generators": 10,
+   "traceless_observables": 5,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 6",
+   "pure_states": "S^5",
+   "generators": 15,
+   "traceless_observables": 6,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 7",
+   "pure_states": "S^6",
+   "generators": 21,
+   "traceless_observables": 7,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 8",
+   "pure_states": "S^7",
+   "generators": 28,
+   "traceless_observables": 8,
+   "equal": false
+  },
+  {
+   "theory": "ball of dimension 9",
+   "pure_states": "S^8",
+   "generators": 36,
+   "traceless_observables": 9,
+   "equal": false
+  }
+ ],
+ "ok": {
+  "A1_B_equals_(9+3i)/16_and_conjugates": true,
+  "A2_gram_psd_all_theta": true,
+  "A3_K_RP2_1_CP1_4_CP2_range_1_to_4": true,
+  "A4_cap_values": true,
+  "A4_full_icosahedral_covering_radius_is_circumradius_18.7125": true,
+  "A5_mirror_image_of_singlet_correlations_is_not_a_state": true,
+  "A5_orientation_cocycle_balanced": true,
+  "A5_total_transpose_preserves_states_partial_does_not": true,
+  "B_fan_recovers_phase_when_cells_small": true,
+  "B_whole_polygon_root_is_ambiguous_in_some_case": true,
+  "C_equality_only_complex_and_3_ball": true
+ }
+}

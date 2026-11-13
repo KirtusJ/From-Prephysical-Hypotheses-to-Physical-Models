@@ -1,0 +1,25 @@
+{
+  "good_source_accept": {
+    "exit_code": 0,
+    "expected": "ACCEPT",
+    "last_stdout": [
+      "CHSH 2.8284271247461894 PPT min -0.4999999999999999 cap lower degrees 10.475313843229452"
+    ],
+    "observed": "ACCEPT",
+    "passed": true
+  },
+  "replace_Bargmann_square_with_first_power": {
+    "exit_code": 1,
+    "expected": "REJECT",
+    "last_stdout": [],
+    "observed": "REJECT",
+    "passed": true
+  },
+  "replace_Tsirelson_target_with_classical_target": {
+    "exit_code": 1,
+    "expected": "REJECT",
+    "last_stdout": [],
+    "observed": "REJECT",
+    "passed": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "claims": [
+    {
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "execution": "EXECUTED",
+      "id": "BASELINE_PACKET",
+      "kind": "MECHANICAL_CHECK",
+      "satisfied": true
+    },
+    {
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "execution": "EXECUTED",
+      "id": "CP1_GEOMETRY_SAMPLED",
+      "kind": "MECHANICAL_CHECK",
+      "satisfied": true
+    },
+    {
+      "disposition": "SUPPORTED_IN_SCOPE",
+      "grounding": "EXTERNAL_INSPECTED",
+      "id": "GELANDER_2013_COROLLARY",
+      "kind": "EXTERNAL_FACT"
+    },
+    {
+      "disposition": "UNRESOLVED",
+      "grounding": "SUPPLIED_ONLY",
+      "id": "Z1_G7_REPORTED_RESIDUALS",
+      "kind": "EXTERNAL_FACT"
+    }
+  ],
+  "delivery": "ABSORBED_TEXT",
+  "execution": "EXECUTED",
+  "extent": [
+    "acr.core 1.0 94de9a3e78600fb5aa6eede9e76c5939f89dce5182c4b2727ab37052579f5608",
+    "acr.mathematics 1.0 0c30c90f853e1ece3127dd7360c54618ac14b6a5bce3063600a4b01539194e3b",
+    "acr.science 1.0 dd02839e0ab8f29eb9e13abbbd0d76029a94ca63f102c4c375c81a89d0277995",
+    "acr.quality_assurance 1.0 7bcb16d67653e5feeb4ff624a0fece294d3fd57cca15e7e8ef36e4fc93fd0193"
+  ],
+  "grounding": "EXTERNAL_INSPECTED",
+  "observability": "BLACK_BOX",
+  "qualifications": {
+    "ACR_effectiveness": "not tested",
+    "expert_peer_review": "none",
+    "lookup": "Offline PCP native clause lookup and local file verifiers were run for source inspection only; they do not enforce the behavioral rules.",
+    "no_independent_agents": true,
+    "protocol_delivery": "Behavioral governing instructions were absorbed as text, not host-integrated as CLI, API or plugin.",
+    "session_personnel": "one LLM actor in overlapping roles; all nested critiques are self-checks"
+  },
+  "reasoning_trace": "UNKNOWN"
+}

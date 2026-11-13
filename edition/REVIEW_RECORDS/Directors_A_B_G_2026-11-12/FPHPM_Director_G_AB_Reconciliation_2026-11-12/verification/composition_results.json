@@ -1,0 +1,955 @@
+{
+  "checks": {
+    "CHSH_violation_threshold": 0.41421356237309515,
+    "invalid_closure_claim_detected": true,
+    "local_tomographic_product_probe_span": 16,
+    "max_gap": {
+      "Bell_effect_acceptance": 0.7499999999999998,
+      "CHSH_fixed_settings": 2.1213203435596424,
+      "four_party_E_acceptance": 0.9374999999999997,
+      "naive_family_E_upper_bound": 0.875,
+      "naive_family_violation": 0.06249999999999967,
+      "partial_transpose_min_eigenvalue": -0.24999999999999994,
+      "t": 0.5
+    },
+    "max_schmidt_CNOT_construction_error": 1.1018648905114063e-15,
+    "num_positive_gap_cases": 99,
+    "num_random_pure_targets": 200,
+    "num_retained_parameter_cases": 101,
+    "sympy_gap_factorization": "-t*(t - 1)/4",
+    "t_half_exact_gap": "1/16"
+  },
+  "evidence_level": "Conditional mathematical construction and reproducible calculations, no experimental emergence",
+  "limitations": [
+    "Pairwise K_t is a finite-dimensional operational toy family, not a prephysical substrate.",
+    "The uniform multipartite K_t extension is disproved; valid multipartite extension needs separate justification.",
+    "The CNOT reconstruction imports a complex quantum operator state representation and a specified gate.",
+    "No quantum-to-classical limit, empirical map, calibrated time or space was produced.",
+    "Reproducing scripts are single-actor calculations, not independent agents or experimental replication."
+  ],
+  "mathematical_claims": {
+    "Bell_effect_supremum_over_K_t": "(1+t)/2",
+    "conditional_CNOT_selection": "All single-qubit pure states + local unitaries + CNOT + convex mixing + state subset of Quantum_2 imply Quantum_2",
+    "fixed_settings_CHSH_of_extremal_rho_t": "sqrt(2)*(1+t), exceeds 2 iff t>sqrt(2)-1",
+    "four_party_E_upper_bound_for_naive_extension": "3/4 + t/4",
+    "four_party_counterexample_E_value": "1-(1-t)^2/4",
+    "four_party_witness_E": "I_16-(I_4-P_Bell)_12 tensor (I_4-P_Bell)_34",
+    "partial_transpose_min_eigenvalue_of_extremal_rho_t": "-t/2",
+    "strict_violation_for_0<t<1": "t(1-t)/4",
+    "two_party_family": "K_t=(1-t)Sep_2 + t Quantum_2, t in [0,1]",
+    "uniform_naive_extension": "K_t^(4)=(1-t)Sep_4 + t Quantum_4"
+  },
+  "ontology_selected": false,
+  "research_stage": "Initial External Grounding / G1 OPEN",
+  "retained_trials": [
+    {
+      "Bell_effect_acceptance": 0.4999999999999999,
+      "CHSH_fixed_settings": 1.414213562373095,
+      "four_party_E_acceptance": 0.7499999999999999,
+      "naive_family_E_upper_bound": 0.75,
+      "naive_family_violation": -1.1102230246251565e-16,
+      "partial_transpose_min_eigenvalue": 0.0,
+      "t": 0.0
+    },
+    {
+      "Bell_effect_acceptance": 0.5049999999999999,
+      "CHSH_fixed_settings": 1.428355697996826,
+      "four_party_E_acceptance": 0.7549749999999998,
+      "naive_family_E_upper_bound": 0.7525,
+      "naive_family_violation": 0.002474999999999894,
+      "partial_transpose_min_eigenvalue": -0.004999999999999999,
+      "t": 0.01
+    },
+    {
+      "Bell_effect_acceptance": 0.5099999999999999,
+      "CHSH_fixed_settings": 1.4424978336205567,
+      "four_party_E_acceptance": 0.7598999999999999,
+      "naive_family_E_upper_bound": 0.755,
+      "naive_family_violation": 0.004899999999999904,
+      "partial_transpose_min_eigenvalue": -0.009999999999999998,
+      "t": 0.02
+    },
+    {
+      "Bell_effect_acceptance": 0.5149999999999999,
+      "CHSH_fixed_settings": 1.4566399692442877,
+      "four_party_E_acceptance": 0.764775,
+      "naive_family_E_upper_bound": 0.7575,
+      "naive_family_violation": 0.0072750000000000314,
+      "partial_transpose_min_eigenvalue": -0.014999999999999996,
+      "t": 0.03
+    },
+    {
+      "Bell_effect_acceptance": 0.5199999999999999,
+      "CHSH_fixed_settings": 1.4707821048680185,
+      "four_party_E_acceptance": 0.7695999999999998,
+      "naive_family_E_upper_bound": 0.76,
+      "naive_family_violation": 0.009599999999999831,
+      "partial_transpose_min_eigenvalue": -0.019999999999999997,
+      "t": 0.04
+    },
+    {
+      "Bell_effect_acceptance": 0.5249999999999999,
+      "CHSH_fixed_settings": 1.4849242404917495,
+      "four_party_E_acceptance": 0.7743749999999999,
+      "naive_family_E_upper_bound": 0.7625,
+      "naive_family_violation": 0.011874999999999969,
+      "partial_transpose_min_eigenvalue": -0.024999999999999994,
+      "t": 0.05
+    },
+    {
+      "Bell_effect_acceptance": 0.5299999999999999,
+      "CHSH_fixed_settings": 1.4990663761154805,
+      "four_party_E_acceptance": 0.7790999999999999,
+      "naive_family_E_upper_bound": 0.765,
+      "naive_family_violation": 0.01409999999999989,
+      "partial_transpose_min_eigenvalue": -0.029999999999999992,
+      "t": 0.06
+    },
+    {
+      "Bell_effect_acceptance": 0.5349999999999999,
+      "CHSH_fixed_settings": 1.5132085117392116,
+      "four_party_E_acceptance": 0.7837749999999999,
+      "naive_family_E_upper_bound": 0.7675,
+      "naive_family_violation": 0.01627499999999993,
+      "partial_transpose_min_eigenvalue": -0.034999999999999996,
+      "t": 0.07
+    },
+    {
+      "Bell_effect_acceptance": 0.5399999999999999,
+      "CHSH_fixed_settings": 1.5273506473629428,
+      "four_party_E_acceptance": 0.7884000000000002,
+      "naive_family_E_upper_bound": 0.77,
+      "naive_family_violation": 0.018400000000000194,
+      "partial_transpose_min_eigenvalue": -0.039999999999999994,
+      "t": 0.08
+    },
+    {
+      "Bell_effect_acceptance": 0.5449999999999999,
+      "CHSH_fixed_settings": 1.5414927829866736,
+      "four_party_E_acceptance": 0.792975,
+      "naive_family_E_upper_bound": 0.7725,
+      "naive_family_violation": 0.02047500000000002,
+      "partial_transpose_min_eigenvalue": -0.04499999999999999,
+      "t": 0.09
+    },
+    {
+      "Bell_effect_acceptance": 0.5499999999999998,
+      "CHSH_fixed_settings": 1.5556349186104044,
+      "four_party_E_acceptance": 0.7974999999999998,
+      "naive_family_E_upper_bound": 0.775,
+      "naive_family_violation": 0.022499999999999742,
+      "partial_transpose_min_eigenvalue": -0.04999999999999999,
+      "t": 0.1
+    },
+    {
+      "Bell_effect_acceptance": 0.5549999999999998,
+      "CHSH_fixed_settings": 1.5697770542341352,
+      "four_party_E_acceptance": 0.8019749999999999,
+      "naive_family_E_upper_bound": 0.7775,
+      "naive_family_violation": 0.024474999999999913,
+      "partial_transpose_min_eigenvalue": -0.054999999999999986,
+      "t": 0.11
+    },
+    {
+      "Bell_effect_acceptance": 0.5599999999999998,
+      "CHSH_fixed_settings": 1.583919189857866,
+      "four_party_E_acceptance": 0.8063999999999998,
+      "naive_family_E_upper_bound": 0.78,
+      "naive_family_violation": 0.026399999999999757,
+      "partial_transpose_min_eigenvalue": -0.059999999999999984,
+      "t": 0.12
+    },
+    {
+      "Bell_effect_acceptance": 0.5649999999999998,
+      "CHSH_fixed_settings": 1.598061325481597,
+      "four_party_E_acceptance": 0.8107749999999998,
+      "naive_family_E_upper_bound": 0.7825,
+      "naive_family_violation": 0.028274999999999828,
+      "partial_transpose_min_eigenvalue": -0.06499999999999999,
+      "t": 0.13
+    },
+    {
+      "Bell_effect_acceptance": 0.5699999999999998,
+      "CHSH_fixed_settings": 1.6122034611053282,
+      "four_party_E_acceptance": 0.8150999999999998,
+      "naive_family_E_upper_bound": 0.785,
+      "naive_family_violation": 0.030099999999999794,
+      "partial_transpose_min_eigenvalue": -0.06999999999999999,
+      "t": 0.14
+    },
+    {
+      "Bell_effect_acceptance": 0.5749999999999998,
+      "CHSH_fixed_settings": 1.6263455967290592,
+      "four_party_E_acceptance": 0.8193749999999996,
+      "naive_family_E_upper_bound": 0.7875,
+      "naive_family_violation": 0.031874999999999654,
+      "partial_transpose_min_eigenvalue": -0.07499999999999998,
+      "t": 0.15
+    },
+    {
+      "Bell_effect_acceptance": 0.5799999999999998,
+      "CHSH_fixed_settings": 1.64048773235279,
+      "four_party_E_acceptance": 0.8235999999999997,
+      "naive_family_E_upper_bound": 0.79,
+      "naive_family_violation": 0.03359999999999963,
+      "partial_transpose_min_eigenvalue": -0.07999999999999999,
+      "t": 0.16
+    },
+    {
+      "Bell_effect_acceptance": 0.5849999999999999,
+      "CHSH_fixed_settings": 1.654629867976521,
+      "four_party_E_acceptance": 0.8277749999999997,
+      "naive_family_E_upper_bound": 0.7925,
+      "naive_family_violation": 0.03527499999999972,
+      "partial_transpose_min_eigenvalue": -0.08499999999999999,
+      "t": 0.17
+    },
+    {
+      "Bell_effect_acceptance": 0.5899999999999999,
+      "CHSH_fixed_settings": 1.668772003600252,
+      "four_party_E_acceptance": 0.8319,
+      "naive_family_E_upper_bound": 0.795,
+      "naive_family_violation": 0.03689999999999993,
+      "partial_transpose_min_eigenvalue": -0.08999999999999998,
+      "t": 0.18
+    },
+    {
+      "Bell_effect_acceptance": 0.5949999999999999,
+      "CHSH_fixed_settings": 1.6829141392239828,
+      "four_party_E_acceptance": 0.8359749999999999,
+      "naive_family_E_upper_bound": 0.7975,
+      "naive_family_violation": 0.038474999999999926,
+      "partial_transpose_min_eigenvalue": -0.09499999999999997,
+      "t": 0.19
+    },
+    {
+      "Bell_effect_acceptance": 0.5999999999999999,
+      "CHSH_fixed_settings": 1.6970562748477138,
+      "four_party_E_acceptance": 0.8399999999999999,
+      "naive_family_E_upper_bound": 0.8,
+      "naive_family_violation": 0.039999999999999813,
+      "partial_transpose_min_eigenvalue": -0.09999999999999998,
+      "t": 0.2
+    },
+    {
+      "Bell_effect_acceptance": 0.6049999999999999,
+      "CHSH_fixed_settings": 1.7111984104714448,
+      "four_party_E_acceptance": 0.8439749999999997,
+      "naive_family_E_upper_bound": 0.8025,
+      "naive_family_violation": 0.04147499999999971,
+      "partial_transpose_min_eigenvalue": -0.10499999999999997,
+      "t": 0.21
+    },
+    {
+      "Bell_effect_acceptance": 0.6099999999999999,
+      "CHSH_fixed_settings": 1.7253405460951758,
+      "four_party_E_acceptance": 0.8479,
+      "naive_family_E_upper_bound": 0.805,
+      "naive_family_violation": 0.04289999999999994,
+      "partial_transpose_min_eigenvalue": -0.10999999999999997,
+      "t": 0.22
+    },
+    {
+      "Bell_effect_acceptance": 0.6149999999999999,
+      "CHSH_fixed_settings": 1.7394826817189066,
+      "four_party_E_acceptance": 0.851775,
+      "naive_family_E_upper_bound": 0.8075,
+      "naive_family_violation": 0.04427499999999995,
+      "partial_transpose_min_eigenvalue": -0.11499999999999998,
+      "t": 0.23
+    },
+    {
+      "Bell_effect_acceptance": 0.6199999999999999,
+      "CHSH_fixed_settings": 1.7536248173426374,
+      "four_party_E_acceptance": 0.8555999999999997,
+      "naive_family_E_upper_bound": 0.81,
+      "naive_family_violation": 0.04559999999999964,
+      "partial_transpose_min_eigenvalue": -0.11999999999999997,
+      "t": 0.24
+    },
+    {
+      "Bell_effect_acceptance": 0.6249999999999998,
+      "CHSH_fixed_settings": 1.7677669529663684,
+      "four_party_E_acceptance": 0.8593749999999998,
+      "naive_family_E_upper_bound": 0.8125,
+      "naive_family_violation": 0.04687499999999978,
+      "partial_transpose_min_eigenvalue": -0.12499999999999997,
+      "t": 0.25
+    },
+    {
+      "Bell_effect_acceptance": 0.6299999999999998,
+      "CHSH_fixed_settings": 1.7819090885900994,
+      "four_party_E_acceptance": 0.8631,
+      "naive_family_E_upper_bound": 0.815,
+      "naive_family_violation": 0.04810000000000003,
+      "partial_transpose_min_eigenvalue": -0.12999999999999998,
+      "t": 0.26
+    },
+    {
+      "Bell_effect_acceptance": 0.6349999999999998,
+      "CHSH_fixed_settings": 1.7960512242138305,
+      "four_party_E_acceptance": 0.8667749999999999,
+      "naive_family_E_upper_bound": 0.8175,
+      "naive_family_violation": 0.04927499999999985,
+      "partial_transpose_min_eigenvalue": -0.13499999999999998,
+      "t": 0.27
+    },
+    {
+      "Bell_effect_acceptance": 0.6399999999999998,
+      "CHSH_fixed_settings": 1.8101933598375615,
+      "four_party_E_acceptance": 0.8703999999999998,
+      "naive_family_E_upper_bound": 0.8200000000000001,
+      "naive_family_violation": 0.05039999999999978,
+      "partial_transpose_min_eigenvalue": -0.13999999999999999,
+      "t": 0.28
+    },
+    {
+      "Bell_effect_acceptance": 0.6449999999999998,
+      "CHSH_fixed_settings": 1.8243354954612925,
+      "four_party_E_acceptance": 0.8739749999999998,
+      "naive_family_E_upper_bound": 0.8225,
+      "naive_family_violation": 0.051474999999999826,
+      "partial_transpose_min_eigenvalue": -0.14499999999999996,
+      "t": 0.29
+    },
+    {
+      "Bell_effect_acceptance": 0.6499999999999997,
+      "CHSH_fixed_settings": 1.838477631085023,
+      "four_party_E_acceptance": 0.8774999999999996,
+      "naive_family_E_upper_bound": 0.825,
+      "naive_family_violation": 0.05249999999999966,
+      "partial_transpose_min_eigenvalue": -0.14999999999999997,
+      "t": 0.3
+    },
+    {
+      "Bell_effect_acceptance": 0.6549999999999998,
+      "CHSH_fixed_settings": 1.852619766708754,
+      "four_party_E_acceptance": 0.8809749999999996,
+      "naive_family_E_upper_bound": 0.8275,
+      "naive_family_violation": 0.053474999999999606,
+      "partial_transpose_min_eigenvalue": -0.15499999999999997,
+      "t": 0.31
+    },
+    {
+      "Bell_effect_acceptance": 0.6599999999999997,
+      "CHSH_fixed_settings": 1.866761902332485,
+      "four_party_E_acceptance": 0.8843999999999996,
+      "naive_family_E_upper_bound": 0.83,
+      "naive_family_violation": 0.05439999999999967,
+      "partial_transpose_min_eigenvalue": -0.15999999999999998,
+      "t": 0.32
+    },
+    {
+      "Bell_effect_acceptance": 0.6649999999999998,
+      "CHSH_fixed_settings": 1.880904037956216,
+      "four_party_E_acceptance": 0.8877749999999998,
+      "naive_family_E_upper_bound": 0.8325,
+      "naive_family_violation": 0.05527499999999974,
+      "partial_transpose_min_eigenvalue": -0.16499999999999998,
+      "t": 0.33
+    },
+    {
+      "Bell_effect_acceptance": 0.6699999999999997,
+      "CHSH_fixed_settings": 1.8950461735799469,
+      "four_party_E_acceptance": 0.8910999999999996,
+      "naive_family_E_upper_bound": 0.835,
+      "naive_family_violation": 0.056099999999999595,
+      "partial_transpose_min_eigenvalue": -0.16999999999999998,
+      "t": 0.34
+    },
+    {
+      "Bell_effect_acceptance": 0.6749999999999998,
+      "CHSH_fixed_settings": 1.909188309203678,
+      "four_party_E_acceptance": 0.8943749999999998,
+      "naive_family_E_upper_bound": 0.8375,
+      "naive_family_violation": 0.05687499999999979,
+      "partial_transpose_min_eigenvalue": -0.17499999999999996,
+      "t": 0.35
+    },
+    {
+      "Bell_effect_acceptance": 0.6799999999999997,
+      "CHSH_fixed_settings": 1.9233304448274091,
+      "four_party_E_acceptance": 0.8975999999999997,
+      "naive_family_E_upper_bound": 0.84,
+      "naive_family_violation": 0.05759999999999976,
+      "partial_transpose_min_eigenvalue": -0.17999999999999997,
+      "t": 0.36
+    },
+    {
+      "Bell_effect_acceptance": 0.6849999999999998,
+      "CHSH_fixed_settings": 1.9374725804511401,
+      "four_party_E_acceptance": 0.9007749999999998,
+      "naive_family_E_upper_bound": 0.8425,
+      "naive_family_violation": 0.058274999999999744,
+      "partial_transpose_min_eigenvalue": -0.18499999999999997,
+      "t": 0.37
+    },
+    {
+      "Bell_effect_acceptance": 0.6899999999999997,
+      "CHSH_fixed_settings": 1.9516147160748707,
+      "four_party_E_acceptance": 0.9038999999999998,
+      "naive_family_E_upper_bound": 0.845,
+      "naive_family_violation": 0.05889999999999984,
+      "partial_transpose_min_eigenvalue": -0.18999999999999995,
+      "t": 0.38
+    },
+    {
+      "Bell_effect_acceptance": 0.6949999999999997,
+      "CHSH_fixed_settings": 1.9657568516986017,
+      "four_party_E_acceptance": 0.9069749999999996,
+      "naive_family_E_upper_bound": 0.8475,
+      "naive_family_violation": 0.05947499999999961,
+      "partial_transpose_min_eigenvalue": -0.19499999999999995,
+      "t": 0.39
+    },
+    {
+      "Bell_effect_acceptance": 0.6999999999999997,
+      "CHSH_fixed_settings": 1.9798989873223325,
+      "four_party_E_acceptance": 0.9099999999999997,
+      "naive_family_E_upper_bound": 0.85,
+      "naive_family_violation": 0.05999999999999972,
+      "partial_transpose_min_eigenvalue": -0.19999999999999996,
+      "t": 0.4
+    },
+    {
+      "Bell_effect_acceptance": 0.7049999999999997,
+      "CHSH_fixed_settings": 1.9940411229460637,
+      "four_party_E_acceptance": 0.9129749999999999,
+      "naive_family_E_upper_bound": 0.8525,
+      "naive_family_violation": 0.060474999999999834,
+      "partial_transpose_min_eigenvalue": -0.20499999999999993,
+      "t": 0.41
+    },
+    {
+      "Bell_effect_acceptance": 0.7099999999999997,
+      "CHSH_fixed_settings": 2.0081832585697947,
+      "four_party_E_acceptance": 0.9158999999999999,
+      "naive_family_E_upper_bound": 0.855,
+      "naive_family_violation": 0.060899999999999954,
+      "partial_transpose_min_eigenvalue": -0.20999999999999994,
+      "t": 0.42
+    },
+    {
+      "Bell_effect_acceptance": 0.7149999999999997,
+      "CHSH_fixed_settings": 2.0223253941935253,
+      "four_party_E_acceptance": 0.9187749999999999,
+      "naive_family_E_upper_bound": 0.8575,
+      "naive_family_violation": 0.06127499999999986,
+      "partial_transpose_min_eigenvalue": -0.21499999999999994,
+      "t": 0.43
+    },
+    {
+      "Bell_effect_acceptance": 0.7199999999999998,
+      "CHSH_fixed_settings": 2.0364675298172563,
+      "four_party_E_acceptance": 0.9216,
+      "naive_family_E_upper_bound": 0.86,
+      "naive_family_violation": 0.06159999999999999,
+      "partial_transpose_min_eigenvalue": -0.21999999999999995,
+      "t": 0.44
+    },
+    {
+      "Bell_effect_acceptance": 0.7249999999999998,
+      "CHSH_fixed_settings": 2.0506096654409873,
+      "four_party_E_acceptance": 0.9243749999999997,
+      "naive_family_E_upper_bound": 0.8625,
+      "naive_family_violation": 0.06187499999999968,
+      "partial_transpose_min_eigenvalue": -0.22499999999999995,
+      "t": 0.45
+    },
+    {
+      "Bell_effect_acceptance": 0.7299999999999998,
+      "CHSH_fixed_settings": 2.0647518010647183,
+      "four_party_E_acceptance": 0.9270999999999998,
+      "naive_family_E_upper_bound": 0.865,
+      "naive_family_violation": 0.06209999999999982,
+      "partial_transpose_min_eigenvalue": -0.22999999999999995,
+      "t": 0.46
+    },
+    {
+      "Bell_effect_acceptance": 0.7349999999999997,
+      "CHSH_fixed_settings": 2.0788939366884494,
+      "four_party_E_acceptance": 0.9297749999999996,
+      "naive_family_E_upper_bound": 0.8674999999999999,
+      "naive_family_violation": 0.062274999999999636,
+      "partial_transpose_min_eigenvalue": -0.23499999999999993,
+      "t": 0.47
+    },
+    {
+      "Bell_effect_acceptance": 0.7399999999999998,
+      "CHSH_fixed_settings": 2.0930360723121804,
+      "four_party_E_acceptance": 0.9323999999999998,
+      "naive_family_E_upper_bound": 0.87,
+      "naive_family_violation": 0.06239999999999979,
+      "partial_transpose_min_eigenvalue": -0.23999999999999994,
+      "t": 0.48
+    },
+    {
+      "Bell_effect_acceptance": 0.7449999999999997,
+      "CHSH_fixed_settings": 2.107178207935911,
+      "four_party_E_acceptance": 0.9349749999999996,
+      "naive_family_E_upper_bound": 0.8725,
+      "naive_family_violation": 0.0624749999999995,
+      "partial_transpose_min_eigenvalue": -0.24499999999999994,
+      "t": 0.49
+    },
+    {
+      "Bell_effect_acceptance": 0.7499999999999998,
+      "CHSH_fixed_settings": 2.1213203435596424,
+      "four_party_E_acceptance": 0.9374999999999997,
+      "naive_family_E_upper_bound": 0.875,
+      "naive_family_violation": 0.06249999999999967,
+      "partial_transpose_min_eigenvalue": -0.24999999999999994,
+      "t": 0.5
+    },
+    {
+      "Bell_effect_acceptance": 0.7549999999999997,
+      "CHSH_fixed_settings": 2.135462479183373,
+      "four_party_E_acceptance": 0.9399749999999997,
+      "naive_family_E_upper_bound": 0.8775,
+      "naive_family_violation": 0.062474999999999725,
+      "partial_transpose_min_eigenvalue": -0.25499999999999995,
+      "t": 0.51
+    },
+    {
+      "Bell_effect_acceptance": 0.7599999999999998,
+      "CHSH_fixed_settings": 2.149604614807104,
+      "four_party_E_acceptance": 0.9423999999999998,
+      "naive_family_E_upper_bound": 0.88,
+      "naive_family_violation": 0.06239999999999979,
+      "partial_transpose_min_eigenvalue": -0.25999999999999995,
+      "t": 0.52
+    },
+    {
+      "Bell_effect_acceptance": 0.7649999999999997,
+      "CHSH_fixed_settings": 2.163746750430835,
+      "four_party_E_acceptance": 0.9447749999999997,
+      "naive_family_E_upper_bound": 0.8825000000000001,
+      "naive_family_violation": 0.062274999999999636,
+      "partial_transpose_min_eigenvalue": -0.26499999999999996,
+      "t": 0.53
+    },
+    {
+      "Bell_effect_acceptance": 0.7699999999999998,
+      "CHSH_fixed_settings": 2.177888886054566,
+      "four_party_E_acceptance": 0.9470999999999997,
+      "naive_family_E_upper_bound": 0.885,
+      "naive_family_violation": 0.06209999999999971,
+      "partial_transpose_min_eigenvalue": -0.26999999999999996,
+      "t": 0.54
+    },
+    {
+      "Bell_effect_acceptance": 0.7749999999999997,
+      "CHSH_fixed_settings": 2.1920310216782966,
+      "four_party_E_acceptance": 0.9493749999999995,
+      "naive_family_E_upper_bound": 0.8875,
+      "naive_family_violation": 0.06187499999999957,
+      "partial_transpose_min_eigenvalue": -0.27499999999999997,
+      "t": 0.55
+    },
+    {
+      "Bell_effect_acceptance": 0.7799999999999998,
+      "CHSH_fixed_settings": 2.206173157302028,
+      "four_party_E_acceptance": 0.9515999999999998,
+      "naive_family_E_upper_bound": 0.89,
+      "naive_family_violation": 0.061599999999999766,
+      "partial_transpose_min_eigenvalue": -0.27999999999999997,
+      "t": 0.56
+    },
+    {
+      "Bell_effect_acceptance": 0.7849999999999997,
+      "CHSH_fixed_settings": 2.2203152929257586,
+      "four_party_E_acceptance": 0.9537749999999996,
+      "naive_family_E_upper_bound": 0.8925,
+      "naive_family_violation": 0.061274999999999635,
+      "partial_transpose_min_eigenvalue": -0.2849999999999999,
+      "t": 0.57
+    },
+    {
+      "Bell_effect_acceptance": 0.7899999999999997,
+      "CHSH_fixed_settings": 2.2344574285494896,
+      "four_party_E_acceptance": 0.9558999999999997,
+      "naive_family_E_upper_bound": 0.895,
+      "naive_family_violation": 0.06089999999999973,
+      "partial_transpose_min_eigenvalue": -0.2899999999999999,
+      "t": 0.58
+    },
+    {
+      "Bell_effect_acceptance": 0.7949999999999997,
+      "CHSH_fixed_settings": 2.2485995641732206,
+      "four_party_E_acceptance": 0.9579749999999998,
+      "naive_family_E_upper_bound": 0.8975,
+      "naive_family_violation": 0.060474999999999834,
+      "partial_transpose_min_eigenvalue": -0.29499999999999993,
+      "t": 0.59
+    },
+    {
+      "Bell_effect_acceptance": 0.7999999999999997,
+      "CHSH_fixed_settings": 2.2627416997969516,
+      "four_party_E_acceptance": 0.9599999999999997,
+      "naive_family_E_upper_bound": 0.9,
+      "naive_family_violation": 0.05999999999999972,
+      "partial_transpose_min_eigenvalue": -0.29999999999999993,
+      "t": 0.6
+    },
+    {
+      "Bell_effect_acceptance": 0.8049999999999997,
+      "CHSH_fixed_settings": 2.2768838354206826,
+      "four_party_E_acceptance": 0.9619749999999998,
+      "naive_family_E_upper_bound": 0.9025,
+      "naive_family_violation": 0.059474999999999834,
+      "partial_transpose_min_eigenvalue": -0.30499999999999994,
+      "t": 0.61
+    },
+    {
+      "Bell_effect_acceptance": 0.8099999999999997,
+      "CHSH_fixed_settings": 2.291025971044413,
+      "four_party_E_acceptance": 0.9638999999999998,
+      "naive_family_E_upper_bound": 0.905,
+      "naive_family_violation": 0.05889999999999973,
+      "partial_transpose_min_eigenvalue": -0.30999999999999994,
+      "t": 0.62
+    },
+    {
+      "Bell_effect_acceptance": 0.8149999999999997,
+      "CHSH_fixed_settings": 2.305168106668144,
+      "four_party_E_acceptance": 0.9657749999999998,
+      "naive_family_E_upper_bound": 0.9075,
+      "naive_family_violation": 0.058274999999999855,
+      "partial_transpose_min_eigenvalue": -0.31499999999999995,
+      "t": 0.63
+    },
+    {
+      "Bell_effect_acceptance": 0.8199999999999997,
+      "CHSH_fixed_settings": 2.319310242291875,
+      "four_party_E_acceptance": 0.9675999999999998,
+      "naive_family_E_upper_bound": 0.91,
+      "naive_family_violation": 0.05759999999999976,
+      "partial_transpose_min_eigenvalue": -0.31999999999999995,
+      "t": 0.64
+    },
+    {
+      "Bell_effect_acceptance": 0.8249999999999997,
+      "CHSH_fixed_settings": 2.3334523779156062,
+      "four_party_E_acceptance": 0.9693749999999997,
+      "naive_family_E_upper_bound": 0.9125,
+      "naive_family_violation": 0.056874999999999676,
+      "partial_transpose_min_eigenvalue": -0.32499999999999996,
+      "t": 0.65
+    },
+    {
+      "Bell_effect_acceptance": 0.8299999999999997,
+      "CHSH_fixed_settings": 2.3475945135393372,
+      "four_party_E_acceptance": 0.9710999999999997,
+      "naive_family_E_upper_bound": 0.915,
+      "naive_family_violation": 0.056099999999999706,
+      "partial_transpose_min_eigenvalue": -0.32999999999999996,
+      "t": 0.66
+    },
+    {
+      "Bell_effect_acceptance": 0.8349999999999997,
+      "CHSH_fixed_settings": 2.3617366491630682,
+      "four_party_E_acceptance": 0.9727749999999997,
+      "naive_family_E_upper_bound": 0.9175,
+      "naive_family_violation": 0.05527499999999974,
+      "partial_transpose_min_eigenvalue": -0.33499999999999996,
+      "t": 0.67
+    },
+    {
+      "Bell_effect_acceptance": 0.8399999999999997,
+      "CHSH_fixed_settings": 2.3758787847867993,
+      "four_party_E_acceptance": 0.9743999999999997,
+      "naive_family_E_upper_bound": 0.92,
+      "naive_family_violation": 0.05439999999999967,
+      "partial_transpose_min_eigenvalue": -0.33999999999999997,
+      "t": 0.68
+    },
+    {
+      "Bell_effect_acceptance": 0.8449999999999998,
+      "CHSH_fixed_settings": 2.3900209204105303,
+      "four_party_E_acceptance": 0.9759749999999998,
+      "naive_family_E_upper_bound": 0.9225,
+      "naive_family_violation": 0.05347499999999983,
+      "partial_transpose_min_eigenvalue": -0.3449999999999999,
+      "t": 0.69
+    },
+    {
+      "Bell_effect_acceptance": 0.8499999999999996,
+      "CHSH_fixed_settings": 2.404163056034261,
+      "four_party_E_acceptance": 0.9774999999999996,
+      "naive_family_E_upper_bound": 0.925,
+      "naive_family_violation": 0.05249999999999955,
+      "partial_transpose_min_eigenvalue": -0.3499999999999999,
+      "t": 0.7
+    },
+    {
+      "Bell_effect_acceptance": 0.8549999999999998,
+      "CHSH_fixed_settings": 2.418305191657992,
+      "four_party_E_acceptance": 0.9789749999999998,
+      "naive_family_E_upper_bound": 0.9275,
+      "naive_family_violation": 0.051474999999999826,
+      "partial_transpose_min_eigenvalue": -0.3549999999999999,
+      "t": 0.71
+    },
+    {
+      "Bell_effect_acceptance": 0.8599999999999997,
+      "CHSH_fixed_settings": 2.432447327281723,
+      "four_party_E_acceptance": 0.9803999999999996,
+      "naive_family_E_upper_bound": 0.9299999999999999,
+      "naive_family_violation": 0.05039999999999967,
+      "partial_transpose_min_eigenvalue": -0.35999999999999993,
+      "t": 0.72
+    },
+    {
+      "Bell_effect_acceptance": 0.8649999999999998,
+      "CHSH_fixed_settings": 2.446589462905454,
+      "four_party_E_acceptance": 0.9817749999999997,
+      "naive_family_E_upper_bound": 0.9325,
+      "naive_family_violation": 0.049274999999999736,
+      "partial_transpose_min_eigenvalue": -0.36499999999999994,
+      "t": 0.73
+    },
+    {
+      "Bell_effect_acceptance": 0.8699999999999997,
+      "CHSH_fixed_settings": 2.460731598529185,
+      "four_party_E_acceptance": 0.9830999999999996,
+      "naive_family_E_upper_bound": 0.935,
+      "naive_family_violation": 0.04809999999999959,
+      "partial_transpose_min_eigenvalue": -0.36999999999999994,
+      "t": 0.74
+    },
+    {
+      "Bell_effect_acceptance": 0.8749999999999996,
+      "CHSH_fixed_settings": 2.474873734152916,
+      "four_party_E_acceptance": 0.9843749999999996,
+      "naive_family_E_upper_bound": 0.9375,
+      "naive_family_violation": 0.046874999999999556,
+      "partial_transpose_min_eigenvalue": -0.3749999999999999,
+      "t": 0.75
+    },
+    {
+      "Bell_effect_acceptance": 0.8799999999999996,
+      "CHSH_fixed_settings": 2.4890158697766465,
+      "four_party_E_acceptance": 0.9855999999999995,
+      "naive_family_E_upper_bound": 0.94,
+      "naive_family_violation": 0.04559999999999953,
+      "partial_transpose_min_eigenvalue": -0.3799999999999999,
+      "t": 0.76
+    },
+    {
+      "Bell_effect_acceptance": 0.8849999999999996,
+      "CHSH_fixed_settings": 2.5031580054003775,
+      "four_party_E_acceptance": 0.9867749999999995,
+      "naive_family_E_upper_bound": 0.9425,
+      "naive_family_violation": 0.04427499999999951,
+      "partial_transpose_min_eigenvalue": -0.3849999999999999,
+      "t": 0.77
+    },
+    {
+      "Bell_effect_acceptance": 0.8899999999999996,
+      "CHSH_fixed_settings": 2.5173001410241085,
+      "four_party_E_acceptance": 0.9878999999999994,
+      "naive_family_E_upper_bound": 0.9450000000000001,
+      "naive_family_violation": 0.04289999999999938,
+      "partial_transpose_min_eigenvalue": -0.3899999999999999,
+      "t": 0.78
+    },
+    {
+      "Bell_effect_acceptance": 0.8949999999999996,
+      "CHSH_fixed_settings": 2.531442276647839,
+      "four_party_E_acceptance": 0.9889749999999995,
+      "naive_family_E_upper_bound": 0.9475,
+      "naive_family_violation": 0.041474999999999485,
+      "partial_transpose_min_eigenvalue": -0.3949999999999999,
+      "t": 0.79
+    },
+    {
+      "Bell_effect_acceptance": 0.8999999999999996,
+      "CHSH_fixed_settings": 2.5455844122715705,
+      "four_party_E_acceptance": 0.9899999999999994,
+      "naive_family_E_upper_bound": 0.95,
+      "naive_family_violation": 0.03999999999999948,
+      "partial_transpose_min_eigenvalue": -0.3999999999999999,
+      "t": 0.8
+    },
+    {
+      "Bell_effect_acceptance": 0.9049999999999996,
+      "CHSH_fixed_settings": 2.559726547895301,
+      "four_party_E_acceptance": 0.9909749999999995,
+      "naive_family_E_upper_bound": 0.9525,
+      "naive_family_violation": 0.03847499999999948,
+      "partial_transpose_min_eigenvalue": -0.4049999999999999,
+      "t": 0.81
+    },
+    {
+      "Bell_effect_acceptance": 0.9099999999999995,
+      "CHSH_fixed_settings": 2.5738686835190316,
+      "four_party_E_acceptance": 0.9918999999999993,
+      "naive_family_E_upper_bound": 0.955,
+      "naive_family_violation": 0.03689999999999938,
+      "partial_transpose_min_eigenvalue": -0.40999999999999986,
+      "t": 0.82
+    },
+    {
+      "Bell_effect_acceptance": 0.9149999999999996,
+      "CHSH_fixed_settings": 2.588010819142763,
+      "four_party_E_acceptance": 0.9927749999999997,
+      "naive_family_E_upper_bound": 0.9575,
+      "naive_family_violation": 0.03527499999999972,
+      "partial_transpose_min_eigenvalue": -0.41499999999999987,
+      "t": 0.83
+    },
+    {
+      "Bell_effect_acceptance": 0.9199999999999995,
+      "CHSH_fixed_settings": 2.6021529547664937,
+      "four_party_E_acceptance": 0.9935999999999994,
+      "naive_family_E_upper_bound": 0.96,
+      "naive_family_violation": 0.03359999999999941,
+      "partial_transpose_min_eigenvalue": -0.4199999999999999,
+      "t": 0.84
+    },
+    {
+      "Bell_effect_acceptance": 0.9249999999999996,
+      "CHSH_fixed_settings": 2.616295090390225,
+      "four_party_E_acceptance": 0.9943749999999996,
+      "naive_family_E_upper_bound": 0.9625,
+      "naive_family_violation": 0.03187499999999954,
+      "partial_transpose_min_eigenvalue": -0.4249999999999999,
+      "t": 0.85
+    },
+    {
+      "Bell_effect_acceptance": 0.9299999999999995,
+      "CHSH_fixed_settings": 2.6304372260139557,
+      "four_party_E_acceptance": 0.9950999999999994,
+      "naive_family_E_upper_bound": 0.965,
+      "naive_family_violation": 0.03009999999999946,
+      "partial_transpose_min_eigenvalue": -0.4299999999999999,
+      "t": 0.86
+    },
+    {
+      "Bell_effect_acceptance": 0.9349999999999996,
+      "CHSH_fixed_settings": 2.644579361637687,
+      "four_party_E_acceptance": 0.9957749999999996,
+      "naive_family_E_upper_bound": 0.9675,
+      "naive_family_violation": 0.028274999999999606,
+      "partial_transpose_min_eigenvalue": -0.4349999999999999,
+      "t": 0.87
+    },
+    {
+      "Bell_effect_acceptance": 0.9399999999999995,
+      "CHSH_fixed_settings": 2.6587214972614177,
+      "four_party_E_acceptance": 0.9963999999999995,
+      "naive_family_E_upper_bound": 0.97,
+      "naive_family_violation": 0.026399999999999535,
+      "partial_transpose_min_eigenvalue": -0.4399999999999999,
+      "t": 0.88
+    },
+    {
+      "Bell_effect_acceptance": 0.9449999999999996,
+      "CHSH_fixed_settings": 2.672863632885149,
+      "four_party_E_acceptance": 0.9969749999999996,
+      "naive_family_E_upper_bound": 0.9725,
+      "naive_family_violation": 0.02447499999999958,
+      "partial_transpose_min_eigenvalue": -0.4449999999999999,
+      "t": 0.89
+    },
+    {
+      "Bell_effect_acceptance": 0.9499999999999995,
+      "CHSH_fixed_settings": 2.6870057685088797,
+      "four_party_E_acceptance": 0.9974999999999994,
+      "naive_family_E_upper_bound": 0.975,
+      "naive_family_violation": 0.02249999999999941,
+      "partial_transpose_min_eigenvalue": -0.4499999999999999,
+      "t": 0.9
+    },
+    {
+      "Bell_effect_acceptance": 0.9549999999999996,
+      "CHSH_fixed_settings": 2.7011479041326107,
+      "four_party_E_acceptance": 0.9979749999999996,
+      "naive_family_E_upper_bound": 0.9775,
+      "naive_family_violation": 0.020474999999999577,
+      "partial_transpose_min_eigenvalue": -0.4549999999999999,
+      "t": 0.91
+    },
+    {
+      "Bell_effect_acceptance": 0.9599999999999995,
+      "CHSH_fixed_settings": 2.7152900397563418,
+      "four_party_E_acceptance": 0.9983999999999995,
+      "naive_family_E_upper_bound": 0.98,
+      "naive_family_violation": 0.018399999999999528,
+      "partial_transpose_min_eigenvalue": -0.4599999999999999,
+      "t": 0.92
+    },
+    {
+      "Bell_effect_acceptance": 0.9649999999999996,
+      "CHSH_fixed_settings": 2.7294321753800728,
+      "four_party_E_acceptance": 0.9987749999999996,
+      "naive_family_E_upper_bound": 0.9825,
+      "naive_family_violation": 0.016274999999999595,
+      "partial_transpose_min_eigenvalue": -0.4649999999999999,
+      "t": 0.93
+    },
+    {
+      "Bell_effect_acceptance": 0.9699999999999995,
+      "CHSH_fixed_settings": 2.7435743110038033,
+      "four_party_E_acceptance": 0.9990999999999995,
+      "naive_family_E_upper_bound": 0.985,
+      "naive_family_violation": 0.014099999999999557,
+      "partial_transpose_min_eigenvalue": -0.46999999999999986,
+      "t": 0.94
+    },
+    {
+      "Bell_effect_acceptance": 0.9749999999999995,
+      "CHSH_fixed_settings": 2.7577164466275343,
+      "four_party_E_acceptance": 0.9993749999999996,
+      "naive_family_E_upper_bound": 0.9875,
+      "naive_family_violation": 0.011874999999999525,
+      "partial_transpose_min_eigenvalue": -0.47499999999999987,
+      "t": 0.95
+    },
+    {
+      "Bell_effect_acceptance": 0.9799999999999995,
+      "CHSH_fixed_settings": 2.7718585822512654,
+      "four_party_E_acceptance": 0.9995999999999996,
+      "naive_family_E_upper_bound": 0.99,
+      "naive_family_violation": 0.009599999999999609,
+      "partial_transpose_min_eigenvalue": -0.47999999999999987,
+      "t": 0.96
+    },
+    {
+      "Bell_effect_acceptance": 0.9849999999999995,
+      "CHSH_fixed_settings": 2.7860007178749964,
+      "four_party_E_acceptance": 0.9997749999999995,
+      "naive_family_E_upper_bound": 0.9924999999999999,
+      "naive_family_violation": 0.007274999999999587,
+      "partial_transpose_min_eigenvalue": -0.4849999999999999,
+      "t": 0.97
+    },
+    {
+      "Bell_effect_acceptance": 0.9899999999999995,
+      "CHSH_fixed_settings": 2.8001428534987274,
+      "four_party_E_acceptance": 0.9998999999999996,
+      "naive_family_E_upper_bound": 0.995,
+      "naive_family_violation": 0.004899999999999571,
+      "partial_transpose_min_eigenvalue": -0.4899999999999999,
+      "t": 0.98
+    },
+    {
+      "Bell_effect_acceptance": 0.9949999999999996,
+      "CHSH_fixed_settings": 2.8142849891224584,
+      "four_party_E_acceptance": 0.9999749999999995,
+      "naive_family_E_upper_bound": 0.9975,
+      "naive_family_violation": 0.00247499999999945,
+      "partial_transpose_min_eigenvalue": -0.4949999999999999,
+      "t": 0.99
+    },
+    {
+      "Bell_effect_acceptance": 0.9999999999999996,
+      "CHSH_fixed_settings": 2.8284271247461894,
+      "four_party_E_acceptance": 0.9999999999999996,
+      "naive_family_E_upper_bound": 1.0,
+      "naive_family_violation": -4.440892098500626e-16,
+      "partial_transpose_min_eigenvalue": -0.4999999999999999,
+      "t": 1.0
+    }
+  ]
+}

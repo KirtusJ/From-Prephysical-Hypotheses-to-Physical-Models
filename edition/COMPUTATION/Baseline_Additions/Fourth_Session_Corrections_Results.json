@@ -1,0 +1,176 @@
+{
+ "M1_consistent_modulus_rule_is_quadratic": {
+  "passed": true,
+  "events_used": 1904,
+  "moduli_occurring": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "rank": 7,
+  "solution_normalized_to_phi1": [
+   1.0,
+   4.0000000000000036,
+   9.000000000000018,
+   16.000000000000046,
+   24.999999999999996,
+   36.0000000000001,
+   49.00000000000016,
+   64.00000000000031
+  ],
+  "seed": 20261113,
+  "first_run": "in verify_modulus_rules_and_local_spectra.py the unknowns ran to 12 although no modulus above 8 occurred; the predicate failed through the program, not the statement"
+ },
+ "M1_controls_linear_and_quartic_rejected_on_the_signed_ring": {
+  "passed": true,
+  "largest_defect_linear": 14.0,
+  "largest_defect_quartic": 3504.0
+ },
+ "M1_control_counting_is_consistent_with_trivial_gains": {
+  "passed": true,
+  "note": "with all gains +1 and phi(n) = n the rule is the number of walks: sum of (A0 v) equals 2 sum of v for every event"
+ },
+ "N1_linear_gain_of_order_3_4_6_spreads_ballistically": {
+  "passed": true,
+  "rows": [
+   {
+    "order": 3,
+    "block_length": 1,
+    "rms_distance": {
+     "1024": 260.2395231545429,
+     "2048": 520.4741939988046
+    },
+    "ratio": 1.9999813544452343,
+    "bound": 7.625
+   },
+   {
+    "order": 4,
+    "block_length": 1,
+    "rms_distance": {
+     "1024": 374.8111537244095,
+     "2048": 749.620624522396
+    },
+    "ratio": 1.9999955099350533,
+    "bound": 8.0
+   },
+   {
+    "order": 6,
+    "block_length": 1,
+    "rms_distance": {
+     "1024": 260.2395231545432,
+     "2048": 520.474193998805
+    },
+    "ratio": 1.9999813544452338,
+    "bound": 8.75
+   }
+  ],
+  "note": "rational field: ballistic propagation with revivals (Cedzich et al. 2013, proved there); G9 Section 6.2 reports the bounded distance over four periods only"
+ },
+ "N2_long_blocks_confine_up_to_2048_steps": {
+  "passed": true,
+  "rows": [
+   {
+    "order": 3,
+    "block_length": 16,
+    "rms_distance": {
+     "1024": 7.066243914323975,
+     "2048": 9.339567212548165
+    },
+    "ratio": 1.321715939300643,
+    "bound": 47.0
+   },
+   {
+    "order": 3,
+    "block_length": 64,
+    "rms_distance": {
+     "1024": 36.4574636984437,
+     "2048": 31.147010491809933
+    },
+    "ratio": 0.854338380460063,
+    "bound": 173.0
+   },
+   {
+    "order": 4,
+    "block_length": 16,
+    "rms_distance": {
+     "1024": 8.073254530280575,
+     "2048": 8.375262375480046
+    },
+    "ratio": 1.0374084384515219,
+    "bound": 53.0
+   },
+   {
+    "order": 4,
+    "block_length": 64,
+    "rms_distance": {
+     "1024": 41.37068440137892,
+     "2048": 33.587900243410964
+    },
+    "ratio": 0.8118768333040063,
+    "bound": 197.0
+   },
+   {
+    "order": 6,
+    "block_length": 16,
+    "rms_distance": {
+     "1024": 10.5781335078851,
+     "2048": 11.297086629461532
+    },
+    "ratio": 1.0679659715998586,
+    "bound": 65.0
+   },
+   {
+    "order": 6,
+    "block_length": 64,
+    "rms_distance": {
+     "1024": 54.51446928682542,
+     "2048": 47.60872376554809
+    },
+    "ratio": 0.8733227047493931,
+    "bound": 245.0
+   }
+  ],
+  "note": "an observation over 2048 steps; the gains are periodic in position, so exact confinement is not expected at all times"
+ },
+ "N3_order_4_staircase_falls_short_of_its_mean_field": {
+  "passed": true,
+  "rows": [
+   {
+    "block_length": 16,
+    "steps": 8,
+    "staircase_displacement": 3.7962140847654338,
+    "linear_gain_displacement": 5.534610026695741,
+    "ratio": 0.685904529217904,
+    "fraction_on_the_far_side_of_the_start": 0.25651282027156974
+   },
+   {
+    "block_length": 64,
+    "steps": 32,
+    "staircase_displacement": 11.999003720787659,
+    "linear_gain_displacement": 22.2558359899382,
+    "ratio": 0.5391396542557366,
+    "fraction_on_the_far_side_of_the_start": 0.38825598760485297
+   },
+   {
+    "block_length": 256,
+    "steps": 128,
+    "staircase_displacement": 14.063416139525405,
+    "linear_gain_displacement": 89.06478684946437,
+    "ratio": 0.15790096891260882,
+    "fraction_on_the_far_side_of_the_start": 0.49586778103131285
+   }
+  ],
+  "note": "packet at k0 = 0.3 on branch 1, width 0.03 in k (about 17 sites in position); the instances L = 16 and 64 repeat G9 Section 6.2 with the mean position in place of the circular centroid"
+ },
+ "_summary": {
+  "predicates": 6,
+  "passed": 6,
+  "seed": 20261113,
+  "numpy": "2.5.3"
+ }
+}

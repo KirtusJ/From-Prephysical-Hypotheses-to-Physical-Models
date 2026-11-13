@@ -1,0 +1,224 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm,headheight=15pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,microtype,xcolor,fancyhdr}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage[colorlinks=true,linkcolor=teal!55!black,urlcolor=teal!55!black,citecolor=teal!55!black]{hyperref}
+\definecolor{ink}{HTML}{173C4C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\sffamily Calibration and identified sets under joint sampling}\fancyhead[R]{\small Paper F4}\fancyfoot[C]{\thepage}
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newcommand{\Prob}{\mathbb P}\newcommand{\E}{\mathbb E}\newcommand{\Iset}{\mathcal I}\newcommand{\Cset}{\mathcal C}
+\title{\color{ink}\sffamily\large From Prephysical Hypotheses to Physical Models\\[9pt]\LARGE Calibration and Identified Sets under Joint Sampling}
+\author{Kirtus Justus\\\small Theoretical Physicist\\\small Port Coquitlam, British Columbia, Canada}
+\date{10 November 2026 \textperiodcentered{} baseline edition 12 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An observation can identify a parameter at the population level while its finite-sample reconstruction remains unreliable. This note gives an explicit joint treatment of source and calibration sampling for a binary readout. A confidence region for the full observation law is projected onto the population identified set, yielding whole-set coverage. For rectangular law regions, the projection is exactly the intersection of two linear inequalities. A predeclared finite experiment has 63 parameter points, 45 distinct observation laws and 2,025 count triples per law. Exact enumeration shows that ignoring calibration sampling can reduce nominal 95\% point coverage to 34.22\%; whole-set coverage can be still lower in a nonidentified case. The joint construction retains at least 98.63\% whole-set coverage on this finite family, with substantial conservatism. A separate two-point argument shows that uniformly shrinking honest confidence sets are impossible when the readout gain may approach zero. These are results for specified mathematical experiments, not measurements of a physical substrate or a derivation of the observation model.
+\end{abstract}
+\begingroup
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\newpage
+\section{Question, assumptions and relation to existing work}
+
+The central question is which target values remain compatible with both the observations and the conditions under which those observations were obtained. Source statistics, calibration data and assumptions about their relationship must enter the same inferential object. The distinction between confidence for each admissible parameter and simultaneous confidence for the whole identified set is established in the partial-identification literature \cite{imbens,romano}. Exact inversion of binomial tails is classical \cite{clopper}. No novelty claim is made for either principle.
+
+The binary model used below is the familiar misclassification relation underlying prevalence adjustment \cite{rogan}; here it is treated as an abstract probability model. Its interpretation does not require physical time or energy. An application to an apparatus would additionally need warranted reference preparations, stable response probabilities, sampling assumptions and a justified assignment of the latent labels. Merely writing the model supplies none of those facts.
+
+The supplied research collection already separates calibration-induced population ambiguity from a fixed-horizon sampling test. Its study \emph{Observation, Memory, Control, and Time in Finite Models}, section on calibration intervals, gives a contained preparation interval for a controlled finite-state model, not a confidence region for that interval. The present note makes estimated calibration part of the observation law in a different, elementary model. It does not transfer the formulas below to the controlled model without specifying that model's calibration experiment.
+
+\section{Population identified sets and joint-law projection}
+
+Let $\Xi$ be a fixed parameter class and let $\mathcal O:\Xi\to\mathcal P$ assign an observation law. Let $h:\Xi\to H$ be the target. All nuisance parameters and admitted structural restrictions belong to $\Xi$. The population identified set is
+\begin{equation}\label{eq:identified}
+\Iset(P)=\{h(\xi):\xi\in\Xi,\ \mathcal O(\xi)=P\}.
+\end{equation}
+If several sampling streams are used, $P$ denotes their full joint law, or a tuple of marginal laws under a stated dependence model. An identified set is not itself a random confidence region.
+
+\begin{theorem}[Projection with whole-set coverage]\label{thm:projection}
+Let $U(D)\subseteq\mathcal P$ be a random observation-law region such that
+\[
+\inf_{P\in\mathcal P_0}\Prob_P\{P\in U(D)\}\ge1-\alpha.
+\]
+Define $\widehat{\Iset}(D)=\bigcup_{Q\in U(D)}\Iset(Q)$. Then
+\[
+\inf_{P\in\mathcal P_0}\Prob_P\{\Iset(P)\subseteq\widehat{\Iset}(D)\}\ge1-\alpha.
+\]
+The assertion presumes the displayed events are measurable. Any verified outer enclosure of $\widehat{\Iset}$ preserves the inclusion guarantee.
+\end{theorem}
+\begin{proof}
+On the event $P\in U(D)$, the union defining $\widehat{\Iset}(D)$ contains its term $\Iset(P)$. The event implication holds for each $P$; taking probabilities and then the infimum proves the statement.
+\end{proof}
+
+This elementary theorem does not make a chosen law region valid. Its coverage premise must be established under the sampling design. It also does not guarantee that the reported region is narrow, connected or nonempty on every realized sample. A convex hull is an outer bound if the exact union has gaps.
+
+\begin{proposition}[Several marginal regions]\label{prop:union}
+Suppose $P=(P_1,\ldots,P_r)$ and each random region $U_j(D)$ satisfies $\Prob_P\{P_j\notin U_j(D)\}\le\alpha_j$ throughout the admitted joint-law class. Then the product region, restricted to that class, contains $P$ with probability at least $1-\sum_j\alpha_j$.
+\end{proposition}
+\begin{proof}
+Apply the union bound to the $r$ noncoverage events. Independence among the regions or streams is not needed for this step.
+\end{proof}
+
+Marginal procedures still require their own distributional premises. For example, a binomial reference count requires the specified Bernoulli sampling assumptions; dependence or drift within that stream can invalidate its interval. A confidence region for one true nuisance parameter is also not automatically a region covering every nuisance value in a larger stipulated sensitivity class. The target set and law map must remain fixed when that distinction matters.
+
+\section{Binary readout: an exact projection}
+
+Let $\theta\in[0,1]$ be a latent population fraction. A binary readout reports one with probability $f$ under latent state zero and probability $s$ under latent state one. Thus
+\begin{equation}\label{eq:model}
+p=(1-\theta)f+\theta s,\qquad (\theta,f,s)\in[0,1]^3.
+\end{equation}
+The two reference labels are assumed to be anchored. We do not assume $s>f$; an inverted readout and a zero-gain readout are included in the mathematical class. For an exact triple $(p,f,s)$, the identified set is a singleton $\{(p-f)/(s-f)\}$ when $s\ne f$ and that ratio lies in $[0,1]$. It is $[0,1]$ when $p=f=s$, and empty otherwise.
+
+\begin{theorem}[Rectangular law regions]\label{thm:rectangle}
+Let $P=[p_-,p_+]$, $F=[f_-,f_+]$ and $S=[s_-,s_+]$ be nonempty closed subintervals of $[0,1]$. With no further coupling restrictions on $f$ and $s$, the exact target projection of \eqref{eq:model} is
+\begin{equation}\label{eq:rectangle}
+\left\{\theta\in[0,1]:\quad
+(1-\theta)f_-+\theta s_-\le p_+,\quad
+(1-\theta)f_++\theta s_+\ge p_-\right\}.
+\end{equation}
+It is a closed interval, a singleton, or the empty set.
+\end{theorem}
+\begin{proof}
+For fixed $\theta$, the image of the rectangle $F\times S$ under $(f,s)\mapsto(1-\theta)f+\theta s$ is exactly the interval with endpoints $(1-\theta)f_-+\theta s_-$ and $(1-\theta)f_++\theta s_+$. Nonnegative coefficients give the extrema, and continuity on a convex rectangle fills all intermediate values. This interval meets $P$ if and only if the two displayed inequalities hold. Both inequalities are affine in $\theta$, proving the final claim.
+\end{proof}
+
+An implementation can intersect $[0,1]$ with the two half-lines
+\[
+(s_–f_-)\theta\le p_+-f_-,\qquad
+(f_+-s_+)\theta\le f_+-p_-.
+\]
+For a zero coefficient, the inequality is either automatic or impossible. Division by a possibly zero estimated gain is unnecessary. Extra restrictions such as $s-f\ge g>0$ must be imposed in the feasibility problem; \eqref{eq:rectangle} alone does not encode them.
+
+\paragraph{A calibration floor.}
+With exact $p=1/2$, but $f\in[1/5,3/10]$ and $s\in[7/10,4/5]$, the complete identified set is $[2/5,3/5]$. Increasing source sample size cannot remove this population ambiguity while those calibration ranges remain unchanged. If instead $p=f=s=1/2$, all of $[0,1]$ is compatible. If $f=s=1/2$ and $p=1/3$, no parameter is compatible.
+
+\section{Finite-sample confidence from three count streams}
+
+Suppose
+\[
+X\sim\operatorname{Bin}(N,p),\quad
+Z_0\sim\operatorname{Bin}(M_0,f),\quad
+Z_1\sim\operatorname{Bin}(M_1,s).
+\]
+Within each stream, trials are independent Bernoulli observations with a common success probability. Cross-stream independence is used for the enumeration in section~\ref{sec:enumeration}; Proposition~\ref{prop:union} itself does not need it.
+
+For an observed count $k$ from $n$ trials and $0<\beta<1$, define
+\[
+A_{n,\beta}(k)=\{q\in[0,1]:\Pr_q(K\le k)>\beta/2,\ \Pr_q(K\ge k)>\beta/2\}.
+\]
+Both tails are inclusive. Equality to the rejection threshold is rejected in this note. The closed hull $\overline A_{n,\beta}(k)$ is a conservative closed region suitable for Theorem~\ref{thm:rectangle}. On a finite declared parameter family, we use $A$ itself, so the equality convention is fully specified.
+
+\begin{lemma}[Exact tail inversion]\label{lem:tails}
+For every $q\in[0,1]$, $\Pr_q\{q\notin A_{n,\beta}(K)\}\le\beta$.
+\end{lemma}
+\begin{proof}
+The event that the lower inclusive tail is at most $\beta/2$ is an initial segment of count values whose total probability is at most $\beta/2$. The upper-tail event is a final segment with the same bound. Their union has probability at most $\beta$. This includes $q=0,1$.
+\end{proof}
+
+Assign errors $\alpha_p+\alpha_f+\alpha_s\le\alpha$. Apply the three inversion regions to $(X,Z_0,Z_1)$ and project their product through \eqref{eq:model}. Theorem~\ref{thm:projection} and Proposition~\ref{prop:union} give whole-identified-set coverage at least $1-\alpha$, uniformly over the entire stated continuous model class, at this fixed sampling horizon. This analytic guarantee is distinct from the numerical coverage values computed for the smaller finite family below. On that finite family, the identified set and reported union are restricted to its declared parameter points; they are not discretized claims about the continuous target set.
+
+An empty projected region is a rejection of compatibility by this statistical procedure. Under a correctly specified nonempty population model, it can occur on a noncoverage event of probability at most $\alpha$. It is not a logical contradiction of the population assumptions inferred from one finite sample.
+
+\section{Exact finite experiment}\label{sec:enumeration}
+
+The design was fixed before execution:
+\[
+N=80,\quad M_0=M_1=4,\quad \alpha=1/20,\quad
+\theta\in\{0,1/6,\ldots,1\},\quad f,s\in\{1/5,1/2,4/5\}.
+\]
+The three streams are independent. The 63 parameter points induce 45 distinct triples $(p,f,s)$: 42 have $f\ne s$ and singleton identified sets, while the three cases $p=f=s$ identify all seven grid values. For every law, all $81\cdot5\cdot5=2{,}025$ count triples are enumerated.
+
+The \emph{joint procedure} uses error $\alpha/3$ per stream, retains each full parameter triple admitted by all three tests, and reports the union of its target coordinates. The \emph{plug-in procedure} sets $\widehat f=Z_0/4$, $\widehat s=Z_1/4$, treats these estimates as exact, and tests the implied source probability at error $\alpha$. The \emph{known-calibration control} uses the true fixed $f,s$ and source error $\alpha$. All three procedures use the same target grid and explicit inclusive-tail rule. The plug-in procedure is a deliberately incomplete uncertainty calculation; these results are not a comparison with all methods that estimate calibration.
+
+\begin{table}[ht]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{43mm}>{\raggedleft\arraybackslash}p{35mm}>{\raggedleft\arraybackslash}p{19mm}>{\raggedleft\arraybackslash}p{35mm}}\toprule
+Procedure & Minimum set coverage & Below 95\% & Minimum point coverage\\\midrule
+Joint source and calibration & 98.6328\% & 0/45 & 98.7908\%\\
+Calibration estimates treated as exact & 13.6591\% & 45/45 & 34.2198\%\\
+Known-calibration control & 95.4497\% & 0/45 & 95.4497\%\\\bottomrule
+\end{tabular}
+\caption{Exact rational probabilities, displayed as rounded percentages. Set coverage contains the entire population identified set; point coverage contains each admissible target value separately. The minima need not occur at the same law.}
+\end{table}
+
+The worst whole-set plug-in case is $p=f=s=1/2$, where the target is not identified. Undercoverage is not confined to that degeneracy: at $(\theta,f,s)=(1/2,1/5,4/5)$, the plug-in coverage is $0.5624238222$, versus $0.9670073816$ for known calibration. The joint coverage is $0.9999935614$, but its expected set cardinality is $6.9821$ out of seven, compared with $2.3224$ for known calibration. Validity is obtained at a considerable cost in precision with only four observations per reference.
+
+The minimum point coverage $0.3421980437$ also occurs in identified cases, for example $(\theta,f,s)=(0,1/5,1/2)$. Thus the discrepancy between point and whole-set coverage does not explain away the plug-in failure. All 45 laws and exact probability fractions are recorded in the accompanying result file; Appendix~\ref{app:all} displays the whole-set values.
+
+\paragraph{Arithmetic and verification.}
+For $q=a/b$ in lowest terms, each binomial probability is represented as
+\[
+\Pr_q(K=k)=\frac{\binom nk a^k(b-a)^{n-k}}{b^n}.
+\]
+All acceptance decisions and probability sums use integers and rational arithmetic. No Monte Carlo sampling, floating-point cutoff or numerical confidence approximation is used. The program checks normalization, true-law admission probabilities against their product formula, whole-set inclusion on the admission event, and the known-calibration control. An independently written arithmetic check recomputes coverage across all 45 laws by conditional source acceptance and rational summation; its actual scope is stated in the execution account. Separate code is not independent empirical replication or independent research provenance.
+
+The interval implementation is also checked on 3,375 rational rectangles at seven target probes, including zero slopes, reversed readouts and incompatible intervals. Those probes are finite implementation checks; Theorem~\ref{thm:rectangle} supplies the general assertion. The experiment was chosen to expose a possible error from omitted calibration uncertainty. Its complete fixed family is reported, without outcome-dependent parameter tuning, and no claim of typical empirical performance is made.
+
+\section{Conditioning and the limits of uniform inference}
+
+\begin{proposition}[Deterministic gain bound]\label{prop:gain}
+Consider points $(p,f,s,\theta)$ and $(p',f',s',\theta')$. Suppose both satisfy \eqref{eq:model}, and $|s-f|\ge g>0$. Then
+\[
+|\theta-\theta'|\le
+\frac{|p-p'|+(1-\theta')|f-f'|+\theta'|s-s'|}{g}
+\le\frac{|p-p'|+\max\{|f-f'|,|s-s'|\}}{g}.
+\]
+\end{proposition}
+\begin{proof}
+Subtract the two observation equations and isolate $(\theta-\theta')(s-f)$. The remaining terms are $(1-\theta')(f-f')+\theta'(s-s')$. Apply the triangle inequality and $0\le\theta'\le1$.
+\end{proof}
+
+With a valid gain restriction throughout a rectangular feasibility class, a diameter bound follows by replacing each difference with the corresponding interval width. The gain restriction is an additional premise; it must not be inferred from an unstable empirical denominator.
+
+\begin{theorem}[No uniformly shrinking honest sets near zero gain]\label{thm:weak}
+Fix $\alpha<1/2$ and a source sample size $N$. Consider independent source and reference sampling with
+\[
+f=1/2-\delta,\quad s=1/2+\delta,\quad 0<\delta<1/2,
+\]
+and the two targets $\theta_0=0$, $\theta_1=1$. Let $\Cset(D)\subseteq[0,1]$ have point coverage at least $1-\alpha$ under both laws for every such $\delta$. Then, under the law with target zero,
+\[
+\Pr_0\{\{0,1\}\subseteq\Cset(D)\}\ge1-2\alpha-2N\delta.
+\]
+The reference sample sizes can be arbitrary: their distributions are identical under the two alternatives. Consequently there is no uniformly shrinking diameter guarantee over the class allowing arbitrarily small positive gains.
+\end{theorem}
+\begin{proof}
+The reference laws agree. Couple each pair of source Bernoulli variables by a common uniform random variable. Their probabilities differ by $2\delta$, so the probability that any of the $N$ paired observations differs is at most $2N\delta$. The total-variation distance between the full data laws is therefore at most $2N\delta$; the same holds after passing to counts. Under law zero, the event $1\in\Cset$ has probability at least $1-\alpha-2N\delta$, while $0\in\Cset$ has probability at least $1-\alpha$. Intersecting those events gives the bound.
+
+For example, along $\delta_N=N^{-2}$ for $N\ge2$, the lower bound tends to $1-2\alpha$. Each member has positive gain and point identification, but a uniformly honest procedure must frequently report diameter one along this sequence. This rules out uniform shrinkage; it does not rule out consistent estimation at a fixed gain bounded away from zero.
+\end{proof}
+
+At $\alpha=0.05$, the limiting bound is $0.9$. This is an analytic obstruction, separate from the particular finite grid. More reference observations cannot separate these two alternatives because the calibration laws are the same in both. Source information and the lower gain bound remain material.
+
+\section{Repeated inspection and physical interpretation}
+
+The finite experiment and stated binomial confidence procedure concern a fixed horizon. Reusing a nominal 95\% fixed-time interval at many data-dependent stopping times does not inherit 95\% simultaneous coverage. One elementary extension allocates error $\alpha_t=\alpha/[t(t+1)]$ to look $t$, constructs valid marginal law regions at deterministic looks, and applies the union bound over $t\ge1$. Since $\sum_t\alpha_t=\alpha$, the projected sets cover simultaneously with probability at least $1-\alpha$. This conservative construction requires each look's sampling law to remain valid; the sampling plan cannot be changed without checking that premise. No optimal sequential procedure is claimed.
+
+For a physical candidate, the target must also be invariant under observationally irrelevant changes of representation. If a latent coordinate changes under a transformation that preserves every admitted observation, a narrow confidence interval for that coordinate depends on an additional identification convention or reference. The binomial calculation cannot establish the convention's physical warrant.
+
+The next useful applications are model-specific. A controlled stochastic realization needs a law for calibration outcomes and an explicit preparation reference. A quantum instrument needs sampling for preparations, success flags and detector calibration, with all relevant shared errors represented. A continuous-time model needs a justified clock and its uncertainty. These are different observation maps. The general projection argument transfers to them once those maps and valid law regions are supplied; the binary formulas and finite-grid performance do not transfer automatically.
+
+\section*{Research and computational disclosure}
+This is an AI-assisted mathematical research manuscript prepared within the same research program as the supplied source collection. The arguments are presented for examination. Exact computation checks the declared finite experiment; it does not certify the software implementation against all possible faults, establish empirical validity, or constitute independent peer review. Sources and tests share program provenance. Editable text, executable code, complete rational outputs and an execution account accompany the manuscript.
+
+\begin{thebibliography}{9}
+\bibitem{clopper} C. J. Clopper and E. S. Pearson, “The use of confidence or fiducial limits illustrated in the case of the binomial,” \emph{Biometrika} 26(4), 404–413 (1934). \href{https://doi.org/10.1093/biomet/26.4.404}{doi:10.1093/biomet/26.4.404}.
+\bibitem{imbens} G. W. Imbens and C. F. Manski, “Confidence intervals for partially identified parameters,” \emph{Econometrica} 72(6), 1845–1857 (2004). \href{https://doi.org/10.1111/j.1468-0262.2004.00555.x}{doi:10.1111/j.1468-0262.2004.00555.x}.
+\bibitem{romano} J. P. Romano and A. M. Shaikh, “Inference for the identified set in partially identified econometric models,” \emph{Econometrica} 78(1), 169–211 (2010). \href{https://doi.org/10.3982/ECTA6706}{doi:10.3982/ECTA6706}.
+\bibitem{rogan} W. J. Rogan and B. Gladen, “Estimating prevalence from the results of a screening test,” \emph{American Journal of Epidemiology} 107(1), 71–76 (1978). \href{https://doi.org/10.1093/oxfordjournals.aje.a112510}{doi:10.1093/oxfordjournals.aje.a112510}.
+\bibitem{justus} K. Justus, \emph{Observation, Memory, Control, and Time in Finite Models}, extended study supplied in \emph{From Prephysical Hypotheses to Physical Models: Mathematical Supplement} (2026). Same-program manuscript; not independent corroboration.
+\end{thebibliography}
+\clearpage
+\appendix
+\section{All finite-family whole-set coverage values}\label{app:all}
+Each row specifies one observable law $(p,f,s)$. For $f\ne s$, the target is the singleton shown; an asterisk denotes all seven target grid values. Values are rounded displays of exact rational probabilities. The executable result file retains all fractions, point coverage, empty-set probabilities and expected cardinalities.
+\input{Coverage_Table.tex}
+\end{document}

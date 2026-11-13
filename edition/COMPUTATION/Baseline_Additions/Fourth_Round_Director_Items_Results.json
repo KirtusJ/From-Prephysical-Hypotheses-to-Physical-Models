@@ -1,0 +1,135 @@
+{
+ "G1_A4_extension_changes_a_vanishing_cross_term": {
+  "passed": true,
+  "D1": "0",
+  "D2": "1/2 - sqrt(3)*I/2",
+  "total_masses": [
+   "1",
+   "3",
+   "15"
+  ]
+ },
+ "G1_A4_total_masses_1_3_15": {
+  "passed": true
+ },
+ "G1_B4_cross_term_0_to_2": {
+  "passed": true,
+  "value": "2",
+  "note": "Director B places the gain on the edge (0,3); extensions of the one-step events ending at 1 and 2"
+ },
+ "G1_criterion_AstarA_not_scalar_for_K4_with_one_gain": {
+  "passed": true,
+  "diagonal": [
+   "3",
+   "3",
+   "3",
+   "3"
+  ]
+ },
+ "G1_K4_no_consistent_signing_one_with_order_4_gains": {
+  "passed": true,
+  "consistent_signings_of_K4": 0,
+  "first_run": "a first version asserted a signing of K4 with square 3; the matrix written was not symmetric and the predicate returned False. The assertion was wrong: no signing of K4 has square 3. Restated"
+ },
+ "G2_closed_walk_rule_is_invariant_and_sees_holonomy": {
+  "passed": true,
+  "weights_of_closed_walk_with_gain_0_and_1": [
+   2.0,
+   0.5000000000000002
+  ]
+ },
+ "G2_open_walk_rule_must_be_constant": {
+  "passed": true
+ },
+ "G2_S3_class_function_invariant_nonclass_not": {
+  "passed": true
+ },
+ "G3_all_three_witnesses_have_full_augmented_holonomy": {
+  "passed": true,
+  "rows": [
+   {
+    "witness": "K4, gain on 2->3 (A)",
+    "order": 6,
+    "least_count_at_5_10_18_24": [
+     6,
+     3644,
+     30189912,
+     23003866452
+    ]
+   },
+   {
+    "witness": "K4, gain on 0->3 (B)",
+    "order": 6,
+    "least_count_at_5_10_18_24": [
+     6,
+     3644,
+     30189912,
+     23003866452
+    ]
+   },
+   {
+    "witness": "two triangles at a vertex (G)",
+    "order": 6,
+    "least_count_at_5_10_18_24": [
+     1,
+     596,
+     1454605,
+     453683940
+    ]
+   }
+  ]
+ },
+ "G3_B4_bound_3^floor((k-10)/2)": {
+  "passed": true
+ },
+ "G3_G4_bound_2^(k-5)": {
+  "passed": true,
+  "least_at_5": 1
+ },
+ "G4_synchronized_product_reaches_8_of_16_endpoint_pairs": {
+  "passed": true,
+  "single": 4,
+  "synchronized": 8,
+  "note": "at a fixed common length the product space is the tensor product (G8 Proposition 6.1); the union over lengths is smaller than the tensor product of the unions when both factors are bipartite"
+ },
+ "G4_holonomy_present_in_the_four_cycle": {
+  "passed": true,
+  "squared_modulus_of_two_path_sum": 1.0000000000000004
+ },
+ "G5_lift_phase_is_conj(B)/|B|_and_det_T_is_(B/|B|)^2": {
+  "passed": true,
+  "rows": [
+   {
+    "control": "Director A",
+    "B": "(0.5625+0.1875j)",
+    "lift_phase": "(0.948683298051-0.316227766017j)",
+    "conj_B_over_modulus": "(0.948683298051-0.316227766017j)",
+    "det_T": "(0.8+0.6j)",
+    "B_over_modulus_squared": "(0.8+0.6j)",
+    "ok": true
+   },
+   {
+    "control": "Director B",
+    "B": "(0.25+0.25j)",
+    "lift_phase": "(0.707106781187-0.707106781187j)",
+    "conj_B_over_modulus": "(0.707106781187-0.707106781187j)",
+    "det_T": "1j",
+    "B_over_modulus_squared": "1j",
+    "ok": true
+   }
+  ],
+  "note": "the printed proof of G7 Proposition 4.3 defines theta by exp(i theta) = conj(B)/|B|; with that definition its lift phase exp(i theta) and its T = exp(-i theta) U agree with these values. The overline is present in the typeset page and in the source and is lost by text extraction of the PDF"
+ },
+ "G6_G4_filter_optimum": {
+  "passed": true
+ },
+ "G7_G4_formal_exponential_controls": {
+  "passed": true,
+  "note": "the imaginary unit, the continuous parameter and the choice between the two product generators are inputs"
+ },
+ "_summary": {
+  "predicates": 16,
+  "passed": 16,
+  "seed": 2026111241
+ }
+}

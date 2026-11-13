@@ -1,0 +1,244 @@
+{
+  "edition": "A2 2026-11-12",
+  "scope": "additive research graph only; no baseline mutation",
+  "root_status": "G1 OPEN; total ontology not identified",
+  "node_status_legend": [
+    "SUPPLIED_TOY_PRIMITIVE",
+    "CHOICE",
+    "EXACT_DERIVATION",
+    "CONDITIONAL_MATH",
+    "OPEN_PHYSICAL",
+    "COUNTERMODEL",
+    "UNJUSTIFIED_OPER_OPERATION",
+    "UNJUSTIFIED_OPER_OPERATIONAL_POSTULATE",
+    "EXTERNAL_CONDITIONAL",
+    "CONDITIONAL_TOPOLOGY",
+    "NO_GO_CLASS",
+    "REFUTED_IN_SCOPE"
+  ],
+  "nodes": [
+    {
+      "id": "F",
+      "label": "Static oriented 3-cycle",
+      "status": "SUPPLIED_TOY_PRIMITIVE"
+    },
+    {
+      "id": "L",
+      "label": "Permutation on free integer module",
+      "status": "CHOICE"
+    },
+    {
+      "id": "C",
+      "label": "C=P-P^T; C²=-3I on contrast",
+      "status": "EXACT_DERIVATION"
+    },
+    {
+      "id": "R",
+      "label": "Real scalar completion and metric",
+      "status": "CHOICE"
+    },
+    {
+      "id": "D",
+      "label": "Two-copy complex module",
+      "status": "CHOICE"
+    },
+    {
+      "id": "H",
+      "label": "Hopf quotient CP¹",
+      "status": "CONDITIONAL_MATH"
+    },
+    {
+      "id": "B",
+      "label": "Squared overlap / Bargmann rule",
+      "status": "CHOICE"
+    },
+    {
+      "id": "Q",
+      "label": "Operational quantum theory",
+      "status": "OPEN_PHYSICAL"
+    },
+    {
+      "id": "T",
+      "label": "Quantum composition / entangled instruments",
+      "status": "OPEN_PHYSICAL"
+    },
+    {
+      "id": "E",
+      "label": "Clock, energy, physical dynamics",
+      "status": "OPEN_PHYSICAL"
+    },
+    {
+      "id": "M",
+      "label": "Classical Hamiltonian mechanics",
+      "status": "OPEN_PHYSICAL"
+    },
+    {
+      "id": "O",
+      "label": "Empirical calibrated map / total ontology",
+      "status": "OPEN_PHYSICAL"
+    },
+    {
+      "id": "K",
+      "label": "Classical Delta₂ simplex completion",
+      "status": "COUNTERMODEL"
+    },
+    {
+      "id": "S",
+      "label": "Spectrality + strong symmetry",
+      "status": "UNJUSTIFIED_OPERATIONAL_POSTULATE"
+    },
+    {
+      "id": "J",
+      "label": "Jordan state spaces / simplex",
+      "status": "EXTERNAL_CONDITIONAL"
+    },
+    {
+      "id": "W",
+      "label": "Symplectic warrant",
+      "status": "UNJUSTIFIED_OPER_OPERATION"
+    },
+    {
+      "id": "P",
+      "label": "CP^n within simple Jordan list",
+      "status": "CONDITIONAL_TOPOLOGY"
+    },
+    {
+      "id": "X",
+      "label": "Finite exact homogeneous GH carriers",
+      "status": "NO_GO_CLASS"
+    },
+    {
+      "id": "Y",
+      "label": "CP^n GH limit of such carriers",
+      "status": "REFUTED_IN_SCOPE"
+    }
+  ],
+  "edges": [
+    {
+      "source": "F",
+      "target": "L",
+      "status": "SELECTED_FUNCTOR",
+      "conditions": "free linearization not forced by finite relation"
+    },
+    {
+      "source": "L",
+      "target": "C",
+      "status": "PROVED",
+      "conditions": "exact algebra conditional on chosen representation"
+    },
+    {
+      "source": "F",
+      "target": "K",
+      "status": "VALID_ALTERNATIVE",
+      "conditions": "classical state simplex from original labels"
+    },
+    {
+      "source": "C",
+      "target": "R",
+      "status": "ASSUMED",
+      "conditions": "scalar completion/norm not derived"
+    },
+    {
+      "source": "R",
+      "target": "D",
+      "status": "ASSUMED",
+      "conditions": "copy multiplicity chosen"
+    },
+    {
+      "source": "D",
+      "target": "H",
+      "status": "ASSUMED_STANDARD_MATH",
+      "conditions": "unit sphere, U1, quotient"
+    },
+    {
+      "source": "H",
+      "target": "B",
+      "status": "ASSUMED",
+      "conditions": "Born squared-overlap probability imported"
+    },
+    {
+      "source": "B",
+      "target": "Q",
+      "status": "OPEN",
+      "conditions": "operational selection and measurements not derived"
+    },
+    {
+      "source": "K",
+      "target": "Q",
+      "status": "COUNTEREXAMPLE_TO_SUFFICIENCY",
+      "conditions": "same F and contrast algebra does not determine Q"
+    },
+    {
+      "source": "Q",
+      "target": "T",
+      "status": "OPEN",
+      "conditions": "single system insufficient"
+    },
+    {
+      "source": "Q",
+      "target": "E",
+      "status": "OPEN",
+      "conditions": "static geometry insufficient"
+    },
+    {
+      "source": "T",
+      "target": "O",
+      "status": "OPEN",
+      "conditions": "composition instrument test"
+    },
+    {
+      "source": "E",
+      "target": "M",
+      "status": "OPEN",
+      "conditions": "classical mechanical limit and units missing"
+    },
+    {
+      "source": "M",
+      "target": "O",
+      "status": "OPEN",
+      "conditions": "physical predictions not tested"
+    },
+    {
+      "source": "Q",
+      "target": "O",
+      "status": "OPEN",
+      "conditions": "calibrated observation map missing"
+    },
+    {
+      "source": "F",
+      "target": "S",
+      "status": "OPEN",
+      "conditions": "no derivation of spectrality or symmetry"
+    },
+    {
+      "source": "S",
+      "target": "J",
+      "status": "EXTERNAL_CONDITIONAL",
+      "conditions": "Barnum-Hilgert classification"
+    },
+    {
+      "source": "J",
+      "target": "P",
+      "status": "CONDITIONAL",
+      "conditions": "global symplectic selector with W"
+    },
+    {
+      "source": "W",
+      "target": "P",
+      "status": "CONDITIONAL",
+      "conditions": "H2 topology obstruction in simple list"
+    },
+    {
+      "source": "P",
+      "target": "Q",
+      "status": "OPEN",
+      "conditions": "Hilbert pure space not full operational QM"
+    },
+    {
+      "source": "X",
+      "target": "Y",
+      "status": "NO_GO",
+      "conditions": "Gelander theorem forbids CP^n manifold GH target"
+    }
+  ]
+}

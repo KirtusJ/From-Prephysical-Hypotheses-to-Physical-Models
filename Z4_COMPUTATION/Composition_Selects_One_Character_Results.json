@@ -1,0 +1,83 @@
+{
+ "P1_conjugate_measures_are_independent": {
+  "passed": true
+ },
+ "P2_single_character_is_multiplicative": {
+  "passed": true
+ },
+ "P3_mixtures_and_other_normalizations_are_not": {
+  "passed": true
+ },
+ "P4_positivity_needs_non_negative_weights": {
+  "passed": true,
+  "rows": [
+   {
+    "q": 8,
+    "conjugate_characters": [
+     1,
+     3
+    ],
+    "rank_of_M": 2,
+    "defect_pure": {
+     "(1, 0)": 3.3858801423168213e-16,
+     "(0, 1)": 3.8736400525738083e-16
+    },
+    "defect_mixed": {
+     "(0.5, 0.5)": 0.7892037786774627,
+     "(1, 1)": 0.9074074074074074,
+     "(2, 0)": 0.5000000000000002,
+     "(1, -1)": 1.998268396969243
+    },
+    "smallest_phi_for_c_1_minus_0p2": -31.03515139147198,
+    "smallest_phi_for_c_1_plus_0p2": 1.8143800820083274e-30
+   },
+   {
+    "q": 10,
+    "conjugate_characters": [
+     1,
+     3
+    ],
+    "rank_of_M": 2,
+    "defect_pure": {
+     "(1, 0)": 3.4315444132670164e-16,
+     "(0, 1)": 3.736558979899872e-16
+    },
+    "defect_mixed": {
+     "(0.5, 0.5)": 0.7273175542406312,
+     "(1, 1)": 0.8754104571861582,
+     "(2, 0)": 0.5000000000000001,
+     "(1, -1)": 1.9976303284229833
+    },
+    "smallest_phi_for_c_1_minus_0p2": -46.780486514986116,
+    "smallest_phi_for_c_1_plus_0p2": 0.9055728090000845
+   },
+   {
+    "q": 12,
+    "conjugate_characters": [
+     1,
+     5
+    ],
+    "rank_of_M": 2,
+    "defect_pure": {
+     "(1, 0)": 3.242983211845703e-16,
+     "(0, 1)": 3.4633921991439687e-16
+    },
+    "defect_mixed": {
+     "(0.5, 0.5)": 0.7247097844112772,
+     "(1, 1)": 0.8623548922056387,
+     "(2, 0)": 0.5000000000000002,
+     "(1, -1)": 1.9984763478926482
+    },
+    "smallest_phi_for_c_1_minus_0p2": -51.88457268119893,
+    "smallest_phi_for_c_1_plus_0p2": 1.0143593539448954
+   }
+  ],
+  "seed": 20261116
+ },
+ "_summary": {
+  "predicates": 4,
+  "passed": 4,
+  "seed": 20261116,
+  "numpy": "2.5.3"
+ }
+}

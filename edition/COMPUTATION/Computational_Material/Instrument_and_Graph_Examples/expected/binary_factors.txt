@@ -1,0 +1,24 @@
+PAIRED_INPUT_GENERALIZATION
+{"endpoint_error": 1.1102230246251565e-16, "first_dim": 2, "seed": 1107, "success": 2.417054580052, "wmax": 0.937911168403, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 2.220446049250313e-16, "first_dim": 2, "seed": 1108, "success": 2.224318100923, "wmax": 0.848280285358, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 1.1102230246251565e-16, "first_dim": 3, "seed": 1160, "success": 3.183784922252, "wmax": 0.876459344861, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 1.1102230246251565e-16, "first_dim": 3, "seed": 1161, "success": 2.477197218959, "wmax": 0.892330762963, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 1.1102230246251565e-16, "first_dim": 4, "seed": 1213, "success": 3.678269612474, "wmax": 0.851734441239, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 4.440892098500626e-16, "first_dim": 4, "seed": 1214, "success": 4.710757492888, "wmax": 0.844434845233, "wmin": 0.0, "zero_input": false}
+{"endpoint_error": 1.1102230246251565e-16, "first_dim": 2, "seed": 88, "success": 1.684426907877, "wmax": 0.722028911804, "wmin": 0.0, "zero_input": true}
+RECTANGULAR_FIRST_FACTOR_CHECKS
+{"endpoint_error": 0.0, "input_dim": 3, "output_dim": 2, "wmax": 0.853744434515}
+{"endpoint_error": 0.0, "input_dim": 2, "output_dim": 4, "wmax": 0.876151403266}
+EXACT_BOUNDARY_CASES
+{"dim": 3, "identical_pair_wmax": 1, "orthogonal_pair_wmax": 0.5}
+EXPLICIT_RARE_SUCCESS_KRAUS_MODELS
+{"branch": "null", "clicks": [0.0008, 0.0008, 0.0008, 0.0008], "successes": [0.001, 0.001, 0.001, 0.001], "weight": 1.0}
+{"branch": "alternative", "clicks": [0.0008, 0.0002, 0.0008, 0.0002], "successes": [0.001, 0.001, 0.001, 0.001], "weight": 0.5}
+RARE_SUCCESS_POWER_NECESSARY_BOUNDS
+{"maximum_rejection_power_at_100": 0.064889168758, "necessary_attempts_KL": 12744, "necessary_attempts_TV": 15350, "odd_assignment_cap": 0.25, "one_step_tv": 0.00015000000000000001}
+{"maximum_rejection_power_at_100": 0.07955883432, "necessary_attempts_KL": 6372, "necessary_attempts_TV": 7675, "odd_assignment_cap": 0.5, "one_step_tv": 0.00030000000000000003}
+{"maximum_rejection_power_at_100": 0.094012200497, "necessary_attempts_KL": 4248, "necessary_attempts_TV": 5116, "odd_assignment_cap": 0.75, "one_step_tv": 0.00045000000000000004}
+{"maximum_rejection_power_at_100": 0.108252424808, "necessary_attempts_KL": 3186, "necessary_attempts_TV": 3837, "odd_assignment_cap": 1.0, "one_step_tv": 0.0006000000000000001}
+LOW_CONTRAST_KL_COMPARISON
+{"maximum_rejection_power_at_100": 0.054987645188, "necessary_attempts_KL": 264114, "necessary_attempts_TV": 46051, "odd_assignment_cap": 0.5, "one_step_tv": 5.0000000000000016e-05}
+VERIFICATION_COMPLETE

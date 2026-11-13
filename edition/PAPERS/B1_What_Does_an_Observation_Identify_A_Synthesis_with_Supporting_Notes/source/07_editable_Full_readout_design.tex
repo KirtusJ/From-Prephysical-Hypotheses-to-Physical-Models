@@ -1,0 +1,58 @@
+\section{Global optimum for the full-output Fisher information}
+The model is the specified scalar eigenmode with unknown nonzero real coherent amplitude $a$, mean photon number $E=a^2$, and two calibrated scales. Put $x=s\lambda$, $y=t\lambda$, and
+\[
+f(u)=ue^{-u},\qquad z(u)=u(1-u)e^{-u},\qquad
+v=(f(x),f(y),\sqrt{1-f(x)^2-f(y)^2}).
+\]
+All three output modes are accessible with phase-calibrated homodyne means $\sqrt2 a v$ and covariance $I/2$. Since $v^Tv=1$, the Gaussian Fisher matrix has $\mathcal I_{a\lambda}=4a v^Tv'=0$, and
+\[
+\mathcal I_{\lambda\mid a}=\frac E{\lambda^2}C_F(x,y),\qquad
+C_F=4\left[z(x)^2+z(y)^2+
+\frac{(f(x)z(x)+f(y)z(y))^2}{1-f(x)^2-f(y)^2}\right].
+\]
+The same value is the coherent-state QFI for this real displacement family: the squared overlap of nearby coherent states is $\exp[-E\|dv\|^2]$, giving $4E\|v'\|^2$. This concerns the specified family and available outputs, not all probes and measurements.
+
+\begin{theorem}
+Over all $x,y>0$, $C_F$ has a unique global maximum at $x=y=r$, where $r>3/2$ is the unique upper root of
+\[
+F(r)=r^2-3r+1+2r^3e^{-2r}=0.
+\]
+The maximum and maximizing scales are
+\[
+r=2.52128156583213785047\ldots,\qquad
+C_F^{\max}=8r^3e^{-2r}=0.82793585316582672742\ldots.
+\]
+\end{theorem}
+\begin{proof}
+Write $P(u)=f(u)^2$, $Z(u)=z(u)^2$ and $g(u)=Z(u)/(1-2P(u))$. The denominators are positive because $P(u)\le e^{-2}<1/2$. Let $m=\sup_{u>0}g(u)$. The function is continuous, vanishes at $0$, $1$ and infinity in the relevant limits, and is positive elsewhere, so the supremum is attained at an interior point away from 1.
+
+Cauchy--Schwarz gives
+\[
+\frac{C_F(x,y)}4\le
+\frac{Z(x)+Z(y)}{1-P(x)-P(y)}.
+\]
+Since $Z(u)\le m(1-2P(u))$, adding the two inequalities gives $C_F(x,y)\le8m$. Equality holds at $x=y=u$ whenever $g(u)=m$. Conversely, equality in the Cauchy step requires the vectors $(f(x),f(y))$ and $(z(x),z(y))$ to be proportional. Because $f$ is strictly positive on this domain and $z(u)/f(u)=1-u$, equality requires $x=y$. It remains to prove that $g$ has exactly one global maximizer.
+
+Its derivative factors as
+\[
+g'(u)=\frac{-2u(u-1)e^{-2u}F(u)}{(1-2u^2e^{-2u})^2},\qquad
+F'(u)=(2u-3)(1-2u^2e^{-2u}).
+\]
+Thus $F$ strictly decreases to $3/2$ and strictly increases thereafter. Since $F(0)=1$, $F(1)=-1+2/e^2<0$, and $F(u)\to\infty$, it has exactly one root in $(0,1)$ and exactly one in $(3/2,\infty)$. The derivative signs, together with the zero endpoint values of $g$, make these the unique maxima on the two branches.
+
+To compare the branch maxima without trusting a numerical optimization, for $0<u<1$ use $u^2(1-u)^2\le1/16$ and $e^{-2u}<1$. Since $e>8/3$,
+\[
+g(u)<\frac{1/16}{1-2/e^2}<\frac2{23}.
+\]
+On the upper branch, evaluating at $u=5/2$ and using $e<11/4$ gives
+\[
+g(5/2)=\frac{225/16}{e^5-25/2}>
+\frac{225/16}{(11/4)^5-25/2}=\frac{4800}{49417}>\frac2{23}.
+\]
+The elementary bounds on $e$ follow from its series: the sum through $1/4!$ is $65/24>8/3$, and the remaining tail is less than $1/100$, giving $e<65/24+1/100<11/4$. Therefore the upper critical point is the unique global maximum of $g$, and equality in the earlier bound forces $x=y=r$. Finally, $F(r)=0$ implies $(1-r)^2=r(1-2r^2e^{-2r})$, so $g(r)=r^3e^{-2r}$. This proves the stated coefficient.
+\end{proof}
+
+Symbolic differentiation, 80-digit root calculations and a separate two-dimensional numerical optimization agree. The numerical search is corroboration, not the proof of globality. The reported settings are locally tuned in the dimensionless coordinates $s\lambda,t\lambda$; an unknown $\lambda$ requires a nominal estimate or an adaptive design to implement them.
+
+The earlier two-monitored-output contract still has its different global optimum $(0.4121145891,2.7010117643)$ and coefficient $0.4780676701$. Full-output access raises the best coefficient by about 73.2\% within these models. It changes the physical readout contract and is not free information obtainable from discarded output.
+

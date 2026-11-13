@@ -1,0 +1,55 @@
+{
+  "conjugation": {
+    "adaptive_tests": 96,
+    "fixed_reference_original_p": 0.9999999999999996,
+    "fixed_reference_state_only_conjugated_p": 0.0,
+    "fixed_reference_whole_model_conjugated_p": 0.9999999999999996,
+    "max_probability_residual": 0.0,
+    "num_outcomes_per_test": 8,
+    "required_scope": "Simultaneously conjugate states, every instrument, transformations, effects, measurement reference and adaptive branch"
+  },
+  "date": "2026-11-12 B.C. Pacific Time",
+  "externality": "No laboratory observations, prephysical dynamics, timing, probability origin or empirical error distributions",
+  "finite_net": {
+    "GH_bound": "d_GH(X_epsilon,M)<=epsilon (extrinsic Hausdorff bound)",
+    "N_values": [
+      4,
+      8,
+      16
+    ],
+    "approx_homogeneity_bound": "for any p,q in X there is a covering correspondence containing (p,q) with distortion <=2 epsilon",
+    "source": "mathematical exact statement; finite Bloch-sphere nets import the ambient CP1 metric and isometry group",
+    "trials": 12
+  },
+  "negative_controls": [
+    "wrong determinant exponent",
+    "state-only conjugation under fixed complex reference",
+    "nonhomogeneous net nearest-neighbor degree variation"
+  ],
+  "phase": {
+    "B_A": [
+      0.125,
+      0.0
+    ],
+    "B_B": [
+      -0.06249999999999999,
+      0.10825317547305487
+    ],
+    "all_three_pair_probabilities": [
+      0.25,
+      0.25,
+      0.25
+    ],
+    "direct_tangent_holonomy_trials": 8,
+    "equal_det_holonomy": true,
+    "grid_trials": 259,
+    "max_direct_hol_error": 4.953206193633819e-12,
+    "phi_counterexample_A": 0.0,
+    "phi_counterexample_B": 2.0943951023931953,
+    "root_recovery_caveat": "A continuous based family of loops can supply winding information beyond the endpoint determinant",
+    "wrong_exponent_mutant_rejected": true
+  },
+  "research_participant": "one assistant, no independent subagents",
+  "root_state": "INITIAL_EXTERNAL_GROUNDING_OPEN",
+  "status": "PASS_SCOPED_MATHEMATICAL_CONSISTENCY_NOT_PHYSICAL_EMERGENCE"
+}

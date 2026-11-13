@@ -1,0 +1,73 @@
+{
+  "method": "Exact-rational contraction mapping on a closed sup-norm box, no external interval library",
+  "center": [
+    "1568999845828313460641124773061129857188423904485787/100000000000000000000000000000000000000000000000000",
+    "99221797594530184569004552699690277722418178923293/25000000000000000000000000000000000000000000000000",
+    "235628563734151668852330800163525773002310110181/10000000000000000000000000000000000000000000000000"
+  ],
+  "radius": "1/10000000000000000000000000000000000",
+  "displacement_strict_upper": "1e-48",
+  "jacobian_variation_infty_strict_upper": "1e-19",
+  "actual_displacement_approx": "4.38610947e-51",
+  "actual_contraction_bound_approx": "1.83231743e-29",
+  "unknown_edges_in_order": [
+    "02",
+    "12",
+    "13"
+  ],
+  "fixed_edges_01_03_23": "1/50",
+  "input": "(e0-e1)/sqrt(2)",
+  "moments_m0_m1_m2_m3": [
+    "1",
+    "5/32",
+    "7/256",
+    "11/2048"
+  ],
+  "alternative_m4_outward_rational": [
+    "1360912975023/200000000000000",
+    "1701141218779/250000000000000"
+  ],
+  "original_m4": "19/16384",
+  "positive_eigenvalues_outward_rational": [
+    [
+      "8474844933/100000000000",
+      "4237422467/50000000000"
+    ],
+    [
+      "279256771709/50000000000",
+      "558513543419/100000000000"
+    ],
+    [
+      "1690749127667/50000000000",
+      "676299651067/20000000000"
+    ]
+  ],
+  "pair_weights_outward_rational": [
+    [
+      "306081/1000000000000",
+      "3060843/10000000000000"
+    ],
+    [
+      "8474631661589/10000000000000",
+      "4237315830831/5000000000000"
+    ],
+    [
+      "762682638773/5000000000000",
+      "1525365277551/10000000000000"
+    ]
+  ],
+  "normalized_moment_jacobian_det_near_center": "1.945275372e-6",
+  "sixteen_site_lift": {
+    "vertices": 16,
+    "old_edge_change": "subtract 3 epsilon",
+    "cross_weights": "3/500",
+    "new_clique_weight": "1/100",
+    "extra_eigenvalues": {
+      "12/125": 1,
+      "18/125": 11
+    },
+    "single_pair_full_measure_preserved": true,
+    "smallest_positive_eigenvalue_preserved": true
+  },
+  "scope": "Existence and uniqueness in this box with three specified edges fixed. Agreement concerns the one normalized pair, not graph-wide observations."
+}

@@ -1,0 +1,7 @@
+# Review records
+
+**Kirtus Justus**, Theoretical Physicist  
+Port Coquitlam, British Columbia, Canada  
+Baseline FPHPM-BASELINE-2026-11-13-Z7, 13 November 2026
+
+Records of reviews made in AI-assisted sessions directed by the author. They are not independent reviews. Directors B and C worked under PCP-2026-11-10-R13; Directors D and Z under ACR 1.0; Directors A, B and G (12 November 2026, GPT-6) report working under ACR 1.0 as absorbed text. The six packets of Directors A, B and G are kept as received in `Directors_A_B_G_2026-11-12/`; the second Director Z session is in `Director_Z/Session_2/`. Six further packets (A3, B3, G3, A4, B4, G4) are kept as received in the same folder; the third Director Z session is in `Director_Z/Session_3/`. The fourth Director Z session is in `Director_Z/Session_4/`, with the register kept for it by the PCP OS program; it worked under the ACR 1.0 text of build 22, which adds Calibration (Core 14.4) to the text used before. In that session Director G (Codex) worked on the same repository; the research supplements of Director G are in pull request 2 of the repository (commit b626c0d) and are not copied here; the cross-review of two of their results is in `Director_Z/Session_4/cross_review/`. The file named G9 inside packet B4 is a Director B submission and is not paper G9 of the program. The large inherited identifier registers and the nested source archives of the Director B and C handoffs are not duplicated here; the complete handoffs are identified by digest in `MANIFEST.json`.

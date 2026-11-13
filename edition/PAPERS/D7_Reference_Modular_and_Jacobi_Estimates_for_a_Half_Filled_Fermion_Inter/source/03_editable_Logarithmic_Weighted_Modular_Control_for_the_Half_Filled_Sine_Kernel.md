@@ -1,0 +1,228 @@
+---
+title: "Logarithmic Weighted Modular Control for the Half-Filled Sine Kernel"
+author: 'Kirtus Justus (Theoretical Physicist) \textbullet{} 31 October 2026\tabularnewline Port Coquitlam, British Columbia, Canada'
+date: ''
+lang: en
+header-includes:
+ - \usepackage{microtype}
+ - \usepackage{booktabs}
+ - \usepackage{longtable}
+---
+
+## Abstract
+
+For the finite interval of a half-filled infinite discrete sine-kernel projection, we establish an explicit logarithmic upper bound on the occupation-weighted quadratic discrepancy between its exact modular generator and the established commuting-Jacobi scaling function. The proof uses an elementary trace-class estimate for the half-line sine-kernel Hankel blocks and a scalar logarithmic inequality. Combined with the independently established Wilson–Dirac positive-majorant pairing estimate, this shows that the *transverse* contribution to the fixed-scaled-mass relative-entropy modular correction is sublogarithmic. An elementary fractional spectral-moment bound yields a considerably weaker sufficient condition for the leading logarithmic law than uniform boundedness of the modular-error operator. The separate argument in *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law* supplies the longitudinal bound and leading entropy law. Neither the present estimate nor that leading law determines the finite part or its proposed inverse-logarithmic remainder rate.
+
+## 1. Reference operators and established inputs
+
+Let \(N=2L\ge2\). On \(\mathbb C^N\) define the half-filled sine-kernel covariance
+
+\[
+(B_N)_{jk}=\begin{cases}\tfrac12,&j=k,\\[2pt]
+\displaystyle\frac{\sin(\pi(j-k)/2)}{\pi(j-k)},&j\ne k,
+\end{cases}\qquad 0\le j,k<N.
+\]
+
+Let \(J_N\) be the real-symmetric tridiagonal matrix with zero diagonal and
+\((J_N)_{j-1,j}=j(N-j)/N\) for \(1\le j<N\). These matrices commute, \(0<B_N<I\), and \(\|J_N/N\|\le1/2\). The strict occupation bounds follow from the fact that a nonzero finitely supported sequence has Fourier transform that cannot vanish identically on either of the two nonempty half-circle frequency arcs.
+
+Set
+
+\[
+W_N=B_N(I-B_N),\quad K_N=\log(I-B_N)-\log B_N,
+\]
+\[
+\eta(t)=\pi t\,{}_3F_2\left(\tfrac14,\tfrac12,\tfrac34;1,\tfrac32;4t^2\right),\quad E_N=K_N+N\eta(J_N/N).
+\]
+
+The generalized hypergeometric series has nonnegative coefficients and converges at its argument 1. Therefore
+
+\[
+A_\eta:=\pi\,{}_3F_2\left(\tfrac14,\tfrac12,\tfrac34;1,\tfrac32;1\right)<\infty,
+\qquad |N\eta(\lambda/N)|\le A_\eta|\lambda|
+\]
+
+for every \(|\lambda|\le N/2\). We use the separately proved reference Jacobi moment estimate
+
+\[
+M_{2,N}=\operatorname{Tr}(J_N^2W_N)\le\frac{32}{\pi^2}(H_N+1),\quad H_N=\sum_{k=1}^N\frac1k.
+\tag{1}
+\]
+
+The sharper identity \(M_{2,N}=(3\pi^2)^{-1}\log N+O(1)\) is available, but unnecessary below.
+
+## 2. Explicit trace-class estimate for the reference crossing
+
+Let \(P\) be the orthogonal projection on \(\ell^2(\mathbb Z)\) onto the Fourier arc \((-\pi/2,\pi/2)\), and let \(\chi_N\) project onto \(N\) consecutive sites. Then \(B_N=\chi_NP\chi_N\), as an operator on the interval. Define \(X_N=\chi_NP(I-\chi_N)\). The full-line projection identity yields
+
+\[
+X_NX_N^*=B_N(I-B_N)=W_N,
+\qquad \operatorname{Tr}\sqrt{W_N}=\|X_N\|_1.
+\tag{2}
+\]
+
+For either exterior half-line, after reversing the interior index, the cross-boundary matrix has entries
+
+\[
+\frac{\sin\{\pi(i+j+1)/2\}}{\pi(i+j+1)},
+\qquad 0\le i<N,\quad j\ge0.
+\]
+
+Write \(H^{(0)}_{ij}=1/(i+j+1)\). The sine factor is a difference of two complex exponentials; each gives diagonal unitary modulation of \(H^{(0)}\). Therefore the nuclear norm of each half-line block is at most \(\pi^{-1}\|H^{(0)}\|_1\).
+
+The elementary Laplace representation
+
+\[
+H^{(0)}_{ij}=\int_0^\infty e^{-t(i+j+1)}\,dt
+\]
+
+is a rank-one Bochner integral. Its integrand has nuclear norm
+
+\[
+\mathcal W_N(t)=e^{-t}\frac{\sqrt{1-e^{-2Nt}}}{1-e^{-2t}}.
+\]
+
+Consequently, for the union of both exterior half-lines,
+
+\[
+\operatorname{Tr}\sqrt{W_N}=\|X_N\|_1\le\frac2\pi I_N,
+\qquad I_N=\int_0^\infty\mathcal W_N(t)\,dt.
+\tag{3}
+\]
+
+For \(0<t\le1\), the concavity inequality \(1-e^{-2t}\ge(1-e^{-2})t\) and \(1-e^{-2Nt}\le\min\{2Nt,1\}\) give
+
+\[
+\mathcal W_N(t)\le\frac{1}{1-e^{-2}}\min\left\{\sqrt{\frac{2N}{t}},\frac1t\right\}.
+\]
+
+For \(t\ge1\), \(\mathcal W_N(t)\le e^{-t}/(1-e^{-2})\). Splitting the integral at \(t=1/N\) and \(t=1\) gives
+
+\[
+\boxed{I_N\le\frac{\log N+2\sqrt2+e^{-1}}{1-e^{-2}}.}\tag{4}
+\]
+
+All constants are independent of \(N\). This is a deliberately nonoptimal estimate.
+
+## 3. Uniform quadratic modular estimate
+
+**Theorem 1.** For every even \(N\ge2\),
+
+\[
+\boxed{
+\operatorname{Tr}(W_NE_N^2)
+\le \frac{16}{\pi} I_N+2A_\eta^2 M_{2,N}
+\le\frac{16(\log N+2\sqrt2+e^{-1})}{\pi(1-e^{-2})}
++\frac{64A_\eta^2}{\pi^2}(H_N+1).}
+\tag{5}
+\]
+
+In particular, \(\operatorname{Tr}(W_NE_N^2)=O(\log N)\).
+
+*Proof.* For \(b\in(0,1)\) let \(k=\log((1-b)/b)\) and \(s=\sqrt{b(1-b)}=1/(2\cosh(k/2))\). Since \(\cosh(k/2)\ge k^2/8\),
+
+\[
+b(1-b)k^2=s^2k^2\le 4s.
+\tag{6}
+\]
+
+Functional calculus gives \(\operatorname{Tr}(W_NK_N^2)\le4\operatorname{Tr}\sqrt{W_N}\). Because \(B_N\), \(J_N\), \(K_N\), \(E_N\) and \(W_N\) commute,
+
+\[
+\operatorname{Tr}(W_NE_N^2)
+\le2\operatorname{Tr}(W_NK_N^2)
++2\operatorname{Tr}\{W_N[N\eta(J_N/N)]^2\}
+\le8\operatorname{Tr}\sqrt{W_N}+2A_\eta^2M_{2,N}.
+\]
+
+Substitute (1), (3), and (4). \(\square\)
+
+**Qualification.** The estimate (5) is far weaker than the numerically observed decay of the weighted variance and does not itself prove a decaying variance bound. The stronger estimate \(O(\log N/N^2)\) is established in *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law*. Its value is that it is independent of any unproved pointwise modular-eigenvalue comparison.
+
+## 4. Consequence for the Wilson–Dirac modular correction
+
+For the mass-scaled Wilson–Dirac covariance perturbation \(\Delta_N\), use its established full-line-projector decomposition compressed to the interval, \(\Delta_N=S_N+D_N\), with positive operator \(G_N\). In the common eigenbasis \(v_j\) of \(B_N,J_N\), put \(b_j=\langle v_j,B_Nv_j\rangle\), \(\lambda_j=\langle v_j,J_Nv_j\rangle\), \(q_j=\langle v_j,G_Nv_j\rangle\), \(e_j=\langle v_j,E_Nv_j\rangle\). Established inputs are
+
+\[
+\operatorname{Tr}G_N\le M_\mu:=\frac\mu\pi,
+\quad |\langle v_j,S_Nv_j\rangle|\le q_j,
+\quad |\langle v_j,D_Nv_j\rangle|\le2\sqrt{q_jb_j(1-b_j)}.
+\]
+
+**Corollary 2 (transverse modular correction).** For each fixed \(\mu>0\),
+
+\[
+\boxed{\left|\operatorname{Tr}(D_NE_N)\right|
+\le2\sqrt{\frac\mu\pi\operatorname{Tr}(W_NE_N^2)}
+=O_\mu(\sqrt{\log N})=o(\log N).}
+\tag{7}
+\]
+
+*Proof.* Apply the pairing bound, sum over common eigenvectors and use Cauchy–Schwarz. Then apply Theorem 1. \(\square\)
+
+Combining (7) with the exact two-bond asymptotic established in the companion Wilson reference-geometry result, bounded nonlinear correction via the Jacobi fourth moment, and bounded Wilson cross-boundary entropy difference yields the leading-order reduction
+
+\[
+\boxed{\mathcal D_L(\mu)=\frac{\mu^2}{6}\log L
++\operatorname{Tr}(S_NE_N)+O_\mu(\sqrt{\log L}),\qquad N=2L.}
+\tag{8}
+\]
+
+The leading coefficient follows if \(\operatorname{Tr}(S_NE_N)=o(\log L)\). Neither (7) nor (8) proves this condition alone; *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law* supplies the stronger estimate \(O_\mu(1)\).
+
+## 5. Fractional spectral moments and weaker sufficient hypotheses
+
+The established positive-majorant spectral-tail estimate is
+
+\[
+\nu_N((t,\infty)):=\sum_{|\lambda_j|>t}q_j
+\le\min\left\{M_\mu,\frac{a_\mu}{t}+\frac{b_\mu}{t^2}\right\},
+\quad a_\mu=\sqrt{\frac2{15}}\frac{\mu^2}{\pi},\quad b_\mu=\frac\mu{3\pi}.
+\tag{9}
+\]
+
+**Lemma 3 (uniform fractional majorant moment).** For every \(0<\alpha<1\) and every even \(N\),
+
+\[
+\boxed{
+\sum_jq_j|\lambda_j|^\alpha
+\le M_\mu+\frac{\alpha a_\mu}{1-\alpha}
++\frac{\alpha b_\mu}{2-\alpha}.}
+\tag{10}
+\]
+
+*Proof.* Use layer-cake: \(\sum q_j|\lambda_j|^\alpha=\alpha\int_0^\infty t^{\alpha-1}\nu_N((t,\infty))dt\). Integrate the total-mass bound on \((0,1)\) and the inverse-power bound on \((1,\infty)\). \(\square\)
+
+**Corollary 4 (sufficient sublinear spectral envelope).** If there exist \(0<\alpha<1\) and \(C_\alpha<\infty\), independent of even \(N\), such that
+
+\[
+|e_j|\le C_\alpha(1+|\lambda_j|^\alpha)\quad\text{for every reference eigenpair},
+\tag{11}
+\]
+
+then \(|\operatorname{Tr}(S_NE_N)|=O_{\mu,\alpha}(1)\), and
+
+\[
+\mathcal D_L(\mu)=\frac{\mu^2}{6}\log L+O_\mu(\sqrt{\log L}).
+\tag{12}
+\]
+
+The envelope (11) is only a **sufficient, unresolved hypothesis**, and is weaker at large \(|\lambda|\) than a logarithmic eigenpair envelope.
+
+**Alternative sufficient condition (uniform sublinearity).** One can weaken (11) further: suppose that for each fixed \(R<\infty\), the modular errors are uniformly bounded on \(|\lambda_j|\le R\), and
+
+\[
+\lim_{R\to\infty}\sup_{N\text{ even},j:\,|\lambda_j|>R}
+\frac{|e_j|}{|\lambda_j|}=0.
+\tag{13}
+\]
+
+Then \(\operatorname{Tr}(S_NE_N)=o(\log N)\) and the leading logarithmic law follows. Indeed, for any \(\varepsilon>0\), (13) bounds \(|e_j|\le\varepsilon|\lambda_j|\) outside a fixed window while the window contributes \(O(1)\). By layer cake and (9), \(\sum_jq_j|\lambda_j|\le M_\mu+a_\mu\log N+b_\mu\), up to harmless fixed-size adjustments. Dividing the resulting estimate by \(\log N\), taking the limsup, then letting \(\varepsilon\downarrow0\), proves the claim. Condition (13) is **not currently established**.
+
+## 6. Scope and sources
+
+Theorem 1, Corollary 2, and Lemma 3 are analytic consequences of the stated finite sine-kernel model and the referenced, separately established Jacobi/majorant results. They use no numerically inferred uniform limit. The longitudinal modular estimate is supplied separately in *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law*. None of these statements proves the proposed full finite part or the \(O_\mu((\log L)^{-1/103})\) remainder.
+
+Classical references: V. Eisler and I. Peschel, *Analytical Results for the Entanglement Hamiltonian of a Free-Fermion Chain*, J. Phys. A **50** (2017), 284003, doi:10.1088/1751-8121/aa76b5; D. Slepian, *Prolate Spheroidal Wave Functions, Fourier Analysis, and Uncertainty, V: The Discrete Case*, Bell Syst. Tech. J. **57** (1978), 1371–1430; V. Peller, *Hankel Operators and Their Applications*, Springer (2003), doi:10.1007/978-0-387-21681-2. These works furnish established mathematical context; they do not externally verify the Wilson-specific results presented here.
+
+**Contributions:** Kirtus Justus directed the research; ChatGPT (OpenAI) developed the present weighted-variance derivation, checks and drafting. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for prior documented involvement in the broader research program, without attributing this particular derivation to them. No external human peer review or formal proof-assistant certification is claimed.

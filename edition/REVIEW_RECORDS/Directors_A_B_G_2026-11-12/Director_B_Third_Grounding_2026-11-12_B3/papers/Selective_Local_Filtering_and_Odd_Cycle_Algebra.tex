@@ -1,0 +1,117 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,amsthm,booktabs,enumitem,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black,citecolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Sep}{\mathrm{Sep}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\I}{\mathbf 1}
+\setlength{\parskip}{0.12em}
+\setlength{\parindent}{0pt}
+\title{\bfseries Selective Local Filtering and Finite-Cycle Algebra:\\[2pt]
+\large Exact Selection Boundaries in a Conditional Quantum-Composition Family}
+\author{Kirtus Justus\\\small Research direction and responsible authorship\\
+\small Port Coquitlam, British Columbia, Canada\\[3pt]
+\small AI-assisted internal mathematical analysis: ChatGPT (GPT-6, OpenAI)}
+\date{12 November 2026, B.C. Pacific Time\\\small Initial External Grounding open; no total ontology selected}
+\begin{document}
+\maketitle
+\begin{abstract}
+A previously constructed convex two-system family agrees with standard elementary complex quantum geometry while leaving composite preparations undetermined. We show that every strict intermediate member is additionally \emph{not closed under selective local filtering}: a two-site product filter, with strictly positive success probability, produces a state beyond the family's exact Bell-fidelity bound. The witness is reconstructible from single-site measurements, requiring no entangling measurement as an experimental premise. Under a further topological closure assumption, allowing all local filters and local unitaries forces the entire conventional two-system density-matrix set, making the operational cost of this selection explicit. Separately, the imaginary-algebra seed from a directed three-cycle extends to every odd directed cycle at the level of a nondegenerate alternating contrast form, after a stated linearization; even cycles provide a null-mode control. Neither construction derives complex amplitudes, quantum instruments, Born probability, physical dynamics, classical mechanics, nor an empirical prephysical-to-physical map. All quantum notation below is a \emph{stipulated mathematical test framework}, not an identified physical qubit.
+\end{abstract}
+
+\section{Defined scope and a source-controlled adversarial question}
+Let $H=\C^2$ be an \emph{assumed} complex two-dimensional Hilbert space. This mathematical system is not an operationally identified two-level system or a derived physical qubit. Let $\D_2$ be the normalized positive semidefinite operators on $H\otimes H$, and $\Sep_2$ its separable convex subset. For $t\in[0,1]$, define the conditional toy family
+\begin{equation}\label{eq:Kt}
+K_t=(1-t)\Sep_2+t\D_2=\{(1-t)\sigma+t\tau:\sigma\in\Sep_2,\tau\in\D_2\}.
+\end{equation}
+These compact convex sets contain all product states and are invariant under local \emph{trace-preserving} quantum channels, but they are not asserted to admit every \emph{outcome-conditioned} quantum operation. The question tested here is the consequence of \emph{adding} selective single-site filters, not whether they were logically entailed by $K_t$ or by a prephysical primitive. The standard trace probability is also imported, not derived.
+
+Set $|\Psi\rangle=(|01\rangle+|10\rangle)/\sqrt{2}$, $P_\Psi=|\Psi\rangle\langle\Psi|$ and $P_{00}=|00\rangle\langle00|$. The state
+\begin{equation}\label{eq:starting}
+\rho_t=(1-t)P_{00}+tP_\Psi\in K_t
+\end{equation}
+is an allowed preparation at every $t$. For any \emph{normalized} product vector $|a\rangle\otimes|b\rangle$, Cauchy--Schwarz gives $\langle ab|P_\Psi|ab\rangle\leq\tfrac12$. Convexity and $\Tr(P_\Psi\tau)\leq 1$ therefore imply
+\begin{equation}\label{eq:bound}
+\sup_{\rho\in K_t}\Tr(P_\Psi\rho)=\frac{1+t}{2},
+\end{equation}
+where the upper bound is attained by $(1-t)|01\rangle\langle01|+tP_\Psi$; the starting state \eqref{eq:starting} itself need not attain it. This exact supporting-functional inequality is the discrimination criterion.
+
+\section{A finite-probability selective-instrument counterexample}
+\begin{theorem}[Failure of selective local-filter closure]\label{thm:filter}
+For every $0<t<1$, there exists a product of two physically conventional single-site filter branches whose normalized successful output from an allowed $\rho_t\in K_t$ lies outside $K_t$. One may choose $F_\varepsilon=\mathrm{diag}(\varepsilon,1)$ on both sites, with $0<\varepsilon^2<t/(1+t)$.
+\end{theorem}
+\begin{proof}
+Put $x=\varepsilon^2$. The successful branch has Kraus operator $F_\varepsilon\otimes F_\varepsilon$. It maps $|00\rangle$ to $\varepsilon^2|00\rangle$ and $|\Psi\rangle$ to $\varepsilon|\Psi\rangle$. Hence the positive success probability and the normalized output are
+\begin{align}\label{eq:success}
+p_{\mathrm{succ}}&=(1-t)x^2+tx=x[t+(1-t)x]>0,\\
+\rho_{t,x}'&=\frac{(1-t)xP_{00}+tP_\Psi}{t+(1-t)x},\qquad
+\Tr(P_\Psi\rho_{t,x}')=\frac{t}{t+(1-t)x}.
+\end{align}
+Subtracting the sharp upper bound \eqref{eq:bound} and factoring gives
+\begin{equation}\label{eq:gap}
+\delta(t,x)=\frac{(1-t)[t-(1+t)x]}{2[t+(1-t)x]}>0
+\quad\Longleftrightarrow\quad 0<x<\frac{t}{1+t}
+\end{equation}
+for each strict intermediate $t$. Thus the conditional state is not in $K_t$. The success branch is a legitimate \emph{product} operation: $F_\varepsilon$ can be complemented by $G_\varepsilon=\mathrm{diag}(\sqrt{1-\varepsilon^2},0)$, with $F_\varepsilon^\dagger F_\varepsilon+G_\varepsilon^\dagger G_\varepsilon=\I$. Sequential local filtering supplies the successful joint branch without an entangling interaction.
+\end{proof}
+
+\textbf{Exact finite counterexample.} At $t=\tfrac12$ and $\varepsilon=\tfrac12$, success occurs with probability $5/32$ and the conditioned state is $\rho'=(P_{00}+4P_\Psi)/5$. It has $\Tr(P_\Psi\rho')=4/5$, whereas the maximum inside $K_{1/2}$ is $3/4$, a \emph{strict rational discrepancy of $1/20$}. No asymptotic limit or numerical rounding is needed.
+
+\begin{proposition}[The discrepancy is detectable with elementary product measurements]
+Writing $X,Y,Z$ for conventional single-site Pauli observables, the separating projector obeys
+\begin{equation}\label{eq:localmeasure}
+P_\Psi=\tfrac14(\I\otimes\I+X\otimes X+Y\otimes Y-Z\otimes Z).
+\end{equation}
+For the exact example, the three correlations are $(\langle XX\rangle,\langle YY\rangle,\langle ZZ\rangle)=(4/5,4/5,-3/5)$. Consequently the violation of the $K_{1/2}$ bound is reconstructible from three settings of \emph{local} measurements.
+\end{proposition}
+\begin{proof} Equation \eqref{eq:localmeasure} follows by direct multiplication in the computational basis. Inserting the two orthogonal projectors $P_{00}$ and $P_\Psi$ gives the stated correlations and the fidelity $\tfrac14(1+\tfrac45+\tfrac45+\tfrac35)=\tfrac45$. The state remains outside the set whether or not a Bell-projector joint measurement is included among its effects.\end{proof}
+
+\textbf{A quantitative cost, not an empirical frequency.} For a uniform exact choice $x=t/[2(1+t)]$, the positive discrepancy and success probability are
+\begin{equation}\label{eq:uniform}
+\delta=\frac{1-t^2}{2(3+t)},\qquad p_{\mathrm{succ}}=\frac{t^2(3+t)}{4(1+t)^2}.
+\end{equation}
+Within \emph{this one-parameter symmetric-filter family}, strict escape requires $x<t/(1+t)$ and therefore $p_{\mathrm{succ}}<2t^2/(1+t)^2$. Thus the successful branch can be rare when $t$ is small; this is not a bound on all imaginable filters. At $t=0$, the chosen uniform filter has zero success and is \emph{undefined} as a conditional state; at $t=1$, $K_t=\D_2$ and no violation occurs. Both endpoints are retained as controls.
+
+\section{What the added instrument premise actually selects}
+\begin{theorem}[Conditional two-system saturation]\label{thm:saturation}
+Fix $t\in(0,1]$. Suppose $S\subseteq\D_2$ is a \emph{closed, convex} set containing the state $\rho_t$ of \eqref{eq:starting}, invariant under all local unitaries and under \emph{normalization of every nonzero-success product of local quantum filter branches}. Then $S=\D_2$.
+\end{theorem}
+\begin{proof}
+Applying the filters of Theorem \ref{thm:filter} with $\varepsilon>0$ gives $\rho'_{t,\varepsilon^2}\in S$. As $\varepsilon\downarrow0$, this converges in trace norm to $P_\Psi$ because $t>0$. Closedness of $S$ puts $P_\Psi$ in $S$. A local bit-flip on the second factor maps it to $P_\Phi$, the projector on $(|00\rangle+|11\rangle)/\sqrt2$. For any $s_0,s_1\ge0$ with $s_0^2+s_1^2=1$, the nonzero-success local filter $\mathrm{diag}(s_0,s_1)\otimes\I$ applied to $P_\Phi$ produces the pure Schmidt state $s_0|00\rangle+s_1|11\rangle$ after normalization. Arbitrary local unitaries and the Schmidt decomposition then supply every two-system pure-state projector. By convexity, their mixtures exhaust $\D_2$. The reverse inclusion was assumed; equality follows.\end{proof}
+
+The theorem is a logical \emph{selection test} conditional on the pre-existing complex operator representation and complete local filtering/normalization, unboundedly low success probabilities, topological closure, local unitaries and mixing. It does not produce those structures from a finite relation. It also does not disprove an intermediate model that allows only deterministic local channels or restricts selective instruments. Local filtering and its entanglement-concentration consequences have a substantial pre-existing literature, including Verstraete, Dehaene and De Moor~\cite{Verstraete2001}; no priority claim is made for that general mechanism.
+
+\section{Independent control: odd finite cycles do not uniquely select quantum states}
+A separate algebraic check tests dependence on the \emph{specific} three-cycle input. Let $P_n$ cyclically permute the vertices of a timeless directed $n$-cycle; after the explicitly chosen rational linearization, put
+\[
+V_n=\{v\in\Q^n:\sum_jv_j=0\},\quad C_n=P_n-P_n^{\mathsf T},\quad \Omega_n(v,w)=v^{\mathsf T}C_n w.
+\]
+\begin{proposition}[Odd-cycle contrast dichotomy]\label{prop:cycles}
+For $n\ge3$, $\Omega_n$ restricted to $V_n$ is nondegenerate iff $n$ is odd. Its skew-operator rank on $\Q^n$ is $n-1$ for odd $n$ and $n-2$ for even $n$. For odd $n$, after choosing the real completion and the counting inner product, $J_n=C_n(-C_n^2)^{-1/2}$, defined on $V_n\otimes_\Q\R$, obeys $J_n^2=-\I$ and $J_n^{\mathsf T}=-J_n$. Reversing the directed cycle sends $J_n$ to $-J_n$.
+\end{proposition}
+\begin{proof}
+Over $\C$, the Fourier basis of $P_n$ has eigenvalues $e^{2\pi i k/n}$ for $k=0,\ldots,n-1$, so $C_n$ has eigenvalues $2i\sin(2\pi k/n)$. The constant eigenvector ($k=0$) is removed by $V_n$. A second zero mode $k=n/2$ exists iff $n$ is even. This proves the rank and alternating-form assertions, since $C_n$ is skew-symmetric. For odd $n$, $-C_n^2$ is positive definite on the real contrast space, whose positive spectral square root therefore exists. Functional calculus gives $J_n^2=-\I$, $J_n^{\mathsf T}=-J_n$. A reflection conjugates $P_n$ to $P_n^{-1}$ and therefore $C_n$ to $-C_n$ while preserving $C_n^2$, proving the orientation reversal.\end{proof}
+
+For $n=3$ the stronger exceptional identity $C_3^2=-3\I$ holds on the contrast plane; for odd $n\ge5$, different nonzero Fourier magnitudes prevent $C_n^2$ from being a scalar multiple of $\I$. Thus the three-cycle's imaginary quadratic field is a special \emph{algebraic simplification}, not evidence of physical selection. Every initial finite label set and its cycle action also supports a conventional classical simplex $\Delta_{n-1}$ with affine effects. The same algebraic contrast modes therefore underdetermine the operational completion. No cyclic edge is interpreted as a physical clock, oscillation, wave or frequency.
+
+\section{Scientific boundary and reproducibility}
+In the source research, the conditional holonomy determinant law presupposes quantum projective geometry. The filtering result concerns the independent \emph{instrument and composition} gate and is unaffected by choosing a global complex-conjugate representation. Likewise, the finite-cycle alternator presupposes a chosen linearization and is compatible with classical completions. Neither changes the mathematical validity of the finite-homogeneity obstruction in its exact-Gromov--Hausdorff scope~\cite{Gelander2013} or the conditional spectrality/strong-symmetry Jordan classifications~\cite{BarnumHilgert2020}.
+
+The attached exact-symbolic verification covers both counterexamples, all boundary controls, 261 retained rational filter trials (including duplicates and extremely small outliers), and 29 finite cycles, with floating-point residuals recorded separately. The exact proofs, not the grid, establish the universal results. External published sources validate background concepts only; no new experiment, independently refereed proof, instrument calibration, physical time, classical Hamiltonian flow, or total ontology has been provided. Research direction is attributed to Kirtus Justus; internal calculations are AI-assisted provenance, not independent expert corroboration.
+
+\begin{thebibliography}{9}\small
+\bibitem{Verstraete2001} F. Verstraete, J. Dehaene and B. De Moor, ``Local filtering operations on two qubits,'' \emph{Physical Review A} \textbf{64}, 010101(R) (2001). \href{https://doi.org/10.1103/PhysRevA.64.010101}{doi:10.1103/PhysRevA.64.010101}.
+\bibitem{Gelander2013} T. Gelander, ``Limits of finite homogeneous metric spaces,'' \emph{L'Enseignement Math\'ematique} \textbf{59}, 195--206 (2013). \href{https://doi.org/10.4171/LEM/59-1-8}{doi:10.4171/LEM/59-1-8}.
+\bibitem{BarnumHilgert2020} H. Barnum and J. Hilgert, ``Spectral Properties of Convex Bodies,'' \emph{Journal of Lie Theory} \textbf{30}, 315--344 (2020). \href{https://doi.org/10.5802/jolt.1118}{doi:10.5802/jolt.1118}.
+\end{thebibliography}
+\end{document}

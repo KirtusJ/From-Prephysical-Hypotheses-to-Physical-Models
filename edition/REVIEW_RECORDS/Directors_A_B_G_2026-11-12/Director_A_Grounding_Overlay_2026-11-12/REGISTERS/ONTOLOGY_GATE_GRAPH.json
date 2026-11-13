@@ -1,0 +1,256 @@
+{
+  "program": "From Prephysical Hypotheses to Physical Models",
+  "director": "Director A (GPT-6 OpenAI)",
+  "date_BC_Pacific": "2026-11-12",
+  "ontology_selected": false,
+  "quantum_mechanics_emergent": false,
+  "classical_mechanics_emergent": false,
+  "root_G1": "OPEN",
+  "nodes": [
+    {
+      "id": "PRE",
+      "label": "Unselected prephysical primitives"
+    },
+    {
+      "id": "OPS",
+      "label": "Operational preparations/effects"
+    },
+    {
+      "id": "MET",
+      "label": "Transition-probability metric"
+    },
+    {
+      "id": "CP",
+      "label": "Imported complex projective geometry"
+    },
+    {
+      "id": "ORI",
+      "label": "Orientation / phase / complex structure"
+    },
+    {
+      "id": "PROB",
+      "label": "Probability and instrument law"
+    },
+    {
+      "id": "COMP",
+      "label": "Composites, tensor/locality"
+    },
+    {
+      "id": "GEN",
+      "label": "Dynamics + calibrated time"
+    },
+    {
+      "id": "Q",
+      "label": "Derived quantum mechanics"
+    },
+    {
+      "id": "CL",
+      "label": "Classical Hamiltonian mechanics"
+    },
+    {
+      "id": "LIM",
+      "label": "Controlled limit / coarse graining"
+    },
+    {
+      "id": "SPC",
+      "label": "Spacetime / clocks / inertial structure"
+    },
+    {
+      "id": "EMP",
+      "label": "Physical records, calibrated experiments"
+    },
+    {
+      "id": "TOTAL",
+      "label": "TOTAL ONTOLOGY (unattained)"
+    },
+    {
+      "id": "FNH",
+      "label": "Finite homogeneous metric carrier"
+    },
+    {
+      "id": "FIN",
+      "label": "Finite nonhomogeneous net"
+    },
+    {
+      "id": "H",
+      "label": "Determinant holonomy identity"
+    },
+    {
+      "id": "PH",
+      "label": "Unique signed Bargmann phase"
+    },
+    {
+      "id": "SPIN",
+      "label": "Classical symplectic spin; I3=0"
+    },
+    {
+      "id": "T",
+      "label": "Stochastic dephasing channel"
+    }
+  ],
+  "edges": [
+    {
+      "source": "PRE",
+      "target": "OPS",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "no warrant"
+    },
+    {
+      "source": "OPS",
+      "target": "MET",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "no operational metric"
+    },
+    {
+      "source": "MET",
+      "target": "CP",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "selection missing"
+    },
+    {
+      "source": "CP",
+      "target": "H",
+      "type": "DERIVED_IN_STIPULATED_MODEL",
+      "claim": "proved within imported CPn"
+    },
+    {
+      "source": "MET",
+      "target": "PH",
+      "type": "OBSTRUCTED_IN_SCOPE",
+      "claim": "conjugation and Gram continuum"
+    },
+    {
+      "source": "ORI",
+      "target": "PH",
+      "type": "CONDITIONAL",
+      "claim": "requires phase-sensitive orientation access"
+    },
+    {
+      "source": "PRE",
+      "target": "ORI",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "missing orientation selection"
+    },
+    {
+      "source": "OPS",
+      "target": "PROB",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "Born/instruments missing"
+    },
+    {
+      "source": "PROB",
+      "target": "Q",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "probability insufficient alone"
+    },
+    {
+      "source": "COMP",
+      "target": "Q",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "composition missing"
+    },
+    {
+      "source": "GEN",
+      "target": "Q",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "dynamical generator/clock missing"
+    },
+    {
+      "source": "PRE",
+      "target": "COMP",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "composition missing"
+    },
+    {
+      "source": "PRE",
+      "target": "GEN",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "time missing"
+    },
+    {
+      "source": "PRE",
+      "target": "SPC",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "causality/clock missing"
+    },
+    {
+      "source": "FNH",
+      "target": "CP",
+      "type": "OBSTRUCTED_IN_SCOPE",
+      "claim": "Gelander exact finite homogeneous GH"
+    },
+    {
+      "source": "FIN",
+      "target": "CP",
+      "type": "DERIVED_IN_STIPULATED_MODEL",
+      "claim": "imported geometry net converges"
+    },
+    {
+      "source": "SPIN",
+      "target": "Q",
+      "type": "OBSTRUCTED_IN_SCOPE",
+      "claim": "I3=0+symplectic is not unique QT"
+    },
+    {
+      "source": "Q",
+      "target": "LIM",
+      "type": "CONDITIONAL",
+      "claim": "requires regime/approximation"
+    },
+    {
+      "source": "LIM",
+      "target": "CL",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "Hamiltonian limit missing"
+    },
+    {
+      "source": "Q",
+      "target": "T",
+      "type": "DERIVED_IN_STIPULATED_MODEL",
+      "claim": "dephasing imported"
+    },
+    {
+      "source": "T",
+      "target": "CL",
+      "type": "OBSTRUCTED_IN_SCOPE",
+      "claim": "noninjective map != Hamiltonian flow"
+    },
+    {
+      "source": "SPC",
+      "target": "EMP",
+      "type": "OPEN_OPERATION_TO_PHYSICS",
+      "claim": "clock/calibration missing"
+    },
+    {
+      "source": "Q",
+      "target": "EMP",
+      "type": "OPEN_OPERATION_TO_PHYSICS",
+      "claim": "empirical correspondence missing"
+    },
+    {
+      "source": "CL",
+      "target": "EMP",
+      "type": "OPEN_OPERATION_TO_PHYSICS",
+      "claim": "empirical correspondence missing"
+    },
+    {
+      "source": "EMP",
+      "target": "TOTAL",
+      "type": "OPEN_OPERATION_TO_PHYSICS",
+      "claim": "experimental identification missing"
+    },
+    {
+      "source": "Q",
+      "target": "TOTAL",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "full derivation not achieved"
+    },
+    {
+      "source": "CL",
+      "target": "TOTAL",
+      "type": "OPEN_PRIMITIVE_TO_OPERATION",
+      "claim": "classical mechanics not derived"
+    }
+  ],
+  "typing": "An edge is not an emergence proof. Missing, obstructed, conditional and stipulated-model arrows are not completed physical derivations."
+}

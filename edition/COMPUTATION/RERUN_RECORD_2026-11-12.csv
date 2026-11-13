@@ -1,0 +1,101 @@
+program,status,stored_output_compared,stdout_equals_stored,note
+Computational_Material/Causal_Readout/verify_causal_readout.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_Recovery/verify_channel_recovery.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/fresh_exact_checks/verify_supplied_operational_examples.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/programs/verify_abstract_channels.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/programs/verify_additional_exact_examples.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/programs/verify_calibration_width.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/programs/verify_control_identification.py,NONZERO_EXIT,no stored stdout,,requires source/Operational_Identification_of_Records_Controls_and_Continuous_Time_Dynamics.tex at a path absent from the packet
+Computational_Material/Channel_and_Operational_Examples/programs/verify_record_nonidentification.py,RAN_OK,no stored stdout,,
+Computational_Material/Channel_and_Operational_Examples/programs/verify_structural_controls.py,NONZERO_EXIT,no stored stdout,,requires results/Structural_Controls.json at a path absent from the packet
+Computational_Material/Channel_and_Operational_Examples/programs/verify_temporal_identification.py,RAN_OK,no stored stdout,,
+Computational_Material/Finite_Examples/verify_coverage_additions.py,RAN_OK,no stored stdout,,
+Computational_Material/Finite_Examples/verify_finite_signs.py,RAN_OK,no stored stdout,,
+Computational_Material/Finite_Examples/verify_mathematical_examples.py,RAN_OK,no stored stdout,,
+Computational_Material/Finite_Examples/verify_operational_results.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/binary_factors.py,RAN_OK,yes,False,differs from the stored output only in the endpoint_error diagnostic at the 1e-16 level; all reported values agree
+Computational_Material/Instrument_and_Graph_Examples/checks/calibrated_detector.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/channel_phase.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/coherent_returns.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/exact_controls.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/flag_polygon_audit.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/graph_certificate.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/graph_sampling.py,NONZERO_EXIT,yes,False,"requires reconciliation_results.json, absent from the packet"
+Computational_Material/Instrument_and_Graph_Examples/checks/joint_purity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/joint_weight_certificates.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/output_ambiguity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/phase_distance.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/phase_information.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/pure_channel_exclusion.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/History_Conditioned_Readout_Verification_2026-11-07.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Channel_Purity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Conditional_Readout_State_Variation_2026-11-07.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Local_Choi_Flip_Bound.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Local_Output_Purity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Multiaxis_Choi_Purity_2026-11-07.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Paired_Conditional_Fidelity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Paired_Input_Constraints.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Sequential_Paired_Input_Tests.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Three_Axis_Support.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/Verify_Trace_Distance_Phase_Bounds.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/certify_four_vertex.py,RAN_OK,yes,False,prints a summary line while the stored .expected file is the written certificate; the summary values 4.38610947e-51 and 1.83231743e-29 agree with it
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/check_branch.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/check_paired_fidelity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/run.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_aligned_columns.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_binary_effect_and_sequential_audit.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_branch_purity_intervals.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_conditional_branch_bounds.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_exact.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_four_marginals.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_four_outcome_fidelity.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_four_preparation_attempt_process.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_paired_fidelity_and_raw_rates.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_paired_input_channel_and_branch(1).py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_phase_resistance.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_roc.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/retained/verify_selection_and_calibrated_effect.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/returned_labels_and_precision.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/submitted_phase_verifier.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/transverse_readout.py,RAN_OK,yes,True,
+Computational_Material/Instrument_and_Graph_Examples/checks/verify_multivariate_power_intervals.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/verify_multivariate_simplex.py,RAN_OK,no stored stdout,,
+Computational_Material/Instrument_and_Graph_Examples/checks/verify_multivariate_stability.py,RAN_OK,no stored stdout,,
+Computational_Material/Joint_Calibration/verify_joint_calibration.py,RAN_OK,no stored stdout,,
+Computational_Material/Joint_Calibration_Check/compare_exact_results.py,RAN_OK,no stored stdout,,
+Computational_Material/Joint_Calibration_Check/verify_declared_calibration_experiment.py,NONZERO_EXIT,no stored stdout,,refuses to overwrite its stored result by design; rerun from a fresh copy reproduced the stored result byte-identically
+Computational_Material/Weak_Readout_Gain/verify_weak_gain_precision.py,RAN_OK,no stored stdout,,
+"Computational_Material/Weak_Readout_Gain/verify_weak_gain_precision.py (documented command, fresh output path)",RAN_OK,yes,result file byte-identical,197 predicates
+"Computational_Material/Joint_Calibration_Check/verify_declared_calibration_experiment.py (documented command, fresh copy)",RAN_OK,yes,result file byte-identical,comparator reports 0 mismatches over 45 identified sets
+Baseline_Additions/verify_holonomy_field_discriminator.py (fresh directory),RAN_OK,yes,result file byte-identical,11 predicates; added in edition Z1
+REVIEW_RECORDS/Director_D/validate_release.py,RAN_OK,yes,fresh verification agrees with stored results,rerun for edition Z1
+NEGATIVE_CONTROLS/FAR-1/verify_toy_models.py (output path redirected),RAN_OK,yes,result file byte-identical,rerun for edition Z1
+Baseline_Additions/verify_reconciliation_and_phase_recovery.py (fresh directory),RAN_OK,yes,result file byte-identical,11 predicates; added in edition Z2
+Baseline_Additions/verify_galois_conjugate_embeddings.py (fresh directory),RAN_OK,yes,result file byte-identical,7 predicates; added in edition Z2
+Baseline_Additions/verify_gain_graph_pair_measures.py (fresh directory),RAN_OK,yes,result file byte-identical,15 predicates; added in edition Z2
+"Baseline_Additions/verify_second_round_director_items.py (fresh directory, with transition_geometry_lib.py)",RAN_OK,yes,result file byte-identical,6 predicates; added in edition Z2
+"REVIEW_RECORDS/Directors_A_B_G_2026-11-12: packet verifiers and verification programs of the six packets (copies, outputs redirected)",RAN_OK,yes,stored results reproduced as reported by each program,rerun for edition Z2
+verify_baseline.py on edition Z1 as received,RAN_OK,yes,BASELINE_CHECK_PASS 657 files,intake for edition Z2
+Baseline_Additions/verify_third_round_director_items.py (fresh directory),RAN_OK,yes,result file byte-identical,25 predicates; added in edition Z3
+Baseline_Additions/verify_fourth_round_director_items.py (fresh directory),RAN_OK,yes,result file byte-identical,16 predicates; added in edition Z3
+Baseline_Additions/verify_gain_graph_covers_and_growth.py (fresh directory),RAN_OK,yes,result file byte-identical,5 predicates; added in edition Z3
+"Baseline_Additions/verify_reversible_gain_digraphs.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,21 predicates; about four minutes; added in edition Z3
+"Baseline_Additions/verify_reversible_walk_rays.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,"7 predicates, of which one is failed and kept (criterion 0.02 site not met); added in edition Z3"
+"REVIEW_RECORDS/Directors_A_B_G_2026-11-12: packet verifiers and verification programs of the packets A3, B3, G3, A4, B4, G4 (copies, outputs redirected)",RAN_OK,yes,stored results reproduced as reported by each program; floating residuals differ at rounding level,rerun for edition Z3
+verify_baseline.py on edition Z2 as received,RAN_OK,yes,BASELINE_CHECK_PASS 791 files,intake for edition Z3
+note on the rows of edition Z2 marked byte-identical,RAN_OK,yes,refers to the container in which edition Z2 was built,"Directors A, B and G report seven last-place floating-point differences for verify_gain_graph_pair_measures.py and 29 for verify_reconciliation_and_phase_recovery.py on their platforms, with all predicates passing"
+"Baseline_Additions/verify_continuation_selection.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,"8 predicates, of which two are failed and kept (S5); added in edition Z4"
+"Baseline_Additions/verify_bounded_order_confinement.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,"3 predicates, of which two are failed and kept (C1, C1b; the band-velocity computation is discarded as an instrument); about one minute; added in edition Z4"
+"Baseline_Additions/verify_modulus_rules_and_local_spectra.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,"5 predicates, of which two are failed and kept (M1 through the program, L3 on the substance); added in edition Z4"
+"Baseline_Additions/verify_fourth_session_corrections.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,6 predicates; added in edition Z4
+"Baseline_Additions/verify_ray_error_scaling.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,"2 predicates, of which one is failed and kept (E1); several minutes; added in edition Z4"
+"Baseline_Additions/verify_ray_averaged_prediction.py (fresh directory, with reversible_walk_lib.py)",RAN_OK,yes,result file byte-identical,2 predicates; several minutes; added in edition Z4
+verify_baseline.py on edition Z3 as received,RAN_OK,yes,BASELINE_CHECK_PASS 967 files,intake for edition Z4
+PAPERS/G9: source rebuilt with XeLaTeX (TeX Live 2023),RAN_OK,yes,13 pages; extracted text identical to the issued PDF,toolchain check for edition Z4
+note on platform,RAN_OK,yes,"numpy 2.5.3, Python 3.13.18, Linux x86_64",the rows of edition Z4 marked byte-identical refer to the container in which edition Z4 was built
+Baseline_Additions/verify_degree_two_quadratic_rule.py (fresh directory),RAN_OK,yes,result file byte-identical,"4 predicates, of which one is failed and kept (Q1: an unknown without an equation on 2 of 40 carriers); added in edition Z5"
+Baseline_Additions/verify_degree_two_quadratic_rule_followup.py (fresh directory),RAN_OK,yes,result file byte-identical,2 predicates; about one minute; added in edition Z5
+Baseline_Additions/verify_cyclotomic_modulus_rules.py (fresh directory),RAN_OK,yes,result file byte-identical,"4 predicates; exact arithmetic in Z[zeta] for q = 2, 4, 6, 8, 10, 12; added in edition Z6"
+Baseline_Additions/verify_composition_selects_one_character.py (fresh directory),RAN_OK,yes,result file byte-identical,4 predicates; added in edition Z7
+REVIEW_RECORDS/Director_Z/Session_4/cross_review/crosscheck_director_g.py (fresh directory),RAN_OK,yes,result file byte-identical,6 predicates; about ten minutes; added in edition Z7
+"Director G, pull request 2, commit b626c0d: four checkers rerun (check_walk, check_record_selection, check_probability_selection, check_forced_envelope)",RAN_OK,yes,"two exact outputs identical apart from line endings; seven floating-point outputs differ by at most 1.5e-6 relative, no predicate changed",reproduction on Linux of results recorded on Windows; rerun for edition Z7

@@ -1,0 +1,541 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\artanh}{\operatorname{artanh}}
+\setlength{\emergencystretch}{2em}
+\title{Spectral Tails and Exact Concentration Logits}
+\author{Kirtus Justus (Theoretical Physicist)\\
+\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Spectral Tails and Exact Concentration Logits},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the half-filled finite sine kernel, we express the concentration logit
+as a convergent sum over the spectrum of a singular differential operator
+after its first $N$ eigenvalues have been removed. The finite Fourier
+subspace is proved to exhaust those first $N$ modes. A Green-kernel trace
+identity then determines the logarithmic derivative of the deflated
+connection coefficient, with no undetermined entire factor. The resulting
+matrix identity is an absolutely convergent odd-power series with positive
+coefficients. It gives exact sign and monotonicity statements and explicit
+spectral-tail truncation bounds at fixed $N$. Formal center coefficients
+are compared with this representation. Their large-$N$ interpretation is developed in the reciprocal-trace companions, and the fixed-interior quantum-period remainder is proved separately in \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law}.
+\end{abstract}
+
+\section{Finite reference problem}
+Fix an integer $N\ge1$. For $0\le j,k<N$, let
+\begin{equation}
+B_{jk}=\begin{cases}1/2,&j=k,\\
+\sin[\pi(j-k)/2]/[\pi(j-k)],&j\ne k,\end{cases}
+\qquad
+H_{j-1,j}=H_{j,j-1}=\frac{j(N-j)}2,\quad H_{jj}=0.
+\label{eq:matrices}
+\end{equation}
+This is the classical discrete concentration geometry used in the
+free-fermion entanglement problem \cite{eisler}. We use
+\begin{equation}
+\mathcal P_N=\log B-\log(I-B),\qquad K_N=-\mathcal P_N,
+\label{eq:modular}
+\end{equation}
+with natural logarithms. The kernel is strictly between zero and one:
+its quadratic form and that of its complement are integrals of the
+squared absolute value of a nonzero finite Fourier polynomial over
+nonempty arcs. No physical clock or energy scale is assumed.
+
+Put $a=\pi/2$, $I=(-a,a)$, $\alpha=(N^2-1)/4$, and
+\begin{equation}
+U_v(x)=\sum_{j=0}^{N-1}v_j e^{i[j-(N-1)/2]x}.
+\end{equation}
+Direct Fourier summation gives
+\begin{equation}
+\mathcal L_N U_v=U_{Hv},\qquad
+\mathcal L_N u=(\cos x\,u')'+\alpha\cos x\,u.
+\label{eq:Fourier}
+\end{equation}
+The outer Fourier coefficients vanish because
+$\alpha-m(m\pm1)=0$ at the appropriate endpoints of the frequency set.
+Integration by parts on $I$, where $\cos x$ vanishes at the endpoints,
+proves $HB=BH$. Since $H$ has positive bonds, it has simple spectrum.
+Its real eigenvectors therefore give common eigenpairs
+$Hv=\beta v$, $Bv=\zeta v$, with $0<\zeta<1$.
+
+The diagonal matrix $E_{jj}=(-1)^j$ obeys
+\begin{equation}
+EHE=-H,\qquad EBE=I-B.
+\label{eq:duality}
+\end{equation}
+Thus the spectrum of $H$ is symmetric. Write $h_N=\|H\|$.
+The case $N=1$ has $h_N=0$ and $\mathcal P_N=0$.
+
+\section{The differential spectrum and its first finite block}
+Let $A_N$ be the self-adjoint Friedrichs operator associated with the
+closure on $C_c^\infty(I)$ of
+\begin{equation}
+\mathfrak a_N[f]=\int_I \cos x\,|f'|^2\,\dd x
+-\alpha\int_I\cos x\,|f|^2\,\dd x.
+\label{eq:form}
+\end{equation}
+The differential expression is $A_N=-\mathcal L_N$.
+Its eigenfunctions use the regular, logarithm-free solution at both
+endpoints. We justify this choice below rather than selecting a different
+self-adjoint extension implicitly. The role of this condition in
+singular Sturm--Liouville problems is classical \cite{kaper,littlejohn}.
+
+\begin{lemma}[Compact spectrum and elementary bounds]
+The spectrum of $A_N$ is simple and discrete. In increasing order,
+with zero-based indices, write it as $\mu_0<\mu_1<\cdots$.
+For $c=2/\pi^2$,
+\begin{equation}
+c\,k(k+1)-\alpha\ \le\ \mu_k\ \le\ \frac12 k(k+1).
+\label{eq:bounds}
+\end{equation}
+In particular its resolvent is trace class away from the spectrum.
+\end{lemma}
+\begin{proof}
+For $|x|<a$,
+\[
+\frac{\cos x}{a^2-x^2}
+=\frac12\frac{\sin[(a-x)/2]}{(a-x)/2}
+          \frac{\sin[(a+x)/2]}{(a+x)/2}
+\]
+lies between $2/\pi^2$ and $1/2$.
+Thus the positive derivative form has the same form domain and equivalent
+form norm as that of the rescaled Friedrichs Legendre operator
+$-[(a^2-x^2)f']'$, whose eigenvalues are $k(k+1)$ \cite{littlejohn}.
+That form domain embeds compactly into $L^2(I)$.
+The potential $-\alpha\cos x$ is bounded between $-\alpha$ and zero.
+The min--max principle now gives compactness and \eqref{eq:bounds}.
+
+At either endpoint, the two local solution types of the eigen-equation
+are analytic and analytic times a logarithm plus analytic.
+The logarithmic type has infinite derivative energy
+$\int_0^\epsilon r\,|1/r|^2\,\dd r$ and is excluded by the form domain.
+The regular type belongs to the closure: a cutoff from zero to one
+over $\epsilon^2<r<\epsilon$, linear in $\log r$, has derivative energy
+$O(1/|\log\epsilon|)$ and vanishing $L^2$ error.
+For these regular solutions the endpoint flux vanishes, so the
+eigen-equation also holds in the operator domain.
+The regular solution at the left endpoint is unique up to a constant;
+hence each eigenvalue is simple.
+This argument concerns eigenfunctions, not arbitrary form-domain
+functions, which need not be bounded at the endpoints.
+Finally \eqref{eq:bounds} implies summability of the resolvent eigenvalues.
+\end{proof}
+
+\begin{theorem}[Exact selection of the first $N$ modes]
+The eigenvalues of $A_N$ on its first $N$ modes are exactly the
+negatives of the eigenvalues of $H$. Consequently
+\begin{equation}
+\mu_{N-1}=h_N,\qquad \mu_N>h_N\ge0.
+\label{eq:gap}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $V_N$ be the real-valued part of the centered Fourier space
+spanned by the functions in \eqref{eq:Fourier}. Its real dimension is
+$N$; it is invariant under $A_N$, and its eigenfunctions are regular
+at both endpoints. Thus it supplies $N$ distinct eigenvalues.
+
+A real continuous function orthogonal to $V_N$ must have at least $N$
+sign changes if it has only finitely many zeros.
+Indeed, if its sign-change points are $z_1,\ldots,z_r$ with $r<N$, then
+\[
+q(x)=\prod_{\ell=1}^{r}\sin\frac{x-z_\ell}{2}\,
+                 \cos^{\,N-1-r}\frac{x}{2}
+\]
+belongs to $V_N$. On $I$, it has exactly those sign changes.
+The product of the function and $q$ has a fixed sign and nonzero integral,
+contradicting orthogonality.
+
+The eigenfunction of index $k$ has at most $k+1$ nodal domains.
+For completeness, its restrictions to nodal domains lie in the closed
+form domain and have disjoint supports, each with Rayleigh quotient
+$\mu_k$. If there were more than $k+1$ such pieces, their span would
+contain a nonzero vector orthogonal to the first $k+1$ eigenfunctions.
+Its quotient would be both $\mu_k$ and at least $\mu_{k+1}$, a
+contradiction. Interior zeros are simple, and endpoint regularity
+prevents an accumulation there, so the sign-change argument applies.
+
+An eigenfunction of index $k<N$ outside $V_N$ would be orthogonal to
+the invariant finite space, and would have at least $N$ sign changes,
+contradicting the nodal bound. Hence $V_N$ contains the first $N$ modes.
+Symmetry \eqref{eq:duality} identifies the largest selected value as
+$h_N$, and simplicity gives the strict inequality in \eqref{eq:gap}.
+\end{proof}
+
+\section{Connection coefficients and a resolvent trace}
+Let $u(x;b)$ solve
+\begin{equation}
+(\cos x\,u')'+(\alpha\cos x-b)u=0,\qquad u(-a;b)=1,
+\label{eq:u}
+\end{equation}
+with the regular left endpoint condition. Let $v(x;b)=u(-x;b)$.
+At the right endpoint define $C_N(b)$ by
+\[
+u(x;b)=C_N(b)v(x;b)\log(a-x)+\text{an analytic function}.
+\]
+The regular right factor has value one at $a$. The normalized Frobenius
+recursion and continuation show that $C_N$ is entire in $b$, and
+its constant Wronskian is
+\begin{equation}
+W=\cos x\,(uv'-u'v)=C_N(b).
+\label{eq:W}
+\end{equation}
+In particular $C_N(b)=-2u(0;b)u'(0;b)$.
+Its zeros are precisely $b=-\mu_k$. They are simple:
+at a real zero, reflection gives $u(a)=h=\pm1$, and parameter
+differentiation yields
+\begin{equation}
+\int_I u^2\,\dd x=-h\,C_N'(b)>0.
+\label{eq:norm}
+\end{equation}
+There are no nonreal zeros, because a regular solution at both endpoints
+would give an eigenvalue of the self-adjoint operator.
+
+\begin{lemma}[Trace identity without a normalization ambiguity]
+For $b$ outside the zeros of $C_N$,
+\begin{equation}
+\frac{C_N'(b)}{C_N(b)}
+=\Tr(A_N+b)^{-1}
+=\sum_{k=0}^\infty\frac1{\mu_k+b}.
+\label{eq:trace}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The Green kernel of $A_N+b$ is
+$G_b(x,y)=-u(\min(x,y);b)v(\max(x,y);b)/C_N(b)$.
+The minus sign makes the derivative jump of $-\cos x\,\partial_xG$
+equal to one. Differentiating \eqref{eq:u} with respect to $b$ and
+pairing with $v$ gives
+\[
+\bigl[\cos x\,(u_bv'-u_b'v)\bigr]'=-uv.
+\]
+The boundary values are zero at $-a$ and $C_N'(b)$ at $a$, so
+$C_N'(b)=-\int_Iuv\,\dd x$.
+
+For real $b>\alpha$, the resolvent is positive and trace class.
+On closed interior subintervals its continuous positive kernel has
+trace equal to the integral of its diagonal. Exhausting $I$ by those
+subintervals and using trace convergence for a positive trace-class
+operator gives $\Tr(A_N+b)^{-1}=\int_I G_b(x,x)\,\dd x$.
+This proves the first equality there. Both sides extend meromorphically,
+so the equality holds throughout their common domain.
+The series equality is the spectral theorem with \eqref{eq:bounds}.
+\end{proof}
+
+Let $D_N(b)=\det(bI-H)$ and $R_N(b)=C_N(b)/D_N(b)$, with its
+removable values filled in. The first-$N$ theorem and \eqref{eq:trace}
+give the exact cancellation
+\begin{equation}
+\frac{R_N'(b)}{R_N(b)}
+=\sum_{k=N}^{\infty}\frac1{\mu_k+b}.
+\label{eq:deftrace}
+\end{equation}
+In particular $R_N$ is nonzero on $(-\mu_N,\mu_N)$.
+There is no unspecified exponential factor: \eqref{eq:trace} fixes
+the logarithmic derivative directly. Related Wronskian determinant
+methods are classical \cite{lesch}; no regularized determinant is needed
+in this argument.
+
+\section{Exact positive expansion and truncation bounds}
+\begin{theorem}[Spectral-tail formula]
+Define, for $|b|<\mu_N$,
+\begin{equation}
+F_N(b)=2\sum_{k=N}^\infty\artanh\frac b{\mu_k}
+=\sum_{k=N}^\infty\log\frac{\mu_k+b}{\mu_k-b}.
+\label{eq:F}
+\end{equation}
+The series converges locally uniformly. At every common finite eigenmode,
+\begin{equation}
+\log\frac{\zeta}{1-\zeta}=F_N(\beta).
+\label{eq:exact}
+\end{equation}
+Consequently the following series converges absolutely in matrix
+operator norm:
+\begin{align}
+\boxed{\ \mathcal P_N=2\sum_{k=N}^\infty
+                  \artanh(H/\mu_k)\ }
+&=2\sum_{r=0}^\infty
+\frac{Z_N(2r+1)}{2r+1}H^{2r+1}, \label{eq:operator}\\
+Z_N(s)&=\sum_{k=N}^\infty\mu_k^{-s},\qquad s\ge1.
+\nonumber
+\end{align}
+Every coefficient on the right is strictly positive.
+\end{theorem}
+\begin{proof}
+We first recover the finite concentration ratio from the normalized
+connections. At a selected root $b=\beta$, the Fourier solution divided
+by its nonzero left endpoint equals $u(x;\beta)$ and has right endpoint
+$h=\pm1$. On the complementary arc, translation by $\pi$ gives the
+same equation with parameter $-\beta$. The centered Fourier function
+satisfies $U(x+2\pi)=\sigma U(x)$, where $\sigma=(-1)^{N-1}$.
+Thus the complementary normalized endpoint value is $\sigma h$.
+Parseval and \eqref{eq:norm} imply
+\[
+\frac{\zeta}{1-\zeta}
+=\sigma\frac{C_N'(\beta)}{C_N'(-\beta)}
+=\frac{R_N(\beta)}{R_N(-\beta)}.
+\]
+The last equality uses $D_N(-b)=(-1)^ND_N(b)$ and its derivative;
+it also covers the central zero for odd $N$ by removable values.
+
+Integrating \eqref{eq:deftrace} from $-b$ to $b$ gives \eqref{eq:F}
+as $\log|R_N(b)/R_N(-b)|$. The zero-free interval fixes the positive
+ratio, and $\sum_{k\ge N}1/\mu_k<\infty$ justifies integration term by
+term. This proves \eqref{eq:exact}.
+Because $h_N/\mu_N<1$, the scalar artanh expansions converge uniformly
+on the whole finite spectrum. Their absolute norm sums are bounded by
+$2\sum_{k\ge N}\artanh(h_N/\mu_k)<\infty$.
+Functional calculus and absolute convergence prove \eqref{eq:operator}.
+\end{proof}
+
+The function $F_N$ is odd and strictly increasing. For $0<b<\mu_N$,
+$F_N(b)/b$ is strictly increasing, by its positive Taylor coefficients.
+In particular $\operatorname{sgn}(2B-I)=\operatorname{sgn}H$,
+including the zero mode. For $N\ge2$, \eqref{eq:operator} also gives
+zero entries between sites of equal parity and strictly positive
+entries between sites of opposite parity: every odd power of the
+positive-bond matrix $H$ is entrywise nonnegative, and an odd-length
+path connects every opposite-parity pair. The signs reverse for $K_N$.
+These are finite-$N$ conclusions. The leading scaling-limit power
+series in \cite{eisler} is a related result with different coefficients.
+
+\begin{corollary}[Explicit omitted-spectrum bound]
+Let $0\le b\le h_N$ and let $M\ge N$ be the first omitted index.
+If $\rho=(\alpha+b)/[cM(M+1)]<1$, then
+\begin{equation}
+\frac{4b}{M}\ \le\
+F_N(b)-2\sum_{k=N}^{M-1}\artanh(b/\mu_k)
+\ \le\ \frac{2b}{c(1-\rho)M}.
+\label{eq:tailbound}
+\end{equation}
+For negative $b$, oddness gives the corresponding signed bounds.
+The upper bound with $b=h_N$ also bounds the matrix operator-norm
+truncation error in \eqref{eq:operator}.
+\end{corollary}
+\begin{proof}
+Use $z\le\artanh z\le z/(1-z)$ for $0\le z<1$.
+The upper eigenvalue bound in \eqref{eq:bounds} gives the lower
+estimate. For the upper estimate,
+$\mu_k-b\ge c(1-\rho)k(k+1)$ for $k\ge M$.
+Now $\sum_{k=M}^\infty1/[k(k+1)]=1/M$.
+The norm statement follows from the spectral theorem and monotonicity.
+\end{proof}
+The bound concerns the exact differential eigenvalues. Computed
+approximations require their own error enclosures; an ordinary
+Galerkin calculation does not automatically make this a numerical certificate.
+
+\begin{corollary}[Acceleration and a quantitative certificate]
+For $0\le b\le h_N$, set $g_b(\mu)=2[\artanh(b/\mu)-b/\mu]$.
+Then
+\begin{equation}
+F_N(b)=2bZ_N(1)+\sum_{k=N}^\infty g_b(\mu_k).
+\label{eq:accelerate}
+\end{equation}
+Let $M\ge N$, $d=c-\alpha/[M(M+1)]>0$, and
+$q=b/[dM(M+1)]<1$. The omitted sum obeys
+\begin{equation}
+0\le \sum_{k=M}^\infty g_b(\mu_k)
+\le \frac{2b^3}{15(1-q^2)d^3M^5}.
+\label{eq:fasttail}
+\end{equation}
+If $|\widehat Z-Z_N(1)|\le\delta_Z$ and
+$|\widehat\mu_k-\mu_k|\le\delta_k$ for $N\le k<M$, with
+$a_k=\widehat\mu_k-\delta_k>b$, the absolute error of the resulting
+finite approximation is at most
+\begin{equation}
+2b\delta_Z+
+\sum_{k=N}^{M-1}\frac{2b^3\delta_k}{a_k^2(a_k^2-b^2)}
++\frac{2b^3}{15(1-q^2)d^3M^5}.
+\label{eq:cert}
+\end{equation}
+\end{corollary}
+\begin{proof}
+For $0\le z\le q<1$, the positive series gives
+$\artanh z-z\le z^3/[3(1-q^2)]$.
+For $k\ge M$, \eqref{eq:bounds} gives $\mu_k\ge d\,k(k+1)$.
+Moreover
+\[
+\frac1{[k(k+1)]^3}\le\frac15
+\left(\frac1{k^5}-\frac1{(k+1)^5}\right),
+\]
+since $(k+1)^5-k^5-5k^2(k+1)^2=5k^2+5k+1>0$.
+Summing proves \eqref{eq:fasttail}.
+Finally $|g_b'(\mu)|=2b^3/[\mu^2(\mu^2-b^2)]$ decreases for $\mu>b$.
+The mean-value theorem and the triangle inequality give \eqref{eq:cert}.
+\end{proof}
+
+\section{Center law: exact structure and formal predictions}
+Let $J=2H/N$, $Jv=\lambda v$, and $t=\lambda/N=2\beta/N^2$.
+Write
+\[
+\varepsilon=\log\frac{1-\zeta}{\zeta},\qquad
+e=\varepsilon+N\eta(t),\qquad
+\eta(t)=\pi t\,{}_3F_2(1/4,1/2,3/4;1,3/2;4t^2).
+\]
+The exact involution sends $(t,\varepsilon,e)$ to
+$(-t,-\varepsilon,-e)$. Thus a leading relation involving
+$e/|\varepsilon|$ cannot have the same positive sign on both branches.
+Symmetry alone does not fix the sign or magnitude of $e/\varepsilon$.
+
+The previously reduced formal coefficients \cite{periods} give
+\begin{align}
+\eta(t)&=\pi t+\tfrac\pi4t^3+O(t^5),&
+\varphi_1(t)&=\tfrac\pi4t+\tfrac{25\pi}{32}t^3+O(t^5),\nonumber\\
+\varphi_3'(0)&=-\tfrac{17\pi}{64},&
+\varphi_5'(0)&=\tfrac{169\pi}{256}.
+\label{eq:formal}
+\end{align}
+Therefore the proposed expansion
+$\varepsilon=-N\eta+\varphi_1/N+\varphi_3/N^3+\cdots$
+has the sign-consistent formal center law
+\begin{equation}
+e\sim\frac{\pi\lambda}{4N^2}
+\sim-\frac{\varepsilon}{4N^2}.
+\label{eq:center}
+\end{equation}
+This coefficient calculation does not prove a plunge asymptotic:
+a fixed-interior expansion away from $t=0$ cannot simply be evaluated
+along a sequence of modes tending to zero.
+
+The tail representation gives an exact, distinguished interpolation
+with
+\begin{equation}
+F_N'(0)=2Z_N(1).
+\label{eq:slope}
+\end{equation}
+Differentiating the \emph{formal candidate} at zero consequently
+suggests the separate trace asymptotic
+\begin{equation}
+Z_N(1)\ \mathrel{\stackrel{\rm formal}{\sim}}\
+\frac\pi N-\frac{\pi}{4N^3}
++\frac{17\pi}{64N^5}-\frac{169\pi}{256N^7}+\cdots .
+\label{eq:traceformal}
+\end{equation}
+Neither the spectral period conjecture at discrete points nor a
+value-only remainder estimate alone justifies differentiating an
+interpolant. Equation \eqref{eq:traceformal} is an additional formal
+prediction to be tested and proved independently.
+For even $N$, it can be tested directly through
+$Z_N(1)=C_N'(0)/C_N(0)$, since $D_N$ is even and nonzero at zero.
+For odd $N$, the removable-value formula is
+$Z_N(1)=C_N''(0)/(2C_N'(0))$.
+
+\paragraph{One further exact formal coefficient.}
+The linear center coefficient can be continued one order without
+assuming a spectral asymptotic. Set $p=\cos x$,
+$q=(p-2t)/(4p)$, $r=1/(4p^2)$, and solve the formal equation
+\begin{equation}
+W^2+\tfrac12(\log W)''-\tfrac14[(\log W)']^2=N^2q+r,
+\quad
+W=N\sqrt q\,(1+a_1N^{-2}+a_2N^{-4}+a_3N^{-6}+a_4N^{-8}+\cdots).
+\label{eq:Riccati}
+\end{equation}
+Primes in \eqref{eq:Riccati} mean $x$ derivatives.
+Coefficient comparison in the ring $\mathbb Q(p)[t]/(t^2)$, using
+$\partial_x^2 f=(1-p^2)f_{pp}-pf_p$, gives
+\begin{align}
+a_4(p,0)&=
+\frac{4096p^6-143616p^4+493824p^2-375733}{128p^8},\nonumber\\
+\partial_ta_4(p,0)&=
+-\frac{16p^8-50952p^6+825534p^4-2268425p^2+1553721}{16p^9}.
+\label{eq:a4}
+\end{align}
+The recursion fixes each new coefficient linearly, so these expressions
+are checked by substitution after the three preceding orders.
+For the counterclockwise period convention
+$\varphi_7=i\oint\sqrt q\,a_4\,\dd x$ with
+$\dd x=-\dd p/\sqrt{1-p^2}$, a fixed circle $2|t|<R<1$ yields
+\begin{equation}
+\varphi_7'(0)
+=\pi\mathop{\rm Res}_{p=0}
+\frac{\partial_ta_4(p,0)-a_4(p,0)/p}{\sqrt{1-p^2}}
+=-\frac{50777\pi}{16384}.
+\label{eq:phi7}
+\end{equation}
+This is an exact formal coefficient identity. The associated
+$N^{-9}$ coefficient suggested for \eqref{eq:traceformal} is
+$50777\pi/16384=9.7363678083\ldots$; that spectral asymptotic is
+not proved by the residue calculation.
+
+\section{Scope and verification}
+Direct finite-matrix center-mode calculations at
+$N=32,64,128,256,512,1024$ give
+$-4N^2e/\varepsilon$ increasing from $0.9993955762$ to
+$0.9999992990$ at 100-digit working precision.
+An independent connection calculation of $Z_N(1)$ at
+$N=8,16,32,64,128$ gives the residual after the four displayed terms
+in \eqref{eq:traceformal}, multiplied by $N^9$, as
+\[
+8.7298271,\quad9.4540545,\quad9.6634554,\quad
+9.7179853,\quad9.7317624.
+\]
+These values are consistent with the coefficient in \eqref{eq:phi7}.
+At $N=128$, increasing precision from 130 to 180 digits and the
+Taylor degree from 600 to 800 changes the retained trace by less than
+$3.88\times10^{-90}$. These are numerical checks, not error enclosures
+or proofs of the limits.
+
+The proofs above identify an exact finite reference function and
+give convergent spectral representations. They do not establish
+the large-$N$ expansion of the remaining differential spectrum, the
+uniform quantum-period remainder, the full Wilson relative-entropy
+law, or a field-theory mass gap.
+The decomposition isolates a further precise target: estimate the
+positive traces $Z_N(2r+1)$ with uniform control sufficient to
+compare \eqref{eq:operator} to the declared period candidate.
+The reciprocal-trace, positive-moment and whole-line results supply the
+stated fixed-interior estimates. For the specified infinite-chain Wilson
+comparison at fixed positive scaled mass, Theorem 1 of \emph{Finite Part
+of Wilson--Dirac Relative Entropy} gives the finite part and an
+\(O_\mu(1/\log L)\) remainder; Theorem 3 of \emph{Uniform Modular
+Control and Nonlinear Convergence for Wilson--Dirac Intervals} supplies
+the even-dimensional bound \(\|E_N\|\le7\). A moving-edge expansion
+remains open. Neither the finite-part theorem nor that norm bound
+promotes the formal coefficient calculation above to an additional
+spectral asymptotic.
+Separate reproduction material records numerical discretizations,
+precision comparisons, formal coefficient checks and their limitations.
+
+\paragraph{Acknowledgments and provenance.}
+This work develops the finite reference problem in
+\emph{From Prephysical Hypotheses to Physical Models}.
+The earlier half-filled connection proposal was supplied in
+correspondence prepared with Claude (Anthropic).
+The present spectral-tail argument and checks were developed with
+ChatGPT (OpenAI). The wider program has also used Gemini (Google),
+Grok (SpaceXAI), and DeepSeek (High-Flyer); no particular proof here
+is attributed to those systems. Assistance implies neither
+external peer review nor endorsement. No priority claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{eisler} V. Eisler and I. Peschel, Analytical results for the
+entanglement Hamiltonian of a free-fermion chain,
+\emph{J. Phys. A} \textbf{50} (2017), 284003,
+\href{https://arxiv.org/abs/1703.08126}{arXiv:1703.08126},
+especially equations (3), (6)--(10), (21)--(22).
+\bibitem{kaper} H. G. Kaper, M. K. Kwong and A. Zettl,
+Characterizations of the Friedrichs extensions of singular
+Sturm--Liouville expressions,
+\emph{SIAM J. Math. Anal.} \textbf{17} (1986), 772--777.
+\bibitem{littlejohn} L. L. Littlejohn and A. Zettl,
+The Legendre equation and its self-adjoint operators,
+\emph{Electron. J. Differential Equations} (2011), No. 69, 1--33,
+especially Theorem 3.6.
+\bibitem{lesch} M. Lesch, Determinants of regular singular
+Sturm--Liouville operators,
+\href{https://arxiv.org/abs/math/9902114}{arXiv:math/9902114}.
+\bibitem{periods} K. Justus,
+\emph{Higher-Order Modular Periods for the Half-Filled Sine Kernel},
+research manuscript, October 2026.
+\end{thebibliography}
+\end{document}

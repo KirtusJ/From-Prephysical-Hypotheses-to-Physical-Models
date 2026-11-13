@@ -1,0 +1,45 @@
+{
+  "scope": "Execution of the two distributed portable calibration programs, after their arithmetic and source review. No sampling data were collected.",
+  "python": "3.12.14",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "computations/verify_joint_calibration.py"
+      ],
+      "source_sha256": "a4504e650834622c8beec2154567e334b6a445ce9104ea0ddc30d1a86bb52893",
+      "elapsed_seconds": 0.690083172001323,
+      "returncode": 0,
+      "result_path": "computations/results/joint_calibration_results.json",
+      "prior_result_sha256": "d7088126ec15a1f4cd126a50ab01b6d32a71fe7154b4ac391d82f562504072e0",
+      "result_sha256": "d7088126ec15a1f4cd126a50ab01b6d32a71fe7154b4ac391d82f562504072e0",
+      "result_reproduced_byte_for_byte": true,
+      "stderr_bytes": 0,
+      "stdout_sha256": "4b01b909fe0cf21bfe359cb10204cd2365c81c8f87df527a2770fed45167b469"
+    },
+    {
+      "command": [
+        "python3",
+        "computations/check_joint_calibration_intervals.py"
+      ],
+      "source_sha256": "5fcd12c094b2865a3d2d29370ecee5fe1be2b3c0a77aa8b0409b2e967d1e0535",
+      "elapsed_seconds": 0.16422171899830573,
+      "returncode": 0,
+      "result_path": "computations/results/Joint_Calibration_Independent_Arithmetic.json",
+      "prior_result_sha256": "1044c3b8342331f68b5588664e7c501dcc9f63467ebe5c8763decbb7a217c92d",
+      "result_sha256": "1044c3b8342331f68b5588664e7c501dcc9f63467ebe5c8763decbb7a217c92d",
+      "result_reproduced_byte_for_byte": true,
+      "stderr_bytes": 0,
+      "stdout_sha256": "00b50fe63768db5e2d8b760402a7d3932c5166b0eed3b1e0a1e3745a0011a525"
+    }
+  ],
+  "second_arithmetic_check_status": "PASS",
+  "exact_fraction_comparisons": 369,
+  "lineage": "Second implementation after exposure to the primary code and results; shared fixed sampling model and research lineage. Code independence is not independent empirical or theoretical replication.",
+  "not_checked": [
+    "No enlarged parameter grid or changed design",
+    "No empirical data or physical calibration mechanism",
+    "No new validation of all continuous-parameter confidence regions",
+    "No recheck of the separate closed-rectangle projection formula or expected set cardinalities"
+  ]
+}

@@ -1,0 +1,159 @@
+\documentclass[10.5pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,array,enumitem}
+\usepackage[margin=0.83in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=black]{hyperref}
+\linespread{0.95}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Foundational mathematical control}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\id}{\mathbf{1}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\eff}{\mathcal{E}}
+\title{\textbf{Quantum Pure-State Geometry Without Quantum State-Space Selection}\\[4pt]
+\large A Finite-Dimensional Convex Operational Countermodel and an Exact Tomographic Boundary}
+\author{Kirtus Justus\\\small Research direction and scholarly responsibility\\
+\small Port Coquitlam, British Columbia, Canada\\[3pt]
+\small AI-assisted internal mathematical analysis: ChatGPT (GPT-6), Director G}
+\date{12 November 2026, B.C. Pacific Time\\[2pt]
+\small Initial External Grounding open; no total ontology identified}
+\begin{document}
+\maketitle
+\begin{abstract}
+A common proposed identification route starts with the geometry of pure states, transition probabilities, holonomy, and complex structure, and then attempts to infer the full quantum theory. We give a finite-dimensional generalized-probabilistic countermodel with exactly the ordinary complex two-level pure-ray manifold, its full standard pairwise Born-transition table, the corresponding Fubini--Study metric and Levi--Civita holonomy, and the same predictions for every finite adaptive circuit made from single-system rotations and binary projective measure--reprepare instruments. Nevertheless, the complete convex operational theory is not a qubit: two mixtures indistinguishable by \emph{all} those conventional projective tests have different probabilities for an additional admissible affine effect, with an exact difference of $1/8$. The state space has affine dimension ten rather than three, and it possesses associative minimal-tensor composites for arbitrarily many systems. The construction is an explicit stipulated mathematical control, not an observed physical model, and none of its probability rules, operations, or continuous geometry emerges from a prephysical primitive.
+\end{abstract}
+
+\section{Scope: a nonselection test rather than an emergent ontology}
+The scientific target remains an explained emergence of quantum and classical mechanics, with their operational and experimental correspondence. This note tests a narrower identification implication:
+\begin{quote}\emph{Do complete quantum pure-state geometry, all pairwise pure-ray Born probabilities, and their holonomy and standard projective readout fix the entire convex operational theory?}\end{quote}
+A counterexample to this implication is not a proof that quantum mechanics cannot emerge from stronger, independently justified premises. The example is modeled within the usual finite-dimensional ordered-vector-space framework for generalized probabilistic theories (GPTs), which separately specifies normalized states, affine effects and admissible transformations~\cite{barrett,eftaxias}. All structures below are explicitly given rather than inferred from any physical observation.
+
+\section{An odd-order symmetric-tensor model}
+For an \emph{odd} positive integer $k$, give the real vector space
+\[
+V_k=\Sym^k(\RR^3),\qquad d_k=\dim V_k={k+2\choose2}
+\]
+the inner product inherited from the full Euclidean tensor power. For each $n\in S^2\subset\RR^3$, put $v_k(n)=n^{\otimes k}$ and define the compact normalized state space
+\begin{equation}\label{eq:Kk}
+\KK_k=\conv\{v_k(n):n\in S^2\}\subset V_k.
+\end{equation}
+The full normalized GPT state is $(1,T)$ with $T\in\KK_k$ and deterministic effect $u(1,T)=1$. Its unrestricted affine effect space is
+\[
+\eff_k=\{e:V_k\to\RR\text{ affine}:0\le e(T)\le1\text{ for every }T\in\KK_k\}.
+\]
+Thus no quantum positivity cone or complex Hilbert space is assumed as a primitive. The $k=1$ body is exactly the ordinary three-dimensional Bloch ball as a \emph{mathematical comparison}; $k=3$ is a degree-three Veronese orbitope, part of an established family of orbitopes~\cite{orbitopes}. The choice of a Euclidean three-space and its unit sphere is imported.
+
+\begin{proposition}[Pure states, size and symmetries]\label{prop:geometry}
+For every odd $k$, $\KK_k$ is full-dimensional in $V_k$, with exactly the exposed extreme points $v_k(n)$, $n\in S^2$, all distinct. Its affine dimension is $d_k$. It admits every rigid rotation $R\in SO(3)$ as an affine reversible transformation $T\mapsto R^{\otimes k}T$.
+\end{proposition}
+\begin{proof}
+For any symmetric $A\in V_k$, $\langle A,n^{\otimes k}\rangle$ is a homogeneous polynomial of degree $k$. If it vanishes on $S^2$, homogeneity implies it vanishes on all $\RR^3$, so $A=0$. Hence the generating vectors linearly span $V_k$. Since $k$ is odd, $v_k(-n)=-v_k(n)$; their convex hull contains the origin, is centrally symmetric and has full affine dimension. For each fixed $m\in S^2$, the affine functional
+\[
+E_m^{(k)}(T)=\tfrac12(1+\langle T,m^{\otimes k}\rangle)
+\]
+is in $\eff_k$: on a generator its value is $\tfrac12[1+(n\cdot m)^k]\in[0,1]$, and convexity extends the bound. Its value is one exactly at $n=m$, so every $v_k(m)$ is exposed. Conversely, any extreme point of a finite-dimensional convex hull of a compact generating set belongs to that set. Rotations preserve the generating sphere and the inner product and are invertible.
+\end{proof}
+
+\section{A complete pure Born table and identical projective geometry}
+Let $k=2r+1$. Contract $r$ pairs of tensor indices using the Euclidean metric:
+\begin{equation}\label{eq:tau}
+\tau_k:V_k\longrightarrow\RR^3,\qquad
+[\tau_k(T)]_i=\sum_{j_1,\ldots,j_r=1}^3 T_{i j_1j_1\cdots j_rj_r}.
+\end{equation}
+This is a \emph{linear} map, with $\tau_k(v_k(n))=n$ for unit $n$. For $m\in S^2$ define an allowed affine binary test
+\begin{equation}\label{eq:F}
+F_m(T)=\tfrac12\bigl(1+m\cdot\tau_k(T)\bigr),\qquad F_{-m}(T)=1-F_m(T).
+\end{equation}
+Both effects are admissible since $\tau_k(\KK_k)=\conv(S^2)=B^3$, the ordinary Euclidean unit ball. Importantly, this \emph{asserts} a specific operational test family; it does not derive its probability rule from any prephysical datum.
+
+\begin{theorem}[Pure-table and geometric nonselection]\label{thm:pure}
+For every odd $k$, the model's exposed pure states are a smooth $S^2$, and the entire pure-state test table is
+\begin{equation}\label{eq:born}
+F_m(v_k(n))=\frac{1+n\cdot m}{2}
+=\left|\left\langle\psi_n,\psi_m\right\rangle\right|^2,
+\end{equation}
+where the right-hand equality is a \emph{comparison} with conventional normalized complex two-level rays having Bloch vectors $n,m$. Its operationally defined pure-state distance
+\[
+d(n,m)=\arccos\sqrt{F_m(v_k(n))}=\frac12\arccos(n\cdot m)
+\]
+is precisely the usual $\mathbb{CP}^{1}$ Fubini--Study distance. Consequently, the full Riemannian metric and its Levi--Civita parallel transport, holonomy, and, given a separately chosen orientation, its compatible symplectic area form coincide after this identification. None of these data determines $k$.
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:born} is immediate from~\eqref{eq:tau}. The odd Veronese embedding $n\mapsto v_k(n)$ is smooth and injective on $S^2$ and its compact domain maps homeomorphically to the exposed pure manifold. The displayed distance is the conventional spherical half-angle expression for complex two-level rays; its length metric is the Fubini--Study Riemannian metric on $S^2$ with $ds^2=\tfrac14 ds^2_{S^2}$. Levi--Civita holonomy is determined by that metric and the chosen manifold orientation. The complex structure and area form exist as usual on this oriented real two-manifold, not as a derived quantum amplitude field.
+\end{proof}
+\begin{remark}[Do not substitute a different metric]
+The metric \emph{induced by the raw tensor ambient inner product} on $v_k(S^2)$ is $k\,ds_{S^2}^2$, not the Fubini--Study metric. Those constant multiples have the same Levi--Civita connection, but different curvature normalization. The \emph{exact} Fubini--Study metric in the theorem is specified by the chosen operational tests~\eqref{eq:F}. Changing that definition would change the claim. No nonstipulated metric bridge is implied.
+\end{remark}
+
+\section{A finite exact operational discriminator}
+For $k=3$ the affine dimension is $10$, not the Bloch ball's dimension $3$. Consider the two independently preparable mixtures of pure generators
+\begin{align}\label{eq:two}
+T_{\mathrm{anti}}&=\tfrac12\,v_3(0,0,1)+\tfrac12\,v_3(0,0,-1)=0,\\
+T_{\mathrm{tri}}&=\tfrac13\sum_{j=0}^{2}v_3\!\left(\cos\frac{2\pi j}{3},\sin\frac{2\pi j}{3},0\right).
+\end{align}
+By symmetry, $\tau_3(T_{\mathrm{anti}})=\tau_3(T_{\mathrm{tri}})=0$. Therefore \emph{every} test $F_m$ returns $1/2$ on either mixture. However, with $e_x=(1,0,0)$, the additional admissible cubic effect $E_{e_x}^{(3)}$ satisfies
+\begin{equation}\label{eq:gap}
+(T_{\mathrm{anti}})_{xxx}=0,\qquad
+(T_{\mathrm{tri}})_{xxx}=\frac{1-1/8-1/8}{3}=\frac14,
+\quad E_{e_x}^{(3)}(T_{\mathrm{anti}})=\frac12,\quad
+E_{e_x}^{(3)}(T_{\mathrm{tri}})=\frac58.
+\end{equation}
+Thus \emph{the exact probability gap is $1/8$}. No independent empirical measurement has been made. If this effect were physically accessible, the two ensembles would be distinguishable and the ordinary two-level quantum density-operator representation could not identify both with the same maximally mixed state.
+
+\begin{corollary}[What tomography must supply]\label{cor:tomo}
+The effects $F_m$, even for all $m\in S^2$, separate states only modulo $\ker\tau_k$, whose dimension is $d_k-3$; it is $7$ at $k=3$. The effects $E_m^{(k)}$, for all $m$, \emph{are} tomographically separating on $\KK_k$. Hence an assumption that all $F_m$ effects are operationally complete is an additional selection condition; it cannot follow from pure geometry or from the equality of their pure-state probabilities.
+\end{corollary}
+\begin{proof}
+The linear contraction $\tau_k$ maps the generating sphere onto $S^2$, hence is surjective and has rank three. Equality of all $F_m$ values is exactly equality of $\tau_k(T)$, giving nullity $d_k-3$. If every $E_m^{(k)}(T)=E_m^{(k)}(T')$, then $\langle T-T',m^{\otimes k}\rangle=0$ for all unit $m$. The homogeneous-polynomial span argument in Proposition~\ref{prop:geometry} forces $T=T'$.
+\end{proof}
+
+
+\begin{theorem}[A sufficient single-system selection gate]\label{thm:selection}
+Let $K$ be any finite-dimensional compact convex normalized state space whose extreme points are exactly a continuously labeled sphere $\{x_n:n\in S^2\}$. Assume it has affine effects $f_m$ for every $m\in S^2$ satisfying $f_m(x_n)=\tfrac12(1+n\cdot m)$, and assume that the family $\{f_m\}$ separates \emph{all} normalized states, not only pure states. Then $K$ is affinely isomorphic to the ordinary three-dimensional Bloch ball, with $f_m$ corresponding to the standard two-level rank-one projector test. If the \emph{no-restriction hypothesis} additionally admits every affine $[0,1]$-valued effect, the entire conventional single-system complex two-level state/effect structure follows as an operational representation. Neither quantum composition nor time evolution follows.
+\end{theorem}
+\begin{proof}
+Define $\Lambda(x)=(2f_{e_1}(x)-1,2f_{e_2}(x)-1,2f_{e_3}(x)-1)$. This affine map sends $x_n\mapsto n$. By finite-dimensional compact convexity, each $x\in K$ is a finite convex combination of extreme points, so $\Lambda(K)=\conv(S^2)=B^3$. The affine identity on extreme points gives $f_m(x)=\tfrac12(1+m\cdot\Lambda(x))$ throughout $K$. If the family separates states, $\Lambda$ is injective and hence an affine isomorphism. The dual affine effects on $B^3$ are exactly the functions $a+b\cdot v$ with $0\le a-|b|$ and $a+|b|\le1$, represented by the usual Hermitian qubit effects $aI+b\cdot\sigma$. This is a \emph{conditional mathematical recognition theorem}: the pure Born table, effect availability, full tomography and no-restriction premise are inputs, not conclusions.
+\end{proof}
+
+\section{The ambiguity survives adaptive projective instruments}
+Define a restricted allowed instrument $\mathcal{M}_m$ with outcomes $s=\pm1$: it reports probability $F_{sm}(T)$ and, on that branch, prepares $v_3(sm)$. Between instrument uses apply any allowed rotation $R\in SO(3)$, possibly selected from the previous recorded outcomes. In a conventional stipulated complex two-level comparison model, use the corresponding unitary Bloch rotation and binary rank-one projective measurement with its usual postmeasurement eigenstate.
+\begin{theorem}[Finite adaptive circuit equality]\label{thm:adaptive}
+For \emph{every} normalized $T\in\KK_3$, every finite adaptive sequence of the specified rotations and measure--reprepare instruments, and every outcome word, the outcome-word probability is exactly the same as that of the conventional complex two-level model initiated with Bloch vector $\tau_3(T)$. In particular the two mixtures in~\eqref{eq:two} remain indistinguishable by every such circuit.
+\end{theorem}
+\begin{proof}
+Before the first measurement, the affine contraction intertwines rotations, $\tau_3(R^{\otimes3}T)=R\tau_3(T)$, and the two models' $F$-probabilities agree by~\eqref{eq:born}. Conditioned on outcome $s$, both descriptions reset their projected Bloch vector to $sm$. These facts persist after any history-dependent choice of the next rotation and measurement. Induction on the length of each outcome word proves equality of the products of conditional probabilities. The additional cubic effects are \emph{not} among the specified instruments, so the theorem makes no claim of equality of the full operational theories.
+\end{proof}
+
+\section{Multipartite closure without ordinary quantum composition}
+Normalize states as $\omega_n=(1,v_3(n))$ in $\RR\oplus V_3$. For every number $r\ge2$ of systems, choose
+\begin{equation}\label{eq:min}
+\KK_3^{\mathrm{min},r}=\conv\left\{\omega_{n_1}\otimes\cdots\otimes\omega_{n_r}: n_j\in S^2\right\}.
+\end{equation}
+This minimal tensor construction is compact, convex, symmetric under system permutations, and associative under grouping by the universal properties of convex hull and product tensors. It is closed under independent preparation of arbitrary allowed mixtures. Product local effects from $\eff_3$ are normalized and nonnegative on each generator and therefore on the full hull; their marginal probabilities are independent of choices of distant local binary tests. In the usual terminology, these composites have only separable preparations and are locally no-signaling~\cite{barrett,eftaxias}. Since the single-site cubic effects already span its affine dual and products span tensor duals, the complete multipartite model is locally tomographic under the \emph{full} effect family. It is not an ordinary complex quantum tensor theory and has no quantum entanglement.
+
+\section{Scientific consequences and limits}
+The example strengthens the nonidentification boundary: even \emph{all} standard pure transition probabilities, exact complex-projective pure geometry, full Levi--Civita holonomy, and complete adaptive readout within a named instrument family do not select the full convex GPT. The necessary additional condition is not merely a scalar holonomy discriminator. One must justify operationally \emph{which measurements are possible}, whether the chosen projective tests are tomographically complete, the permitted reversible and irreversible transformations, and the multi-system composition rule.
+
+The three-site oriented-cycle construction explored elsewhere in the research program can, after additional Euclidean completion and a quotient, supply the mathematical pure manifold used above. The present countermodel shows that even \emph{after} those extra premises the operational completion is not unique. This does not refute a stronger reconstruction which independently derives sharp effects, spectrality, strong symmetry, interference-filter structure, quantum composition, and time dynamics. The published Barnum--M\"uller--Ududec characterization explicitly relies on such additional single-system postulates~\cite{bmu}; no claim that our model satisfies all of them is made.
+
+The investigation used symbolic tensor identities and deterministic numerical tests. It does not contain laboratory data, a derived Born rule, independently calibrated readout, objective time, physical dynamics, classical Hamiltonian mechanics, or a complete prephysical-to-physical correspondence. The model is an adversarial mathematical control, not an ontological candidate selected as nature's theory.
+
+\paragraph{Reproducibility.} The associated archive contains exact symbolic witnesses, full machine-readable results, 1,536 pure-state and 384 mixed-state numerical controls, 768 adaptive word outcomes, scripts and local integrity records. Numerical residuals test implementations; the analytic statements rely on the proofs printed here. Every trial and numerical outlier was retained.
+
+\begin{thebibliography}{9}\small
+\bibitem{orbitopes} R.~Sanyal, F.~Sottile, B.~Sturmfels, \emph{Orbitopes}, Mathematika \textbf{57} (2011), 275--314, \href{https://doi.org/10.1112/S002557931100132X}{doi:10.1112/S002557931100132X}. Precedent for the convex tensor orbit construction, not independent validation of this operational application.
+\bibitem{barrett} J.~Barrett, \emph{Information processing in generalized probabilistic theories}, Phys. Rev. A \textbf{75} (2007), 032304, \href{https://doi.org/10.1103/PhysRevA.75.032304}{doi:10.1103/PhysRevA.75.032304}. Framework context only.
+\bibitem{eftaxias} G.~Eftaxias, M.~Weilenmann, R.~Colbeck, \emph{Multisystem measurements in generalized probabilistic theories and their role in information processing}, Phys. Rev. A \textbf{108} (2023), 062212, \href{https://doi.org/10.1103/PhysRevA.108.062212}{doi:10.1103/PhysRevA.108.062212}. Effect and minimal-composite definitions.
+\bibitem{bmu} H.~Barnum, M.~P.~M\"uller, C.~Ududec, \emph{Higher-order interference and single-system postulates characterizing quantum theory}, New J. Phys. \textbf{16} (2014), 123029, \href{https://doi.org/10.1088/1367-2630/16/12/123029}{doi:10.1088/1367-2630/16/12/123029}. Extra premise boundary.
+\end{thebibliography}
+\end{document}

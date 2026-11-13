@@ -1,0 +1,60 @@
+digraph Ontology {
+graph [rankdir=TB,splines=polyline,overlap=false,pad="0.35",nodesep="0.43",ranksep="0.65",fontname="DejaVu Sans",label="Director A continuation • Ontology dependency map • No physical ontology selected (G1 OPEN)",labelloc=t,fontsize=18];
+node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=10,color="#374151",margin="0.14,0.13"];
+edge [fontname="DejaVu Sans",fontsize=8,color="#6b7280",arrowsize=0.65];
+F [label="Finite oriented
+3-cycle",fillcolor="#e7eeff"];
+L [label="Free integer
+module chosen",fillcolor="#fff2d8"];
+C [label="Exact contrast algebra
+C² = −3 I",fillcolor="#e2f5e3"];
+R [label="Real metric
+imported",fillcolor="#fff2d8"];
+D [label="Two copies
+chosen",fillcolor="#fff2d8"];
+H [label="CP¹ geometry
+conditional",fillcolor="#dff3e8"];
+B [label="Born / squared
+overlap imported",fillcolor="#fff2d8"];
+Q [label="Operational quantum
+theory NOT derived",fillcolor="#fbe4e4"];
+T [label="Composition, effects
+NOT derived",fillcolor="#fbe4e4"];
+E [label="Physical clock /
+dynamics NOT derived",fillcolor="#fbe4e4"];
+M [label="Classical Hamiltonian
+limit NOT derived",fillcolor="#fbe4e4"];
+O [label="Complete physical map
+NOT established",fillcolor="#fbe4e4"];
+K [label="Classical Δ₂
+COUNTERMODEL",fillcolor="#f6e5fa"];
+S [label="Spectrality &
+strong symmetry imported",fillcolor="#ffffff"];
+J [label="Jordan state space
+conditional theorem",fillcolor="#e2f5e3"];
+W [label="Symplectic condition
+imported",fillcolor="#fff2d8"];
+P [label="CPⁿ pure manifold
+conditional selector",fillcolor="#dff3e8"];
+F -> L [label="assumed",color="#6b7280",style=dashed];
+L -> C [label="exact",color="#267543",style=solid];
+F -> K [label="countercompletion",color="#6b7280",style=solid];
+C -> R [label="assumed",color="#6b7280",style=dashed];
+R -> D [label="assumed",color="#6b7280",style=dashed];
+D -> H [label="conditional",color="#6b7280",style=dashed];
+H -> B [label="assumed",color="#6b7280",style=dashed];
+B -> Q [label="OPEN",color="#6b7280",style=dashed];
+K -> Q [label="countercompletion",color="#b13e3e",style=dashed];
+Q -> T [label="OPEN",color="#6b7280",style=dashed];
+Q -> E [label="OPEN",color="#6b7280",style=dashed];
+T -> O [label="OPEN",color="#6b7280",style=dashed];
+E -> M [label="OPEN",color="#6b7280",style=dashed];
+M -> O [label="OPEN",color="#6b7280",style=dashed];
+Q -> O [label="OPEN",color="#6b7280",style=dashed];
+F -> S [label="OPEN",color="#6b7280",style=dashed];
+S -> J [label="conditional",color="#6b7280",style=dashed];
+J -> P [label="conditional",color="#6b7280",style=dashed];
+W -> P [label="conditional",color="#6b7280",style=dashed];
+P -> Q [label="OPEN",color="#6b7280",style=dashed];
+{rank=same; Q; K;}
+}

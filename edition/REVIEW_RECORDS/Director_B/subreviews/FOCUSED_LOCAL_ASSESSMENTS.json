@@ -1,0 +1,100 @@
+[
+  {
+    "id": "DB-LOCAL-01",
+    "profile": "FOCUSED",
+    "scope": "Conditional Bell win model, 19- and 28-round fixed tests, memory and seven-bit randomization",
+    "G1": {
+      "status": "LOCALLY_COMPLETED",
+      "basis": "C paper, earlier B disposition, IBM CHSH and independently authored rational checker"
+    },
+    "G2": {
+      "status": "LOCALLY_COMPLETED",
+      "faithful_case": "C figures reproduced; quantifiers and conditional contracts retained"
+    },
+    "G3": {
+      "status": "LOCALLY_COMPLETED",
+      "adverse_case": "Independent rational-sqrt checks, 27-round adverse bound, history-coupling proof, dyadic failure checks"
+    },
+    "G5": {
+      "status": "LOCALLY_COMPLETED",
+      "checks": "Independent rational-sqrt checks, 27-round adverse bound, history-coupling proof, dyadic failure checks"
+    },
+    "G6": {
+      "status": "LOCAL_HANDOFF_COMPILED",
+      "scoped_findings": [
+        "DB-CHSHM-001",
+        "DB-CHSHM-002",
+        "DB-CHSHM-003"
+      ]
+    },
+    "local_status": "LOCAL_FINISHED",
+    "parent_state_token": "NOT_SUPPLIED",
+    "formal_child_closure": "NOT_CLAIMED",
+    "formal_parent_admission": "NOT_CLAIMED"
+  },
+  {
+    "id": "DB-LOCAL-02",
+    "profile": "FOCUSED",
+    "scope": "Optional stopping and sequential calibration",
+    "G1": {
+      "status": "LOCALLY_COMPLETED",
+      "basis": "Original 19-round result, repeat-block iid endpoint, published Ville inequality"
+    },
+    "G2": {
+      "status": "LOCALLY_COMPLETED",
+      "faithful_case": "Single prespecified window retained; indefinite scanning explicitly ruled out"
+    },
+    "G3": {
+      "status": "LOCALLY_COMPLETED",
+      "adverse_case": "Derive repeated-block false-positive event and likelihood-ratio supermartingale; no finite-time power overclaim"
+    },
+    "G5": {
+      "status": "LOCALLY_COMPLETED",
+      "checks": "Derive repeated-block false-positive event and likelihood-ratio supermartingale; no finite-time power overclaim"
+    },
+    "G6": {
+      "status": "LOCAL_HANDOFF_COMPILED",
+      "scoped_findings": [
+        "DB-CHSHM-004",
+        "DB-CHSHM-005"
+      ]
+    },
+    "local_status": "LOCAL_FINISHED",
+    "parent_state_token": "NOT_SUPPLIED",
+    "formal_child_closure": "NOT_CLAIMED",
+    "formal_parent_admission": "NOT_CLAIMED"
+  },
+  {
+    "id": "DB-LOCAL-03",
+    "profile": "FOCUSED",
+    "scope": "Reciprocal release checker assurance and source provenance",
+    "G1": {
+      "status": "LOCALLY_COMPLETED",
+      "basis": "Current C native verifier, B previous source register, QA Lime R3"
+    },
+    "G2": {
+      "status": "LOCALLY_COMPLETED",
+      "faithful_case": "C checker detects literal G5 failure and recomputation corruption"
+    },
+    "G3": {
+      "status": "LOCALLY_COMPLETED",
+      "adverse_case": "Disposable negative mutations with self-rehash; source-ID union independently checked"
+    },
+    "G5": {
+      "status": "LOCALLY_COMPLETED",
+      "checks": "Disposable negative mutations with self-rehash; source-ID union independently checked"
+    },
+    "G6": {
+      "status": "LOCAL_HANDOFF_COMPILED",
+      "scoped_findings": [
+        "DB-CHSHM-006",
+        "DB-CHSHM-007",
+        "DB-CHSHM-008"
+      ]
+    },
+    "local_status": "LOCAL_FINISHED",
+    "parent_state_token": "NOT_SUPPLIED",
+    "formal_child_closure": "NOT_CLAIMED",
+    "formal_parent_admission": "NOT_CLAIMED"
+  }
+]

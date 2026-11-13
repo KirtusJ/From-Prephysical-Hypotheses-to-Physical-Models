@@ -1,0 +1,272 @@
+\section{Question and results}
+
+Paper G8 assigns to a set of walks of fixed length on a gain graph the squared norm of the sum of the representation matrices of their gains \cite{g8}. It leaves open how the measures at different lengths are related, and records that walk length is not a unitary evolution. The present paper takes the simplest relation between lengths as a requirement and determines its consequences.
+
+\begin{enumerate}[label=(\roman*)]
+\item The measure of a set of walks and the measure of the set of all its continuations by one arc agree up to a fixed factor exactly when the step matrix is a multiple of a unitary matrix on the vectors concerned (Lemma~\ref{lem:cont}).
+\item With trivial gains this happens only for permutations (Proposition~\ref{prop:perm}). On an undirected gain graph the normalized step is then an involution (Proposition~\ref{prop:invol}). For out-degree two and gains of modulus one the digraph is the arc digraph of a digraph with two arcs into and two out of every node, and the gain group contains an element represented by $-1$ (Theorem~\ref{thm:arc}).
+\item A real orthogonal step has a canonical complex structure on the complement of its fixed and reversed vectors, characterized by positivity of the generator and reversed with the step (Proposition~\ref{prop:polar}). The projections onto vertices do not commute with it; on a connected digraph only scalars commute with the step and with these projections (Proposition~\ref{prop:records}).
+\item For the signed arc digraph of a ring the two branches of the step have opposite group velocities (Lemma~\ref{lem:disp}); the position divided by the number of steps converges in law to a group velocity (Theorem~\ref{thm:gjs}, quoted); a gain varying linearly with position translates the quasi-momentum by a fixed amount per step (Proposition~\ref{prop:field}); the group velocity is the derivative of the eigenphase with respect to the holonomy round the ring (Proposition~\ref{prop:twist}).
+\item On a graph in which two adjacent edges lie in exactly one quadrilateral, transport of edges across quadrilaterals is a transport determined by the graph. Its holonomy is trivial exactly for Cayley graphs of elementary abelian $2$-groups (Proposition~\ref{prop:ladder}), and on these the signings with norm-preserving step are the anticommuting ones (Proposition~\ref{prop:clifford}).
+\end{enumerate}
+
+Section~\ref{sec:limits} states what is assumed and what is not obtained. The construction is a test object, filed in the program collection as the constructed trial GH-2. It is not put forward as a physical model.
+
+\section{Setting}\label{sec:setting}
+
+A \emph{gain digraph} is a finite directed graph $D$ with vertex set $V$, in which each arc $e$ has an initial vertex $s(e)$, a terminal vertex $t(e)$ and a gain $\varphi(e)$ in a finite group $G$. Loops are allowed; unless stated otherwise there is at most one arc from a given vertex to a given vertex. Fix a character $\chi\colon G\to\mathrm{U}(1)$. The \emph{step matrix} is
+\[
+A_{yx}=\sum_{e\colon x\to y}\chi(\varphi(e)),\qquad x,y\in V .
+\]
+Switching by $h\colon V\to G$ replaces $\varphi(e)$ by $h(t(e))\varphi(e)h(s(e))^{-1}$ and $A$ by $SAS^{-1}$ with $S$ the diagonal matrix of the numbers $\chi(h(x))$. An undirected gain graph in the sense of \cite{g8} is the case in which arcs come in opposite pairs with inverse gains; then $A=A^*$. A signed digraph is the case $G=\{\pm1\}$ with $\chi$ the identity.
+
+A walk $w=(e_1,\dots,e_j)$ has $t(e_i)=s(e_{i+1})$ and gain $\varphi(w)=\varphi(e_j)\cdots\varphi(e_1)$. An \emph{event} is a set $S$ of walks of one length $j$ from one vertex $x$; its vector $v_S\in\mathbb{C}^V$ has components $v_S(y)=\sum_{w\in S,\,t(w)=y}\chi(\varphi(w))$. Following \cite{g8} put
+\begin{equation}\label{eq:D}
+D(S,S')=\langle v_{S'}|v_S\rangle,\qquad \mu(S)=D(S,S)=\lVert v_S\rVert^2 .
+\end{equation}
+Theorem~4.1 of \cite{g8} derives this form for undirected gain graphs from switching invariance and strong positivity of a rule of second order that vanishes on pairs of walks with different end vertices. Here \eqref{eq:D} is taken as the rule for directed walks; the assumptions of \cite{g8} are carried and listed again in Section~\ref{sec:limits}.
+
+\section{Consistency under continuation}\label{sec:cont}
+
+For an event $S$ of length $j$ let $\operatorname{Ext}S$ be the event consisting of all walks of length $j+1$ whose first $j$ arcs form a walk of $S$. Since the gain of an extended walk is the gain of the last arc times the gain of the walk,
+\begin{equation}\label{eq:ext}
+v_{\operatorname{Ext}S}=A\,v_S .
+\end{equation}
+
+\begin{lemma}\label{lem:cont}
+\begin{enumerate}[label=(\alph*)]
+\item If $A^*A=d\cdot1$ for a number $d>0$, then $D(\operatorname{Ext}S,\operatorname{Ext}S')=d\,D(S,S')$ for all events $S,S'$ of equal length from a common vertex, and the event $\Omega_j(x)$ of all walks of length $j$ from $x$ has $\mu(\Omega_j(x))=d^{\,j}$.
+\item Conversely, if for a number $c>0$ the identity $D(\operatorname{Ext}S,\operatorname{Ext}S')=c\,D(S,S')$ holds for all such events, then $(A^*A)_{yy'}=c\,\delta_{yy'}$ for every pair of vertices $y,y'$ that are end vertices of two walks of equal length from a common vertex. If every two vertices form such a pair, $A^*A=c\cdot1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) follows from \eqref{eq:ext}, and $v_{\Omega_0(x)}$ is the basis vector $e_x$. (b) For single walks $w,w'$ of equal length from $x$ ending at $y,y'$ the vectors are $\chi(\varphi(w))e_y$ and $\chi(\varphi(w'))e_{y'}$, so the identity reads $\langle Ae_{y'}|Ae_y\rangle=c\,\delta_{yy'}$.
+\end{proof}
+
+A gain digraph is called \emph{norm-preserving of degree $d$} if $A^*A=d\cdot1$. Then $U=A/\sqrt d$ is unitary, the normalized measures $\mu(S)/d^{\,j}$ of an event and of all its continuations coincide, and $U^{-1}=U^*$ is the normalized step matrix of the digraph with all arcs reversed and all gains inverted. The condition is a requirement. It fails for a generic gain graph: for the complete graph on four vertices with gain a generator of $\mathbb{Z}_3$ on one oriented edge and trivial gains elsewhere, the one-step events ending at two different vertices have $D=0$ and their continuations have $|D|=1$, and the total measures at lengths $0,1,2$ are $1,3,15$; this example is due to Director~A, and Director~B gives the corresponding criterion on the span of the event vectors. The values are recomputed in the program collection.
+
+\section{What norm preservation imposes}\label{sec:impose}
+
+\begin{proposition}[No transport]\label{prop:perm}
+Let $A$ have non-negative integer entries (trivial gains, with $A_{yx}$ the number of arcs from $x$ to $y$). If $A^*A=d\cdot1$ with $d>0$, then $A=m\,P$ for a permutation matrix $P$ and an integer $m$ with $m^2=d$.
+\end{proposition}
+\begin{proof}
+For $x\ne x'$ the sum $\sum_yA_{yx}A_{yx'}$ of non-negative terms vanishes, so the columns have pairwise disjoint supports. The $|V|$ columns are nonzero, so each support is one row and the rows are distinct. The squared entry is $d$.
+\end{proof}
+With trivial gains a consistent step is therefore deterministic and invertible: a permutation of the vertices, possibly with multiplicity. A consistent step in which some vertex has two different successors requires gains that are not all trivial.
+
+\begin{proposition}[Undirected gain graphs]\label{prop:invol}
+If $A=A^*$ and $A^*A=d\cdot1$, then $A^2=d\cdot1$: the normalized step is an involution, and $v_{\operatorname{Ext}^2S}=d\,v_S$ for every event.
+\end{proposition}
+This is immediate. Examples are the signing of the hypercube used by Huang \cite{huang,g8}; the complete graph on four vertices has no such signing and has one with gains of order four (exhaustive and exact checks in \cite{comp3}). An undirected gain graph thus has no consistent step other than one of period two. A step that is consistent and not an involution needs arcs that are not matched by opposite arcs with inverse gains.
+
+\begin{theorem}[Out-degree two]\label{thm:arc}
+Let $D$ be a gain digraph with at most one arc from any vertex to any vertex, and suppose $A^*A=2\cdot1$. Then:
+\begin{enumerate}[label=(\alph*)]
+\item every vertex has two outgoing and two incoming arcs;
+\item the vertices fall into pairs $\{x,x'\}$ with a common set of successors $\{y,y'\}$, the pairs $\{y,y'\}$ so obtained form a second partition of $V$, and $x,x'$ are the only predecessors of $y$ and of $y'$;
+\item for each such block the gains satisfy
+\begin{equation}\label{eq:zigzag}
+\chi\bigl(\varphi(x\to y)\,\varphi(x'\to y)^{-1}\,\varphi(x'\to y')\,\varphi(x\to y')^{-1}\bigr)=-1 ;
+\end{equation}
+\item $D$ is the arc digraph of a digraph $D_0$, possibly with loops and multiple arcs, in which every node has two incoming and two outgoing arcs: the vertices of $D$ are the arcs of $D_0$, and there is an arc of $D$ from $a$ to $b$ exactly when $a$ ends at the node at which $b$ begins.
+\end{enumerate}
+Conversely, the arc digraph of such a $D_0$ with gains satisfying \eqref{eq:zigzag} at every node is norm-preserving of degree two. In particular $|V|$ is even, and the image of $\chi$ contains $-1$.
+\end{theorem}
+\begin{proof}
+The diagonal entry $(A^*A)_{xx}$ is the number of arcs leaving $x$, since the gains have modulus one; so it is $2$. As $A/\sqrt2$ is a square matrix with orthonormal columns it is unitary, hence $AA^*=2\cdot1$ and every vertex has two incoming arcs. For $x\ne x'$,
+\[
+0=(A^*A)_{xx'}=\sum_{y}\overline{A_{yx}}\,A_{yx'},
+\]
+a sum of one number of modulus one for each common successor $y$. One such number does not vanish, so $x$ and $x'$ have no common successor or the same two successors $y,y'$; in the second case $\overline{A_{yx}}A_{yx'}+\overline{A_{y'x}}A_{y'x'}=0$, which is \eqref{eq:zigzag}. A vertex $y$ has two predecessors $x,x'$; they share $y$, hence share both successors $y,y'$; then $x,x'$ are two predecessors of $y'$, hence all of them. This gives (b) and (c). For (d) let the nodes of $D_0$ be the blocks $\beta=(\{x,x'\},\{y,y'\})$. Each vertex $v$ of $D$ is a successor in exactly one block $\beta$ and a predecessor in exactly one block $\beta'$; regard $v$ as an arc of $D_0$ from $\beta$ to $\beta'$. A node then has the two outgoing arcs $y,y'$ and the two incoming arcs $x,x'$, and $D$ has an arc from $a$ to $b$ exactly when $a$ is a predecessor and $b$ a successor in one block. The converse is the same computation read backwards.
+\end{proof}
+
+Equation \eqref{eq:zigzag} has the following invariant meaning. If $w$ and $w'$ are walks of equal length from a common vertex to $x$ and to $x'$, the pair holonomies of their continuations to $y$ and of their continuations to $y'$ differ by the factor $-1$: where the two walks arrive with the same phase at one successor they arrive with opposite phases at the other. The internal alternative at each node of $D_0$ (which of the two incoming arcs was used) and the element $-1$ are consequences of consistency, branching and the modulus-one gains. They are not selections among number systems: the block $\bigl(\begin{smallmatrix}1&1\\1&-1\end{smallmatrix}\bigr)$ is real, and gains in $\mathbb{Z}_3$ admit no norm-preserving digraph of degree two. Exhaustive enumeration on at most six vertices agrees with the theorem (Table~\ref{tab:enum}).
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrrrrrr@{}}\toprule
+gains & $\mathbb{Z}_2$ & $\mathbb{Z}_2$ & $\mathbb{Z}_2$ & $\mathbb{Z}_2$ & $\mathbb{Z}_2$ & $\mathbb{Z}_4$ & $\mathbb{Z}_4$ & $\mathbb{Z}_3$ & $\mathbb{Z}_3$\\
+vertices & 2 & 3 & 4 & 5 & 6 & 3 & 4 & 4 & 6\\\midrule
+matrices with $A^*A=2$ & 8 & 0 & 1152 & 0 & 691200 & 0 & 73728 & 0 & 0\\
+of these with the block structure & 8 & & 1152 & & 691200 & & 73728 & & \\\bottomrule
+\end{tabular}
+\caption{All matrices with two entries of the stated group of roots of unity in each column, the remaining entries zero, and pairwise orthogonal columns \cite{comp3}.}\label{tab:enum}
+\end{table}
+
+\begin{remark}[Higher degree]
+For a general degree the supports of the columns need not be equal or disjoint; Severini gives a necessary condition for a digraph to carry a unitary matrix and shows that the arc digraph of a digraph does so exactly when that digraph is Eulerian \cite{severini}. On an arc digraph with $d$ arcs into and out of every node the condition $A^*A=d$ says that the $d\times d$ block of gains at each node has orthogonal columns. For $d=3$ no real block exists, because two vectors with three entries $\pm1$ have an odd inner product; the block with entries $e^{2\pi i ab/3}$ has gains in $\mathbb{Z}_3$.
+\end{remark}
+
+\section{The complex structure of a reversible real step}\label{sec:polar}
+
+Let $U$ be an orthogonal map of a finite-dimensional real inner-product space $E$; for a signed digraph that is norm-preserving, $U=A/\sqrt d$ on $\mathbb{R}^V$. Put
+\[
+C=\tfrac12(U+U^{T}),\qquad K=\tfrac12(U-U^{T}),\qquad E_0=\ker K,\qquad E_1=E_0^{\perp}.
+\]
+
+\begin{proposition}[Polar structure]\label{prop:polar}
+\begin{enumerate}[label=(\alph*)]
+\item $E_0=\ker(U-1)\oplus\ker(U+1)$, and $E_1$ is invariant under $U$.
+\item On $E_1$ the map $J=K\,|K|^{-1}$, with $|K|=(K^TK)^{1/2}$, is orthogonal, satisfies $J^2=-1$ and commutes with $U$; and
+\begin{equation}\label{eq:polar}
+U|_{E_1}=\cos\Theta+J\sin\Theta,\qquad \Theta=\arccos\bigl(C|_{E_1}\bigr),
+\end{equation}
+where $\Theta$ is symmetric, commutes with $J$ and has spectrum in $(0,\pi)$.
+\item If $J'$ is an orthogonal map of $E_1$ with $J'^2=-1$ that commutes with $U$, and $U|_{E_1}=\cos\Theta'+J'\sin\Theta'$ for a symmetric $\Theta'$ commuting with $J'$ with spectrum in $(0,\pi)$, then $J'=J$.
+\item For $U^{-1}$ in place of $U$ the spaces $E_0,E_1$ and $\Theta$ are unchanged and $J$ is replaced by $-J$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+$U$ commutes with $U^T=U^{-1}$, so $C$ and $K$ commute, $C$ is symmetric, $K$ is skew, and $1=UU^T=(C+K)(C-K)=C^2-K^2$, that is, $K^TK=1-C^2$. (a) $Kf=0$ means $Uf=U^{-1}f$, that is, $U^2f=f$; as $U$ is diagonalizable over $\mathbb{C}$ this is the sum of the eigenspaces for $1$ and $-1$. $E_0$ is invariant under $U$ and $U^T$, hence so is $E_1$. (b) On $E_1$ the map $|K|$ is symmetric, positive and invertible, and commutes with $K$. Thus $J^T=-|K|^{-1}K=-J$, $J^2=K^2|K|^{-2}=-1$ and $J^TJ=1$. $J$ is a function of $U$ and $U^T$ and commutes with $U$. On $E_1$ one has $1-C^2=|K|^2>0$, so the spectrum of $C$ lies in $(-1,1)$, $\Theta$ is defined with $\sin\Theta=(1-C^2)^{1/2}=|K|$, and $\cos\Theta+J\sin\Theta=C+K=U$. (c) $J'$ commutes with $U$ and $U^{-1}=U^T$. Since $(J'\sin\Theta')^T=-J'\sin\Theta'$, the skew part of $U$ is $K=J'\sin\Theta'$, whence $K^TK=\sin^2\Theta'$. The positive root is unique, so $\sin\Theta'=|K|$ and $J'=K|K|^{-1}$. (d) $U^{-1}=U^T=C-K$.
+\end{proof}
+
+With $J$ as multiplication by $i$ the space $E_1$ is a complex inner-product space of half the dimension on which $U=e^{i\Theta}$ with a positive generator. The complex structure is thus fixed by the step and the direction of the step; no complex number enters the data. Other complex structures commuting with $U$ exist when $U$ has several rotation planes: reversing $J$ on some of them gives one, with a generator that is negative there (an instance is in \cite{comp3}). That a real quantum theory needs an operator of square $-1$ commuting with the observables was argued by Stueckelberg \cite{stueckelberg}; for an irreducible real representation of the Poincar\'e group with non-negative squared mass Moretti and Oppio prove the existence and uniqueness up to sign of an invariant complex structure commuting with the observables generated by the representation \cite{mo}. Proposition~\ref{prop:polar} is the corresponding elementary statement for a single orthogonal map and claims no novelty.
+
+\begin{remark}[Directed cycles]\label{rem:cycles}
+For the cyclic permutation $P$ of $n$ vertices, a norm-preserving step with trivial gains (Proposition~\ref{prop:perm}), $E_0$ contains the constant vector and, for even $n$, the alternating vector. On the vectors of zero sum $J=C(-C^2)^{-1/2}$ with $C=P-P^T$ is therefore defined for odd $n$, and for even $n$ only on the complement of the alternating vector. For $n=3$, $C^2=-3$ on that space. These are the structures found by Directors A, B and G; Proposition~\ref{prop:polar} places them as the case of a permutation and shows that the dependence on the parity of $n$ is the presence of the eigenvalue $-1$.
+\end{remark}
+
+\begin{proposition}[Records]\label{prop:records}
+Let $D$ be a gain digraph with real gains whose underlying graph is connected in which $A_{yx}\ne0$ for every arc, and let $X$ be a real matrix that commutes with $A$ and with the projection $e_ye_y^T$ onto every vertex. Then $X$ is a real multiple of the identity. In particular no map of square $-1$ commutes with the step and with the vertex projections.
+\end{proposition}
+\begin{proof}
+$X$ commutes with all $e_ye_y^T$ and is diagonal. Then $(XA-AX)_{yx}=(X_{yy}-X_{xx})A_{yx}$, so $X_{yy}=X_{xx}$ along every arc, and $X$ is constant because the underlying graph is connected.
+\end{proof}
+
+In the rule \eqref{eq:D} the end vertices are the records. Proposition~\ref{prop:records} says that the complex structure of Proposition~\ref{prop:polar} is not compatible with them: the indicator of a vertex is not a complex-linear observable for $J$. For the ring digraph of Section~\ref{sec:ring} with $5$ to $8$ sites the operator norm of the commutator of $J$ with a vertex projection lies between $0.82$ and $0.93$, and the commutant of the step and the projections onto sites, each of dimension two, is also one-dimensional \cite{comp3}. For the three-cycle the compressed vertex projection and $J$ have a commutator of Frobenius norm $2\sqrt2/3$. A real norm-preserving model with its records is therefore a real theory, and the complex structure of its step is not a structure of the theory. With a complex character the scalars are complex from the start, by the choice of $\chi$.
+
+\section{The signed arc digraph of a ring}\label{sec:ring}
+
+Let $D_0$ be the ring with sites $x\in\mathbb{Z}_N$, $N\ge3$, and arcs from each site to its two neighbours; the same definitions apply to $\mathbb{Z}$. The vertices of its arc digraph $D$ are written $(x,R)$ and $(x,L)$: the arc arriving at $x$ from $x-1$ and from $x+1$. From either of them arcs lead to $(x+1,R)$ and to $(x-1,L)$. All gains are $+1$ except the gain $-1$ on the arcs from $(x,L)$ to $(x-1,L)$. By Theorem~\ref{thm:arc} this signed digraph is norm-preserving of degree two; $U=A/\sqrt2$ is orthogonal. A second signing, with the gain $-1$ on the arcs from $(x,L)$ to $(x+1,R)$ instead, is not switching equivalent to the first: the closed walk of length two has gain $+1$ in the first and $-1$ in the second \cite{comp3}. The first is used below.
+
+On vectors $f(x,c)=e^{ikx}u_c$ the step acts by
+\begin{equation}\label{eq:Uk}
+U(k)=\frac1{\sqrt2}\begin{pmatrix}e^{-ik}&e^{-ik}\\ e^{ik}&-e^{ik}\end{pmatrix}.
+\end{equation}
+
+\begin{lemma}\label{lem:disp}
+The eigenvalues of $U(k)$ are $e^{-i\omega(k)}$ and $-e^{i\omega(k)}$, where
+\[
+\omega(k)=\arcsin\bigl(\sin k/\sqrt2\bigr)\in[-\pi/4,\pi/4].
+\]
+The derivatives with respect to $k$ of the eigenphases $\omega(k)$ and $\pi-\omega(k)$ are $v(k)$ and $-v(k)$,
+\[
+v(k)=\frac{\cos k}{\sqrt{1+\cos^2k}}\in\Bigl[-\tfrac1{\sqrt2},\tfrac1{\sqrt2}\Bigr].
+\]
+\end{lemma}
+\begin{proof}
+The trace of \eqref{eq:Uk} is $-i\sqrt2\sin k$ and the determinant is $-1$, so the eigenvalues are $\pm\sqrt{1-\tfrac12\sin^2k}-\tfrac{i}{\sqrt2}\sin k$. Differentiating $\sin\omega=\sin k/\sqrt2$ gives $v$.
+\end{proof}
+
+\begin{theorem}[Grimmett, Janson and Scudo]\label{thm:gjs}
+For a walk on $\mathbb{Z}$ generated by a translation-invariant unitary step with a finite internal space, started in a vector of finite support, the position $X_t$ after $t$ steps, with distribution given by the squared moduli of the components, satisfies: $X_t/t$ converges in law to the distribution of the group velocity, the derivative of the eigenphase with respect to $k$ on each branch, weighted by the squared modulus of the component of the initial vector on that branch and averaged over $k$ \cite{gjs}; see also \cite{suzuki}.
+\end{theorem}
+
+For the digraph $D$ on $\mathbb{Z}$ the distribution of $X_t$ in Theorem~\ref{thm:gjs} is the normalized pair measure \eqref{eq:D} of the walks of length $t$ by end site. The limit is the distribution of the positions, divided by $t$, of points that move on the lines $x=x_0\pm v(k)t$ with $k$ constant. These are the solutions of Hamilton's equations for the functions $h_\pm(x,k)=\pm\omega(k)$ on the cylinder with coordinates $(x,k)$ and the form $dx\wedge dk$. For the start vertex $(0,R)$ the mean and the second moment of the limit are both $1-1/\sqrt2=0.292893$; the computed moments of $X_t/t$ at $t=400$ are $0.292059$ and $0.292896$ (Table~\ref{tab:weak}). A packet concentrated near $k_0$ on the first branch moves with velocity $v(k_0)$ (Table~\ref{tab:packet}).
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrr@{}}\toprule
+$t$ & 50 & 100 & 200 & 400\\\midrule
+mean of $X_t/t$ & $0.284700$ & $0.289756$ & $0.291266$ & $0.292059$\\
+second moment of $X_t/t$ & $0.293128$ & $0.292942$ & $0.292906$ & $0.292896$\\\bottomrule
+\end{tabular}
+\caption{Walk from the vertex $(0,R)$ on a ring of $1024$ sites. Limit values $1-1/\sqrt2$ for both rows, from Lemma~\ref{lem:disp} and Theorem~\ref{thm:gjs} \cite{comp3}.}\label{tab:weak}
+\end{table}
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrr@{}}\toprule
+$k_0$ & $0.3$ & $1.0$ & $2.2$ & $-0.8$\\\midrule
+displacement of the centroid per step & $0.69059$ & $0.47492$ & $-0.50677$ & $0.57129$\\
+$v(k_0)$ & $0.69077$ & $0.47535$ & $-0.50719$ & $0.57165$\\\bottomrule
+\end{tabular}
+\caption{Packets on the first branch with Gaussian weight of width $0.03$ in $k$, over $300$ steps on a ring of $2048$ sites \cite{comp3}.}\label{tab:packet}
+\end{table}
+
+\subsection{A gain varying linearly with position}
+Let $\Phi$ be a real number, with $N\Phi\in2\pi\mathbb{Z}$ on a ring, and multiply the gain of every arc that leaves site $x$ by $e^{-i\Phi x}$; this requires gains in a cyclic group of order $2\pi/\Phi$ or a multiple, and the character $\chi$ is no longer real. The step becomes $U_\Phi=U\,M_\Phi$ with $M_\Phi$ the multiplication by $e^{-i\Phi x}$. Let $\mathcal{T}$ be the translation $(\mathcal{T}f)(x,c)=f(x-1,c)$, which has the eigenvalue $e^{-ik}$ on the vectors of \eqref{eq:Uk}.
+
+\begin{proposition}[Translation of the quasi-momentum]\label{prop:field}
+$U_\Phi^{-t}\,\mathcal{T}\,U_\Phi^{\,t}=e^{i\Phi t}\,\mathcal{T}$ for every integer $t$. Hence the distribution of the quasi-momentum $k$ in the vector $U_\Phi^{\,t}f$ is the distribution in $f$ translated by $-\Phi t$. Two walks of equal length with the same end vertices that differ by the exchange of one step to the right and one adjacent step to the left have gains differing by the factor $e^{\pm2i\Phi}$, independently of position.
+\end{proposition}
+\begin{proof}
+$\mathcal{T}$ commutes with $U$, and $\mathcal{T}M_\Phi\mathcal{T}^{-1}$ is multiplication by $e^{-i\Phi(x-1)}$, so $\mathcal{T}U_\Phi=e^{i\Phi}U_\Phi\mathcal{T}$. The spectral measure of $\mathcal{T}$ in $U_\Phi^tf$ is therefore that in $f$ rotated by $e^{i\Phi t}$, and $e^{-ik}\mapsto e^{i\Phi t}e^{-ik}$ is $k\mapsto k-\Phi t$. Exchanging the two steps changes the site left at the intermediate time by two.
+\end{proof}
+
+The first statement is the equation $\dot k=-\partial h/\partial x$ for $h(x,k)=\pm\omega(k)+\Phi x$, and it holds exactly for every vector. The last statement expresses the linear gain as a uniform holonomy of pairs of walks. The companion equation $\dot x=\pm v(k)$ is not exact. In computed instances a packet on the first branch follows it over one period $2\pi/\Phi$ of $k$, returning to its initial vector (Table~\ref{tab:field}); the centroid deviates from the integrated velocity by about $0.6$ site, independently of $\Phi$, of which the change of the connection $\operatorname{Im}\langle u|\partial_ku\rangle$ of the branch eigenvector accounts for $88$ and $94$ per cent at the periods $64$ and $256$. A criterion of $0.02$ site for the remainder, set before the computation, was not met (remainders $0.075$ and $0.038$). Walks with such gains have been realized experimentally and analysed by Genske et al.\ and Cedzich et al., who show that the behaviour at long times depends on the arithmetic nature of $\Phi/2\pi$, with revivals for rational values \cite{genske,cedzich}. The ray description above is a statement about times of the order of one period.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}p{0.47\textwidth}rrr@{}}\toprule
+period $2\pi/\Phi$ (steps) & 64 & 128 & 256\\\midrule
+deviation of the $k$-distribution from its translate & $1.3\times10^{-12}$ & $2.1\times10^{-12}$ & $3.4\times10^{-12}$\\
+excursion of the centroid (sites) & $16.06$ & $31.99$ & $63.97$\\
+$(\omega_{\max}-\omega_{\min})/\Phi$ & $16$ & $32$ & $64$\\
+largest deviation of the centroid from the ray (sites) & $0.646$ & $0.618$ & $0.611$\\
+one minus the overlap with the initial vector after one period & $4\times10^{-10}$ & $2\times10^{-14}$ & $4\times10^{-14}$\\\bottomrule
+\end{tabular}
+\caption{Packet at $k_0=1$ on the first branch, ring of $2048$ sites. The ray is $\dot k=-\Phi$, $\dot x=v(k)$, integrated with the midpoint rule \cite{comp3}.}\label{tab:field}
+\end{table}
+
+\subsection{Gains of small order}
+Paper G8 shows that the pair measure is independent of the choice of faithful character only for cyclic gain groups of order $1,2,3,4,6$ \cite{g8}. A linear gain with these orders has $\Phi=\pi,2\pi/3,\pi/2,\pi/3$, far from the regime of Table~\ref{tab:field}. A walk from one vertex then stays within a root-mean-square distance of about six sites over four periods, with return probabilities such as $0.5625$ after $4$ steps for order $4$ and $0.7656$ after $6$ steps for order $3$ \cite{comp3}. A weak mean field can be imitated with gains of order four by a staircase, the gain $e^{-i(\pi/2)\lfloor x/L\rfloor}$ on arcs leaving site $x$, with mean slope $\pi/2L$. It does not reproduce the rays of the mean field: over an eighth of the period a packet at $k_0=0.3$ is displaced by $3.80$ sites for $L=16$ and $12.00$ for $L=64$, against $5.53$ and $22.26$ for the linear gain and $5.57$ and $22.28$ for the ray, and $26$ and $39$ per cent of the measure lies to the left of the starting point \cite{comp3}. In these instances the ray limit with a force is obtained only with gains whose order grows as the field decreases, for which the measure depends on the choice of character.
+
+\subsection{Velocity and the holonomy round the ring}
+Multiply the gain of every step to the right by $e^{i\theta/N}$ and of every step to the left by $e^{-i\theta/N}$. A closed walk that winds once round the ring acquires the factor $e^{\pm i\theta}$, and for $\theta\notin2\pi\mathbb{Z}$ the change is not a switching.
+
+\begin{proposition}\label{prop:twist}
+The step with these gains acts on the vectors of \eqref{eq:Uk} by $U(k-\theta/N)$, $k\in(2\pi/N)\mathbb{Z}$. The derivative of each eigenphase with respect to $\theta$ is $-1/N$ times the group velocity of its branch at $k-\theta/N$.
+\end{proposition}
+\begin{proof}
+The two rows of \eqref{eq:Uk} are multiplied by $e^{i\theta/N}$ and $e^{-i\theta/N}$.
+\end{proof}
+The quasi-momentum is a character of the group of translations, which is the group of deck transformations of the covering of the ring by $\mathbb{Z}$; the velocity is the response of the eigenphase to the holonomy of that covering. A finite-difference check on $12$ sites agrees to $4\times10^{-7}$ \cite{comp3}.
+
+\section{Transport supplied by the carrier}\label{sec:ladder}
+
+Proposition~3.1 of \cite{g7} shows that a transport on a graph is additional data. There is a class of graphs with a transport of their own. A \emph{rectagraph} is a connected graph without triangles in which any two vertices at distance two have exactly two common neighbours. For an edge $ab$ define the bijection $\tau_{ab}$ from the neighbours of $a$ to the neighbours of $b$ by $\tau_{ab}(b)=a$ and, for a neighbour $c\ne b$ of $a$, $\tau_{ab}(c)=d$, the common neighbour of $b$ and $c$ other than $a$. This carries the edge $ac$ across the quadrilateral $a,b,d,c$ to the edge $bd$; it is the construction of Schild's ladder with quadrilaterals of the graph in place of geodesic parallelograms. Composition along walks gives a transport with values in permutations of the $k$ edges at a vertex, $k$ the valency, and a holonomy group at each vertex.
+
+\begin{proposition}\label{prop:ladder}
+The ladder transport of a rectagraph $\Gamma$ of valency $k$ has trivial holonomy if and only if $\Gamma$ is the Cayley graph of an elementary abelian $2$-group with respect to $k$ generators.
+\end{proposition}
+\begin{proof}
+Let the holonomy be trivial. Label the edges at a base vertex by $1,\dots,k$ and transport the labels; every edge $ab$ receives one label, the same from $a$ and from $b$ because $\tau_{ab}(b)=a$. The edges with label $i$ form a perfect matching; let $s_i$ exchange the ends of each of its edges. For $i\ne j$ and a vertex $a$ put $c=s_ia$, $b=s_ja$ and let $d$ be the common neighbour of $b$ and $c$ other than $a$. Then $d=\tau_{ab}(c)$ has label $i$ at $b$, so $d=s_is_ja$, and $d=\tau_{ac}(b)$ has label $j$ at $c$, so $d=s_js_ia$. The involutions $s_i$ commute and generate an elementary abelian $2$-group, transitive on the vertices since $\Gamma$ is connected, hence regular; $\Gamma$ is its Cayley graph. Conversely, in a Cayley graph of such a group that is a rectagraph, $\tau_{a,a+s}(a+s')=a+s+s'$, and the label $s'$ is preserved.
+\end{proof}
+
+Hypercubes and the folded cube with $16$ vertices are examples with trivial holonomy. The incidence graph of the biplane with seven points and blocks of size four is a rectagraph with $14$ vertices and valency $4$; its ladder holonomy group is the full symmetric group of the four edges at a vertex \cite{comp3}. In the first case the graph supplies $k$ classes of parallel edges and no further transport; in the second it supplies a transport with values in a group of permutations. Neither supplies a representation in which the pair measure of \cite{g8} would have interference with both signs: the permutation representation contains the trivial one. By \cite{g8} the measure belonging to the indicator of the identity is the count of coincidences of walks on the covering graph defined by the transport, the mean of the measures of the irreducible representations weighted by their dimensions.
+
+\begin{proposition}\label{prop:clifford}
+Let $\Gamma$ be a rectagraph that is the Cayley graph of an elementary abelian $2$-group with generators $s_1,\dots,s_k$, with a sign on every edge, and let $\gamma_i$ be the symmetric matrix carrying the signs of the edges of class $i$, so that $\gamma_i^2=1$ and $A=\gamma_1+\dots+\gamma_k$. Then:
+\begin{enumerate}[label=(\alph*)]
+\item $A^2=k\cdot1$ if and only if every quadrilateral of $\Gamma$ has an odd number of negative edges, if and only if $\gamma_i\gamma_j=-\gamma_j\gamma_i$ for all $i\ne j$;
+\item in that case $\varpi=\gamma_1\gamma_2\cdots\gamma_k$ satisfies $\varpi^2=(-1)^{k(k-1)/2}$ and $\varpi\gamma_i=(-1)^{k-1}\gamma_i\varpi$. For $k\equiv3$ modulo $4$ it is an orthogonal map of square $-1$ commuting with every $\gamma_i$, and exchanging two of the classes in the product replaces it by its negative.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) $A^2=k+\sum_{i<j}N_{ij}$ with $N_{ij}=\gamma_i\gamma_j+\gamma_j\gamma_i$, whose entries are zero except between $a$ and $s_is_ja$. The elements $s_is_j$, $i<j$, are distinct and different from the identity, since otherwise two vertices at distance two would have more than two common neighbours; so the matrices $N_{ij}$ have disjoint supports off the diagonal, and $A^2=k$ exactly when every $N_{ij}=0$. The entry of $N_{ij}$ between $a$ and $s_is_ja$ is the sum of the sign products of the two paths of length two, which vanishes exactly when the quadrilateral $a,s_ja,s_is_ja,s_ia$ has an odd number of negative edges; every quadrilateral of $\Gamma$ is of this form. (b) Reversing the order of the factors of $\varpi$ uses $k(k-1)/2$ transpositions and gives its inverse; moving $\gamma_i$ through $\varpi$ passes $k-1$ other factors.
+\end{proof}
+
+By Proposition~\ref{prop:invol} the step $A/\sqrt k$ is an involution. The matrices $\gamma_i$ satisfy the relations of a Clifford algebra with $k$ generators of square $+1$; that Huang's matrices are of this kind is shown by Mathews \cite{mathews}, and Alon and Zheng determine which folded cubes have such signings \cite{az}; the folded cube with $16$ vertices has one (the linear system over the field of two elements is consistent \cite{comp3}). For the cube, $k=3$, the signings with every face negative form one switching class, the algebra generated by $\gamma_1,\gamma_2,\gamma_3$ has dimension $8$ with centre spanned by $1$ and $\varpi$, and $\varpi^2=-1$ \cite{comp3}: the three direction operators with their oriented product as imaginary unit are a copy of the complex $2\times2$ matrices, and the sign of the imaginary unit is the orientation of the three classes. This is the known description of the Pauli matrices. It selects nothing here: the number of classes is an input, and choosing $k\equiv3$ modulo $4$ is choosing the complex case.
+
+\section{Assumptions and limits}\label{sec:limits}
+
+\emph{Assumed.} (1) The rule \eqref{eq:D}, with the assumptions of \cite{g8}: second order, end vertices as records, strong positivity, the group and the character. (2) Consistency under continuation in the form $A^*A=d$. It is a natural relation between the measures at successive lengths and is satisfied by counting on a digraph of constant out-degree; it is not derived from the rule, and the generic gain graph violates it. (3) Gains of modulus one with no further weights, and for Theorem~\ref{thm:arc} the out-degree two. (4) In Section~\ref{sec:ring} the ring: the sites, their order and the translation symmetry are put in, and with them the cylinder on which the rays run. (5) For a force, gains depending linearly on position, in a group whose order grows as the force decreases.
+
+\emph{Not obtained.} (6) \emph{A clock.} The parameter is the number of steps. It has no unit, and nothing inside the construction measures it. (7) \emph{A generator.} The eigenphases are defined modulo $2\pi$; a Hamiltonian is a choice of logarithm. Proposition~\ref{prop:polar} gives a positive one for a real step, for a complex structure that the records do not respect (Proposition~\ref{prop:records}). (8) \emph{Selection of complex amplitudes.} The degree-two theorem is satisfied by real gains; the complex structure of the step is not a structure of the theory with its records; in Proposition~\ref{prop:clifford} the type follows the number of classes, which is supplied. (9) \emph{Classical mechanics.} The rays are those of the dispersion function of the given step on a cylinder supplied with the ring. They concern one walk without interaction, in one dimension, over times of the order of one period, and are verified in instances; the equation for the position is not proved here with an error bound. No mass, no potential other than a linear one and no canonical pair other than site and quasi-momentum arise. With gains of the orders for which the measure is independent of the character, the instances examined show no ray limit with a force. (10) \emph{Composition.} Not treated. The product of \cite{g8} applies to the rule; the relation between the events of the product over all lengths and those of the factors is restricted by parity when both factors are bipartite, as Director~G observed. (11) \emph{Uniqueness.} Theorem~\ref{thm:arc} leaves the digraph $D_0$ and the switching class of the gains free; two inequivalent signings exist already on the ring.
+
+\section{Status of the statements}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.38\textwidth}@{}}\toprule
+Statement & Kind\\\midrule
+Lemmas~\ref{lem:cont}, \ref{lem:disp}; Propositions~\ref{prop:perm}, \ref{prop:invol}, \ref{prop:polar}, \ref{prop:records}, \ref{prop:field}, \ref{prop:twist}, \ref{prop:ladder}, \ref{prop:clifford}; Theorem~\ref{thm:arc} & derived results, proofs given here\\
+Theorem~\ref{thm:gjs} & quoted from \cite{gjs}\\
+Tables~\ref{tab:enum} to \ref{tab:field}; the values in Sections~\ref{sec:polar}, \ref{sec:ring} and \ref{sec:ladder} & computed instances\\\bottomrule
+\end{tabular}
+\end{center}
+
+The components are known: unitary matrices on digraphs and arc digraphs, walks with an internal alternative and their weak limits, walks with a linear phase, the complex structure of a real orthogonal map, and the Clifford relations of signed hypercubes. The paper assembles them for the pair measure on a gain digraph and claims no priority for any of them. The following are not established.
+\begin{enumerate}[label=(\roman*)]
+\item A reason for consistency under continuation, for gains of modulus one, or for the ring.
+\item An error bound for the position equation of the rays, and any ray limit with a force for gains of bounded order.
+\item A clock, a selection of complex amplitudes, a composition rule compatible with the step, and any correspondence between the quantities defined here and physical preparations, records or clocks.
+\item The statements have not been refereed, and the numerical tables are not error enclosures.
+\end{enumerate}

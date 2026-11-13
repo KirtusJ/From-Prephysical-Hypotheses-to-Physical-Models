@@ -1,0 +1,51 @@
+{
+  "issued_date_bc": "2026-11-12",
+  "input_sources": {
+    "A_previous_overlay": {
+      "filename": "Director_A_Grounding_Overlay_2026-11-12.zip",
+      "bytes": 418663,
+      "sha256": "7f42ed74d987fdc097a32a2127f3c7d99eb6674ddeac249a8ff7172dd91e4375"
+    },
+    "B_packet": {
+      "filename": "Director_B_Initial_External_Grounding_2026-11-12_B1(1).zip",
+      "bytes": 121298,
+      "sha256": "390b68f0ecd1b295f73068cca8b1ae385a9ed20252e540f510cc523709ce4b64"
+    },
+    "G_packet": {
+      "filename": "FPHPM_Director_G_Initial_Grounding_2026-11-12(1).zip",
+      "bytes": 392067,
+      "sha256": "7c81cae1863b036648d4cede76cb4a8f8ab2410aa6fb1927cbdf37576a8c0fef"
+    },
+    "original_research_collection": {
+      "filename": "files(15).zip",
+      "bytes": 41438879,
+      "sha256": "7792807ad4558ee75a32d1533977936578fbbe88e66dea0d7f61c0940744949e"
+    },
+    "PCP_enterprise": {
+      "filename": "PCP_1.0_Enterprise_Edition.zip",
+      "bytes": 2534245,
+      "sha256": "1282bcd3f0ec8bd22bfb0575a6cf7e3e38f29f8cbdb278082dcfd317da907be7"
+    },
+    "counterexample_session_packet": {
+      "filename": "Toy_Universe_Session_Packet(1).zip",
+      "bytes": 331168,
+      "sha256": "6c512b6a54c05b568afff95d0e73c15e4a72284234badb5c2c64da31bb891cb2"
+    }
+  },
+  "local_verification": {
+    "PCP_1.0_enterprise": "PASS, local 10 entries only",
+    "ACR_1.0_implementation": "PASS, local 57 payloads only",
+    "Director_A_prior": "PASS, local 23 payloads and independent rerun of original numeric script",
+    "Director_B": "PASS, local 15 payloads; geometry, exact algebra, mutation controls reexecuted",
+    "Director_G": "PASS, local 13 payloads; exact and 96 Rodrigues tests reexecuted",
+    "A2": "PASS, exact SymPy controls + 271 retained float trials; no independent referee"
+  },
+  "PCP_fingerprint_edition": "6e0cd24f626c065eb5d00ad976caade59f4da286a4b1203362feb79a98a8d1f6",
+  "ACR_release_manifest_fingerprint": "42341ddf38a21a659d974af7d27c739605dd192b2d16c76ef1ae2dcdbdd41c79",
+  "external_evidence": "see SOURCE_LEDGER.md; published mathematical theorems checked at stated depth; no peer review of this new manuscript",
+  "unavailable_primary_source": [
+    "Director_Z_Z1.zip",
+    "G7 full PDF"
+  ],
+  "global_limit": "Local integrity is not source authentication or physical validity; A/B/G are model-assisted reports, not independent experimental replications"
+}

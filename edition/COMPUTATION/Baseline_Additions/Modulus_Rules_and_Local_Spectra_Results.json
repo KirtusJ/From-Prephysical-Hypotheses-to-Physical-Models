@@ -1,0 +1,577 @@
+{
+ "M2_amplitudes_a_and_1_at_one_site_are_achievable": {
+  "passed": true,
+  "witnesses": {
+   "1": {
+    "length": 2,
+    "site": 0,
+    "plus_walks_from_left": 1,
+    "plus_walks_from_right": 1
+   },
+   "2": {
+    "length": 3,
+    "site": 1,
+    "plus_walks_from_left": 2,
+    "plus_walks_from_right": 1
+   },
+   "3": {
+    "length": 4,
+    "site": 2,
+    "plus_walks_from_left": 3,
+    "plus_walks_from_right": 1
+   },
+   "4": {
+    "length": 5,
+    "site": 3,
+    "plus_walks_from_left": 4,
+    "plus_walks_from_right": 1
+   },
+   "5": {
+    "length": 6,
+    "site": 2,
+    "plus_walks_from_left": 6,
+    "plus_walks_from_right": 4
+   },
+   "6": {
+    "length": 6,
+    "site": 2,
+    "plus_walks_from_left": 6,
+    "plus_walks_from_right": 4
+   }
+  }
+ },
+ "M1_consistent_modulus_rule_is_quadratic": {
+  "passed": false,
+  "events_used": 1904,
+  "unknowns": 12,
+  "rank": 7,
+  "solution_normalized_to_phi1": null,
+  "seed": 20261113,
+  "note": "equations sum_y phi(|(A v)(y)|) = 2 sum_y phi(|v(y)|) over sampled events of length 12 with integer amplitudes of modulus at most 12; every sampled amplitude vector is the vector of an event because it is bounded by the walk counts"
+ },
+ "L1_free_spectrum_on_two_arcs": {
+  "passed": true,
+  "largest_modulus_defect": 7.993605777301127e-15
+ },
+ "L2_common_local_spectrum_only_for_orders_1_2_and_four_points_for_order_4": {
+  "passed": true,
+  "rows": [
+   {
+    "q": 1,
+    "measure_degrees": "180",
+    "isolated_or_boundary_points": 4,
+    "points": [
+     "45",
+     "135",
+     "225",
+     "315"
+    ]
+   },
+   {
+    "q": 2,
+    "measure_degrees": "180",
+    "isolated_or_boundary_points": 4,
+    "points": [
+     "45",
+     "135",
+     "225",
+     "315"
+    ]
+   },
+   {
+    "q": 3,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 4,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 4,
+    "points": [
+     "45",
+     "135",
+     "225",
+     "315"
+    ]
+   },
+   {
+    "q": 5,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 6,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 7,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 8,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 9,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 10,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 11,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 12,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 13,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 14,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 15,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 16,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 17,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 18,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 19,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 20,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 21,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 22,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 23,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 24,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 25,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 26,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 27,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 28,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 29,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 30,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 31,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 32,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 33,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 34,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 35,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 36,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 37,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 38,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 39,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 40,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 41,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 42,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 43,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 44,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 45,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 46,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 47,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   },
+   {
+    "q": 48,
+    "measure_degrees": "0",
+    "isolated_or_boundary_points": 0,
+    "points": []
+   }
+  ],
+  "note": "exact arithmetic in degrees; the set is the two closed arcs of half-width 45 about 0 and 180"
+ },
+ "L3_staircases_of_order_3_4_6_confine_and_order_2_does_not": {
+  "passed": false,
+  "rows": [
+   {
+    "order": 2,
+    "block_length": 1,
+    "rms_distance": {
+     "256": 138.54802529039117,
+     "1024": 554.1852737708801,
+     "2048": 1108.3698483597843
+    },
+    "bound": 7.25
+   },
+   {
+    "order": 2,
+    "block_length": 2,
+    "rms_distance": {
+     "256": 93.70700584815157,
+     "1024": 374.8111537244095,
+     "2048": 749.620624522396
+    },
+    "bound": 9.5
+   },
+   {
+    "order": 2,
+    "block_length": 4,
+    "rms_distance": {
+     "256": 50.27317682939582,
+     "1024": 201.32218307277483,
+     "2048": 402.7431042335387
+    },
+    "bound": 14.0
+   },
+   {
+    "order": 2,
+    "block_length": 16,
+    "rms_distance": {
+     "256": 43.43801706871524,
+     "1024": 173.16431089675692,
+     "2048": 346.2829814918517
+    },
+    "bound": 41.0
+   },
+   {
+    "order": 2,
+    "block_length": 64,
+    "rms_distance": {
+     "256": 47.55515638678344,
+     "1024": 174.08966592861236,
+     "2048": 346.8659001914195
+    },
+    "bound": 149.0
+   },
+   {
+    "order": 3,
+    "block_length": 1,
+    "rms_distance": {
+     "256": 65.07001071053517,
+     "1024": 260.2395231545429,
+     "2048": 520.4741939988046
+    },
+    "bound": 7.625
+   },
+   {
+    "order": 3,
+    "block_length": 2,
+    "rms_distance": {
+     "256": 65.07001071053507,
+     "1024": 260.2395231545435,
+     "2048": 520.4741939988056
+    },
+    "bound": 10.25
+   },
+   {
+    "order": 3,
+    "block_length": 4,
+    "rms_distance": {
+     "256": 19.98461205530008,
+     "1024": 79.82531802262267,
+     "2048": 159.69380410317595
+    },
+    "bound": 15.5
+   },
+   {
+    "order": 3,
+    "block_length": 16,
+    "rms_distance": {
+     "256": 7.981844841554198,
+     "1024": 7.066243914323975,
+     "2048": 9.339567212548165
+    },
+    "bound": 47.0
+   },
+   {
+    "order": 3,
+    "block_length": 64,
+    "rms_distance": {
+     "256": 34.9914892360223,
+     "1024": 36.4574636984437,
+     "2048": 31.147010491809933
+    },
+    "bound": 173.0
+   },
+   {
+    "order": 4,
+    "block_length": 1,
+    "rms_distance": {
+     "256": 93.70700584815157,
+     "1024": 374.8111537244095,
+     "2048": 749.620624522396
+    },
+    "bound": 8.0
+   },
+   {
+    "order": 4,
+    "block_length": 2,
+    "rms_distance": {
+     "256": 45.63502422689925,
+     "1024": 182.4790553788669,
+     "2048": 364.94975516988893
+    },
+    "bound": 11.0
+   },
+   {
+    "order": 4,
+    "block_length": 4,
+    "rms_distance": {
+     "256": 12.900352661034232,
+     "1024": 50.84656016305238,
+     "2048": 101.69754674532064
+    },
+    "bound": 17.0
+   },
+   {
+    "order": 4,
+    "block_length": 16,
+    "rms_distance": {
+     "256": 10.350464025834414,
+     "1024": 8.073254530280575,
+     "2048": 8.375262375480046
+    },
+    "bound": 53.0
+   },
+   {
+    "order": 4,
+    "block_length": 64,
+    "rms_distance": {
+     "256": 37.7301096562974,
+     "1024": 41.37068440137892,
+     "2048": 33.587900243410964
+    },
+    "bound": 197.0
+   },
+   {
+    "order": 6,
+    "block_length": 1,
+    "rms_distance": {
+     "256": 65.07001071053509,
+     "1024": 260.2395231545432,
+     "2048": 520.474193998805
+    },
+    "bound": 8.75
+   },
+   {
+    "order": 6,
+    "block_length": 2,
+    "rms_distance": {
+     "256": 22.74113307420807,
+     "1024": 90.70612284817695,
+     "2048": 181.3840181443963
+    },
+    "bound": 12.5
+   },
+   {
+    "order": 6,
+    "block_length": 4,
+    "rms_distance": {
+     "256": 4.826842579325002,
+     "1024": 13.612538498935002,
+     "2048": 26.550634392567986
+    },
+    "bound": 20.0
+   },
+   {
+    "order": 6,
+    "block_length": 16,
+    "rms_distance": {
+     "256": 10.283301912996915,
+     "1024": 10.5781335078851,
+     "2048": 11.297086629461532
+    },
+    "bound": 65.0
+   },
+   {
+    "order": 6,
+    "block_length": 64,
+    "rms_distance": {
+     "256": 58.543498146624586,
+     "1024": 54.51446928682542,
+     "2048": 47.60872376554809
+    },
+    "bound": 245.0
+   }
+  ],
+  "note": "walk from one vertex on a ring of 8192 sites; block lengths 1 and 2 are recorded and are not part of the criterion; block length 1 is the linear gain of order q"
+ },
+ "_summary": {
+  "predicates": 5,
+  "passed": 3,
+  "seed": 20261113,
+  "numpy": "2.5.3"
+ }
+}

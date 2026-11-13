@@ -1,0 +1,70 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "executions": [
+    {
+      "script": "verifiers/verify_record_nonidentification.py",
+      "script_sha256": "0fd7d89cb8c1672ae56282f77bb996f0a06d4d80ea3286bf3c1a387324cb4f3b",
+      "output": "results/Record_Nonidentification_Results.json",
+      "output_sha256": "e71028f1dd6d72c8ae74eb7b8345e04fcc9a431527c62e36f9fafd5cf9a8a332",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0601,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_control_identification.py",
+      "script_sha256": "335798e6fff94217f6f68618e916e103f1a378156fb884dec871b49ec40bad76",
+      "output": "results/Control_Identification_Results.json",
+      "output_sha256": "06f13f9e09bc555613a4033e77386ba6cfb0b9737e2897b3ac2d8cccb65c3f6f",
+      "exit_code": 0,
+      "elapsed_seconds": 1.352667,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_structural_controls.py",
+      "script_sha256": "cf1b93ed3b8577137484ab92bd22e3ca9b59fe54eb9545219514dc3deccb7f61",
+      "output": "results/Structural_Controls.json",
+      "output_sha256": "79d780c979b2e828df2acb528c62a7128f0209b426df0166bf487cc756a0d276",
+      "exit_code": 0,
+      "elapsed_seconds": 0.079589,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_temporal_identification.py",
+      "script_sha256": "0d7b363a03d711f52a2e4f3389cf57958d3a0bf04c9509eb5b4a112e96f3c895",
+      "output": "results/Temporal_Identification_Results.json",
+      "output_sha256": "1d1cf4db4c1c486aad533df7fb474b8f1d89c14edbb348eee6353d82c7a7143b",
+      "exit_code": 0,
+      "elapsed_seconds": 1.100198,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_calibration_width.py",
+      "script_sha256": "a34436ab3ba66c705315d1532cce7792ed988d2148f354c769daf006d352bd61",
+      "output": "results/Calibration_Width_Results.json",
+      "output_sha256": "f70b4b5bacecd36a0a572b9fad73af454bbd6599e99058878d70d33f46e5e399",
+      "exit_code": 0,
+      "elapsed_seconds": 0.024787,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_abstract_channels.py",
+      "script_sha256": "9b7c7af080a00ac7bfd2fd7ebbedd5590e7e1df8238479c532499cc190b0d169",
+      "output": "results/Abstract_Channel_Results.json",
+      "output_sha256": "baffed97a279aef4b4f204f054c568735ba44bceade886417ad11764b9c58162",
+      "exit_code": 0,
+      "elapsed_seconds": 0.117939,
+      "stderr": ""
+    },
+    {
+      "script": "verifiers/verify_additional_exact_examples.py",
+      "script_sha256": "29fd8b4fc216be1b63a4921491e836f57856d6463e8c396df31e5de74f0a64f8",
+      "output": "results/Additional_Exact_Examples.json",
+      "output_sha256": "c8f17165811b4b56ff89213ede403d9fd60a30621124e91645c4b4543576ac95",
+      "exit_code": 0,
+      "elapsed_seconds": 0.04223,
+      "stderr": ""
+    }
+  ],
+  "interpretation": "Fresh executions of the named mathematical procedures; no physical observations or independent validation of every theorem."
+}

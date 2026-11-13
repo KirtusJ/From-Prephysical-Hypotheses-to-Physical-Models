@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-12 B.C. Pacific Time",
+  "research_program": "From Prephysical Hypotheses to Physical Models",
+  "research_direction": "Kirtus Justus",
+  "assessment": "Director A continuation 3; additive ontology edge register",
+  "baseline_status": "Initial External Grounding; G1 OPEN",
+  "ontology_selected": false,
+  "nodes": [
+    {"id":"P0","meaning":"independently identified prephysical primitives","status":"OPEN"},
+    {"id":"A2CYCLE","meaning":"finite directed-cycle rational representation","status":"EXACT_IN_SCOPE"},
+    {"id":"J","meaning":"complex-type endomorphism C^2=-3I in chosen representation","status":"EXACT_IN_SCOPE"},
+    {"id":"CP","meaning":"complex projective pure-state geometry","status":"IMPORTED_CONDITIONAL"},
+    {"id":"PROB","meaning":"operational Born probabilities, empirical effects and state update","status":"OPEN"},
+    {"id":"LOCAL","meaning":"stipulated single-system complex two-level quantum theory","status":"IMPORTED_CONTROL"},
+    {"id":"K2","meaning":"two-system convex interpolation K_t","status":"MATHEMATICAL_CONTROL"},
+    {"id":"FILTER","meaning":"selective local branch closure","status":"REFUTED_FOR_INTERIOR_KT"},
+    {"id":"K4","meaning":"four-body affine family with variable interpolation weight","status":"REFUTED_FOR_INTERIOR_KT_WITH_PARALLEL_AND_DISCARD"},
+    {"id":"MATCH","meaning":"all-arity matching-generated restricted hierarchy","status":"CONSTRUCTED_WEAK_POSITIVE_CONTROL"},
+    {"id":"D2","meaning":"complete two-system complex quantum density space","status":"CONDITIONAL_ON_PURE_SEED_AND_FILTERS"},
+    {"id":"OPS","meaning":"physically identified composite preparations and instruments","status":"OPEN"},
+    {"id":"TIME","meaning":"physical clock and dynamics with units","status":"OPEN"},
+    {"id":"CLASSICAL","meaning":"controlled classical Hamiltonian correspondence","status":"OPEN"},
+    {"id":"EMPIRICAL","meaning":"complete calibrated physical predictions","status":"OPEN"}
+  ],
+  "edges": [
+    {"from":"P0","to":"A2CYCLE","type":"TEST_CASE_CHOICE","evidence":"A2 internal self-citation; no identification of P0"},
+    {"from":"A2CYCLE","to":"J","type":"EXACT_CONDITIONAL","evidence":"P-P^T on chosen rational zero-sum representation"},
+    {"from":"J","to":"CP","type":"IMPORTED_CHOICES","evidence":"real completion, two copies, norm, circle quotient, Born-style overlap"},
+    {"from":"CP","to":"PROB","type":"OPEN","evidence":"squared overlap not derived operationally"},
+    {"from":"PROB","to":"LOCAL","type":"OPEN","evidence":"an operational system and complex two-level sector not yet derived"},
+    {"from":"LOCAL","to":"K2","type":"IMPORTED_STIPULATION","evidence":"ordinary complex matrix and tensor formalism"},
+    {"from":"K2","to":"FILTER","type":"EXACT_ADVERSE","evidence":"A3-01, sharp one-party conditioned-filter witness"},
+    {"from":"K2","to":"K4","type":"EXACT_ADVERSE","evidence":"A3-02, contradictory s>=2t-t^2 and s<=t"},
+    {"from":"K2","to":"MATCH","type":"EXACT_POSITIVE_CONTROL","evidence":"A3-03, matching hierarchy under weaker operations"},
+    {"from":"K2","to":"D2","type":"CONDITIONAL","evidence":"A3-04, pure entangled seed plus all one-party filters"},
+    {"from":"MATCH","to":"OPS","type":"OPEN","evidence":"matching hierarchy rejects nondestructive filters and GHZ"},
+    {"from":"D2","to":"OPS","type":"OPEN","evidence":"neither pure seed nor physical filter derived from P0"},
+    {"from":"OPS","to":"TIME","type":"OPEN","evidence":"no physical dynamics, clock or units"},
+    {"from":"TIME","to":"CLASSICAL","type":"OPEN","evidence":"no semiclassical Hamiltonian limit with errors"},
+    {"from":"CLASSICAL","to":"EMPIRICAL","type":"OPEN","evidence":"no complete physical mapping, observations, predictions and uncertainty"}
+  ]
+}

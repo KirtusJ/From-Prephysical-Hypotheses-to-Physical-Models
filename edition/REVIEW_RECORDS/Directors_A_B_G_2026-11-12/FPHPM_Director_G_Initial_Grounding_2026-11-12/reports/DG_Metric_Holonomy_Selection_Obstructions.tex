@@ -1,0 +1,148 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.90in,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem,xcolor,fancyhdr,hyperref}
+\definecolor{navy}{HTML}{203B57}
+\definecolor{muted}{HTML}{566476}
+\definecolor{link}{HTML}{225F91}
+\hypersetup{colorlinks=true,urlcolor=link,linkcolor=navy,citecolor=link,pdftitle={Metric Holonomy, Statistical Selection and Finite-Carrier Obstructions},pdfauthor={Kirtus Justus; GPT-6 (Director G), AI-assisted research assessment}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\footnotesize \textcolor{muted}{FPHPM / Director G / Initial External Grounding}}\fancyhead[R]{\footnotesize \textcolor{muted}{12 November 2026 (B.C. PT)}}\fancyfoot[C]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\theoremstyle{plain}\newtheorem{theorem}{Theorem}\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}\newtheorem{remark}{Remark}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}\setlist[itemize]{nosep,leftmargin=15pt}
+\begin{document}
+\begin{center}
+{\Large\bfseries\color{navy} Metric Holonomy, Statistical Selection\\[2pt] and Finite-Carrier Obstructions}\\[9pt]
+{\normalsize An externally sourced, bounded mathematical assessment}\\[5pt]
+{\small Research direction: \textbf{Kirtus Justus}, Port Coquitlam, British Columbia, Canada}\\[2pt]
+{\small AI-assisted mathematical assessment: \textbf{ChatGPT (GPT-6), Director G}}\\[5pt]
+{\small 12 November 2026, B.C. Pacific Time}
+\end{center}
+\vspace{2pt}\hrule\vspace{9pt}
+\textbf{Gate status.} Initial External Grounding, \textbf{G1 OPEN}. No physical ontology, quantum emergence, classical emergence, or complete correspondence map is established. PCP Version 1.0/ACR was read and applied as an \emph{absorbed}, non-host-enforced review methodology. All mathematical constructions in this note are conditional on explicitly imported geometry.
+
+\textbf{Source boundary.} The accessible baseline, PCP Enterprise packet and toy counterexample packet passed their bundled local structural verifiers. The separate Director Z Z1 baseline and manuscript G7 were described in a transmitted disposition but not attached here; their proofs and numerics are \emph{not} certified by this assessment. No sub-agents or independent reviewers were actually deployed. More precise provenance, external-source limits and ACR logging are in the accompanying archive.
+
+\section{An exact metric-only phase nonidentification}
+Let $\langle \cdot,\cdot\rangle$ be the standard Hermitian inner product, conjugate-linear in its first variable. For normalized nonorthogonal rays set
+\begin{equation}
+P(u,v)=|\langle u,v\rangle|^2,\qquad
+B(x,y,z)=\langle x,y\rangle\langle y,z\rangle\langle z,x\rangle.
+\end{equation}
+A full Fubini--Study distance function is $d([u],[v])=\arccos\sqrt{P(u,v)}$.
+\begin{theorem}[Signed phase cannot be reconstructed from probabilities alone]
+No function invariant under all transition-probability isometries of complex projective space can universally recover the oriented Bargmann phase $B/|B|$.
+\end{theorem}
+\begin{proof}
+In $\mathbb C^2$ take
+\[
+x=\begin{pmatrix}1\\0\end{pmatrix},\quad
+y=\begin{pmatrix}\sqrt 3/2\\1/2\end{pmatrix},\quad
+z=\begin{pmatrix}\sqrt 3/2\\i/2\end{pmatrix}.
+\]
+All three vectors have norm one. Direct multiplication gives
+\[
+(P(x,y),P(y,z),P(z,x))=\left(\frac34,\frac58,\frac34\right),\quad
+B(x,y,z)=\frac{9+3i}{16}.
+\]
+Conjugate \emph{all} three vectors. Complex conjugation is an isometry of the complete projective transition-probability metric: every $P(u,v)$ remains unchanged. But the ordered product changes to $(9-3i)/16$, which has the opposite nonzero phase. Any metric-only invariant would have to take the same value on both configurations, a contradiction. The example embeds into $\mathbb{CP}^{n}$ for every $n\ge1$.
+\end{proof}
+The underlying ambiguity is also described by Li, Wagner and Zhang (2026)~\cite{Li2026}; this construction claims no discovery priority.
+
+\begin{remark}[The extra datum hidden in complex determinants]
+The Levi-Civita connection is determined by the \emph{real} Riemannian metric. A complex determinant $\det_{\mathbb C}\operatorname{Hol}$ additionally requires a selected parallel complex structure $J$. Replacing it by $-J$ conjugates that scalar. The resulting real orientation changes by $(-1)^n$ in complex dimension $n$, so \emph{even-dimensional} $\mathbb{CP}^n$ does not resolve the ambiguity by specifying real orientation alone. A signed K\"ahler form or equivalent operational warrant must be supplied and justified, rather than inferred silently from transition probabilities.
+\end{remark}
+
+\section{A positive conditional theorem: determinant holonomy}
+The following is a statement \emph{inside} conventional complex quantum geometry, not a construction of that geometry.
+\begin{proposition}[Determinant/Bargmann correspondence]
+Assume $\mathbb{CP}^n$ has its standard Fubini--Study K\"ahler metric and its \emph{chosen} complex structure $J$. For a projective geodesic polygon $\gamma$ whose successive representative rays are nonorthogonal, write $B=\prod_{j=0}^{m-1}\langle\psi_j,\psi_{j+1}\rangle$ with $\psi_m=\psi_0$. With the corresponding orientation and Pancharatnam conventions,
+\begin{equation}
+\boxed{\displaystyle
+\det_{\mathbb C}\operatorname{Hol}_{T^{1,0}\mathbb{CP}^{n}}(\gamma)
+ =\left(\frac B{|B|}\right)^{n+1}.}
+\label{eq:det}
+\end{equation}
+\end{proposition}
+\begin{proof}
+In the usual affine coordinate $z\in\mathbb C^n$, put $q=1+\|z\|^2$. The Fubini--Study metric is
+\[
+g_{j\bar k}=\frac{q\delta_{jk}-\bar z_jz_k}{q^2},
+\qquad \det g=q^{-(n+1)}.
+\]
+The tautological line $L=\mathcal O(-1)$ has local squared Hermitian norm $q$; its dual $L^*=\mathcal O(1)$ has squared norm $q^{-1}$. The projective Euler sequence identifies the determinant holomorphic line of $T^{1,0}\mathbb{CP}^n$ with $(L^*)^{\otimes(n+1)}$. The displayed determinant shows that the induced Chern connections agree in these local frames; any constant normalization factor is connection-invisible. On a K\"ahler manifold the tangent Chern and Levi-Civita connections agree. Thus the tangent complex determinant holonomy equals the $(n+1)$-th power of the dual-tautological holonomy.
+
+For the chosen ordered sequence, geodesic Pancharatnam transport keeps adjacent representatives in phase. On closing the polygon the \emph{tautological} line obtains holonomy $(B/|B|)^{-1}$, so the dual line obtains $B/|B|$. Equation~\eqref{eq:det} follows. Reversing orientation conjugates both sides.
+\end{proof}
+An independently coded spherical transport check for $n=1$ compared actual great-circle Levi-Civita rotations to $2\arg B$ for \textbf{96 seeded triangles}, retaining every result. The maximum wrapped angular discrepancy was $1.53143\times10^{-15}$ radians. This is numerical corroboration \emph{only for conventional input geometry}; the code is \textbf{not Schild's ladder}, and Director Z's reported $n=2,3$ ladder calculations were not available for comparison. Published Schild's-ladder analyses specify convergence/scaling hypotheses~\cite{Guigui2022}.
+
+\section{The missing statistical theory: classical-spin mirror}
+The phase space of a classical spin with fixed magnitude is $S^2$, with round metric, $SO(3)$ symmetry and the nondegenerate signed area two-form. Its Levi-Civita holonomy is $SO(2)$ and its real tangent commutant is
+\[
+\operatorname{Comm}_{\mathbb R}(SO(2))=\{aI+bJ:a,b\in\mathbb R\}\cong\mathbb C.
+\]
+Rescale its round metric to match the pure-state Fubini--Study sphere $\mathbb{CP}^1$. These \emph{pure-state} geometric invariants coincide. Yet its classical statistical state space can be all Borel probability measures $\mathcal P(S^2)$, with measurable effects $0\le f(n)\le1$, and probability $\int f\,d\mu$. Disjoint classical filters give additive probabilities, hence no genuine higher-order Sorkin interference.
+
+Define $\mu_{\mathrm{pair}}=\tfrac12(\delta_{\hat z}+\delta_{-\hat z})$ and let $\mu_{\mathrm{unif}}$ be uniform area measure. Both have zero first moment and hence map to the \emph{same} qubit density matrix $I/2$ under the conventional Bloch barycentre map. Their classical predictions differ for $f(n)=n_z^2$:
+\[
+\int f\,d\mu_{\mathrm{pair}}=1,
+\qquad \int f\,d\mu_{\mathrm{unif}}=\tfrac13.
+\]
+Therefore pure-state holonomy, a symplectic form and no third-order interference \emph{alone} do not uniquely fix the statistical theory.
+
+\textbf{Scope caveat.} $\mathcal P(S^2)$ has infinite affine dimension; the operational distinguishability metric induced by its \emph{full} classical effect set is not the qubit Fubini--Study metric. This defeats an unrestricted uniqueness assertion but does not refute a narrower finite-dimensional, irreducible Jordan/operational-geometry classification. Such reconstructions require substantial further assumptions~\cite{Barnum2014}.
+
+\section{A curvature control for real qutrits and complex qubits}
+Equip both spaces with the same rule $d([u],[v])=\arccos|\langle u,v\rangle|$. Then
+\[
+\begin{array}{c|c|c|c}
+\text{Pure space} &\text{Gauss curvature}&\pi_1&\text{full holonomy}\\ \hline
+\mathbb{RP}^{2}\ (\text{real three-level})&1&\mathbb Z_2&O(2)\\
+\mathbb{CP}^{1}\ (\text{complex two-level})&4&0&SO(2)
+\end{array}
+\]
+Indeed $\mathbb{RP}^2$ is locally the unit sphere whereas $\mathbb{CP}^1$ is the round sphere of radius $1/2$ for this normalization. Their restricted holonomy groups are both $SO(2)$, so their restricted real holonomy commutants are both $\mathbb C$. However, intrinsic \emph{local curvature} already separates them, as do full holonomy and topology. Monodromy is thus not their \emph{only} geometric discriminator if the full transition-probability metric has been supplied. This distinction does not derive the metric from anything prephysical.
+
+\section{Finite carriers: no-go theorem and area certificates}
+\begin{theorem}[Application of Gelander's limit theorem]\label{thm:gel}
+A sequence of finite \emph{homogeneous} metric spaces cannot converge in the Gromov--Hausdorff sense to $\mathbb{CP}^n$ with its standard manifold topology for any $n\ge1$.
+\end{theorem}
+\begin{proof}
+Gelander proved that if a manifold is a Gromov--Hausdorff limit of finite homogeneous metric spaces, then it is a torus~\cite{Gelander2013}. For $n\ge1$, $\mathbb{CP}^n$ is simply connected and is not a torus. Hence the claimed convergence is impossible. This is an \emph{application} of a published result, not a new proof of its hypotheses.
+\end{proof}
+This excludes exact finite-stage transitive-isometry symmetry \emph{under that convergence notion}. It does not exclude nonhomogeneous discrete carriers, approximate symmetry, or differently defined emergence maps.
+
+\begin{proposition}[Finite single-orbit empty-cap certificates]
+Let $S$ be a \emph{single finite symmetry orbit} on the unit Bloch sphere, with geodesic covering radius $r$. If $S$ is a finite $SO(3)$-orbit, then
+\[
+r\ge\arccos(29/30)\simeq14.83511^{\circ}.
+\]
+If $S$ is a finite $O(3)$-orbit (permitting antiunitary-induced isometries), then
+\[
+r\ge\arccos(59/60)\simeq10.47531^{\circ}.
+\]
+\end{proposition}
+\begin{proof}
+If $N=|S|$, covering by $N$ spherical caps of radius $r$ gives $N2\pi(1-\cos r)\ge4\pi$, hence $r\ge\arccos(1-2/N)$. Finite rotation subgroups are cyclic, dihedral, tetrahedral, octahedral or icosahedral; the three polyhedral orders are at most $60$, so their orbit sizes are at most $60$~\cite{EtingofNotes}. Cyclic and dihedral orbits, aside from exceptional small groups, lie on at most two latitudes around the unique invariant principal axis. Their north/south-pole and equatorial gaps force $r\ge45^\circ$. Small exceptions satisfy the displayed bound directly by cardinality.
+
+For a finite $G\le O(3)$ put $H=G\cap SO(3)$ (normal, index at most two). If $H$ is polyhedral, then $|G|\le120$. If $H$ is cyclic or dihedral with unique principal axis, normality forces $G$ to preserve its unoriented axis; an orbit then lies in at most two latitudes and $r\ge45^\circ$. Exceptional subgroups without that unique axis, notably the order-four dihedral group, have $|G|\le8$ and satisfy the weaker displayed estimate by cap area. The two conclusions follow.
+\end{proof}
+The submitted Director Z summary quotes an uncovered $10.48^\circ$ cap. The exact $O(3)$ bound rounds to $10.48^\circ$ but \emph{does not assert} the strict lower bound $r\ge10.48^\circ$. The source G7 manuscript and its exact assumptions remain uninspected.
+
+\clearpage
+\section{Implications for the prephysical-to-physical program}
+None of these constructions identifies a total ontology. A bridge would still need to ground, without unannounced imports: (1) a carrier/limit and state-equivalence rule; (2) operational transition experiments, rather than a stipulated metric; (3) selection of signed phase geometry $J$ versus $-J$; (4) convex states, effects, composition, Born probabilities and instruments; (5) physically calibrated clocks, dynamics and units; and (6) a controlled quantum-to-classical limit with observables and error bounds. The complete, typed directed obligation map, countermodel caveats, source ledger, validator and retained raw trials accompany this paper.
+
+\textbf{Final disposition:} the determinant law is \emph{conditional supported mathematics}. The metric-only phase reconstruction and unrestricted uniqueness proposal have scoped counterexamples. The exact finite-homogeneous Gromov--Hausdorff route faces a published obstruction. No physics has emerged from prephysical premises. The root review remains G1 OPEN, and Director G has not modified or promoted the baseline.
+
+\begin{thebibliography}{9}\small
+\bibitem{Gelander2013} T. Gelander, ``Limits of finite homogeneous metric spaces,'' \emph{L'Enseignement Math\'ematique} \textbf{59} (2013), 195--206. \href{https://doi.org/10.4171/LEM/59-1-8}{doi:10.4171/LEM/59-1-8}.
+\bibitem{Li2026} M.-S. Li, R. Wagner, and L. Zhang, ``Multistate imaginarity and coherence in qubit systems,'' \emph{Phys. Rev. A} \textbf{113}, 012428 (2026). \href{https://doi.org/10.1103/tpgw-v6ht}{doi:10.1103/tpgw-v6ht}.
+\bibitem{Barnum2014} H. Barnum, M. P. M\"uller, and C. Ududec, ``Higher-order interference and single-system postulates characterizing quantum theory,'' \emph{New J. Phys.} \textbf{16}, 123029 (2014). \href{https://doi.org/10.1088/1367-2630/16/12/123029}{doi:10.1088/1367-2630/16/12/123029}.
+\bibitem{Guigui2022} N. Guigui and X. Pennec, ``Numerical Accuracy of Ladder Schemes for Parallel Transport on Manifolds,'' \emph{Found. Comput. Math.} \textbf{22}, 757--790 (2022). \href{https://doi.org/10.1007/s10208-021-09515-x}{doi:10.1007/s10208-021-09515-x}.
+\bibitem{EtingofNotes} P. Etingof, \emph{Groups Around Us}, MIT lecture notes, chapter on finite rotation groups. \url{https://math.mit.edu/~etingof/groups.pdf}.
+\end{thebibliography}
+\end{document}

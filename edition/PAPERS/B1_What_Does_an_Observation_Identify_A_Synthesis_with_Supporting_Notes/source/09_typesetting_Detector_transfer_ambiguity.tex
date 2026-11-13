@@ -1,0 +1,100 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{fontspec,amsmath,amssymb,amsthm,booktabs,longtable,microtype,hyperref,unicode-math}
+\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}\setmonofont{DejaVu Sans Mono}\setmathfont{Latin Modern Math}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{corollary}[theorem]{Corollary}
+\setlength{\emergencystretch}{3em}\allowdisplaybreaks\raggedbottom
+\title{Detector transfer ambiguity}\author{Kirtus Justus}\date{}
+\begin{document}\maketitle
+\section{The experiment and its identifiable coordinate}
+Let $\lambda_\star>0$ be a reference eigenvalue. The numerical value may be unknown. Assume the same prepared positive eigenmode at every setting, with an independently characterized control $L\mapsto cL$, and assume the ideal Ricker scale law. Write $U=\lambda_\star S$. At coupling $c>0$ its density is
+\[
+ f_c(u)=4c^2u e^{-2cu},\qquad u>0.
+\]
+The instrument registers a record $Z$ in a standard Borel space. Its common response is a subprobability kernel $R(dz\mid u)$. Its total mass $\eta(u)$ is the probability of detection at scale $u$. It can include binning, noise, nonlinear response and scale-dependent loss. With a known number of prepared trials, the measured quantities are subprobability measures
+\[
+ \nu_c(B)=\int_0^\infty f_c(u)R(B\mid u)\,du.
+\]
+Misses remain in the trial denominator. Common source coupling and common detector response across settings are physical inputs. Unknown setting-specific gains, background counts and source impurity require independent characterization. A mixture of eigenmodes can itself produce unresolved variation in $U$, even when the detector reports physical scale exactly.
+
+Choose $a>0$, $\alpha=1+a$ and $\beta=1+2a$. Define $X=e^{-2aU}$, and let $\mathbb E_1[\cdot\mid Z=z]$ be conditional expectation under the reference joint law restricted to registered outcomes. All the measures $\nu_c$ have the same null sets because $f_c>0$ on the same support.
+
+\textbf{Change of measure.} For $j=0,1,2,\ldots$ and $c_j=1+ja$,
+\[
+ \frac1{c_j^2}\frac{d\nu_{c_j}}{d\nu_1}(z)=\mathbb E_1[X^j\mid Z=z]
+ \quad (\nu_1\text{-almost everywhere}).
+\]
+Indeed, $f_{c_j}(u)/f_1(u)=c_j^2X^j$. Multiply by the common response kernel, integrate over any measurable record set, and disintegrate the reference joint measure. This proves the identity without a smooth-density assumption.
+
+\textbf{Two settings.} Suppose $Z=\phi(U)$ on a detected trial, with $\phi$ measurable and one-to-one. The first nontrivial density ratio yields the decoder
+\[
+ h(z)=\phi^{-1}(z)=-\frac1{2a}\log\!\left[\frac1{\alpha^2}\frac{d\nu_\alpha}{d\nu_1}(z)\right].
+\]
+The common efficiency cancels. Once $h$ is known, the reference recorded measure pushed onto the $u$ coordinate is
+\[
+ h_\#\nu_1(du)=\eta(u) f_1(u)\,du.
+\]
+This identifies $\eta$ almost everywhere in that coordinate. The readout mapping itself is determined only where records occur. Dividing a conditional-on-click histogram by a second such histogram introduces the ratio of their total detection probabilities. Counting all prepared trials supplies that normalization directly.
+
+The identified coordinate is $\lambda_\star S$. If $\lambda_\star$ changes to $b\lambda_\star$ and the readout and loss functions of physical scale are composed with $s\mapsto bs$, all these observed measures agree. An independently measured reference value sets the physical unit.
+
+\section{A held-out setting and a test of scale resolution}
+For an arbitrary common response kernel put
+\[
+ m(z)=\frac1{\alpha^2}\frac{d\nu_\alpha}{d\nu_1}(z),\qquad
+ v(z)=\frac1{\beta^2}\frac{d\nu_\beta}{d\nu_1}(z)-m(z)^2.
+\]
+The change of measure gives $v(z)=\operatorname{Var}_1(X\mid Z=z)\ge0$. Under a recoverable record $v=0$ almost everywhere, and two settings forecast the third through
+\[
+ \nu_\beta(dz)=\beta^2 m(z)^2\nu_1(dz).
+\]
+Conversely, under the common-kernel contract, equality makes $X=m(Z)$ almost surely among detections. Since $X$ is strictly monotone in $U$, the decoder $-(2a)^{-1}\log m(Z)$ recovers $U$. Even if the record contains extra random information, this test concerns recoverability of the incident scale. A strictly positive $v$ quantifies the optimal mean-square error of predicting $X$ from a record. Its integral is the error per prepared reference trial restricted to detections. Divide by $\nu_1(\mathcal Z)$ for the conditional error per detection.
+
+There is also an admissibility check. Given a proposed exact decoder $h$, its pushed-forward registered measure must obey $h_\#\nu_1\le f_1(u)du$. This condition and the zero-variance forecast are sufficient for a compatible recoverable response when $m\in(0,1)$ almost everywhere. To see this, disintegrate $\nu_1$ along $u=h(z)$ into its marginal and conditional record law. Multiply that conditional law by the marginal's density relative to $f_1 du$. The resulting kernel has mass at most one and reproduces all three observed measures. Physical verification that the apparatus really uses one common kernel is still an independent step.
+
+For a noisy example, register $Z=U$ with probability 0.55 and $Z=3.5U$ with probability 0.45 after common loss. At $z=1$, the conditional variance obtained from the three record densities is $0.02855966327$. Direct calculation from the two possible incident scales gives the same value. A finite bin can also have positive variance when a perfectly ordered fine-scale record varies inside it. The finite-bin test below allows for that spread.
+
+\section{What finite controls can leave ambiguous}
+The complete family of exact measures $\nu_{1+ja}$ for all $j\ge0$ identifies the common kernel in dimensionless scale. For each measurable record set $B$ these observations are all moments of the finite measure obtained by pushing $f_1(u)R(B\mid u)\,du$ onto $X\in[0,1]$. Polynomials are dense in continuous functions on this compact interval, so equal moments imply equal measures. Pull back by the one-to-one coordinate $X(u)$ and divide by $f_1$. A countable determining class of record sets gives equality of the kernels outside one null set. This is an exact identifiability result. It supplies no stable finite-order inversion of an arbitrary kernel.
+
+An explicit finite counterexample uses $a=1$, for which $\mathbb E_1 X^k=(k+1)^{-2}$. Let
+\[
+ H(x)=x^3-\frac{3105}{2588}x^2+\frac{5751}{16175}x-\frac{4679}{258800}.
+\]
+This monic polynomial is orthogonal to $1,x,x^2$ under the reference law of $X$. Write $\epsilon=(2\sum_i|H_i|)^{-1}$ for its coefficient sum bound. Two detectors each return a single possible click, with efficiencies $1/2+\epsilon H(X)$ and $1/2-\epsilon H(X)$, respectively. These are genuine probabilities. At couplings 1, 2 and 3 the click probabilities coincide exactly. At coupling 4 their difference is $878769/815843875>0$. The unseen difference comes from the next conditional moment. The construction extends to any finite initial progression by using the next orthogonal polynomial.
+
+\textbf{An all-settings instrument ambiguity.} Fix $k>1$ and $0<\eta_0<1$. Device A reports $z=u$ with efficiency $\eta_0 e^{-2c(k-1)u}$, which changes with the coupling. Device B reports $z=u/k$ with constant efficiency $\eta_0/k^2$. Their per-trial densities agree at every coupling:
+\[
+ g_c^A(z)=4\eta_0c^2z e^{-2ckz}=g_c^B(z).
+\]
+Their missed-click probabilities agree as well. This is an exact reason to check for coupling-dependent detector changes using an independently characterized reference signal. Additional settings of the same experiment cannot distinguish these devices.
+
+\section{Finite counts and two different tests}
+\textbf{Fixed numbers of trials.} Predeclare disjoint ordered bins $B_j$. For bins with positive reference mass put
+\[
+ m_j=\frac{\nu_\alpha(B_j)}{\alpha^2\nu_1(B_j)},\qquad
+ m_j^2\le\frac{\nu_\beta(B_j)}{\beta^2\nu_1(B_j)}\le m_j .
+\]
+The lower bound is Jensen's inequality and the upper bound uses $X^2\le X$. They hold for noisy and nonmonotone responses. For an increasing deterministic response, the $m_j$ decrease. The incident $X$ in bin $j$ is between $l=m_{j+1}$ and $h=m_{j-1}$, using 0 and 1 at the exterior ends. Thus $(h-X)(X-l)\ge0$ improves the upper bound to $(h+l)m_j-hl$. At the boundary between bins $j$ and $j+1$, the inferred incident coordinate is between $-\log(m_j)/(2a)$ and $-\log(m_{j+1})/(2a)$, assuming the boundary is in the readout range. If it falls in a response gap, the inequalities bracket a separating incident cutoff. This argument gives intervals for scale without estimating a pointwise density.
+
+The study uses three independent sets of $M$ trials, nine positive bins and ordinary two-sided Clopper--Pearson intervals for the marginal per-trial bin probabilities \cite{clopper}. Allocate total error 0.05 over the 27 intervals by Bonferroni. The within-setting multinomial dependence is allowed. For example, if $[L_{cj},U_{cj}]$ denotes each interval, a forecast using only settings 1 and $\alpha$ has the universal lower endpoint $\beta^2L_{\alpha j}^2/(\alpha^4U_{1j})$ and upper endpoint at most $\min(1,\beta^2U_{\alpha j}/\alpha^2,\beta^2U_{1j})$. The ordered test additionally propagates interval bounds for the neighboring means. Empty feasible sets reject their respective hypotheses. On the simultaneous coverage event, every valid hypothesis passes all its necessary inequalities. The familywise probability of a false rejection is therefore at most 0.05. Sparse bins can give an infinite upper bound on incident scale. The numerical beta quantiles are evaluated in floating point.
+
+\textbf{Independent randomized coupling labels.} To test a linear readout through the origin more efficiently, retain the full record. For each prepared trial independently randomize between $c=1$ and $c=\alpha$ with equal probabilities. Conditional on the registered $z$, the probability that the label is $\alpha$ equals
+\[
+ q_h(z)=\frac{\alpha^2 e^{-2a h(z)}}{1+\alpha^2 e^{-2a h(z)}}
+\]
+when the scale is recoverable with decoder $h$. Shared efficiency cancels. Given the registered records and their indices, the labels are independent with these probabilities. The experiment does not condition on a fixed number of prepared or detected trials in each arm.
+
+Let $L_h$ be the conditional likelihood of the labels and let $L_{\mathrm{mix}}$ be a preselected, normalized mixture of such joint likelihoods. On the linear null, $h(z)=kz$ for unknown $k>0$. Reject at $E\ge20$, where
+\[
+ E=\frac{L_{\mathrm{mix}}}{\sup_{k\ge0}L_{kz}}.
+\]
+For the true $k$, the mixture likelihood ratio $L_{\mathrm{mix}}/L_{kz}$ has conditional expectation one. The displayed statistic is no larger, so Markov's inequality bounds its conditional and unconditional rejection probability by 0.05. This proof allows arbitrary shared efficiency and arbitrary positive $k$. It uses the same likelihood-ratio principle as finite-sample universal inference \cite{universal}. The denominator has a concave one-dimensional log likelihood. The code brackets its maximizer and uses an upper tangent bound. The numerator gives equal weights to the ten fixed decoders $h(z)=kz^{1/p}$ with $p\in\{0.7,1.25\}$ and $k\in\{0.6,0.8,1,1.25,1.6\}$. These choices affect power. The bound concerns a predeclared fixed number of prepared trials.
+
+
+\begin{thebibliography}{9}
+\bibitem{clopper} C. J. Clopper and E. S. Pearson, ``The use of confidence or fiducial limits illustrated in the case of the binomial,'' \emph{Biometrika} \textbf{26}(4), 404--413 (1934). \url{https://doi.org/10.1093/biomet/26.4.404}.
+\bibitem{universal} L. Wasserman, A. Ramdas and S. Balakrishnan, ``Universal inference,'' \emph{Proceedings of the National Academy of Sciences} \textbf{117}(29), 16880--16890 (2020). \url{https://doi.org/10.1073/pnas.1922664117}.
+\end{thebibliography}
+
+\end{document}

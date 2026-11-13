@@ -1,0 +1,2765 @@
+{
+  "title": "Exact finite checks for the Mathematical Supplement",
+  "date": "2026-11-10",
+  "scope": "Rational and symbolic finite examples and displayed constants; no physical measurements; no claim of independent replication.",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "check_count": 680,
+  "all_passed": true,
+  "values": {
+    "partition_distance_order_3": "1/324",
+    "partition_distance_order_4": "39/668168",
+    "partition_distance_order_5": "125/556592256",
+    "partition_distance_order_6": "4869/30891577600000",
+    "aligned_event_numerators": [
+      4360,
+      4488
+    ],
+    "permutation_transitivity": {
+      "1": "1",
+      "2": "3/4",
+      "3": "13/18",
+      "4": "71/96",
+      "5": "461/600",
+      "6": "383/480",
+      "7": "29093/35280",
+      "8": "39049/46080"
+    },
+    "sparse_errors": [
+      "25032226015092744528840625/634998927977903024107964257",
+      "27900695463010851341340625/699384194430517969365104257"
+    ],
+    "adjacent_count_omitted_105": {
+      "minimum_bad_acceptance": "355341530156528745424476554401021179203463937836958403676889416034745580383587116174667334020431748176648898304329113991889656272229638996125065041061965982577832177794916724047621353663372526022974385367678315447312090213503705838975973734895370755036035210557111883882539684547966699372546652274174680088611591171881368788625779311113648040795354835885227600591222570952056468665503739960249533516857473401785200314405619721549249518941493218592570586638986735073753263413343610050881423264296706529602755530710731327500853362692894119318467183696473074847632187198379978134088793403692437160411277263606829891929828794126212518494792407730905823987028750328627081690082481489087335614634515512557709609072689084857102546494291961026082601828298613749301615667797773766303192716741667240059751998338101178376893618496753184582213743150839919970442710285247468088904054449877304687812682077415546289027710160182765181312352025875377677191344370528548355624721268734499499608147251018875878703218281221138358268776530948993957340395011203253687773129853287828743611151/35818788713345504337710990589990737682276085989554417098820993603511820508225680203143509212514009774771276386774006414421430868243216507287026915759378967189059832305927262844257874655002766356884075014977839537956040725585357288495437939905967460256829699939913545508124219800865861412886979778021914634750563802509299853181490114804473455514001280842470349717784866166229906945617303075573217392008712943925658836717363935830042913238405513984354665985796587588986989042425969066983045304037745990675602798435192196783918897751435884241234317934291770786867051140683634504506127783133969549625043319606181124011966126331902289392267738969560516560786165778241659415321313250149403698806722971261302368626081083644977053560583768461195768240765591973558689659743204035488900989670969612450423882862974899163586794531464436605017944910526280867770369799740645705334252860347520313827679103646251802031898756098241371662172463069966495298988697050939703196672594757762727452978903845866317003106559093057575446352573786860229685317166628597377210266874048094485101939600",
+      "decimal_for_reading": 0.009920534527292215
+    },
+    "adjacent_count_omitted_106": {
+      "minimum_bad_acceptance": "7858901588588717864120726798325940858019773450363840602372712428550473141097706892507900439819469337253152732072250239325110504161069107990402083207699946781606743334151658998435642279956058612840355530374798549071868856040721094551822747153200529388848640225247819471486876753889909349497443109672402306690859121405592041309571595417018135297110023133102257119149592334522503940771396216351769119139824095592819820549704021277203136716541903236671355034104222106420034536155845690458908646834296885029312932996035534354886398323665790385443480104231702102970205659089151674396509513393187032000420500170294839615949992262416854846888929873954772424331277439135278399912624186616030862659109010373568453964566141656321578314230169781727272011725934564998033429142608904317851881779710277446148271383779378066441655181543823880519151708275484817808413645254621343089812821051020648064579225973837082329964916661454300727669561390143499908006895741813260232940944359049623281926834586905147228023369712420239412653701736889817007294237077163761355089041139269637870455840182971/784753093296002951405043470074155503020970971295461066487349968727099792401248435299440431907930580618517554812436202391741648250123447033136448118011527950183532131494651528610587586155432144466378194442770928001580010416819184975530021849140385179381646796163497191366196919188438892529470522875794053581259557792794599210675012198211162918736419596398149036148207253169821166726028799716068418057900786714739021878417719533905252197261750807550226812953261595314717883323884464378935168911309072167709103897124469264614196766769128899162399288035795349007711440972844770335691202553430189023363121917596846724830804288426516091945418529565319125016452737175557658491572215361533203996981197327973800038281901697881451880862203648904828916252597970708372624756067241726376662079582180074145617670140732103012369289674228267295405593719079381180775793073524211676247227478258236314135184656214515075596501584346773535353379182249296355041648735328120950467982564507118252409807610817589767701848192345525248551462438821212856683962382317620660375492151049147743949420057453000",
+      "decimal_for_reading": 0.010014489469013663
+    },
+    "minimum_query_cap": 1999998999895,
+    "tail_majority_error_L23_r_half": "40874113559/8796093022208"
+  },
+  "checks": [
+    {
+      "name": "four-alternative total normalization",
+      "passed": true
+    },
+    {
+      "name": "four-alternative spectrum",
+      "passed": true
+    },
+    {
+      "name": "four-alternative event score",
+      "passed": true
+    },
+    {
+      "name": "exactly two positive binary contexts",
+      "passed": true
+    },
+    {
+      "name": "three-copy event score",
+      "passed": true
+    },
+    {
+      "name": "oriented two-copy event",
+      "passed": true
+    },
+    {
+      "name": "aggregation input distance",
+      "passed": true
+    },
+    {
+      "name": "aggregation target distance",
+      "passed": true
+    },
+    {
+      "name": "aggregation attained error 0",
+      "passed": true
+    },
+    {
+      "name": "aggregation success 0",
+      "passed": true
+    },
+    {
+      "name": "aggregation attained error 1",
+      "passed": true
+    },
+    {
+      "name": "aggregation success 1",
+      "passed": true
+    },
+    {
+      "name": "strict positive correlation counterexample",
+      "passed": true
+    },
+    {
+      "name": "log-distance triangle fails",
+      "passed": true
+    },
+    {
+      "name": "power-sum equal total 3",
+      "passed": true
+    },
+    {
+      "name": "matched power 3,0",
+      "passed": true
+    },
+    {
+      "name": "matched power 3,1",
+      "passed": true
+    },
+    {
+      "name": "matched power 3,2",
+      "passed": true
+    },
+    {
+      "name": "first moment gap 3",
+      "passed": true
+    },
+    {
+      "name": "complete pattern distance 3",
+      "passed": true
+    },
+    {
+      "name": "power-sum equal total 4",
+      "passed": true
+    },
+    {
+      "name": "matched power 4,0",
+      "passed": true
+    },
+    {
+      "name": "matched power 4,1",
+      "passed": true
+    },
+    {
+      "name": "matched power 4,2",
+      "passed": true
+    },
+    {
+      "name": "matched power 4,3",
+      "passed": true
+    },
+    {
+      "name": "first moment gap 4",
+      "passed": true
+    },
+    {
+      "name": "complete pattern distance 4",
+      "passed": true
+    },
+    {
+      "name": "power-sum equal total 5",
+      "passed": true
+    },
+    {
+      "name": "matched power 5,0",
+      "passed": true
+    },
+    {
+      "name": "matched power 5,1",
+      "passed": true
+    },
+    {
+      "name": "matched power 5,2",
+      "passed": true
+    },
+    {
+      "name": "matched power 5,3",
+      "passed": true
+    },
+    {
+      "name": "matched power 5,4",
+      "passed": true
+    },
+    {
+      "name": "first moment gap 5",
+      "passed": true
+    },
+    {
+      "name": "complete pattern distance 5",
+      "passed": true
+    },
+    {
+      "name": "power-sum equal total 6",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,0",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,1",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,2",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,3",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,4",
+      "passed": true
+    },
+    {
+      "name": "matched power 6,5",
+      "passed": true
+    },
+    {
+      "name": "first moment gap 6",
+      "passed": true
+    },
+    {
+      "name": "complete pattern distance 6",
+      "passed": true
+    },
+    {
+      "name": "aligned law normalization",
+      "passed": true
+    },
+    {
+      "name": "aligned law normalization",
+      "passed": true
+    },
+    {
+      "name": "aligned four-position distance",
+      "passed": true
+    },
+    {
+      "name": "aligned event gap",
+      "passed": true
+    },
+    {
+      "name": "zero-size repeated event sufficient",
+      "passed": true
+    },
+    {
+      "name": "zero-size preceding event insufficient",
+      "passed": true
+    },
+    {
+      "name": "permutation transitivity recurrence 1",
+      "passed": true
+    },
+    {
+      "name": "permutation transitivity recurrence 2",
+      "passed": true
+    },
+    {
+      "name": "permutation fixed pair recurrence 2",
+      "passed": true
+    },
+    {
+      "name": "permutation transitivity recurrence 3",
+      "passed": true
+    },
+    {
+      "name": "permutation fixed pair recurrence 3",
+      "passed": true
+    },
+    {
+      "name": "permutation transitivity recurrence 4",
+      "passed": true
+    },
+    {
+      "name": "permutation fixed pair recurrence 4",
+      "passed": true
+    },
+    {
+      "name": "triple means",
+      "passed": true
+    },
+    {
+      "name": "variance certificate sufficient 329180",
+      "passed": true
+    },
+    {
+      "name": "variance certificate insufficient 329179",
+      "passed": true
+    },
+    {
+      "name": "midpoint certificate 0",
+      "passed": true
+    },
+    {
+      "name": "midpoint certificate 1",
+      "passed": true
+    },
+    {
+      "name": "sparse exact alpha",
+      "passed": true
+    },
+    {
+      "name": "sparse exact beta",
+      "passed": true
+    },
+    {
+      "name": "whole procedure size",
+      "passed": true
+    },
+    {
+      "name": "whole procedure power",
+      "passed": true
+    },
+    {
+      "name": "quality bad-pass bound",
+      "passed": true
+    },
+    {
+      "name": "quality good-fail bound",
+      "passed": true
+    },
+    {
+      "name": "zero-error reference bound",
+      "passed": true
+    },
+    {
+      "name": "adjacent-count boundary 105",
+      "passed": true
+    },
+    {
+      "name": "simple randomized good acceptance",
+      "passed": true
+    },
+    {
+      "name": "simple randomized bad acceptance",
+      "passed": true
+    },
+    {
+      "name": "adjacent-count boundary 106",
+      "passed": true
+    },
+    {
+      "name": "enumerated U variance 3",
+      "passed": true
+    },
+    {
+      "name": "enumerated U variance 4",
+      "passed": true
+    },
+    {
+      "name": "enumerated U variance 5",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n2 k2",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n2 k2",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n2 k2 (0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n2 k2 (0, 1)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n3 k2",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n3 k2",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k2 (0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k2 (0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k2 (0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k2 (0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k2 (0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n3 k3",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n3 k3",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k3 (0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k3 (0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k3 (0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k3 (0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n3 k3 (0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n4 k2",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n4 k2",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k2 (0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n4 k3",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n4 k3",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k3 (0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n4 k4",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n4 k4",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n4 k4 (0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n5 k2",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n5 k2",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 0, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 0, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 1, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 3, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 3, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 3, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 3, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k2 (0, 1, 2, 3, 4)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n5 k3",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n5 k3",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 0, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 0, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 1, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 3, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 3, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 3, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 3, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k3 (0, 1, 2, 3, 4)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n5 k4",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n5 k4",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 0, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 0, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 1, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 3, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 3, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 3, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 3, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k4 (0, 1, 2, 3, 4)",
+      "passed": true
+    },
+    {
+      "name": "report extension sensitivity n5 k5",
+      "passed": true
+    },
+    {
+      "name": "report extension sharp witness n5 k5",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 0, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 0, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 0, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 0, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 0, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 0, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 1, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 1, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 1, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 1, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 2, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 2, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 2, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 3, 0)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 3, 1)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 3, 2)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 3, 3)",
+      "passed": true
+    },
+    {
+      "name": "clean agreement n5 k5 (0, 1, 2, 3, 4)",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 2,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 2,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 2,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 2,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 3,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 4,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,0,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,1,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,2,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,3,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,4,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,4,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,4,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,4,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 5,4,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,0,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,1,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,2,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,3,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,4,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 6,5,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,0,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,1,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,2,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,3,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,4,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,5,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 7,6,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,0,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,1,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,2,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,3,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,4,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,5,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,6,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 8,7,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,0,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,1,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,2,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,3,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,4,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,5,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,6,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,7,9",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,1",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,2",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,3",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,4",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,5",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,6",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,7",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,8",
+      "passed": true
+    },
+    {
+      "name": "adjacent hypergeometric TV 9,8,9",
+      "passed": true
+    },
+    {
+      "name": "phase Pauli expansion 1/2",
+      "passed": true
+    },
+    {
+      "name": "phase pair negativity 1/2",
+      "passed": true
+    },
+    {
+      "name": "phase odd factor 1/2",
+      "passed": true
+    },
+    {
+      "name": "phase odd factor -1/2",
+      "passed": true
+    },
+    {
+      "name": "phase cross pair distance 1/2",
+      "passed": true
+    },
+    {
+      "name": "shared independent distance 1/2",
+      "passed": true
+    },
+    {
+      "name": "phase pair Casimir 1/2",
+      "passed": true
+    },
+    {
+      "name": "phase Pauli expansion 3/5",
+      "passed": true
+    },
+    {
+      "name": "phase pair negativity 3/5",
+      "passed": true
+    },
+    {
+      "name": "phase odd factor 3/5",
+      "passed": true
+    },
+    {
+      "name": "phase odd factor -3/5",
+      "passed": true
+    },
+    {
+      "name": "phase cross pair distance 3/5",
+      "passed": true
+    },
+    {
+      "name": "shared independent distance 3/5",
+      "passed": true
+    },
+    {
+      "name": "phase pair Casimir 3/5",
+      "passed": true
+    },
+    {
+      "name": "collective spin spectrum 2",
+      "passed": true
+    },
+    {
+      "name": "collective spin spectrum 3",
+      "passed": true
+    },
+    {
+      "name": "collective spin spectrum 4",
+      "passed": true
+    },
+    {
+      "name": "Gibbs difference factorization",
+      "passed": true
+    },
+    {
+      "name": "Gibbs distance log two",
+      "passed": true
+    },
+    {
+      "name": "trine average",
+      "passed": true
+    },
+    {
+      "name": "shared independent trine distance",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 2",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 3",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 4",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 5",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 6",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 7",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 8",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 9",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 10",
+      "passed": true
+    },
+    {
+      "name": "matching alphabet packing 11",
+      "passed": true
+    },
+    {
+      "name": "oriented triple 1",
+      "passed": true
+    },
+    {
+      "name": "anonymized calibrated Y 1",
+      "passed": true
+    },
+    {
+      "name": "oriented triple -1",
+      "passed": true
+    },
+    {
+      "name": "anonymized calibrated Y -1",
+      "passed": true
+    }
+  ]
+}

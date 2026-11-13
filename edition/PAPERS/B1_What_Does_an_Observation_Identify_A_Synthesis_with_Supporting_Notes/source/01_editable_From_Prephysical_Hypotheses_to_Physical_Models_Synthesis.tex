@@ -1,0 +1,558 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.91in,headheight=15pt]{geometry}
+\usepackage{fontspec,amsmath,amssymb,amsthm,booktabs,tabularx,microtype,xcolor,fancyhdr,hyperref}
+\usepackage{tikz,enumitem,needspace}\usepackage{unicode-math}\setmathfont{Latin Modern Math}\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}
+\definecolor{ink}{HTML}{153D45}\definecolor{rulecol}{HTML}{B9C9C8}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,citecolor=ink,pdftitle={From Prephysical Hypotheses to Physical Models},pdfauthor={Kirtus Justus}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\sffamily\color{ink}From Prephysical Hypotheses to Physical Models}\fancyfoot[L]{\small\sffamily Kirtus Justus}\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{theorem}{Theorem}[section]\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{Tr}}\newcommand{\TV}{\operatorname{TV}}\newcommand{\E}{\mathbb E}\newcommand{\id}{\mathbb I}\newcommand{\calB}{\mathcal B}\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\setlength{\emergencystretch}{2em}\raggedbottom
+\usepackage{pdfpages}
+\begin{document}
+\thispagestyle{plain}
+
+\begin{center}{\Large\bfseries\sffamily\color{ink}From Prephysical Hypotheses to Physical Models}\par\vspace{10pt}
+{\large Kirtus Justus}\par Port Coquitlam, British Columbia, Canada\end{center}
+\begin{abstract}
+What would justify interpreting a relational structure as a physical one? We study the part of this question that admits an operational answer: which properties are shared by every model consistent with specified preparations, interventions and measurements? Finite operator algebras illustrate when invariant rank-one choices exist. Spectral filters show how calibrated port measurements can recover a graph, while a static projector or a finite list of moments can leave its generating dynamics ambiguous. Fermionic relative entropy and a scalar-field response illustrate how a physical model and its scale enter such comparisons. For a finite-dimensional instrument, we determine the greatest possible weight of its operation in a specified local operator subspace from all basis-input first-output marginals. For every finite discarded dimension of at least two, joint purification gives the attainable ceiling and zero remains possible. Reading the second output label can give a positive lower bound. Matched coherent preparations and output projections can determine the weight even when all basis outputs leave it ambiguous. We construct both endpoints for each observation class and give an all-attempt sequential test for the calibrated four-input model. The results specify what each observation determines and which calibration would make the inference applicable to a particular physical system.
+\end{abstract}
+
+\section{What does an observation identify?}\label{sec:obs}
+
+A prephysical proposal may specify relations, compositions or symmetries before it specifies a clock, a position observable or a set of physical preparations. The problem is to give those symbols an observable interpretation. A mathematical map from relations into operators is insufficient on its own: the same experimental records may be compatible with several operator assignments, tensor factorizations or dynamical laws. The question can be made precise without assuming that an underlying history is deterministic.
+
+Let $\Theta$ be the class of descriptions under consideration, $\mathcal E$ a specified set of experiments, and $P_\theta^e$ the outcome law for experiment $e$. Include source, detector, gain and loss parameters in $\theta$ whenever the evidence allows them to vary. Define $\theta\sim\theta'$ when $P_\theta^e=P_{\theta'}^e$ for every $e\in\mathcal E$. A proposed property $h$ is identified by this experiment family exactly when it is constant on each equivalence class. Indeed, constancy defines a function of the observed laws; conversely any function of those laws takes the same value on equivalent descriptions. For actual data the relevant object is the range of $h$ over the jointly compatible descriptions, with sampling and calibration uncertainty included. A second experiment can refine this range only if its outcomes distinguish descriptions with different values of the property.
+
+This criterion connects the mathematical and ontological questions. If a description assigns the same observations to two inequivalent referents, those observations cannot decide between them. Independently specifying a preferred port, tensor factor, unit of time, or detector can change the answer. Such a specification is itself a physical premise. We use examples in which the compatible class, or a sharp property of it, can be computed. We start with the selection of operators, then ask what a calibrated spectrum reveals about a generator. The same issue reappears when the measuring operation is itself unknown.
+
+\clearpage
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\refstepcounter{figure}\label{fig:map}}]{Program_Identification_Map.pdf}
+\clearpage
+\subsection*{Method and scope}
+For each example we specify a model class, the interventions an observer may perform, and what is recorded on one attempt. We then ask which values of a property survive all those observations. For example, two Hamiltonians may give the same occupied state at every momentum while assigning different excitation energies. A timed measurement distinguishes them only if the time unit and the measured coupling are independently known.
+
+The graph and instrument examples illustrate different observation contracts. For the tested graph pair, the scale readout retains 36.08\% of spectral total variation. The calibrated four-input example allows local weight in $[0,37/38]$. Orthogonal binary outputs with perfect return fix $w=1/2$ over the complete input basis. These are results for the specified examples and their stated assumptions.
+
+For a collection of exact outcome laws $p=(p^e)_{e\in\mathcal E}$, the \emph{identified set} for $h$ is
+\[
+  \mathcal I_h(p)=\{h(\theta):\theta\in\Theta,\quad P_\theta^e=p^e\ \text{for all }e\}.
+\]
+An empty set excludes the model class at those population values. A singleton identifies the property. To prove that a bound is \emph{sharp}, we give an inequality for every compatible description and a description attaining the endpoint, or state explicitly when an endpoint is only a limit. These notions use the standard observational criterion for identification \cite{rothenberg}.
+
+Actual measurements give counts and calibration uncertainties. If $\mathcal C$ jointly covers the true outcome laws and calibration parameters with stated probability, the union of the corresponding identified sets inherits that coverage under the model. The sequential test in Section~\ref{sec:test} instead bounds the probability of ever rejecting a specified conditional model. Neither procedure assigns a probability to the competing physical descriptions. Figure~\ref{fig:map} shows the role of each measurement, and the \hyperref[sec:glossary]{glossary} gives the conventions for the quantities used below.
+
+\begin{proposition}[Stability of an identified property]
+For a finite list of experiments on finite outcome spaces, put $d(\theta,\theta')=\max_e\TV(P_\theta^e,P_{\theta'}^e)$. Suppose the description space is compact metric, all the outcome maps are continuous and $h$ is a continuous real property. If the exact observations identify $h$, then $\sup_{d(\theta,\theta')\le\delta}|h(\theta)-h(\theta')|\to0$ as $\delta\downarrow0$.
+\end{proposition}
+\begin{proof}
+Otherwise pairs with observational distance tending to zero have a property difference bounded away from zero. A subsequence converges in the product space. Continuity makes the limiting descriptions observationally equivalent, while their property values are distinct. This contradicts identification.
+\end{proof}
+This result assumes a topology on the model class and implies no numerical rate. For a prephysical structure $x$ and representation $b(x)$, the relevant observational map is $x\mapsto(P_{b(x)}^e)_e$. If $b$ is itself undetermined, competing assignments must be included in the description space. Fixing a representation can shrink the equivalence class before any observation has been made.
+
+
+\Needspace{13\baselineskip}
+\section{Invariant structure and physical labels}\label{sec:alg}
+
+Consider a finite-dimensional Hilbert space and specified self-adjoint operators $A_1,\ldots,A_k$. Their algebra $\mathcal A$ is the unital $*$-algebra they generate. A data-preserving unitary commutes with every $A_j$. Ask whether these data select a complete unordered family of rank-one orthogonal projections.
+
+\begin{theorem}[Invariant selection]
+Write the finite-dimensional representation as
+\[
+ \mathcal A=\bigoplus_\alpha (M_{n_\alpha}\otimes I_{m_\alpha}).
+\]
+A complete resolution invariant under all data-preserving unitaries exists exactly when every multiplicity $m_\alpha$ equals one. When it exists, it is unique exactly when $\mathcal A$ is maximal abelian.
+\end{theorem}
+\begin{proof}
+The commutant's unitary group is a product of connected unitary groups. It acts on an invariant finite set of projections by permutations. Every orbit is connected and hence a single point. Each projection therefore commutes with the entire commutant and belongs to the finite-dimensional bicommutant $\mathcal A$. A projection in a block of multiplicity $m_\alpha$ has rank divisible by that multiplicity. Such a block cannot be covered by rank-one projections when $m_\alpha>1$. In multiplicity one any choice of orthonormal basis within each block gives an invariant resolution. A block of dimension exceeding one admits more than one such basis. If every block is one-dimensional, its minimal projections give the unique resolution.
+\end{proof}
+
+There is a calculable difference between exact selection and stable selection. Let $A_1=Z$, $A_2=\varepsilon X$ on a qubit, with $X,Y,Z$ the Pauli matrices. For every $\varepsilon>0$ they generate $M_2$. Yet the minimum eigenvalue of $\sum_j[A_j,[A_j,\cdot]]$ on the traceless Hermitian matrices is $4\varepsilon^2$ for $0<\varepsilon\le1$: the Pauli basis diagonalizes this map with eigenvalues $4$, $4(1+\varepsilon^2)$ and $4\varepsilon^2$, respectively. An arbitrarily small additional coupling removes the exact commutant while leaving a weakly distinguished direction.
+
+A similar calculation locates what a relational phase means. If one known operator has simple spectrum, rephasing its eigenvectors sends an off-diagonal entry $B_{ij}$ of a second operator to $e^{i(\phi_j-\phi_i)}B_{ij}$. Its magnitude and every phase product on a closed cycle are invariant. Conversely, choose phases on a spanning tree of each support component to make the tree entries positive. The remaining edge phases are fixed by their fundamental cycles. With the diagonal entries and labels fixed, this identifies the pair up to the allowed rephasings. A position basis or a physical separation requires an additional identification of the vertices.
+
+\paragraph{Fluctuation variables.}
+Even a familiar physical representation can depend on which states and operations are observed. In a product of $N$ spin-$1/2$ systems with single-site state $(I+mZ)/2$, $0<m\le1$, set $Q_N=\sum_j X_j/\sqrt{2mN}$ and $P_N=\sum_jY_j/\sqrt{2mN}$. Then
+\[
+ [Q_N,P_N]=\frac{i}{mN}\sum_j Z_j,\qquad
+ \E|[Q_N,P_N]-iI|^2=\frac{1-m^2}{Nm^2}.
+\]
+The minimum eigenvalue of $\sum Z_j$ is $-N$, so the operator-norm discrepancy is $1+1/m$ at every $N$. For fixed $u,v$, putting $a=u/\sqrt{2mN}$, $b=v/\sqrt{2mN}$ gives
+\[
+ \E(e^{iuQ_N}e^{ivP_N})=(\cos a\cos b-im\sin a\sin b)^N
+ \longrightarrow \exp[-(u^2+v^2)/(4m)-iuv/2].
+\]
+This follows by multiplying the one-site factors and expanding at the origin. In the tracial state $m=0$ the appropriate $1/\sqrt N$ normalization instead gives $e^{-(u^2+v^2)/2}$ for the ordered characteristic function. The limiting commutator and representation are state-dependent. These spin examples are elementary instances of quantum fluctuation theory \cite{fluct}. They begin with quantum spins. Identifying subsystems further requires the generated local algebras to commute as operators. An expected commutator can vanish even for two Pauli matrices generating all of $M_2$.
+
+\section{From labelled spectral data to a generator}\label{sec:graph}
+
+A graph Laplacian provides a case in which stronger observations close an inverse problem. Let $L$ be the real symmetric combinatorial Laplacian of a connected weighted graph on $n$ labelled vertices. Set $P_0=\mathbf 1\mathbf 1^T/n$ and $K=L^+$. Assume a source can address the indicated vertex modes. Consider the continuous positive operator-valued measure $\Pi(ds)=4sL^2e^{-2sL}\,ds$ on positive scales, completed by a separate output $P_0$. This model uses graph spectral filters and the established resistance pseudoinverse \cite{hammond,devriendt}. The unit of $s$ is set by the generator and its calibration.
+
+\begin{theorem}[Pair reconstruction]
+For two normalized preparations supported on the same pair $i,j$, suppose their diagonal populations match. Let $\Delta\mu$ be their difference in unconditional first scale moments and $\Delta p_0$ their difference in zero-mode probabilities. If $\Delta p_0\ne0$, then
+\[
+ K_{ij}=\frac{\Delta\mu}{n\Delta p_0},\qquad R_{ij}=K_{ii}+K_{jj}-2K_{ij}.
+\]
+Observing all off-diagonal entries fixes $K$ and $L$ in the given labels and units.
+\end{theorem}
+\begin{proof}
+At positive eigenvalue $\lambda$ the density is $4s\lambda^2e^{-2s\lambda}$. Its zeroth and first moments are $1$ and $1/\lambda$. It follows that $\int\Pi=I-P_0$ and $\int s\Pi=K$. The difference of the preparations has entries $z,\bar z$ off diagonal and zeros elsewhere. Its traces against $K$ and $P_0$ are respectively $2\Re(z)K_{ij}$ and $2\Re(z)/n$. Division gives the result. Since $K\mathbf 1=0$, the off-diagonal entries determine each diagonal, and $K^+=L$.
+\end{proof}
+
+Observing every pair does not ensure a usable contrast. The preparations $(|i\rangle\pm i|j\rangle)/\sqrt2$ have identical probabilities under every real symmetric spectral filter. On either the $4\times4$ rook graph or the Shrikhande graph, the weights at Laplacian eigenvalues $0,4,8$ are $(1,6,9)/16$ on every one of the 120 labelled pairs. Translation invariance fixes each projector diagonal to its rank divided by 16; the imaginary off-diagonal coherence cancels. The graphs have eight and zero four-cliques, respectively. Their full scale laws therefore coincide under these preparations despite their inequivalent adjacency. Real plus/minus preparations instead have $\Delta p_0=2/n$. This control, proved in the mathematical review, concerns different graphs and observations from the finite-moment comparison below \cite{brouwer}.
+
+The loss is quantitative on the labelled pair $(0,0),(0,2)$ for the two graphs just considered. Prepare $(|i\rangle+e^{i\phi}|j\rangle)/\sqrt2$ with $c=\cos\phi$. Measuring the Laplacian eigenvalue gives total variation $|c|/4$ between the two laws. The scale record, including its separate zero outcome, gives $(3+4\log 2)|c|/64$. For this pair, therefore, the scale filter retains about 36.1\% of the one-record spectral distinction when $c\ne0$. Both readouts agree at $c=0$. The review derives the contraction and the signed-phase bounds for independent repetitions.
+
+Population recovery leaves a separate precision question. For one edge of conductance $g$, the minus preparation has a gamma scale law of mean $1/(2g)$. In fixed units, $g$ and $g+\sqrt g$ diverge in absolute difference while their laws for any fixed budget approach each other, even with adaptive preparations. Independent minus preparations nevertheless give an exact relative confidence interval. Both statements are proved in the mathematical review.
+
+For a common finite measurement window $[a,b]$, the omitted first-moment operator is positive. With positive spectrum in $[\lambda_2,\lambda_{\max}]$ its norm is bounded by
+\[
+ B=\tfrac43\lambda_{\max}^2a^3+
+ \lambda_2^{-1}e^{-2\lambda_2 b}(1+2\lambda_2b+2\lambda_2^2 b^2).
+\]
+The early integral uses $e^{-2s\lambda}\le1$. The late integral is the decreasing upper Gamma tail evaluated at $\lambda_2$, times $1/\lambda_2$. Subtracting $BI/2$ bounds each omitted off-diagonal entry by $B/2$. A small coherence contrast still amplifies statistical error in the ratio. Means conditioned on a positive click require separate normalization for the zero mode and lost events.
+
+\paragraph{Local precision and global ambiguity.}
+For a known eigenmode and scale $u$, let $f_u=u\lambda e^{-u\lambda}$. A coherent probe with unknown real amplitude $a$ produces homodyne means $\sqrt2 a v$ with independent variance $1/2$ for $v=(f_s,f_t,\sqrt{1-f_s^2-f_t^2})$. Normalization gives $v^Tv'=0$, so the amplitude and eigenvalue scores are orthogonal and the Fisher information for $\lambda$ is $4a^2\|v'\|^2$. This is a local sensitivity. When $s=t$, $x e^{-x}$ takes each value in $(0,e^{-1})$ twice, and the complete output vector agrees at both positive eigenvalues. More repetitions of that fixed experiment leave this ambiguity intact.
+
+\paragraph{Which receiver optimizes local precision?}
+With $x=s\lambda$, $y=t\lambda$, $f(u)=u e^{-u}$ and $z(u)=u(1-u)e^{-u}$, the full-output information is $(a^2/\lambda^2)C(x,y)$, where
+\[
+ C/4=z(x)^2+z(y)^2+\frac{[f(x)z(x)+f(y)z(y)]^2}{1-f(x)^2-f(y)^2}.
+\]
+Set $g(u)=z(u)^2/(1-2f(u)^2)$. Cauchy–Schwarz bounds $C/4$ by $[z(x)^2+z(y)^2]/[1-f(x)^2-f(y)^2]\le2\max g$. Equal scales at a maximizer attain this upper bound. Equality requires $z(x)/f(x)=z(y)/f(y)$, hence $x=y$. The derivative of $g$ has the sign of $-(u-1)F(u)$, $F=u^2-3u+1+2u^3e^{-2u}$, and $F'=(2u-3)(1-2u^2 e^{-2u})$. There is exactly one root in $(0,1)$ and one above $3/2$. On $(0,1)$, $g<(1/16)/(1-2/e^2)<2/23$; at $u=5/2$, $g> (225/16)e^{-5}>2/23$ using $e<11/4$. The upper root $r=2.5212815658\ldots$ is therefore the global maximizer, with $C_{\max}=8r^3e^{-2r}=0.8279358532\ldots$. The positive root below one of $f(u)=f(r)$ is $0.2637461879\ldots$. This calculation establishes local optimality over the specified two scales and full readout, together with a global ambiguity at that design.
+
+A single labelled probe can likewise conceal the generator when only a few moments are available. A concrete example compares the pair vector $(e_0-e_1)/\sqrt2$ on a 16-vertex rook graph with a weighted graph. For $m_j=\langle K^j\rangle$, the rook edge gives $(m_0,\ldots,m_4)=(1,5/32,7/256,11/2048,19/16384)$. The rook edge has weights $1/4$ and $3/4$ at Laplacian eigenvalues $4$ and $8$, respectively, giving these inverse moments. The constructive graph certificate in \cite{graphcert} fixes three conductances of a four-vertex complete graph at $1/50$ and encloses a root for the other three using a contraction on a rational box. In the rational certificate the unknown weights are $(w_{02},w_{12},w_{13})$, near $(15.6899984583,3.9688719038,0.0235628564)$. The reproducibility packet gives the full rational center and interval verifier. For radius $10^{-34}$, the exact Newton displacement is below $4\times10^{-63}$ and the contraction bound is below $5\times10^{-27}$. Thus the Newton map with derivative frozen at the center maps the box into itself contractively. Its fixed point matches $m_1,m_2,m_3$ and puts $m_4$ in $(0.006804564875115,0.006804564875116)$. To obtain the same vertex count, connect each of twelve new vertices to the original four by conductance $\varepsilon=3/500$ and subtract $3\varepsilon$ from every original edge. The weights remain positive. On vectors of sum zero supported on the original four vertices, the diagonal shift $12\varepsilon I$ cancels the subtraction $3\varepsilon L(K_4)$, and the cross block vanishes. Hence the full pair measure is preserved under the extension; the added vertices can, for example, be connected as a positive clique. The distinction at the fourth moment is specific to this probe and these graphs.
+
+\paragraph{Orientation and finite size.}
+On a bipartite hopping model let the real diagonal grading $G$ satisfy $GhG=-h$ and let $B(t)$ be any real bond control obeying $GB(t)G=-B(t)$. The propagators satisfy $U_{\bar h+B}(t)=G\overline{U_{h+B}(t)}G$: complex-conjugating the evolution equation and applying the grading produces the same differential equation and initial condition. In the site basis their transition intensities agree, even when a closed-loop phase changes sign. A calibrated diagonal detuning has the opposite parity under this transformation and can give a distinguishing experiment.
+
+A heat-trace slope can also change for reasons other than geometry. For $L_c=L+c(I-P_0)$, let $B(s)=\tr e^{-sL}-1$. Direct differentiation gives
+\[
+ -2s\partial_s\log\tr e^{-s L_c}
+ = \frac{e^{-sc}B(s)}{1+e^{-sc}B(s)}
+       [-2sB'(s)/B(s)+2sc].
+\]
+At fixed finite volume, increasing $c$ at positive $s$ suppresses all nonconstant modes. A thermodynamic limit taken first can suppress the stationary mode's density instead. Interpreting either slope as a spacetime dimension requires a specified diffusion process, scale and limit, as well as evidence for their physical meaning.
+
+\section{Energy, time and the observable channel}\label{sec:energy}
+
+A spectral parameter acquires physical units through an independently timed or spatially resolved intervention. Even within a specified lattice theory, the static state need not determine the Hamiltonian. If $h(k)=\boldsymbol d(k)\cdot\boldsymbol\sigma$ is gapped, its negative-band projector is $(I-\widehat{\boldsymbol d}(k)\cdot\boldsymbol\sigma)/2$. Replacing $h(k)$ by $a(k)h(k)$ for a positive real function leaves this projector fixed while changing the excitation energies. A finite-range version uses $h_m(k)=\sin k\,X+(1+m-\cos k)Z$ with $m>0$ and multiplier $1+\varepsilon\cos k$, $|\varepsilon|<1$. The occupied projector and every equal-time quasifree correlation on the same algebra agree. A calibrated interband oscillation has frequency proportional to $(1+\varepsilon\cos k)\sqrt{m^2+4(m+1)\sin^2(k/2)}$. At $m=1$ the ratios at $k=\pi/3,\pi$ relative to $k=2\pi/3$ obey $\sqrt{21}R_{12}+2\sqrt7 R_{32}=9$. This follows by substitution. The first ratio is strictly increasing in $\varepsilon$ and identifies it within this one-parameter family \cite{projector}.
+
+There are also inequivalent finite-range dispersions that agree on every uniform spectral integral. Let $h_n(k)=(E_*+d\cos nk)Z$, $E_*>|d|>0$. For integer $n\ge1$, the map $k\mapsto nk$ preserves normalized uniform measure on the circle, so all such integrals of a function of the band energy agree. But a probe with density $(1+\eta\cos k)/(2\pi)$, $0<\eta\le1$, gives mean energy $E_*+\eta d/2$ for $n=1$ and $E_*$ for $n=2$. The new datum breaks the equivalence through its calibrated momentum dependence.
+
+\paragraph{A sharp limitation from Euclidean moments.}
+Let a positive spectral measure be observed at integer multiples of known time spacing $a>0$. Write $x=e^{-aE}$ and $m_j=\int_0^1x^j\,d\rho(x)$. Assume $H_0=(m_{i+j})_{0\le i,j<n}$ is positive definite and put $H_1=(m_{i+j+1})$. For a representing measure supported in $[0,v]$, positivity of $\int(v-x)|p(x)|^2d\rho$ for every polynomial of degree less than $n$ gives $H_1\preceq vH_0$. Thus $v$ is at least the largest generalized eigenvalue $x_n$ of $(H_1,H_0)$. The orthogonal polynomial of degree $n$ has these generalized eigenvalues as its Gaussian quadrature nodes. Its positive quadrature measure matches degrees $0$ through $2n-1$ and has largest node $x_n$. One can see exactness by dividing any such polynomial by the degree-$n$ orthogonal polynomial. The quotient is orthogonal to it, and the remainder is integrated by interpolation at the nodes. The weights are positive because the squared Lagrange polynomials integrate to positive numbers. This realizes the sharp lower bound on the largest accessible $x$, hence the sharp upper bound $-a^{-1}\log x_n$ on the lowest coupled energy for $x_n>0$. For interior moment data a sufficiently small atom at $x=1$ can be subtracted from the moment vector while leaving a representable residual. Adding the atom back yields zero lowest energy with the same observations. Boundary moment data need separate treatment. The quadrature/transfer-matrix connection also appears in Lanczos spectroscopy \cite{wagman}.
+
+\paragraph{Positive moments with uncertainty.}
+The quadrature result concerns equally spaced times. Another exact support bound uses a positive probability measure on energy with data
+$y=(\langle E\rangle,\langle E^2\rangle,\langle E^3\rangle,\langle e^{-hE}\rangle,\langle e^{-2hE}\rangle)$, $h>0$. Suppose $y-y_0$ lies in a compact convex uncertainty set and a feasible measure has three positive masses at $0<x_1<x_2<x_3$. Form
+\[
+ F(E)=E^3+c_2E^2+c_1E+c_0+b_1e^{-hE}+b_2e^{-2hE}.
+\]
+If $F$ vanishes simply at $x_1$ and doubly at $x_2,x_3$, it is nonnegative on $[x_1,\infty)$. Indeed $F^{(4)}$ is an exponential times a linear combination of $1$ and $e^{hE}$, with at most one zero unless identically zero. Rolle's theorem bounds the zero count of $F$ by five, with multiplicity, and $F$ is positive at large $E$. Suppose further that the three-atom data uniquely maximize the linear functional $y\mapsto(c_1,c_2,1,b_1,b_2)\cdot y$ over the allowed data region. Then every feasible measure integrates $F$ to at most zero. Any such measure supported above or at $x_1$ must therefore be concentrated on the three zeros, with exactly the same data. Its weights follow from normalization and the first two moments by a Vandermonde system. This proves that $x_1$ is the largest feasible lower edge and that the maximizing measure is unique under the stated condition. The exact, rectangular and ellipsoidal examples have different optimizers. A proposed transition in the sign of a correction remains a numerical candidate \cite{spectral}.
+
+In a weak Ricker source experiment, a normalized leading response can take the form $F(z)=\int e^{-z\lambda}d\mu(\lambda)$ with $\lambda=\omega^2$ and positive spectral weight proportional to $\omega^4$ times the coupled transition measure. Where $0<F<\infty$, differentiation gives
+\[
+ -(\log F)'=\E_z\lambda,\qquad \frac{d}{dz}\E_z\lambda=-\operatorname{Var}_z(\lambda).
+\]
+Consequently a two-scale logarithmic secant bounds the lowest \emph{coupled} squared frequency from above. A selection rule may remove a lower excitation from $\mu$. A physical clock and a model of the excited channel must already be available to interpret $\omega$.
+
+\paragraph{A field-theory comparison.}
+For a scalar with radial amplitude $\rho$ in a canonically normalized classical Abelian Higgs model, add a homogeneous, independently normalized source $J\rho^2/2$. On the stable positive branch the potential is $\lambda(\rho^2-v^2)^2/4-J\rho^2/2$. Its minimum satisfies $\rho_J^2=v^2+J/\lambda>0$. The linearized squared radial and vector masses are $2\lambda\rho_J^2$ and $g^2\rho_J^2$, from the second derivative and the covariant kinetic term. At $J=0$ these two poles alone leave a continuous parameter ambiguity: rescale $v$ and adjust $g,\lambda$ to keep both squared masses fixed. A calibrated pole residue of $\Phi^*\Phi$ in this tree-level convention is $v^2$, since its linear fluctuation is $v$ times the canonical radial fluctuation. It fixes the remaining scale with the stated field and source normalization. Loop corrections, operator renormalization, or a different action change this inference. The example is within an already specified spacetime field theory \cite{higgs}.
+
+A calibrated compact-group transfer law presents the same issue in a different setting. For the two-dimensional pure $SU(2)$ Wilson plaquette measure the normalized spin-$j$ eigenvalue is $I_{2j+1}(\beta)/I_1(\beta)$. At fixed $j$ the large-$\beta$ expansion of the modified Bessel functions gives $\log\lambda_j=-2j(j+1)/\beta+O_j(\beta^{-2})$. With $\beta=4/(g^2a^2)$ and $N=A/a^2$ this yields $\lambda_j^N\to\exp[-Ag^2 j(j+1)/2]$. In the dimensionless transfer convention $a_{\gamma,n}=-\gamma\log[I_n(\gamma)/I_1(\gamma)]$ and $\ell_n=(n^2-1)/2$, the stronger fixed-time operator-norm limit on either the character space or the full regular representation follows by a separate argument \cite{compact}. The integral representation gives $0<I_{n+1}/I_n<1$, so $a_{\gamma,n}$ increases with $n$. At fixed $n$ it tends to $\ell_n$. For any cutoff $M$ the supremum of $|e^{-s a_{\gamma,n}}-e^{-s\ell_n}|$ above $M$ is bounded by $e^{-s a_{\gamma,M}}+e^{-s\ell_M}$. Take $\gamma\to\infty$ and then $M\to\infty$ for fixed $s>0$; the same split works for $(1+a_{\gamma,n})^{-1}$. At moving $s$ the tail bound changes. The proposed full-representation moving-scale trace-asymptotic coefficient in \cite{compact} remains an open target. This argument uses a known area, lattice spacing and dimension. A fixed-representation limit alone gives no uniform control over the entire character expansion. Continuum lattice convergence in two-dimensional Yang–Mills theory is a separate, established analysis \cite{driver}.
+
+In finite dimension the normalized Gibbs states of $A$ and $A+V$ at inverse-temperature parameter $s\ge0$ have half-trace distance at most $\tanh[s(\lambda_{\max}(V)-\lambda_{\min}(V))/4]$. A commuting two-level system attains this bound. The review gives the proof and distinguishes its domain from the trace-class perturbation result.
+
+\paragraph{What would determine a metric?}
+Even complete unparametrized light paths have a residual ambiguity. For smooth positive $\Omega$, $g$ and $\widetilde g=\Omega^2g$ have the same null cones. The change of connection on a null tangent $k$ contributes $2(k\cdot d\log\Omega)k-g(k,k)\nabla\log\Omega$, proportional to $k$. Thus the two metrics have the same unparametrized null geodesics. On a timelike comparison curve, however, $d\widetilde\tau=\Omega\,d\tau$ (units $c=1$). An independently calibrated proper-time comparison can distinguish conformal factors that give different elapsed times on the selected curve. This standard result of Lorentzian geometry \cite{conformal} begins with a differentiable manifold, a metric class and a causal interpretation. A diffusion scale on a graph does not supply them.
+
+\section{What an equal-time fermionic state can determine}\label{sec:ferm}
+
+The measurement problem is clearer when both the missing observable and the compatible set can be written down. In two number-conserving fermionic modes with gauge-invariant density matrix, let $q_{00},q_{10},q_{01},q_{11}$ be the four occupation probabilities. The only off-diagonal entry allowed is a coherence $z$ within the one-particle sector. Positivity gives $0\le |z|^2\le q_{10}q_{01}$. Every modulus in this interval gives a positive state and
+\[
+ \tr\rho^2=\sum_i q_i^2+2|z|^2 .
+\]
+Thus even noiseless number counting can leave a purity interval. The range can collapse at a boundary probability. This simple projection calculation will reappear for quantum channels.
+
+An exact comparison can also test whether the two-mode state is quasifree, meaning that its correlations obey Wick factorization. Let $C_{ij}=\langle a_i^\dagger a_j\rangle$ and let $\omega_C$ be the gauge-invariant quasifree state with that covariance. Its double occupation is $C_{11}C_{22}-|C_{12}|^2$. Subtracting the observed $q_{11}$ yields $W=q_{10}q_{01}-q_{00}q_{11}-|C_{12}|^2$. The two states have the same one-particle coherence and one-mode populations. Their difference has diagonal entries of magnitudes $|W|$ in all four occupation sectors and zero off-diagonal entries. Thus $\|\rho-\omega_C\|_1=4|W|$, and the trace distance is $2|W|$. Counting alone does not determine $|C_{12}|$ \cite{twomode}.
+ 
+A full covariance carries substantially more information than its occupation probabilities. For a Wilson–Dirac chain take
+\[
+ h_m(k)=\sin k\,X+(1+m-\cos k)Z,\qquad P_m(k)=\tfrac12(I-h_m(k)/|h_m(k)|).
+\]
+Compress the infinite-chain occupied projector to $L$ consecutive two-orbital cells, giving $C_{L,m}$. Set $m=\mu/L$, $\mu>0$ fixed. For two strictly interior fermionic covariances $A,B$, write $S(A)=-\tr[A\log A+(I-A)\log(I-A)]$ and use the quasifree relative entropy
+\[
+ D(A\|B)=\tr\{A(\log A-\log B)+(I-A)[\log(I-A)-\log(I-B)]\}.
+\] Direct expansion gives
+\[
+ D(A\|B)=\tr[(A-B)(\log(I-B)-\log B)]-[S(A)-S(B)] .
+\]
+This identity needs no simultaneous diagonalization of the two covariances.
+
+\begin{proposition}[Wilson comparison and its analytic inputs]\label{prop:wilson}
+In the common interval scalarization let $N=2L$, $A$ be the massive covariance, $B$ the massless covariance, $\Delta=A-B$ and $J_{j-1,j}=J_{j,j-1}=j(N-j)/N$ with zero diagonal. Put $K_B=\log(I-B)-\log B$ and
+\[
+ \eta(t)=\pi t\,{}_3F_2(1/4,1/2,3/4;1,3/2;4t^2),\qquad E_N=K_B+N\eta(J/N).
+\]
+The finite identity gives $D=P+Q+M-\Delta S$, where
+\[
+ P=-\pi\tr(\Delta J),\quad Q=-N\tr\{\Delta[\eta(J/N)-\pi J/N]\},\quad
+ M=\tr(\Delta E_N),\quad \Delta S=S(A)-S(B).
+\]
+The collected proof gives $D=(\mu^2/6)\log L+O_\mu(1)$ and states separately sufficient conditions for convergence of the finite part \cite{relative}; the leading-law proof appears in \cite{bulk}. With the two-bond, nonlinear, modular and boundary-entropy estimates of \cite[Secs.~2--7]{justuswilson}, the finite part is
+\[
+ D(C_{L,\mu/L}\|C_{L,0})
+ =\frac{\mu^2}{6}\log L+
+ \mu^2\!\left(\frac{13}{36}-\frac{\pi}{12}-\frac{\log\mu}{6}\right)
+ -\mathcal S(\mu)+O_\mu((\log L)^{-1}).
+\]
+\end{proposition}
+\begin{proof}
+Insert $K_B=E_N-N\eta(J/N)$ in the covariance identity and split the linear term. The precise estimates used in the asymptotic implication are
+\begin{align*}
+ P&=\frac{\mu^2}{6}\log L+
+ \mu^2\left(\frac16\log\frac8\mu-\frac14\right)+O_\mu(\log L/L),\qquad
+ M=O_\mu(N^{-1/2}),\\
+ Q&=\mu^2 c_\eta+O_\mu((\log N/N)^{1/3}),\qquad
+ \Delta S=\mathcal S(\mu)+O_\mu((\log L)^{-1}),
+\end{align*}
+with $c_\eta=11/18-\pi/12-(\log8)/6$. Here $\mathcal S(\mu)$ is the finite cross-boundary trace-path limit of the entropy difference. The constant follows by addition, and the largest of the four remainder orders is $O_\mu(1/\log L)$. For a concrete definition of the boundary term, let $\chi$ restrict to the unit interval and let $P_\mu^c$ have continuum symbol $[I-(uX+\mu Z)/\sqrt{u^2+\mu^2}]/2$. Set $Y_\mu=\chi P_\mu^c(I-\chi)$, form the off-diagonal Hermitian block matrix $\mathcal H(Y)$ with upper right block $Y$, and put $\mathcal T=\mathcal H(Y_\mu-Y_0)$, $A_t=\mathcal H(Y_0)+t\mathcal T$. Then $\mathcal S(\mu)=\tfrac12\int_0^1\tr[h'(A_t)\mathcal T]\,dt$, with $h(x)$ the binary entropy at $(1+\sqrt{1-4x^2})/2$. The reference spectral interpolation, nonlinear Jacobi estimates and trace-class boundary theorem enter through the cited estimates. The modular bound uses Theorem~4 and Corollary~5 of \cite{justuswilson}, the nonlinear rate uses its Lemma~6 and Theorem~7, and the entropy limit uses its Section~7 and \cite{crossboundary}. The two-bond expansion is in \cite{relative} and \cite{referencegeometry}.
+\end{proof}
+
+One can see precisely how an estimate on the reference spectrum controls the entropy error. For a positive majorant $G$ suppose $\tr G\le M$, $\tr(G\,{\bf1}_{|J|>x})\le a/x+b/x^2$, $\|E_N\|\le4\sqrt N$, and the simultaneous spectral modes of $J,E_N$ have discrepancy at most $C/N$ on $|\lambda|\le N/4$. Splitting the trace at $N/4$ gives
+\[
+ \tr(G|E_N|)\le CM/N+16a/\sqrt N+64b/N^{3/2}.
+\]
+This proof does not need $G$ to commute with $J$. The interior approximation and the tail majorant enter in different regions of the same estimate.
+
+For the same half-filled finite matrices, the stronger estimate $\|E_N\|\le7$ holds for every even $N\ge2$ \cite[Theorem~3]{uniformmodular}. With $N=2L$ and fixed $\mu>0$, Corollary~4 gives a full modular correction $O_\mu(\sqrt{\log N}/N)$, and Theorem~6 gives a nonlinear remainder $O_\mu(\sqrt{(\log N)/N})$. These statements apply at the actual finite eigenmodes; they do not assert a moving-edge interpolation expansion. The full relative-entropy remainder remains $O_\mu(1/\log L)$ in the stated argument because the boundary entropy estimate controls that order.
+
+
+The leading coefficient and finite constant describe a specific equal-time restriction of specified states. There is no uniform assertion as $\mu\downarrow0$. Even an exact value for this functional cannot resolve Hamiltonians with the same occupied projectors. The commuting-operator treatment of entanglement Hamiltonians in free chains gives related spectral context \cite{eisler}.
+
+\section{Identifying states when the detector also varies}\label{sec:readout}
+
+If both state preparations and measurements are unknown, a similarity transformation can preserve complete experimental sequences. For the labelled directions $j=X,Y,Z$, take $\rho_{\pm j}=(I\pm a\sigma_j)/2$ and binary effects $E_{\pm j}=(I\pm b\sigma_j)/2$. Bloch scaling by $3/2$ carries $(a,b)=(1/2,3/4)$ into $(3/4,1/2)$ with the inverse scaling on effects. All one-step probabilities agree. With each accessible map transformed by the same similarity, internal factors cancel in every sequence probability whenever the two restricted models remain physical. The preparation purities are $5/8$ and $25/32$. This is a special case of gate-set gauge freedom \cite{gst}.
+
+Entangling capability by itself does not universally fix that scaling. In the CNOT example $\Phi=0.37\,\operatorname{Ad}_{\mathrm{CNOT}}+0.63\,\mathcal D$, with $\mathcal D$ the two-qubit depolarizing channel, let $G$ multiply a Pauli string of weight $k$ by $(3/2)^k$ and put $\widetilde\Phi=G\Phi G^{-1}$. Its unnormalized Choi matrix $J=\tfrac14\sum_P P^T\otimes\widetilde\Phi(P)$, summed over the sixteen Pauli strings including identity, has spectrum and multiplicities
+\[
+ (1/300,4),\quad(23/240,1),\quad(63/400,6),\quad
+ (187/600,4),\quad(2039/1200,1).
+\]
+These follow by applying the CNOT Pauli permutation in the displayed matrix. The map is trace preserving, and the listed eigenvalues are positive. On input $|+\rangle|0\rangle$, the least eigenvalues after output partial transposition are $-11/400$ and $-3/25$ respectively. Both channels can therefore entangle a product input. A sharp extra hypothesis changes the problem: if the gate is a unitary conjugation, its scaled conjugate must have determinant of magnitude one. A unital TP completely positive map contracts the Hilbert–Schmidt norm by Schwarz's inequality. The determinant forces all singular values to equal one, so the unitary conjugation must commute with the squared Bloch scaling. It preserves the one-body Pauli space. The two commuting simple Lie ideals in this space must be preserved or exchanged, giving local unitaries, possibly followed by SWAP. Thus a genuinely entangling unitary excludes this particular similarity. Other gauges and other noise models have their own identifiability conditions.
+
+\paragraph{Incomplete calibration.}
+With trusted states $\rho_i$ and a fixed effect $0\preceq E\preceq I$, reference click probabilities constrain $\tr E\rho_i$. The sharp possible target probability is its minimum or maximum over that convex set \cite{keith}. On a qubit, trusted computational-basis click rates $p_0,p_1$ fix the diagonal of $E$. Both $E$ and $I-E$ must be positive, giving
+\[
+ |E_{01}|\le R=\min\{\sqrt{p_0p_1},\sqrt{(1-p_0)(1-p_1)}\}.
+\]
+The click interval on $|+\rangle$ is $[(p_0+p_1)/2-R,(p_0+p_1)/2+R]$, attained by the two real endpoint coherences. Thus incomplete tomography can give exact predictions for some calibration outcomes and almost no prediction for others.
+
+\paragraph{A reference with which to test a detector.}
+For a scale input with density $f_c(u)=4c^2u e^{-2cu}$ suppose a common detector event has response $0\le h(u)\le1$. For couplings 1 and 2 the likelihood ratio $4e^{-2u}$ decreases. To maximize the second click rate at fixed first rate $p$, allocate acceptance to the lowest values of $u$; to minimize it, allocate acceptance to the highest. The maximizing rule follows by integrating the difference from a threshold rule against $f_2-kf_1$, whose sign changes at the threshold. With $F_c$ the incident CDF the exact interval is
+\[
+ [1-F_2(F_1^{-1}(1-p)),\,F_2(F_1^{-1}(p))].
+\]
+Randomizing between these rules realizes the interior. Concavity of the upper envelope and convexity of the lower preserve necessity under a stable unknown mode mixture when all eigenvalues scale by the same factor. Passing the test shows compatibility and cannot alone distinguish a changing source from a changing detector.
+
+\paragraph{Phase interventions.}
+Let $P$ be a rank-one match projector, $Q=I-P$, $s=\tr P\rho$, $h=\tr EP$ and $U_\phi=P+e^{i\phi}Q$. With a common conditional state and effect, $q_\phi=\tr(EU_\phi\rho U_\phi^*)$ contains just one harmonic. Put $a=sh$, $b=(q_0+q_\pi)/2-a$ and $c=[q_0-q_\pi+i(q_{\pi/2}-q_{3\pi/2})]/4$. A quartet is feasible exactly if its two opposite-arm sums agree and
+\[
+ 0\le b\le1-s,\qquad |c|^2\le\min\{shb,\,s(1-h)(1-s-b)\}.
+\]
+Indeed an expansion gives $q_\phi=a+b+2\Re(e^{-i\phi}c)$. Cauchy–Schwarz applied to the two projected components gives the first disk from $E$ and the second from $I-E$. Conversely take the pure vector with components $\sqrt{s},\sqrt{1-s}$ in two directions and an effect with diagonals $h,b/(1-s)$ and the appropriate off-diagonal of modulus $|c|/\sqrt{s(1-s)}$. The two determinant conditions give positivity of the effect and of its complement. At $s=0,1$ the phase is unobservable by support. Even a fully measured quartet is compatible with a pure-state realization, so its harmonics alone do not identify purity. A physical implementation must characterize the joint phase operation as well as the transfer of its readout.
+
+\section{Purity and the probability that an operation succeeds}\label{sec:purity}
+
+A history-conditioned quantum operation describes a selected outcome of an instrument. Let $\calB$ be a nonzero CP trace-nonincreasing map on two qubits, and $H=\calB^\dagger(I)$ its success effect. Put $p_*=\tr H/4$. With output-first vectorization, the trace-one Choi state $C$ has input marginal $H^T/(4p_*)$. Trace preservation gives $I/4$. Conditioning on success generally changes that marginal. The branch conditional on input $i$ is meaningful only if $s_i=\langle i|H|i\rangle>0$. The success of a particular preparation must therefore be related to the mean success on $I_4/4$.
+
+\begin{theorem}[Purity interval from one input]\label{thm:purity}
+Fix a pure basis input $i$, its successful joint output $\sigma$, and its Choi weight share $t=s_i/(4p_*)\in(0,1]$. Write $P=\tr\sigma^2$, $\ell=\lambda_{\max}(\sigma)$. In the class fixing only these data and permitting a common absolute scaling of a nonzero branch, the exact possible values of $\tr C^2$ form the interval
+\[
+ \left[t^2P+\frac{(1-t)^2}{12},\quad
+ t^2P+(1-t)^2+2t(1-t)\ell\right].
+\]
+\end{theorem}
+\begin{proof}
+The input sector has dimension four and complementary dimension twelve. Write the corresponding positive block matrix as $C=\left(\begin{smallmatrix}t\sigma&B\\B^*&D\end{smallmatrix}\right)$, $\tr D=1-t$. Then $\tr C^2=t^2P+\tr D^2+2\norm B_F^2$. The minimum uses $B=0$ and $D=(1-t)I/12$. Block positivity gives $B=(t\sigma)^{1/2}KD^{1/2}$ for a contraction $K$, also for singular blocks by restriction to their supports. Hence $\norm B_F^2\le t\ell(1-t)$ and $\tr D^2\le(1-t)^2$. To attain both bounds, coherently couple a top eigenvector of the input block with one complementary direction, with squared amplitudes $t\ell$ and $1-t$. Keep all other eigenvalues of $t\sigma$ in their original directions. Every positive trace-one matrix so obtained can be scaled to the Choi matrix of a trace-nonincreasing map. A continuous mixture between the endpoints yields every intermediate purity.
+\end{proof}
+
+For TP channels $t=1/4$, giving numerical endpoints $(P+3/4)/16$ and $(9+6\ell+P)/16$. The TP constraint is stronger than $t=1/4$, but both endpoints can still be attained. The lower witness prepares $I/4$ on each other basis input and dephases across inputs. For the upper witness, take a Schmidt purification of $\sigma$ as the first isometry column. Complete it with three orthogonal system vectors perpendicular to the top system Schmidt vector, all tensored with the top environment vector. These columns form an isometry. The environment state on the maximally mixed input is the mixture of the first environment state of weight $1/4$ and its top ray of weight $3/4$. Its nonzero spectrum is that of the Choi state. Squaring this mixture yields the upper endpoint. A pure normalized branch can instead have a single nonunitary Kraus operator.
+
+With two local readings on the single prepared input, let $a$ be the larger eigenvalue of the first marginal, $\beta$ a rank-one outcome probability on the second, $b=\min(\beta,1-\beta)$ and $m=\min(1,a+b)$. A unitary fits those readings exactly if $1-a\le\beta\le a$: for a pure bipartite output the two marginal spectra agree, and rotating the second measurement basis attains that entire interval. In general block positivity bounds the largest joint-output eigenvalue by $m$. For $a+b<1$, the state
+\[
+ (\sqrt a|00\rangle+\sqrt b|11\rangle)(\sqrt a\langle00|+\sqrt b\langle11|)
+ +(1-a-b)|10\rangle\langle10|
+\]
+attains it. For $a+b\ge1$ use the pure rotated Schmidt state. Hence the largest joint-output purity is $m^2+(1-m)^2$. Dephasing both measured bases minimizes the joint-output purity for given diagonal marginals: minimize
+$(a-x)^2+x^2+(1-a-b+x)^2+(b-x)^2$
+over $\max(0,a+b-1)\le x\le\min(a,b)$. The unconstrained minimizer is $(a+b)/2-1/4$. These extremizers inserted into Theorem~\ref{thm:purity} give the sharp interval for local data alone. Additional measurements need not share their extremizers.
+
+\paragraph{Multiple measurements of a fixed Choi state.}
+The same geometry explains how additional tomography can improve a lower purity bound. Suppose calibrated data fix the populations $d_j$ of mutually orthogonal sectors of ranks $k_j$ covering the compatible support. If $C_*=\sum_j d_jP_j/k_j$ satisfies the remaining constraints, then
+\[
+ \tr C^2=\sum_j d_j^2/k_j+\|C-C_*\|_F^2
+\]
+because $\tr(CC_*)=\tr(C_*^2)$. Extra linear observables $M_i$ can only restrict $C-C_*$ in the tangent space $T$ of allowed Hermitian perturbations. Project $M_i$ onto $T$, let $G$ be their Hilbert–Schmidt Gram matrix and $u_i=\tr M_i(C-C_*)$. Orthogonal least squares gives $\|C-C_*\|_F^2\ge u^TG^+u$. The least-norm perturbation attains equality whenever $C_*$ plus that perturbation is positive.
+
+For a concrete phase example take normalized Choi vectors $p=|I_4\rangle,u=|iZ\otimes I_2\rangle,v=|iX\otimes I_2\rangle$, with vectorization divided by two. Use the phase about $p$ and detector ray $\sqrt h\,p+\sqrt{1-h}\,u$. Assume $0<h<1$ and $d=s+k>0$. A complete curve $q_\phi=|\sqrt{sh}-e^{i\phi}\sqrt{k(1-h)}|^2$ with the separate match population $s$ fixes the $p,u$ block to a single ray of weight $d=s+k$: the curve fixes the two diagonal populations and the off-diagonal saturates their positivity bound. In detail, the mean equals $hs+(1-h)k$, and the modulus of the first Fourier coefficient equals $\sqrt{h(1-h)}|C_{pu}|$. The specified curve gives $|C_{pu}|^2=sk$, hence a positive two-dimensional block of rank one. At $h=0$ or $1$ the harmonic vanishes for any coherence. The mathematical review exhibits channels of purities $3/8$ and $1/2$ with the same constant scan at either endpoint and the same basis-input outputs. A coherent input distinguishes them. Under the stated interior assumptions the orthogonal ray is in the kernel. An additional measurement of $|v\rangle\langle v|$ with rate $f$ leaves complementary mass $1-d-f$ in a space of rank 13. The sector formula gives $J=d^2+f^2+(1-d-f)^2/13$. The sectors can be filled by maximally entangled vectors, so their uniform filling satisfies the TP marginal. For first-qubit Pauli readouts on input $00$, the observable operators are $4[(I+P)/2\otimes I]\otimes|00\rangle\langle00|$, $P=Z,X,Y$. Let $B_0=I-|\theta\rangle\langle\theta|$, where $\theta=(\sqrt k\,p+\sqrt s\,u)/\sqrt d$ is the null ray. For each observable, first form $M_i'=B_0 M_i B_0-\sum_j P_j\,\tr(P_jM_i)/k_j$. Its partial trace $L_i=\tr_{\rm out}M_i'$ is traceless. The ray $\theta$ is maximally entangled, so for traceless $L$,
+$\tr_{\rm out}[B_0(I\otimes L) B_0]=(7/2)L$. Each sector projector has scalar input marginal. Thus $\widehat M_i=M_i'-(2/7)B_0(I\otimes L_i)B_0$ removes the partial-trace component without changing any fixed population. Multiplication of the stated Pauli matrices gives $\tr(M_i'M_j')-(2/7)\tr(L_iL_j)$ for the projected Gram entries. Its diagonal is $(1230/91,97/7,97/7)$ and the cross terms vanish. The corresponding increments in the lower bound are $91u_Z^2/1230+7(u_X^2+u_Y^2)/97$, with reference readings $(d+6(1-d-f)/13,1/2,1/2)$. This bound is attained for small feasible interior perturbations. A boundary support must be recomputed. Its use after conditioning requires the same process to transfer to the product input.
+
+\section{All four preparations constrain a two-qubit operation}\label{sec:four}
+
+The single-input interval does not exploit the fact that other preparations must share the same operation. We now identify precisely what the four inputs constrain. Write them as $i=00,01,10,11$, in order $i=0,1,2,3$. The output factors will be called $A$ and $B$. For a common branch with Kraus operators $K_j$, let
+\[
+ S=\sum_i s_i=4p_*>0,\quad
+ \mathcal L=\{V\otimes I_2:V\in M_2\},\quad
+ w=\frac{\sum_j\|\operatorname{proj}_{\mathcal L} K_j\|_F^2}{S}.
+\]
+The orthogonal projection uses the Hilbert–Schmidt inner product. $w$ is the population of a specified operator subspace in the normalized Choi state. Its definition uses a particular tensor decomposition. Let $\tau_i=\tr_B\calB(|i\rangle\langle i|)$ be the unnormalized first-output marginal, so $\tr\tau_i=s_i$. For positive subnormalized operators define $F_*(\tau,\omega)=\|\sqrt\tau\sqrt\omega\|_1$ and
+\[
+ d(\tau,\omega)=\tr\tau+\tr\omega-2F_*(\tau,\omega).
+\]
+This convention measures the successful subdistributions. No extra outcome for the two failure populations enters $d$.
+
+\begin{theorem}[Local weight from four output marginals]\label{thm:four}
+Given any positive first-qubit matrices $\tau_0,\ldots,\tau_3$ of traces $0\le s_i\le1$ with $S>0$, the maximum over common CP trace-nonincreasing branches realizing those marginals is
+\[
+ \boxed{w_{\max}=1-\frac{d(\tau_0,\tau_1)+d(\tau_2,\tau_3)}{2S}.}
+\]
+Thus a prescribed lower bound $w\ge w_0$ is compatible exactly when $w_0\le w_{\max}$ in this observation class.
+\end{theorem}
+\begin{proof}
+With respect to the second-bit input and output, write $K_j=\left(\begin{smallmatrix}A_j&B_j\\ C_j&D_j\end{smallmatrix}\right)$. Projection onto $\mathcal L$ replaces the diagonal blocks by their average and the other blocks by zero. Therefore
+\begin{equation}
+ S(1-w)=\sum_j[\tfrac12\|A_j-D_j\|_F^2+\|B_j\|_F^2+\|C_j\|_F^2]. \label{eq:projection}
+\end{equation}
+Let $u_i=\sum_j K_j|i\rangle\otimes|j\rangle$. Write $X_B$ for the second-output bit flip, extended by the identity elsewhere. Pair the columns with equal first input bit. The squared distances of aligned columns sum to
+\[
+ \sum_{b=0}^1\|u_{2b}-X_Bu_{2b+1}\|^2
+  =\sum_j[\|A_j-D_j\|_F^2+\|C_j-B_j\|_F^2]\le 2S(1-w).
+\]
+Alignment leaves each first marginal unchanged. By the purification characterization of root fidelity \cite[Ch.~3]{watrous}, the real overlap in each pair is bounded by $F_*$. Hence each squared distance is at least its $d$.
+
+For attainment, take purifications $\xi_{2b},\xi_{2b+1}$ of the two first marginal matrices in pair $b$ with real overlap $F_*(\tau_{2b},\tau_{2b+1})$. Use disjoint environment spaces for $b=0,1$. Attach output flag $|t\rangle_B$ to the column for input $2b+t$. Distinct flags or environment spaces make the four columns mutually orthogonal with squared norms $s_i$. They define a contraction because its Gram matrix is $\operatorname{diag}(s_i)\le I$. Tracing out its environment gives a common CP trace-nonincreasing operation. The off-diagonal second-bit blocks vanish and both overlap bounds are attained. Zero-trace states correspond to zero columns. This proves the formula including its boundary cases.
+\end{proof}
+
+\begin{corollary}[Complete interval of local weights]\label{cor:interval}
+For the observations of Theorem~\ref{thm:four}, the attainable set is $[0,w_{\max}]$, with $w_{\max}\ge1/2$.
+\end{corollary}
+\begin{proof}
+In the maximizing construction, input bit $t$ is copied to the second output flag. Each Kraus matrix is block diagonal in that bit. Multiply every Kraus matrix on the left by $I\otimes X$. All resulting matrices are block off diagonal, hence orthogonal to $\mathcal L$. The weight is zero. Unitary conjugation on the discarded factor preserves the first-qubit marginal for every input operator, as well as each success rate. Mixing the two operations with weights $\lambda,1-\lambda$ keeps $S$ fixed and gives weight $\lambda w_{\max}$. Nonnegativity of root fidelity gives $d(\tau_a,\tau_b)\le s_a+s_b$, so $w_{\max}\ge 1/2$. For these two endpoint constructions, measuring the second flag on a successful input $00$ distinguishes them exactly when $s_0>0$.
+\end{proof}
+
+The same interval holds on $\mathbb C^d\otimes\mathbb C^2\to\mathbb C^{d'}\otimes\mathbb C^2$ for arbitrary positive integers $d,d'$. Replace the two pair costs by $\sum_{a=0}^{d-1}d(\tau_{a0},\tau_{a1})$ and take $S=\sum_{a,b}\tr\tau_{ab}$. Here the local subspace consists of $V\otimes I_2$ for rectangular $V:\mathbb C^d\to\mathbb C^{d'}$. Each input label has one pair whose fidelity can be attained in its own environment sector. The review proves this binary formula including singular marginals and zero-success inputs. For a discarded factor of dimension $q\ge2$, take all $dq$ basis inputs and keep the complete first-output marginals. For each first-input label $a$ maximize the sum of all real block traces of a positive matrix $X=[X_{bc}]$ with $X_{bb}=\tau_{ab}$, and call that maximum $T_a$. The full attainable interval is $[0,\sum_a T_a/(qS)]$. Optimal purifications, orthogonal output flags and a cyclic shift exhibit both endpoints. The joint optimization is the published multivariate SDP fidelity up to an explicit normalization \cite{multi}. With three pure trine marginals the exact ceiling is $1/2$; independent maximization of all three pairs would give $2/3$. The review gives a dual certificate, a regular-simplex family in every dimension and continuity bounds for imperfect marginals. The data in this theorem are the basis-input marginals; additional calibrated constraints can change the interval.
+
+If first-output tomography also resolves the second output label $b=0,1$, write $M_{ab}$ for the subnormalized first-output state on success with the returned label equal to its input value. Put $D=\sum_{ab}\tr M_{ab}$ and $F=\sum_aF_*(M_{a0},M_{a1})$. The exact interval is $[(D-2F)/(2S),(D+2F)/(2S)]$. The matching blocks determine both endpoints. In particular, for orthogonal first outputs within every pair, $w$ is half the fraction of successes returning the input label. A single always-successful pair with perfect return consequently fixes $w=1/2$. All basis inputs contributing to the normalized Choi weight must be accounted for. The review proves the interval, including zeros and wrong-label outcomes.
+
+For commuting matching blocks, each common eigencomponent has specified purification lengths. Their largest sum occurs when they align. Their smallest resultant length is the longest length minus the sum of the others, clipped at zero. In a three-label trace-preserving example, even the full joint outputs on all basis inputs allow every weight in $[(2-\sqrt3)/9,(4+\sqrt3)/9]$. One coherent-input outcome separates the displayed endpoint channels but still leaves a range of width $2\sqrt3/9$. A projection of the returned label onto the prepared equal superposition instead has probability exactly $w$ for every channel in this example. The proof also gives a phase-averaged return identity when labels can change and dual bounds when a calibrated classical readout loses label information. Both coherent preparations and the matched readout have to transfer to the same branch.
+
+\begin{corollary}[Success totals and resolved outcomes]\label{cor:rows}
+Use one common binary effect $E\otimes I_2$ on successful outputs and define per-attempt probabilities $r_{iy}$ with $\sum_y r_{iy}=s_i$. Let $D_{ij}=\sum_y(\sqrt{r_{iy}}-\sqrt{r_{jy}})^2$. Every common branch obeys
+\[
+ D_{01}+D_{23}\le2(1-w)S .
+\]
+If only $s_2,s_3$ are measured on the last pair, replace $D_{23}$ by $(\sqrt{s_2}-\sqrt{s_3})^2$. If only their sum is known, their minimum possible contribution is zero. With a fixed common rank-one projective first-qubit readout, all these upper bounds on $w$ are sharp for the stated data.
+\end{corollary}
+\begin{proof}
+Measurement maps the two first-qubit marginals to distributions whose square-root affinity is at least their root fidelity. Equivalently, resolve the aligned purifications with the two square-root effects and apply the reverse triangle inequality separately to their norms. For the success-only pair the inequality reduces to the difference of the two column norms. For a projective readout choose each $\tau_i$ diagonal in the measured basis with entries $r_{iy}$. Then quantum and classical affinities agree and Theorem~\ref{thm:four} attains equality. If only successes are observed, take proportional states on that pair. If only its sum is observed, use equal successes, subject to $0\le s_i\le1$.
+\end{proof}
+
+For $s_2s_3>0$ the gain from resolving the last pair is exactly
+\[
+ D_{23}-(\sqrt{s_2}-\sqrt{s_3})^2
+ =2\sqrt{s_2s_3}\left(1-\sum_y\sqrt{q_{2y}q_{3y}}\right),
+ \quad q_{iy}=r_{iy}/s_i.
+\]
+It vanishes when either arm never succeeds or when the two conditional output laws agree. For example, take the four rows $(9,4),(4,9),(16,9),(9,16)$ in hundredths. Both pair discrepancies equal $1/50$ and $S=19/25$. Success totals alone on the last pair allow $w_{\max}=75/76$; recording both outcomes gives $37/38$. The equality construction is explicit: choose four orthonormal environment labels $e_{by}$ and set $u_{2b+t}=\sum_y\sqrt{r_{2b+t,y}}|y,t\rangle|e_{by}\rangle$. This arithmetic is a test of identification at specified populations.
+
+\paragraph{Why the normalization matters.}
+If only the first two normalized successful states are known, choose the other two successes equal to minimize the unused cost. With $g_i=s_i/p_*>0$, Theorem~\ref{thm:four} becomes $g_0+g_1-2\sqrt{g_0g_1}F(\rho_0,\rho_1)\le8(1-w_0)$. Equality of $g_0$ and $g_1$ alone does not set either to one. With raw successes $(0.02,0.02,0.98,0.98)$ we have $p_*=0.5$, $g_0=g_1=0.04$. Orthogonal successful first states are compatible with $w=0.99$. The two remaining inputs account for almost all successes. A calibration of only the two tested arms cannot exclude this explanation.
+
+\paragraph{Consequences for a neighboring output.}
+Let $s_0=s_1=p_*$, $w\ge.99$ and take the first-qubit marginal on input 0 to have largest eigenvalue $a=0.529472934503538\ldots$. Its paired normalized purification has overlap at least $c=0.96$ after alignment. For a projector with arm-0 probability $x<c^2$, its arm-1 probability is at most $G(x)=(c\sqrt{x}+\sqrt{1-c^2}\sqrt{1-x})^2$, by the angle between the binary square-root probability vectors. The sharp absolute click difference for the fixed first spectrum is $G(1-a)-(1-a)=0.272953961453098\ldots$. Indeed $G(x)-x$ decreases for $x\ge(1-\sqrt{1-c^2})/2=0.36$, and rank-one projectors on arm 0 have $x\in[1-a,a]$. A diagonal pair of marginals and its maximizing projector attain equality in the reduced model.
+
+Let $\beta,\alpha$ be the second-bit flip probabilities on the two successful inputs. Equation~\eqref{eq:projection} gives $\alpha+\beta\le.04$. A positive block matrix has top eigenvalue at most the sum of the norms of its diagonal blocks, by block positivity and Cauchy–Schwarz. Applied to the two output flags this bounds the first joint-output eigenvalue by $a+\beta$, and the second by $G(a)+\alpha$. In a pure successful dilation each joint output has the same nonzero spectrum as its environment. Applying $G$ to the environment projector maximizing the second output gives the additional bound $G(a+\beta)$. The maximum of $\min\{G(a+\beta),G(a)+0.04-\beta\}$ occurs at the crossing $\beta=0.022229575038\ldots$ and is less than $0.810954608659$. The first two environment states each contribute $1/4$ to the environment of the Choi purification. The remaining weights sum to $1/2$. Its largest eigenvalue is thus at most $t=(2+a+G(a)+0.04)/4$. Since $t>1/2$, $(t,1-t,0,\ldots)$ majorizes its spectrum, giving $\tr C^2\le t^2+(1-t)^2<0.732104302723$. Neither upper ceiling is known to be jointly attained under all these constraints. This distinction matters when a bound on a property is used to infer a particular channel.
+
+\section{What a calibrated detector adds}\label{sec:detector}
+
+A click on an imperfect detector does not reveal which spectral projector would have fired in an ideal projective measurement. Suppose that the same first-qubit effect $E=L I+(U-L)P_+$ acts in all four arms, with $0\le L<U\le1$ and $P_-=I-P_+$. Let $z_i$ denote the per-attempt probability of success and a click. The two success-weighted populations $v_{i\nu}=\tr(P_\nu\tau_i)$ obey $v_{i+}+v_{i-}=s_i$ and $z_i=Uv_{i+}+Lv_{i-}$, hence
+\begin{equation}
+ v_{i+}=\frac{z_i-Ls_i}{U-L},\qquad
+ v_{i-}=\frac{Us_i-z_i}{U-L}.\label{eq:invert}
+\end{equation}
+\begin{corollary}[Four preparations with a calibrated binary effect]\label{cor:calibrated}
+Suppose $0\le s_i\le1$, $S=\sum_i s_i>0$, and $Ls_i\le z_i\le Us_i$ for all four inputs. Define
+\[
+ D^{\rm sp}_{ab}=\sum_{\nu=+,-}(\sqrt{v_{a\nu}}-\sqrt{v_{b\nu}})^2.
+\]
+Among common completely positive, trace-nonincreasing branches with these rates and this local effect, the largest compatible weight is
+\begin{equation}
+ w_{\max}=1-\frac{D^{\rm sp}_{01}+D^{\rm sp}_{23}}{2S}.\label{eq:wc}
+\end{equation}
+Under these observations alone the full compatible interval is $[0,w_{\max}]$.
+\end{corollary}
+\begin{proof}
+The spectral projectors constitute one projective measurement of the first qubit. Equation~\eqref{eq:invert} fixes its successful outcome masses. Corollary~\ref{cor:rows} bounds their discrepancy. To attain equality choose $\tau_i=v_{i+}P_++v_{i-}P_-$. The orthogonal flagged columns in the proof of Theorem~\ref{thm:four} realize all four states in one branch with success effect $\operatorname{diag}(s_i)\preceq I$. Measuring $E$ on each state reproduces $z_i$. The construction includes zero columns for zero-success inputs. Flipping the second flag and mixing as in Corollary~\ref{cor:interval} attains each lower weight.
+\end{proof}
+The raw click/no-click rows are obtained by sending the two spectral outcomes through a binary stochastic matrix with click probabilities $U$ and $L$. For each reported outcome, Cauchy--Schwarz shows that its square-root affinity is at least the sum of the corresponding weighted spectral affinities. Thus $D^{\rm raw}_{01}+D^{\rm raw}_{23}\le D^{\rm sp}_{01}+D^{\rm sp}_{23}$. The raw bound is sharp if the common detector is unrestricted and a projective effect is allowed. At fixed $E$, sharpness is given by \eqref{eq:wc}. If $U=L$, consistency requires $z_i=Ls_i$; the sharp formula then uses only $(\sqrt{s_a}-\sqrt{s_b})^2$ for each pair. A conditional click probability need not be defined on an arm that never succeeds.
+
+\begin{center}\small\begin{minipage}{\linewidth}\centering
+\refstepcounter{table}\label{tab:calrates}\textbf{Table \thetable.} Four inputs measured with one calibrated first-qubit effect.\\[4pt]
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Input & $s_i$ & $z_i$ & $v_{i+}$ & $v_{i-}$\\\midrule
+$00$ & 0.13 & 0.080 & 0.09 & 0.04\\
+$01$ & 0.13 & 0.050 & 0.04 & 0.09\\
+$10$ & 0.25 & 0.146 & 0.16 & 0.09\\
+$11$ & 0.25 & 0.104 & 0.09 & 0.16\\\bottomrule
+\end{tabular}\end{minipage}
+\end{center}
+For this exact example, take $(L,U)=(0.2,0.8)$. All entries are population values per attempted input. The raw discrepancy is $0.014124289562550\ldots$, giving $w_{\max}^{\rm raw}=0.990707704235164\ldots$ in the broader class. In the calibrated class each pair contributes $1/50$, $S=19/25$, and $w_{\max}=37/38$. The calibrated interval $[0,37/38]$ excludes $w\ge0.98$ and includes zero. The same eight observed rates enter both calculations. Calibration changes the set of admissible explanations.
+
+For equal tested successes $s>0$, put $q_i=z_i/s$, $R=(\sqrt{s_2}-\sqrt{s_3})^2$ when only the other successes are known, and $B=2(1-w_0)S-R$. If $B<0$ the data are infeasible. Otherwise the first states need root fidelity at least $c=\max(0,1-B/(2s))$. For a common effect the sharp limit is
+\[
+ |q_0-q_1|\le (U-L)\sqrt{1-c^2}.
+\]
+The spectral distributions have total variation $|q_0-q_1|/(U-L)$, bounded by $\sqrt{1-F^2}$ \cite{watrous}. The symmetric spectral distributions $((1+d)/2,(1-d)/2)$ and its reverse attain equality at $d=\sqrt{1-c^2}$. If only the untested success sum is prescribed, set $R=0$ at the optimum. For $s=p_*=1$, $w_0=0.99$ and $(L,U)=(0.2,0.8)$ the largest difference is $0.168$. The witness gives clicks $0.584$ and $0.416$. In a different example, spectral rows $(0.7,0.3)$ and $(0.3,0.7)$ produce clicks $0.62$ and $0.38$. Their raw discrepancy $0.058454\ldots$ lies below the ceiling $0.08$, while the spectral discrepancy $0.166970\ldots$ exceeds it.
+
+\paragraph{Two controls for transfer.}
+The identity channel has $w=1$ and identical first-qubit outputs on $00$ and $01$. A single measurement of the \emph{second} qubit perfectly distinguishes these inputs and gives $D_{01}=2$. The local tensor factor in Corollary~\ref{cor:rows} is essential. A different failure occurs on the correct first qubit if the arm effects are $\operatorname{diag}(0.8,0.2)$ and $\operatorname{diag}(0.2,0.8)$. They have the same spectrum but give clicks $0.8$ and $0.2$ on the identical state $|0\rangle$. A common spectrum alone cannot establish readout transfer.
+
+There is a sharp interpolation if the relative orientation is itself calibrated. For two effects with the same ordered eigenvalues $L,U$, let $\theta$ be the angle between their high-eigenvalue Bloch directions. With the equal-success data above and free first-qubit states, the exact largest difference is
+\[
+ (U-L)\sin\bigl(\min\{\pi/2,\theta/2+\arccos c\}\bigr).
+\]
+To prove the upper bound, lift a Bloch vector $r$ to the unit vector $(r,\sqrt{1-|r|^2})$. For two such vectors the qubit identity $F^2=\tr\rho_0\rho_1+2\sqrt{\det\rho_0\det\rho_1}$ gives an angle at most $2\arccos c$. Rotating the second detector direction onto the first by $\theta$ rotates the second lifted state by at most $\theta$. Projecting half the resulting chord onto the first detector axis bounds the probability difference. Equality is obtained using detector axes $(\cos(\theta/2),\pm\sin(\theta/2))$ and coplanar pure-state directions $(\pm\sin\tau,\cos\tau)$ with $\tau=\min\{\arccos c,(\pi-\theta)/2\}$. Their root fidelity is $\cos\tau$. Theorem~\ref{thm:four} supplies a single branch realizing them. This bound concerns a known pair of effects. Uncertainty in the axes, spectral gap and successful preparations changes the feasible set. In particular the population inversion amplifies errors as $U-L$ tends to zero.
+
+\section{From a population constraint to an observable test}\label{sec:test}
+
+Let $\mathcal F_{n-1}$ denote the information available immediately before assignment on eligible attempt $n$, including its eligibility decision. At each such history there must be one common potential operation across the four trusted inputs and the prescribed common first-qubit readout. The operation and detector may vary between histories within the conditional null. Set $\epsilon=1-w_0$. Draw the input privately with known positive predictable probabilities $\pi_i$. Failures and both successful outcomes enter each arm's attempt denominator.
+
+\begin{theorem}[Sequential test for four outcome laws]\label{thm:e}
+At each eligible history choose predictable slopes $t_{by}>0$, for $b=0,1$ and $y=0,1$, and put $d_{2b,y}=1-t_{by}$, $d_{2b+1,y}=1-t_{by}^{-1}$. On a successful assignment $i$ with outcome $y$, score $X_n=(d_{iy}-2\epsilon)/\pi_i$. Score a failure by zero. Choose a predictable nonnegative stake $\eta_n$ such that $1+\eta_nX_n\ge0$ for every possible outcome. If $w_n\ge w_0$ at each eligible history, then
+\[
+ M_0=1,\quad M_N=\prod_{n\le N}(1+\eta_nX_n),\qquad
+ \Pr_{H_0}\{\sup_N M_N\ge1/\alpha\}\le\alpha,\quad 0<\alpha<1 .
+\]
+\end{theorem}
+\begin{proof}
+For $x,z\ge0$, $(1-t)x+(1-t^{-1})z\le(\sqrt{x}-\sqrt{z})^2$ follows from $(\sqrt{tx}-\sqrt{z/t})^2\ge0$. The supremum over $t>0$ equals the right side, including by a limit for a zero rate. Conditional randomization gives
+\[
+ \E[X_n\mid\mathcal F_{n-1}]=\sum_{iy}d_{iy}r_{iy}-2\epsilon S
+ \le D_{01}+D_{23}-2\epsilon S\le0 .
+\]
+The last inequality is Corollary~\ref{cor:rows}. Each factor is nonnegative with conditional mean at most one. The product is a nonnegative supermartingale. At the first crossing stopped at horizon $N$, its expectation is at most one and at least $1/\alpha$ times the crossing probability. Letting $N\to\infty$ gives the claim. This is Ville's inequality, as used in sequential statistical inference \cite{wills}.
+\end{proof}
+
+Threshold 20 gives at most 5\% erroneous rejection under this null. For the four-row example in Section~\ref{sec:four}, choose $(2/3,3/2)$ and $(3/4,4/3)$ as slopes for the two pairs, $\epsilon=1/38$, and $\pi=(3/8,3/8,1/8,1/8)$. Both AM–GM bounds are attained, so $\E X_n=0$. A distinct example takes the last two successes equal to one and ignores their outcomes. A common slope $v$ for that pair makes the coefficients $1-v,1-v^{-1}$ on all successes. For $v=1$ both vanish. With the same first-pair rows and $\epsilon=1/226$, $D_{01}=1/50=2\epsilon S$. The correctly weighted mean is zero. Omitting the inverse probabilities gives $(3/8)(1/50)-(1/113)[(3/8)(26/100)+1/4]=1/226$, positive on the null.
+
+When using calibrated nonprojective effects, the slopes act on the spectral populations. For each measured bit $y$, use $k_{iy}=d_{i-}+(y-L)(d_{i+}-d_{i-})/(U-L)$ for the successful-arm coefficient. The identity $k_{i1}z_i+k_{i0}(s_i-z_i)=d_{i+}v_{i+}+d_{i-}v_{i-}$ follows from \eqref{eq:invert}. Thus the score $(k_{iy}-2\epsilon)/\pi_i$ on success and zero on failure gives a conditional mean bounded by $D^{\rm sp}_{01}+D^{\rm sp}_{23}-2\epsilon S\le0$ under \eqref{eq:wc}. For example, coefficients $(1/2,-1)$ give a score coefficient of $1$ on a click and $-1.5$ on a no-click for $L=0.2,U=0.8$. For input $00$ in Table~\ref{tab:calrates} their mean is $0.080-1.5(0.050)=0.005=0.09/2-0.04$. This uses the observed bit without assigning a spectral label to an individual attempt. The predictable stake must keep the factor nonnegative throughout the actual score range, which can widen as $U-L$ decreases. The bound uses the spectra that govern that history; inserting pooled estimates into the score supplies no such guarantee. A learned stake may depend on previous records. Monitoring several products and selecting the first to cross requires multiplicity control or a prespecified mixture.
+
+\paragraph{Power when successes are rare.}
+Take a fixed common detector with eigenvalues $L<U$ and success probability $h$ on every input. In one model all four successful first outputs occupy the high eigenspace. In a second model the odd inputs occupy the low eigenspace. Corollary~\ref{cor:calibrated} gives maxima of $1$ and $1/2$, respectively, at every $h>0$. For any null $w\ge w_0$ with $1/2<w_0\le1$, the first table has a null realization and the second excludes the null.
+
+Take these branches independently at successive attempts. The observed one-attempt laws agree on even inputs and have total variation $h(U-L)$ on odd inputs. While two records agree, couple their next assignments identically, including under an adaptive assignment rule, and couple the outcomes maximally. Their records then agree through $N$ attempts with probability at least $[1-h(U-L)]^N$. For any test of size $\alpha$ by horizon $N$,
+\[
+ \Pr_{\rm alt}(\text{rejection by }N)
+ \le \min\{1,\,\alpha+1-[1-h(U-L)]^N\}.
+\]
+For $\alpha=0.05$, $h=0.001$, $U-L=0.6$ and $N=100$, the upper bound is $0.1082524248\ldots$. This coupling bound requires at least 3,837 attempts for 95\% power. For uniform independent assignments it requires at least 7,675. A sharper calculation for these two simple independent laws conditions on the number of informative successes. The exact first crossings for simultaneous 5\% size and 95\% power are 7,065 attempts with an always-odd input and 14,131 with uniform independent four-arm assignment. At the narrower symmetric detector $(L,U)=(0.45,0.55)$, independent uniform assignment first meets the two targets at 540,254 attempts for the corresponding two laws. The odd-only comparison bounds every adaptive design for its own pair, but is outside a four-arm protocol that requires positive assignment probability for every input. These thresholds use the optimal randomized likelihood-ratio decision for this pair of laws; see the review for the finite-sum enclosures. As $h\downarrow0$ the two weight ceilings stay separated and the finite-record laws approach one another. There is therefore no finite budget guaranteeing power uniformly above size over this class. Normalized weight is undefined at $S=0$, outside the domain of the four-input theorem.
+
+\paragraph{History selection.}
+Consider a diagonal Kraus operator. Its squared diagonal entries are $(0.045,0.005,0.975,0.975)$, so it defines a trace-nonincreasing branch. It has $p_*=0.5$, $w=0.995$ and identical successful first-qubit outputs on inputs 0 and 1. Every successful first-qubit projective test onto $|0\rangle$ clicks. Under fair two-arm assignment and independent repetitions, the retained arm-0 probability is $0.9$. To characterize the consequence of selection, give a click $Z=+Y$ on arm 0 and $Z=-Y$ on arm 1. Under fair assignment and $|p_0-p_1|\le\delta$, the conditional exponential moment at $\lambda>0$ is bounded by
+\[
+ F_\delta(\lambda)=\tfrac12[e^\lambda+(1-\delta)e^{-\lambda}+\delta].
+\]
+Here $p_i$ denote click probabilities. The objective $1+[(e^\lambda-1)p_0-(1-e^{-\lambda})p_1]/2$ is maximized at $p_0=1,p_1=1-\delta$. Interchanging arms gives the opposite signed score. The two-sided product average at fixed $\lambda$ is $\cosh(\lambda\sum Z)/F_\delta^n$. If it is wrongly applied to retained successes with $\delta=0.28$ and $\lambda=\log2$, at success $n$ it equals
+\[
+ \frac{2^{2k-n}+2^{n-2k}}{2(33/25)^n},\qquad k\sim\operatorname{Bin}(n,0.9).
+\]
+At $n=20$ it exceeds 20 exactly for $k\le3$ or $k\ge17$, of probability $0.8670466765656734\ldots$. Removing paths when they first reach 20 and propagating surviving mass with binomial weights gives $0.8986003839221604\ldots$ for crossing by success 20. The first hitting times through that horizon are 9, 13, 16 and 19. These probabilities describe the misapplied test. Theorem~\ref{thm:e} uses all eligible attempts.
+
+\paragraph{What the past can reveal.}
+Let $W$ be a committed prefix, $B$ the final ideal bit, $Y$ its reported value and $\operatorname{Bern}(s)$ the reference law. Coupling the two complete records and using the triangle inequality gives
+\[
+ \TV(\mathcal L(W,Y),\mathcal L(W)\otimes\operatorname{Bern}(s))
+ \le \Pr(Y\ne B)+\TV(\mathcal L(W,B),\mathcal L(W)\otimes\operatorname{Bern}(s)).
+\]
+Dependence in the record alone cannot assign memory to a gate, a readout, or a preparation. Conversely, if the ideal bit is fresh and both directional reporting errors are bounded by $e$ at each history, the reported-one probability lies in $[s(1-e),s+(1-s)e]$. Every value in the interval is realized by suitable one-sided errors. Applying those channels recursively at the positive-probability prefixes proves sufficiency for an entire word law within this reporting model.
+
+\section{Physical interpretation}\label{sec:discussion}
+
+Symmetries can select invariant subspaces, and labelled graph probes can identify a generator. For an instrument, first-output marginals alone always admit zero local weight. Returned labels can exclude zero. Coherent preparations and matched output projections can identify the weight even when complete basis-output tomography leaves an interval.
+
+An instrument test must commit eligibility before randomizing the input, retain every attempt, and characterize success and readout under matched histories. A held-out rejection challenges the model and its calibration together. Varying the detector orientation or success criterion may distinguish the remaining explanations.
+
+Experiments on superconducting processors found detector response sensitive to other active qubits \cite{chen}, coherent contributions in some measurement bases \cite{aasen}, and dependence on preceding reports without reset \cite{werninghaus}. Multitime tomography can test dependence on prior interventions \cite{white}. Transferring a readout across preparations requires matched observations. Rare successes preclude a uniform trial budget.
+
+Changing a clock scale and its Hamiltonian inversely preserves $e^{-itH}$. A change of port basis can alter inferred adjacency. Two rotated readouts can produce contrast on an identity channel. A physical correspondence must assign states, operations, units and causal order, and predict a held-out outcome that distinguishes competing assignments. The origin of quantum observables, locality, physical time and spacetime remains open.
+
+\paragraph{Acknowledgment.} Kirtus Justus directs the research and holds scholarly responsibility. ChatGPT (OpenAI) assisted with mathematics, computation and editing.
+
+\clearpage
+\section*{Glossary and notation}\phantomsection\label{sec:glossary}
+\pdfbookmark[1]{Glossary and notation}{glossary}
+\noindent Each entry gives the convention used in the paper. Symbols are defined again where a section uses them for a different quantity.\small
+\begin{description}[style=nextline,leftmargin=0pt,labelindent=0pt,itemsep=3pt,parsep=0pt]
+\item[Observation law and identified set.] An observation law assigns outcome probabilities to a specified preparation and measurement. Models are observationally equivalent if those laws agree for every permitted experiment. The identified set contains all property values consistent with them. A sharp upper bound is the least upper bound on this set. Attainment means that some admissible model realizes it.
+\item[Calibration and transfer.] Calibration uses reference measurements to constrain a source, unit, operation or effect. Transfer means that the characterized response also applies under the conditions in which it is used. Two detectors can have the same eigenvalues and measure along different axes.
+\item[Port and spectral scale.] A port is a labelled input or output mode. The graph Laplacian $L$ acts on the labelled modes, and $L^+$ inverts its positive eigenvalues and vanishes on its kernel. In the filter $e^{-sL}$ the scale $s$ has units inverse to those of $L$. Physical time requires its own calibration.
+\item[State, effect and instrument.] A state is positive with trace one. A binary click effect satisfies $0\preceq E\preceq I$ and gives click probability $\tr(E\rho)$. A quantum instrument assigns a completely positive, trace-nonincreasing map to each outcome, and their sum preserves trace. Complete positivity means positivity also holds after tensoring with the identity on any auxiliary system. One such outcome map is a \emph{branch}. A channel preserves trace.
+\item[Success and marginal.] For input $i$, $s_i$ is the success probability per attempt, $z_i$ is the probability of success and a click, and $s_i-z_i$ is the probability of success with no click. The first-qubit marginal $\tau_i$ is formed by tracing out the second output and has trace $s_i$. The conditional click probability is $z_i/s_i$ for $s_i>0$. The mean success on the maximally mixed input is $p_*=\sum_i s_i/4$.
+\item[Choi state and local weight.] Vectorizing the Kraus matrices $K_j$ of a nonzero branch gives $C=\sum_j|K_j\rangle\!\rangle\langle\!\langle K_j|/\sum_j\|K_j\|_F^2$. In the output-first convention its input marginal is the transposed success effect divided by its trace. The local weight $w$ is its population in the vectorized subspace $\{V\otimes I_q\}$ for a specified $q$-dimensional discarded factor. A semidefinite program optimizes a linear functional over positive semidefinite matrices with linear constraints. In the weight theorem one positive block matrix enforces simultaneous compatibility of all overlaps.
+\item[Fidelity, discrepancy and distance.] Root fidelity is $F_*(A,B)=\|\sqrt A\sqrt B\|_1$. For diagonal matrices it is the sum of square roots of products of corresponding entries. For successful outcome masses $p,q$, the squared discrepancy is $\sum_y(\sqrt{p_y}-\sqrt{q_y})^2$ with no factor $1/2$ and no failure bin. Total variation of normalized laws is $\tfrac12\sum_y|p_y-q_y|$. The trace and Frobenius norms are $\|A\|_1=\tr\sqrt{A^*A}$ and $\|A\|_F^2=\tr(A^*A)$.
+\item[History and time-uniform inference.] History comprises the information available before the next private input assignment. A predictable choice uses only that information. A time-uniform error bound controls the probability of ever crossing a rejection threshold under the conditional model, including when observation stops adaptively.
+\end{description}
+
+\normalsize\clearpage\section*{Sources of the mathematical arguments}
+The accompanying articles provide the assumptions and proofs for the examples in this synthesis. Each article is cited by title and theorem or section. The contents of this edition locate the complete articles and the visibly typeset supporting proofs.
+
+\begin{itemize}
+\item \emph{Identification from Restricted Measurements}, Sections 1--5: detector overlap, graph ambiguity, discarded factors and rare-success discrimination.
+\item \emph{Calibrated Dynamical Identification in Fermionic Systems}, \emph{Clock-Scale Ambiguity, Static CAR States, and Gibbs Modular Equivalence}, and \emph{Continuum and Finite-Lattice Two-Time Identification}: clock and observation assumptions for dynamical inference.
+\item \emph{Operational Identification and Calibration in Two-Mode Quasifree Systems} and \emph{Restricted Observables and CAR-State Distinguishability}: state classes, readout restrictions and calibrated finite-error inference.
+\item \emph{Relative Entropy of Finite-Interval Wilson--Dirac Quasifree States}: exact finite decomposition and component bounds. \emph{Finite Part of Wilson--Dirac Relative Entropy}, Theorem 1 and Sections 2--7, assembles the fixed-positive-scaled-mass finite part. \emph{Uniform Modular Control and Nonlinear Convergence for Wilson--Dirac Intervals}, Theorem 3, Corollary 4 and Theorem 6, gives the stronger modular and nonlinear estimates.
+\item \emph{Positive Spectral Measures Under Finite Moment and Laplace Constraints}: extremal measures, uncertainty geometry and the distinct numerical-certificate requirements.
+\item \emph{Compact-Group Transfer Spectra and Ultraviolet Operator Limits}: representation-dependent spectra, semigroup comparisons and perturbation bounds.
+\item \emph{Four-Preparation Tests for a Conditional Quantum Operation}: the common-instrument population constraints and sequential tests using every eligible attempt.
+\end{itemize}
+
+\begin{thebibliography}{24}\setlength{\itemsep}{1.8pt}
+\bibitem{multi} T. Nuradha, H. K. Mishra, F. Leditzky and M. M. Wilde, “Multivariate fidelities,” \textit{J. Phys. A: Math. Theor.} \textbf{58}, 165304 (2025). \href{https://doi.org/10.1088/1751-8121/adc645}{DOI}.
+\bibitem{brouwer} A. E. Brouwer, “The Shrikhande graph,” \href{https://aeb.win.tue.nl/drg/graphs/Shrikhande.html}{Distance-Regular Graphs}. See also S. S. Shrikhande, “The uniqueness of the $L_2$ association scheme,” \textit{Ann. Math. Statist.} \textbf{30}, 781–798 (1959).
+\bibitem{rothenberg} T. J. Rothenberg, “Identification in parametric models,” \textit{Econometrica} \textbf{39}, 577–591 (1971).
+\bibitem{collected} K. Justus, \textit{From Prephysical Hypotheses to Physical Models: Collections}. The contents locate the accompanying articles.
+\bibitem{review} K. Justus, \textit{From Prephysical Hypotheses to Physical Models: Mathematical Supplement}. The contents locate the accompanying articles.
+\bibitem{chen} Y. Chen, M. Farahzad, S. Yoo and T.-C. Wei, “Detector tomography on IBM quantum computers and mitigation of an imperfect measurement,” \textit{Phys. Rev. A} \textbf{100}, 052315 (2019). \href{https://doi.org/10.1103/PhysRevA.100.052315}{DOI}.
+\bibitem{fluct} D. Goderis, A. Verbeure and P. Vets, “Dynamics of fluctuations for quantum lattice systems,” \textit{Commun. Math. Phys.} \textbf{128}, 533–549 (1990).
+\bibitem{hammond} D. K. Hammond, P. Vandergheynst and R. Gribonval, “Wavelets on graphs via spectral graph theory,” \textit{Appl. Comput. Harmon. Anal.} \textbf{30}, 129–150 (2011). \href{https://doi.org/10.1016/j.acha.2010.04.005}{DOI}.
+\bibitem{graphcert} K. Justus, “Equal inverse moments on a labelled graph pair,” exact-rational conductance certificate and verifier, accompanying electronic material.
+\bibitem{devriendt} K. Devriendt, “Effective resistance is more than distance: Laplacians, simplices and the Schur complement,” \textit{Linear Algebra Appl.} \textbf{639}, 24–49 (2022). \href{https://doi.org/10.1016/j.laa.2022.01.002}{DOI}.
+\bibitem{wagman} M. L. Wagman, “Lanczos algorithm, the transfer matrix, and the signal-to-noise problem,” \textit{Phys. Rev. Lett.} \textbf{134}, 241901 (2025). \href{https://doi.org/10.1103/pcvc-734h}{DOI}.
+\bibitem{higgs} P. W. Higgs, “Broken symmetries and the masses of gauge bosons,” \textit{Phys. Rev. Lett.} \textbf{13}, 508–509 (1964). \href{https://doi.org/10.1103/PhysRevLett.13.508}{DOI}.
+\bibitem{conformal} S. M. Carroll, \textit{Spacetime and Geometry}, Cambridge University Press (2019), Appendix G. \href{https://doi.org/10.1017/9781108770385}{DOI}.
+\bibitem{driver} B. K. Driver, “YM$_2$: continuum expectations, lattice convergence, and lassos,” \textit{Commun. Math. Phys.} \textbf{123}, 575–616 (1989). \href{https://mathweb.ucsd.edu/~bdriver/DRIVER/Papers/Drivers_Papers/A3-YM2-Expectations.pdf}{Author copy}.
+\bibitem{projector} K. Justus, \textit{Projector-Equivalent Wilson–Dirac Hamiltonians}, mathematical manuscript.
+\bibitem{spectral} K. Justus, \textit{Positive Spectral Measures Under Finite Moment and Laplace Constraints}, mathematical manuscript.
+\bibitem{compact} K. Justus, \textit{Compact-Group Transfer Spectra and Ultraviolet Operator Limits}, mathematical manuscript.
+\bibitem{twomode} K. Justus, \textit{Operational Identification and Calibration in Two-Mode Quasifree Systems}, mathematical manuscript.
+\bibitem{relative} K. Justus, \textit{Relative Entropy of Finite-Interval Wilson–Dirac Quasifree States}, mathematical manuscript.
+\bibitem{bulk} K. Justus, \textit{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law}, mathematical manuscript.
+\bibitem{crossboundary} K. Justus, \textit{Cross-Boundary Trace-Class Estimates for Wilson–Dirac Quasifree States}, mathematical manuscript.
+\bibitem{referencegeometry} K. Justus, \textit{Exact Reference Geometry and the Two-Bond Asymptotic of a Wilson–Dirac Covariance}, mathematical manuscript.
+\bibitem{uniformmodular} K. Justus, \textit{Uniform Modular Control and Nonlinear Convergence for Wilson–Dirac Intervals}, mathematical manuscript, Theorem 3, Corollary 4 and Theorem 6.
+\bibitem{justuswilson} K. Justus, \textit{Finite Part of Wilson–Dirac Relative Entropy}, mathematical manuscript (2026), Theorem 1 and Sections 2–7.
+\bibitem{eisler} V. Eisler and I. Peschel, “Analytical results for the entanglement Hamiltonian of a free-fermion chain,” \textit{J. Phys. A} \textbf{50}, 284003 (2017). \href{https://doi.org/10.1088/1751-8121/aa76b5}{DOI}.
+\bibitem{gst} E. Nielsen et al., “Gate set tomography,” \textit{Quantum} \textbf{5}, 557 (2021). \href{https://doi.org/10.22331/q-2021-10-05-557}{DOI}.
+\bibitem{keith} A. C. Keith, C. H. Baldwin, S. Glancy and E. Knill, “Joint quantum-state and measurement tomography with incomplete measurements,” \textit{Phys. Rev. A} \textbf{98}, 042318 (2018). \href{https://doi.org/10.1103/PhysRevA.98.042318}{DOI}.
+\bibitem{watrous} J. Watrous, \textit{The Theory of Quantum Information}, Cambridge University Press (2018), chapters 2–3. \href{https://doi.org/10.1017/9781316848142}{DOI}.
+\bibitem{wills} P. Wills, E. Knill, K. Coakley and Y. Zhang, “Performance of test supermartingale confidence intervals for the success probability of Bernoulli trials,” \textit{J. Res. NIST} \textbf{125}, 125003 (2020). \href{https://doi.org/10.6028/jres.125.003}{DOI}.
+\bibitem{aasen} A. S. Aasen et al., “Readout error mitigated quantum state tomography tested on superconducting qubits,” \textit{Commun. Phys.} \textbf{7}, 301 (2024). \href{https://doi.org/10.1038/s42005-024-01790-8}{DOI}.
+\bibitem{werninghaus} M. Werninghaus, D. J. Egger and S. Filipp, “High-speed calibration and characterization of superconducting quantum processors without qubit reset,” \textit{PRX Quantum} \textbf{2}, 020324 (2021). \href{https://doi.org/10.1103/PRXQuantum.2.020324}{DOI}.
+\bibitem{white} G. A. L. White et al., “Non-Markovian quantum process tomography,” \textit{PRX Quantum} \textbf{3}, 020344 (2022). \href{https://doi.org/10.1103/PRXQuantum.3.020344}{DOI}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\input{Scientific_Preamble.tex}
+\lefthyphenmin=2\righthyphenmin=3
+\hypersetup{pdftitle={Calibration Uncertainty and Finite-Sample Identification}}
+\title{Calibration Uncertainty and\\Finite-Sample Identification}
+\author{Kirtus Justus\\\small Port Coquitlam, British Columbia, Canada}
+\date{10 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A set of model parameters compatible with estimated observation probabilities is not automatically a confidence region. We give a projection result that transfers a simultaneous confidence region for the population observation law into a confidence region containing the entire compatible parameter set. A binary detector example yields an exact interval formula under separated calibration ranges, a finite-sample construction from binomial tail inversion, and an explicit inverse-contrast conditioning bound. An adverse example has an empty empirical compatibility set with probability one under a correct model. All counts and numerical examples are stipulated; no experimental observations or physical selection of the model are claimed. The results use elementary set projection and established confidence-interval methods; no novelty claim is made.
+\end{abstract}
+
+\section{Population compatibility and sampling coverage}
+
+Let $\mathcal D\subseteq\Theta\times H$ be an admitted parameter class, where $\theta$ is the target and $\eta$ contains nuisance quantities. A specified observation map
+\[
+ O:\mathcal D\longrightarrow\mathcal U
+\]
+assigns a population observation law or a complete index for that law. The index may include separate calibration experiments as well as the study experiment. For $u\in O(\mathcal D)$, define
+\[
+ \Theta(u)=\{\theta:\exists\eta,\ (\theta,\eta)\in\mathcal D,
+                   \ O(\theta,\eta)=u\}.
+\]
+This is a population identified set. Replacing $u$ by an empirical estimate changes the object being reported. Coverage of each admissible target value and simultaneous coverage of an entire identified set are distinct requirements in partial identification~\cite{imbensmanski}. We use the latter, stronger target here.
+
+Let $\mathcal P(u)$ be a declared nonempty family of sampling laws for the recorded data $D$ under observation index $u$. A singleton family covers a fully specified sampling law; a larger family can allow unspecified dependence. The design, sample sizes and admissible dependence are part of this contract. Assume all events used below are measurable and $0<\alpha<1$. Suppose a data-dependent set $C(D)\subseteq\mathcal U$ satisfies
+\begin{equation}
+ \inf_{u\in O(\mathcal D)}\ \inf_{\mathbb P\in\mathcal P(u)}\mathbb P\{u\in C(D)\}\ge 1-\alpha.
+ \label{eq:lawcoverage}
+\end{equation}
+Define its model projection by
+\begin{equation}
+ \widehat\Theta_C(D)=
+ \{\theta:\exists\eta,\ (\theta,\eta)\in\mathcal D,
+                  \ O(\theta,\eta)\in C(D)\}.
+ \label{eq:projection}
+\end{equation}
+
+\begin{proposition}[Coverage by projection]
+Under \eqref{eq:lawcoverage},
+\begin{equation}
+ \inf_{u\in O(\mathcal D)}\ \inf_{\mathbb P\in\mathcal P(u)}
+ \mathbb P\{\Theta(u)\subseteq\widehat\Theta_C(D)\}\ge 1-\alpha.
+ \label{eq:wholecoverage}
+\end{equation}
+Consequently every admissible true target value has coverage at least $1-\alpha$.
+\end{proposition}
+\begin{proof}
+On the event $u\in C(D)$, every $\theta\in\Theta(u)$ has a witness $\eta$ with $O(\theta,\eta)=u\in C(D)$. The same witness places $\theta$ in \eqref{eq:projection}. Thus the law-coverage event is contained in the whole-set coverage event, for each $u$ and each permitted sampling law. Taking probabilities and then both infima proves the assertion.
+\end{proof}
+
+This proof supplies no sampling guarantee that was absent from $C$. A distance ball $d(u,\widehat u)\le\delta$ is one possible construction, but its radius and sampling guarantee must be established for the actual design. A deterministic sensitivity range for $\eta$ may instead be included in $\mathcal D$. A random interval known only to cover the actual $\eta$ supports actual-parameter coverage when combined with other valid bounds; it does not automatically cover all nuisance values compatible with the same population observation law. To claim \eqref{eq:wholecoverage}, include the calibration observation law in $O$ or separately justify the required simultaneous inclusion.
+
+For a fixed $u$, the proposition remains true with a pointwise guarantee in place of \eqref{eq:lawcoverage}; that change does not establish a uniform guarantee. Likewise a fixed-analysis-time construction supplies no guarantee for arbitrary repeated inspection or optional stopping. An outer numerical approximation $\widetilde\Theta_C\supseteq\widehat\Theta_C$ preserves coverage if the inclusion is valid. An unverified search over selected parameter values can miss feasible witnesses and cannot be used for that inference.
+
+\section{A binary detector with explicit calibration}
+
+Let a latent binary event $X$ have probability $\theta=\Pr(X=1)$. A binary recorded event $Y$ has conditional response probabilities
+\[
+ a=\Pr(Y=1\mid X=1),\qquad b=\Pr(Y=1\mid X=0).
+\]
+Then the study response probability is
+\begin{equation}
+ q=\Pr(Y=1)=b+(a-b)\theta,\qquad 0\le\theta\le1.
+ \label{eq:response}
+\end{equation}
+The labels $X=1$ and $X=0$ in the calibration experiments are assumed to be anchored by a separately specified preparation. Equation \eqref{eq:response} also assumes the same response probabilities apply in calibration and study conditions. Neither assumption follows from writing down a detector matrix. Measurement uncertainty must retain the actual measurement model and calibration conditions~\cite{gum}.
+
+The permitted experiment consists of fixed-size calibration and study samples with count marginals
+\begin{equation}
+ K_a\sim\operatorname{Bin}(n_a,a),\qquad
+ K_b\sim\operatorname{Bin}(n_b,b),\qquad
+ K_q\sim\operatorname{Bin}(n_q,q).
+ \label{eq:binomial}
+\end{equation}
+Independent Bernoulli trials with constant probabilities within each sample are a sufficient construction. The coverage argument below needs the three binomial marginals; independence between the three samples is not required by its union bound. Correlation or drift within a sample must be modelled if it invalidates its binomial law. The sample sizes and error allocations used here are fixed before examining the outcomes.
+
+For comparison, exact knowledge of $a,b,q$ identifies $\theta=(q-b)/(a-b)$ if $a\ne b$ and the ratio lies in $[0,1]$. When $a=b=q$, every $\theta\in[0,1]$ is compatible. With only $q$ observed and the detector uncalibrated, different target values can agree: $(a,b,\theta)=(4/5,1/5,1/2)$ and $(9/10,3/10,1/3)$ both give $q=1/2$. This is a checked ambiguity within the stated class, rather than a failure to find an estimator.
+
+\section{An exact projection for separated calibration intervals}
+
+Let $I_a=[a_L,a_U]$, $I_b=[b_L,b_U]$, and $I_q=[q_L,q_U]$ be closed subintervals of $[0,1]$. Initially these are simply admitted ranges, without any probability interpretation. Define
+\[
+ T(I_a,I_b,I_q)=\{\theta\in[0,1]:\exists a\in I_a,b\in I_b,q\in I_q,
+                              \ q=b+(a-b)\theta\}.
+\]
+
+\begin{theorem}[Sharp interval projection]
+If $b_U<a_L$, put
+\begin{equation}
+ L=\max\left\{0,\frac{q_L-b_U}{a_U-b_U}\right\},\qquad
+ U=\min\left\{1,\frac{q_U-b_L}{a_L-b_L}\right\}.
+ \label{eq:interval}
+\end{equation}
+Then $T=[L,U]$ when $L\le U$, and $T=\varnothing$ otherwise. Every value in the displayed nonempty interval is attained by an admissible triple.
+\end{theorem}
+\begin{proof}
+For a fixed $\theta\in[0,1]$, the range of $(1-\theta)b+\theta a$ over the calibration rectangle is exactly
+\[
+ [q_{\min}(\theta),q_{\max}(\theta)]
+ =[(1-\theta)b_L+\theta a_L,
+   (1-\theta)b_U+\theta a_U].
+\]
+It is an interval because the rectangle is convex and the map is linear. It intersects $I_q$ precisely when
+\[
+ b_L+(a_L-b_L)\theta\le q_U,
+ \qquad b_U+(a_U-b_U)\theta\ge q_L.
+\]
+Both coefficients are strictly positive under $b_U<a_L$. Solving the two inequalities and intersecting with $[0,1]$ gives \eqref{eq:interval}.
+
+For an explicit witness, select any $q$ in the interval intersection. If $q_{\max}>q_{\min}$, take $t=(q-q_{\min})/(q_{\max}-q_{\min})$ and set
+\[
+ a=a_L+t(a_U-a_L),\qquad b=b_L+t(b_U-b_L).
+\]
+These values lie in the calibration intervals and give the selected $q$. If $q_{\max}=q_{\min}$, the lower endpoints suffice. This also proves endpoint attainability.
+\end{proof}
+
+The separation condition belongs to the closed formula. If the intervals overlap, the existential definition of $T$ is still meaningful and the coverage proposition still applies, but division by a contrast that may vanish is invalid. A chosen physical orientation $a>b$, if imposed, is an additional model restriction; it must be retained when computing the projection. Observed separated confidence intervals do not, by themselves, establish an unconditional detector law.
+
+\begin{example}[Persistent calibration width]
+For stipulated ranges
+\[
+ I_a=[4/5,9/10],\quad I_b=[1/10,1/5],\quad I_q=[2/5,9/20],
+\]
+the exact target interval is $[2/7,1/2]$. If the study probability is known exactly as $q=17/40$ while the calibration ranges remain unchanged, the interval is $[9/28,13/28]$, of width $1/7$. Increasing the study sample size cannot remove this stipulated calibration ambiguity. These ranges are an algebraic illustration; no confidence level is attached to them.
+\end{example}
+
+\section{A finite-sample confidence construction}
+
+For a binomial count $K=k$ from $n\ge1$ trials and $0<\beta<1$, define the closed equal-tailed set
+\begin{equation}
+ I_{n,k}(\beta)=\left\{p\in[0,1]:
+    \Pr_p(K\le k)\ge\frac\beta2,
+    \quad\Pr_p(K\ge k)\ge\frac\beta2\right\}.
+ \label{eq:cp}
+\end{equation}
+This is the usual exact binomial tail-inversion interval~\cite{nist}. For $0<k<n$, its lower endpoint solves $\Pr_p(K\ge k)=\beta/2$ and its upper endpoint solves $\Pr_p(K\le k)=\beta/2$. The lower endpoint is $0$ for $k=0$; the upper endpoint is $1$ for $k=n$. Discreteness generally makes coverage exceed its nominal lower bound.
+
+\begin{lemma}[Binomial coverage]
+For every $p\in[0,1]$, $\Pr_p\{p\in I_{n,K}(\beta)\}\ge1-\beta$.
+\end{lemma}
+\begin{proof}
+For fixed $p$, the event $\Pr_p(K'\le K)<\beta/2$ is a lower-tail event in the observed $K$, where $K'$ denotes another variable with the same binomial law solely to define its tail. The largest included count, if there is one, has cumulative probability below $\beta/2$; hence the event probability is at most $\beta/2$. The upper-tail event $\Pr_p(K'\ge K)<\beta/2$ has the same bound by reversing the order. Their union contains exactly the ways $p$ can fail \eqref{eq:cp}. A union bound proves the result, including degenerate endpoint laws.
+\end{proof}
+
+Choose $\alpha_a,\alpha_b,\alpha_q>0$ with sum at most $\alpha$, before outcome inspection, and form
+\[
+ I_a=I_{n_a,K_a}(\alpha_a),\qquad
+ I_b=I_{n_b,K_b}(\alpha_b),\qquad
+ I_q=I_{n_q,K_q}(\alpha_q).
+\]
+By the lemma and a union bound,
+\[
+ \inf_{a,b,\theta\in[0,1]}\ \inf_{\mathbb P\in\mathcal P(a,b,q)}
+ \mathbb P\{(a,b,q)\in I_a\times I_b\times I_q\}\ge1-\alpha,
+ \qquad q=b+(a-b)\theta.
+\]
+Here $\mathcal P(a,b,q)$ contains every joint law of the three counts with the binomial marginals \eqref{eq:binomial}; the three probabilities alone need not determine their dependence. Applying the projection proposition with $O(\theta,a,b)=(a,b,q)$ proves finite-sample, uniform coverage of the entire identified set for that observation index, over every such joint law. The numerical formula \eqref{eq:interval} may be used on outcomes with $b_U<a_L$. For other outcomes the full existential projection is required; selecting only separated outcomes and then claiming conditional coverage would be a different inference.
+
+This construction makes no shortest-interval or optimal-allocation claim. It is conservative, transparent and compatible with arbitrary dependence between the three samples when their stated marginals hold. The mathematical proof does not demonstrate those marginals for an apparatus.
+
+\subsection{Illustrative counts and outward numerical bounds}
+
+Take the stipulated counts $(n_a,K_a)=(100,85)$, $(n_b,K_b)=(100,15)$ and $(n_q,K_q)=(200,85)$, with $\alpha=1/20$ and equal allocations $1/60$. These are constructed counts, not measurements. Forty steps of exact rational bisection enclose each binomial endpoint in an interval of width at most $2^{-40}$. Using the outer endpoint of each bracket gives the following displayed outer intervals, rounded outward to six decimal places:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Quantity & Lower bound & Upper bound\\
+\midrule
+$a$ & 0.745144 & 0.924241\\
+$b$ & 0.075759 & 0.254856\\
+$q$ & 0.341164 & 0.512044\\
+$\theta$ & 0.128936 & 0.651769\\
+\bottomrule
+\end{tabular}
+\end{center}
+The target interval is computed from the exact rational outer endpoints before decimal display. Its width reflects both calibration and study sampling uncertainty. It is not evidence for a prephysical model. The accompanying code evaluates each bracketing tail inequality exactly with integer arithmetic, retaining outward directions through the final projection. This gives a numerical enclosure under the stated algorithm and arithmetic, while the statistical coverage remains grounded in the binomial proof and sampling assumptions.
+
+\section{Adverse and positive boundary cases}
+
+\subsection{An empty estimated set under a correct model}
+
+Suppose calibration is exact: $a=4/5$, $b=1/5$, and the true $\theta=1/2$. Then $q=1/2$. With one study trial, the empirical probability is $\widehat q=0$ or $1$, each with probability $1/2$. If an analyst uses the zero-radius set $I_q=\{\widehat q\}$, both possible empirical probabilities lie outside the model range $[1/5,4/5]$. Thus the estimated compatible target set is empty with probability one, although the true model satisfies every population assumption. Its target coverage is zero.
+
+This counterexample concerns the unjustified empirical substitution. It does not invalidate tail-inversion confidence regions. With a valid uniformly covering region and a nonempty population identified set, \eqref{eq:wholecoverage} bounds the probability of an empty projected region by $\alpha$. Even then an observed empty set calls for examination of sampling assumptions, model restrictions and numerical completeness; it is not a deterministic proof of population impossibility.
+
+\subsection{Contrast controls conditioning}
+
+\begin{proposition}[An inverse-contrast bound]
+Consider two admissible triples satisfying \eqref{eq:response}, with $a-b\ge\kappa>0$. Then
+\begin{equation}
+ |\theta-\theta'|\le
+ \frac{|q-q'|+\theta'|a-a'|+(1-\theta')|b-b'|}{\kappa}
+ \le\frac{|q-q'|+\max\{|a-a'|,|b-b'|\}}{\kappa}.
+ \label{eq:conditioning}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Subtract the response equations in the form
+\[
+ q-q'=(a-b)(\theta-\theta')
+        +\theta'(a-a')+(1-\theta')(b-b').
+\]
+Apply the triangle inequality, divide by $a-b\ge\kappa$, and use $0\le\theta'\le1$.
+\end{proof}
+
+For a confidence rectangle uniformly separated by $\kappa$, the target diameter is therefore bounded by
+\[
+ \min\left\{1,\frac{\operatorname{width}(I_q)
+                  +\max\{\operatorname{width}(I_a),\operatorname{width}(I_b)\}}{\kappa}\right\}.
+\]
+This need not be the sharp interval width in \eqref{eq:interval}. The inverse dependence on contrast is unavoidable in general: set $a=(1+\kappa)/2$, $b=(1-\kappa)/2$, and compare $\theta=0$ with $\theta'=1$. Their target difference is one and their response difference is exactly $\kappa$. At zero contrast every target value has the same response.
+
+\subsection{More information and the relevant target}
+
+At the population level, adding observation coordinates can only reduce the identified set when the same model class and previous observations are retained. For confidence regions the analogous inclusion follows when the law regions themselves are nested. Confidence regions from different realized sample sizes are not generally nested, so additional data do not guarantee a narrower realized interval on every sample path.
+
+An identified labelled coordinate also differs from an invariant physical quantity. If a model treats relabellings or similarities as equivalent, the target must be constant on those equivalence classes or be anchored by additional observations. The calibrated binary example stipulates such anchors. It does not resolve the separate latent-coordinate ambiguity in unanchored hidden-state models, nor does it infer a fundamental ontology from a successful calibration experiment.
+
+\section{Verification and application scope}
+
+The exact checker evaluates 11,025 separated-rectangle and target-grid cases, constructs 5,321 feasible witnesses, checks all binomial counts for $n=1,\ldots,12$ over $p=i/20$ at three stated error levels, and checks the adverse example, interval endpoints, contrast cases and numerical root enclosures. The resulting 11,807 predicate checks passed. These finite checks exercise the formulas and implementations; the displayed proofs establish the general statements. They do not establish physical applicability, universal software correctness, or statistical independence of real observations.
+
+A physical use of this construction still needs a defensible preparation of the calibration labels, a stable response model, the stated sampling law and a scientifically meaningful target. Failure of those conditions changes the inference. A successful application would support a particular measurement model and target within its tested domain. It would not select the mathematical representation from prephysical principles or establish that no observationally equivalent physical description exists.
+
+\paragraph{Contribution and assistance.}
+This study was prepared within \emph{From Prephysical Hypotheses to Physical Models} under Kirtus Justus's research direction with substantial AI assistance in derivation, source inspection, code and presentation. The work has not received independent external peer review. The counts are hypothetical and the methods are presented without a claim of priority.
+
+\clearpage
+\begin{thebibliography}{9}
+\bibitem{imbensmanski} G. W. Imbens and C. F. Manski, \emph{Confidence Intervals for Partially Identified Parameters}, CeMMAP Working Paper CWP09/03 (2003), especially Sections 1--2. \url{https://www.cemmap.ac.uk/wp-content/uploads/2020/08/CWP0903.pdf}. Used for the distinction between target-value and whole-identified-set coverage; its asymptotic results are not invoked as a proof of the finite-sample construction here.
+\bibitem{nist} NIST/SEMATECH, \emph{e-Handbook of Statistical Methods}, Section 7.2.4.1, ``Confidence intervals,'' exact binomial subsection. \url{https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm}. Accessed 10 November 2026. Used for the binomial tail-inversion definitions and endpoint equations.
+\bibitem{gum} Joint Committee for Guides in Metrology, \emph{Evaluation of measurement data---Guide to the expression of uncertainty in measurement}, JCGM 100:2008, corrected 2010, Section 7.1. \url{https://doi.org/10.59161/JCGM100-2008E}. Used for measurement-model and calibration reporting context, not as a statistical coverage theorem or a claim of standards conformance.
+\end{thebibliography}
+\end{document}

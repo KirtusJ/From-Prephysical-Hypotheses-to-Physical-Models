@@ -1,0 +1,153 @@
+{
+ "trial": "GH-2",
+ "date": "2026-11-12",
+ "proof_home": "Paper G9",
+ "built_by": "LLM Director Z (Claude, Anthropic) at the direction of Kirtus Justus",
+ "primitives": [
+  "finite directed graph",
+  "finite group element on each arc; a character of modulus one",
+  "equivalence under switching"
+ ],
+ "assumptions": [
+  {
+   "id": "GH2-A1",
+   "text": "the squared-amplitude rule of GH-1 for directed walks, with GH1-A1 to GH1-A5",
+   "standing": "SUPPLIED"
+  },
+  {
+   "id": "GH2-A2",
+   "text": "consistency under continuation: A*A = d",
+   "standing": "SUPPLIED",
+   "note": "fails for a generic gain graph (Directors A, B); edition Z4: equivalent to taking events to be sets of histories (G10-01-01); the event structure is what is supplied"
+  },
+  {
+   "id": "GH2-A3",
+   "text": "gains of modulus one without further weights; out-degree two in Theorem 4.3",
+   "standing": "SUPPLIED"
+  },
+  {
+   "id": "GH2-A4",
+   "text": "the ring: sites, order, translation symmetry",
+   "standing": "SUPPLIED"
+  },
+  {
+   "id": "GH2-A5",
+   "text": "for a force: gains linear in position, in a cyclic group whose order grows as the force decreases",
+   "standing": "SUPPLIED",
+   "note": "for orders other than 1, 2, 3, 4, 6 the measure depends on the character (G8-01-08)"
+  },
+  {
+   "id": "GH2-A6",
+   "text": "step count as the only ordering parameter",
+   "standing": "SUPPLIED"
+  }
+ ],
+ "derived": [
+  {
+   "id": "G9-01-01",
+   "text": "criterion for consistency under continuation"
+  },
+  {
+   "id": "G9-01-02",
+   "text": "trivial gains: permutation"
+  },
+  {
+   "id": "G9-01-03",
+   "text": "reciprocal gains: involution"
+  },
+  {
+   "id": "G9-01-04",
+   "text": "out-degree two: arc digraph of a 2-in 2-out digraph; zigzag gain -1"
+  },
+  {
+   "id": "G9-01-05",
+   "text": "polar complex structure of a real orthogonal step; uniqueness under a positive generator; reversal"
+  },
+  {
+   "id": "G9-01-06",
+   "text": "only real scalars commute with the step and the vertex projections"
+  },
+  {
+   "id": "G9-01-07",
+   "text": "dispersion and group velocity of the signed ring"
+  },
+  {
+   "id": "G9-01-09",
+   "text": "exact translation of the quasi-momentum under a linear gain; uniform pair gain of exchanged steps"
+  },
+  {
+   "id": "G9-01-10",
+   "text": "group velocity = -N d(eigenphase)/d(holonomy round the ring)"
+  },
+  {
+   "id": "G9-01-11",
+   "text": "ladder transport: trivial holonomy iff Cayley graph of an elementary abelian 2-group"
+  },
+  {
+   "id": "G9-01-12",
+   "text": "norm-preserving signings of such graphs are the anticommuting ones; central complex structure iff k = 3 mod 4"
+  },
+  {
+   "id": "G10-01-01",
+   "text": "consistency under continuation = well-definedness on cylinder sets of histories"
+  },
+  {
+   "id": "G10-01-05",
+   "text": "exact translation of the quasi-momentum only for the linear gain; order at least 2 pi / Phi"
+  },
+  {
+   "id": "G10-01-06",
+   "text": "no common local quasi-energy for winding gains of order 3 or more, except four band edges for order 4"
+  }
+ ],
+ "quoted": [
+  {
+   "id": "G9-01-08",
+   "text": "X_t/t converges in law to the group-velocity distribution (Grimmett, Janson, Scudo)"
+  }
+ ],
+ "observed": {
+  "programs": [
+   "verify_reversible_gain_digraphs.py",
+   "verify_reversible_walk_rays.py"
+  ],
+  "predicates": 28,
+  "passed": 27,
+  "failed_and_kept": "residual below 0.02 site after the connection offset: 0.075 and 0.038",
+  "adverse_instances": "staircase of order-4 gains: displacement 3.80 and 12.00 sites against 5.53 and 22.26 for the linear gain",
+  "edition_Z4": {
+   "programs": [
+    "verify_continuation_selection.py",
+    "verify_bounded_order_confinement.py",
+    "verify_modulus_rules_and_local_spectra.py",
+    "verify_fourth_session_corrections.py",
+    "verify_ray_error_scaling.py",
+    "verify_ray_averaged_prediction.py"
+   ],
+   "predicates": 26,
+   "passed": 19,
+   "failed_and_kept": "S5 (two), C1, C1b, M1 and L3 of the first modulus-rule program, E1",
+   "adverse_instances": "order-4 staircase reaches 0.686, 0.539, 0.158 of the mean-field displacement at block lengths 16, 64, 256; staircases of order 3, 4, 6 confine within a block for block lengths 16, 64",
+   "ray_remainder_sites": "central ray 0.0748 to 0.2315; packet-averaged ray 0.0735 to 0.0016, periods 64 to 2048"
+  }
+ },
+ "proposed_transfer": "none to physics",
+ "absent": [
+  "clock with a unit",
+  "selection of a generator",
+  "selection of complex amplitudes",
+  "ray position equation with an error bound",
+  "weak force with gains of bounded order",
+  "composition and interaction",
+  "more than one dimension",
+  "uniqueness of the carrier",
+  "physical correspondence"
+ ],
+ "dispositions": {
+  "a norm-preserving gain digraph yields quantum mechanics and classical Hamiltonian mechanics": "NOT_IDENTIFIED_IN_SCOPE",
+  "conditional statements of paper G9": "SUPPORTED_IN_SCOPE; ray position equation CONDITIONAL",
+  "a ray limit with a force for gains of bounded order": "UNRESOLVED; narrowed by G10-01-05 and G10-01-06; five adverse instances"
+ },
+ "assessed_by": "the participant that built the trial; SELF_CHECK with exposure",
+ "revised": "2026-11-13, edition Z4"
+}

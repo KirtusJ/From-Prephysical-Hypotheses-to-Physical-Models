@@ -1,0 +1,53 @@
+{
+  "date_local": "2026-11-12 America/Vancouver",
+  "inputs": [
+    {
+      "bytes": 44496467,
+      "name": "Director_Z2_transport_outer_archive",
+      "sha256": "d36e151b0da4aa54edce4edca2b6a7ea2652c36591d44608857c8ecfd2757267",
+      "source_basename": "files(17).zip"
+    },
+    {
+      "bytes": 44422281,
+      "name": "Director_Z2_inner_baseline_archive",
+      "sha256": "4816b48a6b9465706b231b05f5bbc7a9e64934a077a388ff1c161a03fcfbabe5",
+      "source_basename": "FPHPM_Baseline_2026-11-12_Z2.zip"
+    },
+    {
+      "bytes": 522750,
+      "name": "Director_A3_archive",
+      "sha256": "61064cee2bf182dfa7626e439cbc0e72ded4c41af48bacc71ed9d6a15715f7a1",
+      "source_basename": "Director_A_A3_Grounding_Continuation_2026-11-12(2).zip"
+    },
+    {
+      "bytes": 401876,
+      "name": "Director_B3_archive",
+      "sha256": "c4c39bbd72ddff75a101a05a22d25ff4736be24daaacc9ff902432c946525668",
+      "source_basename": "Director_B_Third_Grounding_2026-11-12_B3(2).zip"
+    },
+    {
+      "bytes": 2534245,
+      "name": "PCP_Version_1_0_Enterprise_archive",
+      "sha256": "1282bcd3f0ec8bd22bfb0575a6cf7e3e38f29f8cbdb278082dcfd317da907be7",
+      "source_basename": "PCP_1.0_Enterprise_Edition.zip"
+    }
+  ],
+  "pcp": {
+    "acr_packet_manifest_sha256": "42341ddf38a21a659d974af7d27c739605dd192b2d16c76ef1ae2dcdbdd41c79",
+    "edition": "PCP Version 1.0 Enterprise",
+    "edition_manifest_sha256": "6e0cd24f626c065eb5d00ad976caade59f4da286a4b1203362feb79a98a8d1f6",
+    "local_structural_results": "PASS; no host enforcement or behavioral certification"
+  },
+  "research_status": "G1 OPEN; no total ontology",
+  "supplied_manifest_results": {
+    "A3": "19 payloads PASS; 1186 trials PASS",
+    "B3": "23 payloads PASS; 261+29 trials PASS",
+    "Z2": "791 files, 39 papers, 367 rows PASS"
+  },
+  "z2_g8_rerun": {
+    "byte_identity": false,
+    "floating_difference_count": 7,
+    "maximum_abs_difference": 1.1102230246251565e-16,
+    "predicates_pass": 15
+  }
+}

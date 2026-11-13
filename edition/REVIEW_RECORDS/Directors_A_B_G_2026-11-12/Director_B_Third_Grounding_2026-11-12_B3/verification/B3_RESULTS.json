@@ -1,0 +1,59 @@
+{
+  "cautions": [
+    "no new experiment",
+    "results do not derive local filters from finite relations",
+    "full-state-space selection requires operational filtering, closure, unitary and convex assumptions",
+    "failure of filter closure does not refute G pair model with restricted instrument set"
+  ],
+  "exact_formulas": {
+    "max_Bell_fidelity_in_K_t": "(1+t)/2",
+    "p_success": "x*(t+(1-t)*x)",
+    "post_bell_fidelity": "t/(t+(1-t)*x)",
+    "uniform_choice": "x=t/[2(1+t)]",
+    "uniform_success": "t^2*(3+t)/[4*(1+t)^2]",
+    "uniform_violation": "(1-t^2)/[2(3+t)]",
+    "violation_condition": "0<t<1 and 0<x<t/(1+t)"
+  },
+  "exact_half_example": {
+    "K_t_max_bell_fidelity": "3/4",
+    "XX": "4/5",
+    "YY": "4/5",
+    "ZZ": "-3/5",
+    "epsilon": "1/2",
+    "post_bell_fidelity": "4/5",
+    "postselection_success": "5/32",
+    "strict_gap": "1/20",
+    "t": "1/2"
+  },
+  "failed_test_controls": {
+    "C2_equals_minus3Q_only_n3": true,
+    "case_t0_filter_output_undefined_recorded": true,
+    "case_t1_no_violation_recorded": true
+  },
+  "ontology_selected": false,
+  "research_stage": "Initial External Grounding / G1 OPEN",
+  "results": {
+    "K_t_not_filter_closed_all_interior_t": true,
+    "closed_filter_saturation_to_D2_for_any_t_positive": true,
+    "even_directed_cycle_contrast_skew_form_degenerate": true,
+    "filter_trace_preserving_completion_exists": true,
+    "local_product_pauli_measurements_suffice_to_detect_violation": true,
+    "odd_directed_cycle_J_requires_real_metric_spectral_sqrt": true,
+    "odd_directed_cycle_contrast_skew_form_nondegenerate": true
+  },
+  "scope": "exact mathematical counterexample conditional on stipulated complex two-level systems and allowed postselected local filters",
+  "trial_counts": {
+    "cycle_rows": 29,
+    "distinct_filter_t": 253,
+    "filter_extremes_max_denominator_digits": 50,
+    "filter_parameter_rows_with_duplicates_retained": 261
+  },
+  "under_test_assumptions": [
+    "K_t=(1-t)Sep_2+tD_2",
+    "exact conventional two-qubit quantum Hilbert representation supplied",
+    "all local single-site non-deterministic filters and classical postselection available",
+    "full set of local unitaries available",
+    "finite-dimensional state sets norm-closed for saturation theorem",
+    "convex mixing available"
+  ]
+}

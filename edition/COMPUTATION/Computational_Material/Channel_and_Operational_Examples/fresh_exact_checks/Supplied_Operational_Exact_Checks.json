@@ -1,0 +1,210 @@
+{
+  "schema": "selected_operational_exact_checks_v1",
+  "created_at": "2026-11-10T14:13:06.206085+00:00",
+  "time_convention": "UTC execution timestamp",
+  "source_pdf": {
+    "path": "Related_Source_Editions/Operational_Identification_of_Records_Controls_and_Continuous_Time_Dynamics.pdf",
+    "relative_to": "Review_Materials",
+    "sha256": "11ce1f234b09566cb638a1e52d1e691b9c84127927cfdaf8b26e29a375bf54a7",
+    "physical_pdf_pages": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "program": {
+    "path": "/workspace/scratch/b8e0c11bcccc/grounding_review_2026_11_10/output/Review_Materials/Computational_Material/Channel_and_Operational_Examples/fresh_exact_checks/verify_supplied_operational_examples.py",
+    "sha256": "a4c32a335072b1b46ca4ae8693bba039159137306612e0618c4d4e4d6f71bd1c",
+    "python": "3.12.14",
+    "sympy": "1.14.0"
+  },
+  "scope": "Fresh exact arithmetic on selected displayed witnesses. No archived code executed. Universal identification and observational-equivalence claims remain supported by their stated analytic proofs and premises, not by these finite checks. No empirical, independent-replication, or novelty claim.",
+  "checks": [
+    {
+      "name": "positive stationary row-stochastic model",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "two-output determinant",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": {
+        "determinant": "53/8100"
+      }
+    },
+    {
+      "name": "one-output probabilities",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "symbolic determinant criterion",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "reconstructed emission difference and preparation product",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "displayed C0 and C1",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": {
+        "C0": [
+          [
+            "13/45",
+            "9/100"
+          ],
+          [
+            "29/90",
+            "21/200"
+          ]
+        ],
+        "C1": [
+          [
+            "32/45",
+            "179/900"
+          ],
+          [
+            "61/90",
+            "337/1800"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "short reconstruction returns matrices",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "symbolic similarity formulas",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "fixed first and perturbed second control",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "preparation interval formula",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "numerator 0 positive lower bounds on entire interval",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "numerator 1 positive lower bounds on entire interval",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "one-percent calibration witness",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "common-control pair contrast, original minus primed",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "reset probability functions",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "endpoint reset similarity",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "environment vectors normalized and determinant contrast",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "environment readout probability gap",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "cycle exponential algebra",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "generator rate equivalence",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "NP exact size and feasible randomization N=467",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "NP exact size and feasible randomization N=468",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": null
+    },
+    {
+      "name": "exact fixed-horizon minimum 468",
+      "passed": true,
+      "arithmetic": "exact",
+      "details": {
+        "minimality_reason": "Neyman-Pearson monotone likelihood ratio gives the optimum for each N; optimal power cannot decrease with N because one may ignore added observations. Exact failure at 467 and success at 468 therefore certify this simple iid randomized fixed-horizon boundary."
+      }
+    }
+  ],
+  "all_passed": true,
+  "exact_check_count": 23,
+  "np_boundary": [
+    {
+      "n": 467,
+      "boundary_count": 79,
+      "randomization_approx": 0.14170881280743175,
+      "power_approx": 0.9498952948087144,
+      "power_at_least_19_over_20": false,
+      "power_fraction": "165456790968767816278547419429147752424738481529186117359451962821185969922423915927252096722302276200139524583189378825985787126324283246012758030590061625491038979088793254859539740113794950999745397435889135332531928738493615746746862859548143427302486875527034134858588676772278469623043107987756636622563034336421984872990626835925469574273804813782474075904588047292488389971254041431768273957132838805521850683889097455418369161795876293915105820041878421132639825573309764752315406697746395600105324776577/174184241013728518546850680988616489200150266208247618657533889004378486918082731292826983983012475363624513367026135424779199121364332894572114957800732099979796351691162390722610411960401475458907132155861817787326300365867679840836001217568006175775381427936481849296959297349286505846725063830729484464677741153636208039209143078448941722200550839257752651318991542535645858449849252873442296907316457619093487963367863764456285263673642542788619162626282821723853176144880539055748158716596662998199462890625"
+    },
+    {
+      "n": 468,
+      "boundary_count": 80,
+      "randomization_approx": 0.9986259298550465,
+      "power_approx": 0.9505519541817742,
+      "power_at_least_19_over_20": true,
+      "power_fraction": "827855853416343878377063543684790929779624543249663534781523826110673160477199393010694588512619769170670857642028165727441377499445460134107270871470869846069954760411022524111278579351233268401012321014005462413996393466596691770776330182800939759505795715818873801348854667719843801505650551100871806407402617730275745394092368337466498343811493224707860714208871759685084626696100756524648666806984677106572779549287788699400156887694309616053651168651725157960940963771136121397277869081900006927355552185989/870921205068642592734253404943082446000751331041238093287669445021892434590413656464134919915062376818122566835130677123895995606821664472860574789003660499898981758455811953613052059802007377294535660779309088936631501829338399204180006087840030878876907139682409246484796486746432529233625319153647422323388705768181040196045715392244708611002754196288763256594957712678229292249246264367211484536582288095467439816839318822281426318368212713943095813131414108619265880724402695278740793582983314990997314453125"
+    }
+  ]
+}

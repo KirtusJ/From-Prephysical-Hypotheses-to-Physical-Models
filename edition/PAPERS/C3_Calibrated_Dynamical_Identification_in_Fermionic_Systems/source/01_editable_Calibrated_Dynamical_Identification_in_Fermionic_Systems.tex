@@ -1,0 +1,688 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,booktabs,needspace}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.65em}
+\allowdisplaybreaks
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\cS}{\mathscr S}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\hypersetup{pdftitle={Calibrated Dynamical Identification in Fermionic Systems},pdfauthor={Kirtus Justus}}
+\title{Calibrated Dynamical Identification in Fermionic Systems}
+\author{Kirtus Justus\enspace\textbullet\enspace Theoretical Physicist\enspace\textbullet\enspace 23 October 2026\\Port Coquitlam, British Columbia, Canada}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We characterize two-band generators with the same occupied-band projection, construct bounded number-conserving wavepacket observables and conditional coherent quadrature experiments, and distinguish exact spectral identification from clock calibration and finite-sample stability. A two-gap inverse holds in a specified finite-range family, whereas sampling aliases and uncontrolled observation frames preclude unrestricted inference. The statistical conclusions require independent preparations, fixed experimental design and explicit nuisance budgets.
+\end{abstract}
+\noindent\textbf{Keywords:} fermionic dynamics, spectral identification, number-conserving observables, sampling aliases, calibration.
+
+\section{Compatible dynamics and an operational clock task}
+\label{app:operational-clock}
+
+Ground-state projector invariance leaves more freedom than a common energy scale. This article characterizes
+that freedom for a nondegenerate two-band fiber, constructs normalized CAR
+probes, and separates exact parameter identification from calibration and
+sampling conditions. The alternatives are candidate dynamics on the same
+CAR algebra. They are distinct mathematical Hamiltonians and do not, without further hypotheses, specify the Wilson reference state of a relative-entropy calculation. No physical implementation is selected.
+
+\subsection{All compatible two-band fibers}
+
+\begin{proposition}[A fixed occupied subspace]
+\label{prop:operational-projector-class}
+Let $h=h^*$ be a nonzero traceless $2\times2$ matrix with eigenvalues
+$-E,E$, where $E>0$, and set $P=\mathbf1_{(-\infty,0)}(h)$ and $Q=I-P$.
+For a \emph{nonsingular} Hermitian matrix $h'$, one has
+\begin{equation}
+ \mathbf1_{(-\infty,0)}(h')=P
+ \quad\Longleftrightarrow\quad
+ h'=\alpha I+g h,\qquad g>0,\quad |\alpha|<gE .
+ \label{eq:operational-compatible-class}
+\end{equation}
+The coefficients $\alpha,g$ are unique.
+\end{proposition}
+\begin{proof}
+The equal spectral projectors imply
+$h'=\epsilon_-P+\epsilon_+Q$, with $\epsilon_-<0<\epsilon_+$.
+Since $h=E(Q-P)$, set
+\[
+ \alpha=\frac{\epsilon_++\epsilon_-}{2},\qquad
+ g=\frac{\epsilon_+-\epsilon_-}{2E}.
+\]
+These coefficients give the displayed representation and inequalities.
+Conversely its eigenvalues on $P,Q$ are $\alpha-gE<0$ and
+$\alpha+gE>0$, respectively. Their values also prove uniqueness.
+\end{proof}
+
+If singular $h'$ is allowed while its strict-negative projector must still
+be the same rank-one $P$, the condition becomes
+$g>0$ and $-gE\le\alpha<gE$. The complementary eigenvalue may be zero,
+but the occupied eigenvalue must remain negative. At $h=0$ the rank-one
+statement does not apply. For measurable translation-invariant symbols,
+\eqref{eq:operational-compatible-class} applies almost everywhere where
+$E(k)>0$. A bounded resulting symbol requires essentially bounded
+$\alpha(k)$ and $g(k)E(k)$; pointwise compatibility alone supplies neither
+finite hopping range nor a uniform spectral gap.
+
+For the Wilson symbol, an explicit finite-range subclass is
+\begin{equation}
+ h_m^{(\epsilon)}(k)=(1+\epsilon\cos k)h_m(k),
+ \qquad m\ge0,\quad |\epsilon|<1.
+ \label{eq:operational-finite-range-family}
+\end{equation}
+Its multiplier is at least $1-|\epsilon|>0$. Direct expansion gives
+\begin{equation}
+\begin{split}
+ h_m^{(\epsilon)}(k)={}&
+ \left(\sin k+\frac{\epsilon}{2}\sin 2k\right)\sigma_x\\
+ &+\left[m+1-\frac{\epsilon}{2}
+       +\bigl(\epsilon(m+1)-1\bigr)\cos k
+       -\frac{\epsilon}{2}\cos 2k\right]\sigma_z .
+\end{split}
+\label{eq:operational-range-two-expansion}
+\end{equation}
+Thus it preserves Hermiticity, translation invariance, hopping range at
+most two, and anticommutation with $\sigma_y$. Its negative projector is
+$P_m$ almost everywhere, including at $m=0$ in the multiplier sense;
+the single zero fiber $k=0$ has measure zero. Actual finite-dimensional
+zero modes still require the prescribed occupation convention.
+
+Every fixed equal-time CAR expectation in the specified gauge-invariant
+quasi-free state, and every fixed interval covariance or covariance-only
+state comparison, is unchanged. A parameter-dependent physical energy
+observable is outside this fixed-observable statement. At $m=1$ and
+$k_1=\pi/3$, $k_2=2\pi/3$, the positive Wilson energies are
+$\sqrt3,\sqrt7$. With $\nu=E_*/\hbar>0$, the gap frequencies are
+$\Omega_\epsilon(k)=2\nu(1+\epsilon\cos k)E_m(k)$, and
+\begin{equation}
+ \frac{\Omega_{1/2}(k_1)}{\Omega_{1/2}(k_2)}
+ =\frac53\sqrt{\frac37},\qquad
+ \frac{\Omega_0(k_1)}{\Omega_0(k_2)}=\sqrt{\frac37}.
+ \label{eq:operational-gap-witness}
+\end{equation}
+The difference cannot be absorbed into a common clock rescaling.
+Requiring the exact Wilson form or nearest-neighbor range could exclude
+this example; that would be an additional restriction, rather than an
+inference from the static state. The positive-multiplier mechanism produces the stated range-two example directly.
+
+\subsection{Stationary data and the observable algebra}
+
+\begin{proposition}[Stationarity of the specified preparation]
+\label{prop:operational-stationarity}
+Let $P$ be a one-particle projection and $H=H^*$ a bounded one-particle
+Hamiltonian satisfying $[H,P]=0$. Let $\omega_P$ be its gauge-invariant
+quasi-free CAR state and $\alpha_t^H$ the number-conserving CAR dynamics
+induced by $H$. Then
+\[
+ \omega_P(\alpha_t^H(B))=\omega_P(B)
+ \quad\text{for every CAR observable }B\text{ and every }t\in\mathbb R.
+\]
+Consequently the unperturbed one-time expectations are identical for all
+such candidate dynamics with the same $P$.
+\end{proposition}
+\begin{proof}
+The evolved covariance is $e^{-itH/\hbar}Pe^{itH/\hbar}=P$.
+The induced dynamics preserves the quasi-free form. The defining Wick
+relations therefore give the same values on every polynomial in the CAR
+generators, hence on the completed algebra by continuity. The standard
+covariance and invariance statements are recorded in
+\cite[Definition 3.1, Lemmas 3.3 and 4.2]{araki}.
+\end{proof}
+
+This statement concerns one specified stationary preparation; it makes
+no assertion about quenches, nonstationary preparations, or two-time
+responses. An invariant state need not have trivial two-time correlations
+under the specified dynamics. Covariance does not determine a general non-quasi-free state:
+the two-mode mixtures supported respectively on
+$\{|00\rangle,|11\rangle\}$ and $\{|01\rangle,|10\rangle\}$, with equal
+weights, both have covariance $I/2$ and trace-norm separation $2$.
+This mixed-covariance example does not assert nonuniqueness for a full
+projection covariance.
+
+The observation algebra also matters. A constant \emph{one-particle}
+shift $H\mapsto H+bI$ contributes $b\widehat N$ on finite Fock space.
+The induced dynamics is unchanged on the number-conserving, or
+$U(1)$-gauge-invariant, subalgebra: the extra gauge action is trivial there.
+It need not be unchanged on the entire parity-even algebra, because a
+pair field can acquire the phase $e^{-2ibt/\hbar}$. A vacancy correlation
+formed from individually charged fields at different times can acquire
+$e^{-ibt/\hbar}$ even though their product is gauge neutral. A scalar
+multiple of the \emph{many-body identity}, in contrast, is invisible to
+every observable automorphism. Static ground-state equality after a
+one-particle shift additionally requires the spectral sign conditions in
+\eqref{eq:operational-compatible-class}; dynamic equality on the restricted
+algebra does not by itself ensure those conditions.
+
+\subsection{A normalized wavepacket correlation}
+
+Use the Fourier convention
+$(\mathcal Ff)(k)=(2\pi)^{-1/2}\sum_{n\in\mathbb Z}e^{-ikn}f_n$,
+with target measure $dk$ on $[-\pi,\pi]$. The symbols act by multiplication.
+The following construction uses square-integrable modes, not point
+momentum eigenvectors.
+
+\begin{proposition}[A bounded number-conserving probe]
+\label{prop:operational-wavepacket}
+Let $P$ and $H$ satisfy Proposition~\ref{prop:operational-stationarity},
+put $Q=I-P$, and choose unit vectors $f_-\in\operatorname{Ran}P$ and
+$f_+\in\operatorname{Ran}Q$. Set
+\[
+ M=|f_+\rangle\langle f_-|+|f_-\rangle\langle f_+|,
+ \qquad A=d\Gamma(M).
+\]
+The CAR observable $A$ is bounded, self-adjoint, number conserving and
+parity even, with $\norm{A}=1$. Its mean vanishes, and
+\begin{equation}
+\begin{split}
+ C_A(t)&:=\omega_P(\alpha_t^H(A)A)\\
+ &=\Tr\!\left[P M(t)Q M\right]\\
+ &=\langle f_-,e^{itH/\hbar}f_-\rangle\,
+   \langle f_+,e^{-itH/\hbar}f_+\rangle,
+ \quad M(t)=e^{itH/\hbar}Me^{-itH/\hbar}.
+\end{split}
+\label{eq:operational-wavepacket-trace}
+\end{equation}
+In particular, $C_A(0)=1$, $|C_A(t)|\le1$, and
+$C_A(-t)=\overline{C_A(t)}$.
+
+For $H=E_*g(k)h_m(k)$, suppose $g>0$ almost everywhere and
+$b(k)=g(k)E_m(k)$ is bounded. Choose measurable unit band frames $u_\pm(k)$
+and $w\ge0$ with $\int_{-\pi}^{\pi}w(k)\,dk=1$, and let
+$\widehat f_\pm(k)=\sqrt{w(k)}u_\pm(k)$. Writing
+$\langle v\rangle_w=\int w(k)v(k)\,dk$ and $\nu=E_*/\hbar>0$, one has
+\begin{equation}
+\begin{split}
+ C_A(t)&=\langle e^{-i\nu b t}\rangle_w^2,
+ \qquad C_A'(0)=-2i\nu\langle b\rangle_w,\\
+ -C_A''(0)&=2\nu^2\bigl(\langle b^2\rangle_w+\langle b\rangle_w^2\bigr).
+\end{split}
+ \label{eq:operational-wavepacket-curvature}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The two vectors are orthonormal. On their finite CAR algebra, $A$ acts
+as a Pauli matrix in the one-particle sector and vanishes in the empty
+and doubly occupied sectors. This proves its stated algebraic properties
+and norm. The finite-rank definition is valid in the full CAR algebra;
+no trace-class global density matrix or many-body Hamiltonian for the
+infinite filled state is required.
+
+For finite-rank $M$ the gauge-invariant Wick relation, in the convention
+$\omega_P(c_i^*c_j)=P_{ji}$, reads
+\[
+ \omega_P(c_i^*c_jc_k^*c_\ell)
+ =P_{ji}P_{\ell k}+P_{\ell i}(\delta_{jk}-P_{jk}).
+\]
+Contracting the finite sums yields the connected correlation
+$\Tr[P M(t)Q M]$. The means vanish because $M$ and $M(t)$ are off diagonal
+relative to $P\oplus Q$. Multiplying their rank-one blocks gives
+\eqref{eq:operational-wavepacket-trace}. All traces in this argument are
+traces of finite-rank one-particle operators. Cauchy--Schwarz and unitarity
+give the stated bounds and conjugation identity.
+
+The Fourier choices are normalized by $\int w=1$. The band eigenvalues
+of $H$ are $\mp E_*b$, so each factor in
+\eqref{eq:operational-wavepacket-trace} equals
+$\langle e^{-i\nu b t}\rangle_w$. Boundedness of $b$ permits two
+differentiations under the integral and proves
+\eqref{eq:operational-wavepacket-curvature}.
+\end{proof}
+
+The square in \eqref{eq:operational-wavepacket-curvature} is not a modulus
+square. The response is generally a superposition of frequencies.
+For normalized windows shrinking to the two momenta in
+\eqref{eq:operational-gap-witness}, continuity implies that the square root
+of the ratio of the two curvatures tends to the corresponding gap ratio.
+Those two limits differ, so sufficiently narrow normalized windows
+distinguish the displayed alternatives without a point-momentum state.
+The scale $\nu$ cancels in that ratio. No claim of reconstructing an
+arbitrary function $g$ from finitely many moments, of compact spatial
+support, or of a statistically certified derivative estimator follows.
+
+For the general compatible symbol
+$H=E_*[\alpha(k)I+g(k)h_m(k)]$, with bounded $\alpha$ and $b=gE_m$,
+the same matched modes instead give
+\begin{equation}
+\begin{split}
+ C_A(t)&=\langle e^{i\nu(\alpha-b)t}\rangle_w
+          \langle e^{-i\nu(\alpha+b)t}\rangle_w,\\
+ C_A'(0)&=-2i\nu\langle b\rangle_w,\\
+ -C_A''(0)&=2\nu^2\left[
+       \operatorname{Var}_w(\alpha)+\langle b^2\rangle_w
+       +\langle b\rangle_w^2\right].
+\end{split}
+\label{eq:operational-general-center}
+\end{equation}
+These formulas follow by differentiating the two factors. A constant
+center $\alpha$ cancels entirely, whereas a momentum-dependent center
+can affect the wavepacket response. Same-momentum interband gaps never
+determine $\alpha(k)$.
+
+\subsection{A conditional two-mode protocol and its aliases}
+
+\begin{proposition}[Number-conserving quadratures]
+\label{prop:operational-two-mode}
+For two CAR modes $d_+,d_-$ set
+\[
+ X=d_+^*d_-+d_-^*d_+,
+ \quad Y=-i(d_+^*d_--d_-^*d_+),
+ \quad Z=n_+-n_-.
+\]
+All three commute with total number and parity. On the one-particle
+subspace with ordered basis $|+\rangle,|-\rangle$, take
+$H_\Omega=\hbar\Omega Z/2$ with $\Omega\ge0$ and prepare
+$|\psi_0\rangle=(|+\rangle+|-\rangle)/\sqrt2$. Then
+\begin{equation}
+ \langle X\rangle_t=\cos(\Omega t),\qquad
+ \langle Y\rangle_t=\sin(\Omega t),\qquad
+ z(t):=\langle X\rangle_t+i\langle Y\rangle_t=e^{i\Omega t}.
+ \label{eq:operational-quadratures}
+\end{equation}
+For the state $|-\rangle$, which is the lower-energy state when
+$\Omega>0$, one instead has
+\begin{equation}
+ \langle X(t)\rangle=0,
+ \qquad\langle X(t)X(0)\rangle=e^{-i\Omega t}.
+ \label{eq:operational-ground-correlation}
+\end{equation}
+\end{proposition}
+\begin{proof}
+On the specified sector $X,Y,Z$ are the Pauli matrices. Evolution gives
+the vector $(e^{-i\Omega t/2},e^{i\Omega t/2})/\sqrt2$, which proves
+\eqref{eq:operational-quadratures}. In the Heisenberg picture
+$X(t)=\cos(\Omega t)X-\sin(\Omega t)Y$; taking the lower-level matrix
+element of $X(t)X$ proves \eqref{eq:operational-ground-correlation}.
+At $\Omega=0$ the identities remain valid although the ground state is
+not uniquely selected by energy.
+\end{proof}
+
+The opposite phase signs concern different defined quantities. The
+preparation has fixed particle number and parity, and separate copies
+can supply the two noncommuting quadratures. This mathematical task
+requires known preparations and band labels, accessible readout,
+controlled phase transfer, and a stated Hamiltonian family. These
+requirements do not follow from the algebraic evenness of $X,Y$.
+
+If clock ticks $\tau$ have unknown conversion $t=\kappa\tau$, $\kappa>0$,
+the data depend on $\Omega\kappa$: replacing
+$(\Omega,\kappa)$ by $(a\Omega,\kappa/a)$, $a>0$, leaves them unchanged.
+An uncalibrated physical time variable remains temporal structure.
+If each setting instead has an unrestricted unknown phase offset
+$\phi_j$, every $\Omega'$ gives the same phases after replacing
+$\phi_j$ by $\phi_j+(\Omega-\Omega')t_j$. An independently justified
+phase reference is therefore a substantive assumption.
+
+\begin{proposition}[Exact aliases and instability on an unbounded range]
+\label{prop:operational-aliases}
+Let finitely many sample times be $t_j=n_j\Delta$, with $\Delta>0$,
+integers $n_j$ not all zero, and $d=\gcd(|n_j|)$. Equality of all exact
+phases in \eqref{eq:operational-quadratures} holds if and only if
+\begin{equation}
+ \Omega'-\Omega\in\frac{2\pi}{d\Delta}\mathbb Z.
+ \label{eq:operational-exact-aliases}
+\end{equation}
+In particular, replacing $\Omega$ by $\Omega+2\pi r/\Delta$ leaves the
+sampled one-particle channels unchanged. On full two-mode Fock space
+the residual unitary is $\Pi^{rn_j}$ at time $t_j$, where
+$\Pi=(-1)^{\widehat N}$. Its action is trivial on the entire parity-even
+subalgebra, although not generally on the full CAR algebra.
+
+For two positive times with irrational ratio, exact complex phases
+identify $\Omega$ uniquely. Nevertheless there exist positive frequency
+increments tending to infinity for which the first phase agrees exactly
+and the second phase discrepancy tends to zero. Thus no uniform
+finite-noise inverse bound holds on an unbounded frequency range.
+\end{proposition}
+\begin{proof}
+Put $x=(\Omega'-\Omega)\Delta/(2\pi)$. Equality is equivalent to
+$xn_j\in\mathbb Z$ for every $j$. B\'ezout's identity shows this is
+equivalent to $xd\in\mathbb Z$, proving
+\eqref{eq:operational-exact-aliases}. For the displayed integer shift,
+\[
+ e^{-it_jH_{\Omega+2\pi r/\Delta}/\hbar}
+ =e^{-it_jH_\Omega/\hbar}e^{-i\pi rn_jZ}
+ =e^{-it_jH_\Omega/\hbar}\Pi^{rn_j}.
+\]
+Parity acts as a scalar on the one-particle sector and commutes with
+every parity-even observable, proving the channel statements in exactly
+those scopes.
+
+Write $r=t_2/t_1\notin\mathbb Q$. Equal phases at both times require
+$(\Omega'-\Omega)t_i=2\pi q_i$ for integers $q_i$. If the difference is
+nonzero their quotient makes $r$ rational, a contradiction. For
+instability, partition $[0,1)$ into $N$ equal intervals and consider the
+$N+1$ fractional parts of $0,r,\ldots,Nr$. Two share an interval, so
+there are integers $1\le q_N\le N$ and $p_N$ with
+$|q_Nr-p_N|\le1/N$. An unbounded subsequence of $q_N$ exists: otherwise
+finitely many nonzero distances of $qr$ from the integers would tend
+to zero. Set $\delta\Omega_N=2\pi q_N/t_1$ on that subsequence. Then
+\[
+ e^{i\delta\Omega_Nt_1}=1,\qquad
+ |e^{i\delta\Omega_Nt_2}-1|
+ \le2\pi|q_Nr-p_N|\longrightarrow0.
+\]
+The increments are positive and unbounded, as asserted.
+\end{proof}
+
+For the explicit times $1,\sqrt2$, write
+$p_n+q_n\sqrt2=(3+2\sqrt2)^n$. Then
+$p_n^2-2q_n^2=1$ and
+\[
+ |q_n\sqrt2-p_n|=\frac1{p_n+q_n\sqrt2}.
+\]
+The increment $2\pi q_n$ gives a first phase discrepancy of zero and
+a second discrepancy at most $2\pi/(p_n+q_n\sqrt2)$. This is an exact
+near-alias construction, not a numerical frequency estimate. Exact
+irrational time ratios are ideal assumptions, distinct from finitely
+precise clock calibration. A compact prior changes the stability
+question; Corollary~\ref{cor:operational-diameter} gives an explicit
+short-time bound for the stated finite-data protocol.
+
+\subsection{Shape and scale inside a declared family}
+
+\begin{proposition}[Two resolved gaps in a two-parameter family]
+\label{prop:operational-shape-scale}
+Assume known finite $m\ge0$, known labels $k_1,k_2$, positive
+$E_i=E_m(k_i)$, and distinct $c_i=\cos k_i$. In the specified traceless
+family \eqref{eq:operational-finite-range-family}, let $\nu>0$ and
+$|\epsilon|<1$. Alias-resolved physical gap frequencies
+\[
+ \Omega_i=2\nu E_i(1+\epsilon c_i)
+\]
+determine the parameters uniquely, if they have an admissible solution.
+Specifically, for $b_i=\Omega_i/(2E_i)$,
+\begin{equation}
+ \nu=\frac{b_1c_2-b_2c_1}{c_2-c_1},\qquad
+ \nu\epsilon=\frac{b_1-b_2}{c_1-c_2}.
+ \label{eq:operational-gap-inversion}
+\end{equation}
+The recovered values must satisfy $\nu>0$ and $|\epsilon|<1$.
+The determinant of the gap map with respect to $(\nu,\epsilon)$ is
+\begin{equation}
+ \det\frac{\partial(\Omega_1,\Omega_2)}{\partial(\nu,\epsilon)}
+ =4\nu E_1E_2(c_2-c_1)\ne0.
+ \label{eq:operational-gap-jacobian}
+\end{equation}
+For unwrapped phases
+$\varphi_i=2\nu\kappa\tau_iE_i(1+\epsilon c_i)$, with known
+$\kappa>0$ and nonzero $\tau_1,\tau_2$, the corresponding determinant is
+\begin{equation}
+ \det\frac{\partial(\varphi_1,\varphi_2)}{\partial(\nu,\epsilon)}
+ =4\nu\kappa^2\tau_1\tau_2E_1E_2(c_2-c_1)\ne0.
+ \label{eq:operational-phase-jacobian}
+\end{equation}
+If $\kappa$ is unknown, only $\nu\kappa$ and $\epsilon$ are identified
+by these data; the phase sensitivity matrix in $(\nu,\kappa,\epsilon)$
+has the null direction $(\nu,-\kappa,0)$.
+\end{proposition}
+\begin{proof}
+The equations $b_i=\nu+(\nu\epsilon)c_i$ form a nonsingular linear
+system for $\nu$ and $\nu\epsilon$, giving
+\eqref{eq:operational-gap-inversion}. Direct differentiation gives
+\eqref{eq:operational-gap-jacobian}; multiplying its two rows by
+$\kappa\tau_i$ gives \eqref{eq:operational-phase-jacobian}.
+The unknown-clock statement follows either from the product
+$\nu\kappa$ or by applying the sensitivity matrix to the stated vector.
+\end{proof}
+
+The phase determinant is a local identification statement on a chosen
+phase branch; it does not resolve global aliases. At zero mass one
+must exclude a zero-energy label, and different momentum labels alone
+do not ensure different cosines. Unknown mass, unknown labels, or
+additional dispersive parameters require additional information.
+A third independently specified response imposes a further restriction
+on the fitted family; nonrejection does not identify that family among
+all possible dynamics.
+
+In particular, Proposition~\ref{prop:operational-projector-class} permits
+arbitrary functions $g(k)$ and $\alpha(k)$. Two gaps identify neither
+those functions nor the center $\alpha(k)$, which cancels from every
+same-momentum band gap. The preceding two-parameter conclusion concerns
+only the declared traceless family. These proofs give conditional
+mathematical discriminators and obstructions, while accessible
+preparation, readout, calibration and physical-model selection remain
+separate obligations.
+
+
+% Primary support: Hoeffding (1963), Theorem 2, printed p.16, equation (2.6).
+% The proof below is self-contained and includes a separate calibration event.
+\section{Finite-data confidence for a specified clock response}
+\label{app:operational-confidence}
+
+This section concerns the conditional two-quadrature response
+$z(t)=e^{i\Omega t}$ of Proposition~\ref{prop:operational-two-mode}.
+The registered parameter range is an assumption about the true parameter,
+not a Bayesian posterior. Physical preparation, readout and reference
+availability remain separate obligations. A frequency inferred in instrument
+ticks is a frequency per tick; its conversion to physical time requires the
+corresponding calibration.
+
+\begin{theorem}[Simultaneous confidence with a nuisance budget]
+\label{thm:operational-confidence}
+Fix $0<\Omega_{\max}<\infty$, integers $K,n\ge1$, and
+$0<\alpha<1$. Let the true, fixed parameter satisfy
+$\Omega\in[0,\Omega_{\max}]$. Let $\mathcal G$ denote information used
+to fix the design and calibration before the target measurements. Conditional
+on $\mathcal G$, the times $t_j>0$ and finite allowances $b_j\ge0$ are
+fixed. For each setting $j$ and each quadrature $q\in\{x,y\}$, suppose
+the $n$ real outcomes $W_{j,q,\ell}$ are conditionally independent and
+belong to $[-1,1]$. They need not be identically distributed. Write
+\[
+ \widehat q_j=\frac1n\sum_{\ell=1}^n W_{j,q,\ell},\qquad
+ m_{j,q}=\frac1n\sum_{\ell=1}^n
+       \mathbb E[W_{j,q,\ell}\mid\mathcal G].
+\]
+No independence across different settings or quadratures is required.
+Suppose an event $F\in\mathcal G$ has probability at least $1-\alpha_{\rm cal}$,
+where $\alpha_{\rm cal}\ge0$ and $\alpha+\alpha_{\rm cal}<1$, and that on $F$
+\begin{equation}
+ |m_{j,x}-\cos(\Omega t_j)|\le b_j,\qquad
+ |m_{j,y}-\sin(\Omega t_j)|\le b_j
+ \quad (1\le j\le K).
+ \label{eq:operational-nuisance-budget}
+\end{equation}
+Set
+\[
+ u_n=\sqrt{\frac2n\log\frac{4K}{\alpha}},\qquad
+ \widehat z_j=\widehat x_j+i\widehat y_j,\qquad
+ r_j=\sqrt2\,(u_n+b_j),
+\]
+and define the exact random closed set
+\begin{equation}
+ \mathcal C=\left\{\omega\in[0,\Omega_{\max}]:
+   |\widehat z_j-e^{i\omega t_j}|\le r_j
+   \text{ for all }j\right\}.
+ \label{eq:operational-confidence-set}
+\end{equation}
+Then
+\begin{equation}
+ \Pr_\Omega\{\Omega\in\mathcal C\}\ge1-\alpha-\alpha_{\rm cal}.
+ \label{eq:operational-coverage}
+\end{equation}
+Deterministically valid systematics are the special case $F$ equal to the
+whole probability space and $\alpha_{\rm cal}=0$.
+\end{theorem}
+
+\begin{proof}
+Work conditionally on $\mathcal G$, omitting it from the notation. For any
+$W\in[-1,1]$, boundedness permits differentiating its moment-generating
+function. If
+$\psi(s)=\log\mathbb E\exp(s(W-\mathbb EW))$, then
+$\psi(0)=\psi'(0)=0$ and
+$\psi''(s)=\operatorname{Var}_s(W)\le1$, where the variance uses the
+exponentially tilted probability law. Taylor's integral formula, valid also
+for negative $s$, gives
+\[
+ \psi(s)=s^2\int_0^1(1-v)\psi''(vs)\,dv\le\frac{s^2}{2}.
+\]
+Independence within one group of $n$ trials and the Chernoff bound therefore
+give, for $u>0$,
+\[
+ \Pr\{\widehat q_j-m_{j,q}>u\mid\mathcal G\}
+ \le\inf_{s>0}\exp\left(-snu+\frac{ns^2}{2}\right)
+ =e^{-nu^2/2}.
+\]
+Applying the same calculation to $-W$ bounds the lower tail. This is the
+$[-1,1]$ special case of Hoeffding's bounded-sum inequality
+\cite{hoeffding}. A union bound over the $2K$ groups shows that the event
+\[
+ A=\left\{\max_{j,q}|\widehat q_j-m_{j,q}|\le u_n\right\}
+\]
+has conditional probability at least $1-\alpha$, since
+$4K e^{-nu_n^2/2}=\alpha$. Consequently $\Pr(A^c)\le\alpha$ and
+$\Pr(A\cap F)\ge1-\alpha-\alpha_{\rm cal}$; this step does not require
+independence of the sampling and calibration failure events. On $A\cap F$,
+each real coordinate differs from its ideal value by at most $u_n+b_j$.
+The Euclidean norm of the two coordinate errors is therefore at most $r_j$,
+which places the true $\Omega$ in every constraint in
+\eqref{eq:operational-confidence-set}.
+\end{proof}
+
+The conditioning assumption must be established for the experiment; arbitrary
+conditioning on target outcomes does not preserve independent trials. Data
+dependent stopping, choosing the reported parameter range after examining
+the same responses, or adaptively changing the design requires a valid
+additional argument. An externally justified probabilistic range restriction
+also needs its own failure allocation. With fixed deterministic design one
+may take $\mathcal G$ to be trivial.
+
+The allowances in \eqref{eq:operational-nuisance-budget} bound discrepancies
+of the actual means from the declared response law. They are not a replacement
+for the sampling term. For example, a uniform timing error
+$|\delta t_j|\le d_j$ contributes at most $\Omega_{\max}d_j$ to
+each coordinate, because sine and cosine are one-Lipschitz in their phase.
+A phase error bounded by $a_j$ contributes at most $a_j$. Independently
+justified preparation and readout discrepancies can be added by the triangle
+inequality. Unknown errors cannot be assigned zero allowance. A shared
+calibration event is budgeted once when it controls all required constraints.
+
+\begin{corollary}[Stability on a bounded frequency range]
+\label{cor:operational-diameter}
+Suppose one included measurement time $t_*>0$ satisfies
+$\Omega_{\max}t_*\le\pi$. For every data realization for which
+$\mathcal C$ is nonempty,
+\begin{equation}
+ \operatorname{diam}\mathcal C
+ \le\min\left\{\Omega_{\max},\frac{\pi r_*}{t_*}\right\}.
+ \label{eq:operational-diameter}
+\end{equation}
+\end{corollary}
+\begin{proof}
+For $\omega_1,\omega_2$ in the registered range,
+$0\le|\omega_1-\omega_2|t_*/2\le\pi/2$. The inequality
+$\sin u\ge2u/\pi$ on that interval yields
+\[
+ |e^{i\omega_1t_*}-e^{i\omega_2t_*}|
+ =2\sin\!\left(\frac{|\omega_1-\omega_2|t_*}{2}\right)
+ \ge\frac{2t_*}{\pi}|\omega_1-\omega_2|.
+\]
+If both frequencies belong to $\mathcal C$, the left-hand side is at most
+$2r_*$ by the triangle inequality. The range itself gives the other bound.
+\end{proof}
+
+This is a deterministic diameter estimate for the realized exact set, combined
+with a conditional frequentist coverage theorem. It is not an efficiency
+optimum or a posterior probability for the realized parameter. The assumption
+of a bounded range cannot be discarded merely because two ideal sampling
+times are irrationally related; Proposition~\ref{prop:operational-aliases}
+separates exact injectivity from unbounded-range finite-noise stability.
+
+\begin{corollary}[Joint scale and shape confidence by inverse image]
+\label{cor:operational-joint-region}
+Let $E_1,E_2>0$ and $c_1,c_2\in[-1,1]$ be known, with $c_1\ne c_2$.
+Suppose the measured gap frequencies in a common time coordinate obey
+\[
+ \omega_i=2E_i(\eta+c_i\lambda),\qquad
+ \eta>0,\quad |\lambda|<\eta .
+\]
+Here $\eta=\nu$, $\lambda=\nu\epsilon$ for calibrated physical time,
+or $\eta=\nu\kappa$, $\lambda=\nu\kappa\epsilon$ when the two
+responses share one unknown constant clock factor $\kappa>0$.
+Let $0\le\delta<1$, and let $C_1,C_2$ be random sets with simultaneous coverage
+\[
+ \Pr\{\omega_1\in C_1,\ \omega_2\in C_2\}\ge1-\delta.
+\]
+Then the region
+\begin{equation}
+ \mathcal R=\left\{(a,b):a>0,\ |b|<a,\quad
+       2E_i(a+c_i b)\in C_i\ (i=1,2)\right\}
+ \label{eq:operational-joint-region}
+\end{equation}
+contains $(\eta,\lambda)$ with probability at least $1-\delta$.
+Its image $\{(a,b/a):(a,b)\in\mathcal R\}$ gives the same coverage
+for $(\eta,\epsilon)$ within this declared family. If only marginal
+failure bounds $\delta_1,\delta_2$ are available, one may take
+$\delta=\delta_1+\delta_2<1$ without assuming independence.
+
+If each $C_i$ is a finite union of bounded closed intervals, $\mathcal R$
+is a bounded finite union of parallelograms (possibly degenerate) intersected
+with the strict wedge $a>|b|$. It need not be closed. A further gap
+confidence set $C_3$, with known $E_3>0$ and $c_3\in[-1,1]$, adds the restriction
+$2E_3(a+c_3b)\in C_3$ and preserves joint coverage at the correctly
+combined failure budget.
+\end{corollary}
+\begin{proof}
+On the simultaneous coverage event the true pair satisfies every defining
+constraint of $\mathcal R$. This is a deterministic inverse-image argument,
+so it neither inserts point estimates into a nonlinear inverse nor requires
+independence of $C_1,C_2$. The linear map from $(a,b)$ to the two gaps has
+determinant $4E_1E_2(c_2-c_1)\ne0$. It takes inverse images of interval
+rectangles to bounded parallelograms. A finite union stays bounded, and
+intersection with the strict wedge may remove boundary points without
+enlarging it. The ratio $b/a$ is defined throughout that wedge. The same
+coverage-event argument with the third constraint proves the last assertion.
+\end{proof}
+
+More explicitly, writing $d_i=\omega_i/(2E_i)$, the exact inverse is
+\[
+ \eta=\frac{c_2d_1-c_1d_2}{c_2-c_1},\qquad
+ \lambda=\frac{d_2-d_1}{c_2-c_1}.
+\]
+The ratio map $\lambda/\eta$ can be poorly conditioned near $\eta=0$,
+although the admissible ratio remains in $(-1,1)$ and the bounded-gap
+preimage remains bounded. No claim of stable recovery of this ratio without
+further separation from zero follows. If the two responses have unrelated
+unknown clock factors, the stated two-parameter reduction does not apply.
+For a single interval component of $C_3$, its inverse image is a strip;
+for a finite union there is a union of such strips. A third restriction is
+an additional model constraint, not confirmation that the family is complete.
+
+Under any member of the declared family satisfying the stated observation,
+range and nuisance assumptions, an empty \emph{exact} set $\mathcal C$
+has probability at most $\alpha+\alpha_{\rm cal}$: emptiness implies that the true
+parameter was excluded. The corresponding statement for $\mathcal R$
+uses its combined failure budget. Thus rejection concerns the joint family
+and nuisance assumptions and does not diagnose which assumption failed.
+Nonemptiness is not model confirmation. If several sampling experiments
+share one good-calibration event, its failure probability can be added once
+to the sum of their sampling budgets.
+
+Numerical failure to find a feasible point does not establish exact emptiness.
+The same caution applies to floating-point phase-arc intersection, including
+near a tangency or a singleton interval. A certified outer enclosure that is
+empty can justify emptiness of the exact set; an empty inner approximation
+cannot. The finite replay and its targeted implementation corrections are
+recorded separately and do not turn a floating computation into a universal
+coverage or feasibility certificate.
+
+\section*{AI assistance and acknowledgments}
+Kirtus Justus is the responsible human author. ChatGPT (OpenAI) assisted with mathematical drafting, verification code, source checks, and editorial preparation. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for involvement in the broader research program; no particular calculation or proof in this article is assigned to those systems without specific documentation. The author assumes responsibility for all content. These acknowledgments do not imply external peer review or endorsement by any AI provider.
+
+\begin{thebibliography}{10}
+\bibitem{araki} H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, \emph{Publ. Res. Inst. Math. Sci.} \textbf{6} (1970/71), 385--442, doi:10.2977/prims/1195193913.
+\bibitem{hoeffding} W. Hoeffding, Probability inequalities for sums of bounded random variables, \emph{J. Amer. Statist. Assoc.} \textbf{58} (1963), 13--30, doi:10.1080/01621459.1963.10500830.
+\end{thebibliography}
+\end{document}

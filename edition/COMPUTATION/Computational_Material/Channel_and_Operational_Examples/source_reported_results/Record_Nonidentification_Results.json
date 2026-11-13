@@ -1,0 +1,36 @@
+{
+  "coverage": {
+    "classical_law": "Four gamma values, N=0..8, five rational values of cos(phi); independent path enumeration.",
+    "environment_pair": "gamma=3/5; two rational branch vectors; N=2..6 by appending unchanged product fragments.",
+    "positive_controls": "gamma=0,1 gives zero entanglement minor."
+  },
+  "exact_predicates": 479,
+  "exact_witness": {
+    "P_Xplus_correlated_given_branch1": "457/1250",
+    "P_Xplus_product_given_branch1": "49/50",
+    "correlated_branch_N2": [
+      "9/25",
+      "12/25",
+      "12/25",
+      "-16/25"
+    ],
+    "correlated_schmidt_determinant": "-288/625",
+    "difference": "384/625",
+    "gamma": "3/5",
+    "product_branch_N2": [
+      "9/25",
+      "12/25",
+      "12/25",
+      "16/25"
+    ],
+    "shared_overlap": "9/25"
+  },
+  "limits": [
+    "Universal N and phase identity follows from the analytic proof, not finite enumeration.",
+    "Classical simulator covers the specified final binary output experiment family, not all quantum operations or Bell-local physics.",
+    "Environment ambiguity requires environment fragments not to be accessed or recoupled after the common unitary.",
+    "The added branch-conditioned X readout assumes independently anchored preparation/conditioning and calibrated local effects.",
+    "No physical observations, foundational derivation or novelty priority established."
+  ],
+  "status": "PASS"
+}

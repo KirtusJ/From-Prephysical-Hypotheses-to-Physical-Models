@@ -1,0 +1,1653 @@
+\section{Observation, Memory, Control, and Time in Finite Models}
+\label{op:chapter}
+
+This section studies what a specified collection of observations determines about
+a finite mathematical model.  Its objects are conventional probability kernels,
+finite hidden-state models, quantum states, and continuous-time Markov generators.
+An observation law, an intervention, and a calibration premise are distinct
+inputs.  Equality of observable laws will always refer to an explicitly stated
+experimental menu.  Identifiability within such a menu does not establish that
+the chosen states, controls, environmental factors, or time coordinate describe
+a particular physical system.
+
+We use row probability vectors.  For probability measures on a finite set,
+\(\operatorname{TV}(p,q)=\frac12\sum_x|p_x-q_x|\).
+Matrix \(1\)-norms below are entrywise unless specified otherwise; the Frobenius
+norm is denoted by \(\|\cdot\|_F\).  The vector \(\mathbf1\) has all entries one.
+All logarithms in likelihood calculations are natural; binary entropy is
+explicitly measured in bits.  Population probabilities are exact mathematical
+inputs unless a finite-sample statement is given.
+
+\subsection{Controlled reduction and the limits of short records}
+\label{op:reduction}
+
+Let \(X,Z\) be finite sets, \(q:X\to Z\) a surjection, and \(P_a\) a
+row-stochastic transition matrix on \(X\) for each allowed action \(a\).
+The full process is Markov conditional on the selected action.  A policy may
+randomize and may depend on the complete visible history, but it has no extra
+model-specific hidden-state information.  Write
+\[
+ M_a(x,z')=\sum_{y:q(y)=z'}P_a(x,y).
+\]
+The familiar strong-lumpability condition is the action-free version of the
+following statement; see Wolfer and Watanabe~\cite{op:wolfer}.
+
+\begin{theorem}[Exact controlled reduction]\label{op:lumpability}
+There are kernels \(Q_a\) on \(Z\) that reproduce the complete visible-history
+law for every initial distribution on \(X\) and every common visible-history
+policy if and only if, for every action \(a\), \(M_a(x,\cdot)\) is constant
+on each fiber of \(q\).  In that event the common row is
+\(Q_a(q(x),\cdot)\).
+\end{theorem}
+\begin{proof}
+For necessity, choose point initial distributions at two states \(x,x'\) in
+one fiber and apply the same fixed action.  Both reduced initial states are
+\(q(x)\); their next-observation laws must therefore be equal.
+For sufficiency, condition on any visible history of positive probability
+and the next selected action.  The conditional law of the hidden state is
+supported in the fiber of the current observation.  Mixing identical pushed
+rows over that posterior gives the stated \(Q_a\) row.  The policy uses the
+same conditional distribution of actions in both descriptions.  Induction
+over the finite history proves equality, including the recorded actions.
+\end{proof}
+
+If only specified starting states are admitted, the fiber condition need
+only be imposed on the appropriately reachable domain.  Reduction for one
+special initial law is a weaker property and does not imply the all-start
+statement.
+
+\begin{example}[Fair pairs with predictive memory]\label{op:four-state}
+On states \(00,01,10,11\), observe the final bit and use
+\[
+ P=\begin{pmatrix}
+ 3/4&1/4&0&0\\
+ 0&0&1/4&3/4\\
+ 1/4&3/4&0&0\\
+ 0&0&3/4&1/4
+ \end{pmatrix}.
+\]
+The uniform distribution is stationary because each column sums to one.
+Both append choices have positive probability; the shift graph is strongly
+connected and has self-loops, so the chain is irreducible and aperiodic.
+In stationarity every adjacent observed pair has probability \(1/4\).
+Nevertheless,
+\[
+ P(Y_1=a,Y_2=b,Y_3=c)
+ =\frac18\left[1+\frac12(-1)^{a+b+c}\right],
+ \qquad
+ \operatorname{TV}(P_{Y_{1:3}},\operatorname{Unif}\{0,1\}^3)=\frac14 .
+\]
+For example, the next-zero probabilities after \(00\) and \(10\) are \(3/4\)
+and \(1/4\), respectively.  The visible process is not first-order Markov.
+The best uniform row approximation by a kernel depending on the last bit
+has error \(1/4\): the two relevant Bernoulli rows have distance \(1/2\),
+and their fair midpoint attains half that distance.
+\end{example}
+
+Hidden state is not by itself an obstruction.  For example,
+\[
+ P((z,h),(z',h'))=Q(z,z')\,\mathbf1_{\{h'=1-h\}}
+\]
+has a perpetually alternating hidden bit and an exactly autonomous visible
+kernel \(Q\).
+
+\begin{theorem}[Uniform row error controls complete histories]
+\label{op:history-bound}
+Suppose, uniformly over all admitted \(x,a\),
+\[
+ \operatorname{TV}\bigl(M_a(x,\cdot),Q_a(q(x),\cdot)\bigr)\le\delta,
+ \qquad 0\le\delta\le1.
+\]
+Start with the same visible law and use the same visible-history policy.
+After \(N\) transitions the total variation distance between complete
+visible histories, including actions, is at most
+\[
+ 1-(1-\delta)^N\le N\delta .
+\]
+The first bound is sharp.
+\end{theorem}
+\begin{proof}
+Couple the initial observations identically.  As long as the histories
+agree, use the same policy randomness.  The next visible law of the full
+model is a posterior mixture of pushed rows, hence is within \(\delta\)
+of the reduced row by convexity of total variation.  A maximal coupling
+keeps the next observations equal with probability at least \(1-\delta\).
+Consequently the coupled histories agree with probability at least
+\((1-\delta)^N\).  The coupling inequality proves the claim.
+For sharpness, let the reference chain remain at state \(0\), with state
+\(1\) absorbing if ever entered.  Let the comparison chain escape from
+\(0\) to absorbing \(1\) with probability \(\delta\) on each step.
+The row premise holds at both states.  The reference history is all zero,
+and its probability under the comparison model is exactly
+\((1-\delta)^N\).
+\end{proof}
+
+Thus a test of size \(\alpha\) for the reduced history law has size at most
+\(\min\{1,\alpha+1-(1-\delta)^N\}\) for the full model.  An average
+stationary row error supplies no such uniform conditional premise.
+
+An intervention on fine states need not define an intervention on coarse
+states.  As a simple exact example, let \(q(1)=q(2)=0\), \(q(3)=q(4)=1\).
+The point masses at \(1,2\) have identical coarse images.  A permutation
+interchanging \(2,3\) while fixing \(1,4\) sends them to distinct coarse
+point masses.  No map of the original coarse distribution can represent
+that operation on both inputs.  The quantum counterpart is equally direct:
+\(Z\)-basis dephasing sends both \(|+\rangle\langle+|\) and
+\(|-\rangle\langle-|\) to \(I/2\), while a Hadamard operation followed by
+that dephasing distinguishes them perfectly.  Specifying the admitted
+interventions is therefore part of specifying a reduced model.
+
+\begin{example}[A full-support non-descent witness]\label{op:non-descent}
+For the same partition \(\{1,2\},\{3,4\}\), take the strictly positive
+fine laws
+\[
+ p=(3/5,3/20,1/5,1/20),\qquad
+ p'=(3/20,3/5,1/5,1/20).
+\]
+Both have coarse law \((3/4,1/4)\).
+Interchanging the second and third fine labels sends them to coarse
+laws \((4/5,1/5)\) and \((7/20,13/20)\), of total variation \(9/20\).
+Thus the failure is not confined to boundary point masses.
+Exactly eight of the twenty-four fine permutations descend for all
+fine distributions: the permutation must send each whole input block
+to one output block, giving two block permutations and two internal
+permutations in each block, hence \(2(2!)^2=8\).
+\end{example}
+
+\subsection{A parity-shift process and its exact innovation coordinates}
+\label{op:parity}
+
+Fix \(L\ge1\) and \(-1<\eta<1\).  The hidden state is the last \(L\) bits,
+initially uniform.  From \(x=(x_1,\ldots,x_L)\), append \(b\) with
+probability
+\begin{equation}\label{op:parity-kernel}
+ P_\eta\bigl(x,(x_2,\ldots,x_L,b)\bigr)
+ =\frac{1+\eta(-1)^{x_1+\cdots+x_L+b}}2 .
+\end{equation}
+This family is a parity form of the two-faced chains studied by
+Ryabko~\cite{op:ryabko}, with parameter \(p=(1+\eta)/2\).
+
+\begin{proposition}[Finite-depth agreement]\label{op:finite-depth}
+The uniform law on \(L\)-bit states is stationary.  Every contiguous
+observed block of length at most \(L\) is uniform, whereas a block of
+length \(L+1\) has law
+\[
+ 2^{-(L+1)}\left[1+\eta(-1)^{\sum_{j=1}^{L+1}y_j}\right].
+\]
+Its distance from the uniform law is \(|\eta|/2\).
+For \(\eta\ne0\), the observed process has Markov order exactly \(L\).
+\end{proposition}
+\begin{proof}
+Each destination state has two predecessors, differing in their dropped
+bit.  Their transition probabilities sum to one.  Thus a uniform state
+distribution remains uniform.  Marginalization gives every shorter
+contiguous block law.  Multiplying the initial \(2^{-L}\) probability by
+the append probability gives the displayed \(L+1\) law, whose \(2^{L+1}\)
+absolute discrepancies are all \(2^{-(L+1)}|\eta|\).
+The transition rule depends on no more than the last \(L\) bits.
+For \(\eta\ne0\), changing the oldest of those bits while keeping the last
+\(L-1\) fixed changes the next-bit probability.  All such histories have
+positive probability, proving that smaller order is impossible.
+\end{proof}
+
+The statement concerns contiguous blocks.  It does not assert independence
+of every collection of \(L\) widely separated observations.  Since \(L\)
+can be arbitrarily large, no common finite validation depth distinguishes
+the whole family from fair independent bits.
+
+For a record of length \(L+m\), define parity innovations
+\[
+ E_t=Y_t\mathbin{\oplus}\cdots\mathbin{\oplus}Y_{t+L},
+ \quad 1\le t\le m,
+\]
+where \(\oplus\) is addition modulo two.
+
+\begin{theorem}[Innovation factorization]\label{op:innovations}
+The map from \(Y_{1:L+m}\) to \((Y_{1:L},E_{1:m})\) is bijective and
+\[
+ P(Y_{1:L}=x,E_{1:m}=e)
+ =2^{-L}\prod_{t=1}^m\frac{1+\eta(-1)^{e_t}}2.
+\]
+Consequently the innovations are independent and identically distributed,
+with \(P(E_t=0)=(1+\eta)/2\), and are independent of the initial block.
+\end{theorem}
+\begin{proof}
+The recursion
+\(Y_{t+L}=E_t\oplus Y_t\oplus\cdots\oplus Y_{t+L-1}\)
+recovers the record uniquely.  Its probability is the initial block
+probability times the \(m\) append probabilities in
+\eqref{op:parity-kernel}.  Each append factor depends only on \(e_t\),
+giving the asserted product law.  Bijection alone would not establish
+independence; the factorization of probabilities is essential.
+\end{proof}
+
+Writing \(h_2\) for binary entropy in bits and \(d_{\rm Ber}\) for
+Bernoulli relative entropy in nats, this gives
+\[
+ H(Y_{1:L+m})=L+m h_2((1+\eta)/2),\qquad
+ D(P_{Y_{1:L+m}}\Vert\operatorname{Unif})=
+ m d_{\rm Ber}((1+\eta)/2\Vert1/2).
+\]
+These are entropy and divergence per indexed observation, not a physical
+communication capacity or a rate per unit of laboratory time.
+Cancellation of overlapping parities also gives
+\[
+ (-1)^{Y_t+Y_{t+L+1}}=(-1)^{E_t+E_{t+1}},\qquad
+ P(Y_t=a,Y_{t+L+1}=b)=\tfrac14[1+\eta^2(-1)^{a+b}].
+\]
+The two retained outcomes therefore have distance \(\eta^2/2\) from a
+fair independent pair, although their acquisition spans \(L+2\) process
+positions.  Repeated overlapping sparse pairs are not automatically
+independent trials.
+For \(L\ge2\), pairs at lags \(1,\ldots,L\) are independent and fair:
+for lag \(L\), marginalizing any other coordinate of the \(L+1\) parity
+law removes its perturbation, and smaller lags follow from the uniform
+block laws.  The qualifier \(L\ge2\) is necessary.
+
+\subsubsection{Ideal fixed-horizon testing}
+
+\begin{lemma}[Finite likelihood-ratio ordering]\label{op:np}
+For two strictly positive probability laws \(p_0,p_1\) on a finite
+sample space, a randomized test of prescribed size \(\alpha\) has maximum
+power by rejecting in decreasing order of \(p_1/p_0\), randomizing only
+on a boundary level.
+\end{lemma}
+\begin{proof}
+If the threshold is \(c\) and the proposed test is \(\phi_*\), then
+\((\phi_*-\phi)(p_1-cp_0)\ge0\) pointwise for every other test
+\(0\le\phi\le1\).  Summation and equal size imply
+\(\sum\phi_*p_1\ge\sum\phi p_1\).  A boundary randomization fills the
+required size.  This is the finite Neyman--Pearson argument
+\cite{op:neyman}.
+\end{proof}
+
+With known \(L\), error-free readout, and alternatives \(\eta=0\) versus
+\(\eta=1/2\), let \(C_m=\sum_{t=1}^m\mathbf1_{\{E_t=0\}}\).
+The likelihood ratio of the complete record is \(3^{C_m}/2^m\);
+the initial block is ancillary.  Thus
+\[
+ C_m\sim\operatorname{Bin}(m,1/2)\quad\hbox{or}\quad
+ \operatorname{Bin}(m,3/4).
+\]
+At size \(1/20\), the optimum powers for \(m=39,40\) are respectively
+\(0.9498706279714081\ldots\) and \(0.9530027582141789\ldots\).
+At \(m=40\), reject for \(C_m\ge26\) and, when \(C_m=25\), reject with
+probability \(4423136507/16760560440\).
+The exact power is
+\[
+ \frac{720068525355674046204729}{755578637259143234191360}.
+\]
+Optimal full-record power cannot decrease with the horizon, because an
+extra observation can be discarded.  The failure at \(39\) and success
+at \(40\) therefore establish the minimum within this randomized
+fixed-horizon experiment.  It uses \(L+40\) raw outputs.  The nonrandomized
+rule \(m=42,C_m\ge27\) is a sufficient alternative, with size
+\(0.04421477349\ldots\) and power \(0.95837130194\ldots\); no global
+nonrandomized minimum is asserted.
+
+\subsubsection{Independent readout errors create dependent innovations}
+
+Now observe \(\widetilde Y_t=Y_t\oplus N_t\), where the \(N_t\) are iid
+Bernoulli\((\epsilon)\), independent of the entire source, and
+\(0\le\epsilon<1/2\).  Put \(a=1-2\epsilon\),
+\(W_t=(-1)^{E_t}\), \(V_j=(-1)^{N_j}\), and
+\[
+ Z_t=(-1)^{\widetilde E_t}
+     =W_t\prod_{j=t}^{t+L}V_j.
+\]
+
+\begin{proposition}[Noisy innovation law]\label{op:noisy-cov}
+The mean and covariance function are
+\[
+ \mu=\eta a^{L+1},\quad \Gamma_0=1-\mu^2,\quad
+ \Gamma_h=
+ \begin{cases}
+ \eta^2(a^{2h}-a^{2L+2}),&1\le h\le L,\\
+ 0,&h\ge L+1.
+ \end{cases}
+\]
+Collections of \(Z\)'s separated by more than \(L\) indices are
+independent.  For \(C_m=\sum_{t=1}^m(1+Z_t)/2\),
+\[
+ \operatorname{Var}(C_m)=\frac14
+ \left[m\Gamma_0+
+ 2\sum_{h=1}^{\min\{L,m-1\}}(m-h)\Gamma_h\right].
+\]
+\end{proposition}
+\begin{proof}
+The \(W_t\) are iid of mean \(\eta\), while the independent \(V_j\) have
+mean \(a\).  In \(Z_tZ_{t+h}\), the \(L+1-h\) common detector factors
+square to one when \(h\le L\), leaving \(2h\) factors and expectation
+\(\eta^2a^{2h}\).  For larger \(h\), the defining independent variables
+are disjoint, giving expectation \(\mu^2\) and the stronger setwise
+independence statement.  Summing the covariances gives the variance.
+\end{proof}
+
+The observed initial \(L\)-bit block remains uniform and independent of
+the complete observed innovation sequence: condition on all innovations
+and all detector bits, and use the uniform independent source initial
+block.  Thus the ordered noisy innovations are sufficient within this
+specified family.  Their count generally is not.  For
+\(L=2,\eta=1/2,\epsilon=1/10\),
+\[
+ P(\widetilde E_{1:3}=001)=681/5000,\qquad
+ P(\widetilde E_{1:3}=010)=609/5000,
+\]
+although both words have the same count.  At \(m=40\), the count mean is
+\(628/25\) and its variance \(185736/15625=11.887104\), rather than the
+attenuated-binomial value \(9.34464\).
+
+\begin{proposition}[Exact noisy count recursion]\label{op:count-recursion}
+Let \(A_t(h,k)\) be the joint probability of the most recent \(L\) detector
+bits \(h\) and \(k\) even observed innovations after \(t\) steps.
+Initialize
+\[
+ A_0(h,0)=\epsilon^{|h|}(1-\epsilon)^{L-|h|}.
+\]
+For \(b\in\{0,1\}\), put \(r_b=\epsilon^b(1-\epsilon)^{1-b}\),
+\(h'=(h_2,\ldots,h_L,b)\), and
+\(q(h,b)=[1+\eta(-1)^{|h|+b}]/2\).
+For each current mass, add
+\[
+ A_t(h,k)r_bq(h,b)\ \hbox{to } A_{t+1}(h',k+1),\qquad
+ A_t(h,k)r_b[1-q(h,b)]\ \hbox{to } A_{t+1}(h',k).
+\]
+Then \(P(C_m=k)=\sum_h A_m(h,k)\).
+\end{proposition}
+\begin{proof}
+The next detector bit is independent of the current detector history.
+The next source innovation is independent of all preceding innovations
+and all detector bits.  Conditional on the detector-window parity, its
+observed even probability is exactly \(q(h,b)\).
+The displayed update is the law of total probability on these two
+new independent inputs.  Induction proves the result.
+\end{proof}
+
+For rational parameters this is an integer recurrence after keeping one
+common denominator at each step.  Applying Lemma~\ref{op:np} to the count
+laws, sorting their actual likelihood ratios rather than presuming their
+order, gives the following finite certificate for
+\(L=2,\eta=1/2,\epsilon=1/10\) against the fair iid null.
+Every \(m=1,\ldots,182\) has optimal count-only power below \(0.95\) at
+size \(0.05\); \(m=183\) has power \(0.95047965645\ldots\).
+At \(m=182\) it is \(0.94920331752\ldots\).
+An easily specified sufficient rule at \(183\) rejects for \(C_m\ge104\)
+and with probability \(43/50\) at \(C_m=103\); its size and power are
+\(0.04986347138\ldots\) and \(0.95033569239\ldots\).
+The exact recurrence and rational comparisons are supplied with the
+computational materials.  This minimum is for tests of \(C_m\) only.
+Unlike the complete record, \(C_{m+1}\) need not recover \(C_m\);
+monotonicity of the count experiments is not used.
+Here \(183\) innovations require \(185\) raw outputs.
+A nonrandomized sufficient rule uses \(188\) innovations and rejects
+for \(C_m\ge106\); its size is \(0.04659560696\ldots\) and power
+\(0.95203135112\ldots\).  No nonrandomized minimum is claimed.
+
+The ideal \(40\)-innovation rule has power only
+\(0.49258836198\ldots\) under this noisy alternative, while retaining its
+null size.  Replacing its count law by a binomial with the attenuated
+mean is incorrect.  If instead parity windows start \(L+1\) indices
+apart, their defining source innovations and detector windows are
+disjoint, so the selected parities are iid.  That thinning consumes
+additional raw outputs.
+
+At the population level, known \(L\), \(\eta\ne0\), and \(a>0\) allow
+recovery from \(\mu=E Z_t\) and \(\nu=E Z_tZ_{t+1}\):
+\[
+ a=(\mu^2/\nu)^{1/(2L)},\qquad
+ \epsilon=(1-a)/2,\qquad \eta=\mu/a^{L+1}.
+\]
+Indeed \(\mu^2/\nu=a^{2L}\) and \(\nu=\eta^2a^2\).
+The cases \(\eta=0\) and \(a=0\) are degenerate, and the inversion is
+poorly conditioned near them.  These identities do not supply a
+finite-data confidence interval or validate the iid detector model.
+
+\subsection{Classical realization rank and finite-sample certificates}
+\label{op:rank}
+
+Let \(H_L(x,y)=P(Y_{1:L}=x,Y_{L+1:2L}=y)\).
+Any \(D\)-state classical hidden realization with a sufficient state at
+this boundary factors the matrix as
+\[
+ H_L(x,y)=\sum_{s=1}^D P(Y_{1:L}=x,S_L=s)
+                    P(Y_{L+1:2L}=y\mid S_L=s).
+\]
+Hence \(\operatorname{rank}H_L\le D\).
+Every source, detector, or controller variable that carries predictive
+information across the cut belongs in that sufficient state.  General
+hidden-model realization theory distinguishes this necessary rank
+condition from the existence of a positive realization
+\cite{op:ohta,op:vanluyten}.
+
+\begin{theorem}[Parity-block spectrum and exact state count]
+\label{op:parity-rank}
+In the ideal parity-shift model the singular values of \(H_L\) are
+\[
+ 2^{-L}|\eta|^j,\qquad j=0,\ldots,L,
+\]
+with multiplicity \(\binom Lj\).
+For \(\eta\ne0\), the minimum number of states of an exact classical
+transition-emitting realization is \(2^L\).  It is one when \(\eta=0\).
+\end{theorem}
+\begin{proof}
+Define separate bijections of the row and column bit strings by
+\(u_t=x_t\oplus\cdots\oplus x_L\) and
+\(v_t=y_1\oplus\cdots\oplus y_t\).
+The \(t\)th innovation following the cut is \(u_t\oplus v_t\).
+The innovation factorization therefore gives, up to separate row and
+column permutations,
+\[
+ H_L=2^{-L}B_\eta^{\otimes L},\qquad
+ B_\eta=\frac12\begin{pmatrix}1+\eta&1-\eta\\1-\eta&1+\eta\end{pmatrix}.
+\]
+The singular values of \(B_\eta\) are \(1,|\eta|\); tensor products give
+the asserted list.  Separate row and column permutations preserve
+singular values, though they need not be a similarity transformation.
+For nonzero \(\eta\) the rank is \(2^L\), providing the lower bound.
+The shift-state construction \eqref{op:parity-kernel} has exactly that
+many states and provides the matching positive upper realization.
+For \(\eta=0\) the outputs are iid fair bits.
+\end{proof}
+
+This \(2^L\) result belongs to the parity-shift model.  A stationary
+random-phase concatenation of perturbed \(k\)-bit blocks is a different
+process, with a different \(2k-1\) realization result.  The parameters
+\(L,k\), their record laws, and their state counts are not interchangeable.
+Neither count is a bound on physical constituents or on quantum memory.
+
+\begin{theorem}[Readout and the noisy Walsh spectrum]\label{op:noisy-rank}
+Independent symmetric readout with \(a=1-2\epsilon>0\) preserves the
+rank \(2^L\) for \(\eta\ne0\).
+For \(s\in\{0,1\}^L\), define
+\[
+ r_i(s)=\bigoplus_{j=1}^i s_j,\qquad
+ \ell_i(s)=\bigoplus_{j=i}^L s_j .
+ \]
+The noisy matrix has singular values, indexed by all \(s\),
+\[
+ \sigma_s=2^{-L}|\eta|^{|s|}
+                  a^{|r(s)|+|\ell(s)|}.
+\]
+In particular \(\sigma_{\min}\ge (|\eta|a^2/2)^L>0\).
+\end{theorem}
+\begin{proof}
+Let \(D_\epsilon=\left(\begin{smallmatrix}1-\epsilon&\epsilon\\
+\epsilon&1-\epsilon\end{smallmatrix}\right)\).
+Independent noise on both blocks gives
+\(\widetilde H_L=D_\epsilon^{\otimes L}H_L
+(D_\epsilon^{\otimes L})^T\).
+Its two eigenvalues are \(1,a\), so it is invertible for \(a>0\).
+For the full spectrum, expand each transition factor to obtain
+\[
+ H_L(x,y)=2^{-2L}\sum_s\eta^{|s|}
+             (-1)^{r(s)\cdot x+\ell(s)\cdot y}.
+\]
+The maps \(s\mapsto r(s)\), \(s\mapsto\ell(s)\) are bijections.
+The normalized Walsh vectors
+\(2^{-L/2}(-1)^{v\cdot x}\) form orthonormal bases.
+In these bases, \(H_L\) is a weighted permutation matrix with weights
+\(2^{-L}\eta^{|s|}\).  Readout multiplies its row and column Walsh
+coefficients by \(a^{|r(s)|}\) and \(a^{|\ell(s)|}\).
+The absolute weights are the singular values.  Since
+\(|s|\le L\) and \(|r(s)|+|\ell(s)|\le2L\), the lower bound follows.
+\end{proof}
+
+The same \(2^L\)-state realization with memoryless noisy emission gives
+the upper bound after readout.  At \(\epsilon=1/2\) the observed process
+is iid fair and the rank collapses.  Exact invertibility does not imply
+a well-conditioned statistical inversion.
+
+\begin{lemma}[Singular-tail distance]\label{op:tail}
+For a real matrix \(H\) with singular values in decreasing order, define
+\(T_D(H)=\sum_{j>D}\sigma_j(H)^2\).
+Then
+\[
+ d_D(H):=\inf_{\operatorname{rank}Q\le D}\|H-Q\|_F
+       =\sqrt{T_D(H)},\qquad
+ |d_D(H)-d_D(G)|\le\|H-G\|_F.
+\]
+\end{lemma}
+\begin{proof}
+If \(Q\) has rank at most \(D\), its nullspace contains a subspace of
+dimension equal to the number of columns minus \(D\).  Let \(P\) be
+the orthogonal projection onto such a subspace.
+Then \(\|H-Q\|_F^2\ge\|(H-Q)P\|_F^2=\|HP\|_F^2\).
+In an eigenbasis of \(H^TH\), the latter is a weighted sum of its
+eigenvalues with weights in \([0,1]\) summing to the rank of \(P\).
+It is at least the sum of the smallest required eigenvalues,
+which is \(T_D(H)\).  Keeping the largest \(D\) terms of a singular-value
+decomposition attains this lower bound.  This is the
+Eckart--Young approximation theorem~\cite{op:eckart}.
+Finally, distance to any fixed nonempty subset is \(1\)-Lipschitz by
+the triangle inequality; taking infima proves the last statement.
+\end{proof}
+
+The rank-\(D\) approximation just used is allowed to be any real matrix.
+It need not be nonnegative, normalized, or realizable by a hidden process.
+
+\begin{theorem}[Total variation bounds with marginal information]
+\label{op:marginal-rank}
+Let \(H,Q\) be normalized nonnegative joint matrices, with
+\(\operatorname{rank}Q\le D\).  Write
+\[
+ \delta=\operatorname{TV}(H,Q),\quad
+ r=\operatorname{TV}(H_X,Q_X),\quad
+ c=\operatorname{TV}(H_Y,Q_Y),\quad T=T_D(H).
+\]
+Then
+\[
+ T\le\|H-Q\|_F^2\le
+ \min\{2\delta^2,\delta(\delta+r+c)\},
+\]
+and therefore
+\[
+ \delta\ge
+ \max\left\{\sqrt{T/2},
+ \frac{\sqrt{(r+c)^2+4T}-(r+c)}2\right\}.
+\]
+When both marginals match, the second bound becomes \(\delta\ge\sqrt T\).
+\end{theorem}
+\begin{proof}
+Put \(A=H-Q\).  Its positive and negative entry masses both equal
+\(\delta\).  The sum of squares within each sign is at most the square
+of its total mass, proving \(\|A\|_F^2\le2\delta^2\).
+For a positive entry \(A_{ij}=x\), the negative mass in row \(i\) is at
+least \(x-r\), since the positive part of any row sum is at most \(r\).
+The negative mass in column \(j\) is at least \(x-c\).
+These sets of negative entries are disjoint, because their only possible
+intersection is the positive entry \((i,j)\).  Consequently
+\(\delta\ge2x-r-c\).  Applying the same argument to \(-A\) gives
+\(\|A\|_{\max}\le(\delta+r+c)/2\).
+Thus \(\|A\|_F^2\le\|A\|_{\max}\|A\|_1
+\le\delta(\delta+r+c)\).
+Lemma~\ref{op:tail} supplies \(T\le\|A\|_F^2\);
+solving the two quadratic inequalities proves the result.
+\end{proof}
+
+Known upper bounds on \(r+c\) may be substituted, because the second
+lower bound decreases with that sum.  For zero row and column sums,
+\(\|A\|_F\le\delta\) is sharp, as the signed \(2\)-by-\(2\) cycle
+\(\left(\begin{smallmatrix}x&-x\\-x&x\end{smallmatrix}\right)\) shows.
+That norm sharpness does not show that a rank-constrained probability
+model attains the combined bound.
+
+For \(L=2,\eta=1/2,\epsilon=1/10\), the exact noisy matrix is
+\begin{equation}\label{op:noisy-four}
+ \widetilde H_2=\frac1{2000}
+ \begin{pmatrix}
+ 209&105&81&105\\
+ 81&105&209&105\\
+ 105&81&105&209\\
+ 105&209&105&81
+ \end{pmatrix}.
+\end{equation}
+Its singular values are \(1/4,8/125,8/125,1/25\), and
+\[
+ T_1=153/15625,\qquad T_2=89/15625,\qquad T_3=1/625.
+\]
+Both marginals are uniform on four outcomes.  A normalized rank-one
+nonnegative matrix with those same marginals is uniquely the matrix
+whose entries are \(1/16\), and its total variation distance is exactly
+\(21/125\).  The iid fair-bit process attains this restricted rank-one
+competitor.  The number does not apply when competitor marginals may
+vary; the bounds for two or three states have not been asserted attainable.
+
+\subsubsection{From population rank to finite samples}
+
+\begin{lemma}[Bounded-differences inequality]\label{op:bounded}
+Let \(X_1,\ldots,X_n\) be independent, and suppose changing only \(X_i\)
+changes \(f\) by at most \(c_i\).  Then
+\[
+ P(f-Ef\ge t)\le
+ \exp\left(-\frac{2t^2}{\sum_i c_i^2}\right).
+\]
+\end{lemma}
+\begin{proof}
+The conditional Doob martingale of \(f\) has each martingale difference
+in an interval of length at most \(c_i\): conditional expectations for
+two possible values of \(X_i\) differ by at most \(c_i\), after coupling
+the still independent remaining coordinates identically.
+For a centered variable \(U\) in an interval of length \(c\),
+\(\log E e^{\lambda U}\le\lambda^2c^2/8\).
+Indeed the second derivative of its log moment-generating function is
+the variance under exponential tilting, which is at most \(c^2/4\);
+the function and its first derivative vanish at zero, so integration
+twice gives the bound.  The variance bound follows from
+\(E[(U-a)(b-U)]\ge0\), which gives
+\(\operatorname{Var}(U)\le(EU-a)(b-EU)\le(b-a)^2/4\).
+Apply the exponential bound conditionally to the martingale differences,
+iterate, use Markov's inequality, and minimize over
+\(\lambda=4t/\sum c_i^2\).  This is the standard bounded-differences
+method~\cite{op:mcdiarmid}.
+\end{proof}
+
+\begin{theorem}[Empirical matrix radius and rank test]\label{op:finite-rank}
+Fix a matrix shape with \(K\) cells, an observation map, and a sample size
+\(n\).  Observe \(n\) independent records having the same categorical
+joint law \(H\), and let \(\widehat H\) be their frequency matrix.
+Dependence within a record is allowed.  For \(0<\alpha<1\), set
+\[
+ \varepsilon_\alpha(n,K)=
+ \frac{\sqrt{1-1/K}+\sqrt{\log(1/\alpha)}}{\sqrt n}.
+\]
+Then \(P(\|\widehat H-H\|_F\le\varepsilon_\alpha)\ge1-\alpha\).
+The test rejecting rank at most \(D\) when
+\(d_D(\widehat H)>\varepsilon_\alpha\) has size at most \(\alpha\).
+If \(d_D(H)>\varepsilon_\alpha+\varepsilon_\beta\), its power is at
+least \(1-\beta\).
+On the same confidence event, simultaneously for every \(D\),
+\[
+ \inf_{\substack{Q\ge0,\ \sum Q=1\\\operatorname{rank}Q\le D}}
+ \operatorname{TV}(H,Q)\ge
+ \frac{[d_D(\widehat H)-\varepsilon_\alpha]_+}{\sqrt2}.
+\]
+\end{theorem}
+\begin{proof}
+The multinomial second-moment identity gives
+\[
+ E\|\widehat H-H\|_F^2
+ =\frac{1-\|H\|_F^2}{n}\le\frac{1-1/K}{n}.
+\]
+Jensen's inequality bounds the mean norm by the square root.
+Replacing one record changes \(\widehat H\) by Frobenius norm at most
+\(\sqrt2/n\).  The reverse triangle inequality gives the same
+sensitivity for its error norm.  Lemma~\ref{op:bounded} therefore gives
+an upper tail \(\exp(-nt^2)\); use
+\(t=\sqrt{\log(1/\alpha)/n}\).
+Under the rank null, \(d_D(H)=0\); Lemma~\ref{op:tail} proves the size
+bound.  On the radius event with probability at least \(1-\beta\),
+\(d_D(\widehat H)\ge d_D(H)-\varepsilon_\beta>\varepsilon_\alpha\),
+which proves power.  No additional \(\alpha+\beta\) penalty is needed
+for that power statement.  Finally,
+\(d_D(H)\ge[d_D(\widehat H)-\varepsilon_\alpha]_+\), and
+Theorem~\ref{op:marginal-rank}'s unrestricted bound applies to every
+normalized rank-\(D\) competitor.
+\end{proof}
+
+At the single predeclared matrix and horizon, the confidence event
+simultaneously controls all \(D\); repeated looks at changing horizons
+are a different experiment.  Complete categorical outcomes, including
+any failure outcome required by the experiment, must be represented.
+A numerically computed singular tail requires an error allowance if
+rounding can affect the threshold.
+
+For \eqref{op:noisy-four}, \(K=16\) and \(\alpha=\beta=1/20\).
+Let \(C=\sqrt{15/16}+\sqrt{\log20}\).
+The condition is \(n>4C^2/T_D\).  Its first integer solutions are
+\[
+ \begin{array}{c|ccc}
+ D&1&2&3\\ \hline
+ n&2976&5116&18213\\
+ \text{raw outputs }4n&11904&20464&72852
+ \end{array}
+\]
+These are sufficient numbers of iid four-output records for this
+concentration bound, not optimal testing budgets.  At \(n=18213\) the
+single common power event suffices for all three rank rejections.
+Experiments separately stopped at the three listed horizons do not
+automatically constitute one test of size \(0.05\).
+
+\subsection{Sequential evidence for complete record laws}
+\label{op:sequential}
+
+The null in this subsection is the complete iid fair-bit law,
+\(P_0(Y_{1:n}=y)=2^{-n}\).
+Fair one-bit marginals alone do not define this null.
+Fix coherent candidate laws \(P_\theta\) before seeing data and
+nonnegative mixing weights totaling one.
+
+\begin{theorem}[Likelihood mixtures and an anytime threshold]
+\label{op:mixture}
+Each \(R_{\theta,n}=2^nP_\theta(Y_{1:n})\) is a nonnegative
+\(P_0\)-martingale starting at one.  Their fixed mixture
+\(\mathcal E_n=\int R_{\theta,n}\,dW(\theta)\) is also such a martingale,
+and
+\[
+ P_0\{\exists n\ge0:\mathcal E_n\ge1/\alpha\}\le\alpha.
+\]
+\end{theorem}
+\begin{proof}
+Conditional on a prefix under \(P_0\), the next bit is fair.
+Coherence gives
+\[
+ E_0[R_{\theta,n+1}\mid Y_{1:n}]
+ =2^n\sum_{b=0}^1P_\theta(Y_{1:n},b)=R_{\theta,n}.
+\]
+Nonnegative integration permits conditional Tonelli, proving the mixture
+claim.  Stop at the first threshold crossing or at a fixed \(N\).
+The expected stopped value is one by finite optional stopping, so
+\(P_0(\text{crossing by }N)\le\alpha\).
+Let \(N\) increase.  The same argument holds for nonnegative
+supermartingales and is Ville's inequality; see
+Howard et al.~\cite{op:howard}.
+\end{proof}
+
+For the noisy parity family with fixed \(\eta=1/2,\epsilon=1/10\)
+and unknown \(L\), take \(w_L=1/[L(L+1)]\).
+When \(L\ge n\), every \(n\)-bit observed law is uniform.
+Since \(\sum_{L=n}^\infty w_L=1/n\), the mixture has the finite expression
+\begin{equation}\label{op:length-mixture}
+ \mathcal E_n=\frac1n+
+ \sum_{L=1}^{n-1}\frac{2^nP_L(Y_{1:n})}{L(L+1)},\qquad n\ge1,
+ \quad \mathcal E_0=1.
+\end{equation}
+This identity does not guarantee inexpensive evaluation: a component
+may require \(2^L\) hidden states.  Replacing the fixed mixture by a
+post-data maximum does not preserve its martingale proof.
+
+\begin{proposition}[A sufficient \(1950\)-output horizon]\label{op:1950}
+At the fixed true alternative \(L=2,\eta=1/2,\epsilon=1/10\), the test
+crossing \(20\) in \eqref{op:length-mixture} has power by \(1950\)
+raw outputs at least \(0.9519745696463602\ldots\).
+\end{proposition}
+\begin{proof}
+The \(650\) disjoint three-bit parity windows have independent
+even-parity probability \(p=157/250\).  Let \(K\) be their even count and
+let
+\[
+ S=(157/125)^K(93/125)^{650-K}
+\]
+be their likelihood ratio against fair parity.
+For the full-record component \(R=2^{1950}P_2(Y_{1:1950})\),
+strict positivity gives
+\(E_2(S/R)=E_0S=1\).
+The mixture contains \(R/6\).  Failure to cross by this horizon implies
+in particular \(R<120\).
+For any \(c>0\),
+\[
+ P_2(R<120)\le P_2(S<120c)+P_2(S/R>c)
+              \le P_2(S<120c)+1/c .
+\]
+With \(c=40\), exact integer comparisons show
+\(S\ge4800\) if and only if \(K\ge384\).
+Therefore the miss probability is at most
+\[
+ \sum_{k=0}^{383}\binom{650}{k}
+       (157/250)^k(93/250)^{650-k}+\frac1{40}
+ =0.04802543035363984\ldots<\frac1{20}.
+\]
+All quantities in the last inequality are rational.  The calculation
+does not require evaluating all nonconstant mixture components.
+\end{proof}
+
+This is a sufficient horizon for one specified alternative, not a
+minimum, an expected stopping time, or a bound uniform in \(L\).
+It is a different experiment from the fixed-horizon \(183\)-innovation
+count test.
+
+\begin{theorem}[Pointwise eventual detection]\label{op:eventual}
+Fix a nondegenerate parity candidate with \(L<\infty\), \(\eta\ne0\),
+\(0\le\epsilon<1/2\), and positive mixture weight \(w_L\).
+If that candidate generates the data, its likelihood mixture eventually
+crosses every fixed finite threshold almost surely.  More precisely,
+\[
+ \liminf_{n\to\infty}\frac{\log\mathcal E_n}{n}
+ \ge \frac{d_{\rm Ber}(p_L\Vert1/2)}{L+1}>0,\qquad
+ p_L=\frac{1+\eta(1-2\epsilon)^{L+1}}2 .
+\]
+\end{theorem}
+\begin{proof}
+Use \(m=\lfloor n/(L+1)\rfloor\) disjoint parity windows, and let \(S_m\)
+be their likelihood ratio.  The iid strong law gives
+\(\log S_m/n\to d_{\rm Ber}(p_L\Vert1/2)/(L+1)\).
+For the full-record ratio \(R_{L,n}\), the same change-of-measure
+identity as above gives \(E_L[S_m/R_{L,n}]=1\).
+For every \(b>0\),
+\[
+ P_L(R_{L,n}<S_me^{-bn})\le e^{-bn}.
+\]
+The sum over \(n\) is finite, so the first Borel--Cantelli lemma
+implies that this event occurs only finitely often.
+Apply the assertion to a countable sequence of positive rational
+\(b\) decreasing to zero and use
+\(\mathcal E_n\ge w_LR_{L,n}\).
+The fixed multiplicative weight has vanishing logarithm per \(n\).
+\end{proof}
+
+No uniform finite horizon follows: for \(L\ge n\) the full length-\(n\)
+law equals the null exactly.  Alternatives approaching \(\eta=0\) or
+\(\epsilon=1/2\) also approach the null on each fixed horizon.
+For a concrete warning about the null, the process \(Y_t=B\) for one
+fair bit \(B\) has fair marginals.  In the ideal-readout
+\(\eta=1/2\) mixture, its \(L=1\) contribution is
+\(\frac12(3/2)^{n-1}\), exceeding \(20\) at \(n=11\).
+It is not an iid-null process; rejecting it does not violate the theorem.
+
+\subsubsection{Conditional null envelopes and useful growth}
+
+Suppose instead that the null supplies a predictable envelope
+\[
+ p_t=P(Y_t=1\mid\mathcal F_{t-1})
+ \in[1/2-\delta_t,1/2+\delta_t],\quad 0\le\delta_t\le1/2 .
+\]
+For a predictable Bernoulli forecast \(q_t\), put \(q_t(1)=q_t\) and
+\(q_t(0)=1-q_t\).  The factor
+\[
+ F_t=\frac{2q_t(Y_t)}
+           {1+2\delta_t|2q_t-1|}
+\]
+has conditional null expectation at most one: its numerator has
+expectation \(1+2(p_t-1/2)(2q_t-1)\), maximized exactly at the appropriate
+endpoint of the interval.  Its products obey the crossing guarantee of
+Theorem~\ref{op:mixture}.  This sharp normalization does not ensure
+favorable evidence growth.
+
+\begin{theorem}[Log-optimal binary factor for an interval null]
+\label{op:clipped}
+For \(0<\ell\le u<1\) and an alternative \(0<q<1\), let
+\(p_*=\min\{u,\max\{\ell,q\}\}\).  Define
+\[
+ G_q(1)=q/p_*,\qquad G_q(0)=(1-q)/(1-p_*).
+\]
+It has expectation at most one for every Bernoulli parameter in
+\([\ell,u]\), and maximizes \(E_q\log g(Y)\) over all nonnegative
+factors \(g\) valid throughout that interval.
+\end{theorem}
+\begin{proof}
+If \(q>u\), the expectation of \(G_q\) increases with the actual
+Bernoulli parameter and equals one at \(u=p_*\).
+If \(q<\ell\), it decreases and equals one at \(\ell=p_*\).
+If \(q\in[\ell,u]\), it is identically one.
+For every valid \(g\), Jensen's inequality gives
+\[
+ E_q\log\frac{g(Y)}{G_q(Y)}
+ \le\log E_q\frac{g(Y)}{G_q(Y)}
+ =\log E_{p_*}g(Y)\le0.
+\]
+Zero factors are handled by the extended value \(-\infty\) for the log.
+\end{proof}
+
+This is a binary specialization of the established growth-optimal
+e-variable framework~\cite{op:larsson}.  Predictable choices of
+\(\ell_t,u_t,q_t\) again yield a nonnegative null supermartingale.
+The criterion is expected one-step log growth, not finite-horizon
+Neyman--Pearson power.
+
+For \(q=13/20\) and null interval \([2/5,3/5]\), the two factors are
+\[
+ (F(0),F(1))=(35/53,65/53),\qquad
+ (G(0),G(1))=(7/8,13/12).
+\]
+Their expected log growth under iid Bernoulli\((13/20)\) is negative
+and positive, respectively.  The exact sign certificates are
+\[
+ 65^{13}35^7<53^{20},\qquad 13^{13}7^7>12^{13}8^7.
+\]
+The strong law makes the first product tend to zero and the second
+diverge almost surely.  The first can still cross a threshold early.
+
+A conditional-bias envelope is not a memorylessness null.  In the noisy
+parity model, conditioning first on the full source history and then
+averaging over the observed past yields
+\[
+ \left|P(\widetilde Y_t=1\mid\widetilde Y_{<t})-\frac12\right|
+ \le\frac{|\eta|(1-2\epsilon)}2 .
+\]
+For the numerical alternative this is \(1/5\).
+A null envelope at least that wide contains the dependent process, so
+a test valid for every law in it must retain its null error guarantee
+on that process.  The envelope itself needs justification for the
+actual observation filtration; marginal calibration does not supply it.
+
+\subsection{Visibility, environmental records, and access to fragments}
+\label{op:records}
+
+Consider an ordinary qubit and an environment with a fixed tensor
+decomposition into \(N\) fragments.  A stipulated controlled interaction
+maps the two qubit basis states to branch records
+\[
+ |0\rangle\longmapsto |0\rangle|e_0\rangle^{\otimes N},\qquad
+ |1\rangle\longmapsto |1\rangle|e_1\rangle^{\otimes N},
+ \quad \langle e_0|e_1\rangle=\gamma,\quad |\gamma|\le1.
+\]
+For a balanced input, tracing out the fragments leaves coherence of
+magnitude \(|\gamma|^N/2\).  A phase setting with the convention
+\(p_0(\phi)=\frac12[1+\operatorname{Re}(e^{i\phi}\gamma^N)]\)
+has visibility \(|\gamma|^N\) and qubit purity
+\((1+|\gamma|^{2N})/2\).
+These formulas assume the stated state preparation, tensor partition,
+controlled interaction, and Born-rule measurement.  They derive no
+macroscopic amplification mechanism.
+
+\begin{proposition}[A classical realization of the binary visibility law]
+\label{op:visibility-alias}
+For real \(0\le\gamma\le1\), all final binary laws
+\[
+ p_0(N,\phi)=\tfrac12(1+\gamma^N\cos\phi),
+ \qquad N\in\{0,1,\ldots\},\ \phi\in\mathbb R,
+\]
+are reproduced by a two-state classical Markov chain and a
+setting-dependent binary response.
+\end{proposition}
+\begin{proof}
+Let \(Z_0=+1\).  Flip the sign independently at each step with
+probability \((1-\gamma)/2\), so that the transition matrix is
+\[
+ K_\gamma=\frac12
+ \begin{pmatrix}1+\gamma&1-\gamma\\1-\gamma&1+\gamma\end{pmatrix}.
+\]
+Then \(E Z_N=\gamma^N\), by the one-step conditional expectation
+\(E(Z_{n+1}\mid Z_n)=\gamma Z_n\).
+Given \(Z_N=z\) and the calibrated setting \(\phi\), report outcome zero
+with probability \((1+z\cos\phi)/2\).  Averaging proves the formula.
+At \(N=0\) the chain has made no transition, including when \(\gamma=0\).
+\end{proof}
+
+For complex \(\gamma=re^{i\beta}\), one may instead choose independent
+classical phases \(\Theta_j=\beta\) or \(\beta+\pi\) with probabilities
+\((1+r)/2,(1-r)/2\).  Since \(E e^{i\Theta_j}=\gamma\), the response
+\([1+\cos(\phi+\sum_j\Theta_j)]/2\) has the required averaged law.
+This construction uses accumulated phase; it is not the same assertion
+of a homogeneous two-state realization with one fixed response for all
+complex \(\gamma\).
+Related random-unitary descriptions of quantum noise are established
+\cite{op:crow}; their scope differs from this explicitly classical
+simulation of a specified final binary family.  Neither construction
+simulates arbitrary quantum preparations, joint measurements, Bell
+experiments, or every environmental observable.
+
+\begin{theorem}[A final channel does not identify fragment factorization]
+\label{op:environment}
+Fix the physical fragment partition and let \(0<\gamma<1\),
+\(s=\sqrt{1-\gamma^2}\).  For \(N\ge2\), the product branches
+\[
+ E_0=|0\rangle^{\otimes N},\qquad
+ E_1=(\gamma|0\rangle+s|1\rangle)^{\otimes N}
+\]
+and the branches \(F_i=U_NE_i\), where
+\(U_N=\operatorname{CZ}_{12}\otimes I_{3:\!N}\), induce exactly the
+same complete final qubit channel, including its action with a retained
+ancilla.  Nevertheless \(F_1\) is not a product across the first two
+fragments.
+If the transformed old fragments are never accessed or recoupled, the
+two descriptions also give the same complete histories for common
+operations on the retained system, ancillas, and fresh fragments.
+\end{theorem}
+\begin{proof}
+For any joint state \(\rho\) of a retained system and environment,
+\[
+ \operatorname{Tr}_E[(I\otimes U_N)\rho(I\otimes U_N^\dagger)]
+ =\operatorname{Tr}_E\rho .
+\]
+This identity is valid with an arbitrary retained ancilla, proving the
+complete-channel statement.  It also preserves the branch overlap
+\(\langle E_0|E_1\rangle=\gamma^N\).
+For the first two fragments, the coefficient matrix of \(F_1\) is
+\[
+ \begin{pmatrix}\gamma^2&\gamma s\\
+                 \gamma s&-s^2\end{pmatrix},
+ \qquad \det=-2\gamma^2s^2\ne0 .
+\]
+A pure two-fragment state is a product precisely when its coefficient
+matrix has rank one; thus this branch is not a product.
+Appending the remaining product factors does not remove that fact.
+For a later history satisfying the stated access restriction, the
+common environmental unitary commutes with every later retained-system
+or fresh-fragment operation.  Move it through the product of the
+corresponding instrument maps and remove it under the final trace.
+This proves equality for each fixed outcome/action history; common
+history-dependent randomized policies preserve it by conditioning.
+\end{proof}
+
+The history assertion requires absence of later coupling to the
+transformed fragments.  Equality of final reduced channels by itself
+does not prove equality under arbitrary later access.  Also, the
+distinguished property here is tensor-product factorization of
+conditional quantum fragment states.  It is not a claim that every
+chosen classical fragment readout becomes statistically dependent.
+For example, the common controlled phase leaves the branch's
+\(Z\)-basis probability distribution unchanged.  If arbitrary entangling
+changes of tensor factorization are declared to be a gauge freedom,
+the target factorization property itself changes.
+At \(\gamma=0\) or \(1\), or with fewer than two fragments, the stated
+nonproduct witness is absent; common-unitary invariance of the reduced
+channel still holds.
+
+\begin{example}[A calibrated fragment measurement separates the pair]
+\label{op:fragment-readout}
+For \(\gamma=3/5,s=4/5,N=2\), the branch-one vectors are
+\[
+ E_1=(9,12,12,16)^T/25,\qquad
+ F_1=(9,12,12,-16)^T/25.
+\]
+Both are normalized and have overlap \(9/25\) with \(|00\rangle\).
+Their coefficient determinants are zero and \(-288/625\).
+The first-fragment reduced off-diagonal entries are \(12/25\) and
+\(-84/625\), so a local \(X\) measurement has
+\[
+ P_{E_1}(X=+)=49/50,\qquad P_{F_1}(X=+)=457/1250,
+ \qquad \text{gap}=384/625.
+\]
+This requires anchored preparation of branch one, access to the specified
+fragment, and a calibrated \(X\) readout.  If each reported binary law
+is within total variation \(\varepsilon\) of its stated ideal law,
+the gap is at least \(384/625-2\varepsilon\); strict positivity is a
+sufficient separation condition.  This is pair separation, not
+identification of an arbitrary environmental model.
+\end{example}
+
+\subsection{Positive hidden realizations and exact intervention contracts}
+\label{op:controls}
+
+A finite transition-emitting, or Mealy, model has nonnegative matrices
+\(T_y\), indexed by a finite output alphabet, whose sum \(P=\sum_y T_y\)
+is row-stochastic.  From an initial row distribution \(\pi\),
+\[
+ P(Y_{1:m}=y_1\cdots y_m)=\pi T_{y_1}\cdots T_{y_m}\mathbf1.
+\]
+A silent control is a row-stochastic matrix inserted between output
+steps, producing no extra recorded outcome.  Linear reachability means
+that the rows \(\{\pi T_w\}\) span the whole row space; linear
+observability means that \(\{T_w\mathbf1\}\) spans the whole column
+space, where \(w\) includes the empty word.  We use \emph{linearly minimal}
+when both properties hold.  It is stronger than merely displaying no
+obvious redundant state.
+
+If \(S\) is invertible with \(S\mathbf1=\mathbf1\), put
+\[
+ T'_y=S^{-1}T_yS,\qquad \pi'=\pi S .
+\]
+Whenever these transformed quantities are valid probabilities, every
+passive word law is unchanged by telescoping.  If each common fixed
+control commutes with \(S\), all controlled word laws are unchanged as
+well.  If instead controls are themselves allowed to vary, simultaneous
+transformation \(K'_j=S^{-1}K_jS\) gives the same telescoping identity.
+The distinction between exact fixed controls and uncertain controls
+is substantive.  Similarity equivalence for Mealy models and its
+distinction from other hidden-model classes are established
+\cite{op:vanluyten}.
+
+\begin{example}[A strictly positive minimal passive pair]
+\label{op:mealy-pair}
+Take
+\[
+ T_0=\frac1{20}\begin{pmatrix}6&2\\1&3\end{pmatrix},\quad
+ T_1=\frac1{20}\begin{pmatrix}4&8\\7&9\end{pmatrix},\quad
+ \pi=(4/9,5/9),\quad
+ S=\frac1{10}\begin{pmatrix}9&1\\2&8\end{pmatrix}.
+\]
+The transformed matrices are
+\[
+ T'_0=\frac1{1400}\begin{pmatrix}449&151\\19&181\end{pmatrix},
+ \qquad
+ T'_1=\frac1{280}\begin{pmatrix}67&93\\125&115\end{pmatrix},
+ \qquad \pi'=\pi S .
+\]
+Both representations are strictly positive and stationary:
+\(\pi P=\pi\) and \(\pi'P'=\pi'\).
+Their common two-output matrix is
+\[
+ J=\frac1{900}\begin{pmatrix}81&179\\179&461\end{pmatrix},
+ \qquad \det J=53/8100.
+\]
+The factorization of \(J\) through a hidden boundary state implies
+minimal dimension at least two; the displayed models attain it.
+Their total-transition diagonal multisets are
+\(\{1/2,3/5\}\) and \(\{14/25,27/50\}\), respectively.
+They therefore are not related by a permutation of hidden-state labels.
+\end{example}
+
+\begin{proposition}[Exactly which fixed controls separate that pair]
+\label{op:pair-control}
+Let the same anchored control
+\[
+ K(a,b)=\begin{pmatrix}1-a&a\\b&1-b\end{pmatrix},
+ \qquad 0\le a,b\le1,
+\]
+act in both models of Example~\ref{op:mealy-pair}.
+All controlled output-history laws agree if and only if \(b=2a\).
+The next-zero contrast after one such control is
+\[
+ \pi KT_0\mathbf1-\pi'KT'_0\mathbf1=(2a-b)/35.
+\]
+\end{proposition}
+\begin{proof}
+Direct multiplication gives the contrast and
+\[
+ SK-KS=\frac1{10}
+ \begin{pmatrix}b-2a&2a-b\\b-2a&2a-b\end{pmatrix}.
+\]
+If \(b=2a\), the similarity telescopes through every interleaving
+of outputs and controls.  If \(b\ne2a\), the displayed single-output
+experiment already distinguishes the pair.  Common randomized or
+adaptive control policies preserve the equality in the first case by
+conditioning on their observed histories.
+\end{proof}
+
+The reset \(R_2=\left(\begin{smallmatrix}0&1\\0&1\end{smallmatrix}\right)\)
+maximizes the absolute single-output contrast over this control square:
+it gives \(2/35\), with zero probabilities \(1/5\) and \(1/7\).
+This is an optimum for that contrast and that fixed pair.
+It does not identify the entire model class.  For example,
+\[
+ U=\begin{pmatrix}9/10&1/10\\0&1\end{pmatrix}
+ \quad\hbox{satisfies}\quad UR_2=R_2U=R_2 .
+\]
+The further transformed model has
+\[
+ \pi U=(2/5,3/5),\quad
+ U^{-1}T_0U=\frac1{1800}\begin{pmatrix}531&229\\81&279\end{pmatrix},
+ \quad
+ U^{-1}T_1U=\frac1{1800}\begin{pmatrix}297&743\\567&873\end{pmatrix}.
+\]
+It is strictly positive, remains minimal, and has total-transition
+diagonal multiset \(\{23/50,16/25\}\).
+It is a further nonpermutation partner agreeing with the original on
+all passive and exact-\(R_2\) controlled laws.
+
+\begin{theorem}[One silent control does not identify the unrestricted
+positive minimal class]\label{op:single-control}
+Let \(n\ge2\), let \((\pi,\{T_y\})\) be a strictly positive linearly
+minimal finite-alphabet realization, and assume its unanchored
+preparation and output matrices may vary in a neighborhood of their
+current values within the model class.  A single exact common
+row-stochastic silent control \(K\) leaves a continuum of distinct
+positive realizations with the same complete controlled laws.
+Stationarity, if imposed on \(\pi\), is preserved.
+\end{theorem}
+\begin{proof}
+For \(K\ne I\), choose \(S_t=I+t(K-I)\).
+It satisfies \(S_t\mathbf1=\mathbf1\), commutes with \(K\), and is
+invertible for sufficiently small \(t\).
+At \(t=0\), all entries of \(T_y\) and \(\pi\) are positive.
+Continuity and finiteness preserve positivity for a sufficiently small
+interval of \(t\).  Normalization follows from \(S_t\mathbf1=\mathbf1\).
+The transformed total transition matrix and preparation satisfy
+\(\pi'P'=\pi P S_t=\pi S_t=\pi'\) when the original is stationary.
+The telescoping identity proves equality for all controlled words.
+If \(K=I\), use any nonzero matrix \(A\) with \(A\mathbf1=0\) and
+\(S_t=I+tA\), again sufficiently near the identity.
+To see that distinct similarities give distinct numerical realizations,
+suppose a similarity \(V\) fixes both \(\pi\) and every \(T_y\).
+Then \(\pi T_wV=\pi T_w\) for every word.  Reachability forces \(V=I\).
+The ratio of two similarities yielding identical realizations would
+be such a \(V\), hence the similarities would be equal.
+A continuum of distinct realizations cannot be removed by the finite
+set of state permutations.
+\end{proof}
+
+The theorem concerns a local open positive class, an unanchored
+preparation, and silent stochastic controls.  Structural zeros, fixed
+preparations, recorded control outcomes, or narrower parametrizations
+can change the conclusion.  It is not a claim about all hidden-model
+classes.  Adding invisible hidden labels is an easier ambiguity:
+one may append arbitrary hidden transitions whose pushed visible rows
+stay fixed, as in Theorem~\ref{op:lumpability}.  Such redundant lifts
+are not counterexamples to minimal-realization theorems and do not
+establish distinct physical ontologies.
+
+\begin{theorem}[A sharp two-control criterion in two states]
+\label{op:two-controls}
+Consider stationary strictly positive binary Mealy models with two
+states, passive linear dimension two, and an unanchored initial
+distribution.  Suppose two labelled controls are known exactly and
+have the same matrices in every admissible model:
+\[
+ K_j=\begin{pmatrix}1-a_j&a_j\\b_j&1-b_j\end{pmatrix},\quad j=1,2 .
+\]
+Complete controlled population laws identify every numerical output
+matrix and the labelled preparation in this class if and only if
+\[
+ \Delta=a_1b_2-a_2b_1\ne0 .
+\]
+When \(\Delta\ne0\), experiments with at most one control followed by
+at most two outputs suffice for the reconstruction.
+\end{theorem}
+\begin{proof}
+Write \(\pi=(r,1-r)\), \(e=T_0\mathbf1=(e_1,e_2)^T\),
+\(d=e_1-e_2\), \(k=rd\), \(q=P(0)\), and
+\(q_j=P(K_j\text{ then }0)\).
+If \(d=0\), both \(T_0\mathbf1=q\mathbf1\) and
+\(T_1\mathbf1=(1-q)\mathbf1\).  Repeated multiplication makes every
+word iid Bernoulli, contradicting passive dimension two.  Thus \(d\ne0\).
+The first-state mass after \(K_j\) is
+\(r+b_j-(a_j+b_j)r\), hence
+\[
+ \begin{pmatrix}q_1-q\\q_2-q\end{pmatrix}
+ =
+ B\begin{pmatrix}d\\k\end{pmatrix},\qquad
+ B=\begin{pmatrix}
+ b_1&-(a_1+b_1)\\ b_2&-(a_2+b_2)
+ \end{pmatrix},\quad \det B=\Delta .
+\]
+If \(\Delta\ne0\), solve for \(d,k\), then recover
+\[
+ r=k/d,\qquad e_2=q-k,\qquad e_1=e_2+d .
+\]
+At least one \(q_j-q\) is nonzero, because otherwise \(B\) would map
+the nonzero vector \((d,k)^T\) to zero.  For such \(j\), define
+\[
+ A=\begin{pmatrix}\pi\\\pi K_j\end{pmatrix},\quad
+ F=\begin{pmatrix}\mathbf1&e\end{pmatrix},\quad
+ C_y=\begin{pmatrix}
+ P(y)&P(y0)\\
+ P(K_j\text{ then }y)&P(K_j\text{ then }y0)
+ \end{pmatrix}.
+\]
+Then \(C_y=AT_yF\),
+\(\det A=-(q_j-q)/d\), and \(\det F=-d\).
+Both are invertible, so \(T_y=A^{-1}C_yF^{-1}\).
+All quantities are obtained from the stated short experiments.
+
+Conversely, direct multiplication gives
+\[
+ [K_1,K_2]=\Delta\begin{pmatrix}1&-1\\1&-1\end{pmatrix}.
+\]
+If \(\Delta=0\) and a control \(K\ne I\) exists, the nonconstant
+similarities \(I+t(K-I)\) commute with both controls.
+If both controls are identity, use any nontrivial near-identity
+row-normalized similarity.  The positivity, stationarity, and
+minimality argument of Theorem~\ref{op:single-control} provides a
+continuum of admissible distinct realizations with all controlled
+laws equal.  Identification is impossible.
+\end{proof}
+
+For a positive non-reset example,
+\[
+ K_1=\begin{pmatrix}3/4&1/4\\1/2&1/2\end{pmatrix},\qquad
+ K_2=\begin{pmatrix}1/2&1/2\\1/4&3/4\end{pmatrix},\qquad
+ \Delta=-3/16.
+\]
+For Example~\ref{op:mealy-pair},
+\[
+ q=13/45,\quad q_1=29/90,\quad q_2=49/180,\quad
+ d=1/5,\quad k=4/45,
+\]
+and the short-word matrices for \(j=1\) are
+\[
+ C_0=\begin{pmatrix}13/45&9/100\\29/90&21/200\end{pmatrix},
+ \qquad
+ C_1=\begin{pmatrix}32/45&179/900\\61/90&337/1800\end{pmatrix}.
+\]
+The formulas recover the displayed \(\pi,T_0,T_1\) exactly.
+Small \(|\Delta|\), small \(|d|\), or a small preparation contrast can
+make the inverse numerically unstable; this population theorem
+contains no finite-sample stability bound.
+
+\begin{proposition}[Pure preparations and a finite-state positive control]
+\label{op:anchored-preparations}
+For a two-state model with two exactly anchored labelled pure
+preparations, put
+\(e_i=P_i(0)\), \(p_i(y)=P_i(y)\), \(z_i(y)=P_i(y0)\).
+If \(d=e_1-e_2\ne0\), then
+\[
+ (T_y)_{i1}=\frac{z_i(y)-e_2p_i(y)}d,\qquad
+ (T_y)_{i2}=\frac{e_1p_i(y)-z_i(y)}d.
+\]
+More generally, an observable \(n\)-state realization is identified by
+an exact labelled cyclic permutation control and an exact reset to
+one labelled state, using experiments with at most \(n\) output symbols.
+\end{proposition}
+\begin{proof}
+For two states, the equations
+\((T_y)_{i1}+(T_y)_{i2}=p_i(y)\) and
+\(e_1(T_y)_{i1}+e_2(T_y)_{i2}=z_i(y)\)
+give the formulas.
+For \(n\) states, a reset followed by powers of the cycle prepares
+every pure labelled state.  Let
+\(V_k=\operatorname{span}\{T_v\mathbf1:|v|\le k\}\).
+The initial space \(V_0\) has dimension one.
+If \(V_k=V_{k+1}\), each \(T_y\) maps \(V_k\) into itself, so all later
+spaces are identical.  Observability therefore implies that full
+dimension is reached by \(k=n-1\).
+Choose \(n\) spanning suffix columns to form an invertible matrix \(F\).
+Their probabilities under the pure preparations give every entry of
+\(F\).  Probabilities of \(yv\) under the same preparations give
+\(T_yF\), so recover \(T_y\).  Probabilities of those suffixes from the
+original preparation give \(\pi F\), so recover \(\pi\).
+\end{proof}
+
+The cycle and reset contain structural zeros and permit repeated uses.
+The bound concerns the number of output symbols per setting; it does
+not count control uses, distinct settings, repeated trials, duration,
+or calibration cost.  Together with the one-control obstruction, two
+types are minimal only for the stated universal ideal control-design
+question over positive minimal models.  Restricted model classes may
+require fewer.
+
+\subsection{Calibration intervals and statistical separation}
+\label{op:calibration}
+
+Exact controls and approximately known controls define different
+inverse problems.  This can be shown quantitatively without assigning
+a prior to the uncertain control.
+
+\begin{theorem}[An explicit calibration-induced identification interval]
+\label{op:calibration-interval}
+Use the positive model of Example~\ref{op:mealy-pair} and the two
+controls displayed after Theorem~\ref{op:two-controls}.
+Keep \(K_1\) fixed exactly, but allow \(K_2\) to lie in its full
+maximum-row total-variation ball of radius \(\varepsilon\).
+Keep the preparation unanchored.  Among strictly positive stationary
+models with the same complete controlled output laws, the first
+preparation coordinate includes the interval
+\[
+ \left[\frac49,\frac49+\min\left\{\frac1{15},
+                                      \frac{8\varepsilon}{9}\right\}\right].
+\]
+This is a contained interval, not the complete identified set.
+\end{theorem}
+\begin{proof}
+For \(0\le t\le1/10\), use
+\[
+ S_t=\begin{pmatrix}1-t&t\\2t&1-2t\end{pmatrix},
+ \qquad \det S_t=1-3t\ge7/10.
+\]
+Direct multiplication gives
+\[
+ S_t^{-1}K_1S_t=K_1,\qquad
+ S_t^{-1}K_2S_t-K_2
+ =\begin{pmatrix}3t/4&-3t/4\\3t/4&-3t/4\end{pmatrix}.
+\]
+Thus the maximum-row total variation error is \(3t/4\).
+The transformed preparation is
+\(\pi S_t=((4+6t)/9,(5-6t)/9)\).
+For completeness, the eight numerators of the two transformed output
+matrices, over the positive common denominator \(20(1-3t)\), are
+\[
+ \begin{array}{cc}
+ 6-15t-t^2&2-5t+t^2\\
+ 1-8t-t^2&3-12t+t^2\\[2pt]
+ 4-3t-35t^2&8-37t+35t^2\\
+ 7-4t-35t^2&9-36t+35t^2
+ \end{array}.
+\]
+On the stated interval they are bounded below, in the same order, by
+\[
+ 449/100,\ 3/2,\ 19/100,\ 9/5,\
+ 67/20,\ 43/10,\ 25/4,\ 27/5,
+\]
+all strictly positive.  Normalization and stationarity are preserved by
+similarity.  Simultaneously transforming \(T_y,\pi,K_2\), while \(K_1\)
+stays fixed, makes every controlled word telescope to its original
+probability.  The admissible segment is
+\(0\le t\le\min\{1/10,4\varepsilon/3\}\).
+Its first preparation coordinate is \(4/9+2t/3\), giving the interval.
+\end{proof}
+
+For example, \(\varepsilon=1/100\) gives
+\([4/9,34/75]\), of width \(2/225\).
+This is uncertainty in a chosen latent coordinate, not uncertainty in
+the common predictions.  An independently fixed preparation or a
+model for extra calibration outcomes can break the equivalence.
+
+\begin{proposition}[Finite positive menus with open calibration classes]
+\label{op:open-calibration}
+Let \(n\ge2\), with finitely many strictly positive output matrices,
+a positive unanchored preparation, and finitely many strictly positive
+silent controls.  Suppose their admissible classes contain local
+neighborhoods of the output/preparation parameters and relative-open
+neighborhoods of each control within row-stochastic matrices.
+If the realization is linearly minimal, there is a local continuum of
+distinct admissible simultaneous-similarity realizations with the same
+complete controlled laws.
+\end{proposition}
+\begin{proof}
+Choose a nonzero matrix \(A\) with \(A\mathbf1=0\), and
+\(S_t=I+tA\) sufficiently near \(I\).
+Transform every output matrix and every control by \(S_t^{-1}(\cdot)S_t\),
+and the preparation by \(\pi S_t\).
+The sum of the transformed output matrices and each transformed control
+are row-stochastic, and the transformed preparation sums to one, because
+\(S_t\mathbf1=\mathbf1\).
+Strict positivity and the finitely many open-neighborhood conditions
+persist for sufficiently small \(t\).
+All probabilities telescope.  The trivial stabilizer argument in
+Theorem~\ref{op:single-control} proves distinctness.
+\end{proof}
+
+The open-neighborhood premise excludes exact structural zeros and other
+constraints that obstruct the path.  This qualitative result provides
+no universal numerical interval width.
+
+\subsubsection{The reset experiment with bounded nuisance}
+
+For the fixed pair in Example~\ref{op:mealy-pair}, suppose the intended
+reset to state two may place a candidate-specific mass \(u\in[0,\delta]\)
+on state one.  The next-zero laws range over
+\[
+ p_A=(1+u)/5,\qquad p_B=(1+2u)/7.
+\]
+For \(0\le\delta<1/5\), the two probability intervals have strictly
+positive separation
+\[
+ g_\delta=\frac15-\frac{1+2\delta}7
+          =\frac{2-10\delta}{35}.
+\]
+At \(\delta=1/5\), take the exact \(R_2\) in the first model and
+\[
+ S^{-1}R_2S=
+ \begin{pmatrix}1/5&4/5\\1/5&4/5\end{pmatrix}
+\]
+in the second.  The complete controlled laws, not only the next output,
+then agree by simultaneous similarity.  The same witness is admissible
+for every larger \(\delta\).  Thus this fixed-pair nuisance class has
+a sharp \(20\%\) threshold for uniform separation by arbitrary records.
+With an additional total-variation readout allowance \(\epsilon\) on
+each binary law, \(g_\delta-2\epsilon>0\) is a sufficient one-output
+separation condition.  The full-history sharpness claim above concerns
+the explicitly specified reset nuisance, not every possible
+history-dependent readout-error class.
+
+With perfect resets, perfect readout, and independent repeated reset
+trials, the simple hypotheses are Bernoulli\((1/7)\) versus
+Bernoulli\((1/5)\) for the zero indicator.
+Lemma~\ref{op:np} yields optimal size-\(1/20\) randomized powers
+\[
+ \begin{array}{c|cc}
+ n&467&468\\ \hline
+ \text{power}&0.9498952948087144\ldots&
+               0.9505519541817742\ldots
+ \end{array}
+\]
+At \(n=468\), reject for at least \(81\) zeros and randomize at \(80\)
+with probability \(0.998625929855047\ldots\), defined exactly by
+\[
+ \gamma=\frac{1/20-
+   \sum_{k=81}^{468}\binom{468}{k}(1/7)^k(6/7)^{468-k}}
+   {\binom{468}{80}(1/7)^{80}(6/7)^{388}}.
+\]
+Discarding an extra iid trial cannot reduce attainable full-record
+power, so the \(467/468\) boundary proves the minimum for this specified
+randomized fixed-horizon test class.  It does not include calibration
+trials or apply to the two-control reconstruction theorem.
+
+For a different, robust experiment suppose the conditional zero
+probability after every observed past is at most \(p_-\) under one
+class and at least \(p_+\) under the other, with \(g=p_+-p_->0\).
+Threshold the mean at \((p_-+p_+)/2\).
+The conditional exponential bound used in
+Lemma~\ref{op:bounded}, applied to the bounded martingale differences
+of the zero indicators, gives each error at most
+\(\exp(-ng^2/2)\).
+It suffices that \(n\ge\lceil2\log(20)/g^2\rceil\).
+For \(g=2/35\), this is \(1835\) trials.
+Independence is unnecessary for this conditional-mean argument, but
+the interval must hold under the actual filtration at every trial.
+An unconditional mean gap does not supply it.
+
+\subsection{Sampled generators and the information supplied by a clock}
+\label{op:time}
+
+A finite continuous-time Markov generator \(Q\) has nonnegative
+off-diagonal entries and zero row sums, and produces transition
+matrices \(e^{tQ}\) for \(t\ge0\).
+Recovering \(Q\) from sampled transitions is the classical embedding
+and matrix-exponential inverse problem
+\cite{op:baake,op:yue}.  It presupposes a state basis and time coordinate.
+
+\begin{theorem}[Two positive generators with all integer samples equal]
+\label{op:generator-alias}
+Let
+\[
+ C=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix},\quad
+ \Pi=\tfrac13\mathbf1\mathbf1^T,\quad R=I-\Pi,\quad A=C-C^2,
+\]
+and define
+\[
+ Q_0=-12R,\qquad Q_1=-12R+\frac{2\pi}{\sqrt3}A .
+\]
+Both are irreducible generators with uniform stationary distribution
+and strictly positive off-diagonal rates.
+They obey \(e^{nQ_0}=e^{nQ_1}\) for every integer \(n\ge0\), but are
+neither similar nor related by a positive scalar time rescaling,
+even when a similarity is also allowed.
+One is reversible and the other has nonzero stationary circulation.
+\end{theorem}
+\begin{proof}
+The off-diagonal rates are \(4\) for \(Q_0\) and
+\(4\pm2\pi/\sqrt3>0\) for \(Q_1\).
+The inequality follows, for example, from
+\(\pi<22/7<2\sqrt3\).
+Rows and columns sum to zero, so the uniform distribution is
+stationary; strict positive rates imply irreducibility and uniqueness.
+Direct algebra gives
+\[
+ A\Pi=\Pi A=0,\quad A^2=-3R,\quad AR=RA=A.
+\]
+Summing the exponential series on the invariant subspaces yields
+\[
+ e^{tQ_0}=\Pi+e^{-12t}R,\qquad
+ e^{tQ_1}=\Pi+e^{-12t}
+ \left[\cos(2\pi t)R+\frac{\sin(2\pi t)}{\sqrt3}A\right].
+\]
+At integer \(t\) the kernels agree.
+The spectra are \(0,-12,-12\) and \(0,-12\pm2\pi i\), respectively.
+Similarity preserves spectra, and a positive scalar cannot turn real
+nonzero eigenvalues into nonreal ones.
+The symmetric generator \(Q_0\) is reversible for the uniform law.
+For \(Q_1\), the oriented stationary flux difference along a cycle edge
+is \(\frac13[(4+2\pi/\sqrt3)-(4-2\pi/\sqrt3)]
+=4\pi/(3\sqrt3)>0\).
+\end{proof}
+
+\begin{proposition}[Exactly the integer-grid intervention menu]
+\label{op:grid-policy}
+Use either generator in Theorem~\ref{op:generator-alias}, a common
+initial law, and the same instantaneous labelled boundary controls
+and instruments.  Suppose every control and every readout, including
+silent state maps, occurs on the integer time grid, the between-boundary
+generator stays fixed, and the policy depends only on the common
+observed history and private randomness.
+Then the complete finite controlled observation-history laws agree.
+\end{proposition}
+\begin{proof}
+A fixed outcome-history probability is a row product of the initial
+law, transition matrices for nonnegative integer durations, and the
+corresponding boundary instrument matrices, followed by \(\mathbf1\).
+Every factor is common to the two descriptions, so the probability
+is common.  For an adaptive randomized policy, condition successively
+on each history; its next action, scheduling choice, and stop decision
+have the same conditional law.  Induction gives the result.
+\end{proof}
+
+Integer-grid readouts alone are insufficient if silent controls are
+allowed at off-grid times.  Persistent drives that change the generator,
+continuous monitoring, and observations of jump or waiting times also
+lie outside this menu and may supply distinguishing information.
+
+An anchored preparation of state one and a readout distinguishing
+states two and three at time \(t=1/4\) give the contrast
+\[
+ (e^{Q_1/4})_{12}-(e^{Q_1/4})_{13}
+ =\frac{2e^{-3}}{\sqrt3}
+ =0.0574891546486971\ldots ,
+\]
+whereas the contrast is zero for \(Q_0\).
+An unconditioned stationary uniform preparation has identical uniform
+marginals under both models and does not provide this witness.
+The contrast assumes a calibrated quarter-time setting; it is not
+claimed optimal and carries no trial-count guarantee.
+
+\begin{theorem}[Exact identification from two incommensurate times]
+\label{op:two-times}
+Let \(Q,B\) be finite real matrices represented in the same state basis.
+Let \(t_1,t_2>0\) have irrational ratio.
+If
+\[
+ e^{t_1Q}=e^{t_1B},\qquad e^{t_2Q}=e^{t_2B},
+\]
+then \(Q=B\).
+\end{theorem}
+\begin{proof}
+Denote the two common exponential matrices by \(M_1,M_2\).
+They are invertible and commute, since they are both functions of \(Q\).
+For every pair of integers \(m,n\),
+\[
+ e^{(mt_1+nt_2)Q}=M_1^mM_2^n=e^{(mt_1+nt_2)B}.
+\]
+The subgroup \(\{mt_1+nt_2:m,n\in\mathbb Z\}\) is dense in
+\(\mathbb R\).  One proof is that irrational rotation modulo \(t_2\)
+has arbitrarily small positive return differences by the pigeonhole
+principle; integer multiples of those differences approximate any
+real number, and all such multiples remain in the subgroup.
+Continuity gives equality of the exponentials for every real time.
+Differentiating at zero yields \(Q=B\).
+\end{proof}
+
+The proof does not assume \(Q\) and \(B\) commute with one another.
+Negative powers are algebraic inverses, not proposed physical operations
+at negative time.  The result requires full exact transition matrices,
+a common basis, homogeneous dynamics, and exact times.
+Finite-precision measurements cannot establish exact irrationality of
+a time ratio, and this uniqueness theorem is not a stability theorem.
+
+\begin{theorem}[No uniform inverse stability over unbounded rates]
+\label{op:rate-instability}
+Fix a nonzero real \(c\) and any finite collection of strictly positive
+observation times.  With the matrices \(R,A\) above, put
+\[
+ Q_a=-aR,\qquad B_a=-aR+cA,\qquad a>3|c|.
+\]
+These are irreducible Markov generators.  Their difference is the fixed
+nonzero matrix \(cA\), while
+\(\|e^{tQ_a}-e^{tB_a}\|\to0\) as \(a\to\infty\) at every specified
+time, for any matrix norm.
+Thus no uniform inverse error modulus holds over the unrestricted-rate
+class.  In particular, even when the menu is injective, as for two
+incommensurate times, its inverse is not uniformly continuous.
+\end{theorem}
+\begin{proof}
+Off-diagonal entries are \(a/3\) or \(a/3\pm c\), all positive.
+The same invariant-subspace calculation gives
+\[
+ e^{tB_a}-e^{tQ_a}
+ =e^{-at}\left[
+   (\cos(\sqrt3ct)-1)R+
+   \frac{\sin(\sqrt3ct)}{\sqrt3}A\right].
+\]
+For fixed positive \(t\), the bracket is bounded independently of \(a\)
+and the prefactor tends to zero.  A finite maximum over observation
+times tends to zero as well, while
+\(\|B_a-Q_a\|=|c|\|A\|>0\).
+\end{proof}
+
+On a specified compact generator class, the exact two-time map of
+Theorem~\ref{op:two-times} is continuous and injective, so its inverse
+on its image is uniformly continuous by compactness.
+That qualitative exception provides no quantitative modulus, and no
+joint finite-data result for uncertain timing and uncertain transition
+matrices is obtained here.
+
+\subsection{Scope of the mathematical conclusions}
+\label{op:scope}
+
+The positive results identify precisely what their declared experiments
+determine: autonomous coarse dynamics under a fiber condition; a
+classical predictive-state lower bound from a joint-law matrix; valid
+finite-sample or sequential tests under explicit sampling assumptions;
+finite-state reconstruction under exact anchored controls; and a
+generator under full exact observations at two incommensurate times.
+The counterexamples identify specific missing information: short-block
+agreement, a final channel without fragment access, a single silent
+control, open calibration uncertainty, or sampling on a coarse time
+grid can leave distinct descriptions observationally equivalent.
+
+All these conclusions are conditional on conventional mathematical
+primitives and the stated observation maps.  They do not select a
+physical tensor partition, demonstrate that a detector is independent,
+derive a probability rule from a prephysical proposal, or provide an
+emergent physical clock.  A physical correspondence must identify which
+preparations, interventions, outcomes, reset procedures, and timings
+realize the premises and must confront the appropriate competing
+observation laws.

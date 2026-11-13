@@ -1,0 +1,210 @@
+---
+title: "A Positive Reference-Modular Trace for Wilson–Dirac Intervals"
+author: 'Kirtus Justus (Theoretical Physicist) \textbullet{} 31 October 2026\tabularnewline Port Coquitlam, British Columbia, Canada'
+date: ''
+lang: en
+header-includes:
+ - \usepackage{microtype,booktabs,longtable}
+ - \setlength{\emergencystretch}{3em}
+---
+
+## Abstract
+
+We formulate the longitudinal reference-modular contribution to the quasifree relative entropy of a Wilson–Dirac interval in terms of a positive finite-matrix trace. A particle–hole pairing argument bounds the difference between the signed longitudinal generator and a positive reference logarithm. Together with an optimal scalar cubic envelope, a Wilson-majorant spectral-tail estimate, and the exact longitudinal Jacobi first moment, this yields a positive-trace reduction with an explicit one-sided, finite-dimensional error bound. The leading logarithmic asymptotic of that positive trace is **not** evaluated here. The full fixed-positive-scaled-mass entropy expansion is proved separately in Theorem 1 of *Finite Part of Wilson–Dirac Relative Entropy*, with a finite boundary trace path and remainder $O_\mu(1/\log L)$. This positive-trace reduction alone is not that proof.
+
+## 1. Finite reference and operator hypotheses
+
+For an even number of scalarized sites, \(N=2L\), consider the half-filled sine-kernel compression \(B_N\), the commuting tridiagonal Jacobi matrix \(J_N\), and
+
+\[
+W_N=B_N(I-B_N),\qquad K_N=\log(I-B_N)-\log B_N,\qquad
+E_N=K_N+N\eta(J_N/N).
+\]
+
+The infinite-line occupied-band projection is \(P_0\), compressed by the interval projection \(\chi_N\) to \(B_N\). The full-line Wilson majorant \(G\) and longitudinal perturbation \(S\) obey
+
+\[
+G\ge0,\qquad 0\le2G\le I,\qquad [G,P_0]=0,\qquad S=G(I-2P_0).
+\]
+
+Write \(G_N=\chi_NG\chi_N\) and \(S_N=\chi_NS\chi_N\). Finite compression preserves operator inequalities but **not** products. Let \(D=\mathrm{diag}((-1)^j)\); the half-filled symmetry gives
+\[
+DB_ND=I-B_N,\quad DJ_ND=-J_N,\quad DG_ND=G_N,\quad DS_ND=-S_N.
+\]
+
+The reference has \(0<B_N<I\), and it has no occupation eigenvalue equal to \(1/2\) when \(N\) is even: after reordering by site parity, \(B_N-I/2\) is off-diagonal with an invertible Cauchy block. Thus its upper and lower occupation sectors are exactly paired. Define \(H_N=\operatorname{sgn}(2B_N-I)\).
+
+We use the following separately established finite-interval estimates, with \(r=\mu/(N+\mu)\), \(\mu>0\) fixed:
+
+\[
+\begin{aligned}
+M_N&:=\operatorname{Tr}G_N
+=N\left[\frac12-\frac{\arccos r}{\pi\sqrt{1-r^2}}\right]\le\frac{\mu}{\pi},\\
+\nu_N((t,\infty))&:=\sum_{|\lambda_j|>t}\langle v_j,G_Nv_j\rangle
+\le\frac{a_\mu}{t}+\frac{b_\mu}{t^2},\\
+a_\mu&=\sqrt{\frac2{15}}\frac{\mu^2}{\pi},\qquad b_\mu=\frac{\mu}{3\pi},
+\end{aligned}
+\tag{1}
+\]
+
+where \(J_Nv_j=\lambda_jv_j\). The reference-crossing trace-class estimate is
+
+\[
+\operatorname{Tr}\sqrt{W_N}\le\frac2\pi I_N,\quad
+I_N=\int_0^\infty e^{-t}\frac{\sqrt{1-e^{-2Nt}}}{1-e^{-2t}}\,dt
+=\frac12\int_0^1\frac{\sqrt{1-u^N}}{\sqrt u(1-u)}\,du
+=O(\log N).
+\tag{2}
+\]
+
+The complete relative-entropy reduction is a separate mathematical input:
+
+\[
+\mathcal D_L(\mu)=\frac{\mu^2}{6}\log L+\operatorname{Tr}(S_NE_N)+O_\mu(\sqrt{\log L}).
+\tag{3}
+\]
+
+## 2. Positive reference-logarithm comparison
+
+**Lemma 1.** For any self-adjoint \(F_N\) satisfying \([F_N,B_N]=0\) and \(DF_ND=-F_N\),
+
+\[
+\left|\operatorname{Tr}(S_NF_N)+\operatorname{Tr}(G_NH_NF_N)\right|
+\le2\sqrt{M_N\,\operatorname{Tr}(W_NF_N^2)}.
+\tag{4}
+\]
+
+**Proof.** Choose a paired common eigenbasis of \(B_N,F_N\). For the eigenvector in the upper occupation sector write \(b>1/2\), \(f\) for the \(F_N\)-eigenvalue, \(q=\langle v,G_Nv\rangle\), \(s=\langle v,S_Nv\rangle\), and \(\theta=q+s\). The partner \(Dv\) has eigenvalues \(1-b,-f\) and expectations \(q,-s\). On the full line, \(G+S=2G(I-P_0)\) is positive and dominated both by \(I-P_0\) and \(2G\). Compression of these *inequalities* gives
+\[
+0\le\theta\le\min(1-b,2q).
+\]
+Hence, for \(w=b(1-b)\), \(\theta^2/w\le\theta/b\le2\theta\). Summing over upper occupations and using pair symmetry,
+\[
+\sum_+\frac{\theta_j^2}{w_j}\le2M_N,\quad
+\sum_+w_jf_j^2=\tfrac12\operatorname{Tr}(W_NF_N^2),
+\quad\operatorname{Tr}(S_NF_N)+\operatorname{Tr}(G_NH_NF_N)=2\sum_+\theta_j f_j.
+\]
+Cauchy–Schwarz proves (4). In particular, no commutation of \(G_N\) with \(B_N\) has been assumed. \(\square\)
+
+Take \(F_N=K_N\). Since \(H_NK_N=-|K_N|\) and the upper occupation eigenvalue of \(K_N\) is negative, its paired trace has a fixed sign:
+
+\[
+\boxed{\begin{gathered}0\le P_N-\operatorname{Tr}(S_NK_N)
+\le U_N:=2\sqrt{M_NT_{K,N}},\\
+P_N:=\operatorname{Tr}(G_N|K_N|)\ge0,\quad T_{K,N}:=\operatorname{Tr}(W_NK_N^2).
+\end{gathered}}
+\tag{5}
+\]
+
+The sharp scalar occupation-logarithm theorem, proved in the companion study *Finite-Interval Occupation Logarithm and Reference-Crossing Bounds*, gives \(b(1-b)\log^2((1-b)/b)\le C_{\log}\sqrt{b(1-b)}\), with \(C_{\log}=2x_*^2/\cosh x_*\), \(x_*\tanh x_*=2\). The same study proves \(I_N\le F_N:=\operatorname{arsinh}\sqrt{N-1}+\sqrt N\arcsin(N^{-1/2})\). Hence
+
+\[
+\boxed{U_N\le2\sqrt{\frac{2C_{\log}M_NF_N}{\pi}}=O_\mu(\sqrt{\log N}).}
+\tag{6}
+\]
+
+## 3. Uniformly bounded nonlinear Jacobi contribution
+
+The reference scaling function has the positive-coefficient integral series
+
+\[
+\eta(t)=4t\int_0^1\frac{\sqrt{1-u^2}}{\sqrt{1-4t^2u^4}}\,du
+=\pi t+\sum_{j\ge1}c_jt^{2j+1},\qquad c_j\ge0,
+\quad |t|\le\frac12.
+\]
+
+Since \(\eta(1/2)=2\operatorname{arsinh}(1)\), the optimal global cubic envelope on this scalar interval is
+
+\[
+\boxed{|\eta(t)-\pi t|\le C_\eta|t|^3,\quad
+C_\eta=16\operatorname{arsinh}(1)-4\pi.}
+\tag{7}
+\]
+
+From the tail bound (1) and layer cake,
+
+\[
+\frac1{N^2}\sum_jq_j|\lambda_j|^3
+=\frac3{N^2}\int_0^{N/2}t^2\nu_N((t,\infty))dt
+\le\frac{3a_\mu}{8}+\frac{3b_\mu}{2N}.
+\]
+
+The operator order \(-G_N\le S_N\le G_N\) then implies
+
+\[
+\boxed{
+\left|\operatorname{Tr}\left[S_N(N\eta(J_N/N)-\pi J_N)\right]\right|
+\le V_{N,\mu}:=C_\eta\left(\frac{3a_\mu}{8}+\frac{3b_\mu}{2N}\right)=O_\mu(1).}
+\tag{8}
+\]
+
+This bounds a **majorant-weighted trace**, not the operator-norm difference between the two generators.
+
+## 4. Finite-dimensional enclosure and asymptotic reduction
+
+**Theorem 2 (positive trace and directional error).** For every even \(N=2L\) and fixed positive \(\mu\), subject to the hypotheses and estimates in §1,
+
+\[
+\boxed{
+P_N+\pi\operatorname{Tr}(S_NJ_N)-U_N-V_{N,\mu}
+\le\operatorname{Tr}(S_NE_N)
+\le P_N+\pi\operatorname{Tr}(S_NJ_N)+V_{N,\mu}.}
+\tag{9}
+\]
+
+The fully explicit upper envelope (6) may replace \(U_N\) if \(T_{K,N}\) is not evaluated. The right-hand deviation from \(P_N+\pi\operatorname{Tr}(S_NJ_N)\) is bounded uniformly in \(N\); only the lower deviation is presently controlled at \(O_\mu(\sqrt{\log N})\).
+
+**Proof.** Decompose \(E_N=K_N+\pi J_N+[N\eta(J_N/N)-\pi J_N]\). Apply the signed inequality (5) to the first term and (8) to the final term. \(\square\)
+
+The companion exact Jacobi moment is
+
+\[
+\operatorname{Tr}(S_NJ_N)
+=\frac{N^2-1}{3\pi}
+\left[\frac{\mathbf E(1-r^2)-r^2\mathbf K(1-r^2)}{1-r^2}-1\right],
+\]
+
+with the elliptic **parameter** \(1-r^2\). NIST DLMF §19.12 gives its fixed-\(\mu\) expansion
+
+\[
+\pi\operatorname{Tr}(S_NJ_N)
+=-\frac{\mu^2}{6}\log N
++\frac{\mu^2}{4}-\frac{\mu^2}{6}\log\frac4\mu
++O_\mu\left(\frac{\log N}{N}\right).
+\]
+
+Combining with the separate entropy reduction (3), and \(\log N=\log L+\log2\), proves the positive-trace formulation
+
+\[
+\boxed{
+\mathcal D_L(\mu)=P_N+\frac{\mu^2}{4}-\frac{\mu^2}{6}\log\frac8\mu
++O_\mu(\sqrt{\log N}).}
+\tag{10}
+\]
+
+Equation (10) **does not identify the full entropy finite part**. The error is not known to converge. The complete leading coefficient \(\mu^2/6\) is equivalent, through (10), to the positive-trace condition below. It follows from the leading entropy theorem in *Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law*:
+
+\[
+\boxed{\operatorname{Tr}(G_N|K_N|)=\frac{\mu^2}{6}\log N+o_\mu(\log N).}
+\tag{11}
+\]
+
+## 5. Spectral-measure formulation
+
+Put \(A_N=|2B_N-I|\), whose spectrum lies in \([0,1)\). Spectral calculus yields
+
+\[
+P_N=2\int_0^1\operatorname{Tr}[G_NA_N(I-t^2A_N^2)^{-1}]\,dt
+=\int_0^\infty\operatorname{Tr}[G_N\mathbf1_{\{|K_N|>s\}}]ds.
+\tag{12}
+\]
+
+These positive operator-integral formulations require no Jacobi eigenvector ordering. They formulate the trace in terms of the weighted reference spectral measure. Its logarithmic growth is determined by the separate weighted asymptotic argument cited above; positivity alone does not determine the coefficient.
+
+## 6. Limitations and mathematical references
+
+The statements refer to infinite-chain band projections compressed to a finite interval and the fixed scaled-mass regime \(m=\mu/L\). They do not apply automatically to finite open-boundary ground states or establish estimates uniform in a moving spectral index. The leading entropy theorem uses the separate compact-interior and weighted modular bounds. A finite part and an inverse-logarithmic convergence rate are not established by the present reduction.
+
+The finite-interval majorant, reference crossing and entropy results invoked in §1 are mathematical inputs of the companion studies *Exact Spectral Majorants for a Wilson–Dirac Interval*, *Logarithmic Weighted Modular Control for the Half-Filled Sine Kernel*, *Exact Longitudinal Jacobi Moment and Wilson Majorant Mass*, and *Finite-Interval Wilson–Dirac Relative Entropy*, together with the sharp bound in *Finite-Interval Occupation Logarithm and Reference-Crossing Bounds*. The exact elliptic asymptotic is consistent with NIST Digital Library of Mathematical Functions, §19.12 (https://dlmf.nist.gov/19.12). Classical discrete-prolate context includes Slepian's 1978 discrete case and Grünbaum's 1981 commuting-tridiagonal results. Neither classical reference is asserted to establish this Wilson-specific theorem.
+
+**Contributions and acknowledgments.** Kirtus Justus directs the research and publication decisions. ChatGPT (OpenAI) developed the positive trace argument and its explicit enclosure in AI-assisted mathematical work, with numerical reconstructions and critical checks. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged in the broader program without an unsubstantiated claim of contribution to this particular derivation. No external peer review, institutional endorsement or formal machine-proof certification is asserted.

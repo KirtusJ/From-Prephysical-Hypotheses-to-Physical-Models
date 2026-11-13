@@ -1,0 +1,364 @@
+\section{Question and results}
+
+A parallel transport assigns to each path a map between the objects attached to its endpoints; its holonomy is the map attached to a closed path, and its monodromy is the part of the holonomy that survives when the transport is flat. This paper asks what these notions contribute to a passage from a structure specified without physical interpretation to quantum mechanics and to classical mechanics. Three questions are separated.
+
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Selection.} Does the presence of transport on a carrier select the quantum formalism? It does not (Proposition~\ref{prop:nonselection}).
+\item \emph{Exact relations.} Which statements connect transport in classical and in quantum models? Sections~\ref{sec:quantum} and~\ref{sec:cq} collect them. The item proved here is a determinant law: on complex projective space the Levi-Civita holonomy of a geodesic polygon has complex determinant equal to the $(n+1)$-th power of the phase of the Bargmann invariant (Proposition~\ref{prop:det}). The Levi-Civita transport is fixed by the transition probabilities, and Schild's ladder computes it from geodesic midpoints alone. Subdividing a polygon into thin triangles recovers the phase of the Bargmann invariant itself (Proposition~\ref{prop:fan}); the transition probabilities thus determine every such phase up to one complex conjugation applied to all of them at once, and nothing more (Corollary~\ref{cor:onebit}).
+\item \emph{Discrimination and obligations.} Given a transition-probability geometry, the full holonomy group of its Levi-Civita connection distinguishes complex quantum theory from the real, quaternionic, octonionic and ball-shaped alternatives, and so does the existence of a symplectic form on the pure states (Theorem~\ref{thm:disc}). A finite carrier with exact transitive symmetry cannot approximate the pure-state space of a quantum system in the Gromov--Hausdorff sense (Corollary~\ref{cor:gh}); for the qubit an explicit bound is given (Proposition~\ref{prop:bloch}). A finitely generated dense group of unitary matrices with algebraic entries does not determine the transition probabilities of its orbit: a field automorphism gives a second invariant transition probability on the same orbit (Proposition~\ref{prop:galois}). The transition-probability geometries of two systems do not determine that of the composite system, nor the relative orientation of their complex structures (Propositions~\ref{prop:comp} and~\ref{prop:orient}).
+\end{enumerate}
+
+The statements are mathematical. A discriminator presupposes the transition-probability geometry it is applied to; it does not derive that geometry. No physical correspondence is asserted, and no structure considered here is shown to produce quantum or classical mechanics. Section~\ref{sec:status} lists what remains open.
+
+\section{Setting}\label{sec:setting}
+
+\subsection{Transition-probability geometries}
+A \emph{transition probability} on a set $P$ is a function $p\colon P\times P\to[0,1]$ with $p(x,y)=p(y,x)$ and $p(x,y)=1$ exactly when $x=y$. For a complex Hilbert space $\mathbb{C}^{n+1}$ the pure states are the points $[a]$ of $\mathbb{CP}^n$, with $a$ a unit vector, and $p([a],[b])=|\langle a|b\rangle|^2$. The function
+\begin{equation}\label{eq:dist}
+d(x,y)=\arccos\sqrt{p(x,y)}
+\end{equation}
+is the geodesic distance of the Fubini--Study metric, normalized so that the projection $\pi\colon S^{2n+1}\to\mathbb{CP}^n$ from the unit sphere is a Riemannian submersion. The same formula defines the metric on the real and quaternionic projective spaces and on the octonionic plane. For a ball-shaped state space of dimension $m+1$ the pure states form a sphere $S^m$ with $p(x,y)=(1+x\cdot y)/2$, and \eqref{eq:dist} gives the round metric of radius $1/2$. In a classical model $p(x,y)=\delta_{xy}$ and \eqref{eq:dist} defines no Riemannian structure.
+
+The normalization in \eqref{eq:dist} fixes the scale of the metric. The sectional curvature is then identically $1$ on $\mathbb{RP}^m$ and identically $4$ on the spheres of the ball-shaped theories; on $\mathbb{CP}^n$ and $\mathbb{HP}^n$ with $n\ge2$ and on $\mathbb{OP}^2$ it takes all values in $[1,4]$, the value $4$ on the projective lines and the value $1$ on totally real planes \cite{besse,gorodski}.
+
+\subsection{Horizontal representation in the complex case}
+The tangent space of $\mathbb{CP}^n$ at $[a]$ is represented by the \emph{horizontal space} $a^\perp=\{w\in\mathbb{C}^{n+1}:\langle a|w\rangle=0\}$; the pairs $(a,w)$ and $(e^{i\alpha}a,e^{i\alpha}w)$ represent the same tangent vector. Multiplication by $i$ on $a^\perp$ is the complex structure $J$. For unit vectors $a_0,\dots,a_{k-1}$ with $a_k=a_0$ and $\langle a_j|a_{j+1}\rangle\neq0$ the \emph{Bargmann invariant} is
+\begin{equation}\label{eq:bargmann}
+B(a_0,\dots,a_{k-1})=\prod_{j=0}^{k-1}\langle a_j|a_{j+1}\rangle ,
+\end{equation}
+with the inner product antilinear in its first argument. It does not depend on the phases of the representatives \cite{bargmann,mukundasimon}.
+
+\subsection{Classes compared}
+Under the three single-system postulates of Barnum, M\"uller and Ududec (classical decomposability, strong symmetry, no third-order interference) the non-classical theories are real, complex and quaternionic quantum theory, the three-level octonionic theory and the ball-shaped state spaces \cite{bmu}. Their pure-state manifolds are listed in Table~\ref{tab:disc}. This list is the comparison class of Section~\ref{sec:disc}. Theories with third-order interference lie outside it.
+
+\section{Transport does not select a representation}\label{sec:nonselection}
+
+\begin{proposition}\label{prop:nonselection}
+Let $\Gamma$ be a finite connected graph with $r$ independent cycles and let $G$ be any group. Assigning an element $g_e\in G$ to each oriented edge, with $g_{\bar e}=g_e^{-1}$, and identifying assignments that differ by $g_e\mapsto h_{t(e)}g_eh_{s(e)}^{-1}$ for a function $h$ on vertices, gives a set in bijection with $G^r$ modulo simultaneous conjugation. In particular every $r$-tuple of elements of every group is the holonomy of a transport on $\Gamma$.
+\end{proposition}
+
+\begin{proof}
+Choose a spanning tree. A unique vertex function $h$ with $h=1$ at a base vertex makes $g_e=1$ on the tree. The $r$ remaining edges carry arbitrary elements, which are the holonomies of the fundamental cycles through the base vertex; the remaining freedom is a constant $h$, which conjugates all of them.
+\end{proof}
+
+The loop structure of a carrier therefore determines neither the group in which holonomies take values nor the values. The same closed path carries a conjugacy class in a finite group, a rotation, or a phase, according to the transport placed on it. For the geodesic triangle on the sphere with vertices on the three coordinate axes (solid angle $\pi/2$) the Levi-Civita transport gives the rotation by $\pi/2$ and the spin-$j$ coherent states give the phase $j\pi/2$; the computed values are in \cite{comp}. Paper G6 proves that a connected Hermitian matrix is recovered, up to diagonal phase changes, from the moduli of its entries and its cycle products \cite{g6}; there the matrix is supplied, and the cycle products are its holonomies. In all these cases the transport is additional data.
+
+\section{Holonomy inside quantum mechanics}\label{sec:quantum}
+
+\subsection{Triple invariant of a qubit}
+\begin{proposition}\label{prop:qubit}
+For unit vectors $a,b,c\in\mathbb{R}^3$ and $P_a=\tfrac12(1+a\cdot\sigma)$,
+\[
+\operatorname{Tr}(P_aP_bP_c)=\tfrac14\bigl(1+a\cdot b+b\cdot c+c\cdot a+i\,a\cdot(b\times c)\bigr).
+\]
+\end{proposition}
+\begin{proof}
+Expand the product and use $(a\cdot\sigma)(b\cdot\sigma)=a\cdot b+i(a\times b)\cdot\sigma$, $\operatorname{Tr}\sigma_k=0$ and $\operatorname{Tr}[(a\cdot\sigma)(b\cdot\sigma)(c\cdot\sigma)]=2i\,a\cdot(b\times c)$.
+\end{proof}
+The trace equals the Bargmann invariant of the three states. Its phase is half the oriented solid angle of the geodesic triangle $abc$ on the Bloch sphere. Classical point states give values in $\{0,1\}$ and real amplitudes give a real invariant, so a phase other than $0$ and $\pi$ witnesses complex amplitudes; the three pairwise overlaps do not determine it. The measurability of such invariants and the experimental comparison of real and complex quantum theory are treated in \cite{obg,renou}.
+
+\subsection{Levi-Civita transport along a geodesic}
+\begin{lemma}\label{lem:transport}
+Let $a,u\in\mathbb{C}^{n+1}$ be orthonormal and $\gamma(t)=\cos t\,a+\sin t\,u$. Let $R_t$ be the unitary map that sends $a\mapsto\cos t\,a+\sin t\,u$, $u\mapsto-\sin t\,a+\cos t\,u$ and fixes the orthogonal complement of $\operatorname{span}_{\mathbb{C}}\{a,u\}$. For $w\in a^\perp$ the field $W(t)=R_tw$ is horizontal at $\gamma(t)$ and represents the Levi-Civita parallel transport of $w$ along the geodesic $\pi\circ\gamma$.
+\end{lemma}
+\begin{proof}
+$R_t$ is unitary and $R_ta=\gamma(t)$, so $\langle\gamma(t)|W(t)\rangle=\langle a|w\rangle=0$. Write $w=\alpha u+w'$ with $\alpha\in\mathbb{C}$ and $w'$ orthogonal to $a$ and $u$. Then $W(t)=\alpha(-\sin t\,a+\cos t\,u)+w'$ and $\dot W(t)=-\alpha\,\gamma(t)$. The real multiple of $\gamma(t)$ is normal to the sphere and the imaginary multiple is tangent to the fibre of $\pi$. Hence the covariant derivative of $W$ in $S^{2n+1}$ along the horizontal curve $\gamma$ has vanishing horizontal part. For a Riemannian submersion the horizontal part of the covariant derivative of a horizontal lift along a horizontal curve is the lift of the covariant derivative in the base \cite{oneill}. So $W$ represents a parallel field.
+\end{proof}
+
+\subsection{Determinant law}
+A \emph{geodesic polygon} is a closed path in $\mathbb{CP}^n$ through points $[a_0],\dots,[a_{k-1}],[a_k]=[a_0]$ whose consecutive points are joined by the minimal geodesic; consecutive points are assumed non-orthogonal.
+
+\begin{proposition}[Determinant law]\label{prop:det}
+The Levi-Civita holonomy $T$ of a geodesic polygon in $\mathbb{CP}^n$, as a map of the horizontal space $a_0^\perp$, is complex-linear and unitary, and
+\begin{equation}\label{eq:det}
+\det\nolimits_{\mathbb{C}}T=\Bigl(\frac{B}{|B|}\Bigr)^{n+1},\qquad B=B(a_0,\dots,a_{k-1}).
+\end{equation}
+If $w\in a_0^\perp$ is orthogonal to every $a_j$, then $Tw=(B/|B|)\,w$.
+\end{proposition}
+\begin{proof}
+Lift the polygon horizontally: put $\tilde a_0=a_0$ and let $\tilde a_{j+1}$ be the multiple of $a_{j+1}$ by a phase with $\langle\tilde a_j|\tilde a_{j+1}\rangle>0$. Writing $\tilde a_j=e^{i\alpha_j}a_j$ gives $\alpha_{j+1}=\alpha_j-\arg\langle a_j|a_{j+1}\rangle$, so $\tilde a_k=e^{i\theta}a_0$ with $\theta=-\arg B$, that is, $e^{i\theta}=\overline{B}/|B|$ and $e^{-i\theta}=B/|B|$. On the $j$-th side apply Lemma~\ref{lem:transport} with $a=\tilde a_j$ and $u$ the unit vector along $\tilde a_{j+1}-\langle\tilde a_j|\tilde a_{j+1}\rangle\tilde a_j$, up to the parameter value at which $\gamma$ reaches $\tilde a_{j+1}$. Let $U$ be the product of the resulting unitary maps. Each factor is a real rotation in a complex two-dimensional subspace and the identity on its complement, so $\det U=1$. By construction $Ua_0=\tilde a_k=e^{i\theta}a_0$; therefore $U$ preserves $a_0^\perp$ and $\det(U|_{a_0^\perp})=e^{-i\theta}$. The transported vector is represented by $(\tilde a_k,Uw)$, equivalently by $(a_0,e^{-i\theta}Uw)$. Thus $T=e^{-i\theta}\,U|_{a_0^\perp}$, which is complex-linear and unitary on a space of complex dimension $n$, and $\det_{\mathbb{C}}T=e^{-in\theta}e^{-i\theta}=(B/|B|)^{n+1}$. Each factor of $U$ fixes the vectors orthogonal to the span of the $a_j$, so for such $w$ one has $Uw=w$ and $Tw=e^{-i\theta}w$.
+\end{proof}
+
+\begin{remark}
+For $n=1$ the law gives a rotation by $2\arg B$, the solid angle of the polygon on the Bloch sphere, in agreement with Proposition~\ref{prop:qubit}. In general \eqref{eq:det} states that the holonomy of the top exterior power of the tangent bundle is the $(n+1)$-th power of the holonomy of the natural connection on the bundle of unit vectors over $\mathbb{CP}^n$, which is the geometric phase \cite{berry,simon,samuelbhandari}.
+\end{remark}
+
+\begin{corollary}\label{cor:schild}
+The transition probabilities of $\mathbb{CP}^n$ determine, for every geodesic polygon, the number $(B/|B|)^{n+1}$ up to complex conjugation. If the vertices of the polygon do not span $\mathbb{C}^{n+1}$, they determine $B/|B|$ up to complex conjugation.
+\end{corollary}
+\begin{proof}
+By \eqref{eq:dist} the transition probabilities determine the Riemannian metric, hence $T$ as a real-linear map. $T$ commutes with exactly two complex structures on the tangent space that are parallel, $J$ and $-J$ (Theorem~\ref{thm:disc}); they give conjugate determinants. The subspace of $a_0^\perp$ orthogonal to the vertices is the set of tangent vectors at $[a_0]$ orthogonal to the smallest totally geodesic complex projective subspace containing the polygon, which the metric determines; on it $T$ is multiplication by $B/|B|$ for $J$ and by its conjugate for $-J$.
+\end{proof}
+
+Schild's ladder transports a vector using geodesic midpoints and geodesic doubling only, so it is defined by the metric \eqref{eq:dist}. Table~\ref{tab:schild} compares a ladder computation with \eqref{eq:det}. The conjugation ambiguity in Corollary~\ref{cor:schild} is the ambiguity between unitary and antiunitary maps that preserve transition probabilities.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}cllll@{}}\toprule
+$n$ & $\arg B$ & $(n+1)\arg B$ & $\arg\det_{\mathbb{C}}T$, Schild's ladder & $\lVert T_{\mathrm{ladder}}-T_{\mathrm{Lemma}}\rVert$\\\midrule
+1 & $\phantom{-}0.2437942$ & $\phantom{-}0.4875884$ & $\phantom{-}0.4875909$ & $2.5\times10^{-6}$\\
+2 & $\phantom{-}0.0395055$ & $\phantom{-}0.1185166$ & $\phantom{-}0.1185172$ & $5.7\times10^{-7}$\\
+3 & $-0.1170973$ & $-0.4683893$ & $-0.4683915$ & $1.6\times10^{-6}$\\\bottomrule
+\end{tabular}
+\caption{Geodesic triangles with random vertices at distance $0.6$ from a random base point. The ladder uses $600$ rungs per side and rung length $2\times10^{-3}$, with the transports of $w$ and $-w$ differenced. For $n=3$ the triangle does not span $\mathbb{C}^4$ and the ladder holonomy has an eigenvalue within $2\times10^{-6}$ of $B/|B|$. Numerical evaluation in double precision; not an error enclosure \cite{comp}.}\label{tab:schild}
+\end{table}
+
+\subsection{Recovery of the phase}
+The power $n+1$ in \eqref{eq:det} leaves $B/|B|$ undetermined up to an $(n+1)$-th root of unity when the vertices span $\mathbb{C}^{n+1}$. The ambiguity is removed by subdivision.
+
+\begin{proposition}[Fan of thin triangles]\label{prop:fan}
+Let $[a_0],\dots,[a_{k-1}]$ be a geodesic polygon in $\mathbb{CP}^n$ such that $a_0$ is orthogonal to no point of the sides joining $[a_j]$ to $[a_{j+1}]$, $1\le j\le k-2$. Divide each of these sides by points $[c_{j,0}]=[a_j],[c_{j,1}],\dots,[c_{j,N}]=[a_{j+1}]$ of the minimal geodesic, and let $B_{j,i}$ and $T_{j,i}$ be the Bargmann invariant and the Levi-Civita holonomy of the geodesic triangle $[a_0],[c_{j,i}],[c_{j,i+1}]$. Then
+\begin{equation}\label{eq:fan}
+\frac{B}{|B|}=\prod_{j=1}^{k-2}\prod_{i=0}^{N-1}\frac{B_{j,i}}{|B_{j,i}|},
+\end{equation}
+and for all sufficiently large $N$ every factor is the $(n+1)$-th root of $\det_{\mathbb{C}}T_{j,i}$ with argument in $(-\pi/(n+1),\pi/(n+1))$.
+\end{proposition}
+\begin{proof}
+\emph{Refinement of a side.} Let $p,q$ be unit vectors with $\langle p|q\rangle=e^{i\beta}|\langle p|q\rangle|\ne0$, and let $\gamma(t)=\cos t\,p+\sin t\,u$ be the horizontal lift from $p$ of the minimal geodesic from $[p]$ to $[q]$, which reaches $e^{-i\beta}q$ at $t=t_N<\pi/2$. For $0=t_0<t_1<\dots<t_N$ one has $\langle\gamma(t_i)|\gamma(t_{i+1})\rangle=\cos(t_{i+1}-t_i)>0$. With the representatives $\gamma(t_i)$ for the interior points, the product $\langle p|\gamma(t_1)\rangle\cdots\langle\gamma(t_{N-1})|q\rangle$ equals a positive number times $e^{i\beta}$. The Bargmann invariant does not depend on representatives, so inserting the points changes $B$ by a positive factor.
+
+\emph{Fan.} For unit vectors $b_1,\dots,b_m$ none of which is orthogonal to $a_0$,
+\[
+\prod_{l=1}^{m-1}B(a_0,b_l,b_{l+1})=B(a_0,b_1,\dots,b_m)\prod_{l=2}^{m-1}|\langle a_0|b_l\rangle|^2 .
+\]
+Applied to the refined polygon this gives \eqref{eq:fan}.
+
+\emph{Roots.} By Proposition~\ref{prop:det}, $\det_{\mathbb{C}}T_{j,i}=(B_{j,i}/|B_{j,i}|)^{n+1}$. As the mesh of the subdivision tends to zero, $B(a_0,c,c')$ tends to $|\langle a_0|c\rangle|^2$ uniformly for $[c],[c']$ on a side, and this quantity is bounded below by a positive constant by hypothesis and compactness. Hence $\arg B_{j,i}\to0$ uniformly, and for large $N$ each $B_{j,i}/|B_{j,i}|$ is the root of $\det_{\mathbb{C}}T_{j,i}$ nearest to $1$.
+\end{proof}
+
+\begin{corollary}[One conjugation]\label{cor:onebit}
+The transition probabilities of $\mathbb{CP}^n$, $n\ge1$, determine the function that assigns to each geodesic polygon the number $B/|B|$ up to complex conjugation of the whole function. They do not determine it further.
+\end{corollary}
+\begin{proof}
+The metric determines the subdivision points and the holonomies $T_{j,i}$ as real-linear maps. The parallel complex structures are $J$ and $-J$ (Theorem~\ref{thm:disc}), and each is determined on all of $\mathbb{CP}^n$ by its value at one point. With $J$ the right-hand side of \eqref{eq:fan} is $B/|B|$; with $-J$ every determinant is conjugated and the result is $\overline{B}/|B|$. The polygons satisfying the hypothesis of Proposition~\ref{prop:fan} are dense among geodesic polygons, on which $B/|B|$ is continuous. Conversely, complex conjugation of coordinates in a basis preserves all transition probabilities and conjugates every Bargmann invariant; for instance the states $(1,0)$, $(\sqrt3/2,1/2)$, $(\sqrt3/2,i/2)$ have transition probabilities $3/4,5/8,3/4$ and $B=(9+3i)/16$, and their conjugates have the same probabilities and $B=(9-3i)/16$.
+\end{proof}
+
+The statement that the transition probabilities fix the phases up to one conjugation also follows from Wigner's theorem, by which a bijection of pure states preserving transition probabilities is induced by a unitary or an antiunitary map \cite{bargmann}; Proposition~\ref{prop:fan} adds a construction of the phases from the metric. It concerns the transition probabilities among all states. The three transition probabilities of a triple alone do not determine its Bargmann phase even up to sign when $n\ge2$: the Gram matrices with off-diagonal moduli $1/2$ and triple phase $\theta$ are positive semidefinite for every $\theta$, with determinant $(1+\cos\theta)/4$. For a qubit they determine it up to conjugation \cite{lwz}. Table~\ref{tab:fan} records instances of \eqref{eq:fan}.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}ccrrrr@{}}\toprule
+$n$ & vertices & $\arg B$ & root of $\det_{\mathbb{C}}T$, whole polygon & fan, $N=4$ & residual of fan, $N=64$\\\midrule
+2 & 3 & $0.247795$ & $0.247795$ & $0.247795$ & $1.0\times10^{-15}$\\
+2 & 4 & $-0.297712$ & $-0.297712$ & $-0.297712$ & $4.1\times10^{-15}$\\
+3 & 4 & $0.094825$ & $0.094825$ & $0.094825$ & $1.4\times10^{-15}$\\
+3 & 5 & $-0.783410$ & $-0.783410$ & $-0.783410$ & $2.5\times10^{-16}$\\
+4 & 5 & $2.715582$ & $0.202307$ & $2.715582$ & $6.7\times10^{-16}$\\\bottomrule
+\end{tabular}
+\caption{Random geodesic polygons whose vertices span $\mathbb{C}^{n+1}$. Third column: phase of the Bargmann invariant. Fourth column: argument of the root of $\det_{\mathbb{C}}T$ nearest to $1$ for the undivided polygon; in the last row it differs from $\arg B$ by $2\pi\cdot2/5$. Fifth and sixth columns: formula \eqref{eq:fan} with closed-form transport. With the conjugate complex structure the same computation returns $-\arg B$. Double precision \cite{comp2}.}\label{tab:fan}
+\end{table}
+
+\section{Holonomy and monodromy as a discriminator}\label{sec:disc}
+
+For a Riemannian manifold $M$ and a point $x$, the \emph{holonomy group} is the group of Levi-Civita transports round all closed paths at $x$; the \emph{restricted} holonomy group uses contractible paths only. The \emph{commutant} is the algebra of real-linear maps of $T_xM$ commuting with the holonomy group. A parallel complex structure exists exactly when the commutant contains an element of square $-1$.
+
+\begin{table}[ht]\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}llllll@{}}\toprule
+Theory & Pure states & Restricted holonomy & Holonomy & Commutant & Symplectic form\\\midrule
+real, $m\ge2$ & $\mathbb{RP}^m$ & $\mathrm{SO}(m)$ & $\mathrm{O}(m)$ or $\mathrm{SO}(m)$ & $\mathbb{R}$ & none\\
+complex, $n\ge1$ & $\mathbb{CP}^n$ & $\mathrm{U}(n)$ & $\mathrm{U}(n)$ & $\mathbb{C}$ & exists\\
+quaternionic, $n\ge1$ & $\mathbb{HP}^n$ & $\mathrm{Sp}(n)\mathrm{Sp}(1)$ & $\mathrm{Sp}(n)\mathrm{Sp}(1)$ & $\mathbb{R}$ & none\\
+octonionic & $\mathbb{OP}^2$ & $\mathrm{Spin}(9)$ & $\mathrm{Spin}(9)$ & $\mathbb{R}$ & none\\
+ball, $m\ne2$ & $S^m$ & $\mathrm{SO}(m)$ & $\mathrm{SO}(m)$ & $\mathbb{R}$ & none\\\bottomrule
+\end{tabular}
+\caption{Pure-state manifolds of the comparison class with the metric \eqref{eq:dist}. The real, complex and quaternionic theories have $m+1$ or $n+1$ levels; the octonionic theory has three; the ball has dimension $m+1$. The holonomy group of $\mathbb{RP}^m$ is $\mathrm{O}(m)$ for even $m$ and $\mathrm{SO}(m)$ for odd $m$. The ball of dimension $3$ is the qubit, $S^2=\mathbb{CP}^1$; the ball of dimension $2$ is the two-level real theory, $S^1=\mathbb{RP}^1$; $\mathbb{HP}^1=S^4$.}\label{tab:disc}
+\end{table}
+
+\begin{theorem}\label{thm:disc}
+For a non-classical theory of the comparison class of Section~\ref{sec:setting}, with pure-state manifold $M$ carrying the metric \eqref{eq:dist}, the following are equivalent.
+\begin{enumerate}[label=(\alph*)]
+\item The theory is complex quantum theory.
+\item The commutant of the holonomy group of $M$ is isomorphic to $\mathbb{C}$.
+\item $M$ admits a symplectic form.
+\end{enumerate}
+In case (a) the parallel complex structures are $\pm J$, and the symplectic forms invariant under the identity component of the isometry group are the nonzero constant multiples of $g(J\cdot,\cdot)$.
+\end{theorem}
+
+\begin{proof}
+The manifolds of Table~\ref{tab:disc} are the compact symmetric spaces of rank one, and the restricted holonomy group of each is its linear isotropy group, as listed \cite{berger,besse}.
+
+(a)$\Rightarrow$(b). By Lemma~\ref{lem:transport} the transport along every geodesic commutes with multiplication by $i$, so $J$ is parallel along every geodesic; hence $\nabla J=0$, every holonomy of $\mathbb{CP}^n$ is complex-linear, and the commutant contains $\mathbb{C}$. The holonomy representation of an irreducible symmetric space is irreducible, so by Schur's lemma the commutant is $\mathbb{R}$, $\mathbb{C}$ or $\mathbb{H}$. If it were $\mathbb{H}$ the holonomy group would lie in a compact symplectic group and every holonomy would have determinant $1$ with respect to $J$; by \eqref{eq:det} and Proposition~\ref{prop:qubit} a small geodesic triangle in a projective line has $\det_{\mathbb{C}}T\neq1$. The complex structures in $\mathbb{C}$ are $\pm J$.
+
+(b)$\Rightarrow$(a). The standard representation of $\mathrm{SO}(m)$ on $\mathbb{R}^m$ has commutant $\mathbb{R}$ for $m=1$ and $m\ge3$ and commutant $\mathbb{C}$ for $m=2$. This settles the spheres, where $S^2$ is the qubit, and the odd real projective spaces. For $\mathbb{RP}^m$ the closed geodesic generating the fundamental group lifts to half a great circle from $a$ to $-a$ in $S^m$; the transport along it fixes the vectors orthogonal to the circle and reverses the tangent, and the identification of the tangent spaces at $a$ and $-a$ is multiplication by $-1$. The resulting holonomy fixes the tangent direction and reverses its orthogonal complement, with determinant $(-1)^{m-1}$. For $m=2$ it is a reflection; together with the rotations it generates $\mathrm{O}(2)$, whose commutant is $\mathbb{R}$. The isotropy representations of $\mathrm{Sp}(n)\mathrm{Sp}(1)$ on $\mathbb{R}^{4n}$ and of $\mathrm{Spin}(9)$ on $\mathbb{R}^{16}$ are irreducible of real type \cite{besse}.
+
+(a)$\Rightarrow$(c). The form $g(J\cdot,\cdot)$ is closed and nondegenerate.
+
+(c)$\Rightarrow$(a). On a compact manifold of dimension $2k$ without boundary a symplectic form $\omega$ makes $\omega^k$ a volume form, so the manifold is orientable and the class of $\omega$ in $H^2(M;\mathbb{R})$ is nonzero. Odd-dimensional manifolds and the non-orientable $\mathbb{RP}^{2k}$ are excluded. $H^2(S^m;\mathbb{R})=0$ for $m\neq2$; the real cohomology of $\mathbb{HP}^n$ is concentrated in degrees divisible by $4$ and that of $\mathbb{OP}^2$ in degrees $0$, $8$, $16$.
+
+Last statement. The identity component of the isometry group acts transitively with isotropy representation $\mathrm{U}(n)$. An invariant $2$-form is determined by its value at one point, which is a skew form invariant under $\mathrm{U}(n)$; such forms are $g(A\cdot,\cdot)$ with $A$ skew in the commutant, that is, $A$ a real multiple of $J$.
+\end{proof}
+
+\begin{remark}[Curvature and monodromy]\label{rem:rp2}
+The three-level real theory and the qubit have pure-state manifolds $\mathbb{RP}^2$ and $S^2$ of the same dimension and diameter $\pi/2$. Their restricted holonomy groups coincide, so the commutant of the holonomies round contractible loops is $\mathbb{C}$ for both, and criterion (b) of Theorem~\ref{thm:disc} separates them only through the non-contractible loop of $\mathbb{RP}^2$, whose holonomy is a reflection and removes the parallel complex structure. The metrics themselves are not locally isometric: with the normalization \eqref{eq:dist} the curvature is $1$ on $\mathbb{RP}^2$ and $4$ on the qubit sphere, so the rotation angle of the holonomy round a small loop is the enclosed area in the first case and four times it in the second. Monodromy is therefore needed for the commutant criterion and is not the only quantity that separates the two geometries; orientability and the fundamental group separate them as well. In the real theories the bundle of unit vectors over the pure states is a double cover with a flat connection; its holonomy is $-1$ on non-contractible loops and $+1$ on contractible ones, so the sign of a real Bargmann invariant is a monodromy. In the complex theory the curvature of the corresponding connection is a $2$-form invariant under the unitary group, hence by Theorem~\ref{thm:disc} a constant multiple of $g(J\cdot,\cdot)$, and by Proposition~\ref{prop:qubit} the constant is not zero.
+\end{remark}
+
+\begin{remark}[Relation to known characterizations]
+Condition (c) uses no dynamics. Barnum, M\"uller and Ududec select complex quantum theory from the same class by requiring that generators of reversible evolution correspond to conserved observables \cite{bmu}. On $\mathbb{CP}^n$ the Schr\"odinger evolution generated by $H$ is the Hamiltonian flow of $\langle H\rangle$ for the form $2\operatorname{Im}\langle\cdot|\cdot\rangle$ \cite{kibble,ashtekar}. Landsman's axioms describe the pure-state space of either mechanics as a Poisson space with a transition probability; for quantum mechanics the sectors of the transition probability are the symplectic leaves, and the Poisson structure is fixed up to a constant identified with Planck's constant \cite{landsman1,landsman2}. In the algebraic setting Alfsen and Shultz call a suitable map from observables to generators of one-parameter groups a dynamical correspondence and show that a Jordan algebra of observables admitting one is the self-adjoint part of a complex $C^*$-algebra \cite{alfsenshultz,baez}. The symplectic form of (c) realizes such a map, $H\mapsto X_H$. Conditions (b) and (c), observability of energy and the existence of a dynamical correspondence are thus forms of one requirement. None of them is derived from another principle here. A reversible real-linear dynamics supplies a complex structure of its own: Stueckelberg argued that a real quantum theory needs an operator of square $-1$ commuting with the observables \cite{stueckelberg}, Moretti and Oppio derive a complex structure, unique up to sign, from an irreducible real representation of the Poincar\'e group \cite{mo}, and for a single orthogonal map the complex structure for which the generator is positive is unique and is reversed with the map \cite{g9}. In the model of \cite{g9} the projections that serve as records do not commute with it, so this route presupposes that the observables are generated by the dynamics.
+\end{remark}
+
+\begin{proposition}[Generators and observables]\label{prop:count}
+For a theory of the comparison class let $g$ be the dimension of the isometry group of the pure-state manifold and $o$ the dimension of the space of observables modulo constants. Then
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}\toprule
+Theory & $g$ & $o$ & $g=o$\\\midrule
+real, $N$ levels & $N(N-1)/2$ & $N(N+1)/2-1$ & never for $N\ge2$\\
+complex, $N$ levels & $N^2-1$ & $N^2-1$ & always\\
+quaternionic, $N$ levels & $N(2N+1)$ & $N(2N-1)-1$ & never\\
+octonionic, $3$ levels & $52$ & $26$ & no\\
+ball of dimension $d$ & $d(d-1)/2$ & $d$ & only for $d=3$\\\bottomrule
+\end{tabular}
+\end{center}
+and $g=o$ exactly for complex quantum theory, the ball of dimension $3$ being the qubit.
+\end{proposition}
+\begin{proof}
+The isometry groups have the Lie algebras $\mathfrak{so}(N)$, $\mathfrak{su}(N)$, $\mathfrak{sp}(N)$, $\mathfrak{f}_4$ and $\mathfrak{so}(d)$, and the observables form the Jordan algebras of symmetric real, Hermitian complex and Hermitian quaternionic $N\times N$ matrices, of Hermitian octonionic $3\times3$ matrices, and $\mathbb{R}^d\oplus\mathbb{R}$, of dimensions $N(N+1)/2$, $N^2$, $N(2N-1)$, $27$ and $d+1$ \cite{bmu,baez}. The equation $g=o$ reads $N=1$ in the real case, $2N=-1$ in the quaternionic case and $d=3$ for the balls.
+\end{proof}
+A linear bijection between observables modulo constants and generators requires $g=o$. The count is a necessary condition for the requirement of the preceding remark and is recorded as a check of it \cite{comp2}.
+
+Theorem~\ref{thm:disc} and the last remark give the following comparison. In classical Hamiltonian mechanics the pure states are the points of a symplectic manifold, $p=\delta$, and the symplectic form is data independent of $p$. In complex quantum theory the pure states form a symplectic manifold whose form is determined by $p$ up to a constant, through the holonomy of the metric that $p$ defines. In the other theories of the comparison class the pure states carry no symplectic form. ``The pure states form a symplectic manifold'' is thus a condition satisfied by classical mechanics and by complex quantum theory and by no other member of the class. It is a postulate that a candidate may be required to meet. It is not derived here from anything.
+
+Theorem~\ref{thm:disc} is a statement about the comparison class. Outside it the conditions do not single out quantum theory. The classical statistical model of a spin, whose states are the probability measures on a sphere $S^2$ with its area form, has pure states forming a symplectic manifold and has additive probabilities, hence no interference of any order; it is not a quantum theory, its state space is an infinite-dimensional simplex, and the uniform measure and the equal mixture of two antipodal points, which the map to the qubit Bloch ball identifies, are separated by the classical observable $n\mapsto n_z^2$ with expectations $1/3$ and $1$. The absence of third-order interference and a symplectic form on the pure states are therefore not jointly sufficient without the remaining postulates of the class.
+
+A finite-dimensional example outside the class, due to Director~G, is the convex hull $K$ of the tensors $n\otimes n\otimes n$, $n\in S^2$, in the ten-dimensional space of symmetric tensors of degree three, a Veronese orbitope \cite{orbitopes}. Its extreme points form a sphere. With $\tau$ the contraction of two indices, $\tau(n\otimes n\otimes n)=n$, the affine tests $F_m(T)=\tfrac12(1+m\cdot\tau(T))$ take the values $\tfrac12(1+m\cdot n)$ on the extreme points, the transition probabilities of the qubit. The test $E_m(T)=\tfrac12(1+\langle T,m\otimes m\otimes m\rangle)$ has the value $1/2$ on the equal mixture of two antipodal extreme points and $5/8$ on the equal mixture of three extreme points at mutual angle $2\pi/3$ on a great circle through $m$, with $m$ one of the three; all tests $F_m$ give $1/2$ on both. Two readings have to be kept apart. If only the tests $F_m$, with preparation of the extreme point indicated by the outcome, are admitted, the statistics of every sequence of tests depend on $T$ through $\tau(T)$ alone, and the model is the qubit. If every affine function with values in $[0,1]$ on $K$ is admitted as a test, then $T\mapsto\tfrac12+\tfrac12q(T)$, with $q$ the linear function equal to $x^3-3xy^2$ on $n\otimes n\otimes n$ for $n=(x,y,z)$, is a test: on the unit sphere $x^3-3xy^2=\sin^3\vartheta\cos3\phi$ in polar coordinates. It has the value $1$ at the extreme point with azimuth $0$ on the equator and $0$ at the one with azimuth $\pi/3$, where the qubit value is $3/4$. Pure states at angle $\pi/3$ are then perfectly distinguishable, and the function $\tfrac12(1+m\cdot n)$ is one of several functions singled out by tests of the model; a numerical linear program gives infimum $0$ for all angles from $\pi/3$ on \cite{comp3}. The example shows that a designated table of tests on pure states does not determine the convex set of states. It does not possess the transition-probability geometry of the qubit as a structure of its own.
+
+Table~\ref{tab:comm} records numerical commutant dimensions for holonomies of random geodesic triangles; they agree with Table~\ref{tab:disc}.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lcccccccc@{}}\toprule
+ & $\mathbb{CP}^2$ & $\mathbb{CP}^3$ & $S^2$ & $S^3$ & $S^4$ & $S^8$ & $\mathbb{RP}^2$, contractible & $\mathbb{RP}^2$, all loops\\\midrule
+commutant dimension & 2 & 2 & 2 & 1 & 1 & 1 & 2 & 1\\\bottomrule
+\end{tabular}
+\caption{Dimension of the real commutant of computed holonomy matrices \cite{comp}. For $\mathbb{RP}^2$ the non-contractible loop was also transported by Schild's ladder, with determinant $-0.999995$.}\label{tab:comm}
+\end{table}
+
+\section{Relations between classical and quantum models}\label{sec:cq}
+
+The following relations are established in the literature; the computations cited from \cite{comp} are finite instances.
+
+\emph{Prequantization.} On a symplectic manifold $(M,\omega)$ with $\omega/2\pi\hbar$ integral there is a Hermitian line bundle with connection of curvature $\omega/\hbar$ \cite{kostant,souriau}. Triviality of its holonomy on the Lagrangian tori of an integrable system is the Bohr--Sommerfeld condition. For the unit sphere with $\omega$ equal to $\hbar j$ times the area form the integrality condition is $2j\in\mathbb{Z}$, and the holonomy of the bundle round a loop enclosing solid angle $\Omega$ is $e^{ij\Omega}$.
+
+\emph{Coherent states.} For the spin-$j$ coherent states $|n\rangle$, $n\in S^2$ \cite{perelomov},
+\begin{equation}\label{eq:coh}
+|\langle n|n'\rangle|^2=\Bigl(\frac{1+n\cdot n'}{2}\Bigr)^{2j}=\cos^{4j}(\vartheta/2),
+\end{equation}
+with $\vartheta$ the angle between $n$ and $n'$. As $j\to\infty$ the transition probability restricted to coherent states tends to $\delta_{nn'}$, the angle at which it equals $1/2$ being asymptotic to $\sqrt{2\ln2/j}$, while the Bargmann phase of a coherent-state triangle is $j$ times the solid angle. The restriction therefore tends to the classical pair ($p=\delta$, symplectic form the area form) when the form is divided by $j$.
+
+\emph{Monodromy.} An integrable system with a focus-focus singular value has no global action variables; the lattice of local actions has nontrivial monodromy round the singular value \cite{duistermaat,cushman}. The joint spectrum of the quantized system is locally a lattice, and its monodromy equals the classical one \cite{vungoc}. For the spherical pendulum $H=\tfrac{\hbar^2}{2}L^2+\cos\theta$ the transported lattice cell returns shifted by one site for loops enclosing the singular value $(\ell,E)=(0,1)$ and unshifted for loops that do not, at $\hbar=0.05,0.04,0.03,0.02$ \cite{comp}.
+
+These relations connect two models that are both given. Each uses the symplectic form or the complex line bundle as data.
+
+\section{Obligations on finite carriers}\label{sec:finite}
+
+Reconstructions of quantum theory from operational postulates use a connected group acting transitively on pure states \cite{hardy,masanesmueller}. A finite structure has a finite automorphism group. A finite carrier therefore has to produce the pure-state space in a limit. This section restricts the form such a limit can take.
+
+A metric space is \emph{homogeneous} if its isometry group acts transitively on it.
+
+\begin{proposition}\label{prop:bloch}
+Let $F$ be a finite subset of the unit sphere $S^2$ that is homogeneous in the induced metric. Then some point of $S^2$ has angular distance at least $\arccos(59/60)\approx10.475^\circ$ from every point of $F$. If $F$ is an orbit of a finite group of rotations, the distance is at least $\arccos(29/30)\approx14.835^\circ$.
+\end{proposition}
+\begin{proof}
+An isometry of $F$ preserves inner products and extends to an orthogonal map of the span of $F$, hence of $\mathbb{R}^3$. If $F$ lies in a plane through the origin, a unit normal of that plane is at distance $\pi/2$ from $F$. Otherwise $F$ spans $\mathbb{R}^3$, the orthogonal maps preserving $F$ form a finite group $G$, and $F$ is an orbit of $G$. A finite subgroup of $\mathrm{O}(3)$ either preserves a line or is one of the polyhedral groups, of order at most $120$ \cite{coxeter}. If $G$ preserves a line, the points of $F$ lie on the parallels at colatitudes $t$ and $\pi-t$ about that line for some $t\in[0,\pi/2]$; a pole is at distance $t$ from $F$ and a point of the equator at distance at least $\pi/2-t$, and one of the two is at least $\pi/4$. Otherwise $|F|\le120$. Caps of angular radius $\rho$ about the points of $F$ have total area at most $120\cdot2\pi(1-\cos\rho)$, which is less than $4\pi$ when $\cos\rho>59/60$. A finite group of rotations either preserves a line or is a polyhedral rotation group of order at most $60$, and the same count gives $\cos\rho\le29/30$.
+\end{proof}
+
+Reflections of the Bloch sphere are induced by antiunitary maps, so the first bound refers to symmetries of the transition probability and the second to symmetries induced by unitary maps. The bounds come from an area count and are not sharp. For the full icosahedral group a fundamental triangle, with angles $\pi/2,\pi/3,\pi/5$, is the set of points nearer to a given orbit point inside it than to any other orbit point \cite{lavi}; the covering radius of the best orbit is therefore the circumradius of that triangle, $18.7125^\circ$. Numerical minimization over orbits of the polyhedral groups gives the same value for the full icosahedral group and $18.718^\circ$ for its rotation subgroup \cite{comp,comp2}. Lavi determines the corresponding optimum, $0.3208$ in Euclidean Hausdorff distance, when the orbit is not required to lie on the sphere \cite{lavi}. These values are computed instances and play no part in the proof.
+
+\begin{theorem}[Turing; Gelander]\label{thm:tg}
+A compact connected Lie group is approximable by finite groups if and only if it is abelian \cite{turing,breuillard}. A metric space is a Gromov--Hausdorff limit of finite homogeneous metric spaces if and only if it admits a compact group of isometries that acts transitively and whose identity component is abelian; the connected components of such a limit are inverse limits of tori \cite{gelander}.
+\end{theorem}
+
+\begin{corollary}\label{cor:gh}
+For $n\ge1$ the space $\mathbb{CP}^n$ with the metric \eqref{eq:dist} is not a Gromov--Hausdorff limit of finite homogeneous metric spaces. The same holds for $S^m$ with $m\ge2$, $\mathbb{RP}^m$ with $m\ge2$, $\mathbb{HP}^n$ and $\mathbb{OP}^2$. The circle $S^1$ and the tori are such limits.
+\end{corollary}
+\begin{proof}
+Each of the listed spaces is a compact connected manifold of positive dimension. By Theorem~\ref{thm:tg} a connected limit is an inverse limit of tori, and the only manifolds that arise as such limits are tori \cite{gelanderlect}. None of the listed spaces is homeomorphic to a torus: $\mathbb{CP}^n$, $\mathbb{HP}^n$, $\mathbb{OP}^2$ and $S^m$ with $m\ge2$ are simply connected, and $\mathbb{RP}^m$ with $m\ge2$ has fundamental group of order two. The cyclic subgroups of the circle are finite homogeneous spaces converging to it, and products give the tori.
+\end{proof}
+
+Consequently a sequence of finite carriers converging to a quantum pure-state space cannot have a transitive symmetry group at each stage. Three possibilities remain and are recorded without assessment of their merit.
+\begin{enumerate}[label=(\arabic*)]
+\item \emph{Inhomogeneous approximants.} Every compact metric space is a limit of finite metric spaces. The symmetry of the limit is then absent at every finite stage, and a candidate has to state why it appears.
+\item \emph{Finite generating data.} A finitely generated subgroup of a compact group can be dense. Its elements are words of unbounded length in finitely many generators, and the sets of words of bounded length are not homogeneous. Table~\ref{tab:words} gives an instance in which the generators are stipulated rotations; it illustrates the form of this possibility and derives nothing.
+\item \emph{Phases.} The abelian case is not obstructed: holonomies with values in the cyclic groups $\mathbb{Z}_N$ approximate holonomies in $\mathrm{U}(1)$. The limit is not determined by the finite stages, since the cyclic groups have the circle as a direct-limit closure and the profinite integers as an inverse limit. For a cyclic group of order $N$ the real value assigned to a count of holonomies depends on which faithful character is used unless $N\in\{1,2,3,4,6\}$ \cite{g8}.
+\end{enumerate}
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+word length at most & 4 & 8 & 12 & 16 & 20 & 24 & 28\\\midrule
+distinct rotations & 19 & 128 & 494 & 1525 & 4428 & 12629 & 35935\\
+orbit points & 8 & 35 & 113 & 338 & 971 & 2770 & 7882\\
+covering radius (degrees) & 90.0 & 47.3 & 24.1 & 16.3 & 9.1 & 7.5 & 4.4\\\bottomrule
+\end{tabular}
+\caption{Orbit of the point $(0,0,1)$ under words in the half-turn about $(1,0,1)/\sqrt2$ and the rotation by $\pi/4$ about $(0,0,1)$. Stipulated: the two rotations. Observed: the counts and covering radii \cite{comp}. From length $20$ the covering radius is below the bounds of Proposition~\ref{prop:bloch}.}\label{tab:words}
+\end{table}
+
+Possibility (2) meets a further limitation. Let $\zeta=e^{i\pi/4}$ and
+\[
+H=\frac{1}{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad T=\begin{pmatrix}1&0\\0&\zeta\end{pmatrix},
+\]
+and let $\Gamma$ be the group generated by $H$ and $T$. Its elements have entries in the ring $\mathbb{Z}[\zeta,1/2]$, and its image in the projective unitary group is dense \cite{boykin}; the rotations of Table~\ref{tab:words} are the images of $H$ and $T$. Let $\sigma$ be the automorphism of the field $\mathbb{Q}(\zeta)$ with $\sigma(\zeta)=\zeta^3$, so that $\sigma(\sqrt2)=-\sqrt2$ and $\sigma(i)=-i$ \cite{selinger}.
+
+\begin{proposition}[Conjugate embeddings]\label{prop:galois}
+Applying $\sigma$ to matrix entries defines an automorphism of $\Gamma$ with $\sigma(H)=-H$ and $\sigma(T)=T^3$. Let $X=\Gamma\cdot[e_0]\subset\mathbb{CP}^1$ be the orbit of the first basis state, with the transition probability $p$ of $\mathbb{CP}^1$. Then
+\[
+p'(g[e_0],h[e_0])=p(\sigma(g)[e_0],\sigma(h)[e_0])
+\]
+is a well-defined transition probability on $X$, invariant under $\Gamma$, with $p'=\sigma\circ p$; the completion of $X$ for either of the metrics $\arccos\sqrt p$ and $\arccos\sqrt{p'}$ is isometric to $\mathbb{CP}^1$; $p'\ne p$; and the identity map of $X$ is not uniformly continuous from one metric to the other.
+\end{proposition}
+\begin{proof}
+The Galois group of $\mathbb{Q}(\zeta)$ over $\mathbb{Q}$ is abelian, so $\sigma$ commutes with complex conjugation and $\sigma(g)^*\sigma(g)=\sigma(g^*g)=1$: the matrix $\sigma(g)$ is unitary. $\sigma$ is a ring automorphism, hence multiplicative on matrices and injective. Since $1/\sqrt2=(\zeta-\zeta^3)/2$ is mapped to its negative, $\sigma(H)=-H$ and $\sigma(T)=T^3$. The scalar $\zeta$ lies in $\Gamma$, because $(T^2H)^3=\zeta$; hence $-1\in\Gamma$ and $\sigma(\Gamma)=\Gamma$. The stabilizer of $[e_0]$ in $\Gamma$ consists of its diagonal matrices and is preserved by $\sigma$, so $p'$ is well defined; it is symmetric, invariant, and equals $1$ only on the diagonal because $\sigma$ is injective on $\Gamma$ modulo the stabilizer. For $x=g[e_0]$, $y=h[e_0]$ the number $p(x,y)=|\langle ge_0|he_0\rangle|^2$ lies in $\mathbb{Q}(\sqrt2)$ and $p'(x,y)=\sigma(p(x,y))$. The map $x=g[e_0]\mapsto\sigma(g)[e_0]$ is a bijection of $X$ carrying $p'$ to $p$, and $X$ is dense in $\mathbb{CP}^1$, which gives the statement on completions. For $g=HTH$, $h=1$ one finds $p=(2+\sqrt2)/4$ and $p'=(2-\sqrt2)/4$.
+
+Suppose the identity of $X$ were uniformly continuous from $\arccos\sqrt p$ to $\arccos\sqrt{p'}$. Composed with the bijection above it would extend to a continuous map $\phi$ of $\mathbb{CP}^1$ onto itself with $\phi(gx)=\sigma(g)\phi(x)$ for $g\in\Gamma$. If $g_k\to1$ in the projective unitary group, then $\sigma(g_k)\phi(x)=\phi(g_kx)\to\phi(x)$ for every $x$, so $\sigma(g_k)\to1$. Thus $\sigma$ would extend to a continuous automorphism of the projective unitary group, which is isomorphic to $\mathrm{SO}(3)$. Every such automorphism is inner and preserves rotation angles. But $T$ acts on the Bloch sphere as a rotation by $\pi/4$ and $\sigma(T)=T^3$ as a rotation by $3\pi/4$.
+\end{proof}
+
+The group $\Gamma$ with its two generators, and the subgroup stabilizing a state, are specified without reference to the real numbers. Proposition~\ref{prop:galois} shows that these data do not determine the transition probability on the orbit: an ordering of the field in which $p$ takes its values has to be supplied in addition. Complex conjugation, the automorphism $\zeta\mapsto\zeta^{-1}$, leaves $p$ unchanged and is the conjugation of Corollary~\ref{cor:onebit}; the automorphism $\sigma$ changes $p$. Table~\ref{tab:galois} gives exact values. Among the $21310$ elements of $\Gamma$ modulo scalars that are words of length at most $26$, one has $p=0.9953$ and $p'=0.0672$ \cite{comp2}. For phases in a cyclic group the corresponding statement is in \cite{g8}.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}llll@{}}\toprule
+word $g$ & $|\langle e_0|ge_0\rangle|^2$, exact & $p$ & $p'$\\\midrule
+$HTH$ & $1/2+\sqrt2/4$ & $0.853553$ & $0.146447$\\
+$HTTH$ & $1/2$ & $0.5$ & $0.5$\\
+$HTHTH$ & $3/4$ & $0.75$ & $0.75$\\
+$HTHTHTTHTTTH$ & $3/4-\sqrt2/8$ & $0.573223$ & $0.926777$\\\bottomrule
+\end{tabular}
+\caption{Transition probabilities between $[e_0]$ and $g[e_0]$ for the embedding $\zeta=e^{i\pi/4}$ and for its conjugate. Exact arithmetic in $\mathbb{Q}(\zeta)$ \cite{comp2}.}\label{tab:galois}
+\end{table}
+
+\section{Composition}\label{sec:comp}
+
+The statements above concern one system. Reconstructions of quantum theory treat the composition of systems by a separate postulate \cite{hardy,masanesmueller}. The following two statements record what the single-system geometry leaves open.
+
+\begin{proposition}\label{prop:comp}
+Let $\mathcal{S}_{\min}$ be the convex hull of the product states $\rho_A\otimes\rho_B$ of two qubits and $\mathcal{S}_Q$ the set of all density operators on $\mathbb{C}^2\otimes\mathbb{C}^2$. Both contain all product states, have the qubit state space as the set of states of each factor, and are invariant under local unitary maps; $\mathcal{S}_{\min}\ne\mathcal{S}_Q$.
+\end{proposition}
+\begin{proof}
+The first three properties are immediate. The singlet state has partial transpose with eigenvalues $-1/2,1/2,1/2,1/2$ and is not in $\mathcal{S}_{\min}$, whose elements have positive partial transpose. Its value of the Clauser--Horne--Shimony--Holt expression is $2\sqrt2$, against at most $2$ on $\mathcal{S}_{\min}$.
+\end{proof}
+$\mathcal{S}_{\min}$ is the minimal tensor product of generalized probabilistic theories \cite{ewc}. The two composites have the same single-system transition probabilities, holonomies and reversible single-system transformations. These data therefore do not determine the composite.
+
+\begin{proposition}[Relative orientation]\label{prop:orient}
+Let $R$ be the reflection $(x,y,z)\mapsto(x,-y,z)$ of the Bloch sphere of the second qubit, an isometry of its transition-probability geometry, extended to an affine map of the Bloch ball. Then $(\mathrm{id}\otimes R)\mathcal{S}_Q\ne\mathcal{S}_Q$. For $m$ qubits, the images of the set of density operators under reflections of the factors in a subset $Y$ are equal for $Y$ and its complement, and are otherwise distinct, giving $2^{m-1}$ sets; the signs $\varepsilon_{jk}=s_js_k$, with $s_j=-1$ for $j\in Y$ and $s_j=1$ otherwise, satisfy $\varepsilon_{jk}\varepsilon_{kl}\varepsilon_{lj}=1$.
+\end{proposition}
+\begin{proof}
+$\mathrm{id}\otimes R$ is the partial transpose, which maps the singlet state to an operator with eigenvalue $-1/2$. In terms of the correlation matrix $t_{ab}=\langle\sigma_a\otimes\sigma_b\rangle$ the singlet has $t=-1$ with determinant $-1$, and its image has determinant $+1$. Reflection of all factors is the transpose, which preserves the set of density operators; reflection of a proper nonempty subset is a partial transpose, under which the image of a state entangled across the corresponding bipartition, for instance a state of the form $(|0\cdots0\rangle+|1\cdots1\rangle)/\sqrt2$, is not positive. The identity for the signs is $s_j^2=1$.
+\end{proof}
+The geometry of each factor is symmetric under $R$, and the composite is not. A composite of quantum systems thus fixes the relative orientation of the complex structures $J$ of its factors, while Corollary~\ref{cor:onebit} leaves each orientation free. The pairwise relative orientations form a signing of the complete graph on the systems in which every triangle has product $+1$; such a signing is balanced in the sense used for signed graphs \cite{g3}, and it is equivalent to an assignment of orientations up to reversing all of them. Only the common reversal is without effect. The values quoted in the proofs are recomputed in \cite{comp2}.
+
+\section{Status of the statements}\label{sec:status}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.38\textwidth}@{}}\toprule
+Statement & Kind\\\midrule
+Propositions~\ref{prop:nonselection}, \ref{prop:qubit}, \ref{prop:det}, \ref{prop:fan}, \ref{prop:count}, \ref{prop:bloch}, \ref{prop:galois}, \ref{prop:comp}, \ref{prop:orient}; Lemma~\ref{lem:transport}; Corollaries~\ref{cor:schild}, \ref{cor:onebit} & derived results, proofs given here; Proposition~\ref{prop:galois} uses the density of $\Gamma$ quoted from \cite{boykin}\\
+Theorem~\ref{thm:disc} & derived result; uses the holonomy groups and cohomology of the rank-one symmetric spaces and the classification of \cite{bmu}\\
+Theorem~\ref{thm:tg} & quoted from \cite{turing,gelander}\\
+Corollary~\ref{cor:gh} & consequence of Theorem~\ref{thm:tg}\\
+Tables~\ref{tab:schild}, \ref{tab:fan}, \ref{tab:comm}, \ref{tab:words}, \ref{tab:galois}; monodromy index; covering radii & computed instances\\
+Section~\ref{sec:cq} & relations quoted from the literature\\\bottomrule
+\end{tabular}
+\end{center}
+
+The following are not established.
+\begin{enumerate}[label=(\roman*)]
+\item No structure specified without quantum or classical data has been shown to yield a transition-probability geometry of the comparison class, or to satisfy the postulates that define that class.
+\item The condition that pure states form a symplectic manifold separates complex quantum theory within the comparison class. A reason for imposing it that does not presuppose Hamiltonian dynamics is not known to the author.
+\item Corollary~\ref{cor:onebit} leaves one conjugation undetermined for each system, and Proposition~\ref{prop:orient} shows that composition fixes the relative choices. What fixes them in a structure specified without quantum data is not identified.
+\item Proposition~\ref{prop:galois} shows that algebraic generating data determine transition probabilities only up to field automorphisms. A principle that selects the ordering, or that confines the data to fields in which complex conjugation is the only automorphism, is not given.
+\item For each of the three possibilities of Section~\ref{sec:finite} no construction from a finite relational structure is supplied. Paper \cite{g8} gives a construction conditional on stated assumptions for the second and third possibilities. No account is given here of a principle that selects the composite of Section~\ref{sec:comp}.
+\item The statements have not been refereed, and the numerical tables are not error enclosures.
+\end{enumerate}

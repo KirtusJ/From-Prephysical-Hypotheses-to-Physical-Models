@@ -1,0 +1,239 @@
+\section{Question and results}
+
+Paper G7 shows that a transport on a finite graph can take arbitrary values in an arbitrary group, so that the presence of transport selects no representation \cite{g7}. The present paper asks a different question about the same object. Suppose a transport is given. Which numerical functions of sets of walks can depend on it at all, if they are to be unchanged by the changes of the transport that leave its holonomy fixed?
+
+\begin{enumerate}[label=(\roman*)]
+\item A function that is additive over walks, with one weight function of the gain for all walks, cannot depend on the transport; if walks returning to the starting vertex are weighted separately, their weight is a class function of the gain (Lemma~\ref{lem:first}).
+\item A function additive in pairs of walks, vanishing on pairs with different end vertices and given by one rule for all graphs, is invariant exactly when it is a class function of the holonomy of the pair, and strongly positive exactly when that class function is a non-negative combination of irreducible characters (Theorem~\ref{thm:main}). Its extreme forms are squared norms of sums of representation matrices (Corollary~\ref{cor:born}).
+\item Such a function has interference of second order and none of third order (Corollary~\ref{cor:interf}); it defines a Hilbert space and a transition probability (Proposition~\ref{prop:hilbert}); it is multiplicative under the product of gain graphs, whose Hilbert space at each length is the tensor product (Proposition~\ref{prop:tensor}); for the indicator of the identity it is the count of coincidences on a covering graph (Proposition~\ref{prop:cover}); the rays of events of long walks are dense in a projective space determined by the gains of closed walks of even length (Proposition~\ref{prop:growth}); and it reduces to counting when walks leave distinct records (Proposition~\ref{prop:records}).
+\item For cyclic gains the values are independent of the choice of faithful character only for the orders $1,2,3,4,6$ (Proposition~\ref{prop:rigid}).
+\end{enumerate}
+
+Section~\ref{sec:limits} states what the construction assumes and what it fails to give. The statements are mathematical. The construction is a test object for the program's question of what a relational structure must supply before a physical reading is warranted; it is not put forward as a physical model.
+
+\section{Setting}\label{sec:setting}
+
+Let $\Gamma$ be a finite connected simple graph with vertex set $V$, and let $G$ be a finite group. A \emph{gain function} assigns to each oriented edge $e$ an element $\varphi(e)\in G$ with $\varphi(\bar e)=\varphi(e)^{-1}$ for the reversed edge $\bar e$; the pair $(\Gamma,\varphi)$ is a \emph{gain graph} \cite{zaslavsky,reff}. For $h\colon V\to G$ the \emph{switched} gain function is $\varphi^h(e)=h(t(e))\,\varphi(e)\,h(s(e))^{-1}$, where $s(e)$ and $t(e)$ are the initial and terminal vertices. A signed graph is the case $G=\{\pm1\}$ \cite{g3}. A \emph{walk} $w=(e_1,\dots,e_k)$ is a sequence of oriented edges with $t(e_i)=s(e_{i+1})$; its gain is $\varphi(w)=\varphi(e_k)\cdots\varphi(e_1)$, and
+\begin{equation}\label{eq:switch}
+\varphi^h(w)=h(t(w))\,\varphi(w)\,h(s(w))^{-1}.
+\end{equation}
+The gains of closed walks at a vertex $x$ form the \emph{holonomy group} at $x$, which switching replaces by a conjugate. Two walks are \emph{coterminous} if they have the same initial and the same terminal vertex; for such walks $\varphi(w)\varphi(w')^{-1}$ is the gain of the closed walk that follows $w'$ backwards and then $w$, and by \eqref{eq:switch} switching conjugates it by $h(t(w))$.
+
+Fix a vertex $x$ and a length $k$, and let $\Omega$ be the set of walks of length $k$ starting at $x$. Subsets of $\Omega$ are called \emph{events}. For a real function $\mu$ on events and pairwise disjoint events $S_1,\dots,S_r$ the \emph{interference term of order $r$} is
+\[
+I_r(S_1,\dots,S_r)=\sum_{\emptyset\ne c\subseteq\{1,\dots,r\}}(-1)^{r-|c|}\,\mu\Bigl(\bigcup_{i\in c}S_i\Bigr),
+\]
+following Sorkin \cite{sorkin}. A function $D$ on pairs of events is \emph{bi-additive} if it is additive under disjoint union in each argument, \emph{Hermitian} if $D(S',S)=\overline{D(S,S')}$, and \emph{strongly positive} if for all events $S_1,\dots,S_r$ the matrix $D(S_i,S_j)$ is positive semidefinite \cite{djs}. A bi-additive function is determined by its values $d(w,w')$ on pairs of single walks.
+
+\section{Additive functions}
+
+A walk is \emph{closed} if it ends at its starting vertex and \emph{open} otherwise.
+
+\begin{lemma}\label{lem:first}
+Let $F_{\mathrm o},F_{\mathrm c}\colon G\to\mathbb{R}$ and, for every gain graph, let
+\[
+\mu(S)=\sum_{w\in S\ \mathrm{open}}F_{\mathrm o}(\varphi(w))+\sum_{w\in S\ \mathrm{closed}}F_{\mathrm c}(\varphi(w)).
+\]
+Then $\mu$ is unchanged by switching for every gain graph with gain group $G$ if and only if $F_{\mathrm o}$ is constant and $F_{\mathrm c}$ is a class function. In particular, if one function $F_1=F_{\mathrm o}=F_{\mathrm c}$ is used for all walks, it is constant and $\mu$ is a multiple of the number of walks.
+\end{lemma}
+\begin{proof}
+Take a graph containing a walk $w$ from $x$ to a vertex $y\ne x$ with gain $a$. Switching with $h(y)=b$ and $h=1$ elsewhere changes its gain to $ba$ by \eqref{eq:switch}. Invariance of $\mu(\{w\})$ gives $F_{\mathrm o}(ba)=F_{\mathrm o}(a)$ for all $a,b\in G$. Take a triangle $x,m,m'$ with gains $1$, $1$ and $a$ on the edges $xm$, $mm'$ and $m'x$; the closed walk round it has gain $a$, and switching with $h(x)=b$ changes it to $bab^{-1}$ by \eqref{eq:switch}. So $F_{\mathrm c}(bab^{-1})=F_{\mathrm c}(a)$. Conversely, by \eqref{eq:switch} switching conjugates the gain of a closed walk, and a constant and a class function give an invariant $\mu$.
+\end{proof}
+
+For walks that do not return to the starting vertex the lowest order at which a set function can depend on the gains is therefore the second. For returning walks a dependence of first order exists. For $G=\mathbb{Z}_3$ and $F_{\mathrm c}=1+\operatorname{Re}\chi$ with $\chi$ a faithful character, closed walks of gain $0$ and $1$ have weights $2$ and $1/2$; this example is due to Directors A, B and G. Such a function is non-negative and additive, so it has no interference of any order: it is a classical weighting of returning walks by their holonomy. It uses the distinction between returning and non-returning walks, which is an instance of the role of end vertices as records assumed in Section~\ref{sec:pair}.
+
+\section{Pair functions}\label{sec:pair}
+
+A \emph{pair rule} is a function $F\colon G\times G\to\mathbb{C}$. For a gain graph, a vertex $x$ and a length $k$ it defines the bi-additive function
+\begin{equation}\label{eq:D}
+D_F(S,S')=\sum_{\substack{w\in S,\ w'\in S'\\ t(w)=t(w')}}F\bigl(\varphi(w),\varphi(w')\bigr).
+\end{equation}
+Three assumptions are built into \eqref{eq:D}: the function is of second order; pairs of walks with different end vertices do not contribute; and the contribution of a coterminous pair depends on the two gains only, by a rule that is the same for all graphs and vertices and for closed and open walks.
+
+\begin{theorem}\label{thm:main}
+Let $F$ be a pair rule for the finite group $G$.
+\begin{enumerate}[label=(\alph*)]
+\item $D_F$ is unchanged by switching for every gain graph, vertex and length if and only if $F(a,b)=f(ab^{-1})$ for a class function $f$ on $G$.
+\item In that case $D_F$ is Hermitian and strongly positive for every gain graph, vertex and length if and only if
+\begin{equation}\label{eq:pd}
+f=\sum_\rho c_\rho\,\chi_\rho,\qquad c_\rho\ge0,
+\end{equation}
+where $\rho$ runs over the irreducible unitary representations of $G$ and $\chi_\rho$ is the character of $\rho$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) If $F(a,b)=f(ab^{-1})$ with $f$ a class function, then by \eqref{eq:switch} switching replaces $ab^{-1}$ by a conjugate for every coterminous pair, and $D_F$ is unchanged. Conversely, let $\Gamma$ have vertices $x,m_1,m_2,y$ and edges $xm_1,m_1y,xm_2,m_2y$, with gains $1$ on the edges at $x$ and gains $a,b$ on the edges $m_1y,m_2y$. The two walks of length $2$ from $x$ to $y$ have gains $a$ and $b$. Switching with $h(y)=h$, $h(x)=k$ and $h(m_i)=k$ gives gains $hak^{-1}$ and $hbk^{-1}$. Invariance of $D_F(\{w_1\},\{w_2\})$ gives $F(hak^{-1},hbk^{-1})=F(a,b)$ for all $h,k$. With $k=b$, $h=1$ this is $F(a,b)=F(ab^{-1},1)=:f(ab^{-1})$, and with $b=1$, $k=h$ it is $f(hah^{-1})=f(a)$.
+
+(b) The characters $\chi_\rho$ form a basis of the class functions, so $f=\sum_\rho c_\rho\chi_\rho$ with complex $c_\rho$ \cite{serre}. If all $c_\rho\ge0$, put $A_\rho(S,y)=\sum_{w\in S,\,t(w)=y}\rho(\varphi(w))$. Since $\chi_\rho(ab^{-1})=\operatorname{Tr}\rho(a)\rho(b)^*$,
+\begin{equation}\label{eq:rep}
+D_F(S,S')=\sum_\rho c_\rho\sum_{y\in V}\operatorname{Tr}A_\rho(S,y)\,A_\rho(S',y)^* ,
+\end{equation}
+a non-negative combination of Gram matrices, hence Hermitian and strongly positive. Conversely, let $\Gamma$ have vertices $x$, $y$ and $m_g$ for $g\in G$, with edges $xm_g$ of gain $1$ and $m_gy$ of gain $g$. The walks $w_g$ of length $2$ from $x$ to $y$ have $D_F(\{w_g\},\{w_h\})=f(gh^{-1})$. On the group algebra, with basis $G$, the matrix $f(gh^{-1})$ is $\sum_\rho c_\rho\,(|G|/d_\rho)\,\Pi_\rho$, where $d_\rho$ is the dimension of $\rho$ and $\Pi_\rho$ the orthogonal projection onto the isotypic component of the regular representation belonging to the contragredient of $\rho$, because $(d_\rho/|G|)\sum_g\chi_\rho(g^{-1})g$ is the central idempotent of $\rho$ \cite{serre}. Its eigenvalues are the numbers $c_\rho|G|/d_\rho$, and it is Hermitian and positive semidefinite only if every $c_\rho\ge0$.
+\end{proof}
+
+\begin{corollary}[Squared-norm form]\label{cor:born}
+The functions \eqref{eq:pd} form a cone whose extreme rays are spanned by the irreducible characters. For $f=\chi_\rho$ the measure $\mu(S)=D_F(S,S)$ is
+\begin{equation}\label{eq:born}
+\mu(S)=\sum_{y\in V}\Bigl\lVert\sum_{w\in S,\ t(w)=y}\rho(\varphi(w))\Bigr\rVert^2 ,
+\end{equation}
+with the Hilbert--Schmidt norm. For a one-dimensional $\rho=\chi$ it is $\sum_y\bigl|\sum_w\chi(\varphi(w))\bigr|^2$.
+\end{corollary}
+
+Thus each walk carries the matrix $\rho(\varphi(w))$, matrices of walks with a common end vertex are added, and the measure is the sum over end vertices of squared norms. The matrix of a single walk depends on the gauge; the measure does not. For $G=\{\pm1\}$ and the sign character this is a sum of signs: the case of a signed graph. For a cyclic group of order at least $3$ and a faithful character the summands are complex numbers of modulus one. For the quaternion group and its two-dimensional representation they are unit quaternions, and \eqref{eq:born} is twice the squared quaternionic modulus. In general $\rho$ is of real, complex or quaternionic type according to its Frobenius--Schur indicator \cite{serre}. The characters $\chi_\rho$ and $\overline{\chi_\rho}$ give the same measure, since \eqref{eq:born} is unchanged when every matrix is replaced by its complex conjugate; this is the conjugation left undetermined by transition probabilities in \cite{g7}.
+
+\begin{corollary}[Order of interference]\label{cor:interf}
+For $\mu(S)=D_F(S,S)$ with $F$ as in Theorem~\ref{thm:main}, $I_2(S_1,S_2)=2\operatorname{Re}D_F(S_1,S_2)$ and $I_r=0$ for $r\ge3$.
+\end{corollary}
+\begin{proof}
+Bi-additivity gives $\mu(\bigcup_{i\in c}S_i)=\sum_{i,j\in c}D_F(S_i,S_j)$. In $I_r$ the coefficient of $D_F(S_i,S_j)$ is $\sum_{c\ni i,j}(-1)^{r-|c|}$, which vanishes when $r$ exceeds the number of distinct indices among $i,j$.
+\end{proof}
+
+Table~\ref{tab:interf} gives a computed instance, together with a rule of fourth order, $|\sum_w\chi(\varphi(w))|^4$, which is also invariant under switching and non-negative and has interference of third and fourth order. The second order is the lowest at which the gains of open walks can enter (Lemma~\ref{lem:first}); it is not forced.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrr@{}}\toprule
+ & $I_2$ & $I_3$ & $I_4$ & $I_5$\\\midrule
+number of walks & $0$ & $0$ & & \\
+$\bigl|\sum\chi\bigr|^2$ & $-16$ & $-3.6\times10^{-15}$ & $-7.1\times10^{-15}$ & \\
+$\bigl|\sum\chi\bigr|^4$ & $-352$ & $-1376$ & $-1024$ & $5.5\times10^{-12}$\\\bottomrule
+\end{tabular}
+\caption{Interference terms for five disjoint sets of six closed walks of length $6$ in a random gain graph on six vertices with gains in the cyclic group of order $4$ and $\chi$ a faithful character. The summed values of $\chi$ on the five sets are $-2$, $4+2i$, $3-i$, $2-2i$, $1-i$. In a first draw one set had sum $0$ and $I_4$ of the fourth-order rule vanished; that draw is kept in the result file \cite{comp2}.}\label{tab:interf}
+\end{table}
+
+\subsection{The covering graph}
+The \emph{derived graph} of $(\Gamma,\varphi)$ has vertex set $V\times G$ and, for each oriented edge $e$ from $a$ to $b$ and each $g\in G$, an edge joining $(a,g)$ and $(b,\varphi(e)g)$. It covers $\Gamma$ with $G$ as group of deck transformations, and a walk $w$ from $x$ lifts to a walk from $(x,1)$ to $(t(w),\varphi(w))$.
+
+\begin{proposition}\label{prop:cover}
+For $f=\delta_1$, the indicator of the identity of $G$, the measure of an event $S$ is
+\[
+\mu_{\delta}(S)=\sum_{(y,g)\in V\times G}N_S(y,g)^2,
+\]
+where $N_S(y,g)$ is the number of walks of $S$ ending at $y$ with gain $g$: the number of ordered pairs of walks of $S$ whose lifts end at the same vertex of the derived graph, which is the pair measure of the lifted event for trivial gains. Moreover
+\[
+\mu_\delta(S)=\frac1{|G|}\sum_\rho d_\rho\,\mu_\rho(S),
+\]
+with $\mu_\rho$ the measure \eqref{eq:born} of the irreducible representation $\rho$ and $d_\rho$ its dimension.
+\end{proposition}
+\begin{proof}
+A coterminous pair contributes $\delta_1(\varphi(w)\varphi(w')^{-1})$, which is $1$ when the gains are equal and $0$ otherwise. The second formula is $\delta_1=|G|^{-1}\sum_\rho d_\rho\chi_\rho$ \cite{serre} and linearity of $D_F$ in $f$.
+\end{proof}
+
+Counting coincidences of walks on a covering graph thus yields, without any choice of representation, the mean of the irreducible measures; this measure has constructive interference only. The covering determines its group and hence the list of representations. It does not determine which of them is used: an extreme measure \eqref{eq:born} is one isotypic part of the coincidence count, and its selection is an input. An instance for $\mathbb{Z}_4$ and for the symmetric group on three letters is in \cite{comp4}.
+
+\section{Hilbert space and transition probability}
+
+Fix a one-dimensional character $\chi$ of $G$ and write $D=D_F$ for $f=\chi$. For an event $S$ let $v_S\in\mathbb{C}^V$ be the vector with components $v_S(y)=\sum_{w\in S,\,t(w)=y}\chi(\varphi(w))$.
+
+\begin{proposition}\label{prop:hilbert}
+$D(S,S')=\langle v_{S'}|v_S\rangle$. The Hilbert space constructed from $D$ by the method of Dowker, Johnston and Sorkin \cite{djs} is the span $\mathcal{H}$ of the vectors $v_S$. On the events with $\mu(S)>0$,
+\[
+p(S,S')=\frac{|D(S,S')|^2}{\mu(S)\,\mu(S')}
+\]
+takes values in $[0,1]$, is symmetric, equals $1$ exactly when $v_S$ and $v_{S'}$ are proportional, and is the transition probability of the rays $[v_S],[v_{S'}]$ in the projective space of $\mathcal{H}$. Suppose that $G$ is cyclic of order $n$ with $\chi$ faithful, that the walks from $x$ end in a set $V_k$ of $m$ vertices, and that for each $y\in V_k$ and each $g\in G$ the number of walks from $x$ to $y$ with gain $g$ tends to infinity with $k$ along a sequence of lengths with fixed $V_k$. Then the closure of the set of rays $[v_S]$ over that sequence is $\mathbb{CP}^{m-1}$ if $n\ge3$ and $\mathbb{RP}^{m-1}$ if $n=2$.
+\end{proposition}
+\begin{proof}
+The first statement is \eqref{eq:rep} for a one-dimensional representation. The construction of \cite{djs} takes formal combinations of events with the inner product given by $D$ and divides by its null space; the map $S\mapsto v_S$ realizes the quotient. The properties of $p$ are the Cauchy--Schwarz inequality. For the last statement, $v_S(y)$ is a sum of $n_g$ copies of $\chi(g)$ with $0\le n_g\le N_g(y)$, chosen independently for each $y$, where $N_g(y)$ is the number of walks with gain $g$. Since the $n$-th roots of unity sum to zero for $n\ge2$, the negative of each is a sum of the others, so the attainable values of $v_S(y)$ exhaust the ring $\mathbb{Z}[\chi(G)]$ as $N_g(y)\to\infty$. Rays through points of $\mathbb{Z}[\chi(G)]^m$ are the rays through points of the field $\mathbb{Q}(\chi(G))^m$, which is dense in $\mathbb{C}^m$ for $n\ge3$ and equals $\mathbb{Q}^m$ for $n=2$.
+\end{proof}
+
+Under the stated growth condition a finite gain graph thus yields, through events of unbounded walk length, a dense subset of a pure-state space of the comparison class of \cite{g7} with its transition probability. The subset at each finite length is finite and not homogeneous, in agreement with the obstruction of \cite{g7}. The symmetry of the limit is not a symmetry of the graph. The quantity $p(S,S')$ is defined by the pair function; no procedure inside the construction gives it the meaning of a probability of transition.
+
+\subsection{The growth condition}
+For a walk $w$ let $\varphi'(w)=(\varphi(w),|w|\bmod2)\in G\times\mathbb{Z}_2$, with $|w|$ the length. The elements $\varphi'(c)$ for closed walks $c$ at $x$ form a subgroup $H'$ of $G\times\mathbb{Z}_2$; let $H_{\mathrm e}=\{g:(g,0)\in H'\}$, the group of gains of closed walks of even length at $x$.
+
+\begin{proposition}\label{prop:growth}
+Let $\Gamma$ have at least three vertices and fix for each vertex $y$ a walk $w_y$ from $x$ to $y$.
+\begin{enumerate}[label=(\alph*)]
+\item The pairs $(g,\epsilon)$ for which a walk from $x$ to $y$ with gain $g$ and length of parity $\epsilon$ exists form the coset $\varphi'(w_y)H'$. For every such pair the number $N_k(y,g)$ of walks of length $k$ tends to infinity as $k\to\infty$ through the integers of parity $\epsilon$.
+\item For each parity, the gains of walks of that parity from $x$ to $y$ form a coset $g_yH_{\mathrm e}$ or the empty set. The growth condition of Proposition~\ref{prop:hilbert} holds, along the lengths of either parity and with $V_k$ the set of vertices reached at that parity, if and only if $H_{\mathrm e}=G$.
+\item In general let $G$ be cyclic, $\chi$ faithful and $V_k$ the set of $m$ vertices reached at the parity of $k$. The closure of the set of rays $[v_S]$ over the lengths of that parity is, after switching by $h(y)=g_y^{-1}$, the space $\mathbb{CP}^{m-1}$ if $|H_{\mathrm e}|\ge3$, the space $\mathbb{RP}^{m-1}$ if $|H_{\mathrm e}|=2$, and the set of rays of vectors with non-negative components if $|H_{\mathrm e}|=1$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) If $c$ is a closed walk at $x$, the walk that follows $c$ and then $w_y$ has $\varphi'=\varphi'(w_y)\varphi'(c)$; conversely a walk $w$ from $x$ to $y$ followed by $w_y$ backwards is a closed walk $c$ at $x$ with $\varphi'(w)=\varphi'(w_y)\varphi'(c)$. Let $\Gamma'$ be the graph with vertices $(y,q)$, $q\in\varphi'(w_y)H'$, and an edge joining $(a,q)$ and $(b,\varphi'(e)q)$ for each oriented edge $e$ from $a$ to $b$. It is connected by the first statement, bipartite by the second coordinate of $q$, and has at least three vertices, so its largest adjacency eigenvalue $\lambda$ is at least $\sqrt2$. $N_k(y,g)$ is the number of walks of length $k$ in $\Gamma'$ from $(x,(1,0))$ to $(y,(g,k\bmod2))$. The square of the adjacency matrix of $\Gamma'$, restricted to one side of the bipartition, is non-negative and primitive with largest eigenvalue $\lambda^2>1$, so all entries of its powers tend to infinity; for the other side multiply once more by the adjacency matrix. (b) The slice of a coset of $H'$ at a fixed parity is a coset of $H_{\mathrm e}$ or empty, and by (a) every element of it is the gain of arbitrarily many walks. The growth condition requires the slice to be $G$. (c) By (a) and (b), $v_S(y)=\chi(g_y)\sum_{h\in H_{\mathrm e}}n_h\chi(h)$ with integers $0\le n_h\le N_k(y,g_yh)$ chosen independently, and the bounds tend to infinity. If $|H_{\mathrm e}|\ge2$ the sums exhaust the ring generated by $\chi(H_{\mathrm e})$, as in the proof of Proposition~\ref{prop:hilbert}, which is dense in $\mathbb{C}$ for $|H_{\mathrm e}|\ge3$ and equals $\mathbb{Z}$ for $|H_{\mathrm e}|=2$; if $|H_{\mathrm e}|=1$ they are the non-negative integers. The factors $\chi(g_y)$ are removed by the stated switching.
+\end{proof}
+
+The condition $H_{\mathrm e}=G$ holds when the closed walks at $x$ generate $G$ and either $\Gamma$ is bipartite or some closed walk of odd length has trivial gain. Examples with gains in $\mathbb{Z}_n$: the complete graph on four vertices with a generator on one oriented edge and trivial gains elsewhere (Directors A and B; Director B gives $N_k\ge3^{\lfloor(k-10)/2\rfloor}$ for $n=3$ and $k\ge10$), and two triangles with a common vertex, one with trivial gains and one with a generator on one edge (Director G, with $N_k\ge2^{k-5}$ for $n=3$ and $k\ge5$); in both a triangle of trivial gain and a triangle whose gain is a generator pass through the base vertex. The condition fails for gains in a proper subgroup, and for a graph that is not bipartite in which every edge has odd gain in $\mathbb{Z}_4$: there $H_{\mathrm e}=\{0,2\}$ and the limit is a real projective space although the gain group has order four. The type of the limit space is thus governed by $H_{\mathrm e}$ and not by the group in which the gains are written. Computed instances of (a) and (b), and the bounds quoted for lengths up to $24$, are in \cite{comp4}.
+
+\section{Composition}\label{sec:compo}
+
+For gain graphs $(\Gamma_1,\varphi_1)$ and $(\Gamma_2,\varphi_2)$ with groups $G_1,G_2$ the \emph{product} has vertex set $V_1\times V_2$, an edge from $(a,u)$ to $(b,v)$ whenever $ab$ and $uv$ are edges, and gain $(\varphi_1(ab),\varphi_2(uv))\in G_1\times G_2$. A walk of length $k$ from $(x_1,x_2)$ is a pair of walks of length $k$ from $x_1$ and from $x_2$.
+
+\begin{proposition}\label{prop:tensor}
+Let $f_i=\chi_i$ be one-dimensional characters of $G_i$ and $f=\chi_1\otimes\chi_2$. Then for events $S_i,S_i'$ of the factors
+\[
+D(S_1\times S_2,\,S_1'\times S_2')=D_1(S_1,S_1')\,D_2(S_2,S_2'),
+\]
+$v_{S_1\times S_2}=v_{S_1}\otimes v_{S_2}$, and the Hilbert space of the product is $\mathcal{H}_1\otimes\mathcal{H}_2$. An event of the product that is not a product of events can have a vector that is not a product vector.
+\end{proposition}
+\begin{proof}
+The gain of a pair of walks is the pair of gains and its character value the product, and two pairs are coterminous exactly when both components are. This gives the first two statements. Every event of the product is a disjoint union of single pairs, so the vectors $v_S$ span the span of the $v_{w_1}\otimes v_{w_2}$. For walks $w_1,w_1'$ with different end vertices and $w_2,w_2'$ with different end vertices, the event $\{(w_1,w_2),(w_1',w_2')\}$ has a vector of rank two.
+\end{proof}
+
+In this construction the composite is the full tensor product and not the minimal composite of \cite{g7}, because the events of the product graph include correlated sets of pairs of walks. The product used here advances both factors at each step; a common step count is assumed. The product in which one factor advances at a time has as adjacency operator the sum of the two adjacency operators. Proposition~\ref{prop:tensor} concerns one common length. The span of the event vectors of the product over all lengths can be smaller than the tensor product of the spans of the factors over all lengths: for two four-cycles the end vertices reached at a common length have equal parity, and $8$ of the $16$ pairs of end vertices occur. This restriction was pointed out by Director~G; it is absent when the walks of each factor reach every vertex at all large lengths.
+
+\section{Records and counting}
+
+\begin{proposition}\label{prop:records}
+If no two distinct walks of an event $S$ are coterminous, then $\mu(S)=f(1)\,|S|$. This holds for every event when $\Gamma$ is a tree and walks without backtracking are used, and for every event of the graph whose vertices are the walks from $x$ and whose edges join a walk to its extensions by one edge.
+\end{proposition}
+\begin{proof}
+Only the pairs $(w,w)$ contribute to \eqref{eq:D}, each with $f(1)$.
+\end{proof}
+
+When each walk ends at a vertex that records the whole walk, the pair measure is the counting measure, additive and independent of the gains. Table~\ref{tab:records} gives an instance. In this construction interference requires two different walks between the same end vertices, that is, a closed walk, and the measure depends on the transport only through holonomies. Counting of recorded walks is a classical stochastic description. It is not Hamiltonian mechanics.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+end vertex & 0 & 1 & 2 & 3 & 4\\\midrule
+pair measure, walks not recorded & 324 & 1481 & 328 & 1481 & 328\\
+pair measure, walks recorded & 34 & 67 & 52 & 67 & 52\\
+number of walks & 34 & 67 & 52 & 67 & 52\\\bottomrule
+\end{tabular}
+\caption{The $272$ walks of length $5$ from a vertex of a random gain graph on five vertices with gains in the cyclic group of order $4$, by end vertex \cite{comp2}.}\label{tab:records}
+\end{table}
+
+\section{Choice of character}\label{sec:char}
+
+For a cyclic group $\mathbb{Z}_n$ the measure \eqref{eq:born} of a faithful character $\chi$ is $\sum_{g}N_g\operatorname{Re}\chi(g)$, where $N_g$ is the number of coterminous ordered pairs in $S$ with holonomy $g$. The integers $N_g$ are determined by the gain graph. The real numbers $\operatorname{Re}\chi(g)$ depend on which faithful character is used.
+
+\begin{proposition}\label{prop:rigid}
+The number $\sum_{g\in\mathbb{Z}_n}N_g\operatorname{Re}\chi(g)$ is the same for all faithful characters $\chi$ of $\mathbb{Z}_n$ and all integers $N_g$ if and only if $n\in\{1,2,3,4,6\}$.
+\end{proposition}
+\begin{proof}
+The faithful characters are $\chi_j(g)=e^{2\pi ijg/n}$ with $j$ prime to $n$. Independence for all $N_g$ means $\cos(2\pi jg/n)=\cos(2\pi g/n)$ for all $g$ and all such $j$; for $g=1$ this forces $j\equiv\pm1$ modulo $n$, and conversely $j\equiv\pm1$ gives equality for all $g$. So the condition is that the units modulo $n$ are $\pm1$ only, that is, Euler's function satisfies $\varphi(n)\le2$.
+\end{proof}
+
+For $n\in\{1,2\}$ the values are integers; for $n=4$ they lie in the Gaussian integers and for $n\in\{3,6\}$ in the Eisenstein integers, and the measure is $N_0-N_2$ for $n=4$ and $N_0-(N_1+N_2)/2$ for $n=3$. In these cases the only nontrivial field automorphism is complex conjugation, which does not change the measure. For other orders the faithful characters are exchanged by further automorphisms and give different measures (Table~\ref{tab:char}); the corresponding statement for a dense group of unitary matrices is Proposition~7.4 of \cite{g7}. The field of Eisenstein numbers also arises without a choice of root of unity: for the cyclic permutation matrix $P$ of a directed three-cycle, $C=P-P^{T}$ satisfies $C^2=-3$ on the vectors of zero sum, with rational entries. The same matrix acts on the classical probability simplex of three outcomes, so its presence does not distinguish the two readings. Rigidity does not select complex numbers either: the two-dimensional character of the quaternion group is rational-valued.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+order $n$ & 3 & 4 & 5 & 6 & 7 & 8 & 12\\\midrule
+faithful characters & 2 & 2 & 4 & 2 & 6 & 4 & 4\\
+largest difference & $6\times10^{-16}$ & $6\times10^{-16}$ & $0.214$ & $4\times10^{-16}$ & $0.140$ & $0.068$ & $0.236$\\\bottomrule
+\end{tabular}
+\caption{Largest difference, over end vertices and faithful characters, of the measures of the sets of walks of length $6$ by end vertex, normalized to total $1$, for random gain graphs on six vertices \cite{comp2}.}\label{tab:char}
+\end{table}
+
+\section{Assumptions and limits}\label{sec:limits}
+
+\emph{Assumed.} (1) The order two of the rule. Lemma~\ref{lem:first} excludes order one for any dependence on gains; rules of higher even order exist (Table~\ref{tab:interf}). That observed interference is of second order only is an experimental statement \cite{sinha}. (2) The vanishing of the pair function on walks with different end vertices: the end vertices act as records. Invariance alone would allow a constant for such pairs, and further terms for closed walks, of first order (Lemma~\ref{lem:first}) and of second. (3) Strong positivity. Dowker and Wilkes argue for it from closure under composition, building on Bo\"es and Navascu\'es \cite{dw,bn}. (4) The group, and the irreducible representation. Every group and representation occurs; real, complex and quaternionic types all satisfy the theorem. Nothing here selects the complex case, in accordance with Proposition~3.1 of \cite{g7}.
+
+\emph{Not obtained.} (5) \emph{Dynamics.} The measures at lengths $k$ and $k+1$ are in general not related by continuation: for the complete graph on four vertices with one gain of order three, two one-step events with $D=0$ have continuations with $|D|=1$, and the total measures at lengths $0,1,2$ are $1,3,15$ (Directors A and B). The relation holds, up to a factor, exactly when the adjacency matrix is a multiple of a unitary matrix on the vectors concerned; paper \cite{g9} examines this requirement. For gains of modulus one in a character $\chi$ the matrix $A$ with entries $\chi(\varphi(e))$ on edges is Hermitian \cite{reff,cdd}, and $v_\Omega=A^ke_x$ for the event $\Omega$ of all walks. Walk length is a unitary evolution only if $A$ is a multiple of a unitary matrix. For $200$ random gain graphs on six vertices with gains in $\mathbb{Z}_4$ the ratio of the smallest to the largest singular value of $A$ was at most $0.42$. The signing of the hypercube used by Huang \cite{huang} has $A^2=n$ in dimension $n$ (verified for $n\le7$), so $A/\sqrt n$ is unitary and an involution: the evolution has period two. In general the normalized distribution of end vertices tends, for long walks, to the squared moduli of the eigenvector of $A$ of largest modulus of eigenvalue when that eigenvalue is simple in modulus; in an instance the total-variation distance was $1.2\times10^{-8}$ at length $60$ \cite{comp2}. An undirected gain graph contains no reversible dynamics other than an involution \cite{g9}, no continuous group acting on its limit space, and no clock other than the step count. (6) \emph{Classical mechanics.} Only the counting measure of Proposition~\ref{prop:records} and the additive weighting of returning walks of Lemma~\ref{lem:first} are obtained. No phase space, symplectic form or Hamiltonian flow arises; for directed gains on a ring a conditional ray limit is described in \cite{g9}. (7) \emph{Meaning of $p$.} The transition probability of Proposition~\ref{prop:hilbert} is not connected to a procedure. (8) \emph{The ordering of values.} For cyclic orders other than $1,2,3,4,6$ the measure depends on a choice of character (Proposition~\ref{prop:rigid}).
+
+\section{Status of the statements}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.38\textwidth}@{}}\toprule
+Statement & Kind\\\midrule
+Lemma~\ref{lem:first}; Theorem~\ref{thm:main}; Corollaries~\ref{cor:born}, \ref{cor:interf}; Propositions~\ref{prop:cover}, \ref{prop:hilbert}, \ref{prop:growth}, \ref{prop:tensor}, \ref{prop:records}, \ref{prop:rigid} & derived results, proofs given here; Proposition~\ref{prop:hilbert} uses the construction of \cite{djs}\\
+Tables~\ref{tab:interf}, \ref{tab:records}, \ref{tab:char}; the values in Section~\ref{sec:limits} & computed instances\\\bottomrule
+\end{tabular}
+\end{center}
+
+The components are known: gain graphs and their represented adjacency matrices, the quantum measure and its interference hierarchy, the Hilbert space of a strongly positive decoherence functional, and the characterization of positive-definite class functions. The paper assembles them for a transport on a finite graph and claims no priority for any of them. The following are not established.
+\begin{enumerate}[label=(\roman*)]
+\item A reason for the second order of the rule, for the role of end vertices, or for a particular group and representation.
+\item A reason for excluding first-order weights of returning walks, and a relation between the measures at different lengths.
+\item Any dynamics, any classical Hamiltonian limit, and any correspondence between the quantities defined here and physical preparations, records or clocks.
+\item The statements have not been refereed, and the numerical tables are not error enclosures.
+\end{enumerate}

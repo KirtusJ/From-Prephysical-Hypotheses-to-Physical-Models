@@ -1,0 +1,240 @@
+\section{Relational Structures and the Limits of Observation}
+\label{str:chapter}
+
+A mathematical description can be useful before its symbols have a physical interpretation. The distinction matters whenever a relation, quotient, positive kernel or symmetry is proposed as a starting point. This chapter states what these structures determine under explicit mathematical assumptions. None of the constructions below assigns a physical clock, spatial metric, detector, source law or quantum state space by definition.
+
+\subsection{Finite structures and homomorphism equivalence}
+\label{str:cores}
+Fix a finite relational signature whose relation symbols have positive arity, with no constants or function symbols. Objects have finite nonempty carriers and arbitrary interpretations of those relations; arrows are ordinary homomorphisms. Write $A\preceq B$ when a homomorphism $A\to B$ exists and $A\simeq_h B$ when both directions exist. A finite core is a structure all of whose endomorphisms are automorphisms.
+
+\begin{proposition}[Core and probe equivalence]
+Every finite structure has a core, unique up to isomorphism in its homomorphism-equivalence class. Moreover, $A\simeq_h B$ if and only if, for every finite structure $X$, the Boolean statements $\operatorname{Hom}(X,A)\ne\varnothing$ and $\operatorname{Hom}(X,B)\ne\varnothing$ agree.
+\end{proposition}
+\begin{proof}
+Choose an endomorphism with image of least cardinality and take an idempotent power on its eventual image. Its image is a retract. A nonbijective endomorphism of that image would contradict minimality. A bijective endomorphism of a finite relational structure is an automorphism: its induced permutation of each finite relation maps that relation injectively into itself and hence onto itself. If cores $C,D$ admit maps $f:C\to D$ and $g:D\to C$, both composites are automorphisms. Thus $f$ has a homomorphic inverse, for example $(gf)^{-1}g$, and is an isomorphism. Probe agreement implies the two required maps by taking $X=A,B$; the converse follows by composition. This is the standard finite-core result; see Bodirsky~\cite{bodirsky}.
+\end{proof}
+
+Products and disjoint unions give meet and join in the quotient poset. Indeed, a map $X\to A\times B$ is equivalent to a pair of maps to $A,B$, and a map $A\sqcup B\to X$ is equivalent to a pair of maps from $A,B$. Consequently
+\[
+ [A]\wedge[B]=[A\times B],\qquad [A]\vee[B]=[A\sqcup B].
+\]
+These operations are associative, commutative and idempotent at the level of classes. They do not assert that a raw product of two cores is itself a core. The supported identity is
+\[
+ \operatorname{core}(\operatorname{core}(A)\times\operatorname{core}(B))
+ \cong\operatorname{core}(A\times B).
+\]
+For example, the graph product $K_2\times K_2$ is two disjoint edges and retracts onto one edge, although each factor is a core.
+
+\begin{proposition}[Initial and terminal objects]
+The empty-relation singleton $E_1$ is weakly initial in this full nonempty category, but is not initial. The category has no initial object. The full-relation singleton is terminal. The thin homomorphism quotient nevertheless has a least element $[E_1]$. If empty carriers are admitted under the stated signature convention, the empty structure is initial.
+\end{proposition}
+\begin{proof}
+Every map $E_1\to A$ preserves its empty relations, so there are $|A|$ such arrows. Every function from any nonempty $A$ into the full two-element structure $F_2$ is a homomorphism, giving $2^{|A|}\ge2$ arrows. No $A$ can therefore satisfy initiality, which requires a unique arrow to every object~\cite{stacksinitial}. There is exactly one function into the full singleton, and it is a homomorphism. Passing to a thin category retains existence of arrows and discards their multiplicity, so $[E_1]$ becomes least. With an empty carrier allowed, its unique empty function into every object preserves every positive-arity relation.
+\end{proof}
+
+In particular, $E_1\sqcup A$ cannot be a disjoint-union unit in the full category: it has one more carrier element. Binary coproducts exist there; a nullary coproduct does not. A proof in the quotient poset must not silently substitute for this full-category universal property.
+
+The quotient also discards information. Homomorphism counts distinguish one edge from two disjoint edges although their cores coincide. Deleting a vertex from one edge removes every edge; deleting one vertex from two disjoint edges leaves an edge. Thus arbitrary deletion does not descend to the same quotient. A chosen embedding of a core requires further data. These are precise losses of a chosen equivalence relation, not defects of every richer relational description.
+
+If an assignment sends an idempotent quotient product to the ordinary tensor product of nonzero finite-dimensional Hilbert spaces and preserves the object isomorphism, its dimension obeys $d=d^2$, hence $d=1$. This elementary object constraint is narrower than categorical no-cloning theorems, which require additional categorical and naturality assumptions~\cite{abramsky}. Infinite-dimensional Hilbert spaces can satisfy $H\cong H\otimes H$ as objects; that fact does not construct a coherent functor preserving all arrows and compositions.
+
+A positive finite-dimensional exception exists when zero Hilbert spaces are allowed. Regard the thin quotient as a meet-semilattice category, with arrows $a\to b$ for $a\le b$, tensor product $a\wedge b$ and unit its greatest element $\top$. Strong monoidal functors from this category to finite-dimensional complex Hilbert spaces with linear maps are classified, up to monoidal natural isomorphism, by upward-closed, meet-closed subsets containing $\top$. Given such a subset $\mathcal F$, assign $\mathbb C$ on $\mathcal F$ and the zero space elsewhere; arrows within $\mathcal F$ are the identity and every other existing arrow is the unique zero map. Upward closure prevents an arrow from a supported object to an unsupported one, and meet closure together with upward closure gives
+$a\wedge b\in\mathcal F$ exactly when both $a,b\in\mathcal F$. The canonical tensor identifications therefore make a strong monoidal functor.
+
+Conversely, object idempotence forces dimension zero or one. The image of the arrow $a\to\top$ is a nonzero counit when the object is one-dimensional, by the counit identity for the diagonal. Naturality then makes every arrow between supported objects nonzero and makes support upward closed. Tensor preservation makes it meet closed. Using these counits to identify the supported spaces with $\mathbb C$ identifies all supported arrows with the identity and respects the tensor maps. This proves the classification. Requiring every object to be nonzero leaves the constant one-dimensional functor. The surviving information is membership in a chosen order filter, not a physical qubit assignment.
+
+\subsection{Operational rank under factorizing composition}
+\label{rec:operational-rank}
+
+For an operational object \(x\), let its preparations be \(p\), its
+effects be \(e\), and its evaluation probabilities be \(e(p)\).
+Define \(r(x)\) as the supremum of the ranks of finite evaluation
+matrices \((e_i(p_j))_{i,j}\).  When this rank is finite, a nonsingular
+square matrix of size \(r(x)\) witnesses it.  The preparations and
+effects in such a witness need not allow perfect single-trial
+discrimination.
+
+\begin{theorem}[A rank obstruction to operational idempotence]
+Suppose \(r(x)\) and \(r(y)\) are finite.  Assume that the composite
+\(x\wedge y\) admits every independent preparation \(p\otimes q\) and
+product effect \(e\otimes f\) needed for rank witnesses, and that their
+evaluations factorize:
+\[
+ (e\otimes f)(p\otimes q)=e(p)f(q).
+\]
+Then
+\[
+ r(x\wedge y)\ge r(x)r(y).
+\]
+If composition is idempotent as an operational object, in particular
+\(r(x\wedge x)=r(x)\), every finite positive rank \(r(x)\) is one.
+\end{theorem}
+\begin{proof}
+If either rank is zero, the inequality is immediate. Otherwise choose nonsingular witness matrices \(A\) and \(B\) of sizes \(r(x)\)
+and \(r(y)\).  The admitted product preparations and effects have
+evaluation matrix \(A\otimes B\).  Its inverse is
+\(A^{-1}\otimes B^{-1}\), so its rank is \(r(x)r(y)\).  This proves
+the lower bound.  Applying it to \(y=x\) and using operational
+idempotence gives \(r(x)\ge r(x)^2\).  A finite positive integer
+satisfying this inequality is one.
+\end{proof}
+
+The statement generalizes the corresponding finite-Hilbert-dimension
+obstruction to an explicitly specified preparation--effect pairing
+\cite[Proposition~11]{rec:operational-study}.  It needs the stated
+availability and factorization premises; a relational signature alone
+does not supply them.  It makes no assertion that all relational
+models, infinite-rank models or nonfactorizing compositions are trivial.
+
+\subsection{Positive event kernels and their normalization}
+\label{str:kernels}
+Let $D\succeq0$ be a finite Hermitian matrix with $\mathbf1^*D\mathbf1=1$. For a set of alternatives $A$ define the real nonnegative score $q_D(A)=\mathbf1_A^*D\mathbf1_A$. If a partition $(A_j)$ satisfies $\mathbf1_{A_i}^*D\mathbf1_{A_j}=0$ for $i\ne j$, its scores sum to one. A Gram factorization $D=V^*V$ then gives orthogonal grouped vectors $V\mathbf1_{A_j}$ with squared norms equal to these scores. This conditional Born-form representation does not select one partition or a physical instrument. The surrounding mathematical setting is related to quantum measure theory and composition of decoherence functionals~\cite{sorkin,boes}; it is not an independent reconstruction of laboratory quantum mechanics.
+
+The total-event normalization is not trace normalization and does not bound every event score by one. For an explicit example take $v=(1,i)/\sqrt2$, $D=vv^*$ and three tensor copies. The event consisting of the three binary words of Hamming weight one has amplitude $3i/(2\sqrt2)$ and score $9/8$, although $\mathbf1^*D^{\otimes3}\mathbf1=1$. A probability interpretation therefore needs an admissible-event rule or additional assumptions.
+
+A separate four-alternative example is
+\[
+ D_4=\frac14\begin{pmatrix}1&0&0&1\\0&1&-1&0\\0&-1&1&0\\1&0&0&1\end{pmatrix}.
+\]
+It has eigenvalues $1/2,1/2,0,0$ and unit total-event score. Both partitions
+$\{1,2\}\mid\{3,4\}$ and $\{1,3\}\mid\{2,4\}$ are strongly decoherent with probabilities $1/2,1/2$, while their common singleton refinement is not decoherent. The permutation exchanging alternatives two and three preserves the kernel and exchanges these two partitions. A deterministic rule selecting exactly one of them cannot respect every kernel automorphism. Allowing a collection of contexts or an additional symmetry-breaking reference changes the selection problem. The event $\{1,2,4\}$ has score $5/4$, providing another direct warning against reading every subset score as a probability.
+
+For every real Boolean vector $b$,
+\[
+ b^*D^{\otimes n}b=b^*\overline D^{\otimes n}b.
+\]
+The left side is real and conjugating it gives the right side. Thus all identical-copy Boolean observations leave a conjugation ambiguity. Joint, nonrectangular events may still reveal information absent from single-copy events. For example,
+\[
+ D_t=\begin{pmatrix}1/2&it\\-it&1/2\end{pmatrix},\quad |t|\le1/2,
+ \qquad b=(0,1,1,0)^T
+\]
+gives $b^*(D_t\otimes D_u)b=1/2+2tu$. The sign relative to a specified second preparation is observable in this enlarged menu; a common reversal of both signs is not. Access to an orientation reference is an additional premise.
+
+More generally, complete one- and two-copy Boolean scores determine a finite Hermitian $D=R+iA$ up to conjugation. Singletons and two-element events recover the real symmetric matrix $R$. For distinct $i,j$ and $k,l$, the two-copy event $\{(i,k),(j,l)\}$ has off-diagonal contribution
+$2\operatorname{Re}(D_{ij}D_{kl})=2(R_{ij}R_{kl}-A_{ij}A_{kl})$.
+Subtracting its known diagonal and real terms recovers every product $A_{ij}A_{kl}$. The resulting rank-one outer product determines the vector of imaginary entries up to simultaneous sign, including the zero-vector case. Nonproduct joint events are essential here. This is tomography of the stipulated scores; it does not warrant a laboratory effect for an event with score above one.
+
+\begin{proposition}[Bounded affine observations under a singular normalizer]
+Let $W\succeq0$, $W\ne0$, and consider the entire cone section
+$\mathcal K_W=\{D\succeq0:\operatorname{Tr}(WD)=1\}$. Every affine functional taking values in $[0,1]$ on all of $\mathcal K_W$ depends only on the compression of $D$ to $\operatorname{supp}W$. Under the transformation $\rho=W^{1/2}DW^{1/2}$, these functionals are ordinary effects on a rank-$\operatorname{rank}W$ density-matrix space. If $W$ has rank one, all such functionals are constant.
+\end{proposition}
+\begin{proof}
+Absorb the affine constant into the coefficient of $W$, so the functional is $\operatorname{Tr}(FD)$ on the section. For $x$ in the support with $x^*Wx=1$ and $z$ in the kernel, test the rank-one matrices $(x+tz)(x+tz)^*$ for arbitrary complex $t$. Boundedness forces the quadratic kernel block and both linear cross terms of $F$ to vanish. The restriction of $W$ to its support is invertible. The allowed compressed matrices map onto all density matrices there, and boundedness on them says $0\preceq W^{-1/2}FW^{-1/2}\preceq I$. In rank one there is only one density matrix.
+\end{proof}
+
+The associated dynamical statement also has explicit premises. If a completely positive map $\Phi(D)=\sum_\ell A_\ell D A_\ell^*$ preserves the normalizer, $\Phi^*(W)=W$, then it descends to a CPTP map on the support quotient. For $z\in\ker W$,
+$\sum_\ell\|W^{1/2}A_\ell z\|^2=z^*Wz=0$, so every $W^{1/2}A_\ell$ kills that kernel. On $R=\operatorname{supp}W$, put
+$K_\ell=W_R^{1/2}P_RA_\ell P_RW_R^{-1/2}$.
+Then $\sum_\ell K_\ell^*K_\ell=I_R$ and the output compression is
+$\sum_\ell K_\ell\rho K_\ell^*$. This conclusion assumes the completely positive framework; it is not a physical derivation of quantum channels.
+
+For the rank-one total-event normalizer, a positive balanced addition $P\succeq0$, $P\mathbf1=0$, remains balanced after any positive linear normalization-preserving map. Indeed, its positive image has zero total-event weight and hence annihilates $\mathbf1$. If a fixed cell $A$ belongs to an exactly strongly decoherent output partition for each of two compared states $B+gP$, its probability equals
+$\mathbf1_A^*\Phi(B+gP)\mathbf1=\mathbf1_A^*\Phi(B)\mathbf1$,
+independent of $g$. Which partitions are admissible may depend on $g$; this does not exclude every possible observation of the added sector.
+
+This conclusion uses the unrestricted cone and global affine bounds. A compact restricted state set, a full-rank normalizer, or a different observation rule changes the question. For instance, entrywise nonnegative PSD matrices with total entry sum one form a compact alternative closed under ordinary tensor products and nonnegative column-stochastic grouping (including deterministic partition grouping). Such an alternative supplies a different state/effect model; it is not selected by singular normalization alone.
+
+For classical probabilities, a column-stochastic matrix $T$ sends $p$ to $Tp$. Coherent congruence $D\mapsto TDT^T$ is a different operation, although it preserves total-event normalization. If both columns of $T$ equal $(1/2,1/2)^T$ and $D=\operatorname{diag}(1/2,1/2)$, congruence gives the all-ones matrix divided by four, whereas classical postprocessing gives $\operatorname{diag}(1/2,1/2)$. The former has off-diagonal terms and trace $1/2$. A classical quantum-channel realization instead has Kraus operators $\sqrt{T_{ij}}\,|i\rangle\langle j|$ and maps diagonal states to $\operatorname{diag}(Tp)$.
+
+The normalization $D\mapsto D/\operatorname{Tr}D$ preserves tensor products but changes convex preparation weights: a mixture $pD+(1-p)E$ maps to a mixture of the normalized states with first weight
+$p\operatorname{Tr}D/[p\operatorname{Tr}D+(1-p)\operatorname{Tr}E]$.
+Replacing $J=\mathbf1\mathbf1^*$ by $J+\delta I$, $\delta>0$, gives a full-rank normalizer and informative effects on every direction. The limit $\delta\downarrow0$ need not be uniform over states with balanced strength growing like $1/\delta$. These are mathematically legitimate additional choices; neither the preparation rule nor the regularization is fixed by a signed sum.
+
+\begin{proposition}[Deterministic and conditional aggregation]
+Let
+\[a=(1,1,0,0)^T/\sqrt2,\qquad b=(0,0,1,1)^T/\sqrt2,\]
+and define
+\[
+ D_\pm=\frac{I_4}{4}\pm\frac{aa^*-bb^*}{8},\qquad
+ M=\begin{pmatrix}1&1&0&0\\0&0&1&1\end{pmatrix}.
+\]
+No deterministic CPTP map takes both $D_\pm$ to $MD_\pm M^*$. The smallest possible maximum trace-distance error for this specified pair is $1/8$. A trace-nonincreasing operation with Kraus matrix $M/\sqrt2$ attains the desired conditional outputs with success probability $1/2$ on each input.
+\end{proposition}
+\begin{proof}
+Both input and target pairs are density matrices. Their trace distances are $1/4$ and $1/2$, respectively. Trace-distance contraction and the triangle inequality give $1/2\le1/4+2\varepsilon$, so $\varepsilon\ge1/8$. The measure-and-group channel
+$D\mapsto\operatorname{diag}(D_{11}+D_{22},D_{33}+D_{44})$ has error exactly $1/8$ on both targets. Finally, $(M/\sqrt2)^*(M/\sqrt2)\preceq I$ and its output is half the required target on either input. Failure probability belongs to the complete operation and cannot be discarded in an information-per-attempt calculation.
+\end{proof}
+The linear map on Hermitian matrices $D\mapsto MDM^*$ is onto the four-real-dimensional Hermitian $2\times2$ space, so its real kernel has dimension $16-4=12$. This linear statement alone is not an implementation claim.
+
+\subsection{Marginal agreement and extension}
+\label{str:marginals}
+For finite alphabets of sizes $q_1,\ldots,q_n$, decompose each coordinate vector space into its constant direction and its zero-sum subspace. The intersection of the kernels of all one-coordinate summations is the tensor product of the zero-sum subspaces, of dimension $\prod_i(q_i-1)$. It is exactly the space invisible to every proper marginal. Small signed perturbations in this space preserve normalization and all proper marginals of a strictly positive law. Binary parity is the simplest example; agreement of smaller marginals does not imply joint independence.
+
+For three ternary variables define
+\[
+ T(x_1,x_2,x_3)=\sum_{a=0}^2\prod_{i=1}^3(\mathbf1\{x_i=a\}-1/3),
+ \qquad P_\varepsilon(x)=1/27+\varepsilon T(x).
+\]
+There are nine all-equal or all-different words with $T=2/9$ and eighteen mixed words with $T=-1/9$. Hence positivity holds exactly on $[-1/6,1/3]$, and every proper marginal is uniform.
+
+\begin{proposition}[Exact four-variable extension interval]
+The law $P_\varepsilon$ is the three-variable marginal of an exchangeable four-variable ternary law if and only if $-1/6\le\varepsilon\le2/15$.
+\end{proposition}
+\begin{proof}
+Average any feasible extension over coordinate and symbol permutations. Let $a,b,c,d$ be its per-word masses for occupancy types $(4),(3,1),(2,2),(2,1,1)$. Put $A=(1+6\varepsilon)/27$ and $B=(1-3\varepsilon)/27$. The marginal constraints are
+\[
+ a+2b=A,\qquad3d=A,\qquad b+c+d=B.
+\]
+Nonnegativity implies $A\ge0$ and $B\ge A/3$. Conversely $b=0$, $a=A$, $d=A/3$, $c=B-A/3$ is a nonnegative solution whenever these inequalities hold. They are equivalent to the stated interval.
+\end{proof}
+At $\varepsilon=1/3$ the nearest four-extendible triple has TV distance $2/5$ if uniform pair marginals must be retained. Symmetrization reduces that minimization to the displayed one-parameter family, whose nearest admissible endpoint is $2/15$. If pair marginals may vary, the sharp distance is $1/3$: any symmetrized four-variable law obeys $Q(\text{all different})\le Q(\text{mixed})$, whereas the target gives these events probabilities $2/3,0$. The bounded signed event contrast yields the lower bound. It is attained by per-word weights $a=1/9$, $b=c=0$, $d=1/54$. These two distances answer different minimization problems.
+
+A separate finite binary example starts with positive-count law
+\[
+ (p_0,p_1,p_2,p_3,p_4)=(1/162,16/81,16/27,16/81,1/162).
+\]
+Its pair correlation is $-5/27$. Exchangeable extension is the linear feasibility problem
+\[
+ p_k=\sum_{j=0}^N w_j\frac{\binom jk\binom{N-j}{4-k}}{\binom N4},
+ \qquad w_j\ge0,\quad\sum_jw_j=1.
+\]
+It is feasible for $N=5,6$ and infeasible for $N=7$; this is a finite extendibility question, not a conclusion about a fundamental source. The complete extension proofs and sharp approximation distances appear in Section~\ref{fin:four-law} and Section~\ref{fin:distances}. No size-dependent quadratic Gibbs rule is inferred from a feasible extension.
+
+Coherent restrictions on a cofiltered system of finite nonempty discrete sets have a nonempty inverse limit by compactness: each finite set of compatibility equations is satisfied by projecting a point in a common refinement. If there is a context $K$ refining all others with compatible unique restriction maps, that limit is canonically its allowed set $C(K)$. It need not be a singleton. A nondirected contextual cover need not have a global completion, so this compactness argument cannot be applied without its index-category assumptions.
+
+The greatest-context conclusion does not require finite or nonempty fibers. More precisely, let contexts form a small poset with a greatest refinement $K$, sets $C(i)$, and maps $\rho_{ij}:C(j)\to C(i)$ for $i\le j$, with identity and composition laws. Projection to $K$ is a bijection
+\[
+ \varprojlim_i C(i)\;\cong\; C(K).
+\]
+Indeed, $c\in C(K)$ defines the compatible family $(\rho_{iK}(c))_i$, while compatibility forces every family to have this form. These constructions are inverses. Empty $C(K)$ gives an empty limit; a nonempty or singleton limit needs the corresponding property of $C(K)$. The greatest-context argument is separate from the compactness existence result for general cofiltered finite systems.
+
+\subsection{Symmetry does not supply a probability or a metric}
+\label{str:geometry}
+There is no countably additive probability on a countably infinite transitive set invariant under every permutation: all singleton masses would be equal, giving either zero total mass or an infinite sum. Likewise, uniform probabilities on finite sets are not natural under every surjection, because unequal fibers push uniform mass to unequal weights. Restricted symmetry, equal-fiber maps and probabilities on quotient patterns are legitimate distinct constructions.
+
+A positive-definite correlation matrix need not yield a metric under $d_{ij}=-\log R_{ij}$. For example,
+\[
+ R=\begin{pmatrix}1&3/5&21/100\\3/5&1&3/5\\21/100&3/5&1\end{pmatrix}
+\]
+has eigenvalues $1/4,79/100,49/25$, but $21/100<(3/5)^2$, so $d_{13}>d_{12}+d_{23}$. A Gram realization $R_{ij}=\langle u_i,u_j\rangle$ with unit vectors instead gives the Euclidean chord distance $\|u_i-u_j\|=\sqrt{2(1-R_{ij})}$ (a pseudometric if vectors coincide). Choosing this transform does not derive a Lorentzian metric or physical dimension.
+
+For a prescribed path graph, its Laplacian eigenvalues involve $2-2\cos(\pi k/n)$ under a stated boundary convention. The occurrence of $\pi$ follows from that spectral problem; it supplies neither physical periodicity nor the graph's physical interpretation. Similarly, a chosen complex coordinate gives two real parameters, not a clock or a $2+1$-dimensional spacetime.
+
+For the unoriented matching Gram matrices $G_n(d)_{\pi\sigma}=d^{\#\text{loops}(\pi,\sigma)}$, positivity in every degree forces $d$ to be a nonnegative integer. For integer $d$, contractions in $(\mathbb R^d)^{\otimes2n}$ give the Gram representation. The antisymmetrizer on $n$ strands has squared norm proportional to $d(d-1)\cdots(d-n+1)$; a positive noninteger $d$ makes this negative at $n=\lfloor d\rfloor+2$, and $G_1$ excludes negative $d$. Conversely any fixed finite collection of degrees can admit nonintegers: at sufficiently large integer $d$ the contraction vectors in those degrees are independent, and positive definiteness persists in a neighborhood by continuity. All-degree positivity restricts a parameter without selecting one integer, a physical alphabet or a probability rule.
+
+\subsection{Sector preservation and restricted observations}
+\label{str:sector}
+Let $P$ be an orthogonal projection, $Q=I-P$, $\Phi$ a CPTP map and $E=\Phi^*(P)$. Define $\alpha=\|P(I-E)P\|$ and $\beta=\|QEQ\|$. Then
+\[
+ \|E-P\|\le F(\alpha,\beta)
+ =\frac{|\alpha-\beta|+\sqrt{(\alpha-\beta)^2+4\min(\alpha,\beta)}}2.
+\]
+This is sharp. To see it, compress $E$ to the span of the normalized $P$ and $Q$ components of a unit vector. Its matrix is $\left(\begin{smallmatrix}1-a&z\\\bar z&c\end{smallmatrix}\right)$ with $a\le\alpha,c\le\beta$. Positivity of both $E$ and $I-E$ gives
+$|z|^2\le\min\{(1-a)c,a(1-c)\}$. The norm of its difference from $\operatorname{diag}(1,0)$ is at most $F(a,c)\le F(\alpha,\beta)$; direct differentiation on $a\ge c$ and $a\le c$ verifies monotonicity. Equality is attained by the qubit effect with diagonal $1-\alpha,\beta$ and off-diagonal $\sqrt{\min\{(1-\alpha)\beta,\alpha(1-\beta)\}}$, realized by a measure-and-prepare channel. Symmetric leakage $\alpha=\beta=\epsilon$ permits discrepancy $\sqrt\epsilon$, while $\beta=0$ gives $\alpha$.
+
+An orthonormal sequence $e_n$ converges weakly to zero, so every fixed compact effect $K$ satisfies $\langle e_n,Ke_n\rangle\to0$. A finite norm-net argument makes the convergence uniform over norm-precompact families of compact effects. This is a statement about a restricted fixed menu. Moving projections $|e_n\rangle\langle e_n|$, the full coordinate PVM, or the fixed noncompact projection onto the even coordinates can retain distinctions. Such escape is not annihilation and does not establish a physical persistence law.
+
+Exact signed balance at each separately chosen size is also weaker than coherent restrictions. Uniformly balancing $2k$ signs does not give an exactly balanced law after deleting one factor, and arbitrary deletion of two factors can remove equal signs. A rule deleting an opposite pair can preserve balance, but it supplies a specific allowed operation. Likewise, covariance is not conservation of every observable: a depolarizing channel is covariant under every unitary while reducing every nontrivial Bloch expectation. A conservation or persistence claim requires its own dynamics and invariant quantity.
+
+\subsection{What a physical completion must additionally specify}
+\label{str:physical}
+A proposal without an assigned foundational physical position, wavelength, frequency or clock may still have mathematical indices, spectral variables or nonconstant functionals. None is automatically a physical location, periodic motion or activity. Signed cancellation does not determine a norm, normalized source distribution or state/effect cone. A formal Ricker function
+$\psi(x)=(1-x^2)e^{-x^2/2}$ has $\int\psi=0$ and $\int\psi^2=3\sqrt\pi/4$ on a supplied real coordinate; it does not generate that coordinate or a field equation.
+
+Conventional physical models can be used to examine additional assumptions. With a supplied quantum Hamiltonian $p^2/(2m)+V(x)$ and the usual commutation and differentiability conditions, Ehrenfest's theorem gives $m\,d^2\langle x\rangle/dt^2=-\langle V'(x)\rangle$. If $V\in C^3$ and $|V'''|\le M$ on an interval containing the position support and its mean, Taylor's theorem gives
+\[
+ |\langle V'(X)\rangle-V'(\langle X\rangle)|\le\tfrac M2\operatorname{Var}(X).
+\]
+The linear term averages to zero. Quadratic potentials make the error zero; a cubic potential can attain the bound. The mean equation does not imply persistent localization: a free Gaussian wave packet spreads. Likewise, the canonically normalized Abelian-Higgs Lagrangian with potential $\lambda(|\phi|^2-v^2/2)^2$ gives $m_h^2=2\lambda v^2$, $m_V^2=q^2v^2$ after $\phi=(v+h)/\sqrt2$. These masses follow from the supplied field theory and normalization. Semiclassical horizon entropy or a chosen higher-dimensional metric likewise presupposes its gravitational structure and cannot fill a missing prephysical-to-observable correspondence.
+
+Useful conditional predictions do not require proof of a unique metaphysical foundation. They do require a specified physical interpretation and a prospective observation that could test it. The results in this chapter identify several mathematical obstructions and positive alternatives; the physical selection among those alternatives remains a separate question.

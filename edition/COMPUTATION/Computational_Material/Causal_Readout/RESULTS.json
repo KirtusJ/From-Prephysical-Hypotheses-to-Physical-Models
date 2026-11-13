@@ -1,0 +1,40 @@
+{
+  "causal_freshness_total_variation": {
+    "decimal": "0.026717230998941559",
+    "fraction": "875470225373317/32768000000000000"
+  },
+  "correlation_amplitude_A": "875137381763841/262144000000000000",
+  "date_vancouver": "2026-11-07",
+  "exact_transport_certificate": {
+    "all_eight_conditional_flip_constraints_exact": true,
+    "all_ideal_and_reported_marginals_exact": true,
+    "last_bit_error": "1/100",
+    "mutual_information_lower_bound_nats": "0.00055893162454394513",
+    "per_true_bit_flip_rate": "1/100",
+    "positive_entries": 36,
+    "prefix_future_dependence_decimal": "0.016717230998941558",
+    "prefix_future_dependence_total_variation": "547790225373317/32768000000000000",
+    "triangle_bound_saturated": true
+  },
+  "ideal_probability_s": "131/320",
+  "observed_probability_m": "6579/16000",
+  "rare_prefix_111": {
+    "conditional_gap_from_fresh_s": "0.046206885937663235",
+    "conditional_reported_one": "0.36316811406233679",
+    "minimum_freshness_gap_if_history_conditional_report_error_at_most_0_01": "0.036206885937663233",
+    "probability": "0.069521592416748046"
+  },
+  "responsible_researcher": "Kirtus Justus",
+  "source_exponential_test": {
+    "lambdas": {
+      "alternative": "0.4412",
+      "null": "0.3653"
+    },
+    "records": 8982,
+    "threshold": "-0.001827",
+    "upper_false_rejection_probability": "0.04999520376305833929",
+    "upper_missed_detection_probability": "0.049985875128356778308"
+  },
+  "status": "Exact rational model and numerical verification only; no apparatus observations",
+  "target_probability_min": "6618618424092483/262144000000000000"
+}

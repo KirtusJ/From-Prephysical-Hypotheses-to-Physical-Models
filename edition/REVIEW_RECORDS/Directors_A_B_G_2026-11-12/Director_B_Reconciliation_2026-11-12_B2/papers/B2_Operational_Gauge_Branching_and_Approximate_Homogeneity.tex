@@ -1,0 +1,163 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,enumitem,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,
+  pdftitle={Operational conjugation, determinant branching and approximate finite homogeneity},
+  pdfauthor={Kirtus Justus}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Director B | Grounding note}\cfoot{\thepage}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Counterexample}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\FS}{\mathrm{FS}}
+\newcommand{\GH}{\mathrm{GH}}
+\newcommand{\dist}{\operatorname{dis}}
+\begin{document}
+\begin{center}
+{\large\bfseries From Prephysical Hypotheses to Physical Models}\\[7pt]
+{\Large\bfseries Operational Conjugation, Determinant Branching\\[2pt] and Approximate Finite Homogeneity}\\[9pt]
+{\large Kirtus Justus}\\
+Theoretical Physicist\\
+Port Coquitlam, British Columbia, Canada\\[6pt]
+12 November 2026, B.C. Pacific Time\\[6pt]
+{\footnotesize Research direction: Kirtus Justus. Internal analytic/computational assistance: ChatGPT (GPT-6), Director B.\\
+Not independently refereed. No physical ontology selected; Initial External Grounding remains open.}
+\end{center}
+\begin{abstract}
+The transition-probability geometry and holonomy identities used in current foundational-physics reconstruction proposals are examined at three selection boundaries. First, simultaneous complex conjugation of every preparation and adaptive quantum instrument leaves every finite operational record probability exactly invariant. An absolute oriented complex-structure sign may consequently be a representation choice, whereas conjugation relative to an unchanged physical reference is detectable. Second, for each $n\ge 2$ there are two ordered three-ray configurations in $\CP^n$ with the same three transition probabilities and the same complex tangent determinant holonomy, but inequivalent Bargmann phases even modulo conjugation. Third, arbitrary finite nets of a homogeneous compact metric space exhibit correspondence-based approximate transitivity with distortion tending to zero, although exact finite-stage homogeneity may be obstructed by Gelander's theorem. These are mathematical results inside stated structures. They do not supply a prephysical origin of probabilities, composition, dynamics, clocks, classical mechanics or empirical identification.
+\end{abstract}
+
+\section{Scope and relation to the current grounding review}
+The program's target is an \emph{explained emergence} of quantum mechanics and classical mechanics, including their physical correspondence. A theorem within a stipulated Hilbert space does not establish the origin of that space, its Born probabilities or its coupling to experiments. A finite metric approximation of an imported projective space is likewise not a physical emergence derivation.
+
+The present assessment follows directly inspected Director A and G research packets, the earlier Director B packet and the published literature. Both A and G local verifiers were rerun. Director Z's summary was inspected, but the separately claimed Z1 archive and G7 full text were not supplied; the exact scope of its Schild-ladder computation remains unverified. These are internally linked research submissions, \emph{not} independent external experts. The primary theorem on finite homogeneous limits was checked against Gelander's actual paper~\cite{gelander}, and the quantum-reconstruction postulates were checked against their publisher source~\cite{barnum}. Internal software hashes certify only local consistency.
+
+We use the transition-probability distance $d_{\FS}([u],[v])=\arccos|\langle u,v\rangle|$ on rays of norm-one vectors in $\mathbb C^{n+1}$. For an ordered, nonorthogonal ray polygon with representative vectors $u_0,\ldots,u_{m-1}$, put
+\begin{equation}\label{eq:B}
+B=\prod_{j=0}^{m-1}\langle u_j,u_{j+1}\rangle,\qquad u_m=u_0.
+\end{equation}
+The complex determinant of the Levi--Civita tangent holonomy \emph{assumes} a chosen compatible complex structure. In conventional projective geometry, when successive edges are shortest geodesics, the bundle identity $\det(T^{1,0}\CP^n)\cong\mathcal O(1)^{\otimes(n+1)}$ yields
+\begin{equation}\label{eq:hol}
+\det_{\mathbb C}\Hol_{T^{1,0}\CP^n}(\gamma)=\left(\frac B{|B|}\right)^{n+1}.
+\end{equation}
+This is a \emph{conditional identity} of the already specified complex projective geometry, not a law selecting that geometry. Pancharatnam and Berry phases have separately established operational and geometric settings~\cite{berryreview,li2026}.
+
+\section{Global conjugation: which sign is an actual observable?}
+\begin{theorem}[Global representational conjugation]\label{thm:gauge}
+Let $\mathcal H=\mathbb C^d$ be a \emph{stipulated} finite-dimensional Hilbert space, $\rho$ a density operator, and for each earlier outcome history $h$ let $\{K_{x\mid h,\alpha}\}_{x,\alpha}$ be the Kraus operators of a normalized quantum instrument. Every probability of every finite adaptive outcome word is preserved when the \emph{entire} representation is simultaneously conjugated entrywise: $\rho\mapsto\overline\rho$ and $K_{x\mid h,\alpha}\mapsto\overline{K_{x\mid h,\alpha}}$. All transformed instruments remain valid completely positive normalized instruments.
+\end{theorem}
+\begin{proof}
+For a given record $w=(x_1,\ldots,x_m)$, sum over the unobserved internal Kraus labels $\boldsymbol\alpha$. The probability is
+\begin{equation}\label{eq:prob}
+p(w)=\sum_{\boldsymbol\alpha}\Tr\bigl(K_{w,\boldsymbol\alpha}\,\rho\,K_{w,\boldsymbol\alpha}^\dagger\bigr),\quad
+K_{w,\boldsymbol\alpha}=K_{x_m\mid h_{m-1},\alpha_m}\cdots K_{x_1\mid\varnothing,\alpha_1}.
+\end{equation}
+Entrywise conjugation respects matrix products, so each term becomes the complex conjugate of the original trace. Each term is real and nonnegative. Consequently $p'(w)=\overline{p(w)}=p(w)$. Also
+$\sum_{x,\alpha}(\overline K_{x\mid h,\alpha})^\dagger\overline K_{x\mid h,\alpha}
+=\overline{\sum_{x,\alpha}K_{x\mid h,\alpha}^\dagger K_{x\mid h,\alpha}}=I$.
+The conjugated Kraus form is completely positive. This reasoning applies independently at each history, so it proves the adaptive case.
+\end{proof}
+
+\begin{example}[A fixed reference defeats \emph{partial} conjugation]
+Let $v=(1,i)^T/\sqrt2$, $\rho=vv^\dagger$ and the accepted effect $E=\rho$. Then
+\begin{equation}\label{eq:ref}
+\Tr(E\rho)=1,\qquad \Tr(E\overline\rho)=0,\qquad
+\Tr(\overline E\,\overline\rho)=1.
+\end{equation}
+Thus complex conjugation of a state against \emph{unchanged} apparatus is empirically distinguishable; only the \emph{common change of representation} is invisible to the stated probabilities. We do not propose complex conjugation as a physically implementable channel on an unknown subsystem.
+\end{example}
+
+\paragraph{Interpretation and boundary.} An \emph{absolute} $J$ versus $-J$ sign should not automatically be made a necessary prephysical-physical bridge obligation if physical adequacy is judged modulo a simultaneous change of representation across all states, channels, and reference frames. A signed phase \emph{relative to fixed controls} can be operational, as \eqref{eq:ref} demonstrates. These alternatives must not be silently exchanged. For continuous unitary time evolution, $U(t)\mapsto\overline{U(t)}$ corresponds algebraically to $H\mapsto-\overline H$ under the same $t$ parameter; any physical constraint on energy signs, time orientation or external references needs an additional audit. The theorem is about \emph{kinematic probabilities in complete finite experiments}, not emergence of an energy standard.
+
+\section{A scalar holonomy determinant is not a phase-reconstruction oracle}
+\begin{theorem}[Fixed pair transitions and determinant, differing phase]\label{thm:root}
+For every integer $n\ge2$ there exist ordered triples of rays in the standard $\CP^n$ such that all three pairwise transition probabilities are $1/4$ and both complex tangent determinant holonomies of their shortest-geodesic triangles are $1$, yet their normalized Bargmann phases differ and are not complex conjugates of one another.
+\end{theorem}
+\begin{proof}
+For any $\phi\in[-\pi,\pi]$ define the Hermitian matrix
+\begin{equation}\label{eq:gram}
+G_{\phi}=\begin{pmatrix}
+1&\tfrac12&\tfrac12e^{-i\phi}\\
+\tfrac12&1&\tfrac12\\
+\tfrac12e^{i\phi}&\tfrac12&1
+\end{pmatrix}.
+\end{equation}
+Its diagonal principal minors are $1$, its order-two principal minors are $3/4$, and
+$\det G_{\phi}=(1+\cos\phi)/4\ge0$. Every principal minor is nonnegative, so $G_\phi\succeq0$; hence it is the Gram matrix of three unit vectors in $\mathbb C^3\subset\mathbb C^{n+1}$. The three pairwise squared overlap magnitudes are $1/4$ and the cyclic invariant is
+\begin{equation}\label{eq:branch}
+B_\phi=\tfrac18e^{i\phi},\qquad
+D_\phi:=\det_{\mathbb C}\Hol(\gamma_\phi)=e^{i(n+1)\phi},
+\end{equation}
+where the last equality is the conditional geometric formula \eqref{eq:hol}. Take $\phi_0=0$ and $\phi_1=2\pi/(n+1)$, which lies in $(0,\pi)$ for $n\ge2$. Then $D_{\phi_0}=D_{\phi_1}=1$, but the phases $1$ and $e^{2\pi i/(n+1)}$ are distinct and not conjugate to one another. All successive overlaps have magnitude $1/2$, so the geodesic edges are uniquely shortest and the geometric formula applies.
+\end{proof}
+
+For $n=2$, the second phase is $e^{2\pi i/3}$; both triples even have the same three pairwise distances $\pi/3$. The two Gram matrices have determinants $1/2$ and $1/8$, respectively, so their higher-order configurations differ even though the proposed \emph{scalar} discriminator cannot detect it. This does \emph{not} refute recovery from the full ambient manifold and its labeled neighborhoods, the entire matrix-valued holonomy, or a continuously tracked loop family with winding data. A single scalar determinant loses the $(n+1)$-st-root branch.
+
+\paragraph{Direct numerical control.} Eight independent integrations of the $\CP^2$ Levi--Civita tangent connection returned a maximum determinant discrepancy of $4.95321\times10^{-12}$. The endpoints $\phi=\pm\pi$ were retained by rotating the affine coordinate chart unitarily when the initial chart crossed a pole. The numerical result is corroboration inside assumed geometry, not Schild's ladder or a mathematical proof of \eqref{eq:hol}. A second-power mutant was deliberately rejected by the test.
+
+\section{Finite nonsymmetric nets can be asymptotically homogeneous}
+\begin{theorem}[Correspondence-based approximate transitivity]\label{thm:net}
+Suppose $(M,d)$ is a compact homogeneous metric space, and $X_\varepsilon\subset M$ is a finite $\varepsilon$-net carrying the restricted metric. Then $d_{\GH}(X_\varepsilon,M)\le\varepsilon$. Moreover for any $p,q\in X_\varepsilon$ there exists a correspondence $R_{pq}\subset X_\varepsilon\times X_\varepsilon$ containing $(p,q)$ with $\dist(R_{pq})\le2\varepsilon$.
+\end{theorem}
+\begin{proof}
+Since the inclusion is isometric and every point of $M$ lies within $\varepsilon$ of $X_\varepsilon$, the Hausdorff bound in the common ambient metric yields the asserted Gromov--Hausdorff bound. By homogeneity choose an isometry $g:M\to M$ with $g(p)=q$ and define
+\[
+R_{pq}:=\{(x,y)\in X_\varepsilon^2: d(gx,y)\le\varepsilon\}.
+\]
+For any $x\in X_\varepsilon$, the net contains a $y$ with $d(gx,y)\le\varepsilon$. Conversely, for any $y\in X_\varepsilon$, the net contains an $x$ with $d(x,g^{-1}y)\le\varepsilon$. Both coordinate projections of $R_{pq}$ are therefore onto; the pair $(p,q)$ belongs to it. For any $(x,y),(x',y')\in R_{pq}$,
+\[
+|d(x,x')-d(y,y')|=|d(gx,gx')-d(y,y')|
+\le d(gx,y)+d(gx',y')\le2\varepsilon.
+\]
+This is the required correspondence distortion bound.
+\end{proof}
+
+\paragraph{Concrete projective-sphere control.} In $\CP^1$, identify the ray metric with half the spherical central angle. A latitude-longitude grid with polar angle $\theta_j=j\pi/N$, $0\le j\le N$, and azimuth $\varphi_k=k\pi/N$, $0\le k<2N$, counted once at the poles, has $2+2N(N-1)$ distinct points. Rounding the two angular coordinates incurs a unit-sphere path length at most $\pi/N$, giving projective covering radius $\varepsilon=\pi/(2N)$. Nearest-neighbor multiplicities differ between poles and interior vertices, so these particular nets are not exactly homogeneous. They nevertheless satisfy Theorem~\ref{thm:net}, and the bound tends to zero.
+
+Gelander proves that a manifold arising as a Gromov--Hausdorff limit of \emph{exactly finite homogeneous metric spaces} must be a torus~\cite{gelander}; this forbids such a sequence approaching $\CP^n$, but it does not contradict Theorem~\ref{thm:net}. An \emph{approximate correspondence} is not an exact metric automorphism or a coherent approximate group representation, and this proof \emph{imports} the continuum homogeneous space from the outset. It cannot be promoted into a noncircular prephysical construction.
+
+\section{Ontology map: distinctions required before promotion}
+\begin{center}
+\small
+\begin{tabular}{@{}p{.29\textwidth}p{.61\textwidth}@{}}
+\toprule
+Map edge & Present evidence status and missing warrant \\
+\midrule
+Prephysical primitives $\to$ carrier & Open: no independently motivated primitive, topology or equivalence relation. \\
+Carrier $\to$ operational probabilities & Open: transition metric, Born rule and physical preparations remain imported. \\
+Metric/holonomy $\to$ full quantum local theory & Conditional mathematics; absolute conjugation can be representational, scalar holonomy phase-branch ambiguous. \\
+Local theory $\to$ composition & Not identified: separable and ordinary composites agree on local qubit geometry but disagree on Bell correlations (earlier Director B analysis). \\
+Operations $\to$ clocks, energy, dynamics & Open: no physical clock, generator selection, unit map, or relativistic field bridge. \\
+Quantum $\to$ classical mechanics & Open: a coarse-grained stochastic transition is not a reversible Hamiltonian flow; an error-controlled dynamical limit is required. \\
+Model $\to$ physical ontology & Open: empirical calibrations, risky predictions, uncertainties and alternative-model comparison are absent. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Reconstruction theorems may legitimately assume operational postulates, but those assumptions are not automatically emergent. In particular Barnum, M\"uller and Ududec require classical decomposability, strong symmetry and no higher-order interference to restrict the finite-dimensional single-system theory, and add observability of energy to select complex quantum theory~\cite{barnum}. Neither their classification nor the phase identities above supplies a prephysical implementation of these postulates. The physical genesis and quantum-to-classical map remain the central unsolved obligations.
+
+\section{Verification record and method limitations}
+The accompanying reproducible checker retains $259$ phase-family configurations, eight direct $\CP^2$ transport tests, $96$ adaptive three-step instrument tests with eight outcome words each, and 12 finite-net correspondences with $12{,}000$ sampled pair comparisons per case. These are deterministic numerical checks, not statistical evidence from laboratory samples. All endpoints and extreme values are retained. Two deliberately false controls are rejected: the wrong determinant exponent and state-only conjugation under a fixed reference. The scripted net also fails exact homogeneity by nearest-neighbor multiplicity. A first affine-coordinate implementation became singular at $\phi=\pm\pi$; the actual rays and trial entries were preserved and only the coordinate chart was changed.
+
+The physical target remains unselected. All conclusions carry explicitly declared mathematical inputs. PCP Version 1.0 / Adversarial Claim Review (ACR) was used as a text-absorbed method with source-specific clause retrieval, not an integrated or host-enforced tool. No independent sub-agents, referees, laboratory measurements, or demonstrations of ACR's relative efficacy are claimed. No upstream release or root-phase state has been altered.
+
+\begin{thebibliography}{9}\small
+\bibitem{gelander} T. Gelander, ``Limits of finite homogeneous metric spaces,'' \emph{L'Enseignement Math\'ematique} \textbf{59} (2013), 195--206. \href{https://doi.org/10.4171/LEM/59-1-8}{doi:10.4171/LEM/59-1-8}. Primary PDF examined.
+\bibitem{barnum} H. Barnum, M. P. M\"uller and C. Ududec, ``Higher-order interference and single-system postulates characterizing quantum theory,'' \emph{New J. Phys.} \textbf{16} (2014), 123029. \href{https://doi.org/10.1088/1367-2630/16/12/123029}{doi:10.1088/1367-2630/16/12/123029}.
+\bibitem{li2026} M.-S. Li, R. Wagner and L. Zhang, ``Multistate imaginarity and coherence in qubit systems,'' \emph{Phys. Rev. A} \textbf{113} (2026), 012428. \href{https://doi.org/10.1103/tpgw-v6ht}{doi:10.1103/tpgw-v6ht}.
+\bibitem{ladder} N. Guigui and X. Pennec, ``Numerical Accuracy of Ladder Schemes for Parallel Transport on Manifolds,'' \emph{Found. Comput. Math.} \textbf{22} (2022), 757--790. \href{https://doi.org/10.1007/s10208-021-09515-x}{doi:10.1007/s10208-021-09515-x}.
+\bibitem{berryreview} E. Cohen \emph{et al.}, ``Geometric phase from Aharonov--Bohm to Pancharatnam--Berry and beyond,'' \emph{Nature Reviews Physics} \textbf{1} (2019), 437--449. \href{https://doi.org/10.1038/s42254-019-0071-1}{doi:10.1038/s42254-019-0071-1}.
+\end{thebibliography}
+\end{document}

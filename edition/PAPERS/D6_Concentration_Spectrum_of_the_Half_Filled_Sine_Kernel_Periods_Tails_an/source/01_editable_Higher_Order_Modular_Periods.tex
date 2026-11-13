@@ -1,0 +1,351 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=0.88in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{lemma}[proposition]{Lemma}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ph}{\varphi}
+\setlength{\emergencystretch}{2em}
+\title{Higher-Order Modular Periods for the Half-Filled Sine Kernel}
+\author{Kirtus Justus (Theoretical Physicist)\\\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Higher-Order Modular Periods for the Half-Filled Sine Kernel},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\begin{document}
+\maketitle
+\begin{abstract}
+The half-filled finite sine kernel commutes with a Jacobi matrix whose eigenvector generating function satisfies an exact differential equation. We derive its formal even WKB periods through order $N^{-5}$ and reduce each correction to two derivatives of a hypergeometric period. Finite polynomial identities certify the reductions. Their edge poles reproduce three shifted-Stirling coefficients exactly at the level of formal period functions. Separately, a positive Fourier-integral formula for the concentration eigenvalues gives an explicit Gauss--Legendre truncation bound and a useful additional numerical check. Multiprecision comparisons at thirteen bulk modes support the proposed spectral expansion. The separate companion \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law} identifies these formal periods with the spectral coefficients and proves a uniform remainder on each fixed interior interval. The present paper supplies the coefficient reductions. These results concern one specified reference model; they do not establish the completeness of a physical model or a quantum-field-theoretic mass gap.
+\end{abstract}
+
+\section{Model, conventions and scope}
+This study develops the reference-modular discrepancy used in \emph{From Prephysical Hypotheses to Physical Models}. The mathematical objects and evidence levels are explicit: finite identities and formal coefficient reductions are proved below; comparisons with the concentration spectrum are numerical evidence. The established commuting-operator approach to the free-fermion entanglement Hamiltonian provides the setting \cite{eisler}. No priority claim for the classical ingredients or the displayed higher-order formulae is made.
+
+For even $N$, indices $0\le j,k<N$, define
+\begin{equation}
+ B_{jk}=K(j-k),\qquad K(0)=\tfrac12,\qquad
+ K(d)=\frac{\sin(\pi d/2)}{\pi d}\quad(d\ne0).
+ \label{eq:kernel}
+\end{equation}
+Let $J$ have zero diagonal and positive bonds
+\begin{equation}
+ J_{j-1,j}=J_{j,j-1}=a_j=\frac{j(N-j)}{N},\qquad 1\le j<N.
+ \label{eq:jacobi}
+\end{equation}
+The Fourier representation
+\begin{equation}
+ v^*Bv=\frac1{2\pi}\int_{-\pi/2}^{\pi/2}
+       \left|\sum_{j=0}^{N-1}v_j e^{ij\theta}\right|^2\dd\theta
+ \label{eq:fourier}
+\end{equation}
+and its complementary-band counterpart give $0<B<I$: a nonzero finite Fourier polynomial cannot vanish on an interval. Direct computation, with $d=j-k$, gives
+\[
+ [J,B]_{jk}=\frac{N-j-k-1}{N}
+       \bigl[(d-1)K(d-1)+(d+1)K(d+1)\bigr]=0.
+\]
+Here $0K(0)=0$ makes the same identity valid when $d=\pm1$. Because $J$ is an irreducible real Jacobi matrix, its spectrum is simple; its real normalized eigenvectors are also eigenvectors of $B$.
+For even $N$, the maximum absolute row sum is $N/2-1/N$, so every eigenvalue satisfies $|\lambda/N|<1/2$.
+
+Write $Jv=\lambda v$, $Bv=\zeta v$ and
+\begin{align}
+ t&=\lambda/N, &\varepsilon&=\log\frac{1-\zeta}{\zeta}, & e&=\varepsilon+N\eta(t), \label{eq:defe}\\
+ \eta(t)&=\pi t\,{}_3F_2\!\left(\tfrac14,\tfrac12,\tfrac34;1,\tfrac32;4t^2\right),
+ &&& |t|&<\tfrac12. \label{eq:eta}
+\end{align}
+The alternating-sign diagonal matrix $D_{jj}=(-1)^j$ obeys $DJD=-J$ and $DBD=I-B$. Thus the paired mode has $(-t,1-\zeta,-\varepsilon,-e)$. All signs below use \eqref{eq:defe}. In particular, signs of individual corrections cannot be compared without specifying the branch.
+
+\section{The exact differential equation and the formal period}
+\begin{proposition}[Finite Fourier equation]
+For an eigenvector of \eqref{eq:jacobi}, put
+\[
+ U(\xi)=\sum_{j=0}^{N-1}v_j e^{i[j-(N-1)/2]\xi},\qquad p=\cos\xi.
+\]
+Then
+\begin{equation}
+ (pU')'+\left[\frac{N^2-1}{4}p-\frac{N\lambda}{2}\right]U=0.
+ \label{eq:U}
+\end{equation}
+On a region with a chosen square-root branch, $V=\sqrt p\,U$ satisfies
+\begin{equation}
+ V''+[N^2q(p,t)+r(p)]V=0,\qquad
+ q=\frac{p-2t}{4p},\qquad r=\frac1{4p^2}.
+ \label{eq:ode}
+\end{equation}
+Primes in this section denote $\xi$ derivatives.
+\end{proposition}
+\begin{proof}
+For $m=j-(N-1)/2$,
+$Na_{j+1}=(N^2-1)/4-m^2-m$ and $Na_j=(N^2-1)/4-m^2+m$.
+Multiplying the finite recurrence by $e^{im\xi}$ and summing gives \eqref{eq:U}; the endpoint bonds vanish. Substitution of $U=p^{-1/2}V$, using $p''=-p$ and $(p')^2=1-p^2$, gives \eqref{eq:ode}. In the alternative notation $N^2/4-\mu/p+1/(4p^2)$ this fixes $\mu=N\lambda/2$.
+\end{proof}
+
+For a formal ansatz $V=\exp(i\int Y\,\dd\xi)$, the Riccati equation is
+$Y^2-iY'=N^2q+r$. Its even momentum $W$, defined by
+$Y=W+iW'/(2W)$, obeys
+\begin{equation}
+ W^2+\tfrac12(\log W)''-\tfrac14[(\log W)']^2=N^2q+r.
+ \label{eq:even}
+\end{equation}
+The word \emph{formal} means equality of coefficients in an inverse-power series; convergence or a spectral error bound is not assumed. Write
+\begin{equation}
+ W=N\sqrt q\left(1+\frac a{N^2}+\frac b{N^4}+\frac c{N^6}+\cdots\right).
+ \label{eq:wkb}
+\end{equation}
+Expansion of \eqref{eq:even} determines the rational functions
+\begin{align}
+ R_0&=\tfrac14(\log q)''-\tfrac1{16}[(\log q)']^2,
+ &a&=\frac{r-R_0}{2q},\nonumber\\
+ R_1&=\tfrac12a''-\tfrac14(\log q)'a',
+ &b&=-\frac{qa^2+R_1}{2q},\nonumber\\
+ L_2&=b-\tfrac12a^2,\qquad
+ R_2=\tfrac12L_2''-\tfrac14(\log q)'L_2'-\tfrac14(a')^2,
+ &c&=-\frac{2qab+R_2}{2q}.
+ \label{eq:recursion}
+\end{align}
+All derivatives can be evaluated rationally using
+$f''=(1-p^2)f_{pp}-pf_p$ and $f'g'=(1-p^2)f_pg_p$. For example,
+\begin{equation}
+ a=-\frac{2p^3t+p^2t^2-p^2-t^2}{2p(p-2t)^3}.
+ \label{eq:a}
+\end{equation}
+
+For $0<|t|<1/2$, choose a counterclockwise cycle $\Gamma$ enclosing the whole cut joining $0$ and $2t$, excluding $-1,1$. Set $\dd\xi=-\dd p/\sqrt{1-p^2}$, with $\sqrt{1-p^2}$ positive on $(-1,1)$ and $\sqrt q\sim1/2$ outside its two branch points. Both square roots return to their initial values along the cycle. A circle centered at zero with $2|t|<R<1$ makes the Laurent expansion immediate and gives
+\begin{equation}
+ -i\oint_\Gamma\sqrt q\,\dd\xi=\eta(t).
+ \label{eq:cycleeta}
+\end{equation}
+Indeed, expanding $(1-2t/p)^{1/2}(1-p^2)^{-1/2}$ and taking the coefficient of $p^{-1}$ yields \eqref{eq:eta}, with its leading term $\pi t$. This fixes the normalization without any concentration data. Define
+\begin{align}
+ P_{\rm form}&=-i\oint_\Gamma W\,\dd\xi
+       =N\eta-\frac{\ph_1}{N}-\frac{\ph_3}{N^3}-\frac{\ph_5}{N^5}-\cdots,\label{eq:P}\\
+ \ph_1&=i\oint_\Gamma\sqrt q\,a\,\dd\xi,\qquad
+ \ph_3=i\oint_\Gamma\sqrt q\,b\,\dd\xi,\qquad
+ \ph_5=i\oint_\Gamma\sqrt q\,c\,\dd\xi.\label{eq:phis}
+\end{align}
+No equality between $P_{\rm form}$ and $\log[\zeta/(1-\zeta)]$ has yet been established by this construction.
+
+\section{Exact reduction of the three correction periods}
+\begin{theorem}[Formal coefficient identities]
+For $0<|t|<1/2$, the period functions in \eqref{eq:phis} satisfy
+\begin{equation}
+ \ph_1=\frac t2\eta'+(t^2-\tfrac16)\eta'',\qquad
+ \ph_3=A_3\eta'+B_3\eta'',\qquad
+ \ph_5=A_5\eta'+B_5\eta'',
+ \label{eq:reduction}
+\end{equation}
+where primes now denote $t$ derivatives and
+\begin{align}
+ A_3&=\frac{108t^4-83t^2+7}{120t(4t^2-1)^2},\qquad
+ B_3=\frac{708t^6-789t^4+153t^2-14}{360t^2(4t^2-1)^2},\label{eq:AB3}\\
+ A_5&=-\frac{\begin{gathered}6384t^{10}-51320t^8+26567t^6\\[-2pt]-13594t^4+2019t^2-124\end{gathered}}
+ {1680t^3(4t^2-1)^4},\label{eq:A5}\\
+ B_5&=-\frac{\begin{gathered}38304t^{12}-374688t^{10}+267522t^8\\[-2pt]-170573t^6+39472t^4-4937t^2+248\end{gathered}}
+ {5040t^4(4t^2-1)^4}.\label{eq:B5}
+\end{align}
+Each $\ph_k$ is odd in $t$. These are exact identities between the defined formal period coefficients, independent of a spectral asymptotic assertion.
+\end{theorem}
+\begin{proof}
+Define
+\[
+ \mathcal L(R)=(1-p^2)R_p-pR+\frac{(1-p^2)t}{p(p-2t)}R.
+\]
+For $f=a,b,c$, the rational identity
+\begin{equation}
+ f=\frac A{p-2t}+\frac B{(p-2t)^2}+\mathcal L(R_f)
+ \label{eq:exactderivative}
+\end{equation}
+reduces the integral, because
+$\sqrt q\,\mathcal L(R_f)=\dd[p'\sqrt q\,R_f]/\dd\xi$.
+The primitive is single-valued along $\Gamma$, so its closed integral vanishes. Differentiating \eqref{eq:cycleeta} on a fixed admissible contour gives
+\[
+ \eta'=i\oint_\Gamma\frac{\sqrt q}{p-2t}\,\dd\xi,
+ \qquad
+ \eta''=i\oint_\Gamma\frac{\sqrt q}{(p-2t)^2}\,\dd\xi.
+\]
+
+For completeness the following finite coefficient system certifies \eqref{eq:exactderivative}, including its longer primitives. Set $(f_1,f_2,f_3)=(a,b,c)$, $D_r=p^r(p-2t)^{3r}$ and
+\[
+ R_{f_r}=\frac{P_r(p)}{p^{r-1}(p-2t)^{3r-1}},\qquad \deg P_r\le4r-3.
+\]
+Equation \eqref{eq:exactderivative} is equivalent to the polynomial identity
+\begin{align}
+ &(1-p^2)p(p-2t)P_r'
+ +\bigl[-p^2(p-2t)+(2r-1)(1-p^2)(t-2p)\bigr]P_r\nonumber\\
+ &\hspace{12mm}+A p^r(p-2t)^{3r-1}+B p^r(p-2t)^{3r-2}=D_r f_r.
+ \label{eq:certificate}
+\end{align}
+The degree-$4r$ coefficient cancels. In ascending powers $p^0,\ldots,p^{4r-1}$, with unknowns the ascending coefficients of $P_r$ followed by $A,B$, the coefficient matrices have determinants
+\begin{equation}
+ \det M_1=-3t^2(4t^2-1),\quad
+ \det M_2=-2835t^6(4t^2-1)^4,\quad
+ \det M_3=-30405375t^{10}(4t^2-1)^7.
+ \label{eq:det}
+\end{equation}
+They are nonzero in the stated domain. Exact elimination in these $4$, $8$ and $12$ dimensional systems gives $A=t/2$, $B=t^2-1/6$ for $r=1$, and precisely \eqref{eq:AB3}--\eqref{eq:B5} for $r=2,3$. Substitution makes all $4$, $8$ and $12$ coefficient residuals zero. Thus \eqref{eq:recursion} and \eqref{eq:certificate} are a finite, reproducible rational certificate, requiring no numerical fitting. At first order, $R_a=(-4p+3t)/[6(p-2t)^2]$. Finally, $\eta'$ is even, $\eta''$ odd, all $A$ are odd and all $B$ even, proving oddness.
+\end{proof}
+
+The combinations extend through $t=0$ by cancellation; the displayed rational formulae are applied here only for $0<|t|<1/2$. A fixed circle $|p|=R<1$ and the coefficient recursion give their analytic continuation for $|2t|<R$, which also explains the removability without division by small numerical quantities.
+
+\section{Edge poles and coefficient-level Stirling matching}
+\begin{theorem}[Edge limits of the formal functions]
+Let $u=1/2-t\downarrow0$ on the positive branch. Then
+\begin{equation}
+ \lim u\ph_1=\frac{\sqrt2}{24},\qquad
+ \lim u^3\ph_3=-\frac{14\sqrt2}{2880},\qquad
+ \lim u^5\ph_5=\frac{124\sqrt2}{40320}.
+ \label{eq:edge}
+\end{equation}
+On the negative branch the signs reverse when $u=1/2-|t|$.
+\end{theorem}
+\begin{proof}
+Expansion and beta integration give
+\begin{align}
+ \eta(t)&=4t\int_0^1\frac{\sqrt{1-s^2}}{\sqrt{1-4t^2s^4}}\,\dd s,\nonumber\\
+ \eta'(t)&=4\int_0^1\frac{\sqrt{1-s^2}}{(1-4t^2s^4)^{3/2}}\,\dd s,\qquad
+ \eta''(t)=48t\int_0^1\frac{s^4\sqrt{1-s^2}}{(1-4t^2s^4)^{5/2}}\,\dd s.
+ \label{eq:etaint}
+\end{align}
+Differentiation is justified on compact subintervals of $|2t|<1$. In the last integral put $t=1/2-u$ and $s=1-uz$. The integrand of $u\eta''$, extended by zero for $z>1/u$, tends to
+\[
+ \frac{3\sqrt2}{4}\frac{z^{1/2}}{(1+z)^{5/2}}.
+\]
+For $0<u<1/4$, $\sqrt{1-s^2}\le\sqrt{2uz}$ and
+$1-4t^2s^4\ge c_0u(1+z)$ with an absolute $c_0>0$. The rescaled integrand is therefore bounded by a fixed multiple of the displayed integrable function. Dominated convergence yields
+\[
+ u\eta''\longrightarrow\frac{3\sqrt2}{4}\mathrm B(3/2,1)=\frac1{\sqrt2}.
+\]
+Splitting the integral for $\eta'$ at $1-s=u$ gives $\eta'=O(\log(1/u))$. The exact rational coefficients give
+\[
+ B_1\to\tfrac1{12},\qquad u^2B_3\to-\tfrac7{720},\qquad
+ u^4B_5\to\tfrac{31}{5040}.
+\]
+The $A\eta'$ terms vanish after multiplication by $u,u^3,u^5$, respectively. This proves \eqref{eq:edge}; no asymptotic expansion was differentiated without control.
+\end{proof}
+
+For the formal comparison variable $h=Nu/\sqrt2$, these leading poles have the coefficients
+$1/(24h)$, $-7/(2880h^3)$ and $31/(40320h^5)$. They coincide with the shifted-Stirling expansion
+\begin{equation}
+ C(h):=h\log h-h+\tfrac12\log(2\pi)-\log\Gamma(h+\tfrac12)
+ \sim\frac1{24h}-\frac7{2880h^3}+\frac{31}{40320h^5}-\cdots.
+ \label{eq:gamma}
+\end{equation}
+This classical Gamma statement follows from duplication and Stirling's formula \cite{duplication,stirling}. For example, if
+$S(h)=\log\Gamma(h)-(h-1/2)\log h+h-\tfrac12\log(2\pi)$,
+duplication gives $C(h)=S(h)-S(2h)$. The ordinary first-omitted-term remainder bound for positive $h$ gives the conservative inequality
+\begin{equation}
+ \left|C(h)-\frac1{24h}+\frac7{2880h^3}-\frac{31}{40320h^5}\right|
+ \le\frac{129}{215040h^7},\qquad h>0.
+ \label{eq:gammaerror}
+\end{equation}
+This is a Gamma-function bound, not a bound for $e$. In particular, substituting fixed $h$ into an unproved or nonuniform bulk expansion cannot establish a spectral edge theorem. The exact fifth limit is
+$124\sqrt2/40320=0.0043492679001553518366\ldots$ in the declared $u$ convention.
+
+\section{A positive computation of tiny concentration eigenvalues}
+Let $N=2m$. Reversal symmetry splits $J$ into two $m$ dimensional Jacobi matrices. For parity $\sigma=\pm1$, the isometry
+\begin{equation}
+ v=\frac1{\sqrt2}(w,\sigma\,\operatorname{reverse}(w))
+ \label{eq:parity}
+\end{equation}
+gives the same first $m-1$ bonds and final diagonal entry $\sigma a_m=\sigma N/4$. The two matrices differ by a positive rank-one perturbation and strictly interlace, since the final coordinate is cyclic. For the full eigenvalues ordered increasingly from index zero, $\sigma=(-1)^{\text{index}+1}$.
+
+For real normalized $w$, define
+\[
+ f_+(\theta)=\sum_{j=0}^{m-1}w_j\cos((m-\tfrac12-j)\theta),\qquad
+ f_-(\theta)=\sum_{j=0}^{m-1}w_j\sin((m-\tfrac12-j)\theta).
+\]
+Equation \eqref{eq:fourier} becomes the nonnegative integral
+\begin{equation}
+ \zeta=\frac2\pi\int_0^{\pi/2}f_\sigma(\theta)^2\,\dd\theta.
+ \label{eq:positive}
+\end{equation}
+For $Q$ point Gauss--Legendre nodes $x_\ell$ and weights $\omega_\ell$ on $[-1,1]$, set
+\begin{equation}
+ \zeta_Q=\tfrac12\sum_{\ell=1}^Q\omega_\ell
+ f_\sigma\!\left(\frac{\pi(x_\ell+1)}4\right)^2.
+ \label{eq:quad}
+\end{equation}
+The amplitude can be evaluated in $O(N)$ operations per node by a trigonometric Clenshaw recurrence. With $c_r=w_{m-1-r}$, $x=\cos\theta$, $d_m=d_{m+1}=0$ and $d_r=c_r+2xd_{r+1}-d_{r+2}$,
+$f_+=\cos(\theta/2)(d_0-d_1)$ and $f_-=\sin(\theta/2)(d_0+d_1)$.
+
+\begin{proposition}[Exact-arithmetic quadrature bound]
+For the exact normalized real vector in \eqref{eq:parity},
+\begin{equation}
+ |\zeta-\zeta_Q|\le\frac N2\left[\frac{\pi(N-1)}2\right]^{2Q}
+          \frac{(Q!)^4}{(2Q+1)((2Q)!)^3}.
+ \label{eq:quadbound}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Fourier identity gives
+$f_\sigma^2=\frac12\sum_{j,k}v_jv_k e^{i(j-k)\theta}$.
+Consequently
+\[
+ \sup_\theta |(f_\sigma^2)^{(2Q)}(\theta)|
+ \le\tfrac12(\textstyle\sum_j|v_j|)^2(N-1)^{2Q}
+ \le\tfrac N2(N-1)^{2Q}.
+\]
+The classical Gauss--Legendre error formula \cite{quadrature}, mapped to $[0,\pi/2]$ and multiplied by $2/\pi$, yields \eqref{eq:quadbound}.
+\end{proof}
+
+This bound controls truncation for exact nodes, weights and vector. It does not enclose floating-point or eigenvector errors. Positivity removes the cancellation between order-one terms of the Toeplitz quadratic form, but the trigonometric amplitude itself can still cancel and requires adequate precision.
+
+For $N=1280$, mode index $412$, a separate parity-reduced calculation at $450$ decimal digits with $Q=1280$ gives
+\[
+ \zeta=1.9436461813314363836565293725869439848559834876059\ldots\times10^{-219}.
+\]
+Its relative difference from the multiprecision Toeplitz quadratic form is approximately $2.25\times10^{-233}$. The logarithm to base ten of the right side of \eqref{eq:quadbound} is approximately $-698.02$; the full eigenvector residual norm is approximately $3.92\times10^{-449}$. These decimal results are numerical checks, not outward-rounded enclosures. A second check at $N=320$, target $t=-0.35$, finds an occupation of order $10^{-158}$; positive quadrature at $200$ and $300$ digits agrees in all $100$ stored significant digits, while the $200$ digit Toeplitz calculation loses much more precision through cancellation.
+
+\section{Bulk comparisons and the remaining spectral question}
+To test the formal coefficients independently of their derivation, eigenpairs were selected nearest to targets $t=-0.05,-0.125,-0.25,-0.4$ for $N=160,320,640$, with one further $N=1280$ mode. Each eigenvalue and eigenvector was recomputed from the finite Jacobi recurrence in multiprecision. Double precision was used only for starting guesses and mode selection. Residual norms and multiprecision Sturm counts on either side of each root were checked. Every concentration calculation was repeated with $70$ additional working digits; all $90$ stored significant digits of $e$ agreed.
+
+The formal coefficients were evaluated by contour quadrature at two radii, with $1024$ and $2048$ nodes and $85$ and $105$ working digits, respectively. Comparisons were made on the $60$ significant digits retained by that calculation; agreement beyond the stored resolution is not an exact-zero discrepancy. The first coefficient also agreed with its derivative formula. All corrections in Table~\ref{tab:bulk} use the actual $t=\lambda/N$, not the target.
+
+Define the diagnostics
+\begin{equation}
+ r_5=e-\frac{\ph_1(t)}N-\frac{\ph_3(t)}{N^3}-\frac{\ph_5(t)}{N^5},
+ \qquad R_7=N^7r_5.
+ \label{eq:diagnostic}
+\end{equation}
+\input{bulk_table.tex}
+
+At $N=1280$ and increasing mode index $412$,
+\begin{align*}
+ t&=-0.124739991196938656384387974111906293\ldots,\\
+ e&=-0.00008048751355147794775611390542947613274\ldots,\\
+ \ph_1&=-0.103024094448572682466352828157935730\ldots,\\
+ \ph_3&=+0.126325283851928757174928374991310098\ldots,\\
+ \ph_5&=-0.411977546424471734522238417962699287\ldots.
+\end{align*}
+The difference $N^3(e-\ph_1/N)-\ph_3$ is approximately $-2.51450\times10^{-7}$. After subtracting $\ph_3/N^3$, the unscaled error is approximately $-1.19901\times10^{-16}$; subtracting $\ph_5/N^5$ leaves $+5.10531\times10^{-22}$, or $6.34298\times10^{-18}$ relative to $e$. The fifth coefficient is negative at this mode; its positive symmetry partner has the opposite sign.
+
+The diagnostics are consistent with a next inverse power $N^{-7}$ for the sampled interior modes. The near-edge target has much larger $R_7$ than the central targets, underscoring the need for a stated domain and uniform constants. Since the actual coordinates drift with $N$, this table is not a fixed-$t$ convergence-rate proof.
+
+\paragraph{Precision and structural checks.}
+At fixed actual $t$, error propagation in the fifth-order diagnostic is
+\[
+ \delta\!\left[N^5(e-\ph_1/N-\ph_3/N^3)\right]
+ =N^5\delta e-N^4\delta\ph_1-N^2\delta\ph_3.
+\]
+At $N=1280$, an absolute error $10^{-13}$ in $e$ alone becomes approximately $343.6$ in this diagnostic. Thus binary64 residual data cannot resolve this correction. The correct signed kernel \eqref{eq:kernel} is even in $d$: either both numerator and denominator use $d$, or both use $|d|$. Mixing these conventions produces an odd off-diagonal kernel. For a real-vector quadratic form, the resulting matrix $B_{\rm bad}=I/2+A$, $A^T=-A$, returns $1/2$ exactly, hence $\varepsilon=0$ and $e=N\eta$. Hermiticity and explicit signed-offset tests detect this failure.
+
+\paragraph{Spectral connection and remaining edge question.}
+The separate whole-line connection theorem establishes, for every compact $K\subset(-1/2,0)$ or $K\subset(0,1/2)$, constants $C_K,N_K$ such that every paired mode with $t\in K$ and even $N\ge N_K$ obeys
+\begin{equation}
+ \left|e-\frac{\ph_1(t)}N-\frac{\ph_3(t)}{N^3}-\frac{\ph_5(t)}{N^5}\right|
+ \le C_KN^{-7}.
+ \label{eq:open}
+\end{equation}
+This inequality is proved in \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law}, including continuation across zero, through exact boundary normalization and an integrable Riccati residual. It does not follow from the coefficient identities alone. An edge-overlap theorem would require additional uniform estimates as $K$ approaches $\pm1/2$. Even \eqref{eq:open} alone would not control the full modular-discrepancy operator norm or complete the associated Wilson relative-entropy asymptotic, which also involves edge modes and weighted traces. The present model-level results therefore refine a specific mathematical component without establishing a universal physical theory.
+
+\paragraph{Acknowledgments and computational assistance.}
+ChatGPT (OpenAI) assisted with the derivations, computational implementations and mathematical checking presented here. This work belongs to a broader research program that has also used Claude (Anthropic), Gemini (Google), Grok (SpaceXAI) and DeepSeek (High-Flyer). Those broader contributions are not attributed the specific checks in this article and do not imply endorsement. AI-assisted checking does not constitute independent human peer review.
+
+\begin{thebibliography}{9}
+\bibitem{eisler} V. Eisler and I. Peschel, \emph{Analytical results for the entanglement Hamiltonian of a free-fermion chain}, J. Phys. A: Math. Theor. \textbf{50} (2017), 284003. \href{https://arxiv.org/abs/1703.08126}{arXiv:1703.08126}.
+\bibitem{stirling} NIST Digital Library of Mathematical Functions, \S5.11, \emph{Asymptotic Expansions}, especially the Stirling expansion and positive-real remainder bounds. \url{https://dlmf.nist.gov/5.11}.
+\bibitem{duplication} NIST Digital Library of Mathematical Functions, \S5.5(iii), equation 5.5.5, \emph{Duplication Formula}. \url{https://dlmf.nist.gov/5.5}.
+\bibitem{quadrature} NIST Digital Library of Mathematical Functions, \S3.5(v), equations 3.5.19 and 3.5.21, \emph{Gauss Quadrature}. \url{https://dlmf.nist.gov/3.5}.
+\end{thebibliography}
+\end{document}

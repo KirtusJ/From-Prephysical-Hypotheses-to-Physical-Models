@@ -1,0 +1,150 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Incomplete detector calibration},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Incomplete detector calibration}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{2. Independent result: exact detector partial-identification interval}\label{independent-result-exact-detector-partial-identification-interval}
+
+Let trusted density matrices rho\_i (i=1,\ldots,m) have exact measured response rates p\_i for an otherwise unknown but stable binary measurement effect 0 \textless= E \textless= I on a finite-dimensional Hilbert space. For a target state rho\_T define
+
+\begin{verbatim}
+L(p) = min Tr(E rho_T),   U(p) = max Tr(E rho_T),
+subject to Tr(E rho_i)=p_i for every i and 0 <= E <= I.
+\end{verbatim}
+
+These are finite semidefinite programs, and by definition are the sharp possible target-response bounds for the entire admissible effect class. Both extrema are attained when the calibration vector is feasible because the effect set is compact. The image is a closed interval by convexity. \textbf{They are data dependent}: a target outside the real reference span does not imply ambiguity for every possible calibration dataset.
+
+For any real vector lambda, put A=lambda-weighted subtraction \texttt{A=rho\_T-sum\_i\ lambda\_i\ rho\_i}. Then
+
+\begin{verbatim}
+Tr(E rho_T) = sum_i lambda_i p_i + Tr(E A)
+            <= sum_i lambda_i p_i + Tr(A_+),
+\end{verbatim}
+
+where \texttt{A\_+} is the positive part of A and the inequality is sharp when E is its positive spectral projector if no other constraints are imposed. Consequently,
+
+\begin{verbatim}
+U(p) <= inf_lambda [sum_i lambda_i p_i + Tr((rho_T-sum_i lambda_i rho_i)_+)].
+\end{verbatim}
+
+The inequality is equality under the usual finite-dimensional Slater condition: at least one compatible effect satisfies 0 \textless{} E \textless{} I. At boundary response vectors, rely on the primal SDP or limiting dual, not an unqualified interior-strong-duality assertion. For normalized densities, \texttt{L(p)=1-U(1-p)} follows by exchanging E and I-E.
+
+\subsubsection{Elementary complete proof for a qubit}\label{elementary-complete-proof-for-a-qubit}
+
+Use two trusted reference states \textbar0\textgreater\textless0\textbar{} and \textbar1\textgreater\textless1\textbar. Suppose their calibrated click probabilities are p0,p1. A possible effect has the form
+
+\begin{verbatim}
+E = [[p0, z], [conjugate(z), p1]].
+\end{verbatim}
+
+Positivity of E and I-E is equivalent to
+
+\begin{verbatim}
+|z| <= R := min(sqrt(p0*p1), sqrt((1-p0)*(1-p1))).
+\end{verbatim}
+
+For the held-out target \textbar+\textgreater=(\textbar0\textgreater+\textbar1\textgreater)/sqrt(2), \texttt{q=(p0+p1)/2+Re(z)}. Choosing z=+/-R proves the \emph{exact} interval
+
+\begin{verbatim}
+(p0+p1)/2-R <= q <= (p0+p1)/2+R.
+\end{verbatim}
+
+In particular, if p0=p1=p, the range is \texttt{{[}max(0,2p-1),min(1,2p){]}}. At p=0 the calibration forces E=0 and q=0, despite \textbar+\textgreater\textless+\textbar{} lying outside the real reference span. At p=1/2 the same two reference probabilities are compatible with every target rate from zero to one. These are extreme physical effects, not a numerical fitting artifact.
+
+This is an instance of established quantum partial tomography and set-identification SDPs (e.g.~\emph{Physical Review A} 98, 042318, 2018), not a claim of mathematical originality. Its application to the present measurement contract is useful because it avoids inferring universal ignorance from mere failure of reference informational completeness.
+
+\subsubsection{Uncertain reference data}\label{uncertain-reference-data}
+
+When independently justified intervals \texttt{{[}l\_i,u\_i{]}} replace exact p\_i, use the same primal with inequalities. Its Lagrangian bound reads
+
+\begin{verbatim}
+U <= inf_{beta_i,gamma_i>=0} [sum_i (beta_i u_i-gamma_i l_i)
+      + Tr((rho_T - sum_i (beta_i-gamma_i)rho_i)_+)].
+\end{verbatim}
+
+Equality follows under appropriate strict feasibility. This is how uncertainty and physicality should jointly enter, rather than treating a noisy point estimate as exact.
+
+\subsection{3. Cross-check: tetrahedral source-response bound}\label{cross-check-tetrahedral-source-response-bound}
+
+For four trusted tetrahedral qubit states rho\_i=(I+r\_i dot sigma)/2, define D\_i=(3rho\_i-I)/2. They form a dual frame and satisfy sum D\_i\^{}2=(5/2)I. The sixteen probabilities \texttt{p\_ij=Tr(E\ rho\_i\ tensor\ rho\_j)} determine E exactly. Under entrywise errors \textbar delta p\_ij\textbar{} \textless= delta, the \emph{maximum response over separable states}, b\_sep(E), changes by at most 4 delta, which is sharp. The proof uses the dual weights
+
+\begin{verbatim}
+w_i(x) = Tr(D_i rho_x)=(1+3r_i dot x)/4.
+\end{verbatim}
+
+The exact maximum of sum\_i \textbar w\_i(x)\textbar{} is two for Bloch vectors \textbar x\textbar\textless=1, attained at a tetrahedral antipode, with weights (-1/2,1/2,1/2,1/2). Product response weights therefore have absolute sum at most four. Direct construction of a sign-perturbation near E=I/2 attains the bound without leaving the effect set for sufficiently small delta.
+
+Using alpha=.05, Delta=13/1280, and seventeen independent settings of n trials each, the sufficient requirement n \textgreater{} 50 log(34/alpha)/Delta\^{}2 gives n=3,161,479, total 53,745,143. This is a \emph{conservative sufficient} shot budget with trusted preparations, stable effect, and independent Bernoulli trials, not a necessary hardware cost.
+
+\end{document}

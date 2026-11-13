@@ -1,0 +1,393 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,enumitem}
+\usepackage[margin=0.9in]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Mathematical research supplement}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\SSep}{\mathsf{Sep}}
+\newcommand{\KK}{\mathcal K}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\C}{\mathbb C}
+\newcommand{\LOCC}{\mathrm{LOCC}}
+\newcommand{\GHZ}{\mathrm{GHZ}}
+\title{\textbf{Instrument Closure and Multipartite Selection:}\\[4pt]
+Exact Counterexamples and Conditional Completion Theorems}
+\author{Kirtus Justus\\[-1pt]\small Research direction and scholarly responsibility\\
+\small Port Coquitlam, British Columbia, Canada}
+\date{12 November 2026, B.C. Pacific Time\\[3pt]
+\small Initial External Grounding; mathematics under stipulated premises; no ontology selected}
+\begin{document}
+\maketitle
+\begin{abstract}
+A two-system convex family can reproduce ordinary elementary complex two-level
+quantum statistics while restricting composite preparations. An earlier four-system
+counterexample showed that a uniform convex interpolation between fully separable
+and all density operators fails parallel-preparation closure. We strengthen this in
+four ways. First, every nonendpoint interpolation already fails closure under a
+\emph{single-party successful local filter}, and the violation and its nonzero
+success probability are computed exactly. Second, permitting a different mixture
+parameter at four systems cannot restore \emph{both} parallel preparation and
+partial trace. Third, an explicit matching-generated hierarchy provides a positive
+countercontrol: it is closed under parallel preparation, discarding and elementary
+local trace-preserving operations, retains entangled two-system preparations and
+may violate CHSH, but excludes a three-system GHZ state. Fourth, within a stipulated
+complex density-operator representation, closure under local successful filters
+and local unitaries makes \emph{one entangled pure two-system seed} sufficient to
+fill the complete two-system state space. A related mixed-state extension invokes
+published distillation results and substantially stronger assumptions. Every
+statement is conditional mathematical research, not an emergence of operational
+probability, physical systems, time, quantum mechanics, classical mechanics, or a
+calibrated prephysical-to-physical map.
+\end{abstract}
+
+\section{Assessment contract and definitions}
+The program's target is an explained emergence of quantum and classical mechanics
+from independently warranted prephysical structure, with an empirical map.
+Here the \emph{mathematical control} is assumed: an elementary Hilbert space
+$H=\C^2$ with its usual complex inner product, positive density operators,
+Born-form evaluation, Hilbert tensor products and the standard meaning of a
+quantum operation. These are \emph{stipulations of the test}, not derived
+primitive phenomena and not identification of physical qubits.
+Let $\DD_n$ be the density operators on $H^{\otimes n}$, and
+\[
+\SSep_n=\operatorname{conv}\{\rho_1\otimes\cdots\otimes\rho_n:
+\rho_j\in\DD_1\}
+\]
+the fully separable subset. For $0\le t\le1$, define the Minkowski mixture
+\begin{equation}\label{eq:K}
+\KK_t^{(2)}=(1-t)\SSep_2+t\DD_2
+=\{(1-t)\sigma+t\tau:\sigma\in\SSep_2,\ \tau\in\DD_2\}.
+\end{equation}
+It is closed under convex mixing and elementary local completely positive
+trace-preserving (CPTP) operations. Its extreme $t=0$ is a \emph{separable
+composite with quantum elementary systems}, not classical Hamiltonian mechanics.
+Its $t=1$ endpoint is the ordinary quantum two-system composite.
+Set
+\[
+|\Phi\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2},\qquad
+P=|\Phi\rangle\langle\Phi|,\qquad
+\rho_t=(1-t)|00\rangle\langle00|+tP.
+\]
+We use $0\preceq E\preceq\id$ as positive operator inequalities. A linear
+separation functional need not already be implemented as a physical effect.
+When operational access is discussed, the needed admissible instrument is stated.
+
+\begin{lemma}[Sharp Bell support]\label{lem:support}
+For every $0\le t\le1$,
+\[
+\max_{\rho\in\KK_t^{(2)}}\tr(P\rho)=\frac{1+t}{2}.
+\]
+The state $\rho_t$ attains the maximum.
+\end{lemma}
+\begin{proof}
+For product unit vectors $|a\rangle|b\rangle$, Cauchy--Schwarz gives
+$|\langle\Phi|a\otimes b\rangle|^2\le1/2$; convexity extends the
+bound to $\SSep_2$. The maximum over $\DD_2$ is $1$.
+The affine mixture has upper bound $(1-t)/2+t$, attained by the
+separable $|00\rangle\langle00|$ and the quantum $P$ constituents.
+\end{proof}
+
+\section{Instrument-level obstruction at two systems}
+\begin{theorem}[A single successful local filter leaves every interior family]
+\label{thm:filter}
+For every $0<t<1$, $\KK_t^{(2)}$ is not closed under normalized
+nonzero successful branches of all single-party local quantum instruments.
+In fact, an ordinary two-outcome instrument on the first subsystem has a branch
+with success probability exactly $t$, whose conditioned output is outside
+$\KK_t^{(2)}$.
+\end{theorem}
+\begin{proof}
+For $0<x\le1$ use Kraus operators on the first system
+\[
+F_x=\begin{pmatrix}x&0\\0&1\end{pmatrix},\qquad
+F_x^{\rm fail}=\begin{pmatrix}\sqrt{1-x^2}&0\\0&0\end{pmatrix},\qquad
+F_x^\dagger F_x+(F_x^{\rm fail})^\dagger F_x^{\rm fail}=\id_2.
+\]
+Applying the successful branch $F_x\otimes\id_2$ to $\rho_t$ gives the
+unnormalized state
+\[
+\widetilde\rho_{t,x}=(1-t)x^2|00\rangle\langle00|
++\frac t2(x|00\rangle+|11\rangle)(x\langle00|+\langle11|),
+\]
+with success probability
+\begin{equation}\label{eq:success}
+p_{t,x}=\tr\widetilde\rho_{t,x}=
+\frac{(2-t)x^2+t}{2}>0.
+\end{equation}
+The conditioned Bell-projector expectation is
+\begin{equation}\label{eq:fidelity}
+f_{t,x}=\frac{\tr(P\widetilde\rho_{t,x})}{p_{t,x}}
+=\frac12+\frac{tx}{(2-t)x^2+t}.
+\end{equation}
+The derivative vanishes at $x_*=\sqrt{t/(2-t)}\in(0,1)$,
+where it is maximal on $(0,1]$. At this point
+\begin{equation}\label{eq:gap}
+p_{t,x_*}=t,\qquad
+f_{t,x_*}=\frac{1+\sqrt{t/(2-t)}}{2},\qquad
+f_{t,x_*}-\max_{\rho\in\KK_t^{(2)}}\tr(P\rho)
+=\frac{\sqrt{t/(2-t)}-t}{2}>0.
+\end{equation}
+Strict positivity follows from
+$\frac{t}{2-t}-t^2=\frac{t(1-t)^2}{2-t}>0$.
+Lemma~\ref{lem:support} therefore excludes the normalized output from
+$\KK_t^{(2)}$. This is a violation of \emph{postselected-state closure},
+not of trace-preserving channel closure.\end{proof}
+
+\begin{remark}[Access, limits and controls]
+At $t=1/2$, $x_*=1/\sqrt3$, success probability is $1/2$,
+$f_{t,x_*}=(1+1/\sqrt3)/2$, and the gap is $0.03867513459\ldots$.
+As $t\downarrow0$ success probability tends to zero; the endpoint
+$t=0$ is not assigned a nonexistent normalized zero-probability branch.
+Both $\KK_0^{(2)}=\SSep_2$ and $\KK_1^{(2)}=\DD_2$ are closed under
+nonzero-probability local filters. Near $t\uparrow1$ the positive gap is
+$\frac14(1-t)^2+O((1-t)^3)$; floating-point zero is not a mathematical
+counterexample. The Bell witness is accessible by \emph{product-observable
+statistics} if local Pauli measurements are supplied, since
+$P=\tfrac14(\id\otimes\id+X\otimes X-Y\otimes Y+Z\otimes Z)$.
+Those effects, outcome probabilities, postselection, Pauli measurements and
+preparation resources are all imported in this mathematical test.
+\end{remark}
+
+\section{An arity-dependent interpolation still fails at four systems}
+Allow two and four elementary systems to use \emph{different} mixture weights
+$t,s\in[0,1]$:
+\[
+\KK_t^{(2)}=(1-t)\SSep_2+t\DD_2,\qquad
+\KK_s^{(4)}=(1-s)\SSep_4+s\DD_4.
+\]
+\begin{theorem}[Independent preparation and discarding are incompatible]
+\label{thm:arity}
+If (i) the tensor product of any two allowed pair states is admitted at four
+systems and (ii) discarding either disjoint pair maps every four-system
+state into $\KK_t^{(2)}$, then necessarily $t=s\in\{0,1\}$.
+In particular no interior pair weight can be repaired by choosing an
+independent four-body weight $s$ of the displayed form.
+\end{theorem}
+\begin{proof}
+\emph{Discard bound.} For any $s$, the state
+$\rho_s^{12}\otimes|00\rangle\langle00|^{34}$ belongs to $\KK_s^{(4)}$:
+its fully separable and unrestricted density constituents can be chosen
+with the same spectator $|00\rangle^{34}$. Discarding systems 3,4 gives
+$\rho_s^{12}$; Lemma~\ref{lem:support} implies
+\begin{equation}\label{eq:up}s\le t.\end{equation}
+\emph{Parallel-preparation bound.} Let $P_{12}=P\otimes\id_4$ and
+$P_{34}=\id_4\otimes P$ and define the projector
+\[
+E=\id_{16}-(\id_4-P)\otimes(\id_4-P).
+\]
+For any fully product pure four-party state, the two disjoint pair Bell
+probabilities $f_1,f_2$ satisfy $f_i\le1/2$. Thus
+$\tr(E\omega)=1-(1-f_1)(1-f_2)\le3/4$ for all
+$\omega\in\SSep_4$. The upper bound is attained by $|0000\rangle$;
+$\max_{\DD_4}\tr E=1$. Consequently
+\[
+\max_{\omega\in\KK_s^{(4)}}\tr(E\omega)=\frac34+\frac s4.
+\]
+Independent preparation of $\rho_t^{12}$ and $\rho_t^{34}$ requires
+$\rho_t\otimes\rho_t\in\KK_s^{(4)}$, whose actual witness value is
+$1-((1-t)/2)^2$. Hence
+\begin{equation}\label{eq:down}
+s\ge2t-t^2.
+\end{equation}
+Together \eqref{eq:up} and \eqref{eq:down} require
+$t\ge2t-t^2$, i.e. $t(1-t)\le0$. With $t\in[0,1]$, this allows only
+$t=0$ or $1$, and the two inequalities then force $s=t$.
+\end{proof}
+\begin{remark}
+The theorem excludes precisely a \emph{uniform-at-each-arity
+Minkowski interpolation} with weights allowed to vary by arity. It does
+not exclude all possible four-system extensions. The witness $E$ can
+serve as an ordinary linear separation functional even if a proposed
+instrument theory does not physically implement it. For the special case
+$s=t$, the violation is $t(1-t)/4$, recovering the earlier four-party
+counterexample. The new contradiction uses an additional \emph{discarding}
+obligation and defeats attempts to change $s$ to repair that example.
+\end{remark}
+
+\section{Positive countercontrol: a coherent restricted hierarchy}
+A no-go must not be promoted beyond its hypotheses. Let $\mathfrak P_n$
+be the finite set of partitions of $\{1,\ldots,n\}$ into blocks of size
+one or two. Set $L_1=\DD_1$, $L_2=\KK_t^{(2)}$ and define
+\begin{equation}\label{eq:matching}
+\MM_n(t)=\operatorname{conv}\bigcup_{\pi\in\mathfrak P_n}
+\left\{\bigotimes_{b\in\pi}\rho_b:\rho_b\in L_{|b|}\right\}.
+\end{equation}
+The tensor factors are placed on their labeled subsystems. This is a
+\emph{matching-generated} family, not the interpolation of
+Theorem~\ref{thm:arity}.
+\begin{theorem}[Consistency under specified weak operations]
+\label{thm:matching}
+For every $t\in[0,1]$, the hierarchy \eqref{eq:matching} is compact,
+convex, invariant under permutations and closed under independent
+preparation, discarding any subset of elementary systems, and arbitrary
+\emph{unconditioned} one-site CPTP operations. It also permits destructive
+single-site measurements with postselection \emph{if the measured site is
+removed}. Its single-system and two-system spaces are $\DD_1$ and
+$\KK_t^{(2)}$. Product-observable tomography distinguishes its density
+operators. Nevertheless $\MM_3(t)\ne\DD_3$ for every $t$.
+\end{theorem}
+\begin{proof}
+Each block-state set is compact, and there are finitely many partitions;
+finite-dimensional convex hull preserves compactness. Permutations relabel
+partitions. The tensor product of two block-product terms is a block-product
+term on the disjoint union; bilinear expansion extends this to convex
+mixtures. Partial traces either remove whole blocks or turn a surviving
+member of a two-block into an arbitrary $\DD_1$ state. On-site CPTP
+operations preserve $L_1$ and preserve $L_2$ because they separately
+preserve the fully separable and quantum constituents. A destructive
+single-site effect similarly leaves its block partner in $\DD_1$ and
+other blocks unchanged, with normalized mixtures remaining admissible.
+Product Pauli effects span the full Hermitian operator space and hence
+separate any two different states.
+
+Let $|\GHZ\rangle=(|000\rangle+|111\rangle)/\sqrt2$ and
+$Q=|\GHZ\rangle\langle\GHZ|$. Every block-product term at three
+systems factors across some one-site versus two-site bipartition. Across
+every such split the Schmidt coefficients of $|\GHZ\rangle$ are
+$(1/\sqrt2,1/\sqrt2)$. Thus $\tr(Q\omega)\le1/2$ for every
+$\omega\in\MM_3(t)$, by the maximal Schmidt-overlap bound and convexity.
+But $\tr(Q Q)=1$, so $Q\notin\MM_3(t)$.
+\end{proof}
+\begin{remark}[Not a full operational emergence theory]
+The hierarchy deliberately does \emph{not} claim closure under
+nondestructive successful local filters, arbitrary joint instruments,
+entangling gates or joint operations on all members of one laboratory.
+Adding these assumptions requires a new closure proof and can defeat
+\eqref{eq:matching}. For every $t>0$ it nevertheless contains the
+entangled $\rho_t$ (its partial transpose has eigenvalue $-t/2$).
+For the stipulated Pauli CHSH settings it contains a state with
+$\langle\mathrm{CHSH}\rangle=\sqrt2(1+t)>2$ whenever
+$t>\sqrt2-1$. Thus all-arity parallel preparation, discard, local
+state tomography, and a Bell-CHSH violation do not alone force the
+unrestricted many-body density spaces. This is a restricted mathematical
+quantum subtheory with imported probabilities and operations, \emph{not}
+a proposed physical ontology.
+\end{remark}
+
+\section{A conditional positive completion mechanism}
+\begin{theorem}[One entangled pure seed with local selective filters]
+\label{thm:pure}
+Let $\mathcal L\subseteq\DD_2$ be convex and invariant under all local
+unitaries and every normalized nonzero successful branch of a one-party
+local quantum filter $F\otimes\id_2$, where $F^\dagger F\preceq\id_2$.
+If $\mathcal L$ contains even one \emph{pure entangled} two-system state,
+then $\mathcal L=\DD_2$.
+\end{theorem}
+\begin{proof}
+By local unitaries write the seed in Schmidt form
+$|\psi\rangle=a|00\rangle+b|11\rangle$, with $a,b>0$ and
+$a^2+b^2=1$. Every target two-system unit vector has Schmidt form
+$(U\otimes V)(c|00\rangle+d|11\rangle)$ with $c,d\ge0$,
+$c^2+d^2=1$. Choose any $\kappa>0$ small enough that
+$\kappa c/a\le1$ and $\kappa d/b\le1$. Then
+\[
+F=\operatorname{diag}(\kappa c/a,\kappa d/b)
+\quad\text{satisfies}\quad F^\dagger F\preceq\id_2,
+\]
+and $(F\otimes\id)|\psi\rangle=\kappa(c|00\rangle+d|11\rangle)$.
+The branch has positive success probability $\kappa^2$; normalization,
+followed by the local $U\otimes V$, produces the target pure state.
+Thus $\mathcal L$ contains every pure bipartite state. Their convex hull
+is $\DD_2$, while $\mathcal L\subseteq\DD_2$ by hypothesis.
+\end{proof}
+\begin{corollary}[Mixed entangled seed under stronger published premises]
+\label{cor:mixed}
+Suppose $\mathcal L\subseteq\DD_2$ is also compact and is the two-system
+sector of an all-arity theory closed under tensor powers, discarding,
+normalized successful finite-round $\LOCC$ protocols on arbitrarily many
+copies, local unitaries and successful local filters. If $\mathcal L$
+contains an entangled two-system density operator, then
+$\mathcal L=\DD_2$, \emph{conditional on the published theorem} that
+every entangled $2\times2$ quantum state is distillable by such protocols.
+\end{corollary}
+\begin{proof}
+The two-qubit distillation theorem of Horodecki, Horodecki and
+Horodecki~\cite{Horodecki1997} gives finite-copy $\LOCC$ outputs with
+Bell-state fidelity tending to one. The assumed operational closure
+places every normalized output in $\mathcal L$. Compactness places
+the limiting Bell projector in $\mathcal L$. Apply
+Theorem~\ref{thm:pure}.\end{proof}
+\begin{remark}[Assumption debt]
+Theorem~\ref{thm:pure} assumes a standard complex composite, a pure
+entangled seed, arbitrarily chosen local filters, successful-branch
+updating, and convex mixing. Corollary~\ref{cor:mixed} adds all-arity
+systems, cross-copy laboratory operations, classical communication,
+postselection, a compactness limit, and an external distillation theorem.
+These assumptions can do the mathematical selection work but do not explain
+why a prephysical substrate supplies them. The statement is \emph{not}
+that any CHSH violation, bare tensor closure, or holonomy alone implies
+full quantum theory.
+\end{remark}
+
+\section{Reconciliation with the broader research objective}
+The projective holonomy determinant identity, its root-of-unity ambiguity,
+global conjugation equivalence, finite exact-homogeneity obstruction,
+and finite-cycle complex-type algebra remain conditional or restricted
+results of earlier work. Neither they nor the present composition theorems
+derive an operational clock, the Born rule, a Hamiltonian, physical
+spacetime, a quantum-to-classical Hamiltonian limit, or empirical
+prediction with uncertainty. The finite-cycle construction also admits a
+classical simplex completion; present composite results import complex
+Hilbert spaces and therefore \emph{do not bridge that selection gap}.
+
+The resulting obligation hierarchy is sharper: choose independently
+warranted primitive operations and records; identify probability and
+measurement update; justify composition and conditioning at every arity;
+identify any actual entangling preparation and instrument; then separately
+derive dynamics, physical units and a controlled classical limit. A
+failure of one natural interpolation does not exclude every completion;
+Theorem~\ref{thm:matching} supplies an explicit countercontrol. Work
+remains at Initial External Grounding. No ontology is selected.
+
+\section*{Reproducibility and provenance}
+The accompanying source checker uses exact SymPy reductions, high-precision
+MPMath boundary cases, ordinary finite-dimensional matrix controls, a
+seeded batch of GHZ biseparable controls and sampled pure-state local
+filters. Theorems, rather than finite random tests, supply the universal
+quantifiers. The one-party local-filter result and arity-varying four-party
+bound have exact algebraic proofs; the sampling checks do not estimate a
+physical distribution. All boundary and numerical outlier cases are retained.
+
+Research direction and scholarly responsibility: Kirtus Justus.
+Mathematical development, code execution and internal checking assisted by
+ChatGPT (GPT-6). This is one-assistant internal work and incorporates
+other assistant-generated submissions as \emph{internal research provenance},
+not as independent refereeing. The underlying research release was not
+modified; no experimental results, independent scientific validation or
+host-enforced research protocol are claimed.
+
+\begin{thebibliography}{9}\small
+\bibitem{Bennett1996} C. H. Bennett, H. J. Bernstein, S. Popescu and
+B. Schumacher, ``Concentrating partial entanglement by local operations,''
+\emph{Phys. Rev. A} \textbf{53}, 2046 (1996).
+\url{https://doi.org/10.1103/PhysRevA.53.2046}.
+\bibitem{Horodecki1997} M. Horodecki, P. Horodecki and R. Horodecki,
+``Inseparable Two Spin-1/2 Density Matrices Can Be Distilled to a Singlet Form,''
+\emph{Phys. Rev. Lett.} \textbf{78}, 574 (1997).
+\url{https://doi.org/10.1103/PhysRevLett.78.574}.
+\bibitem{Nielsen1999} M. A. Nielsen,
+``Conditions for a Class of Entanglement Transformations,''
+\emph{Phys. Rev. Lett.} \textbf{83}, 436 (1999).
+\url{https://doi.org/10.1103/PhysRevLett.83.436}.
+\bibitem{BarnumHilgert2020} H. Barnum and J. Hilgert,
+``Spectral Properties of Convex Bodies,''
+\emph{J. Lie Theory} \textbf{30}, 315--344 (2020).
+\url{https://doi.org/10.5802/jolt.1118}.
+\bibitem{Gelander2013} T. Gelander,
+``Limits of Finite Homogeneous Metric Spaces,''
+\emph{L'Enseignement Math\'ematique} \textbf{59}, 195--206 (2013).
+\url{https://doi.org/10.4171/LEM/59-1-8}.
+\end{thebibliography}
+\end{document}

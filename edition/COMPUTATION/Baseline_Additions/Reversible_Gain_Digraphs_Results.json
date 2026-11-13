@@ -1,0 +1,382 @@
+{
+ "R1_degree_two_reversible_gain_digraphs_are_block_structured": {
+  "passed": true,
+  "table": [
+   {
+    "vertices": 2,
+    "gains": "Z2",
+    "solutions": 8,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 3,
+    "gains": "Z2",
+    "solutions": 0,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 4,
+    "gains": "Z2",
+    "solutions": 1152,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 5,
+    "gains": "Z2",
+    "solutions": 0,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 6,
+    "gains": "Z2",
+    "solutions": 691200,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 4,
+    "gains": "Z4",
+    "solutions": 73728,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 3,
+    "gains": "Z4",
+    "solutions": 0,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 4,
+    "gains": "Z3",
+    "solutions": 0,
+    "all_block_structured": true
+   },
+   {
+    "vertices": 6,
+    "gains": "Z3",
+    "solutions": 0,
+    "all_block_structured": true
+   }
+  ],
+  "universe": "all simple digraphs with loops allowed, out-degree 2 at every vertex, gains as listed; solutions are matrices with pairwise orthogonal columns"
+ },
+ "R1_none_on_odd_vertex_sets_and_none_without_minus_one": {
+  "passed": true
+ },
+ "R2_trivial_gains_reversible_means_permutation": {
+  "passed": true,
+  "matrices_found": 32
+ },
+ "R3_polar_structure_of_random_orthogonal_maps": {
+  "passed": true,
+  "rows": [
+   {
+    "n": 6,
+    "dim_kernel": 2,
+    "J2_plus_E1": 8.326672684688674e-16,
+    "commutes_with_U": 8.326672684688674e-16,
+    "U_minus_cosTheta_plus_JsinTheta": 8.881784197001252e-16,
+    "reversal_J_plus_Jrev": 0.0
+   },
+   {
+    "n": 7,
+    "dim_kernel": 1,
+    "J2_plus_E1": 7.771561172376096e-15,
+    "commutes_with_U": 1.1435297153639112e-14,
+    "U_minus_cosTheta_plus_JsinTheta": 2.886579864025407e-15,
+    "reversal_J_plus_Jrev": 0.0
+   },
+   {
+    "n": 8,
+    "dim_kernel": 2,
+    "J2_plus_E1": 1.887379141862766e-15,
+    "commutes_with_U": 7.771561172376096e-16,
+    "U_minus_cosTheta_plus_JsinTheta": 9.992007221626409e-16,
+    "reversal_J_plus_Jrev": 0.0
+   },
+   {
+    "n": 9,
+    "dim_kernel": 1,
+    "J2_plus_E1": 1.1421419365831298e-14,
+    "commutes_with_U": 2.0896478991616618e-14,
+    "U_minus_cosTheta_plus_JsinTheta": 1.27675647831893e-15,
+    "reversal_J_plus_Jrev": 0.0
+   }
+  ],
+  "seed": 2026111233
+ },
+ "R3_other_commuting_structures_have_a_negative_generator": {
+  "passed": true,
+  "smallest_eigenvalue_of_minus_Jprime_K": -0.29853646631624864,
+  "first_run": "the first version reversed J on the span of the two lowest eigenvectors of (U+U^T)/2 of a matrix that had eigenvalues +1 and -1; that span was not invariant and the predicate returned False (smallest eigenvalue -2.8e-16). Failure of the checking program; restated for a matrix of determinant +1, which has no eigenvalue +-1. A second version looped without end: the orthogonal factor returned by the QR routine for a 6 x 6 matrix always had determinant -1"
+ },
+ "R3_cycle_kernel_dimension_1_odd_2_even": {
+  "passed": true,
+  "rows": [
+   {
+    "n": 3,
+    "dim_kernel": 1
+   },
+   {
+    "n": 4,
+    "dim_kernel": 2
+   },
+   {
+    "n": 5,
+    "dim_kernel": 1
+   },
+   {
+    "n": 6,
+    "dim_kernel": 2
+   },
+   {
+    "n": 7,
+    "dim_kernel": 1
+   },
+   {
+    "n": 8,
+    "dim_kernel": 2
+   },
+   {
+    "n": 9,
+    "dim_kernel": 1
+   },
+   {
+    "n": 10,
+    "dim_kernel": 2
+   }
+  ]
+ },
+ "R4_ring_step_norm_preserving": {
+  "passed": true
+ },
+ "R4_walk_sum_equals_matrix_power": {
+  "passed": true,
+  "walks": 1024
+ },
+ "R4_total_pair_measure_is_2^k": {
+  "passed": true,
+  "total": 1024.0,
+  "counting_total": 1024.0,
+  "note": "pair measure of all walks of length k by end vertex sums to 2^k, as does the number of walks; the two distributions differ"
+ },
+ "R4_pair_measure_differs_from_counting": {
+  "passed": true,
+  "largest_difference": 0.35546875
+ },
+ "R4_two_classes_of_block_signings": {
+  "passed": true,
+  "bounce_gain": [
+   1.0,
+   -1.0
+  ],
+  "eigenphases_class1": [
+   -2.897326,
+   -2.66976,
+   -2.482535,
+   -2.371274,
+   -0.770319,
+   -0.659058,
+   -0.471833,
+   -0.244267,
+   0.0,
+   0.244267,
+   0.471833,
+   0.659058,
+   0.770319,
+   2.371274,
+   2.482535,
+   2.66976,
+   2.897326,
+   3.141593
+  ],
+  "eigenphases_class2": [
+   -2.297571,
+   -2.297571,
+   -1.932163,
+   -1.932163,
+   -1.447698,
+   -1.447698,
+   -0.998368,
+   -0.998368,
+   -0.785398,
+   0.785398,
+   0.998368,
+   0.998368,
+   1.447698,
+   1.447698,
+   1.932163,
+   1.932163,
+   2.297571,
+   2.297571
+  ],
+  "note": "closed walk of length 2 has gain +1 in the first signing and -1 in the second, so they are not switching equivalent"
+ },
+ "R5_polar_structure_does_not_commute_with_records": {
+  "passed": true,
+  "rows": [
+   {
+    "sites": 5,
+    "dim_kernel": 2,
+    "comm_J_vertex_projection": 0.8944271909999156,
+    "comm_J_site_projection": 0.8944271909999162,
+    "commutant_dim_step_and_vertex_records": 1,
+    "commutant_dim_step_and_site_records": 1
+   },
+   {
+    "sites": 6,
+    "dim_kernel": 4,
+    "comm_J_vertex_projection": 0.8164965809277259,
+    "comm_J_site_projection": 0.8164965809277259,
+    "commutant_dim_step_and_vertex_records": 1,
+    "commutant_dim_step_and_site_records": 1
+   },
+   {
+    "sites": 7,
+    "dim_kernel": 2,
+    "comm_J_vertex_projection": 0.9258200997725518,
+    "comm_J_site_projection": 0.925820099772552,
+    "commutant_dim_step_and_vertex_records": 1,
+    "commutant_dim_step_and_site_records": 1
+   },
+   {
+    "sites": 8,
+    "dim_kernel": 4,
+    "comm_J_vertex_projection": 0.866025403784439,
+    "comm_J_site_projection": 0.8660254037844393,
+    "commutant_dim_step_and_vertex_records": 1,
+    "commutant_dim_step_and_site_records": 1
+   }
+  ]
+ },
+ "R5_commutant_of_step_and_records_is_real_scalars": {
+  "passed": true,
+  "note": "no real-linear complex structure commutes with the step and with the record projections"
+ },
+ "R9_velocity_is_N_times_d_eigenphase_d_holonomy": {
+  "passed": true,
+  "rows": [
+   {
+    "theta": 0.3,
+    "largest_error": 4.170833177025157e-07
+   },
+   {
+    "theta": 0.7,
+    "largest_error": 4.1550346621677114e-07
+   },
+   {
+    "theta": 1.9,
+    "largest_error": 3.981396021202066e-07
+   }
+  ],
+  "sites": 12,
+  "first_run": "a first version included twist 0, where eigenvalues are degenerate and the finite-difference matching of eigenvalues failed (error 7.5e6); twist 0.7 gave 4.2e-7. Generic twists are used"
+ },
+ "R10_signed_hypercube_Clifford_relations": {
+  "passed": true,
+  "rows": [
+   {
+    "k": 1,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": true,
+    "volume_element_square": 1
+   },
+   {
+    "k": 2,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": false,
+    "volume_element_square": -1
+   },
+   {
+    "k": 3,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": true,
+    "volume_element_square": -1
+   },
+   {
+    "k": 4,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": false,
+    "volume_element_square": 1
+   },
+   {
+    "k": 5,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": true,
+    "volume_element_square": 1
+   },
+   {
+    "k": 6,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": false,
+    "volume_element_square": -1
+   },
+   {
+    "k": 7,
+    "signed_matchings": true,
+    "support_is_hypercube": true,
+    "anticommute": true,
+    "A2_is_k": true,
+    "volume_element_central": true,
+    "volume_element_square": -1
+   }
+  ]
+ },
+ "R10_central_complex_structure_iff_k_is_3_mod_4": {
+  "passed": true
+ },
+ "R10_cube_algebra_is_eight_dimensional_with_centre_1_and_J": {
+  "passed": true
+ },
+ "R10_cube_signings_with_all_faces_negative_form_one_switching_class": {
+  "passed": true,
+  "signings": 128,
+  "switching_orbit_size": 128
+ },
+ "R10_ladder_transport_trivial_on_cube_and_folded_cube": {
+  "passed": true,
+  "graphs": [
+   "4-cube",
+   "folded 5-cube (16 vertices, valency 5)"
+  ]
+ },
+ "R10_biplane_incidence_graph_is_a_rectagraph_with_nontrivial_ladder_holonomy": {
+  "passed": true,
+  "vertices": 14,
+  "valency": 4,
+  "order_of_ladder_holonomy_group": 24,
+  "note": "14 vertices: not a power of two, so not a Cayley graph of an elementary abelian 2-group"
+ },
+ "R10_folded_5_cube_all_squares_negative_recorded": {
+  "passed": true,
+  "edges": 40,
+  "squares": 40,
+  "system_consistent": true,
+  "rank": 24,
+  "note": "recorded, not a predicate: whether a signing with every 4-cycle negative exists on the folded 5-cube"
+ },
+ "_summary": {
+  "predicates": 21,
+  "passed": 21,
+  "seeds": [
+   2026111233
+  ]
+ }
+}

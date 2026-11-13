@@ -1,0 +1,181 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,needspace}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines=true,breakanywhere=true,fontsize=\small}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\raggedbottom
+\widowpenalty=10000\clubpenalty=10000
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\tr}{\operatorname{Tr}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Unitary scaling rigidity},
+  pdfauthor={Kirtus Justus},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Unitary scaling rigidity}
+\author{Kirtus Justus}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{2. Postulates and notation}\label{postulates-and-notation}
+
+Let \texttt{M\_2(C)} denote one-qubit matrices and \texttt{M\_4(C)} two-qubit matrices. For \texttt{lambda\textgreater{}0}, let \texttt{S\_lambda} fix the identity and multiply every traceless Pauli component by \texttt{lambda}. Let \texttt{G\_lambda=S\_lambda⊗S\_lambda}, acting on matrices on the \emph{supplied} two-qubit tensor product. For a tensor-product Pauli \texttt{sigma\_a⊗sigma\_b}, put \texttt{w(a,b)=1\_\{a≠0\}+1\_\{b≠0\}}; then \texttt{G\_lambda(sigma\_a⊗sigma\_b)=lambda\^{}\{w(a,b)\}(sigma\_a⊗sigma\_b)}.
+
+The channel \texttt{D(A)=Tr(A)\ I\_4/4} is completely depolarizing. For a two-qubit unitary U write \texttt{Ad\_U(A)=UAU†}. A gate set consists of physical preparations, effects and (trace-preserving or outcome-conditioned) completely positive maps with the same supplied product structure. The gauge transformation on operations is \texttt{Phi\ -\textgreater{}\ G\_lambda\ Phi\ G\_lambda\^{}\{-1\}}, with effects transformed dually. This is a predictive similarity, \textbf{not} a physical channel \texttt{G\_lambda} on arbitrary states if \texttt{lambda\textgreater{}1}.
+
+\subsection{3. Theorem: a noiseless entangling unitary forbids nontrivial Bloch-scaling gauge}\label{theorem-a-noiseless-entangling-unitary-forbids-nontrivial-bloch-scaling-gauge}
+
+\textbf{Theorem 1.} For \texttt{lambda\textgreater{}0}, \texttt{lambda≠1}, and a unitary \texttt{U} on two qubits, the linear map
+
+\texttt{Psi=G\_lambda∘Ad\_U∘G\_lambda\^{}\{-1\}}
+
+is CPTP \textbf{if and only if}, up to overall phase, \texttt{U} is a product of one-qubit unitaries or a product followed by SWAP. Consequently, if U can entangle some pure product input, Psi is not CPTP for \texttt{lambda≠1}.
+
+\textbf{Proof.} In the normalized Hermitian Pauli basis, \texttt{Ad\_U} is a real orthogonal 16×16 matrix \texttt{R} and \texttt{G\_lambda} is positive diagonal \texttt{D}, with entries \texttt{1}, \texttt{lambda} (weight-one Paulis) and \texttt{lambda\^{}2} (weight-two Paulis). The candidate \texttt{T=D\ R\ D\^{}\{-1\}} is unital and trace preserving. Every unital trace-preserving completely positive map is a Hilbert--Schmidt contraction. If T is CPTP, all its singular values are at most one. But \texttt{\textbar{}det\ T\textbar{}=\textbar{}det\ R\textbar{}=1}; their product is one, so every singular value is exactly one and \texttt{T\^{}T\ T=I}. This implies \texttt{R\^{}T\ D\^{}2\ R=D\^{}2}, hence R preserves the eigenspaces of D². Since \texttt{lambda≠1}, it must preserve the six-dimensional one-body subspace
+
+\texttt{V\_1=span\{sigma\_j⊗I,\ I⊗sigma\_j\ :\ j=x,y,z\}}.
+
+Conjugation by U therefore normalizes the Lie algebra \texttt{su(2)⊕su(2)}. Its two simple ideals can only be individually preserved or exchanged; every automorphism of a single \texttt{su(2)} ideal is implemented by a one-qubit unitary. The remaining unitary commutes with the entire two-qubit matrix algebra and is scalar. Thus U is local or local followed by SWAP. Conversely, those unitaries preserve Pauli weight, commute with G, and yield exactly \texttt{Psi=Ad\_U}, which is CPTP. QED.
+
+The proof combines elementary Lie-algebra automorphisms with established Hilbert--Schmidt contractivity for unital CPTP maps. It is not asserted to be an original normalizer theorem.
+
+\textbf{Direct CNOT witness.} For \texttt{U=CNOT}, one has
+
+\texttt{Psi(X⊗I)=lambda\ X⊗X}, \texttt{Psi(X⊗X)=lambda\^{}\{-1\}\ X⊗I}.
+
+For either \texttt{lambda\textgreater{}1} or \texttt{lambda\textless{}1}, a norm-one Hermitian unitary Pauli is mapped to an operator of norm greater than one. A positive unital map cannot do that. This immediately proves nonpositivity for the CNOT instance without Choi analysis.
+
+\subsection{4. Exact noisy counterexample: physical entangling gates on both sides}\label{exact-noisy-counterexample-physical-entangling-gates-on-both-sides}
+
+\textbf{Theorem 2 (explicit conditional counterexample).} Take \texttt{lambda=3/2}, \texttt{p=63/100}, and
+
+\texttt{Phi\_A=(1-p)Ad\_CNOT\ +\ p\ D},
+
+\texttt{Phi\_B=G\_lambda\ Phi\_A\ G\_lambda\^{}\{-1\}}.
+
+Both maps are CPTP and are entangling channels. The two complete models with the above A/B preparations and effects, their same calibrated one-qubit rotations, and their respectively defined joint gates predict identical probabilities for every circuit assembled from these named operations, including arbitrary repetitions and adaptive classical feedback. Their identically labeled source purities still differ.
+
+\textbf{Proof of CPTP.} Trace preservation and unitality are immediate. Using the unnormalized 16×16 Choi matrix \texttt{J(Phi)\ =\ sum\_ij\ \textbar{}i\textgreater{}\textless{}j\textbar{}\ ⊗\ Phi(\textbar{}i\textgreater{}\textless{}j\textbar{})}, exact Gaussian-rational arithmetic gives the spectrum of \texttt{J(G\ Ad\_CNOT\ G\^{}\{-1\})}:
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Eigenvalue & Multiplicity \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{25/6} & 1 \\
+\texttt{5/12} & 4 \\
+\texttt{-5/12} & 4 \\
+\texttt{0} & 6 \\
+\texttt{-1/6} & 1 \\
+\end{longtable}
+
+Because \texttt{J(D)=I\_16/4}, the transformed depolarized gate has Choi spectrum:
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Eigenvalue & Multiplicity \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{1/300} & 4 \\
+\texttt{23/240} & 1 \\
+\texttt{63/400} & 6 \\
+\texttt{187/600} & 4 \\
+\texttt{2039/1200} & 1 \\
+\end{longtable}
+
+All eigenvalues are strictly positive. This proves CP. In fact the exact minimum depolarization making this transformed gate CP is \texttt{p=5/8}; the chosen \texttt{p=63/100} lies strictly inside that region, with minimum Choi eigenvalue \texttt{1/300}. The original Phi\_A is trivially CPTP.
+
+\textbf{Proof of entanglement generation.} For the pure product input \texttt{\textbar{}+\textgreater{}\textless{}+\textbar{}⊗\textbar{}0\textgreater{}\textless{}0\textbar{}}, the two output partial transposes have eigenvalue spectra respectively \texttt{\{137/400\ (three\ times),\ -11/400\}} and \texttt{\{87/200,\ 137/400\ (twice),\ -3/25\}}. Each has a negative eigenvalue, proving that each channel can produce entangled outputs from a product input.
+
+\textbf{Even the labeled accessible outputs disagree on entanglement.} For the identically labeled product preparations \texttt{(+x,+z)}, use radii \texttt{a\_A=1/2}, \texttt{a\_B=3/4}. The output partial-transpose eigenvalues are
+
+\begin{itemize}
+\tightlist
+\item
+  A: \texttt{43/320}, \texttt{437/1600} (twice), \texttt{511/1600}, all nonnegative, hence separable for two qubits.
+\item
+  B: \texttt{-13/1280}, \texttt{1933/6400} (twice), \texttt{2599/6400}, hence entangled.
+\end{itemize}
+
+Yet the permitted local preparations and local effects do not distinguish them. To prove the complete equality, observe that the corresponding product states transform by G and effects transform by the dual inverse. Every named gate, including the joint Phi\_B, transforms by the same similarity. Thus all G and G\^{}\{-1\} terms cancel telescopically in each circuit probability, including individual adaptive branches. Exact arithmetic additionally checks 36 product source pairs against 36 product effect pairs, all 1,296 single-joint-gate tests, plus all 36 pairs for the uncalibrated SWAP model.
+
+This does \textbf{not} mean entanglement is an illusion or that the two full physically calibrated theories are equivalent. It means the restricted gate-set data do not identify the abstract purity and output entanglement assigned to those labels. Independent joint calibration changes the observation contract. QED.
+
+\subsection{5. Proposition: arbitrarily small nonzero noise can retain some ambiguity}\label{proposition-arbitrarily-small-nonzero-noise-can-retain-some-ambiguity}
+
+Fix any \texttt{0\textless{}p\textless{}2/3} and choose preparation and effect contrasts strictly inside their positivity intervals. At \texttt{lambda=1}, \texttt{Phi\_p=(1-p)Ad\_CNOT+pD} has strictly positive Choi matrix, since \texttt{p\textgreater{}0}, and produces an entangled output from \texttt{\textbar{}+0\textgreater{}} because \texttt{1-p\textgreater{}1/3}. The Choi matrix and the output partial transpose depend continuously on lambda. Therefore for all lambda sufficiently close to but different from one, the transformed Phi'\_p remains CPTP and entangling. The source and effect gate sets also remain physical by continuity. The models remain observationally equivalent under their corresponding uncalibrated gates, yet give different preparation purities.
+
+Thus there is \textbf{no universal positive lower noise threshold} below which every nontrivial similarity is automatically ruled out by merely requiring all available gates to be entangling CPTP channels. The allowed gauge differences shrink as noise tends to zero. This is a conditional finite-dimensional continuity argument, not a universal theorem about all noise models.
+
+\end{document}

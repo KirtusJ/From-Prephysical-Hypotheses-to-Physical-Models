@@ -1,0 +1,218 @@
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,enumitem,xcolor,hyperref}
+\hypersetup{hidelinks,pdftitle={Flag-Resolved Identification of Local Choi Weight}}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{topsep=1pt,itemsep=1pt,parsep=1pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\K}{\mathcal K}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathcal F}
+\begin{document}
+\begin{center}
+{\Large\bfseries Flag-Resolved Identification of Local Choi Weight}\\[3pt]
+{\large Joint Semidefinite Bounds, an Exact Three-Level Example, and a Gibbs-State Check}\\[8pt]
+Research direction and scholarly responsibility: Kirtus Justus\\
+Mathematical and computational assistance: ChatGPT (OpenAI)\\
+November 7, 2026 \quad Port Coquitlam, British Columbia, Canada
+\end{center}
+\vspace{-7pt}
+\paragraph{Selected scientific sections.} This edition retains Sections 2--4, with their original numbering and the mathematical assumptions, constructions and limitations stated there.
+\paragraph{Notation clarifications.} The completely positive map acts between the operator algebras $B(\C^d\otimes\C^q)$ and $B(\C^{d'}\otimes\C^q)$; the original display omitted the operator-algebra notation. The symbols $D,F$ in the binary reduction are defined below, and the logarithm convention is specified for the relative-entropy proof.
+
+\section*{2. Exact interval when the output flag is observed}
+Let one nonzero completely positive, trace-nonincreasing map act as
+\[
+ \cB:B(\C^d\otimes\C^q)\longrightarrow B(\C^{d'}\otimes\C^q),\qquad q\ge 2 .
+\]
+Its Stinespring contraction has unrestricted finite ancillary dimension. For every
+input basis vector $|a,b\rangle$ and measured output flag $r$, suppose the
+\emph{unnormalized} first-output matrix $\sigma_{ab,r}\succeq0$ is known,
+with $s_{ab}=\sum_r\Tr\sigma_{ab,r}\le1$ and
+$S=\sum_{a,b}s_{ab}>0$. The flag measurement uses the specified output basis;
+its orientation is part of the observation contract.
+
+The local Kraus weight is
+\[
+ w(\cB)=\frac{\sum_j\|\Pi_{\mathcal L}K_j\|_F^2}
+                  {\sum_j\|K_j\|_F^2},\qquad
+ \mathcal L=\{V\otimes I_q: V:\C^d\to\C^{d'}\}.
+\]
+For fixed $a$ put $A_{ab}=\sigma_{ab,b}$, the \emph{matching-flag} matrix, and
+define the compact semidefinite completion set
+\[
+ \K_a=\{X=[X_{bc}]_{b,c=0}^{q-1}\succeq0:\ X_{bb}=A_{ab}\}.
+\]
+With $\boldsymbol1=(1,\ldots,1)^T$, set
+\[
+ T_a^-=\min_{X\in\K_a}\Tr[(\boldsymbol1\boldsymbol1^T\otimes I_{d'})X],
+ \qquad
+ T_a^+=\max_{X\in\K_a}\Tr[(\boldsymbol1\boldsymbol1^T\otimes I_{d'})X].
+\]
+\begin{theorem}[Flag-resolved local-weight interval]
+With only these output-flag-resolved matrices and the stated class of common operations
+fixed, the exact compatible set is
+\[
+\boxed{\quad
+ \mathcal I_w=
+ \left[\frac{\sum_aT_a^-}{qS},\,\frac{\sum_aT_a^+}{qS}\right].
+ \quad}
+\]
+Both endpoints are attained by trace-nonincreasing maps and every intermediate value
+is attained. This includes singular matrices, zero-success inputs, and $d\ne d'$.
+\end{theorem}
+\begin{proof}
+For each Kraus $K_j$, its orthogonal projection onto $\mathcal L$ is
+$(\Tr_{\rm flag}K_j/q)\otimes I_q$. Combine the Kraus columns into Stinespring
+vectors $u_{ab}=\sum_r |r\rangle\otimes v_{ab,r}$, where
+$v_{ab,r}\in\C^{d'}\otimes\mathcal E$. The matching components
+$x_{ab}:=v_{ab,b}$ obey
+$\Tr_{\mathcal E}|x_{ab}\rangle\langle x_{ab}|=A_{ab}$. The definition of $w$ then gives
+\[
+ qSw=\sum_a\left\|\sum_bx_{ab}\right\|^2.
+\]
+For each $a$, the reduced cross blocks
+$X_{bc}=\Tr_{\mathcal E}|x_{ab}\rangle\langle x_{ac}|$
+form a positive block matrix in $\K_a$; its objective is
+$\|\sum_bx_{ab}\|^2$. This proves both universal bounds.
+
+Conversely factor an arbitrary feasible $X$ into common purifications $x_{ab}$
+with the required reduced cross blocks. Use disjoint environment sectors
+for different $a$. For every nonmatching flag $r\ne b$, choose a purification
+of $\sigma_{ab,r}$ in a fresh environment sector, disjoint from all matching
+sectors and all other nonmatching sectors. Append its flag $|r\rangle$ to that
+component. The resulting columns $u_{ab}$ are mutually orthogonal: distinct
+matching components of one $a$ have distinct output flags, while every remaining
+overlap is killed by the orthogonal environment assignments. Their squared
+norms equal $s_{ab}\le1$, so these columns form a Stinespring contraction
+for a single completely positive, trace-nonincreasing map. It reproduces
+every $\sigma_{ab,r}$ and achieves the selected block objective. Select
+a minimizing or maximizing $X$ for each $a$ to attain the endpoints.
+Their convex mixtures retain the observations and $S$, while $w$ is affine
+on the mixture. This fills the interval.
+\end{proof}
+
+For $q=2$, Uhlmann's theorem gives
+\[
+ T_a^\pm=\Tr(A_{a0}+A_{a1})
+      \pm2\|\sqrt{A_{a0}}\sqrt{A_{a1}}\|_1.
+\]
+Writing $D=\sum_a\Tr(A_{a0}+A_{a1})$ and
+$F=\sum_a\|\sqrt{A_{a0}}\sqrt{A_{a1}}\|_1$, Theorem 1 gives the binary bound
+$(D-2F)/(2S)\le w\le(D+2F)/(2S)$. A positive lower endpoint is a
+\emph{measurement consequence}, not a contradiction of the zero endpoint
+when the entire second factor was discarded.
+
+\section*{3. Closed form for commuting matched-flag data}
+\begin{corollary}[Common spectral basis]
+Suppose for each $a$ the matrices $A_{ab}$ commute. Write
+$A_{ab}=\sum_k p_{abk}|k\rangle\langle k|$ and $r_{abk}=\sqrt{p_{abk}}$.
+Then
+\[
+\begin{aligned}
+ T_a^+&=\sum_k\left(\sum_b r_{abk}\right)^2,\\
+ T_a^-&=\sum_k\left[\max\left\{0,\,2\max_b r_{abk}
+                                     -\sum_b r_{abk}\right\}\right]^2.
+\end{aligned}
+\]
+\end{corollary}
+\begin{proof}
+Resolve each purification into its mutually orthogonal first-output
+eigenspaces. For eigenlabel $k$, the projected components are vectors of
+specified lengths $r_{abk}$. Their sum has maximum norm $\sum_b r_{abk}$
+and minimum norm $\max(0,2\max_b r_{abk}-\sum_b r_{abk})$, the standard polygon
+inequality (including the two-vector case). The latter lower bound holds
+for arbitrary environments by the reverse triangle inequality. Choose
+separate environment sectors for different $k$ and complex phases realizing
+the polygon extrema. This simultaneously attains the stated sum of squares.
+\end{proof}
+
+\subsection*{Trace-preserving three-level example}
+Take $d=1,d'=2,q=3$ with perfect flag return, unit success, and
+first-output states
+\[
+ \tau_0=P_0,\qquad \tau_1=\tfrac14P_0+\tfrac34P_1,\qquad \tau_2=P_1.
+\]
+All nonmatching flag matrices vanish. The commuting corollary gives $S=3$ and
+\[
+ \boxed{\mathcal I_w=
+ \left[\frac{2-\sqrt3}{9},\,\frac{4+\sqrt3}{9}\right]
+ =[0.02977213249\ldots,0.63689453417\ldots].}
+\]
+For $\epsilon=\pm1$ define two Kraus operators from $\C^3$ to
+$\C^2\otimes\C^3$:
+\[
+ \begin{aligned}
+ K_0^{(\epsilon)}
+ &=|0\rangle\otimes\bigl(|0\rangle\langle0|
+                   +\tfrac{\epsilon}{2}|1\rangle\langle1|\bigr),\\
+ K_1^{(\epsilon)}
+ &=|1\rangle\otimes\bigl(\tfrac{\epsilon\sqrt3}{2}|1\rangle\langle1|
+                   +|2\rangle\langle2|\bigr).
+ \end{aligned}
+\]
+In both cases $\sum_jK_j^\dagger K_j=I_3$. Every computational-basis input
+has the \emph{same complete joint output state}
+$\tau_b\otimes|b\rangle\langle b|$ for both signs, while their local weights
+are the two endpoints. On the coherent input
+$|\eta\rangle=(|0\rangle+|1\rangle+|2\rangle)/\sqrt3$, however, the joint
+effect $P_0\otimes|+_{01}\rangle\langle+_{01}|$, with
+$|+_{01}\rangle=(|0\rangle+|1\rangle)/\sqrt2$, has click rates
+\[
+ \Pr_+(1)=\frac38,\qquad \Pr_-(1)=\frac1{24}.
+\]
+The difference is exactly $1/3$. This is an ideal mathematical
+discriminator; no such device experiment is reported.
+
+\section*{4. Sharp finite-dimensional Gibbs stability}
+The following result uses the tight classical Jeffreys-divergence bound of Sason \cite{sason}. Relative entropy in this proof uses natural logarithms.
+\begin{proposition}[Sharp finite-dimensional thermal stability]
+For finite-dimensional self-adjoint $A,V$ and $s\ge0$, let
+$\rho=e^{-sA}/\Tr e^{-sA}$ and
+$\sigma=e^{-s(A+V)}/\Tr e^{-s(A+V)}$. Put
+$v=\lambda_{\max}(V)-\lambda_{\min}(V)$.
+Then the conventional half-trace distance satisfies
+\[
+ \boxed{\quad \tfrac12\|\rho-\sigma\|_1
+                \le\tanh(sv/4).\quad}
+\]
+The envelope is attained in dimension two.
+\end{proposition}
+\begin{proof}
+Let $T=\|\rho-\sigma\|_1/2$. Since the log-partition terms cancel,
+\[
+ D(\rho\Vert\sigma)+D(\sigma\Vert\rho)
+   =s\Tr[(\rho-\sigma)V]\le svT.
+\]
+Measure the positive spectral subspace of $\rho-\sigma$. The two resulting
+Bernoulli laws have total variation $T$. Data processing and the sharp
+Bernoulli symmetric-divergence inequality give the opposite bound
+$D(\rho\Vert\sigma)+D(\sigma\Vert\rho)\ge4T\operatorname{artanh}T$.
+For $T>0$, division and inversion yield the result; $T=0$ is immediate.
+For equality, choose $A=\operatorname{diag}(-v/4,v/4)$ and $V=-2A$:
+the two Gibbs populations exchange, with trace distance $\tanh(sv/4)$.
+\end{proof}
+The finite-dimensional improvement does not automatically extend to
+unbounded operators or an infinite-volume thermodynamic limit without
+additional domain and trace-class hypotheses.
+
+\begin{thebibliography}{9}
+\bibitem{watrous} J. Watrous, \emph{The Theory of Quantum Information},
+ Cambridge University Press (2018), Chapter 3.
+\bibitem{nuradha} T. Nuradha, H. K. Mishra, F. Leditzky and M. M. Wilde,
+ ``Multivariate fidelities,'' \emph{J. Phys. A} \textbf{58}, 165304 (2025),
+ doi:10.1088/1751-8121/adc645.
+\bibitem{sason} I. Sason, ``Tight bounds for symmetric divergence measures
+ and a refined bound for lossless source coding,''
+ \emph{IEEE Trans. Inform. Theory} \textbf{61}, 701--707 (2015),
+ doi:10.1109/TIT.2014.2387065.
+\end{thebibliography}
+\end{document}

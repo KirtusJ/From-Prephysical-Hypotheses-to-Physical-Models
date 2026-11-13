@@ -1,0 +1,12 @@
+Terminal 20 = 43352333828283669431/50000000000000000000 = 0.8670466765656734
+Cumulative through 20 = 449300191961080193/500000000000000000 = 0.8986003839221604
+First hitting successes = 9,13,16,19
+Effect eigenvalues = 1/5 4/5 spectral gap = 3/5
+Common-effect population demo: raw rates [Fraction(31, 50), Fraction(19, 50)] D_raw 0.058454224078 D_spectral 0.166969722018
+At pstar=1 and w0=.99, threshold=.08: raw discrepancy passes; calibrated discrepancy rejects.
+Different effects with identical eigenvalues and identical states can falsely imply D_spectral=2.
+At equal success s=pstar=1 and w0=.99, sharp common-effect click difference: 21/125 (as decimal 0.168000)
+The identity channel plus input-dependent effects has click difference 3/5 despite identical detector spectra. This is not a common-effect test.
+Spectral-score expectation equals observed-bit-score expectation exactly.
+Score click-minus-no-click factor = 1/(U-L) times the spectral coefficient difference.
+All deterministic checks passed.

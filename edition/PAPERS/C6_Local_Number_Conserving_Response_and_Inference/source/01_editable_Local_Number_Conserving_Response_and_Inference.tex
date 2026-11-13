@@ -1,0 +1,709 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,booktabs,needspace}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.65em}
+\allowdisplaybreaks
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\cS}{\mathscr S}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\hypersetup{pdftitle={Local Number-Conserving Response and Inference},pdfauthor={Kirtus Justus}}
+\title{Local Number-Conserving Response and Inference}
+\author{Kirtus Justus\enspace\textbullet\enspace Theoretical Physicist\enspace\textbullet\enspace 23 October 2026\\Port Coquitlam, British Columbia, Canada}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+For an explicitly specified Wilson--Dirac quasifree state, we derive a positive local particle--hole response measure, its exact total mass and second moment, and an operationally specified sequential occupation measurement reproducing its real Fourier response. A short-time lower derivative bound gives bi-Lipschitz identification of a squared dynamical scale. Bounded independent samples yield confidence regions under explicit calibration, range and nuisance hypotheses. The response measure is not a probability measure before normalization, and a gauge-neutral correlation is not automatically an implementable measurement. The results do not demonstrate physical realization of the preparation and instrument.
+\end{abstract}
+\noindent\textbf{Keywords:} quasifree CAR states, local response, positive spectral measure, number-conserving instruments, bounded-sample confidence.
+
+\section{Positive spectral response and accessible instruments}
+\label{sec:local-response}
+\subsection{A local density response on the infinite chain}
+
+Fix finite $m\ge0$ and the full-chain Wilson symbol
+\[
+ h_m(k)=\sin k\,\sigma_x+(m+1-\cos k)\sigma_z,
+ \qquad E_m(k)=\sqrt{m^2+4(m+1)\sin^2(k/2)}.
+\]
+Let $P_m(k)=(I-h_m(k)/E_m(k))/2$ almost everywhere and let $\omega_m$ be
+its gauge-invariant quasi-free CAR state. At $m=0$ the single zero fiber
+has measure zero; no finite-dimensional zero-mode occupation is inferred.
+The standard quasi-free covariance and invariance inputs are
+\cite[Definition 3.1, Lemmas 3.3 and 4.2]{araki}.
+
+Use the one-particle inverse-time generator
+\[
+ K_{\gamma,\delta}=\gamma H_m+\delta I,
+ \qquad \gamma\ge0,\quad\delta\in\mathbb R,
+\]
+and the convention that the annihilation column evolves by
+$e^{-itK_{\gamma,\delta}}$. The same $\omega_m$ is prepared for every
+$\gamma,\delta$. It is stationary because $P_m$ commutes with this
+generator. For $m>0$ the sufficient condition $|\delta|<\gamma m$ also
+makes $P_m$ its strict-negative ground-state covariance; no such extra
+ground-state assertion is needed for arbitrary offsets or at $\gamma=0$.
+
+In the infinite system, neutrality means invariance under the global
+$U(1)$ gauge action. No total-number operator on the filled state and no
+global trace-class density matrix are assumed. The term $\delta I$ induces
+a gauge automorphism, so the dynamics of every neutral CAR observable is
+independent of $\delta$.
+
+Set
+\[
+ n_0=c_{0,1}^*c_{0,1}+c_{0,2}^*c_{0,2},\qquad A_0=n_0-I,
+ \qquad C_m^\gamma(t)=\omega_m\bigl(\alpha_t^{\gamma,\delta}(A_0)A_0\bigr).
+\]
+The local occupation eigenvalues give $\|A_0\|=1$, while
+$\operatorname{tr}P_m(k)=1$ gives $\omega_m(A_0)=0$. The same on-site
+observable is measured at two laboratory times. Its Heisenberg image is
+generally spread through the full chain; isolated compressed-Hamiltonian
+evolution is not being used.
+
+Write $\langle f\rangle=(2\pi)^{-1}\int_{-\pi}^{\pi}f(k)\,dk$ and let
+$\boldsymbol n_m(k)\in\mathbb R^3$ be the unit Bloch vector of
+$h_m(k)/E_m(k)$. Define
+\[
+ W_m(k,q)=\operatorname{tr}_{\mathbb C^2}[P_m(k)(I-P_m(q))]
+   =\frac{1-\boldsymbol n_m(k)\cdot\boldsymbol n_m(q)}2\ge0.
+\]
+
+\begin{proposition}[Positive local particle-hole spectral measure]
+\label{prop:neutral-spectral}
+There is a finite positive measure $\mu_m$ on $[0,2(m+2)]$ such that
+\begin{equation}
+ \begin{split}
+ C_m^\gamma(t)
+ &=\iint W_m(k,q)e^{-i\gamma(E_m(k)+E_m(q))t}
+                    \frac{dk\,dq}{(2\pi)^2}\\
+ &=\int e^{-i\gamma\lambda t}\,d\mu_m(\lambda),
+ \qquad u_m(s):=\operatorname{Re}C_m^1(s)
+              =\int\cos(s\lambda)\,d\mu_m(\lambda).
+ \end{split}
+ \label{eq:neutral-spectral}
+\end{equation}
+The measure is the pushforward of
+$W_m(k,q)dk\,dq/(2\pi)^2$ under $\lambda=E_m(k)+E_m(q)$.
+It has strictly positive total mass and strictly positive second moment
+for every finite $m\ge0$, and $C_m^\gamma$ is independent of $\delta$.
+\end{proposition}
+\begin{proof}
+Let $a$ be the rank-two one-particle projection onto cell zero. In the
+finite-rank CAR notation, $n_0=d\Gamma(a)$ and
+$a(t)=e^{itK_{\gamma,\delta}}ae^{-itK_{\gamma,\delta}}$.
+For finite-rank $A,B$, the gauge-invariant Wick relation gives
+\[
+ \omega_m(d\Gamma(A)d\Gamma(B))
+   -\operatorname{Tr}(P_m A)\operatorname{Tr}(P_m B)
+   =\operatorname{Tr}[P_m A(I-P_m)B].
+\]
+This follows by contracting
+$\omega(c_i^*c_jc_k^*c_\ell)
+ =(P_m)_{ji}(P_m)_{\ell k}
+  +(P_m)_{\ell i}(\delta_{jk}-(P_m)_{jk})$ on the finite-dimensional
+span of the ranges involved. In particular,
+$C_m^\gamma(t)=\operatorname{Tr}[P_m a(t)(I-P_m)a]$.
+Every operator product under this one-particle trace is trace class.
+
+Under the Fourier convention with target measure $dk$, the kernel of $a$
+is $I_2/(2\pi)$. On $P_m(k)$ the left propagator contributes
+$e^{i(-\gamma E_m(k)+\delta)t}$, and on $I-P_m(q)$ the right propagator
+contributes $e^{-i(\gamma E_m(q)+\delta)t}$. Their offsets cancel, giving
+the double integral in \eqref{eq:neutral-spectral}. The Pauli trace identity
+gives the stated expression for $W_m$ and its positivity. Boundedness
+$0\le E_m\le m+2$ proves the support bound and permits all finite
+derivatives under the integral.
+
+At $k=\pi/2$, $q=-\pi/2$, writing $a_m=m+1$ gives
+$W_m=1/(1+a_m^2)>0$ and $E_m(k)+E_m(q)=2\sqrt{1+a_m^2}>0$.
+Both remain positive in an open rectangle around that pair. That rectangle
+has positive measure, proving positivity of both the total mass and the
+second moment, including when $m=0$.
+\end{proof}
+
+\begin{corollary}[Exact mass and curvature of the spectral measure]
+\label{cor:neutral-curvature}
+Put
+\[
+ z_m=\left\langle\frac{m+1-\cos k}{E_m(k)}\right\rangle,
+ \qquad e_m=\langle E_m\rangle,
+ \qquad b_m=\langle E_m(m+1-\cos k)\rangle.
+\]
+Then
+\begin{equation}
+ \begin{split}
+ v_m:=\mu_m(\mathbb R)=C_m^1(0)&=\frac{1-z_m^2}{2}>0,\\
+ \Xi_m:=\int\lambda^2\,d\mu_m(\lambda)
+   &=1+e_m^2-z_mb_m>0,\\
+ -\frac{d^2}{dt^2}C_m^\gamma(0)&=\gamma^2\Xi_m.
+ \end{split}
+ \label{eq:neutral-moments}
+\end{equation}
+The measure is not normalized to total mass one. At $m=0$,
+\begin{equation}
+ z_0=\frac2\pi,\qquad e_0=\frac4\pi,
+ \qquad b_0=\frac{16}{3\pi},
+ \qquad \Xi_0=1+\frac{16}{3\pi^2}.
+ \label{eq:neutral-zero-mass}
+\end{equation}
+An equivalent correlation formula is
+\begin{equation}
+ \begin{split}
+ F_m(s)&=\langle e^{-isE_m}\rangle,\qquad
+ Z_m(s)=\left\langle\frac{m+1-\cos k}{E_m(k)}e^{-isE_m}\right\rangle,\\
+ C_m^1(s)&=\frac{F_m(s)^2-Z_m(s)^2}{2}.
+ \end{split}
+ \label{eq:neutral-factorized}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Oddness of the sine component gives
+$\langle\boldsymbol n_m\rangle=(0,0,z_m)$, so integration of $W_m$ gives
+$v_m=(1-z_m^2)/2$. Expanding $(E_m(k)+E_m(q))^2$ in the spectral integral
+gives, with vector averages taken componentwise,
+\[
+ \Xi_m=\langle E_m^2\rangle+\langle E_m\rangle^2
+   -\langle E_m^2\boldsymbol n_m\rangle\cdot
+          \langle\boldsymbol n_m\rangle
+   -|\langle E_m\boldsymbol n_m\rangle|^2.
+\]
+Now $\langle E_m^2\rangle=(m+1)^2+1$,
+$\langle E_m\boldsymbol n_m\rangle=(0,0,m+1)$ and
+$\langle E_m^2\boldsymbol n_m\rangle=(0,0,b_m)$, proving the simplification.
+Differentiation of \eqref{eq:neutral-spectral} gives the curvature, and its
+strict positivity has already been proved independently of cancellation
+in the simplified expression.
+
+For $s_k=|\sin(k/2)|$ at $m=0$, one has
+$E_0=2s_k$ and the $z$ component of $\boldsymbol n_0$ is $s_k$.
+The normalized averages
+$\langle s_k\rangle=2/\pi$ and
+$\langle s_k^3\rangle=4/(3\pi)$ give
+\eqref{eq:neutral-zero-mass}. Finally, factor the double integral into
+products of one-dimensional averages. The sine component is odd and the
+$y$ component is zero, leaving \eqref{eq:neutral-factorized}. These are
+ordinary complex squares, not squared absolute values.
+\end{proof}
+
+\subsection{A specified local L\"uders protocol}
+
+Let $R_r=I-2c_{0,r}^*c_{0,r}$, $r=1,2$, and
+$\Pi_r^a=(I+aR_r)/2$ for $a\in\{-1,1\}$. Each $R_r$ is a self-adjoint
+unitary. The projectors are gauge invariant and belong to the local CAR
+algebra. The specified first instrument has selective Heisenberg maps
+$B\mapsto\Pi_s^b B\Pi_s^b$, the L\"uders prescription
+\cite[Section 2, equations (7)--(8)]{Luders2006}. Measuring the same
+projective observable with an additional disturbance inside a degenerate
+eigenspace is not automatically this instrument.
+
+\begin{proposition}[Sequential occupation measurements]
+\label{prop:neutral-luders}
+Prepare $\omega_m$ and choose $r,s$ independently and uniformly from
+$\{1,2\}$, independently of the preparation. Measure $R_s$ at time zero
+with the specified L\"uders instrument, evolve under $K_{\gamma,\delta}$
+for a calibrated elapsed time $t\ge0$, and measure $R_r$ projectively.
+Record the product $Y=ab\in\{-1,1\}$ of the outcomes. Then
+\begin{equation}
+ \mathbb E[Y]=u_m(\gamma t),
+ \label{eq:neutral-luders}
+\end{equation}
+independently of the uniform one-particle offset $\delta$.
+\end{proposition}
+\begin{proof}
+For fixed settings, the joint probability is
+\[
+ p(a,b\mid r,s)
+   =\omega_m\bigl(\Pi_s^b\alpha_t^{\gamma,\delta}(\Pi_r^a)\Pi_s^b\bigr).
+\]
+It is nonnegative and sums to one, without a global density matrix.
+Writing $B=\alpha_t^{\gamma,\delta}(R_r)$ and $R=R_s$, the identities
+\[
+ \sum_a a\,\alpha_t^{\gamma,\delta}(\Pi_r^a)=B,
+ \qquad
+ \sum_b b\,\Pi_s^b B\Pi_s^b=\frac{RB+BR}{2}
+\]
+give
+$\mathbb E[ab\mid r,s]=\operatorname{Re}\omega_m(BR_s)$.
+Averaging the four setting pairs and using
+$(R_1+R_2)/2=-A_0$ yields
+$\operatorname{Re}\omega_m(\alpha_t^{\gamma,\delta}(A_0)A_0)
+=u_m(\gamma t)$ by \eqref{eq:neutral-spectral}.
+\end{proof}
+
+Only the initial state is assumed quasi-free. The first measurement can
+disturb it, and the proof makes no quasi-free assumption about the conditional
+postmeasurement state. All individual insertions are neutral. The task
+requires no band-wavepacket preparation or complex quadrature phase reference,
+but it does require the stated local orbital readout, back-action, repeated
+preparation and calibrated waiting operation. Their algebraic specification
+does not establish their physical implementation. The statistic is the
+symmetrized real correlation, not the complete ordered complex correlation.
+Measuring both orbital occupations, or using a three-outcome total-density
+instrument at the first time, changes the intervention and requires a
+separate response calculation; it is not implicit in this randomized protocol.
+
+\subsection{Matching curvature does not identify the dispersion}
+
+For any positive almost-everywhere multiplier $g$ with bounded
+$b(k)=g(k)E_m(k)$, the state projector remains $P_m$. Replacing $E_m$ by $b$
+in the spectral phase leaves the same weight $W_m$ and gives
+\begin{equation}
+ \Xi_{m,g}=\langle b^2\rangle+\langle b\rangle^2
+  -\langle b^2\boldsymbol n_m\rangle\cdot\langle\boldsymbol n_m\rangle
+  -|\langle b\boldsymbol n_m\rangle|^2>0.
+ \label{eq:neutral-general-multiplier}
+\end{equation}
+Positivity follows from the same positive spectral integral; the displayed
+formula follows by expanding its second moment. Boundedness of $b$ is the
+required dynamics condition; finite hopping range is a further property of
+particular multipliers.
+
+\begin{proposition}[An exact finite-range curvature counterexample]
+\label{prop:neutral-shape-counterexample}
+At $m=0$ let $g(k)=1+(3/5)\cos k$ and
+$\gamma_g=\sqrt{\Xi_0/\Xi_{0,g}}$. The symbols $h_0$ and
+$\gamma_g g h_0$ have identical specified static state data and identical
+local density curvature. Their real local density correlations are not
+identical functions of time. Both hopping symbols have finite range.
+\end{proposition}
+\begin{proof}
+The multiplier is in $[2/5,8/5]$ and its range-two expansion is already
+obtained by expanding the degree-one multiplier times the Wilson symbol; positive multiplication
+preserves the negative projector. Put $s=|\sin(k/2)|$. Then
+\[
+ E_0=2s,\qquad b(s)=\frac{16s-12s^3}{5},\qquad
+ (\boldsymbol n_0)_z=s.
+\]
+For $M_j=\langle s^j\rangle$, the elementary integral
+$M_j=(2/\pi)\int_0^{\pi/2}\sin^j\theta\,d\theta$ gives
+$M_0=1$, $M_1=2/\pi$ and
+$M_{j+2}=(j+1)M_j/(j+2)$. In particular,
+\[
+ \langle b^2\rangle=\frac{29}{25},\quad
+ \langle b\rangle=\frac{16}{5\pi},\quad
+ \langle b\boldsymbol n_0\rangle=(0,0,7/10),\quad
+ \langle b^2\boldsymbol n_0\rangle=(0,0,6656/(2625\pi)).
+\]
+Substitution into \eqref{eq:neutral-general-multiplier} yields
+\begin{equation}
+ \Xi_{0,g}=\frac{67}{100}+\frac{13568}{2625\pi^2},
+ \qquad \gamma_g^2\Xi_{0,g}=\Xi_0.
+ \label{eq:neutral-matched-curvature}
+\end{equation}
+Thus the curvature equality is exact and does not use rounded numerical
+values.
+
+Differentiating the cubic $b(s)$ on $[0,1]$ gives its maximum
+$b_{\max}=64/45$ at $s=2/3$. The elementary bounds $3<\pi$ and
+$\pi^2<10$ imply $\Xi_0<8/5$ and $\Xi_{0,g}>1$, whence
+\[
+ \gamma_g^2 b_{\max}^2
+ <\frac85\left(\frac{64}{45}\right)^2<4.
+\]
+The scaled alternative spectral measure is therefore supported at excitation
+frequencies at most $2\gamma_g b_{\max}<4$.
+
+The original measure has support edge exactly $4$, despite its weight
+vanishing at the exact maximizing pair. Indeed take
+$k=\pi-r$, $q=-\pi+r$, with $0<r<\pi$. Then
+\[
+ E_0(k)+E_0(q)=4\cos(r/2),\qquad W_0(k,q)=\sin^2(r/2)>0.
+\]
+For every $\varepsilon>0$, sufficiently small positive $r$ and an open
+neighborhood of this pair give positive weighted measure at frequencies
+greater than $4-\varepsilon$.
+
+For a nonzero finite positive measure of compact nonnegative support with
+edge $R$, its even moments satisfy
+\[
+ \left(\int\lambda^{2j}\,d\mu(\lambda)\right)^{1/(2j)}\longrightarrow R.
+\]
+The upper bound follows from the total mass and $\lambda\le R$; the lower
+bound follows by restricting to $\lambda>R-\varepsilon$, which has positive
+mass, and then sending $j$ to infinity and $\varepsilon$ to zero. Equality
+of the two real correlations for every time would, by bounded-support
+differentiation at zero, give equality of every even moment. Their different
+support edges contradict this. Thus the real responses differ.
+\end{proof}
+
+The counterexample retains the exact static data and one exact dynamical
+curvature, but changes the wider dynamical family. An identified scale within
+the fixed Wilson family therefore does not select that family. The finite-time
+inference in the following section must retain its known-family and calibration
+premises. No new entropy asymptotic, source realization or physical clock
+emergence follows.
+
+
+\section{Finite-time inference from the local neutral response}
+\label{app:neutral-inference}
+
+This section uses the positive measure of
+Proposition~\ref{prop:neutral-spectral} and the specified sequential
+instrument of Proposition~\ref{prop:neutral-luders}. Use the measure $\mu_m$ defined in that proposition, whose spectral
+variable is $\lambda=E_m(k)+E_m(q)$. Thus
+\[
+ u_m(s)=\int\cos(s\lambda)\,d\mu_m(\lambda),\qquad
+ \mu_m([0,2(m+2)])=v_m,\qquad
+ \int\lambda^2\,d\mu_m(\lambda)=\Xi_m>0.
+\]
+The measure has mass $v_m$, not one. The dimensionless mass $m$, the
+prepared covariance, the observation basis and the instrument class are
+part of the specified model. Calibrated physical elapsed time and a
+registered parameter range remain assumptions.
+
+\begin{proposition}[A stable short-time map in the squared scale]
+\label{prop:neutral-monotonicity}
+Fix finite $m\ge0$, $0<\gamma_{\max}<\infty$, and a known time
+\begin{equation}
+ 0<t\le\frac{\pi}{4\gamma_{\max}(m+2)}.
+ \label{eq:neutral-short-time}
+\end{equation}
+For $0\le\gamma_1,\gamma_2\le\gamma_{\max}$,
+\begin{equation}
+ \frac{\Xi_m t^2}{\pi}|\gamma_1^2-\gamma_2^2|
+ \le |u_m(\gamma_1t)-u_m(\gamma_2t)|
+ \le\frac{\Xi_m t^2}{2}|\gamma_1^2-\gamma_2^2|.
+ \label{eq:neutral-bilipschitz}
+\end{equation}
+Consequently the response is strictly decreasing as a function of
+$\gamma\in[0,\gamma_{\max}]$ and is bi-Lipschitz as a function of
+$x=\gamma^2$ on $[0,\gamma_{\max}^2]$.
+\end{proposition}
+\begin{proof}
+Let $F(x)=u_m(t\sqrt{x})$. For $x>0$, differentiation gives
+\[
+ F'(x)=-\frac{t^2}{2}\int\lambda^2
+       \operatorname{sinc}(t\sqrt{x}\lambda)\,d\mu_m(\lambda),
+ \qquad \operatorname{sinc}(y)=
+ \begin{cases}\sin(y)/y,&y\ne0,\\1,&y=0.\end{cases}
+\]
+The same formula is the right derivative at $x=0$. Indeed,
+$|\cos(t\sqrt{x}\lambda)-1|/x\le t^2\lambda^2/2$, and the
+finite measure has bounded support; dominated convergence gives
+$F'(0)=-t^2\Xi_m/2$. The displayed derivative is continuous up to
+zero by another dominated-convergence application.
+
+For all parameters in the proposition, the sinc argument lies in
+$[0,\pi/2]$. Concavity of sine on this interval and
+$\sin y\le y$ give $2/\pi\le\operatorname{sinc}y\le1$.
+Using $\Xi_m>0$ from Corollary~\ref{cor:neutral-curvature},
+\[
+ \frac{\Xi_m t^2}{\pi}\le -F'(x)\le\frac{\Xi_m t^2}{2}.
+\]
+Integrating between $\gamma_1^2$ and $\gamma_2^2$ proves
+\eqref{eq:neutral-bilipschitz}, including the zero endpoint.
+\end{proof}
+
+The nonnegative-scale restriction matters: the real response is even in
+$\gamma$ and cannot identify its sign on a two-sided range.
+Although the squared-scale inverse is Lipschitz at zero, the scale inverse
+has only a general square-root modulus there. Zero neutral dynamics still
+presuppose the candidate's time variable; they are not a derivation of a physical time coordinate.
+
+If only ticks $\tau$ are known and $t=\kappa\tau$ for one unknown constant
+$\kappa>0$, the response depends on $\gamma\kappa$. The preceding conclusion
+then applies to that product after a bound on the product and the
+corresponding tick-time window have been justified. It does not determine
+the two factors or justify a physical-time bound from an uncalibrated
+tick reading.
+
+\begin{theorem}[Conditional confidence for the neutral response]
+\label{thm:neutral-confidence}
+Fix finite known $m\ge0$, $0<\gamma_{\max}<\infty$, an integer $n\ge1$
+and $0<\alpha<1$. The true fixed scale belongs to
+$[0,\gamma_{\max}]$. Let $\mathcal G$ be information used to choose the
+design and calibration before the fresh trial settings and outcomes. Conditional on
+$\mathcal G$, let $t$ satisfy \eqref{eq:neutral-short-time} and let the
+finite allowance $b\ge0$ be fixed. Suppose the $n$ outcomes $Y_i\in[-1,1]$
+are conditionally independent. They need not be identically distributed.
+Put
+\[
+ \widehat u=\frac1n\sum_{i=1}^nY_i,\qquad
+ \mu_Y=\frac1n\sum_{i=1}^n\mathbb E[Y_i\mid\mathcal G].
+\]
+For the ideal random-orbital protocol, each $Y_i$ is the product of two
+reflection outcomes and lies in $\{-1,1\}$. Conditional on $\mathcal G$,
+the fresh orbital choices within each trial remain independent and uniform;
+the independent-trial assumption concerns the complete randomized trial.
+The realized choices are not added to $\mathcal G$ when asserting the
+unconditional-over-settings ideal response $u_m(\gamma t)$.
+
+Suppose an event $F\in\mathcal G$ has probability at least
+$1-\alpha_{\rm cal}$, where $\alpha_{\rm cal}\ge0$ and
+$\alpha+\alpha_{\rm cal}<1$, and on $F$,
+\[
+ |\mu_Y-u_m(\gamma t)|\le b.
+\]
+Set
+\[
+ \eta_n=\sqrt{\frac2n\log\frac2\alpha},\qquad
+ \delta_n=\eta_n+b,\qquad
+ \mathcal C_\gamma=
+ \{g\in[0,\gamma_{\max}]:
+       |\widehat u-u_m(gt)|\le\delta_n\}.
+\]
+This exact random closed set satisfies
+\begin{equation}
+ \Pr\{\gamma\in\mathcal C_\gamma\}
+       \ge1-\alpha-\alpha_{\rm cal}.
+ \label{eq:neutral-coverage}
+\end{equation}
+The deterministic-calibration case is $\alpha_{\rm cal}=0$ and $F$ equal
+to the entire probability space.
+\end{theorem}
+\begin{proof}
+Condition on $\mathcal G$. For a random variable $Y\in[-1,1]$, let
+$\psi(s)=\log\mathbb E e^{s(Y-\mathbb EY)}$. Boundedness permits
+differentiation, $\psi(0)=\psi'(0)=0$, and
+$\psi''(s)=\operatorname{Var}_s(Y)\le1$ under the exponentially tilted
+law. Taylor's integral identity, for either sign of $s$, yields
+$\psi(s)\le s^2/2$. Conditional independence gives
+\[
+ \Pr\{\widehat u-\mu_Y>\eta\mid\mathcal G\}
+ \le\inf_{s>0}e^{-sn\eta+ns^2/2}=e^{-n\eta^2/2}.
+\]
+The same calculation for $-Y$ bounds the lower tail. Thus
+$\Pr\{|\widehat u-\mu_Y|>\eta_n\mid\mathcal G\}\le\alpha$.
+This is the bounded-sum specialization of Hoeffding's inequality
+\cite{hoeffding}. The argument applies to a single bounded real response.
+
+Let $A=\{|\widehat u-\mu_Y|\le\eta_n\}$. Taking expectations gives
+$\Pr(A^c)\le\alpha$. On $A\cap F$, the triangle inequality places the
+true scale in $\mathcal C_\gamma$. Since
+$\Pr(A\cap F)\ge1-\alpha-\alpha_{\rm cal}$, the result follows.
+No independence between the sampling and calibration events is used.
+\end{proof}
+
+Conditional independence and the nuisance allowance are premises to be
+established for the experiment. Conditioning arbitrarily on target
+outcomes, changing the registered range after inspecting them, optional
+stopping, or changing the instrument or elapsed time based on those same
+outcomes is not covered without an additional argument. Separate nominal confidence statements do not constitute simultaneous coverage without a combined failure budget.
+
+If realized setting labels are conditioned on instead, their conditional
+means need not average to $u_m(\gamma t)$. An unbalanced setting schedule
+therefore requires its own mean-discrepancy justification or a separately
+proved stratified estimator. The explicit conditional mean assumption above
+is essential; recording a gauge-neutral statistic does not establish it.
+
+\begin{corollary}[Diameter and the zero-scale boundary]
+\label{cor:neutral-width}
+Under Theorem~\ref{thm:neutral-confidence}, for every realization with
+$\mathcal C_\gamma\ne\varnothing$,
+\begin{align}
+ \operatorname{diam}\{g^2:g\in\mathcal C_\gamma\}
+ &\le \min\left\{\gamma_{\max}^2,
+                \frac{2\pi\delta_n}{\Xi_mt^2}\right\},
+ \label{eq:neutral-squared-width}\\
+ \operatorname{diam}\mathcal C_\gamma
+ &\le \min\left\{\gamma_{\max},
+          \sqrt{\frac{2\pi\delta_n}{\Xi_mt^2}}\right\}.
+ \label{eq:neutral-zero-width}
+\end{align}
+If a registered range instead imposes
+$0<\gamma_{\min}\le\gamma\le\gamma_{\max}$ and the exact set is formed
+on that range, then
+\begin{equation}
+ \operatorname{diam}\mathcal C_\gamma
+ \le\min\left\{\gamma_{\max}-\gamma_{\min},
+              \frac{\pi\delta_n}{\gamma_{\min}\Xi_mt^2}\right\}.
+ \label{eq:neutral-positive-width}
+\end{equation}
+\end{corollary}
+\begin{proof}
+For any two members of the set, the difference of their responses is at
+most $2\delta_n$. Apply the lower bound in
+\eqref{eq:neutral-bilipschitz}. For nonnegative $a,b$,
+$|a-b|^2\le|a^2-b^2|$; on the positive lower range,
+$|a^2-b^2|=|a-b|(a+b)\ge2\gamma_{\min}|a-b|$.
+The registered range supplies each additional cap.
+\end{proof}
+
+For fixed $m,t,\alpha$ and zero systematics, the displayed squared-scale
+bound is $O(n^{-1/2})$. The positive-lower-scale bound has the same rate,
+whereas the general scale bound at a range containing zero is
+$O(n^{-1/4})$. These are upper bounds for this construction, not minimax
+lower bounds or statements of optimal experimental efficiency. A nonzero
+fixed allowance $b$ need not vanish with increasing sample size.
+
+The exact set is found by intersecting
+$[\widehat u-\delta_n,\widehat u+\delta_n]$ with
+$[u_m(\gamma_{\max}t),u_m(0)]$ and applying the decreasing inverse.
+Endpoint order reverses under that inverse. An exactly empty set rejects
+the conjunction of the specified model, range and nuisance assumptions
+at the declared coverage level; it does not determine which premise
+failed. Nonemptiness does not establish model adequacy.
+Floating quadrature, root finding or an empty numerical interval list do
+not certify exact emptiness. An empty certified outer enclosure would
+suffice.
+
+\subsection{Timing allowance and a specific curvature comparison}
+\label{sec:neutral-error-budget}
+
+For all real elapsed times, the positive spectral representation gives
+\[
+ \left|\frac{d}{dt}u_m(\gamma t)\right|
+ \le2\gamma_{\max}(m+2)v_m .
+\]
+Consequently $|t_{\rm actual}-t|\le\epsilon_t$ contributes at most
+$2\gamma_{\max}(m+2)v_m\epsilon_t$ to a uniform mean-response discrepancy.
+Other justified preparation and readout discrepancies can be added by the
+triangle inequality. Random calibration claims need their own failure
+allocation; a shared calibration event is counted once when it controls
+all required constraints. Unknown errors are not zero allowances.
+
+For comparison, suppose the exact $v_m=u_m(0)$ is known and estimate
+curvature by $2(v_m-\widehat u)/t^2$. Put
+$\Omega_*=2\gamma_{\max}(m+2)$. The elementary bounds
+$0\le y^2-2(1-\cos y)\le y^4/12$ imply
+\begin{equation}
+ 0\le\gamma^2\Xi_m-
+      \frac{2(v_m-u_m(\gamma t))}{t^2}
+ \le\frac{\Omega_*^4v_m}{12}t^2.
+ \label{eq:neutral-curvature-bias}
+\end{equation}
+For the upper elementary bound, the fourth derivative of
+$1-y^2/2+y^4/24-\cos y$ is $1-\cos y\ge0$; its first four
+initial values at zero vanish. Integrate for $y\ge0$ and use evenness.
+The lower bound follows from $1-\cos y\le y^2/2$.
+Applying these inequalities inside the spectral integral proves
+\eqref{eq:neutral-curvature-bias}.
+
+On the response-accuracy event of Theorem~\ref{thm:neutral-confidence},
+\[
+ \left|\frac{2(v_m-\widehat u)}{t^2}-\gamma^2\Xi_m\right|
+ \le \frac{\Omega_*^4v_m}{12}t^2+\frac{2\delta_n}{t^2}.
+\]
+For this specified second-difference estimator, zero systematics and fixed
+$m,\gamma_{\max},\alpha$, balancing these two upper-bound terms uses
+$t_n\asymp n^{-1/8}$ and gives an $O(n^{-1/4})$ upper bound for curvature.
+For sufficiently large $n$, this choice lies in the short-time window.
+Exact known-family response inversion at a fixed permissible time has the
+$O(n^{-1/2})$ squared-scale bound above. This comparison concerns the
+displayed bounds and estimator; it proves no general statistical-efficiency
+ordering, lower bound, or apparatus-cost advantage. Estimating $v_m$
+instead of knowing it introduces additional error.
+
+\begin{proposition}[Static identification of dimensionless mass]
+\label{prop:neutral-mass}
+In the fixed orbital basis and prepared Wilson family,
+\[
+ \omega_m(n_{0,2}-n_{0,1})=z_m.
+\]
+The map $m\mapsto z_m$ is continuous and strictly increasing on finite
+$m\ge0$, with $z_0=2/\pi$ and $\lim_{m\to\infty}z_m=1$.
+For $m>0$,
+\begin{equation}
+ z_m'=\left\langle\frac{\sin^2k}{E_m(k)^3}\right\rangle>0.
+ \label{eq:neutral-mass-derivative}
+\end{equation}
+For every finite $M\ge0$ and $m_1,m_2\in[0,M]$,
+\begin{equation}
+ |m_1-m_2|\le 2(M+2)^3|z_{m_1}-z_{m_2}|.
+ \label{eq:neutral-mass-inverse}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The diagonal entries of the local covariance are
+$(1-z_m)/2$ and $(1+z_m)/2$, giving the occupation difference.
+Writing $a=m+1$, differentiate
+$(a-\cos k)/(a^2+1-2a\cos k)^{1/2}$ to obtain
+$\sin^2 k/E_m(k)^3$. On any compact positive-mass neighborhood,
+$E_m\ge m$ supplies a dominating bound for differentiation.
+The integrand is positive on a set of positive measure, proving
+\eqref{eq:neutral-mass-derivative}.
+
+The original integrand for $z_m$ lies in $[0,1]$ almost everywhere.
+At $m=0$ it equals $|\sin(k/2)|$ away from the single null point,
+whose average is $2/\pi$. It tends pointwise to one as $m\to\infty$.
+Dominated convergence gives both endpoint limits and continuity at zero.
+Strict increase for positive masses and continuity extend strict increase
+to the zero endpoint. For example,
+$z_m>z_{m/2}\ge z_0$ for $m>0$.
+
+For $0<m\le M$, $E_m(k)\le M+2$ and
+$\langle\sin^2k\rangle=1/2$, so
+$z_m'\ge1/[2(M+2)^3]$. Integrate this lower bound between positive
+endpoints and pass to a zero endpoint by continuity. If $M=0$ the
+inequality is trivial. No finite upper bound on $z_m'$ at zero is used.
+\end{proof}
+
+The mass is dimensionless and identified only inside this prepared-state
+family and fixed basis. The result identifies neither a physical energy
+scale from static data nor an arbitrary compatible dispersion.
+The observable $n_{0,2}-n_{0,1}$ has values in $[-1,1]$, so independent
+occupation samples can supply a mass confidence set by the same bounded
+mean argument and the exact monotone inverse of $z_m$.
+
+\begin{corollary}[Joint mass and scale uncertainty]
+\label{cor:neutral-joint-region}
+Fix a registered finite mass range $[0,M]$, a scale range
+$[0,\gamma_{\max}]$, and
+$0<t\le\pi/[4\gamma_{\max}(M+2)]$. Let the true fixed pair belong to
+these ranges. Suppose a random mass set $I$ satisfies
+$\Pr\{m\in I\}\ge1-\beta$, and the dynamic sample satisfies the
+conditional design and mean-discrepancy assumptions of
+Theorem~\ref{thm:neutral-confidence} at the true pair, with the specified
+finite allowance $b$. Assume $\beta+\alpha+\alpha_{\rm cal}<1$.
+Then the exact inverse-image region
+\begin{equation}
+ \mathcal R_{m,\gamma}=
+ \{(a,g):a\in I\cap[0,M],\ 0\le g\le\gamma_{\max},\
+       |\widehat u-u_a(gt)|\le\delta_n\}
+ \label{eq:neutral-joint-region}
+\end{equation}
+contains $(m,\gamma)$ with probability at least
+$1-\beta-\alpha-\alpha_{\rm cal}$. Its projection onto the scale axis
+has the same coverage lower bound for $\gamma$. No independence between
+the mass set and the dynamic data is required for this union bound.
+\end{corollary}
+\begin{proof}
+The dynamic response event has failure probability at most
+$\alpha+\alpha_{\rm cal}$ by the proof of
+Theorem~\ref{thm:neutral-confidence}, evaluated at the true fixed $m$.
+Intersecting it with $\{m\in I\}$ and applying the union bound places
+the true pair in every defining constraint of
+\eqref{eq:neutral-joint-region}. Projection preserves inclusion.
+The common time bound ensures the fixed-mass monotonicity theorem is
+valid throughout the registered mass range.
+\end{proof}
+
+This result is an uncertainty construction, not a license to ignore how
+$I$ or the design was obtained. A mass point estimate substituted into
+$u_m$ without its uncertainty generally does not retain the stated
+coverage. The fixed-mass width in Corollary~\ref{cor:neutral-width} applies
+to each mass slice; it is not a bound on the projection of the full joint
+region, whose different slices can be displaced. Additional control of
+the response's mass dependence is needed for a quantitative projected
+width. If one shared calibration event controls both stages, a joint
+derivation can allocate that failure once; the marginal union bound just
+stated is conservative when those margins already overlap in failure.
+
+All these conclusions concern a specified model, observation class and
+calibrated experiment. They do not select a physical realization of the
+underlying physical source, certify the numerical inverse, or turn a successful
+family fit into a proof of model completeness.
+
+\section*{AI assistance and acknowledgments}
+Kirtus Justus is the responsible human author. ChatGPT (OpenAI) assisted with mathematical drafting, verification code, source checks, and editorial preparation. Claude (Anthropic), Gemini (Google), Grok (SpaceXAI), and DeepSeek (High-Flyer) are acknowledged for involvement in the broader research program; no particular calculation or proof in this article is assigned to those systems without specific documentation. The author assumes responsibility for all content. These acknowledgments do not imply external peer review or endorsement by any AI provider.
+
+\begin{thebibliography}{10}
+\bibitem{araki} H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, \emph{Publ. Res. Inst. Math. Sci.} \textbf{6} (1970/71), 385--442, doi:10.2977/prims/1195193913.
+\bibitem{hoeffding} W. Hoeffding, Probability inequalities for sums of bounded random variables, \emph{J. Amer. Statist. Assoc.} \textbf{58} (1963), 13--30, doi:10.1080/01621459.1963.10500830.
+\bibitem{Luders2006} G. L\"uders, Concerning the state-change due to the measurement process, \emph{Ann. Phys.} \textbf{518} (2006), 663--670, doi:10.1002/andp.20065180904.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,27 @@
+=== Mathematical compatibility (all rational, except parity root) ===
+Alternative odd probability:       17242828044899517/32768000000000000 = 0.526209351956162
+Null odd ceiling, 1% cap:         66265902529874879/131072000000000000 = 0.505568714369773
+TV at fixed three-bit marginal:  711463803568579/32768000000000000 = 0.021712152208514
+TV with all four rates adjustable: 7284851823181053032590319/352902543707699200000000000 = 0.020642673035576
+Primal and dual certificates agree exactly: True
+Root rate of attaining report law: 22879606191395517/55141022454328000 = 0.414928943516529
+Critical history: (1, 1, 1)  q= 81711338569043/224995905216000 = 0.363168114062337
+Minimum cap making full Q feasible: 10396360128757/92107698697800 = 0.112871782443147
+Parity-only compatibility threshold: 0.044121657500399
+Conditionals at last slot (depth3):
+  000 q=0.427540794200, epsilon_needed=0.030756900233
+  001 q=0.387769900872, epsilon_needed=0.052775814663
+  010 q=0.387769900872, epsilon_needed=0.052775814663
+  011 q=0.444721046342, epsilon_needed=0.059845157827
+  100 q=0.387769900872, epsilon_needed=0.052775814663
+  101 q=0.444721046342, epsilon_needed=0.059845157827
+  110 q=0.444721046342, epsilon_needed=0.059845157827
+  111 q=0.363168114062, epsilon_needed=0.112871782443
+=== Independent Decimal binomial power check (not an interval certificate) ===
+n=6342, alpha=0.05, boundary k=3272, randomized fraction=0.692186292538920, power=0.949970847337640, attained size=0.050000000000000
+n=6343, alpha=0.05, boundary k=3272, randomized fraction=0.182739196396088, power=0.950004432130367, attained size=0.050000000000000
+n=6757, alpha=0.04, boundary k=3488, randomized fraction=0.423069428722963, power=0.949974789382334, attained size=0.040000000000000
+n=6758, alpha=0.04, boundary k=3489, randomized fraction=0.915753323138215, power=0.950018042462656, attained size=0.040000000000000
+Illustrative zero-failure calibration: 30 cells, simultaneous 99% coverage
+At least 797 zero-error references per cell, 23910 classified cell observations in all.
+No claim of stationarity, calibration transport, quantum realization or hardware trials.

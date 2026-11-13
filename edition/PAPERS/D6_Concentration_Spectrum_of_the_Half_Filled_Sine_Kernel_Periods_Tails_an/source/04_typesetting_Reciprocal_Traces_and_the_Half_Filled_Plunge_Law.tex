@@ -1,0 +1,499 @@
+\documentclass[10pt]{article}
+
+\usepackage{microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\artanh}{\operatorname{artanh}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\setlength{\emergencystretch}{2em}
+\title{Reciprocal Traces and the Half-Filled Plunge Law}
+\author{Kirtus Justus (Theoretical Physicist)\\
+\small Port Coquitlam, British Columbia, Canada}
+\date{October 2026}
+\hypersetup{pdftitle={Reciprocal Traces and the Half-Filled Plunge Law},pdfauthor={Kirtus Justus (Theoretical Physicist)}}
+\usepackage{fontspec,unicode-math,mathtools}
+\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}\setmonofont{DejaVu Sans Mono}\setmathfont{Latin Modern Math}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the half-filled finite sine kernel at even size, the first reciprocal
+trace of the deflated differential spectrum is an exact positive Laplace
+transform. A weighted Legendre resolvent and a Mellin contour identity
+determine its normalization. Taylor estimates on a fixed analytic kernel
+then prove its large-size expansion to every fixed order, including an
+explicit remainder after the term of order $N^{-9}$. This result yields
+the signed plunge law for every nonzero Jacobi eigenmode whose eigenvalue
+tends to zero. An elementary trial vector proves that the central pair
+has this property. No uniform bulk quantum-period expansion is assumed.
+\end{abstract}
+
+\section{The finite problem and its exact differential trace}
+Let $N\ge2$ be even. Define real symmetric matrices, with indices
+$0\le j,k<N$, by
+\[
+B_{jk}=\begin{cases}1/2,&j=k,\\
+\sin[\pi(j-k)/2]/[\pi(j-k)],&j\ne k,\end{cases}\qquad
+H_{j-1,j}=H_{j,j-1}=\frac{j(N-j)}2,\quad H_{jj}=0,
+\qquad J_N=\frac{2H}{N}.
+\]
+These are the usual half-filled concentration matrix and its commuting
+Jacobi matrix \cite{eisler}. They commute, $0<B<I$, and their common
+eigenpairs are denoted
+\[
+Hv=\beta v,\qquad J_Nv=\lambda v,\qquad Bv=\zeta v,
+\qquad \beta=N\lambda/2.
+\]
+Put $\alpha=(N^2-1)/4$. On $(-\pi/2,\pi/2)$ consider the Friedrichs
+realization
+\[
+A_Nu=-(\cos x\,u')'-\alpha\cos x\,u.
+\]
+Its eigenfunctions are regular, with no logarithmic term, at both
+endpoints. Write its increasing eigenvalues as $\mu_{N,k}$, starting
+at $k=0$, and define
+\begin{equation}
+Z_N=\sum_{k=N}^{\infty}\mu_{N,k}^{-1}.
+\label{eq:Z}
+\end{equation}
+The exact spectral-tail construction \cite{tails} gives
+\begin{equation}
+\{\mu_{N,0},\ldots,\mu_{N,N-1}\}=-\operatorname{spec}H,
+\qquad \mu_{N,N}>\|H\|,
+\label{eq:finiteblock}
+\end{equation}
+and the norm-convergent scalar representation at every common mode
+\begin{equation}
+\log\frac\zeta{1-\zeta}=F_N(\beta),\qquad
+F_N(b)=2\sum_{k=N}^{\infty}\artanh\frac b{\mu_{N,k}},
+\quad |b|<\mu_{N,N}.
+\label{eq:logit}
+\end{equation}
+For clarity, the ingredients of these exact inputs are as follows.
+The centered finite Fourier space is invariant under $-A_N$ and supplies
+$-\operatorname{spec}H$. A sign-change test against that space, together
+with the variational nodal bound, identifies exactly the first $N$
+differential eigenvalues. For the left regular solution normalized to
+one, let $C_N(b)$ be its logarithmic coefficient at the right endpoint.
+Its Green kernel gives
+$C_N'/C_N=\Tr(A_N+b)^{-1}$. Deflating
+$D_N(b)=\det(bI-H)$ removes precisely those first $N$ terms.
+The endpoint Lagrange identity and the complementary Fourier arc give
+the occupation ratio as $[C_N/D_N](\beta)/[C_N/D_N](-\beta)$.
+Integrating the deflated resolvent trace proves \eqref{eq:logit}.
+These statements concern the specified endpoint realization, not an
+arbitrary self-adjoint extension.
+
+At $b=0$ set $\nu=(N-1)/2$ and translate $s=x+\pi/2$.
+The regular solutions are $P_\nu(\cos s)$ and $P_\nu(-\cos s)$,
+where $P_\nu$ denotes the Ferrers function on $(-1,1)$.
+The Legendre connection formula gives
+$C_N(0)=2\sin(\pi\nu)/\pi$, while the parameter Lagrange identity gives
+$C_N'(0)=-\int_0^\pi P_\nu(\cos s)P_\nu(-\cos s)\dd s$.
+Because $D_N$ is even and nonzero at zero,
+\begin{equation}
+Z_N=\frac{C_N'(0)}{C_N(0)}
+=-\frac\pi{2\sin\pi\nu}\int_0^\pi
+P_\nu(\cos s)P_\nu(-\cos s)\dd s.
+\label{eq:Legendre}
+\end{equation}
+The notation $P_{-1/2}(\cosh t)$ below instead denotes the real
+Legendre function for argument at least one. All spectral and modular
+quantities here are dimensionless; no physical clock or energy scale is
+introduced.
+
+\section{A weighted resolvent and a Mellin reflection identity}
+Define
+\[
+\Phi(z)={}_2F_1(1/2,1/2;1;z),\qquad G(z)=\Phi(z)^2,
+\qquad c_j=\frac{(1/2)_j}{j!},\qquad
+a_l=\sum_{j=0}^l c_j^2c_{l-j}^2.
+\]
+Thus $G(z)=\sum_{l\ge0}a_lz^l$ for $|z|<1$.
+\begin{lemma}[Weighted Legendre trace]
+Let
+\[
+M(a)=\sum_{l=0}^{\infty}\frac{a_l}{l+a}.
+\]
+This defines a meromorphic function with possible poles only at the
+nonpositive integers. For even $N$, with $\nu=(N-1)/2$,
+\begin{equation}
+Z_N=\frac\pi2\{M(-\nu)+M(\nu+1)\}.
+\label{eq:Msum}
+\end{equation}
+For $\Re a>0$, $M(a)=\int_0^1z^{a-1}G(z)\dd z$.
+\end{lemma}
+\begin{proof}
+The generating function for Legendre polynomials yields
+\[
+P_l(\cos s)=\sum_{j=0}^l c_jc_{l-j}e^{i(2j-l)s},
+\qquad \int_0^\pi P_l(\cos s)^2\dd s=\pi a_l.
+\]
+Induction gives $c_j^2\le1/(j+1)$, and hence
+\begin{equation}
+0<a_l\le\frac{2H_{l+1}}{l+2},\qquad
+H_r=\sum_{j=1}^r\frac1j.
+\label{eq:acoef}
+\end{equation}
+Consider the ordinary Legendre operator with regular/Friedrichs endpoint
+conditions, $L=-[(1-x^2)u']'$ on $L^2(-1,1;\dd x)$, with eigenvalues $l(l+1)$
+and normalized eigenfunctions $\sqrt{(2l+1)/2}P_l(x)$.
+Its shifted Green kernel has diagonal
+\[
+(L-\nu(\nu+1))^{-1}(x,x)
+=-\frac\pi{2\sin\pi\nu}P_\nu(x)P_\nu(-x).
+\]
+Initially $-1/2<\nu<0$, so the resolvent is positive.
+Integrating its diagonal with weight $(1-x^2)^{-1/2}$ gives, by
+positive-kernel trace on compact intervals and monotone exhaustion,
+\[
+-\frac\pi{2\sin\pi\nu}\int_0^\pi
+P_\nu(\cos s)P_\nu(-\cos s)\dd s
+=\frac\pi2\sum_{l\ge0}a_l
+\left(\frac1{l-\nu}+\frac1{l+\nu+1}\right).
+\]
+The series is locally normally convergent away from its poles by
+\eqref{eq:acoef}. Endpoint logarithmic bounds, locally uniform in
+$\nu$, give the meromorphic continuation of the integral expression.
+Continuation to the required half-integer $\nu$ and
+\eqref{eq:Legendre} prove \eqref{eq:Msum}. The Mellin integral for
+$M$ follows by absolute convergence. At negative half-integers it
+always means meromorphic continuation, not a divergent ordinary integral.
+\end{proof}
+
+\begin{lemma}[Mellin reflection at half-integers]
+For $n\ge1$,
+\begin{equation}
+M(1/2-n)+M(1/2+n)
+=\int_0^1 z^{n-1/2}G(1-z)\dd z.
+\label{eq:reflection}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $0<a<1$, introduce
+\[
+J(c)=\int_0^1z^{c-1}G(1-z)\dd z,\qquad
+Q(a)=\int_0^\infty x^{a-1}G(-x)\dd x.
+\]
+Use the principal branch of $\Phi$, cut along $[1,\infty)$.
+Reciprocal-modulus continuation \cite{dlmf} gives, for $x>1$,
+\[
+\Phi(x+i0)=x^{-1/2}\{\Phi(1/x)+i\Phi(1-1/x)\},
+\quad
+\Re G(x+i0)=x^{-1}\{G(1/x)-G(1-1/x)\}.
+\]
+Integrate $z^{a-1}G(z)$ around the upper half-plane, with small
+indentations at zero and one. The origin arc is $O(\epsilon^a)$;
+the arc at one is $O(\epsilon(1+|\log\epsilon|)^2)$.
+Since $\Phi(z)=O(|z|^{-1/2}(1+\log|z|))$ there, the large arc
+is $O(R^{a-1}(1+\log R)^2)$ and also vanishes.
+The negative-axis phase therefore gives
+\[
+\int_0^\infty x^{a-1}G(x+i0)\dd x=e^{i\pi a}Q(a).
+\]
+Taking real parts and changing $z=1/x$ on $x>1$ yields
+\begin{equation}
+M(a)+M(1-a)-J(1-a)=\cos(\pi a)Q(a).
+\label{eq:contour}
+\end{equation}
+Pfaff's transformation gives
+$G(-x)=(1+x)^{-1}G(x/(1+x))$, so
+\[
+Q(a)=\int_0^1z^{a-1}(1-z)^{-a}G(z)\dd z.
+\]
+For $\Re a<1$, its endpoint at one is integrable. At zero,
+subtracting finitely many Taylor terms of $(1-z)^{-a}G(z)$
+continues this integral meromorphically; its possible poles in that
+half-plane are only $0,-1,-2,\ldots$.
+Both sides of \eqref{eq:contour} consequently continue to $\Re a<1$.
+At $a=1/2-n$, $Q(a)$ is finite and $\cos(\pi a)=0$.
+This proves \eqref{eq:reflection}, including its normalization.
+\end{proof}
+
+\section{Exact positive representation and trace asymptotics}
+\begin{theorem}[Positive Laplace formula]
+For every positive even integer $N$,
+\begin{equation}
+\boxed{\quad Z_N=\pi\int_0^\infty e^{-Nt}f(t)\dd t,
+\qquad f(t)=P_{-1/2}(\cosh t)^2.\quad}
+\label{eq:laplace}
+\end{equation}
+Equivalently,
+$Z_N=(\pi/2)\int_0^1 z^{(N-1)/2}G(1-z)\dd z$.
+\end{theorem}
+\begin{proof}
+The equivalent form follows immediately from \eqref{eq:Msum} and
+\eqref{eq:reflection}. The quadratic transformation
+\[
+y(t):=P_{-1/2}(\cosh t)=e^{-t/2}\Phi(1-e^{-2t})
+\]
+then gives \eqref{eq:laplace} on substituting $z=e^{-2t}$.
+The transformation can be checked directly: both sides are the unique
+regular solution of
+\begin{equation}
+y''+\coth t\,y'+\tfrac14 y=0,\qquad y(0)=1,\quad y'(0)=0.
+\label{eq:yode}
+\end{equation}
+Thus no numerical match or asymptotic normalization is required.
+\end{proof}
+
+Euler's integral gives the particularly useful real formula
+\begin{equation}
+y(t)=\frac2\pi\int_0^{\pi/2}
+\frac{\dd\varphi}{\sqrt{1+\sinh^2(t/2)\sin^2\varphi}}.
+\label{eq:Euler}
+\end{equation}
+It follows that $0<f(t)\le1$, with strict decrease for $t>0$.
+The right side of \eqref{eq:laplace} defines a completely monotone
+interpolation for real $N>0$, but its identification with the spectral
+trace is asserted here only at even integers. In particular, odd $N$
+has a zero finite mode and requires a different deflation at $b=0$.
+
+\begin{corollary}[An exact slope bound]
+For even $N\ge2$,
+\begin{equation}
+0<\pi-NZ_N<\frac\pi{4N^2}.
+\label{eq:slopebound}
+\end{equation}
+Moreover $NZ_N/\pi$ increases strictly along the positive even
+integers and tends to one.
+\end{corollary}
+\begin{proof}
+Equation \eqref{eq:yode} implies
+\[
+-y'(t)=\frac1{4\sinh t}\int_0^t\sinh s\,y(s)\dd s
+<\tfrac14\tanh(t/2)<t/8\quad(t>0).
+\]
+Thus $0<1-f(t)=(1-y(t))(1+y(t))<t^2/8$.
+Integration proves \eqref{eq:slopebound}.
+Finally $NZ_N/\pi=\int_0^\infty e^{-u}f(u/N)\dd u$;
+strict monotonicity and dominated convergence give the remaining claims.
+\end{proof}
+
+\begin{theorem}[Asymptotic expansion with a remainder]
+As positive even $N\to\infty$,
+\begin{equation}
+\boxed{Z_N=\frac\pi N-\frac\pi{4N^3}
++\frac{17\pi}{64N^5}-\frac{169\pi}{256N^7}
++\frac{50777\pi}{16384N^9}+O(N^{-11}).}
+\label{eq:traceexp}
+\end{equation}
+There is an ordinary asymptotic expansion to every fixed order.
+In \eqref{eq:traceexp}, the absolute remainder is at most
+$\pi B\,10!/N^{11}$, where
+\begin{align*}
+\rho&=3/2,& M&=(1-\sinh^2(3/4))^{-1},\\
+B&=\max\left\{\frac{M\rho^{-10}}{1-\rho^{-2}},\,
+2+\frac18+\frac{17}{1536}+\frac{169}{184320}
++\frac{50777}{660602880}\right\}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Expansion of \eqref{eq:yode}, or of its defining hypergeometric series,
+gives
+\begin{equation}
+f(t)=1-\frac{t^2}{8}+\frac{17t^4}{1536}
+-\frac{169t^6}{184320}+\frac{50777t^8}{660602880}+O(t^{10}).
+\label{eq:fseries}
+\end{equation}
+For complex $|t|\le\rho$, $|\sinh(t/2)|\le\sinh(3/4)<1$.
+Equation \eqref{eq:Euler}, with the square root continued from zero,
+shows that $f$ is even and analytic on a neighborhood of this disk,
+with $|f|\le M$. Cauchy's estimate therefore bounds its coefficient
+of $t^{2j}$ by $M\rho^{-2j}$.
+Let $S_8$ be the polynomial displayed in \eqref{eq:fseries}.
+For $0\le t\le1$, the geometric coefficient tail gives
+$|f(t)-S_8(t)|\le M\rho^{-10}t^{10}/(1-\rho^{-2})$.
+For $t\ge1$, $0<f\le1$ gives the other term defining $B$.
+Thus $|f-S_8|\le Bt^{10}$ on the entire positive axis.
+Integrating this finite Taylor estimate in \eqref{eq:laplace} proves
+the stated remainder and coefficients. The same argument applies at
+each fixed truncation order. It does not assert convergence of the
+infinite inverse-power series.
+\end{proof}
+
+The coefficient of $N^{-9}$ is now a spectral-trace theorem.
+Its agreement with a formal quantum-period coefficient does not,
+by itself, prove that period expansion at other spectral modes.
+
+\section{A uniform estimate near the center}
+Define the leading reference function and errors by
+\begin{equation}
+\eta(t)=\pi t\,{}_3F_2(1/4,1/2,3/4;1,3/2;4t^2),\qquad
+\varepsilon=\log\frac{1-\zeta}{\zeta},\qquad
+e=\varepsilon+N\eta(\lambda/N).
+\label{eq:errors}
+\end{equation}
+\begin{theorem}[Signed plunge law for shrinking Jacobi modes]
+Let even $N\to\infty$ and choose nonzero common eigenmodes with
+$\lambda_N\to0$. Then
+\begin{equation}
+e_N=\frac{\pi\lambda_N}{4N^2}
+\left[1+O(N^{-2}+\lambda_N^2)\right],\qquad
+\varepsilon_N=-\pi\lambda_N\left[1+O(N^{-2})\right].
+\label{eq:plunge}
+\end{equation}
+Consequently
+\begin{equation}
+\boxed{\quad\frac{-4N^2e_N}{\varepsilon_N}\longrightarrow1.\quad}
+\label{eq:ratio}
+\end{equation}
+The estimates apply to either sign of the eigenvalue.
+\end{theorem}
+\begin{proof}
+We give a bound uniform for even $N\ge8$ and $0<|\lambda|\le1$.
+The central two-site Rayleigh quotient gives $\|H\|\ge N^2/8$.
+By \eqref{eq:finiteblock},
+\[
+r:=\frac{|\beta|}{\mu_{N,N}}\le\frac{4|\lambda|}{N}\le\frac12,
+\qquad
+\sum_{k\ge N}\mu_{N,k}^{-3}
+\le\frac{64Z_N}{N^4}\le\frac{64\pi}{N^5}.
+\]
+The positive artanh series in \eqref{eq:logit} gives
+\begin{equation}
+|F_N(\beta)-N\lambda Z_N|
+\le\frac{2|\beta|^3}{3(1-r^2)}\sum_{k\ge N}\mu_{N,k}^{-3}
+\le\frac{64\pi|\lambda|^3}{9N^2}.
+\label{eq:nonlinear}
+\end{equation}
+The coefficients $d_k$ of the hypergeometric series in \eqref{eq:errors}
+are positive, with $d_1=1/16$ and $d_{k+1}<d_k$.
+Hence, for $|t|<1/2$,
+\[
+|\eta(t)-\pi t|\le\frac{\pi|t|^3}{4(1-4t^2)},
+\qquad
+|N\eta(\lambda/N)-\pi\lambda|
+\le\frac{4\pi|\lambda|^3}{15N^2}.
+\]
+Since $\varepsilon=-F_N(\beta)$, these inequalities imply
+\begin{equation}
+|e-\lambda(\pi-NZ_N)|\le\frac{8\pi|\lambda|^3}{N^2}.
+\label{eq:uniform}
+\end{equation}
+Equation \eqref{eq:traceexp} gives
+$\pi-NZ_N=\pi/(4N^2)+O(N^{-4})$.
+This and \eqref{eq:uniform} prove the first estimate in
+\eqref{eq:plunge}; \eqref{eq:slopebound} and
+\eqref{eq:nonlinear} prove the second. Dividing is legitimate:
+\eqref{eq:logit} is strictly increasing and vanishes only at $\beta=0$.
+No differentiation of an unproved spectral asymptotic has been used.
+\end{proof}
+
+\section{The actual central pair satisfies the hypothesis}
+\begin{lemma}[An elementary central-mode bound]
+Let $N=2m$, $m\ge1$, and let $\lambda_{\min,+}(J_{2m})$ be the
+smallest positive eigenvalue. With $H_0=0$,
+\begin{equation}
+0<\lambda_{\min,+}(J_{2m})
+\le\frac{2m-1}{2m}\left(1+\frac14H_{m-1}\right)^{-1/2}.
+\label{eq:centralbound}
+\end{equation}
+In particular the innermost positive and negative modes satisfy
+\eqref{eq:plunge} and \eqref{eq:ratio}.
+\end{lemma}
+\begin{proof}
+Use site indices $1,\ldots,2m$ and bonds
+$b_j=j(2m-j)/(2m)$. Set $v_{2k}=0$, $v_{2k-1}=A_k$,
+$A_1=1$, and $A_{k+1}=-b_{2k-1}A_k/b_{2k}$.
+All rows of $J_{2m}v$ vanish except the last, so
+$\|J_{2m}v\|=b_{2m-1}|A_m|$.
+With $c_r=(1/2)_r/r!$ as above,
+\[
+|A_k|=\prod_{j=1}^{k-1}\frac{2j-1}{2j}
+\frac{2m-2j+1}{2m-2j}\ge c_{k-1},\qquad
+|A_m|=(2m-1)c_{m-1}^2\le1.
+\]
+For the last inequality, the ratio of successive endpoint amplitudes
+is $1-1/(4m^2)<1$, starting at one.
+Also $r c_r^2$ increases for $r\ge1$, starting at $1/4$,
+because its successive ratio is $(2r+1)^2/[4r(r+1)]>1$.
+Thus $\|v\|^2\ge1+H_{m-1}/4$.
+Expanding $v$ in an orthonormal eigenbasis gives
+$\operatorname{dist}(0,\operatorname{spec}J_{2m})
+\le\|J_{2m}v\|/\|v\|$.
+Finally the spectrum is symmetric, and
+$\det J_{2m}=(-1)^m\prod_{k=1}^m b_{2k-1}^2\ne0$.
+The distance is therefore the smallest positive eigenvalue, proving
+\eqref{eq:centralbound}. The harmonic sum diverges, so the required
+nonzero eigenvalues tend to zero.
+\end{proof}
+The estimate is sufficient but is not claimed to give the sharp
+central eigenvalue scale. In combination with the previous theorem
+it gives the conservative central-pair bound
+$-4N^2e_N/\varepsilon_N=1+O(1/\log N)$.
+
+\section{Independent recurrence and scope}
+An additional exact characterization, useful for checking constants,
+is
+\begin{equation}
+(N+1)^3Z_{N+2}-2N(N^2+1)Z_N+(N-1)^3Z_{N-2}=0,
+\qquad N\ge4\ \text{even}.
+\label{eq:recurrence}
+\end{equation}
+For a direct derivation from \eqref{eq:Legendre}, let
+$I_\nu=\int_{-1}^1(1-x^2)^{-1/2}P_\nu(x)P_\nu(-x)\dd x$
+and insert an extra $x^2$ to define $T_\nu$.
+The degree raising and lowering identities \cite{dlmf}, followed
+by two integrations by parts, give
+\begin{align*}
+I_{\nu+1}&=\frac\nu{(\nu+1)^2}T_\nu
++\left[-1+\frac1{2(\nu+1)^2}\right]I_\nu,\\
+I_{\nu-1}&=-\frac{\nu+1}{\nu^2}T_\nu
++\left[-1+\frac1{2\nu^2}\right]I_\nu.
+\end{align*}
+Endpoint products are $O(r^{1/2}(1+|\log r|))$ and vanish.
+Eliminating $T_\nu$ gives
+\[
+(\nu+1)^3I_{\nu+1}
++(2\nu+1)(\nu^2+\nu+1/2)I_\nu+\nu^3I_{\nu-1}=0.
+\]
+Substitution in \eqref{eq:Legendre}, including the alternating sine
+factor, proves \eqref{eq:recurrence}. The recurrence alone would not
+have fixed the normalization of a candidate solution; the contour
+argument supplies that missing information.
+
+Numerical evaluation of the connection derivative and
+both positive-integral forms agrees at $N=2,4,8$ to 70-digit working
+precision. Exact rational checks verify the displayed kernel
+coefficients and trial-vector identities. These calculations support
+reproducibility; the proofs and remainder estimates above do not
+depend on finite numerical agreement.
+
+The conclusions concern even size and half filling. They prove a
+reciprocal-trace expansion and the signed law for shrinking Jacobi
+modes, including the central pair. They do not establish the uniform
+bulk quantum-period remainder, its higher spectral coefficients,
+a general-filling effective-size convention, or the full Wilson
+relative-entropy finite-part asymptotic. The separate companion \emph{Uniform Bulk Modular Asymptotics and the Leading Wilson Entropy Law} proves the fixed-interior period expansion and leading Wilson law with bounded remainder.
+
+\paragraph{Acknowledgments and provenance.}
+This work belongs to \emph{From Prephysical Hypotheses to Physical Models}.
+The analysis and checks here were developed by Kirtus Justus with
+ChatGPT (OpenAI). The preceding connection-coefficient proposal was
+supplied in correspondence prepared with Claude (Anthropic).
+The wider program has also used Gemini (Google), Grok (SpaceXAI),
+and DeepSeek (High-Flyer); no specific proof here is attributed to
+those systems. Assistance does not imply external peer review or
+endorsement. No priority claim is made for the special-function identities.
+
+\begin{thebibliography}{9}
+\bibitem{tails} K. Justus, \emph{Spectral Tails and Exact Concentration Logits},
+research manuscript, October 2026.
+\bibitem{eisler} V. Eisler and I. Peschel, Analytical results for the
+entanglement Hamiltonian of a free-fermion chain,
+\emph{J. Phys. A} \textbf{50} (2017), 284003,
+\href{https://arxiv.org/abs/1703.08126}{arXiv:1703.08126}.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/14.3}{\S14.3},
+\href{https://dlmf.nist.gov/14.10}{\S14.10},
+\href{https://dlmf.nist.gov/15.6}{\S15.6},
+\href{https://dlmf.nist.gov/15.8}{\S15.8}, and
+\href{https://dlmf.nist.gov/19.7}{\S19.7}; in particular
+(14.10.4)--(14.10.5), (15.6.1), (15.8.1), and (19.7.3).
+\end{thebibliography}
+\end{document}

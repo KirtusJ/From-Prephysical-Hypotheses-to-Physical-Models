@@ -1,0 +1,73 @@
+{
+  "finite_checks": 733,
+  "gaussian_quadrature": [
+    {
+      "P": "1/4",
+      "analytic_bits": 0.16096404744368117,
+      "noise_variance": "1",
+      "quadrature_bits_per_real_coordinate": 0.16096404744368123
+    },
+    {
+      "P": "3",
+      "analytic_bits": 1.0,
+      "noise_variance": "1",
+      "quadrature_bits_per_real_coordinate": 0.9999999999999998
+    },
+    {
+      "P": "2",
+      "analytic_bits": 0.24271341358512083,
+      "noise_variance": "5",
+      "quadrature_bits_per_real_coordinate": 0.2427134135851208
+    },
+    {
+      "P": "7/3",
+      "analytic_bits": 1.3862947519484636,
+      "noise_variance": "2/5",
+      "quadrature_bits_per_real_coordinate": 1.3862947519484663
+    }
+  ],
+  "limitations": [
+    "The Gaussian supremum and unbounded family of zero-error constellations require the accompanying proofs.",
+    "The Rademacher witness assumes exact real-valued output and non-Gaussian discrete noise.",
+    "Coordinate counts and second moments carry no physical time or energy interpretation in these checks.",
+    "No finite-block zero-error claim is made for nondegenerate Gaussian noise."
+  ],
+  "rademacher_constellations": [
+    {
+      "M": 2,
+      "cost": "1/36",
+      "zero_error_bits": 1.0
+    },
+    {
+      "M": 3,
+      "cost": "1/24",
+      "zero_error_bits": 1.584962500721156
+    },
+    {
+      "M": 5,
+      "cost": "1/18",
+      "zero_error_bits": 2.321928094887362
+    },
+    {
+      "M": 17,
+      "cost": "2/27",
+      "zero_error_bits": 4.087462841250339
+    },
+    {
+      "M": 64,
+      "cost": "21/260",
+      "zero_error_bits": 6.0
+    },
+    {
+      "M": 257,
+      "cost": "32/387",
+      "zero_error_bits": 8.005624549193879
+    }
+  ],
+  "status": "PASS",
+  "two_coordinate_equal_trace_control": {
+    "anisotropic_bits": 1.207518749639422,
+    "anisotropic_ratio": "16/3",
+    "isotropic_bits": 1.0
+  }
+}

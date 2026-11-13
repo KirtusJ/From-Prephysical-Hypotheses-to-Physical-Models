@@ -1,0 +1,572 @@
+{
+ "X1_invariant_forms_are_spanned_by_the_embeddings": {
+  "passed": true,
+  "rows": [
+   {
+    "M": 3,
+    "field_degree": 4,
+    "unknowns": 10,
+    "solution_dimension": 2,
+    "euler_phi": 2,
+    "embeddings": 2,
+    "largest_residual_of_embedding_forms": 1.1102230246251565e-15,
+    "rank_of_embedding_forms": 2
+   },
+   {
+    "M": 5,
+    "field_degree": 8,
+    "unknowns": 36,
+    "solution_dimension": 4,
+    "euler_phi": 4,
+    "embeddings": 4,
+    "largest_residual_of_embedding_forms": 8.881784197001252e-16,
+    "rank_of_embedding_forms": 4
+   },
+   {
+    "M": 7,
+    "field_degree": 12,
+    "unknowns": 78,
+    "solution_dimension": 6,
+    "euler_phi": 6,
+    "embeddings": 6,
+    "largest_residual_of_embedding_forms": 4.440892098500626e-15,
+    "rank_of_embedding_forms": 6
+   },
+   {
+    "M": 9,
+    "field_degree": 12,
+    "unknowns": 78,
+    "solution_dimension": 6,
+    "euler_phi": 6,
+    "embeddings": 6,
+    "largest_residual_of_embedding_forms": 3.1086244689504383e-15,
+    "rank_of_embedding_forms": 6
+   }
+  ]
+ },
+ "X2_multiplicative_exactly_for_single_embeddings": {
+  "passed": true,
+  "unit_weights": {
+   "(1, 0, 0, 0)": 1.0445008007239427e-14,
+   "(0, 1, 0, 0)": 8.372425915813468e-15,
+   "(0, 0, 1, 0)": 6.84323476883974e-15,
+   "(0, 0, 0, 1)": 7.335578313494559e-15
+  },
+  "other_weights": {
+   "(0.5, 0.5, 0, 0)": 0.8217044888855952,
+   "(0.5, 0, 0.5, 0)": 0.8549624393665574,
+   "(0.25, 0.25, 0.25, 0.25)": 0.8128930817610064,
+   "(2, 0, 0, 0)": 0.5000000000000026,
+   "(1, 0, 0, 1)": 0.9367453349546346
+  },
+  "seed": 20261117
+ },
+ "X3_five_sheet_values_and_discriminator": {
+  "passed": true,
+  "ordinary": 0.3272542485937368,
+  "conjugate": 0.047745751406263075,
+  "s_under_each_embedding": {
+   "(1, 1)": 0.032247551122989826,
+   "(1, -1)": -2.7961795736232,
+   "(2, 1)": -2.2038204263767995,
+   "(2, -1)": -5.03224755112299
+  }
+ },
+ "X4_inputs_of_the_bound": {
+  "passed": false,
+  "largest_ratio_of_band_remainder_to_q4_over_6": 1.0001143272404203,
+  "largest_section_derivative": 0.7071067811611215,
+  "bloch_vector_matches_up_to_axis_convention": {
+   "residual": 6.106226635438361e-16,
+   "axis_permutation": [
+    0,
+    1,
+    2
+   ],
+   "signs": [
+    1,
+    1,
+    1
+   ]
+  },
+  "note": "the Bloch vector is compared up to a permutation and signs of the three axes, which is a choice of Pauli basis for the two channels"
+ },
+ "X5_real_space_walk_within_the_spinor_bound": {
+  "passed": true,
+  "runs": [
+   {
+    "label": "eps=1, delta=0.05",
+    "sites": 65536,
+    "delta": 0.05,
+    "epsilon": 1.0,
+    "force_F": 0.7669903939428204,
+    "field_h": 9.587379924285257e-05,
+    "step_dt": 0.0025000000000000005,
+    "p0": 0.3,
+    "support_P": 1.3,
+    "norm_g_prime": 1.7543115059395982,
+    "norm_s_g": 0.33900921203631307,
+    "rows": [
+     {
+      "t": 0.12500000000000003,
+      "steps": 50,
+      "distance": 0.00011193892859767488,
+      "bound_E": 0.00995239950934603,
+      "within_bound": true,
+      "norm": 0.9999999999999922,
+      "mean_scaled_position": 0.03137135036709282,
+      "classical_Y": 0.031507887547321714,
+      "charfn_error": {
+       "1": 0.7457351558730468,
+       "-1": 0.7464086770901567
+      },
+      "charfn_bound": 2.0957672163114
+     },
+     {
+      "t": 0.25000000000000006,
+      "steps": 100,
+      "distance": 0.00010624835249503954,
+      "bound_E": 0.020048142851237266,
+      "within_bound": true,
+      "norm": 0.9999999999999845,
+      "mean_scaled_position": 0.05075854834629501,
+      "classical_Y": 0.05103155018928686,
+      "charfn_error": {
+       "1": 0.7459042694450694,
+       "-1": 0.7476654856997538
+      },
+      "charfn_bound": 2.177509614348292
+     },
+     {
+      "t": 0.37500000000000006,
+      "steps": 150,
+      "distance": 0.00017560232097031428,
+      "bound_E": 0.030325608766292988,
+      "within_bound": true,
+      "norm": 0.9999999999999766,
+      "mean_scaled_position": 0.05817836214480454,
+      "classical_Y": 0.058570987925895435,
+      "charfn_error": {
+       "1": 0.7461858191820971,
+       "-1": 0.7484977946080735
+      },
+      "charfn_bound": 2.2596154575315133
+     },
+     {
+      "t": 0.5000000000000001,
+      "steps": 200,
+      "distance": 0.0001832074940912269,
+      "bound_E": 0.04082996024062482,
+      "within_bound": true,
+      "norm": 0.9999999999999687,
+      "mean_scaled_position": 0.05361190901686419,
+      "classical_Y": 0.054126200757147414,
+      "charfn_error": {
+       "1": 0.7465797354050286,
+       "-1": 0.7485452730314274
+      },
+      "charfn_bound": 2.342175071833287
+     },
+     {
+      "t": 0.6250000000000001,
+      "steps": 250,
+      "distance": 0.00023629115700860254,
+      "bound_E": 0.05161367256157723,
+      "within_bound": true,
+      "norm": 0.9999999999999605,
+      "mean_scaled_position": 0.037077487897763994,
+      "classical_Y": 0.037697188683042865,
+      "charfn_error": {
+       "1": 0.747085354320419,
+       "-1": 0.7480306770683117
+      },
+      "charfn_bound": 2.4252934078283013
+     },
+     {
+      "t": 0.7500000000000001,
+      "steps": 300,
+      "distance": 0.0002478881880499794,
+      "bound_E": 0.06273706137346823,
+      "within_bound": true,
+      "norm": 0.9999999999999524,
+      "mean_scaled_position": 0.008559080666539876,
+      "classical_Y": 0.009283951703581705,
+      "charfn_error": {
+       "1": 0.7477022468043241,
+       "-1": 0.7477558720605185
+      },
+      "charfn_bound": 2.509091096805192
+     },
+     {
+      "t": 0.8750000000000002,
+      "steps": 350,
+      "distance": 0.00029546568723382065,
+      "bound_E": 0.07426881073332993,
+      "within_bound": true,
+      "norm": 0.9999999999999446,
+      "mean_scaled_position": -0.031923583751435,
+      "classical_Y": -0.031113510181236037,
+      "charfn_error": {
+       "1": 0.7484295853513865,
+       "-1": 0.749096815627446
+      },
+      "charfn_bound": 2.593705506878026
+     },
+     {
+      "t": 1.0000000000000002,
+      "steps": 400,
+      "distance": 0.0003124305633299331,
+      "bound_E": 0.08628650116664907,
+      "within_bound": true,
+      "norm": 0.9999999999999368,
+      "mean_scaled_position": -0.08438335820830689,
+      "classical_Y": -0.08349519697141039,
+      "charfn_error": {
+       "1": 0.7492664259071481,
+       "-1": 0.7539562179350738
+      },
+      "charfn_bound": 2.679291799097774
+     }
+    ]
+   },
+   {
+    "label": "eps=delta=0.1",
+    "sites": 65536,
+    "delta": 0.1,
+    "epsilon": 0.1,
+    "force_F": 0.9587379924285254,
+    "field_h": 9.587379924285257e-05,
+    "step_dt": 0.0010000000000000002,
+    "p0": 0.3,
+    "support_P": 0.6162277660168379,
+    "norm_g_prime": 1.7543115059395982,
+    "norm_s_g": 0.33900921203631307,
+    "rows": [
+     {
+      "t": 0.10000000000000002,
+      "steps": 100,
+      "distance": 0.00015193144815166214,
+      "bound_E": 0.019944684074531076,
+      "within_bound": true,
+      "norm": 0.9999999999999841,
+      "mean_scaled_position": 0.025141648728921384,
+      "classical_Y": 0.025206310037857376,
+      "charfn_error": {
+       "1": 0.1327354454256344,
+       "-1": 0.1407719031410353
+      },
+      "charfn_bound": 0.8902124152519895
+     },
+     {
+      "t": 0.20000000000000004,
+      "steps": 200,
+      "distance": 0.00024890925438321443,
+      "bound_E": 0.04054475445131278,
+      "within_bound": true,
+      "norm": 0.9999999999999681,
+      "mean_scaled_position": 0.040706332794307826,
+      "classical_Y": 0.04082524015142949,
+      "charfn_error": {
+       "1": 0.13285776286113812,
+       "-1": 0.1530109900735994
+      },
+      "charfn_bound": 0.9804824882808311
+     },
+     {
+      "t": 0.30000000000000004,
+      "steps": 300,
+      "distance": 0.00030266666148314603,
+      "bound_E": 0.062161093210103616,
+      "within_bound": true,
+      "norm": 0.999999999999952,
+      "mean_scaled_position": 0.04668834608870723,
+      "classical_Y": 0.04685679034071635,
+      "charfn_error": {
+       "1": 0.13306170928475503,
+       "-1": 0.15901686538298118
+      },
+      "charfn_bound": 1.0727850980736908
+     },
+     {
+      "t": 0.4000000000000001,
+      "steps": 400,
+      "distance": 0.0003230796586751038,
+      "bound_E": 0.0852752662497554,
+      "within_bound": true,
+      "norm": 0.999999999999936,
+      "mean_scaled_position": 0.043085500932669274,
+      "classical_Y": 0.04330096060571796,
+      "charfn_error": {
+       "1": 0.1333472218078207,
+       "-1": 0.15570832951217942
+      },
+      "charfn_bound": 1.1680833764282728
+     },
+     {
+      "t": 0.5000000000000001,
+      "steps": 500,
+      "distance": 0.000323229867671268,
+      "bound_E": 0.11050642107191211,
+      "within_bound": true,
+      "norm": 0.9999999999999203,
+      "mean_scaled_position": 0.029899130801941676,
+      "classical_Y": 0.03015775094643429,
+      "charfn_error": {
+       "1": 0.13371409742767373,
+       "-1": 0.14492441859364852
+      },
+      "charfn_bound": 1.2676156183478642
+     },
+     {
+      "t": 0.6000000000000001,
+      "steps": 600,
+      "distance": 0.00032289221120234215,
+      "bound_E": 0.13862818456470918,
+      "within_bound": true,
+      "norm": 0.9999999999999041,
+      "mean_scaled_position": 0.00713408840932353,
+      "classical_Y": 0.007427161362865392,
+      "charfn_error": {
+       "1": 0.13416198960234602,
+       "-1": 0.13484416978835034
+      },
+      "charfn_bound": 1.3729290776087366
+     },
+     {
+      "t": 0.7000000000000002,
+      "steps": 700,
+      "distance": 0.0003418302838482548,
+      "bound_E": 0.17058556078647225,
+      "within_bound": true,
+      "norm": 0.9999999999998885,
+      "mean_scaled_position": -0.02520126184948554,
+      "classical_Y": -0.024890808144988813,
+      "charfn_error": {
+       "1": 0.13469040819776604,
+       "-1": 0.14252113089267796
+      },
+      "charfn_bound": 1.4859137623275411
+     },
+     {
+      "t": 0.8000000000000002,
+      "steps": 800,
+      "distance": 0.00037865570669877067,
+      "bound_E": 0.2075118287494164,
+      "within_bound": true,
+      "norm": 0.9999999999998721,
+      "mean_scaled_position": -0.06709505917980393,
+      "classical_Y": -0.0667961575771282,
+      "charfn_error": {
+       "1": 0.13529872667375048,
+       "-1": 0.1838050601486139
+      },
+      "charfn_bound": 1.6088362305287074
+     },
+     {
+      "t": 0.9000000000000002,
+      "steps": 900,
+      "distance": 0.00040128015368215165,
+      "bound_E": 0.250745440203345,
+      "within_bound": true,
+      "norm": 0.9999999999998563,
+      "mean_scaled_position": -0.11853197370837593,
+      "classical_Y": -0.11828888693355294,
+      "charfn_error": {
+       "1": 0.13598620198798694,
+       "-1": 0.2583115137787236
+      },
+      "charfn_bound": 1.7443733857118429
+     },
+     {
+      "t": 1.0000000000000002,
+      "steps": 1000,
+      "distance": 0.0003637828446303862,
+      "bound_E": 0.3018469174193488,
+      "within_bound": true,
+      "norm": 0.9999999999998406,
+      "mean_scaled_position": -0.17949325150569712,
+      "classical_Y": -0.1793689962142629,
+      "charfn_error": {
+       "1": 0.13675201233805953,
+       "-1": 0.35872949488615097
+      },
+      "charfn_bound": 1.8956462724191288
+     }
+    ]
+   },
+   {
+    "label": "eps=delta=0.05",
+    "sites": 1048576,
+    "delta": 0.05,
+    "epsilon": 0.05,
+    "force_F": 0.9587379924285254,
+    "field_h": 5.992112452678286e-06,
+    "step_dt": 0.00012500000000000003,
+    "p0": 0.3,
+    "support_P": 0.523606797749979,
+    "norm_g_prime": 1.7543115059395982,
+    "norm_s_g": 0.33900921203631307,
+    "rows": [
+     {
+      "t": 0.06250000000000001,
+      "steps": 500,
+      "distance": 2.619701677922469e-05,
+      "bound_E": 0.0060962067764808985,
+      "within_bound": true,
+      "norm": 0.9999999999999196,
+      "mean_scaled_position": 0.016871161345897917,
+      "classical_Y": 0.016877464858538038,
+      "charfn_error": {
+       "1": 0.07065601778016362,
+       "-1": 0.07778604660978723
+      },
+      "charfn_bound": 0.5259117738768598
+     },
+     {
+      "t": 0.12500000000000003,
+      "steps": 1000,
+      "distance": 4.54083754020946e-05,
+      "bound_E": 0.012259175890153644,
+      "within_bound": true,
+      "norm": 0.9999999999998387,
+      "mean_scaled_position": 0.02999844931273432,
+      "classical_Y": 0.030009859434152148,
+      "charfn_error": {
+       "1": 0.07068410480223451,
+       "-1": 0.09133295477069389
+      },
+      "charfn_bound": 0.554959734779011
+     },
+     {
+      "t": 0.18750000000000006,
+      "steps": 1500,
+      "distance": 5.8997315484863126e-05,
+      "bound_E": 0.01851682100015153,
+      "within_bound": true,
+      "norm": 0.9999999999997582,
+      "mean_scaled_position": 0.03938139277331448,
+      "classical_Y": 0.03939718372684233,
+      "charfn_error": {
+       "1": 0.07073092250674232,
+       "-1": 0.10376413427924328
+      },
+      "charfn_bound": 0.5841970476738123
+     },
+     {
+      "t": 0.25000000000000006,
+      "steps": 2000,
+      "distance": 6.785265872193424e-05,
+      "bound_E": 0.024904299944703976,
+      "within_bound": true,
+      "norm": 0.9999999999996771,
+      "mean_scaled_position": 0.045019654977073276,
+      "classical_Y": 0.04503943773660858,
+      "charfn_error": {
+       "1": 0.07079647212577736,
+       "-1": 0.11199775631651655
+      },
+      "charfn_bound": 0.6136940282377227
+     },
+     {
+      "t": 0.31250000000000006,
+      "steps": 2500,
+      "distance": 7.257241187064178e-05,
+      "bound_E": 0.031464820490252454,
+      "within_bound": true,
+      "norm": 0.9999999999995964,
+      "mean_scaled_position": 0.04691303358831628,
+      "classical_Y": 0.0469366214634509,
+      "charfn_error": {
+       "1": 0.07088075139118954,
+       "-1": 0.1148979914549488
+      },
+      "charfn_bound": 0.6435370920036252
+     },
+     {
+      "t": 0.3750000000000001,
+      "steps": 3000,
+      "distance": 7.365836578494786e-05,
+      "bound_E": 0.03825044608056636,
+      "within_bound": true,
+      "norm": 0.9999999999995153,
+      "mean_scaled_position": 0.04506146071193584,
+      "classical_Y": 0.045088734907369296,
+      "charfn_error": {
+       "1": 0.07098375449260505,
+       "-1": 0.11217737626376366
+      },
+      "charfn_bound": 0.6738303658590585
+     },
+     {
+      "t": 0.4375000000000001,
+      "steps": 3500,
+      "distance": 7.172199957375676e-05,
+      "bound_E": 0.04532290158585891,
+      "within_bound": true,
+      "norm": 0.9999999999994349,
+      "mean_scaled_position": 0.03946500290301752,
+      "classical_Y": 0.03949577806836377,
+      "charfn_error": {
+       "1": 0.07110547204649281,
+       "-1": 0.10413676612737949
+      },
+      "charfn_bound": 0.7046972995444493
+     },
+     {
+      "t": 0.5000000000000001,
+      "steps": 4000,
+      "distance": 6.768854534002027e-05,
+      "bound_E": 0.05275437905190307,
+      "within_bound": true,
+      "norm": 0.9999999999993541,
+      "mean_scaled_position": 0.03012386115812682,
+      "classical_Y": 0.03015775094643429,
+      "charfn_error": {
+       "1": 0.07124589107207398,
+       "-1": 0.09192352659624234
+      },
+      "charfn_bound": 0.7362822771513431
+     }
+    ]
+   }
+  ],
+  "largest_ratio_distance_to_bound": 0.011247431184063307,
+  "note": "real-space step on a ring with the gain exp(-i h x) on arcs leaving site x; the envelope is encoded in the plus-band section built from the projector; distance in l2 over all fibres"
+ },
+ "X6_position_characteristic_function_within_the_stated_chain_of_bounds": {
+  "passed": true,
+  "orientation_of_position_axis": "-1",
+  "final_rows": [
+   {
+    "run": "eps=delta=0.1",
+    "t": 1.0000000000000002,
+    "error": {
+     "1": 0.13675201233805953,
+     "-1": 0.35872949488615097
+    },
+    "bound": 1.8956462724191288,
+    "mean_scaled_position": -0.17949325150569712,
+    "classical_Y": -0.1793689962142629
+   },
+   {
+    "run": "eps=delta=0.05",
+    "t": 0.5000000000000001,
+    "error": {
+     "1": 0.07124589107207398,
+     "-1": 0.09192352659624234
+    },
+    "bound": 0.7362822771513431,
+    "mean_scaled_position": 0.03012386115812682,
+    "classical_Y": 0.03015775094643429
+   }
+  ],
+  "note": "the bound is the sum of the three estimates of the paper: envelope deviation, 2 E(t), and 4 delta L for replacing the section by the constant spinor"
+ },
+ "_summary": {
+  "predicates": 6,
+  "passed": 5,
+  "seed": 20261117,
+  "numpy": "2.5.3",
+  "sympy": "1.14.0"
+ }
+}

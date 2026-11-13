@@ -1,0 +1,112 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.84in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{topsep=3pt,itemsep=2pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\cB}{\mathcal B}
+\title{Joint Purification Constraints on Local Kraus Weight\\[3pt]\large Exact Attainment, Simplex Obstructions, and Error Stability}
+\author{Research direction: Kirtus Justus\\Mathematical and computational assistance: ChatGPT (OpenAI)}
+\date{7 November 2026\quad Vancouver, British Columbia}
+\begin{document}
+\maketitle
+\vspace{-1.1em}
+\paragraph{Selected scientific sections.} This edition retains Sections 1--4 and the references used by their mathematical arguments. All observations are specified mathematical populations; no apparatus trial is asserted.
+\paragraph{Numerical execution scope.} The numerical checks and interval-arithmetic computations described below are reports from the 7 November 2026 manuscript. Their executions were not repeated for this selected edition.
+\paragraph{Explicit mathematical qualification.} The local-weight interval theorem is stated here for $q\ge2$. Its zero-weight construction uses a fixed-point-free cyclic shift of the discarded factor. The original statement did not make this restriction explicit. At $q=1$, the local operator space is the whole Kraus-operator space, so every nonzero operation has weight one and the claimed zero endpoint is unavailable.
+
+\section{Observation contract and exact optimization}
+Let $q\ge2$ and let $\cB:B(\mathbb C^d\otimes\mathbb C^q)\to B(\mathbb C^{d'}\otimes\mathbb C^q)$ be a nonzero completely positive, trace-nonincreasing map. For all basis inputs $|a,b\rangle$, suppose that
+\[
+\tau_{ab}=\Tr_{B'}\cB(|a,b\rangle\langle a,b|)\succeq0,\qquad s_{ab}=\Tr\tau_{ab}\le1,\qquad S=\sum_{a,b}s_{ab}>0
+\]
+are specified. The normalized local Kraus weight $w$ is the sum of squared Hilbert--Schmidt norms of the orthogonal projections of Kraus operators onto $\mathcal L=\{V\otimes I_q: V\in M_{d'\times d}\}$, divided by $S$. It is independent of Kraus representation. Set
+\[
+T_a=\max\left\{\sum_{b,c=1}^q\operatorname{Re}\Tr X_{bc}:X=[X_{bc}]_{b,c=1}^q\succeq0,\;X_{bb}=\tau_{ab}\right\}.
+\]
+\begin{theorem}[Exact compatible weight interval]
+With only the marginals above fixed, the complete attainable set is
+\[
+\boxed{\mathcal I_w=\left[0,\frac{\sum_a T_a}{qS}\right].}
+\]
+The upper endpoint is attained by one common trace-nonincreasing operation; the lower endpoint is attained by another operation with all the same marginals. Every intermediate value is attained. If all $s_{ab}=1$, both endpoint operations may be trace preserving. Also $1/q\le w_{\max}\le1$.
+\end{theorem}
+\begin{proof}
+Write each Kraus matrix in blocks indexed by the input/output $q$-level factor. Orthogonal projection onto $\mathcal L$ replaces its diagonal blocks by their average. Hence $qSw=\sum_a\|\sum_b\xi_{ab}\|^2$, where $\xi_{ab}$ collects the $b\to b$ output block and the Kraus environment for input $|a,b\rangle$. Its first-output reduced state $\sigma_{ab}$ obeys $0\preceq\sigma_{ab}\preceq\tau_{ab}$. Purify $\tau_{ab}-\sigma_{ab}$ in a fresh environment sector, orthogonal to the original sector and to the sectors used for other $b$. Appending this component produces purifications $\zeta_{ab}$ of $\tau_{ab}$, without decreasing $\|\sum_b\xi_{ab}\|^2$. Their positive block Gram operator has prescribed diagonal $\tau_{ab}$, giving the SDP upper bound.
+
+Conversely factor an optimal positive block matrix as $X_{bc}=A_bA_c^*$ and let $\zeta_{ab}$ be the corresponding common purifications. Set the Stinespring column on $|a,b\rangle$ to $\zeta_{ab}\otimes|b\rangle$ in the discarded output factor, using mutually orthogonal environments for distinct $a$. Different columns are orthogonal by their output flags or environments, and each has squared norm $s_{ab}\le1$, so the Stinespring operator is a contraction. Its Kraus projection attains $\sum_aT_a/(qS)$. A fixed-point-free cyclic shift of the discarded output flag removes all diagonal blocks, gives $w=0$, and leaves every $\tau_{ab}$ intact. Mixing these operations gives every intermediate weight. The diagonal SDP choice gives $T_a\ge\sum_b s_{ab}$; Cauchy--Schwarz gives $T_a\le q\sum_b s_{ab}$.
+\end{proof}
+
+\paragraph{Prior-art normalization.} Definition 5.8, Remark 5.9, and Proposition 5.10 of Nuradha, Mishra, Leditzky and Wilde \cite{nuradha} give the block-positive SDP for multivariate fidelity, including positive operators of nonunit trace. With their convention,
+\[
+T_a=\sum_b s_{ab}+q(q-1)F_{\mathrm{SDP}}(\tau_{a1},\ldots,\tau_{aq}).
+\]
+This SDP is published prior mathematics. The result connects this SDP to a sharp attainable local Kraus weight. No claim of publication priority is made. For $q=2$, the SDP reduces to the root fidelity of the pair.
+
+\section{An exact family that defeats pairwise optimization}
+\begin{theorem}[Regular-simplex obstruction]
+For each integer $q\ge3$, there exist $q$ normalized pure first-output marginals on $\mathbb C^{q-1}$, with unit success on the $q$ basis inputs, for which
+\[
+\boxed{w_{\max}^{\mathrm{joint}}=\frac1{q-1},\qquad w_{\max}^{\mathrm{pairwise}}=\frac2q.}
+\]
+The joint endpoint and $w=0$ are attained by trace-preserving channels. The second expression is an invalid extrapolation obtained by independently maximizing all pairwise overlaps.
+\end{theorem}
+\begin{proof}
+Choose real unit vectors $x_1,\ldots,x_q\in\mathbb R^{q-1}$ satisfying $\langle x_b,x_c\rangle=-1/(q-1)$ for $b\ne c$. Every purification of $|x_b\rangle\langle x_b|$ is $x_b\otimes e_b$ with $\|e_b\|=1$. Their joint objective is
+\[
+\left\|\sum_b x_b\otimes e_b\right\|^2=\frac{q^2}{q-1}-\frac1{q-1}\left\|\sum_b e_b\right\|^2\le\frac{q^2}{q-1}.
+\]
+Take $e_b=e^{2\pi ib/q}$ in a one-dimensional environment to attain equality. Attach the second-output flag $|b\rangle$ to each column. These columns form an isometry, so the realizing channel is trace preserving. Dividing the optimal objective by $qS=q^2$ proves the first expression. Pairwise root fidelities all equal $1/(q-1)$, so the invalid independent-pair sum gives $(q+q(q-1)/(q-1))/q^2=2/q$. A cyclic second-output shift gives the zero endpoint, again trace preserving.
+\end{proof}
+The trine example is $q=3$, with exact ceilings $1/2$ and $2/3$. In general their ratio is $2(q-1)/q$, approaching two. The 7 November 2026 manuscript reports finite-matrix calculations for $q=2,\ldots,10$ reproducing the channel isometries, weight values and zero endpoints.
+
+\section{Quantitative stability under marginal error}
+For two sets of admissible positive marginals $\tau=(\tau_{ab})$ and $\tau'=(\tau'_{ab})$, put
+\[
+\delta=\sum_{a,b}\|\tau_{ab}-\tau'_{ab}\|_1,\qquad S=\sum_{a,b}\Tr\tau_{ab},\qquad S'=\sum_{a,b}\Tr\tau'_{ab}.
+\]
+\begin{proposition}[A trace-norm stability certificate]
+For positive $S,S'$, their sharp compatible upper weights satisfy
+\[
+\boxed{|w_{\max}(\tau)-w_{\max}(\tau')|\le\min\left\{1,\frac{(\sqrt S+\sqrt{S'})\sqrt\delta+\delta}{\min(S,S')}\right\}.}
+\]
+At equal total success $S=S'$, the simpler bound $2\sqrt{\delta/S}$ holds.
+\end{proposition}
+\begin{proof}
+For each $a$, choose purifications $\zeta_{ab}$ attaining $T_a(\tau)$. After extending the environment if needed, Uhlmann's theorem gives purifications of $\tau'_{ab}$ satisfying
+$\|\zeta_{ab}-\zeta'_{ab}\|^2=\Tr\tau_{ab}+\Tr\tau'_{ab}-2F_*(\tau_{ab},\tau'_{ab})\le\|\tau_{ab}-\tau'_{ab}\|_1$; the last step is the Powers--St\o rmer inequality. The triangle inequality and symmetry imply
+$|\sqrt{T_a(\tau)}-\sqrt{T_a(\tau')}|\le\sqrt{q\delta_a}$, where $\delta_a=\sum_b\|\tau_{ab}-\tau'_{ab}\|_1$.
+Since $T_a\le qS_a$ with $S_a=\sum_b\Tr\tau_{ab}$, Cauchy--Schwarz gives
+$|\sum_a T_a-\sum_aT'_a|\le q(\sqrt S+\sqrt{S'})\sqrt\delta$. Now divide by $qS$ and $qS'$, use $w_{\max}\le1$ and $|S-S'|\le\delta$, and symmetrize the denominator. Every step applies to noncommuting and singular marginals.
+\end{proof}
+This is a sufficient deterministic robustness estimate. It makes no claim of optimal modulus and becomes weak as total success approaches zero. A joint statistical coverage region for the estimated marginals is still required before using it on sampled measurements. The 7 November 2026 manuscript reports no violations in checks on 1,200 randomly generated commuting examples; these reported numerical checks supplement rather than prove the inequality.
+
+\section{Exact rare-success fixed-horizon discrimination}
+The two comparison branches succeed on an informative input with probability $h=1/1000$ and use a binary detector with click probabilities $U=1-L$ and $L$ under the two simple hypotheses. Let $\eta$ be the probability of assigning an informative input, fixed independently of the outcomes, and $t=\eta h$. Under either hypothesis the informative-success count is $M\sim\operatorname{Bin}(N,t)$. Given $M=m$, the number of informative no-clicks is $K\sim\operatorname{Bin}(m,L)$ under the null and $\operatorname{Bin}(m,1-L)$ under the alternative. The symmetric likelihood-ratio test has equal errors and optimal risk
+\[
+R_N=\sum_{m=0}^N{N\choose m}t^m(1-t)^{N-m} e_m,\quad e_m=\Pr_{L}(K>m/2)+\frac12\mathbf 1_{2\mid m}\Pr_L(K=m/2).
+\]
+\begin{center}
+\begin{tabular}{@{}llllr@{}}
+\toprule
+$L$ & $\eta$ & Last $N$ above $5\%$ & First $N$ below $5\%$ & $R_{N_\star}$\\
+\midrule
+$0.20$ & $1$ & 7,064 & 7,065 & 0.04999782557675\\
+$0.20$ & $1/2$ & 14,130 & 14,131 & 0.04999764112286\\
+$0.45$ & $1/2$ & 540,253 & 540,254 & 0.04999995504566\\
+\bottomrule
+\end{tabular}
+\end{center}
+The 7 November 2026 manuscript reports that all six tabulated boundary comparisons were evaluated using outward-rounded interval arithmetic with a geometric upper bound on the omitted nonnegative binomial tail. The risk is nonincreasing with $N$, since an additional observation can always be ignored. The tabulated thresholds are reported as exact for the corresponding specified two-simple-law fixed-allocation comparisons, not for the larger composite-null anytime-valid test.
+
+\begin{thebibliography}{9}
+\bibitem{nuradha} T. Nuradha, H. K. Mishra, F. Leditzky, and M. M. Wilde, ``Multivariate fidelities,'' \emph{Journal of Physics A: Mathematical and Theoretical} \textbf{58}, 165304 (2025), doi:\href{https://doi.org/10.1088/1751-8121/adc645}{10.1088/1751-8121/adc645}; arXiv:2404.16101v3, Def. 5.8, Rem. 5.9, Prop. 5.10.
+\bibitem{watrous} J. Watrous, \emph{The Theory of Quantum Information}, Cambridge University Press (2018), Ch. 3.
+\end{thebibliography}
+\end{document}

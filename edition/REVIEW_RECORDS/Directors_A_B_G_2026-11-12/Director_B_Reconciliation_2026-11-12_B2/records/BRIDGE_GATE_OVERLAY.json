@@ -1,0 +1,197 @@
+{
+  "schema": "FPHPM.DirectorB.B2.OntologyGraph.v1",
+  "root_stage": "G1 OPEN",
+  "assurance": "mathematical graph of required identification edges, not a known true ontology",
+  "nodes": [
+    {
+      "id": "PP",
+      "name": "Prephysical primitive and equivalence",
+      "status": "OPEN",
+      "imported": false
+    },
+    {
+      "id": "CAR",
+      "name": "Carrier, topology, discrete-to-continuum limit",
+      "status": "OPEN",
+      "imported": null
+    },
+    {
+      "id": "OBS",
+      "name": "Operational preparations, effects, physical records and probability",
+      "status": "OPEN",
+      "imported": null
+    },
+    {
+      "id": "MET",
+      "name": "Transition-probability metric",
+      "status": "CONDITIONAL",
+      "imported": true
+    },
+    {
+      "id": "ORIENT",
+      "name": "Complex structure modulo operationally allowed global conjugation",
+      "status": "CONDITIONAL",
+      "imported": true
+    },
+    {
+      "id": "PHASE",
+      "name": "Operationally calibrated signed phases relative to references",
+      "status": "OPEN",
+      "imported": true
+    },
+    {
+      "id": "LOCAL",
+      "name": "Full local quantum state, effect and instrument theory",
+      "status": "CONDITIONAL",
+      "imported": true
+    },
+    {
+      "id": "COMP",
+      "name": "Multi-system composition and entanglement",
+      "status": "OPEN",
+      "imported": null
+    },
+    {
+      "id": "DYN",
+      "name": "Time, energy, causal dynamics, spatial fields and units",
+      "status": "OPEN",
+      "imported": null
+    },
+    {
+      "id": "CLASS",
+      "name": "Classical Hamiltonian limit with errors",
+      "status": "OPEN",
+      "imported": null
+    },
+    {
+      "id": "EMP",
+      "name": "Empirical operational identification and physical falsification",
+      "status": "OPEN",
+      "imported": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "PP",
+      "target": "CAR",
+      "acceptance_condition": "derive noncircular carrier/limit and topology",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001",
+        "B2-008"
+      ]
+    },
+    {
+      "source": "CAR",
+      "target": "OBS",
+      "acceptance_condition": "operational outcomes and nonimported probability origin",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001"
+      ]
+    },
+    {
+      "source": "OBS",
+      "target": "MET",
+      "acceptance_condition": "derive testable transition probabilities and geometry",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001",
+        "B2-011"
+      ]
+    },
+    {
+      "source": "MET",
+      "target": "ORIENT",
+      "acceptance_condition": "reconstruct compatible complex structure modulo warranted equivalence",
+      "status": "CONDITIONAL",
+      "claim_ids": [
+        "B2-002",
+        "B2-004",
+        "B2-005"
+      ]
+    },
+    {
+      "source": "ORIENT",
+      "target": "PHASE",
+      "acceptance_condition": "define phase reference and signed relative orientation",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-003",
+        "B2-004"
+      ]
+    },
+    {
+      "source": "MET",
+      "target": "LOCAL",
+      "acceptance_condition": "identify convex states, effects, instruments and valid Born probabilities",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-010",
+        "B2-013"
+      ]
+    },
+    {
+      "source": "PHASE",
+      "target": "LOCAL",
+      "acceptance_condition": "derive measurable phase instruments rather than holonomy scalar only",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-005"
+      ]
+    },
+    {
+      "source": "LOCAL",
+      "target": "COMP",
+      "acceptance_condition": "ground composition, entangling transformations and Bell effects",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-013"
+      ]
+    },
+    {
+      "source": "COMP",
+      "target": "DYN",
+      "acceptance_condition": "derive physical clock, generator and causal dynamics",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001",
+        "B2-015"
+      ]
+    },
+    {
+      "source": "DYN",
+      "target": "CLASS",
+      "acceptance_condition": "establish semiclassical/coarse-graining limit with observable errors",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-015"
+      ]
+    },
+    {
+      "source": "CLASS",
+      "target": "EMP",
+      "acceptance_condition": "calibrate physical mechanics with units and independent measurements",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001"
+      ]
+    },
+    {
+      "source": "DYN",
+      "target": "EMP",
+      "acceptance_condition": "calibrate joint quantum processes and physical timing",
+      "status": "OPEN",
+      "claim_ids": [
+        "B2-001"
+      ]
+    }
+  ],
+  "candidate_routes_not_closed": [
+    "nonhomogeneous approximately homogeneous finite carriers",
+    "operational reconstruction modulo representation gauge",
+    "Bell-sensitive composition falsifier",
+    "dynamical classical limit with timing and error estimates"
+  ],
+  "nonadmission": "No edge from prephysical primitive through quantum and classical dynamics is proven or experimentally grounded"
+}

@@ -1,0 +1,272 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern, microtype, amsmath,amssymb,amsthm,mathtools,booktabs,enumitem}
+\usepackage[margin=0.91in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{From Prephysical Hypotheses to Physical Models}\rhead{Mathematical supplement}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Ssep}{\mathcal{S}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf{1}}
+\newcommand{\C}{\mathbb{C}}
+\title{\textbf{Composite-State Selection and Multipartite Closure:}\\
+An Operational Countermodel and a Conditional Entangling-Gate Criterion}
+\author{Kirtus Justus\\\small Research direction and scholarly responsibility\\
+\small Port Coquitlam, British Columbia, Canada\\[4pt]
+\small AI-assisted internal mathematical checking: ChatGPT (GPT-6), Director G}
+\date{12 November 2026, B.C. Pacific Time\\[2pt]
+\small Initial External Grounding; research stage OPEN; no ontology selected}
+\begin{document}
+\maketitle
+\begin{abstract}
+We distinguish three logical burdens often collapsed in attempts to infer a complete
+quantum theory from single-system pure-state geometry: selecting a two-system state
+space, preserving that selection under independent multipartite preparation, and
+justifying entangling dynamics. A continuous family of stipulated two-system
+operational models has exactly the standard elementary complex two-level state
+spaces and measurements, and is locally tomographic, but differs in its allowed
+joint states. A proposed uniform four-system extension fails an exact parallel-
+preparation test by $t(1-t)/4$ for every $0<t<1$. Conversely, assuming the standard
+complex operator representation, pure product preparations, all local unitaries,
+convex mixing and a controlled-not operation is sufficient to force the full
+ordinary two-system density-matrix state space. These are conditional mathematical
+results, not an origin of complex structure, quantum probabilities, an entangling
+gate, dynamics, classical mechanics or physical spacetime. The source research
+baseline remains unchanged.
+\end{abstract}
+
+\section{Question, epistemic scope and exact definitions}
+The original scientific target is an explained emergence of both quantum and classical
+mechanics, with a calibrated correspondence from prephysical primitives. The present
+note answers a narrower \emph{mathematical falsification question}: does exhaustive
+knowledge of an elementary system's conventional complex projective geometry,
+local quantum measurements and local reversible symmetries determine composition?
+A numerical or analytic answer here is not a selection of a real ontology.
+
+The term ``two-level system'' here refers \emph{only} to a stipulated mathematical
+complex Hilbert space $H=\C^2$ with the usual inner product. It is neither an
+operationally identified physical qubit nor a qubit derived from prephysical
+hypotheses. Its Born probabilities and tensor products are part of this test's
+\emph{assumptions}, not conclusions.
+
+Let $\D_n$ be the compact convex set of positive trace-one operators on
+$H^{\otimes n}$, and let
+\[
+\Ssep_n = \operatorname{conv}\{\rho_1\otimes\cdots\otimes\rho_n:
+\rho_j\in\D_1\}
+\]
+be the fully separable subset. For $0\leq t\leq 1$ set
+\begin{equation}\label{eq:Kt}
+\K_t^{(2)}=(1-t)\Ssep_2+t\D_2
+=\{(1-t)\sigma+t\tau:\sigma\in\Ssep_2,\;\tau\in\D_2\}.
+\end{equation}
+Minkowski addition is intended, not an unmotivated probabilistic estimate of what
+nature prefers. At the endpoints $\K_0^{(2)}=\Ssep_2$ and $\K_1^{(2)}=\D_2$.
+
+All tests use standard single-system density matrices, local quantum POVMs and
+local completely positive trace-preserving (CPTP) maps, as \emph{given inputs}.
+For joint measurements we allow the effects $0\preceq E\preceq\id_4$ and their
+probabilities $\tr(E\rho)$. Joint binary effects can be implemented by
+measure-and-prepare instruments whose conditional output is a fixed separable
+state, so no entangled postmeasurement state is implicitly required. The
+\emph{no-restriction hypothesis} for joint effects and arbitrary entangling
+unitaries are not assumed.
+
+\section{What is and is not selected at two systems}
+\begin{proposition}[Operational pair family]\label{prop:pair}
+For every $t\in[0,1]$, $\K_t^{(2)}$ is a compact convex bipartite state space
+containing all independent product preparations, stable under arbitrary local
+CPTP maps, with well-defined normalized positive quantum measurement effects.
+All members have the same elementary preparations and measurement probabilities.
+They are locally tomographic: product effects suffice to distinguish their
+bipartite states.
+\end{proposition}
+\begin{proof}
+Convexity and compactness follow from those of $\Ssep_2$ and $\D_2$.
+Because $\Ssep_2\subseteq\D_2$, every $\sigma\in\Ssep_2$ is in
+$\K_t^{(2)}$, by taking $(1-t)\sigma+t\sigma$. The tensor product of two
+local CPTP maps sends $\Ssep_2$ to itself and $\D_2$ to itself, hence preserves
+$\K_t^{(2)}$. Ordinary positive effects assign numbers in $[0,1]$ to all
+allowed states. To distinguish states locally, choose on each factor the four
+rank-one effects associated with $|0\rangle,|1\rangle,|+\rangle,
+(|0\rangle+i|1\rangle)/\sqrt{2}$. They span the real space of $2\times2$
+Hermitian matrices; their sixteen products span the real space of $4\times4$
+Hermitian matrices. Thus their expectation values determine the bipartite
+operator, regardless of which $\K_t^{(2)}$ contains it. Finally, partial traces
+have valid elementary marginals. The two-system model makes no assertion about
+unrestricted transformations or a consistent arbitrary-size composite.
+\end{proof}
+
+Write $|\Phi\rangle=(|00\rangle+|11\rangle)/\sqrt{2}$ and
+$P=|\Phi\rangle\langle\Phi|$. Define the distinguished allowed state
+\begin{equation}\label{eq:rho}
+\rho_t=(1-t)|00\rangle\langle00|+tP \in\K_t^{(2)}.
+\end{equation}
+
+\begin{proposition}[Exact separating effect]\label{prop:bell}
+For the physically unestablished but mathematically admissible joint effect $P$,
+\[
+\sup_{\rho\in\K_t^{(2)}}\tr(P\rho)=\frac{1+t}{2},
+\qquad 0\leq t\leq1.
+\]
+The extremizer $\rho_t$ has partial-transpose minimum eigenvalue $-t/2$.
+Under the fixed conventional CHSH settings $A_0=Z$, $A_1=X$,
+$B_{0,1}=(Z\pm X)/\sqrt{2}$, it yields
+$\langle\mathrm{CHSH}\rangle_{\rho_t}=\sqrt{2}(1+t)$, which exceeds $2$
+when $t>\sqrt{2}-1$.
+\end{proposition}
+\begin{proof}
+For any normalized product vector $|a\rangle|b\rangle$,
+$|\langle\Phi|a\otimes b\rangle|^2\leq1/2$ by Cauchy--Schwarz, and
+convexity extends the inequality to $\Ssep_2$. The maximum of $\tr(P\tau)$
+over $\D_2$ is one. Taking the weighted sum gives the upper bound
+$(1-t)/2+t$; $|00\rangle\langle00|$ and $P$ attain the constituent bounds.
+The partial transpose of \eqref{eq:rho} has spectrum
+$\{1-t/2,t/2,t/2,-t/2\}$ (with zeros appropriately combined at $t=0$).
+The CHSH expression follows from $\mathrm{CHSH}=\sqrt{2}(Z\otimes Z+X\otimes X)$
+for the specified settings. \end{proof}
+
+In particular, even an observed CHSH violation at these settings would not,
+without further premises, select the entire two-system density-matrix set.
+This observation remains within the constructed family; no empirical CHSH
+measurement was performed here.
+
+\section{An exact obstruction at four systems}
+One might attempt to use the \emph{same} interpolation parameter at every
+system size:
+\begin{equation}\label{eq:naive}
+\K_t^{(4)}\stackrel{?}{=}(1-t)\Ssep_4+t\D_4.
+\end{equation}
+Independent preparation of any two allowed pair states would require
+$\rho\otimes\sigma\in\K_t^{(4)}$ for all
+$\rho,\sigma\in\K_t^{(2)}$. This closure condition is separate from local
+tomography and from closure under local channels.
+
+\begin{theorem}[Uniform extension fails parallel-preparation closure]
+\label{thm:four}
+For every $0<t<1$, the proposed four-party state set \eqref{eq:naive}
+excludes an independent product of two states permitted by \eqref{eq:Kt}.
+The violation of an exactly sharp positive-effect bound is
+\begin{equation}\label{eq:gap}
+\Delta(t)=\frac{t(1-t)}4>0.
+\end{equation}
+At $t=1/2$ this is exactly $1/16$.
+\end{theorem}
+\begin{proof}
+Let $P_{12}=P\otimes\id_4$ and $P_{34}=\id_4\otimes P$,
+acting on disjoint elementary pairs in $H^{\otimes4}$. They commute. Define
+\[
+E=\id_{16}-(\id_{16}-P_{12})(\id_{16}-P_{34})
+=\id_{16}-(\id_4-P)\otimes(\id_4-P).
+\]
+This is a projector, so it is a legitimate effect ($0\preceq E\preceq\id$).
+On each fully product pure state the two pair fidelities $f_1,f_2$ are at most
+$1/2$. Hence $\tr(E\omega)=1-(1-f_1)(1-f_2)\leq3/4$.
+Convexity gives this bound for all $\Ssep_4$; it is attained by $|0000\rangle$.
+On $\D_4$ the supremum is one, attained by $P\otimes|00\rangle\langle00|$.
+Thus the exact support bound over the proposed set is
+\begin{equation}\label{eq:support}
+\sup_{\omega\in\K_t^{(4)}}\tr(E\omega)=\frac34+\frac t4.
+\end{equation}
+Independently prepare $\rho_t$ from \eqref{eq:rho} on each of the pairs
+$(1,2)$ and $(3,4)$. The pair Bell fidelity is $(1+t)/2$, so the product
+preparation has
+\[
+\tr[E(\rho_t\otimes\rho_t)]
+=1-\left(1-\frac{1+t}{2}\right)^2
+=1-\frac{(1-t)^2}{4}.
+\]
+Subtracting \eqref{eq:support} yields $\Delta(t)=t(1-t)/4$.
+It is strictly positive for every interior $t$, establishing the failure.
+The endpoints pass this particular test.\end{proof}
+
+\begin{remark}[Precisely what the counterexample defeats]
+The two-system $\K_t^{(2)}$ remains a valid \emph{pairwise} operational toy
+state set. The failed assertion is that the same simple formula defines a
+consistent composition rule simultaneously for pairs and four elementary
+systems. This theorem does not exclude all alternative multipartite extensions,
+nor claim that every intermediate two-system composite is impossible. At
+$t=0$, the fully separable hierarchy is closed under arbitrary tensor
+products and discarding; at $t=1$ the usual quantum hierarchy is similarly
+closed. Those two controls are retained.
+\end{remark}
+
+\section{A conditional selection principle, and its cost}
+\begin{theorem}[Specified entangling gate forces the usual two-system cone]
+\label{thm:cnot}
+Let $\K\subseteq\D_2$ be a convex set containing all pure product
+preparations. Assume (a) invariance under arbitrary local unitaries
+$U\otimes V$ and (b) closure under the exact controlled-not operation
+$\operatorname{CNOT}|a,b\rangle=|a,a\oplus b\rangle$.
+Then $\K=\D_2$.
+\end{theorem}
+\begin{proof}
+Any normalized $|\psi\rangle\in H\otimes H$ has a Schmidt decomposition
+\[
+|\psi\rangle=(U\otimes V)
+\bigl(s_0|00\rangle+s_1|11\rangle\bigr),
+\quad s_0,s_1\geq0,\quad s_0^2+s_1^2=1.
+\]
+The bracketed state is
+$\operatorname{CNOT}[(s_0|0\rangle+s_1|1\rangle)\otimes|0\rangle]$,
+where the input is a pure product. By the two closure assumptions, every
+pure two-system state belongs to $\K$. Convex mixtures of pure state
+projectors exhaust $\D_2$. Since $\K\subseteq\D_2$, equality follows.
+\end{proof}
+
+\noindent\textbf{Scope warning.} The theorem takes as inputs the Hilbert-space
+embedding, the ordinary complex operator representation of the joint system,
+a named entangling gate, and standard notions of purity and convex mixing.
+It proves no \emph{prephysical} origin of those objects. A weaker or different
+operational entangling principle requires its own proof. Allowing only local
+unitaries does \emph{not} suffice. The theorem is a diagnostic for identifying
+exactly which additional compositional postulate performs the selection.
+
+\section{Scientific disposition and reproducibility}
+\begin{center}
+\begin{tabular}{p{0.52\linewidth}p{0.34\linewidth}}
+\toprule
+Target of assessment & Scope of finding\\\midrule
+Nonselection of two-system composition by local geometry and local quantum effects & Exact mathematical countermodels, supported in stated scope\\
+Uniform multipartite interpolation \eqref{eq:naive} for $0<t<1$ & Refuted by the positive-effect witness\\
+Composition selected when CNOT is assumed on $\K\subseteq\D_2$ & Conditional theorem, not emergent physics\\
+Origin of Born probabilities, entangling interactions, clocks and classical mechanics & Not identified by these calculations\\
+Total prephysical-to-physical ontology & Not identified; Initial External Grounding stays open\\\bottomrule
+\end{tabular}
+\end{center}
+
+The independent verification script \texttt{\detokenize{verification/verify_composite_selection.py}}
+retains 101 equally spaced $t$ values including both endpoints, 200 seeded
+complex-Gaussian target vectors checked through numerical Schmidt synthesis,
+and an exact symbolic factorization in SymPy. It confirms the sixteen-dimensional
+real span of product preparations/effects, the partial-transpose and CHSH values,
+$\Delta(1/2)=1/16$, and the full parameter-grid witness. These are
+\emph{deterministic numerical checks and exact algebra}; the grid does not
+measure nature, estimate the prevalence of model failure, or supply a
+statistical confidence level. The mathematical proofs above, rather than
+floating-point tolerances, control the stated universally quantified findings.
+No trial is discarded because of an inconvenient value.
+
+The present calculation was produced and self-checked by one AI participant
+under the human research direction of Kirtus Justus. It is internal research
+provenance, not an independent sub-agent, independent expert review, empirical
+validation, or scientific endorsement. No source baseline has been edited.
+
+\begin{thebibliography}{9}\small
+\bibitem{Muller2021} M. P. M\"uller, ``Probabilistic theories and reconstructions of quantum theory,''
+\emph{SciPost Physics Lecture Notes} \textbf{28} (2021).
+\url{https://doi.org/10.21468/SciPostPhysLectNotes.28}.
+\bibitem{Barnum2014} H. Barnum, M. P. M\"uller, and C. Ududec,
+``Higher-order interference and single-system postulates characterizing quantum theory,''
+\emph{New Journal of Physics} \textbf{16}, 123029 (2014).
+\url{https://doi.org/10.1088/1367-2630/16/12/123029}.
+\end{thebibliography}
+\end{document}
