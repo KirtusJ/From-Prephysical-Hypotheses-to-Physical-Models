@@ -91,9 +91,16 @@ def submit(root, calls_path, digest, calls, ledger, again):
     latest = Path(str(calls_path) + ".out")
     old_outputs = [Path(row["output"]) for row in seen]
     archived_paths = {path.resolve() for path in old_outputs}
-    # Historical relative paths did not record the working directory.
+    # The original working directory for a relative row is unknown. Its normalized
+    # trailing path is still literal, including any square brackets in a filename.
+    relative_tails = set()
+    for path in old_outputs:
+        if not path.is_absolute():
+            parts = tuple(part for part in Path(os.path.normpath(path)).parts if part != "..")
+            if parts:
+                relative_tails.add(Path(*parts))
     while latest.resolve() in archived_paths or any(
-        not path.is_absolute() and latest.match(path) for path in old_outputs
+        Path(*latest.parts[-len(tail.parts):]) == tail for tail in relative_tails
     ):
         latest = latest.with_suffix(".latest.out")
     archives = ledger.parent / "submission_replies"

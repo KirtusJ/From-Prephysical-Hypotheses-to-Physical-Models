@@ -86,6 +86,22 @@ class ReplyFiles(unittest.TestCase):
         self.assertEqual(self.started, 1)
         self.assertEqual(len(self.entries()), 1)
 
+    def test_legacy_filename_is_literal_from_another_working_directory(self):
+        self.request = self.root / "dir" / "batch[1].json"
+        self.request.parent.mkdir()
+        self.request.write_text('[{"name":"acr_status"}]')
+        view = Path(str(self.request) + ".out")
+        view.write_bytes(b"original receipt")
+        self.ledger.parent.mkdir(parents=True)
+        row = {"sha256": "legacy", "time": "old", "written": 1, "refused": 0,
+               "output": "../unused/../dir/batch[1].json.out"}
+        self.ledger.write_text(json.dumps(row) + "\n")
+        self.assertEqual(self.run_submit(), 0)
+        self.assertEqual(view.read_bytes(), b"original receipt")
+        new = self.entries()[-1]
+        self.assertEqual(Path(new["latest_output"]), self.request.with_suffix(".json.latest.out"))
+        self.assertEqual(Path(new["latest_output"]).read_bytes(), Path(new["output"]).read_bytes())
+
     def test_view_refresh_failure_does_not_resubmit_completed_calls(self):
         with patch.object(pcp_submit.os, "replace", side_effect=OSError("view unavailable")):
             self.assertEqual(self.run_submit(), 0)
