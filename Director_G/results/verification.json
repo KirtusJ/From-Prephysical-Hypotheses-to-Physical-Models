@@ -1,5 +1,5 @@
 {
-  "research_rerun": "Ten research checkers ran in fresh temporary directories. All twenty-one generated results matched both working copies byte for byte.",
+  "research_rerun": "Thirteen research checkers ran in fresh temporary directories. All twenty-six result files matched both working copies byte for byte.",
   "output_sha256": {
     "checks.json": "83dba60d1cbf7662e669655fbb221155ac1962adcd941f0bb6b5debc6a59194b",
     "filter_trials.csv": "91da8b349fad6ed65376f9c3ffd394a53c2fbe512e927b57395578bdce55db31",
@@ -21,7 +21,12 @@
     "fixed_transport.json": "cf82f2089e2ddabc9881249cdd0ee93f7eccfa7f6d00b0da32f7a265570486d1",
     "fixed_transport.csv": "6b25177833d51c4af61d3926adb35d760616470b81b6db9d6bf429a5248a412d",
     "fixed_transport_free_counts.csv": "14c4cc90c2048b28f0daeb6cf52386c7b1bb5d4b92ad4dd2621af5df40250069",
-    "field_echo.json": "f8be413cb2c504b83e3921b1064e24aeaea8fef1ff62fd0d950c23d7f10dc3b3"
+    "field_echo.json": "f8be413cb2c504b83e3921b1064e24aeaea8fef1ff62fd0d950c23d7f10dc3b3",
+    "periodic_force.json": "c5202800998fff24e0eb791dc22d59f9402bf9ace470a42a7c9a01167e766c76",
+    "periodic_force_trials.csv": "4232e52420d933dbbaa8610fb6a50304cc283afcd91d7740e9b8765ce24d8e3f",
+    "cycle_interaction.json": "2a90c0b6e4cc2b1ef8a50c5d242b461c73e041555956df450c513ed38955b908",
+    "cycle_interaction.csv": "5487965f8065394085420628df19dd9e78341cf62801c43d3675a9bd94821054",
+    "folded_pair.json": "275b1cdb05854229b7d2adfff74e929fd6d3322329e026ce906003a64f923bd6"
   },
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "numpy": "2.3.5",
@@ -49,7 +54,9 @@
     "relative_transport.csv": 3060,
     "position_histories.csv": 128,
     "fixed_transport.csv": 48276,
-    "fixed_transport_free_counts.csv": 12000
+    "fixed_transport_free_counts.csv": 12000,
+    "periodic_force_trials.csv": 36,
+    "cycle_interaction.csv": 240
   },
   "baseline_payloads_rechecked": 967,
   "map_gates": 13,
@@ -78,7 +85,7 @@
     "affected": "first written phase-control expression",
     "first_run_pass": false
   },
-  "review_limits": "No empirical correspondence established. The field schedule theorem has a same-session derivation and numerical check. Z's earlier review and proposal concerned the quartered preparation. The exact alternating result, new fixed lift and corridor are outside Z's review.",
+  "review_limits": "No physical correspondence established. Z's fourth cross-review concerns the fixed transport and field reversal. The new smooth interacting torus limits have an in-session adversarial reading, finite numerical checks and limited Lean verification.",
   "probability_selection_checks": {
     "character_recursion": true,
     "tag_permutation": true,
@@ -108,7 +115,10 @@
     "relative_transport": "e15e6a5397e782b483df74e1170f0df948cb880f402eb883a37f8740b7d239f7",
     "position_records": "4fb7276d4194a083be04de5e0d9453e73c87a29ce569de16899ef10175bbd0d1",
     "fixed_transport": "7dfe9f64bd71bf6cebcbcef2508ed33988417bc69e86d4f16d4c0f6a45a09689",
-    "field_echo": "9ad6c8c2c739b6c5809fa0e131fd75b081bec1f8684ef9d5fb9679c4c53f1b18"
+    "field_echo": "9ad6c8c2c739b6c5809fa0e131fd75b081bec1f8684ef9d5fb9679c4c53f1b18",
+    "periodic_force": "515cce7b5eb093384852e9eb4196888bd356bf96f79b98bd9c2ba8cd6a97d09f",
+    "cycle_interaction": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+    "folded_pair": "9cf75dc2d256ef798db8bf43c5535112abd7bef2df24c2822616bb8f8ac8aac2"
   },
   "calibration_record_sha256_scope": "External fingerprint of the local session calibration record. The shared scientific packet includes the research controls.",
   "native_embedding_checks": {
@@ -146,7 +156,9 @@
     "review_artifacts_commit": "d21f101dcce9c962ebd0845dbbebebce8fd5a589",
     "standing": "Director Z cross-read with exposure and contact, used separate computations and retained adverse trials. The relative transport review took the three-step reduction as given. The sequential proof was checked; the posterior acceptance estimate was read without recomputation.",
     "base_preparation_review_commit": "4ebcf785f7bf498fffc44ce155c21165a47f72bc",
-    "relative_and_sequential_review_commit": "48e0df01a3bf5a385b4faccdf23429412ca7e00e"
+    "relative_and_sequential_review_commit": "48e0df01a3bf5a385b4faccdf23429412ca7e00e",
+    "fixed_transport_and_field_echo_review_commit": "41a7ec9cb63a9b4324392dd30b0ae7b5de91c61e",
+    "fixed_transport_and_field_echo_scope": "Two participants under Director Z read those papers at 616c1d6, used separate code, and retained a failed monotonicity conjecture. Director Z read their reports and spot-checked results without following both papers in full."
   },
   "relative_transport_checks": {
     "destructive_preparation": true,
@@ -194,5 +206,48 @@
     "file": "lean/RecordWeights.lean",
     "sha256": "66b4d7e773bc6ed055fea4f166a10c457be2f9b7a02c4c0b857e73b36b09f6a2",
     "standing": "Verified using the Lean executable on Windows. Universal conditional recurrence, finite five-step example, reduced moving masks, and a periodic integer gain identity. Physical record premises remain open."
+  },
+  "periodic_interaction_review": "Periodic_force_review.md",
+  "shared_sheet_lean": {
+    "file": "lean/SharedSheet.lean",
+    "sha256": "4521b54f95aab9a7423324e48863fc7166bdfbbb99cead10f4f63905d9352d92",
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "coverage": "Finite character reduction, signed four-way norm, masks, periodic gain and rounding."
+  },
+  "periodic_force_checks": {
+    "norm": true,
+    "certified_phase_rounding": true,
+    "observed_rounding_within_bound": true,
+    "coarse_integer_gain_vanishes": true,
+    "free_scalar_oracle": true,
+    "space_difference": true,
+    "time_difference": true,
+    "attractive_beats_wrong_sign": true,
+    "attractive_beats_coarse_order": true
+  },
+  "cycle_interaction_checks": {
+    "count_total": true,
+    "reflection": true,
+    "positive_scale": true,
+    "rounded": true,
+    "within_bound": true,
+    "count_built_spinor_bound": true
+  },
+  "folded_pair_checks": {
+    "exact_integer_preparations": true,
+    "alias_positive_controls": true,
+    "spectral_profile": true,
+    "curvature_masses": true,
+    "count_mass": true,
+    "mass": true,
+    "conjugate_sectors": true,
+    "real_vs_fourier_solver": true,
+    "classical_step_doubling": true
+  },
+  "corridor_counts_lean": {
+    "file": "lean/CorridorCounts.lean",
+    "sha256": "3928ab7d6b1fcd9cebb320c96c39ecaa6447f5051767ae9048a66e23e41f34fc",
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "coverage": "Signed physical ring paths, fully lifted stopping histogram, common integer sheet on each old-flag output and n±1,1,1 signed counts. Persistent joint-odds stability and common endpoint response remain premises."
   }
 }

@@ -16,8 +16,9 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Relative sheet transport](Relative_sheet_transport.md) | An exact dark output, finite relative-character preparation and conditional transfer of an external tag |
 | [Sequential position records](Sequential_position_records.md) | A measured path limit through a field reversal and the joint preparation yield |
 | [Fixed transport and record weights](Fixed_transport_and_record_weights.md) | Relative holonomy tests on a fixed graph and the all-integer squared response from persistent corridor records |
-| [Lean proofs](lean/README.md) | Universal response recurrence, periodic transport identities, reduced masks and a five-step path enumeration |
+| [Lean proofs](lean/README.md) | Universal response recurrence, physical corridor counts, shared-sheet character reduction and integer rounding |
 | [Field reversal during preparation](Field_reversal_during_preparation.md) | Exact signed-schedule amplitudes, optimal yield and adverse finite flight data |
+| [Periodic interaction and two limits](Periodic_interaction_and_two_limits.md) | A shared integer gain gives two-body Schrödinger dynamics and interacting Newton trajectories; a folded preparation yields four classical branches |
 | [Cross-review with Director Z](Director_exchange.md) | Hypothesis checks for G10 and a counterexample to the broader prose summary |
 
 Run each checker with Python and an output directory. The walk, record, envelope and position-simulation checks require NumPy. The exact embedding and joint-transport checks use the standard library. The commands assume the current directory contains this file.
@@ -33,6 +34,9 @@ python -B check_relative_transport.py rerun
 python -B check_position_records.py rerun
 python -B check_fixed_transport.py rerun
 python -B check_field_echo.py rerun
+python -B check_periodic_force.py rerun
+python -B check_cycle_interaction.py rerun
+python -B check_folded_pair.py rerun
 ```
 
-The results directory contains all trial rows and the retained first-run adverse phase comparison. The numerical residuals describe the model under the specified inputs. The ten checkers reproduced twenty-one generated files byte for byte on the recorded Windows runtime. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)
+The results directory contains all trial rows and the retained first-run adverse phase comparison. The numerical residuals describe the model under the specified inputs. The thirteen checkers reproduced twenty-six generated files byte for byte on the recorded Windows runtime. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)
