@@ -1,0 +1,17 @@
+Setting
+There are three distinguishable vertices, labelled 0, 1, 2. Let d be a fixed integer. We look at all digraphs on these vertices where every vertex emits exactly d arcs. Concretely, each vertex chooses, independently of the others, a subset of {0, 1, 2} of size d; it has one arc to each member of its chosen subset. Self-loops are permitted (a vertex can be in its own subset). Parallel arcs do not exist (the targets of a vertex form a set). The vertices are labelled, so two digraphs are equal precisely when their sets of arcs coincide.
+
+Definitions
+- A "sealed" set is a non-empty vertex subset S with no arc leaving it: whenever u is in S and u -> v is an arc, v is in S too.
+- A sealed set S is "rich" when some vertex t in S has at least two distinct in-neighbours that themselves belong to S. In-neighbours outside S are ignored. If t has a self-loop, t itself counts as one of these in-neighbours.
+- A sealed set which fails to be rich is "poor".
+
+Quantities to compute (separately for d = 2 and for d = 1)
+- G = how many digraphs of this kind exist.
+- P = the sum, over all these digraphs, of the number of sealed sets of the digraph (i.e. the count of (digraph, sealed set S) pairs).
+- B = the count of (digraph, S) pairs where S is sealed and poor.
+- H = how many digraphs possess one or more poor sealed sets.
+
+Output format
+Give a single line and nothing else. Put the four d = 2 values first, then the four d = 1 values, substituting the integers for the ".." placeholders:
+G2=.. P2=.. B2=.. H2=.. G1=.. P1=.. B1=.. H1=..
