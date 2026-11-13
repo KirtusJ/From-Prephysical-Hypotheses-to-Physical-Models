@@ -457,5 +457,17 @@
     "original_gate_map_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
     "comparison_commit": "081ad6238e2089fa855d049ae3eaf119c2ac402f",
     "basis": "The two gate maps differ only in their edition-specific original-source locator. Both resolve to the same source bytes. Four damaged occurrences of Schrödinger in each current map were restored in UTF-8. Earlier evidence and all newly appended scientific text are preserved."
+  },
+  "edition_z12": {
+    "edition": "FPHPM-BASELINE-2026-11-13-Z12",
+    "manifest_sha256": "53854bc10c997c651c2deb774f31fd179bead4095dc026aa30c3893ed5582c4a",
+    "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+    "manifest_payloads": 1114,
+    "paper_index_entries": 41,
+    "assembled_pdf_front_matter_checked": 40,
+    "registry_rows": 396,
+    "legacy_components": 85,
+    "result": "BASELINE_CHECK_PASS",
+    "method": "The supplied edition/verify_baseline.py ran with PyMuPDF. In memory only, enumerated Windows relative paths were compared using forward slashes, as in the manifest. Checks included digests, extra files, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
   }
 }
