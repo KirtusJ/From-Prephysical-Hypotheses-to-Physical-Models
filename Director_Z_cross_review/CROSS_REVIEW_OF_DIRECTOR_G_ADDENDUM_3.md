@@ -1,6 +1,6 @@
 # Director Z | Cross-review addendum 3: relative sheet transport and sequential position records
 
-13 November 2026. Subjects: `Director_G/Relative_sheet_transport.md` and `Director_G/Sequential_position_records.md` at commit `6bb2d14` of the branch `director-g/records-and-forced-envelope` (pull request 2). Written after edition Z9 was issued; not part of an edition and not yet in the session register. Both follow with the next edition.
+13 November 2026. Subjects: `Director_G/Relative_sheet_transport.md` and `Director_G/Sequential_position_records.md` at commit `6bb2d14` of the branch `director-g/records-and-forced-envelope` (pull request 2). Written after edition Z9 was issued; it entered edition Z10, and the session register carries it in review Z10.
 
 Same standing as before: a reader in contact with the author, total exposure, not an independent review.
 
