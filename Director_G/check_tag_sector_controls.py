@@ -63,11 +63,11 @@ def encode(tick, x, tag, translated):
     return tag ^ int(flip)
 
 
-def panels(setting, model, translated=False):
+def panels(setting, model, translated=False, last_tick=LAST_TICK):
     start, origin, initial_tag, enabled = setting
     masses = {(origin, encode(start, origin, initial_tag, translated), 0): F(1)}
     records = {}
-    for tick in range(start, LAST_TICK+1):
+    for tick in range(start, last_tick+1):
         raw = words(setting, tick)
         signed = {(x, encode(tick, x, b, translated), r): v for (x, b, r), v in raw.items()}
         decoded = {(x, b, r): masses.get((x, encode(tick, x, b, translated), r), F(0))
@@ -78,14 +78,18 @@ def panels(setting, model, translated=False):
             require(all(m == F(raw.get(cell, 0)**2, 2**(tick-start))
                         for cell, m in decoded.items()), "signed word oracle")
         records[tick] = raw, decoded
-        if tick == LAST_TICK:
+        if tick == last_tick:
             break
         future = {}
         for x, b in product(range(origin-(tick-start), origin+(tick-start)+1), (0, 1)):
             u, v = (signed.get((x, b, r), 0) for r in (0, 1))
             norm = u*u + v*v
-            if model == "spectator":
-                norm += sum(signed.get((x, b^1, r), 0)**2 for r in (0, 1))
+            if model in ("spectator", "max_norm"):
+                other_norm = sum(signed.get((x, b^1, r), 0)**2 for r in (0, 1))
+                if model == "spectator":
+                    norm += other_norm
+                else:
+                    norm = max(norm, other_norm)
             right = F(1, 2) + (F(u*v, norm) if norm else 0)
             require(0 <= right <= 1, "conditional probability")
             mass = sum(masses.get((x, b, r), F(0)) for r in (0, 1))
@@ -108,6 +112,9 @@ def run():
         all_panels[name] = records
         for model in MODELS:
             require(records[model] == panels(setting, model, True), "spacetime tag relabel")
+        max_norm = panels(setting, "max_norm")
+        require(max_norm == records["sector"], "larger-norm rule reproduces every four-tick cell")
+        require(max_norm == panels(setting, "max_norm", True), "larger-norm spacetime tag relabel")
         saved[name] = []
         for tick in records["sector"]:
             raw, autonomous = records["sector"][tick]
@@ -143,6 +150,15 @@ def run():
                             left_given_parent=str(overlap[dark]/mass), shield_left_given_parent="0",
                             left_joint=str(overlap[dark]), positive_ports_overlap=[str(overlap[a]),str(overlap[b])],
                             positive_ports_shield=[str(shield[a]),str(shield[b])], cross_ratio=str(contrast))
+    # Continue the overlap flight to a splitter where the selected sector has smaller norm.
+    for model, expected_mass in (("sector", F(1, 256)), ("max_norm", F(5, 512))):
+        extended = panels(SETTINGS["overlap_0"], model, last_tick=8)
+        raw, parent = extended[7]
+        require((raw[-1, 1, 0], raw[-1, 1, 1]) == (1, 2), "tick-seven selected rails")
+        require(sum(raw[-1, 0, r]**2 for r in (0, 1)) == 8, "tick-seven other sector norm")
+        require(sum(parent[-1, 1, r] for r in (0, 1)) == F(5, 128), "tick-seven parent mass")
+        _, terminal = extended[8]
+        require(terminal[-2, 1, 1] == expected_mass, "tick-eight tagged left daughter")
     return dict(columns=["site","tag","rail (0=R,1=L)","signed words","sector mass","spectator mass"],
                 settings=saved, witnesses=tests)
 
