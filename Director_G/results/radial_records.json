@@ -1,0 +1,2248 @@
+{
+  "checks": {
+    "whole_tree": true,
+    "branch_gram": true,
+    "all_return_matrices": true,
+    "all_trials": true,
+    "event_ready_source": true
+  },
+  "first_excursion_tree": [
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 6.869154506741516e-17,
+      "matrix_error": 2.1113307183039603e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.4655053005362233e-17,
+      "matrix_error": 3.1569925345268207e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": 4.148783686426546e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.392293200086568e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.392293200086568e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.67098717864937e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,5,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.67098717864937e-18,
+      "matrix_error": 3.255813018879823e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.2083806578453438e-17,
+      "matrix_error": 2.065134201172189e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05400697587155e-18,
+      "matrix_error": 3.057651765985361e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05400697587155e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.762200228447494e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.762200228447494e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.441673549284931e-18,
+      "matrix_error": 2.6331251014325256e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.441673549284931e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439949294325109e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439949294325109e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.053573731968015e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.053573731968015e-18,
+      "matrix_error": 2.537776533509386e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.1838289749129284e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439943607886265e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439943607886265e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.761736715165507e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.761736715165507e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.309738932716441e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3306061709333827e-17,
+      "matrix_error": 2.1882943617631573e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3310436395068132e-17,
+      "matrix_error": 2.1882943617631573e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973759904703317e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973759904703317e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.309738932716441e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.7596847438728284e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.7596847438728284e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.440280668338244e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.440280668338244e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.1838289749129284e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746952841954875e-18,
+      "matrix_error": 2.537776533509386e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746952841954875e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.133306785944498e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.133306785944498e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.136326711247567e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.136326711247567e-18,
+      "matrix_error": 2.6331251014325256e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.4564020406060585e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.4564020406060585e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05321099397179e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05321099397179e-18,
+      "matrix_error": 3.057651765985361e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.2081831371014606e-17,
+      "matrix_error": 2.065134201172189e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.670669975538677e-18,
+      "matrix_error": 3.255813018879823e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.670669975538677e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36018434470832e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36018434470832e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973300382197823e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973300382197823e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.404676248701834e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.404676248701834e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589114e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589114e-18,
+      "matrix_error": 4.148783686426546e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.4655053005362233e-17,
+      "matrix_error": 3.1569925345268207e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 6.869154506741516e-17,
+      "matrix_error": 2.1113307183039603e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3338317471424865e-17,
+      "matrix_error": 3.0541136479953052e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": 4.061814248350342e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.06828179543876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.06828179543876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.371065567444862e-18,
+      "matrix_error": 3.1145664134658662e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.371065567444862e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.447129612864634e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.447129612864634e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.755564639743405e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.755564639743405e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36094644572903e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36094644572903e-18,
+      "matrix_error": 3.1985215122904828e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.778754238273818e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.778754238273818e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.385319077612974e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.385319077612974e-18,
+      "matrix_error": 4.0455613878274565e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3338317471424865e-17,
+      "matrix_error": 3.0536317181923548e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": 4.06125915315129e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666827990982505e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666827990982505e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666504325844736e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666504325844736e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": 4.06125915315129e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.285461368446635e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.285461368446635e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.588695591557023e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.588695591557023e-18,
+      "matrix_error": 4.119810118670014e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.7008106368709283e-17,
+      "matrix_error": 3.0967063759893227e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 7.850768816800594e-17,
+      "matrix_error": 2.0740677722252305e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,2,1,0",
+      "arrived": true,
+      "ticks": 4,
+      "probability": 0.125,
+      "gram_error": 1.9666483644550122e-16,
+      "matrix_error": 1.0532500405730103e-15
+    },
+    {
+      "start": 0,
+      "path": "0,1,0",
+      "arrived": true,
+      "ticks": 2,
+      "probability": 0.5,
+      "gram_error": 4.714125575415727e-16,
+      "matrix_error": 2.482534153247273e-16
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 6.869154506741516e-17,
+      "matrix_error": 2.1113307183039603e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.4655053005362233e-17,
+      "matrix_error": 3.1569925345268207e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": 4.148783686426546e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.392293200086568e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.392293200086568e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.67098717864937e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,5,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.67098717864937e-18,
+      "matrix_error": 3.255813018879823e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.2083806578453438e-17,
+      "matrix_error": 2.065134201172189e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05400697587155e-18,
+      "matrix_error": 3.057651765985361e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05400697587155e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.762200228447494e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.762200228447494e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.441673549284931e-18,
+      "matrix_error": 2.6331251014325256e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.441673549284931e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439949294325109e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439949294325109e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.053573731968015e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.053573731968015e-18,
+      "matrix_error": 2.537776533509386e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.1838289749129284e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439943607886265e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.439943607886265e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.761736715165507e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.761736715165507e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.309738932716441e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3306061709333827e-17,
+      "matrix_error": 2.1882943617631573e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3310436395068132e-17,
+      "matrix_error": 2.1882943617631573e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973759904703317e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973759904703317e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.309738932716441e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.7596847438728284e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.7596847438728284e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.440280668338244e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.440280668338244e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": 3.1838289749129284e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746952841954875e-18,
+      "matrix_error": 2.537776533509386e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746952841954875e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.133306785944498e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.133306785944498e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.1331736667334966e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.136326711247567e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.136326711247567e-18,
+      "matrix_error": 2.6331251014325256e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.4564020406060585e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.4564020406060585e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05321099397179e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.05321099397179e-18,
+      "matrix_error": 3.057651765985361e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.2081831371014606e-17,
+      "matrix_error": 2.065134201172189e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.670669975538677e-18,
+      "matrix_error": 3.255813018879823e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.670669975538677e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36018434470832e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36018434470832e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973300382197823e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973300382197823e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.404676248701834e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.404676248701834e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589114e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589114e-18,
+      "matrix_error": 4.148783686426546e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.4655053005362233e-17,
+      "matrix_error": 3.1569925345268207e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 6.869154506741516e-17,
+      "matrix_error": 2.1113307183039603e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3338317471424865e-17,
+      "matrix_error": 3.0541136479953052e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,5,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": 4.061814248350342e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,5,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.721468349589112e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,5,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.06828179543876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,5,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.06828179543876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": 3.2595966494637802e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973126091168783e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.359810994353137e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.746491033406846e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,4,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.974556543605876e-18,
+      "matrix_error": 3.2033349409162933e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.371065567444862e-18,
+      "matrix_error": 3.1145664134658662e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.371065567444862e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.447129612864634e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.447129612864634e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.755564639743405e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.755564639743405e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36094644572903e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.36094644572903e-18,
+      "matrix_error": 3.1985215122904828e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.778754238273818e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 6.778754238273818e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.385319077612974e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.385319077612974e-18,
+      "matrix_error": 4.0455613878274565e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.3338317471424865e-17,
+      "matrix_error": 3.0536317181923548e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,4,5,6",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": 4.06125915315129e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,4,5,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,4,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666827990982505e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,4,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666827990982505e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666504325844736e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.666504325844736e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,3,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 7.973125766753545e-18,
+      "matrix_error": 4.06125915315129e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,1,2,3,4",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.285461368446635e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,1,2,3,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.285461368446635e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,1,2,1,2",
+      "arrived": false,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.588695591557023e-18,
+      "matrix_error": null
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 10,
+      "probability": 0.001953125,
+      "gram_error": 8.588695591557023e-18,
+      "matrix_error": 4.119810118670014e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 8,
+      "probability": 0.0078125,
+      "gram_error": 2.7008106368709283e-17,
+      "matrix_error": 3.0967063759893227e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,2,1,0",
+      "arrived": true,
+      "ticks": 6,
+      "probability": 0.03125,
+      "gram_error": 7.850768816800594e-17,
+      "matrix_error": 2.0740677722252305e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,2,1,0",
+      "arrived": true,
+      "ticks": 4,
+      "probability": 0.125,
+      "gram_error": 1.9666483644550122e-16,
+      "matrix_error": 1.0532500405730103e-15
+    },
+    {
+      "start": 6,
+      "path": "0,1,0",
+      "arrived": true,
+      "ticks": 2,
+      "probability": 0.5,
+      "gram_error": 4.714125575415727e-16,
+      "matrix_error": 2.482534153247273e-16
+    }
+  ],
+  "tree_probability_totals": [
+    1.0,
+    1.0
+  ],
+  "source": {
+    "raw_filtered_mass": 0.25,
+    "conditional_contact_gate_mass": 0.25,
+    "zero_mode_mass": 0,
+    "mixture_error": 3.438780286458794e-16,
+    "concurrence": 0.8660254037844385,
+    "ideal_max_chsh": 2.6457513110645903
+  },
+  "sampling": {
+    "seed": 41729,
+    "axis_tolerance": 0.63,
+    "deadline_ticks": 180,
+    "trials_per_setting": 64,
+    "statistics": {
+      "Z": {
+        "hits": 64,
+        "timeouts": 0,
+        "mean_ticks": 0.0
+      },
+      "X": {
+        "hits": 59,
+        "timeouts": 5,
+        "mean_ticks": 77.40625
+      },
+      "Y": {
+        "hits": 64,
+        "timeouts": 0,
+        "mean_ticks": 22.0625
+      },
+      "oblique": {
+        "hits": 62,
+        "timeouts": 2,
+        "mean_ticks": 27.8125
+      }
+    },
+    "scope": "Logical-frame simulation and fixed binary fallback; no Bell data or confidence bound."
+  }
+}

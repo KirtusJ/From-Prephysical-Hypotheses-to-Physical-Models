@@ -1,32 +1,38 @@
 {
-  "research_rerun": "Thirteen research checkers ran in fresh temporary directories. All twenty-six result files matched both working copies byte for byte.",
+  "research_rerun": "Eighteen checkers completed in fresh output directories with bundled Python 3.12.14 and NumPy 2.3.5 on Windows. All 32 final output files and all 18 checker sources match both research copies byte for byte. The geometry checker has a final rerun with additional finite-locality controls.",
   "output_sha256": {
-    "checks.json": "83dba60d1cbf7662e669655fbb221155ac1962adcd941f0bb6b5debc6a59194b",
-    "filter_trials.csv": "91da8b349fad6ed65376f9c3ffd394a53c2fbe512e927b57395578bdce55db31",
-    "ray_trials.csv": "3b998a848fa82f1c5e48d98a3a7138519c24b9279b057981dde399a61005a844",
-    "record_branch_trials.csv": "9b2dd74583236ba75df2fcfa719f05346187125b534235ec39aa44089ac92cb2",
-    "record_selection.json": "dfa348a6adc1527865439627db1431d41a823fd1fe2e512b3b2e54cd6347c1ef",
-    "probability_selection.json": "112b3c2ba1b87fcc0e83a32f37d9229c1afe84badf894828787bc80c6aa5ea10",
-    "probability_walk_trials.csv": "817fe0750a5a2e8cc01cc617a2a2485a52fdc772b6b99766d3f900c42a832868",
+    "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
+    "band_preparation_flights.csv": "f4b28a7341f91fe3104a3605986b6c48e1017d5b9a95d94ca3c90bf342afe2ae",
+    "coin_qubit.json": "c414444a5be2ed23221ab47c03a39f1209e1de190e58203f4f729f551c0584e0",
+    "cycle_interaction.csv": "5487965f8065394085420628df19dd9e78341cf62801c43d3675a9bd94821054",
+    "cycle_interaction.json": "2a90c0b6e4cc2b1ef8a50c5d242b461c73e041555956df450c513ed38955b908",
+    "field_echo.json": "f8be413cb2c504b83e3921b1064e24aeaea8fef1ff62fd0d950c23d7f10dc3b3",
+    "fixed_transport.csv": "6b25177833d51c4af61d3926adb35d760616470b81b6db9d6bf429a5248a412d",
+    "fixed_transport.json": "cf82f2089e2ddabc9881249cdd0ee93f7eccfa7f6d00b0da32f7a265570486d1",
+    "fixed_transport_free_counts.csv": "14c4cc90c2048b28f0daeb6cf52386c7b1bb5d4b92ad4dd2621af5df40250069",
+    "folded_pair.json": "275b1cdb05854229b7d2adfff74e929fd6d3322329e026ce906003a64f923bd6",
     "forced_envelope.json": "55d392fa72b9b1c58a80e16d5d35b7bdcc3b73473348c46a693ed85c0269a9b7",
     "forced_envelope_trials.csv": "30bdb10633d16d174531a90b6085204b78d2177702fc02fde87d79e2a1fcd063",
     "native_embedding.json": "5e8b2424fbcadeb36abb48afd06b6d88a75d81022d1f6b748e90aa89da7e9011",
     "native_record_tree.csv": "9c86d63e96ae4e514e3b0dec2a821c13f0684717004cbe14014a3fd7ecea0689",
-    "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
-    "band_preparation_flights.csv": "f4b28a7341f91fe3104a3605986b6c48e1017d5b9a95d94ca3c90bf342afe2ae",
-    "relative_transport.csv": "c250b655e3d7e93c765efdf982f96957a9562807a2bbc5b73cdce7b7fdd44fa4",
-    "relative_transport.json": "15c53165421a78ab25c433f43b8e4fcde816eafd785ba53427d04467306413c1",
-    "position_records.json": "9e22f0243f6208e470d349421213d5e15cbd8656e936fa4116b6443e96fb2ff8",
-    "position_histories.csv": "3b396346dd641bc97dea7728cae7923e8421f4bef6f8c93f1070bf64ade3e549",
-    "fixed_transport.json": "cf82f2089e2ddabc9881249cdd0ee93f7eccfa7f6d00b0da32f7a265570486d1",
-    "fixed_transport.csv": "6b25177833d51c4af61d3926adb35d760616470b81b6db9d6bf429a5248a412d",
-    "fixed_transport_free_counts.csv": "14c4cc90c2048b28f0daeb6cf52386c7b1bb5d4b92ad4dd2621af5df40250069",
-    "field_echo.json": "f8be413cb2c504b83e3921b1064e24aeaea8fef1ff62fd0d950c23d7f10dc3b3",
     "periodic_force.json": "c5202800998fff24e0eb791dc22d59f9402bf9ace470a42a7c9a01167e766c76",
     "periodic_force_trials.csv": "4232e52420d933dbbaa8610fb6a50304cc283afcd91d7740e9b8765ce24d8e3f",
-    "cycle_interaction.json": "2a90c0b6e4cc2b1ef8a50c5d242b461c73e041555956df450c513ed38955b908",
-    "cycle_interaction.csv": "5487965f8065394085420628df19dd9e78341cf62801c43d3675a9bd94821054",
-    "folded_pair.json": "275b1cdb05854229b7d2adfff74e929fd6d3322329e026ce906003a64f923bd6"
+    "position_histories.csv": "3b396346dd641bc97dea7728cae7923e8421f4bef6f8c93f1070bf64ade3e549",
+    "position_records.json": "9e22f0243f6208e470d349421213d5e15cbd8656e936fa4116b6443e96fb2ff8",
+    "probability_selection.json": "112b3c2ba1b87fcc0e83a32f37d9229c1afe84badf894828787bc80c6aa5ea10",
+    "probability_walk_trials.csv": "817fe0750a5a2e8cc01cc617a2a2485a52fdc772b6b99766d3f900c42a832868",
+    "radial_bell.json": "951a1bf546ad03c5ca1f105a7a48cb460a156fc222105ba590ab528459f1ae46",
+    "radial_records.json": "176facbc363f6f8e2279ef80d6d9813ef92c5c0fb0886513d560c0825afafb41",
+    "radial_trials.csv": "27453646536d2431a3d29715931be841653f33aaec2d81cc8c65d26c34aaf834",
+    "record_branch_trials.csv": "9b2dd74583236ba75df2fcfa719f05346187125b534235ec39aa44089ac92cb2",
+    "record_selection.json": "dfa348a6adc1527865439627db1431d41a823fd1fe2e512b3b2e54cd6347c1ef",
+    "refinement_geometry.json": "4ab89a0c6e9f6b04a0dc52ad9f3af067f9ae8a3ffc25b4ed2610cb68cdb5e8d6",
+    "relative_transport.csv": "c250b655e3d7e93c765efdf982f96957a9562807a2bbc5b73cdce7b7fdd44fa4",
+    "relative_transport.json": "15c53165421a78ab25c433f43b8e4fcde816eafd785ba53427d04467306413c1",
+    "simultaneous_sectors.json": "d2bea50faf81d42289750e2460a6c50d75a8a9bbf49775ae425c0062180bbdb4",
+    "checks.json": "83dba60d1cbf7662e669655fbb221155ac1962adcd941f0bb6b5debc6a59194b",
+    "filter_trials.csv": "91da8b349fad6ed65376f9c3ffd394a53c2fbe512e927b57395578bdce55db31",
+    "ray_trials.csv": "3b998a848fa82f1c5e48d98a3a7138519c24b9279b057981dde399a61005a844"
   },
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "numpy": "2.3.5",
@@ -44,25 +50,26 @@
     "filter_target": true
   },
   "row_counts": {
-    "filter_trials.csv": 1524,
-    "ray_trials.csv": 3968,
-    "record_branch_trials.csv": 11148,
-    "probability_walk_trials.csv": 2920,
-    "forced_envelope_trials.csv": 54774,
-    "native_record_tree.csv": 573,
     "band_preparation_flights.csv": 1300,
-    "relative_transport.csv": 3060,
-    "position_histories.csv": 128,
+    "cycle_interaction.csv": 240,
     "fixed_transport.csv": 48276,
     "fixed_transport_free_counts.csv": 12000,
+    "forced_envelope_trials.csv": 54774,
+    "native_record_tree.csv": 573,
     "periodic_force_trials.csv": 36,
-    "cycle_interaction.csv": 240
+    "position_histories.csv": 128,
+    "probability_walk_trials.csv": 2920,
+    "radial_trials.csv": 256,
+    "record_branch_trials.csv": 11148,
+    "relative_transport.csv": 3060,
+    "filter_trials.csv": 1524,
+    "ray_trials.csv": 3968
   },
   "baseline_payloads_rechecked": 967,
   "map_gates": 13,
   "calibration_record_sha256": "dc80a00ba16beaf8344dfe1bc7d2b437d4c8a7b33704075c7de266fd929ace87",
   "root_review": "G1 OPEN",
-  "scope": "Byte-level reruns on the local runtime and declared numerical and arithmetic controls. Scientific review scope is in cross_review.",
+  "scope": "Reruns, file identity, finite numerical controls, exact arithmetic and the named Lean statements. The local manuscript-link check tests path resolution. Cross-reading and empirical limits are recorded separately.",
   "record_selection_checks": {
     "all_three_step_blocks": true,
     "three_class_law": true,
@@ -85,7 +92,7 @@
     "affected": "first written phase-control expression",
     "first_run_pass": false
   },
-  "review_limits": "No physical correspondence established. Z's fourth cross-review concerns the fixed transport and field reversal. The new smooth interacting torus limits have an in-session adversarial reading, finite numerical checks and limited Lean verification.",
+  "review_limits": "The original physical correspondence is unresolved. Director Z’s recorded reviews cover the listed earlier heads. The coin, sector and Bell extensions received same-session mathematical, numerical and formal checks from participants in one model family. The CHSH statistic is a prediction for the stated source and all-output analyzer.",
   "probability_selection_checks": {
     "character_recursion": true,
     "tag_permutation": true,
@@ -106,19 +113,24 @@
     "norm": true
   },
   "source_sha256": {
-    "walk": "b2130f1f411d1dad91510c05e44e47050715e894f5cff4b6948431dd0fc2ed12",
-    "record_selection": "fa40e68def5bcd8b688eb207f4aed854be63326ce450d571130cb14f98eb6816",
-    "probability_selection": "a740fa5c385acc90f00ff588c0eda117e596814d09f0f8c6d6130a204bd16d62",
+    "band_preparation": "50efa87d2430699968f535e5841fa50975dad98808d57961a0d4f91d7cff87bc",
+    "coin_qubit": "78ce06f940e0f33833dcc654daf34c9b241a50119d30e3677808c957140bf267",
+    "cycle_interaction": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
+    "field_echo": "9ad6c8c2c739b6c5809fa0e131fd75b081bec1f8684ef9d5fb9679c4c53f1b18",
+    "fixed_transport": "7dfe9f64bd71bf6cebcbcef2508ed33988417bc69e86d4f16d4c0f6a45a09689",
+    "folded_pair": "9cf75dc2d256ef798db8bf43c5535112abd7bef2df24c2822616bb8f8ac8aac2",
     "forced_envelope": "3462858d011c092027af36e6f8d4811da503123ea4f68d4f3ee4384a1ce30363",
     "native_embedding": "e05dae50ff867ee08d4f6058353031ca97a487e121553ea4aab5a894a469095b",
-    "band_preparation": "50efa87d2430699968f535e5841fa50975dad98808d57961a0d4f91d7cff87bc",
-    "relative_transport": "e15e6a5397e782b483df74e1170f0df948cb880f402eb883a37f8740b7d239f7",
-    "position_records": "4fb7276d4194a083be04de5e0d9453e73c87a29ce569de16899ef10175bbd0d1",
-    "fixed_transport": "7dfe9f64bd71bf6cebcbcef2508ed33988417bc69e86d4f16d4c0f6a45a09689",
-    "field_echo": "9ad6c8c2c739b6c5809fa0e131fd75b081bec1f8684ef9d5fb9679c4c53f1b18",
     "periodic_force": "515cce7b5eb093384852e9eb4196888bd356bf96f79b98bd9c2ba8cd6a97d09f",
-    "cycle_interaction": "9a88566c17a503e86790154b0a8a0074a44740cd634b3714a2555d8b2debd5f0",
-    "folded_pair": "9cf75dc2d256ef798db8bf43c5535112abd7bef2df24c2822616bb8f8ac8aac2"
+    "position_records": "4fb7276d4194a083be04de5e0d9453e73c87a29ce569de16899ef10175bbd0d1",
+    "probability_selection": "a740fa5c385acc90f00ff588c0eda117e596814d09f0f8c6d6130a204bd16d62",
+    "radial_bell": "788d320930cd2f65893d277f330b94d195b0c64633249cea62cded0318a87eef",
+    "radial_records": "b48099253ea9e85442eedde825bef43caefb1a44c283881d42688d02a25012d8",
+    "record_selection": "fa40e68def5bcd8b688eb207f4aed854be63326ce450d571130cb14f98eb6816",
+    "refinement_geometry": "7ef2cebe2cf21320f2c2f0b58578bb413d12478827139580dbc2b9a3b32e1273",
+    "relative_transport": "e15e6a5397e782b483df74e1170f0df948cb880f402eb883a37f8740b7d239f7",
+    "simultaneous_sectors": "2e8d93887ccc57ecdf0961466fae7a173bb3a84647f4fbe0f24217277d16d5bb",
+    "walk": "b2130f1f411d1dad91510c05e44e47050715e894f5cff4b6948431dd0fc2ed12"
   },
   "calibration_record_sha256_scope": "External fingerprint of the local session calibration record. The shared scientific packet includes the research controls.",
   "native_embedding_checks": {
@@ -249,5 +261,201 @@
     "sha256": "3928ab7d6b1fcd9cebb320c96c39ecaa6447f5051767ae9048a66e23e41f34fc",
     "toolchain": "leanprover/lean4:v4.19.0",
     "coverage": "Signed physical ring paths, fully lifted stopping histogram, common integer sheet on each old-flag output and n±1,1,1 signed counts. Persistent joint-odds stability and common endpoint response remain premises."
+  },
+  "coin_qubit_checks": {
+    "integer_paths": true,
+    "unfitted_complex_matrices": true,
+    "input_independent_success": true,
+    "matrix_ratios": true,
+    "three_analyzers": true,
+    "zero_gain_loses_quadrature": true,
+    "four_preparation_gram_M3": true,
+    "preparation_readbacks": true,
+    "full_lift_readbacks": true,
+    "arm_tag_changes_coherent_read": true,
+    "dephased_quadratures_indistinguishable": true,
+    "contact_source_formula": true,
+    "postselected_CHSH": true,
+    "all_local_trials_CHSH": true
+  },
+  "radial_bell_checks": {
+    "aligned_source_factors": true,
+    "fixed_synchronous_source": true,
+    "synchronous_no_contact_control": true,
+    "synchronous_all_route_access": true,
+    "source_correlation_exact": true,
+    "all_branches_counted": true,
+    "literal_finite_tree": true,
+    "summed_effect_both_orientations": true,
+    "finite_all_output_CHSH": true,
+    "zero_contact_same_policy": true,
+    "shorter_cap_retained": true
+  },
+  "radial_records_checks": {
+    "whole_tree": true,
+    "branch_gram": true,
+    "all_return_matrices": true,
+    "all_trials": true,
+    "event_ready_source": true
+  },
+  "fresh_rerun": {
+    "checkers": 18,
+    "outputs": 32,
+    "csv_files": 14,
+    "bindings": {
+      "check_band_preparation.py": [
+        "band_preparation.json",
+        "band_preparation_flights.csv"
+      ],
+      "check_coin_qubit.py": [
+        "coin_qubit.json"
+      ],
+      "check_cycle_interaction.py": [
+        "cycle_interaction.csv",
+        "cycle_interaction.json"
+      ],
+      "check_field_echo.py": [
+        "field_echo.json"
+      ],
+      "check_fixed_transport.py": [
+        "fixed_transport.csv",
+        "fixed_transport.json",
+        "fixed_transport_free_counts.csv"
+      ],
+      "check_folded_pair.py": [
+        "folded_pair.json"
+      ],
+      "check_forced_envelope.py": [
+        "forced_envelope.json",
+        "forced_envelope_trials.csv"
+      ],
+      "check_native_embedding.py": [
+        "native_embedding.json",
+        "native_record_tree.csv"
+      ],
+      "check_periodic_force.py": [
+        "periodic_force.json",
+        "periodic_force_trials.csv"
+      ],
+      "check_position_records.py": [
+        "position_histories.csv",
+        "position_records.json"
+      ],
+      "check_probability_selection.py": [
+        "probability_selection.json",
+        "probability_walk_trials.csv"
+      ],
+      "check_radial_bell.py": [
+        "radial_bell.json"
+      ],
+      "check_radial_records.py": [
+        "radial_records.json",
+        "radial_trials.csv"
+      ],
+      "check_record_selection.py": [
+        "record_branch_trials.csv",
+        "record_selection.json"
+      ],
+      "check_refinement_geometry.py": [
+        "refinement_geometry.json"
+      ],
+      "check_relative_transport.py": [
+        "relative_transport.csv",
+        "relative_transport.json"
+      ],
+      "check_simultaneous_sectors.py": [
+        "simultaneous_sectors.json"
+      ],
+      "check_walk.py": [
+        "checks.json",
+        "filter_trials.csv",
+        "ray_trials.csv"
+      ]
+    },
+    "previous_release_outputs_matching": 26,
+    "final_geometry_output": "The final geometry run supersedes the earlier run from the same batch. The output_sha256 table binds the run that includes the finite-locality cases."
+  },
+  "scientific_controls": {
+    "coin_qubit": "Literal integer mirror paths of radii 1 through 8, state-independent acceptance, full-sheet tomography, destructive arm labels and earlier postselected/fallback contact controls.",
+    "radial_records": "Full first-excursion trees at two origins and a seeded controller with 256 trials. Source factors here assume aligned coin inputs after filtering.",
+    "radial_bell": {
+      "source_fixed": "3/512",
+      "fixed_source_ticks": 6,
+      "all_routing_source": "1/16 with potentially unbounded pre-herald duration",
+      "all_post_herald_cap": 25,
+      "CHSH": "134503435/67108864",
+      "without_contact": "33840139/67108864",
+      "shorter_cap_20": "8386371/4194304"
+    },
+    "simultaneous_sectors": "Two finite five-sheet words; original integer counts, Fourier weights and posterior under the localized input. The records do not establish a uniform synthesis cost.",
+    "refinement_geometry": "Finite cycle metric and divisor inclusions, 2,006 units in finite locality controls, 19 sharp equal-budget examples, a coherent CRT counterexample and tagged square-root-of-two sign controls."
+  },
+  "retained_adverse_artifacts": {
+    "sha256": {
+      "orientation_oracle_first_run.json": "50a88c835025e7807ad46ef3b07beb48f6f6f2ebb7c3ffc1bfe76546f0de9f71",
+      "band_preparation_first_oracle.json": "c837b5a1550443b627b18288fc75f18b6c47386bea9effae1677b5dc3a695112",
+      "radial_first_oracle.json": "36edc477a1d3c0c001ae49c728814fb0a3af166dee558972092680324700e7e6",
+      "radial_trials_first_oracle.csv": "6bf515bde28c46ce4d032fd38dd2db9625449980b120df1187ef99a56256019f"
+    },
+    "radial_original_tree_predicate": false,
+    "radial_original_trials": 256,
+    "description": "Historical first comparisons, separate from the 32 current rerun files. The first radial analytic oracle double-counted the left split sign."
+  },
+  "lean_compilation": {
+    "compiler": "Lean 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94",
+    "checks": 7,
+    "exit_codes": {
+      "CoinInterferometer.lean": 0,
+      "CorridorCounts.lean": 0,
+      "RadialBell.lean": 0,
+      "RadialRecords.lean": 0,
+      "RecordWeights.lean": 0,
+      "RefinementLocality.lean": 0,
+      "SharedSheet.lean": 0
+    },
+    "source_sha256": {
+      "CoinInterferometer.lean": "1f5eedae7c3fa666cfa5e8b58e80738368ec3c9f5d9069753b9571e66e774abc",
+      "CorridorCounts.lean": "3928ab7d6b1fcd9cebb320c96c39ecaa6447f5051767ae9048a66e23e41f34fc",
+      "RadialBell.lean": "d83a85939be25e7892e07bf76cb2a98b3f757f2b4ad392bfbe6fcf3a35a6c9a3",
+      "RadialRecords.lean": "cc9548f2112ddc822785e6533ba569aafe60b58343d7d12d43fab8a3c7e17afe",
+      "RecordWeights.lean": "66b4d7e773bc6ed055fea4f166a10c457be2f9b7a02c4c0b857e73b36b09f6a2",
+      "RefinementLocality.lean": "baa2945feb0cefae838d7d103d27d2748d39a2cb9541a4f86dbe565853d655b9",
+      "SharedSheet.lean": "4521b54f95aab9a7423324e48863fc7166bdfbbb99cead10f4f63905d9352d92"
+    },
+    "coverage": "RecordWeights, SharedSheet and CorridorCounts cover earlier conditional finite statements. CoinInterferometer and RadialRecords cover mirror paths and radius updates. RadialBell covers the finite source/correlation arithmetic and strict bounded CHSH inequality. RefinementLocality covers signed integer bounds and sharpness. Scope of each statement is in lean/README.md."
+  },
+  "edition_z11": {
+    "edition": "FPHPM-BASELINE-2026-11-13-Z11",
+    "manifest_sha256": "e8754dd2d9400d1268c4a065b1230468fe1adea2bafd2931270c00ecbebe0b81",
+    "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+    "manifest_payloads": 1094,
+    "paper_index_entries": 41,
+    "assembled_pdf_front_matter_checked": 40,
+    "registry_rows": 395,
+    "legacy_components": 85,
+    "result": "BASELINE_CHECK_PASS",
+    "method": "The supplied edition/verify_baseline.py ran with PyMuPDF. In memory only, enumerated Windows relative paths were compared using forward slashes, as in the manifest. Checks included digests, extra files, registry and crosswalk consistency, PDF front matter and the file-wide location scan."
+  },
+  "manuscript_links": {
+    "local_research": {
+      "markdown_files": 18,
+      "relative_file_link_occurrences": 119,
+      "missing_local_targets": 0
+    },
+    "published_checkout": {
+      "markdown_files": 19,
+      "relative_file_link_occurrences": 136,
+      "missing_local_targets": 0
+    },
+    "scope": "Local file targets from the research manuscripts and Lean README, with the additional research index in the checkout. Relative files only; external URLs and within-document anchors were outside this check."
+  },
+  "gate_map_check": {
+    "original_disposition": "UNRESOLVED",
+    "gates": 13,
+    "local_sha256": "f88dd088a061419d8aba6e2af2b786cc66fbd9505d655330bbb69bd568ffec3b",
+    "published_sha256": "8fd5ae575c000a8c66fdd6a4b8812919e76b939c720716a594034ad1323e085a",
+    "original_gate_map_sha256": "14cbab1d5e435696e69b1bbf950e96ca23a5bd6e99888a032c66f5bee4606dfd",
+    "comparison_commit": "081ad6238e2089fa855d049ae3eaf119c2ac402f",
+    "basis": "The two gate maps differ only in their edition-specific original-source locator. Both resolve to the same source bytes. Four damaged occurrences of Schrödinger in each current map were restored in UTF-8. Earlier evidence and all newly appended scientific text are preserved."
   }
 }

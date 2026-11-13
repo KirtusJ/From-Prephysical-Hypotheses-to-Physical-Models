@@ -1,0 +1,756 @@
+{
+  "checks": {
+    "aligned_source_factors": true,
+    "fixed_synchronous_source": true,
+    "synchronous_no_contact_control": true,
+    "synchronous_all_route_access": true,
+    "source_correlation_exact": true,
+    "all_branches_counted": true,
+    "literal_finite_tree": true,
+    "summed_effect_both_orientations": true,
+    "finite_all_output_CHSH": true,
+    "zero_contact_same_policy": true,
+    "shorter_cap_retained": true
+  },
+  "radius": 6,
+  "ring_sites": 12,
+  "sheet_order": 3,
+  "source": {
+    "filter_counts": [
+      0,
+      -1,
+      1
+    ],
+    "filter_probability": "1/4",
+    "contact_probability_given_aligned_inputs": "1/4",
+    "filter_times_aligned_contact_probability": "1/16",
+    "zero_mode_numerator": 0,
+    "alice_Z_row": [
+      "-3/4",
+      "-1/4",
+      "0"
+    ],
+    "alice_X_row": [
+      "1/4",
+      "-1/4",
+      "-3/4"
+    ]
+  },
+  "fixed_synchronous_source": {
+    "ticks": 6,
+    "alice_bob_start": "0,R; 0,R; common localized sheet",
+    "filter_probability_all_bob_records": "1/4",
+    "probability_bob_at_minus_one_given_filter": "3/8",
+    "joint_R_hop_probability": "1/4",
+    "contact_return_probability": "1/4",
+    "fixed_source_probability": "3/512",
+    "fixed_source_histories": 3,
+    "bob_histories": [
+      {
+        "bob_word": "RRR",
+        "bob_site": 3,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RRL",
+        "bob_site": 1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RLR",
+        "bob_site": 1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 1,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          1,
+          0,
+          -1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RLL",
+        "bob_site": -1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 1,
+        "bob_relative_sign": -1,
+        "signed_filter_counts": [
+          -1,
+          0,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          1,
+          -1,
+          0
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            1,
+            -1,
+            0
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LRR",
+        "bob_site": 1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 2,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          -1,
+          1,
+          0
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "LRL",
+        "bob_site": -1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 2,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          -1,
+          1,
+          0
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          0,
+          -1,
+          1
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            -1,
+            1
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LLR",
+        "bob_site": -1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": -1,
+        "signed_filter_counts": [
+          0,
+          1,
+          -1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          -1,
+          0,
+          1
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            0,
+            1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            0,
+            1
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LLL",
+        "bob_site": -3,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      }
+    ]
+  },
+  "all_accepted_synchronous_routing": {
+    "same_parity_start_pairs": 72,
+    "checked_block_length": 8,
+    "minimum_hit_probability": "1/4096",
+    "minimizers": [
+      [
+        5,
+        5
+      ]
+    ],
+    "mean_tick_upper_bound": "32768",
+    "eventual_route_probability": "1",
+    "accepted_source_probability": "1/16",
+    "tail_bound": "P(no completed directed joint arrival after 8j ticks) <= (1-p_min)^j",
+    "scope": "All contemporaneous one-step direction records retained before settings, contact off. A recorded step acts by a common signed sheet translation and two independent fair directions."
+  },
+  "signed_y_coordinate": "Second coordinate stores physical Pauli-Y coefficient divided by sqrt(3).",
+  "labels": "Rows Alice Z, X. Columns Bob B0, B1. S=E00+E01+E10-E11.",
+  "policy": "B1 reads -X by side after the first split. B0 measures radius through cap 24. At a meeting read the signed X or Z specified by the table, breaking ties toward Z. If the interior cap is reached, read the signed side as -X of the segment input. Stopped parties have already emitted a binary result; no idle unitary is needed.",
+  "literal_tree_max_residual": 3.614764428601049e-15,
+  "summed_bob_effect_max_residual": 3.885780586188048e-16,
+  "certificate": {
+    "cap": 24,
+    "physical_tick_cap": 25,
+    "timeout_probability": "177147/8388608",
+    "total_probability": "1",
+    "groups": [
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 0,
+        "relative_arm_sign": 1,
+        "probability": "334763/4194304",
+        "read": "X",
+        "output_multiplier": -1
+      },
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 1,
+        "relative_arm_sign": 1,
+        "probability": "2956203/4194304",
+        "read": "X",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 2,
+        "relative_arm_sign": 1,
+        "probability": "320001/8388608",
+        "read": "Z",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 0,
+        "relative_arm_sign": -1,
+        "probability": "334763/4194304",
+        "read": "X",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 1,
+        "relative_arm_sign": -1,
+        "probability": "320001/8388608",
+        "read": "X",
+        "output_multiplier": -1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 2,
+        "relative_arm_sign": -1,
+        "probability": "320001/8388608",
+        "read": "Z",
+        "output_multiplier": -1
+      }
+    ],
+    "correlations": [
+      [
+        "23600115/67108864",
+        "3/4"
+      ],
+      [
+        "5474307/8388608",
+        "-1/4"
+      ]
+    ],
+    "probabilities_equal": [
+      [
+        "90708979/134217728",
+        "7/8"
+      ],
+      [
+        "13862915/16777216",
+        "3/8"
+      ]
+    ],
+    "CHSH": "134503435/67108864",
+    "CHSH_decimal": 2.0042573660612106,
+    "margin": "285707/67108864"
+  },
+  "shorter_cap_results": [
+    {
+      "cap": 2,
+      "timeout_probability": "1/2",
+      "CHSH": "29/16",
+      "CHSH_decimal": 1.8125
+    },
+    {
+      "cap": 4,
+      "timeout_probability": "3/8",
+      "CHSH": "121/64",
+      "CHSH_decimal": 1.890625
+    },
+    {
+      "cap": 6,
+      "timeout_probability": "9/32",
+      "CHSH": "493/256",
+      "CHSH_decimal": 1.92578125
+    },
+    {
+      "cap": 8,
+      "timeout_probability": "27/128",
+      "CHSH": "1995/1024",
+      "CHSH_decimal": 1.9482421875
+    },
+    {
+      "cap": 10,
+      "timeout_probability": "81/512",
+      "CHSH": "8045/4096",
+      "CHSH_decimal": 1.964111328125
+    },
+    {
+      "cap": 12,
+      "timeout_probability": "243/2048",
+      "CHSH": "32371/16384",
+      "CHSH_decimal": 1.97576904296875
+    },
+    {
+      "cap": 14,
+      "timeout_probability": "729/8192",
+      "CHSH": "130053/65536",
+      "CHSH_decimal": 1.9844512939453125
+    },
+    {
+      "cap": 16,
+      "timeout_probability": "2187/32768",
+      "CHSH": "521915/262144",
+      "CHSH_decimal": 1.9909477233886719
+    },
+    {
+      "cap": 18,
+      "timeout_probability": "6561/131072",
+      "CHSH": "2092765/1048576",
+      "CHSH_decimal": 1.9958162307739258
+    },
+    {
+      "cap": 20,
+      "timeout_probability": "19683/524288",
+      "CHSH": "8386371/4194304",
+      "CHSH_decimal": 1.9994666576385498
+    },
+    {
+      "cap": 22,
+      "timeout_probability": "59049/2097152",
+      "CHSH": "33591413/16777216",
+      "CHSH_decimal": 2.0022042393684387
+    }
+  ],
+  "no_contact_source": {
+    "filter_counts": [
+      0,
+      -1,
+      1
+    ],
+    "filter_probability": "1/4",
+    "contact_probability_given_aligned_inputs": "1/4",
+    "filter_times_aligned_contact_probability": "1/16",
+    "zero_mode_numerator": 0,
+    "alice_Z_row": [
+      "0",
+      "0",
+      "0"
+    ],
+    "alice_X_row": [
+      "1/4",
+      "-1/4",
+      "0"
+    ]
+  },
+  "no_contact_fixed_synchronous_source": {
+    "ticks": 6,
+    "alice_bob_start": "0,R; 0,R; common localized sheet",
+    "filter_probability_all_bob_records": "1/4",
+    "probability_bob_at_minus_one_given_filter": "3/8",
+    "joint_R_hop_probability": "1/4",
+    "contact_return_probability": "1/4",
+    "fixed_source_probability": "3/512",
+    "fixed_source_histories": 3,
+    "bob_histories": [
+      {
+        "bob_word": "RRR",
+        "bob_site": 3,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RRL",
+        "bob_site": 1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RLR",
+        "bob_site": 1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 1,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          1,
+          0,
+          -1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "RLL",
+        "bob_site": -1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 1,
+        "bob_relative_sign": -1,
+        "signed_filter_counts": [
+          -1,
+          0,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          1,
+          -1,
+          0
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            0,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            -1,
+            0,
+            1
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LRR",
+        "bob_site": 1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 2,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          -1,
+          1,
+          0
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      },
+      {
+        "bob_word": "LRL",
+        "bob_site": -1,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 2,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          -1,
+          1,
+          0
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          0,
+          -1,
+          1
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            0
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LLR",
+        "bob_site": -1,
+        "bob_direction": 1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": -1,
+        "signed_filter_counts": [
+          0,
+          1,
+          -1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": true,
+        "source_contribution": "1/512",
+        "signed_counts_after_joint_hop": [
+          -1,
+          0,
+          1
+        ],
+        "contact_output_RR_RL_LR_LL": [
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            -1
+          ]
+        ],
+        "per_port_character_identity": true
+      },
+      {
+        "bob_word": "LLL",
+        "bob_site": -3,
+        "bob_direction": -1,
+        "bob_sheet_shift_mod_3": 0,
+        "bob_relative_sign": 1,
+        "signed_filter_counts": [
+          0,
+          -1,
+          1
+        ],
+        "filter_and_word_probability": "1/32",
+        "unconditional_bob_word_probability": "1/8",
+        "bob_at_minus_one": false,
+        "source_contribution": "0"
+      }
+    ]
+  },
+  "no_contact_same_policy": {
+    "cap": 24,
+    "physical_tick_cap": 25,
+    "timeout_probability": "177147/8388608",
+    "total_probability": "1",
+    "groups": [
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 0,
+        "relative_arm_sign": 1,
+        "probability": "334763/4194304",
+        "read": "X",
+        "output_multiplier": -1
+      },
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 1,
+        "relative_arm_sign": 1,
+        "probability": "2956203/4194304",
+        "read": "X",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": -1,
+        "departure_sum_mod_3": 2,
+        "relative_arm_sign": 1,
+        "probability": "320001/8388608",
+        "read": "Z",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 0,
+        "relative_arm_sign": -1,
+        "probability": "334763/4194304",
+        "read": "X",
+        "output_multiplier": 1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 1,
+        "relative_arm_sign": -1,
+        "probability": "320001/8388608",
+        "read": "X",
+        "output_multiplier": -1
+      },
+      {
+        "last_radial_increment": 1,
+        "departure_sum_mod_3": 2,
+        "relative_arm_sign": -1,
+        "probability": "320001/8388608",
+        "read": "Z",
+        "output_multiplier": -1
+      }
+    ],
+    "correlations": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "17062923/67108864",
+        "-1/4"
+      ]
+    ],
+    "probabilities_equal": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "84171787/134217728",
+        "3/8"
+      ]
+    ],
+    "CHSH": "33840139/67108864",
+    "CHSH_decimal": 0.5042573660612106,
+    "margin": "-100377589/67108864"
+  },
+  "scope": "Exact model prediction conditioned on a source herald preceding both setting choices. Every post-herald run contributes. The physical assumptions of Bell testing were not measured."
+}

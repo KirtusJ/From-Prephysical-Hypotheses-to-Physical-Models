@@ -19,6 +19,8 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Lean proofs](lean/README.md) | Universal response recurrence, physical corridor counts, shared-sheet character reduction and integer rounding |
 | [Field reversal during preparation](Field_reversal_during_preparation.md) | Exact signed-schedule amplitudes, optimal yield and adverse finite flight data |
 | [Periodic interaction and two limits](Periodic_interaction_and_two_limits.md) | A shared integer gain gives two-body Schrödinger dynamics and interacting Newton trajectories; a folded preparation yields four classical branches |
+| [Preparing and measuring a coin qubit](Operational_coin_qubit.md) | Three tomographic settings, all-outcome radial feedback and an exact finite CHSH prediction including timeout records |
+| [Sector control and the probability embedding](Sector_control_and_probability_embedding.md) | Separate control of all conjugate character pairs, a rare five-sheet record, and the reversible metric condition on compatible odd cyclotomic embeddings |
 | [Cross-review with Director Z](Director_exchange.md) | Hypothesis checks for G10 and a counterexample to the broader prose summary |
 
 Run each checker with Python and an output directory. The walk, record, envelope and position-simulation checks require NumPy. The exact embedding and joint-transport checks use the standard library. The commands assume the current directory contains this file.
@@ -37,6 +39,11 @@ python -B check_field_echo.py rerun
 python -B check_periodic_force.py rerun
 python -B check_cycle_interaction.py rerun
 python -B check_folded_pair.py rerun
+python -B check_coin_qubit.py rerun
+python -B check_radial_records.py rerun
+python -B check_radial_bell.py rerun
+python -B check_simultaneous_sectors.py rerun
+python -B check_refinement_geometry.py rerun
 ```
 
-The results directory contains all trial rows and the retained first-run adverse phase comparison. The numerical residuals describe the model under the specified inputs. The thirteen checkers reproduced twenty-six generated files byte for byte on the recorded Windows runtime. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)
+All eighteen checkers reproduced thirty-two result files byte for byte on the recorded Windows runtime. The results directory also retains first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. On other platforms text line endings, math libraries and binary64 reductions may affect byte identity. [Verification record](results/verification.json)

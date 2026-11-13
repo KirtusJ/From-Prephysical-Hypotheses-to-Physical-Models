@@ -1,4 +1,4 @@
-# Formal checks of the persistent-record argument
+# Formal checks of the signed walk and its records
 
 Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada.
 
@@ -24,3 +24,15 @@ RecordWeights.lean covers the reduced masks and conditional recurrence. The sepa
 [SharedSheet.lean](SharedSheet.lean) checks the two-walker character reduction with arbitrary joint departure gains and sheet-unresolved coordinate masks, four-way signed norm scaling, periodic integer gains and nearest-integer accuracy. Use the same compiler and run `lean SharedSheet.lean`. The analytic torus limits are in the [two-body paper](../Periodic_interaction_and_two_limits.md).
 
 [CorridorCounts.lean](CorridorCounts.lean) enumerates signed steps with the actual modular site-and-direction mask for every ring length of at least six. It proves the general physical histogram, signed output ports and the common integer sheet coordinate both at the stop and on each flagged outgoing port. Run `lean CorridorCounts.lean` with the same toolchain. Persistent joint-odds consistency remains an operational premise.
+
+The coin experiment adds three Lean 4.19.0 files. Run `lean` on each file from this directory.
+
+| File | Scope |
+|---|---|
+| [CoinInterferometer.lean](CoinInterferometer.lean) | Two signed mirror histories on the line, their winding increments and return directions, and the common norm attenuation under the stated phase and coin norm laws. |
+| [RadialRecords.lean](RadialRecords.lean) | Both adjacent radius outcomes on a ring of length at least eight, equal branch norms, boundary coordinates and uniqueness of the rational first-step tables. |
+| [RadialBell.lean](RadialBell.lean) | Finite source correlations in Eisenstein arithmetic, observer table, mass conservation at every cap and exact four correlations at cap 24. Kernel evaluation gives the strict CHSH inequality. |
+
+The manuscript proves projective density and adaptive hitting. The physical origin of the measured radius, shared sheet, locality and probability interpretation remains open. [Model and proof](../Operational_coin_qubit.md)
+
+[RefinementLocality.lean](RefinementLocality.lean) proves the signed-integer locality certificate for any modulus exceeding the product of the forward and inverse displacement bounds plus one. An explicit family at equality proves sharpness for every even common budget. The identification of a reference encoder and access to its inverse are premises. [Physical interpretation](../Sector_control_and_probability_embedding.md)
