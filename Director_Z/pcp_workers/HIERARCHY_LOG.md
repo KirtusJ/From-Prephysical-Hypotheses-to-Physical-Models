@@ -93,3 +93,6 @@ Working rule drawn from this: at most two levels below the director (sub-agent, 
 
 `Director_Z/tools/pcp_submit.py` was written after the second duplicate register submission: it refuses to send a call file whose digest is already in its ledger and saves the server's output to a file. This is rule 6 turned into a program. Applications are written only when a step has failed more than once or recurs at every edition.
 
+## Pull requests from the stack (13 November 2026)
+
+Principal: sub-agents and workers may open pull requests on all repositories and branches when necessary. Adopted as: patch file from sub-agents without GitHub tools, pull request from workers that have them, author never merges. Observed the same day: the director's own merge of another author's branch (Director G's pull requests 5, 6, 8) was refused by the session's permission layer, so merging is by the author or the principal. To watch: whether any worker opens one, and whether it was needed.

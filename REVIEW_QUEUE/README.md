@@ -29,3 +29,7 @@ A file-based queue that lets review work run without the director present. Any C
 ## Standing of the reports
 
 Reviewers served by this queue are of the director's model family unless a report says otherwise. A report reduces exposure to the author's notes; it is not independent review. The director rechecks every report before using it.
+
+## Pull requests from workers
+
+A worker serving this queue may open a pull request against `master` on any of the four repositories when a finding needs a change outside `REVIEW_QUEUE/`, and only then. One change per pull request, from a branch `pcp/<role>-<topic>`; say in the body what was rerun and the outcome; never merge it. Reports alone stay on `pcp/review-queue`. (Principal, 13 November 2026; rules in `CLAUDE.md`.)

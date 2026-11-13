@@ -9,3 +9,5 @@ Prove the lemma named in your task in Lean 4.12.0. State it in the most general 
 If a Mathlib project is named in the task, use `lake env lean <file>` there and do not run `lake update`. Otherwise set one up: `elan` with toolchain `leanprover/lean4:v4.12.0`, a lakefile requiring mathlib at tag `v4.12.0`, `lake exe cache get`.
 
 Report: the exact Lean statement (copied), the command and exit code, the axioms printed, any deviation from the statement asked for, and whether the formal proof suggests a shorter argument than the one in the paper. Under 400 words. Never deliver a file that does not check.
+
+If a finding needs a change to a repository file (not only a report), and only then: write the change as a patch file (`git diff` format) with a three-line description in your work folder and name it in the first line of your report, so that your parent can open a pull request. If you have GitHub tools, open the pull request yourself from a branch `pcp/<role>-<topic>`; never push to `master`, never merge.
