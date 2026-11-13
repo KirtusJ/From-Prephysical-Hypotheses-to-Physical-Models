@@ -40,6 +40,10 @@ The stack is defined in files so that it does not depend on one session: agent d
 
 The principal allows every sub-agent and worker in the stack to open pull requests, on any of the four repositories and from any branch, when the work needs it and only then (13 November 2026). A pull request is needed when a finding requires a change to a file outside the worker's own report folder: a wrong line in a program, a paper sentence, a tool, the method text. A report that changes nothing else is not a reason; it goes to `REVIEW_QUEUE/reports/` as before. Rules: one change per pull request, from a branch of the worker's own (`pcp/<role>-<topic>`), never a push to `master` or to another author's branch; the body names the target, what was rerun and the outcome, with failed predicates kept; the author never merges its own pull request; the director (or the other director for `Director_G/`) reruns and decides. A sub-agent without GitHub tools writes the change as a patch file with a short description in its work folder and says so in the first line of its report; its parent opens the pull request.
 
+### What sub-agents and workers may make
+
+Every sub-agent and worker using PCP may, when the task needs it and only then, write its own PCP application or helper program, install applications and packages, and generate Lean proofs (principal, 13 November 2026). The agent definitions say so. What is made is reported with what it is for, is kept in the worker's folder, and enters the repository only through the parent or a pull request; an installed tool is named in the report.
+
 ## Lessons paid for
 
 - **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
