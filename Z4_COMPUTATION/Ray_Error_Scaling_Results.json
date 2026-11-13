@@ -1,0 +1,91 @@
+{
+ "E1_residual_after_offset_scales_as_first_power_of_the_field": {
+  "passed": false,
+  "rows": [
+   {
+    "period": 64,
+    "field": 0.09817477042468103,
+    "max_error_without_offset": 0.6463112073696164,
+    "max_error_with_offset": 0.07477432811150192,
+    "offset_sign": -1,
+    "excursion_predicted": 16.0,
+    "return_probability": 0.9999999995638489
+   },
+   {
+    "period": 128,
+    "field": 0.04908738521234052,
+    "max_error_without_offset": 0.618212059852052,
+    "max_error_with_offset": 0.038450610396891516,
+    "offset_sign": -1,
+    "excursion_predicted": 32.0,
+    "return_probability": 0.9999999999999751
+   },
+   {
+    "period": 256,
+    "field": 0.02454369260617026,
+    "max_error_without_offset": 0.6114264387026651,
+    "max_error_with_offset": 0.03814861010392423,
+    "offset_sign": -1,
+    "excursion_predicted": 64.0,
+    "return_probability": 0.99999999999996
+   },
+   {
+    "period": 512,
+    "field": 0.01227184630308513,
+    "max_error_without_offset": 0.6166440454610012,
+    "max_error_with_offset": 0.062190173074027466,
+    "offset_sign": -1,
+    "excursion_predicted": 128.0,
+    "return_probability": 0.9999999999999123
+   },
+   {
+    "period": 1024,
+    "field": 0.006135923151542565,
+    "max_error_without_offset": 0.6370872043672051,
+    "max_error_with_offset": 0.11744038646828048,
+    "offset_sign": -1,
+    "excursion_predicted": 256.0,
+    "return_probability": 0.9999999999998153
+   },
+   {
+    "period": 2048,
+    "field": 0.0030679615757712823,
+    "max_error_without_offset": 0.6844476685383825,
+    "max_error_with_offset": 0.2315208872670611,
+    "offset_sign": -1,
+    "excursion_predicted": 512.0,
+    "return_probability": 0.9999999999996414
+   }
+  ],
+  "log_log_slope": 0.39114982358226624,
+  "residual_times_period_mean_sites": 107.6213967994842,
+  "residual_times_period": [
+   4.785556999136123,
+   4.921678130802114,
+   9.766044186604603,
+   31.841368613902063,
+   120.25895574351921,
+   474.15477712294114
+  ],
+  "note": "criterion fixed before the run: the fitted exponent of the residual against the period lies in (-1.3, -0.7); the residual without the offset is expected to tend to a constant (the connection change), the residual with it to vanish linearly in Phi"
+ },
+ "E2_residual_without_offset_tends_to_a_constant": {
+  "passed": true,
+  "values": [
+   0.6463112073696164,
+   0.618212059852052,
+   0.6114264387026651,
+   0.6166440454610012,
+   0.6370872043672051,
+   0.6844476685383825
+  ]
+ },
+ "_summary": {
+  "predicates": 2,
+  "passed": 1,
+  "ring": 8192,
+  "k0": 1.0,
+  "sigma": 0.03,
+  "numpy": "2.5.3"
+ }
+}

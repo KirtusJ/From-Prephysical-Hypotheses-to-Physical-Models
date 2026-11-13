@@ -1,0 +1,45 @@
+{
+ "subject": {
+  "participant": "Claude (Anthropic), acting as LLM Director Z, fourth session",
+  "model": "claude-fable-5-2 as named by the host at the time of this record; the session was configured for claude-opus-5-5 and the serving model changed during the session; UNKNOWN which model produced each earlier turn",
+  "host": "Claude Code, cloud session",
+  "date": "2026-11-13"
+ },
+ "configuration": {
+  "delivery": "RETRIEVAL",
+  "extent": [
+   "acr.core 1.0, Specification SHA-256 649211ff2d765e06b5d5eb31dc80af6f97aedea242f2dcb5b77b3fa270ef34d6 (method manifest 7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707, plugin build 22), read in full",
+   "acr.mathematics 1.0 and acr.science 1.0 Specifications, read in full",
+   "ACR 1.0 Implementation packet of the Enterprise Edition build 19, manifest 6b6d3a680f3fdec811ce7105dd2124e951e272c28a24608f073914f4155853c6: Core, Mathematics and Science Specifications read in full; differences from build 22 read as a diff",
+   "pcpos 1.0.22 tool server reached through a stdio client written in the session, not through the host's plugin mechanism: no hook of the plugin ran"
+  ],
+  "confinement": "The plugin was not installed in the host. Its tool server was driven by a client the participant wrote; the host's hooks did not run, so no prompt, shell command or subagent was observed by the program. The retrieval items were chosen by the participant from provisions it had already read in this session, with their text in its context; the method packet's item generator (TOOLS/calibrate.py) is not in any archive supplied. Counts below are of that arrangement, not of the plugin as used."
+ },
+ "assessor": {
+  "relation": "HOST_OR_TOOL",
+  "name": "pcpos 1.0.22 `clause` (exact substring comparison of each committed answer with the provision's text), run by a script the participant wrote",
+  "note": "item selection: SELF"
+ },
+ "instrument": {
+  "tool": "pcpos clause",
+  "version": "1.0.22",
+  "items_sha256": "fde3c49ca842301ee76ac9c2ba296c23a101dd4e42dc74a131c8e7a92fa99a08",
+  "items": "nine committed answers, written before the comparison; one run per item"
+ },
+ "acquisition": {
+  "delivered_equals_release": "plugin method text: 41 files present and equal to manifest 7ff72eed..., 16 absent (programs and probes), 1 differing (REFERENCE/Clause_Index.csv, line endings after version control); edition packet build 19: verify_release.py PASS, 57 payloads",
+  "reached": "Core, Mathematics and Science Specifications in both builds; kernel; Known_Limitations; pcp-os skills and agents. Not opened: Engineering, Cryptography, Statistics and Quality Assurance Specifications, the Overviews, Methods Catalog, Record Contracts, Command Interface, Integration Guide, Safety Handbook, probes"
+ },
+ "retrieval": {
+  "items": 9,
+  "for": 9,
+  "against": 0,
+  "unscored": 0,
+  "invented": 0,
+  "runs_per_item": 1,
+  "seen_with_answers": true
+ },
+ "application": "NOT_MEASURED",
+ "thresholds": "NONE",
+ "claim": "NONE"
+}
