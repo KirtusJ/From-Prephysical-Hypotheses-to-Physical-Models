@@ -1,0 +1,366 @@
+{
+ "2 K2loops C=1": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "3 Hadamard C2": {
+  "computed": [
+   2,
+   2
+  ],
+  "formula": [
+   2,
+   2
+  ],
+  "lin": 1,
+  "quad": 1,
+  "K": {
+   "1,1": 1
+  },
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [
+   1
+  ],
+  "dim_S2": 2,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "4 all +1 in C2": {
+  "computed": [
+   2,
+   2
+  ],
+  "formula": [
+   2,
+   2
+  ],
+  "lin": 2,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 2,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "5a case3 + source c (gains 1,1)": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "5b case3 + source c (gains 1,-1)": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "6 two copies of 3": {
+  "computed": [
+   4,
+   4
+  ],
+  "formula": [
+   4,
+   4
+  ],
+  "lin": 2,
+  "quad": 2,
+  "K": {
+   "1,1": 2
+  },
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   [
+    [
+     2,
+     3
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [
+   1
+  ],
+  "dim_S2": 4,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "7 3-cycle-complement C2": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "8 loop, 3 vertices C3": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "9 Hadamard gains in C4 (Gamma index 2)": {
+  "computed": [
+   5,
+   5
+  ],
+  "formula": [
+   5,
+   5
+  ],
+  "lin": 2,
+  "quad": 3,
+  "K": {
+   "1,1": 1,
+   "1,3": 1,
+   "3,3": 1
+  },
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "U": [
+   1,
+   3
+  ],
+  "dim_S2": 5,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "10 d=3 Fourier C3": {
+  "computed": [
+   2,
+   2
+  ],
+  "formula": [
+   2,
+   2
+  ],
+  "lin": 1,
+  "quad": 1,
+  "K": {
+   "1,2": 1
+  },
+  "classes": [
+   [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ]
+  ],
+  "U": [
+   1,
+   2
+  ],
+  "dim_S2": 2,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "11 case3 + 2 sources, K4-ish": {
+  "computed": [
+   1,
+   1
+  ],
+  "formula": [
+   1,
+   1
+  ],
+  "lin": 1,
+  "quad": 0,
+  "K": {},
+  "classes": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  ],
+  "U": [],
+  "dim_S2": 1,
+  "P1": "PASS",
+  "P3": "PASS"
+ },
+ "P2 case3 no F(0)=0": {
+  "dim": [
+   3,
+   3
+  ],
+  "expected": 3,
+  "P2": "PASS"
+ },
+ "P2 case5a": {
+  "dim": 3,
+  "expected": 3
+ }
+}
