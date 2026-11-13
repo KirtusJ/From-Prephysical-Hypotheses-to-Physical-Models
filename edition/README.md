@@ -2,16 +2,16 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-13-Z11, 13 November 2026
+Baseline FPHPM-BASELINE-2026-11-13-Z12, 13 November 2026
 
-This is the baseline edition of the research program. It replaces the two-volume arrangement of 10 November 2026 by 41 papers in seven series (656 assembled pages; one paper is planned and not yet written), with program-level registers held outside the papers.
+This is the baseline edition of the research program. It replaces the two-volume arrangement of 10 November 2026 by 41 papers in seven series (657 assembled pages; one paper is planned and not yet written), with program-level registers held outside the papers.
 
 ## Where to start
 
 1. `PROGRAM/CHARTER.md` — aim, structure and responsibility.
 2. `PROGRAM/STANDARDS.md` — kinds of statement, proof homes, registry status values, computation and citation.
 3. `PROGRAM/PAPER_INDEX.md` — the papers. Paper A1 is the program overview.
-4. `PROGRAM/registers/` — theorem registry (395 rows), open problems, readiness, citations, component crosswalk, bridge-candidate map, gate map.
+4. `PROGRAM/registers/` — theorem registry (396 rows), open problems, readiness, citations, component crosswalk, bridge-candidate map, gate map.
 
 ## Layout
 
