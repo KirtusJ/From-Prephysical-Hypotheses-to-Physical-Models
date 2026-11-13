@@ -9,7 +9,7 @@ lean --version
 lean RecordWeights.lean
 ```
 
-The local run used the official Windows release from a separate tool cache. An existing Lean 4.19.0 executable can also check the file directly. [Official release](https://github.com/leanprover/lean4/releases/tag/v4.19.0)
+Director G’s supplements in this directory use Lean 4.19.0. Director Z’s edition proofs use their own Lean 4.12.0 toolchain. The local run used the official Windows release from a separate tool cache. An existing Lean 4.19.0 executable can also check the file directly. [Official release](https://github.com/leanprover/lean4/releases/tag/v4.19.0)
 
 | Lean statement | Scope of the check |
 |---|---|
@@ -60,3 +60,19 @@ The manuscript proves projective density and adaptive hitting. The physical orig
 [LoopCoinPreparation.lean](LoopCoinPreparation.lean) verifies physical coin pulses, equal-time base return, both signed sheet shifts, ring wrap and the action on an entire R packet. [ForceAliasRefinement.lean](ForceAliasRefinement.lean) verifies the odd-order unit classification from bounded doubled representatives and the independent unit-scale criterion. The continuum and apparatus arguments are in the [loop preparation](../Returning_loops_and_one_classical_ray.md) and [calibration](../Force_calibration_across_scales.md) papers.
 
 [ConfinedReturn.lean](ConfinedReturn.lean) proves the parity-compatible signed-area bound on a confined always-moving path, its saturation, and the exact cancellation of the common force kick for a reflected double lobe. The arbitrary even-duration optimum with balanced signs and the ancillary herald bound have separate analytic proofs. [Physical conventions and scope](../Confined_returns_and_quadrature.md)
+
+[MassGauge.lean](MassGauge.lean) checks the bare and quarter-sheet mass frames on complete signed histories with input preparation, arbitrary scalar kicks, variable stride, masks, and a sheet-unresolved squared read. The [bounded-speed replacement and real sheet source](../Local_mass_clock_and_common_ray.md) use additional analytic estimates.
+
+[PhaseContact.lean](PhaseContact.lean) checks both signed contact ports, their squared norms on real integer inputs, the correction at a blank child, and tree-transcript reconstruction up to global reversal. The chain-depth bound and source-independence test have separate proofs in the [contact supplement](../Phase_contact_and_shared_walks.md) and [network supplement](../Network_phase_and_probability_records.md).
+
+[CollisionRecords.lean](CollisionRecords.lean) proves first encounter and reflected versus transmitted labelled positions for the always-moving half-cell walk. [LocalOccupation.lean](LocalOccupation.lean) checks the adjacent-gate action on every two-orbital minor and the rational hopping determinants. The band approximations and hard-point limits are proved separately in the [occupation supplement](../Interacting_occupation_walk.md).
+
+[ContactComposition.lean](ContactComposition.lean) checks the one-particle identity and the two-particle path coefficients for the two rational rotations on four sites, including distinct double-occupation phases on the outer bonds. The general unit-phase selection and robustness estimates use these amplitudes and the [analytic port identities](../Occupation_contact_from_composition.md).
+
+[GaussString.lean](GaussString.lean) proves the ordered two-charge flux law, support size, and adjacent-hop update. The endpoint result extends over finite histories with spectator registers. The [electric-string paper](../Electric_string_quantum_and_classical_motion.md) gives the separate continuum and collision arguments.
+
+[StaircaseAbundance.lean](StaircaseAbundance.lean) constructs at least 2^k physical histories of a common length for every signed residue at both merging inputs of the staircase carrier. The [weight classification](../Counting_and_character_records.md) also assumes a single endpoint function and consistent continuation of arbitrary selected histories.
+
+The extended [staircase proof](StaircaseAbundance.lean) reaches every site and either rail of one parity with every signed gain, at a common time for that parity. It proves clock parity on arbitrary physical words as well. The [Z20 application](../Return_records_and_reversible_dynamics.md) combines the two parity equations analytically.
+
+[StringControl.lean](StringControl.lean) checks the two site-layout responses of the uniform separation energy, their difference for every occupied pair, and the diagonal contrast on each hopping edge. The [control and detector proof](../Electric_string_controls_and_probability.md) gives the Lie closure and the operational premises for probabilities.

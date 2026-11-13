@@ -1,0 +1,885 @@
+{
+  "protocol": "Shared localized launch and five force ticks before arm choice. Diagnostic reads both base variables, keeps every outcome, follows its measured rail with an oriented relative terminal score; sheet never measured. Flight arm omits reset.",
+  "geometry": "Line; integer departure x, signed Hadamard, incoming R; exact 2^t normalization. The initial ensemble gives half to persistent route counting and half to a localized physical sheet.",
+  "all_launches": [
+    {
+      "order": 3,
+      "launches_tested": 24,
+      "nonzero_origin_cases": 16,
+      "first_wrap_cases": 6
+    },
+    {
+      "order": 4,
+      "launches_tested": 18,
+      "nonzero_origin_cases": 12,
+      "first_wrap_cases": 6
+    },
+    {
+      "order": 5,
+      "launches_tested": 36,
+      "nonzero_origin_cases": 24,
+      "first_wrap_cases": 6
+    },
+    {
+      "order": 6,
+      "launches_tested": 24,
+      "nonzero_origin_cases": 16,
+      "first_wrap_cases": 6
+    },
+    {
+      "order": 8,
+      "launches_tested": 30,
+      "nonzero_origin_cases": 20,
+      "first_wrap_cases": 6
+    },
+    {
+      "order": 12,
+      "launches_tested": 42,
+      "nonzero_origin_cases": 28,
+      "first_wrap_cases": 6
+    }
+  ],
+  "all_outcomes": [
+    {
+      "order": 3,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 14
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 18
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 96,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 128,
+          "coherent_raw": 192,
+          "p": "5/32"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 18
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 14
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 160,
+          "p": "1/4"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 14
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 18
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 96,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 128,
+          "coherent_raw": 128,
+          "p": "1/8"
+        },
+        {
+          "n": 5,
+          "count_raw": 160,
+          "coherent_raw": 160,
+          "p": "5/64"
+        },
+        {
+          "n": 6,
+          "count_raw": 192,
+          "coherent_raw": 256,
+          "p": "7/128"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 14
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 18
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 96,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 128,
+          "coherent_raw": 192,
+          "p": "5/32"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 16
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 16
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 96,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 128,
+          "coherent_raw": 128,
+          "p": "1/8"
+        },
+        {
+          "n": 5,
+          "count_raw": 160,
+          "coherent_raw": 224,
+          "p": "3/32"
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "accepted_port": null,
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 16,
+          "coherent": 14
+        },
+        {
+          "coin": -1,
+          "paths": 16,
+          "coherent": 18
+        }
+      ],
+      "paths": 32,
+      "coherent": 32,
+      "prior_herald_probability": "1",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 32,
+          "coherent_raw": 32,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 64,
+          "coherent_raw": 64,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 96,
+          "coherent_raw": 96,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 128,
+          "coherent_raw": 128,
+          "p": "1/8"
+        },
+        {
+          "n": 5,
+          "count_raw": 160,
+          "coherent_raw": 160,
+          "p": "5/64"
+        },
+        {
+          "n": 6,
+          "count_raw": 192,
+          "coherent_raw": 192,
+          "p": "3/64"
+        },
+        {
+          "n": 7,
+          "count_raw": 224,
+          "coherent_raw": 288,
+          "p": "1/32"
+        }
+      ]
+    }
+  ],
+  "conditional_herald_and_reset": [
+    {
+      "order": 3,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 0
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 0,
+      "prior_herald_probability": "3/32",
+      "post_count_weight": "1",
+      "sheet_gram": [
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 0,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 0,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 0,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 24,
+          "coherent_raw": 0,
+          "p": "1/8"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 8
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 8,
+      "prior_herald_probability": "7/32",
+      "post_count_weight": "3/7",
+      "sheet_gram": [
+        8,
+        0,
+        -8,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 8,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 0,
+          "p": "3/28"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 8,
+          "p": "13/112"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 4
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 4,
+      "prior_herald_probability": "5/32",
+      "post_count_weight": "3/5",
+      "sheet_gram": [
+        4,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 4,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 6,
+          "p": "9/40"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 6,
+          "p": "3/20"
+        },
+        {
+          "n": 4,
+          "count_raw": 24,
+          "coherent_raw": 4,
+          "p": "7/80"
+        },
+        {
+          "n": 5,
+          "count_raw": 30,
+          "coherent_raw": 0,
+          "p": "3/64"
+        },
+        {
+          "n": 6,
+          "count_raw": 36,
+          "coherent_raw": 4,
+          "p": "1/32"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 0
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 0,
+      "prior_herald_probability": "3/32",
+      "post_count_weight": "1",
+      "sheet_gram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 0,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 0,
+          "p": "1/4"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 0,
+          "p": "3/16"
+        },
+        {
+          "n": 4,
+          "count_raw": 24,
+          "coherent_raw": 0,
+          "p": "1/8"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 6
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 6,
+      "prior_herald_probability": "3/16",
+      "post_count_weight": "1/2",
+      "sheet_gram": [
+        6,
+        0,
+        -4,
+        0,
+        2,
+        0,
+        -4,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 6,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 4,
+          "p": "1/6"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 6,
+          "p": "1/8"
+        },
+        {
+          "n": 4,
+          "count_raw": 24,
+          "coherent_raw": 0,
+          "p": "1/16"
+        },
+        {
+          "n": 5,
+          "count_raw": 30,
+          "coherent_raw": 6,
+          "p": "3/64"
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "accepted_port": [
+        1,
+        1
+      ],
+      "incoming_rail_populations": [
+        {
+          "coin": 1,
+          "paths": 6,
+          "coherent": 4
+        },
+        {
+          "coin": -1,
+          "paths": 0,
+          "coherent": 0
+        }
+      ],
+      "paths": 6,
+      "coherent": 4,
+      "prior_herald_probability": "5/32",
+      "post_count_weight": "3/5",
+      "sheet_gram": [
+        4,
+        0,
+        -2,
+        0,
+        2,
+        0,
+        -4,
+        0,
+        2,
+        0,
+        -2,
+        0
+      ],
+      "rows": [
+        {
+          "n": 1,
+          "count_raw": 6,
+          "coherent_raw": 4,
+          "p": "1/4"
+        },
+        {
+          "n": 2,
+          "count_raw": 12,
+          "coherent_raw": 4,
+          "p": "1/5"
+        },
+        {
+          "n": 3,
+          "count_raw": 18,
+          "coherent_raw": 8,
+          "p": "13/80"
+        },
+        {
+          "n": 4,
+          "count_raw": 24,
+          "coherent_raw": 4,
+          "p": "7/80"
+        },
+        {
+          "n": 5,
+          "count_raw": 30,
+          "coherent_raw": 4,
+          "p": "17/320"
+        },
+        {
+          "n": 6,
+          "count_raw": 36,
+          "coherent_raw": 0,
+          "p": "9/320"
+        },
+        {
+          "n": 7,
+          "count_raw": 42,
+          "coherent_raw": 4,
+          "p": "23/1280"
+        }
+      ]
+    }
+  ],
+  "alias_path_checks": {
+    "4": 1524,
+    "6": 2286,
+    "8": 2286,
+    "10": 2286,
+    "12": 2286,
+    "16": 2286
+  },
+  "equal_sheet_different_flight": [
+    {
+      "relative_sign": 1,
+      "sheet_gram": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "flight_p_right": "1"
+    },
+    {
+      "relative_sign": -1,
+      "sheet_gram": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "flight_p_right": "0"
+    }
+  ],
+  "shared_vs_redrawn": {
+    "weights": [
+      "1/2",
+      "1/10",
+      "2/5"
+    ],
+    "categories": [
+      "count",
+      "k=0",
+      "k=\u00b11"
+    ],
+    "bright_by_category": [
+      "1/4",
+      "1/2",
+      "1/4"
+    ],
+    "marginal": "11/40",
+    "persistent_pair": "13/160",
+    "independently_redrawn_pair": "121/1600",
+    "persistent_minus_redrawn": "9/1600"
+  },
+  "physical_repeat": [
+    {
+      "order": 3,
+      "marginal": "1/4",
+      "shared": "5/64",
+      "reset_independent": "1/16",
+      "difference": "1/64"
+    },
+    {
+      "order": 4,
+      "marginal": "1/4",
+      "shared": "3/32",
+      "reset_independent": "1/16",
+      "difference": "1/32"
+    },
+    {
+      "order": 5,
+      "marginal": "1/4",
+      "shared": "5/64",
+      "reset_independent": "1/16",
+      "difference": "1/64"
+    },
+    {
+      "order": 6,
+      "marginal": "1/4",
+      "shared": "5/64",
+      "reset_independent": "1/16",
+      "difference": "1/64"
+    },
+    {
+      "order": 8,
+      "marginal": "1/4",
+      "shared": "5/64",
+      "reset_independent": "1/16",
+      "difference": "1/64"
+    },
+    {
+      "order": 12,
+      "marginal": "1/4",
+      "shared": "5/64",
+      "reset_independent": "1/16",
+      "difference": "1/64"
+    }
+  ],
+  "wrong_incoming": [
+    {
+      "incoming": 1,
+      "fixed_positive_port": "1/8",
+      "reflected_port": "1/8"
+    },
+    {
+      "incoming": -1,
+      "fixed_positive_port": "1/4",
+      "reflected_port": "1/8"
+    }
+  ]
+}

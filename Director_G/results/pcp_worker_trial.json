@@ -64,5 +64,240 @@
       "child": "incorrect/incomplete",
       "parent": "correct; checked inverse 4 and independently rejected child response"
     }
+  },
+  "codex_subagent_delegates_to_pcp_grandchild": {
+    "host": "Codex collaboration API, native Windows PCP Python host 1.0.22 and separate Rust 1.0.22 replay.",
+    "hierarchy": [
+      "/root/calibration_assessor",
+      "/root/calibration_assessor/signed_staircase_audit"
+    ],
+    "handoff": "Codex collaboration.spawn_agent succeeded on the parent path; roles are declared in PCP. No second independent PCP-provider model invocation was made.",
+    "question": "On the 24-site ring choose representatives x\u2208{0,\u2026,23}, use departure gain g(x)=floor(x/2) mod 6 and a minus sign exactly on L\u2192L. From (0,R) compare the two fixed chronological words RRLLR and LLRRR. Determine their signed terminal gains in \u03bc12 (write exponent relative to \u03b612=e^(2\u03c0i/12) with each sheet gain unit \u03b612\u00b2), their common final base/rail, and the relative gain of the first word divided by the second. List departure positions and Hadamard signs.",
+    "question_sha256": "ea1945fbc05cc0674a2f70b72f5937eb9d055f978a5e01bd3342aef87f680433",
+    "parent_receipt_sha256": "bd7de1b5dc4d08bbd86066ba6db7046a77d7574c33534b8d0433a78b2930055f",
+    "child_receipt_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+    "parent": {
+      "events": 34,
+      "head": "f89cef4b69edb3c554fde9d48f3877d7f2839888890df008c05ca957a05554e7",
+      "register_sha256": "c7769ab0f98db643f568d36ff6bd711901c7d520dd6513211edd2e93e6c4534b",
+      "result_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+      "read_back_sha256": "17b18b4007c53e5878f88a5e5724c07baf8f05d3ceef6d3205026637e0670507",
+      "verifier_exit": 1,
+      "guard_problems": 0,
+      "review_state": "CLOSED_COMPLETE"
+    },
+    "child": {
+      "events": 20,
+      "head": "66d5c6525ceceb552f949fc2415aedc2c815443c7dc925960e21592eb4ad7fa4",
+      "register_sha256": "5a09dfb697674fab0809c458148fe0f2be4e108aedd24e6d571f6427f3e37d7a",
+      "result_sha256": "87c36e8ece11a12f1fccf1e1721418924930a4234950d2be2372f3bfa57a7cc8",
+      "read_back_sha256": "87c36e8ece11a12f1fccf1e1721418924930a4234950d2be2372f3bfa57a7cc8",
+      "verifier_exit": 0,
+      "guard_problems": 0,
+      "review_state": "CLOSED_COMPLETE"
+    },
+    "supervisor_readback": "After child FINAL_ANSWER and host collaboration.list_agents reported completed, parent opened child receipt/calculation, verified object bytes, compared all word fields and both question files, and reran Rust verification on both registers.",
+    "calculation": {
+      "first": {
+        "word": "RRLLR",
+        "departures": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "sheet_terms": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "sheet": 1,
+        "exponent": 8,
+        "port": [
+          1,
+          "R"
+        ]
+      },
+      "second": {
+        "word": "LLRRR",
+        "departures": [
+          0,
+          23,
+          22,
+          23,
+          0
+        ],
+        "sheet_terms": [
+          0,
+          5,
+          5,
+          5,
+          0
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "sheet": 3,
+        "exponent": 0,
+        "port": [
+          1,
+          "R"
+        ]
+      },
+      "ratio_exponent": 8,
+      "reverse_ratio_exponent": 4
+    },
+    "limitation": "Native Rust parent exit 1 marks the accurately relayed adoption as attention. Both chains and guard replays pass, both reviews closed and both tasks ended. Actor authentication remains DECLARED. Build-17 Enterprise adapter cards and build-22 native method have distinct method releases; kernel cards are byte-identical.",
+    "workflow": "Send the actual coordinate convention and a bounded task. Keep the parent responsible for independently recomputing the answer and checking the returned object after child exit. A spare collaboration slot was needed; an extra reviewer dispatch during the trial hit the agent thread limit."
+  },
+  "recursion_limits_and_matched_prefix_probe": {
+    "test": "One bounded matched arithmetic probe; Codex director is depth zero.",
+    "question": "Start with a sharp right rail, pointer 0, three independent fair tape bits on a cyclic tape. Each tick SWAPS the current rail with the bit at the pointer, outputs the new rail, then advances the pointer. For the length-five word RLRRL give its exact probability for this reversible tape, the probability under five fresh fair choices, and the joint distribution of the fourth and fifth directions conditional on the first direction being R. Explicitly distinguish reading a cell and leaving its content unchanged. Provide all four conditional bins in order RR, RL, LR, LL, with exact fractions.",
+    "question_bytes": 594,
+    "question_sha256": "d08ea6a986b5a5de3507bada97cb892b31f7dc4b11e577536d4b3fb05ae7ec9f",
+    "oracle": {
+      "ordered_bins": [
+        "RR",
+        "RL",
+        "LR",
+        "LL"
+      ],
+      "swap_word": "0",
+      "swap_conditional": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "fresh_word": "1/32",
+      "fresh_conditional": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "read_only_word": "1/8",
+      "read_only_conditional": [
+        "1/2",
+        "1/2",
+        "0",
+        "0"
+      ]
+    },
+    "direct_tree": {
+      "leaf_name": "/root/calibration_assessor/signed_staircase_audit/tape_depth_three",
+      "next_spawn": "collab spawn failed: agent thread limit reached",
+      "occupied_collaboration_roles": 4,
+      "successful_worker_depth": 3,
+      "total_seconds": 374.184808,
+      "depth1_register_scope_seconds": 318.058755,
+      "parent_arithmetic_process_ms": 259,
+      "leaf_first_result_correct": true,
+      "parent_corrections": [],
+      "verified_handoffs": "Both supervising workers read their child after its direct turn completed. The director checked the three receipt digests, question bytes, frozen result and all register heads.",
+      "portable_receipt_sha256": {
+        "depth1": "41c90b4aa453164ef30fbb4420ef6da9fad3fe8b08fb9162ba00a6e1f7df9d36",
+        "depth2": "93a3f3ff19f2fcbf3c661b1ec91935a5c947c81485cefb4e4ad0e65b3cd8de82",
+        "depth3": "4ddfd780f781cdf801e01496731f35f8fc14ea0f0a5c8e68b77533e126f88e9a"
+      },
+      "replay": [
+        {
+          "role": "nested/depth1",
+          "events": 23,
+          "head": "d0755fabbad6624271825114c23e7df72b0e6efbb417ed859fb8eea81a741863",
+          "register_sha256": "e32f5d26ee88e6c846f031eaaeb4ab18706e6a691348d26ee74191f574a771d4",
+          "rust_exit": 1,
+          "guard_problems": 0
+        },
+        {
+          "role": "nested/depth2",
+          "events": 22,
+          "head": "33209508370ab6882f378e09bfdbf6534614fb2fe15e24158e12e4293ff7dfda",
+          "register_sha256": "78d5587f0f491e0f7770dcc88ddc14a815547b531e9d56828839ab6397e49f80",
+          "rust_exit": 0,
+          "guard_problems": 0
+        },
+        {
+          "role": "nested/depth3",
+          "events": 11,
+          "head": "a8f848fc55087bfd596a9c515a57f6cbb2cd4a19affc7713a3d8d484d6e0a1f4",
+          "register_sha256": "07be4c58a48b58b9276584e0592fbf34babcf1dd7accfc3357c40e5d8fdda20e",
+          "rust_exit": 1,
+          "guard_problems": 0
+        }
+      ],
+      "status": "The native Rust status commands for depth 1 and depth 3 each reported MEDIUM for relayed adoption. Depth 2 returned zero. A diagnostic guest failed to start on the first separate status attempt; the staged second run returned the observed status text."
+    },
+    "flat": {
+      "seconds": 20.1906992,
+      "run_head": "39ceabb7fd91e097ac4c6c5f43506710ac6047998ee5bbd6a9a2bfe79c1ae351",
+      "result_sha256": "1470943be9494fec3537424af6a9ef3f88d33f59710d0ac75b8ff3075f49b45c",
+      "reply": "A **swap** puts the previous rail value into the cell; it does **not** leave the cell unchanged.\n\nWrite the initial tape bits as \\(a,b,c\\). Starting with rail \\(R\\), the first five outputs are\n\\[\na,\\ b,\\ c,\\ R,\\ a.\n\\]\nThus the fifth direction must equal the first.\n\n- **Reversible swap tape:** \\(P(RLRRL)=0\\).\n- **Five fresh independent fair choices:** \\(P(RLRRL)=1/32\\).\n\nConditional on the first direction being \\(R\\), the fourth and fifth are both \\(R\\). The requested conditional bins are:\n\n| Bin | RR | RL | LR | LL |\n|---|---:|---:|---:|---:|\n| Probability | \\(1/1\\) | \\(0/1\\) | \\(0/1\\) | \\(0/1\\) |\n\nBy contrast, **reading each cell while leaving its content unchanged** would produce \\(a,b,c,a,b\\), giving \\(P(RLRRL)=1/8\\). That is a different operation.\n\nDerived directly from the supplied swap rule; no tools used.",
+      "replay_events": 7,
+      "replay_exit": 0,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 8960,
+        "input_tokens": 11157,
+        "output_tokens": 424,
+        "reasoning_output_tokens": 176
+      },
+      "adjudication": "Correct swap and fresh target probabilities, four requested swap conditional bins, and read-only word probability. Fresh/read-only conditional tables were not expressly enumerated in this reply."
+    },
+    "hosted_extension": {
+      "commissioned_from_depth": 3,
+      "model_depths": [
+        4,
+        5
+      ],
+      "depth4": "Hosted Codex CLI",
+      "depth5": "Offline Qwen2.5 0.5B Q4_0",
+      "canonical_attempt": "20261113T202049901017Z",
+      "receipt": "cf0d9b91e9fa958d2396",
+      "exact_mcp_argument": true,
+      "calls": 1,
+      "transport_verified": true,
+      "register_heads": [
+        "30726d159c0ff9f8a7bbde391e2ba2d2a2f021095fa048e002afe7677eef8a96",
+        "93be418582234cebaccd4f30e767e0f038903212a4fcb2730356003de34db92f"
+      ],
+      "hosted_wall_s": 47.1093194,
+      "inner_cli_wall_s": 37.3317895,
+      "offline_wall_s": 11.9180322,
+      "local_process_cpu_only_s": {
+        "cli": 3.03125,
+        "offline": 20.484375
+      },
+      "usage_hosted": {
+        "input_tokens": 40700,
+        "cached_input_tokens": 35712,
+        "output_tokens": 676,
+        "reasoning_output_tokens": 129
+      },
+      "offline_prompt_tokens": 534,
+      "offline_evaluation_runs": 58,
+      "hosted_first_reply": "Receipt ID: `cf0d9b91e9fa958d2396`\n\nThe consultation\u2019s answer is incorrect. Directly tracking the swaps, let the initial tape bits be \\(a,b,c\\). Starting with rail \\(R\\), the five outputs are\n\\[\na,\\ b,\\ c,\\ R,\\ a.\n\\]\nThe first swap stores the initial \\(R\\) in cell 0; the fourth swap retrieves it.\n\nThus:\n\n- **Reversible tape:** \\(P(RLRRL)=0\\), because the first and fifth outputs must match.\n- **Five fresh fair choices:** \\(P(RLRRL)=1/32\\).\n\nConditional on the first output being \\(R\\), the joint distribution of the fourth and fifth outputs is:\n\n| Model | RR | RL | LR | LL |\n|---|---:|---:|---:|---:|\n| Swap tape | \\(1\\) | \\(0\\) | \\(0\\) | \\(0\\) |\n| Fresh fair choices | \\(1/4\\) | \\(1/4\\) | \\(1/4\\) | \\(1/4\\) |\n\n**Reading while leaving the cell unchanged is a different rule.** It would produce \\(a,b,c,a,b\\), giving \\(P(RLRRL)=1/8\\) and conditional bins \\((1/2,1/2,0,0)\\). A swap instead writes the previous rail into the visited cell.",
+      "offline_first_reply": "The exact probability for the reversible tape is 1/2^5 = 1/32. The probability under five fresh fair choices is 1/32. The joint distribution of the fourth and fifth directions conditional on the first direction being R is 1/32. [end of text]",
+      "adjudication": {
+        "hosted": "Correct target probabilities, all conditional bins, swap and read-only mechanisms, and actual consultation receipt. It rejected the child's erroneous swap probability.",
+        "offline": "Only the fresh 1/32 was correct. It gave 1/32 for the swap, supplied one scalar in place of four conditional bins, and omitted the read-only distinction."
+      },
+      "portable_receipt_sha256": "0dd0305f9201dd58d6a5d400548a72bcdad36f6ff38d07cff94f7c7b330eaf2d"
+    },
+    "decision": "For a finite arithmetic or worktree check, start with one worker and a deterministic oracle. A second level has paid off for a different representation or an independent falsifier, as in the explicit signed-word computation and the shorter Lean construction. In this matched trial, extra identical reviews produced no mathematical correction until the small offline model introduced an error. Use additional recursion when the child can name an independent task that could change the conclusion. Stop escalating once direct evidence and an oracle settle the issue. The active native-thread ceiling differed from the total across providers. This is one probe; agent context, register setup, different reporting scopes, host load and concurrent work preclude a universal latency or token threshold. No model-side native-tree token usage, monetary spend or remote CPU measured."
   }
 }

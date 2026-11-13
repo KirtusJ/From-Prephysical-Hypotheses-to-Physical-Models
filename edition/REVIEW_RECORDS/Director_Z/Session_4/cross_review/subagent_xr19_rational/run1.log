@@ -1,0 +1,56 @@
+A0                                 met=     40 failed=    0 measured=     0
+A1                                 met=     40 failed=    0 measured=     0
+A2                                 met=     40 failed=    0 measured=     0
+A3                                 met=     40 failed=    0 measured=     0
+A4                                 met=     39 failed=    0 measured=     0
+A5                                 met=    200 failed=    0 measured=     0
+A6                                 met=     42 failed=    0 measured=     0
+A6_hypothesis                      met=     42 failed=    0 measured=     0
+A7                                 met=     42 failed=    0 measured=     0
+A8                                 met=      0 failed=    0 measured=     6
+B0                                 met=      1 failed=    0 measured=     0
+B1                                 met=      1 failed=    0 measured=     0
+B2                                 met=      6 failed=    0 measured=     0
+B3_column                          met=   2214 failed=    0 measured=     0
+B3_delta                           met=   2214 failed=    0 measured=     0
+B3_f>=bound                        met=   2214 failed=    0 measured=     0
+B3_hypothesis                      met=   2214 failed= 3786 measured=     0
+    FAIL [0, 0, np.float64(0.016357805833376118), np.float64(0.7258448199461922)]
+    FAIL [1, 1, np.float64(0.002681995539531231), np.float64(0.4570529172614113)]
+    FAIL [3, 0, np.float64(0.03816794464535328), np.float64(0.5374620064987341)]
+B3_z<=a                            met=   2214 failed=    0 measured=     0
+B4                                 met=      0 failed=    0 measured=     1
+B5                                 met=      2 failed=    0 measured=     0
+B6_trace_decreasing_nonvacuous     met=   4512 failed=    0 measured=     0
+B6_trace_preserving_nonvacuous     met=   4497 failed=    0 measured=     0
+C0                                 met=     15 failed=    1 measured=     0
+    FAIL [10, 6]
+C1                                 met=     15 failed=    0 measured=     0
+C2                                 met=     15 failed=    0 measured=     0
+C3                                 met=     15 failed=    0 measured=     0
+C4                                 met=     10 failed=    0 measured=     0
+C4_oddB                            met=      0 failed=    0 measured=     3
+C5                                 met=      0 failed=    0 measured=     6
+C6                                 met=     13 failed=    0 measured=     0
+C7                                 met=      4 failed=    0 measured=     0
+D0                                 met=     20 failed=    0 measured=     0
+D1                                 met=     20 failed=    0 measured=     0
+D2                                 met=     20 failed=    0 measured=     0
+D3_nonvacuous                      met=  49037 failed=    0 measured=     0
+D3_vacuous_bound>=2                met=      0 failed=    0 measured=  8030
+D4                                 met=      5 failed=    0 measured=     0
+D4_outside_hypothesis              met=      0 failed=    0 measured=    15
+D5                                 met=     20 failed=    0 measured=     0
+D6                                 met=      0 failed=    0 measured=     4
+D7                                 met=   2000 failed=    0 measured=     0
+E1                                 met=      1 failed=    0 measured=     0
+E2                                 met=      1 failed=    0 measured=     0
+E2_hypothesis                      met=      1 failed=    0 measured=     0
+E3                                 met=      4 failed=    0 measured=     0
+E3_below_stated_range              met=      0 failed=    0 measured=     3
+E4                                 met=   3000 failed=    0 measured=     0
+TOTAL {'met': 74830, 'failed': 3787, 'measured': 8068}
+
+real	0m9.219s
+user	0m9.378s
+sys	0m0.024s

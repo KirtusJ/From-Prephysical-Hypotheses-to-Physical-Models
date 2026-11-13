@@ -1,0 +1,1551 @@
+{
+  "cases": [
+    {
+      "order": 5,
+      "walsh_example": [
+        16,
+        63,
+        65
+      ],
+      "walsh_checks": [
+        {
+          "K": 128,
+          "coarse_success": "4225/16384",
+          "acted_idle_anchor": [
+            16,
+            63,
+            0,
+            0
+          ],
+          "all_complement_numerator": 12159,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "624629412225/4398046511104",
+            "624629412225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "4225/16384",
+          "acted_idle_anchor": [
+            -63,
+            16,
+            0,
+            0
+          ],
+          "all_complement_numerator": 12159,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "624629412225/4398046511104",
+            "624629412225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "4225/16384",
+          "acted_idle_anchor": [
+            0,
+            0,
+            65,
+            0
+          ],
+          "all_complement_numerator": 12159,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "624629412225/4398046511104",
+            "624629412225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "4225/16384",
+          "acted_idle_anchor": [
+            95,
+            110,
+            195,
+            -260
+          ],
+          "all_complement_numerator": 364770,
+          "input_squared_norm": 30,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "624629412225/4398046511104",
+            "624629412225/4398046511104"
+          ]
+        }
+      ],
+      "synchronized_integer_record_prefixes": [
+        {
+          "all_bright": 1,
+          "joint_bright": "1/2",
+          "first_dark_after_prefix": "1/2",
+          "conditional_relation": 0.3995717921125964
+        },
+        {
+          "all_bright": 2,
+          "joint_bright": "3/8",
+          "first_dark_after_prefix": "1/8",
+          "conditional_relation": 0.5321920568402398
+        },
+        {
+          "all_bright": 4,
+          "joint_bright": "35/128",
+          "first_dark_after_prefix": "5/128",
+          "conditional_relation": 0.728301562364173
+        },
+        {
+          "all_bright": 8,
+          "joint_bright": "1616350138567/7604080640000",
+          "first_dark_after_prefix": "282416495789/38020403200000",
+          "conditional_relation": 0.9328673775136163
+        },
+        {
+          "all_bright": 12,
+          "joint_bright": "1130893051266554607885181/5646683826135040000000000",
+          "first_dark_after_prefix": "9096567464424628748047/5646683826135040000000000",
+          "conditional_relation": 0.9858705489730731
+        }
+      ],
+      "coherent_comparator": [
+        {
+          "reads": 1,
+          "rational": [
+            96,
+            247,
+            265
+          ],
+          "angle_error": 0.0565366346324101,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "70225/262144",
+          "expected_gate_calls": 4.732915628337487,
+          "retry_pair_cap_per_gate": 3,
+          "per_gate_timeout": 0.1643459163818605,
+          "literal_one_gate_attempt_per_read_success_log10": -0.5720481740780459,
+          "gate_completed_retained_yield": 0.5,
+          "gate_completed_correct_mass": 0.199840223013169,
+          "wrong_given_accepted": 0.600319553973662,
+          "wrong_to_correct_upper": 2.726706626730748,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.18113207547169805,
+              0.46603773584905667
+            ],
+            [
+              -3.122502256758253e-17,
+              -3.3277111787671875e-17
+            ]
+          ],
+          "timed_joint_correct_lower": 0.1669972984321144
+        },
+        {
+          "reads": 4,
+          "rational": [
+            96,
+            247,
+            265
+          ],
+          "angle_error": 0.0565366346324101,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "70225/262144",
+          "expected_gate_calls": 4.732915628337487,
+          "retry_pair_cap_per_gate": 6,
+          "per_gate_timeout": 0.03689264429357391,
+          "literal_one_gate_attempt_per_read_success_log10": -2.2881926963121835,
+          "gate_completed_retained_yield": 0.2734375,
+          "gate_completed_correct_mass": 0.1993616575054335,
+          "wrong_given_accepted": 0.2709059382658432,
+          "wrong_to_correct_upper": 0.8637214008628771,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.29106702279583996,
+              0.7598907970654768
+            ],
+            [
+              -0.3974831825696957,
+              0.32073066337599865
+            ]
+          ],
+          "timed_joint_correct_lower": 0.16994174264093242
+        },
+        {
+          "reads": 16,
+          "rational": [
+            96,
+            247,
+            265
+          ],
+          "angle_error": 0.0565366346324101,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "70225/262144",
+          "expected_gate_calls": 4.732915628337487,
+          "retry_pair_cap_per_gate": 11,
+          "per_gate_timeout": 0.0030589653898585147,
+          "literal_one_gate_attempt_per_read_success_log10": -9.152770785248734,
+          "gate_completed_retained_yield": 0.1980033501899966,
+          "gate_completed_correct_mass": 0.19745882846544746,
+          "wrong_given_accepted": 0.0027500631884593593,
+          "wrong_to_correct_upper": 0.008695904225174907,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.30986427455274934,
+              0.9487831804160395
+            ],
+            [
+              -0.8044442808408278,
+              0.5856152283270175
+            ]
+          ],
+          "timed_joint_correct_lower": 0.18779451291028246
+        },
+        {
+          "reads": 64,
+          "rational": [
+            320,
+            999,
+            1049
+          ],
+          "angle_error": 0.004165781511097366,
+          "guaranteed_chord_upper": 0.015625,
+          "walsh_capacity": 2048,
+          "forward_walsh_H_layers": 22,
+          "one_attempt_gate_success": "1100401/4194304",
+          "expected_gate_calls": 4.811614129758151,
+          "retry_pair_cap_per_gate": 17,
+          "per_gate_timeout": 0.000179499897815117,
+          "literal_one_gate_attempt_per_read_success_log10": -37.190971406110116,
+          "gate_completed_retained_yield": 0.1999444757153985,
+          "gate_completed_correct_mass": 0.19994447571472468,
+          "wrong_given_accepted": 3.3700941262615855e-12,
+          "wrong_to_correct_upper": 8.029701461143038e-12,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.30901699437364455,
+              0.9510565162931284
+            ],
+            [
+              -0.809016994370238,
+              0.5877852522885829
+            ]
+          ],
+          "timed_joint_correct_lower": 0.19764751488531732
+        },
+        {
+          "reads": 256,
+          "rational": [
+            20992,
+            63855,
+            67217
+          ],
+          "angle_error": 0.003455951272282709,
+          "guaranteed_chord_upper": 0.00390625,
+          "walsh_capacity": 131072,
+          "forward_walsh_H_layers": 34,
+          "one_attempt_gate_success": "4518125089/17179869184",
+          "expected_gate_calls": 4.802433276100913,
+          "retry_pair_cap_per_gate": 23,
+          "per_gate_timeout": 9.298952389424941e-06,
+          "literal_one_gate_attempt_per_read_success_log10": -148.4957700939248,
+          "gate_completed_retained_yield": 0.19984718026863735,
+          "gate_completed_correct_mass": 0.19984718026863735,
+          "wrong_given_accepted": 1.8168391435755373e-47,
+          "wrong_to_correct_upper": 5.693234071512937e-47,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.30901699437494734,
+              0.9510565162951535
+            ],
+            [
+              -0.8090169943749475,
+              0.587785252292473
+            ]
+          ],
+          "timed_joint_correct_lower": 0.19937143769853077
+        },
+        {
+          "reads": 1024,
+          "rational": [
+            82944,
+            255583,
+            268705
+          ],
+          "angle_error": 0.00035376635243022925,
+          "guaranteed_chord_upper": 0.0009765625,
+          "walsh_capacity": 524288,
+          "forward_walsh_H_layers": 38,
+          "one_attempt_gate_success": "72202377025/274877906944",
+          "expected_gate_calls": 4.807047887756157,
+          "retry_pair_cap_per_gate": 28,
+          "per_gate_timeout": 8.121144147077752e-07,
+          "literal_one_gate_attempt_per_read_success_log10": -594.5224598667447,
+          "gate_completed_retained_yield": 0.19999359239023998,
+          "gate_completed_correct_mass": 0.19999359239023998,
+          "wrong_given_accepted": 6.503548313279681e-189,
+          "wrong_to_correct_upper": 1.6353581015258883e-188,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.3090169943749473,
+              0.9510565162951535
+            ],
+            [
+              -0.8090169943749476,
+              0.587785252292473
+            ]
+          ],
+          "timed_joint_correct_lower": 0.1998272766867092
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "walsh_example": [
+        48,
+        55,
+        73
+      ],
+      "walsh_checks": [
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            48,
+            55,
+            0,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            -55,
+            48,
+            0,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            0,
+            0,
+            73,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            151,
+            62,
+            219,
+            -292
+          ],
+          "all_complement_numerator": 331650,
+          "input_squared_norm": 30,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        }
+      ],
+      "synchronized_integer_record_prefixes": [
+        {
+          "all_bright": 1,
+          "joint_bright": "1/2",
+          "first_dark_after_prefix": "1/2",
+          "conditional_relation": 0.28557385914865135
+        },
+        {
+          "all_bright": 2,
+          "joint_bright": "3/8",
+          "first_dark_after_prefix": "1/8",
+          "conditional_relation": 0.3805780021355843
+        },
+        {
+          "all_bright": 4,
+          "joint_bright": "35/128",
+          "first_dark_after_prefix": "5/128",
+          "conditional_relation": 0.521422616554246
+        },
+        {
+          "all_bright": 8,
+          "joint_bright": "71258320801990347/362001154673770496",
+          "first_dark_after_prefix": "4613100465991749/362001154673770496",
+          "conditional_relation": 0.7228834642246111
+        },
+        {
+          "all_bright": 12,
+          "joint_bright": "7692031773651046927/46336147798242623488",
+          "first_dark_after_prefix": "255056332305391337/46336147798242623488",
+          "conditional_relation": 0.8554975181789348
+        }
+      ],
+      "coherent_comparator": [
+        {
+          "reads": 1,
+          "rational": [
+            48,
+            55,
+            73
+          ],
+          "angle_error": 0.044342914771903,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 128,
+          "forward_walsh_H_layers": 14,
+          "one_attempt_gate_success": "5329/16384",
+          "expected_gate_calls": 4.0744980296490905,
+          "retry_pair_cap_per_gate": 2,
+          "per_gate_timeout": 0.212409515658346,
+          "literal_one_gate_attempt_per_read_success_log10": -0.48777421905482493,
+          "gate_completed_retained_yield": 0.5,
+          "gate_completed_correct_mass": 0.14278692957432568,
+          "wrong_given_accepted": 0.7144261408513486,
+          "wrong_to_correct_upper": 4.975047940862733,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.3287671232876712,
+              0.3767123287671233
+            ],
+            [
+              -2.0816681711721685e-17,
+              -1.7221414921107235e-17
+            ]
+          ],
+          "timed_joint_correct_lower": 0.1124576270211008
+        },
+        {
+          "reads": 4,
+          "rational": [
+            48,
+            55,
+            73
+          ],
+          "angle_error": 0.044342914771903,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 128,
+          "forward_walsh_H_layers": 14,
+          "one_attempt_gate_success": "5329/16384",
+          "expected_gate_calls": 4.0744980296490905,
+          "retry_pair_cap_per_gate": 5,
+          "per_gate_timeout": 0.037516879656993386,
+          "literal_one_gate_attempt_per_read_success_log10": -1.9510968762192997,
+          "gate_completed_retained_yield": 0.2734375,
+          "gate_completed_correct_mass": 0.14257649671405165,
+          "wrong_given_accepted": 0.47857738344575396,
+          "wrong_to_correct_upper": 2.8361900504704587,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.5260273972602739,
+              0.6027397260273973
+            ],
+            [
+              -0.05411897166447747,
+              0.396322011634453
+            ]
+          ],
+          "timed_joint_correct_lower": 0.1211803956375045
+        },
+        {
+          "reads": 16,
+          "rational": [
+            48,
+            55,
+            73
+          ],
+          "angle_error": 0.044342914771903,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 128,
+          "forward_walsh_H_layers": 14,
+          "one_attempt_gate_success": "5329/16384",
+          "expected_gate_calls": 4.0744980296490905,
+          "retry_pair_cap_per_gate": 10,
+          "per_gate_timeout": 0.002086001482649386,
+          "literal_one_gate_attempt_per_read_success_log10": -7.804387504877199,
+          "gate_completed_retained_yield": 0.15238718319844344,
+          "gate_completed_correct_mass": 0.14173786196927896,
+          "wrong_given_accepted": 0.06988331305590567,
+          "wrong_to_correct_upper": 0.2995625821809629,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.6211396729371058,
+              0.7500508484480465
+            ],
+            [
+              -0.18165531222146036,
+              0.896623825996963
+            ]
+          ],
+          "timed_joint_correct_lower": 0.13700721572583144
+        },
+        {
+          "reads": 64,
+          "rational": [
+            704,
+            903,
+            1145
+          ],
+          "angle_error": 0.011006272360977287,
+          "guaranteed_chord_upper": 0.015625,
+          "walsh_capacity": 2048,
+          "forward_walsh_H_layers": 22,
+          "one_attempt_gate_success": "1311025/4194304",
+          "expected_gate_calls": 4.199255544326005,
+          "retry_pair_cap_per_gate": 15,
+          "per_gate_timeout": 0.00015076385961357614,
+          "literal_one_gate_attempt_per_read_success_log10": -32.32313160036945,
+          "gate_completed_retained_yield": 0.14258100383151895,
+          "gate_completed_correct_mass": 0.14258052269264657,
+          "wrong_given_accepted": 3.3744949149309566e-06,
+          "wrong_to_correct_upper": 1.3431746056627373e-05,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.6234883356345954,
+              0.7818310266716598
+            ],
+            [
+              -0.22252106410646175,
+              0.9749236509931188
+            ]
+          ],
+          "timed_joint_correct_lower": 0.14120477933860723
+        },
+        {
+          "reads": 256,
+          "rational": [
+            11520,
+            14359,
+            18409
+          ],
+          "angle_error": 0.0029338199044095514,
+          "guaranteed_chord_upper": 0.00390625,
+          "walsh_capacity": 32768,
+          "forward_walsh_H_layers": 30,
+          "one_attempt_gate_success": "338891281/1073741824",
+          "expected_gate_calls": 4.16839613232776,
+          "retry_pair_cap_per_gate": 19,
+          "per_gate_timeout": 1.4717428098228614e-05,
+          "literal_one_gate_attempt_per_read_success_log10": -128.21490546516955,
+          "gate_completed_retained_yield": 0.14277846919302484,
+          "gate_completed_correct_mass": 0.14277846919302484,
+          "wrong_given_accepted": 1.3809974949318352e-23,
+          "wrong_to_correct_upper": 5.579377977629144e-23,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.6234898018587335,
+              0.7818314824680299
+            ],
+            [
+              -0.22252093395631456,
+              0.9749279121818235
+            ]
+          ],
+          "timed_joint_correct_lower": 0.142240528238318
+        },
+        {
+          "reads": 1024,
+          "rational": [
+            183296,
+            230103,
+            294185
+          ],
+          "angle_error": 0.0005448628399518096,
+          "guaranteed_chord_upper": 0.0009765625,
+          "walsh_capacity": 524288,
+          "forward_walsh_H_layers": 38,
+          "one_attempt_gate_success": "86544814225/274877906944",
+          "expected_gate_calls": 4.176133768447061,
+          "retry_pair_cap_per_gate": 24,
+          "per_gate_timeout": 8.921988460101829e-07,
+          "literal_one_gate_attempt_per_read_success_log10": -513.9443560595912,
+          "gate_completed_retained_yield": 0.1428462861079011,
+          "gate_completed_correct_mass": 0.1428462861079011,
+          "wrong_given_accepted": 3.6488239127612023e-93,
+          "wrong_to_correct_upper": 1.3818880906831985e-92,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.6234898018587335,
+              0.7818314824680297
+            ],
+            [
+              -0.22252093395631456,
+              0.9749279121818235
+            ]
+          ],
+          "timed_joint_correct_lower": 0.14271578008127986
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "walsh_example": [
+        48,
+        55,
+        73
+      ],
+      "walsh_checks": [
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            48,
+            55,
+            0,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            -55,
+            48,
+            0,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            0,
+            0,
+            73,
+            0
+          ],
+          "all_complement_numerator": 11055,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        },
+        {
+          "K": 128,
+          "coarse_success": "5329/16384",
+          "acted_idle_anchor": [
+            151,
+            62,
+            219,
+            -292
+          ],
+          "all_complement_numerator": 331650,
+          "input_squared_norm": 30,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "651273210225/4398046511104",
+            "651273210225/4398046511104"
+          ]
+        }
+      ],
+      "synchronized_integer_record_prefixes": [
+        {
+          "all_bright": 1,
+          "joint_bright": "1/2",
+          "first_dark_after_prefix": "1/2",
+          "conditional_relation": 0.24971232613392877
+        },
+        {
+          "all_bright": 2,
+          "joint_bright": "3/8",
+          "first_dark_after_prefix": "1/8",
+          "conditional_relation": 0.3325666443904939
+        },
+        {
+          "all_bright": 4,
+          "joint_bright": "35/128",
+          "first_dark_after_prefix": "5/128",
+          "conditional_relation": 0.45504235732588755
+        },
+        {
+          "all_bright": 8,
+          "joint_bright": "1297565303186907529/6606521072796311552",
+          "first_dark_after_prefix": "86320214503335467/6606521072796311552",
+          "conditional_relation": 0.6305991573823375
+        },
+        {
+          "all_bright": 12,
+          "joint_bright": "68608401788895317489/422817348658963939328",
+          "first_dark_after_prefix": "2770293396782120195/422817348658963939328",
+          "conditional_relation": 0.7597752946850977
+        }
+      ],
+      "coherent_comparator": [
+        {
+          "reads": 1,
+          "rational": [
+            224,
+            207,
+            305
+          ],
+          "angle_error": 0.039422719797326256,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "93025/262144",
+          "expected_gate_calls": 3.8179951625907016,
+          "retry_pair_cap_per_gate": 2,
+          "per_gate_timeout": 0.18960914860998357,
+          "literal_one_gate_attempt_per_read_success_log10": -0.44994024325808984,
+          "gate_completed_retained_yield": 0.49999999999999994,
+          "gate_completed_correct_mass": 0.12495143907610697,
+          "wrong_given_accepted": 0.7500971218477861,
+          "wrong_to_correct_upper": 6.072851029331881,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.36721311475409835,
+              0.3393442622950821
+            ],
+            [
+              -5.547631813981766e-17,
+              6.976732384194313e-18
+            ]
+          ],
+          "timed_joint_correct_lower": 0.10125950309529409
+        },
+        {
+          "reads": 4,
+          "rational": [
+            224,
+            207,
+            305
+          ],
+          "angle_error": 0.039422719797326256,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "93025/262144",
+          "expected_gate_calls": 3.8179951625907016,
+          "retry_pair_cap_per_gate": 5,
+          "per_gate_timeout": 0.030211306039962135,
+          "literal_one_gate_attempt_per_read_success_log10": -1.7997609730323594,
+          "gate_completed_retained_yield": 0.2734375,
+          "gate_completed_correct_mass": 0.12480586946695478,
+          "wrong_given_accepted": 0.5435671059494225,
+          "wrong_to_correct_upper": 3.9653031129175815,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.5875409836065573,
+              0.5429508196721312
+            ],
+            [
+              0.03150550927170103,
+              0.39875732330018815
+            ]
+          ],
+          "timed_joint_correct_lower": 0.10972367619475583
+        },
+        {
+          "reads": 16,
+          "rational": [
+            224,
+            207,
+            305
+          ],
+          "angle_error": 0.039422719797326256,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 512,
+          "forward_walsh_H_layers": 18,
+          "one_attempt_gate_success": "93025/262144",
+          "expected_gate_calls": 3.8179951625907016,
+          "retry_pair_cap_per_gate": 9,
+          "per_gate_timeout": 0.0026096551184707903,
+          "literal_one_gate_attempt_per_read_success_log10": -7.1990438921294375,
+          "gate_completed_retained_yield": 0.14460632231966564,
+          "gate_completed_correct_mass": 0.12422528495548178,
+          "wrong_given_accepted": 0.14094153725263614,
+          "wrong_to_correct_upper": 0.7207944662588123,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.6959162725867706,
+              0.6598859797866153
+            ],
+            [
+              0.03600547255529258,
+              0.859027048979766
+            ]
+          ],
+          "timed_joint_correct_lower": 0.11903832254384074
+        },
+        {
+          "reads": 64,
+          "rational": [
+            3456,
+            3367,
+            4825
+          ],
+          "angle_error": 0.013043375753056807,
+          "guaranteed_chord_upper": 0.015625,
+          "walsh_capacity": 8192,
+          "forward_walsh_H_layers": 26,
+          "one_attempt_gate_success": "23280625/67108864",
+          "expected_gate_calls": 3.882605771967033,
+          "retry_pair_cap_per_gate": 14,
+          "per_gate_timeout": 0.00013976460929125638,
+          "literal_one_gate_attempt_per_read_success_log10": -29.426256121848855,
+          "gate_completed_retained_yield": 0.12467069110995001,
+          "gate_completed_correct_mass": 0.12466020097810435,
+          "wrong_given_accepted": 8.414272634785516e-05,
+          "wrong_to_correct_upper": 0.00039249162427782233,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.7071033488082968,
+              0.70707536050637
+            ],
+            [
+              2.7988301926957594e-05,
+              0.9999158572736522
+            ]
+          ],
+          "timed_joint_correct_lower": 0.12354512358393639
+        },
+        {
+          "reads": 256,
+          "rational": [
+            13568,
+            13575,
+            19193
+          ],
+          "angle_error": 0.0002578933737911182,
+          "guaranteed_chord_upper": 0.00390625,
+          "walsh_capacity": 32768,
+          "forward_walsh_H_layers": 30,
+          "one_attempt_gate_success": "368371249/1073741824",
+          "expected_gate_calls": 3.914836125009311,
+          "retry_pair_cap_per_gate": 18,
+          "per_gate_timeout": 1.359609877040192e-05,
+          "literal_one_gate_attempt_per_read_success_log10": -118.94122068811578,
+          "gate_completed_retained_yield": 0.12499946792919124,
+          "gate_completed_correct_mass": 0.12499946792919124,
+          "wrong_given_accepted": 4.968773056622759e-18,
+          "wrong_to_correct_upper": 1.7866165089449414e-17,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.7071067811865475,
+              0.7071067811865477
+            ],
+            [
+              -1.8383286541246573e-16,
+              1.0
+            ]
+          ],
+          "timed_joint_correct_lower": 0.12456439462046472
+        },
+        {
+          "reads": 1024,
+          "rational": [
+            13568,
+            13575,
+            19193
+          ],
+          "angle_error": 0.0002578933737911182,
+          "guaranteed_chord_upper": 0.0009765625,
+          "walsh_capacity": 32768,
+          "forward_walsh_H_layers": 30,
+          "one_attempt_gate_success": "368371249/1073741824",
+          "expected_gate_calls": 3.914836125009311,
+          "retry_pair_cap_per_gate": 23,
+          "per_gate_timeout": 6.796331355933756e-07,
+          "literal_one_gate_attempt_per_read_success_log10": -475.7648827524631,
+          "gate_completed_retained_yield": 0.1249978717303537,
+          "gate_completed_correct_mass": 0.1249978717303537,
+          "wrong_given_accepted": 7.65332703704906e-71,
+          "wrong_to_correct_upper": 2.970511587003804e-70,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.7071067811865475,
+              0.7071067811865476
+            ],
+            [
+              -1.8369701987210297e-16,
+              1.0
+            ]
+          ],
+          "timed_joint_correct_lower": 0.12491088017015495
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "walsh_example": [
+        15,
+        8,
+        17
+      ],
+      "walsh_checks": [
+        {
+          "K": 32,
+          "coarse_success": "289/1024",
+          "acted_idle_anchor": [
+            15,
+            8,
+            0,
+            0
+          ],
+          "all_complement_numerator": 735,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "156125025/1073741824",
+            "156125025/1073741824"
+          ]
+        },
+        {
+          "K": 32,
+          "coarse_success": "289/1024",
+          "acted_idle_anchor": [
+            -8,
+            15,
+            0,
+            0
+          ],
+          "all_complement_numerator": 735,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "156125025/1073741824",
+            "156125025/1073741824"
+          ]
+        },
+        {
+          "K": 32,
+          "coarse_success": "289/1024",
+          "acted_idle_anchor": [
+            0,
+            0,
+            17,
+            0
+          ],
+          "all_complement_numerator": 735,
+          "input_squared_norm": 1,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "156125025/1073741824",
+            "156125025/1073741824"
+          ]
+        },
+        {
+          "K": 32,
+          "coarse_success": "289/1024",
+          "acted_idle_anchor": [
+            38,
+            1,
+            51,
+            -68
+          ],
+          "all_complement_numerator": 22050,
+          "input_squared_norm": 30,
+          "first_failed_then_recovered_joint_by_middle_record": [
+            "156125025/1073741824",
+            "156125025/1073741824"
+          ]
+        }
+      ],
+      "synchronized_integer_record_prefixes": [
+        {
+          "all_bright": 1,
+          "joint_bright": "1/2",
+          "first_dark_after_prefix": "1/2",
+          "conditional_relation": 0.1666195149841499
+        },
+        {
+          "all_bright": 2,
+          "joint_bright": "3/8",
+          "first_dark_after_prefix": "1/8",
+          "conditional_relation": 0.2220965021884268
+        },
+        {
+          "all_bright": 4,
+          "joint_bright": "35/128",
+          "first_dark_after_prefix": "5/128",
+          "conditional_relation": 0.304417170211889
+        },
+        {
+          "all_bright": 8,
+          "joint_bright": "6435/32768",
+          "first_dark_after_prefix": "429/32768",
+          "conditional_relation": 0.4233865606033472
+        },
+        {
+          "all_bright": 12,
+          "joint_bright": "787751245057213274319/4887389560203470962688",
+          "first_dark_after_prefix": "34249495049716249185/4887389560203470962688",
+          "conditional_relation": 0.5152666193806684
+        }
+      ],
+      "coherent_comparator": [
+        {
+          "reads": 1,
+          "rational": [
+            15,
+            8,
+            17
+          ],
+          "angle_error": 0.03364144934457053,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 32,
+          "forward_walsh_H_layers": 10,
+          "one_attempt_gate_success": "289/1024",
+          "expected_gate_calls": 4.5432525951557095,
+          "retry_pair_cap_per_gate": 3,
+          "per_gate_timeout": 0.15108138703551252,
+          "literal_one_gate_attempt_per_read_success_log10": -0.5494021138832641,
+          "gate_completed_retained_yield": 0.5,
+          "gate_completed_correct_mass": 0.08330975749207495,
+          "wrong_given_accepted": 0.83338048501585,
+          "wrong_to_correct_upper": 10.355870956907857,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.4411764705882353,
+              0.2352941176470588
+            ],
+            [
+              -3.9885087420310494e-17,
+              3.160816214711619e-17
+            ]
+          ],
+          "timed_joint_correct_lower": 0.07072320377658008
+        },
+        {
+          "reads": 4,
+          "rational": [
+            15,
+            8,
+            17
+          ],
+          "angle_error": 0.03364144934457053,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 32,
+          "forward_walsh_H_layers": 10,
+          "one_attempt_gate_success": "289/1024",
+          "expected_gate_calls": 4.5432525951557095,
+          "retry_pair_cap_per_gate": 6,
+          "per_gate_timeout": 0.031800543620109006,
+          "literal_one_gate_attempt_per_read_success_log10": -2.1976084555330564,
+          "gate_completed_retained_yield": 0.27343749999999994,
+          "gate_completed_correct_mass": 0.08323906997981341,
+          "wrong_given_accepted": 0.6955828297881109,
+          "wrong_to_correct_upper": 8.641088736269024,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.7058823529411766,
+              0.3764705882352942
+            ],
+            [
+              0.22283737024221445,
+              0.33217993079584784
+            ]
+          ],
+          "timed_joint_correct_lower": 0.07265087927665197
+        },
+        {
+          "reads": 16,
+          "rational": [
+            15,
+            8,
+            17
+          ],
+          "angle_error": 0.03364144934457053,
+          "guaranteed_chord_upper": 0.0625,
+          "walsh_capacity": 32,
+          "forward_walsh_H_layers": 10,
+          "one_attempt_gate_success": "289/1024",
+          "expected_gate_calls": 4.5432525951557095,
+          "retry_pair_cap_per_gate": 11,
+          "per_gate_timeout": 0.0023685024898728512,
+          "literal_one_gate_attempt_per_read_success_log10": -8.790433822132226,
+          "gate_completed_retained_yield": 0.1399653332078346,
+          "gate_completed_correct_mass": 0.08295691919868821,
+          "wrong_given_accepted": 0.40730381375575736,
+          "wrong_to_correct_upper": 4.188859602647061,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.8305765721492538,
+              0.44311963365907237
+            ],
+            [
+              0.4371691639243767,
+              0.6527430945917174
+            ]
+          ],
+          "timed_joint_correct_lower": 0.07981318048389982
+        },
+        {
+          "reads": 64,
+          "rational": [
+            3807,
+            2176,
+            4385
+          ],
+          "angle_error": 0.004339516781783792,
+          "guaranteed_chord_upper": 0.015625,
+          "walsh_capacity": 8192,
+          "forward_walsh_H_layers": 26,
+          "one_attempt_gate_success": "19228225/67108864",
+          "expected_gate_calls": 4.490122671229404,
+          "retry_pair_cap_per_gate": 16,
+          "per_gate_timeout": 0.00015866601924938335,
+          "literal_one_gate_attempt_per_read_success_log10": -34.741804279001116,
+          "gate_completed_retained_yield": 0.08528389632152135,
+          "gate_completed_correct_mass": 0.08330822855469197,
+          "wrong_given_accepted": 0.023165777503657732,
+          "wrong_to_correct_upper": 0.14012188022935324,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.863767770208039,
+              0.4977030700690483
+            ],
+            [
+              0.4954991182224275,
+              0.8552491981580271
+            ]
+          ],
+          "timed_joint_correct_lower": 0.08246226471498055
+        },
+        {
+          "reads": 256,
+          "rational": [
+            60775,
+            35328,
+            70297
+          ],
+          "angle_error": 0.0029509903122659775,
+          "guaranteed_chord_upper": 0.00390625,
+          "walsh_capacity": 131072,
+          "forward_walsh_H_layers": 34,
+          "one_attempt_gate_success": "4941668209/17179869184",
+          "expected_gate_calls": 4.476532307998989,
+          "retry_pair_cap_per_gate": 21,
+          "per_gate_timeout": 1.1054586706458532e-05,
+          "literal_one_gate_attempt_per_read_success_log10": -138.5334450462705,
+          "gate_completed_retained_yield": 0.08328690508009466,
+          "gate_completed_correct_mass": 0.08328690175624588,
+          "wrong_given_accepted": 3.990841982334623e-08,
+          "wrong_to_correct_upper": 2.6333041619605837e-07,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.8660253971615891,
+              0.5000000007776831
+            ],
+            [
+              0.4999999840455178,
+              0.8660253899546264
+            ]
+          ],
+          "timed_joint_correct_lower": 0.08305120197333984
+        },
+        {
+          "reads": 1024,
+          "rational": [
+            243375,
+            140288,
+            280913
+          ],
+          "angle_error": 0.0006924854650225409,
+          "guaranteed_chord_upper": 0.0009765625,
+          "walsh_capacity": 524288,
+          "forward_walsh_H_layers": 38,
+          "one_attempt_gate_success": "78912113569/274877906944",
+          "expected_gate_calls": 4.483342347732828,
+          "retry_pair_cap_per_gate": 26,
+          "per_gate_timeout": 8.090878147506571e-07,
+          "literal_one_gate_attempt_per_read_success_log10": -555.0040674527531,
+          "gate_completed_retained_yield": 0.08332310385715448,
+          "gate_completed_correct_mass": 0.08332310385715448,
+          "wrong_given_accepted": 2.976297643170297e-31,
+          "wrong_to_correct_upper": 1.9443039843622367e-30,
+          "signed_relative_cos_sin_by_held_power": [
+            [
+              0.8660254037844386,
+              0.5000000000000002
+            ],
+            [
+              0.4999999999999996,
+              0.8660254037844389
+            ]
+          ],
+          "timed_joint_correct_lower": 0.08325407017214402
+        }
+      ]
+    }
+  ],
+  "relabel_controls": [
+    {
+      "q": 5,
+      "untransported_unit": 2,
+      "correct_chirality_bright": 0.9999956615723744,
+      "wrong_chirality_bright": 0.09427072374696127,
+      "simultaneous_generator_relabel_preserves_every_rate": true,
+      "full_real_conjugation_preserves_every_rate": true
+    },
+    {
+      "q": 7,
+      "untransported_unit": 2,
+      "correct_chirality_bright": 0.999969715797895,
+      "wrong_chirality_bright": 0.38338121914406875,
+      "simultaneous_generator_relabel_preserves_every_rate": true,
+      "full_real_conjugation_preserves_every_rate": true
+    },
+    {
+      "q": 8,
+      "untransported_unit": 3,
+      "correct_chirality_bright": 0.9999535372429613,
+      "wrong_chirality_bright": 0.4931837988401967,
+      "simultaneous_generator_relabel_preserves_every_rate": true,
+      "full_real_conjugation_preserves_every_rate": true
+    },
+    {
+      "q": 12,
+      "untransported_unit": 5,
+      "correct_chirality_bright": 0.9998470388093781,
+      "wrong_chirality_bright": 0.7392135546464822,
+      "simultaneous_generator_relabel_preserves_every_rate": true,
+      "full_real_conjugation_preserves_every_rate": true
+    }
+  ],
+  "compositum": [
+    {
+      "orders": [
+        5,
+        7
+      ],
+      "second_power": 1,
+      "held_same_plane": true,
+      "rows": [
+        {
+          "records_per_sheet": 8,
+          "herald_yield_given_gates": 0.04202465469986464,
+          "good_joint_mass": 0.028563515816428697,
+          "wrong": 0.3203152763437055,
+          "product_cos_sin": [
+            -0.4804573380878195,
+            0.7096098467348383
+          ]
+        },
+        {
+          "records_per_sheet": 32,
+          "herald_yield_given_gates": 0.028612983037911384,
+          "good_joint_mass": 0.02853979069745688,
+          "wrong": 0.002558011527757232,
+          "product_cos_sin": [
+            -0.5506462853449999,
+            0.8335837381908723
+          ]
+        },
+        {
+          "records_per_sheet": 128,
+          "herald_yield_given_gates": 0.028445087121154955,
+          "good_joint_mass": 0.028445087120975703,
+          "wrong": 6.3016667737364795e-12,
+          "product_cos_sin": [
+            -0.5508969814532236,
+            0.8345732537177197
+          ]
+        }
+      ]
+    },
+    {
+      "orders": [
+        5,
+        7
+      ],
+      "second_power": -1,
+      "held_same_plane": true,
+      "rows": [
+        {
+          "records_per_sheet": 8,
+          "herald_yield_given_gates": 0.04202465469986464,
+          "good_joint_mass": 0.028563515816428697,
+          "wrong": 0.3203152763437055,
+          "product_cos_sin": [
+            0.8049062332909028,
+            0.29412810799875105
+          ]
+        },
+        {
+          "records_per_sheet": 32,
+          "herald_yield_given_gates": 0.028612983037911384,
+          "good_joint_mass": 0.02853979069745688,
+          "wrong": 0.002558011527757232,
+          "product_cos_sin": [
+            0.9354502641469272,
+            0.35072208862282944
+          ]
+        },
+        {
+          "records_per_sheet": 128,
+          "herald_yield_given_gates": 0.028445087121154955,
+          "good_joint_mass": 0.028445087120975703,
+          "wrong": 6.3016667737364795e-12,
+          "product_cos_sin": [
+            0.9362348706385383,
+            0.35137482407778503
+          ]
+        }
+      ]
+    },
+    {
+      "orders": [
+        8,
+        12
+      ],
+      "second_power": 1,
+      "held_same_plane": true,
+      "rows": [
+        {
+          "records_per_sheet": 8,
+          "herald_yield_given_gates": 0.03857130650307824,
+          "good_joint_mass": 0.010412730696344089,
+          "wrong": 0.7300394609263992,
+          "product_cos_sin": [
+            0.21789261564971252,
+            0.7605014264501351
+          ]
+        },
+        {
+          "records_per_sheet": 32,
+          "herald_yield_given_gates": 0.012828597568599135,
+          "good_joint_mass": 0.010400931706441493,
+          "wrong": 0.1892386014274779,
+          "product_cos_sin": [
+            0.25631541505751804,
+            0.9379826782098296
+          ]
+        },
+        {
+          "records_per_sheet": 128,
+          "herald_yield_given_gates": 0.010356796946903746,
+          "good_joint_mass": 0.010353869293453947,
+          "wrong": 0.0002826794292490982,
+          "product_cos_sin": [
+            0.25882941506603074,
+            0.965883839181567
+          ]
+        }
+      ]
+    },
+    {
+      "orders": [
+        8,
+        12
+      ],
+      "second_power": -1,
+      "held_same_plane": true,
+      "rows": [
+        {
+          "records_per_sheet": 8,
+          "herald_yield_given_gates": 0.03857130650307824,
+          "good_joint_mass": 0.010412730696344089,
+          "wrong": 0.7300394609263992,
+          "product_cos_sin": [
+            0.7658685049561829,
+            0.1982045526811756
+          ]
+        },
+        {
+          "records_per_sheet": 32,
+          "herald_yield_given_gates": 0.012828597568599135,
+          "good_joint_mass": 0.010400931706441493,
+          "wrong": 0.1892386014274779,
+          "product_cos_sin": [
+            0.9387646272718461,
+            0.2534365230209421
+          ]
+        },
+        {
+          "records_per_sheet": 128,
+          "herald_yield_given_gates": 0.010356796946903746,
+          "good_joint_mass": 0.010353869293453947,
+          "wrong": 0.0002826794292490982,
+          "product_cos_sin": [
+            0.9658838400437408,
+            0.2588294118486231
+          ]
+        }
+      ]
+    }
+  ],
+  "integer_only_primitive_target": [
+    {
+      "order": 5,
+      "denominator_grid": 16,
+      "selected": [
+        7,
+        24,
+        25
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "2953968/48828125",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 5,
+      "denominator_grid": 64,
+      "selected": [
+        1887,
+        6016,
+        6305
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "1017331368666098432/49819051969410953125",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 5,
+      "denominator_grid": 128,
+      "selected": [
+        7735,
+        23808,
+        25033
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "2569964336308609536/49151242530022646301965",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 7,
+      "denominator_grid": 16,
+      "selected": [
+        3,
+        4,
+        5
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "32248/546875",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 7,
+      "denominator_grid": 64,
+      "selected": [
+        3135,
+        3968,
+        5057
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "5376459295311551942318336/592036817550290248333457351",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 7,
+      "denominator_grid": 128,
+      "selected": [
+        3135,
+        3968,
+        5057
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "5376459295311551942318336/592036817550290248333457351",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 8,
+      "denominator_grid": 16,
+      "selected": [
+        207,
+        224,
+        305
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "5806998413538767424/74885669139562890625",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 8,
+      "denominator_grid": 64,
+      "selected": [
+        3367,
+        3456,
+        4825
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "7649096416061036052155510016/293750450579677734527587890625",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 8,
+      "denominator_grid": 128,
+      "selected": [
+        13575,
+        13568,
+        19193
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "9497576004341329502588175628800/18413778149056806083742386579640001",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 12,
+      "denominator_grid": 16,
+      "selected": [
+        15,
+        8,
+        17
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "38144394047760/582622237229761",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 12,
+      "denominator_grid": 64,
+      "selected": [
+        3807,
+        2176,
+        4385
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "438440073152636115945612429076505454080256/50539992417253607354119935106725761962890625",
+      "search_only_used_integers": true
+    },
+    {
+      "order": 12,
+      "denominator_grid": 128,
+      "selected": [
+        3807,
+        2176,
+        4385
+      ],
+      "winding_count": 1,
+      "certified_angle_error": "438440073152636115945612429076505454080256/50539992417253607354119935106725761962890625",
+      "search_only_used_integers": true
+    }
+  ],
+  "theorem": "On a retained cyclic sheet and a separate two-real-coordinate plane, coherently route T of a fixed generator on one arm and the rational R=(aI+bJ)/c on the other. Apply H to the arm before and after, accepting its plus output. The complete port pair is (T\u2297I\u00b1I\u2297R)/2. The commuting operators share joint sectors (k,s); T acts by exp(2\u03c0ik/q), J by s i. Born conditioning multiplies their weights by p_ks=(1+cos(2\u03c0k/q\u2212s\u03c6))/2. The localized real launch gives weight 1/(2q) per sector. For |\u03c6\u22122\u03c0/q|<\u03c0/q the maximizers are the two correlated pairs k=s mod q. Put G=cos\u00b2(delta/2), B=cos\u00b2((2\u03c0/q\u2212delta)/2) for delta=absolute angle error. After r retained plus records wrong/correct odds \u2264(q\u22121)(B/G)^r, correct joint mass G^r/q. Choosing angle error O(1/r) makes correct mass approach 1/q at this fixed order. At fixed nonzero angle mismatch G<1, insisting on indefinitely many bright records kills yield. For arbitrary input replace 1/q by its prior on the correlated subspace; zero initial overlap cannot be created. A single fresh localized read always has probability 1/2 and resetting every record gives 2^-r. A complete ordinary folded sheet preparation uncorrelated with the rebit initially has only half its weight in the wanted chiral relation.",
+  "readout": "After accepting, compare a held power T^d with I on the reference arm to obtain cosine contrast, or with the real signed quarter-turn J for sine contrast. Both survive global conjugation since s changes with k. Both can be negative; neither is an absolute choice of complex square root of -1. Two sheets calibrated on the SAME plane align their chiral signs and powers of their product yield cosine and sine on the joint cyclotomic order. Independent uncorrelated planes would not align those signs. Conditioned wrong mass \u03b7 perturbs any contrast by at most 2\u03b7. The operational field generated by these limiting contrasts is the real field Q(cos(2\u03c0/q),sin(2\u03c0/q)), the maximal real subfield of Q(zeta_lcm(q,4)); it does not give arbitrary complex numbers as probabilities. Repeated coherent synthesis and additional fields can extend the available apparatus.",
+  "gate": "For Pythagorean a\u00b2+b\u00b2=c\u00b2, pad K=2^ceil(log2(|a|+|b|)). Reuse the native Walsh-signed SELECT structure. Acted block: |a| labels implement sign(a)I, |b| labels sign(b)J; idle block: c labels implement I; all other labels flip the blank validity bit reversibly. Two full-index Walsh layers and one common projector onto flag-zero/index-zero realize success Kraus (c/K)(R direct-sum I). Full complement is retained as one outcome, never reading a distinguishing data/name flag. All code input states have the same pass probability p=c\u00b2/K\u00b2>1/8. For retry use the actual inverse W\u2020, with J\u2020=\u2212J; this SELECT need not be an involution. Alternating W\u2020/W and coarse anchor reads on a failed attempt gives residual (1\u2212p)(1\u22122p(1\u2212p))^N, expected 1+1/p calls when 0<p<1. The sheet shift is separately applied only after a successful rotation port, while the coherent comparison arms remain unread. Gate retries and timeout are separate from subsequent plus/minus read. The two arms need matched phase, timing and discarded-route information.",
+  "finite_apparatus": "Stereographic slope rounding with denominator m and an exact signed quarter-turn gives rational orthogonals within 1/m chord distance, including clocked idle blocks. A known finite circuit of L such plane rotations and signed permutations, with ordinary common projectors, changes its unconditional instrument probabilities by at most L/m in total variation by telescoping contractive unitaries and retaining an outcome register. General finite complex unitaries can be realified and decomposed into finitely many real plane rotations and signed permutations; synthesis needs addressable two-coordinate pairs and spectator matching. Finite rational programs give exact rational laws on rational localized real input, even when the named target limit has algebraic records. Conditional probabilities also need the original herald mass bounded away from zero. Compilation alone does not establish the probability law or choose an absolute field embedding.",
+  "grounding": "The fundamental angular target can be constructed as the smallest positive order-q turn relative to a chosen oriented circle. A physical synthesizer needs held addressable I,J and the fixed sheet stroke plus coherent controlled use. For the examples an additional finite program search uses only integer operations: enumerate rational rotations in the first quadrant, count crossings of the positive real ray under q powers, and require the nearest unwrapped return to have winding one. A final point with positive real part bounds angular error by 2*abs(Im(R^q))/q. Refining the grid yields arbitrary accuracy by density and the simple oriented order-q root. A finite grid and integer test need no numerical sine/cosine input. The quarter orientation and order are operational assumptions. Other instruments still require matched controls or a calibrated operationally equivalent apparatus. Only the relative sheet/reference chirality is measured. Complementing the real plane or simultaneously relabeling the entire sheet apparatus leaves the experiment invariant. Without the held comparison arm, native powers give ordered folded cosines; they do not themselves supply this synchronized reference or its heralded state preparation."
+}

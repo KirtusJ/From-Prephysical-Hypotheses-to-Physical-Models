@@ -2,7 +2,7 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-13-Z17, 13 November 2026
+Baseline FPHPM-BASELINE-2026-11-13-Z23, 13 November 2026
 
 Each paper has one folder under `PAPERS/` holding the assembled PDF, its parts and the available sources. `registers/PAPER_INDEX.csv` is the machine-readable form and adds the papers each one cites.
 
@@ -80,4 +80,4 @@ Each paper has one folder under `PAPERS/` holding the assembled PDF, its parts a
 | G7 | Transport, Holonomy and Monodromy as Bridge Candidates between Classical and Quantum Models | article | 18 | 15 |
 | G8 | Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule | article | 12 | 10 |
 | G9 | Reversible Steps on Gain Digraphs: Arc Structure, Complex Structure and the Ray Limit | article | 13 | 12 |
-| G10 | Histories as Events: the Order of the Pair Rule, First-Order Weights and Forces from Gains of Bounded Order | article | 31 | 24 |
+| G10 | Histories as Events: the Order of the Pair Rule, First-Order Weights and Forces from Gains of Bounded Order | article | 47 | 32 |

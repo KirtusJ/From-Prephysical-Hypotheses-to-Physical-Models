@@ -130,3 +130,14 @@ COMPUTATION/Lean/Mathlib/VslCertificates.lean with Mathlib v4.12.0,RAN_OK,not ap
 COMPUTATION/Lean/Mathlib/GaugeBlock.lean with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z16
 "Baseline_Additions/Multiset_Law: verify_multiset.py, verify_multiset_followup.py, explore.py",RAN_OK,yes,first program rerun byte-identical by the sub-agent; follow-up and exploration not rerun,edition Z17; needs python-flint
 COMPUTATION/Lean/Mathlib/MultisetBlock.lean with Mathlib v4.12.0,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z17
+Baseline_Additions: all programs with stored result files (26 completed reruns in fresh directories),RAN_OK,yes,26 of 26 result files byte-identical; gauge_bl.py identical apart from 24 timing fields,comb after edition Z17; see REVIEW_RECORDS/Director_Z/Session_4/comb/rerun/status.txt
+Baseline_Additions: verify_k4_additive_ratios.py,RAN_OK,yes,3 of 3 predicates; exact arithmetic,edition Z18
+COMPUTATION/Lean: four core files and eleven Mathlib files,RAN_OK,not applicable,all exit code 0; permitted axioms only; six warnings of unused local facts,rerun by the director at the comb
+Baseline_Additions/Multiset_Law: verify_multiset_abelian.py,RAN_OK,yes,"rerun in a fresh directory byte-identical, by the sub-agent",edition Z19; needs python-flint
+"COMPUTATION/Lean/Mathlib: PreimageSpan, VslStep3, VslNewton, SubmonoidFinite, SquareIsometry",RAN_OK,not applicable,"all exit code 0; axioms propext, Classical.choice, Quot.sound; one warning of an unused variable",rerun by the director for edition Z19
+Baseline_Additions/Vertex_Law: verify_vertexlaw.py,RAN_OK,yes,"rerun in a fresh directory byte-identical, by the sub-agent; a first result file is kept as superseded",edition Z20; needs python-flint
+COMPUTATION/Lean/Mathlib/VertexLaw.lean,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z20
+Baseline_Additions/Vertex_Law: verify_periodic.py,RAN_OK,yes,"rerun in a fresh directory byte-identical, by the sub-agent",edition Z21; needs python-flint
+COMPUTATION/Lean/Mathlib/RootsSum.lean,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z21
+COMPUTATION/Lean/Mathlib/Composition.lean,RAN_OK,not applicable,"exit code 0; axioms propext, Classical.choice, Quot.sound",rerun by the director for edition Z22
+Baseline_Additions/Vertex_Law: verify_return_weight.py,RAN_OK,yes,rerun in a fresh directory byte-identical; a first run crashed while writing its result and its partial file is kept,edition Z23; needs numpy

@@ -1,0 +1,132 @@
+{
+ "seed": 20261113,
+ "predicates": {
+  "D0": {
+   "built": 305,
+   "qualifying": 234,
+   "sizes": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    16
+   ],
+   "met": true
+  },
+  "D1": {
+   "failures": 0,
+   "met": true
+  },
+  "D2": {
+   "pair_start_instances": 6904,
+   "with_abundance": 6904,
+   "met": true
+  },
+  "D3": {
+   "instances": 8,
+   "with_abundance": 0,
+   "met": true
+  },
+  "M0": {
+   "met": true
+  },
+  "M1": {
+   "met": true
+  },
+  "M2": {
+   "met": true
+  },
+  "M3": {
+   "met": true
+  }
+ },
+ "micro": [
+  {
+   "name": "W(4,3) signs",
+   "q": 2,
+   "d": 3,
+   "pairs_with_m_lt_d": 6,
+   "m": [
+    2
+   ],
+   "Dhat_strongly_connected": true,
+   "r": 1,
+   "r0": 1,
+   "q0": 2,
+   "abundance": [
+    24,
+    24
+   ],
+   "M0": true,
+   "M1": true,
+   "unknowns": 8,
+   "inner_unknowns": 4,
+   "null_dim": 1,
+   "inner_singular_values": [
+    0.14476907070343992
+   ],
+   "inner_rank": 1,
+   "M2": true,
+   "M3": true
+  },
+  {
+   "name": "C6 conference signs",
+   "q": 2,
+   "d": 5,
+   "pairs_with_m_lt_d": 15,
+   "m": [
+    4
+   ],
+   "Dhat_strongly_connected": true,
+   "r": 1,
+   "r0": 1,
+   "q0": 2,
+   "abundance": [
+    90,
+    90
+   ],
+   "M0": true,
+   "M1": true,
+   "unknowns": 9,
+   "inner_unknowns": 4,
+   "null_dim": 1,
+   "inner_singular_values": [
+    0.10569725930560157
+   ],
+   "inner_rank": 1,
+   "M2": true,
+   "M3": true
+  },
+  {
+   "name": "W(4,3) switched in Z4",
+   "q": 4,
+   "d": 3,
+   "pairs_with_m_lt_d": 6,
+   "m": [
+    2
+   ],
+   "Dhat_strongly_connected": true,
+   "r": 1,
+   "r0": 1,
+   "q0": 4,
+   "abundance": [
+    24,
+    24
+   ],
+   "M0": true,
+   "M1": true,
+   "unknowns": 18,
+   "inner_unknowns": 7,
+   "null_dim": 1,
+   "inner_singular_values": [
+    0.1709466765335635
+   ],
+   "inner_rank": 1,
+   "M2": true,
+   "M3": true
+  }
+ ],
+ "all_met": true
+}

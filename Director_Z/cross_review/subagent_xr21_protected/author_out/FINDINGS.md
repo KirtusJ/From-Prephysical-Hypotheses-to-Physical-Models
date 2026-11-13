@@ -1,0 +1,3 @@
+- run2: 16 met / 0 failed / 6 measured; run1 order control retained (route Y gives (x,-y) in 40/40).
+- Lean 4.19.0: CoherentComparison.lean, HeraldedWeights.lean exit 0, no sorry; axioms propext, Quot.sound (equal_coordinate none).
+- author check_coherent_comparison.py rerun from copy: see byte comparison in report.

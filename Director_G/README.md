@@ -7,6 +7,19 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Electric-string controls and probability](Electric_string_controls_and_probability.md) | All finite pair analyzers in closure, an exact protected-port experiment, and a calibrated residue law predicting a different two-hop return |
+| [Return records and reversible dynamics](Return_records_and_reversible_dynamics.md) | Terminal sheet coarsening and autonomous recurrence select the signed-square staircase readout under explicit closure assumptions; short and long forward tests also separate permanent hop records in a finite electric string |
+| [Local electric string and records](Gauss_string_records.md) | Explicit link bits, adjacent pair creation, interference and causal receiver trials |
+| [Quantum binding and classical rebound](Electric_string_quantum_and_classical_motion.md) | A sourced linear force, a Dirichlet limit, a transverse classical collision and a four-site read of the phase reference |
+| [Contact phases from alternate gate sequences](Occupation_contact_from_composition.md) | Two occupied-port comparisons select the determinant on a four-mode line and quantify calibration errors |
+| [Contact at the two-particle band edge](Contact_threshold_on_the_ring.md) | Exact finite-ring threshold condition and a scaling that preserves the Dirichlet limit under weak contact phases |
+| [Hard-point quantum and classical motion](Interacting_occupation_walk.md) | Local occupation dynamics, an exact contact-sign discriminator, a scalar Dirichlet quantum limit and ordered classical collision trajectories |
+| [Moving contact and phase echo](Moving_contact_and_phase_echo.md) | A phase comparison between two continually moving distinguishable walkers, with observed interference and timed failure outcomes |
+| [Two-source phase and network records](Network_phase_and_probability_records.md) | A shared reference crosses the independent-source network bound in seven finite rational selector calls with all outcomes included |
+| [Local contact and shared complex walks](Phase_contact_and_shared_walks.md) | Timing and causal depth of aligning blank planes, local complex instruments and a counterexample for preloaded data |
+| [Local clock and common classical ray](Local_mass_clock_and_common_ray.md) | A bounded-speed mass and force schedule and a rational sheet source with many occupied sectors |
+| [Rational and optical bypass comparison](Rational_references_and_optical_bypass.md) | Compiled phase standards, failure recovery, and a held-gate test against published optical truth tables |
+| [Real plane for cyclic phase](A_rational_plane_for_cyclic_phase.md) | A retained sheet and two real coordinates select relative phase and read sine and cosine |
 | [Finite-speed mass and motion](Finite_speed_mass_and_motion.md) | A signed-sheet Dirac limit and a common classical trajectory across distinct phase labels, with relative-label tests and their sampling costs |
 | [Confined returns and circular polarization](Confined_returns_and_quadrature.md) | Sharp balanced integer areas and the success-dependent phase cost of arbitrary real ancillary preparations |
 | [Finite clock purity](Finite_clock_purity.md) | All-order leakage bounds and the eight-sheet coherent bypass that realizes an exact pair |
@@ -108,6 +121,36 @@ python -B check_causal_mass_flight.py rerun
 python -B check_shared_mass_force.py rerun
 python -B check_clock_galois_support.py rerun
 python -B check_random_power_read.py rerun
+python -B check_bypass_phase_reference.py rerun
+python -B check_rational_bypass.py rerun
+python -B check_rational_phase_comparison.py rerun
+python -B check_optical_bypass_calibration.py rerun
+python -B check_local_mass_register.py rerun
+python -B check_common_ray_source.py rerun
+python -B check_phase_contact.py rerun
+python -B check_distributed_complex_walk.py rerun
+python -B check_independent_source_phase.py rerun
+python -B check_rational_network_ports.py rerun
+python -B check_collision_scattering.py rerun
+python -B check_collision_phase_reference.py rerun
+python -B check_occupation_contact.py rerun
+python -B check_occupation_envelope.py rerun
+python -B check_staggered_cone.py rerun
+python -B check_contact_compilation.py rerun
+python -B check_contact_exchange.py rerun
+python -B check_contact_continuum.py rerun
+python -B check_network_functional.py rerun
+python -B check_gauss_string.py rerun
+python -B check_string_band.py rerun
+python -B check_string_motion.py rerun
+python -B check_string_source.py rerun
+python -B check_staircase_abundance.py rerun
+python -B check_ring_recurrence.py rerun
+python -B check_staircase_echo.py rerun
+python -B check_sheet_coarsening.py rerun
+python -B check_string_return_law.py rerun
+python -B check_string_control.py rerun
+python -B check_string_readouts.py rerun
 ```
 
-The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing that verification to 23 programs and 37 generated outputs. Three subsequent gain and flag checkers and the native port calculation bring the cumulative count to 27 programs and 41 generated outputs. Four further programs verify protected coordinate comparisons and their local routing, bringing the total to 31 checkers and 45 generated outputs. Four further checkers cover autonomous calibration, edge-supported record flows, a local echo and its reversible microscopic countermodel, bringing the total to 35 checkers and 49 outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. Four further checkers cover the optical data and detector gains, bringing the cumulative counts to 39 checkers and 53 generated outputs. Three clock studies add physical port counts, sharp support bounds and a dyadic preparation schedule, for 42 checkers and 56 generated outputs. Six further programs check the alternative clock transports, reuse, the finite force cone, the marked ruler and equal-sum history events, bringing the totals to 48 checkers and 62 generated outputs. Five more checkers cover native and optical multiset weights, sensitivity to detector loss, local clock detectors and hidden record sectors, for 53 checkers and 67 generated outputs. Four more checkers cover matched force calibration, returning-path preparation and the resulting flight, for 57 checkers and 71 generated outputs. Eight further checkers cover confined preparations, finite-speed motion, finite clock purity and phase readout, for 65 checkers and 79 generated outputs. [Verification record](results/verification.json)
+The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing that verification to 23 programs and 37 generated outputs. Three subsequent gain and flag checkers and the native port calculation bring the cumulative count to 27 programs and 41 generated outputs. Four further programs verify protected coordinate comparisons and their local routing, bringing the total to 31 checkers and 45 generated outputs. Four further checkers cover autonomous calibration, edge-supported record flows, a local echo and its reversible microscopic countermodel, bringing the total to 35 checkers and 49 outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. Four further checkers cover the optical data and detector gains, bringing the cumulative counts to 39 checkers and 53 generated outputs. Three clock studies add physical port counts, sharp support bounds and a dyadic preparation schedule, for 42 checkers and 56 generated outputs. Six further programs check the alternative clock transports, reuse, the finite force cone, the marked ruler and equal-sum history events, bringing the totals to 48 checkers and 62 generated outputs. Five more checkers cover native and optical multiset weights, sensitivity to detector loss, local clock detectors and hidden record sectors, for 53 checkers and 67 generated outputs. Four more checkers cover matched force calibration, returning-path preparation and the resulting flight, for 57 checkers and 71 generated outputs. Eight further checkers cover confined preparations, finite-speed motion, finite clock purity and phase readout, for 65 checkers and 79 generated outputs. Six further programs cover rational and optical references, the local mass clock and a multi-sector ray source, bringing the inventory to 71 checkers and 85 generated outputs. Four phase-contact and network checkers bring the inventory to 75 checkers and 89 generated outputs, alongside 24 Lean source files. Five collision and occupation checkers bring the total to 80 checkers, 94 generated outputs and 26 Lean sources. Four further checkers cover gate composition, finite phase and continuum controls, and the published network functional, bringing the totals to 84 checkers, 98 generated outputs and 27 Lean files. Four electric-string checks bring the totals to 88 programs, 102 generated outputs and 28 Lean files. The common-horizon staircase calculation brings the inventory to 89 programs, 103 generated outputs and 29 Lean files. Four return and coarsening programs bring the totals to 93 checkers and 107 generated outputs. The parity extension uses one of the 29 existing Lean files. Two string-control and readout checkers bring the totals to 95 programs and 109 generated outputs, with 30 Lean files. [Verification record](results/verification.json)

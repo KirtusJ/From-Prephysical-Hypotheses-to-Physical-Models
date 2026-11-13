@@ -1,0 +1,1295 @@
+{
+ "summary": {
+  "carriers_total": 15,
+  "carriers_qualifying": 13,
+  "nonqualifying": [
+   [
+    "allones2_Z2_NONQUAL",
+    true,
+    false,
+    false
+   ],
+   [
+    "three_vertex_count_only_NONQUAL",
+    true,
+    true,
+    false
+   ]
+  ],
+  "P0": {
+   "met": 13,
+   "failed": []
+  },
+  "P1": {
+   "met": 13,
+   "failed": []
+  },
+  "P2": {
+   "met": 13,
+   "failed": []
+  },
+  "P3": {
+   "met": 13,
+   "failed": []
+  },
+  "P4": {
+   "met": 12,
+   "failed": [
+    "coined_ring_5"
+   ]
+  },
+  "P5": {
+   "met": 13,
+   "failed": []
+  }
+ },
+ "C1_simple_digraphs": {
+  "tested": 3028,
+  "violations": 0,
+  "max_ratio_N_t*d/d^t": 1.0
+ },
+ "C2_parallel_arcs_hypothesis_violated": {
+  "tested": 500,
+  "violations": 500,
+  "max_ratio": 3.0,
+  "example": [
+   [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   [
+    1,
+    1
+   ],
+   2.0
+  ]
+ },
+ "carriers": [
+  {
+   "name": "hadamard2_Z2_loop_at_x0",
+   "nV": 2,
+   "mods": [
+    2
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 4.0e-12",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 7.993605777301127e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 4.440892098500626e-16,
+    "0.3333": 3.3306690738754696e-16,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.9999999999999996
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.833333333333333
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.5
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     0.9999999999999996
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.999999999999843,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    0.9999999999999996
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.5
+  },
+  {
+   "name": "hadamard2_Z2_x0=1_loop_gain-1",
+   "nV": 2,
+   "mods": [
+    2
+   ],
+   "x0": "1",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 4.0e-12",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 7.993605777301127e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 4.440892098500626e-16,
+    "0.3333": 3.3306690738754696e-16,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.9999999999999996
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.833333333333333
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.5
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     0.9999999999999996
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.999999999999843,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    0.9999999999999996
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.5
+  },
+  {
+   "name": "coined_ring_3",
+   "nV": 6,
+   "mods": [
+    2
+   ],
+   "x0": "(0, 0)",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": false,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 0.5,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 1.2e-11",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 8.43769498715119e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 1.6407374939797492e-05,
+    "0.3333": 0.11112204936107095,
+    "1.0000": 0.25
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       286,
+       0.9999835926250602
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       286,
+       0.7222112839722624
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.25
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     286,
+     0.9999835926250602
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.9999036570096406,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    286,
+    0.9999835926250602
+   ],
+   "P6_t<=60_with_N_t=0": [
+    1
+   ],
+   "a1_max_R": 0.25
+  },
+  {
+   "name": "coined_ring_4",
+   "nV": 8,
+   "mods": [
+    2
+   ],
+   "x0": "(0, 0)",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": false,
+   "H2": true,
+   "r": 2,
+   "r0": 2,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 0.5,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 1.6e-11",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 7.993605777301127e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 1.3322676295501878e-15,
+    "0.3333": 0.08333333333333415,
+    "1.0000": 0.25
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       8,
+       0.9999999999999987
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       8,
+       0.7499999999999992
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.25
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     8,
+     0.9999999999999987
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.999999999999843,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    8,
+    0.9999999999999987
+   ],
+   "P6_t<=60_with_N_t=0": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59
+   ],
+   "a1_max_R": 0.25
+  },
+  {
+   "name": "coined_ring_5",
+   "nV": 10,
+   "mods": [
+    2
+   ],
+   "x0": "(0, 0)",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": false,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 0.5,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 2.0e-11",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 8.43769498715119e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 0.0028442169907051396,
+    "0.3333": 0.13522947799380336,
+    "1.0000": 0.25
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       264,
+       0.9971557830092949
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       264,
+       0.69810385533953
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.25
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     264,
+     0.9971557830092949
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.955177022710088,
+   "P4": false,
+   "P4_sim_max_all_t>=1": [
+    264,
+    0.9971557830092949
+   ],
+   "P6_t<=60_with_N_t=0": [
+    1,
+    3
+   ],
+   "a1_max_R": 0.25
+  },
+  {
+   "name": "coined_ring_6",
+   "nV": 12,
+   "mods": [
+    2
+   ],
+   "x0": "(0, 0)",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": false,
+   "H2": true,
+   "r": 2,
+   "r0": 2,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 0.5,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 2.4e-11",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 8.43769498715119e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 1.6407374939797492e-05,
+    "0.3333": 0.11112204936107095,
+    "1.0000": 0.25
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       286,
+       0.9999835926250602
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       286,
+       0.7222112839722624
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.25
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     286,
+     0.9999835926250602
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.9999036570096406,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    286,
+    0.9999835926250602
+   ],
+   "P6_t<=60_with_N_t=0": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59
+   ],
+   "a1_max_R": 0.25
+  },
+  {
+   "name": "lazy_ring_4_loop_at_x0",
+   "nV": 8,
+   "mods": [
+    2
+   ],
+   "x0": "(0, 1)",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 1,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    1
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 1.6e-11",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 8.881784197001252e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 3.9968028886505635e-15,
+    "0.3333": 0.1249796549479193,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       24,
+       0.999999999999996
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       24,
+       0.7083536783854141
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.5
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     24,
+     0.999999999999996
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.9999999999998181,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    24,
+    0.999999999999996
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.5
+  },
+  {
+   "name": "fourier3_Z3_deg3",
+   "nV": 3,
+   "mods": [
+    3
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 3,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 3,
+   "index_matches_r_over_r0": true,
+   "UD_size": 2,
+   "dev_max_qualifying": 8.455206652451151e-16,
+   "dev_min_nonqualifying": 3.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    2
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 6.0e-12",
+   "P3_spread": 4.591882429849647e-13,
+   "P3": true,
+   "P0_dev": 1.1546319456101628e-14,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": -4.978240042419202e-13,
+    "0.3333": -3.318456620604593e-13,
+    "1.0000": -5.551115123125783e-17
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2000,
+       1.0000000000004978
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2000,
+       0.7777777777781096
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.3333333333333333
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2000,
+     1.0000000000004978
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 1.0000000000004978,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2000,
+    1.0000000000004978
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.3333333333333333
+  },
+  {
+   "name": "fourier5_Z5_two_classes",
+   "nV": 5,
+   "mods": [
+    5
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 5,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 5,
+   "index_matches_r_over_r0": true,
+   "UD_size": 4,
+   "dev_max_qualifying": 1.0376562214819238e-15,
+   "dev_min_nonqualifying": 5.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 2,
+   "class_sizes": [
+    2,
+    2
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 1.0e-11",
+   "P3_spread": 2.0963786262484518e-13,
+   "P3": true,
+   "P0_dev": 1.1102230246251565e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 2.220446049250313e-16,
+    "0.3333": 1.1102230246251565e-16,
+    "1.0000": -5.551115123125783e-17
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.9999999999999998
+      ],
+      [
+       2,
+       0.9999999999999998
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.7333333333333333
+      ],
+      [
+       2,
+       0.7333333333333333
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.2
+      ],
+      [
+       1,
+       0.2
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     0.9999999999999998
+    ],
+    [
+     2,
+     0.9999999999999998
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.9999999999999802,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    0.9999999999999998
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.2
+  },
+  {
+   "name": "zeta_hadamard_Z8_r4",
+   "nV": 2,
+   "mods": [
+    8
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 4,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 4,
+   "dev_max_qualifying": 1.7618760988402745e-15,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    4
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 4.0e-12",
+   "P3_spread": 4.0101255649460654e-13,
+   "P3": true,
+   "P0_dev": 1.1102230246251565e-14,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 4.440892098500626e-16,
+    "0.3333": 3.3306690738754696e-16,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.9999999999999996
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.833333333333333
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.5
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     0.9999999999999996
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.999999999999778,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    0.9999999999999996
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.5
+  },
+  {
+   "name": "a(1,1;1,b)_Z2xZ2",
+   "nV": 2,
+   "mods": [
+    2,
+    2
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 2,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 2,
+   "dev_max_qualifying": 1.2246467991473532e-16,
+   "dev_min_nonqualifying": 2.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    2
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 4.0e-12",
+   "P3_spread": 0.0,
+   "P3": true,
+   "P0_dev": 7.993605777301127e-15,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": 4.440892098500626e-16,
+    "0.3333": 3.3306690738754696e-16,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.9999999999999996
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.833333333333333
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.5
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     0.9999999999999996
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 0.999999999999843,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    0.9999999999999996
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.5
+  },
+  {
+   "name": "fourier3_x_hadamard_Z3xZ2_deg6",
+   "nV": 6,
+   "mods": [
+    3,
+    2
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 6,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 6,
+   "index_matches_r_over_r0": true,
+   "UD_size": 2,
+   "dev_max_qualifying": 3.140385616789348e-15,
+   "dev_min_nonqualifying": 6.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    2
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 1.2e-11",
+   "P3_spread": 6.308842337432452e-14,
+   "P3": true,
+   "P0_dev": 1.3322676295501878e-14,
+   "P0": "True",
+   "P2_min_margin": {
+    "0.0000": -5.613287612504791e-13,
+    "0.3333": -3.743672039036028e-13,
+    "1.0000": -2.7755575615628914e-17
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2000,
+       1.0000000000005613
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2000,
+       0.7222222222225966
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.16666666666666666
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2000,
+     1.0000000000005613
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 1.0000000000005613,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2000,
+    1.0000000000005613
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.16666666666666666
+  },
+  {
+   "name": "fourier4_Z4",
+   "nV": 4,
+   "mods": [
+    4
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 4,
+   "loop_at_x0": true,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 4,
+   "index_matches_r_over_r0": true,
+   "UD_size": 2,
+   "dev_max_qualifying": 7.347880794884119e-16,
+   "dev_min_nonqualifying": 4.0,
+   "H3": true,
+   "qualifies": true,
+   "n_classes": 1,
+   "class_sizes": [
+    2
+   ],
+   "total_walks_is_d^t": true,
+   "P1_fail_t": [],
+   "P1": true,
+   "max_N_t*d/d^t": 1.0,
+   "unitary_norm_drift_bound": "T*nV*1e-15 = 8.0e-12",
+   "P3_spread": 1.4788170688007085e-13,
+   "P3": true,
+   "P0_dev": 0.0,
+   "P0": true,
+   "P2_min_margin": {
+    "0.0000": 0.0,
+    "0.3333": -1.1102230246251565e-16,
+    "1.0000": 0.0
+   },
+   "P2": true,
+   "P5": true,
+   "P5_detail": {
+    "0.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       1.0
+      ]
+     ]
+    },
+    "0.3333": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       2,
+       0.7500000000000001
+      ]
+     ]
+    },
+    "1.0000": {
+     "ok": "True",
+     "best_t_R": [
+      [
+       1,
+       0.25
+      ]
+     ]
+    }
+   },
+   "a0_max_R_per_class": [
+    [
+     2,
+     1.0
+    ]
+   ],
+   "P4_sim_max_t1000_2000": 1.0,
+   "P4": true,
+   "P4_sim_max_all_t>=1": [
+    2,
+    1.0
+   ],
+   "P6_t<=60_with_N_t=0": [],
+   "a1_max_R": 0.25
+  },
+  {
+   "name": "allones2_Z2_NONQUAL",
+   "nV": 2,
+   "mods": [
+    2
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": true,
+   "H2": false,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 1,
+   "index_matches_r_over_r0": false,
+   "UD_size": 0,
+   "dev_max_qualifying": null,
+   "dev_min_nonqualifying": 2.0,
+   "H3": false,
+   "qualifies": false
+  },
+  {
+   "name": "three_vertex_count_only_NONQUAL",
+   "nV": 3,
+   "mods": [
+    2
+   ],
+   "x0": "0",
+   "H1": true,
+   "d": 2,
+   "loop_at_x0": false,
+   "H2": true,
+   "r": 1,
+   "r0": 1,
+   "C0_size": 2,
+   "index_matches_r_over_r0": true,
+   "UD_size": 0,
+   "dev_max_qualifying": null,
+   "dev_min_nonqualifying": 1.0,
+   "H3": false,
+   "qualifies": false
+  }
+ ]
+}

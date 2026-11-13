@@ -1,0 +1,18 @@
+P1 2-vertex C2 hatD_sc True r 1 r0 1 C0 [0, 1] U [1] U|C0 classes 1 nullity,unknowns,eqs (2, 18, 34) expected dim 2
+   fibres {(0, 0): [0, 1], (0, 1): [0, 1]}
+P2 trivial bipartite hatD_sc True r 2 r0 2 C0 [0] U [] U|C0 classes 0 nullity,unknowns,eqs (1, 16, 28) expected dim 1
+   fibres {(0, 0): [0], (0, 1): [0], (0, 2): [], (0, 3): [], (1, 0): [], (1, 1): [], (1, 2): [0], (1, 3): [0]}
+P3 ring N=2 hatD_sc True r 2 r0 2 C0 [0, 1] U [1] U|C0 classes 1 nullity,unknowns,eqs (2, 36, 68) expected dim 2
+   fibres {(0, 0): [0, 1], (0, 1): [0, 1], (0, 2): [], (0, 3): [], (1, 0): [], (1, 1): [], (1, 2): [0, 1], (1, 3): [0, 1]}
+P3 ring N=4 hatD_sc True r 2 r0 2 C0 [0, 1] U [1] U|C0 classes 1 nullity,unknowns,eqs (2, 72, 328) expected dim 2
+   fibres {(0, 0): [0, 1], (0, 1): [0, 1], (0, 2): [], (0, 3): [], (0, 4): [0, 1], (0, 5): [0, 1], (0, 6): [], (0, 7): [], (1, 0): [], (1, 1): [], (1, 2): [0, 1], (1, 3): [0, 1], (1, 4): [], (1, 5): [], (1, 6): [0, 1], (1, 7): [0, 1]}
+P3 violation of parity rule (c_even=1,c_odd=2): length,S,mu(S),mu(ExtS) (1, [((0, 2), 0), ((0, 7), 0)], 4, 4) ; same-constant rule violations on pairs: 0
+P4 g*J q=2 hatD_sc True r 2 r0 1 C0 [0] U [] U|C0 classes 0 nullity,unknowns,eqs (1, 12, 18) expected dim 1
+   fibres {(0, 0): [0], (0, 1): [0], (1, 0): [1], (1, 1): [1]}
+P4 g*J q=4 hatD_sc True r 4 r0 1 C0 [0] U [] U|C0 classes 0 nullity,unknowns,eqs (1, 24, 36) expected dim 1
+   fibres {(0, 0): [0], (0, 1): [0], (1, 0): [1], (1, 1): [1], (2, 0): [2], (2, 1): [2], (3, 0): [3], (3, 1): [3]}
+P5 four-vertex q=4 (tail,head,exp) hatD_sc True r 2 r0 1 C0 [0, 2] U [1, 3] U|C0 classes 1 nullity,unknowns,eqs (2, 72, 328) expected dim 2
+   fibres {(0, 0): [0, 2], (0, 1): [0, 2], (0, 2): [1, 3], (0, 3): [0, 2], (1, 0): [1, 3], (1, 1): [1, 3], (1, 2): [0, 2], (1, 3): [1, 3]}
+P5alt (head,tail,exp) hatD_sc True r 2 r0 1 C0 [0, 2] U [1, 3] U|C0 classes 1 nullity,unknowns,eqs (2, 72, 328) expected dim 2
+   fibres {(0, 0): [0, 2], (0, 1): [0, 2], (0, 2): [1, 3], (0, 3): [0, 2], (1, 0): [1, 3], (1, 1): [1, 3], (1, 2): [0, 2], (1, 3): [1, 3]}
+P5 C0= [0, 2] one coset per vertex per length 1..6: True events 18000 mu differ 0 inconsistent F1,F2 0 0 F1 vs F2 on off-fibre m=(0,1) at y=0: 16 25

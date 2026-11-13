@@ -5300,5 +5300,960 @@
       "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
       "fresh_full_replay": false
     }
+  },
+  "local_mass_clocks_and_held_optical_bypass_addendum": {
+    "scope": "Incremental verification of local clocks, broad character sources, matched coherent bypass phases and an independently measured controlled-H implementation.",
+    "totals": {
+      "checkers": 71,
+      "generated_outputs": 85,
+      "lean_files": 23,
+      "added_checkers": 6,
+      "added_outputs": 6,
+      "added_lean_files": 1,
+      "fresh_checker_processes": 12,
+      "fresh_lean_compilations": 2
+    },
+    "sources_and_outputs": {
+      "Local_mass_clock_and_common_ray.md": {
+        "lf_sha256": "e86792b2b9ecf4e239fe80b5ea4924fb4d588be5f389107dda7fe4240f9d3061",
+        "raw_bytes_by_mirror": {
+          "research": 10217,
+          "checkout": 10217
+        }
+      },
+      "Rational_references_and_optical_bypass.md": {
+        "lf_sha256": "6b41b24781e87067bbe9ce5a7910c011f4785405e9acfc876f5a4f851d9432d9",
+        "raw_bytes_by_mirror": {
+          "research": 13500,
+          "checkout": 13500
+        }
+      },
+      "A_rational_plane_for_cyclic_phase.md": {
+        "lf_sha256": "83be5ddfc777576f76be904f616e2e28e5d748d2e86bc47355bc725756e69ee8",
+        "raw_bytes_by_mirror": {
+          "research": 7286,
+          "checkout": 7286
+        }
+      },
+      "lean/MassGauge.lean": {
+        "lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+        "raw_bytes_by_mirror": {
+          "research": 7177,
+          "checkout": 7177
+        }
+      },
+      "check_local_mass_register.py": {
+        "lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+        "raw_bytes_by_mirror": {
+          "research": 14003,
+          "checkout": 14003
+        }
+      },
+      "check_bypass_phase_reference.py": {
+        "lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+        "raw_bytes_by_mirror": {
+          "research": 13359,
+          "checkout": 13359
+        }
+      },
+      "check_common_ray_source.py": {
+        "lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+        "raw_bytes_by_mirror": {
+          "research": 12731,
+          "checkout": 12731
+        }
+      },
+      "check_rational_bypass.py": {
+        "lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+        "raw_bytes_by_mirror": {
+          "research": 12206,
+          "checkout": 12206
+        }
+      },
+      "check_rational_phase_comparison.py": {
+        "lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+        "raw_bytes_by_mirror": {
+          "research": 19498,
+          "checkout": 19498
+        }
+      },
+      "check_optical_bypass_calibration.py": {
+        "lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+        "raw_bytes_by_mirror": {
+          "research": 8531,
+          "checkout": 8531
+        }
+      },
+      "results/local_mass_register.json": {
+        "lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+        "raw_bytes_by_mirror": {
+          "research": 31453,
+          "checkout": 31453
+        }
+      },
+      "results/bypass_phase_reference.json": {
+        "lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+        "raw_bytes_by_mirror": {
+          "research": 27559,
+          "checkout": 27559
+        }
+      },
+      "results/common_ray_source.json": {
+        "lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+        "raw_bytes_by_mirror": {
+          "research": 75701,
+          "checkout": 75701
+        }
+      },
+      "results/rational_bypass.json": {
+        "lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+        "raw_bytes_by_mirror": {
+          "research": 40686,
+          "checkout": 40686
+        }
+      },
+      "results/rational_phase_comparison.json": {
+        "lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+        "raw_bytes_by_mirror": {
+          "research": 53668,
+          "checkout": 53668
+        }
+      },
+      "results/optical_bypass_calibration.json": {
+        "lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+        "raw_bytes_by_mirror": {
+          "research": 10349,
+          "checkout": 10349
+        }
+      },
+      "check_clock_bandwidth.py": {
+        "lf_sha256": "cf1e0b4af48b65d96b5a342176f69fb410279d37389cb825fb8812b55c6a66ce",
+        "raw_bytes_by_mirror": {
+          "research": 18248,
+          "checkout": 18248
+        }
+      },
+      "Director_exchange.md": {
+        "lf_sha256": "e167a40deca1ba76532de64d99d37591323aba9af4d67bebad52d3c5c319a3ac",
+        "raw_bytes_by_mirror": {
+          "research": 19552,
+          "checkout": 19552
+        }
+      },
+      "Finite_clock_purity.md": {
+        "lf_sha256": "e9d47d8d1ae66bc8c904b3ad410a18e279b422abb88fc5e9d459588e9a77abf2",
+        "raw_bytes_by_mirror": {
+          "research": 7653,
+          "checkout": 7653
+        }
+      },
+      "Finite_speed_mass_and_motion.md": {
+        "lf_sha256": "c0ea2dd1cec3ba2fa84d922a0a505e5a0214f22a0cc0736ca2378c78722b4692",
+        "raw_bytes_by_mirror": {
+          "research": 16830,
+          "checkout": 16830
+        }
+      },
+      "Internal_phase_reference.md": {
+        "lf_sha256": "078954c0caf0fe8643c8db6f77bd43e594b041369af18d2f4440c53dc0d9be50",
+        "raw_bytes_by_mirror": {
+          "research": 18595,
+          "checkout": 18595
+        }
+      },
+      "lean/README.md": {
+        "lf_sha256": "11904cf12605326f53576d306c2dd38b50becadacf8f1c5c9040fed4e7f18c60",
+        "raw_bytes_by_mirror": {
+          "research": 10678,
+          "checkout": 10678
+        }
+      }
+    },
+    "runs": {
+      "research": [
+        {
+          "source": "check_local_mass_register.py",
+          "source_lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+          "exit": 0,
+          "output": "local_mass_register.json",
+          "output_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "generated_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_bypass_phase_reference.py",
+          "source_lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+          "exit": 0,
+          "output": "bypass_phase_reference.json",
+          "output_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "generated_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_common_ray_source.py",
+          "source_lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+          "exit": 0,
+          "output": "common_ray_source.json",
+          "output_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "generated_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_bypass.py",
+          "source_lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+          "exit": 0,
+          "output": "rational_bypass.json",
+          "output_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "generated_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_phase_comparison.py",
+          "source_lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+          "exit": 0,
+          "output": "rational_phase_comparison.json",
+          "output_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "generated_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_optical_bypass_calibration.py",
+          "source_lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+          "exit": 0,
+          "output": "optical_bypass_calibration.json",
+          "output_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "generated_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "MassGauge.lean",
+          "source_lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+          "exit": 0
+        }
+      ],
+      "checkout": [
+        {
+          "source": "check_local_mass_register.py",
+          "source_lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+          "exit": 0,
+          "output": "local_mass_register.json",
+          "output_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "generated_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_bypass_phase_reference.py",
+          "source_lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+          "exit": 0,
+          "output": "bypass_phase_reference.json",
+          "output_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "generated_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_common_ray_source.py",
+          "source_lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+          "exit": 0,
+          "output": "common_ray_source.json",
+          "output_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "generated_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_bypass.py",
+          "source_lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+          "exit": 0,
+          "output": "rational_bypass.json",
+          "output_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "generated_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_phase_comparison.py",
+          "source_lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+          "exit": 0,
+          "output": "rational_phase_comparison.json",
+          "output_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "generated_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_optical_bypass_calibration.py",
+          "source_lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+          "exit": 0,
+          "output": "optical_bypass_calibration.json",
+          "output_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "generated_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "MassGauge.lean",
+          "source_lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+          "exit": 0
+        }
+      ]
+    },
+    "method": "Serial below-normal priority, fresh temporary directories per source per scientific mirror. Bundled Python 3.12.14 with NumPy/one BLAS thread for the local mass and bypass phase calculations; standard Python 3.14.7 for the common-ray, rational and optical programs; Lean 4.19.0 -j 1. Each cited producing-runtime replay compared raw archive bytes. One alternate runtime produced last-bit differences in the common-ray output, separately quantified.",
+    "cross_runtime_control": {
+      "source": "check_common_ray_source.py",
+      "python": "3.12.14 (also run in each mirror)",
+      "fields_differing": 288,
+      "maximum_absolute_difference": 3.3306690738754696e-16,
+      "largest_difference_path": "/finite_flights/8/all_populated_folds/6/position_harmonic/0",
+      "alternative_lf_sha256": "6838298761fea325d12a1dfb6f50fca244c02712be88198acaaf61e04fa20914",
+      "unchanged": "Every non-floating value and array structure; archived Python 3.14.7 result reproduced byte-for-byte."
+    },
+    "independent_checks": {
+      "local_clock": "Integer routing and full scalar/vector wave comparisons, including both orientations. Cumulative nearest rounding of the desired triangular phase bounds its running error by half a unit. In the X-mass frame the same sheet needs at most ceil(c|F|T/mu)+1 vector strokes, plus the mass stroke, for a fixed horizon. Explicit 2D local pitch, subslot/base speed factor, ring circumference, clock/resource and source support bounds recorded; an external uniform background and coherent preparation are supplied. Naive independent rounding returns zero when c|F|T<mu/2.",
+      "common_ray": "Five sources compared with direct Fourier weights, exact half-turn alias for the projected transcripts, plus nine bounded-horizon and three later flights. Ruler-sensitive and unobserved-sheet statements have different scope. Details and negative finite cases remain in the checker tables.",
+      "bypass": "Second computation matched all three reported contrasts in 48 idle-angle, sign and distinguishable-marker settings within 4.45e-16. All 16 complete integer-circuit controls sum to one and every independently reconstructed marker-resolved bright mass equals the archived fraction.",
+      "rational": "Verified all 15 exact rational success probabilities and geometric renewal identity for expected oracle/adjoint calls after coarse flags; all held output probability pairs normalize. Arbitrarily detailed measurements of rejected branches may reveal rail information and void the coherent retry hypothesis.",
+      "rational_phase": "Independent spectral calculation at four orders and six comparator lengths each confirmed retained yields and correct masses within 1e-12. The localized same-product two-bright probability is 3/8; independent resets give 1/4. The integer winding check bounds the error for q=5, (7735,23808,25033), below 5.3e-5. A held plane measures a relative orientation; joint conjugation remains indistinguishable. Gate-failure budgets and fixed-angle asymptotic loss are separate from conditional sector purity.",
+      "optical": "Verified complementary correct-projector overlap 1/4, top/bottom ideal scores 0/1 for the fixed controlled-arm sign change, and equality of all 32 ideal entries under a transported analyzer convention. The published process bound 0.8971 differs from central-score arithmetic 0.8973. The normalized Choi single-error certificate from unweighted conditional scores is 0.85034073307 (rounded), conditional on a common trace-decreasing CP map and calibrated bases. The score is a central-value implication. It alone cannot exclude the alternate unmeasured Ramsey result via the displayed worst-input inequality. Pure-dephasing fit to the top score predicts bottom 1; the measured bottom score was 0.9605.",
+      "scope": "A fixed operational phase, calibrated detectors and common successful input ensemble are required. Matched simultaneous conjugation can preserve all observed ideal labels. The controlled-H paper reports postselected optical records; a prediction for another Ramsey input is identified as an extrapolation under an explicitly described channel."
+    },
+    "gate_maps": {
+      "lf_sha256": {
+        "research": "2f91ab467d1a493932a2e4e96817d46cfbaa1c80fd687419c3678b6e3a33b26d",
+        "checkout": "41cf8c62dc9c4e24485f502fafa242fc98d871698e5c9e4010de050c37b0aa9c"
+      },
+      "new_keys": [
+        "local_mass_clock",
+        "rational_bypass_and_optical_calibration",
+        "rational_cyclic_reference",
+        "mass_gauge_lean"
+      ],
+      "disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "index_lf_sha256": {
+      "lean_index": "11904cf12605326f53576d306c2dd38b50becadacf8f1c5c9040fed4e7f18c60",
+      "publication": "3297591365f0fce5336b01b701134552e2db3ef8cbf7118c114211442e8c2104",
+      "queue": "49cd610f494111d28c0bcf9c5fbcc6157123e76aa5837db8b11133a6b7293e56",
+      "project_worker_instructions": "5863c844177ed2427c1ebaa1d20a0057b8d5d2539a6e64b8f552398bb8b67c26"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 38,
+        "local_link_occurrences": 449,
+        "new_article_local_links": {
+          "Local_mass_clock_and_common_ray.md": 10,
+          "Rational_references_and_optical_bypass.md": 7,
+          "A_rational_plane_for_cyclic_phase.md": 8
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 39,
+        "local_link_occurrences": 486,
+        "new_article_local_links": {
+          "Local_mass_clock_and_common_ray.md": 10,
+          "Rational_references_and_optical_bypass.md": 7,
+          "A_rational_plane_for_cyclic_phase.md": 8
+        },
+        "missing": 0
+      }
+    },
+    "edition_z17": {
+      "historical_verification": "moving_odd_clocks_reuse_and_holonomy_addendum.edition_z17",
+      "baseline_commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "review_head": "60e78b13c59eda1532a949f1fb23ad05ab299f25",
+      "edition_tree_unchanged_from_baseline": true,
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "fresh_full_replay": false
+    },
+    "nested_consultation": {
+      "path": "Session/PCP_workers/nested/attempts/20261113T181850928564Z",
+      "result_raw_sha256": "d97073e4ee8304f0273d7b937008a27d75191110b9253e8066b89358aec6d3b2",
+      "receipt": "ecec96ce14640152eb5e",
+      "verified": true,
+      "calls": 1,
+      "parent_sha256": "4d461b8eaa417d26fc62dc9896782a577e8a053f1e066036b5cdc7fb651ad222",
+      "child_sha256": "ad4159128cd344c9be12739200613272868273d9ad7e45bd9225ef63a6b7fc61",
+      "parent_register": "15be48f598a87ead3804c64e09883faea73448869bfade9e9e534af3efae060f",
+      "child_register": "c99a44f79ee66e0102d6790f97eb7946b5b1d1503156d5cc019bbc4cf688ec64",
+      "interpretation": "Child echoed the question without producing either probability. Parent computed 3/8 under retention and 1/4 under replacement. This records the workflow only. Independent checker evidence is above."
+    }
+  },
+  "review_queue_second_period_response": {
+    "source_branch": "pcp/review-queue",
+    "review_commit": "e37e86fa1ec9e424c8cd8d98a8000d717852f6f3",
+    "review_target": "b84056e",
+    "prior_manifest_sha256": "23a9c25644709e520b6c1d3826060ee8c2b324c2d738da8b3ea20c6693cc21d9",
+    "review_sha256": {
+      "Equal_time_gains": "5483c262af18cbba62e0be164593d09fe961e32f1587d9dd8e75eecc25f146e3",
+      "Internal_phase_reference": "fe9299bd7fcee10910dfdb99b59c2c11b8f4960ef7d14ae1c007bf9e1f75a86a",
+      "Local_mediation": "6fe500143e04e048534c0bda749f084f9a9eb303db5617d7df0c44a95f88783d"
+    },
+    "revised_manuscripts_lf_sha256": {
+      "Director_exchange.md": "f9ca6d0b5988c6a2e66cdafac1448a571a1681fd5139fdcd44048affe8542d6b",
+      "Equal_time_gains_and_history_records.md": "74d078b92ae711bcaafd6a6f0df5424ad1b694110d397150cab7ec9e7518a110",
+      "Internal_phase_reference.md": "11e1d81f5be640c0e619c81188b86f3b4b7eab912d5fb8a197736b6aca502fff",
+      "Local_mediation_and_the_force_clock.md": "fcd6a03d1546dec44c4a43ec7bc4b94511c866742ff6f5b131d3647b7ee766da"
+    },
+    "review_rank_by_localized_launch": {
+      "(0, 1)": 6,
+      "(0, -1)": 6,
+      "(1, 1)": 7,
+      "(1, -1)": 7,
+      "(2, 1)": 8,
+      "(2, -1)": 8,
+      "(3, 1)": 7,
+      "(3, -1)": 7,
+      "(4, 1)": 6,
+      "(4, -1)": 6,
+      "(5, 1)": 7,
+      "(5, -1)": 7,
+      "(6, 1)": 8,
+      "(6, -1)": 8,
+      "(7, 1)": 7,
+      "(7, -1)": 7
+    },
+    "tape_zero_range_three": [
+      "3/16",
+      "5/16"
+    ],
+    "tape_zero_range_four": [
+      "3/32",
+      "7/32"
+    ],
+    "amplitude_rows": [
+      {
+        "L": 1,
+        "B8": [
+          "1/2",
+          "0"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 2,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 3,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 4,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 6,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/2",
+          "0"
+        ]
+      },
+      {
+        "L": 12,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/4",
+          "1/4"
+        ]
+      },
+      {
+        "L": 30,
+        "B8": [
+          "1/4",
+          "1/4"
+        ],
+        "B16": [
+          "1/4",
+          "1/4"
+        ]
+      }
+    ],
+    "timing": "The review queue's primary runs were against b84056e. The targeted checks here re-read the released review results, verified the N=192 cone excess from our stored finite flight, and compiled the original three unmodified proofs in the pinned environment. The external review programs were not independently replayed for this note.",
+    "exploratory_second_bin_N192": 0.010496863147860136,
+    "lean_4_19_0": [
+      {
+        "file": "GainAbundance.lean",
+        "source_lf_sha256": "8e382d9846dec11854ceff278055e83892fbca523627ce17cbc2df536ea8d71b",
+        "exit": 0
+      },
+      {
+        "file": "LocalMediator.lean",
+        "source_lf_sha256": "e4ba3ea3f2f067abd931ec17f64b4f3f618efdec4ce658edae201bd5b8635ff8",
+        "exit": 0
+      },
+      {
+        "file": "InternalReference.lean",
+        "source_lf_sha256": "012a823aa3b2934885ba98964701dc2bbf038d746c7dd0ac804de4b7f8051ee0",
+        "exit": 0
+      }
+    ]
+  },
+  "shared_phase_contact_and_source_network": {
+    "scope": "Two-source contact with signed real planes, source cuts, finite signed realization of the network read and limitations of any embedding inference. Independent referee here means a different task within the same Codex family; Director Z has not yet endorsed the new results.",
+    "totals": {
+      "checkers": 75,
+      "generated_outputs": 89,
+      "lean_files": 24,
+      "new_checker_programs": 4,
+      "new_generated_outputs": 4
+    },
+    "checks": {
+      "fresh_processes": 8,
+      "replayed_outputs": "All four outputs from each copy matched both frozen byte streams.",
+      "lean_compilations": 2,
+      "toolchain": "Lean 4.19.0 on Windows x86_64, commit 6caaee842e94, -j1, both copies exit zero.",
+      "checker_runtime": "Bundled Windows Python runtime, independent fresh output directories.",
+      "markdown_internal_links_per_copy": {
+        "Phase_contact_and_shared_walks.md": 16,
+        "Network_phase_and_probability_records.md": 8
+      }
+    },
+    "source_and_output_lf_sha256": {
+      "Phase_contact_and_shared_walks.md": "32343233ca18177327671830ad8120899f7fbd02508aa14df0a5b6504ce74e38",
+      "Network_phase_and_probability_records.md": "a96ee2e3c7c5a0d3871c2c2809fab92eacd40eb0fcab0cd15229fe575ee81173",
+      "lean/PhaseContact.lean": "863907ce8dae2ca06f5971a1dae2effe782ac0dd2e8d7ea5526f7348f8d873ab",
+      "check_phase_contact.py": "4ece023498cf04b58db75c79a4acb77c59162750d49c80adfd1c35f2b9835360",
+      "check_distributed_complex_walk.py": "f79f49ffbd01a3fbe1e415400c4510ec0041a7782064fbf69834be8c2899c733",
+      "check_independent_source_phase.py": "494d6945d442780ef33631d0203d8cf68d9861ae836f4b1bc20ad61917f0000b",
+      "check_rational_network_ports.py": "94ff220bf1881ae8e6c48abbe23aa470e3477dfde90a9a7cce6bba1e76c75b43",
+      "results/phase_contact.json": "4bd048f195697b18e1f938b50561310a7b8fb083a3d761a957e6b742ff9d65df",
+      "results/distributed_complex_walk.json": "56ec1d1586680baf6321a5d6eb4b322c2dae55e5a2cf9c3efa77644d3afcdf8b",
+      "results/independent_source_phase.json": "89db3fec2a1f5f0302826db79a8c89956290691d28fbdeac2daf3b9b616e62ff",
+      "results/rational_network_ports.json": "8f2905a39a84cf7c4f3471b12da151927d16f18e99d970532d846926f623b8e7"
+    },
+    "windows_output_bytes_sha256": {
+      "phase_contact": "4bd048f195697b18e1f938b50561310a7b8fb083a3d761a957e6b742ff9d65df",
+      "distributed_complex_walk": "56ec1d1586680baf6321a5d6eb4b322c2dae55e5a2cf9c3efa77644d3afcdf8b",
+      "independent_source_phase": "89db3fec2a1f5f0302826db79a8c89956290691d28fbdeac2daf3b9b616e62ff",
+      "rational_network_ports": "8f2905a39a84cf7c4f3471b12da151927d16f18e99d970532d846926f623b8e7"
+    },
+    "network": {
+      "comparison_bound": "15321/2000",
+      "reference": "Renou et al., supplementary Theorem 3, Eq. E4, numerical SDP",
+      "finite_score": "2106619826745/274877906944",
+      "seven_call_gap": "114702575061/34359738368000",
+      "all_deadlines": [
+        "105/32",
+        "374745/65536",
+        "938841225/134217728",
+        "2106619826745/274877906944",
+        "4511653131968745/562949953421312"
+      ],
+      "timeouts": "Fresh fair sign with all Bell labels included",
+      "experiments": "Model calculations; published optical coincidences reported separately."
+    },
+    "review": {
+      "resource": "Two conjugate diagonal weights in each real block independently checked. Real-classical mixing allowed. Access to a coherent cross-block measurement changes the separability premise.",
+      "data": "Both relative grades retained; a negative result changes already-loaded Y data in the held convention. Correcting a matched sheet requires its reflection.",
+      "revisions": "The initial two-decimal comparison was replaced by 7.6605 from Eq. E4. The paper now distinguishes the simple Bell-operator range bound from the sharper numerical SDP and identifies the source representation and four-photon sampling assumptions."
+    },
+    "pcp_nested": {
+      "verified": true,
+      "attempt": "20261113T183013192664Z",
+      "calls": 1,
+      "receipt": "9dfcd04058352113edc6",
+      "question": "Let J_A,J_B be commuting real complex structures, J_A^2=J_B^2=-I. K=-J_A J_B has k=±1 with equal probability from independent real-coordinate starts. On grade k, J_B=k J_A. Check yields: retain only + (1/2); retain both with record (1); or for - apply a local reflection R_B anticommuting with J_B before later gates (1). Do independent raw sources thereby share orientation in every run? Distinguish selection and correction; does any case choose absolute complex chirality or probability embedding?",
+      "output_sha256": "1064e933f98bf2aecc0dc6c09620c180c4618a7983ff450dc55b534b5b176e3d",
+      "adjudication": "Child echoed the proposed calculation. The parent checked K^2 and projector identities independently; the echoed response is not independent scientific support."
+    },
+    "open_physical_gates": 13
+  },
+  "occupation_walk_and_moving_contact": {
+    "scope": "Fixed-angle ordered scalar limit, separately tuned finite-speed spinor limit, binary occupation alternatives and a timed phase-sensitive collision on distinguishable walkers. Same-family crosschecks, cross-director review requested separately.",
+    "totals": {
+      "checkers": 80,
+      "generated_outputs": 94,
+      "lean_sources": 26
+    },
+    "replay": {
+      "checker_runs": 10,
+      "lean_compilations": 4,
+      "formal_toolchain": "Lean 4.19.0, -j1",
+      "runtime": "Windows bundled Python, NumPy, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1. All five generated streams were byte-identical from both source directories and to both stored results.",
+      "markdown_local_links": {
+        "Moving_contact_and_phase_echo.md": 12,
+        "Interacting_occupation_walk.md": 14
+      }
+    },
+    "sha256_lf": {
+      "Moving_contact_and_phase_echo.md": "b2d0022a80699002a5f924399d036f550f3b9deb47ba728e59f1d09f3f70284f",
+      "Interacting_occupation_walk.md": "6157df344490630f1c440c777db205ee6118cb96d43e633868f68cede718f2ae",
+      "lean/CollisionRecords.lean": "498c799708a8aa3cd01cef5dcb6cdafb2a2cdb5a17e8eac17b3a153c82824c56",
+      "lean/LocalOccupation.lean": "6e8bc1b1a4351639f08235aa11403d6800fe6f9f6613b710dda9f1fa56658975",
+      "check_collision_scattering.py": "d25b7ea4bb02be2a635c666946ddb5ea9053e03c3ba9af747bdafdaafd953066",
+      "check_collision_phase_reference.py": "f3ce43acb206640da0aeb162f98bc2860f1bb0924f3936c3c0d868a47a003f1e",
+      "check_occupation_contact.py": "7e2c0291de10c2bd092ab6d4800413f2ead569ea9c280ce5314856ff04ed3996",
+      "check_occupation_envelope.py": "f448f8c2cf2d295c56c498be7ba8f3f04eadbbf30daa31f3b9a81a943a72e92c",
+      "check_staggered_cone.py": "4bd6015816ab4f018b2dcae177db287079b9f58f2fca3a89e706ec5f52a39d5f",
+      "results/collision_scattering.json": "778a169bc108548048164b5d8797c73ce108867f243b5cea1f18904c9fc9158d",
+      "results/collision_phase_reference.json": "e4c93496e712a023219c44305e4ac241d658b40e382a58852600ce7248a8d5fb",
+      "results/occupation_contact.json": "b47882951e2ce1a904db070e9cdb1a019a5d0a20c63152c678cd4e4caf414652",
+      "results/occupation_envelope.json": "d8e7de9766be85cc3982fab4b1ece169fedbe132a321d9da3108cbf7b2b2c088",
+      "results/staggered_cone.json": "5e73d33ba81a03f33391ca1a49fa651fb9b267571791abfafabd115c8d37654f"
+    },
+    "controls": {
+      "localized_return": [
+        "1936/15625",
+        "13456/15625",
+        "7696/15625"
+      ],
+      "different_cell_probability": [
+        "1",
+        "1/2"
+      ],
+      "plucker": [
+        "0",
+        "288/625"
+      ],
+      "echo_first_fail_second_fail_both_pass": [
+        "39/64",
+        "975/4096",
+        "625/4096"
+      ],
+      "echo_passed_aligned_opposite_unread": [
+        "1",
+        "49/625",
+        "337/625"
+      ],
+      "scale": "At finite circumference the periodic two-particle occupation lift on a ring has an antiperiodic one-body boundary. Coarse pitch, finite boundary, gapless and reversed-mass cases all remain in the outputs."
+    },
+    "limitations": "Squared readout and choice of local gate remain inputs. The alternative double-occupation sign is distinguishable at finite depth; its continuum limit is unproved. Fixed-angle and fixed-speed charts use different refinements. Real source coordinates remove a distributed phase resource for occupation reads, with source synthesis and gate time as additional premises.",
+    "nested_pcp": {
+      "receipt": "bd778fb227010d1c6f07",
+      "question": "For the complex 2 by 2 matrix U=[[3,-4i],[-4i,3]]/5, compute det(U). Show the finite arithmetic.",
+      "child_reply": "det(U) = -15i [end of text]",
+      "output_sha256": "b1e02785418300056365e1fd472fe6b1184cc25435bd9b192034ba96a7c4e473",
+      "adjudication": "One verified call. The child reported -15i; the parent recalculated the determinant as 1, confirmed by exact minors and Lean. The raw result is retained."
+    },
+    "open_gates": 13
+  },
+  "gate_composition_contact_threshold_and_review_7": {
+    "scope": "Local two-particle contact rule conditional on two implementation-equivalence records, finite band-edge condition, weak-phase quantum limit and reconciliation of cross-review 7.",
+    "totals": {
+      "checkers": 84,
+      "generated_outputs": 98,
+      "lean_files": 27
+    },
+    "replay": {
+      "fresh_checker_processes": 8,
+      "lean_compilations": 2,
+      "runtime": "Bundled Windows Python, single-thread BLAS, two independent output directories; all four stored byte streams matched both copies.",
+      "toolchain": "Lean 4.19.0 Windows x86_64; both fresh compiles exit zero.",
+      "local_links_checked_per_copy": {
+        "Occupation_contact_from_composition.md": 11,
+        "Contact_threshold_on_the_ring.md": 3,
+        "Network_phase_and_probability_records.md": 9,
+        "Rational_references_and_optical_bypass.md": 7,
+        "Local_mass_clock_and_common_ray.md": 10,
+        "Interacting_occupation_walk.md": 16
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Occupation_contact_from_composition.md": "99df94e772f03ba8fce432572c5fea07b06742f19ba61d656283d00dc40cd2c3",
+      "Contact_threshold_on_the_ring.md": "fc232a8826a9a6239f5caf8640c0ef6c2b7e7c3cf31ed0bc6a278552948acab2",
+      "lean/ContactComposition.lean": "01a670a279b317dc2f895a9a8b6dbe322e6cb083e7cbbafd0e7958224a632268",
+      "check_contact_compilation.py": "0a50ec4b19f1d5486a99f09b126e4def82655bf9bafa0b01102bd12c18bf691b",
+      "check_contact_exchange.py": "8663081878bdfe8c52ced7c73bb5739001e79ddda13ce50b9426bcdc0ae91b6d",
+      "check_contact_continuum.py": "dccf5b31038941e123fb00bfafab6ade0bb9650727e1282150b201b89ff7d17c",
+      "check_network_functional.py": "887f24c18cc1ade46d16122e5f7d68ae038d65d80682fa3d5554ef60377bd083",
+      "results/contact_compilation.json": "4106a41bd72be14ce0d5db6f0ef40c4e3c587764d0be82b2331299856c1862fe",
+      "results/contact_exchange.json": "165fb0bbc7fa365d448aa0004ce7fd5607c54887af93297c6690224fa167629d",
+      "results/contact_continuum.json": "fb140e2ace80da314eeed86d41adf113271152b3c7768d8dacf745969d399f2e",
+      "results/network_functional.json": "2171a146c1b19155c1d7b9963cbb9e15d62e2588b0b30228491ccf6a2eee8733"
+    },
+    "controls": {
+      "swap_probability": "d²|1+s|²",
+      "post_swap_pair_difference": "d²(2|1−g0|²+2|1−g2|²+|g0−g2|²)",
+      "reference_probability": "331776/390625",
+      "gate_compiler": "Real-sign all-pass ports in four or six eight-label rotations. Failure subspaces retained. No equality claimed for the entire failure channel.",
+      "fixed_negative_threshold": "Exactly one for every even ring at zero total momentum and z*=((24−7i)/25)^2; infinite-line fixed-negative contact law open.",
+      "network": "288 signed coefficients, 54 tables, 15552 input bins; all comparison maps agree with published Eq. E3 after matching Bob bits. External SDP not rerun."
+    },
+    "cross_director_7": {
+      "source": "e610e08",
+      "reviewed_at": "fd8c6a7",
+      "standing": "Review in contact with author by Director Z; finite results separated from third-party bound. The new contact-selection and band-edge derivations have not received Director Z review.",
+      "contact_predicates": {
+        "met": 9,
+        "failed": 0,
+        "measured_only": 4
+      },
+      "product_controls": {
+        "drawn": 200,
+        "qualifying": 198,
+        "K_zero": 198,
+        "end_to_end": 3
+      },
+      "unread_sensitivity": "refer to M3_no_record_at_charlie in source JSON",
+      "optical_float_control": [
+        "0.2433225959241921",
+        "0.24332259592419214"
+      ],
+      "rational_bypass_cross_review": "Same parsed content; one-byte serialization difference retained by reviewers.",
+      "out_of_hypothesis_controls": 3787
+    },
+    "nested_model": {
+      "attempt": "20261113T190642420301Z",
+      "receipt": "9772390fff2bcc7feacc",
+      "output_sha256": "1149df27653fe7820e07c6c90fa22fa810e2de595972121a4cebec0930971cc1",
+      "question": "For a four-mode occupation experiment, two equivalent one-particle schedules give a monitored two-particle probability proportional to |2+u+v|^2 or 16. Check the concrete unit phases u=i and v=-i: compute |2+u+v|^2 and compare with 16. Then determine precisely which unit complex u,v make |2+u+v|^2=16, and whether agreement of the one-particle schedules alone establishes that equality. Give your reasoning.",
+      "returned": "The requested complex squared modulus is 16. The two equivalent one-particle schedules give a monitored two-particle probability proportional to |2+u+v|^2 or 16. The concrete unit phases u=i and v=-i. The one-particle schedules are not specified, but the two-particle probability is given. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is 16, and the one-particle schedules are not specified. The squared modulus is",
+      "parent_evaluation": "With u=i,v=−i the true squared modulus is 4. Child reported 16. Parent corrected it and verified the equality condition; the first receipt and answer were retained."
+    },
+    "open_gates": 13
+  },
+  "local_electric_string_and_transverse_motion": {
+    "scope": "Two-charge vacuum Gauss sector with nearest-neighbor dressed rotations and one parallel electric phase after both bond layers. Fixed-action scalar limit, separately retuned finite-speed spinor, then transverse semiclassical position law. No empirical fit or absolute probability embedding.",
+    "totals": {
+      "checkers": 88,
+      "generated_outputs": 102,
+      "lean_files": 28
+    },
+    "replay": {
+      "fresh_checker_processes": 8,
+      "lean_compilations": 2,
+      "runtime": "Four validators per working copy in separate fresh processes, single-thread numerical backend; all eight output byte comparisons matched. Lean 4.19.0 commit 6caaee842e94, Windows x86_64, both compiles passed.",
+      "links_per_copy": {
+        "Electric_string_quantum_and_classical_motion.md": 18,
+        "Gauss_string_records.md": 7
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Electric_string_quantum_and_classical_motion.md": "a5254d22f6f61f6a6543da1da1ba1f043a86c3e4f6bd150b6fca4b60bfdda1ac",
+      "Gauss_string_records.md": "725778bd1dafbbac38f0fa0cbef5d30a4020978df94d076c8d4b8c911c915cc9",
+      "lean/GaussString.lean": "f3e0414132594af2ef4b9e52278170a0794bc6984f610f4c51492d416b10b7e5",
+      "check_gauss_string.py": "80b41c05dc06fed2da38d0b253de53feb300c679f95dc5854835a36cceca4b84",
+      "check_string_motion.py": "7b3d902eab0793ad07a00f2c799796f836d9fc666d2f72ef0e1b91e9d33bd909",
+      "check_string_band.py": "25c3eeac7b41161913e0bd023c4f097016f63a3e001174a2fae9fa4b310578c9",
+      "check_string_source.py": "ecc06dee4862619f2f231e663e5937073154bc07aa7369b144845ab8b7a3e13d",
+      "results/gauss_string.json": "8578564cde87d4df867ecc92cd05a520969c50c5475ac9def34326cabbb61035",
+      "results/string_motion.json": "d741660976555b2af239ffbbdb62ab541934f1fdad76542b78b3b6a068a03b0d",
+      "results/string_band.json": "b3a2e0c2ae48e06334db14dfed3b71495de856f2c186f9bf60bbc245a96161ea",
+      "results/string_source.json": "ec21de92d5fd8a252005b326c24ca5977ab482b6f3ef71c9494f18038dff8412"
+    },
+    "findings": {
+      "exact_read": "One full-cycle electric phase changes the localized return on six sites; half-layer, opposite background, explicit electric pointer and undo, vacuum and defects retained.",
+      "source": "Finite overlapping two-orbital states compiled with 13 and 17 addressed dressed rotations; inverse and dephased echoes, wrong determinant and blank-link controls retained.",
+      "phase_reference": "Four-site bright/dark under global conjugation unchanged. Aligned 9/25 vs independent 17/25 vs opposite 1 bright; retained tag 1/2.",
+      "motion": "55 snapshots, 8 relative trials and 4 open full-array trials. Gap >=1 after rebound 0.997284 vs reference 0.997614. At intermediate rebound 0.52571 vs 0.65665. Final held-phase norm discrepancy 0.94435 retained.",
+      "lean": "Gauss law, finite support, local flips, prefix parity including spectators, complement and integrated finite path action. Analytic and semiclassical theorems were reviewed separately."
+    },
+    "nested_model": {
+      "receipt": "bf297139f471e70738e1",
+      "parent_head": "bff2f57d3aad1f4e23a8e01da72663d24afcd1a17b25bd57f287bd54d55f6097",
+      "child_head": "0434fc6c3465e0c1ecb41a4362730078ab36deaa4327d68e153ffc70afdf7b00",
+      "question": "On an open binary chain j=1,...,5, E(j) xor E(j-1)=n(j), with n=(0,1,0,1,0) and energy epsilon times sum_{j=1}^5 E(j), compute E(1..5) and energy for each boundary choice E(0)=0 and E(0)=1. Does changing n(4) alone while keeping every E register fixed satisfy the constraint? Please give a short check.",
+      "child_reply": "The requested binary link values or energy from prefix parity are as follows:\r\n\r\n- E(1) = 0\r\n- E(2) = 1\r\n- E(3) = 0\r\n- E(4) = 1\r\n- E(5) = 0\r\n\r\nThe energy for each boundary choice E(0) is:\r\n\r\n- E(0) = 0\r\n- E(0) = 1\r\n- E(0) = 0\r\n- E(0) = 1\r\n- E(0) = 0\r\n\r\nDoes changing n(4) alone while keeping every E register fixed satisfy the constraint? Please give a short check. [end of text]",
+      "parent_reply": "First receipt: `\"bf297139f471e70738e1\"`.\n\nI asked the reviewer to solve five links with charges \\(n=(0,1,0,1,0)\\), testing both boundary fluxes. Its first reply gave incorrect fields and no valid energies.\n\nMy independent check uses\n\\[\nE(j)=E(0)\\oplus\\bigoplus_{k=1}^{j}n(k).\n\\]\nThus:\n\n- \\(E(0)=0\\): \\(E=(0,1,1,0,0)\\), energy \\(2\\epsilon\\).\n- \\(E(0)=1\\): \\(E=(1,0,0,1,1)\\), energy \\(3\\epsilon\\).\n\nChanging \\(n(4)\\) while fixing every field register violates the constraint at site 4.\n\n**No instantaneous force signal follows.** With local field registers fixed, the specified local link phase is unchanged. A distant charge label cannot change that local evolution.\n\nThe **preparation premise** is an already prepared, Gauss-law-consistent field configuration, including boundary flux. Recomputing its entire string after changing a charge assumes a global update.\n\nThe **physical speed count** includes charge preparation, constraint-preserving field updates, and local interaction layers across the separation\u2014not merely one parallel phase layer. With nearest-neighbor updates, propagation over \\(L\\) links requires order \\(L\\) layers. No numerical physical speed is specified.",
+      "parent_adjudication": "Child failed prefix parity and did not supply either energy. Parent supplied both complements; independently verified using XOR of [0,1,0,1,0] cumulants in the two boundary sectors. One model-selected tool invocation, two local PCP instances."
+    },
+    "open_gates": 13
+  },
+  "staircase_abundance_and_director_z_review_8": {
+    "review_commit": "078e5ac",
+    "scope": "G10 classification applied to the actual staircase departure block at x=2. Whole-carrier continuation of arbitrary subsets, one common endpoint function, normalization and positivity are physical assumptions. Finite base histograms alone do not establish them or choose the ordinary embedding.",
+    "totals": {
+      "checkers": 89,
+      "generated_outputs": 103,
+      "lean_files": 29
+    },
+    "checked": {
+      "staircase_orders": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        15,
+        16
+      ],
+      "minimum_requested_per_class": 7,
+      "lean": "Actual physical steps, line-to-ring periodicity, all words and two exits. An injection gives at least 2^k histories for each signed class and rail at 12k+6M+8 ticks for any M>0. Lean 4.19.0, fresh success in both copies.",
+      "reruns": "Both staircase outputs matched fresh Python processes. The optical checker also reproduced the 46,217-byte CRLF file in both locations on Windows. Director Z recorded 44,502 bytes under LF; all differences are 1,715 carriage returns.",
+      "optics": "The primary sharp-mode witness still uses an eighth-root model and the stated detector assumptions. Unexpanded pixel extents give ordinary-weight floor 0.41279749.",
+      "path_area": "Direction-word enumeration reproduced D9=31/256, D10=65/512, D11=355/2048, D12=111/512 on both rails.",
+      "signed_block": "Switching depends on the chosen order-two element. C2 x C4 gives switched dimensions 3,4,4 and unswitched dimension 14. Integer Lean iff, real classification and global switching kept distinct."
+    },
+    "source_and_output_sha256_LF": {
+      "Counting_and_character_records.md": "c317e70b9cdfa637eeab62420833727c4dca5a2ddb2e2dcc4adc28dfdc109a02",
+      "Multiset_block_law.md": "536e6219b2776257e262c654b1f6ad38e2db15fdd1328e81c7ca29ebd445a50f",
+      "Optical_multiset_weights.md": "23f228e9a248b70448c60ee055ec5cb7a49d48c6299129225c6e8862d38f408b",
+      "Path_area_and_the_force_clock.md": "f08451ed04eaf7d2b590c732c6d5524ac0a7d6690264ed36c1efbea7604d8b50",
+      "check_staircase_abundance.py": "f036b9037526e47e080a5c23370fb2ddd2de52c88e524fd7b9d074e0128da4d5",
+      "results/staircase_abundance.json": "34e44c9838914fbadc0199e3d1cfb517e4e9c32f210963b3e8641208db478feb",
+      "lean/StaircaseAbundance.lean": "5d3ff98ba5c68f987755582eae92c0e6e2e9fb328b956c31e97497022915cec5"
+    },
+    "checked_links": {
+      "Counting_and_character_records.md": {
+        "local": 19,
+        "git_pinned": 2
+      },
+      "Multiset_block_law.md": {
+        "local": 5,
+        "git_pinned": 7
+      },
+      "Optical_multiset_weights.md": {
+        "local": 8,
+        "git_pinned": 2
+      },
+      "Path_area_and_the_force_clock.md": {
+        "local": 19,
+        "git_pinned": 3
+      }
+    },
+    "open_gates": 13
+  },
+  "terminal_sheet_coarsening_and_reversible_returns": {
+    "scope": "One localized staircase launch. Nonnegative stationary multiset functions per port, arbitrary history subset continuation, terminal coarsening and reversible finite-dimensional compact operational closure. Finite return experiments separate laws conditional on their preparations. Electric string comparison assumes a two-component marked/coherent family.",
+    "totals": {
+      "checkers": 93,
+      "generated_outputs": 107,
+      "lean_files": 29
+    },
+    "proof": {
+      "g10": "Edition Z20 481a04f; apply the global-law statement after combining the two disjoint parity equations. A common horizon for both parities is impossible.",
+      "lean": "Lean 4.19.0, Windows, two successful compilations. Directed step, floor periodicity, uniform arbitrary signed gain multiplicity at each target site/rail of one parity at 12k+10M+10+p, opposite parity obstruction. No formalization of the operational axioms or recurrence.",
+      "recurrence": "Minkowski norm of K-K makes the affine automorphism isometric; joint returns of finite coherent blocks attain the limsup. Infinite iid tape and finite H-bit prefix controls delimit the closure hypothesis."
+    },
+    "checks": {
+      "replay": "Four fresh processes per working copy, byte-identical outputs; after the last extra rail-recovery predicate, two further ring-recurrence processes were rerun. All four stored current outputs independently reproduced in both trees.",
+      "scope_of_numerics": "22,510 local subsets, 18,334 disagreements with pure zero character, all sheet/position/rail outcomes kept. Formal removal of one cancelling history yields 33/32 each in 14 tested orders. All 1,336 basis columns in the two exact inverse circuits checked. Nine finite-visibility rows.",
+      "string": "Four phase models scanned over ticks 1..32768 for each of six launches; maximal difference between the two scan implementations <5e-11. Exact early pointer and unmarked distributions; geometry n=2..10 includes one-state exception.",
+      "finite_tape": "All inverse states on five finite tapes and all words through tape length; exact launch ensemble return periods 12,36,24,60,180 at order 3.",
+      "per_copy_local_links": {
+        "Return_records_and_reversible_dynamics.md": 15,
+        "Counting_and_character_records.md": 20,
+        "Electric_string_quantum_and_classical_motion.md": 19,
+        "Native_preparations_and_probability_embeddings.md": 9
+      }
+    },
+    "source_and_output_sha256_LF": {
+      "Return_records_and_reversible_dynamics.md": "fdcddd60a36c439503c3a85f6be26beff7acbeed02d6882e06c576a2e5a19e69",
+      "Counting_and_character_records.md": "50672dfc47adeb8b89399116f89fafb9b262a66578d923b4f7950973509c1f46",
+      "Electric_string_quantum_and_classical_motion.md": "50391027608cf1d2d519fcdedfb2b1d1ae2b88c51bca6f053211b41b96a44d33",
+      "Native_preparations_and_probability_embeddings.md": "2eb65f46d52086d814ea2395332df33c8cce0411b27310d46638cb02665909e8",
+      "lean/StaircaseAbundance.lean": "82807066687875e9cce8d69b55c51bed28c53131063caa739b93734b818eeec8",
+      "check_sheet_coarsening.py": "d22dda971e46a5f432de87051c296b0ec22fc3148977d9fce3ad96fba645927c",
+      "check_ring_recurrence.py": "70a4884c5cb3267e7c6e45a873f6482a9175ff30e1f18241460cab31335104e7",
+      "check_staircase_echo.py": "9e4899d6eaad38bda549fcb5651e9902ce3854e968a78b6e504ebada7b4aa8a1",
+      "check_string_return_law.py": "3645b7a6fc0d39b2ed68d33f93a4be9a6ed7f253eb28a012b6c654ad32e516c4",
+      "results/sheet_coarsening.json": "024f9133e45c2ad2c40f9cebd79b9cebc3c9bb6d813952d77752182ea45c347e",
+      "results/ring_recurrence.json": "9aa07c6e43c0fa0bc385370586c081bd86dc4522468b519c4c283995773312db",
+      "results/staircase_echo.json": "a3924a582c650efb752d758b402e632a1a3c29c68c3a6dafa1faafdae842a030",
+      "results/string_return_law.json": "05252a7f2940afe47d50061880774fbccb0f0508c754f2c26e2e3acdbcd3f2ca"
+    },
+    "nested_pcp": {
+      "receipt": "7f1c2ab75879084d13e5",
+      "child_head": "5a55ec7d10b81c43f94e7beda6fdf2d04884aea675f742ac0a01d2c7fedf7075",
+      "parent_head": "41ea26616e4850247abbdfb10d87c59abc8fee929acacb492526fe2e7c3bc332",
+      "request": "For H=2 independent fair tape bits b1,b2, compare reversible counting walk (x,c)->(x+(-1)^b,c+1), reading b at c, with two fresh fair \u00b11 steps, start (0,0). Enumerate all direction prefixes and terminal x distributions. Then reset x=0,c=0 and reuse the identical tape: compare joint terminal observations with fresh independent tape. Does a finite terminal record rule out the counter? Give a short calculation and receipt ID.",
+      "child_answer": "1. 2\r\n2. 1\r\n3. 1\r\n4. 1\r\n5. 1\r\n6. 1\r\n7. 1\r\n8. 1\r\n9. 1\r\n10. 1 [end of text]",
+      "parent_answer": "The first consultation returned receipt ID `7f1c2ab75879084d13e5`. Its reply, quoted in full:\n\n> 1. 2  \n> 2. 1  \n> 3. 1  \n> 4. 1  \n> 5. 1  \n> 6. 1  \n> 7. 1  \n> 8. 1  \n> 9. 1  \n> 10. 1 [end of text]\n\nThis calculation is unusable: it provides no identifiable comparison or reasoning. I used no further consultation.\n\nMy independent check uses a fixed tape \\(b\\), integer counter \\(c\\), and transition\n\\[\n(x,c)\\mapsto(x+(-1)^{b_c},c+1).\n\\]\nThis is reversible: from \\((y,d)\\), recover \\((y-(-1)^{b_{d-1}},d-1)\\).\n\nFor two independent fair tape bits, every direction prefix is:\n\n| Prefix | Position | Probability |\n|---|---:|---:|\n| empty | 0 | 1 |\n| \\(+\\) | 1 | \\(1/2\\) |\n| \\(-\\) | \u22121 | \\(1/2\\) |\n| \\(++\\) | 2 | \\(1/4\\) |\n| \\(+-\\) | 0 | \\(1/4\\) |\n| \\(-+\\) | 0 | \\(1/4\\) |\n| \\(--\\) | \u22122 | \\(1/4\\) |\n\nThese match fresh fair steps exactly, including all prefixes. Both terminal distributions are \\(P(-2)=1/4,\\ P(0)=1/2,\\ P(2)=1/4\\).\n\n**Using the same tape again:** if both position and counter are restored to their starting values, the entire path repeats. For successive terminal observations \\((X,Y)\\):\n\n| Pair | Same tape, restarted | Independent fresh tapes |\n|---|---:|---:|\n| \\((-2,-2)\\) | \\(1/4\\) | \\(1/16\\) |\n| \\((0,0)\\) | \\(1/2\\) | \\(1/4\\) |\n| \\((2,2)\\) | \\(1/4\\) | \\(1/16\\) |\n| Any unequal pair, collectively | 0 | \\(5/8\\) |\n\nRestoring the starting state is an externally stipulated operation; it is not supplied by the reversible walk itself. Without resetting the counter, another two steps read subsequent bits, whose values the H=2 calculation does not specify.\n\n**Assessment: conditional.** Finite terminal observations do not generally rule out a counting component: this explicit reversible counting model matches the fresh walk for H=2. An unequal pair would refute this particular deterministic same-tape restart model under the stated exact assumptions. Equal pairs remain compatible with both models. The consultation supplies no support; the conclusions above come from the displayed enumeration.",
+      "adjudication": "The child returned an unlabelled list; no usable calculation. Parent enumerated all four two-bit words with equal weights for its separate tape/counter example and distinguished repeated versus fresh samples. The paper uses a fully reversible swap and cyclic pointer rather than treating repeated measurements on reused tapes as independent."
+    },
+    "open_gates": 13
+  },
+  "director_z_ninth_cross_review": {
+    "review_commit": "78cfafd",
+    "standing": "Director Z and two cross-reviewers with exposure to the manuscripts and their reproductions; this is a shared-program cross-read.",
+    "files": {
+      "Protected_records_and_coordinate_weights.md": {
+        "sha256_LF": "9249d48d0930936b2461fc844ebb10771c0d8e8a31bebf959d957408fa772385",
+        "local_links": 23
+      },
+      "Force_calibration_across_scales.md": {
+        "sha256_LF": "3aec1afd752bc47e565dc01bdd275d9ac782736d0876c23fccf00163dca539c1",
+        "local_links": 16
+      },
+      "Returning_loops_and_one_classical_ray.md": {
+        "sha256_LF": "3f14fed7b95899cbdba9efb79529e1cd31027a272ec927f41111e4e0c90ea16a",
+        "local_links": 15
+      }
+    },
+    "confirmation": "Three checkers freshly replayed on Windows from checkout reproduced stored bytes. The reviewer\u2019s Linux coherent comparison differs in one final CR; the loop read differs in a trailing CR plus 85 numeric leaves in two control groups, maximum absolute difference 1.6653345369377348e-16. The force transfer was identical. Both variants are retained.",
+    "corrections": [
+      "Loop phase uniformity on a circle requires circumference divisible by sheet order. At declared chart, exact route heralds are 2^-127 and 2^-179; RMS values do not establish finite narrowness. The sign symmetry uses preparation conjugation.",
+      "Force calibration leaves independent units as a premise. At pi/8 the exact six-block probability is 1/512 with ratio 2/231 and posterior count 8/9.",
+      "Selector order matches the loaded source; pair-slot permutations directly establish the protected comparison and a separate joint clean-padding route treats the individual private slot. Grid ranges and Lean scope are explicit."
+    ],
+    "open_gates": 13
+  },
+  "periodic_carrier_z21_confirmation": {
+    "edition_commit": "93fbbd4",
+    "supplement_before": "10d2bf7",
+    "note": "C0 is the full signed gain group in the base staircase and the full sign group after resolving the physical sheet. Z21 Theorem 5.26 gives the same result for attainable events as our explicit two-parity argument.",
+    "paper_sha256_LF": "f4d4fd127fcb35c103b5eef9159af75ca369b2118b7bac2559096b9fdcbca7f3"
+  },
+  "two_particle_string_controls_and_detector": {
+    "prior_shared_edition": "d36b6a9 (Z23)",
+    "standalone_lean": "4.19.0, clean exit. Integer layout and matching-edge contrasts only.",
+    "file_sha256": {
+      "check_string_control.py": "699353fe5af5a7adaf51146a9d3256f971b05bb86c43844edde401870e23b2fe",
+      "check_string_readouts.py": "6b68e0c51f784d061aed4c35f9f8f010b32262c7865d757e19a1873e8d18c78a",
+      "results/string_control.json": "ff71e22811cece5749c3c1146bc74b09e65dace6145c19806e8f31ee31298700",
+      "results/string_readouts.json": "d490fa44ae47bc5aa10fe49cb1b187295f8b36c2deb55b91f08240a358d411c6",
+      "lean/StringControl.lean": "1028f34a80425fdecc818e26e806cf101a282d1f3e70f82c1e1be2dde4d84b8c"
+    },
+    "paper_sha256_lf": "7afe84062c042444f1009eb530b3767a74d602451fb7da39f9daa1f3f32d634c",
+    "checks": "The director reran both checkers in separate fresh output folders. Both SHA-256 values match the checked-in results. All 36 single-hop settings and 36 joint bins, including zeros, and every launch/word through length four are represented. No experimental data.",
+    "challenge": "Three same-family Codex participants: one computed Lie ranks and the finite witness and reviewed the finished paper, one formalized the diagonal identities, and one tested the detector reconstruction. The latter produced the two-residue law and routed stabilizer argument. Reassessment clarified the second tilt and refinement-dependent denominators. Separate copy routing is an additional hypothetical control.",
+    "open_gates": 13
   }
 }

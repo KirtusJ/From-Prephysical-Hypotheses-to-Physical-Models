@@ -1,0 +1,388 @@
+{
+ "met": [
+  {
+   "name": "A2 quadratic protected masses constant",
+   "info": []
+  },
+  {
+   "name": "B 81/88",
+   "info": null
+  },
+  {
+   "name": "B 162/239",
+   "info": "162/239"
+  },
+  {
+   "name": "B 1/20,1/8,1/40,1/16,1/28",
+   "info": null
+  },
+  {
+   "name": "B 5/16 from counts (2,1,0,0,0) at t=4 (arithmetic only)",
+   "info": null
+  },
+  {
+   "name": "C1 t=0..16",
+   "info": []
+  },
+  {
+   "name": "C2 t=0..16",
+   "info": []
+  },
+  {
+   "name": "C3 t=0..16",
+   "info": []
+  },
+  {
+   "name": "C4 t=0..16",
+   "info": []
+  },
+  {
+   "name": "C5 t=0..16",
+   "info": []
+  },
+  {
+   "name": "D1 mod-2 power formula on all words",
+   "info": []
+  },
+  {
+   "name": "D2 odd numerator in every column, no single-port output (qualifying N)",
+   "info": []
+  },
+  {
+   "name": "E1 JWJW=I exactly, N in 2,6,10,12,14,18 (localized input returns to one port at depth 2)",
+   "info": []
+  },
+  {
+   "name": "E2 isolated X_x (pre) and S X_x S^-1 (post), minus rail blank at end",
+   "info": []
+  },
+  {
+   "name": "E3 control: omitting one J breaks the echo on every tested N (expected to hold as a failure)",
+   "info": {
+    "sizes_where_omission_still_passes": []
+   }
+  }
+ ],
+ "failed": [
+  {
+   "name": "A1 full final vectors equal and equal (x,y)/sqrt2, private blank, equal depth",
+   "info": [
+    "note_end_to_end",
+    "x_vs_two_twos",
+    "three_vs_four_twos",
+    "depth1",
+    "random_t1_0",
+    "random_t1_1",
+    "random_t1_2",
+    "random_t1_3",
+    "random_t1_4",
+    "random_t1_5",
+    "random_t2_0",
+    "random_t2_1",
+    "random_t2_2",
+    "random_t2_3",
+    "random_t2_4",
+    "random_t2_5",
+    "random_t3_0",
+    "random_t3_1",
+    "random_t3_2",
+    "random_t3_3",
+    "random_t3_4",
+    "random_t3_5",
+    "random_t4_0",
+    "random_t4_1",
+    "random_t4_2",
+    "random_t4_3",
+    "random_t4_4",
+    "random_t4_5",
+    "random_t5_0",
+    "random_t5_1",
+    "random_t5_2",
+    "random_t5_3",
+    "random_t5_4",
+    "random_t5_5",
+    "random_t6_0",
+    "random_t6_1",
+    "random_t6_2",
+    "random_t6_3",
+    "random_t6_4",
+    "random_t6_5"
+   ]
+  }
+ ],
+ "measured": {
+  "A_instances": {
+   "total": 41,
+   "qualifying": 40,
+   "nonqualifying": 1,
+   "with_equal_signed_entry": 38,
+   "initial_vectors_differ": 40,
+   "gate_words_differ": 40,
+   "layer_counts_equal": 40,
+   "quartic_changes_protected_mass": 40,
+   "quartic_unchanged_names": []
+  },
+  "C_counts_through_t14": {
+   "small_range_pairs": 289,
+   "large_range_rows": 127,
+   "normaliser_rows": 14,
+   "signed_depth_value_cases": 877,
+   "note_says": {
+    "reference_pair_compilations": 424,
+    "signed_cases": 877
+   },
+   "C5_scope": "fold run on every row for t<=12 and on a 1-in-97 sample for t=13..16"
+  },
+  "C_per_depth": {
+   "0": {
+    "S": 1,
+    "b": 0,
+    "pairs": 0,
+    "large": 0
+   },
+   "1": {
+    "S": 2,
+    "b": 1,
+    "pairs": 0,
+    "large": 0
+   },
+   "2": {
+    "S": 4,
+    "b": 1,
+    "pairs": 0,
+    "large": 1
+   },
+   "3": {
+    "S": 8,
+    "b": 2,
+    "pairs": 1,
+    "large": 0
+   },
+   "4": {
+    "S": 16,
+    "b": 2,
+    "pairs": 1,
+    "large": 2
+   },
+   "5": {
+    "S": 32,
+    "b": 4,
+    "pairs": 3,
+    "large": 1
+   },
+   "6": {
+    "S": 64,
+    "b": 5,
+    "pairs": 4,
+    "large": 3
+   },
+   "7": {
+    "S": 128,
+    "b": 8,
+    "pairs": 7,
+    "large": 3
+   },
+   "8": {
+    "S": 256,
+    "b": 11,
+    "pairs": 10,
+    "large": 5
+   },
+   "9": {
+    "S": 512,
+    "b": 16,
+    "pairs": 15,
+    "large": 6
+   },
+   "10": {
+    "S": 1024,
+    "b": 22,
+    "pairs": 21,
+    "large": 10
+   },
+   "11": {
+    "S": 2048,
+    "b": 32,
+    "pairs": 31,
+    "large": 13
+   },
+   "12": {
+    "S": 4096,
+    "b": 45,
+    "pairs": 44,
+    "large": 19
+   },
+   "13": {
+    "S": 8192,
+    "b": 64,
+    "pairs": 63,
+    "large": 26
+   },
+   "14": {
+    "S": 16384,
+    "b": 90,
+    "pairs": 89,
+    "large": 38
+   },
+   "15": {
+    "S": 32768,
+    "b": 128,
+    "pairs": 127,
+    "large": 53
+   },
+   "16": {
+    "S": 65536,
+    "b": 181,
+    "pairs": 180,
+    "large": 75
+   }
+  },
+  "D": {
+   "words": 156,
+   "qualifying_words": 120,
+   "D1_fail": [],
+   "D2_fail": [],
+   "nonqual_single_port": [
+    [
+     4,
+     24
+    ],
+    [
+     4,
+     24
+    ]
+   ],
+   "first_t_with_all_even_column_from_R0": {
+    "4": 3,
+    "8": 5,
+    "16": 9,
+    "6": null,
+    "12": null
+   },
+   "U24_identity_N8_all_columns": true
+  },
+  "E": {
+   "E1_fail": 0,
+   "E2_fail": 0,
+   "omit_J_columns_failed": 248,
+   "omit_J_columns_passed": 0,
+   "omit_J_sizes_with_all_columns_passing": []
+  },
+  "F_stored_router": {
+   "final_128_numerators_identical": true,
+   "denominators_equal": true,
+   "nonzero_modes": 13,
+   "stage_names": [
+    "selector",
+    "before reduction phase",
+    "reduce 1",
+    "reduce 2",
+    "reduce 3",
+    "middle permutation",
+    "middle phase",
+    "prepare 1",
+    "prepare 2",
+    "prepare 3",
+    "after preparation phase"
+   ],
+   "stages_with_identical_word_digest": [
+    0
+   ],
+   "stages_with_different_word_digest": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "start_vectors": [
+    [
+     2,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "peak_minus_modes": [
+    [
+     20,
+     20,
+     21,
+     23,
+     17,
+     11,
+     16,
+     22,
+     21,
+     26,
+     26
+    ],
+    [
+     32,
+     32,
+     32,
+     20,
+     20,
+     17,
+     20,
+     20,
+     20,
+     26,
+     26
+    ]
+   ],
+   "static_mask_first_change": [
+    [
+     null,
+     1644,
+     2646,
+     4589,
+     6532,
+     8463,
+     8523,
+     11689,
+     13612,
+     15547,
+     17502
+    ],
+    [
+     null,
+     1644,
+     2646,
+     4589,
+     6532,
+     8463,
+     8523,
+     11689,
+     13612,
+     15547,
+     17502
+    ]
+   ]
+  }
+ },
+ "counts": {
+  "met": 15,
+  "failed": 1,
+  "measured_only": 6
+ }
+}
