@@ -41,3 +41,26 @@ At this depth the three models agree on both separate marginals. The branch weig
 The checker compares the physical compiler with word enumeration at all populated and dark outputs for both sharp initial rails and all eight tested depths. A leaked copy first spoils the corrected sharp-\(R\) endpoint distribution at \(t=3\), with total variation \(1/4\). The case study's eight-site return example likewise distinguishes a final-only record from an intermediate read and from a record at every tick. Here the extra copy is tested as its own instrument. [Checker](check_parity_eraser.py) · [Full terminal panels and adverse controls](results/parity_eraser.json) · [Delegation and scientific review, p. 21](../case_studies/PCP_Delegation_and_Scientific_Review.pdf#page=21)
 
 The [Lean 4.19.0 proof](lean/ParityEraser.lean) checks the unnormalized integer reflection identity by induction at all horizons, the local four-port compiler and the first-arm sign reversal. The density-operator and detector arguments above use additional premises.
+
+## Measuring the response to either neighbor
+
+Consider a stationary marker whose denominator at site \(y\) is \(n_y+\alpha n_{y-1}+\beta n_{y+1}\), where \(n_y=u_y^2+v_y^2\), with unknown finite \(\alpha,\beta\ge0\). The signed field still follows the same walk. All isolated sharp launches continue to agree with on-site calibration because their occupied sites have dark neighbors. The two coefficients describe a proposed dependence of the marker on the local guide. They have no assigned experimental values.
+
+In the sharp-\(R\) setting above, insert three routing slots between the analyzer transposition and its final tick. In the first setting, hold all ports. In the second, swap both rails without mixing them on the successive site pairs \((-1,0),(0,1),(-1,0)\). This permutes the two flanking sites and restores both rails of the central site and its marker mass. Both settings take nine slots from launch through the final split under the one-slot transposition convention. All earlier splits on occupied sites have \(uv=0\); the mass at the central parent is \(1/4\) for every coefficient pair. The earlier controls transport the marker and field by the same permutations. A device that retains intermediate router history can lie outside this comparison.
+
+The two flank norms are \(1,2\) in the hold setting and \(2,1\) after exchange. Thus \(z_1=\alpha+2\beta\) and \(z_2=2\alpha+\beta\) enter as excess denominators over the central norm \(2\). At the same physical daughter pair \(D=(+1,R), B=(-1,L)\) the unconditional detector masses and their odds are
+
+\[
+ P_D(z)=\frac{z}{8(2+z)},\qquad P_B(z)=\frac{4+z}{8(2+z)},\qquad
+ R(z)=\frac{P_D(z)}{P_B(z)}=\frac{z}{4+z}.
+\]
+
+**A directional test needs no relative efficiency calibration.** Suppose the expected counts equal the masses times a positive setting brightness and a stable positive efficiency for each detector. Then the sign of \(C_{D,1}C_{B,2}-C_{B,1}C_{D,2}\) is the sign of \(\beta-\alpha\), since \(R\) is strictly increasing. Both expected dark counts can be zero. The determinant remains defined at this boundary. For \((\alpha,\beta)=(1,0)\) the two dark probabilities are \(1/24\) and \(1/16\); interchanging the coefficients interchanges the results. Sampling uncertainty, background, crosstalk and response changes between schedules require separate treatment.
+
+**For the magnitudes**, prepare one populated incoming rail at the same central splitter with the matched final clock and readout. Since \(uv=0\), both daughter probabilities are equal in this reference for all coefficients. Divide each test setting's dark-to-bright expected count ratio by the corresponding reference ratio. With stable relative efficiencies between each test and its reference this recovers \(R_i\). Setting \(z_i=4R_i/(1-R_i)\) yields
+
+\[
+ \alpha=(2z_2-z_1)/3,\qquad \beta=(2z_1-z_2)/3 .
+\]
+
+The family predicts \(0\le R_i<1\) and \(z_1\le2z_2,\ z_2\le2z_1\). Invalid values can indicate sampling error or failure of a modeling assumption. The inversion becomes poorly conditioned as \(R_i\) approaches one. In the symmetric subfamily \(\alpha=\beta=\lambda\), even the absolutely calibrated dark probability is one-to-one in \(\lambda\). A hosted PCP worker drafted the exact rational cross-multiplication identity for that last statement, and its parent checked the returned source with Lean 4.19.0. The field equations and measurement model are separate hypotheses. [Lean identity](lean/DarkPort.lean) · [Two-setting checker](check_neighbour_calibration.py) · [All 25 coefficient pairs including zero and large weights](results/neighbour_calibration.json)
