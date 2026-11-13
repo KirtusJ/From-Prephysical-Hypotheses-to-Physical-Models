@@ -1,0 +1,158 @@
+{
+ "seed": 20261113,
+ "predicates": {
+  "Q1": {
+   "met": true
+  },
+  "Q2": {
+   "result": {
+    "dim": 1,
+    "inner": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "rank": 1,
+    "dev": 3.157967714489334e-15,
+    "exact_sq": 0.0,
+    "exact_lin": 12.0,
+    "sv": [
+     0.9999999999999998
+    ]
+   },
+   "met": false
+  },
+  "Q3": {
+   "ranks": {
+    "1": 0,
+    "1.5": 0,
+    "2.5": 0,
+    "3": 0,
+    "4": 0
+   },
+   "met": true
+  },
+  "Q4": {
+   "max_residual_of_phi_t": 0.0,
+   "inner_rank": 1,
+   "met": true
+  },
+  "G0": {
+   "built": 124,
+   "qualifying": 97,
+   "met": true
+  },
+  "G1": {
+   "failures": 0,
+   "met": true
+  },
+  "G2": {
+   "counted": 97,
+   "met_on": 97,
+   "not_counted_too_few_inner_unknowns": 0,
+   "worst_relative_deviation": 2.4202861936828413e-14,
+   "met": true
+  },
+  "G3": {
+   "connected": false,
+   "inner_rank": 1,
+   "dev": 6.710681393289835e-15,
+   "met": true,
+   "note": "hypothesis violated on purpose; recorded only"
+  },
+  "L1": {
+   "dimension_and_failures": {
+    "(1,)": [
+     0,
+     0
+    ],
+    "(2,)": [
+     0,
+     0
+    ],
+    "(3,)": [
+     0,
+     0
+    ],
+    "(4,)": [
+     0,
+     0
+    ],
+    "(5,)": [
+     0,
+     0
+    ],
+    "(6,)": [
+     0,
+     0
+    ],
+    "(7,)": [
+     0,
+     0
+    ],
+    "(8,)": [
+     0,
+     0
+    ],
+    "(9,)": [
+     0,
+     0
+    ],
+    "(10,)": [
+     0,
+     0
+    ],
+    "(11,)": [
+     0,
+     0
+    ],
+    "(12,)": [
+     0,
+     0
+    ],
+    "(2, 2)": [
+     0,
+     0
+    ],
+    "(2, 4)": [
+     0,
+     0
+    ],
+    "(3, 3)": [
+     0,
+     0
+    ],
+    "(4, 4)": [
+     0,
+     0
+    ],
+    "(2, 2, 2)": [
+     0,
+     0
+    ]
+   },
+   "nonvacuous_groups": 0,
+   "met": false
+  },
+  "L2": {
+   "null_dim_on_box": 3,
+   "inner_rank": 3,
+   "residual_outside_quadratic_forms": 6.5651380857111e-16,
+   "met": true
+  },
+  "K": {
+   "cases": {
+    "K1 d=1 cycle, Z3: X(D) all characters; arbitrary even kernel consistent with c=1": "PASS",
+    "K2 d=1 merging pair: X(D) empty, no common-length walks to both, yet f(1)=1 kernel consistent with c=1": "PASS",
+    "K2b no start reaches both merging vertices at one length (12 lengths)": "PASS",
+    "K3 trivial group, d=2: X(D) empty; coincidence count: single walk forces c=2, pair event gives ratio 3": "FAIL",
+    "K4 one vertex, loop gain 1 in Z4: X(D) all four characters; any even kernel consistent with c=1": "PASS",
+    "K5 one vertex, loop, trivial group: consistent with c=1": "PASS"
+   },
+   "met": false
+  }
+ },
+ "all_met": false
+}

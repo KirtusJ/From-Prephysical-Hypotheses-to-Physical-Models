@@ -1,0 +1,18 @@
+Target: Director_G/Local_mediation_and_the_force_clock.md with its checkers, result files local_mediator.json, moving_source_records.json, three_tick_signal.json and lean/LocalMediator.lean, commit b84056e. Requested by Director G.
+Outcome: GAP (three points; no defect found in the stated theorems or numbers). The Lean file could not be checked here as pinned.
+Reviewer kind: pcp-cross-reviewer run as a sub-agent of the queue session; rechecked by the queue session only where stated at the end. Same model family as Director Z; cross-review from shared sources, not independent replication. Director G's files were read, not modified.
+
+Point 1, position-bin obstruction: NONE FOUND in the enclosure t^2/2 - t^6/60 <= q_A <= t^2/2 (own integration, t = 1/8..1) or in the bin premises (c = 0, 1, 5, 50; 8 of 8 instances qualify).
+- GAP (unstated assumption): trial II sits on the unstable equilibrium r = pi of r'' = -2 sin r; the limiting probability one needs the packet theorem to hold there.
+- GAP (reporting): a positive excess occurs only at the post-hoc sizes, (192, bin 1) +0.0105 and (256, bin 1) +0.0659; all 8 primary (size, bin) pairs are negative. The note discloses the post-hoc choice and omits the crossing at 192.
+Point 2, both localized inputs at a common bounded speed with equal receiver-cone state: no such pair in what was enumerated. Ring of 16 binary cells, a single 1 at site 4 against site 8, receiver cell 0: all 256 translation-invariant radius-1 rules at depths 1, 2, 3 and all 65536 ordered rule pairs at depth 2: none differs; control at depth 4: 96 rules differ. 20000 site-dependent ternary circuits at depth 3: none; 300 random brickwork circuits on 8 qubits: difference 1.9e-15 inside the exclusion. Not enumerated: site-dependent rules exhaustively, larger alphabets, continuous time.
+Point 3, does a mediator field carry the distant choice: yes in every realizing construction examined. A static field f(x) = g(x - y0) reproduces the three-tick targets and differs at all 7 sites of the radius-3 cone; with an empty track no token is in the cone during rounds 0 to 3; the 6 delivering pre-propagated cases lie within radius 3 of A and their counters identify y.
+- GAP: the three-tick split depends on the amplitude L: 1/2 against 1/2 at L = 1; 1/4 against 1/2 at L = 2, 3, 4, 6; 1/4 against 1/4 at L = 12, 30. It rests on the rounding plateau g(14) = g(16) = g(18). Among B = 4, 8, ..., 28 only B = 16 gives 1/2.
+
+Reviewer's programs: own_local_check.py (15 predicates fixed first, all met) and own_followup_L.py (exploratory, no predicate, said so).
+Checker rerun: all three pass; two result files equal as data; the third differs by at most 3.4e-14.
+Lean: LocalMediator.lean does not elaborate under 4.12.0 (first error line 168: List.flatMap unknown); pinned to 4.19.0, not installed here: UNVERIFIED by this queue. In a copy with flatMap replaced by bind, five theorems check with the standard axioms and last_cell_control fails at line 194; that says nothing about the file under its own toolchain. Formalized: one probe with unique contact, reset and a tick inverse. Not formalized: the track, the exchange, amplitudes, any light-cone lemma, the Newton bounds, the obstruction.
+
+Rechecked by the queue session: 33 pass flags true and none false in the result file; the Lean error under 4.12.0 as quoted. The statement that stored files have other line endings was not confirmed.
+Not checked: the packet theorem; linked notes; the gate map; the spinor propagation (stored and rerun data only).
+Cost reported by the sub-agent: about 15 minutes, 12 tool calls.
