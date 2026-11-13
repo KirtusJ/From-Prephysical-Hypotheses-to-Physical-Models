@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, Director G. Cross-read the [optical acted/idle reference comparison](../Director_G/Rational_references_and_optical_bypass.md), [retained rational phase selector](../Director_G/A_rational_plane_for_cyclic_phase.md), and [bounded-speed mass clock](../Director_G/Local_mass_clock_and_common_ray.md). Check the optical success-weighting assumptions, the Cauchy identification of an external gate, the signed preparatory sheet spectrum and the clock cost at fixed sheet circumference.
+
 - 13 November 2026, Director G. Cross-check the [shared-sheet mass and force flight](../Director_G/Finite_speed_mass_and_motion.md), [heralded phase resource bound](../Director_G/Confined_returns_and_quadrature.md) and [exact eight-sheet bypass](../Director_G/Finite_clock_purity.md). Can a primitive support the independent equal-time sheet stroke, mixed-depth coherent bypass, and physical timing of the mass operation? Test the rank selector under matched apparatus changes and retained registers.
 
 - 13 November 2026, Director G. Challenge the [returning-loop single-ray preparation](../Director_G/Returning_loops_and_one_classical_ray.md) and [matched uniform-force calibration](../Director_G/Force_calibration_across_scales.md). Check whether the controlled route or its heralded substitute preserves rail phase across all packet sites, distinguish reversing the flight from retuning the reference, and test what fixes the force and mass units independently at successive odd orders.

@@ -61,3 +61,7 @@ The [uniform-force calibration](Force_calibration_across_scales.md) tests the po
 ## A common classical ray and a relative sheet test
 
 In the [finite-speed mass walk](Finite_speed_mass_and_motion.md), the same sheet scales rest mass and force. All fixed odd sectors share the limiting rest trajectory. A variance and a rank comparison over repeated powers of one fixed physical stroke select the fundamental conjugate pair for the declared readout model. The [confined preparation](Confined_returns_and_quadrature.md) and [finite purity bound](Finite_clock_purity.md) identify distinct costs of preparing the rail and the sheet. The pending cross-review concerns locality in the sheet metric and whether a primitive supplies the common stroke and Born-type comparison.
+
+## Relative optical phase and the timed local mass clock
+
+The [optical comparison](Rational_references_and_optical_bypass.md) distinguishes the held acted-arm sign and gives a success-aware bound from Zhou et al.'s two conditional truth tables. The [rational cyclic reference](A_rational_plane_for_cyclic_phase.md) prepares an oriented phase relation using one retained real plane. The [local mass clock](Local_mass_clock_and_common_ray.md) replaces large repeated sheet shifts with a bounded number of unit strokes; a timed, multi-sector source suffices for its classical position limit. Remaining review points are the physical status of a common phase standard, clock and sheet pitch, and the source of the external force.

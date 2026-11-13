@@ -5300,5 +5300,404 @@
       "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
       "fresh_full_replay": false
     }
+  },
+  "local_mass_clocks_and_held_optical_bypass_addendum": {
+    "scope": "Incremental verification of local clocks, broad character sources, matched coherent bypass phases and an independently measured controlled-H implementation.",
+    "totals": {
+      "checkers": 71,
+      "generated_outputs": 85,
+      "lean_files": 23,
+      "added_checkers": 6,
+      "added_outputs": 6,
+      "added_lean_files": 1,
+      "fresh_checker_processes": 12,
+      "fresh_lean_compilations": 2
+    },
+    "sources_and_outputs": {
+      "Local_mass_clock_and_common_ray.md": {
+        "lf_sha256": "e86792b2b9ecf4e239fe80b5ea4924fb4d588be5f389107dda7fe4240f9d3061",
+        "raw_bytes_by_mirror": {
+          "research": 10217,
+          "checkout": 10217
+        }
+      },
+      "Rational_references_and_optical_bypass.md": {
+        "lf_sha256": "6b41b24781e87067bbe9ce5a7910c011f4785405e9acfc876f5a4f851d9432d9",
+        "raw_bytes_by_mirror": {
+          "research": 13500,
+          "checkout": 13500
+        }
+      },
+      "A_rational_plane_for_cyclic_phase.md": {
+        "lf_sha256": "83be5ddfc777576f76be904f616e2e28e5d748d2e86bc47355bc725756e69ee8",
+        "raw_bytes_by_mirror": {
+          "research": 7286,
+          "checkout": 7286
+        }
+      },
+      "lean/MassGauge.lean": {
+        "lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+        "raw_bytes_by_mirror": {
+          "research": 7177,
+          "checkout": 7177
+        }
+      },
+      "check_local_mass_register.py": {
+        "lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+        "raw_bytes_by_mirror": {
+          "research": 14003,
+          "checkout": 14003
+        }
+      },
+      "check_bypass_phase_reference.py": {
+        "lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+        "raw_bytes_by_mirror": {
+          "research": 13359,
+          "checkout": 13359
+        }
+      },
+      "check_common_ray_source.py": {
+        "lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+        "raw_bytes_by_mirror": {
+          "research": 12731,
+          "checkout": 12731
+        }
+      },
+      "check_rational_bypass.py": {
+        "lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+        "raw_bytes_by_mirror": {
+          "research": 12206,
+          "checkout": 12206
+        }
+      },
+      "check_rational_phase_comparison.py": {
+        "lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+        "raw_bytes_by_mirror": {
+          "research": 19498,
+          "checkout": 19498
+        }
+      },
+      "check_optical_bypass_calibration.py": {
+        "lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+        "raw_bytes_by_mirror": {
+          "research": 8531,
+          "checkout": 8531
+        }
+      },
+      "results/local_mass_register.json": {
+        "lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+        "raw_bytes_by_mirror": {
+          "research": 31453,
+          "checkout": 31453
+        }
+      },
+      "results/bypass_phase_reference.json": {
+        "lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+        "raw_bytes_by_mirror": {
+          "research": 27559,
+          "checkout": 27559
+        }
+      },
+      "results/common_ray_source.json": {
+        "lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+        "raw_bytes_by_mirror": {
+          "research": 75701,
+          "checkout": 75701
+        }
+      },
+      "results/rational_bypass.json": {
+        "lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+        "raw_bytes_by_mirror": {
+          "research": 40686,
+          "checkout": 40686
+        }
+      },
+      "results/rational_phase_comparison.json": {
+        "lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+        "raw_bytes_by_mirror": {
+          "research": 53668,
+          "checkout": 53668
+        }
+      },
+      "results/optical_bypass_calibration.json": {
+        "lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+        "raw_bytes_by_mirror": {
+          "research": 10349,
+          "checkout": 10349
+        }
+      },
+      "check_clock_bandwidth.py": {
+        "lf_sha256": "cf1e0b4af48b65d96b5a342176f69fb410279d37389cb825fb8812b55c6a66ce",
+        "raw_bytes_by_mirror": {
+          "research": 18248,
+          "checkout": 18248
+        }
+      },
+      "Director_exchange.md": {
+        "lf_sha256": "e167a40deca1ba76532de64d99d37591323aba9af4d67bebad52d3c5c319a3ac",
+        "raw_bytes_by_mirror": {
+          "research": 19552,
+          "checkout": 19552
+        }
+      },
+      "Finite_clock_purity.md": {
+        "lf_sha256": "e9d47d8d1ae66bc8c904b3ad410a18e279b422abb88fc5e9d459588e9a77abf2",
+        "raw_bytes_by_mirror": {
+          "research": 7653,
+          "checkout": 7653
+        }
+      },
+      "Finite_speed_mass_and_motion.md": {
+        "lf_sha256": "c0ea2dd1cec3ba2fa84d922a0a505e5a0214f22a0cc0736ca2378c78722b4692",
+        "raw_bytes_by_mirror": {
+          "research": 16830,
+          "checkout": 16830
+        }
+      },
+      "Internal_phase_reference.md": {
+        "lf_sha256": "078954c0caf0fe8643c8db6f77bd43e594b041369af18d2f4440c53dc0d9be50",
+        "raw_bytes_by_mirror": {
+          "research": 18595,
+          "checkout": 18595
+        }
+      },
+      "lean/README.md": {
+        "lf_sha256": "11904cf12605326f53576d306c2dd38b50becadacf8f1c5c9040fed4e7f18c60",
+        "raw_bytes_by_mirror": {
+          "research": 10678,
+          "checkout": 10678
+        }
+      }
+    },
+    "runs": {
+      "research": [
+        {
+          "source": "check_local_mass_register.py",
+          "source_lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+          "exit": 0,
+          "output": "local_mass_register.json",
+          "output_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "generated_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_bypass_phase_reference.py",
+          "source_lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+          "exit": 0,
+          "output": "bypass_phase_reference.json",
+          "output_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "generated_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_common_ray_source.py",
+          "source_lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+          "exit": 0,
+          "output": "common_ray_source.json",
+          "output_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "generated_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_bypass.py",
+          "source_lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+          "exit": 0,
+          "output": "rational_bypass.json",
+          "output_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "generated_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_phase_comparison.py",
+          "source_lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+          "exit": 0,
+          "output": "rational_phase_comparison.json",
+          "output_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "generated_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_optical_bypass_calibration.py",
+          "source_lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+          "exit": 0,
+          "output": "optical_bypass_calibration.json",
+          "output_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "generated_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "MassGauge.lean",
+          "source_lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+          "exit": 0
+        }
+      ],
+      "checkout": [
+        {
+          "source": "check_local_mass_register.py",
+          "source_lf_sha256": "8b08154f6ca6d166f9a8b8806455f499c7993b76c2ea27768fdd431796969952",
+          "exit": 0,
+          "output": "local_mass_register.json",
+          "output_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "generated_lf_sha256": "bb660beafe6adf7638ed0d262c168d4643f5daa68851c3eb3ec56b573b5dc135",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_bypass_phase_reference.py",
+          "source_lf_sha256": "6664c0ce5466b287727483eed01a5eaf860e98087ba58b525feae286f1899228",
+          "exit": 0,
+          "output": "bypass_phase_reference.json",
+          "output_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "generated_lf_sha256": "75bb1532c7c7064e4abd1425865b874870b3f8329d01a80670c6d19063f475e6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_common_ray_source.py",
+          "source_lf_sha256": "c7335ef766a48a28f759f7c15c6985a78537bd23009a5da4fa9af6c64e46ff8a",
+          "exit": 0,
+          "output": "common_ray_source.json",
+          "output_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "generated_lf_sha256": "5474c8cd0d8abba42dd601207f0446652e824779b319bfa46f5ff6bab5027f08",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_bypass.py",
+          "source_lf_sha256": "50560fd5b3b5c4b76ce9e58f1de1b46b17e9edae1c5534cc0085d3d916c85344",
+          "exit": 0,
+          "output": "rational_bypass.json",
+          "output_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "generated_lf_sha256": "45bba88ab70e892407ad9b5df1cf7106f5ae9439cada77b34e1366bebda3bad6",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_rational_phase_comparison.py",
+          "source_lf_sha256": "c67b3f6daa50b2e618733355dfea5d5cc2554a2295a5a2286f8eba0eff5e33b7",
+          "exit": 0,
+          "output": "rational_phase_comparison.json",
+          "output_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "generated_lf_sha256": "893eaa181290fda4876d79ac628fbc1e37c62f8333c888047ae60ccc3fcb165e",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_optical_bypass_calibration.py",
+          "source_lf_sha256": "158e872b4614b6a19a8b9783fdc93d899b92eec2d0285b2f1b09c0984ede65a8",
+          "exit": 0,
+          "output": "optical_bypass_calibration.json",
+          "output_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "generated_lf_sha256": "5b6fcca6ba8edc2515137e1c7832a8eedd5ef338de72e172bee829573ae9f1d8",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "MassGauge.lean",
+          "source_lf_sha256": "bbe0cc7db9d25dd46186806130602dd9e8981490d78caf4981d76ba35589848d",
+          "exit": 0
+        }
+      ]
+    },
+    "method": "Serial below-normal priority, fresh temporary directories per source per scientific mirror. Bundled Python 3.12.14 with NumPy/one BLAS thread for the local mass and bypass phase calculations; standard Python 3.14.7 for the common-ray, rational and optical programs; Lean 4.19.0 -j 1. Each cited producing-runtime replay compared raw archive bytes. One alternate runtime produced last-bit differences in the common-ray output, separately quantified.",
+    "cross_runtime_control": {
+      "source": "check_common_ray_source.py",
+      "python": "3.12.14 (also run in each mirror)",
+      "fields_differing": 288,
+      "maximum_absolute_difference": 3.3306690738754696e-16,
+      "largest_difference_path": "/finite_flights/8/all_populated_folds/6/position_harmonic/0",
+      "alternative_lf_sha256": "6838298761fea325d12a1dfb6f50fca244c02712be88198acaaf61e04fa20914",
+      "unchanged": "Every non-floating value and array structure; archived Python 3.14.7 result reproduced byte-for-byte."
+    },
+    "independent_checks": {
+      "local_clock": "Integer routing and full scalar/vector wave comparisons, including both orientations. Cumulative nearest rounding of the desired triangular phase bounds its running error by half a unit. In the X-mass frame the same sheet needs at most ceil(c|F|T/mu)+1 vector strokes, plus the mass stroke, for a fixed horizon. Explicit 2D local pitch, subslot/base speed factor, ring circumference, clock/resource and source support bounds recorded; an external uniform background and coherent preparation are supplied. Naive independent rounding returns zero when c|F|T<mu/2.",
+      "common_ray": "Five sources compared with direct Fourier weights, exact half-turn alias for the projected transcripts, plus nine bounded-horizon and three later flights. Ruler-sensitive and unobserved-sheet statements have different scope. Details and negative finite cases remain in the checker tables.",
+      "bypass": "Second computation matched all three reported contrasts in 48 idle-angle, sign and distinguishable-marker settings within 4.45e-16. All 16 complete integer-circuit controls sum to one and every independently reconstructed marker-resolved bright mass equals the archived fraction.",
+      "rational": "Verified all 15 exact rational success probabilities and geometric renewal identity for expected oracle/adjoint calls after coarse flags; all held output probability pairs normalize. Arbitrarily detailed measurements of rejected branches may reveal rail information and void the coherent retry hypothesis.",
+      "rational_phase": "Independent spectral calculation at four orders and six comparator lengths each confirmed retained yields and correct masses within 1e-12. The localized same-product two-bright probability is 3/8; independent resets give 1/4. The integer winding check bounds the error for q=5, (7735,23808,25033), below 5.3e-5. A held plane measures a relative orientation; joint conjugation remains indistinguishable. Gate-failure budgets and fixed-angle asymptotic loss are separate from conditional sector purity.",
+      "optical": "Verified complementary correct-projector overlap 1/4, top/bottom ideal scores 0/1 for the fixed controlled-arm sign change, and equality of all 32 ideal entries under a transported analyzer convention. The published process bound 0.8971 differs from central-score arithmetic 0.8973. The normalized Choi single-error certificate from unweighted conditional scores is 0.85034073307 (rounded), conditional on a common trace-decreasing CP map and calibrated bases. The score is a central-value implication. It alone cannot exclude the alternate unmeasured Ramsey result via the displayed worst-input inequality. Pure-dephasing fit to the top score predicts bottom 1; the measured bottom score was 0.9605.",
+      "scope": "A fixed operational phase, calibrated detectors and common successful input ensemble are required. Matched simultaneous conjugation can preserve all observed ideal labels. The controlled-H paper reports postselected optical records; a prediction for another Ramsey input is identified as an extrapolation under an explicitly described channel."
+    },
+    "gate_maps": {
+      "lf_sha256": {
+        "research": "2f91ab467d1a493932a2e4e96817d46cfbaa1c80fd687419c3678b6e3a33b26d",
+        "checkout": "41cf8c62dc9c4e24485f502fafa242fc98d871698e5c9e4010de050c37b0aa9c"
+      },
+      "new_keys": [
+        "local_mass_clock",
+        "rational_bypass_and_optical_calibration",
+        "rational_cyclic_reference",
+        "mass_gauge_lean"
+      ],
+      "disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "index_lf_sha256": {
+      "lean_index": "11904cf12605326f53576d306c2dd38b50becadacf8f1c5c9040fed4e7f18c60",
+      "publication": "3297591365f0fce5336b01b701134552e2db3ef8cbf7118c114211442e8c2104",
+      "queue": "49cd610f494111d28c0bcf9c5fbcc6157123e76aa5837db8b11133a6b7293e56",
+      "project_worker_instructions": "5863c844177ed2427c1ebaa1d20a0057b8d5d2539a6e64b8f552398bb8b67c26"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 38,
+        "local_link_occurrences": 449,
+        "new_article_local_links": {
+          "Local_mass_clock_and_common_ray.md": 10,
+          "Rational_references_and_optical_bypass.md": 7,
+          "A_rational_plane_for_cyclic_phase.md": 8
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 39,
+        "local_link_occurrences": 486,
+        "new_article_local_links": {
+          "Local_mass_clock_and_common_ray.md": 10,
+          "Rational_references_and_optical_bypass.md": 7,
+          "A_rational_plane_for_cyclic_phase.md": 8
+        },
+        "missing": 0
+      }
+    },
+    "edition_z17": {
+      "historical_verification": "moving_odd_clocks_reuse_and_holonomy_addendum.edition_z17",
+      "baseline_commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "review_head": "60e78b13c59eda1532a949f1fb23ad05ab299f25",
+      "edition_tree_unchanged_from_baseline": true,
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "fresh_full_replay": false
+    },
+    "nested_consultation": {
+      "path": "Session/PCP_workers/nested/attempts/20261113T181850928564Z",
+      "result_raw_sha256": "d97073e4ee8304f0273d7b937008a27d75191110b9253e8066b89358aec6d3b2",
+      "receipt": "ecec96ce14640152eb5e",
+      "verified": true,
+      "calls": 1,
+      "parent_sha256": "4d461b8eaa417d26fc62dc9896782a577e8a053f1e066036b5cdc7fb651ad222",
+      "child_sha256": "ad4159128cd344c9be12739200613272868273d9ad7e45bd9225ef63a6b7fc61",
+      "parent_register": "15be48f598a87ead3804c64e09883faea73448869bfade9e9e534af3efae060f",
+      "child_register": "c99a44f79ee66e0102d6790f97eb7946b5b1d1503156d5cc019bbc4cf688ec64",
+      "interpretation": "Child echoed the question without producing either probability. Parent computed 3/8 under retention and 1/4 under replacement. This records the workflow only. Independent checker evidence is above."
+    }
   }
 }

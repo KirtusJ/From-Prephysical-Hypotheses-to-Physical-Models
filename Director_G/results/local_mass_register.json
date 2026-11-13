@@ -1,0 +1,1105 @@
+{
+  "protocol": "At each flight tick, H, a unit rail-controlled mass translation, H, a programmed compensating unit-stroke sequence on the same ring, and one site stream. Use C_s=exp(-i*s*theta*sigma_x) in the mass frame. Real H at launch prepares +X. Native position and rail reads ignore the diagonal change of spin and force frames.",
+  "hardware": "Two-dimensional cylinder (x,y) with a finite rail, nearest-neighbour base +/-1 and local sheet \u00b11 permutations; local H and real signed readout. At horizon T, force vector stride bound Qmax=ceil(|f|cT/mu)+1. Allocate subslots, including padding for different q. If base pitch is c*tau, retain base speed c per full tick. When moves occupy distinct clock subslots the strict microstep propagation bound is larger by a FIXED factor; to use a single speed cap v include fixed subslot overhead or allow simultaneous base/sheet shifts with bounded product-metric velocity. Site placement, a distinct physical sheet coordinate per local base mode, joint phase preparation and synchronized translated programs are required. Ring circumference at sheet pitch O(tau) is O(epsilon); a fixed circumference has a different physical resource cost.",
+  "comparison": "The scalar uniform force and the exact vector representation agree up to exp(-i*n*h*x) at the output. Between the rounded and exact vector flights, pending z rotation s*theta*(Q_n-h*n(n+1)/(2*theta)) cancels the incremental vector-phase discrepancy. Conjugating the small mass coin by the pending phase costs <=2*abs(sin(s*theta)*sin(r)). For |s|=1 the uniform operator norm error is <=theta/2+2*n*abs(sin(theta))*sin(theta/2); tau=o(epsilon\u00b2) suffices. Per-tick rounding without accumulating the phase remainder need not converge; small force max |f|T<mu/(2c) rounds every desired stroke to zero.",
+  "limitations": "The selected character pair is an input, and a localized physical sheet does not have this purity. Uniform field is preprogrammed as a common time-dependent local phase; scalar-force address transport, an unknown remote force source, spin tomography in a fixed transverse basis, and nonlocal spatial-coherence reads are distinct tasks. Finite M and bounded transfer O(1) strokes require a specifiable finite field range and horizon or new clock controls.",
+  "finite_controller": [
+    {
+      "slope": "-3/7",
+      "tick_count": 20,
+      "strides": [
+        0,
+        -1,
+        -2,
+        -1,
+        -2,
+        -3,
+        -3,
+        -3,
+        -4,
+        -5,
+        -4,
+        -5,
+        -6,
+        -6,
+        -6,
+        -7,
+        -8,
+        -7,
+        -8,
+        -9
+      ],
+      "final_remainder": 7,
+      "integer_offset": -120,
+      "denominator_doubled": 14
+    },
+    {
+      "slope": "1/9",
+      "tick_count": 20,
+      "strides": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "final_remainder": 15,
+      "integer_offset": 40,
+      "denominator_doubled": 18
+    },
+    {
+      "slope": "3/10",
+      "tick_count": 20,
+      "strides": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        5,
+        4,
+        5,
+        5,
+        5,
+        6,
+        6
+      ],
+      "final_remainder": 10,
+      "integer_offset": 120,
+      "denominator_doubled": 20
+    },
+    {
+      "slope": "0",
+      "tick_count": 20,
+      "strides": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_remainder": 1,
+      "integer_offset": 0,
+      "denominator_doubled": 2
+    }
+  ],
+  "initial_sheet_arc_controls": [
+    {
+      "M": 17,
+      "occupied_consecutive_sheet_sites": 1,
+      "maximum_target_pair_mass": 0.11764705882352942,
+      "rank_two_trace_ceiling": 0.11764705882352941
+    },
+    {
+      "M": 17,
+      "occupied_consecutive_sheet_sites": 2,
+      "maximum_target_pair_mass": 0.22734967404757134,
+      "rank_two_trace_ceiling": 0.23529411764705882
+    },
+    {
+      "M": 17,
+      "occupied_consecutive_sheet_sites": 4,
+      "maximum_target_pair_mass": 0.39743653943304647,
+      "rank_two_trace_ceiling": 0.47058823529411764
+    },
+    {
+      "M": 17,
+      "occupied_consecutive_sheet_sites": 8,
+      "maximum_target_pair_mass": 0.5005094658093174,
+      "rank_two_trace_ceiling": 0.9411764705882353
+    },
+    {
+      "M": 17,
+      "occupied_consecutive_sheet_sites": 17,
+      "maximum_target_pair_mass": 1.0000000000000002,
+      "rank_two_trace_ceiling": 1.0
+    },
+    {
+      "M": 32,
+      "occupied_consecutive_sheet_sites": 1,
+      "maximum_target_pair_mass": 0.0625,
+      "rank_two_trace_ceiling": 0.0625
+    },
+    {
+      "M": 32,
+      "occupied_consecutive_sheet_sites": 4,
+      "maximum_target_pair_mass": 0.23826593079411096,
+      "rank_two_trace_ceiling": 0.25
+    },
+    {
+      "M": 32,
+      "occupied_consecutive_sheet_sites": 8,
+      "maximum_target_pair_mass": 0.41018221548384415,
+      "rank_two_trace_ceiling": 0.5
+    },
+    {
+      "M": 32,
+      "occupied_consecutive_sheet_sites": 16,
+      "maximum_target_pair_mass": 0.5,
+      "rank_two_trace_ceiling": 1.0
+    },
+    {
+      "M": 32,
+      "occupied_consecutive_sheet_sites": 32,
+      "maximum_target_pair_mass": 1.0,
+      "rank_two_trace_ceiling": 1.0
+    },
+    {
+      "M": 63,
+      "occupied_consecutive_sheet_sites": 1,
+      "maximum_target_pair_mass": 0.031746031746031744,
+      "rank_two_trace_ceiling": 0.031746031746031744
+    },
+    {
+      "M": 63,
+      "occupied_consecutive_sheet_sites": 7,
+      "maximum_target_pair_mass": 0.21358372933444275,
+      "rank_two_trace_ceiling": 0.2222222222222222
+    },
+    {
+      "M": 63,
+      "occupied_consecutive_sheet_sites": 15,
+      "maximum_target_pair_mass": 0.3970685637466699,
+      "rank_two_trace_ceiling": 0.47619047619047616
+    },
+    {
+      "M": 63,
+      "occupied_consecutive_sheet_sites": 31,
+      "maximum_target_pair_mass": 0.5000098779837236,
+      "rank_two_trace_ceiling": 0.9841269841269841
+    },
+    {
+      "M": 63,
+      "occupied_consecutive_sheet_sites": 63,
+      "maximum_target_pair_mass": 1.0,
+      "rank_two_trace_ceiling": 1.0
+    },
+    {
+      "M": 128,
+      "occupied_consecutive_sheet_sites": 1,
+      "maximum_target_pair_mass": 0.015625,
+      "rank_two_trace_ceiling": 0.015625
+    },
+    {
+      "M": 128,
+      "occupied_consecutive_sheet_sites": 16,
+      "maximum_target_pair_mass": 0.23758474757041934,
+      "rank_two_trace_ceiling": 0.25
+    },
+    {
+      "M": 128,
+      "occupied_consecutive_sheet_sites": 32,
+      "maximum_target_pair_mass": 0.40921887693043835,
+      "rank_two_trace_ceiling": 0.5
+    },
+    {
+      "M": 128,
+      "occupied_consecutive_sheet_sites": 64,
+      "maximum_target_pair_mass": 0.5,
+      "rank_two_trace_ceiling": 1.0
+    },
+    {
+      "M": 128,
+      "occupied_consecutive_sheet_sites": 128,
+      "maximum_target_pair_mass": 1.0,
+      "rank_two_trace_ceiling": 1.0
+    }
+  ],
+  "resource_counts": "For physical base interval of width L_x, about (L_x/(c*tau))*M cylinder sites carry the rails. Given a rational h/theta, exact integer schedules can be preloaded identically at each base site or generated with a clock and remainder. Counter bit operations are not instantaneous nearest-neighbour primitives: a table of O(T/tau) settings, or a clockwork and its cycle time, is a supplied resource. The real folded character projector has diagonal 2/M, so a sheet state supported on A sites has pair mass at most 2*A/M even with unresolved ancillas. A bounded-speed preparation from one site needs order M*sheet_pitch time for near purity; this is a lower bound and not a construction from only synchronized Hadamards.",
+  "literal": [
+    {
+      "M": 7,
+      "force": "-3/2",
+      "strides": [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 5.095246377785861e-16
+    },
+    {
+      "M": 7,
+      "force": "0",
+      "strides": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 2.9406505148178845e-16
+    },
+    {
+      "M": 7,
+      "force": "3/2",
+      "strides": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 5.23691153334427e-16
+    },
+    {
+      "M": 8,
+      "force": "-3/2",
+      "strides": [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 6.927648449883945e-16
+    },
+    {
+      "M": 8,
+      "force": "0",
+      "strides": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 2.830524433501838e-16
+    },
+    {
+      "M": 8,
+      "force": "3/2",
+      "strides": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 6.927648449883945e-16
+    },
+    {
+      "M": 13,
+      "force": "-3/2",
+      "strides": [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 5.117875266520903e-16
+    },
+    {
+      "M": 13,
+      "force": "0",
+      "strides": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 5.509324452557032e-16
+    },
+    {
+      "M": 13,
+      "force": "3/2",
+      "strides": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 5.551115123125783e-16
+    },
+    {
+      "M": 20,
+      "force": "-3/2",
+      "strides": [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 3.7238012298709097e-16
+    },
+    {
+      "M": 20,
+      "force": "0",
+      "strides": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 1.942890293094024e-16
+    },
+    {
+      "M": 20,
+      "force": "3/2",
+      "strides": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "all_paths_base_and_sheet_cone": true,
+      "signed_integer_final_norm": 524288,
+      "maximum_fibre_discrepancy": 3.3766115072321297e-16
+    }
+  ],
+  "scalar_vector": [
+    {
+      "s": 1,
+      "f": -1,
+      "full_spinor_residual_after_gauge": 2.8443762456607407e-16,
+      "uncorrected_spinor_distance": 0.5685440370088991
+    },
+    {
+      "s": 1,
+      "f": 0,
+      "full_spinor_residual_after_gauge": 0.0,
+      "uncorrected_spinor_distance": 0.0
+    },
+    {
+      "s": 1,
+      "f": 2,
+      "full_spinor_residual_after_gauge": 2.6494618615933143e-16,
+      "uncorrected_spinor_distance": 1.0779797584062405
+    },
+    {
+      "s": -1,
+      "f": -1,
+      "full_spinor_residual_after_gauge": 2.3670121118523606e-16,
+      "uncorrected_spinor_distance": 0.5733326041900915
+    },
+    {
+      "s": -1,
+      "f": 0,
+      "full_spinor_residual_after_gauge": 0.0,
+      "uncorrected_spinor_distance": 0.0
+    },
+    {
+      "s": -1,
+      "f": 2,
+      "full_spinor_residual_after_gauge": 2.443006798843489e-16,
+      "uncorrected_spinor_distance": 1.086605288082711
+    }
+  ],
+  "flights": [
+    {
+      "K": 1,
+      "M": 200,
+      "epsilon": 0.4973591971621729,
+      "tau": "1/64",
+      "ticks": 32,
+      "force": "1/2",
+      "sector": 1,
+      "phi_per_tick": 0.031415926535897934,
+      "desired_force_phase_per_tick": 0.0002454369260617026,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.484375,
+      "support_modes": 7,
+      "max_spinor_error": 0.01613715166118142,
+      "max_corrected_spinor_error": 0.003361828319280946,
+      "final_uniform_bound": 0.04728420389804899,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.5119598286230018,
+          -0.007723867969775641
+        ],
+        "unrounded": [
+          0.511964888863938,
+          -0.008060571497888361
+        ],
+        "naive": [
+          0.5119931291073867,
+          -1.925779847926616e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.48856179171559805,
+        0.4885288829706518,
+        0.4892310777170497
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.005208333333333333,
+      "sheet_circumference_at_that_pitch": 1.0416666666666667
+    },
+    {
+      "K": 1,
+      "M": 200,
+      "epsilon": 0.4973591971621729,
+      "tau": "1/64",
+      "ticks": 32,
+      "force": "1/2",
+      "sector": -1,
+      "phi_per_tick": 0.031415926535897934,
+      "desired_force_phase_per_tick": 0.0002454369260617026,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.484375,
+      "support_modes": 7,
+      "max_spinor_error": 0.01613715166118142,
+      "max_corrected_spinor_error": 0.0033618283192809466,
+      "final_uniform_bound": 0.04728420389804899,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.5119598286230018,
+          -0.007723867969775631
+        ],
+        "unrounded": [
+          0.5119648888639379,
+          -0.008060571497888361
+        ],
+        "naive": [
+          0.5119931291073867,
+          -2.9561828451330754e-18
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.48856179171559805,
+        0.4885288829706519,
+        0.4892310777170497
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.005208333333333333,
+      "sheet_circumference_at_that_pitch": 1.0416666666666667
+    },
+    {
+      "K": 1,
+      "M": 200,
+      "epsilon": 0.4973591971621729,
+      "tau": "1/64",
+      "ticks": 32,
+      "force": "-1/2",
+      "sector": 1,
+      "phi_per_tick": 0.031415926535897934,
+      "desired_force_phase_per_tick": -0.0002454369260617026,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.484375,
+      "support_modes": 7,
+      "max_spinor_error": 0.01613715166118142,
+      "max_corrected_spinor_error": 0.0033618283192809466,
+      "final_uniform_bound": 0.04728420389804899,
+      "ideal_continuum_position": 0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.5119598286230018,
+          0.007723867969775653
+        ],
+        "unrounded": [
+          0.511964888863938,
+          0.00806057149788834
+        ],
+        "naive": [
+          0.5119931291073867,
+          -1.925779847926616e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.48856179171559805,
+        0.4885288829706518,
+        0.4892310777170497
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.005208333333333333,
+      "sheet_circumference_at_that_pitch": 1.0416666666666667
+    },
+    {
+      "K": 1,
+      "M": 200,
+      "epsilon": 0.4973591971621729,
+      "tau": "1/64",
+      "ticks": 32,
+      "force": "0",
+      "sector": 1,
+      "phi_per_tick": 0.031415926535897934,
+      "desired_force_phase_per_tick": 0.0,
+      "highest_register_stride": 0,
+      "largest_prefix_rounding_error_in_strokes": 0.0,
+      "support_modes": 7,
+      "max_spinor_error": 0.0,
+      "max_corrected_spinor_error": 0.0,
+      "final_uniform_bound": 0.04728420389804899,
+      "ideal_continuum_position": -0.0,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.5119931291073867,
+          -1.925779847926616e-17
+        ],
+        "unrounded": [
+          0.5119931291073867,
+          -1.925779847926616e-17
+        ],
+        "naive": [
+          0.5119931291073867,
+          -1.925779847926616e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.4880068708926133,
+        0.4880068708926133,
+        0.4880068708926133
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0078125,
+      "sheet_circumference_at_that_pitch": 1.5625
+    },
+    {
+      "K": 1,
+      "M": 200,
+      "epsilon": 0.4973591971621729,
+      "tau": "1/64",
+      "ticks": 32,
+      "force": "3",
+      "sector": 1,
+      "phi_per_tick": 0.031415926535897934,
+      "desired_force_phase_per_tick": 0.0014726215563702157,
+      "highest_register_stride": 2,
+      "largest_prefix_rounding_error_in_strokes": 0.46875,
+      "support_modes": 7,
+      "max_spinor_error": 0.014697036855776996,
+      "max_corrected_spinor_error": 0.0018472178412353947,
+      "final_uniform_bound": 0.04728420389804899,
+      "ideal_continuum_position": -0.2675918792439982,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.511031178678647,
+          -0.04450297153962131
+        ],
+        "unrounded": [
+          0.5110252616532994,
+          -0.04460728880869735
+        ],
+        "naive": [
+          0.5108939657158773,
+          -0.03743913285909121
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.4949662420313384,
+        0.49493724528622396,
+        0.4974819306185661
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.00390625,
+      "sheet_circumference_at_that_pitch": 0.78125
+    },
+    {
+      "K": 2,
+      "M": 800,
+      "epsilon": 0.24867959858108646,
+      "tau": "1/512",
+      "ticks": 256,
+      "force": "1/2",
+      "sector": 1,
+      "phi_per_tick": 0.007853981633974483,
+      "desired_force_phase_per_tick": 7.669903939428207e-06,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.498046875,
+      "support_modes": 11,
+      "max_spinor_error": 0.00423057919269666,
+      "max_corrected_spinor_error": 0.0006541777772496657,
+      "final_uniform_bound": 0.01971815492407318,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.7271013453348103,
+          -0.02779627770000197
+        ],
+        "unrounded": [
+          0.7271020399946735,
+          -0.027759390592395402
+        ],
+        "naive": [
+          0.7274667944678892,
+          -2.1434312571069993e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.2725046596769764,
+        0.2725067482653343,
+        0.27563412872491444
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0006510416666666666,
+      "sheet_circumference_at_that_pitch": 0.5208333333333334
+    },
+    {
+      "K": 2,
+      "M": 800,
+      "epsilon": 0.24867959858108646,
+      "tau": "1/512",
+      "ticks": 256,
+      "force": "1/2",
+      "sector": -1,
+      "phi_per_tick": 0.007853981633974483,
+      "desired_force_phase_per_tick": 7.669903939428207e-06,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.498046875,
+      "support_modes": 11,
+      "max_spinor_error": 0.00423057919269666,
+      "max_corrected_spinor_error": 0.0006541777772496657,
+      "final_uniform_bound": 0.01971815492407318,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.7271013453348103,
+          -0.027796277700001946
+        ],
+        "unrounded": [
+          0.7271020399946735,
+          -0.02775939059239541
+        ],
+        "naive": [
+          0.7274667944678892,
+          -3.3900883530286314e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.2725046596769764,
+        0.2725067482653343,
+        0.27563412872491444
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0006510416666666666,
+      "sheet_circumference_at_that_pitch": 0.5208333333333334
+    },
+    {
+      "K": 2,
+      "M": 800,
+      "epsilon": 0.24867959858108646,
+      "tau": "1/512",
+      "ticks": 256,
+      "force": "-1/2",
+      "sector": 1,
+      "phi_per_tick": 0.007853981633974483,
+      "desired_force_phase_per_tick": -7.669903939428207e-06,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.498046875,
+      "support_modes": 11,
+      "max_spinor_error": 0.00423057919269666,
+      "max_corrected_spinor_error": 0.0006541777772496657,
+      "final_uniform_bound": 0.01971815492407318,
+      "ideal_continuum_position": 0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.7271013453348103,
+          0.0277962777000016
+        ],
+        "unrounded": [
+          0.7271020399946735,
+          0.027759390592395183
+        ],
+        "naive": [
+          0.7274667944678892,
+          -2.1434312571069993e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.2725046596769764,
+        0.27250674826533433,
+        0.27563412872491444
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0006510416666666666,
+      "sheet_circumference_at_that_pitch": 0.5208333333333334
+    },
+    {
+      "K": 2,
+      "M": 800,
+      "epsilon": 0.24867959858108646,
+      "tau": "1/512",
+      "ticks": 256,
+      "force": "0",
+      "sector": 1,
+      "phi_per_tick": 0.007853981633974483,
+      "desired_force_phase_per_tick": 0.0,
+      "highest_register_stride": 0,
+      "largest_prefix_rounding_error_in_strokes": 0.0,
+      "support_modes": 11,
+      "max_spinor_error": 0.0,
+      "max_corrected_spinor_error": 0.0,
+      "final_uniform_bound": 0.01971815492407318,
+      "ideal_continuum_position": -0.0,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.7274667944678892,
+          -2.1434312571069993e-17
+        ],
+        "unrounded": [
+          0.7274667944678892,
+          -2.1434312571069993e-17
+        ],
+        "naive": [
+          0.7274667944678892,
+          -2.1434312571069993e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.2725332055321108,
+        0.2725332055321108,
+        0.2725332055321108
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0009765625,
+      "sheet_circumference_at_that_pitch": 0.78125
+    },
+    {
+      "K": 2,
+      "M": 800,
+      "epsilon": 0.24867959858108646,
+      "tau": "1/512",
+      "ticks": 256,
+      "force": "3",
+      "sector": 1,
+      "phi_per_tick": 0.007853981633974483,
+      "desired_force_phase_per_tick": 4.601942363656924e-05,
+      "highest_register_stride": 2,
+      "largest_prefix_rounding_error_in_strokes": 0.490234375,
+      "support_modes": 11,
+      "max_spinor_error": 0.004212228143820896,
+      "max_corrected_spinor_error": 0.0005806204996308877,
+      "final_uniform_bound": 0.01971815492407318,
+      "ideal_continuum_position": -0.2675918792439982,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.7166073253360025,
+          -0.1275103936863137
+        ],
+        "unrounded": [
+          0.716605573112369,
+          -0.1275622811347409
+        ],
+        "naive": [
+          0.7152048364012377,
+          -0.10900963650215466
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.2736847386412545,
+        0.2736710388265701,
+        0.28103743349979166
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.00048828125,
+      "sheet_circumference_at_that_pitch": 0.390625
+    },
+    {
+      "K": 3,
+      "M": 3200,
+      "epsilon": 0.12433979929054323,
+      "tau": "1/4096",
+      "ticks": 2048,
+      "force": "1/2",
+      "sector": 1,
+      "phi_per_tick": 0.001963495408493621,
+      "desired_force_phase_per_tick": 2.3968449810713145e-07,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.4998779296875,
+      "support_modes": 15,
+      "max_spinor_error": 0.0010364870161261965,
+      "max_corrected_spinor_error": 0.00011791580548988772,
+      "final_uniform_bound": 0.008877424883382454,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.8565265287575422,
+          -0.03953225961606797
+        ],
+        "unrounded": [
+          0.8565265721854151,
+          -0.03953686936979487
+        ],
+        "naive": [
+          0.8574693437145912,
+          -8.353605747473092e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.14257651494068566,
+        0.14257618739630631,
+        0.14939404728588934
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 8.138020833333333e-05,
+      "sheet_circumference_at_that_pitch": 0.2604166666666667
+    },
+    {
+      "K": 3,
+      "M": 3200,
+      "epsilon": 0.12433979929054323,
+      "tau": "1/4096",
+      "ticks": 2048,
+      "force": "1/2",
+      "sector": -1,
+      "phi_per_tick": 0.001963495408493621,
+      "desired_force_phase_per_tick": 2.3968449810713145e-07,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.4998779296875,
+      "support_modes": 15,
+      "max_spinor_error": 0.0010364870161261965,
+      "max_corrected_spinor_error": 0.00011791580548988772,
+      "final_uniform_bound": 0.008877424883382454,
+      "ideal_continuum_position": -0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.8565265287575421,
+          -0.03953225961606796
+        ],
+        "unrounded": [
+          0.856526572185415,
+          -0.03953686936979489
+        ],
+        "naive": [
+          0.8574693437145912,
+          -7.182256080140565e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.14257651494068577,
+        0.14257618739630643,
+        0.14939404728588934
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 8.138020833333333e-05,
+      "sheet_circumference_at_that_pitch": 0.2604166666666667
+    },
+    {
+      "K": 3,
+      "M": 3200,
+      "epsilon": 0.12433979929054323,
+      "tau": "1/4096",
+      "ticks": 2048,
+      "force": "-1/2",
+      "sector": 1,
+      "phi_per_tick": 0.001963495408493621,
+      "desired_force_phase_per_tick": -2.3968449810713145e-07,
+      "highest_register_stride": 1,
+      "largest_prefix_rounding_error_in_strokes": 0.4998779296875,
+      "support_modes": 15,
+      "max_spinor_error": 0.0010364870161261965,
+      "max_corrected_spinor_error": 0.00011791580548988772,
+      "final_uniform_bound": 0.008877424883382454,
+      "ideal_continuum_position": 0.061552812808830265,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.8565265287575423,
+          0.0395322596160679
+        ],
+        "unrounded": [
+          0.856526572185416,
+          0.039536869369794767
+        ],
+        "naive": [
+          0.8574693437145912,
+          -8.353605747473092e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.14257651494068554,
+        0.14257618739630543,
+        0.1493940472858894
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 8.138020833333333e-05,
+      "sheet_circumference_at_that_pitch": 0.2604166666666667
+    },
+    {
+      "K": 3,
+      "M": 3200,
+      "epsilon": 0.12433979929054323,
+      "tau": "1/4096",
+      "ticks": 2048,
+      "force": "0",
+      "sector": 1,
+      "phi_per_tick": 0.001963495408493621,
+      "desired_force_phase_per_tick": 0.0,
+      "highest_register_stride": 0,
+      "largest_prefix_rounding_error_in_strokes": 0.0,
+      "support_modes": 15,
+      "max_spinor_error": 0.0,
+      "max_corrected_spinor_error": 0.0,
+      "final_uniform_bound": 0.008877424883382454,
+      "ideal_continuum_position": -0.0,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.8574693437145912,
+          -8.353605747473092e-17
+        ],
+        "unrounded": [
+          0.8574693437145912,
+          -8.353605747473092e-17
+        ],
+        "naive": [
+          0.8574693437145912,
+          -8.353605747473092e-17
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.14253065628540884,
+        0.14253065628540884,
+        0.14253065628540884
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 0.0001220703125,
+      "sheet_circumference_at_that_pitch": 0.390625
+    },
+    {
+      "K": 3,
+      "M": 3200,
+      "epsilon": 0.12433979929054323,
+      "tau": "1/4096",
+      "ticks": 2048,
+      "force": "3",
+      "sector": 1,
+      "phi_per_tick": 0.001963495408493621,
+      "desired_force_phase_per_tick": 1.4381069886427887e-06,
+      "highest_register_stride": 2,
+      "largest_prefix_rounding_error_in_strokes": 0.499755859375,
+      "support_modes": 15,
+      "max_spinor_error": 0.001035326976551431,
+      "max_corrected_spinor_error": 9.238904472822831e-05,
+      "final_uniform_bound": 0.008877424883382454,
+      "ideal_continuum_position": -0.2675918792439982,
+      "physical_position_harmonic": 0.7853981633974483,
+      "bounded_position_records": {
+        "actual": [
+          0.8389394886324892,
+          -0.16816962431019394
+        ],
+        "unrounded": [
+          0.8389400385341601,
+          -0.16817088634916627
+        ],
+        "naive": [
+          0.8402526040122971,
+          -0.09838597649423858
+        ]
+      },
+      "position_harmonic_distance_from_ray": [
+        0.14482131907660958,
+        0.14482043854332005,
+        0.17642388703225007
+      ],
+      "sheet_pitch_if_each_edge_has_speed_one": 6.103515625e-05,
+      "sheet_circumference_at_that_pitch": 0.1953125
+    }
+  ]
+}
