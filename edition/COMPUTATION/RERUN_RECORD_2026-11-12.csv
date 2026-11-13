@@ -133,3 +133,5 @@ COMPUTATION/Lean/Mathlib/MultisetBlock.lean with Mathlib v4.12.0,RAN_OK,not appl
 Baseline_Additions: all programs with stored result files (26 completed reruns in fresh directories),RAN_OK,yes,26 of 26 result files byte-identical; gauge_bl.py identical apart from 24 timing fields,comb after edition Z17; see REVIEW_RECORDS/Director_Z/Session_4/comb/rerun/status.txt
 Baseline_Additions: verify_k4_additive_ratios.py,RAN_OK,yes,3 of 3 predicates; exact arithmetic,edition Z18
 COMPUTATION/Lean: four core files and eleven Mathlib files,RAN_OK,not applicable,all exit code 0; permitted axioms only; six warnings of unused local facts,rerun by the director at the comb
+Baseline_Additions/Multiset_Law: verify_multiset_abelian.py,RAN_OK,yes,"rerun in a fresh directory byte-identical, by the sub-agent",edition Z19; needs python-flint
+"COMPUTATION/Lean/Mathlib: PreimageSpan, VslStep3, VslNewton, SubmonoidFinite, SquareIsometry",RAN_OK,not applicable,"all exit code 0; axioms propext, Classical.choice, Quot.sound; one warning of an unused variable",rerun by the director for edition Z19

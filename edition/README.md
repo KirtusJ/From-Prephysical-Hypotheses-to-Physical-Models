@@ -2,9 +2,9 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-13-Z18, 13 November 2026
+Baseline FPHPM-BASELINE-2026-11-13-Z19, 13 November 2026
 
-This is the baseline edition of the research program. It replaces the two-volume arrangement of 10 November 2026 by 41 papers in seven series (670 assembled pages; one paper is planned and not yet written), with program-level registers held outside the papers.
+This is the baseline edition of the research program. It replaces the two-volume arrangement of 10 November 2026 by 41 papers in seven series (672 assembled pages; one paper is planned and not yet written), with program-level registers held outside the papers.
 
 ## Where to start
 
