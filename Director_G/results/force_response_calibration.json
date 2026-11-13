@@ -1,0 +1,2449 @@
+{
+  "scope": "All examples use the same g(x)=x signed H walk from a localized (0,R) on C_(4M), without an address-dependent staircase or added sheet measurement. Coefficients are the normalized effective counting and fixed character responses of the specified preparation. Repeat terminal launches for different calibration settings. Prediction across a DO herald requires fixed shared components through that flight and the coherent direction-only instrument.",
+  "one_left_formula": "Let D_j=sum b_k cos(4*pi*k*j/M). W_n=2^(n+1)P_{n+1}(n-1,R) =n+2*sum_{j=1}^{n-1}(n-j)D_j. The symmetric second difference is 2D_n. Adjacent LR/RL exchanges raise area by two, and every witness word is positive.",
+  "six_tick_count": "The (1,R) numerator at t=5 is 4+2c-4D_1+2D_2-4D_3+2D_4. The one-left record through six ticks supplies all four lags. Subtract to recover c. At this same port pure count gives 6/32, unforced k=0 gives zero, while uniform signed characters give 4/32 when the five even-area residues are distinct. Nyquist is inseparable from k=0 for even M.",
+  "identified_class": "For H=M/gcd(M,2), identify s=fold_H((2/gcd(M,2))*k) in the inverse real Fourier transform. For even M, conjugation and adding M/2 have identical base-port laws: area at each depth has parity n*x0+n(n-1)/2, independent of history. The common sign survives native repeated coordinate/DO readouts at known ticks on one localized parity; coherent inter-parity preparations and operations need not share this alias. For a class s the physical phase distance from the nearest multiple of pi is pi*s/H.",
+  "exact_terminal_tests": [
+    {
+      "M": 3,
+      "base_order": 12,
+      "folded_cycle_order": 3,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/26",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "4/13"
+        ],
+        [
+          1,
+          [
+            1,
+            2
+          ],
+          "15/26"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 4,
+      "base_order": 16,
+      "folded_cycle_order": 2,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "first_full_rank": 4,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "1/11",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            2
+          ],
+          "7/11"
+        ],
+        [
+          1,
+          [
+            1,
+            3
+          ],
+          "3/11"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 5,
+      "base_order": 20,
+      "folded_cycle_order": 5,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "3/34",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "4/17"
+        ],
+        [
+          1,
+          [
+            2,
+            3
+          ],
+          "10/17"
+        ],
+        [
+          2,
+          [
+            1,
+            4
+          ],
+          "3/34"
+        ]
+      ],
+      "five_tick_words_once": [
+        [
+          [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          4,
+          -1
+        ],
+        [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          2,
+          1
+        ],
+        [
+          [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          -2,
+          1
+        ],
+        [
+          [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          -4,
+          -1
+        ]
+      ]
+    },
+    {
+      "M": 6,
+      "base_order": 24,
+      "folded_cycle_order": 3,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/46",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            3
+          ],
+          "15/46"
+        ],
+        [
+          1,
+          [
+            1,
+            2,
+            4,
+            5
+          ],
+          "14/23"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 7,
+      "base_order": 28,
+      "folded_cycle_order": 7,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        4
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "3/52",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "2/13"
+        ],
+        [
+          1,
+          [
+            3,
+            4
+          ],
+          "2/13"
+        ],
+        [
+          2,
+          [
+            1,
+            6
+          ],
+          "2/13"
+        ],
+        [
+          3,
+          [
+            2,
+            5
+          ],
+          "25/52"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 8,
+      "base_order": 32,
+      "folded_cycle_order": 4,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3
+      ],
+      "first_full_rank": 6,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "1/23",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            4
+          ],
+          "3/23"
+        ],
+        [
+          1,
+          [
+            1,
+            3,
+            5,
+            7
+          ],
+          "38/69"
+        ],
+        [
+          2,
+          [
+            2,
+            6
+          ],
+          "19/69"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 9,
+      "base_order": 36,
+      "folded_cycle_order": 9,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "first_full_rank": 6,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/80",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "1/10"
+        ],
+        [
+          1,
+          [
+            4,
+            5
+          ],
+          "13/80"
+        ],
+        [
+          2,
+          [
+            1,
+            8
+          ],
+          "13/80"
+        ],
+        [
+          3,
+          [
+            3,
+            6
+          ],
+          "13/80"
+        ],
+        [
+          4,
+          [
+            2,
+            7
+          ],
+          "3/8"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 10,
+      "base_order": 40,
+      "folded_cycle_order": 5,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "3/85",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            5
+          ],
+          "4/17"
+        ],
+        [
+          1,
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          "14/85"
+        ],
+        [
+          2,
+          [
+            2,
+            3,
+            7,
+            8
+          ],
+          "48/85"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 11,
+      "base_order": 44,
+      "folded_cycle_order": 11,
+      "cap_for_explicit_recovery": 7,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        6
+      ],
+      "first_full_rank": 6,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/101",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "8/101"
+        ],
+        [
+          1,
+          [
+            5,
+            6
+          ],
+          "18/101"
+        ],
+        [
+          2,
+          [
+            1,
+            10
+          ],
+          "18/101"
+        ],
+        [
+          3,
+          [
+            4,
+            7
+          ],
+          "18/101"
+        ],
+        [
+          4,
+          [
+            2,
+            9
+          ],
+          "18/101"
+        ],
+        [
+          5,
+          [
+            3,
+            8
+          ],
+          "18/101"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 12,
+      "base_order": 48,
+      "folded_cycle_order": 6,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        4
+      ],
+      "first_full_rank": 5,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "1/37",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            6
+          ],
+          "14/111"
+        ],
+        [
+          1,
+          [
+            1,
+            5,
+            7,
+            11
+          ],
+          "41/111"
+        ],
+        [
+          2,
+          [
+            2,
+            4,
+            8,
+            10
+          ],
+          "41/111"
+        ],
+        [
+          3,
+          [
+            3,
+            9
+          ],
+          "4/37"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 15,
+      "base_order": 60,
+      "folded_cycle_order": 15,
+      "cap_for_explicit_recovery": 9,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        8,
+        8
+      ],
+      "first_full_rank": 7,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ],
+        [
+          7,
+          1,
+          -1
+        ],
+        [
+          7,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "3/139",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "8/139"
+        ],
+        [
+          1,
+          [
+            7,
+            8
+          ],
+          "28/139"
+        ],
+        [
+          2,
+          [
+            1,
+            14
+          ],
+          "11/139"
+        ],
+        [
+          3,
+          [
+            6,
+            9
+          ],
+          "11/139"
+        ],
+        [
+          4,
+          [
+            2,
+            13
+          ],
+          "28/139"
+        ],
+        [
+          5,
+          [
+            5,
+            10
+          ],
+          "28/139"
+        ],
+        [
+          6,
+          [
+            3,
+            12
+          ],
+          "11/139"
+        ],
+        [
+          7,
+          [
+            4,
+            11
+          ],
+          "11/139"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 16,
+      "base_order": 64,
+      "folded_cycle_order": 8,
+      "cap_for_explicit_recovery": 6,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "first_full_rank": 6,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          2,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/142",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            8
+          ],
+          "19/142"
+        ],
+        [
+          1,
+          [
+            1,
+            7,
+            9,
+            15
+          ],
+          "27/142"
+        ],
+        [
+          2,
+          [
+            2,
+            6,
+            10,
+            14
+          ],
+          "22/71"
+        ],
+        [
+          3,
+          [
+            3,
+            5,
+            11,
+            13
+          ],
+          "22/71"
+        ],
+        [
+          4,
+          [
+            4,
+            12
+          ],
+          "5/142"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 21,
+      "base_order": 84,
+      "folded_cycle_order": 21,
+      "cap_for_explicit_recovery": 12,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "first_full_rank": 8,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ],
+        [
+          7,
+          1,
+          -1
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          7,
+          3,
+          -1
+        ],
+        [
+          8,
+          0,
+          -1
+        ],
+        [
+          8,
+          2,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "1/62",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "4/93"
+        ],
+        [
+          1,
+          [
+            10,
+            11
+          ],
+          "13/93"
+        ],
+        [
+          2,
+          [
+            1,
+            20
+          ],
+          "3/62"
+        ],
+        [
+          3,
+          [
+            9,
+            12
+          ],
+          "3/62"
+        ],
+        [
+          4,
+          [
+            2,
+            19
+          ],
+          "13/93"
+        ],
+        [
+          5,
+          [
+            8,
+            13
+          ],
+          "13/93"
+        ],
+        [
+          6,
+          [
+            3,
+            18
+          ],
+          "3/62"
+        ],
+        [
+          7,
+          [
+            7,
+            14
+          ],
+          "13/93"
+        ],
+        [
+          8,
+          [
+            4,
+            17
+          ],
+          "3/62"
+        ],
+        [
+          9,
+          [
+            6,
+            15
+          ],
+          "3/62"
+        ],
+        [
+          10,
+          [
+            5,
+            16
+          ],
+          "13/93"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 25,
+      "base_order": 100,
+      "folded_cycle_order": 25,
+      "cap_for_explicit_recovery": 14,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        11,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "first_full_rank": 9,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ],
+        [
+          7,
+          1,
+          -1
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          7,
+          3,
+          -1
+        ],
+        [
+          8,
+          0,
+          -1
+        ],
+        [
+          8,
+          2,
+          -1
+        ],
+        [
+          9,
+          1,
+          -1
+        ],
+        [
+          9,
+          1,
+          1
+        ]
+      ],
+      "count_fraction_recovered": "1/74",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "4/111"
+        ],
+        [
+          1,
+          [
+            12,
+            13
+          ],
+          "19/222"
+        ],
+        [
+          2,
+          [
+            1,
+            24
+          ],
+          "19/222"
+        ],
+        [
+          3,
+          [
+            11,
+            14
+          ],
+          "19/222"
+        ],
+        [
+          4,
+          [
+            2,
+            23
+          ],
+          "19/222"
+        ],
+        [
+          5,
+          [
+            10,
+            15
+          ],
+          "19/222"
+        ],
+        [
+          6,
+          [
+            3,
+            22
+          ],
+          "19/222"
+        ],
+        [
+          7,
+          [
+            9,
+            16
+          ],
+          "19/222"
+        ],
+        [
+          8,
+          [
+            4,
+            21
+          ],
+          "1/111"
+        ],
+        [
+          9,
+          [
+            8,
+            17
+          ],
+          "19/222"
+        ],
+        [
+          10,
+          [
+            5,
+            20
+          ],
+          "19/222"
+        ],
+        [
+          11,
+          [
+            7,
+            18
+          ],
+          "19/222"
+        ],
+        [
+          12,
+          [
+            6,
+            19
+          ],
+          "19/222"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 32,
+      "base_order": 128,
+      "folded_cycle_order": 16,
+      "cap_for_explicit_recovery": 10,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        9,
+        9,
+        9
+      ],
+      "first_full_rank": 7,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ],
+        [
+          7,
+          1,
+          -1
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          7,
+          3,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "3/292",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0,
+            16
+          ],
+          "11/146"
+        ],
+        [
+          1,
+          [
+            1,
+            15,
+            17,
+            31
+          ],
+          "11/146"
+        ],
+        [
+          2,
+          [
+            2,
+            14,
+            18,
+            30
+          ],
+          "39/292"
+        ],
+        [
+          3,
+          [
+            3,
+            13,
+            19,
+            29
+          ],
+          "39/292"
+        ],
+        [
+          4,
+          [
+            4,
+            12,
+            20,
+            28
+          ],
+          "11/146"
+        ],
+        [
+          5,
+          [
+            5,
+            11,
+            21,
+            27
+          ],
+          "39/292"
+        ],
+        [
+          6,
+          [
+            6,
+            10,
+            22,
+            26
+          ],
+          "39/292"
+        ],
+        [
+          7,
+          [
+            7,
+            9,
+            23,
+            25
+          ],
+          "39/292"
+        ],
+        [
+          8,
+          [
+            8,
+            24
+          ],
+          "7/73"
+        ]
+      ],
+      "five_tick_words_once": null
+    },
+    {
+      "M": 63,
+      "base_order": 252,
+      "folded_cycle_order": 63,
+      "cap_for_explicit_recovery": 33,
+      "affine_rank_from_all_ports_each_tick": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        11,
+        14,
+        17,
+        21,
+        25,
+        29,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "first_full_rank": 14,
+      "rank_witness_port_rows": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          -1
+        ],
+        [
+          5,
+          1,
+          -1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          -1
+        ],
+        [
+          6,
+          2,
+          -1
+        ],
+        [
+          7,
+          1,
+          -1
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          7,
+          3,
+          -1
+        ],
+        [
+          8,
+          0,
+          -1
+        ],
+        [
+          8,
+          2,
+          -1
+        ],
+        [
+          9,
+          1,
+          -1
+        ],
+        [
+          9,
+          1,
+          1
+        ],
+        [
+          9,
+          3,
+          -1
+        ],
+        [
+          10,
+          0,
+          -1
+        ],
+        [
+          10,
+          2,
+          -1
+        ],
+        [
+          10,
+          4,
+          -1
+        ],
+        [
+          11,
+          1,
+          -1
+        ],
+        [
+          11,
+          1,
+          1
+        ],
+        [
+          11,
+          3,
+          -1
+        ],
+        [
+          11,
+          5,
+          -1
+        ],
+        [
+          12,
+          0,
+          -1
+        ],
+        [
+          12,
+          2,
+          -1
+        ],
+        [
+          12,
+          4,
+          -1
+        ],
+        [
+          12,
+          6,
+          -1
+        ],
+        [
+          13,
+          1,
+          -1
+        ],
+        [
+          13,
+          1,
+          1
+        ],
+        [
+          13,
+          3,
+          -1
+        ],
+        [
+          13,
+          5,
+          -1
+        ],
+        [
+          14,
+          0,
+          -1
+        ],
+        [
+          14,
+          2,
+          -1
+        ],
+        [
+          14,
+          4,
+          -1
+        ]
+      ],
+      "count_fraction_recovered": "1/190",
+      "folded_classes_and_exact_recovered_weights": [
+        [
+          0,
+          [
+            0
+          ],
+          "4/285"
+        ],
+        [
+          1,
+          [
+            31,
+            32
+          ],
+          "2/95"
+        ],
+        [
+          2,
+          [
+            1,
+            62
+          ],
+          "2/95"
+        ],
+        [
+          3,
+          [
+            30,
+            33
+          ],
+          "29/570"
+        ],
+        [
+          4,
+          [
+            2,
+            61
+          ],
+          "29/570"
+        ],
+        [
+          5,
+          [
+            29,
+            34
+          ],
+          "2/95"
+        ],
+        [
+          6,
+          [
+            3,
+            60
+          ],
+          "2/95"
+        ],
+        [
+          7,
+          [
+            28,
+            35
+          ],
+          "2/95"
+        ],
+        [
+          8,
+          [
+            4,
+            59
+          ],
+          "2/95"
+        ],
+        [
+          9,
+          [
+            27,
+            36
+          ],
+          "29/570"
+        ],
+        [
+          10,
+          [
+            5,
+            58
+          ],
+          "29/570"
+        ],
+        [
+          11,
+          [
+            26,
+            37
+          ],
+          "2/95"
+        ],
+        [
+          12,
+          [
+            6,
+            57
+          ],
+          "2/95"
+        ],
+        [
+          13,
+          [
+            25,
+            38
+          ],
+          "2/95"
+        ],
+        [
+          14,
+          [
+            7,
+            56
+          ],
+          "29/570"
+        ],
+        [
+          15,
+          [
+            24,
+            39
+          ],
+          "29/570"
+        ],
+        [
+          16,
+          [
+            8,
+            55
+          ],
+          "2/95"
+        ],
+        [
+          17,
+          [
+            23,
+            40
+          ],
+          "2/95"
+        ],
+        [
+          18,
+          [
+            9,
+            54
+          ],
+          "2/95"
+        ],
+        [
+          19,
+          [
+            22,
+            41
+          ],
+          "29/570"
+        ],
+        [
+          20,
+          [
+            10,
+            53
+          ],
+          "29/570"
+        ],
+        [
+          21,
+          [
+            21,
+            42
+          ],
+          "2/95"
+        ],
+        [
+          22,
+          [
+            11,
+            52
+          ],
+          "2/95"
+        ],
+        [
+          23,
+          [
+            20,
+            43
+          ],
+          "2/95"
+        ],
+        [
+          24,
+          [
+            12,
+            51
+          ],
+          "2/95"
+        ],
+        [
+          25,
+          [
+            19,
+            44
+          ],
+          "29/570"
+        ],
+        [
+          26,
+          [
+            13,
+            50
+          ],
+          "29/570"
+        ],
+        [
+          27,
+          [
+            18,
+            45
+          ],
+          "2/95"
+        ],
+        [
+          28,
+          [
+            14,
+            49
+          ],
+          "2/95"
+        ],
+        [
+          29,
+          [
+            17,
+            46
+          ],
+          "2/95"
+        ],
+        [
+          30,
+          [
+            15,
+            48
+          ],
+          "2/95"
+        ],
+        [
+          31,
+          [
+            16,
+            47
+          ],
+          "29/570"
+        ]
+      ],
+      "five_tick_words_once": null
+    }
+  ],
+  "direction_only_pass": "Alternate two-tick outcomes L,R,L,... from initial R, preserving all unresolved sites and sheets coherently. Classical counting has pass 2^(-m) with conditional X=-(m mod 2)+ a sum of m fair increments. Signed character h has exact pass p_m(h)=integral(prod sin\u00b2(q+(2j+1)h))dq/(2pi) on the unwrapped cover. A trigonometric quadrature with >2m points verifies the integral. Generalized Holder gives p_m(h)<=binom(2m,m)/4^m. Both k=0 and a quarter turn h=pi/2 attain the upper bound; the latter is not in general a weak-force component.",
+  "finite_predicted_flights": [
+    {
+      "M": 5,
+      "blocks": 2,
+      "flight_ticks": 3,
+      "counterfactual_pure_count_pass": "1/4",
+      "zero_signed_exact_pass_and_Holder_ceiling": "3/8",
+      "k0_count_posterior_odds_multiplier_count_over_k0": "2/3",
+      "prior_count_then_k0_through_Mminus1": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.2777777777777778,
+        0.1111111111111111,
+        0.2222222222222222,
+        0.05555555555555555
+      ],
+      "pass_by_character": [
+        0.375,
+        0.28862712429686843,
+        0.14887287570313157,
+        0.1488728757031316,
+        0.28862712429686843
+      ],
+      "unconditional_mixed_pass": 0.25,
+      "rejected_mass": 0.75,
+      "normalized_post_weights": [
+        0.16666666666666666,
+        0.25,
+        0.3206968047742983,
+        0.06616572253472514,
+        0.1323314450694503,
+        0.06413936095485964
+      ],
+      "position_and_conditional_flight_mass": [
+        [
+          1,
+          0.3645833333333333
+        ],
+        [
+          3,
+          0.10416666666666667
+        ],
+        [
+          5,
+          0.03125
+        ],
+        [
+          -5,
+          0.03125
+        ],
+        [
+          -3,
+          0.10416666666666667
+        ],
+        [
+          -1,
+          0.36458333333333337
+        ]
+      ],
+      "count_conditional_mean_lattice": 0,
+      "count_conditional_variance_lattice": 5
+    },
+    {
+      "M": 8,
+      "blocks": 4,
+      "flight_ticks": 4,
+      "counterfactual_pure_count_pass": "1/16",
+      "zero_signed_exact_pass_and_Holder_ceiling": "35/128",
+      "k0_count_posterior_odds_multiplier_count_over_k0": "8/35",
+      "prior_count_then_k0_through_Mminus1": [
+        0.07692307692307693,
+        0.07692307692307693,
+        0.05128205128205128,
+        0.02564102564102564,
+        0.20512820512820512,
+        0.1794871794871795,
+        0.15384615384615385,
+        0.1282051282051282,
+        0.10256410256410256
+      ],
+      "pass_by_character": [
+        0.2734375,
+        0.0234375,
+        0.2734375,
+        0.0234375,
+        0.2734375,
+        0.0234375,
+        0.2734375,
+        0.0234375
+      ],
+      "unconditional_mixed_pass": 0.12900641025641027,
+      "rejected_mass": 0.8709935897435898,
+      "normalized_post_weights": [
+        0.037267080745341616,
+        0.16304347826086957,
+        0.009316770186335404,
+        0.05434782608695651,
+        0.037267080745341616,
+        0.3804347826086956,
+        0.02795031055900621,
+        0.2717391304347826,
+        0.018633540372670808
+      ],
+      "position_and_conditional_flight_mass": [
+        [
+          0,
+          0.373932453416149
+        ],
+        [
+          2,
+          0.25621118012422356
+        ],
+        [
+          4,
+          0.060364906832298136
+        ],
+        [
+          6,
+          0.006987577639751555
+        ],
+        [
+          8,
+          0.0018924689440993788
+        ],
+        [
+          -8,
+          0.0018924689440993788
+        ],
+        [
+          -6,
+          0.01940993788819876
+        ],
+        [
+          -4,
+          0.06036490683229815
+        ],
+        [
+          -2,
+          0.218944099378882
+        ]
+      ],
+      "count_conditional_mean_lattice": 0,
+      "count_conditional_variance_lattice": 8
+    },
+    {
+      "M": 12,
+      "blocks": 6,
+      "flight_ticks": 5,
+      "counterfactual_pure_count_pass": "1/64",
+      "zero_signed_exact_pass_and_Holder_ceiling": "231/1024",
+      "k0_count_posterior_odds_multiplier_count_over_k0": "16/231",
+      "prior_count_then_k0_through_Mminus1": [
+        0.037037037037037035,
+        0.037037037037037035,
+        0.12345679012345678,
+        0.06172839506172839,
+        0.14814814814814814,
+        0.08641975308641975,
+        0.024691358024691357,
+        0.1111111111111111,
+        0.04938271604938271,
+        0.13580246913580246,
+        0.07407407407407407,
+        0.012345679012345678,
+        0.09876543209876543
+      ],
+      "pass_by_character": [
+        0.2255859375,
+        0.0014648437499999814,
+        0.0014648437500000226,
+        0.2255859375,
+        0.0014648437499999432,
+        0.0014648437499999887,
+        0.2255859375,
+        0.001464843749999925,
+        0.0014648437500001206,
+        0.2255859375,
+        0.001464843750000023,
+        0.0014648437500001392
+      ],
+      "unconditional_mixed_pass": 0.0849971064814815,
+      "rejected_mass": 0.9150028935185185,
+      "normalized_post_weights": [
+        0.0068085106382978705,
+        0.09829787234042552,
+        0.0021276595744680574,
+        0.0010638297872340588,
+        0.39319148936170206,
+        0.0014893617021276015,
+        0.00042553191489361366,
+        0.29489361702127653,
+        0.0008510638297871903,
+        0.0023404255319150855,
+        0.19659574468085103,
+        0.00021276595744681182,
+        0.0017021276595746294
+      ],
+      "position_and_conditional_flight_mass": [
+        [
+          1,
+          0.24267952127659576
+        ],
+        [
+          3,
+          0.17755984042553188
+        ],
+        [
+          5,
+          0.06169880319148936
+        ],
+        [
+          7,
+          0.009311835106382973
+        ],
+        [
+          9,
+          0.0010006648936170207
+        ],
+        [
+          11,
+          8.976063829787233e-05
+        ],
+        [
+          -11,
+          8.976063829787233e-05
+        ],
+        [
+          -9,
+          0.0018251329787234035
+        ],
+        [
+          -7,
+          0.019019281914893608
+        ],
+        [
+          -5,
+          0.08584773936170209
+        ],
+        [
+          -3,
+          0.1778789893617021
+        ],
+        [
+          -1,
+          0.222998670212766
+        ]
+      ],
+      "count_conditional_mean_lattice": 0,
+      "count_conditional_variance_lattice": 11
+    },
+    {
+      "M": 31,
+      "blocks": 8,
+      "flight_ticks": 10,
+      "counterfactual_pure_count_pass": "1/256",
+      "zero_signed_exact_pass_and_Holder_ceiling": "6435/32768",
+      "k0_count_posterior_odds_multiplier_count_over_k0": "128/6435",
+      "prior_count_then_k0_through_Mminus1": [
+        0.006012024048096192,
+        0.006012024048096192,
+        0.02004008016032064,
+        0.03406813627254509,
+        0.04809619238476954,
+        0.06212424849699399,
+        0.014028056112224449,
+        0.028056112224448898,
+        0.04208416833667335,
+        0.056112224448897796,
+        0.008016032064128256,
+        0.022044088176352707,
+        0.036072144288577156,
+        0.050100200400801605,
+        0.002004008016032064,
+        0.01603206412825651,
+        0.03006012024048096,
+        0.04408817635270541,
+        0.05811623246492986,
+        0.01002004008016032,
+        0.02404809619238477,
+        0.03807615230460922,
+        0.052104208416833664,
+        0.004008016032064128,
+        0.018036072144288578,
+        0.03206412825651302,
+        0.04609218436873747,
+        0.06012024048096192,
+        0.012024048096192385,
+        0.026052104208416832,
+        0.04008016032064128,
+        0.05410821643286573
+      ],
+      "pass_by_character": [
+        0.196380615234375,
+        3.310078375216309e-05,
+        8.959719854416485e-05,
+        5.2518721094448354e-05,
+        0.000915210115941815,
+        0.00012060005133633934,
+        0.0001235680184754517,
+        0.0012427062507732543,
+        0.12294568635326446,
+        0.0001292577712535214,
+        7.003517472672307e-05,
+        7.038935739529093e-05,
+        0.00023123375656677872,
+        0.0002706219534312732,
+        0.00022693620248225263,
+        0.02693617989252376,
+        0.02693617989252349,
+        0.00022693620248231283,
+        0.00027062195343132393,
+        0.00023123375656668304,
+        7.03893573951905e-05,
+        7.00351747268578e-05,
+        0.00012925777125412757,
+        0.12294568635326478,
+        0.0012427062507731988,
+        0.00012356801847571413,
+        0.0001206000513359869,
+        0.0009152101159419664,
+        5.251872109465152e-05,
+        8.959719854466669e-05,
+        3.3100783753003366e-05
+      ],
+      "unconditional_mixed_pass": 0.01255790994688519,
+      "rejected_mass": 0.9874420900531148,
+      "normalized_post_weights": [
+        0.001870093752639207,
+        0.09401604139244764,
+        5.2822672130032265e-05,
+        0.0002430666872553894,
+        0.00020114418117699338,
+        0.004527563974436247,
+        0.0001347186191363747,
+        0.0002760680884289943,
+        0.004164567135118665,
+        0.5493554243386897,
+        8.250851003776956e-05,
+        0.00012293937236785844,
+        0.0002021908953864529,
+        0.0009225147809169667,
+        4.3186212218781213e-05,
+        0.0002897182545986401,
+        0.06447767262332738,
+        0.0945672531808792,
+        0.001050228672920349,
+        0.00021593106109394657,
+        0.00044280709483996073,
+        0.00021342372290761804,
+        0.00029058397105186074,
+        4.125425501907825e-05,
+        0.17657852925172213,
+        0.00317300353151884,
+        0.00045354043099145384,
+        0.0005773655105827756,
+        0.0008763027047297411,
+        0.00010895309813795955,
+        0.0002859608085373539,
+        0.00014262121475470762
+      ],
+      "position_and_conditional_flight_mass": [
+        [
+          0,
+          0.21827068022927595
+        ],
+        [
+          2,
+          0.1600748604378866
+        ],
+        [
+          4,
+          0.08100088402934201
+        ],
+        [
+          6,
+          0.05993595246872478
+        ],
+        [
+          8,
+          0.04616873648376771
+        ],
+        [
+          10,
+          0.018808905103464658
+        ],
+        [
+          12,
+          0.003960772093640389
+        ],
+        [
+          14,
+          0.00044261393826930444
+        ],
+        [
+          16,
+          2.3697038778759138e-05
+        ],
+        [
+          18,
+          1.1865956402676447e-06
+        ],
+        [
+          -18,
+          1.1865956402676447e-06
+        ],
+        [
+          -16,
+          2.3810484970370263e-05
+        ],
+        [
+          -14,
+          0.0003680252787361884
+        ],
+        [
+          -12,
+          0.0022876052628844666
+        ],
+        [
+          -10,
+          0.008786651364244539
+        ],
+        [
+          -8,
+          0.028217662032099588
+        ],
+        [
+          -6,
+          0.06670602520765297
+        ],
+        [
+          -4,
+          0.11999469429145738
+        ],
+        [
+          -2,
+          0.1849260510635238
+        ]
+      ],
+      "count_conditional_mean_lattice": 0,
+      "count_conditional_variance_lattice": 18
+    }
+  ],
+  "dyadic_scaling_controls": [
+    {
+      "epsilon_delta": 0.5,
+      "M": 16,
+      "effective_F": 6.283185307179586,
+      "even_blocks": 6,
+      "prior_equal_count_and_weak_pair": true,
+      "weak_character_pass": 0.001953124999999995,
+      "weak_pass_over_Holder_ceiling": 0.008658008658008635,
+      "quarter_turn_pass_over_ceiling": 1,
+      "zero_field_pass_over_ceiling": 1,
+      "mixed_pass": 0.008789062499999998,
+      "conditional_count_weight": 0.8888888888888891,
+      "conditional_weak_weight": 0.11111111111111086,
+      "zero_field_count_odds_log2_multiplier": -3.851749041416058,
+      "scaled_count_variance_after_DO": 0.375
+    },
+    {
+      "epsilon_delta": 0.25,
+      "M": 256,
+      "effective_F": 6.283185307179586,
+      "even_blocks": 32,
+      "prior_equal_count_and_weak_pair": true,
+      "weak_character_pass": 7.748397621197525e-05,
+      "weak_pass_over_Holder_ceiling": 0.0007799346560285664,
+      "quarter_turn_pass_over_ceiling": 1,
+      "zero_field_pass_over_ceiling": 1,
+      "mixed_pass": 3.874210452130945e-05,
+      "conditional_count_weight": 3.0048786266348156e-06,
+      "conditional_weak_weight": 0.9999969951213734,
+      "zero_field_count_odds_log2_multiplier": -28.66861663700344,
+      "scaled_count_variance_after_DO": 0.125
+    },
+    {
+      "epsilon_delta": 0.125,
+      "M": 4096,
+      "effective_F": 6.283185307179586,
+      "even_blocks": 182,
+      "prior_equal_count_and_weak_pair": true,
+      "weak_character_pass": 0.0003511864026932729,
+      "weak_pass_over_Holder_ceiling": 0.008403236792854795,
+      "quarter_turn_pass_over_ceiling": 1,
+      "zero_field_pass_over_ceiling": 1,
+      "mixed_pass": 0.00017559320134663645,
+      "conditional_count_weight": 4.6451858741935274e-52,
+      "conditional_weak_weight": 1.0,
+      "zero_field_count_odds_log2_multiplier": -177.41936375443225,
+      "scaled_count_variance_after_DO": 0.04443359375
+    },
+    {
+      "epsilon_delta": 0.0625,
+      "M": 65536,
+      "effective_F": 6.283185307179586,
+      "even_blocks": 1024,
+      "prior_equal_count_and_weak_pair": true,
+      "weak_character_pass": 0.0006536912611677304,
+      "weak_pass_over_Holder_ceiling": 0.03708092918529126,
+      "quarter_turn_pass_over_ceiling": 1,
+      "zero_field_pass_over_ceiling": 1,
+      "mixed_pass": 0.0003268456305838652,
+      "conditional_count_weight": 8.509651232496247e-306,
+      "conditional_weak_weight": 1.0,
+      "zero_field_count_odds_log2_multiplier": -1018.1740758250364,
+      "scaled_count_variance_after_DO": 0.015625
+    }
+  ],
+  "two_ray_scope": "For weak effective slope h_eff reduced modulo pi and conjugation, put |F_s|=(pi*s/H)/(epsilon*delta^3). In a calibrated finite mixture of bounded force magnitudes satisfying the two-ray hypotheses with epsilon=delta, even m nearest delta^(-5/2), each good success is p_m(0)(1+o(1)); its limiting characteristic function at fixed time T is cos(xi*|F_s|*T\u00b2/2) for common centre zero. The conditional mixture uses actual posterior weights, counting contributes the central point (scaled variance (epsilon*delta)^2(m+n)), and signed zero effective field contributes the same central point. Earlier unfiltered terminal ports distinguish these latter mechanisms. Among weak signed branches the filter preserves relative weights asymptotically. Count to weak signed odds are suppressed by sqrt(pi*m)*2^(-m) when that signed prior is appreciable. A pure counting run still passes rarely and stays central. If unwanted preweight eta outside a weak target family tends to zero then its postweight also tends to zero by Holder; no stronger prior rate is required for this particular filter. Strong or resonant components of appreciable posterior cannot be assigned weak rays. Scaling limits and a physical measurement law are assumptions here, not inferred from these finite records."
+}

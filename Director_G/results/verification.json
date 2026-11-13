@@ -4464,5 +4464,317 @@
       "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
       "fresh_full_replay": false
     }
+  },
+  "matched_force_calibration_and_return_loop_flight_addendum": {
+    "scope": "Four finite force calibration, shared-preparation and return-loop studies, plus two standalone Lean files. Prior optical and edition checks are retained at their original scopes.",
+    "totals": {
+      "checkers": 57,
+      "generated_outputs": 71,
+      "lean_files": 21,
+      "added_checkers": 4,
+      "added_outputs": 4,
+      "added_lean_files": 2,
+      "fresh_checker_processes": 8,
+      "fresh_lean_compilations": 4
+    },
+    "sources_and_outputs": {
+      "Force_calibration_across_scales.md": {
+        "lf_sha256": "613f2f8eb7ad781f3a1be555d6a2392140ed3d9982fb5778b5cbefb675bd81f6",
+        "raw_bytes_by_mirror": {
+          "research": 11482,
+          "checkout": 11482
+        }
+      },
+      "Returning_loops_and_one_classical_ray.md": {
+        "lf_sha256": "2b12f13fcfee8e1391b5e9b2e5398846511eb41ea6751115b85a888f6522fe74",
+        "raw_bytes_by_mirror": {
+          "research": 12721,
+          "checkout": 12721
+        }
+      },
+      "lean/ForceAliasRefinement.lean": {
+        "lf_sha256": "077ae06b7101ec1234056a6798bbfd9aa8cf494fe2a5b23a9aa3e7ebff31a89b",
+        "raw_bytes_by_mirror": {
+          "research": 10630,
+          "checkout": 10630
+        }
+      },
+      "lean/LoopCoinPreparation.lean": {
+        "lf_sha256": "e528c957c6ef5415f6aaf9b5bb726c505fcbac1cb160c9c61e58e30b8ef1458b",
+        "raw_bytes_by_mirror": {
+          "research": 6605,
+          "checkout": 6605
+        }
+      },
+      "check_force_reference_transfer.py": {
+        "lf_sha256": "1537cfa4b26c9ef60a5d592c751d85bfb63c49645d6bbe26e7f556899fce66ac",
+        "raw_bytes_by_mirror": {
+          "research": 11834,
+          "checkout": 11834
+        }
+      },
+      "check_force_response_calibration.py": {
+        "lf_sha256": "331beb0804896039a74c32380ca5fed58f273e00f1709a3ebe4110dd9ad180dd",
+        "raw_bytes_by_mirror": {
+          "research": 15550,
+          "checkout": 15550
+        }
+      },
+      "check_loop_coin_flight.py": {
+        "lf_sha256": "609bc5674b8bce78e311da59ebe1486602df40a9b1fdada7f569b05be72f9db4",
+        "raw_bytes_by_mirror": {
+          "research": 9766,
+          "checkout": 9766
+        }
+      },
+      "check_return_loop_control.py": {
+        "lf_sha256": "3a97b500264d141ae150c27345e359a65e8690e437b77fcf1c64cd9a03ffc03a",
+        "raw_bytes_by_mirror": {
+          "research": 22216,
+          "checkout": 22216
+        }
+      },
+      "results/force_reference_transfer.json": {
+        "lf_sha256": "9bd7be9957a5f15de2d0628f75c8e9cb93645120bbe7d5412356157c88460381",
+        "raw_bytes_by_mirror": {
+          "research": 16472,
+          "checkout": 16472
+        }
+      },
+      "results/force_response_calibration.json": {
+        "lf_sha256": "94d35e47b177e78b6686cec9b9de4ff4e1280a8afe8e406e23561ba2db6fd1a0",
+        "raw_bytes_by_mirror": {
+          "research": 46890,
+          "checkout": 46890
+        }
+      },
+      "results/loop_coin_flight.json": {
+        "lf_sha256": "fd63d0d63ff4a0961cb7e092c67af014602d3dd255b147dda0daf6771347d754",
+        "raw_bytes_by_mirror": {
+          "research": 97014,
+          "checkout": 97014
+        }
+      },
+      "results/return_loop_control.json": {
+        "lf_sha256": "21550421f3fe8672cbec9e5a6cb761b5952aebb0e1b291c8fac1d72cf0ff20fd",
+        "raw_bytes_by_mirror": {
+          "research": 143227,
+          "checkout": 143227
+        }
+      },
+      "check_character_tomography.py": {
+        "lf_sha256": "33dfd2ebab7ce66703b4914affb819bc53e2b376e15fdaeacce1d46895aeb7f9",
+        "raw_bytes_by_mirror": {
+          "research": 18206,
+          "checkout": 18206
+        }
+      },
+      "check_walk.py": {
+        "lf_sha256": "b2130f1f411d1dad91510c05e44e47050715e894f5cff4b6948431dd0fc2ed12",
+        "raw_bytes_by_mirror": {
+          "research": 10247,
+          "checkout": 10247
+        }
+      },
+      "Base_preparation_and_two_rays.md": {
+        "lf_sha256": "99fc2b3a4a42dbee639b0a2e8464241c9278a9fe6d8e70815b9aa03c1a068986",
+        "raw_bytes_by_mirror": {
+          "research": 13400,
+          "checkout": 13400
+        }
+      },
+      "Counting_and_character_records.md": {
+        "lf_sha256": "504af8f0ff95be9598c4b87802be921e10623000dcf66dae1d0c335c2a19e843",
+        "raw_bytes_by_mirror": {
+          "research": 12962,
+          "checkout": 12962
+        }
+      },
+      "Director_exchange.md": {
+        "lf_sha256": "2d37e07d23985be6e35be9abc0865d87f5d4302fd6d8165aec5c4ec6dfdca726",
+        "raw_bytes_by_mirror": {
+          "research": 18129,
+          "checkout": 18129
+        }
+      },
+      "lean/README.md": {
+        "lf_sha256": "b130c8964f98f15a251006ce628087cb852cc7bc8652789dad253e398d36ac86",
+        "raw_bytes_by_mirror": {
+          "research": 9920,
+          "checkout": 9920
+        }
+      }
+    },
+    "runs": {
+      "research": [
+        {
+          "source": "check_force_reference_transfer.py",
+          "source_lf_sha256": "1537cfa4b26c9ef60a5d592c751d85bfb63c49645d6bbe26e7f556899fce66ac",
+          "exit": 0,
+          "output": "force_reference_transfer.json",
+          "output_lf_sha256": "9bd7be9957a5f15de2d0628f75c8e9cb93645120bbe7d5412356157c88460381",
+          "generated_lf_sha256": "9bd7be9957a5f15de2d0628f75c8e9cb93645120bbe7d5412356157c88460381",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_force_response_calibration.py",
+          "source_lf_sha256": "331beb0804896039a74c32380ca5fed58f273e00f1709a3ebe4110dd9ad180dd",
+          "exit": 0,
+          "output": "force_response_calibration.json",
+          "output_lf_sha256": "94d35e47b177e78b6686cec9b9de4ff4e1280a8afe8e406e23561ba2db6fd1a0",
+          "generated_lf_sha256": "94d35e47b177e78b6686cec9b9de4ff4e1280a8afe8e406e23561ba2db6fd1a0",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_loop_coin_flight.py",
+          "source_lf_sha256": "609bc5674b8bce78e311da59ebe1486602df40a9b1fdada7f569b05be72f9db4",
+          "exit": 0,
+          "output": "loop_coin_flight.json",
+          "output_lf_sha256": "fd63d0d63ff4a0961cb7e092c67af014602d3dd255b147dda0daf6771347d754",
+          "generated_lf_sha256": "fd63d0d63ff4a0961cb7e092c67af014602d3dd255b147dda0daf6771347d754",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_return_loop_control.py",
+          "source_lf_sha256": "3a97b500264d141ae150c27345e359a65e8690e437b77fcf1c64cd9a03ffc03a",
+          "exit": 0,
+          "output": "return_loop_control.json",
+          "output_lf_sha256": "21550421f3fe8672cbec9e5a6cb761b5952aebb0e1b291c8fac1d72cf0ff20fd",
+          "generated_lf_sha256": "21550421f3fe8672cbec9e5a6cb761b5952aebb0e1b291c8fac1d72cf0ff20fd",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "ForceAliasRefinement.lean",
+          "source_lf_sha256": "077ae06b7101ec1234056a6798bbfd9aa8cf494fe2a5b23a9aa3e7ebff31a89b",
+          "exit": 0
+        },
+        {
+          "source": "LoopCoinPreparation.lean",
+          "source_lf_sha256": "e528c957c6ef5415f6aaf9b5bb726c505fcbac1cb160c9c61e58e30b8ef1458b",
+          "exit": 0
+        }
+      ],
+      "checkout": [
+        {
+          "source": "check_force_reference_transfer.py",
+          "source_lf_sha256": "1537cfa4b26c9ef60a5d592c751d85bfb63c49645d6bbe26e7f556899fce66ac",
+          "exit": 0,
+          "output": "force_reference_transfer.json",
+          "output_lf_sha256": "9bd7be9957a5f15de2d0628f75c8e9cb93645120bbe7d5412356157c88460381",
+          "generated_lf_sha256": "9bd7be9957a5f15de2d0628f75c8e9cb93645120bbe7d5412356157c88460381",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_force_response_calibration.py",
+          "source_lf_sha256": "331beb0804896039a74c32380ca5fed58f273e00f1709a3ebe4110dd9ad180dd",
+          "exit": 0,
+          "output": "force_response_calibration.json",
+          "output_lf_sha256": "94d35e47b177e78b6686cec9b9de4ff4e1280a8afe8e406e23561ba2db6fd1a0",
+          "generated_lf_sha256": "94d35e47b177e78b6686cec9b9de4ff4e1280a8afe8e406e23561ba2db6fd1a0",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_loop_coin_flight.py",
+          "source_lf_sha256": "609bc5674b8bce78e311da59ebe1486602df40a9b1fdada7f569b05be72f9db4",
+          "exit": 0,
+          "output": "loop_coin_flight.json",
+          "output_lf_sha256": "fd63d0d63ff4a0961cb7e092c67af014602d3dd255b147dda0daf6771347d754",
+          "generated_lf_sha256": "fd63d0d63ff4a0961cb7e092c67af014602d3dd255b147dda0daf6771347d754",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "check_return_loop_control.py",
+          "source_lf_sha256": "3a97b500264d141ae150c27345e359a65e8690e437b77fcf1c64cd9a03ffc03a",
+          "exit": 0,
+          "output": "return_loop_control.json",
+          "output_lf_sha256": "21550421f3fe8672cbec9e5a6cb761b5952aebb0e1b291c8fac1d72cf0ff20fd",
+          "generated_lf_sha256": "21550421f3fe8672cbec9e5a6cb761b5952aebb0e1b291c8fac1d72cf0ff20fd",
+          "raw_equal": true,
+          "json_equal": true,
+          "python": "python.exe"
+        },
+        {
+          "source": "ForceAliasRefinement.lean",
+          "source_lf_sha256": "077ae06b7101ec1234056a6798bbfd9aa8cf494fe2a5b23a9aa3e7ebff31a89b",
+          "exit": 0
+        },
+        {
+          "source": "LoopCoinPreparation.lean",
+          "source_lf_sha256": "e528c957c6ef5415f6aaf9b5bb726c505fcbac1cb160c9c61e58e30b8ef1458b",
+          "exit": 0
+        }
+      ]
+    },
+    "method": "Each source ran serially below normal priority in a fresh temporary directory per source and mirror. Python 3.14.7 for standard-library calibration and transfer, bundled Python 3.12.14 with NumPy and one BLAS thread for both loop programs. Lean 4.19.0 with -j 1. Raw bytes compared per source tree; mirror bindings use LF normalization.",
+    "independent_checks": {
+      "calibration": "Separate complex position/rail recurrence with two-step direction-only projections, followed by force flight, for every occupied character of each M=5,8,12,31 trial. All posterior weights, aggregate pass and all position bins agree within 3.57e-15. Unconditional inversion applies to the indicated launched force ring.",
+      "matched_preparation": "174 individual-word tests at two launch rails and three origins, plus 58 signed-coordinate comparisons after a shared native five-tick preparation with and without an extra herald. Half-count prior at order five becomes 3/5 on the specified herald. After two bright outcomes, same-register mass 5/64 versus 1/16 for two fresh starts at order five. Sheet weights alone do not determine the base band.",
+      "loop": "Independent position-space coin/sheet-character propagation from a localized initial rail through every two-step herald projection, all H/I/X route controls and flight. Tested nine orders including non-perfect square tuning; 36 combinations of preparation and flight sign. Compared both orientations to the published final table at 111,128,307,2048 and all six fixed-reference, reversal, zero and mistuning controls at 2048, max absolute observable discrepancy 2.05e-14. Independently reconstructed the 64-point momentum table at order 128 from position amplitudes using the trace/determinant spectral projector; both orientations give target curvature 0.925010162369543. The M111 boundary tie outlier remains documented.",
+      "zero_drift": "Verified every occupied amplitude at the exit of signed \u2212,+,+,\u2212 pulse quarters in full position-space evolution, both orientations at M111,128,307,2048 (b=3,3,4,11). Gains \u00b12 b\u00b2 have no residual common position phase. Terminal means, origin and side masses agree; maximum mean discrepancy 5.11e-15. Physical excursion a*delta\u00b2 remains while loop time scales as 2a*delta\u00b3.",
+      "tuned_control": "Forward enumeration of earliest attainable residue classes over half-length for all 254 orders 3\u2026256; 286 modular minimum nonempty lengths agreed. All 58 fixed-H word controls were independently enumerated over every trial word for first-failure times, success and recombiner response with the private bit erased or retained. Return latency is for fixed counterpropagating histories, the rounding estimate assumes a named nonzero field magnitude, and H/I/X or sign reversals are supplied controls.",
+      "scope": "A coarse pilot heralds a spatial track, but independently redrawn launches do not inherit its individual outcome. A known fixed reference produces a signed reversal; retuning the loop with the force produces its negative magnitude. The base-only field quotient retains conjugation and the half-turn alias. Both arms must share preparation and input phase convention. Tagged, erased and counted arms differ. No absolute named root, external force unit, band preparation, or observed data follows from numerical propagation alone."
+    },
+    "gate_maps": {
+      "lf_sha256": {
+        "research": "8d673bc5efa84dc685c6f0e44b13abafaeee51720d12b194c4f0f9b2544385ce",
+        "checkout": "ea69e2465cc33088df28c7941ce61f8ee32d93a0ec62e4a22ca287939a9ccb57"
+      },
+      "new_keys": [
+        "force_reference_calibration",
+        "loop_coin_ray",
+        "force_refinement_lean",
+        "loop_preparation_lean"
+      ],
+      "disposition": "UNRESOLVED",
+      "open_gates": 13
+    },
+    "index_lf_sha256": {
+      "publication": "3fdc40072d089d1581acec821d853e99376d0612b24947348c57c26e807ac479",
+      "queue": "d41709e2b7a54cd4ae039df6fb56c64602642ec2ed55c3cc1b33ca0ceaac46a8",
+      "project_worker_instructions": "91ba40416d6f04a58be0f243323684150308d0e9913ffd824e293aa6c6e0488a"
+    },
+    "markdown_links": {
+      "research": {
+        "files": 32,
+        "local_link_occurrences": 374,
+        "new_article_local_links": {
+          "Force_calibration_across_scales.md": 14,
+          "Returning_loops_and_one_classical_ray.md": 13
+        },
+        "missing": 0
+      },
+      "checkout": {
+        "files": 33,
+        "local_link_occurrences": 405,
+        "new_article_local_links": {
+          "Force_calibration_across_scales.md": 14,
+          "Returning_loops_and_one_classical_ray.md": 13
+        },
+        "missing": 0
+      }
+    },
+    "edition_z17": {
+      "historical_verification": "moving_odd_clocks_reuse_and_holonomy_addendum.edition_z17",
+      "baseline_commit": "ad79f263c4791e9ea7ff91800e3940a8cebae2d8",
+      "review_head": "4985b19c51cb632340c7ef1a78ed317e0b419743",
+      "edition_tree_unchanged_from_baseline": true,
+      "manifest_sha256": "587e66e4c0cf8b65642cd833b031a64ee990a7858b77cb93d028b6be336208ee",
+      "verifier_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+      "fresh_full_replay": false
+    }
   }
 }

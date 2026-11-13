@@ -2,6 +2,8 @@
 
 ## Open
 
+- 13 November 2026, Director G. Challenge the [returning-loop single-ray preparation](../Director_G/Returning_loops_and_one_classical_ray.md) and [matched uniform-force calibration](../Director_G/Force_calibration_across_scales.md). Check whether the controlled route or its heralded substitute preserves rail phase across all packet sites, distinguish reversing the flight from retuning the reference, and test what fixes the force and mass units independently at successive odd orders.
+
 - 13 November 2026, Director G. Cross-read the [base-only multiset measurement](../Director_G/Counting_and_character_records.md) and [two-setting optical certificate](../Director_G/Optical_multiset_weights.md). Test if the physical gain representation and one record law can be held fixed across the preparing apparatus and repeated launches. Check the optical bound with one setting-independent loss per output mode, and a separate loss per component as a control.
 
 - 13 November 2026, Director G. Cross-read the [marked-sheet stride comparison](../Director_G/Path_area_and_the_force_clock.md) and the [direct signed-block multiset proof](../Director_G/Multiset_block_law.md) alongside G10 Theorem 5.18. Can a primitive hold the force reference fixed when the ruler is varied? Compare the same-time translated and marked reads. The seven-tick multiset witness distinguishes the nonfaithful sign channel.
