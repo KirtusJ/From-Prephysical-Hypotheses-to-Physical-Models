@@ -24,19 +24,20 @@ def mass(state):
     return float(np.sum(abs(state)**2))
 
 
-def prepare(length, x, blocks, phase):
+def prepare(length, x, blocks, phase, signs=None):
     state = np.zeros((length, 2), dtype=np.complex128)
     state[x == 0, 0] = 1
     for i in range(blocks):
-        state = step(step(state, phase), phase)
+        active = phase if signs is None or signs[i] == 1 else np.conj(phase)
+        state = step(step(state, active), active)
         state[:, i % 2] = 0
     success = mass(state)
     return state/sqrt(success), success
 
 
-def flight(order, sign, switched):
+def flight(order, sign, switched, preparation_signs=None):
     delta = (pi/order)**0.25
-    blocks = 2*round(delta**(-2.5)/2)
+    blocks = 2*round(delta**(-2.5)/2) if preparation_signs is None else len(preparation_signs)
     switch = round(0.75/delta**3)
     reads = [round(t/delta**3) for t in (1.4, 2.3, 3.0)]
     radius = 2*blocks+reads[-1]+2
@@ -44,7 +45,7 @@ def flight(order, sign, switched):
     Y = x*delta**2
     phase = np.exp(-1j*sign*pi/order*x)
     inverse = np.conj(phase)
-    start, success = prepare(len(x), x, blocks, phase)
+    start, success = prepare(len(x), x, blocks, phase, preparation_signs)
 
     def advance(state, low, high):
         for n in range(low, high):
