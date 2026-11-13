@@ -1,0 +1,1630 @@
+{
+  "checks": {
+    "tree_total": true,
+    "tree_field_laws": true,
+    "zero_controls": true,
+    "filter_exact": true,
+    "named_sheet_profile": true,
+    "ordered_limit": true,
+    "infinite_threshold": true
+  },
+  "adaptive_tree": {
+    "leaves": 573,
+    "zero_leaves": 437,
+    "mass": "1",
+    "errors": []
+  },
+  "filter": [
+    {
+      "constructive_after_destructive": 0,
+      "canonical_counts": [
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "actual_sheet_counts": [
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "C": 2,
+      "norm_one": [
+        2,
+        0,
+        -1,
+        -1
+      ],
+      "norm_two": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "field_norm": 5,
+      "next_constructive": "1/8",
+      "sheet_probabilities": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/5",
+      "branch_probability": "1/4"
+    },
+    {
+      "constructive_after_destructive": 1,
+      "canonical_counts": [
+        0,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "actual_sheet_counts": [
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "C": 2,
+      "norm_one": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "norm_two": [
+        2,
+        0,
+        -1,
+        -1
+      ],
+      "field_norm": 5,
+      "next_constructive": "1/4",
+      "sheet_probabilities": [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/5",
+      "branch_probability": "1/32"
+    },
+    {
+      "constructive_after_destructive": 2,
+      "canonical_counts": [
+        0,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "actual_sheet_counts": [
+        1,
+        0,
+        -1,
+        1,
+        -1
+      ],
+      "C": 4,
+      "norm_one": [
+        7,
+        0,
+        4,
+        4
+      ],
+      "norm_two": [
+        3,
+        0,
+        -4,
+        -4
+      ],
+      "field_norm": 5,
+      "next_constructive": "5/16",
+      "sheet_probabilities": [
+        "1/4",
+        "0",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/20",
+      "branch_probability": "1/128"
+    },
+    {
+      "constructive_after_destructive": 3,
+      "canonical_counts": [
+        0,
+        -1,
+        2,
+        -2,
+        1
+      ],
+      "actual_sheet_counts": [
+        -2,
+        1,
+        0,
+        -1,
+        2
+      ],
+      "C": 10,
+      "norm_one": [
+        18,
+        0,
+        11,
+        11
+      ],
+      "norm_two": [
+        7,
+        0,
+        -11,
+        -11
+      ],
+      "field_norm": 5,
+      "next_constructive": "13/40",
+      "sheet_probabilities": [
+        "2/5",
+        "1/10",
+        "0",
+        "1/10",
+        "2/5"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/125",
+      "branch_probability": "5/2048"
+    },
+    {
+      "constructive_after_destructive": 4,
+      "canonical_counts": [
+        0,
+        2,
+        -3,
+        3,
+        -2
+      ],
+      "actual_sheet_counts": [
+        0,
+        -2,
+        3,
+        -3,
+        2
+      ],
+      "C": 26,
+      "norm_one": [
+        47,
+        0,
+        29,
+        29
+      ],
+      "norm_two": [
+        18,
+        0,
+        -29,
+        -29
+      ],
+      "field_norm": 5,
+      "next_constructive": "17/52",
+      "sheet_probabilities": [
+        "0",
+        "2/13",
+        "9/26",
+        "9/26",
+        "2/13"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/845",
+      "branch_probability": "13/16384"
+    },
+    {
+      "constructive_after_destructive": 5,
+      "canonical_counts": [
+        0,
+        -3,
+        5,
+        -5,
+        3
+      ],
+      "actual_sheet_counts": [
+        0,
+        -3,
+        5,
+        -5,
+        3
+      ],
+      "C": 68,
+      "norm_one": [
+        123,
+        0,
+        76,
+        76
+      ],
+      "norm_two": [
+        47,
+        0,
+        -76,
+        -76
+      ],
+      "field_norm": 5,
+      "next_constructive": "89/272",
+      "sheet_probabilities": [
+        "0",
+        "9/68",
+        "25/68",
+        "25/68",
+        "9/68"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/5780",
+      "branch_probability": "17/65536"
+    },
+    {
+      "constructive_after_destructive": 6,
+      "canonical_counts": [
+        0,
+        5,
+        -8,
+        8,
+        -5
+      ],
+      "actual_sheet_counts": [
+        -8,
+        5,
+        0,
+        -5,
+        8
+      ],
+      "C": 178,
+      "norm_one": [
+        322,
+        0,
+        199,
+        199
+      ],
+      "norm_two": [
+        123,
+        0,
+        -199,
+        -199
+      ],
+      "field_norm": 5,
+      "next_constructive": "233/712",
+      "sheet_probabilities": [
+        "32/89",
+        "25/178",
+        "0",
+        "25/178",
+        "32/89"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/39605",
+      "branch_probability": "89/1048576"
+    },
+    {
+      "constructive_after_destructive": 7,
+      "canonical_counts": [
+        0,
+        -8,
+        13,
+        -13,
+        8
+      ],
+      "actual_sheet_counts": [
+        8,
+        0,
+        -8,
+        13,
+        -13
+      ],
+      "C": 466,
+      "norm_one": [
+        843,
+        0,
+        521,
+        521
+      ],
+      "norm_two": [
+        322,
+        0,
+        -521,
+        -521
+      ],
+      "field_norm": 5,
+      "next_constructive": "305/932",
+      "sheet_probabilities": [
+        "32/233",
+        "0",
+        "32/233",
+        "169/466",
+        "169/466"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/271445",
+      "branch_probability": "233/8388608"
+    },
+    {
+      "constructive_after_destructive": 8,
+      "canonical_counts": [
+        0,
+        13,
+        -21,
+        21,
+        -13
+      ],
+      "actual_sheet_counts": [
+        -21,
+        13,
+        0,
+        -13,
+        21
+      ],
+      "C": 1220,
+      "norm_one": [
+        2207,
+        0,
+        1364,
+        1364
+      ],
+      "norm_two": [
+        843,
+        0,
+        -1364,
+        -1364
+      ],
+      "field_norm": 5,
+      "next_constructive": "1597/4880",
+      "sheet_probabilities": [
+        "441/1220",
+        "169/1220",
+        "0",
+        "169/1220",
+        "441/1220"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/1860500",
+      "branch_probability": "305/33554432"
+    },
+    {
+      "constructive_after_destructive": 9,
+      "canonical_counts": [
+        0,
+        -21,
+        34,
+        -34,
+        21
+      ],
+      "actual_sheet_counts": [
+        0,
+        -21,
+        34,
+        -34,
+        21
+      ],
+      "C": 3194,
+      "norm_one": [
+        5778,
+        0,
+        3571,
+        3571
+      ],
+      "norm_two": [
+        2207,
+        0,
+        -3571,
+        -3571
+      ],
+      "field_norm": 5,
+      "next_constructive": "4181/12776",
+      "sheet_probabilities": [
+        "0",
+        "441/3194",
+        "578/1597",
+        "578/1597",
+        "441/3194"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/12752045",
+      "branch_probability": "1597/536870912"
+    },
+    {
+      "constructive_after_destructive": 10,
+      "canonical_counts": [
+        0,
+        34,
+        -55,
+        55,
+        -34
+      ],
+      "actual_sheet_counts": [
+        0,
+        -34,
+        55,
+        -55,
+        34
+      ],
+      "C": 8362,
+      "norm_one": [
+        15127,
+        0,
+        9349,
+        9349
+      ],
+      "norm_two": [
+        5778,
+        0,
+        -9349,
+        -9349
+      ],
+      "field_norm": 5,
+      "next_constructive": "5473/16724",
+      "sheet_probabilities": [
+        "0",
+        "578/4181",
+        "3025/8362",
+        "3025/8362",
+        "578/4181"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/87403805",
+      "branch_probability": "4181/4294967296"
+    },
+    {
+      "constructive_after_destructive": 11,
+      "canonical_counts": [
+        0,
+        -55,
+        89,
+        -89,
+        55
+      ],
+      "actual_sheet_counts": [
+        -89,
+        55,
+        0,
+        -55,
+        89
+      ],
+      "C": 21892,
+      "norm_one": [
+        39603,
+        0,
+        24476,
+        24476
+      ],
+      "norm_two": [
+        15127,
+        0,
+        -24476,
+        -24476
+      ],
+      "field_norm": 5,
+      "next_constructive": "28657/87568",
+      "sheet_probabilities": [
+        "7921/21892",
+        "3025/21892",
+        "0",
+        "3025/21892",
+        "7921/21892"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/599074580",
+      "branch_probability": "5473/17179869184"
+    },
+    {
+      "constructive_after_destructive": 12,
+      "canonical_counts": [
+        0,
+        89,
+        -144,
+        144,
+        -89
+      ],
+      "actual_sheet_counts": [
+        89,
+        0,
+        -89,
+        144,
+        -144
+      ],
+      "C": 57314,
+      "norm_one": [
+        103682,
+        0,
+        64079,
+        64079
+      ],
+      "norm_two": [
+        39603,
+        0,
+        -64079,
+        -64079
+      ],
+      "field_norm": 5,
+      "next_constructive": "75025/229256",
+      "sheet_probabilities": [
+        "7921/57314",
+        "0",
+        "7921/57314",
+        "10368/28657",
+        "10368/28657"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/4106118245",
+      "branch_probability": "28657/274877906944"
+    },
+    {
+      "constructive_after_destructive": 13,
+      "canonical_counts": [
+        0,
+        -144,
+        233,
+        -233,
+        144
+      ],
+      "actual_sheet_counts": [
+        -233,
+        144,
+        0,
+        -144,
+        233
+      ],
+      "C": 150050,
+      "norm_one": [
+        271443,
+        0,
+        167761,
+        167761
+      ],
+      "norm_two": [
+        103682,
+        0,
+        -167761,
+        -167761
+      ],
+      "field_norm": 5,
+      "next_constructive": "98209/300100",
+      "sheet_probabilities": [
+        "54289/150050",
+        "10368/75025",
+        "0",
+        "10368/75025",
+        "54289/150050"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/28143753125",
+      "branch_probability": "75025/2199023255552"
+    },
+    {
+      "constructive_after_destructive": 14,
+      "canonical_counts": [
+        0,
+        233,
+        -377,
+        377,
+        -233
+      ],
+      "actual_sheet_counts": [
+        0,
+        -233,
+        377,
+        -377,
+        233
+      ],
+      "C": 392836,
+      "norm_one": [
+        710647,
+        0,
+        439204,
+        439204
+      ],
+      "norm_two": [
+        271443,
+        0,
+        -439204,
+        -439204
+      ],
+      "field_norm": 5,
+      "next_constructive": "514229/1571344",
+      "sheet_probabilities": [
+        "0",
+        "54289/392836",
+        "142129/392836",
+        "142129/392836",
+        "54289/392836"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/192900153620",
+      "branch_probability": "98209/8796093022208"
+    },
+    {
+      "constructive_after_destructive": 15,
+      "canonical_counts": [
+        0,
+        -377,
+        610,
+        -610,
+        377
+      ],
+      "actual_sheet_counts": [
+        0,
+        -377,
+        610,
+        -610,
+        377
+      ],
+      "C": 1028458,
+      "norm_one": [
+        1860498,
+        0,
+        1149851,
+        1149851
+      ],
+      "norm_two": [
+        710647,
+        0,
+        -1149851,
+        -1149851
+      ],
+      "field_norm": 5,
+      "next_constructive": "1346269/4113832",
+      "sheet_probabilities": [
+        "0",
+        "142129/1028458",
+        "186050/514229",
+        "186050/514229",
+        "142129/1028458"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/1322157322205",
+      "branch_probability": "514229/140737488355328"
+    },
+    {
+      "constructive_after_destructive": 16,
+      "canonical_counts": [
+        0,
+        610,
+        -987,
+        987,
+        -610
+      ],
+      "actual_sheet_counts": [
+        -987,
+        610,
+        0,
+        -610,
+        987
+      ],
+      "C": 2692538,
+      "norm_one": [
+        4870847,
+        0,
+        3010349,
+        3010349
+      ],
+      "norm_two": [
+        1860498,
+        0,
+        -3010349,
+        -3010349
+      ],
+      "field_norm": 5,
+      "next_constructive": "1762289/5385076",
+      "sheet_probabilities": [
+        "974169/2692538",
+        "186050/1346269",
+        "0",
+        "186050/1346269",
+        "974169/2692538"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/9062201101805",
+      "branch_probability": "1346269/1125899906842624"
+    },
+    {
+      "constructive_after_destructive": 17,
+      "canonical_counts": [
+        0,
+        -987,
+        1597,
+        -1597,
+        987
+      ],
+      "actual_sheet_counts": [
+        987,
+        0,
+        -987,
+        1597,
+        -1597
+      ],
+      "C": 7049156,
+      "norm_one": [
+        12752043,
+        0,
+        7881196,
+        7881196
+      ],
+      "norm_two": [
+        4870847,
+        0,
+        -7881196,
+        -7881196
+      ],
+      "field_norm": 5,
+      "next_constructive": "9227465/28196624",
+      "sheet_probabilities": [
+        "974169/7049156",
+        "0",
+        "974169/7049156",
+        "2550409/7049156",
+        "2550409/7049156"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/62113250390420",
+      "branch_probability": "1762289/4503599627370496"
+    },
+    {
+      "constructive_after_destructive": 18,
+      "canonical_counts": [
+        0,
+        1597,
+        -2584,
+        2584,
+        -1597
+      ],
+      "actual_sheet_counts": [
+        -2584,
+        1597,
+        0,
+        -1597,
+        2584
+      ],
+      "C": 18454930,
+      "norm_one": [
+        33385282,
+        0,
+        20633239,
+        20633239
+      ],
+      "norm_two": [
+        12752043,
+        0,
+        -20633239,
+        -20633239
+      ],
+      "field_norm": 5,
+      "next_constructive": "24157817/73819720",
+      "sheet_probabilities": [
+        "3338528/9227465",
+        "2550409/18454930",
+        "0",
+        "2550409/18454930",
+        "3338528/9227465"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/425730551631125",
+      "branch_probability": "9227465/72057594037927936"
+    },
+    {
+      "constructive_after_destructive": 19,
+      "canonical_counts": [
+        0,
+        -2584,
+        4181,
+        -4181,
+        2584
+      ],
+      "actual_sheet_counts": [
+        0,
+        -2584,
+        4181,
+        -4181,
+        2584
+      ],
+      "C": 48315634,
+      "norm_one": [
+        87403803,
+        0,
+        54018521,
+        54018521
+      ],
+      "norm_two": [
+        33385282,
+        0,
+        -54018521,
+        -54018521
+      ],
+      "field_norm": 5,
+      "next_constructive": "31622993/96631268",
+      "sheet_probabilities": [
+        "0",
+        "3338528/24157817",
+        "17480761/48315634",
+        "17480761/48315634",
+        "3338528/24157817"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/2918000611027445",
+      "branch_probability": "24157817/576460752303423488"
+    },
+    {
+      "constructive_after_destructive": 20,
+      "canonical_counts": [
+        0,
+        4181,
+        -6765,
+        6765,
+        -4181
+      ],
+      "actual_sheet_counts": [
+        0,
+        -4181,
+        6765,
+        -6765,
+        4181
+      ],
+      "C": 126491972,
+      "norm_one": [
+        228826127,
+        0,
+        141422324,
+        141422324
+      ],
+      "norm_two": [
+        87403803,
+        0,
+        -141422324,
+        -141422324
+      ],
+      "field_norm": 5,
+      "next_constructive": "165580141/505967888",
+      "sheet_probabilities": [
+        "0",
+        "17480761/126491972",
+        "45765225/126491972",
+        "45765225/126491972",
+        "17480761/126491972"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/20000273725560980",
+      "branch_probability": "31622993/2305843009213693952"
+    },
+    {
+      "constructive_after_destructive": 21,
+      "canonical_counts": [
+        0,
+        -6765,
+        10946,
+        -10946,
+        6765
+      ],
+      "actual_sheet_counts": [
+        -10946,
+        6765,
+        0,
+        -6765,
+        10946
+      ],
+      "C": 331160282,
+      "norm_one": [
+        599074578,
+        0,
+        370248451,
+        370248451
+      ],
+      "norm_two": [
+        228826127,
+        0,
+        -370248451,
+        -370248451
+      ],
+      "field_norm": 5,
+      "next_constructive": "433494437/1324641128",
+      "sheet_probabilities": [
+        "59907458/165580141",
+        "45765225/331160282",
+        "0",
+        "45765225/331160282",
+        "59907458/165580141"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/137083915467899405",
+      "branch_probability": "165580141/36893488147419103232"
+    },
+    {
+      "constructive_after_destructive": 22,
+      "canonical_counts": [
+        0,
+        10946,
+        -17711,
+        17711,
+        -10946
+      ],
+      "actual_sheet_counts": [
+        10946,
+        0,
+        -10946,
+        17711,
+        -17711
+      ],
+      "C": 866988874,
+      "norm_one": [
+        1568397607,
+        0,
+        969323029,
+        969323029
+      ],
+      "norm_two": [
+        599074578,
+        0,
+        -969323029,
+        -969323029
+      ],
+      "field_norm": 5,
+      "next_constructive": "567451585/1733977748",
+      "sheet_probabilities": [
+        "59907458/433494437",
+        "0",
+        "59907458/433494437",
+        "313679521/866988874",
+        "313679521/866988874"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/939587134549734845",
+      "branch_probability": "433494437/295147905179352825856"
+    },
+    {
+      "constructive_after_destructive": 23,
+      "canonical_counts": [
+        0,
+        -17711,
+        28657,
+        -28657,
+        17711
+      ],
+      "actual_sheet_counts": [
+        -28657,
+        17711,
+        0,
+        -17711,
+        28657
+      ],
+      "C": 2269806340,
+      "norm_one": [
+        4106118243,
+        0,
+        2537720636,
+        2537720636
+      ],
+      "norm_two": [
+        1568397607,
+        0,
+        -2537720636,
+        -2537720636
+      ],
+      "field_norm": 5,
+      "next_constructive": "2971215073/9079225360",
+      "sheet_probabilities": [
+        "821223649/2269806340",
+        "313679521/2269806340",
+        "0",
+        "313679521/2269806340",
+        "821223649/2269806340"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/6440026026380244500",
+      "branch_probability": "567451585/1180591620717411303424"
+    },
+    {
+      "constructive_after_destructive": 24,
+      "canonical_counts": [
+        0,
+        28657,
+        -46368,
+        46368,
+        -28657
+      ],
+      "actual_sheet_counts": [
+        0,
+        -28657,
+        46368,
+        -46368,
+        28657
+      ],
+      "C": 5942430146,
+      "norm_one": [
+        10749957122,
+        0,
+        6643838879,
+        6643838879
+      ],
+      "norm_two": [
+        4106118243,
+        0,
+        -6643838879,
+        -6643838879
+      ],
+      "field_norm": 5,
+      "next_constructive": "7778742049/23769720584",
+      "sheet_probabilities": [
+        "0",
+        "821223649/5942430146",
+        "1074995712/2971215073",
+        "1074995712/2971215073",
+        "821223649/5942430146"
+      ],
+      "checks": {
+        "zero_constant": true,
+        "field_norm": true,
+        "trace": true,
+        "next_record": true,
+        "literal_filter_word": true,
+        "literal_next_record": true
+      },
+      "leakage_times_one_minus_leakage": "1/44140595050111976645",
+      "branch_probability": "2971215073/18889465931478580854784"
+    }
+  ],
+  "random_threshold": [
+    {
+      "bits": 1,
+      "accept_cells": 0,
+      "reject_cells": 1,
+      "undecided_cells": 1,
+      "cell_denominator": 2,
+      "bracket_exact": true
+    },
+    {
+      "bits": 2,
+      "accept_cells": 1,
+      "reject_cells": 2,
+      "undecided_cells": 1,
+      "cell_denominator": 4,
+      "bracket_exact": true
+    },
+    {
+      "bits": 3,
+      "accept_cells": 2,
+      "reject_cells": 5,
+      "undecided_cells": 1,
+      "cell_denominator": 8,
+      "bracket_exact": true
+    },
+    {
+      "bits": 4,
+      "accept_cells": 5,
+      "reject_cells": 10,
+      "undecided_cells": 1,
+      "cell_denominator": 16,
+      "bracket_exact": true
+    },
+    {
+      "bits": 5,
+      "accept_cells": 10,
+      "reject_cells": 21,
+      "undecided_cells": 1,
+      "cell_denominator": 32,
+      "bracket_exact": true
+    },
+    {
+      "bits": 6,
+      "accept_cells": 20,
+      "reject_cells": 43,
+      "undecided_cells": 1,
+      "cell_denominator": 64,
+      "bracket_exact": true
+    },
+    {
+      "bits": 7,
+      "accept_cells": 41,
+      "reject_cells": 86,
+      "undecided_cells": 1,
+      "cell_denominator": 128,
+      "bracket_exact": true
+    },
+    {
+      "bits": 8,
+      "accept_cells": 83,
+      "reject_cells": 172,
+      "undecided_cells": 1,
+      "cell_denominator": 256,
+      "bracket_exact": true
+    },
+    {
+      "bits": 9,
+      "accept_cells": 167,
+      "reject_cells": 344,
+      "undecided_cells": 1,
+      "cell_denominator": 512,
+      "bracket_exact": true
+    },
+    {
+      "bits": 10,
+      "accept_cells": 335,
+      "reject_cells": 688,
+      "undecided_cells": 1,
+      "cell_denominator": 1024,
+      "bracket_exact": true
+    },
+    {
+      "bits": 11,
+      "accept_cells": 670,
+      "reject_cells": 1377,
+      "undecided_cells": 1,
+      "cell_denominator": 2048,
+      "bracket_exact": true
+    },
+    {
+      "bits": 12,
+      "accept_cells": 1340,
+      "reject_cells": 2755,
+      "undecided_cells": 1,
+      "cell_denominator": 4096,
+      "bracket_exact": true
+    },
+    {
+      "bits": 13,
+      "accept_cells": 2680,
+      "reject_cells": 5511,
+      "undecided_cells": 1,
+      "cell_denominator": 8192,
+      "bracket_exact": true
+    },
+    {
+      "bits": 14,
+      "accept_cells": 5361,
+      "reject_cells": 11022,
+      "undecided_cells": 1,
+      "cell_denominator": 16384,
+      "bracket_exact": true
+    },
+    {
+      "bits": 15,
+      "accept_cells": 10723,
+      "reject_cells": 22044,
+      "undecided_cells": 1,
+      "cell_denominator": 32768,
+      "bracket_exact": true
+    },
+    {
+      "bits": 16,
+      "accept_cells": 21446,
+      "reject_cells": 44089,
+      "undecided_cells": 1,
+      "cell_denominator": 65536,
+      "bracket_exact": true
+    },
+    {
+      "bits": 17,
+      "accept_cells": 42893,
+      "reject_cells": 88178,
+      "undecided_cells": 1,
+      "cell_denominator": 131072,
+      "bracket_exact": true
+    },
+    {
+      "bits": 18,
+      "accept_cells": 85787,
+      "reject_cells": 176356,
+      "undecided_cells": 1,
+      "cell_denominator": 262144,
+      "bracket_exact": true
+    },
+    {
+      "bits": 19,
+      "accept_cells": 171575,
+      "reject_cells": 352712,
+      "undecided_cells": 1,
+      "cell_denominator": 524288,
+      "bracket_exact": true
+    },
+    {
+      "bits": 20,
+      "accept_cells": 343150,
+      "reject_cells": 705425,
+      "undecided_cells": 1,
+      "cell_denominator": 1048576,
+      "bracket_exact": true
+    },
+    {
+      "bits": 21,
+      "accept_cells": 686301,
+      "reject_cells": 1410850,
+      "undecided_cells": 1,
+      "cell_denominator": 2097152,
+      "bracket_exact": true
+    },
+    {
+      "bits": 22,
+      "accept_cells": 1372603,
+      "reject_cells": 2821700,
+      "undecided_cells": 1,
+      "cell_denominator": 4194304,
+      "bracket_exact": true
+    },
+    {
+      "bits": 23,
+      "accept_cells": 2745207,
+      "reject_cells": 5643400,
+      "undecided_cells": 1,
+      "cell_denominator": 8388608,
+      "bracket_exact": true
+    },
+    {
+      "bits": 24,
+      "accept_cells": 5490415,
+      "reject_cells": 11286800,
+      "undecided_cells": 1,
+      "cell_denominator": 16777216,
+      "bracket_exact": true
+    },
+    {
+      "bits": 25,
+      "accept_cells": 10980830,
+      "reject_cells": 22573601,
+      "undecided_cells": 1,
+      "cell_denominator": 33554432,
+      "bracket_exact": true
+    },
+    {
+      "bits": 26,
+      "accept_cells": 21961660,
+      "reject_cells": 45147203,
+      "undecided_cells": 1,
+      "cell_denominator": 67108864,
+      "bracket_exact": true
+    },
+    {
+      "bits": 27,
+      "accept_cells": 43923321,
+      "reject_cells": 90294406,
+      "undecided_cells": 1,
+      "cell_denominator": 134217728,
+      "bracket_exact": true
+    },
+    {
+      "bits": 28,
+      "accept_cells": 87846643,
+      "reject_cells": 180588812,
+      "undecided_cells": 1,
+      "cell_denominator": 268435456,
+      "bracket_exact": true
+    },
+    {
+      "bits": 29,
+      "accept_cells": 175693286,
+      "reject_cells": 361177625,
+      "undecided_cells": 1,
+      "cell_denominator": 536870912,
+      "bracket_exact": true
+    },
+    {
+      "bits": 30,
+      "accept_cells": 351386573,
+      "reject_cells": 722355250,
+      "undecided_cells": 1,
+      "cell_denominator": 1073741824,
+      "bracket_exact": true
+    },
+    {
+      "bits": 31,
+      "accept_cells": 702773147,
+      "reject_cells": 1444710500,
+      "undecided_cells": 1,
+      "cell_denominator": 2147483648,
+      "bracket_exact": true
+    },
+    {
+      "bits": 32,
+      "accept_cells": 1405546295,
+      "reject_cells": 2889421000,
+      "undecided_cells": 1,
+      "cell_denominator": 4294967296,
+      "bracket_exact": true
+    },
+    {
+      "bits": 33,
+      "accept_cells": 2811092590,
+      "reject_cells": 5778842001,
+      "undecided_cells": 1,
+      "cell_denominator": 8589934592,
+      "bracket_exact": true
+    },
+    {
+      "bits": 34,
+      "accept_cells": 5622185180,
+      "reject_cells": 11557684003,
+      "undecided_cells": 1,
+      "cell_denominator": 17179869184,
+      "bracket_exact": true
+    },
+    {
+      "bits": 35,
+      "accept_cells": 11244370361,
+      "reject_cells": 23115368006,
+      "undecided_cells": 1,
+      "cell_denominator": 34359738368,
+      "bracket_exact": true
+    },
+    {
+      "bits": 36,
+      "accept_cells": 22488740722,
+      "reject_cells": 46230736013,
+      "undecided_cells": 1,
+      "cell_denominator": 68719476736,
+      "bracket_exact": true
+    },
+    {
+      "bits": 37,
+      "accept_cells": 44977481445,
+      "reject_cells": 92461472026,
+      "undecided_cells": 1,
+      "cell_denominator": 137438953472,
+      "bracket_exact": true
+    },
+    {
+      "bits": 38,
+      "accept_cells": 89954962891,
+      "reject_cells": 184922944052,
+      "undecided_cells": 1,
+      "cell_denominator": 274877906944,
+      "bracket_exact": true
+    },
+    {
+      "bits": 39,
+      "accept_cells": 179909925783,
+      "reject_cells": 369845888104,
+      "undecided_cells": 1,
+      "cell_denominator": 549755813888,
+      "bracket_exact": true
+    },
+    {
+      "bits": 40,
+      "accept_cells": 359819851567,
+      "reject_cells": 739691776208,
+      "undecided_cells": 1,
+      "cell_denominator": 1099511627776,
+      "bracket_exact": true
+    },
+    {
+      "bits": 41,
+      "accept_cells": 719639703135,
+      "reject_cells": 1479383552416,
+      "undecided_cells": 1,
+      "cell_denominator": 2199023255552,
+      "bracket_exact": true
+    },
+    {
+      "bits": 42,
+      "accept_cells": 1439279406271,
+      "reject_cells": 2958767104832,
+      "undecided_cells": 1,
+      "cell_denominator": 4398046511104,
+      "bracket_exact": true
+    },
+    {
+      "bits": 43,
+      "accept_cells": 2878558812543,
+      "reject_cells": 5917534209664,
+      "undecided_cells": 1,
+      "cell_denominator": 8796093022208,
+      "bracket_exact": true
+    },
+    {
+      "bits": 44,
+      "accept_cells": 5757117625086,
+      "reject_cells": 11835068419329,
+      "undecided_cells": 1,
+      "cell_denominator": 17592186044416,
+      "bracket_exact": true
+    },
+    {
+      "bits": 45,
+      "accept_cells": 11514235250173,
+      "reject_cells": 23670136838658,
+      "undecided_cells": 1,
+      "cell_denominator": 35184372088832,
+      "bracket_exact": true
+    },
+    {
+      "bits": 46,
+      "accept_cells": 23028470500346,
+      "reject_cells": 47340273677317,
+      "undecided_cells": 1,
+      "cell_denominator": 70368744177664,
+      "bracket_exact": true
+    },
+    {
+      "bits": 47,
+      "accept_cells": 46056941000692,
+      "reject_cells": 94680547354635,
+      "undecided_cells": 1,
+      "cell_denominator": 140737488355328,
+      "bracket_exact": true
+    },
+    {
+      "bits": 48,
+      "accept_cells": 92113882001385,
+      "reject_cells": 189361094709270,
+      "undecided_cells": 1,
+      "cell_denominator": 281474976710656,
+      "bracket_exact": true
+    }
+  ]
+}
