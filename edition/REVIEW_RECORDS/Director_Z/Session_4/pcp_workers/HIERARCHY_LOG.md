@@ -67,3 +67,29 @@ Director G reports the other outcome on their side (`AGENTS.md`, 13 November 202
 
 A challenger sub-agent was allowed one headless worker (`claude -p` from its shell) to formalize a small step in Lean and to use the answer inside its own report. Outcome: the worker returned a correct file in 53 seconds on the first attempt; the challenger reran it (exit code 0) and so did the director. The challenger's whole run took about 7 minutes and 92 thousand tokens, against 4 to 6 minutes and 50 to 70 thousand without nesting, and its report carried the Lean statement verbatim. Worth it when the step is small and sharply stated; the director still reruns the file. PCP OS recorded nothing of the nested worker, as expected.
 
+## Limits of recursion (tested 13 November 2026, at the principal's request)
+
+Scripts and logs: `recursion/` beside this file. Route: headless workers started from a shell, each starting the next.
+
+| Test | Result |
+|---|---|
+| Relay of a token down a chain and back, 1, 2, 3, 5, 8 levels | Correct at every depth. 11, 21, 30, 51, 87 seconds: about 11 seconds per level, linear. No mechanical limit was reached at depth 8 |
+| A fully specified counting task restated in each level's own words, 4 levels, solved at the bottom | Correct answer (eight numbers, checked against the director's own program). 78 seconds against 16 for one level. The text grew from 181 to about 300 words at the first restatement and then stayed; every condition survived; the vocabulary changed ("closed" became "sealed", "good" became "rich") |
+| Fixed cost of one headless worker that does nothing | about 36 thousand tokens of context, mostly cached, 3 to 6 seconds, about 0.12 to 0.14 dollars as the tool reports it; a worker that runs one shell command about 73 thousand |
+| Earlier: a challenger that delegated one Lean step | 53 seconds for the worker; useful |
+| Direct nesting through the Agent tool | not available to sub-agents here (depth 1 only) |
+
+Where recursion stops being efficient in this workflow:
+
+1. Depth is not the limit; a level that adds nothing is. Every level costs a cold start (tens of thousands of tokens and 10 to 20 seconds) whatever it does. A level pays only if it brings something the level above lacks: a different tool (Lean), parallel width, or a context kept free of the parent's notes.
+2. The director's recheck does not get cheaper with depth. Rule 3 of the stack (reread every report, rerun its files) applies to what comes back at the top; errors made two levels down are visible only through files, so nested workers must leave result files, not just an answer. Beyond depth 2 the director is rereading reports about reports.
+3. Names drift. A task restated four times kept its meaning and changed its terms. For work on a paper, where labels and defined terms matter, a nested worker must be given the text or the file path, not a restatement.
+4. The register sees none of it. PCP OS records no event for a nested worker; the parent must submit one, which adds a step per level.
+5. One account limit is shared by all levels, and it is what stopped the unattended queue session.
+
+Working rule drawn from this: at most two levels below the director (sub-agent, plus one headless worker for a sharply stated step with a machine-checkable answer); pass file paths, not paraphrases; every nested worker writes a result file that the director can rerun. Deeper chains work and are kept as a tested option, not a default.
+
+## Small applications
+
+`Director_Z/tools/pcp_submit.py` was written after the second duplicate register submission: it refuses to send a call file whose digest is already in its ledger and saves the server's output to a file. This is rule 6 turned into a program. Applications are written only when a step has failed more than once or recurs at every edition.
+
