@@ -2,8 +2,8 @@
 
 Requires pdfplumber. Read Fig. 3's vector bars after checking the source
 digest and axis geometry. Preserve every plotted site and displaced count.
-Test the two reported fair-coin statistics, extremize distribution distance
-over arm mixtures, and enumerate all 16 signed words in each instrument.
+Test the two reported fair-coin statistics, bound the positive-side shift under
+equal exposure, extremize distance over arm mixtures, and enumerate the 16 words.
 """
 import argparse
 from collections import Counter
@@ -11,6 +11,7 @@ from fractions import Fraction as F
 import hashlib
 from itertools import product
 import json
+from math import comb
 from pathlib import Path
 
 import pdfplumber
@@ -70,6 +71,68 @@ def tv(a,b):
 
 def positive(p):
     return sum(y for x,y in p.items() if x > 0)
+
+
+def binomial_limit(k, n, *, upper, grid=10000, alpha=F(1, 100)):
+    """One-sided Clopper–Pearson endpoint rounded outwards by exact tail comparisons."""
+    require(0 <= k <= n and grid > 0 and 0 < alpha < 1, "invalid binomial arguments")
+    if upper and k == n:
+        return F(1)
+    if not upper and k == 0:
+        return F(0)
+    limit = grid**n * alpha.numerator
+    low, high = 0, grid
+    while low < high:
+        i = (low + high)//2
+        if upper:
+            tail = sum(comb(n, j)*i**j*(grid-i)**(n-j) for j in range(k+1))
+            crossed = tail*alpha.denominator <= limit
+        else:
+            tail = sum(comb(n, j)*i**j*(grid-i)**(n-j) for j in range(k,n+1))
+            crossed = tail*alpha.denominator > limit
+        if crossed:
+            high = i
+        else:
+            low = i + 1
+    return F(low if upper else low - 1, grid)
+
+
+def positive_side_uncertainty(panels, retained):
+    """Equal setting exposures; nested binomials for retained and positive counts."""
+    blank, left, right = (panel["counts"] for panel in panels)
+    kept_b, kept_c = retained["retained_b"], retained["retained_c"]
+    n_b, n_c = sum(kept_b.values()), sum(kept_c.values())
+    grid = 10000
+    cells = {
+        "blank_positive": (positive(blank), sum(blank.values())),
+        "retention_b": (n_b, sum(left.values())),
+        "retention_c": (n_c, sum(right.values())),
+        "positive_given_b": (positive(kept_b), n_b),
+        "positive_given_c": (positive(kept_c), n_c),
+    }
+    upper_blank = binomial_limit(*cells["blank_positive"], upper=True, grid=grid)
+    upper_b = binomial_limit(*cells["retention_b"], upper=True, grid=grid)
+    lower_c = binomial_limit(*cells["retention_c"], upper=False, grid=grid)
+    lower_pos_b = binomial_limit(*cells["positive_given_b"], upper=False, grid=grid)
+    lower_pos_c = binomial_limit(*cells["positive_given_c"], upper=False, grid=grid)
+    upper_w = upper_b / (upper_b + lower_c) if upper_b + lower_c else F(1)
+    # The linear lower envelope occurs at one of the two possible weight endpoints.
+    lower_pool = min(lower_pos_c, upper_w*lower_pos_b + (1-upper_w)*lower_pos_c)
+    gap = lower_pool - upper_blank
+    p, u_b, u_c = (F(*cells[label]) for label in ("blank_positive", "positive_given_b", "positive_given_c"))
+    matching_w = (u_c-p)/(u_c-u_b)
+    require((upper_blank, lower_pos_b, lower_pos_c, upper_b, lower_c)
+            == (F(2828,10000), F(998,10000), F(6327,10000), F(5565,10000), F(4264,10000)),
+            "conditional binomial endpoints")
+    require(gap == F(2367893,49145000) and matching_w == F(162207,181240),
+            "equal-exposure bound or free-weight witness")
+    require(matching_w*u_b + (1-matching_w)*u_c == p, "binary matching weight")
+    return dict(counts=cells, confidence_at_least=F(95,100), grid=grid,
+                blank_positive_upper=upper_blank, retention_b_upper=upper_b,
+                retention_c_lower=lower_c, positive_given_b_lower=lower_pos_b,
+                positive_given_c_lower=lower_pos_c, weight_b_upper=upper_w,
+                retained_positive_lower=lower_pool, positive_gap_lower=gap,
+                common_target_loss_lower=gap/(1+gap), matching_free_weight_b=matching_w)
 
 
 def common_target(p, q):
@@ -196,8 +259,10 @@ def main():
     if dest.exists():
         parser.exit(2, f"Refusing to overwrite {dest}\n")
     panels = figure_counts(args.pdf)
+    retained = compare(panels)
     result = dict(source=SOURCE, source_sha256=DIGEST, figure=3,
-                  digitized=panels, retained_analysis=compare(panels), model=ideal())
+                  digitized=panels, retained_analysis=retained, model=ideal(),
+                  positive_side_uncertainty=positive_side_uncertainty(panels, retained))
     with dest.open("x", encoding="utf-8", newline="\n") as stream:
         json.dump(result, stream, default=str, indent=2, allow_nan=False)
         stream.write("\n")

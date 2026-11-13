@@ -47,6 +47,26 @@ There is an explicit common-population explanation of the two *empirical* histog
 
 This bound is attainable. Take \(\pi_j=s\max(p_j,q_j)\) at equality. At each occupied well retain a fraction \(p_j/\max(p_j,q_j)\) in the blank setting and \(q_j/\max(p_j,q_j)\) in the pooled setting. Each accepted sample normalizes to its required histogram. For the published pooling, the masses of the common target at \(j=-3,\ldots,+2\) are proportional to \((794,7130,52007,14030,33580,5750)\). Its total is 113291, and each setting accepts 91310 units. Thus the smallest possible *larger* loss in this model is **19.402%**. Permitting any closed-interval arm mixture gives **9.649%** at the negative arm alone. If both weights must be positive the latter value is an infimum. These are feasibility thresholds for the plotted frequencies. The experiment does not measure unintended losses of these sizes. The intended removal of the displaced arm is already accounted for before defining this target. [Exact target and site acceptance fractions](results/cesium_negative_read.json)
 
+### Sampling uncertainty when the two probe settings have equal exposure
+
+The reported choice of $j>0$ was fixed before inspecting these reconstructions. It gives a conservative population bound on total variation and, within the faithful-site selection model above, on the larger loss fraction. Treat the counted endpoints within each setting as independent draws with stable category probabilities. Condition on the observed setting totals. Let $a_b,a_c$ be the retention probabilities for the two probe settings, $u_b,u_c$ their positive-site probabilities conditional on retention, and $p_+$ the blank positive-site probability. The positive probability in the equally exposed retained pool is $q_+=w u_b+(1-w)u_c$, with $w=a_b/(a_b+a_c)$. This allows the retention rates themselves to differ.
+
+| Population probability | Count used | One-sided 99% bound, rounded outwards |
+|---|---:|---:|
+| Positive, blank | 49/230 | at most 0.2828 |
+| Retained, setting (b) | 201/404 | at most 0.5565 |
+| Retained, setting (c) | 196/404 | at least 0.4264 |
+| Positive given retained, (b) | 31/201 | at least 0.0998 |
+| Positive given retained, (c) | 140/196 | at least 0.6327 |
+
+Each entry inverts an exact binomial tail. Given an arm's retained count, its positive count is binomial, so the conditional bound also has the stated marginal coverage. The union bound gives at least 95% simultaneous coverage for the five directions without assuming independence among these five limits. Set $w_+=5565/9829$. On this joint event, $w\le w_+$ and $q_+\ge w_+(0.0998)+(1-w_+)(0.6327)$. Subtracting the upper blank bound yields
+$$
+d_{\rm TV}\ \ge\ q_+-p_+\ \ge\ 2367893/49145000 \simeq 0.04818.
+$$
+Within the common-population model that preserves each accepted well identity, the larger loss must then be at least $2367893/51512893$, about **4.60%**, at the same confidence level. This population lower limit uses only the prespecified binary read. The 19.402% figure above is the exact threshold for fitting the two full empirical histograms.
+
+If relative arm brightness is free, the empirical weight $162207/181240$, about 0.895 on the negative arm, makes $w(31/201)+(1-w)(140/196)$ equal to $49/230$ exactly. The binary read alone then admits a match. The full-histogram central-value discrepancy above still applies. Unknown setting-dependent assignment errors, dependencies between atoms in the same sequence, or time drift can change the population interpretation. The published histograms lack sequence identifiers. The calculation gives no measured rate of unintended loss. [Original Fig. 3 and Appendix C](https://doi.org/10.1103/PhysRevX.5.011003) · [Exact one-sided binomial limits](https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm) · [Checker and recorded bounds](results/cesium_negative_read.json)
+
 ## The walk and the missing control
 
 Use the reflected logical coordinate: the initially populated right rail in the program represents the left-moving atomic spin. The fair signed update gives \((u+v,u-v)\) on its two outgoing rails. The five occupied terminal sites of the abstract four-tick walk are two coordinate units apart. In the plotted orientation assign each direction word the terminal well \(j=(\#\mathrm{left\ program\ steps}-\#\mathrm{right\ program\ steps})/2\). This is an endpoint convention. The source and both probe operations are specified separately. A fair rotation coin can also be written as the Hadamard followed or preceded by a diagonal sign. For fixed counts of left steps and fixed final rail, the added signs are then common to all contributing paths (incoming counts differ from outgoing counts only by the initial and final rail). They do not affect these squared endpoint sums.
