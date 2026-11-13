@@ -1,0 +1,1237 @@
+{
+  "model": "Hadamard/sign then conditional spatial shift; departure x=0 adds one sheet unit modulo five. Source and named endpoint (0,R); N=8.",
+  "read": "One clean plus label qubit, one coherent label/direction mask after each tick, no label measurement during the walk; final X-basis read. Each first mask failure ends its branch. Sum squared amplitudes over named endpoint sheet coordinates without summing amplitudes across different sheet coordinates.",
+  "resources": {
+    "label_qubits": 1,
+    "labels": 2,
+    "ticks_per_attempt": 10,
+    "joint_masks_per_attempt": 10,
+    "maximum_prescribed_direction_bits_per_setting": 20,
+    "physical_table_premise": "A controller supplies time- and label-dependent masks preserving all surviving coherences. The normalized input sheet is supplied. Each gain difference refers to a separate circuit."
+  },
+  "path_search": "Cap distinct prefixes at two for each (physical site, incoming direction, sheet gain, sign). Equal-state prefixes have identical continuations. Stop at the first common horizon with all five positive gains, two representatives at positive zero, and one at negative zero.",
+  "dp_layers": [
+    {
+      "depth": 0,
+      "reached_states": 1,
+      "available_positive_gains_at_target": [
+        0
+      ]
+    },
+    {
+      "depth": 1,
+      "reached_states": 2,
+      "available_positive_gains_at_target": []
+    },
+    {
+      "depth": 2,
+      "reached_states": 4,
+      "available_positive_gains_at_target": [
+        1
+      ]
+    },
+    {
+      "depth": 3,
+      "reached_states": 7,
+      "available_positive_gains_at_target": []
+    },
+    {
+      "depth": 4,
+      "reached_states": 14,
+      "available_positive_gains_at_target": [
+        2
+      ]
+    },
+    {
+      "depth": 5,
+      "reached_states": 22,
+      "available_positive_gains_at_target": []
+    },
+    {
+      "depth": 6,
+      "reached_states": 36,
+      "available_positive_gains_at_target": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "depth": 7,
+      "reached_states": 44,
+      "available_positive_gains_at_target": []
+    },
+    {
+      "depth": 8,
+      "reached_states": 56,
+      "available_positive_gains_at_target": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "depth": 9,
+      "reached_states": 60,
+      "available_positive_gains_at_target": []
+    },
+    {
+      "depth": 10,
+      "reached_states": 72,
+      "available_positive_gains_at_target": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "experiments": [
+    {
+      "input_integer_sheet": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "normalization_squared": 1,
+      "singleton": {
+        "routes": [
+          {
+            "word": "0101100110",
+            "x": 0,
+            "direction": 0,
+            "gain": 0,
+            "sign": 1
+          },
+          null
+        ],
+        "first_mask_failure_mass": [
+          "3/4",
+          "1/8",
+          "1/16",
+          "1/32",
+          "1/64",
+          "1/128",
+          "1/256",
+          "1/512",
+          "1/1024",
+          "1/2048"
+        ],
+        "all_masks_pass": "1/2048",
+        "all_endpoint_plus": "1/4096",
+        "all_endpoint_minus": "1/4096",
+        "named_endpoint_plus": "1/4096",
+        "named_endpoint_minus": "1/4096",
+        "total_mass": "1"
+      },
+      "equal_sign_settings": [
+        {
+          "sheet_difference": 0,
+          "plus_over_reference": "4",
+          "minus_over_reference": "0",
+          "C": "1",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "1001100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/1024",
+            "all_endpoint_minus": "0",
+            "named_endpoint_plus": "1/1024",
+            "named_endpoint_minus": "0",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 1,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000100",
+                "x": 0,
+                "direction": 0,
+                "gain": 1,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 2,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000010",
+                "x": 0,
+                "direction": 0,
+                "gain": 2,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 3,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0010110110",
+                "x": 0,
+                "direction": 0,
+                "gain": 3,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 4,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0011010110",
+                "x": 0,
+                "direction": 0,
+                "gain": 4,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        }
+      ],
+      "moments_from_named_records": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "recovered_pair_masses_k0_k1pm_k2pm": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "direct_grouped_Fourier_masses": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "controls": {
+        "negative_same_sheet_difference": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": -1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "0",
+          "all_endpoint_minus": "1/1024",
+          "named_endpoint_plus": "0",
+          "named_endpoint_minus": "1/1024",
+          "total_mass": "1"
+        },
+        "different_physical_endpoint": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010100",
+              "x": 2,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "1/2048",
+          "all_endpoint_minus": "1/2048",
+          "named_endpoint_plus": "1/4096",
+          "named_endpoint_minus": "1/4096",
+          "total_mass": "1"
+        }
+      },
+      "embedding_control": {
+        "automorphism_b": 2,
+        "globally_transformed_algebraic_pair_masses": [
+          0.2,
+          0.4,
+          0.4
+        ],
+        "same_coordinate_input_C_after_global_transformation": [
+          1.0,
+          -5.551115123125783e-17,
+          -1.6653345369377348e-16,
+          2.498001805406602e-16,
+          2.0816681711721685e-16
+        ],
+        "C_if_external_algebraic_pair_masses_held_fixed": [
+          1.0,
+          -5.551115123125783e-17,
+          -1.6653345369377348e-16,
+          2.498001805406602e-16,
+          2.0816681711721685e-16
+        ],
+        "externally_fixed_k1_difference_one": {
+          "before_C": 0.30901699437494745,
+          "after_C": -0.8090169943749473,
+          "checked_tagged_coordinate_rays": [
+            {
+              "character_image": 1,
+              "plus_over_reference": 2.618033988749894,
+              "minus_over_reference": 1.3819660112501049
+            },
+            {
+              "character_image": 2,
+              "plus_over_reference": 0.38196601125010515,
+              "minus_over_reference": 3.618033988749894
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input_integer_sheet": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "normalization_squared": 5,
+      "singleton": {
+        "routes": [
+          {
+            "word": "0101100110",
+            "x": 0,
+            "direction": 0,
+            "gain": 0,
+            "sign": 1
+          },
+          null
+        ],
+        "first_mask_failure_mass": [
+          "3/4",
+          "1/8",
+          "1/16",
+          "1/32",
+          "1/64",
+          "1/128",
+          "1/256",
+          "1/512",
+          "1/1024",
+          "1/2048"
+        ],
+        "all_masks_pass": "1/2048",
+        "all_endpoint_plus": "1/4096",
+        "all_endpoint_minus": "1/4096",
+        "named_endpoint_plus": "1/4096",
+        "named_endpoint_minus": "1/4096",
+        "total_mass": "1"
+      },
+      "equal_sign_settings": [
+        {
+          "sheet_difference": 0,
+          "plus_over_reference": "4",
+          "minus_over_reference": "0",
+          "C": "1",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "1001100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/1024",
+            "all_endpoint_minus": "0",
+            "named_endpoint_plus": "1/1024",
+            "named_endpoint_minus": "0",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 1,
+          "plus_over_reference": "14/5",
+          "minus_over_reference": "6/5",
+          "C": "2/5",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000100",
+                "x": 0,
+                "direction": 0,
+                "gain": 1,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "7/10240",
+            "all_endpoint_minus": "3/10240",
+            "named_endpoint_plus": "7/10240",
+            "named_endpoint_minus": "3/10240",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 2,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000010",
+                "x": 0,
+                "direction": 0,
+                "gain": 2,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 3,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0010110110",
+                "x": 0,
+                "direction": 0,
+                "gain": 3,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 4,
+          "plus_over_reference": "14/5",
+          "minus_over_reference": "6/5",
+          "C": "2/5",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0011010110",
+                "x": 0,
+                "direction": 0,
+                "gain": 4,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "7/10240",
+            "all_endpoint_minus": "3/10240",
+            "named_endpoint_plus": "7/10240",
+            "named_endpoint_minus": "3/10240",
+            "total_mass": "1"
+          }
+        }
+      ],
+      "moments_from_named_records": [
+        "1",
+        "2/5",
+        "0",
+        "0",
+        "2/5"
+      ],
+      "recovered_pair_masses_k0_k1pm_k2pm": [
+        0.36,
+        0.49888543819998316,
+        0.14111456180001677
+      ],
+      "direct_grouped_Fourier_masses": [
+        0.36,
+        0.4988854381999832,
+        0.1411145618000168
+      ],
+      "controls": {
+        "negative_same_sheet_difference": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": -1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "0",
+          "all_endpoint_minus": "1/1024",
+          "named_endpoint_plus": "0",
+          "named_endpoint_minus": "1/1024",
+          "total_mass": "1"
+        },
+        "different_physical_endpoint": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010100",
+              "x": 2,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "1/2048",
+          "all_endpoint_minus": "1/2048",
+          "named_endpoint_plus": "1/4096",
+          "named_endpoint_minus": "1/4096",
+          "total_mass": "1"
+        }
+      },
+      "embedding_control": {
+        "automorphism_b": 2,
+        "globally_transformed_algebraic_pair_masses": [
+          0.36,
+          0.1411145618000168,
+          0.4988854381999832
+        ],
+        "same_coordinate_input_C_after_global_transformation": [
+          1.0,
+          0.3999999999999999,
+          -1.734723475976807e-16,
+          1.734723475976807e-16,
+          0.40000000000000036
+        ],
+        "C_if_external_algebraic_pair_masses_held_fixed": [
+          1.0,
+          -6.938893903907228e-18,
+          0.3999999999999999,
+          0.40000000000000024,
+          -4.163336342344337e-17
+        ],
+        "externally_fixed_k1_difference_one": {
+          "before_C": 0.30901699437494745,
+          "after_C": -0.8090169943749473,
+          "checked_tagged_coordinate_rays": [
+            {
+              "character_image": 1,
+              "plus_over_reference": 2.618033988749894,
+              "minus_over_reference": 1.3819660112501049
+            },
+            {
+              "character_image": 2,
+              "plus_over_reference": 0.38196601125010515,
+              "minus_over_reference": 3.618033988749894
+            }
+          ]
+        }
+      }
+    },
+    {
+      "input_integer_sheet": [
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "normalization_squared": 2,
+      "singleton": {
+        "routes": [
+          {
+            "word": "0101100110",
+            "x": 0,
+            "direction": 0,
+            "gain": 0,
+            "sign": 1
+          },
+          null
+        ],
+        "first_mask_failure_mass": [
+          "3/4",
+          "1/8",
+          "1/16",
+          "1/32",
+          "1/64",
+          "1/128",
+          "1/256",
+          "1/512",
+          "1/1024",
+          "1/2048"
+        ],
+        "all_masks_pass": "1/2048",
+        "all_endpoint_plus": "1/4096",
+        "all_endpoint_minus": "1/4096",
+        "named_endpoint_plus": "1/4096",
+        "named_endpoint_minus": "1/4096",
+        "total_mass": "1"
+      },
+      "equal_sign_settings": [
+        {
+          "sheet_difference": 0,
+          "plus_over_reference": "4",
+          "minus_over_reference": "0",
+          "C": "1",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "1001100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/1024",
+            "all_endpoint_minus": "0",
+            "named_endpoint_plus": "1/1024",
+            "named_endpoint_minus": "0",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 1,
+          "plus_over_reference": "1",
+          "minus_over_reference": "3",
+          "C": "-1/2",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000100",
+                "x": 0,
+                "direction": 0,
+                "gain": 1,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/4096",
+            "all_endpoint_minus": "3/4096",
+            "named_endpoint_plus": "1/4096",
+            "named_endpoint_minus": "3/4096",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 2,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0000000010",
+                "x": 0,
+                "direction": 0,
+                "gain": 2,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 3,
+          "plus_over_reference": "2",
+          "minus_over_reference": "2",
+          "C": "0",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0010110110",
+                "x": 0,
+                "direction": 0,
+                "gain": 3,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/2048",
+            "all_endpoint_minus": "1/2048",
+            "named_endpoint_plus": "1/2048",
+            "named_endpoint_minus": "1/2048",
+            "total_mass": "1"
+          }
+        },
+        {
+          "sheet_difference": 4,
+          "plus_over_reference": "1",
+          "minus_over_reference": "3",
+          "C": "-1/2",
+          "instrument": {
+            "routes": [
+              {
+                "word": "0101100110",
+                "x": 0,
+                "direction": 0,
+                "gain": 0,
+                "sign": 1
+              },
+              {
+                "word": "0011010110",
+                "x": 0,
+                "direction": 0,
+                "gain": 4,
+                "sign": 1
+              }
+            ],
+            "first_mask_failure_mass": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/32",
+              "1/64",
+              "1/128",
+              "1/256",
+              "1/512",
+              "1/1024"
+            ],
+            "all_masks_pass": "1/1024",
+            "all_endpoint_plus": "1/4096",
+            "all_endpoint_minus": "3/4096",
+            "named_endpoint_plus": "1/4096",
+            "named_endpoint_minus": "3/4096",
+            "total_mass": "1"
+          }
+        }
+      ],
+      "moments_from_named_records": [
+        "1",
+        "-1/2",
+        "0",
+        "0",
+        "-1/2"
+      ],
+      "recovered_pair_masses_k0_k1pm_k2pm": [
+        0.0,
+        0.27639320225002106,
+        0.7236067977499789
+      ],
+      "direct_grouped_Fourier_masses": [
+        0.0,
+        0.27639320225002106,
+        0.7236067977499789
+      ],
+      "controls": {
+        "negative_same_sheet_difference": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": -1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "0",
+          "all_endpoint_minus": "1/1024",
+          "named_endpoint_plus": "0",
+          "named_endpoint_minus": "1/1024",
+          "total_mass": "1"
+        },
+        "different_physical_endpoint": {
+          "routes": [
+            {
+              "word": "0101100110",
+              "x": 0,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            },
+            {
+              "word": "0101010100",
+              "x": 2,
+              "direction": 0,
+              "gain": 0,
+              "sign": 1
+            }
+          ],
+          "first_mask_failure_mass": [
+            "1/2",
+            "1/4",
+            "1/8",
+            "1/16",
+            "1/32",
+            "1/64",
+            "1/128",
+            "1/256",
+            "1/512",
+            "1/1024"
+          ],
+          "all_masks_pass": "1/1024",
+          "all_endpoint_plus": "1/2048",
+          "all_endpoint_minus": "1/2048",
+          "named_endpoint_plus": "1/4096",
+          "named_endpoint_minus": "1/4096",
+          "total_mass": "1"
+        }
+      },
+      "embedding_control": {
+        "automorphism_b": 2,
+        "globally_transformed_algebraic_pair_masses": [
+          0.0,
+          0.7236067977499789,
+          0.27639320225002106
+        ],
+        "same_coordinate_input_C_after_global_transformation": [
+          1.0,
+          -0.5,
+          -2.498001805406602e-16,
+          2.7755575615628914e-16,
+          -0.49999999999999994
+        ],
+        "C_if_external_algebraic_pair_masses_held_fixed": [
+          1.0,
+          -1.3877787807814457e-16,
+          -0.5000000000000002,
+          -0.49999999999999967,
+          4.163336342344337e-16
+        ],
+        "externally_fixed_k1_difference_one": {
+          "before_C": 0.30901699437494745,
+          "after_C": -0.8090169943749473,
+          "checked_tagged_coordinate_rays": [
+            {
+              "character_image": 1,
+              "plus_over_reference": 2.618033988749894,
+              "minus_over_reference": 1.3819660112501049
+            },
+            {
+              "character_image": 2,
+              "plus_over_reference": 0.38196601125010515,
+              "minus_over_reference": 3.618033988749894
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "interpretation": "The real DFT reconstructs probability masses of conjugate character pairs and k=0 relative to the named sheet translation. Rephasing, a globally conjugate orientation, and a globally permuted algebraic character labeling do not follow from these record probabilities. Ratios use the same-clock unconditional singleton plus probability."
+}
