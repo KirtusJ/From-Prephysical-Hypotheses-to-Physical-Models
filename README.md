@@ -7,16 +7,18 @@ This repository holds the baseline editions of the research program as archives,
 
 | Item | Content |
 |---|---|
-| `FPHPM_Baseline_2026-11-13_Z5.zip` | edition Z5 (13 November 2026): 41 papers, registers, computation, review records. Current. Its predecessor, edition Z4 of the same day, is in the history of this repository (commit `50568e7`) and is identified by digest in the manifest of Z5 |
+| `FPHPM_Baseline_2026-11-13_Z6.zip` | edition Z6 (13 November 2026): 41 papers, registers, computation, review records. Current. Its predecessors of the same day, editions Z4 and Z5, are in the history of this repository (commits `50568e7` and `dfc151d`); each edition names its predecessor by digest in its manifest |
 | `FPHPM_Baseline_2026-11-12_Z3.zip` | edition Z3 (12 November 2026), the predecessor, kept unchanged |
-| `G10_Histories_as_Events.pdf` | paper G10, first issued in edition Z4, revised in edition Z5 (Theorem 5.3 added) |
+| `G10_Histories_as_Events.pdf` | paper G10, first issued in edition Z4, revised in editions Z5 (Theorem 5.3) and Z6 (Lemma 5.4, Theorem 5.5) |
 | `G7_…pdf`, `G8_…pdf`, `G9_…pdf` | papers G7 to G9 as in editions Z3 and Z4 |
-| `Gate_Map_2026-11-13.pdf`, `Gate_Map_2026-11-12.pdf` | gate map figures of editions Z5 and Z3 |
-| `DIRECTOR_Z_TECHNICAL_DISPOSITION_SESSION_4.md`, `CALIBRATION_AND_ACR_USE_LOG_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4.csv` | records of the fourth Director Z session (copies of files in edition Z5) |
-| `ADDENDUM_EDITION_Z5_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM.csv` | addendum of the same session: the revision of paper G10 |
+| `Gate_Map_2026-11-13.pdf`, `Gate_Map_2026-11-12.pdf` | gate map figures of editions Z6 and Z3 |
+| `DIRECTOR_Z_TECHNICAL_DISPOSITION_SESSION_4.md`, `CALIBRATION_AND_ACR_USE_LOG_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4.csv` | records of the fourth Director Z session (copies of files in edition Z6) |
+| `ADDENDUM_EDITION_Z5_SESSION_4.md`, `ADDENDUM_EDITION_Z6_SESSION_4.md`, `NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM.csv`, `NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_2.csv` | two addenda of the same session: the revisions of paper G10, and the record of contact with Director G |
 | `…_SESSION_3.md`, `CROSS_DIRECTOR_ADJUDICATION_SESSION_3.csv` | records of the third session |
-| `Z4_COMPUTATION/` | the eight programs of the fourth session with their result files (copies of `COMPUTATION/Baseline_Additions` in edition Z5) |
+| `Z4_COMPUTATION/` | the nine programs of the fourth session with their result files (copies of `COMPUTATION/Baseline_Additions` in edition Z6) |
 | `Z4_CALIBRATION/` | the Calibration Record of the fourth session with the committed retrieval answers and their scores |
 | `.pcp/` | the register kept for the fourth session by the PCP OS program, and the text it stored beside it |
 
 To check an edition, extract it and run `python3 verify_baseline.py` in its folder. A pass is a local fact about the files; it authenticates nobody and certifies no proof. Research direction and scholarly responsibility: Kirtus Justus. Assistance by AI systems is recorded in `PROGRAM/CONTRIBUTIONS.md` of each edition and implies no endorsement by their providers.
+
+Two directors work on this repository. Director Z (Claude) keeps the editions and the fourth-session records on the branch `claude/cool-newton-bqk60b`; coordination with Director G takes place on the review thread of pull request 1.
