@@ -1,0 +1,1005 @@
+{
+  "protocol": "Fixed unit-speed comparison, shrinking-action torus sequence, target flight time 1. The same A input and gate sequence are used for both B centres at each coupling and size.",
+  "read": "One final A position projection in each predeclared open bin, periodic modulo 2*pi. Both probabilities are computed on the same unmeasured state. No intermediate read, rejection, or postselection.",
+  "cone": "Use the closed continuous T_N-neighborhood of the entire open bin's closure before selecting lattice sites. This includes every possible speed-one backward support and can exceed the dilation of occupied read sites on a coarse grid.",
+  "input": "Product of two normalized periodic Fourier Gaussians exp(-epsilon*l^2/2) with zero central momentum in the sampled positive-curvature tensor band. The coin spinors, including their phases, enter the B cone reductions.",
+  "physical_assumptions": "The selected sheet character and localized band packets are supplied as initial resources. Their physical preparation time and success probability are unknown. All other local inputs and auxiliaries must be identical in the cone. The reported times begin after preparation.",
+  "interaction": "Integer gain round((N^3+1)*delta^2*kappa*(1-cos(Y_A-Y_B))/(2*pi)); one prepared sheet character exp(-2*pi*i*g/(N^3+1)). Each coin H tensor H, departure phase and pair of conditional shifts is unitary; full mass equals one algebraically.",
+  "finite_interpretation": "The B vacuum/one-particle trace distance bounds this binary read in any speed-one model obeying the physical input and detector premises. Positive excess supplies a finite lower bound of half the excess on maximum model-to-target error over the two inputs. A nonpositive excess yields zero lower bound. Finite values have no extrapolated TV claim.",
+  "roundoff": "IEEE binary64 amplitudes (complex128). Normalization, free-source invariance and the independent first-step transform are checked to 2e-12; the B cone eigenvalue calculation is checked to 1e-12. Reported lower bounds use numerical evaluations.",
+  "primary_sizes": [
+    32,
+    64,
+    96,
+    128
+  ],
+  "exploratory_sizes": [
+    192,
+    256
+  ],
+  "followup": "After observing the four primary sizes, the same two detector bins, time rule and source preparations were kept for two larger rings. The exploratory sizes were selected together before either larger flight.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "sizes": [
+    {
+      "N": 32,
+      "epsilon": 0.44311346272637897,
+      "delta": 0.44311346272637897,
+      "spacing": 0.19634954084936207,
+      "tau": 0.08700512495049541,
+      "ticks": 11,
+      "attained_time": 0.9570563744554494,
+      "geometric_cone_radius": 0.9570563744554494,
+      "sheet_order": 32769,
+      "max_attractive_rounding_angle_error": 9.2441845236102e-05,
+      "single_sector_state_complex_entries": 4096,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 2,
+          "initial_cone": {
+            "site_count": 12,
+            "B_mass_pi_over_2": 0.4999991476417601,
+            "B_mass_pi": 0.0006423769609697934,
+            "inner_product_real": 0.013454218754430916,
+            "inner_product_imag": 0.0019388917444239236,
+            "trace_distance": 0.499629798090249,
+            "eigenvalue_check_abs_error": 1.1102230246251565e-16
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 3,
+          "initial_cone": {
+            "site_count": 12,
+            "B_mass_pi_over_2": 0.20956087714642285,
+            "B_mass_pi": 6.0484799409353843e-05,
+            "inner_product_real": 0.0020210954509587106,
+            "inner_product_imag": 0.00041404608970775495,
+            "trace_distance": 0.20954057066000292,
+            "eigenvalue_check_abs_error": 5.551115123125783e-17
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999991,
+          "final_probability_sum": 0.9999999999999991,
+          "initial_bin_probabilities": [
+            0.23027139234225785,
+            0.4473424165803597
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.596528596294794e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.1983732758755404,
+            0.3450729713439402
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999991,
+          "final_probability_sum": 0.9999999999999991,
+          "initial_bin_probabilities": [
+            0.23027139234225785,
+            0.4473424165803597
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.789436318650961e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.19837327587554038,
+            0.3450729713439402
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999991,
+          "final_probability_sum": 0.9999999999999991,
+          "initial_bin_probabilities": [
+            0.23027139234225785,
+            0.4473424165803597
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.808314370987799e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.2548788818130159,
+            0.26664734367783927
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999991,
+          "final_probability_sum": 0.9999999999999994,
+          "initial_bin_probabilities": [
+            0.23027139234225785,
+            0.4473424165803597
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.647500211167523e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.16316713042746492,
+            0.2603135520403418
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.1983732758755404,
+          "A_bin_probability_B_pi": 0.19837327587554038,
+          "signed_probability_difference": 2.7755575615628914e-17,
+          "binary_total_variation": 2.7755575615628914e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.499629798090249,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.3450729713439402,
+          "A_bin_probability_B_pi": 0.3450729713439402,
+          "signed_probability_difference": 0.0,
+          "binary_total_variation": 0.0,
+          "excess_over_speed_one_cone_trace_bound": -0.20954057066000292,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.2548788818130159,
+          "A_bin_probability_B_pi": 0.16316713042746492,
+          "signed_probability_difference": 0.09171175138555096,
+          "binary_total_variation": 0.09171175138555096,
+          "excess_over_speed_one_cone_trace_bound": -0.407918046704698,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.26664734367783927,
+          "A_bin_probability_B_pi": 0.2603135520403418,
+          "signed_probability_difference": 0.006333791637497477,
+          "binary_total_variation": 0.006333791637497477,
+          "excess_over_speed_one_cone_trace_bound": -0.20320677902250545,
+          "same_clock_maximum_error_lower_bound": 0.0
+        }
+      ]
+    },
+    {
+      "N": 64,
+      "epsilon": 0.31332853432887503,
+      "delta": 0.31332853432887503,
+      "spacing": 0.09817477042468103,
+      "tau": 0.030760956925239093,
+      "ticks": 33,
+      "attained_time": 1.0151115785328901,
+      "geometric_cone_radius": 1.0151115785328901,
+      "sheet_order": 262145,
+      "max_attractive_rounding_angle_error": 1.1973888869504234e-05,
+      "single_sector_state_complex_entries": 16384,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 5,
+          "initial_cone": {
+            "site_count": 26,
+            "B_mass_pi_over_2": 0.49999999988837046,
+            "B_mass_pi": 4.4973936682062715e-05,
+            "inner_product_real": 0.0035126952140937242,
+            "inner_product_imag": 0.00025540585518922954,
+            "trace_distance": 0.49997519236928656,
+            "eigenvalue_check_abs_error": 1.2212453270876722e-15
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 6,
+          "initial_cone": {
+            "site_count": 27,
+            "B_mass_pi_over_2": 0.23114095043805777,
+            "B_mass_pi": 6.980631685185387e-06,
+            "inner_product_real": 0.0004984838548752746,
+            "inner_product_imag": 4.799338002976719e-05,
+            "trace_distance": 0.23113986545886667,
+            "eigenvalue_check_abs_error": 5.551115123125783e-16
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999996,
+          "final_probability_sum": 0.9999999999999996,
+          "initial_bin_probabilities": [
+            0.3324393810544377,
+            0.5244405470108906
+          ],
+          "A_mean_envelope_momentum": 1.739322765419854e-17,
+          "B_mean_envelope_momentum": 1.739322765419854e-17,
+          "first_step_Fourier_check_norm": 5.345870310908787e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.28292637485705563,
+            0.39338400308831156
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999996,
+          "final_probability_sum": 0.9999999999999996,
+          "initial_bin_probabilities": [
+            0.3324393810544377,
+            0.5244405470108906
+          ],
+          "A_mean_envelope_momentum": 1.739322765419854e-17,
+          "B_mean_envelope_momentum": 1.739322765419854e-17,
+          "first_step_Fourier_check_norm": 5.378007983585998e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.28292637485705563,
+            0.3933840030883114
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999996,
+          "final_probability_sum": 0.9999999999999997,
+          "initial_bin_probabilities": [
+            0.3324393810544377,
+            0.5244405470108906
+          ],
+          "A_mean_envelope_momentum": 1.739322765419854e-17,
+          "B_mean_envelope_momentum": 1.739322765419854e-17,
+          "first_step_Fourier_check_norm": 5.895744177989904e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.35044536364974094,
+            0.2536784452142978
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999996,
+          "final_probability_sum": 0.9999999999999991,
+          "initial_bin_probabilities": [
+            0.3324393810544377,
+            0.5244405470108906
+          ],
+          "A_mean_envelope_momentum": 1.739322765419854e-17,
+          "B_mean_envelope_momentum": 1.739322765419854e-17,
+          "first_step_Fourier_check_norm": 5.627805950357577e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.2238481290655423,
+            0.2856769351173946
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.28292637485705563,
+          "A_bin_probability_B_pi": 0.28292637485705563,
+          "signed_probability_difference": 0.0,
+          "binary_total_variation": 0.0,
+          "excess_over_speed_one_cone_trace_bound": -0.49997519236928656,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.39338400308831156,
+          "A_bin_probability_B_pi": 0.3933840030883114,
+          "signed_probability_difference": 1.6653345369377348e-16,
+          "binary_total_variation": 1.6653345369377348e-16,
+          "excess_over_speed_one_cone_trace_bound": -0.2311398654588665,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.35044536364974094,
+          "A_bin_probability_B_pi": 0.2238481290655423,
+          "signed_probability_difference": 0.12659723458419864,
+          "binary_total_variation": 0.12659723458419864,
+          "excess_over_speed_one_cone_trace_bound": -0.3733779577850879,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.2536784452142978,
+          "A_bin_probability_B_pi": 0.2856769351173946,
+          "signed_probability_difference": -0.03199848990309684,
+          "binary_total_variation": 0.03199848990309684,
+          "excess_over_speed_one_cone_trace_bound": -0.19914137555576983,
+          "same_clock_maximum_error_lower_bound": 0.0
+        }
+      ]
+    },
+    {
+      "N": 96,
+      "epsilon": 0.2558316769866221,
+      "delta": 0.2558316769866221,
+      "spacing": 0.06544984694978735,
+      "tau": 0.016744144103681857,
+      "ticks": 60,
+      "attained_time": 1.0046486462209114,
+      "geometric_cone_radius": 1.0046486462209114,
+      "sheet_order": 884737,
+      "max_attractive_rounding_angle_error": 3.5069320351577282e-06,
+      "single_sector_state_complex_entries": 36864,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 8,
+          "initial_cone": {
+            "site_count": 39,
+            "B_mass_pi_over_2": 0.4999999999992688,
+            "B_mass_pi": 6.4911195008700566e-06,
+            "inner_product_real": 0.0013128652779727122,
+            "inner_product_imag": 6.252887330429475e-05,
+            "trace_distance": 0.4999965449700522,
+            "eigenvalue_check_abs_error": 1.4988010832439613e-15
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 9,
+          "initial_cone": {
+            "site_count": 40,
+            "B_mass_pi_over_2": 0.18172708572223475,
+            "B_mass_pi": 5.367180252862611e-07,
+            "inner_product_real": 9.049893033410102e-05,
+            "inner_product_imag": 5.877569183209863e-06,
+            "trace_distance": 0.18172704046436944,
+            "eigenvalue_check_abs_error": 7.771561172376096e-16
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0000000000000002,
+          "final_probability_sum": 1.0,
+          "initial_bin_probabilities": [
+            0.37694190349103585,
+            0.5694878395229366
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.690543216465554e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.3261042748658704,
+            0.43167335787800626
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 1.0,
+          "final_probability_sum": 1.0,
+          "initial_bin_probabilities": [
+            0.37694190349103573,
+            0.5694878395229366
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.787275966982814e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.32610427486587035,
+            0.43167335787800626
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0000000000000002,
+          "final_probability_sum": 0.9999999999999999,
+          "initial_bin_probabilities": [
+            0.37694190349103585,
+            0.5694878395229366
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.573635930273943e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.4024787631755901,
+            0.25438922901060834
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 1.0,
+          "final_probability_sum": 0.9999999999999989,
+          "initial_bin_probabilities": [
+            0.37694190349103573,
+            0.5694878395229366
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.711107201184092e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.2601872784484044,
+            0.31503300598418027
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.3261042748658704,
+          "A_bin_probability_B_pi": 0.32610427486587035,
+          "signed_probability_difference": 5.551115123125783e-17,
+          "binary_total_variation": 5.551115123125783e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.49999654497005214,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.43167335787800626,
+          "A_bin_probability_B_pi": 0.43167335787800626,
+          "signed_probability_difference": 0.0,
+          "binary_total_variation": 0.0,
+          "excess_over_speed_one_cone_trace_bound": -0.18172704046436944,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.4024787631755901,
+          "A_bin_probability_B_pi": 0.2601872784484044,
+          "signed_probability_difference": 0.14229148472718572,
+          "binary_total_variation": 0.14229148472718572,
+          "excess_over_speed_one_cone_trace_bound": -0.35770506024286647,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.25438922901060834,
+          "A_bin_probability_B_pi": 0.31503300598418027,
+          "signed_probability_difference": -0.06064377697357193,
+          "binary_total_variation": 0.06064377697357193,
+          "excess_over_speed_one_cone_trace_bound": -0.12108326349079751,
+          "same_clock_maximum_error_lower_bound": 0.0
+        }
+      ]
+    },
+    {
+      "N": 128,
+      "epsilon": 0.22155673136318949,
+      "delta": 0.22155673136318949,
+      "spacing": 0.04908738521234052,
+      "tau": 0.010875640618811926,
+      "ticks": 92,
+      "attained_time": 1.000558936930697,
+      "geometric_cone_radius": 1.000558936930697,
+      "sheet_order": 2097153,
+      "max_attractive_rounding_angle_error": 1.467694642365118e-06,
+      "single_sector_state_complex_entries": 65536,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 10,
+          "initial_cone": {
+            "site_count": 52,
+            "B_mass_pi_over_2": 0.4999999999999884,
+            "B_mass_pi": 1.3167646509831386e-06,
+            "inner_product_real": 0.0005821571878342088,
+            "inner_product_imag": 2.0474863226310197e-05,
+            "trace_distance": 0.49999932134843184,
+            "eigenvalue_check_abs_error": 2.1094237467877974e-15
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 12,
+          "initial_cone": {
+            "site_count": 53,
+            "B_mass_pi_over_2": 0.15202258100132787,
+            "B_mass_pi": 6.826721330782643e-08,
+            "inner_product_real": 2.2735896715952392e-05,
+            "inner_product_imag": 1.1060190747173315e-06,
+            "trace_distance": 0.15202257759299176,
+            "eigenvalue_check_abs_error": 7.216449660063518e-16
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0000000000000004,
+          "final_probability_sum": 1.0000000000000004,
+          "initial_bin_probabilities": [
+            0.3884874404967389,
+            0.6014314513120211
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.831715461675464e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.33283222770388826,
+            0.459707002463495
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 1.0000000000000004,
+          "final_probability_sum": 1.0000000000000004,
+          "initial_bin_probabilities": [
+            0.3884874404967389,
+            0.6014314513120211
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.737304944991125e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.33283222770388826,
+            0.45970700246349494
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0000000000000004,
+          "final_probability_sum": 1.0000000000000004,
+          "initial_bin_probabilities": [
+            0.3884874404967389,
+            0.6014314513120211
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.786724496810705e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.39302242179906144,
+            0.25137477060978497
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 1.0000000000000004,
+          "final_probability_sum": 1.0000000000000004,
+          "initial_bin_probabilities": [
+            0.3884874404967389,
+            0.6014314513120211
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.803796146156835e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.2628862776297086,
+            0.3366132935333842
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.33283222770388826,
+          "A_bin_probability_B_pi": 0.33283222770388826,
+          "signed_probability_difference": 0.0,
+          "binary_total_variation": 0.0,
+          "excess_over_speed_one_cone_trace_bound": -0.49999932134843184,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.459707002463495,
+          "A_bin_probability_B_pi": 0.45970700246349494,
+          "signed_probability_difference": 5.551115123125783e-17,
+          "binary_total_variation": 5.551115123125783e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.1520225775929917,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.39302242179906144,
+          "A_bin_probability_B_pi": 0.2628862776297086,
+          "signed_probability_difference": 0.13013614416935282,
+          "binary_total_variation": 0.13013614416935282,
+          "excess_over_speed_one_cone_trace_bound": -0.369863177179079,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.25137477060978497,
+          "A_bin_probability_B_pi": 0.3366132935333842,
+          "signed_probability_difference": -0.08523852292359924,
+          "binary_total_variation": 0.08523852292359924,
+          "excess_over_speed_one_cone_trace_bound": -0.06678405466939252,
+          "same_clock_maximum_error_lower_bound": 0.0
+        }
+      ]
+    },
+    {
+      "N": 192,
+      "epsilon": 0.1809003136395669,
+      "delta": 0.1809003136395669,
+      "spacing": 0.032724923474893676,
+      "tau": 0.005919948920439092,
+      "ticks": 169,
+      "attained_time": 1.0004713675542065,
+      "geometric_cone_radius": 1.0004713675542065,
+      "sheet_order": 7077889,
+      "max_attractive_rounding_angle_error": 4.437219622011046e-07,
+      "single_sector_state_complex_entries": 147456,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 16,
+          "initial_cone": {
+            "site_count": 77,
+            "B_mass_pi_over_2": 0.4567812225204787,
+            "B_mass_pi": 5.2368159718139736e-08,
+            "inner_product_real": 0.00011005129082039441,
+            "inner_product_imag": 2.612948141383428e-06,
+            "trace_distance": 0.4567811959911189,
+            "eigenvalue_check_abs_error": 2.3314683517128287e-15
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 18,
+          "initial_cone": {
+            "site_count": 79,
+            "B_mass_pi_over_2": 0.11623832143595506,
+            "B_mass_pi": 2.37814601193439e-09,
+            "inner_product_real": 2.4043996098490937e-06,
+            "inner_product_imag": 7.741134968632053e-08,
+            "trace_distance": 0.1162383213861683,
+            "eigenvalue_check_abs_error": 5.828670879282072e-16
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0,
+          "final_probability_sum": 0.9999999999999998,
+          "initial_bin_probabilities": [
+            0.4242819231458522,
+            0.6462014225721486
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 6.924035487621316e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.3738964754299345,
+            0.4999053952727447
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999998,
+          "final_probability_sum": 0.9999999999999998,
+          "initial_bin_probabilities": [
+            0.4242819231458522,
+            0.6462014225721486
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.108158033154566e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.3738964754299344,
+            0.49990539527274463
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 1.0,
+          "final_probability_sum": 0.9999999999999987,
+          "initial_bin_probabilities": [
+            0.4242819231458522,
+            0.6462014225721486
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.01151808190453e-16,
+          "full_Fourier_flight_check_norm": 3.8513882612172395e-14,
+          "final_bin_probabilities": [
+            0.4479960955292972,
+            0.24066466766187955
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999998,
+          "final_probability_sum": 0.9999999999999976,
+          "initial_bin_probabilities": [
+            0.4242819231458522,
+            0.6462014225721486
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 7.037127376936689e-16,
+          "full_Fourier_flight_check_norm": 3.8642934604248346e-14,
+          "final_bin_probabilities": [
+            0.3005879768795591,
+            0.367399852195908
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.3738964754299345,
+          "A_bin_probability_B_pi": 0.3738964754299344,
+          "signed_probability_difference": 5.551115123125783e-17,
+          "binary_total_variation": 5.551115123125783e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.4567811959911188,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.4999053952727447,
+          "A_bin_probability_B_pi": 0.49990539527274463,
+          "signed_probability_difference": 5.551115123125783e-17,
+          "binary_total_variation": 5.551115123125783e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.11623832138616824,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.4479960955292972,
+          "A_bin_probability_B_pi": 0.3005879768795591,
+          "signed_probability_difference": 0.14740811864973807,
+          "binary_total_variation": 0.14740811864973807,
+          "excess_over_speed_one_cone_trace_bound": -0.3093730773413808,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.24066466766187955,
+          "A_bin_probability_B_pi": 0.367399852195908,
+          "signed_probability_difference": -0.12673518453402843,
+          "binary_total_variation": 0.12673518453402843,
+          "excess_over_speed_one_cone_trace_bound": 0.010496863147860136,
+          "same_clock_maximum_error_lower_bound": 0.005248431573930068
+        }
+      ]
+    },
+    {
+      "N": 256,
+      "epsilon": 0.15666426716443752,
+      "delta": 0.15666426716443752,
+      "spacing": 0.02454369260617026,
+      "tau": 0.0038451196156548866,
+      "ticks": 260,
+      "attained_time": 0.9997311000702706,
+      "geometric_cone_radius": 0.9997311000702706,
+      "sheet_order": 16777217,
+      "max_attractive_rounding_angle_error": 1.7313169470983825e-07,
+      "single_sector_state_complex_entries": 262144,
+      "bins": [
+        {
+          "endpoints": [
+            0.015625,
+            0.53125
+          ],
+          "read_site_count": 21,
+          "initial_cone": {
+            "site_count": 103,
+            "B_mass_pi_over_2": 0.4651153269224103,
+            "B_mass_pi": 6.321668713853855e-09,
+            "inner_product_real": 3.7661175824929544e-05,
+            "inner_product_imag": 6.553760967724846e-07,
+            "trace_distance": 0.46511532387199767,
+            "eigenvalue_check_abs_error": 2.4980018054066022e-15
+          }
+        },
+        {
+          "endpoints": [
+            -0.4,
+            0.18
+          ],
+          "read_site_count": 24,
+          "initial_cone": {
+            "site_count": 106,
+            "B_mass_pi_over_2": 0.09453808682741793,
+            "B_mass_pi": 2.5719863988535426e-10,
+            "inner_product_real": 3.778229527425721e-07,
+            "inner_product_imag": 9.064859049527128e-09,
+            "trace_distance": 0.09453808682590709,
+            "eigenvalue_check_abs_error": 8.326672684688674e-16
+          }
+        }
+      ],
+      "flights": [
+        {
+          "kappa": 0,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999999,
+          "final_probability_sum": 1.0,
+          "initial_bin_probabilities": [
+            0.4380752223493814,
+            0.6775463729917661
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.20698398908389e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.38907917262787756,
+            0.5296350370884824
+          ]
+        },
+        {
+          "kappa": 0,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999998,
+          "final_probability_sum": 0.9999999999999999,
+          "initial_bin_probabilities": [
+            0.43807522234938134,
+            0.6775463729917661
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.143701057063356e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.3890791726278775,
+            0.5296350370884824
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 1.5707963267948966,
+          "initial_probability_sum": 0.9999999999999999,
+          "final_probability_sum": 0.9999999999999996,
+          "initial_bin_probabilities": [
+            0.4380752223493814,
+            0.6775463729917661
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.26446480014138e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.45788119870121247,
+            0.2305974059127978
+          ]
+        },
+        {
+          "kappa": 1,
+          "B_centre": 3.141592653589793,
+          "initial_probability_sum": 0.9999999999999998,
+          "final_probability_sum": 1.0000000000000036,
+          "initial_bin_probabilities": [
+            0.43807522234938134,
+            0.6775463729917661
+          ],
+          "A_mean_envelope_momentum": 0.0,
+          "B_mean_envelope_momentum": 0.0,
+          "first_step_Fourier_check_norm": 5.304943261166794e-16,
+          "full_Fourier_flight_check_norm": null,
+          "final_bin_probabilities": [
+            0.3141159928241473,
+            0.39103646676419446
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "kappa": 0,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.38907917262787756,
+          "A_bin_probability_B_pi": 0.3890791726278775,
+          "signed_probability_difference": 5.551115123125783e-17,
+          "binary_total_variation": 5.551115123125783e-17,
+          "excess_over_speed_one_cone_trace_bound": -0.4651153238719976,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 0,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.5296350370884824,
+          "A_bin_probability_B_pi": 0.5296350370884824,
+          "signed_probability_difference": 0.0,
+          "binary_total_variation": 0.0,
+          "excess_over_speed_one_cone_trace_bound": -0.09453808682590709,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 0,
+          "A_bin_probability_B_pi_over_2": 0.45788119870121247,
+          "A_bin_probability_B_pi": 0.3141159928241473,
+          "signed_probability_difference": 0.14376520587706515,
+          "binary_total_variation": 0.14376520587706515,
+          "excess_over_speed_one_cone_trace_bound": -0.3213501179949325,
+          "same_clock_maximum_error_lower_bound": 0.0
+        },
+        {
+          "kappa": 1,
+          "bin_index": 1,
+          "A_bin_probability_B_pi_over_2": 0.2305974059127978,
+          "A_bin_probability_B_pi": 0.39103646676419446,
+          "signed_probability_difference": -0.16043906085139667,
+          "binary_total_variation": 0.16043906085139667,
+          "excess_over_speed_one_cone_trace_bound": 0.06590097402548958,
+          "same_clock_maximum_error_lower_bound": 0.03295048701274479
+        }
+      ]
+    }
+  ]
+}
