@@ -5910,5 +5910,74 @@
       "adjudication": "Child echoed the proposed calculation. The parent checked K^2 and projector identities independently; the echoed response is not independent scientific support."
     },
     "open_physical_gates": 13
+  },
+  "occupation_walk_and_moving_contact": {
+    "scope": "Fixed-angle ordered scalar limit, separately tuned finite-speed spinor limit, binary occupation alternatives and a timed phase-sensitive collision on distinguishable walkers. Same-family crosschecks, cross-director review requested separately.",
+    "totals": {
+      "checkers": 80,
+      "generated_outputs": 94,
+      "lean_sources": 26
+    },
+    "replay": {
+      "checker_runs": 10,
+      "lean_compilations": 4,
+      "formal_toolchain": "Lean 4.19.0, -j1",
+      "runtime": "Windows bundled Python, NumPy, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1. All five generated streams were byte-identical from both source directories and to both stored results.",
+      "markdown_local_links": {
+        "Moving_contact_and_phase_echo.md": 12,
+        "Interacting_occupation_walk.md": 14
+      }
+    },
+    "sha256_lf": {
+      "Moving_contact_and_phase_echo.md": "b2d0022a80699002a5f924399d036f550f3b9deb47ba728e59f1d09f3f70284f",
+      "Interacting_occupation_walk.md": "6157df344490630f1c440c777db205ee6118cb96d43e633868f68cede718f2ae",
+      "lean/CollisionRecords.lean": "498c799708a8aa3cd01cef5dcb6cdafb2a2cdb5a17e8eac17b3a153c82824c56",
+      "lean/LocalOccupation.lean": "6e8bc1b1a4351639f08235aa11403d6800fe6f9f6613b710dda9f1fa56658975",
+      "check_collision_scattering.py": "d25b7ea4bb02be2a635c666946ddb5ea9053e03c3ba9af747bdafdaafd953066",
+      "check_collision_phase_reference.py": "f3ce43acb206640da0aeb162f98bc2860f1bb0924f3936c3c0d868a47a003f1e",
+      "check_occupation_contact.py": "7e2c0291de10c2bd092ab6d4800413f2ead569ea9c280ce5314856ff04ed3996",
+      "check_occupation_envelope.py": "f448f8c2cf2d295c56c498be7ba8f3f04eadbbf30daa31f3b9a81a943a72e92c",
+      "check_staggered_cone.py": "4bd6015816ab4f018b2dcae177db287079b9f58f2fca3a89e706ec5f52a39d5f",
+      "results/collision_scattering.json": "778a169bc108548048164b5d8797c73ce108867f243b5cea1f18904c9fc9158d",
+      "results/collision_phase_reference.json": "e4c93496e712a023219c44305e4ac241d658b40e382a58852600ce7248a8d5fb",
+      "results/occupation_contact.json": "b47882951e2ce1a904db070e9cdb1a019a5d0a20c63152c678cd4e4caf414652",
+      "results/occupation_envelope.json": "d8e7de9766be85cc3982fab4b1ece169fedbe132a321d9da3108cbf7b2b2c088",
+      "results/staggered_cone.json": "5e73d33ba81a03f33391ca1a49fa651fb9b267571791abfafabd115c8d37654f"
+    },
+    "controls": {
+      "localized_return": [
+        "1936/15625",
+        "13456/15625",
+        "7696/15625"
+      ],
+      "different_cell_probability": [
+        "1",
+        "1/2"
+      ],
+      "plucker": [
+        "0",
+        "288/625"
+      ],
+      "echo_first_fail_second_fail_both_pass": [
+        "39/64",
+        "975/4096",
+        "625/4096"
+      ],
+      "echo_passed_aligned_opposite_unread": [
+        "1",
+        "49/625",
+        "337/625"
+      ],
+      "scale": "At finite circumference the periodic two-particle occupation lift on a ring has an antiperiodic one-body boundary. Coarse pitch, finite boundary, gapless and reversed-mass cases all remain in the outputs."
+    },
+    "limitations": "Squared readout and choice of local gate remain inputs. The alternative double-occupation sign is distinguishable at finite depth; its continuum limit is unproved. Fixed-angle and fixed-speed charts use different refinements. Real source coordinates remove a distributed phase resource for occupation reads, with source synthesis and gate time as additional premises.",
+    "nested_pcp": {
+      "receipt": "bd778fb227010d1c6f07",
+      "question": "For the complex 2 by 2 matrix U=[[3,-4i],[-4i,3]]/5, compute det(U). Show the finite arithmetic.",
+      "child_reply": "det(U) = -15i [end of text]",
+      "output_sha256": "b1e02785418300056365e1fd472fe6b1184cc25435bd9b192034ba96a7c4e473",
+      "adjudication": "One verified call. The child reported -15i; the parent recalculated the determinant as 1, confirmed by exact minors and Lean. The raw result is retained."
+    },
+    "open_gates": 13
   }
 }
