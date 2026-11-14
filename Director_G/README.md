@@ -18,6 +18,10 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Probability records across sheet orders](Refining_the_sheet.md) | Matched coarse and fine gain preparations test compatibility. A lower bound on a three-tick probability along doubling towers constrains every pure label to one integer. Native order-four and prime-order ports select its unit magnitude. |
 | [Selection in the full count and character mixture](Mixed_refinement_records.md) | A dark calibration port and the rate of change of a three-tick rail probability under refinement characterize the ordinary response within compatible mixed laws. |
 | [Refinement and free fall](Refinement_and_free_fall.md) | The staircase gain is an exact linear phase gradient on an occupied parity slice. The terminal distance of a rested packet reads the absolute winding in fixed mechanical units. |
+| [Selecting the unit character with routed arms](Routed_sheet_filter.md) | Real turns, two balanced splitters and recorded terminal rails select the unit pair to prescribed accuracy. A localized sheet supplies target weight $2/M$. |
+| [Preparing a sheet by address](Addressed_sheet_preparation.md) | Reversible rail switches on disjoint sheet intervals raise the initial unit-pair weight above $4/\pi^2$ at every order. The cyclic differences of the source control the scaled three-tick force calibration. |
+| [Local resolution and the uninterrupted walk](Local_filter_resolution.md) | A [Lean support bound](lean/FilterPhaseWidth.lean) limits all local preparations. With the physical coin fixed, a [centered product estimate](Uninterrupted_sheet_read.md) and a [terminal fringe](Uninterrupted_sheet_fringes.md) give the sharp time scale for two pairwise tests. |
+| [Quantum and classical flight from one localized source](From_a_local_sheet_to_a_flight.md) | A retained sheet supports a spreading Gaussian at fixed action and a concentrated falling position at shrinking action. The clock, ensemble yield and persistent count rival are explicit. |
 | [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
 | [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
 | [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
@@ -128,6 +132,10 @@ python -B check_holonomy_cone.py rerun
 python -B check_holonomy_embedding.py rerun
 python -B check_multiset_fibres.py rerun
 python -B check_sheet_refinement.py rerun
+python -B check_addressed_sheet_source.py rerun
+python -B check_routed_sheet_filter.py rerun
+python -B check_uninterrupted_sheet_read.py rerun
+python -B check_local_sheet_flight.py rerun
 python -B check_cover_comparison.py rerun
 python -B check_cover_marginals.py rerun
 python -B check_prime_port_records.py rerun
