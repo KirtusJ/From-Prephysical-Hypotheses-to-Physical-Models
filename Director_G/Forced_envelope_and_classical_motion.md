@@ -68,4 +68,6 @@ The root review remains G1 OPEN. This conditional link between a lattice update,
 
 A subsequent construction treats smooth position-dependent interaction on two periodic lattices. [Periodic two-body limits](Periodic_interaction_and_two_limits.md)
 
+A matched readout calibration can bound the error in the position law if the detector applies a power to terminal cells whose log weights satisfy a variance bound. The variance hypothesis must be checked on the actual encoded flight. [Calibration transfer and its Gaussian control](Calibration_and_the_log_weights_of_a_flight.md)
+
 If a balanced, independently counted path component survives preparation with weight c, its physical displacement has variance at most t times epsilon in this scaling. A nonzero such fraction leaves mass at the initial position in the shrinking-action limit, even when the selected coherent component moves. [Counting and the classical position law](Counting_and_character_records.md)

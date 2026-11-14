@@ -6699,6 +6699,17 @@
     },
     "standing": "All 32 outgoing-direction words and coordinate recurrence agree on every joint rail and sheet. Localized sources on both sheets, readout partitions, no-swap and site-only controls were replayed. The physical read and precision are open."
   },
+  "flight_log_weights": {
+    "paper": "Calibration_and_the_log_weights_of_a_flight.md",
+    "checker": "check_flight_log_weights.py",
+    "result": "results/flight_log_weights.json",
+    "sha256": {
+      "check_flight_log_weights.py": "59de1f55b442611f5d381f5261d3434abb4cca6e6e7d40ec7fef1c1a49d12ece",
+      "results/flight_log_weights.json": "1bebdf692f928bb4be87326b52deec5d4626d81864ced01ea3018db74def4459",
+      "results/addressed_position_score.json": "6866696d1614973626ec427005960aee346ebe0ba398270fc846e8a9074a6da7"
+    },
+    "standing": "An analytic total-variation bound assumes population transfer and a uniform variance bound at the detector's actual scored resolution. Twelve finite mass refinements and fifteen Gaussian settings check the predicted behavior. The ordinary flight limit, transfer conditions and physical realization retain their separate obligations."
+  },
   "addressed_score_to_flight": {
     "paper": "Checking_a_heralded_flight_word.md",
     "checker": "check_heralded_record_transfer.py",
