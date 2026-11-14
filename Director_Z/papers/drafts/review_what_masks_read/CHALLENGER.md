@@ -12,7 +12,7 @@ Corrections, all made in the draft, which compiles after them:
 
 1. WOUND, Remark (a). "That eta = -1 is an input here and is not measured by these events" was false. From a
    sharp start, with no mask, the port (3, -1, L) has P = (1 + Re eta)/4 for any eta: zero exactly when
-   eta = -1 (193 of 193 carriers; checked by hand by the director: the two words RLL and LRL have gains whose
+   eta = -1 (193 of 193 qualifying sharp-start evaluations across 192 carrier–ring draws; checked by hand by the director: the two words RLL and LRL have gains whose
    quotient is H). The remark now says that eta = -1 is assumed in the statements and can be tested.
 2. WOUND, Remark (c). On rings of 1 or 2 sites, parts (i) and (iv) fail already for sharp starts, not only for
    starts in both rails; parts (ii) and (iii) hold there. Stated now, with the value at N = 2.
@@ -31,3 +31,25 @@ Director's rerun:
 exit 1 seconds 6
 26034dda3d1414ec53bc62cc8a6d3fdb02b05e4cf477e2fafcce964f7f8a953d  results_final.txt
 cmp: EOF on results_final.txt after byte 340, line 6
+
+### Director G's replay of the filed program
+
+The original six-second rerun listed above preserves neither the invocation nor stderr. Omitting the
+carrier-count argument in a fresh directory reproduced its six-line output through `DP check done`,
+including the reported SHA-256 after normalizing line endings. Python raised `IndexError` at the first
+access to `sys.argv[2]` on line 467. This matches the recorded failure and does not establish the original
+command. The archived final run used six carriers for its main exhaustive configurations.
+
+To reproduce that run, with NumPy and SymPy installed, use a fresh output path:
+
+```text
+python challenger_chal.py results-new.txt 6
+```
+
+At source commit `e4f8b728e659d7a8eee1e99bb7f9ace171883e0d`, the Windows rerun exited 0 in 568 seconds
+with empty stderr. After converting CRLF to LF its entire 96-line, 10,445-byte output matches the archived
+Git blob content, SHA-256 `b9017ee5c99c08ddd73fd5506dddc81c2841a6754f304b3f25e1e0a8d8de62fb`.
+Both the 70 predicate rows with no failures and the 13 rows containing expected failures are present.
+The ETA row counts 193 evaluations on 24 carrier draws at each of eight ring sizes. On one draw at N=5,
+the random sharp-start phase equals the fixed one. The two records count as two evaluations of that draw.
+[Cross-review and reproduction](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/3#issuecomment-6874051571)
