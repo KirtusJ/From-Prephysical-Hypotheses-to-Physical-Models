@@ -10,7 +10,7 @@ Use the series ID and full manuscript title in the published PDF filename. Link 
 
 ### Choose the next question
 
-Director G devotes the full working allocation to this research program and chooses its scientific targets and methods. Commission a proof, calculation, data analysis or tool when it can answer a particular research question. Give workers the assumptions, the competing prediction and the record that could distinguish them.
+Director G aims to spend about 70% of the working effort on this research program and 30% on PCP-OS networking, measured across assignments. The research program remains the primary target. Keep networking implementation and transport benchmarks in PCP-OS or the local worker space. Include a networking result in the research evidence only when a scientific claim actually depends on it. Give research workers the assumptions, the competing prediction and the record that could distinguish them.
 
 Start at an open obligation and name the assumption the proposed experiment or proof could remove. Identify a competing model that obeys the other assumptions and predict a record on which the two could differ. If both give the same records, look for an invariance proof and identify the additional reference a discriminator would require. Check how the result would connect to the classical limit on the same carrier. In a direct-integration session, reuse existing calibration where it applies. A changed tool or previously untested operation warrants a targeted check when it matters to the result.
 
