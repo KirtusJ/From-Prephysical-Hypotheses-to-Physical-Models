@@ -78,6 +78,28 @@ def panel(label, psi, charge, skip, expected):
                 seen=seen,convolved=inferred,total_variation=tv)
 
 
+def sector_comparison(label, positions, target_weights, reference_weights, efficiencies, expected_tv):
+    offsets = (0, -2)
+    seen = [Q(0)] * 16
+    spot = [Q(0)] * 16
+    position_law = [Q(0)] * 16
+    for x, offset, weight, ref_weight, efficiency in zip(
+            positions, offsets, target_weights, reference_weights, efficiencies):
+        seen[(x + offset) % 16] += weight * efficiency
+        spot[offset % 16] += ref_weight * efficiency
+        position_law[x % 16] += weight
+    require(sum(position_law) == sum(reference_weights) == 1, "normalized launches")
+    inferred = [sum(position_law[x] * spot[(d-x) % 16] for x in range(16))
+                for d in range(16)]
+    # Keep the no-click outcome when comparing per-launch laws.
+    tv = (sum(abs(p-q) for p,q in zip(seen, inferred)) + abs(sum(seen)-sum(inferred))) / 2
+    require(tv == expected_tv, label)
+    return dict(label=label, positions=positions, offsets=offsets, target_weights=target_weights,
+                reference_weights=reference_weights, efficiencies=efficiencies, seen=seen,
+                no_click=1-sum(seen), convolved_marginals=inferred,
+                inferred_no_click=1-sum(inferred), total_variation=tv)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output",type=Path)
@@ -112,7 +134,20 @@ def main():
         require(shift_error<1e-12 and 1-sharp_return<=4*len(band)/n,"band shift")
         band_rows.append(dict(sites=n,band_modes=len(band),shift=d,
                               sharp_offsite=1-sharp_return,max_amplitude_shift_error=shift_error))
-    result=dict(direct_panels=rows,rare_click_counterexamples=rare,frequency_window_controls=band_rows)
+    half = (Q(1,2), Q(1,2))
+    skew = (Q(3,4), Q(1,4))
+    efficient = (Q(1), Q(1))
+    sector_rows = [
+        sector_comparison("reference weight mismatch", (0,0), skew, half, efficient, Q(1,4)),
+        sector_comparison("matched reference common position", (0,0), skew, skew, efficient, Q(0)),
+        sector_comparison("sector-correlated position and offset", (0,2), half, half, efficient, Q(1,2)),
+        sector_comparison("unequal sector efficiencies", (0,0), half, half, (Q(1,4),Q(1)), Q(0)),
+    ]
+    unequal = sector_rows[-1]["seen"]
+    require((unequal[0]/sum(unequal), unequal[-2]/sum(unequal)) == (Q(1,5), Q(4,5)),
+            "conditioning reweights the sectors")
+    result=dict(direct_panels=rows,rare_click_counterexamples=rare,frequency_window_controls=band_rows,
+                sector_comparisons=sector_rows)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     with args.output.open("x",encoding="utf8",newline="\n") as f:
         json.dump(result,f,indent=2,default=str)

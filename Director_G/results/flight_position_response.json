@@ -371,5 +371,255 @@
       "sharp_offsite": 0.150146484375,
       "max_amplitude_shift_error": 2.220446049250313e-16
     }
+  ],
+  "sector_comparisons": [
+    {
+      "label": "reference weight mismatch",
+      "positions": [
+        0,
+        0
+      ],
+      "offsets": [
+        0,
+        -2
+      ],
+      "target_weights": [
+        "3/4",
+        "1/4"
+      ],
+      "reference_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "efficiencies": [
+        "1",
+        "1"
+      ],
+      "seen": [
+        "3/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0"
+      ],
+      "no_click": "0",
+      "convolved_marginals": [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "inferred_no_click": "0",
+      "total_variation": "1/4"
+    },
+    {
+      "label": "matched reference common position",
+      "positions": [
+        0,
+        0
+      ],
+      "offsets": [
+        0,
+        -2
+      ],
+      "target_weights": [
+        "3/4",
+        "1/4"
+      ],
+      "reference_weights": [
+        "3/4",
+        "1/4"
+      ],
+      "efficiencies": [
+        "1",
+        "1"
+      ],
+      "seen": [
+        "3/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0"
+      ],
+      "no_click": "0",
+      "convolved_marginals": [
+        "3/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0"
+      ],
+      "inferred_no_click": "0",
+      "total_variation": "0"
+    },
+    {
+      "label": "sector-correlated position and offset",
+      "positions": [
+        0,
+        2
+      ],
+      "offsets": [
+        0,
+        -2
+      ],
+      "target_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "reference_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "efficiencies": [
+        "1",
+        "1"
+      ],
+      "seen": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "no_click": "0",
+      "convolved_marginals": [
+        "1/2",
+        "0",
+        "1/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0"
+      ],
+      "inferred_no_click": "0",
+      "total_variation": "1/2"
+    },
+    {
+      "label": "unequal sector efficiencies",
+      "positions": [
+        0,
+        0
+      ],
+      "offsets": [
+        0,
+        -2
+      ],
+      "target_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "reference_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "efficiencies": [
+        "1/4",
+        "1"
+      ],
+      "seen": [
+        "1/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "no_click": "3/8",
+      "convolved_marginals": [
+        "1/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "inferred_no_click": "3/8",
+      "total_variation": "0"
+    }
   ]
 }
