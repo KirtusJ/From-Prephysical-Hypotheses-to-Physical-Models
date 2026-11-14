@@ -2,6 +2,19 @@
 
 Run nine Hadamard walk ticks and record position after ticks 3, 6 and 9. Apply a quarter-turn to the coin after each of the first two records. For a fair mixture of sharp right and left launches, equal-sign pulses give the first and third displacements the same sign with probability **1/2**. Opposite-sign pulses give **5/8**. The entire distribution of any two adjacent displacements agrees across the four phase patterns. Independent fair pulse signs give **9/16** for the endpoint sign test. These are ideal circuit predictions. [Two-flight velocity theory](../../../Director_G/Velocity_memory_after_a_position_record.md) · [Three-record phase memory](../../../Director_G/A_phase_kept_between_three_position_records.md)
 
+## A classical position record that preserves a qubit
+
+A twelve-tick schedule on a sixteen-site ring makes every position probability independent of the incoming rail state. Repeating the site read gives a classical chain while the ideal rail can retain entanglement. The same records test ordinary probabilities against powers redrawn at each write, even when the rail disturbance is unknown. Four qubits suffice. [Position chain, rail test and comparison with measuring every tick](classical_positions_with_a_retained_qubit.md) · [Probability test and error bound](ordinary_powers_with_a_retained_qubit.md) · [A shorter ten-tick comparison](scoring_after_an_unknown_write.md)
+
+    python -I -B check_scalar_walk.py --all-scalar --blocks 3 --qasm three_blocks.qasm
+    python -I -B analyze_scalar_records.py counts.json --h 0.5 --alpha 0.05
+
+The [analyzer and JSON example](analyze_scalar_records.py) use one chronological array of absolute three-bit left-count addresses per shot or histogram entry; null indicates an unreadable code. In the exported sixteen-site ring circuit, bits 3j, 3j+1 and 3j+2 are the low, middle and high address bits of zero-based write j. In a most-significant-first display, the rightmost group is the first write. Preserve attempted launches. No hardware acquisition accompanies these predictions.
+
+## What can be learned about a phase
+
+A five-tick and an eleven-tick echo compare the sum and difference of two addressed phases. Their absolute common sign is unobservable on this apparatus. A separate photonic experiment reported a controlled-Hadamard comparison for its own calibrated optics. Three sign-agreement rates also predict the diffusion coefficient of a rare-write walk when the same fixed rail channel acts at every write. [Two phase echoes](two_address_echoes.md) · [Nine measured optical settings](photonic_phase_data.md) · [Diffusion from three recorded directions](../../../Director_G/Diffusion_from_three_measured_directions.md)
+
 ## Testing the probability rule
 
 The original phase difference also occurs for a nonordinary exponent near 4.665. Three words from one setting distinguish ordinary scoring if a single exponent persists over the three writes. If it can change, the original first write admits a mixture that reproduces all 64 ordinary word probabilities. [Which words identify an exponent](joint_and_conditional_powers.md)
