@@ -221,3 +221,22 @@ Principal: harden PCP Async not just in the stack but in the kernel itself. Stat
 ### `mathematics.statement` is on the mainline of PCP OS (14 November 2026)
 
 Director G reviewed `KirtusJ/pcp-os#22` on Windows and filed three objections, all real: a `let` outside brackets could own the `:=` so that a weakened theorem kept its pin; `_root_.sorryAx` passed the open-proof probe; a `pinned` that was not a string was read as no pin. All three fixed in Rust with the reviewer's cases as regression tests; Director G reran its controls and closed them. Integrated into `master` at `0e068ee` by this side under the principal's permission, after the other director's "ready": workspace tests on the merged tree 66 passed, 0 failed. Source only; the binary in use is still the packaged build 22. What the episode shows about the stack: the same-family sub-agent wrote 45 assertions and missed the one input that defeats the instrument's purpose; a reviewer of another family on another system found it within the hour.
+
+### Kernel asynchronous side and the Tokio note: state at 14 November 2026, written before a context compaction
+
+Directive (principal): asynchronous work is core to PCP and is considered at all times; Rust's `async` and Tokio have an infamous history, to be considered deeply; the hardening reaches the kernel on bare metal.
+
+What exists in `KirtusJ/pcp-os`, none of it on `master` yet:
+
+| Item | Where | State |
+|---|---|---|
+| Issue 31: the stop key leaves the task RUNNING in the kernel's task table | pcp-os | open, fixed by pull request 33 |
+| Issue 32: a refused program's frames are not returned | pcp-os | open, fixed by pull request 33 |
+| Pull request 33: eight kernel self-tests of the asynchronous side and the two fixes | branch `pcp/director-z-kernel-async`, head `1a7fdd6` | open, awaiting Director G |
+| Pull request 34: `ASYNC.md` (no `async` or Tokio in the source today, ten hazards, six rules) | branch `pcp/director-z-async-note`, head `7bf7f2f` | open, awaiting Director G |
+
+Evidence for 33, QEMU 8.2.2, `PCPOS_KERNEL_STAGE=<dir> sh run.sh` in `crates/pcpos-kernel`: `master` at `0e068ee` 58 self-tests pass; tests only, 64 pass and 2 fail (status 35); with the fixes 66 pass (status 33); the workspace tests pass. Nothing is claimed about real hardware.
+
+Not to be done without the other director's answer: putting 33 or 34 on `master`. Not to be done without the agreed restart notice: replacing the binary in use (`scratchpad/pcpos/pcpos`, build 22, digest beginning `c2c6795d`).
+
+Open on this side, in order: the research program first (read the proofs in `Director_Z/computation/Character_Separation/CRITERION.md` line by line; queue follow-ups on Proposition 5.35 for q = 7, 8, its assembly in Lean, parts (ii) and (iii) for q > 2; the product-event theorem for carriers with several norm-preserving characters); then the Mathematics and Science modules (result-to-program binding in the host, once Director G's rerun helper format is known; a summary-against-record rule); other modules last. The edition is Z26; register 609 events; reviews Z24 to Z26 closed; objections O29 to O31 recorded open; findings to Z-140. The queue session is `session_01CeUdCw9r8D7zqFEbrYETKD`, trigger `trig_017oSax6RZ3Jm4mR2GET4aDC`, branch `pcp/review-queue`; check it each period.
