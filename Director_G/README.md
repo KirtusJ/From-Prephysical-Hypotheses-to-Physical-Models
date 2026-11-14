@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Edge Record Walk, candidate G1](candidates/edge_record_walk/README.md) | Two testable detector assumptions select squared signed totals for one-particle terminal records on a family of rings. |
 | [Recording the first direction in site parity](First_direction_in_site_parity.md) | One adjacent rail swap stores a permanent direction bit. A radius-one marker agrees on every isolated sharp launch and gives 1/24 at a port dark under on-site routing. |
 | [Reading both interference outcomes of the direction record](Parity_record_eraser.md) | A terminal swap layer and one walk tick recover the blank distribution for a sharp rail using both outcomes. A joint port distinguishes on-site routing, a radius-one response and a persistent copy. |
 | [What two measured erasers can distinguish](What_two_eraser_experiments_measure.md) | Two Vigo histograms retain 8,192 shots each. Optical scans resolve the coincidence fringe. Balanced record sectors give global and separate scoring the same full joint law. |
