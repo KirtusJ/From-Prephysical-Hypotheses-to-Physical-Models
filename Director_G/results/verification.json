@@ -1,4 +1,17 @@
 {
+  "compact_bin_reflections": {
+    "paper": "Compact_transport_of_a_flight_bin.md",
+    "checker": "check_compact_bin_reflections.py",
+    "result": "results/compact_bin_reflections.json",
+    "lean": "lean/CompactBinReflection.lean",
+    "sha256": {
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "results/compact_bin_reflections.json": "05ce9d2f6a9f59ea0d7aeab798c1d616f64e7b01ffca836c0ccec3ac34de2f9b",
+      "lean/CompactBinReflection.lean": "b09b42a165caea7cbae6d980f99caa7ac70d5c0a00f2f7dfe248a4e46b65f81d"
+    },
+    "replay": "Python signed walk to tick 256, exact forward and inverse gate words, full-column checks at up to 32 padded slots. Lean 4.19.0 checks four scalar identities. The small-panel four-square finder is exhaustive; large panels use deterministic base four.",
+    "scope": "The uniform expected polynomial four-slot construction uses a modification of the cited number-theoretic algorithm and is proved in the paper. Coherent within-bin controls and a known input vector are assumed. No physical rate is inferred."
+  },
   "stable_bin_flattening": {
     "paper": "Stable_flattening_inside_a_recorded_bin.md",
     "checker": "check_stable_flattening.py",
