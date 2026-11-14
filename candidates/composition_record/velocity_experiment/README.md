@@ -4,7 +4,11 @@ Run nine Hadamard walk ticks and record position after ticks 3, 6 and 9. Apply a
 
 ## A classical position record that preserves a qubit
 
+Two records can leave the walker at the same site yet yield clockwise probe probabilities of $729/754$ and $25/754$ when their order is switched. Closed records also implement a dense family of real rail gates. At fixed time the final address alone loses all rail entanglement with a reference by write seven. One of three messages computed from the complete path can preserve a Bell fidelity above $0.64$ at write 32. [Position-order probe and stopped gate](closed_position_gates.md) · [Entanglement and the optimal message alphabet](recovering_a_qubit_from_position_messages.md)
+
 A twelve-tick schedule on a sixteen-site ring makes every position probability independent of the incoming rail state. Repeating the site read gives a classical chain while the ideal rail can retain entanglement. The same records test ordinary probabilities against powers redrawn at each write, even when the rail disturbance is unknown. Four qubits suffice. [Position chain, rail test and comparison with measuring every tick](classical_positions_with_a_retained_qubit.md) · [Probability test and error bound](ordinary_powers_with_a_retained_qubit.md) · [A shorter ten-tick comparison](scoring_after_an_unknown_write.md)
+
+At long times the sender's working memory and the number of messages matter separately. Any fixed finite classical encoder loses the average Bell fidelity advantage, even if the receiver gets its whole final state. The constructive encoder tracks an angle with stochastic rounding. [Finite memory for position gates](finite_memory_for_position_gates.md)
 
     python -I -B check_scalar_walk.py --all-scalar --blocks 3 --qasm three_blocks.qasm
     python -I -B analyze_scalar_records.py counts.json --h 0.5 --alpha 0.05
