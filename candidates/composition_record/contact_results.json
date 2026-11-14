@@ -1,0 +1,197 @@
+{
+  "field": 5,
+  "tomography": {
+    "class_columns": [
+      "det",
+      "a1 C1",
+      "a1 C2",
+      "a1 C3",
+      "a2 C1",
+      "a2 C2",
+      "a2 C3",
+      "a3 C1",
+      "a3 C2",
+      "a3 C3"
+    ],
+    "commutator_menu": "all 125 h, both x and y in the three standard basis labels",
+    "commutator_words_per_class": 1125,
+    "fifth_power_words_per_class": 15625,
+    "power_menus_with_common_commutator_rows": {
+      "commutators_only": {
+        "power_rows": 0,
+        "combined_rank": 1,
+        "kernel_dimension": 9
+      },
+      "h_and_x_equal_e1": {
+        "power_rows": 1,
+        "combined_rank": 2,
+        "kernel_dimension": 8
+      },
+      "x_equal_e1_all_h": {
+        "power_rows": 125,
+        "combined_rank": 4,
+        "kernel_dimension": 6
+      },
+      "h_equal_x_all_vectors": {
+        "power_rows": 125,
+        "combined_rank": 7,
+        "kernel_dimension": 3
+      },
+      "independent_h_and_x": {
+        "power_rows": 15625,
+        "combined_rank": 10,
+        "kernel_dimension": 0
+      }
+    },
+    "minimal_panel_rows": [
+      "K(e1,e2,e3)",
+      "L(e1,e1)",
+      "L(e1,e2)",
+      "L(e1,e3)",
+      "L(e2,e1)",
+      "L(e2,e2)",
+      "L(e2,e3)",
+      "L(e3,e1)",
+      "L(e3,e2)",
+      "L(e3,e3)"
+    ],
+    "minimal_panel_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "skew_rival": {
+    "seed": "det + a1 C2 - a2 C1",
+    "diagonal_zero_fifth_powers": 125,
+    "L(e1,e2)": 1,
+    "L(e2,e1)": 4,
+    "commutators_agreeing_with_det": 1125
+  },
+  "gauge": {
+    "seed": "det + delta f, f(a,b) = a1^2 b2^2",
+    "raw_word": "beta_h(e1,e1)",
+    "raw_at_e2": 3,
+    "raw_at_2e2": 2,
+    "twice_raw_at_e2": 1,
+    "closed_commutators_agreeing_with_det": 1125,
+    "closed_fifth_powers_agreeing_with_det": 15625
+  }
+}

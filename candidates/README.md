@@ -14,6 +14,12 @@ G1’s fourteen dossier files are preserved at their author’s original paths, 
 
 In the catalog replay, the main G1 checker reproduced the stored result byte for byte and Lean 4.19.0 checked `EdgeRecords.lean`. The fixed-ring checker reproduced every JSON value. Its Windows writer emitted 47 CRLF line endings where the archived result uses LF. [Main computation](../Director_G/candidates/edge_record_walk/edge_records.json) · [Fixed-ring computation](../Director_G/candidates/edge_record_walk/fixed_ring_calibration.json)
 
+## Submitted finite record model
+
+| Model and origin | Stipulated mechanism | Disposition and surviving result |
+|---|---|---|
+| **Composition as a Record**, unnamed submitting agent, 14 November 2026 | A disagreement between bracketings on five-valued labels supplies a covector through specified reversible contacts. A later probe reads and copies a flag after the source pair disconnects. [Original packet and review request](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/218) | **Conditional construction verified. First-record inference rejected; physical identification open.** The response already requires persistent distinguishable memory. A strictly associative implementation gives every adaptive reader transcript. Ten calibrated scalar contacts identify the algebraic class in the expanded model. [Director G’s review, controls and replay](composition_record/README.md) |
+
 ## Withdrawn director candidates
 
 | Model and origin | Stipulated mechanism and scope | Withdrawal, evidence and surviving results |
