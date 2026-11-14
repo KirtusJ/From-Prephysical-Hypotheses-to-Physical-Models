@@ -126,6 +126,20 @@ def analyze(rows, block, m):
     return out
 
 
+def classical_order_test(rows):
+    """Exact conditional lower tail for q3 >= q2 given all recorded bright counts."""
+    k2,n2 = pooled(rows["GyGx"*2])
+    k3,n3 = pooled(rows["GyGx"*3])
+    bright = k2+k3
+    denom = math.comb(n2+n3, bright)
+    numer = sum(math.comb(n3,j)*math.comb(n2,bright-j)
+                for j in range(max(0,bright-n2),k3+1))
+    require(k3*n2 < k2*n3,"expected sign of the observed order test")
+    return dict(two_block_bright=[k2,n2],three_block_bright=[k3,n3],
+                exact_tail=str(Fraction(numer,denom)),
+                log10_tail=round(math.log10(numer)-math.log10(denom),6))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output",type=Path)
@@ -135,6 +149,7 @@ def main():
     for name in SOURCES:
         rows=read_rows(name,args.inputs)
         reports.append(dict(filename=name,sha256=SOURCES[name],selected=rows,
+                            classical_two_state=classical_order_test(rows),
                             blocks={key:analyze(rows,b,m) for key,(b,m) in BLOCKS.items()}))
     require(len(reports)==6,"run count")
     end = reports[-1]["blocks"]["YX"]
