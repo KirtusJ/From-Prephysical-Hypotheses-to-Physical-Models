@@ -28,6 +28,14 @@ def likelihood (kernel : List Bool → Bool → Nat) (past : List Bool) : List B
   | [] => 1
   | x :: xs => kernel past x * likelihood kernel (x :: past) xs
 
+/-- The average squared centered bias equals its cross product plus half
+the squared change, after multiplication by two. -/
+theorem unequalBias (x y : Int) :
+    x*x+y*y = 2*(x*y)+(x-y)*(x-y) := by
+  simp only [Int.sub_mul, Int.mul_sub]
+  rw [Int.mul_comm y x]
+  omega
+
 theorem histories (k l : List Bool → Bool → Nat)
     (same : ∀ past x, k past x = l past x) (word past : List Bool) :
     likelihood k past word = likelihood l past word := by

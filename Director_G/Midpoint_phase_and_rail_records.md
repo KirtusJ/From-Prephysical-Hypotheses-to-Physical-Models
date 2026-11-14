@@ -14,6 +14,16 @@ The two fair-count contributions sum to $c$. Consequently
 $$D=\frac{1-L_2-C_{-1}}{4}=\int(q-1/2)^2\,d\nu.$$
 This quantity vanishes exactly when the coherent components are balanced almost surely. Pure fair counting gives zero as well. Combining $D$ with the independent free-clock witness $W=L_3+2(1-a)L_2+(a^2-1)L_1$ from the monitored test excludes fair counting and identifies $(q,|\operatorname{tr}U|^2)=(1/2,a)$ almost surely at their joint zero. For the cubic target $a=3/2$, the balanced prediction is $L_2=3/4$, $C_{-1}=1/4$. The cubic unbalanced pair with $q=1/2\pm1/16$ gives $L_2=3/4$, $C_{-1}=15/64$. Its sign-setting deficit of $1/64$ per launch is four times the double-flip excess of $1/256$ in the monitored test. These two margins alone do not compare statistical power across instruments.
 
+If the nominal sign has an unknown phase error with $|1+\lambda|\le\epsilon$, the change of its per-coin flip rate from the ideal sign has magnitude at most $2q(1-q)\epsilon\le\epsilon/2$, by expanding $q|A+\lambda B|^2$. Thus the induced bias in $D$ is at most $\epsilon/8$ under the stated stable-source and diagonal-plate hypotheses. Absolute uncertainties $e_2,e_Z$ in the two rates add at most $(e_2+e_Z)/4$ to the error bound, without any stochastic independence requirement on the errors.
+
+### What retention the sign test actually needs
+
+Permit different unitary coins $U_1,U_2$ before and after the plate, drawn jointly from the same law at both settings. Put $q_j=|(U_j)_{LR}|^2$. The first path to the final left rail has squared weight $q_2(1-q_1)$; the second has weight $(1-q_2)q_1$. Summing the bare and signed probabilities cancels their interference. Write $D_{12}=(1-L_2-C_{-1})/4$. Then
+$$D_{12}=\int(q_1-1/2)(q_2-1/2)\,d\nu,$$
+$$\tfrac12\int[(q_1-1/2)^2+(q_2-1/2)^2]d\nu
+=D_{12}+\tfrac12\int(q_1-q_2)^2d\nu.$$
+Hence persistence of the **flip probability** alone suffices for the balance measurement; the two coins' complex phases may drift. If an independent characterization gives $\int(q_1-q_2)^2d\nu\le b$, the mean of the two squared imbalances is at most $D_{12}+b/2$. Centered independent redraws with mean $q_j=1/2$ can give $D_{12}=0$ at positive imbalance. Perfect anticorrelation about one half can instead make $D_{12}<0$ even with a stable law across settings. The sign of the deficit can consequently test a retention premise. Interpreting the separate free-clock witness for the generator still requires its free-evolution hypotheses.
+
 ## One oriented phase and an exact defect identity
 
 For $q<1$ define $\eta=B/A$. Its modulus is one. At $q=1$ choose $\eta$ arbitrarily since its weight below vanishes. The full identity for one plate is
@@ -36,4 +46,4 @@ Conversely, with a persistent hidden coin and repeated readings after each tick,
 
 The checker propagates exact Gaussian-rational unitary amplitudes, computes both midpoint outputs and their phase defects, and retains positive and negative controls including an adaptive tree with early stopping. All conclusions assume the coherent squared-amplitude rule or the specified counting alternative. Establishing a prephysical probability law and a common physical implementation for these controls remains open. [Exact checker](check_midpoint_phase.py) · [All checked records](results/midpoint_phase.json)
 
-Lean 4.19.0 separately verifies the parallelogram and balance polynomials on signed integer numerators and the implication from equal conditional kernels to equal finite transcript products at common denominators. The complex path calculation, generator-retention premise and infinite-record extension are given above. [Lean statements](lean/MidpointPhase.lean)
+Lean 4.19.0 separately verifies the parallelogram, balance and centered cross-product polynomials on signed integer numerators and the implication from equal conditional kernels to equal finite transcript products at common denominators. The complex path calculation, generator-retention premise and infinite-record extension are given above. [Lean statements](lean/MidpointPhase.lean)

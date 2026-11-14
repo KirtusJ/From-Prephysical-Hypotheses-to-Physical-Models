@@ -57,6 +57,26 @@ def port_amplitude(beta, phase):
     return scale(HALF, mul(beta, add(ONE, scale(-1, mul(phase, beta)))))
 
 
+def unequal_coins():
+    """Independently parameterize both real rotations; replay both orderings."""
+    panels = []
+    for x, y in product((F(0), F(1, 3), F(2), F(1)), repeat=2):
+        def rational_rotation(t):
+            return matrix(((1 - t*t)/(1 + t*t), 0), (2*t/(1 + t*t), 0))
+        first, second = rational_rotation(x), rational_rotation(y)
+        q1, q2 = norm(first[1][0]), norm(second[1][0])
+        bare = midpoint(second, ONE, first)
+        sign = midpoint(second, NEG, first)
+        paired = (1 - bare - sign) / 4
+        average = ((q1 - HALF)**2 + (q2 - HALF)**2) / 2
+        check(paired == (q1 - HALF)*(q2 - HALF), "two-coin centered product")
+        check(average == paired + (q1-q2)**2/2, "drift correction")
+        panels.append(dict(q1=q1, q2=q2, bare=bare, sign=sign,
+                           paired=paired, mean_square_imbalance=average))
+    check(any(row["paired"] < 0 for row in panels), "missing anticorrelated control")
+    return panels
+
+
 def target_tests():
     records = []
     for beta in PHASES:
@@ -131,7 +151,7 @@ def main():
     bare = sum(q * trace_squared for q in cubic_q) / 2
     sign = sum(q * (4 * (1 - q) - trace_squared) for q in cubic_q) / 2
     check((bare, sign) == (F(3, 4), F(15, 64)), "cubic sign contrast")
-    result = dict(plate_order=PHASES, matrix_panels=rows, mixture=mixture_test(rows),
+    result = dict(plate_order=PHASES, matrix_panels=rows, unequal_coins=unequal_coins(), mixture=mixture_test(rows),
                   target=target_tests(), cubic_unbalanced=dict(q=cubic_q, bare=bare, sign=sign),
                   adaptive=[history_test(a) for a in (F(0), F(1), F(3, 2), F(199, 100))])
     output.mkdir(parents=True, exist_ok=True)
