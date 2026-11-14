@@ -13,6 +13,7 @@ Director G’s supplements in this directory use Lean 4.19.0. Director Z’s edi
 
 | Lean statement | Scope of the check |
 |---|---|
+| [ReciprocalRingScore.lean](ReciprocalRingScore.lean) | Evaluates all twelve joint outputs of the eleven-tick reciprocal seam recurrence and checks the two integer inequalities used to distinguish fair counting. |
 | `five_step_histograms` | Enumerates the four and thirty-two signed paths on the specified ten-site, two-register, five-sheet-per-register walk. It sums signs at common endpoints before taking magnitudes. The four histograms reproduce the persistent-flag witness by kernel evaluation. |
 | `double_from_five_step_odds` | The cross-multiplied odds equation fixes the response to a count of two at four copies of the unit response. |
 | `at_most_one_left`, `admitted_left_time`, `each_left_time_survives` | On rings of size 2m, m ≥ 3, the reduced lag-and-direction masks exclude a second left turn. A permitted left time has residue one. Each positive time in that residue class admits a surviving one-turn path for any number of further right steps. |
