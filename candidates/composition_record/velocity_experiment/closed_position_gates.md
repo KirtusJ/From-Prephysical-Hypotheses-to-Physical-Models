@@ -19,6 +19,8 @@ Generate the circuit in this directory with the following command. The exporter 
 
     python -I -B check_scalar_walk.py --order-probe --qasm fresh.qasm
 
+An independent Qiskit Aer run parsed this export and sampled 32,768 ideal circuit shots with seed 251624. The first prefix gave 2,893 arrivals at site 9 and 102 at site 7. Reversing the order gave 99 and 2,856 respectively. All 512 record counts are retained. Their total variation distance from the exact distribution was $571/32768$. The largest count deviation was 95 on display word 100100110 (3,459 sampled, 3,364 expected). No ideally dark word appeared. These counts test compilation and readout decoding on a simulator. [Full count record and software versions](../../../Director_G/results/position_order_aer_32768.json) · [Seeded replay](replay_order_probe.py) · [IBM OpenQASM import](https://quantum.cloud.ibm.com/docs/en/api/qiskit/qasm3) · [Aer simulator](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html)
+
 ## Returning to the origin with a chosen gate
 
 Write $O_d$ for the normalized rail matrix conditional on displacement $d$. For a chronological word multiply the matrices with the latest on the left. The displacements $(2,8,14,8)$ trace the sites $0,2,10,8,0$ and give
