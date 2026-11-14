@@ -1,0 +1,168 @@
+{
+  "physical_right_left_numerators": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "site": 1,
+  "site_mass": "5/8",
+  "threshold_truth_table": {
+    "000": [
+      0,
+      0,
+      0
+    ],
+    "001": [
+      1,
+      0,
+      0
+    ],
+    "010": [
+      1,
+      0,
+      0
+    ],
+    "011": [
+      1,
+      1,
+      0
+    ],
+    "100": [
+      1,
+      0,
+      0
+    ],
+    "101": [
+      1,
+      1,
+      0
+    ],
+    "110": [
+      1,
+      1,
+      0
+    ],
+    "111": [
+      1,
+      1,
+      1
+    ]
+  },
+  "triple_count_weights_over_512": [
+    27,
+    135,
+    225,
+    125
+  ],
+  "threshold_masses": [
+    "485/512",
+    "175/256",
+    "125/512"
+  ],
+  "squared_base_rate": "25/34",
+  "squared_threshold_average": "231580234357825/362799406831234",
+  "monotone_upper": "2/3",
+  "guaranteed_base_gap": "7/102",
+  "mixed_type_weights": [
+    "7/32",
+    "25/32"
+  ],
+  "mixed_type_masses": [
+    0,
+    "4/5"
+  ],
+  "mixed_threshold_rate": "25/32",
+  "correlated_tails": [
+    "5/8",
+    "5/8",
+    "5/8"
+  ],
+  "correlated_squared_rate": "25/34",
+  "even_parity_tails": [
+    "3/4",
+    "3/4",
+    "0"
+  ],
+  "forty_eight_copy_sharp_upper": "61/96",
+  "dispersion": {
+    "product_three": {
+      "mean": "5/8",
+      "variance": "5/64",
+      "mean_threshold_variance": "19695/131072",
+      "expected_absolute_count_difference": "59085/65536"
+    },
+    "ghz_three": {
+      "mean": "5/8",
+      "variance": "15/64",
+      "mean_threshold_variance": "15/64",
+      "expected_absolute_count_difference": "45/32"
+    },
+    "pairwise_even": {
+      "mean": "1/2",
+      "variance": "1/12",
+      "mean_threshold_variance": "1/8",
+      "expected_absolute_count_difference": "3/4"
+    },
+    "fixed_count": {
+      "mean": "1/2",
+      "variance": "0",
+      "mean_threshold_variance": "0",
+      "expected_absolute_count_difference": "0"
+    },
+    "two_point_eight": {
+      "mean": "5/8",
+      "variance": "9/64",
+      "mean_threshold_variance": "3/16",
+      "expected_absolute_count_difference": "3"
+    }
+  },
+  "two_point_thresholds": [
+    "1",
+    "1",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2"
+  ],
+  "two_point_symmetric_rate": "5/8",
+  "two_point_raw_square_rate": "7/16",
+  "two_point_raw_shortfall": "3/16",
+  "reflection_check": {
+    "histograms": 728,
+    "symmetric_histograms": 118
+  },
+  "blocks_per_arm": 2545,
+  "bank_launches": 10180,
+  "decision_threshold": "7/204"
+}
