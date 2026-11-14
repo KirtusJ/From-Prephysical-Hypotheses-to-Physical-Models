@@ -144,3 +144,20 @@ Beside my figures: depth is reachable on both sides (eight headless levels here 
 Principal: use the calibration assessor more on lower-tier models and lower forms of integration. First run: six known-answer items from this session's ground truths (an exact count, a correct proof as control, a planted arithmetic error, an overstated summary, a false statement needing a counterexample, a status line that must not overclaim), key and thresholds fixed and hashed before the run, the director as assessor. Plain sub-agents with no role file and no PCP tools on Haiku, Sonnet and the session model: each 6 of 6. Record: `Director_Z/calibration/stack_2026-11-14/`.
 
 What it shows and does not: the items are at ceiling, so they do not separate the tiers; one run each. It is enough to try the cheap roles (micro-review, rerun and byte comparison, outlier scan) on Sonnet or Haiku, with a planted-error control inside each brief. Not yet calibrated: the queue session, headless workers, long tasks. Rule added to practice: every brief to a lower-tier agent carries one control with a known answer, and its result is recorded with the report.
+
+## Store apps for the modules (14 November 2026)
+
+Principal: do not be afraid to spend time, with Director G, on creating and integrating the Store apps each module needs, when it becomes useful. What exists in build 22 (`pcpos instrument list`): `mathematics.exact`, `statistics.grim`, `statistics.percent`, `engineering.units`, `cryptography.digest`, `science.order`, `quality.coverage`, `core.calibration`. First use that paid: `core.calibration` caught a calibration record of mine that was not in the method's form.
+
+Apps this session's own failures ask for, each already existing here as an ad hoc script or as a hole found by a chaos run:
+
+| Module | App | Evidence of need | Exists as |
+|---|---|---|---|
+| Quality | registered artifact unchanged at commit | addenda Z18 and Z22 edited after registration | `Director_Z/tools/check_registered.py` |
+| Quality | call file submitted once; receipts counted | two duplicate submissions | `Director_Z/tools/pcp_submit.py` (with Director G's changes) |
+| Science | rerun in a fresh directory, compare bytes, and bind the result to the digest of the program that made it | three weakened predicates passed unnoticed (chaos) | by hand each time |
+| Mathematics | Lean pass: exit code, no sorry, permitted axioms, and the statement text compared with the paper's | a theorem weakened under the same name passed (chaos) | by hand each time |
+| Statistics | outlier scan of result files with flags EXPLAINED or UNEXPLAINED | asked for at each edition | micro-review brief |
+| Core | summary sentence against its record (counts named in prose checked against the file they come from) | fifteen wrong summary sentences across six editions | micro-review brief |
+
+Not built as Store apps yet: the form a Store app must take in PCP is Director G's ground as much as mine, so the proposal goes to the exchange first; the scripts above keep working meanwhile.
