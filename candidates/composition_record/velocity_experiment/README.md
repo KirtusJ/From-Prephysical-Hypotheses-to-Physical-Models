@@ -21,9 +21,13 @@ The [analyzer and JSON example](analyze_scalar_records.py) use one chronological
 
 ## What can be learned about a phase
 
+A three-tick dark-port calibration transfers a relative sign to an addressed Hadamard when both settings share the same path phase. A second construction uses uniformly applied Hadamards and signed routing to synthesize a heralded reference. Its four-path version succeeds with probability 5/16 and compares two gate signs in nine walk ticks. [Three-tick calibration and its counterexample](a_three_tick_phase_transfer.md) · [Reference circuit, precision bound and nine-tick echo](a_phase_reference_from_synchronized_walks.md)
+
 A five-tick and an eleven-tick echo compare the sum and difference of two addressed phases. Their absolute common sign is unobservable on this apparatus. A separate photonic experiment reported a controlled-Hadamard comparison for its own calibrated optics. Three sign-agreement rates also predict the diffusion coefficient of a rare-write walk when the same fixed rail channel acts at every write. [Two phase echoes](two_address_echoes.md) · [Nine measured optical settings](photonic_phase_data.md) · [Diffusion from three recorded directions](../../../Director_G/Diffusion_from_three_measured_directions.md)
 
 ## Testing the probability rule
+
+When the heralded reference is used in three successive flights, 40 of the 85 possible stopped records have positive mass. Their ordinary probabilities identify exponent one at each reached write if failure and the successful position are scored together. A separate binary herald admits an exact counterfeit. [Stopped records, complete table and competing reader](records_with_a_heralded_reference.md)
 
 The original phase difference also occurs for a nonordinary exponent near 4.665. Three words from one setting distinguish ordinary scoring if a single exponent persists over the three writes. If it can change, the original first write admits a mixture that reproduces all 64 ordinary word probabilities. [Which words identify an exponent](joint_and_conditional_powers.md)
 
