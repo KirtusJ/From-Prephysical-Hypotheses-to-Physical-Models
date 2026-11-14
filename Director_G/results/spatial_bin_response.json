@@ -1,0 +1,111 @@
+{
+  "positions_R_L_numerators": {
+    "-3": [
+      0,
+      1
+    ],
+    "-1": [
+      -1,
+      0
+    ],
+    "1": [
+      2,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "position_squared_norms": {
+    "-3": "1/8",
+    "-1": "1/8",
+    "1": "5/8",
+    "3": "1/8"
+  },
+  "bright_support": {
+    "p": "5/8",
+    "cosine": "1/5",
+    "sin_squared": "24/25",
+    "exact_bad_coefficients": [
+      0,
+      0
+    ],
+    "direct_leakage_below_1e_minus_26": true,
+    "direct_overlap_with_projection_within_2e_minus_13": true
+  },
+  "dark_support": {
+    "p": "3/8",
+    "cosine": "-1/3",
+    "sin_squared": "8/9",
+    "exact_bad_coefficients": [
+      0,
+      0
+    ],
+    "direct_leakage_below_1e_minus_26": true,
+    "direct_overlap_with_projection_within_2e_minus_13": true
+  },
+  "random_bin_sign_rates": [
+    "5/8",
+    "5/8"
+  ],
+  "labels_per_eight_calibrator_preparations": {
+    "bright": 5,
+    "dark": 3
+  },
+  "normalized_square_of_site_norms": "25/28",
+  "mixture_gap": "15/56",
+  "phase_sensitive_counterexample": [
+    "3/4",
+    "1/2"
+  ],
+  "zero_and_one_bin": "one supported ray only; test that boundary directly",
+  "phase_invariance_only_model": "square of the total site mass before choosing rail",
+  "rare_branch_replays": [
+    {
+      "p": "1/2",
+      "ordinary_pairs": 0,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/4",
+      "ordinary_pairs": 0,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/8",
+      "ordinary_pairs": 1,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/16",
+      "ordinary_pairs": 2,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/32",
+      "ordinary_pairs": 3,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/64",
+      "ordinary_pairs": 5,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/1024",
+      "ordinary_pairs": 24,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/32768",
+      "ordinary_pairs": 141,
+      "final_bad_norm_below_1e_minus_12": true
+    },
+    {
+      "p": "1/1048576",
+      "ordinary_pairs": 803,
+      "final_bad_norm_below_1e_minus_12": true
+    }
+  ]
+}

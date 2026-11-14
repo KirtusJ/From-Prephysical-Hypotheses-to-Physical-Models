@@ -1,0 +1,51 @@
+# A two-rail comparison inside a spatial flight
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+A detector can obey the squared-amplitude rule for every isolated two-rail preparation and still assign the wrong probability to a position in a flight. The comparison below tests one actual flight event at a time. The required coherent controls address a position bin and the original sharp source. They do not have to rotate every pair of position modes. The squared norm enters as a prediction computed from the walk’s geometry. Its agreement with a measured frequency is a separate, falsifiable condition. [Two-rail comparison](Three_phase_rail_probability.md) · [Previous many-mode construction with protected records](Protected_records_and_coordinate_weights.md)
+
+## Four preparations and one event
+
+Let $U$ prepare the finite flight $\psi=U|0\rangle$ from a known sharp launch. Include both rails, all occupied positions, and any other coherent degrees of freedom in $U$. Let $P$ be the coordinate projector for the final bin of interest. The number $p=\|P\psi\|^2$ is fixed by the supplied norm-preserving geometry. For $0<p<1$, define two normalized, mutually orthogonal packets
+
+$$g=P\psi/\sqrt p,\qquad b=(I-P)\psi/\sqrt{1-p}.$$
+
+These two *packets* are the logical rails. The support of $g$ or $b$ can contain many position and internal modes. Apply a sign to the whole bin, $S=I-2P$, which changes the relative phase of the two portions. Compare two independent, classical preparation mixtures. The first chooses $\psi$ and $S\psi$ with weights $1/2,1/2$. The second chooses $g$ and $b$ with weights $p,1-p$. Both ensembles have the same kinematic matrix because
+
+$$\tfrac12\bigl[\psi\psi^\dagger+(S\psi)(S\psi)^\dagger\bigr]=pgg^\dagger+(1-p)bb^\dagger.$$
+
+This identity follows by multiplying columns. An unrestricted binary detector law $F$ on preparations need not give the same mean on these two ensembles. For the **same** bin event, compare their measured means to tolerance $e_m$, and compare the individual rates on $\psi$ and $S\psi$ to tolerance $e_s$. Check $F(g)\ge1-\eta_g$ and $F(b)\le\eta_b$ on the separately prepared packets. All rates use original attempts, with losses included under the stated event definition. Then
+
+$$ |F(\psi)-p|\le e_m+e_s/2+p\eta_g+(1-p)\eta_b. $$
+
+Indeed the even mean differs from $F(\psi)$ by at most $e_s/2$, and the reference mean differs from $p$ by at most the indicated endpoint error. Using the measured reference rates directly can give a tighter interval. Independent programmed exposures or stratified averaging can implement the specified weights; a weight error $d$ contributes at most $|d|$ for a binary event. Confidence limits must cover the comparisons being combined. Identical terminal read, preparation equivalence at the tested clock, and stability within the comparison are experimental premises. A hidden history-dependent detector can distinguish an identity-padded flight from an ordinary one. For $p=0$ or $1$, only one supported ray exists; test the corresponding sharp response directly.
+
+A [Lean check](lean/SpatialBinResponse.lean) verifies the additive error propagation in common integer rate units. It makes no assertion that a physical device passes the comparisons.
+
+## Making both reference packets coherently
+
+Suppose one can apply phases $D_P(\phi)=I+(e^{i\phi}-1)P$ and $D_0(\chi)$ on the entire sharp source, and can reverse the complete preparation $U$. Then $D_\psi(\chi)=U D_0(\chi)U^\dagger$ applies the source phase on the ray $\psi$. Both operators preserve $\mathrm{span}(g,b)$. This is the two-dimensional invariant space in amplitude amplification. Here the preparation is a flight and the subsequent experiment measures its record law; amplification alone gives no observed probability. The phase of the complement can be implemented by the inverse bin phase up to a global factor. [Brassard, Høyer, Mosca and Tapp](https://arxiv.org/abs/quant-ph/0005055) · [Høyer on phase matching](https://doi.org/10.1103/PhysRevA.62.052304)
+
+For a marked portion of norm squared $u\ge1/4$, start from the flight. First apply $D_{\rm mark}(\phi)$ and then $D_\psi(\phi)$ with $\cos\phi=1-1/(2u)$. The amplitude of the unwanted portion is multiplied by $1+(e^{i\phi}-1)[1+u(e^{i\phi}-1)]$, which vanishes by the chosen cosine. Thus both reference preparations need just one such pair when $1/4\le p\le3/4$. The phase generally requires more than the fixed cubic knob. With only sign masks and reflections the exact controls can fail. For $u=1/2$ their rotations carry the flight only to rays with equal marked and unmarked moduli, so neither separated reference is reached from it.
+
+For a rarer marked packet set $\theta=\arcsin\sqrt u$ and $j=\lfloor(\pi/2-\theta)/(2\theta)\rfloor$. Up to a common sign, each ordinary pair $D_\psi(\pi)D_{\rm mark}(\pi)$ advances the marked/unmarked vector $(\sin\alpha,\cos\alpha)$ by $2\theta$. After $j$ pairs its angle is $\alpha=(2j+1)\theta$. If it has not reached the marked axis, take a final marked phase with
+
+$$\cos\phi=-\frac{\cos\alpha(1-2u)}{2\sin\alpha\sqrt{u(1-u)}}.$$
+
+For $u<1/4$ one has $0<2\theta<\pi/2$ and $\alpha>\pi/2-2\theta$, giving an admissible cosine. Put $v=\sqrt u\,e^{i\phi}\sin\alpha+\sqrt{1-u}\cos\alpha$. The displayed choice gives $\operatorname{Re}v=\cos\alpha/[2\sqrt{1-u}]$. Hence $e^{i\chi}=1-\cos\alpha/(\sqrt{1-u}\,v)$ has modulus one, and $D_\psi(\chi)$ cancels the unmarked amplitude exactly. There are $O(1/\sqrt{u})$ preparation/reversal pairs for a rare packet. Identity-phase pairs can pad different programs to the same terminal clock if the apparatus implements the inverse and hold stably. Long calibration follows the simulated flight time and is a separate physical cost. In particular an uncontrolled irreversible loss cannot be undone by a programmed inverse.
+
+## A three-tick position test
+
+Start a right-going Hadamard walker at zero on a 16-well ring. Each tick first applies $H$ and then shifts its two outputs one site in opposite directions. For $x=-3,-1,1,3$ the ordered R,L numerators after three ticks are $(0,1),(-1,0),(2,1),(1,0)$, over $\sqrt8$. For $P=\mathbf1_{x=1}$ the squared population is $5/8$. Sign the two rails together at $x=1$. Use $\cos\phi=1/5$ to prepare the in-bin reference and $-1/3$ to prepare the out-of-bin reference. The bare and sign-reversed trials need one identity-padded phase pair to match the reference clock. The source oracle applies its phase only at $(0,R)$, between three inverse and three forward walk ticks. Reversing each tick undoes first the conditional shifts and then the coin.
+
+For comparison set $w_x=\sum_c|\psi(x,c)|^2$. Let an alternative sample position with weights $w_x^2/\sum_yw_y^2$, then choose its rail using the ordinary conditional proportions within that position. It agrees with every single-site rail test, including sharp poles and all rotated rail preparations. It also gives identical position probabilities on $\psi$ and $S\psi$, and is sharp on the two reference packets. But its in-bin rate is $25/28$, giving a mixture discrepancy of $15/56$ per launch. Conversely an unrestricted ray response can assign $3/4$ and $1/2$ to $\psi$ and $S\psi$, give the sharp values on the endpoints, and continue the ordinary values elsewhere. Its mixture discrepancy vanishes while its sign comparison fails by $1/4$. The tests therefore cover distinct alternatives. The [checker](check_spatial_bin_response.py) propagates the actual 32-port walk, inverse and phase masks; it also proves the single-pair cancellation identities over rational coefficients and retains nine rare-packet boundaries. [Replay results](results/spatial_bin_response.json)
+
+## A conditional flight and its denominator
+
+For a candidate preparation word $H_0$ with kinematic weight $Y>0$, let $C\subset H_0$ also impose a chosen terminal tube or a predicate on a finite record of positions. Copy the measured predicate bits coherently into initially blank pointers and include their controls and retained environments in the full $U$. Testing the two bin comparisons for $H_0$ and $C$ gives unconditional errors $b_H,b_C$. If the physically read records represent those same pointer events and $b_H<Y$, ordinary conditionalization gives
+
+$$\left|\Pr(C\mid H_0)-\frac{\|P_C\psi\|^2}{Y}\right|\le\frac{b_C+b_H}{Y-b_H}.$$
+
+No independence of the two inferred error bounds is required if they hold simultaneously. A vanishing-yield source requires errors $o(Y)$ to guarantee transfer uniformly by this bound. At errors of order $Y$, one can keep the accepted fraction $Y$ and change the split of the accepted group by a fixed fraction. For example, increasing a nominal $Y/2$ joint rate to $3Y/4$ and decreasing its accepted complement accordingly changes the conditional rate by $1/4$ even while the unconditional discrepancy vanishes with $Y$.
+
+For the program’s prepared two-ray flight the calculation can be applied separately to acceptance, membership in each of the two tubes, and escape from their union. For successive finite readings choose predicates on *whole records* that constrain one path to follow one ray. Marginal tests at each time allow switches between rays. The packet estimates, time and length assignments, order of limits and tightness of records come from the flight theorem. Transferring its result requires the comparison errors on the needed predicates to shrink relative to the preparation yield, plus evidence that the actual experiment implements those pointers and phase controls on the same flight. The bin comparison supplies a finite operational target for those obligations. [Transfer from the phase witness](Phase_witness_and_flight.md) · [Repeated position records and Newtonian tracks](Sequential_position_records.md)
