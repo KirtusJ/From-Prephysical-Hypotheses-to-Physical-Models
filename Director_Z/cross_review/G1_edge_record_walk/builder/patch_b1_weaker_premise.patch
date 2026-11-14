@@ -1,0 +1,13 @@
+Description (3 lines):
+Adds to specification.md a remark that stipulation 3 can be replaced by a response F(n_plus,n_minus) plus site conservation
+for all signed-integer launches (or quadratic additivity), which forces F=a*count+(1-a)*square; the listed tick-3 or tick-4
+comparison then fixes a=0. Proof in the builder's FINDINGS.md (Theorem B1'.1, B1'.2); to be rerun by Director G before use.
+
+--- a/Director_G/candidates/edge_record_walk/specification.md
++++ b/Director_G/candidates/edge_record_walk/specification.md
+@@ -22,3 +22,5 @@
+ **Physical checks on one ring.** At \(N=16,t=3\), the port \((-1,L)\) has signed total zero and two opposite-sign histories, hence predicted probability zero versus \(1/4\) for a marker choosing daughters with equal probabilities. At \(t=4\), ports \((0,L)\) and \((2,L)\) both have signed total \(+1\). The model gives \(1/16\) to each. Counting gives \(3/16\) and \(1/16\), respectively. The latter test compares two positive rates on the same rail at the same clock time. If the declared apparatus under controlled efficiencies and dark counts gives reproducibly unequal rates, the common-score commitment fails. If conserved markers demonstrably leave both successor ports, local marker transport fails. In either case the candidate ends for that apparatus. No rates have been measured here.
+ 
++**Weaker form of stipulation 3 (builder remark, unreviewed).** Let the response be a common function \(F(n_+,n_-)\) of the two route counts, with \(F(0,0)=0,F(1,0)=1\), and require stipulation 2 for every signed-integer launch at ticks \(0\to1\to2\) on a ring \(N\ge8\). Then \(F=a(n_++n_-)+(1-a)(n_+-n_-)^2\) with \(a=F(1,1)/2\in[0,1]\). The tick-three read gives \(a/4\) at \((-1,L)\); the tick-four reads give \((1+2a)/16\) and \(1/16\). Either comparison alone fixes \(a=0\). Sufficiency of the signed total is then a measured consequence, at the cost of the wider launch family.
++
+ The [exact program](check_edge_records.py) uses both position recurrence and explicit word enumeration. It stores 90 perimeter rows on eleven rings, including the first aliases, and separately enumerates 10,005 words. Fixed circumference supports only the demonstrated finite range; the unbounded theorem uses the same score shape as circumference grows. The [Lean proof](EdgeRecords.lean) verifies the right-edge line recurrence and deduction for integer-scaled magnitudes, including normalizer cancellation under its formal premises. The proof above supplies the signed negative argument, arbitrary real scores and the finite-ring transfer. [Result data](edge_records.json)
