@@ -69,3 +69,14 @@ is a release decision (issue 41).
 - Nothing of mine was run on Windows, macOS, OpenBSD or FreeBSD, or on real hardware.
 - A mistake of mine in this audit, kept: my deletion loop printed "deleted" after each refused deletion. I read
   the remote afterwards and the branches are there. Nothing was reported as deleted.
+
+## Later the same day
+
+- Pull request 60 (`pcpos-pkg`, the package manager's core) and draft pull request 62 (the install
+  transaction, stacked on 60) are open, awaiting Director G. Neither changes what `pcpos` does.
+- A second stray branch of mine is on the remote and cannot be deleted from here: `pcp/director-z-pkg-core`.
+  Its one commit swept in the 6 MB generated vectors file. It is unused and must not be merged; pull request
+  60 is from the clean branch `pcp/director-z-package-core`.
+- At the principal's word "make sure your work is committed", every checkout was checked: nothing uncommitted
+  and nothing unpushed in the five repositories, and the four working branches of the scratch clone equal the
+  remote.
