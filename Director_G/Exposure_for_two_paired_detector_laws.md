@@ -1,8 +1,8 @@
 # Exposure needed to distinguish the two finite-budget detectors
 
-Research note for Director G, prepared by OpenAI Codex for Kirtus Justus. Gate OP-27.
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement prepared by OpenAI Codex for Director G.
 
-At the common moment budget $M=10^{-8}$, compare exactly two specified populations: the [global tent](Finite_moment_transfer_between_calibrated_masses.md) and the [gap-local tent](Local_response_at_the_selected_gap.md). They have different node-pair scores but identical single-hit probabilities. What can be distinguished using the entire two-bit record at routed masses?
+The global and gap-local tent populations predict different paired-read scores and identical single-hit rates. Set each population's aggregate weighted mean squared node error to exactly $M=10^{-8}$ using its specified mixing weight. How many complete pairs at routed masses distinguish the two laws? If $M$ were merely an upper limit on an unspecified mixing weight's moment, both families would include the same zero-weight law. The exposure bounds below apply to the two fully specified populations. [Global tent](Finite_moment_transfer_between_calibrated_masses.md) · [Gap-local tent](Local_response_at_the_selected_gap.md)
 
 **Protocol.** Draw a fresh independent detector type for each pair. Choose its mass using only past observations and independent randomness. Read that mass twice on the shared type with independent binary outcomes conditional on type. Retain both incident outcomes. Assign equal prior probability to the two populations and measure average classification error. The result applies to a fixed number of pairs or a hard exposure cap. Persistent types across pairs, side information about type, unequal masses within a pair, off-menu preparations and missing outcomes require separate analyses.
 
@@ -16,7 +16,7 @@ Let $\rho_s=\sum_z\sqrt{P_s(z)Q_s(z)}$, and $r=\min_s\rho_s$ over the allowed no
 
 ## Fixed-cap decision bounds
 
-For any common adaptive or randomized mass-selection policy, the affinity of the joint transcripts through $N$ pairs is at least $r^N$. Given a common history, the policy uses the same distribution over next masses under either hypothesis. The one-step affinity of the mass and outcome is a weighted average of the node affinities, hence at least $r$. Multiply by the square-root product of the two history probabilities and sum to obtain the recursion. An earlier stopping rule with a deterministic cap can be padded after stopping.
+For any common adaptive or randomized mass-selection policy, the affinity of the joint transcripts through $N$ pairs is at least $r^N$. Include the chosen masses in the transcript. Private randomization can be included as an independent seed with the same law under both hypotheses. Given a common history, the policy uses the same distribution over next masses under either hypothesis. The one-step affinity of the mass and outcome is a weighted average of the node affinities, hence at least $r$. Multiply by the square-root product of the two history probabilities and sum to obtain the recursion. Padding a stopped transcript with a common dummy symbol up to a deterministic cap preserves its decision. Discarding masses or seeds cannot improve the optimal decision based on the full transcript.
 
 For transcript laws $P,Q$ of affinity $A$, Cauchy–Schwarz applied to the factors $\sqrt P-\sqrt Q$ and $\sqrt P+\sqrt Q$ gives $\mathrm{TV}(P,Q)\le\sqrt{1-A^2}$. Equal-prior optimal error is $(1-\mathrm{TV})/2$. Thus any protocol with average error at most 5% needs $r^{2N}\le0.19$. Conversely, always preparing an affinity-minimizing node gives transcript affinity $r^N$; the likelihood-ratio rule has error at most $r^N/2$ since $\min(p,q)\le\sqrt{pq}$. Therefore $r^N\le0.1$ suffices. [Background on affinity bounds in testing](https://www2.isye.gatech.edu/~nemirovs/LMCOLN2023Spring.pdf)
 

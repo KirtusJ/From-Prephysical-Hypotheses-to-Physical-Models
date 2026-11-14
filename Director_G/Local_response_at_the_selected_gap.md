@@ -1,6 +1,6 @@
 # Localizing the response around the selected mass gap
 
-Research supplement for Director G, prepared by OpenAI Codex for Kirtus Justus. Gate OP-27.
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement prepared by OpenAI Codex for Director G.
 
 On the tick-256 menu the [finite-moment bound](Finite_moment_transfer_between_calibrated_masses.md) gives an attainable square-root coefficient of about 1.230 using a single tent across the lower half. The detector below uses its hidden state to center the tent around the winning gap. It gives a coefficient of about 1.956, with an observable change in the distribution of paired errors.
 
@@ -26,4 +26,4 @@ The mean signed bias is exactly $B_0+\epsilon G$ and the aggregate paired moment
 
 The [rational checker](check_gap_local_response.py) sums over all 11 active gaps and integrates each affine edge strip independently as a cross-check. It gives $H\approx0.000731481676$ and $G/\sqrt H\approx1.956009335$. At $M=10^{-8}$ the selected bias is about **2.001824 percentage points**. The earlier upper bound is about **2.150342 points** at this budget. The sharp coefficient remains open.
 
-Under this construction the centered pair score at node $x_j$ is $M\sum_i p_i f_i(x_j)^2/H$. Exactly 21 of 32 interior lower-half nodes have a positive score. At the routed mass $0.260644776272\ldots$ the score is approximately $3.1642773 M$. At the interior mass $0.000573654881\ldots$ it is zero, whereas the global tent predicts a positive score at every interior node for $M>0$. The distinction is a population prediction; no finite-exposure resolving power or physical target-selection mechanism has been established.
+Under this construction the centered pair score at node $x_j$ is $M\sum_i p_i f_i(x_j)^2/H$. Exactly 21 of 32 interior lower-half nodes have a positive score. At the routed mass $0.260644776272\ldots$ the score is approximately $3.1642773 M$. At the interior mass $0.000573654881\ldots$ it is zero, whereas the global tent predicts a positive score at every interior node for $M>0$. These predictions permit a finite-exposure comparison of the two specified populations at the same known $M$. Preparing the off-menu science target from the hidden type remains a separate physical requirement. [Exposure for two paired detector laws](Exposure_for_two_paired_detector_laws.md)
