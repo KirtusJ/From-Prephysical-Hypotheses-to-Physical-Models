@@ -1,0 +1,62 @@
+{
+  "panels": {
+    "which_way": {
+      "source": "counts.npy",
+      "sha256": "32c3ddacdb1476db9234bd41318c2650497a1ac9e5d31de694c46c06d3347895",
+      "counts": {
+        "00": 2082,
+        "01": 2100,
+        "10": 1874,
+        "11": 2136
+      },
+      "rates": {
+        "system_zero": "989/2048",
+        "agreement": "2109/4096",
+        "system_zero_given_record_zero": "347/697",
+        "system_zero_given_record_one": "937/2005"
+      }
+    },
+    "erased": {
+      "source": "counts2.npy",
+      "sha256": "cdd4cd90545216c9e9c157303d5914240e7715f01835129b2a9af8ecf67e384c",
+      "counts": {
+        "00": 3854,
+        "01": 169,
+        "10": 163,
+        "11": 4006
+      },
+      "rates": {
+        "system_zero": "4017/8192",
+        "agreement": "1965/2048",
+        "system_zero_given_record_zero": "3854/4023",
+        "system_zero_given_record_one": "163/4169"
+      }
+    }
+  },
+  "differences": {
+    "system_zero": {
+      "on_minus_off": "61/8192",
+      "individual_95pct_Hoeffding_interval": [
+        -0.01377404712094718,
+        0.02866662524594718
+      ]
+    },
+    "agreement": {
+      "on_minus_off": "1821/4096",
+      "individual_95pct_Hoeffding_interval": [
+        0.4233597419415528,
+        0.4658004143084472
+      ]
+    }
+  },
+  "hypothetical_record_zero_rate": {
+    "Z": {
+      "global_square": "2/3",
+      "rowwise_square": "1/2"
+    },
+    "X": {
+      "global_square": "1/3",
+      "rowwise_square": "1/2"
+    }
+  }
+}
