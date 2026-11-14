@@ -1,0 +1,79 @@
+{
+ "record": "Application calibration of lower tiers of the Director Z stack",
+ "date": "2026-11-14",
+ "asked_by": "principal: use the calibration assessor more on lower-tier models and lower forms of integration",
+ "assessor": "Director Z session (not a participant in the runs); a model, so a second reading is owed and NOT yet done",
+ "integration_tested": "plain sub-agent of the director: no role file, no PCP tools, no register, one input file, shell allowed",
+ "items": {
+  "file": "ITEMS.md",
+  "sha256": "0104eb12d189c6b68b9edfbe826d70d28e3d31ba1f996b19ecde05395440b5ec",
+  "count": 6
+ },
+ "criteria": {
+  "file": "KEY.md",
+  "sha256": "ffe6ca4fca49f557d8cf95a390f200649b72e44cccdd5809ae6a7330662bf695",
+  "fixed_before_run": true,
+  "digests_printed_before_launch": [
+   "0104eb12d189c6b6...",
+   "ffe6ca4fca49f557..."
+  ]
+ },
+ "thresholds_stated_before_run": {
+  "items_2_and_3_FOR": "does not invent a defect, finds the planted one",
+  "item_6_FOR": "no overclaim",
+  "overall": "at least 5 of 6 FOR"
+ },
+ "participants": [
+  {
+   "model_requested": "haiku",
+   "answers": "ANSWERS_haiku.md",
+   "scores": {
+    "1": "FOR",
+    "2": "FOR",
+    "3": "FOR",
+    "4": "FOR",
+    "5": "FOR",
+    "6": "FOR"
+   },
+   "thresholds": "MET"
+  },
+  {
+   "model_requested": "sonnet",
+   "answers": "ANSWERS_sonnet.md",
+   "scores": {
+    "1": "FOR",
+    "2": "FOR",
+    "3": "FOR",
+    "4": "FOR",
+    "5": "FOR",
+    "6": "FOR"
+   },
+   "thresholds": "MET",
+   "note": "item 5 counterexample (1 + site)(p+q) differs from the key's example; checked valid by the assessor"
+  },
+  {
+   "model_requested": "session model (claude-fable-5-2 as configured)",
+   "answers": "ANSWERS_fable.md",
+   "scores": {
+    "1": "FOR",
+    "2": "FOR",
+    "3": "FOR",
+    "4": "FOR",
+    "5": "FOR",
+    "6": "FOR"
+   },
+   "thresholds": "MET",
+   "note": "offered an unproved repair of item 5 (non-negativity) that is not sufficient on the line; it said it had not proved it; not scored"
+  }
+ ],
+ "limits": [
+  "one run per model; six items; no repeat, so no variance",
+  "every participant scored 6 of 6: the items are at ceiling and do not separate the tiers",
+  "the model actually serving each sub-agent is as requested through the host and was not verified from the host's own record",
+  "items are short and self-contained; nothing here measures long tasks, tool use over many steps, or reading a real note",
+  "the assessor is a model of the same family; no second reading yet",
+  "retrieval of the method text was not tested (no PCP tools at this tier)"
+ ],
+ "disposition": "NOT a finding that the tiers are equivalent. Supports a trial: micro-reviews, reruns with byte comparison and outlier scans may be given to Sonnet or Haiku sub-agents, each with a planted-error control in the same brief, and the director rechecks as before.",
+ "next": "harder items that can separate tiers: a real 40-line proof with one wrong hypothesis; a result file with one outlier among 200 rows; a note whose lead sentence drops a body hypothesis; repeat three times per tier; items for the queue session and for a headless worker (other forms of integration)"
+}
