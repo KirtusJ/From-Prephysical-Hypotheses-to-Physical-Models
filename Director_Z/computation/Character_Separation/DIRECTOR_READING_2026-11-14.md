@@ -21,3 +21,12 @@ Not checked by me: table.py was not rerun in this reading (the builder reports a
 claim until rerun). P4 is not reached by computation for N = 7, 9, 11, 12; there the least length rests on Prop 2(a).
 
 Sent to a formalizer the same day: Prop 3(a), Prop 3(b) and the modulus identity.
+
+Follow-up, same day: table.py rerun by the director in a fresh directory. A first attempt did not run (exit 127, a missing timing tool; kept as a failed attempt). Second attempt:
+
+```
+exit 0 seconds 47
+03bcd177b8c48c23079a54309a84b2086dc1aa0143bdd6ae0e4131219adae7b0  table_result.json
+```
+
+Filed digest of table_result.json: 03bcd177b8c48c23079a54309a84b2086dc1aa0143bdd6ae0e4131219adae7b0.
