@@ -6979,5 +6979,77 @@
       "results/origin_sink_data.json": "9519f04a9251d1bdb76a2042adc13ef402c32fc3b8d869a8c293ec246f3f254e"
     },
     "standing": "The authors' figure raster reproduces all 18 pairs of expanded cap intervals. Tick 34 supplies both fixed-launch-mixture upper bounds. The result assumes equal reference response and a fixed fraction across optical settings. The graphical ranges carry no confidence level."
+  },
+  "forward_cut": {
+    "paper": "Certifying_a_position_read_with_three_forward_ticks.md",
+    "checker": "check_forward_cut.py",
+    "result": "results/forward_cut.json",
+    "lean": "lean/ForwardCut.lean",
+    "sha256": {
+      "check_forward_cut.py": "45bf56c5d432270d2ffa012cabf8c44577f19bd6bbef2a1e4714c7a7683b530d",
+      "results/forward_cut.json": "05771929da7ea176c31741c23dde49c3b575b24d71041a6aaa537f5074a9ed22",
+      "lean/ForwardCut.lean": "6d4a8c73d0736dc9d906b8e16cf7b8b943b1ddaec588b0d60d3073661186dbad"
+    },
+    "standing": "Physical paths and a masked recurrence agree at all starts and cuts for 3 through 40 wells. Exact identification requires faithful joint support."
+  },
+  "forward_source_site": {
+    "paper": "Certifying_a_position_read_by_return_to_the_launch_well.md",
+    "checker": "check_forward_source_site.py",
+    "result": "results/forward_source_site.json",
+    "lean": "lean/ForwardCut.lean",
+    "sha256": {
+      "check_forward_source_site.py": "cbe1b56d183b750459932b22d6d50e99248fde3add48ef144564db37eb0c3463",
+      "results/forward_source_site.json": "a95adc5e3cfa64eda4604e1a7188120e5e18c629e7e924af028763965dee25a6",
+      "lean/ForwardCut.lean": "6d4a8c73d0736dc9d906b8e16cf7b8b943b1ddaec588b0d60d3073661186dbad"
+    },
+    "standing": "All four-step coefficients checked on 4 through 32 wells. Original-well read sums both rails and assumes ordinary probabilities."
+  },
+  "exchangeable_words": {
+    "paper": "When_two_walk_records_determine_the_law_of_many_copies.md",
+    "checker": "check_exchangeable_words.py",
+    "result": "results/exchangeable_words.json",
+    "lean": "lean/ExchangeableWord.lean",
+    "sha256": {
+      "check_exchangeable_words.py": "cfe9d888f5fb056b656a58bf58f0f879799e423c12be3ca6c0c0d1981b90ad59",
+      "results/exchangeable_words.json": "799e6f1121acc446c99c1a732623d48a894546dcb0a02140fb071b33a8752780",
+      "lean/ExchangeableWord.lean": "90352dc830ad1ec67279636485ba7cadd65703a29d92d5ebeb9e4e6aecb73479"
+    },
+    "standing": "The full signed-word table and nine-bank obstruction replayed. Infinite consistent exchangeable extension is a separate premise."
+  },
+  "five_sheet_success_spectrum": {
+    "paper": "Four_prefixes_of_the_five_sheet_walk.md",
+    "checker": "check_five_sheet_success_spectrum.py",
+    "result": "results/five_sheet_success_spectrum.json",
+    "lean": "lean/FiveSheetSuccessSpectrum.lean",
+    "sha256": {
+      "check_five_sheet_success_spectrum.py": "ab748b55e6cd74e36c1c15a5c662794fd06cbd33f439bff2dedbe23aed24c79e",
+      "results/five_sheet_success_spectrum.json": "bf1831452949f6e2d2c24abdd8f64cb887dc33554e2071d7a357d340e5e7f0cb",
+      "lean/FiveSheetSuccessSpectrum.lean": "1f0bf5fb23727a0643e0d3d3e33b30db07c1cd3ba17ee5569fcd155d03e80428"
+    },
+    "standing": "Five-sheet herald and first five continuations checked. A three-rate competitor fits the first three moments."
+  },
+  "forward_power_scale": {
+    "paper": "From_five_forward_ticks_to_a_coherent_position_read.md",
+    "checker": "check_forward_power_scale.py",
+    "result": "results/forward_power_scale.json",
+    "lean": "lean/ForwardPowerScale.lean",
+    "sha256": {
+      "check_forward_power_scale.py": "72c60b624082bef5dc7b535198fc5cf12d7615b19893c1b45dbe7c43b001d147",
+      "results/forward_power_scale.json": "aaf95cfa839863d3155800d25ce9e9cff1399d1deec75f7c4fa861c02e1bae7d",
+      "lean/ForwardPowerScale.lean": "d4d8ca9f499c657e2acedd605c493b332213668d8fe28324854d43dd0d63c6ff"
+    },
+    "standing": "All 32 direction words and the three scored masses checked. Transfer requires a common powered readout population with known cells."
+  },
+  "origin_sink_write_rate": {
+    "paper": "Independent_position_writes_in_an_absorbing_walk.md",
+    "checker": "check_origin_sink_write_rate.py",
+    "result": "results/origin_sink_write_rate.json",
+    "sha256": {
+      "check_origin_sink_write_rate.py": "4d988735e43ed684c048b40db025eb92da3360d79c1c9ecd58ea1d48b5643b1b",
+      "results/origin_sink_write_rate.json": "d0ef6068a2f6415f24297736838a3dc626cecc045771f25ee2ed2f3bb32a662f",
+      "check_origin_sink_data.py": "181bd7133307355decfeb02a2b26b0e193373001acb67d9c0030dbd6c91a0c37",
+      "results/origin_sink_data.json": "9519f04a9251d1bdb76a2042adc13ef402c32fc3b8d869a8c293ec246f3f254e"
+    },
+    "standing": "Interpolated integer density-matrix results bound independent full-site writes at all 18 even clocks. The plotted bars give conditional envelope compatibility."
   }
 }
