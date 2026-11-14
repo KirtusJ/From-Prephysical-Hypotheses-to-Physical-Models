@@ -1,0 +1,36 @@
+# Choosing a science preparation from a binary pilot read
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+A detector can be calibrated at every fixed mass and still bias a preparation chosen from its previous records. For the uniform single-gap threshold rival, one binary pilot permits an exact positive bias of $h^2/2$, where $h$ is the gap width. The policy needs two possible science preparations. The observable is the mean of $Y-S$ over every completed protocol, with $Y$ the science hit indicator and $S$ the mass actually selected. The ordinary detector with fresh Bernoulli noise predicts zero. [Single-gap construction](Hidden_threshold_between_calibrated_masses.md) · [Shared-type paired-read assumptions](Paired_reads_for_a_type_dependent_target.md)
+
+## A freely supplied bit
+
+Let $[a,b]$ be a gap in the lower half of the mass menu, $h=b-a>0$, and $U$ a detector type uniform on $(0,1)$. For a target $s=a+hx$, $0\le x\le1$, the response probability is $g_U(s)=a+h\mathbf 1_{U\le x}$. Endpoint values agree almost surely. Reflection gives $g_U(1-s)=1-g_U(s)$, and the response is ordinary elsewhere. For each fixed $s$, $\mathbb E g_U(s)=s$. The convention on an individual threshold has zero probability for any finite menu of fixed actions. This is the two-endpoint unbiased rounding law with a threshold shared across trials. [Connolly, Higham and Mary](https://doi.org/10.1137/20M1334796)
+
+Suppose the preparer can obtain a single bit of its choosing about $U$, and has a menu of just two fixed science actions. Write $X_0,X_1$ for their response probabilities minus their target masses. Each has zero mean. Selection earns at most $\mathbb E\max(X_0,X_1)=\mathbb E|X_0-X_1|/2$. Each active action has $\mathbb E|X_i|=2hx(1-x)\le h/2$, including either reflection, and inactive actions have zero error. The bound is therefore $h/2$. At $c=(a+b)/2$, ask whether $U\le1/2$. Choose $c$ on yes and $1-c$ on no. The selected response exceeds its target by exactly $h/2$ on every type. This establishes what a perfectly informative bit could do. The next protocol specifies a physical observation that can supply partial information.
+
+## One or more pilot launches at one fixed mass
+
+Fix $z=a+hp$. Make $m\ge1$ conditionally independent pilot reads of $z$ with the same persistent $U$. The final science draw has conditional mean $g_U(S)$ given $U$ and the pilot record. The preparer may choose any target mass using that record and independent randomization. Write $P_b(k)$ and $P_a(k)$ for the binomial probabilities of $k$ hits in $m$ trials with success rates $b$ and $a$. All pilot strings with the same count have the same likelihood under either side of the split $U\le p$.
+
+For a lower-gap action $s=a+hx$, its contribution on count $k$ to the unconditional bias is
+
+$$
+\mathbb E[(g_U(s)-s)\mathbf1_{K=k}]
+=h\,[P_b(k)-P_a(k)]\,[\min(x,p)-xp].
+$$
+
+To obtain this identity, integrate $\mathbf1_{U\le x}-x$ against the count likelihood. The constant term $P_a(k)$ integrates to zero. Its integral restricted to $U\le p$ is $\min(x,p)-xp$. The bracket increases up to $x=p$ and decreases thereafter. Reflecting the target reverses its sign. Thus $z$ and $1-z$ suffice even when every science mass is available. Choose $z$ when $P_b(k)>P_a(k)$ and $1-z$ when the inequality reverses. Ties give zero contribution for either choice. This maximizes each count's contribution separately, including among randomized decisions.
+
+The maximum at $z$ is $2hp(1-p)\operatorname{TV}(\mathrm{Bin}(m,a),\mathrm{Bin}(m,b))$, where total variation is half the sum of absolute differences of the count probabilities. A pilot outside the two active gaps reveals nothing. A pilot in the reflected gap amounts to exchanging hit and miss. The total variation factor is independent of $p$, so the best fixed pilot lies at the midpoint or its reflection. For one pilot its value is $b-a$, giving $h^2/2$. A hit at $c$ selects $c$ and a miss selects $1-c$. For increasing $m$, the two sample means concentrate at distinct points, so total variation tends to one by testing whether the pilot hit fraction exceeds $(a+b)/2$. The optimal bias from repeats at a single mass tends to $h/2$. The earlier $3h/4$ single-gap construction gave the preparer the full threshold and a continuum of actions. Choosing several different pilot masses is outside the fixed-pilot result.
+
+## Controls and preparation cost
+
+Every routed node, including $a$ and $b$, has the same response for every type. Any number of conditionally independent pilots confined to those nodes therefore gives zero science bias. An independent redraw of the science type after the pilots also gives zero, since each fixed science mass has its ordinary population mean. Under the stipulated rival, randomizing between endpoint preparations with mean $c$ yields a type-independent pilot and gives zero, even if the preparer retains which endpoint was used. The proposed test requires a preparation whose *pooled kinematic mass* is $c$ within each pilot run, its reflected science preparation, persistence across the block, and a fresh science draw with the stated conditional mean. An unrecorded loss or a type altered by a pilot would require a different model.
+
+For the largest gap in the recorded tick-256 lower-half mesh, $a=0.239027918813\ldots$, $b=0.260644776272\ldots$ and $c=0.249836347542\ldots$. A single pilot can produce **0.0233644 percentage points** of signed bias in this rival, compared with **1.08084 percentage points** for the freely supplied bit. [Routed mask data](results/echo_probability_map.json)
+
+The two bounding shell masks $A,B$ have input effects $E_A=aI$ and $E_B=bI$ on the two launch rails. One extra balanced address bit prepares the midpoint kinematically. Put a blank address into $(|0\rangle+|1\rangle)/\sqrt2$ independently of the walk and hold it through the read. Write a single success flag if the final radius belongs to $A$ in address 0 or to $B$ in address 1. Pool the entire success sector before applying the specified response $g_U$, leaving the two address states orthogonal. The flag Gram on the original input rails is $(E_A+E_B)/2=cI$. The actual masks share 36 radii. Each shared radius contributes in both address sectors with half its original weight in each. Flipping just the success flag gives $(1-c)I$ for the reflected preparation. The [exact checker](check_threshold_pilot.py) propagates both input columns through the 256-tick walk and sums their site Grams separately in all four address/flag sectors.
+
+The pooled-read premise can fail even for that circuit. If the meter first resolves the address and then applies the endpoint responses within each normalized address branch, it returns $(g_U(a)+g_U(b))/2=c$ on every type. The pilot then carries no threshold information. A physical test needs the balanced blank address, conditional mask routing and the stated order of pooling and response. The calculation supplies a preparation under those operations. Realizing the apparatus and comparing its rates with observations remain open obligations for P5 (probability rule) and P11 (empirical correspondence).
