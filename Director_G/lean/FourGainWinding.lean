@@ -49,4 +49,13 @@ theorem hits_zero (z : Nat → Int) (n : Nat) (start : 0 < z 0) (finish : z n �
     · have := slow n (by omega)
       exact ⟨n+1, by omega, by omega⟩
 
+/-- The shifted wires start and finish strictly on opposite sides. -/
+theorem interior_crossing (z : Nat → Int) (n : Nat) (start : 0 < z 0)
+    (finish : z n < 0) (slow : ∀ i, i < n → z i ≤ z (i+1) + 1) :
+    ∃ i, 0 < i ∧ i < n ∧ z i = 0 := by
+  obtain ⟨i, le, h⟩ := hits_zero z n start (by omega) slow
+  have hn : i ≠ n := by intro e; subst i; omega
+  have hz : i ≠ 0 := by intro e; subst i; omega
+  exact ⟨i, by omega, by omega, h⟩
+
 end FourGainWinding
