@@ -59,12 +59,14 @@ same model family as the writer, or Director G where named; none is independent 
 |---|---|---|---|
 | D1 | With no screen the weights of all readings at one tick sum to 1 | T3 makes the coin unitary; paper G10, norm-preserving digraphs | proved; in the issued paper |
 | D2 | The tally of a history depends only on its length, its final rail, its number of left steps and its number of L-to-L steps: tally = a^t (a/c)^e B^l H^m | Draft, Lemma (word gain); the identity is Director G's | proved; hand-checked by the director; computed on 81,840 words |
-| D3 | Every weight depends on the world (C, a, b, c, d, chi) only through Re(omega) | Draft, Proposition (what the statistics can depend on), with T4 | proved; challenger in progress |
-| D4 | Re(omega) is read: the fork event has weight 2^-(M+1) (2 + 2 (-1)^(M-1) Re omega); and no run of M ticks or fewer reads anything about the voice | Draft, Proposition (what is read) and Corollary (complete list); fork event Director G's | proved; boundary review done; challenger in progress |
-| D5 | Two worlds with voices chi and its complex conjugate have the same weights for every instrument | Draft, Corollary (conjugate character) | proved; challenger in progress |
+| D3 | Every weight depends on the world (C, a, b, c, d, chi) only through Re(omega) | Draft, Proposition (what the statistics can depend on), with T4 | proved; challenged, no defect found in range |
+| D4 | Re(omega) is read: the fork event has weight 2^-(M+1) (2 + 2 (-1)^(M-1) Re omega); and no run of M ticks or fewer reads anything about the voice | Draft, Proposition (what is read) and Corollary (complete list); fork event Director G's | proved; boundary review done; challenged, no defect found in range |
+| D5 | Two worlds with voices chi and its complex conjugate have the same weights for every instrument | Draft, Corollary (conjugate character) | proved; challenged, no defect found in range |
 | D6 | Two worlds with different groups C and the same Re(omega) have the same weights for every instrument | Draft, Corollary (complete list), "of the same or of different gain groups" | proved; challenged on 23 pairs only (thin) |
 | D7 | Rings of N = 4, 3, 5 places together fix chi(B) up to complex conjugation; no two ring sizes of 3 or more do so for every value | Draft, Proposition (several rings) | proved; checked in Lean (`Director_Z/lean/CharSeparation.lean`) |
 | D8 | Under T7 no part of a run can start from a state that reads more than D3 allows: whatever screens and steps produce carries a factor that cancels chi(c/a) | Draft, Proposition (the walk cannot prepare) | proved; algebra in Lean (`Director_Z/lean/TwoRail.lean`); challenger found no defect in range |
+
+| D9 | T3 can be tested from inside: with no screen, the reading (tick 3, place -1, rail L) has weight (1 + Re chi(H))/4, which is zero exactly when T3 holds | Draft, Remark (a), from the computation in the proof of Proposition (what is read)(i); found by the challenger, 193 of 193 carriers, and checked by hand by the director | proved |
 
 Not derived, and marked so that it is not mistaken for a result of the candidate:
 
@@ -92,13 +94,13 @@ Named in advance; each is an attack the director intends to make or to commissio
 4. **T6 and T3 leave nothing to explain.** The candidate cannot be an explanation of anything it stipulates.
    An attacker who shows that every interesting consequence is a consequence of T3 and T6 alone, with T2 idle,
    shows that the tallies are decoration.
-5. **D6 is thinly tested** and D3 to D5 await their challenger.
+5. **D6 is thinly tested.** D3 to D5 have since been challenged from the draft text (rings of 3 to 10 places for the named events, exhaustive screens on rings of 3 to 5): no defect found in range; six corrections to wording were made, one of which became D9.
 6. **No classical limit, no dynamics of more than one walker, no gravity-like or field-like content** is
    stipulated or derived. As a universe it is very small, and stipulated answers to large questions will
    mostly have to be SILENT.
 
 ## 5. Status in one line
 
-Seven stipulations written; eight derived statements, two in the issued paper or machine-checked, six in a
-draft whose challenger has not reported; six lines of attack named, none yet carried out. The candidate stands
+Seven stipulations written; nine derived statements, two in the issued paper or machine-checked, seven in a
+draft that has had one challenger (same model family); six lines of attack named, none yet carried out. The candidate stands
 only in the sense that it has not been attacked.

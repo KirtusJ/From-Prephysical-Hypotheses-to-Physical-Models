@@ -1,0 +1,96 @@
+C0 control: 32*P as cyclotomic vector canon = (8, 0, 0, 0) ; expected 8 (P=1/4)
+named formulas done
+Ra: qualifying pairs 14340 ; first counterexamples for proper subsets (K,j,j'): {'23': (12, 1, 5), '35': (15, 1, 4), '25': (20, 1, 9)}
+Rc: pairs failing when gcd(M,q)>1 (outside hypothesis, informative): 41872
+PREP, LINE done
+DP check done
+N=3 K=12 Lmax=5: data 132, eta real 77, eta=-1&n=1 40, sharp unit 10, distinct Re omega among sharp 2; pairs equal tuple 38, different tuple 742; INV pairs 46; FAIR non-sharp with Re omega!=0 and fork P=2^-M: 0; groups: ['T1', 'T2', 'T4', 'grp[2]', 'grp[3, 12, 4]', 'grp[3]', 'grp[6, 4, 2]', 'grp[6]']
+N=4 K=12 Lmax=4: data 132, eta real 110, eta=-1&n=1 72, sharp unit 18, distinct Re omega among sharp 3; pairs equal tuple 80, different tuple 2476; INV pairs 93; FAIR non-sharp with Re omega!=0 and fork P=2^-M: 0; groups: ['T1', 'T2', 'T4', 'grp[12]', 'grp[3, 4, 3]', 'grp[3, 6, 12]', 'grp[4]']
+N=5 K=12 Lmax=3: data 132, eta real 132, eta=-1&n=1 80, sharp unit 20, distinct Re omega among sharp 2; pairs equal tuple 126, different tuple 3034; INV pairs 148; FAIR non-sharp with Re omega!=0 and fork P=2^-M: 0; groups: ['T1', 'T2', 'T4', 'grp[12, 2]', 'grp[3]', 'grp[4]', 'grp[6, 2, 4]', 'grp[6, 3, 4]', 'grp[6, 6]']
+N=3 K=24 Lmax=4: data 84, eta real 84, eta=-1&n=1 54, sharp unit 12, distinct Re omega among sharp 3; pairs equal tuple 36, different tuple 1395; INV pairs 43; FAIR non-sharp with Re omega!=0 and fork P=2^-M: 2; groups: ['T1', 'T2', 'T4', 'grp[12, 6]', 'grp[12]', 'grp[6, 3]', 'grp[6]']
+
+PREDICATE TABLE: name | cases tested (qualifying) | pass | fail | first failing cases
+C0                                           |        1 |        1 |        0 | 
+CONJ_N3_pred_false                           |       44 |       44 |        0 | 
+CONJ_N3_pred_true                            |       50 |       50 |        0 | 
+CONJ_N4_pred_false                           |       18 |       18 |        0 | 
+CONJ_N4_pred_true                            |       54 |       54 |        0 | 
+CONJ_N5_pred_false                           |       23 |       23 |        0 | 
+CONJ_N5_pred_true                            |       57 |       57 |        0 | 
+DP                                           |    12042 |    12042 |        0 | 
+ETA                                          |      193 |      193 |        0 | 
+F1                                           |      192 |      192 |        0 | 
+I1                                           |      924 |      924 |        0 | 
+I1_etaNot-1                                  |     1380 |      346 |     1034 | [(3, [3, 3], (40, 80, 80, 80), 'den=1', 'both', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=5', 'both', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=5', 'both', 'n=1')]
+I1_n!=1                                      |      231 |      231 |        0 | 
+I1_n=1                                       |      693 |      693 |        0 | 
+I1n2                                         |      276 |       16 |      260 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'both', 'n=1')]
+I1n2s(sharp)                                 |       69 |       15 |       54 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n!=1')]
+I2                                           |      924 |      924 |        0 | 
+I2_etaNot-1                                  |     1380 |      116 |     1264 | [(3, [3, 3], (40, 80, 80, 80), 'den=1', 'sharp', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=1', 'sharp', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=5', 'both', 'n=1')]
+I2_n!=1                                      |      231 |      231 |        0 | 
+I2_n=1                                       |      693 |      693 |        0 | 
+I2n2                                         |      276 |        5 |      271 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'both', 'n=1')]
+I2n2s(sharp)                                 |       69 |        0 |       69 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n!=1')]
+II1                                          |      924 |      924 |        0 | 
+II1_n!=1                                     |      231 |      231 |        0 | 
+II1_n=1                                      |      693 |      693 |        0 | 
+II1any                                       |     2304 |     2304 |        0 | 
+II1n2                                        |      276 |      276 |        0 | 
+II1n2s(sharp)                                |       69 |       69 |        0 | 
+II2                                          |      924 |      924 |        0 | 
+II2_n!=1                                     |      231 |      231 |        0 | 
+II2_n=1                                      |      693 |      693 |        0 | 
+II2n2                                        |      276 |      276 |        0 | 
+II2n2s(sharp)                                |       69 |       69 |        0 | 
+III                                          |      924 |      924 |        0 | 
+III_etaNot-1                                 |     1380 |      181 |     1199 | [(3, [3, 3], (40, 80, 80, 80), 'den=1', 'sharp', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=1', 'sharp', 'n=1'), (3, [3, 3], (40, 80, 80, 80), 'den=1', 'both', 'n=1')]
+III_n!=1                                     |      231 |      231 |        0 | 
+III_n=1                                      |      693 |      693 |        0 | 
+IIIn2                                        |      276 |      276 |        0 | 
+IIIn2s(sharp)                                |       69 |       69 |        0 | 
+INV_N3                                       |       89 |       89 |        0 | 
+INV_N4                                       |       93 |       93 |        0 | 
+INV_N5                                       |      148 |      148 |        0 | 
+IV                                           |      924 |      924 |        0 | 
+IV_n!=1                                      |      231 |      231 |        0 | 
+IV_n=1                                       |      693 |      693 |        0 | 
+IVm                                          |      924 |      924 |        0 | 
+IVm_n!=1                                     |      231 |      231 |        0 | 
+IVm_n=1                                      |      693 |      693 |        0 | 
+IVmn2                                        |      276 |       15 |      261 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'both', 'n=1')]
+IVmn2s(sharp)                                |       69 |        6 |       63 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n!=1')]
+IVn2                                         |      276 |       13 |      263 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'both', 'n=1')]
+IVn2s(sharp)                                 |       69 |        3 |       66 | [(1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n=1'), (1, [40], (51, 105, 36, 30), 'den=1', 'sharp', 'n!=1')]
+L1                                           |    10200 |    10200 |        0 | 
+L2                                           |    10200 |    10200 |        0 | 
+L3                                           |    10160 |    10160 |        0 | 
+LINE                                         |     1816 |     1816 |        0 | 
+LINE_not_qualifying(eta not real)            |       73 |       73 |        0 | 
+LIST_N3_diff_tuple=>diff_stats               |     2137 |     2137 |        0 | 
+LIST_N3_equal_tuple=>equal_stats             |       74 |       74 |        0 | 
+LIST_N4_diff_tuple=>diff_stats               |     2476 |     2476 |        0 | 
+LIST_N4_equal_tuple=>equal_stats             |       80 |       80 |        0 | 
+LIST_N5_diff_tuple=>diff_stats               |     3034 |     3034 |        0 | 
+LIST_N5_equal_tuple=>equal_stats             |      126 |      126 |        0 | 
+N2a                                          |     1656 |     1656 |        0 | 
+N2b                                          |     1800 |      145 |     1655 | [(1, [15], (64, 16, 88, 88), 'den=1', 'sharp', 'n=1', 2), (1, [15], (64, 16, 88, 88), 'den=1', 'sharp', 'n=1', 3), (1, [15], (64, 16, 88, 88), 'den=1', 'sharp', 'n=1', 4)]
+N2c                                          |      144 |      144 |        0 | 
+PREP1                                        |     1561 |     1561 |        0 | 
+PREP1_nonzero_cases                          |      174 |      174 |        0 | 
+PREP2                                        |      304 |      304 |        0 | 
+PREP2f(literal, no factor 2^-t)              |      125 |        0 |      125 | [(4, (0, 4, 20, 0), 't=2'), (4, (0, 12, 12, 0), 't=1'), (7, (0, 0, 0, 0), 't=5')]
+PREP_not_qualifying(eta not real)            |       96 |       96 |        0 | 
+Ra                                           |    14340 |    14340 |        0 | 
+Rb                                           |       81 |       81 |        0 | 
+Rc                                           |    26469 |    26469 |        0 | 
+SHARP_N3_fork_separates_iff                  |      111 |      111 |        0 | 
+SHARP_N3_len<=M_equal                        |      111 |      111 |        0 | 
+SHARP_N3_stats<=>Re_omega                    |      111 |      111 |        0 | 
+SHARP_N4_fork_separates_iff                  |      153 |      153 |        0 | 
+SHARP_N4_len<=M_equal                        |      153 |      153 |        0 | 
+SHARP_N4_stats<=>Re_omega                    |      153 |      153 |        0 | 
+SHARP_N5_fork_separates_iff                  |      190 |      190 |        0 | 
+SHARP_N5_len<=M_equal                        |      190 |      190 |        0 | 
+SHARP_N5_stats<=>Re_omega                    |      190 |      190 |        0 | 
+END seed 20261114
