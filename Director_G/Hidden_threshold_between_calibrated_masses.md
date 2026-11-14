@@ -40,4 +40,6 @@ $$
 
 **Tick 256.** Of 33 lower-half gaps, 11 contribute at $t=0.019079203740\ldots$. The sharp value is $B=0.019822640675\ldots$, strictly below the largest gap $0.021616857458\ldots$. The [rational checker](check_multigap_bias.py) verifies both the integrated excess and the conditional winning-gap mean and checks the equal-two-gap control by enumerating all permutations of four midpoint ranks. The one-gap answer is $3h/4$; for two equal gaps it is $7h/8$.
 
-This is an extremum over admissible detectors and adaptive targets. Independence of target and type gives zero signed bias instead. Experimental access to a type-dependent target and the finite-sample case with nonzero calibration moments remain open. A second Codex reader saw the proposed formula and hypotheses and independently checked the upper bound, coupling and tie convention. The proof has not been formalized in Lean.
+This is an extremum over admissible detectors and adaptive targets. Independence of target and type gives zero signed bias. A companion derives upper and attainable lower bounds given a positive population moment budget or a valid upper limit on it. Obtaining that limit from finite samples and realizing a type-dependent target experimentally remain open. [Transfer with nonzero node errors](Finite_moment_transfer_between_calibrated_masses.md)
+
+A second Codex reader saw the proposed formula and hypotheses and independently checked the upper bound, coupling and tie convention. The proof has not been formalized in Lean.

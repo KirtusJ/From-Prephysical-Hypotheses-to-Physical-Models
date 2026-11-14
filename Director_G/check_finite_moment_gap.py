@@ -33,7 +33,8 @@ def main():
     assert 0 < M < cost
     print(f"node={float(u):.12f}, full cost={float(cost):.12g}, slope={float(slope):.12f}")
     print(f"sqrt coefficient={sqrt(A)+sqrt(C):.12f}")
-    print(f"at M={float(M):g}: {float(base+slope*M):.12f} <= worst <= {float(base)+(sqrt(A)+sqrt(C))*sqrt(M):.12f}")
+    print(f"at M={float(M):g}: attainable bias (rounded) {float(base+slope*M):.12f}, "
+          f"upper bound (rounded) {float(base)+(sqrt(A)+sqrt(C))*sqrt(M):.12f}")
 
 
 if __name__ == "__main__":
