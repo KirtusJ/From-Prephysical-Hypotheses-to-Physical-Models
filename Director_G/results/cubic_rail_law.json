@@ -2557,5 +2557,348 @@
       "intercept": "1",
       "gradient_squared": "0"
     }
-  ]
+  ],
+  "equal_pair_panels": {
+    "0": {
+      "states": 1,
+      "pairs": 1,
+      "collisions": []
+    },
+    "2": {
+      "states": 3,
+      "pairs": 6,
+      "collisions": []
+    },
+    "4": {
+      "states": 8,
+      "pairs": 36,
+      "collisions": [
+        {
+          "midpoint": [
+            "0",
+            "0",
+            "-1/2"
+          ],
+          "left": {
+            "words": [
+              "0010",
+              "1010"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          },
+          "right": {
+            "words": [
+              "0011",
+              "1011"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          }
+        }
+      ]
+    },
+    "6": {
+      "states": 18,
+      "pairs": 171,
+      "collisions": [
+        {
+          "midpoint": [
+            "0",
+            "1/4",
+            "1/4"
+          ],
+          "left": {
+            "words": [
+              "000000",
+              "001010"
+            ],
+            "means": {
+              "ordinary": "5/8",
+              "quadratic": "43/64",
+              "cubic": "23/32"
+            }
+          },
+          "right": {
+            "words": [
+              "001110",
+              "101110"
+            ],
+            "means": {
+              "ordinary": "5/8",
+              "quadratic": "371/512",
+              "cubic": "287/512"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "-3/8",
+            "-1/8",
+            "1/4"
+          ],
+          "left": {
+            "words": [
+              "000000",
+              "001011"
+            ],
+            "means": {
+              "ordinary": "5/8",
+              "quadratic": "43/64",
+              "cubic": "23/32"
+            }
+          },
+          "right": {
+            "words": [
+              "001111",
+              "101111"
+            ],
+            "means": {
+              "ordinary": "5/8",
+              "quadratic": "371/512",
+              "cubic": "287/512"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "0",
+            "-1/2"
+          ],
+          "left": {
+            "words": [
+              "000010",
+              "001010"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          },
+          "right": {
+            "words": [
+              "000011",
+              "001011"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "0",
+            "-1/2"
+          ],
+          "left": {
+            "words": [
+              "000010",
+              "001010"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          },
+          "right": {
+            "words": [
+              "001101",
+              "101101"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "0",
+            "-1/2"
+          ],
+          "left": {
+            "words": [
+              "000011",
+              "001011"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          },
+          "right": {
+            "words": [
+              "001101",
+              "101101"
+            ],
+            "means": {
+              "ordinary": "1/4",
+              "quadratic": "11/32",
+              "cubic": "7/16"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "-9/32",
+            "-3/32",
+            "1/16"
+          ],
+          "left": {
+            "words": [
+              "000010",
+              "001111"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          },
+          "right": {
+            "words": [
+              "001101",
+              "110111"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "3/16",
+            "1/16"
+          ],
+          "left": {
+            "words": [
+              "000011",
+              "110110"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          },
+          "right": {
+            "words": [
+              "001101",
+              "001110"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "3/32",
+            "1/32",
+            "1/16"
+          ],
+          "left": {
+            "words": [
+              "001010",
+              "110111"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          },
+          "right": {
+            "words": [
+              "001111",
+              "101101"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "-1/16",
+            "1/16"
+          ],
+          "left": {
+            "words": [
+              "001011",
+              "001110"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          },
+          "right": {
+            "words": [
+              "101101",
+              "110110"
+            ],
+            "means": {
+              "ordinary": "17/32",
+              "quadratic": "631/1024",
+              "cubic": "1085/2048"
+            }
+          }
+        },
+        {
+          "midpoint": [
+            "0",
+            "0",
+            "-1/8"
+          ],
+          "left": {
+            "words": [
+              "101110",
+              "111010"
+            ],
+            "means": {
+              "ordinary": "7/16",
+              "quadratic": "287/512",
+              "cubic": "511/1024"
+            }
+          },
+          "right": {
+            "words": [
+              "101111",
+              "111011"
+            ],
+            "means": {
+              "ordinary": "7/16",
+              "quadratic": "287/512",
+              "cubic": "511/1024"
+            }
+          }
+        }
+      ]
+    }
+  }
 }

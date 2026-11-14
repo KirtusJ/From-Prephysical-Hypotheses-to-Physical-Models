@@ -419,3 +419,32 @@ manager expects** (the marketplace file on its branch), pinned to commits. So th
 in play (Claude Code's, the other assistant's, and PCP OS's own for applications and modules) and one Store
 catalogue that can describe all three kinds of thing. The Store entry for a plugin says where its index is; it
 does not pretend PCP installs it.
+
+## 10. Modularity and compatibility (principal, 14 November 2026: "across the software spectrum, where possible")
+
+Faults of exactly this kind already met in this work, each [tested]:
+- the plugin's programs lose their executable bit in a Git checkout, and Windows has no such bit at all;
+- one method file's digest is defined over CRLF bytes and fails after a checkout that normalizes line endings;
+- the longest paths of the research edition exceed what a default Windows clone accepts;
+- a helper of mine called `/usr/bin/time`, which this machine does not have (exit 127);
+- the plugin ships programs for Linux on two processors only; on macOS and Windows its hooks do nothing;
+- Director G's probe: a plain child process on Windows read a sibling file, so "a separate process" is not
+  confinement, and what confinement an operating system offers differs on every one of the five systems.
+
+Requirements added:
+
+21. **Modules with one job and a stated interface.** Index reading, verification, fetching, the install
+    transaction, the register record, the Store catalogue and each front end are separate parts; each can be
+    replaced or tested alone. The core has no dependency on any front end, and stays usable from the kernel.
+22. **No dependence on one system's facilities for correctness.** Verification is by digest of bytes, never by
+    file mode, modification time or line-ending convention; the installer sets what modes the destination
+    needs itself. File names in an index are compared exactly and refused if two differ only in letter case;
+    paths are bounded in length; no external utility is required at install or run time.
+23. **One confinement model for installed applications on every system.** Because operating-system confinement
+    differs (and a child process alone confines nothing), an executable Store application runs as a guest of
+    the host with only the capabilities its index entry declares. Director G's probe of a capability-limited
+    guest (no imports, bounded memory, bounded steps) is the candidate; which engine, weighed against the rule
+    that the host has one dependency today, is a stage 2 decision. The kernel keeps its own user-mode
+    confinement, which is the same model.
+24. **Compatibility is stated, not assumed.** For each supported system the documents say what was run there
+    and what was not. Where something cannot work, it fails with a message naming what is missing.
