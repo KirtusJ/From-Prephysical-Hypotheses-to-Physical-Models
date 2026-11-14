@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Two coins at a site contact](Two_coin_position_read_at_one_contact.md) | One terminal position event distinguishes matching and opposite circular inputs. Changing the launch spacing recovers the ten real symmetric components of the joint state under calibrated contact and position reads. |
 | [A position flag referenced to the unknown launch coin](Unknown_coin_position_reference.md) | One circuit handles both input rails and their superpositions. For a three-tick site, the ordinary and normalized-square readers predict different comparisons on a maximally mixed launch. |
 | [Simultaneous transport of two input columns](Simultaneous_transport_of_two_input_columns.md) | Equal Gram and equal dyadic row module characterize stable two-column transport. A 37-tick mirror sector preserves an input direction modulo five. |
 | [Paired reads for a type-dependent target](Paired_reads_for_a_type_dependent_target.md) | Two reads sharing a detector type bound errors even when the science mass follows that type. Complementary detector curves show the cube-root exponent is sharp. |
