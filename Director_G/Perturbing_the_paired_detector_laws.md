@@ -14,7 +14,7 @@ These are mathematical sensitivity bounds on the observed joint distribution. Th
 
 ### Uniform protection for the current rule
 
-Let p be one nominal table, and let its actual conditional distribution before each collected pair, given the observed past, be p+u with TV at most δ. This assumption permits history-dependent errors. Internal policy randomness has the same distribution under both laws. The nominal table is strictly positive; at the stated δ all perturbed cells remain positive. Let m₁ and m₂ be the two smallest nominal cell probabilities. The positive entries of u sum to at most δ and the negative entries have the same total magnitude. Concentrating each sign on a different cell bounds the sum of uᵢ²/pᵢ by δ²(1/m₁+1/m₂). Taylor's bound on −log(1+x)+x for |x|≤δ/m₁ gives
+Let p be one nominal table, and let its actual conditional distribution before each collected pair, given the observed past, be p+u with TV at most δ. This assumption permits history-dependent errors. Given the same observed history, both experiments use the same conditional decision rule. At a terminal tie the test draws a private fair coin independent of the transcript in both the nominal and perturbed experiments. The nominal table is strictly positive; at the stated δ all perturbed cells remain positive. Let m₁ and m₂ be the two smallest nominal cell probabilities. The positive entries of u sum to at most δ and the negative entries have the same total magnitude. Concentrating each sign on a different cell bounds the sum of uᵢ²/pᵢ by δ²(1/m₁+1/m₂). Taylor's bound on −log(1+x)+x for |x|≤δ/m₁ gives
 
 $$D(p\Vert p+u)\leq \frac{\delta^2(1/m_1+1/m_2)}{2(1-\delta/m_1)^2}.$$
 
