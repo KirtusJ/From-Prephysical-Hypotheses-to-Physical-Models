@@ -4,6 +4,8 @@ Run nine Hadamard walk ticks and record position after ticks 3, 6 and 9. Apply a
 
 ## A classical position record that preserves a qubit
 
+Two private source writes followed by a coherent return prepare four rail states at one site. Seven further writes and a matching position probe give a four-state quantum-memory test. The coherent and deliberately dephased preparations have identical downstream position statistics before that probe. [Source, recovery benchmark, control circuit and full simulated counts](four_preparations_at_one_site.md)
+
 Two records can leave the walker at the same site yet yield clockwise probe probabilities of $729/754$ and $25/754$ when their order is switched. Closed records also implement a dense family of real rail gates. At fixed time the final address alone loses all rail entanglement with a reference by write seven. One of three messages computed from the complete path can preserve a Bell fidelity above $0.64$ at write 32. [Position-order probe and stopped gate](closed_position_gates.md) · [Entanglement and the optimal message alphabet](recovering_a_qubit_from_position_messages.md)
 
 A twelve-tick schedule on a sixteen-site ring makes every position probability independent of the incoming rail state. Repeating the site read gives a classical chain while the ideal rail can retain entanglement. The same records test ordinary probabilities against powers redrawn at each write, even when the rail disturbance is unknown. Four qubits suffice. [Position chain, rail test and comparison with measuring every tick](classical_positions_with_a_retained_qubit.md) · [Probability test and error bound](ordinary_powers_with_a_retained_qubit.md) · [A shorter ten-tick comparison](scoring_after_an_unknown_write.md)
