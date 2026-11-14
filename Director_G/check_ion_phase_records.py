@@ -42,7 +42,8 @@ def read_rows(filename, folder):
         data = (folder/filename).read_bytes()
     require(hashlib.sha256(data).hexdigest()==SOURCES[filename], "input digest "+filename)
     rows = defaultdict(list)
-    for line, row in enumerate(data.decode("utf8").splitlines(), 1):
+    # The April bytes end every physical line with CR CR LF. The archive uses LF offsets.
+    for line, row in enumerate(data.decode("utf8").split("\n"), 1):
         if not row.strip() or row.startswith("#"):
             continue
         word, plus, total, *other = row.split()
@@ -96,6 +97,40 @@ def bounded_zero(rows, family):
                 W_upper_95=None if certified is None else math.ceil(certified*10**8)/10**8)
 
 
+def negative_target_interval(rows):
+    # For target m=-1, W = 3 + (q3 + q0 - 2*q2)/(q1 - q0).
+    # Construct all eight one-sided limits at once; no cross-setting independence required.
+    alpha = 0.05/(8*6)
+    qlo, qhi = [], []
+    for rs in rows:
+        k,n = pooled(rs)
+        qlo.append(max(0,1-upper(n-k,n,alpha)))
+        qhi.append(upper(k,n,alpha))
+    den=(qlo[1]-qhi[0],qhi[1]-qlo[0])
+    num=(qlo[3]+qlo[0]-2*qhi[2],qhi[3]+qhi[0]-2*qlo[2])
+    if den[0]<=0:
+        return None
+    ratios=[3+v/z for v in num for z in den]
+    return [math.floor(min(ratios)*1e6)/1e6,math.ceil(max(ratios)*1e6)/1e6]
+
+
+def equality_test(row1,row2):
+    k1,n1=pooled(row1)
+    k2,n2=pooled(row2)
+    total=k1+k2
+    target=math.comb(n2,k2)*math.comb(n1,k1)
+    masses=(math.comb(n2,j)*math.comb(n1,total-j)
+            for j in range(max(0,total-n1),min(total,n2)+1))
+    return str(Fraction(sum(w for w in masses if w<=target),math.comb(n1+n2,total)))
+
+
+def unoriented_margin(rows):
+    alpha=0.05/(3*6)
+    (k0,n0),(k2,n2),(k3,n3)=(pooled(rows[i]) for i in (0,2,3))
+    margin=(1-upper(n2-k2,n2,alpha))-upper(k3,n3,alpha)-upper(k0,n0,alpha)
+    return math.floor(margin*1e6)/1e6
+
+
 def analyze(rows, block, m):
     clocks = [rows["{}"]] + [rows[block*k] for k in (1,2,3)]
     if not all(clocks):
@@ -119,7 +154,11 @@ def analyze(rows, block, m):
         predicted = q[0] if word=="GyGyGyGy" else detector_b
         check_controls[word] = dict(measured_bright=str(observed), observed_minus_prediction=str(observed-predicted))
     out["other_nominal_R_L_controls"] = check_controls
+    if m==-1:
+        out["calibrated_W_six_date_95_interval"]=negative_target_interval(clocks)
     if m==0:
+        out["p2_equal_half_two_sided_fisher"]=equality_test(clocks[1],clocks[2])
+        out["unoriented_margin_six_date_95_lower"]=unoriented_margin(clocks)
         triple = [clocks[j] for j in (0,1,3)]
         out["per_run_binomial_bound"] = bounded_zero(triple, 1)
         out["six_date_simultaneous_bound"] = bounded_zero(triple, 6)
@@ -155,11 +194,13 @@ def main():
     end = reports[-1]["blocks"]["YX"]
     require(end["bright"]==["0","23/50","29/50","0"] and end["calibrated_W"]=="0",
             "final run coordinate, denominators and calibration")
-    require(reports[0]["selected"]["GyGx"*3][1]["plus"]==23,"duplicate April entry")
+    require([(r["line"],r["plus"]) for r in reports[0]["selected"]["GyGx"*3]]
+            ==[(1317,14),(2037,23)],"physical LF line numbers of duplicate April entries")
     require(sum("missing_clocks" in r["blocks"]["XY"] for r in reports)==5,"reverse order absences")
     data=dict(source_commit=COMMIT,plus_label="outcome |1>; return R is |0>",
               block_labels={"Y":"Gy","YX":"GyGx","XY":"GxGy"},
               denominators="per reported circuit repetitions; shared-rate duplicates pooled within date only",
+              row_selection="Physical LF line numbers; exact expanded gate-word equality. Idle padding excluded.",
               intervals="per date and selected word under binomial repeats, four simultaneous one-sided endpoints",
               runs=reports)
     args.output.mkdir(exist_ok=True,parents=True)
