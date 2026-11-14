@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Five ticks from a localized sheet](Five_ticks_from_a_localized_sheet.md) | Two sheet swaps and a joint site-and-sheet read give a uniform margin against nonordinary powers. Six unsigned words cancel at one dark coordinate. |
 | [Three signed ticks and one position read](Three_signed_ticks_and_the_probability_power.md) | Three wells with one occupied rail give an integer score that detects fresh powers, including arbitrarily large exponents, and fair path counting. A two-sign alternative takes six ticks. |
 | [Seven free ticks and one position read](Seven_free_ticks_and_one_position_read.md) | One histogram separates the ordinary finite power from all other site or rail-cell powers and full path counting on fresh launches. Very large powers approach zero on this contrast. |
 | [Two five-tick tests of the probability power](Two_five_tick_records_and_the_probability_power.md) | An oriented site hit and its repeat separate three persistent power rules and path counting. A second comparison of old position words tests global powers on separate launches. |
