@@ -52,6 +52,42 @@ These three populations reproduce \((729,558,761)/2048\) exactly. Indeed, on thr
 
 Adding a final sheet bit at a subset of these occupied wells creates one pure bin per addressed well, of respective masses 576, 225 and 81. Thus reading it at any two wells still permits a finite false mixture; reading it at all three meets the theorem. This counts the wells on which the read must distinguish the two sheets. One shared output bit alongside the well label can do so. As a check on the extent of the obstruction, a full finite scan over base circumferences 3 through 90 and ticks 1 through 120 found no base-only histogram with three distinct pure masses for the reciprocal double cover, sharp right-going launch and balanced coin. The [archive](results/pure_mass_criterion.json) retains all 10,560 settings. This scan does not establish an all-time obstruction on every ring.
 
+## The full set of histograms at one fixed exponent
+
+There is a sharper diagnostic when the exponent is the same on **every** launch but the detector resolution varies. Write \(a_{xi}>0\) for the occupied mode masses in bin \(x\), \(m_x=\sum_i a_{xi}\), and define
+\[
+L_x(q)=\min\{m_x^q,\ \sum_i a_{xi}^q\},\qquad
+U_x(q)=\max\{m_x^q,\ \sum_i a_{xi}^q\}.
+\]
+For any prescribed histogram \(p'\) strictly positive on the occupied bins, the attainable set is specified exactly by
+\[
+\max_x L_x(q)/p'_x\ \le\ \min_x U_x(q)/p'_x. \tag{1}
+\]
+A distribution with positive mass in a dark bin fails; a distribution with a zero at an occupied bin also fails for finite \(q\).
+
+To see this, write \(B=\prod_x[L_x,U_x]\) for the box of unnormalized weights and \(N(w)=w/\sum_x w_x\). Convexity or concavity of \(z^q\) puts every partition vector inside \(B\), with full pooling and full splitting attaining the two endpoints independently in each bin. At \(q=0\) the endpoints are one and the number of occupied modes. Thus every vertex of \(B\) is available. Normalization sends a line segment to the segment between its normalized endpoints. More explicitly, if \(w=\sum_j t_jv_j\) is a convex combination of vertices, \(N(w)\) mixes their normalized histograms with launch weights \(t_j\sum_x v_{jx}/\sum_x w_x\). Conversely any mixture of normalized partitions lies in \(N(B)\), by reweighting the unnormalized vectors inversely by their totals. So a common scalar multiple of \(p'\) must lie in \(B\), which gives (1). The proof includes variation of the normalizer with each launch; averaging raw weights with the launch frequencies could give a different result.
+
+For the ordinary histogram let \(m_*=\min_x m_x\) over occupied bins and define the weighted power mean
+\[
+M_s(x)=\left[\sum_i(a_{xi}/m_x)a_{xi}^{\,s}\right]^{1/s},
+\qquad M_0(x)=\exp\!\left(\sum_i(a_{xi}/m_x)\log a_{xi}\right).
+\]
+For finite \(q\ne1\), the ordinary histogram is attainable **exactly when**
+\[
+\max_x M_{q-1}(x)\ \le\ m_* . \tag{2}
+\]
+For \(q>1\), division by \(m_x\) in (1) gives \(\max_x\sum_i a_{xi}^q/m_x\le\min_y m_y^{q-1}\). For \(q<1\) the inequalities reverse before taking the negative power \(1/(q-1)\), yielding the same criterion. In particular \(M_{-1}(x)=m_x/n_x\) for \(n_x\) occupied modes, which tests zero power. Weighted power means are nondecreasing in \(s\), strictly so at a bin containing unequal masses. This follows from Jensen's inequality applied to the change of power or, across zero, to the convex function \(s\mapsto\log\sum_i(a_{xi}/m_x)e^{s\log a_{xi}}\), which vanishes at zero. Thus finite exponents obeying (2) form an initial interval, possibly empty, a singleton or unbounded. The ordinary exponent always passes directly, including when (2) fails at \(s=0\). This fixed-exponent result is compatible with the earlier necessity theorem: a mixture using *different* powers can pass outside the single-power set.
+
+For the six-well base read the positive mode masses at wells \(1,3,5\) are \((144,9,576),(225,324,9),(4,676,81)\) and \(m_*=558\). All finite powers from \(0\) to one common upper endpoint \(q_*\) can reproduce the ordinary histogram by varying only resolution. The endpoint lies in
+\[
+1.2675150158 < q_* < 1.2675150159 .
+\]
+It is the nonordinary root of \(4^q+676^q+81^q=761\cdot558^{q-1}\). At the lower bracket all three surplus expressions \(\sum_i a_{xi}^q-m_x558^{q-1}\) are negative; at the upper bracket only the third is positive. Monotonicity of the means then gives the full interval, including its endpoint. At \(q=2\), the third split numerator is 463553, larger than \(761\cdot558\), so even the most favorable resolution mixture cannot match the ordinary histogram. These are compatibility calculations on exact model probabilities. Inferring a limit for an apparatus requires its measured histogram and uncertainty.
+
+Two controls illustrate (2). At exponent one half, the site weights \(m_x/23\) are inside all three intervals: each exceeds its pooled square root and is at most the corresponding fully split weight 39, 36 or 37. Normalizing that box point gives the full ordinary histogram. For a different instrument with just two bins of internal masses (4,4) and (1,1), the smallest total is 2 and the first bin has every power mean equal to 4. Only the ordinary exponent passes. Thus an interval of invisible nonordinary exponents is an apparatus-specific result.
+
+The [fixed-power checker](check_fixed_power_resolution.py) constructs a rational mixture of normalized vertices at zero power, reuses the recorded physical spectrum, and brackets the endpoint using outward enclosures for logarithms and exponentials in decimal arithmetic. The [output](results/fixed_power_resolution.json) retains all three site inequalities on both sides. [Decimal logarithm and exponential rounding](https://docs.python.org/3/library/decimal.html#decimal.Decimal.exp)
+
 ## Counting, other detectors and physical identification
 
 Fair counting of microscopic words is an additional model. If its \(S\) is positive, the preceding argument excludes it along with the finite nonordinary powers. A dark bin with positive counted frequency supplies another test. In general the count histogram must be checked directly. The three masses alone classify mixtures of powers. The six-well joint-read paper checks the actual 2,048 word counts. The theorem diagnoses a single setting; multiple settings can constrain a shared population if their readout models justify that extra relation.
