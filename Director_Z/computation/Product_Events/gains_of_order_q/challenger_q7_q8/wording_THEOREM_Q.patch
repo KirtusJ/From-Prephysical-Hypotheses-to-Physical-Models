@@ -1,0 +1,29 @@
+--- a/Director_Z/computation/Product_Events/gains_of_order_q/THEOREM_Q.tex	2026-11-14 05:41:50.991686098 +0000
++++ b/Director_Z/computation/Product_Events/gains_of_order_q/THEOREM_Q.tex	2026-11-14 05:41:51.003906484 +0000
+@@ -9,7 +9,7 @@
+ 
+ \paragraph{Hypothesis $\mathrm{P}_q$ (preparation).} For every site $x$ and all $U,V\in\mathbb{N}^C$ there are $T_0\ge1$ and a position product event $S$ of length $T_0$ with $m_S(x,R)=U$ and $m_S(x,L)=V$.
+ 
+-\emph{Status.} For $q=2$ this is the conclusion of Lemma~\ref{lem:prep} (CITED, line and rings with $N/\gcd(N,2)\ge11$). For $q>2$ it is CONJECTURED and not proved anywhere known to the writer. Director~G's note on sheet residues proves a different statement: there the gains lie in $\{\pm1\}\times\mathbb{Z}/M$, the second entry is changed by $\lfloor x/2\rfloor$ on both arcs leaving the site $x$, on rings of $4M$ sites, and only the sign counts the steps $L$ after $L$, modulo $2$. It does not control that number modulo $q>2$. Its control word $RLLRR$, which has the end point of $LRRLR$ and one more step $L$ after $L$, indicates how a construction for $D_h$ could go; this was not replayed.
++\emph{Status.} For $q=2$ this is the conclusion of Lemma~\ref{lem:prep} (CITED, line and rings with $N/\gcd(N,2)\ge11$). The cases $U=0$ and $V=0$ are part of the hypothesis and are used (Step~1 of Proposition~\ref{prop:solveq}); without them $F_R=b$, $F_L=-b$ on the nonzero multisets is a further solution of \eqref{eq:Eq0}. For $q=1$ the status is not stated here. For $q>2$ it is CONJECTURED and not proved anywhere known to the writer. Director~G's note on sheet residues proves a different statement: there the gains lie in $\{\pm1\}\times\mathbb{Z}/M$, the second entry is changed by $\lfloor x/2\rfloor$ on both arcs leaving the site $x$, on rings of $4M$ sites, and only the sign counts the steps $L$ after $L$, modulo $2$. It does not control that number modulo $q>2$. Its control word $RLLRR$, which has the end point of $LRRLR$ and one more step $L$ after $L$, indicates how a construction for $D_h$ could go; this was not replayed.
+ 
+ \begin{lemma}[one site]\label{lem:onesiteq}
+ Let $S$ be a position product event on $D_h$ with $m_S(x,R)=U$, $m_S(x,L)=V$. If \eqref{eq:ppcons} holds with the factor $k$, then
+@@ -57,7 +57,7 @@
+ \begin{theorem}\label{thm:posprodq}
+ Let $D_h$ be the line or a ring, with $h$ of order $q$, and let $\mu$ be a rule \eqref{eq:multirule} on the multisets of gains in $\langle h\rangle$.
+ \begin{enumerate}[label=(\roman*)]
+-\item Suppose Hypothesis $\mathrm{P}_q$ holds on $D_h$, that $F_{(x,R)}=F_R$ and $F_{(x,L)}=F_L$ do not depend on the site, and that \eqref{eq:ppcons} holds with $k=2$. Then $F_R=F_L=F$ with
++\item Suppose Hypothesis $\mathrm{P}_q$ holds on $D_h$, that $F_{(x,R)}=F_R$ and $F_{(x,L)}=F_L$ do not depend on the site, that $F_R(0)=F_L(0)=0$, and that \eqref{eq:ppcons} holds with $k=2$. Then $F_R=F_L=F$ with
+ \[
+ F(m)=a\,|m|+c\,|\sigma_\psi(m)|^2 ,\qquad \psi(h)=-1,
+ \]
+@@ -71,7 +71,7 @@
+ 
+ \begin{remark}
+ (a) \emph{Agreement with Theorem~\ref{thm:periodic}.} On a ring with $N\ge3$ the two vertices $(x,R)$, $(x,L)$ have the same two successors with gains $(1,1)$ and $(1,h)$, so the step is norm-preserving in $\psi$ exactly when $1+\psi(h)=0$: one character for $q$ even, none for $q$ odd. The closed walks $LRLR$ and $LLRR$ at $(0,R)$ have one length and the gains $1$ and $h$, so $C_0=\langle h\rangle$. Theorem~\ref{thm:periodic} then gives, for consistency on all events, the same space as (i) gives from position product events. The comparison is \textbf{PROVED} given that theorem (CITED); that its hypothesis on $\hat D$ holds here was not checked beyond this.
+-(b) \emph{Where it stops.} The generalization of the algebra does not stop: \eqref{eq:Eq0} has no solutions besides the count and the one square, for every $q$. For $q$ odd nothing but the count survives, so on $D_h$ with $q$ odd position product events carry no rule that depends on the gains. What is missing for $q>2$ is the preparation $\mathrm{P}_q$.
++(b) \emph{Where it stops.} The generalization of the algebra does not stop: \eqref{eq:Eq0} has no solutions besides the count and the one square, for every $q$. For $q$ odd nothing but the count survives; so, given $\mathrm{P}_q$ (CONJECTURED for $q>2$), on $D_h$ with $q$ odd position product events carry no rule with $F_y(0)=0$, site-independent $F_R,F_L$ and factor $k=2$ that depends on the gains. Site-dependent functions and other factors were not attempted, see (d). What is missing for $q>2$ is the preparation $\mathrm{P}_q$.
+ (c) \emph{The neighbouring case.} If $h$ has order $r<q$ in $C$ and \eqref{eq:Eq0} is asked for all multisets on $C$, the computed nullity is $k+[r\text{ even}]\,k(k+1)/2$, $k=q/r$, in seven cases ($q\le6$, sizes $4$ to $6$); \textbf{COMPUTED}. It is the number of $T$-invariant additive functions plus the number of quadratic forms whose radical contains $(1+T)\mathbb{Z}^C$; that every solution is of this kind is \textbf{CONJECTURED}. Director~G's equation for $\{\pm1\}\times\mathbb{Z}/M$ is the case $r=2$, $k=M$, with invariance under the shifts added, which leaves $2+\lfloor M/2\rfloor$.
+ (d) Parts (ii) and (iii) of Theorem~\ref{thm:posprod} (functions that vary with the site, unknown factor) and carriers with four different arc gains were not attempted for $q>2$. No step was checked in Lean.
+ (e) \emph{Kept.} The exponential ansatz $F(m)=\prod_gx_g^{m(g)}-1$ with $x_g+x_{gh}=2$ satisfies the instances of \eqref{eq:Eq0} with $|V|=1$ up to a constant for a one-parameter family when $q$ is even, and fails \eqref{eq:Eq0} unless all $x_g=1$.
