@@ -27,6 +27,11 @@ This comparison measures the final outcome of a sequence containing the mark, tw
 
 For a walk detector, an analogous end-to-end comparison would retain all science outcomes after diagnostic-on and duration-matched diagnostic-off controls. A difference would falsify invariance for that exposed preparation and schedule. Agreement of ensemble means still allows opposite changes in unobserved response modes. These transmon counts supply an observed example of sequence dependence. They give no mode channel, half-mass calibration or probability-embedding result for the walk.
 
+
+## What timestamped herald records can check
+
+The Delft electron-spin Bell experiments give a complementary example of a different denominator. Their archives list a timestamp, station-C clicks and station readout fields. The original data table contains 4,746 rows. The second experiment has 1,047 and 2,871 rows in its two detector files. The deposit documentation restricts the recorded attempts to a broad two-photon signature at station C. These are source-table counts before further Bell analysis. They do not give every unheralded source attempt or an independently assigned arm that omits the apparatus mark. Timing information can support a check within the recorded population. It cannot reconstruct missing trials or identify disturbance from turning a mark off. [First primary dataset](https://doi.org/10.4121/uuid:6e19e9b2-4a2d-40b5-8dd3-a660bf3c0a31) · [Second primary dataset](https://doi.org/10.4121/uuid:53644d31-d862-4f9f-9ad2-0b571874b829)
+
 ## Reproduce the complete curve
 
 Download **2103.03008.zip** from the authors' versioned [Zenodo deposit](https://zenodo.org/records/5146074). Its recorded MD5 is **051eaf6d854425618260796b82f25c98**. Extract the following member directly, preserving its original bytes.

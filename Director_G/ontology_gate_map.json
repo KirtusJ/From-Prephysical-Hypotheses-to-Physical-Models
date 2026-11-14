@@ -511,6 +511,10 @@
       "baseline_evidence": "None.",
       "evidence_updates": [
         {
+          "sources": ["../candidates/composition_record/observed_mark_disturbance.md", "../candidates/composition_record/check_observed_mark_disturbance.rs"],
+          "result": "In the public superconducting-qubit circuit data, the final-one count after two X rotations was 211/1024 with a prior measurement versus 988/1024 in the unmarked circuit in the 500 ns run column. At 2020 ns the counts were 981 and 995. The replay retains all 39 delay contrasts and checks all 4992 circuit-column totals. This observed operation dependence motivates a non-disturbance control for prechoice walk diagnostics. The archive contains no walk-mode sensor or duration-matched sham for this comparison."
+        },
+        {
           "prs": [
             100,
             107
