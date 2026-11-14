@@ -1,0 +1,45 @@
+# One rail source and two local switches
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+Can the [two-switch spectator test](Two_local_switches_and_one_spectator.md) distinguish ordinary site probabilities if the source supplies no calibrated balanced bit? For a detector that draws a positive exponent on each launch, the two split packets may have different, unknown masses. Three recorded uses of an unknown coin can supply both packets and a spectator from one two-rail input. No conditioning on a successful preparation is needed. The conclusion depends on which launches reach both switches and on what the detector pools.
+
+## Preparing the five output wells
+
+At position zero allow any normalized two-rail input, including a mixed state or a rail entangled with an inert reference. Retain which input rail enters in a blank computational-basis bit. At three successive ticks apply site- and history-independent two-mode unitaries $U_1,U_2,U_3$, record the outgoing rail in a fresh bit and stream one site in its direction. These are reversible basis records. The four labels together distinguish the initial rail and the three outputs without reading them. For each transition write 0 for staying on the same rail, 1 for flipping. Set $q_j=|(U_j)_{LR}|^2$. Two-by-two unitarity makes the two flip moduli equal and both stay moduli equal. For flip word $b_1b_2b_3$, the sum of squared amplitudes over both initial rails is therefore
+
+$$m(b)=\prod_{j=1}^3 q_j^{b_j}(1-q_j)^{1-b_j}.$$
+
+Each factor denotes the selected entry, including at 0 and 1. For either initial rail the squared norm of its input component multiplies the same product. Cross terms between the two input components vanish on pooling because their labels are orthogonal. This is a kinematic norm calculation before assigning a position probability. The three matrices, their phases, the input state and the detector type may all vary together between launches. The [unknown-coin test](Testing_an_unknown_two_mode_coin.md) uses monitored returns with ordinary conditional coin probabilities. Here an entire history remains in the preparation and each launch gives one terminal read. Coin decoherence in a walk on a line is studied by [Brun, Carteret and Ambainis](https://doi.org/10.1103/PhysRevA.67.032304). Their calculation concerns the position moments of that walk.
+
+Use prefix 01 for packet A and 10 for B. Put every other prefix in the spectator. Just before the two local choices their masses are
+
+$$u=(1-q_1)q_2,\qquad v=q_1(1-q_2),\qquad s=1-u-v.$$
+
+The two branches inside A have masses $u(1-q_3),uq_3$. Inside B replace $u$ by $v$. To realize the routing on a 24-well ring, at tick three each retained label determines the current site $x\in\{-3,-1,1,3\}$ and incoming rail. Route A to $y=-4$ on L, B to $y=0$ on L and the spectator to $y=4$ on R. For each label prescribe nine straight-or-exchange moves with $(9+y-x)/2$ of them right, reserving the last move for the required arrival rail. The count is integral and lies between 1 and 8, so all routes exist. Apply local permutations controlled by the retained label. At each of A and B independently choose split (S) or pooled (P) late at tick twelve. In P all continue left. In S the histories with $b_3=1$ turn right. Stream to tick thirteen. The two output pairs are $(-5,-3)$ and $(-1,1)$, and the spectator is at 5. The other 19 wells are empty in SS. No switch affects the spectator through a last-tick walk edge. All settings use the same source law and count all assigned launches, including misses.
+
+## Unequal packets and arbitrary correlations
+
+On a launch take a common finite nonnegative scalar score $f$ at all 24 wells, positive at occupied masses; a site's probability is its score divided by their sum. Pool the rails and protected labels at each site **before** applying $f$. Write $Z$ for the all-split normalizer and put
+
+$$d_1=f(u)+f(0)-f(uq_3)-f(u(1-q_3)),\qquad
+  d_2=f(v)+f(0)-f(vq_3)-f(v(1-q_3)).$$
+
+The four normalizers are $Z,Z+d_2,Z+d_1,Z+d_1+d_2$. For $C=r_{SS}-r_{SP}-r_{PS}+r_{PP}$, with $r$ the original-launch spectator rate in each assignment, the contribution conditional on all launch variables is
+
+$$C_{\rm launch}=\frac{f(s)d_1d_2(2Z+d_1+d_2)}
+ {Z(Z+d_1)(Z+d_2)(Z+d_1+d_2)}.$$
+
+The second factor in the numerator besides $f(s)d_1d_2$ is the sum of two positive normalizers. For $f(w)=w^p$, $p>0$, both gaps have the sign of $p-1$ whenever both packets genuinely split. Indeed for $0<h<1$, $h^p+(1-h)^p$ is strictly below 1 for $p>1$ and strictly above 1 for $p<1$. Thus $C\ge0$. Equality forces $p=1$ almost surely on launches with $s>0$, $u,v>0$ and $0<q_3<1$. This active condition holds when all three $q_j$ are strictly interior. Exponents and source fluctuations may be arbitrarily correlated. A launch-specific positive spectator recording efficiency common to the four choices multiplies its contribution. Random assignment independent of the joint source–detector state, isolated controls and a fixed bank are essential. No physical test of this circuit has been made here.
+
+The sign proof only needs two nonempty split pairs and a positive spectator. Even the two split ratios may differ. It applies to scores drawn from globally strictly convex or strictly concave functions by subtracting the constant $f(0)$ and using the strict chord inequalities for each packet. If the draw may also yield an affine score, exact zero excludes the strictly curved draws on active launches. An affine pedestal needs its own dark-well control. For a common sign of the two gaps, a finite-error statement can be made without a source or score scale. Write $Z_{00}=Z$, $Z_{01}=Z+d_2$, $Z_{10}=Z+d_1$, $Z_{11}=Z+d_1+d_2$, and $M=\max Z_{ij}$. On any subpopulation with measured per-type spectator numerator divided by $M$ at least $b>0$ and $|d_i|/M\ge\delta_i>0$, one has $C_{\rm launch}\ge2b\delta_1\delta_2$. To see this, factor $(Z_{00}+Z_{11})/(Z_{00}Z_{11})=1/Z_{00}+1/Z_{11}\ge2/M$. Consequently a simultaneous upper limit $C\le e$ bounds that subpopulation's mass by $e/(2b\delta_1\delta_2)$. The per-type lower bounds require separate evidence.
+
+## What the source still decides
+
+For a general scalar score the two gaps can have opposite signs. When the first two coins have the same unknown flip modulus on a given launch, $u=v=q(1-q)$ and $s\ge1/2$. The gaps agree for any $f$, hence zero contrast forces $f(u)+f(0)=f(uq_3)+f(u(1-q_3))$ almost surely. The third coin can be different. One unknown source gives no automatic coverage of a dyadic grid. With $q_1\ne q_2$ arbitrary, even monotone scores can give a negative contrast. At $(q_1,q_2,q_3)=(3/4,1/4,1/2)$ take $f(w)=w+(w-1/24)_+-(3/2)(w-1/4)_+$, with $x_+=\max(0,x)$. Its slopes are $1,2,1/2$. The two gaps are $1/48$ and $-1/3$, whereas the squared score has two positive gaps. A positive mixture of these two scores has exactly zero contrast; its weight is in the stored results.
+
+Positive rates at every exposed output certify activity in the population only in aggregate. For example, take a fraction $1-\lambda$ of launches with interior coins and ordinary scores. On the other $\lambda$ use three identity coins and any nonordinary power. Only the spectator is occupied on that second type, so all four complete position laws equal those of the same fluctuating source with ordinary scores everywhere. That type's fraction can approach one. Even if every launch is active, fixed $p=2$ and $q_1=q_2\downarrow0$ drive the contrast to zero. Uniform finite-error identification requires quantitative participation.
+
+The power conclusion also depends on the readout. A detector may first select a protected full-history label with its kinematic mass and then use any positive power *within that label*. Each such label reaches a single terminal site in every assignment. This mechanism gives all ordinary site rates for this circuit at every exponent. If an external reference or an unrecorded environment stores the same labels, erasing an on-board copy alone does not close this alternative. At the opposite extreme, a reversible permutation acting on a sharp rail and blank bits with only deterministic coins keeps a single occupied basis state. It cannot guarantee five positive wells for arbitrary unknown coins. In the sharp-input worst case, $n$ binary branching uses and otherwise basis permutations yield at most $2^n$ occupied basis histories, so three uses are necessary for five occupied wells under these resources. This lower bound assumes no other coherent splitter.
+
+The [rational checker](check_recorded_coin_source.py) propagates orthogonally labeled histories through all three coins and each subsequent local switch. It compares full 24-well tables to the product construction, probes degenerate coins, exchanges of rail phases, source–score correlations and conditioning on labels. The [Lean identity](lean/UnequalLocalSwitches.lean) verifies the cleared unequal-gap numerator. [Stored results](results/recorded_coin_source.json)
