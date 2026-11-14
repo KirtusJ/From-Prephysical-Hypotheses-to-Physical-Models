@@ -161,3 +161,7 @@ Apps this session's own failures ask for, each already existing here as an ad ho
 | Core | summary sentence against its record (counts named in prose checked against the file they come from) | fifteen wrong summary sentences across six editions | micro-review brief |
 
 Not built as Store apps yet: the form a Store app must take in PCP is Director G's ground as much as mine, so the proposal goes to the exchange first; the scripts above keep working meanwhile.
+
+## Reboots are coordinated (14 November 2026)
+
+Principal: coordinate reboots as necessary. Rule in `CLAUDE.md` (Mechanics, PCP itself): announce in the exchange file before a restart of PCP, calibration, the queue session or a shared tool; record forced restarts afterwards. Restarts so far this session, all forced: resumptions from a summary; the allowance stop of 13 November (eleven sub-agents and the queue session, all resumed); one move of the container (scratch survived). None planned.
