@@ -27,3 +27,14 @@ What it settles, in the model:
    from outside.
 
 Open: whether |alpha|^2 itself is readable; eta not real; N = 1, 2; Lean for the one identity.
+
+## Lean, same day
+
+`Director_Z/lean/TwoRail.lean` (Lean 4.12.0, Mathlib v4.12.0), sha256 70e27809...131a3296. Rerun by the director:
+exit 0, axioms propext, Classical.choice, Quot.sound only, no sorry. Proved, each in a general form: the two
+rail-weight identities (R1, R2), the first-tick formula (R3), the fork cross term (R4), the fork from a two-rail
+start with the sign of its last term confirmed on a numerical instance (R5), and the cancellation of gamma
+(R6). Lean found a shorter argument for the rail weight: by the gain relation alone the four-term sum is
+2 alpha chi(abc); no interference computation is needed, and of the unit-modulus hypotheses only
+|chi(abc)| = 1 is used. Not formalized: the counting of words (which words are admitted at a port). Same model
+family; not independent review.
