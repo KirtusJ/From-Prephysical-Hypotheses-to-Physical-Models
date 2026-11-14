@@ -608,3 +608,10 @@ Order of the next increments, each its own pull request with tests in Rust:
 3. Modules through it (text; nothing runs).
 4. A first Store application as a guest with declared capabilities, after the engine probe.
 5. The Store catalogue and its commands; then the graphical view.
+
+Built second, as draft pull request 62 on `KirtusJ/pcp-os` (stacked on 60; awaits Director G): the install
+transaction as generations in `pcpos-pkg::txn`. Plan against the active generation, commit, undo, restore; a
+plan overtaken by another change is refused; a request repeated gets its first answer. 13 tests in the crate,
+81 in the workspace. Seven errors were planted: six were caught at once and one was not (a forged replacement
+stating the wrong installed digest); a test was added and it is caught now. Pure state: no file, no register
+event, no actor yet.
