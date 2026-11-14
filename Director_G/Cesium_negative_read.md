@@ -1,0 +1,114 @@
+# What a four-step cesium walk measures about a first-step record
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada
+
+Research supplement by Director G (OpenAI Codex).
+
+Robens, Alt, Meschede, Emary and Alberti prepared each cesium atom in one spin state and used its imaged starting well as its coordinate origin. A sequence contained 1.2 spatially separated atoms on average. They compared a four-step walk with two runs in which they moved one of the first-step arms five sites aside and counted final positions. Their published histograms supply a test of a passive record that would leave the final distribution invariant. They also show exactly where the experiment stops short of testing the independence of two pointer values at a shared splitter. [Original experiment, Figs. 2–4 and Appendices A–G](https://doi.org/10.1103/PhysRevX.5.011003) · [Authors' PDF used for the counts](https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf)
+
+## Which atoms enter each comparison
+
+Let \(j\) denote the terminal well index printed in Fig. 3. The authors' binary read is \(+1\) on \(j>0\) and \(-1\) on \(j\leq0\). Panel (a) measures position with no intermediate probe. In (b) the first positive arm is moved and the negative arm is retained. Panel (c) reverses those roles. Each probed setting starts with 404 counted atoms. For (b) the displaced region is \(j=4,\ldots,8\), and for (c) it is \(j=-8,\ldots,-4\). The figure marks both regions. Positions in these regions are included in the accounting below. [Original Fig. 3 and Eq. (2)](https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf)
+
+| Run | \(j=-3\) | \(-2\) | \(-1\) | 0 | \(+1\) | \(+2\) | \(+3\) | Moved aside | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| No probe | 2 | 15 | 131 | 33 | 35 | 14 | 0 | — | 230 |
+| Retain negative arm | 0 | 31 | 107 | 32 | 31 | 0 | 0 | 203 | 404 |
+| Retain positive arm | 0 | 0 | 27 | 29 | 115 | 25 | 0 | 208 | 404 |
+
+These are counts reconstructed from the vector bars of the published figure. The [checker](check_cesium_negative_read.py) pins the source PDF by digest, reads the five axis ticks in each panel and measures each green bar in units of atoms. The greatest distance to the nearest integer is below 0.070 atom. It saves all seventeen displayed sites for each setting, including zero-height bars and the two blank-run atoms at \(j=-3\), outside the ideal support. The displaced counts by site are \(22,42,111,27,1\) in increasing order for (b), and \(2,22,113,40,31\) for (c). The plot gives no explanation for individual anomalous endpoints. Two readers independently recovered the retained counts. The run order and individual trials are unavailable in these histograms. [Bar geometry, count tables and exact arithmetic](results/cesium_negative_read.json)
+
+Following the authors' equal-exposure pooling, the retained first-arm weights are \(201/397\) and \(196/397\). The observed probability of a positive terminal position changes from \(49/230\) to \(171/397\). For the paper's assignments at the first two times, \(K=1+2[P_{\rm retained}(j>0)-P_{\rm blank}(j>0)]\). These counts give \(K=1.435374\), consistent with the printed \(1.435\pm0.074\). The quoted uncertainty is the authors' bootstrap estimate. Their separate Monte Carlo estimate is 0.068. Neither uncertainty is an error bar for the full distribution distance derived below. [Original Eq. (2), Sec. IV and Appendix C](https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf)
+
+## A constraint on terminal records
+
+Write \(p\) for the normalized blank histogram and \(q\) for the normalized pooled retained histogram. Under *any* joint assignment of terminal positions with these two marginals, equal outcomes occupy mass at most \(\sum_j\min(p_j,q_j)\). Matching the common part at each site and coupling the leftover positive and negative excesses attains that bound. Thus the smallest possible terminal mismatch for these empirical distributions is their total variation,
+
+\[
+ d_{\rm TV}(p,q)=p(\{-3,-1\})-q(\{-3,-1\})
+ =\frac{21981}{91310}\simeq 0.24073 .
+\]
+
+The paper's prespecified \(j>0\) read gives a smaller difference of 0.21769. The maximizing event above was selected from the data. The two numbers describe observed histograms; neither measures the proportion of individual atoms that followed one trajectory in both experiments. A lower bound on the fraction of a *population* whose endpoint could have changed requires population distributions, comparable preparation, arm selection and detection, and uncertainty for that bound. The original article discusses a 1% imperfection estimate for the negative probe and a separate position-reconstruction error. Its standard blank walk lacked the extra measurement delay. Its matched-delay control used a Ramsey sequence. A later discrete-event simulation also illustrates the importance of modeling the measuring apparatus. [Robens et al., Sec. VI and Appendices A, E](https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf) · [Willsch et al., *Discrete-Event Simulation of Quantum Walks*](https://doi.org/10.3389/fphy.2020.00145)
+
+There is a sensitivity check for the first-arm weights. Let \(b,c\) be the separately normalized retained histograms. For any putative arm weight \(w\) the distance from \(p\) to \(wb+(1-w)c\) is piecewise linear. It suffices to evaluate the endpoints and all roots of \(p_j=wb_j+(1-w)c_j\) in \((0,1)\). The minimum is \(4937/46230\simeq0.10679\), at \(w=1\). Thus reweighting the two reported arm distributions cannot reproduce the full blank histogram exactly. An independent certificate uses the event \(A=\{-3,-1,+2\}\). Here \(p(A)-b(A)=4937/46230\) and \(b(A)-c(A)=2630/9849>0\). Consequently every arm mixture has at least that much discrepancy, with equality for the negative arm alone. This is an algebraic result for the plotted central counts. Arbitrary setting-dependent or site-dependent changes in collection can alter the input distributions.
+
+For a positive-cell comparison, use only the two named detectors \(j=\pm1\). The ratio of positive-to-negative odds in the pooled setting divided by the same odds in the blank setting is
+
+\[
+ \frac{146\cdot131}{134\cdot35}=\frac{9563}{2345}\simeq4.078 .
+\]
+
+For fixed pooling weights, site efficiencies cancel if each well has the same response across all three settings and unresolved spins. Blank-run brightness and an overall rescaling of the retained pool also cancel. Relative brightness between the two retained settings changes their weights. Additive backgrounds and transfer of counts between sites require separate treatment. Appendix A reports about 2% nearest-site misassignment. If the two retained settings instead have independently unknown positive brightness factors, their combined odds are between the individual arm odds. Relative to the blank odds the limiting endpoints are \(4061/3745\simeq1.0844\) and \(15065/945\simeq15.942\). This leaves only a small central-value separation in the most adverse weighting. Changing the blank \(+1\) count from 35 to 38, holding the other three arm and blank counts in that endpoint comparison fixed, would put the blank ratio inside the interval. The reported uncertainty on \(K\) cannot establish a significance for this separate nuisance-parameter test.
+
+### How much selective loss can reproduce the histograms?
+
+There is an explicit common-population explanation of the two *empirical* histograms under a specified detector model. Let \(\pi_j\) be the shared terminal distribution before any unintended loss. The detector preserves the well identity of every accepted event. It may retain different fractions at each well in each setting, including zero. Both settings must retain at least \(s\) of their respective draws from \(\pi\). Writing \(s_p,s_q\) for their actual retained fractions, each \(\pi_j\) must be at least \(\max(s_p p_j,s_q q_j)\ge s\max(p_j,q_j)\). Summing over wells gives \(s\le 1/(1+d_{\rm TV}(p,q))\).
+
+This bound is attainable. Take \(\pi_j=s\max(p_j,q_j)\) at equality. At each occupied well retain a fraction \(p_j/\max(p_j,q_j)\) in the blank setting and \(q_j/\max(p_j,q_j)\) in the pooled setting. Each accepted sample normalizes to its required histogram. For the published pooling, the masses of the common target at \(j=-3,\ldots,+2\) are proportional to \((794,7130,52007,14030,33580,5750)\). Its total is 113291, and each setting accepts 91310 units. Thus the smallest possible *larger* loss in this model is **19.402%**. Permitting any closed-interval arm mixture gives **9.649%** at the negative arm alone. If both weights must be positive the latter value is an infimum. These are feasibility thresholds for the plotted frequencies. The experiment does not measure unintended losses of these sizes. The intended removal of the displaced arm is already accounted for before defining this target. [Exact target and site acceptance fractions](results/cesium_negative_read.json)
+
+### Sampling uncertainty when the two probe settings have equal exposure
+
+The reported choice of $j>0$ was fixed before inspecting these reconstructions. It gives a conservative population bound on total variation and, within the faithful-site selection model above, on the larger loss fraction. Treat the counted endpoints within each setting as independent draws with stable category probabilities. Condition on the observed setting totals. Let $a_b,a_c$ be the retention probabilities for the two probe settings, $u_b,u_c$ their positive-site probabilities conditional on retention, and $p_+$ the blank positive-site probability. The positive probability in the equally exposed retained pool is $q_+=w u_b+(1-w)u_c$, with $w=a_b/(a_b+a_c)$. This allows the retention rates themselves to differ.
+
+| Population probability | Count used | One-sided 99% bound, rounded outwards |
+|---|---:|---:|
+| Positive, blank | 49/230 | at most 0.2828 |
+| Retained, setting (b) | 201/404 | at most 0.5565 |
+| Retained, setting (c) | 196/404 | at least 0.4264 |
+| Positive given retained, (b) | 31/201 | at least 0.0998 |
+| Positive given retained, (c) | 140/196 | at least 0.6327 |
+
+Each entry inverts an exact binomial tail. Given an arm's retained count, its positive count is binomial, so the conditional bound also has the stated marginal coverage. The union bound gives at least 95% simultaneous coverage for the five directions without assuming independence among these five limits. Set $w_+=5565/9829$. On this joint event, $w\le w_+$ and $q_+\ge w_+(0.0998)+(1-w_+)(0.6327)$. Subtracting the upper blank bound yields
+$$
+d_{\rm TV}\ \ge\ q_+-p_+\ \ge\ 2367893/49145000 \simeq 0.04818.
+$$
+Within the common-population model that preserves each accepted well identity, the larger loss must then be at least $2367893/51512893$, about **4.60%**, at the same confidence level. This population lower limit uses only the prespecified binary read. The 19.402% figure above is the exact threshold for fitting the two full empirical histograms.
+
+If relative arm brightness is free, the empirical weight $162207/181240$, about 0.895 on the negative arm, makes $w(31/201)+(1-w)(140/196)$ equal to $49/230$ exactly. The binary read alone then admits a match. The full-histogram central-value discrepancy above still applies. Unknown setting-dependent assignment errors, dependencies between atoms in the same sequence, or time drift can change the population interpretation. The published histograms lack sequence identifiers. The calculation gives no measured rate of unintended loss. [Original Fig. 3 and Appendix C](https://doi.org/10.1103/PhysRevX.5.011003) · [Exact one-sided binomial limits](https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm) · [Checker and recorded bounds](results/cesium_negative_read.json)
+
+## The walk and the missing control
+
+Use the reflected logical coordinate: the initially populated right rail in the program represents the left-moving atomic spin. The fair signed update gives \((u+v,u-v)\) on its two outgoing rails. The five occupied terminal sites of the abstract four-tick walk are two coordinate units apart. In the plotted orientation assign each direction word the terminal well \(j=(\#\mathrm{left\ program\ steps}-\#\mathrm{right\ program\ steps})/2\). This is an endpoint convention. The source and both probe operations are specified separately. A fair rotation coin can also be written as the Hadamard followed or preceded by a diagonal sign. For fixed counts of left steps and fixed final rail, the added signs are then common to all contributing paths (incoming counts differ from outgoing counts only by the initial and final rail). They do not affect these squared endpoint sums.
+
+With all 16 words kept, the ideal blank probabilities at the five sites are \((1,10,2,2,1)/16\). Shifting one arm by five plotted wells and using both complementary retained arms gives \((1,6,2,6,1)/16\). The normalized left and right single-arm distributions are \((1,5,1,1,0)/8\) and \((0,1,1,5,1)/8\). The integer panel gives \(K=3/2\), total variation \(1/4\) and two-site odds ratio 5. These are ideal model values. The measured counts and both estimates of statistical uncertainty above are separate data. [All word signs, endpoint ports and displaced masses](results/cesium_negative_read.json)
+
+The ordinary signed walk predicts where resolving the first arm transfers probability. The blank minus pooled distribution has an ideal surplus of \(1/4\) at \(-1\) and a deficit of \(1/4\) at \(+1\). The published counts give \(+0.23203\) and \(-0.21558\) at those same wells. The largest absolute difference at any other plotted well is \(0.01287\). This agreement in sign and location supports the model's resolved and unresolved arm calculation for this instrument. The two-well comparison describes the published data. The prespecified positive-side statistic and \(K\) summarize the same measurement. [All seventeen differences](results/cesium_negative_read.json)
+
+A marker model that assumes one common undisturbed terminal random variable under the complementary negative reads requires the pooled and blank population laws to agree, given faithful response and matching preparation. A marker coupled to the entire signed field can give different final laws when moving one arm changes the guide in which the other subsequently propagates. In particular the experiment puts the removed arm in a spatially disjoint set of wells. A competing splitter that changes its routing only when **two pointer sectors occupy the same site** can agree with the ordinary law throughout each retained flight. Testing this remaining freedom needs an instrument in which both sectors actually reach the same splitter. The four positive detector readings in the [joint-sector control](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/21) give ratios 1 and \(6/5\) for two such laws. Those are predictions for a different measurement. The empirical comparison constrains transfer from a bare walk to a physically displaced arm; it leaves the physical origin of the marker, the squared detector law, the clock and the full quantum-to-classical map open.
+
+### A proposed sign reversal before recombination
+
+Keep both first arms, apply a relative sign to one, and recombine them with the same subsequent walk. Compare with an equal-duration identity setting. More generally a stipulated relative phase \(\phi\) gives a five-well law \((1,6+4\cos\phi,2,6-4\cos\phi,1)/16\) in order of increasing \(j\). This follows by grouping the same sixteen words by first arm and terminal spin before squaring. The endpoint observable
+
+\[
+J=P(-1)-P(+1)-4[P(-2)-P(+2)]
+\]
+
+vanishes separately on each normalized single-arm row and hence on every mixture of those two rows, even if the mixture weight changes between settings. It equals \(\cos\phi/2\) in the coherent model. A real sign reversal therefore exchanges the two central peaks and takes \(J\) from \(+1/2\) to \(-1/2\). The outer wells are essential for rejecting a change in arm weights. The comparison assumes calibrated well responses and records all endpoints and arm yields. This intervention goes beyond the reported cesium experiment. Separately, site-dependent polarization-independent phase shifters have been implemented in a photonic walk. [Xue et al., experimental apparatus](https://doi.org/10.1088/1367-2630/16/5/053009) [Exact arm and interference terms](results/cesium_negative_read.json)
+
+Two competing mechanisms specify what additional control is needed. A random real sign chosen positive with probability \((1+\cos\phi)/2\) reproduces the full phase scan with real analyzers. Under linear composition, a separately calibrated downstream \(+\pi/2\) phase reference on the same arm distinguishes this ensemble from a coherent \(+\pi/2\) input. Their predicted \(J\) values are \(0\) and \(-1/2\), respectively. A separate detector counterexample starts with the phase-independent diagonal distribution \((1,6,2,6,1)/16\). Give the detectors at \(-1,+1\) efficiencies \((3+2\cos\phi)/5,(3-2\cos\phi)/5\) and the others \(3/5\). The total yield is always \(3/5\), and normalizing reproduces the entire coherent fringe. Running a single populated arm through the same sign settings and readout tests this particular gain change, since it changes the two central detector odds by a factor of 25 between settings. These controls require a physical implementation and data.
+
+### Comparing three wells with unknown detector efficiencies
+
+A prospective experiment can use the wells $-2,-1,0$ and four preparations. Prepare each first arm alone, giving reference settings $L$ and $R$. Then prepare both arms, once with an identity operation and once with an equal-duration sign reversal. Let the expected count in setting $s$ and well $j$ be $Y_s(j)=B_s\eta_jP_s(j)$. The source brightness $B_s>0$ may change independently in every setting. Each efficiency $\eta_j>0$ may differ between wells and must be shared across preparations and unresolved spin at that well.
+
+Use well 0 as a reference with positive expected counts in all four settings. For either other well, form the position of the joint run between the two single-arm odds,
+$$
+r_s(j)=Y_s(j)/Y_s(0),\qquad
+h_j=\frac{r_s(j)-r_R(j)}{r_L(j)-r_R(j)},\qquad
+D=h_{-1}-h_{-2}.
+$$
+The source brightness cancels in each ratio and the fixed factor $\eta_j/\eta_0$ cancels in $h_j$. The two sharp odds are distinct at each comparison well. For any incoherent mixture $P_s=w_sP_L+(1-w_s)P_R$, both positions equal $w_sP_L(0)/[w_sP_L(0)+(1-w_s)P_R(0)]$. Therefore $D=0$ even if arm populations change between the identity and reversal settings. For this walk both sharp arms have $P(0)=1/8$, so the common position is $w_s$ itself.
+
+For the balanced coherent preparation, $h_{-2}=1/2$ and $h_{-1}=(1+\cos\phi)/2$. The outer well fixes the arm population and the inner well carries the interference term.
+
+| Both-arm setting | $h_{-2}$ | $h_{-1}$ | Predicted $D$ |
+|---|---:|---:|---:|
+| Identity | 1/2 | 1 | +1/2 |
+| Sign reversal | 1/2 | 0 | −1/2 |
+| Any incoherent mixture of the measured arms | $w_s$ | $w_s$ | 0 |
+
+For a normalized two-arm state with left population $w$ and real off-diagonal entry $c=\operatorname{Re}\rho_{LR}$, the three site masses are $w/8$, $(1+4w+4c)/8$ and $1/8$. Thus $D=c$ under the stated walk. The signed-word checker and a Lean calculation in physical coordinates verify the coefficients. Lean also verifies how a two-row determinant scales with the two row brightnesses and well gains. [Exact checker](check_three_well_phase.py) · [Recorded cases](results/three_well_phase.json) · [Integer identities checked with Lean 4.19.0](lean/ThreeWellPhase.lean)
+
+An explicit counterexample shows why gain stability must extend to the joint preparations. Keep the diagonal input for both sign settings and give the single-arm preparations a flat efficiency of $3/5$. Apply the sign-dependent efficiencies above only when both arms are populated. This reproduces both coherent five-well rows, their total yield and both single-arm controls. Restoring the flat gain on joint inputs gives $D=0$. A randomized real sign also survives this real-analyzer scan. The published experiment did not take the reversal data. The ratios describe expected counts. An experiment can retain every site count, including zeros, and estimate uncertainty from the joint count tables before comparing the predicted signs. [Original measurement settings, Fig. 3](https://doi.org/10.1103/PhysRevX.5.011003)

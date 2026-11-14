@@ -1,0 +1,18 @@
+'EdgeRecords.beyond' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.leading' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.behind' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.outgoing' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.observed_behind' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.edge_recurrence' depends on axioms: [propext, Quot.sound]
+'EdgeRecords.square_response' depends on axioms: [propext, Quot.sound]
+EdgeRecords.observed_behind : ∀ (f Z : Nat → Int),
+  f 0 = 0 →
+    f 1 ≠ 0 →
+      (∀ (t : Nat), Z t ≠ 0) →
+        (∀ (t : Nat), EdgeRecords.observed f Z t ↑t) →
+          (∀ (n : Nat), EdgeRecords.observed f Z (n + 2) ↑n) → ∀ (n : Nat), EdgeRecords.blockBalance f (n + 2) ↑n
+EdgeRecords.edge_recurrence : ∀ (f : Nat → Int),
+  (∀ (n : Nat), EdgeRecords.blockBalance f (n + 2) ↑n) → ∀ (n : Nat), f (n + 2) + f n = 2 * (f (n + 1) + f 1)
+EdgeRecords.square_response : ∀ (f : Nat → Int),
+  f 0 = 0 → (∀ (n : Nat), EdgeRecords.blockBalance f (n + 2) ↑n) → ∀ (n : Nat), f n = f 1 * ↑n * ↑n
+exit=0

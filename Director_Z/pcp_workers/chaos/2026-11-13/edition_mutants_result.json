@@ -1,0 +1,360 @@
+[
+ {
+  "id": "E01",
+  "title": "changed digit in a result JSON under COMPUTATION",
+  "file": "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+  "original_sha256": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+  "change": "digit at byte 675: 8 -> 9 (context: ...p\": [         -0.1,         0.9       ],       \"index_enclos...)",
+  "made_false": "yes (a recorded result value)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E02",
+  "title": "changed word in a paper's .tex",
+  "file": "PAPERS/G4_Quantum_State_Families_Symmetry_and_Relative_References/source/G4_manuscript.tex",
+  "original_sha256": "bfc0534d9a8879e53e6e7644a2dfce53586a36f667b4b57779e735caa753ae6e",
+  "change": "word ' not ' -> ' now ' at byte 1844 (context: ...ion: Claude (Anthropic). Assistance does not imply provider endorsement.\\par This man...)",
+  "made_false": "yes (a negation removed from a sentence)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'PAPERS/G4_Quantum_State_Families_Symmetry_and_Relative_References/source/G4_manuscript.tex')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E03",
+  "title": "one byte replaced in a paper PDF",
+  "file": "PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/13_Conformal_Invariance_and_Sharp_Wilson_Majorant_Boundary_Bounds.pdf",
+  "original_sha256": "36221c4db0f1402c91a1f64cbbd5d1ee73b03c2e773754ba9fb34b00316712cf",
+  "change": "byte 428 of 70240: 0xcc -> 0xcd",
+  "made_false": "record altered (PDF bytes)",
+  "check": "verify_baseline.py: manifest digest (and crosswalk digest if it is a part)",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/13_Conformal_Invariance_and_Sharp_Wilson_Majorant_Boundary_Bounds.pdf')",
+   "  ('crosswalk digest', 'PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/13_Conformal_Invariance_and_Sharp_Wilson_Majorant_Boundary_Bounds.pdf')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E04",
+  "title": "deleted file",
+  "file": "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr21_loops/leancopy/LoopCoinPreparation.lean",
+  "original_sha256": "e528c957c6ef5415f6aaf9b5bb726c505fcbac1cb160c9c61e58e30b8ef1458b",
+  "change": "file removed from the copy (moved to planted/, not deleted)",
+  "made_false": "record altered (a file is absent)",
+  "check": "verify_baseline.py: missing file",
+  "prediction": "CAUGHT (missing)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('missing', 'REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr21_loops/leancopy/LoopCoinPreparation.lean')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E05",
+  "title": "added stray file",
+  "file": "COMPUTATION/MUTANT_E05_stray_result.json",
+  "original_sha256": "(no original: added file)",
+  "change": "stray file added",
+  "made_false": "record altered (an unlisted result file)",
+  "check": "verify_baseline.py: unlisted file",
+  "prediction": "CAUGHT (unlisted)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('unlisted', 'COMPUTATION/MUTANT_E05_stray_result.json')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E06",
+  "title": "added stray file under a directory named __pycache__",
+  "file": "PAPERS/__pycache__/MUTANT_E06_stray_paper.tex",
+  "original_sha256": "(no original: added file)",
+  "change": "stray .tex added under a directory named __pycache__",
+  "made_false": "record altered (an unlisted file inside the edition)",
+  "check": "verify_baseline.py: unlisted file",
+  "prediction": "SURVIVES: the unlisted test skips every path containing '__pycache__'",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E07",
+  "title": "registry CSV: a statement number changed",
+  "file": "PROGRAM/registers/THEOREM_REGISTRY.csv",
+  "original_sha256": "aa6beb338a2b797d7cd8d9408a71093a46a89820cefaf798faa919a8c72cbdc5",
+  "change": "row C3-01-09: statement number 2.3 -> 2.4",
+  "made_false": "yes (the registry points to another statement number)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'PROGRAM/registers/THEOREM_REGISTRY.csv')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E08",
+  "title": "registry CSV: a status word changed",
+  "file": "PROGRAM/registers/THEOREM_REGISTRY.csv",
+  "original_sha256": "aa6beb338a2b797d7cd8d9408a71093a46a89820cefaf798faa919a8c72cbdc5",
+  "change": "row B1-05-05: status PROOF_NOT_ADJACENT -> PROOF_IN_MANUSCRIPT",
+  "made_false": "yes (a proof is declared present in the manuscript)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'PROGRAM/registers/THEOREM_REGISTRY.csv')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E09",
+  "title": "a digest changed in the manifest",
+  "file": "MANIFEST.json",
+  "original_sha256": "7796d11fb984c8970f2d915a053ba7fb831908997955517c228163ebf7ad621e",
+  "change": "sha256 of COMPUTATION/Baseline_Additions/Vanishing_Sums/t2_log_phi4.txt: hex digit 52 2 -> 3",
+  "made_false": "record altered (a digest in the manifest)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'COMPUTATION/Baseline_Additions/Vanishing_Sums/t2_log_phi4.txt')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E10",
+  "title": "a line changed in the register copy inside the edition",
+  "file": "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl",
+  "original_sha256": "2b69e8b7c172e34ddd36db6979c526bbfc1ef5d83862c9c48c95ecde3e5c518a",
+  "change": "line seq 283 (INSPECTION_DECLARED): timestamp digit 6 -> 7 (2026-11-13T11:13:36Z -> 2026-11-13T11:13:37Z)",
+  "made_false": "yes (a register record altered)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl')"
+  ],
+  "chain_check_failures": 1
+ },
+ {
+  "id": "E11",
+  "title": "README count '413 rows' changed",
+  "file": "README.md",
+  "original_sha256": "09c3d0c63afe7fe14831593911f157c73575c5dd63de6ee1ce6403e90414cfab",
+  "change": "'theorem registry (413 rows)' -> '(431 rows)'",
+  "made_false": "yes (the registry has 413 rows)",
+  "check": "verify_baseline.py: manifest digest",
+  "prediction": "CAUGHT (digest)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'README.md')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E12",
+  "title": "a pair of file names swapped",
+  "file": "COMPUTATION/Baseline_Additions/Kernel_Rules_General_Results.json",
+  "original_sha256": "164df4d51579849e6c951e58fb09fd39c8cd0b019a97ae13d4e9b5b0cbcb3f1f",
+  "change": "file names swapped: COMPUTATION/Baseline_Additions/Kernel_Rules_General_Results.json <-> COMPUTATION/Baseline_Additions/Transport_Bridge_Results.json",
+  "made_false": "yes (each name now carries the other's content)",
+  "check": "verify_baseline.py: manifest digest of both",
+  "prediction": "CAUGHT (digest, two files)",
+  "verifier_exit": 1,
+  "verifier_output": [
+   "BASELINE_CHECK_FAIL",
+   "  ('digest', 'COMPUTATION/Baseline_Additions/Kernel_Rules_General_Results.json')",
+   "  ('digest', 'COMPUTATION/Baseline_Additions/Transport_Bridge_Results.json')"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E13",
+  "title": "result-JSON digit, manifest consistent",
+  "file": "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+  "original_sha256": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+  "change": "digit at byte 675: 8 -> 9 (context: ...p\": [         -0.1,         0.9       ],       \"index_enclos...); manifest entry re-digested",
+  "made_false": "yes (a recorded result value)",
+  "check": "rerun of the program and byte comparison (not the verifier)",
+  "prediction": "SURVIVES the verifier; only a rerun catches it",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E14",
+  "title": "README count, manifest consistent",
+  "file": "README.md",
+  "original_sha256": "09c3d0c63afe7fe14831593911f157c73575c5dd63de6ee1ce6403e90414cfab",
+  "change": "'theorem registry (413 rows)' -> '(431 rows)'; manifest entry re-digested",
+  "made_false": "yes (the registry has 413 rows)",
+  "check": "nothing mechanical ties the README sentence to the registry; a reviewer of the summary",
+  "prediction": "SURVIVES the verifier (it prints 413 but does not compare)",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E15",
+  "title": "registry status word, manifest consistent",
+  "file": "PROGRAM/registers/THEOREM_REGISTRY.csv",
+  "original_sha256": "aa6beb338a2b797d7cd8d9408a71093a46a89820cefaf798faa919a8c72cbdc5",
+  "change": "row B1-05-05: status PROOF_NOT_ADJACENT -> PROOF_IN_MANUSCRIPT; manifest entry re-digested",
+  "made_false": "yes (a proof is declared present in the manuscript)",
+  "check": "a reviewer comparing the registry row with the paper",
+  "prediction": "SURVIVES the verifier",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E16",
+  "title": "registry row removed, manifest consistent",
+  "file": "PROGRAM/registers/THEOREM_REGISTRY.csv",
+  "original_sha256": "aa6beb338a2b797d7cd8d9408a71093a46a89820cefaf798faa919a8c72cbdc5",
+  "change": "row G8-01-03 (Corollary 4.2) removed; 412 rows remain; manifest entry re-digested",
+  "made_false": "yes (README says 413 rows; PAPER_INDEX statements count for the paper is now one too many)",
+  "check": "verify_baseline.py ought to compare PAPER_INDEX.statements and the README count with the registry",
+  "prediction": "SURVIVES the verifier",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 412 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E17",
+  "title": "addendum '32 labelled statements' -> 33, manifest consistent",
+  "file": "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z23.md",
+  "original_sha256": "084c6b81235d4b21b48ff94bb280513b21aa087583361f0706e194fd734fe44d",
+  "change": "'Paper G10 revised (47 pages, 32 labelled statements' -> '33 labelled statements'; manifest entry re-digested",
+  "made_false": "yes (G10 has 32 registry rows)",
+  "check": "summary-sentence review (a reviewer)",
+  "prediction": "SURVIVES the verifier",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E18",
+  "title": "manifest: predecessor digest changed",
+  "file": "MANIFEST.json",
+  "original_sha256": "7796d11fb984c8970f2d915a053ba7fb831908997955517c228163ebf7ad621e",
+  "change": "predecessor_manifest_sha256: hex digit 10 c -> d",
+  "made_false": "yes (the edition names a predecessor digest that is not its predecessor's)",
+  "check": "verify_baseline.py ought to, but has no predecessor to compare with; git history of MANIFEST.json",
+  "prediction": "SURVIVES the verifier",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E19",
+  "title": "manifest: a file size changed",
+  "file": "MANIFEST.json",
+  "original_sha256": "7796d11fb984c8970f2d915a053ba7fb831908997955517c228163ebf7ad621e",
+  "change": "size of REVIEW_RECORDS/Director_Z/Session_4/queue_reports/2026-11-13_pcp-cross-reviewer_Director_G_Periodic_interaction/compare_rerun.py: 1354 -> 1355",
+  "made_false": "yes (the manifest states a wrong size)",
+  "check": "verify_baseline.py ought to compare sizes",
+  "prediction": "SURVIVES: the verifier never reads 'size'",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E20",
+  "title": "register copy line (interior), manifest consistent",
+  "file": "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl",
+  "original_sha256": "2b69e8b7c172e34ddd36db6979c526bbfc1ef5d83862c9c48c95ecde3e5c518a",
+  "change": "line seq 283 (INSPECTION_DECLARED): timestamp digit 6 -> 7 (2026-11-13T11:13:36Z -> 2026-11-13T11:13:37Z); manifest entry re-digested",
+  "made_false": "yes (a register record altered)",
+  "check": "the register's own prev-hash chain; comparison with .pcp/register.jsonl",
+  "prediction": "SURVIVES the verifier; a chain check would catch it",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 1
+ },
+ {
+  "id": "E21",
+  "title": "PAPER_INDEX pages of G10 47 -> 48, manifest consistent",
+  "file": "PROGRAM/registers/PAPER_INDEX.csv",
+  "original_sha256": "86ab4bae99523aacc8a464de7ca1148609d0233671b566089a7f5347aa47be78",
+  "change": "row G10: pages 47 -> 48; manifest entry re-digested",
+  "made_false": "yes (the assembled G10 PDF has 47 pages)",
+  "check": "verify_baseline.py ought to compare with the PDF page count (it already opens each PDF)",
+  "prediction": "SURVIVES the verifier",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E22",
+  "title": "the verifier itself weakened, plus a wrong README count",
+  "file": "verify_baseline.py",
+  "original_sha256": "9135b272e807d4cee5c1284036e9b95ea20ca953303060e71b522d6335a080cd",
+  "change": "'if bad:' -> 'if bad and False:' in the verifier, together with README '(413 rows)' -> '(431 rows)' (no re-digest)",
+  "made_false": "yes (the check is disabled and a count is wrong)",
+  "check": "nothing inside the edition can; git diff of verify_baseline.py or a trusted copy of the verifier",
+  "prediction": "SURVIVES",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ },
+ {
+  "id": "E23",
+  "title": "register copy LAST line changed, manifest consistent",
+  "file": "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl",
+  "original_sha256": "2b69e8b7c172e34ddd36db6979c526bbfc1ef5d83862c9c48c95ecde3e5c518a",
+  "change": "line seq 529 (REVIEW_CLOSED): timestamp digit 3 -> 4 (2026-11-13T20:47:24Z -> 2026-11-14T20:47:24Z); manifest entry re-digested",
+  "made_false": "yes (a register record altered)",
+  "check": "comparison with the live .pcp/register.jsonl digest",
+  "prediction": "SURVIVES the verifier and a prev-hash chain check (no successor line)",
+  "verifier_exit": 0,
+  "verifier_output": [
+   "BASELINE_CHECK_PASS 1553 files; 41 papers; 413 registry rows; 85 legacy components accounted for (local consistency only; not authentication, peer review or proof certification)"
+  ],
+  "chain_check_failures": 0
+ }
+]

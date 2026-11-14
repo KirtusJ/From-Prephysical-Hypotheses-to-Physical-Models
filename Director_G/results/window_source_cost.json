@@ -1,0 +1,95 @@
+{
+  "model": "Sharp (0,R), unwrapped integer sites, one coherent inclusive yes/no flag. Both rails contribute squared signed counts.",
+  "trials": "Independent fresh copies, or the same conditional yes probability after every failure. The fractions and minimal budgets are exact. The two failure decimals are display values.",
+  "exponent_inputs": "T ~ delta^(-14/5), p ~ (2/pi)delta^(11/10), zero overhead; the lane count divided by delta^(-required_lane_growth_power_at_fixed_deadline) must diverge for success tending to one.",
+  "exact": [
+    {
+      "ticks": 16,
+      "inclusive_window": [
+        0,
+        2
+      ],
+      "site_right_left": [
+        [
+          0,
+          35,
+          -35
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -45,
+          25
+        ]
+      ],
+      "total_raw_score": 65536,
+      "accepted_raw_score": 5100,
+      "p": "1275/16384",
+      "one_trial_failure": "15109/16384",
+      "min_trials_for_95_percent": 37,
+      "failure_before_threshold": 0.054121291107607446,
+      "failure_at_threshold": 0.04990958174712164
+    },
+    {
+      "ticks": 64,
+      "inclusive_window": [
+        2,
+        6
+      ],
+      "site_right_left": [
+        [
+          2,
+          -319929885,
+          281150505
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          358709265,
+          -238949415
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          6,
+          -412276725,
+          168273405
+        ]
+      ],
+      "total_raw_score": 18446744073709551616,
+      "accepted_raw_score": 565457934310570350,
+      "p": "282728967155285175/9223372036854775808",
+      "one_trial_failure": "8940643069699490633/9223372036854775808",
+      "min_trials_for_95_percent": 97,
+      "failure_before_threshold": 0.050348544244893836,
+      "failure_at_threshold": 0.048805183329249234
+    }
+  ],
+  "ideal_clock_powers": [
+    {
+      "epsilon_power": "1",
+      "tick_power": "3",
+      "one_attempt_duration_power": "1/5",
+      "mean_serial_time_power": "-9/10",
+      "required_lane_growth_power_at_fixed_deadline": "9/10"
+    },
+    {
+      "epsilon_power": "9/10",
+      "tick_power": "29/10",
+      "one_attempt_duration_power": "1/10",
+      "mean_serial_time_power": "-1",
+      "required_lane_growth_power_at_fixed_deadline": "1"
+    }
+  ]
+}

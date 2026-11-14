@@ -1,0 +1,3 @@
+Adds to edition/verify_baseline.py: manifest size check; unlisted-file test no longer skips arbitrary paths containing "__pycache__" (only *.pyc inside such a directory); PAPER_INDEX statements vs registry rows, README registry count, PAPER_INDEX pages vs PDF page count, and the prev-hash chain of every register.jsonl.
+All added checks hold on the unmodified Z23 copy; they catch chaos mutants E06, E14, E16, E19, E20, E21 (not E13, E15, E17, E18, E22, E23).
+Not applied. verify_baseline.py is itself listed in MANIFEST.json, so it must go in through the next edition script; the repository's untracked Director_Z/tools/__pycache__ is outside edition/ and unaffected.

@@ -1,0 +1,91 @@
+{
+  "carrier": {
+    "vertices": 5,
+    "degree": 5,
+    "lift_vertices": 125,
+    "base_period": 1,
+    "lift_period": 5,
+    "qualifying_characters": 20
+  },
+  "end_vertex": 1,
+  "length": 3,
+  "available_walks_by_gain": [
+    9,
+    4,
+    4,
+    4,
+    4
+  ],
+  "weight_format": "A + B sqrt(5), stored as [A,B]",
+  "cases": [
+    {
+      "name": "negative_count",
+      "coefficients": [
+        -1,
+        1,
+        1
+      ],
+      "multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_weight": [
+        "-5",
+        "0"
+      ],
+      "control_weight": [
+        "5/2",
+        "0"
+      ]
+    },
+    {
+      "name": "negative_class_1",
+      "coefficients": [
+        1,
+        -1,
+        1
+      ],
+      "multiplicities": [
+        2,
+        2,
+        0,
+        0,
+        2
+      ],
+      "exact_weight": [
+        "6",
+        "-4"
+      ],
+      "control_weight": [
+        "6",
+        "1"
+      ]
+    },
+    {
+      "name": "negative_class_2",
+      "coefficients": [
+        1,
+        1,
+        -1
+      ],
+      "multiplicities": [
+        2,
+        0,
+        2,
+        2,
+        0
+      ],
+      "exact_weight": [
+        "6",
+        "-4"
+      ],
+      "control_weight": [
+        "6",
+        "-1"
+      ]
+    }
+  ]
+}

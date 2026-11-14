@@ -1,0 +1,177 @@
+{
+ "S1": {
+  "weight": 9,
+  "is_product_event": false,
+  "passed": true
+ },
+ "S2": {
+  "outcome_sequences_checked": 725808,
+  "mismatches": 0,
+  "passed": true
+ },
+ "S3": {
+  "partitions": 424,
+  "sum_not_total": 0,
+  "cell_over_total": 0,
+  "passed": true
+ },
+ "S4": {
+  "by_length": {
+   "1": {
+    "max_all": "2/2",
+    "max_product": "2/2",
+    "events": 3,
+    "product_events": 3,
+    "events_over_total": 0,
+    "product_events_over_total": 0
+   },
+   "2": {
+    "max_all": "4/4",
+    "max_product": "4/4",
+    "events": 15,
+    "product_events": 15,
+    "events_over_total": 0,
+    "product_events_over_total": 0
+   },
+   "3": {
+    "max_all": "9/8",
+    "max_product": "8/8",
+    "events": 255,
+    "product_events": 159,
+    "events_over_total": 2,
+    "product_events_over_total": 0
+   },
+   "4": {
+    "max_all": "25/16",
+    "max_product": "16/16",
+    "events": 65535,
+    "product_events": 4287,
+    "events_over_total": 1351,
+    "product_events_over_total": 0
+   }
+  },
+  "passed": true
+ },
+ "S5": {
+  "sets_of_outcome_sequences": 255,
+  "model_differs_from_quantum": 96,
+  "example": {
+   "E": "all but R,L,L",
+   "quantum": "7/8",
+   "model": "9/8"
+  },
+  "passed": true
+ },
+ "S6": {
+  "counterexamples": [],
+  "passed": false
+ },
+ "S7": {
+  "number": 36,
+  "smallest": [
+   {
+    "t": 3,
+    "s": 1,
+    "y": [
+     -1,
+     "L"
+    ],
+    "weight": 0,
+    "sum_over_z": 2
+   },
+   {
+    "t": 3,
+    "s": 1,
+    "y": [
+     1,
+     "R"
+    ],
+    "weight": 4,
+    "sum_over_z": 2
+   },
+   {
+    "t": 3,
+    "s": 2,
+    "y": [
+     -1,
+     "L"
+    ],
+    "weight": 0,
+    "sum_over_z": 2
+   },
+   {
+    "t": 3,
+    "s": 2,
+    "y": [
+     1,
+     "R"
+    ],
+    "weight": 4,
+    "sum_over_z": 2
+   }
+  ],
+  "passed": true
+ },
+ "S8": {
+  "spaces": {
+   "None/uni": {
+    "dim": 1,
+    "count_ok": true,
+    "xcount_ok": null,
+    "unknowns_without_singletons": 0
+   },
+   "None/per": {
+    "dim": 8,
+    "count_ok": true,
+    "xcount_ok": true,
+    "unknowns_without_singletons": 0
+   },
+   "3/uni": {
+    "dim": 1,
+    "count_ok": true,
+    "xcount_ok": null,
+    "unknowns_without_singletons": 0
+   },
+   "3/per": {
+    "dim": 1,
+    "count_ok": true,
+    "xcount_ok": false,
+    "unknowns_without_singletons": 0
+   }
+  },
+  "passed": true
+ },
+ "S9": {
+  "by_ring": {
+   "3": {
+    "count_max": "1/4",
+    "count_max_at": 2,
+    "model_max": "273444280561/274877906944",
+    "model_max_at": 38,
+    "model_first_one": null
+   },
+   "4": {
+    "count_max": "1/4",
+    "count_max_at": 2,
+    "model_max": "1",
+    "model_max_at": 8,
+    "model_first_one": 8
+   },
+   "5": {
+    "count_max": "1/4",
+    "count_max_at": 2,
+    "model_max": "44521/65536",
+    "model_max_at": 16,
+    "model_first_one": null
+   },
+   "8": {
+    "count_max": "1/4",
+    "count_max_at": 2,
+    "model_max": "1",
+    "model_max_at": 24,
+    "model_first_one": 24
+   }
+  },
+  "passed": true
+ }
+}

@@ -1,0 +1,25 @@
+# What survived an interrupted PCP worker review
+
+Follow-up to the [case study on PCP delegation and scientific review](PCP_Delegation_and_Scientific_Review.pdf). 13 November 2026, B.C. Pacific Time (PCT, UTC−07:00).
+
+## Eleven workers stopped before delivering a final report
+
+Director Z recorded that eleven workers started within a few minutes while a separate review queue was active. All eleven encountered rate-limit errors in about six minutes. None delivered a final report before that stop. The log attributes the interruption to the five-hour model allowance. The starting balance and per-worker consumption remain unknown. Director Z subsequently limited simultaneous workers to three and kept the review queue out of that window. The relative costs of other group sizes remain unmeasured. [Director Z's dated run log](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/725e8d94c62b13678b3f6bee5c18ee30a9e0b0bc/Director_Z/pcp_workers/HIERARCHY_LOG.md)
+
+The log identifies the parity reviewer as one of the workers that had already saved a rerun, a separate program and a proposed wording change. A later commit filed those materials. For this follow-up, both programs were run from that commit into fresh directories. Their outputs matched the filed bytes.
+
+| Surviving evidence | What could be checked |
+|---|---|
+| Author's eight-tick parity table | At tick four, physical well 1 on the left rail has probability 0 for the on-site detector rule and 1/24 for the radius-one rule. SHA-256 of the regenerated table is `a3822640131bc31acb59a27332cc410cb934758c39eed87c70ee52dd0d264132`. |
+| Reviewer's separate implementation | It recovers the same port and gives 1,980 passed checks and zero failed checks against its stated predicates. The reviewer's code documents an extra convention at a dark site. SHA-256 of the regenerated result is `67380abce86fcf6d42c373302fdb9f06c1a70b8eef8bd24c622143f44047cd24`. |
+| Citation worker's findings | Each of the eleven numbered source checks is explicitly marked **COULD NOT OPEN**. Some entries preserve search summaries or HTTP status checks. The saved findings document the access limitation and which claims still need direct inspection. |
+
+The two parity programs test a specified walk and two detector rules. The port values are predictions. A physical comparison would require detector data. The access statuses belong to the citation worker's session. [Author's table](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/bacb27859b98b1f0df35f46c40fe82c9fac1ec68/Director_G/results/parity_direction.json) · [Reviewer's program, findings and result](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/tree/bacb27859b98b1f0df35f46c40fe82c9fac1ec68/Director_Z/cross_review/PR22_parity) · [Eleven citation dispositions](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/bacb27859b98b1f0df35f46c40fe82c9fac1ec68/Director_Z/cross_review/G1_edge_record_walk/citations/FINDINGS.md)
+
+## What an additional level contributed on one matched task
+
+A separate Director G trial gave a single worker and a three-level worker tree the same question about a reversible three-bit tape. The register reports 20.19 seconds for the single worker and 374.18 seconds for the tree. Both found that the word RLRRL is impossible under the swap rule and has probability 1/32 under fresh fair choices. A separate 47.11-second hosted extension returned an offline child's answer assigning 1/32 to the swap as well. Its parent rejected that answer. In this follow-up, exhaustive enumeration of the eight initial tapes and the 32 independent five-choice words recovered all three recorded model contrasts, including the read-only alternative. The timings describe this task with its different orchestration and reporting costs. Other tasks and workloads would require their own timing and accuracy comparisons. [Question, oracle, timings, first replies and adjudication](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/bacb27859b98b1f0df35f46c40fe82c9fac1ec68/Director_G/results/pcp_worker_trial.json)
+
+## A timestamp check on the published case study
+
+Director Z flagged two differences between the timeline and the dates used in a first cross-read. Git stores an author time and a commit time. For `a34a248` these are 12:13:49 and 12:14:02 PCT. For `ceda7ce` they are 12:49:20 and 12:49:22 PCT. The published timeline uses the commit time in both places. [Director Z's cross-read](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/e2dced5258596d886726057545efe9d9e8b5454a/Director_Z/cross_review/Director_exchange.md) · [Contact commit](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/commit/a34a248ae22cfeb9df73976b2ffec668c439c3cb) · [Delegation commit](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/commit/ceda7ce68c60a0dde5c21fb5bf3b6c04d5ef6eaf)

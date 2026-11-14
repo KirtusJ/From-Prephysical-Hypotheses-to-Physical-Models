@@ -18,6 +18,9 @@ This file is read by Claude sessions and their sub-agents working here. It recor
 | Challenger | sub-agent, paper text only as input | trying to break one theorem and its proof, with its own program | 5 to 10 minutes |
 | Formalizer | sub-agent with Lean | machine-checking the algebraic steps | 2 to 5 minutes |
 | Micro-review | sub-agent, one narrow target | boundary cases, wording that an edge case makes false, outliers in result files | 1 to 2 minutes, about 8 tool calls |
+| Builder (positive arc) | sub-agent `pcp-builder` | making one statement stronger: a hypothesis removed, a computed step proved, two results unified | 10 to 15 minutes |
+| Wildcard | sub-agent `pcp-wildcard`, no assigned target | whatever it judges most worth attention anywhere in the repository, favourable or not | one per working period |
+| Chaos | sub-agent `pcp-chaos`, scratch copies only | planted errors, to see which checks catch them | before an edition and when a check changes |
 
 Rules for the stack:
 
@@ -27,10 +30,19 @@ Rules for the stack:
 4. Sub-agents share the director's model family. Their agreement reduces exposure; it is not independent review. Say so in the record.
 5. Findings propagate upward into the paper before issue and into the registers at issue; the report itself is filed under `REVIEW_RECORDS/Director_Z/Session_4/`.
 6. Run an outlier scan over all result files at each edition.
+7. The stack carries positive arcs as well as negative ones (principal, 13 November 2026): for a statement or candidate under attack, send a builder as well as the challengers, and carry what it proves upward in the same way as a defect. Propagate widely: prefer several narrow sub-agents in parallel to one reading by the director, and let workers pass work down one further level when it helps.
 
 ## Running without the director
 
 The stack is defined in files so that it does not depend on one session: agent definitions in `.claude/agents/` (`pcp-challenger`, `pcp-micro-review`, `pcp-formalizer`, `pcp-cross-reviewer`) and a file queue in `REVIEW_QUEUE/` with its protocol. Any session, a scheduled routine or a sub-agent can serve the queue; reports go to the branch `pcp/review-queue` and never to `master`. The director reads that branch at the start of each working period, rechecks each report, and carries findings into the next edition. New statements are added to `REVIEW_QUEUE/QUEUE.md` when they are drafted. Changes to this hierarchy, with what worked and what did not, are logged in `Director_Z/pcp_workers/HIERARCHY_LOG.md`; check the child session's status at the start of each working period, because it shares the account's limits and stops silently.
+
+### Pull requests from sub-agents and workers
+
+The principal allows every sub-agent and worker in the stack to open pull requests, on any of the four repositories and from any branch, when the work needs it and only then (13 November 2026). A pull request is needed when a finding requires a change to a file outside the worker's own report folder: a wrong line in a program, a paper sentence, a tool, the method text. A report that changes nothing else is not a reason; it goes to `REVIEW_QUEUE/reports/` as before. Rules: one change per pull request, from a branch of the worker's own (`pcp/<role>-<topic>`), never a push to `master` or to another author's branch; the body names the target, what was rerun and the outcome, with failed predicates kept; the author never merges its own pull request; the director (or the other director for `Director_G/`) reruns and decides. A sub-agent without GitHub tools writes the change as a patch file with a short description in its work folder and says so in the first line of its report; its parent opens the pull request.
+
+### What sub-agents and workers may make
+
+Every sub-agent and worker using PCP may, when the task needs it and only then, write its own PCP application or helper program, install applications and packages, and generate Lean proofs (principal, 13 November 2026). The agent definitions say so. What is made is reported with what it is for, is kept in the worker's folder, and enters the repository only through the parent or a pull request; an installed tool is named in the report.
 
 ## Lessons paid for
 
@@ -52,6 +64,10 @@ The stack is defined in files so that it does not depend on one session: agent d
 - PCP itself: the principal allows changes to the PCP repositories (`pcp`, `pcp-os-claude`, `pcp-claude`) and a restart of PCP and of calibration, with care toward Director G, who uses the same method text (13 November 2026). Do it only when the work needs it. Before any change: write what and why in `Director_Z/cross_review/Director_exchange.md` and wait for the next exchange unless the change is confined to this side; work on the session branch of that repository and never on its default branch without agreement; never rewrite history; do not restart PCP or replace the method text while a review is open in `.pcp/register.jsonl`; record the digest of the method text before and after. A restart begins a new register session and a new calibration record; the old register stays.
 - Branches: work on the session branch, fetch before every push, fast-forward `master` only. Never rewrite history. Do not touch `Director_G/`.
 - Identifiers: Director Z owns paper G10, findings `Z-…`, open problems to OP-30; Director G owns `Director_G/`, papers G11 on, OP-31 on.
+
+## Candidate models
+
+The principal's process (13 November 2026) is in `Director_Z/candidate/CANDIDATE_PROCESS.md`: steelman the best stipulated candidate in full (form, function, brand, plain-English overview, peer-review standard specification, stipulated map, stipulated answers to the problems of cosmology and to the Millennium Prize problems, each answer marked FOLLOWS, ADDED or SILENT and none a claim), invite attacks from every agent and director, and abandon the candidate at once when a verified attack breaks it. Abandoned candidates are kept under `Director_Z/candidate/abandoned/` with the reason. A candidate is never an ontology.
 
 ## What to work on
 
