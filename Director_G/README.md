@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Two partial terminal sheet reads](Two_partial_terminal_sheet_reads.md) | Reading sheets at two wells per setting selects the ordinary power across two randomized settings if their exponent and counting populations agree. Neither setting identifies the power alone. |
 | [When a position histogram identifies its probability power](When_a_position_histogram_identifies_its_probability_power.md) | Three distinct masses in bins with one occupied mode are necessary and sufficient under independently variable within-bin resolution. A zero-power mixture exactly reproduces the ordinary six-well histogram when the sheet is hidden. |
 | [When probability calibration transfers to a flight profile](Calibration_and_the_log_weights_of_a_flight.md) | A bound on the variance of log cell weights converts the signed-walk score into position error on matched flights, including infinite resolved supports. A narrowing Gaussian illustrates why the limiting center alone cannot identify the exponent. |
 | [A reciprocal sheet connection on six wells](A_reciprocal_sheet_connection_on_six_wells.md) | Eleven uniform ticks on a fixed double cover give one terminal histogram. Three pure-rail wells and the peak occupancy distinguish fresh powers and fair counting, including the largest-cell limit. [Odd-ring site records and interference controls](A_reciprocal_sheet_connection_on_six_wells.md#what-a-base-site-instrument-can-see-on-an-odd-ring) |
