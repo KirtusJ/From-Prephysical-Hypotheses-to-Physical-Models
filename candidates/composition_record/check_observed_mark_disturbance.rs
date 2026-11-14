@@ -46,6 +46,17 @@ fn parse(text: &str) -> BTreeMap<&str, Vec<Counts>> {
     table
 }
 
+// All comparison-success allocations compatible with the recorded two groups.
+// Returns (would-be mark-zero / comparison hits, weighted effect in group zero,
+// weighted effect in group one), each expressed as an integer numerator interval.
+fn compatible(marked: Counts, control_hits: u16) -> [(i32, i32); 3] {
+    let [_, _, n00, n01, n10, n11] = marked.map(i32::from);
+    let (w0, w1, u) = (n00 + n01, n10 + n11, i32::from(control_hits));
+    let (lo, hi) = ((u - w1).max(0), w0.min(u));
+    assert!(lo <= hi);
+    [(lo, hi), (n01 - hi, n01 - lo), (n11 - u + lo, n11 - u + hi)]
+}
+
 fn main() {
     let path = env::args_os().nth(1).expect("pass the original ...-final.txt path");
     let text = fs::read_to_string(path).expect("read input");
@@ -69,7 +80,7 @@ fn main() {
     assert_eq!(no_gates[0], [994,30,0,0,0,0]);
     assert_eq!(no_gates[38], [1002,22,0,0,0,0]);
 
-    println!("delay_ns,mark0_final0,mark0_final1,mark1_final0,mark1_final1,control_final0,control_final1,marked_final1,gated_delta_num,no_gates_marked_final1,no_gates_control_final1,no_gates_delta_num");
+    println!("delay_ns,mark0_final0,mark0_final1,mark1_final0,mark1_final1,control_final0,control_final1,marked_final1,gated_delta_num,no_gates_marked_final1,no_gates_control_final1,no_gates_delta_num,group0_shots,group0_low_num,group0_high_num,group1_shots,group1_low_num,group1_high_num");
     let mut nonnegative = Vec::new();
     let mut delta = Vec::new();
     for (i, (&m, &c)) in marked.iter().zip(control).enumerate() {
@@ -81,8 +92,13 @@ fn main() {
         let bare_hits = marked_no_gates[i][3] + marked_no_gates[i][5];
         let bare_control = no_gates[i][1];
         let bare_difference = i32::from(bare_hits) - i32::from(bare_control);
-        println!("{delay},{},{},{},{},{},{},{hits},{difference},{bare_hits},{bare_control},{bare_difference}",m[2],m[3],m[4],m[5],c[0],c[1]);
+        let [_, (lo0, hi0), (lo1, hi1)] = compatible(m, c[1]);
+        println!("{delay},{},{},{},{},{},{},{hits},{difference},{bare_hits},{bare_control},{bare_difference},{},{lo0},{hi0},{},{lo1},{hi1}",m[2],m[3],m[4],m[5],c[0],c[1],m[2]+m[3],m[4]+m[5]);
     }
+    assert_eq!(compatible(marked[0], control[0][1]), [(959,988),(-788,-759),(-18,11)]);
+    assert_eq!(compatible(marked[38], control[38][1]), [(967,995),(-34,-6),(-8,20)]);
+    assert_eq!(compatible(marked_no_gates[0], no_gates[0][1])[1], (8,28));
+    assert_eq!(compatible(marked_no_gates[38], no_gates[38][1])[1], (13,33));
     assert_eq!(delta[0] - delta[38], -763);
     assert_eq!(nonnegative, [(1180,0), (1260,1), (1500,7), (1900,3), (1980,8)]);
     eprintln!("Checked all 128 circuits × 39 run columns, 1,024 outcomes per circuit and column. All 39 control vectors are distinct.");
