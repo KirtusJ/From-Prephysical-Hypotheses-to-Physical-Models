@@ -1,0 +1,73 @@
+diff --git a/edition/verify_baseline.py b/edition/verify_baseline.py
+--- a/edition/verify_baseline.py
++++ b/edition/verify_baseline.py
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python3
+ """Local consistency check of the baseline.  Requires PyMuPDF for the front-matter check (skipped with a notice if absent)."""
+ import csv, hashlib, json, os, re, sys
+-ROOT = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))  # a trusted copy can be run from outside the tree
+ man = json.load(open(os.path.join(ROOT, "MANIFEST.json"))); bad = []
+ listed = set(man["files"])
+ for rel, meta in man["files"].items():
+@@ -12,7 +12,7 @@
+ for dp, _, fs in os.walk(ROOT):
+     for f in fs:
+         rel = os.path.relpath(os.path.join(dp, f), ROOT)
+-        if rel not in listed and rel != "MANIFEST.json" and not (os.path.basename(dp) == "__pycache__" and f.endswith(".pyc")): bad.append(("unlisted", rel))
++        if rel not in listed and rel != "MANIFEST.json" and not (os.path.basename(dp) == "__pycache__" and f.endswith(".pyc") and open(os.path.join(dp, f), "rb").read(4)[2:] == b"\r\n"): bad.append(("unlisted", rel))
+ reg = os.path.join(ROOT, "PROGRAM", "registers")
+ rd = lambda n: list(csv.DictReader(open(os.path.join(reg, n))))
+ cross, registry, index = rd("COMPONENT_CROSSWALK.csv"), rd("THEOREM_REGISTRY.csv"), rd("PAPER_INDEX.csv")
+@@ -31,13 +31,36 @@
+ for r in index:
+     if r["kind"] != "planned" and int(r["statements"] or 0) != sum(1 for q in registry if q["paper"] == r["id"] and q["kind"] != "Note"):
+         bad.append(("PAPER_INDEX statements differ from registry", r["id"]))
+-for n in re.findall(r"theorem registry \((\d+) rows\)", open(os.path.join(ROOT, "README.md")).read()):
++counts = re.findall(r"theorem registry \((\d+) rows\)", open(os.path.join(ROOT, "README.md")).read())
++if not counts: bad.append(("README registry count sentence not found", ""))
++for n in counts:
+     if int(n) != len(registry): bad.append(("README registry count", n))
++for r in index:
++    if r["kind"] == "planned" and any(q["paper"] == r["id"] for q in registry): bad.append(("planned paper has registry rows", r["id"]))
++for rel in sorted(listed):
++    if rel.endswith(".json") and "partial" not in os.path.basename(rel) and os.path.exists(os.path.join(ROOT, rel)):  # a kept crash output is named *partial*
++        try: json.load(open(os.path.join(ROOT, rel), encoding="utf-8"))
++        except ValueError: bad.append(("not JSON", rel))
++import subprocess
++pm = os.environ.get("FPHPM_PREDECESSOR_MANIFEST"); pred = []
++if pm: pred = [hashlib.sha256(open(pm, "rb").read()).hexdigest()]
++else:
++    g = subprocess.run(["git", "-C", ROOT, "log", "--format=%H", "-n", "3", "--", "MANIFEST.json"], capture_output=True, text=True)
++    for c in g.stdout.split() if g.returncode == 0 else []:
++        s = subprocess.run(["git", "-C", ROOT, "show", c + ":./MANIFEST.json"], capture_output=True)
++        if s.returncode == 0: pred.append(hashlib.sha256(s.stdout).hexdigest())
++if not pred: print("notice: no predecessor manifest available (git history or FPHPM_PREDECESSOR_MANIFEST); predecessor digest not checked")
++elif man.get("predecessor_manifest_sha256") not in pred: bad.append(("predecessor digest matches no earlier MANIFEST.json", man.get("predecessor_manifest_sha256")))
++live = os.environ.get("FPHPM_LIVE_REGISTER") or os.path.join(ROOT, "..", ".pcp", "register.jsonl")
++copy = os.path.join(ROOT, "REVIEW_RECORDS", "Director_Z", "Session_4", "register", "register.jsonl")
++if not os.path.exists(live): print("notice: live register not found; register copy not compared")
++elif not open(live, "rb").read().startswith(open(copy, "rb").read()): bad.append(("register copy is not an initial segment of the live register", ""))
+ for dp, _, fs in os.walk(ROOT):
+     if "register.jsonl" in fs:
+         ls = [l for l in open(os.path.join(dp, "register.jsonl"), "rb").read().split(b"\n") if l]
+         for i in range(len(ls) - 1):
+             if json.loads(ls[i + 1])["prev"] != hashlib.sha256(ls[i]).hexdigest(): bad.append(("register chain", os.path.relpath(dp, ROOT) + " seq %d" % i))
++        if ls and (json.loads(ls[0])["prev"] != "0" * 64 or [json.loads(l)["seq"] for l in ls] != list(range(len(ls)))): bad.append(("register genesis or sequence", os.path.relpath(dp, ROOT)))
+ try:
+     import pymupdf
+     for r in index:
+@@ -51,6 +74,13 @@
+         if "Vancouver" in "".join(pg.get_text() for pg in d): bad.append(("location not normalized", r["id"]))
+ except ImportError:
+     print("notice: PyMuPDF not installed; front-matter check skipped")
++    import shutil
++    if shutil.which("pdfinfo"):
++        for r in index:
++            if r["kind"] == "planned": continue
++            m = re.search(r"^Pages:\s+(\d+)", subprocess.run(["pdfinfo", os.path.join(ROOT, r["file"])], capture_output=True, text=True).stdout, re.M)
++            if not m or int(m.group(1)) != int(r["pages"]): bad.append(("PAPER_INDEX pages differ from PDF (pdfinfo)", r["id"]))
++    else: print("notice: pdfinfo not found either; PAGE COUNTS NOT CHECKED")
+ if bad:
+     print("BASELINE_CHECK_FAIL"); [print(" ", b) for b in bad[:40]]; sys.exit(1)
+ print(f"BASELINE_CHECK_PASS {len(man['files'])} files; {len(index)} papers; {len(registry)} registry rows; {len(vc['components'])} legacy components accounted for "
