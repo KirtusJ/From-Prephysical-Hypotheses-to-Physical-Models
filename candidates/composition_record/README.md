@@ -4,6 +4,8 @@
 
 **Disposition, 14 November 2026.** Maintain the construction as a stipulated finite record model. Reject the inference that a discrepancy about composition, by itself, produces the first physical record. The conditional writer survives. Once a source pair writes to a distinguishable memory, a later probe can read and copy the answer after disconnection. Nothing measured here establishes why a physical carrier implements the stipulated contact or how the initial distinguishable memory, blank, order of interventions and persistence arise. The submitted manuscript itself recognizes these limits. Physical realization remains open. [Original review request, account-restricted packet and reading copy](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/218)
 
+A four-spin simulator measured a comparison of two fusion orders. Its reported quadratures give a concrete check on how a physical carrier could measure the candidate's six-order invariant. [Experiment, parity control and phase-calibration requirements](fusion_overlap.md)
+
 ## The test that separates the claims
 
 The model starts with three-component labels over the field of five elements. Two ways of combining three labels have the same sum. A further scalar records the stipulated discrepancy. Its alternating sum over six orders is unchanged when an arbitrary calibration is added to each pair. For the determinant seed this scalar equals the determinant itself.
