@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Paired reads for a type-dependent target](Paired_reads_for_a_type_dependent_target.md) | Two reads sharing a detector type bound errors even when the science mass follows that type. Complementary detector curves show the cube-root exponent is sharp. |
 | [Recording the first direction in site parity](First_direction_in_site_parity.md) | One adjacent rail swap stores a permanent direction bit. A radius-one marker agrees on every isolated sharp launch and gives 1/24 at a port dark under on-site routing. |
 | [Reading both interference outcomes of the direction record](Parity_record_eraser.md) | A terminal swap layer and one walk tick recover the blank distribution for a sharp rail using both outcomes. A joint port distinguishes on-site routing, a radius-one response and a persistent copy. |
 | [A forward test of a binary site record](Forward_test_of_a_binary_site_record.md) | A six-tick dark return distinguishes retaining a binary mask from recording every intermediate site, for every launch coin. Ideal sharp lookup gives one original-launch hit in sixteen. |
