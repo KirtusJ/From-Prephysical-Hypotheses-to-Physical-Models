@@ -7113,5 +7113,51 @@
       "plot_velocity_readout.py": "dbcd775b4ce455813da1aa7454c2d1c55b17e06bcd9b90b4e16ed92801a4c37d"
     },
     "standing": "Exact finite flights, the reflected fold and the Pascal parity theorem were replayed. The analytic velocity-law selection uses a common exponent population and binning before powering. The macroscopic window probabilities are model predictions."
+  },
+  "microscopic_velocity_shells": {
+    "paper": "Microscopic_position_weights_at_a_classical_front.md",
+    "checker": "check_microscopic_velocity_shells.py",
+    "result": "results/microscopic_velocity_shells.json",
+    "sha256": {
+      "check_microscopic_velocity_shells.py": "d6ddd1b4dd27f5c21c91149a79d79f6f6baa4f9aa50f6f429165366a99483013",
+      "results/microscopic_velocity_shells.json": "9bc563aa875faceff74614d8b1f70a89d81d9efc5751adbc1a49c2550b20bfee"
+    },
+    "standing": "A fixed distribution of microscopic powers and a fixed sharp right-rail launch give ordinary limiting positions only for unit power. The front-shell test also works for one reflected observation family."
+  },
+  "velocity_mask_balance": {
+    "paper": "Seven_mask_balances_for_a_velocity_read.md",
+    "checker": "check_velocity_mask_balance.py",
+    "result": "results/velocity_mask_balance.json",
+    "lean": "lean/VelocityMaskBalance.lean",
+    "sha256": {
+      "check_velocity_mask_balance.py": "a8d752d3e065c7b505b124c6f968a43c4d3ba1d63a9217a8f6995569f542394f",
+      "results/velocity_mask_balance.json": "8aa1cc28c730a2148683d303deb3caac057ab5f19c1e04b30ed823fd05334dfd",
+      "lean/VelocityMaskBalance.lean": "2d91a6afcec8d8f65f9f03d8270a1d1efd54b4048d2c9baf15eb15d036774134"
+    },
+    "standing": "Seven addressed comparisons with protected tags test a specified eight-site population law. Scope includes the assumptions on pooling and reporting of the joint addressed cells."
+  },
+  "spatial_weight_envelope": {
+    "paper": "Uniform_stability_of_microscopic_arrival_probabilities.md",
+    "checker": "check_spatial_weight_envelope.py",
+    "result": "results/spatial_weight_envelope.json",
+    "lean": "lean/ArrivalNormalization.lean",
+    "sha256": {
+      "check_spatial_weight_envelope.py": "e89fd08c414c6beec1a3c2b5b726ebfd2eff040e3c35e3d68e5ca3854f051ac6",
+      "results/spatial_weight_envelope.json": "07312b11d4637e859a198552f5d7a7cf3d15c05939530f33141907220dc1c6ea",
+      "lean/ArrivalNormalization.lean": "87afd70b7b703d72f94726c70d20239c883e51362a3fb1df5cffd34d2de7885b"
+    },
+    "standing": "The speed-resolved Fourier bound gives uniform microscopic total-variation continuity at exponent one, through both front layers and for arbitrary localized mixed coins. A growing non-walk table retains a discrepancy of one sixth. Lean checks the finite nonnegative rational normalization inequality."
+  },
+  "speed_coin": {
+    "paper": "What_walk_speed_reveals_about_a_changing_detector.md",
+    "checker": "check_speed_coin.py",
+    "result": "results/speed_coin.json",
+    "lean": "lean/SpeedCoin.lean",
+    "sha256": {
+      "check_speed_coin.py": "339e1696ad4137fe62c8998bb89ff105c64efc9b1dbc764c1e4904e5451bf679",
+      "results/speed_coin.json": "dea933f47f5de9ed98f0155d1773844cbfb613a8137a7fdefc8928b020069aa5",
+      "lean/SpeedCoin.lean": "0a5fee5c0d0a0277a6127043d0d976cc012db588192cbe3961b3eba04e10c349"
+    },
+    "standing": "The ordinary speed distribution of a sharp-position launch is coin-independent at each clock. The limiting speed law identifies convergence of microscopic exponents to one in probability for varying correlated populations. Pooling radii first gives a distinct eight-tick test. Lean checks the scalar matrix implication and the eight-tick signed and unsigned tables; the limiting implication is analytic."
   }
 }
