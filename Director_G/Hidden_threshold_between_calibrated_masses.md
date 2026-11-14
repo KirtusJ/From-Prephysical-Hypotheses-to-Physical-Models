@@ -1,8 +1,10 @@
 # A hidden threshold between two calibrated masses
 
-Research note for Director G, prepared by OpenAI Codex for Kirtus Justus. Gate OP-27.
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement prepared by OpenAI Codex for Director G.
 
-The [paired-read supplement](Paired_reads_for_a_type_dependent_target.md) bounds the transfer of calibration to a mass chosen using the detector type. On the tick-256 menu, a complementary, monotone detector can pass every node pair and have the ordinary population mean at **every fixed mass**, while producing a positive science-rate bias of 0.01621264309. Allowing selection among all gaps gives a sharp bias of 0.019822640675 under the same exact calibration assumptions, as derived below.
+At tick 256, the 33 routed masks and their complements give 66 distinct calibration masses. The 67th node, $1/2$, is a virtual anchor fixed by per-type complementarity. Exact per-type calibration makes the science-rate bias zero for any choice among these 67 nodes, even when the choice depends on the detector type. [Paired-read calibration and the midpoint anchor](Paired_reads_for_a_type_dependent_target.md)
+
+What if the science target can be set **between** those masses using information about the detector type? A monotone, complementary detector with the ordinary population mean at every fixed mass can then produce a bias of 0.01621264309 using one gap and its reflection. Over all gaps the sharp bias is 0.019822640675, or about 1.98226 percentage points. Both numbers assume access to the specified type-dependent targets. This tests what finite calibration can establish about the [P5 probability rule](ontology_gate_map.json).
 
 ## Construction and proof
 
@@ -22,7 +24,7 @@ For the [tick-256 mask data](results/echo_probability_map.json), a≈0.239027918
 
 The [exact checker](check_threshold_target.py) recovers the gap from the routed masks using rational arithmetic and checks the node responses, a finite set of fixed-mass means, the selected bias, and the midpoint prediction. Its 64 threshold midpoints integrate the two affine branches of the bias exactly. The continuous fixed-mass statement follows from the uniform-threshold proof. No physical paired observations, preparation of c, or empirical type-target coupling are claimed.
 
-## Sharp bias across the whole menu
+## Sharp bias for targets between calibration nodes
 
 Assume a finite symmetric mesh containing both endpoints and the midpoint, exact per-type agreement at its nodes almost surely, monotonicity, per-type complementarity and population mean identity at every fixed mass. Zero shared-type pair moments with zero conditional covariance imply the node assumption. The target may depend measurably on the whole response curve. A positive bias and the expected absolute error have the same sharp upper limit because reflection reverses the sign of the pointwise error.
 
