@@ -22,6 +22,10 @@ chi, written TR(N; C; a, b, c, d; chi).
 
 ## What it is not
 
+- Not new dynamics. As dynamics it is a coined quantum walk on a cycle, a known object, with a coin whose four
+  entries have equal size. What the candidate adds is the bookkeeping by tallies, the closure of the world on
+  itself, and exact statements of what can be read inside it.
+
 - Not our universe, and not a model of any experiment. Where a number in it matches a laboratory number, that
   is a comparison and nothing more.
 - Not a derivation of the squared rule. The squared rule is stipulation T6. The candidate does not say why.
