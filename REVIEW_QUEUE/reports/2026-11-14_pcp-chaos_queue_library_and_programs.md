@@ -23,7 +23,7 @@ Other findings
 3. period() has no guard for a digraph that is not strongly connected; an exception from it is what stopped three mutants.
 
 Done by the queue session on its own files
-- Added REVIEW_QUEUE/lib/pcplib_selftest.py (written by the sub-agent, read and run by the queue session): 23 known-answer tests with negative controls. It passes on the library (exit 0) and, per the sub-agent's table selftest_vs_mutants.txt, fails on 16 of the 17 library mutants; the one it does not catch is the null_space threshold at 1e-15.
+- Added REVIEW_QUEUE/lib/pcplib_selftest.py (written by the sub-agent, read and run by the queue session): 22 known-answer tests with negative controls. It passes on the library (exit 0) and, per the sub-agent's table selftest_vs_mutants.txt, fails on 16 of the 17 library mutants; the one it does not catch is the null_space threshold at 1e-15.
 - Not yet done: a test system with eigenvalues between 1e-15 and 1e-9; a guard in period(); a shared bound variable and a computed control in program 3 (the filed program is a record and is not edited; the next program should do it); pinning the thread count in programs that record floating values.
 
 Rechecked by the queue session: the self-test's text; that it exits 0 on the library in the repository; the table of mutants against the self-test as a file. The 23 runs themselves were not repeated.
