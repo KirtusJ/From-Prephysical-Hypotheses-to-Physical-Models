@@ -7,7 +7,7 @@ import io
 import re
 import unicodedata
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import quote, unquote
 
 import pymupdf
 
@@ -23,15 +23,27 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def reader_name(row):
+    # Keep every title word; the two subtitle separators below are illegal on Windows.
+    title = re.sub(r"[:?]\s+", " – ", row["title"])
+    return f"{row['id']} - {title}.pdf"
+
+
 def check_text(label, content):
     normalized = unicodedata.normalize("NFKC", content).replace(r"\_", "_")
     match = ALIAS.search(normalized)
     if match:
         raise ValueError(f"{label} contains a workflow alias: {match.group()!r}")
+    # Text layers can put whitespace or a discretionary hyphen inside a name.
+    spelling = re.sub(r"[\s\u00ad\u2010-\u2014-]+", "", normalized.casefold())
+    if "deepseek(highflyer)" in spelling:
+        raise ValueError(f"{label} should credit DeepSeek by its published name")
 
 
-def inspect_pdf(path):
+def inspect_pdf(path, title):
     with pymupdf.open(path) as document:
+        if document.metadata.get("title") != title:
+            raise ValueError(f"{path.name} PDF title differs from the paper index")
         cover = " ".join(document[0].get_text().casefold().split())
         for credit in ("kirtus justus", "theoretical physicist", "port coquitlam",
                        "british columbia", "canada"):
@@ -54,10 +66,15 @@ def verify_catalog(write):
     if len(ids) != len(set(ids)):
         raise ValueError("Duplicate paper ID in edition index")
     expected = {row["id"] for row in entries if row["kind"] != "planned"}
-    found = {path.stem for path in PAPERS.glob("*.pdf")}
-    if found != expected:
-        raise ValueError(f"Missing {expected - found}, unexpected {found - expected}")
+    filenames = {reader_name(row) for row in entries if row["kind"] != "planned"}
+    found = {path.name for path in PAPERS.glob("*.pdf")}
+    if found != filenames:
+        raise ValueError(f"Missing {filenames - found}, unexpected {found - filenames}")
     catalog = (PAPERS / "README.md").read_text(encoding="utf-8")
+    contributions = (PAPERS / "contributions.md").read_text(encoding="utf-8")
+    anchors = re.findall(r'<a\s+id="([A-G][1-9][0-9]*)"\s*>\s*</a>', contributions)
+    if sorted(anchors) != sorted(ids):
+        raise ValueError("Expected a unique contribution record for every indexed paper and plan")
     for link in re.findall(r"\]\(([^)]+)\)", catalog):
         if not link.startswith(("https://", "#")):
             if write and link == "catalog.csv":
@@ -67,20 +84,24 @@ def verify_catalog(write):
     for source in (PAPERS / "source").rglob("*.tex"):
         check_text(source, source.read_text(encoding="utf-8"))
     buffer = io.StringIO(newline="")
-    fields = ["id", "series", "title", "kind", "file", "pages", "sha256",
+    fields = ["id", "series", "title", "kind", "contributions", "file", "pages", "sha256",
               "issued_file", "issued_pages", "issued_sha256"]
     writer = csv.DictWriter(buffer, fieldnames=fields, lineterminator="\n")
     writer.writeheader()
     for row in entries:
         key = row["id"]
         record = {field: row[field] for field in ("id", "series", "title", "kind")}
+        record["contributions"] = f"contributions.md#{key}"
+        if catalog.count(f"]({record['contributions']})") != 1:
+            raise ValueError(f"Expected exactly one paper-level credit link for {key}")
         if key in expected:
-            reader = PAPERS / f"{key}.pdf"
+            reader = PAPERS / reader_name(row)
             original = EDITION / row["file"]
-            if catalog.count(f"]({reader.name})") != 1:
+            link = quote(reader.name)
+            if catalog.count(f"]({link})") != 1:
                 raise ValueError(f"Expected exactly one reader link for {key}")
-            pages = inspect_pdf(reader)
-            catalog_row = f"| {key} | [{row['title']}]({reader.name}) | {pages} |"
+            pages = inspect_pdf(reader, row["title"])
+            catalog_row = f"| {key} | [{row['title']}]({link}) | {pages} |"
             if catalog_row not in catalog:
                 raise ValueError(f"Catalog title or page count differs for {key}")
             record.update(file=reader.name, pages=pages, sha256=digest(reader),

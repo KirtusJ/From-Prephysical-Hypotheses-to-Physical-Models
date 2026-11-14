@@ -8,7 +8,7 @@ The current reader catalog contains 40 PDFs and 683 pages. All 683 pages were re
 
 At source commit `9ba569b1fed1411913438de7c2b58e0ed4ce1837`, the repository held 221 loose PDFs and 201 further PDF occurrences inside its Z3 ZIP. Deduplication by SHA-256 left 210 distinct files. PyMuPDF 2.1 rendered every one of their 1,532 pages in grayscale at 72 dpi. The checks covered empty rasters, text extending beyond the page, glyph ID zero, Unicode replacement characters, nonembedded fonts, and ink touching the trim. The count includes ancillary and quarantined files as inventory only. [Issued edition](../../edition/README.md) · [Z3 archive](../../edition_archives/)
 
-All 1,532 pages opened and rendered without structural repair. Every page had visible ink. No visible glyph had ID zero. None of the 40 issued papers contained traced text outside its page boundary. A second screen flagged 26 pages where adjoining word boxes overlapped, including duplicate component copies. Visual inspection at the flagged locations showed stacked binomial arguments, indices, operators and fractions. The 22 edge marks in B1 are full-width colored header rules. The large lower margins on several title pages separate the summary from the credits. An omitted symbol at typesetting time can leave no glyph to inspect. Source comparison is necessary for that class of error. [B1](../B1.pdf) · [D7](../D7.pdf) · [F6](../F6.pdf)
+All 1,532 pages opened and rendered without structural repair. Every page had visible ink. No visible glyph had ID zero. None of the 40 issued papers contained traced text outside its page boundary. A second screen flagged 26 pages where adjoining word boxes overlapped, including duplicate component copies. Visual inspection at the flagged locations showed stacked binomial arguments, indices, operators and fractions. The 22 edge marks in B1 are full-width colored header rules. The large lower margins on several title pages separate the summary from the credits. An omitted symbol at typesetting time can leave no glyph to inspect. Source comparison is necessary for that class of error. [B1](../B1%20-%20What%20Does%20an%20Observation%20Identify%20%E2%80%93%20A%20Synthesis%20with%20Supporting%20Notes.pdf) · [D7](../D7%20-%20Reference%20Modular%20and%20Jacobi%20Estimates%20for%20a%20Half-Filled%20Fermion%20Interval.pdf) · [F6](../F6%20-%20Statistical%20Comparisons%20and%20Reference%20Errors.pdf)
 
 ## Seven corrected reader text layers
 
@@ -16,15 +16,15 @@ The equation shapes rendered in the issued papers, but a raw character trace ret
 
 | Reader | Previously unmapped instances | Added Unicode entries, counted by use | Mapsto text spans |
 | --- | ---: | ---: | ---: |
-| [C3](../C3.pdf) | 42 | 41 | 1 |
-| [C5](../C5.pdf) | 42 | 42 | 0 |
-| [C6](../C6.pdf) | 69 | 67 | 2 |
-| [C7](../C7.pdf) | 29 | 28 | 1 |
-| [D3](../D3.pdf) | 103 | 103 | 0 |
-| [D4](../D4.pdf) | 77 | 77 | 0 |
-| [D6](../D6.pdf) | 128 | 127 | 1 |
+| [C3](../C3%20-%20Calibrated%20Dynamical%20Identification%20in%20Fermionic%20Systems.pdf) | 42 | 41 | 1 |
+| [C5](../C5%20-%20Continuum%20and%20Finite-Lattice%20Two-Time%20Identification.pdf) | 42 | 42 | 0 |
+| [C6](../C6%20-%20Local%20Number-Conserving%20Response%20and%20Inference.pdf) | 69 | 67 | 2 |
+| [C7](../C7%20-%20Restricted%20Observables%20and%20CAR-State%20Distinguishability.pdf) | 29 | 28 | 1 |
+| [D3](../D3%20-%20Finite%20Part%20of%20Wilson%E2%80%93Dirac%20Relative%20Entropy.pdf) | 103 | 103 | 0 |
+| [D4](../D4%20-%20Uniform%20Modular%20Control%20and%20Nonlinear%20Convergence%20for%20Wilson%E2%80%93Dirac%20Intervals.pdf) | 77 | 77 | 0 |
+| [D6](../D6%20-%20Concentration%20Spectrum%20of%20the%20Half-Filled%20Sine%20Kernel%20%E2%80%93%20Periods%2C%20Tails%20and%20Plunge%20Windows.pdf) | 128 | 127 | 1 |
 
-All 90 pages in those seven reader files were pixel-identical to the issued copies under two independent renderers, PyMuPDF at 144 dpi and Poppler at 90 dpi. Object-level comparison confined the differences to the seven Unicode maps and the five text-equivalence spans. The drawing commands inside each span and every other decoded page-content stream matched the originals. All five semantic arrows read back correctly. These checks cover the repaired glyphs. Flattened line extraction can still reorder multidimensional expressions. Use the typeset mathematics or its TeX source for the full expression.
+At the 14 November math-text revision (commit `c143ec4`), all 90 pages in those seven reader files were pixel-identical to the issued copies under two independent renderers, PyMuPDF at 144 dpi and Poppler at 90 dpi. Object-level comparison confined the differences to the seven Unicode maps and the five text-equivalence spans. The drawing commands inside each span and every other decoded page-content stream matched the originals. All five semantic arrows read back correctly. These checks cover the repaired glyphs. Flattened line extraction can still reorder multidimensional expressions. Use the typeset mathematics or its TeX source for the full expression.
 
 ## Ancillary clipping
 
