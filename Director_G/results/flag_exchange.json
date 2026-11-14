@@ -1,0 +1,863 @@
+{
+  "three_tick": {
+    "ticks": 3,
+    "mask": [
+      1
+    ],
+    "denominator_squared": 8,
+    "magnitudes": [
+      1,
+      2
+    ],
+    "cannot_split_alone": [],
+    "sectors": [
+      {
+        "marked": true,
+        "input_cells": [
+          [
+            1,
+            "L",
+            1
+          ],
+          [
+            1,
+            "R",
+            2
+          ]
+        ],
+        "norm_numerator": 5,
+        "odd_gcd": 1,
+        "leaves": 5,
+        "operations": [
+          [
+            "Walsh",
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "marked": false,
+        "input_cells": [
+          [
+            -3,
+            "L",
+            1
+          ],
+          [
+            -1,
+            "R",
+            -1
+          ],
+          [
+            3,
+            "R",
+            1
+          ]
+        ],
+        "norm_numerator": 3,
+        "odd_gcd": 1,
+        "leaves": 3,
+        "operations": [
+          [
+            "phase -1",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "full_exchange": {
+    "labels": 8,
+    "marks": 5,
+    "physical_leaf_to_J_x_rail_scratch_J": [
+      [
+        1,
+        "L",
+        0,
+        0
+      ],
+      [
+        1,
+        "R",
+        0,
+        1
+      ],
+      [
+        1,
+        "R",
+        1,
+        2
+      ],
+      [
+        1,
+        "R",
+        2,
+        3
+      ],
+      [
+        1,
+        "R",
+        3,
+        4
+      ],
+      [
+        -3,
+        "L",
+        0,
+        5
+      ],
+      [
+        -1,
+        "R",
+        0,
+        6
+      ],
+      [
+        3,
+        "R",
+        0,
+        7
+      ]
+    ],
+    "full_routing_permutation_size": 128,
+    "common_positive_pair_entries": 64,
+    "atom_amplitude": "1/8",
+    "direct_mass": "5/8",
+    "exact": {
+      "states_equal": true,
+      "squared_difference": "0"
+    },
+    "retained_old_J_tag": {
+      "states_equal": false,
+      "squared_difference": "7/4"
+    },
+    "uncompensated_J_phase": {
+      "states_equal": false,
+      "squared_difference": "7/8"
+    },
+    "unequal_J_amplitudes": {
+      "states_equal": false,
+      "squared_difference": "7/44"
+    },
+    "translated_mask_cells": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        7
+      ]
+    ],
+    "weighted_target_rate": "5/6",
+    "weighted_reference_rate": "5/8",
+    "weighted_failure_gap": "5/24"
+  },
+  "later_clocks": [
+    {
+      "ticks": 4,
+      "mask": [
+        2
+      ],
+      "denominator_squared": 16,
+      "magnitudes": [
+        1,
+        3
+      ],
+      "cannot_split_alone": [
+        3
+      ],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              2,
+              "L",
+              1
+            ],
+            [
+              2,
+              "R",
+              3
+            ]
+          ],
+          "norm_numerator": 10,
+          "odd_gcd": 1,
+          "leaves": 10,
+          "walsh_counts": {
+            "Walsh": 3
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -4,
+              "L",
+              -1
+            ],
+            [
+              -2,
+              "L",
+              -1
+            ],
+            [
+              -2,
+              "R",
+              1
+            ],
+            [
+              0,
+              "L",
+              1
+            ],
+            [
+              0,
+              "R",
+              -1
+            ],
+            [
+              4,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 6,
+          "odd_gcd": 1,
+          "leaves": 6,
+          "walsh_counts": {
+            "phase -1": 3
+          }
+        }
+      ]
+    },
+    {
+      "ticks": 5,
+      "mask": [
+        3
+      ],
+      "denominator_squared": 32,
+      "magnitudes": [
+        1,
+        2,
+        4
+      ],
+      "cannot_split_alone": [],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              3,
+              "L",
+              1
+            ],
+            [
+              3,
+              "R",
+              4
+            ]
+          ],
+          "norm_numerator": 17,
+          "odd_gcd": 1,
+          "leaves": 17,
+          "walsh_counts": {
+            "Walsh": 5
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -5,
+              "L",
+              1
+            ],
+            [
+              -3,
+              "L",
+              2
+            ],
+            [
+              -3,
+              "R",
+              -1
+            ],
+            [
+              -1,
+              "L",
+              -2
+            ],
+            [
+              1,
+              "L",
+              2
+            ],
+            [
+              5,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 15,
+          "odd_gcd": 1,
+          "leaves": 15,
+          "walsh_counts": {
+            "phase -1": 2,
+            "Walsh": 3
+          }
+        }
+      ]
+    },
+    {
+      "ticks": 6,
+      "mask": [
+        4
+      ],
+      "denominator_squared": 64,
+      "magnitudes": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "cannot_split_alone": [
+        3,
+        5
+      ],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              4,
+              "L",
+              1
+            ],
+            [
+              4,
+              "R",
+              5
+            ]
+          ],
+          "norm_numerator": 26,
+          "odd_gcd": 1,
+          "leaves": 26,
+          "walsh_counts": {
+            "Walsh": 9
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -6,
+              "L",
+              -1
+            ],
+            [
+              -4,
+              "L",
+              -3
+            ],
+            [
+              -4,
+              "R",
+              1
+            ],
+            [
+              -2,
+              "L",
+              2
+            ],
+            [
+              -2,
+              "R",
+              1
+            ],
+            [
+              0,
+              "L",
+              -2
+            ],
+            [
+              0,
+              "R",
+              -2
+            ],
+            [
+              2,
+              "L",
+              3
+            ],
+            [
+              2,
+              "R",
+              2
+            ],
+            [
+              6,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 38,
+          "odd_gcd": 1,
+          "leaves": 38,
+          "walsh_counts": {
+            "phase -1": 4,
+            "Walsh": 10
+          }
+        }
+      ]
+    },
+    {
+      "ticks": 7,
+      "mask": [
+        5
+      ],
+      "denominator_squared": 128,
+      "magnitudes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "cannot_split_alone": [
+        3,
+        5,
+        6
+      ],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              5,
+              "L",
+              1
+            ],
+            [
+              5,
+              "R",
+              6
+            ]
+          ],
+          "norm_numerator": 37,
+          "odd_gcd": 1,
+          "leaves": 37,
+          "walsh_counts": {
+            "Walsh": 13
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -7,
+              "L",
+              1
+            ],
+            [
+              -5,
+              "L",
+              4
+            ],
+            [
+              -5,
+              "R",
+              -1
+            ],
+            [
+              -3,
+              "L",
+              -1
+            ],
+            [
+              -3,
+              "R",
+              -2
+            ],
+            [
+              -1,
+              "R",
+              3
+            ],
+            [
+              1,
+              "L",
+              -1
+            ],
+            [
+              1,
+              "R",
+              -4
+            ],
+            [
+              3,
+              "L",
+              4
+            ],
+            [
+              3,
+              "R",
+              5
+            ],
+            [
+              7,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 91,
+          "odd_gcd": 1,
+          "leaves": 91,
+          "walsh_counts": {
+            "phase -1": 5,
+            "Walsh": 28
+          }
+        }
+      ]
+    },
+    {
+      "ticks": 8,
+      "mask": [
+        6
+      ],
+      "denominator_squared": 256,
+      "magnitudes": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "cannot_split_alone": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              6,
+              "L",
+              1
+            ],
+            [
+              6,
+              "R",
+              7
+            ]
+          ],
+          "norm_numerator": 50,
+          "odd_gcd": 1,
+          "leaves": 50,
+          "walsh_counts": {
+            "Walsh": 17
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -8,
+              "L",
+              -1
+            ],
+            [
+              -6,
+              "L",
+              -5
+            ],
+            [
+              -6,
+              "R",
+              1
+            ],
+            [
+              -4,
+              "L",
+              -1
+            ],
+            [
+              -4,
+              "R",
+              3
+            ],
+            [
+              -2,
+              "L",
+              3
+            ],
+            [
+              -2,
+              "R",
+              -3
+            ],
+            [
+              0,
+              "L",
+              -3
+            ],
+            [
+              0,
+              "R",
+              3
+            ],
+            [
+              2,
+              "L",
+              1
+            ],
+            [
+              2,
+              "R",
+              -5
+            ],
+            [
+              4,
+              "L",
+              5
+            ],
+            [
+              4,
+              "R",
+              9
+            ],
+            [
+              8,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 206,
+          "odd_gcd": 1,
+          "leaves": 206,
+          "walsh_counts": {
+            "phase -1": 6,
+            "Walsh": 71
+          }
+        }
+      ]
+    },
+    {
+      "ticks": 5,
+      "mask": [
+        -5,
+        3,
+        5
+      ],
+      "denominator_squared": 32,
+      "magnitudes": [
+        1,
+        2,
+        4
+      ],
+      "cannot_split_alone": [],
+      "sectors": [
+        {
+          "marked": true,
+          "input_cells": [
+            [
+              -5,
+              "L",
+              1
+            ],
+            [
+              3,
+              "L",
+              1
+            ],
+            [
+              3,
+              "R",
+              4
+            ],
+            [
+              5,
+              "R",
+              1
+            ]
+          ],
+          "norm_numerator": 19,
+          "odd_gcd": 1,
+          "leaves": 19,
+          "walsh_counts": {
+            "Walsh": 5
+          }
+        },
+        {
+          "marked": false,
+          "input_cells": [
+            [
+              -3,
+              "L",
+              2
+            ],
+            [
+              -3,
+              "R",
+              -1
+            ],
+            [
+              -1,
+              "L",
+              -2
+            ],
+            [
+              1,
+              "L",
+              2
+            ]
+          ],
+          "norm_numerator": 13,
+          "odd_gcd": 1,
+          "leaves": 13,
+          "walsh_counts": {
+            "phase -1": 2,
+            "Walsh": 3
+          }
+        }
+      ]
+    }
+  ],
+  "protected_single_port_breaker": {
+    "ticks": 4,
+    "port": [
+      2,
+      "R"
+    ],
+    "numerator": 3,
+    "terminal_magnitudes": [
+      3
+    ]
+  },
+  "randomized_response_for_the_blocked_port": {
+    "physical_target_port": [
+      2,
+      "R"
+    ],
+    "direct_probability": "9/16",
+    "flag_rule": [
+      "always on",
+      "always off",
+      "copy target",
+      "copy target"
+    ],
+    "squared_denominator": 64,
+    "sectors": [
+      {
+        "flag": true,
+        "norm_numerator": 34,
+        "available_physical_cells": 34,
+        "odd_gcd": 1,
+        "Walsh_blocks": 9
+      },
+      {
+        "flag": false,
+        "norm_numerator": 30,
+        "available_physical_cells": 94,
+        "odd_gcd": 1,
+        "Walsh_blocks": 3
+      }
+    ],
+    "exchange_reference_mass": "17/32",
+    "exchange": {
+      "positive_entries": 4096,
+      "atom_amplitude": "1/64",
+      "full_column_equal": true
+    },
+    "weighted_undiluted_rate": "27/34",
+    "weighted_diluted_rate": "11/17",
+    "discrepancy": "63/544",
+    "transfer_error": {
+      "sharp": "1/16",
+      "dark": "1/32",
+      "reference": "1/64",
+      "comparison": "1/128",
+      "copy": "1/64",
+      "attained_bound": "3/32"
+    },
+    "illustrative_original_launches": {
+      "incident": 128,
+      "hits": 66,
+      "unresolved": 3,
+      "event_rate_interval": [
+        "33/64",
+        "69/128"
+      ]
+    }
+  }
+}
