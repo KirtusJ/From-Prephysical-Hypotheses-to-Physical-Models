@@ -6710,6 +6710,17 @@
     },
     "standing": "An analytic total-variation bound assumes population transfer and a uniform variance bound at the detector's actual scored resolution. Twelve finite mass refinements and fifteen Gaussian settings check the predicted behavior. The ordinary flight limit, transfer conditions and physical realization retain their separate obligations."
   },
+  "addressed_score_to_flight": {
+    "paper": "Checking_a_heralded_flight_word.md",
+    "checker": "check_heralded_record_transfer.py",
+    "result": "results/heralded_record_transfer.json",
+    "sha256": {
+      "check_heralded_record_transfer.py": "ffb4395b3f687fcb7cc5bee9ae4c81a0ac10b461668ef8031a1d5fd77ba1eb8f",
+      "check_addressed_position_score.py": "5ee4977cd485980f2eab706ed3dc5e6f449cf1668815e6e775b197df0eb947df",
+      "results/heralded_record_transfer.json": "080753859295b74c4a99b4b380b31647ace9fccc05f96d99c57d913f8771a130"
+    },
+    "standing": "All 64 calibration partitions were replayed at seven finite powers. The all-sites-pooled refinement has fixed 1/6 discrepancy while the population score tends to zero. Calibration applies to a matched population, an actual finite cell readout, and an upper bound on the complete incident score."
+  },
   "unsigned_position_score": {
     "paper": "Unsigned_rail_swaps_and_one_position_read.md",
     "checker": "check_unsigned_position_score.py",
