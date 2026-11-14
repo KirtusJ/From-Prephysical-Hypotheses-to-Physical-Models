@@ -62,6 +62,8 @@ A subsequent stipulated experiment lets the two directions of a signed walker ap
 
 The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
 
+[A joint read after undoing the translation](coherent_flag.md) distinguishes an ideal coherent record from every separable route–memory state using one binary flag. A separate spin–photon experiment supplies a raw coincidence check with two complementary analyzers and a position-basis read.
+
 ## Reproduction and preservation
 
 Director G checked all 28 manifest entries of the transmitted ZIP, replayed the notebook against its saved output and reproduced both supplied finite result files. The runs used Python 3.14.7 and NumPy 2.5.4. Lean 4.19.0 freshly compiled Algebra, Writer, Memory, BlindSpot, Braiding and Bridge with warnings treated as errors, then completed the axiom audit. The field-five pentagon count is 244,140,625 mathematical cases. The flag circuit was checked on 15,625 covector–probe pairs. These are calculated cases, with no physical frequencies attached.
