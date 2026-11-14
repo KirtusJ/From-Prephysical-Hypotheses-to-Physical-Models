@@ -22,6 +22,10 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Preparing a sheet by address](Addressed_sheet_preparation.md) | Reversible rail switches on disjoint sheet intervals raise the initial unit-pair weight above $4/\pi^2$ at every order. The cyclic differences of the source control the scaled three-tick force calibration. |
 | [Local resolution and the uninterrupted walk](Local_filter_resolution.md) | A [Lean support bound](lean/FilterPhaseWidth.lean) limits all local preparations. With the physical coin fixed, a [centered product estimate](Uninterrupted_sheet_read.md) and a [terminal fringe](Uninterrupted_sheet_fringes.md) give the sharp time scale for two pairwise tests. |
 | [Quantum and classical flight from one localized source](From_a_local_sheet_to_a_flight.md) | A retained sheet supports a spreading Gaussian at fixed action and a concentrated falling position at shrinking action. The clock, ensemble yield and persistent count rival are explicit. |
+| [Unit selection by the unmodified walk](Native_multiscale_selector.md) | Sharp records at several clocks select the unit pair against every folded label. The worst time has the optimal exponent $2/3$ at fixed confidence, and early rejection gives a bounded mean per localized launch. [Exact stage compiler](certify_native_stage.py) |
+| [Position records and the selected probability law](Position_transcripts_and_selected_laws.md) | Two consecutive wells determine a sharp arrival. The convolution of retained words gives the joint record probabilities of every classified input mixture and shows precisely when selection is possible. |
+| [Reading direction with position toggles](Direction_from_position_toggles.md) | One carried bit and two period-four position patterns measure the outgoing rail without identifying its site. A premature read halves a four-tick interference probability. |
+| [Preparation and flight in a permanent field](Field_on_source_and_release.md) | The walker restarts at a failed detector and keeps its field on through preparation. The surviving packet's momentum shift changes the finite-action Gaussian centers and the mean release clock. |
 | [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
 | [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
 | [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
@@ -136,6 +140,10 @@ python -B check_addressed_sheet_source.py rerun
 python -B check_routed_sheet_filter.py rerun
 python -B check_uninterrupted_sheet_read.py rerun
 python -B check_local_sheet_flight.py rerun
+python -B check_native_multiscale_selector.py rerun
+python -B certify_native_stage.py --examples --output rerun/native_stage_certificates.json
+python -B check_direction_from_sites.py rerun
+python -B check_field_on_renewal.py rerun
 python -B check_cover_comparison.py rerun
 python -B check_cover_marginals.py rerun
 python -B check_prime_port_records.py rerun
