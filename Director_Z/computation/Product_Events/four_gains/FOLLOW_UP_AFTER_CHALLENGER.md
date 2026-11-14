@@ -54,3 +54,30 @@ followed up. It bears on the strength of the test of Theorem 6, not on the theor
 
 PREP for four gains (a hypothesis; nothing is known); Z6 beyond 47 cases; the periodic theorem's set U(D);
 Lean (Steps 3 and 6 are the natural candidates); G4 with F_L free.
+
+## Lean, same day (received and rechecked while the principal's override was in force; no new research started)
+
+`Director_Z/lean/FourGain.lean` (Lean 4.12.0, Mathlib v4.12.0), sha256 09241fa4...8c951d90. Rerun by the
+director: exit 0; 40 axiom reports, none beyond propext, Classical.choice, Quot.sound, and no `sorryAx` among
+them. (The director's scan for forbidden words matched once: line 15, a comment that says the file has none.)
+Same model family; not independent review. Proved, each more generally than the proof in FINDINGS.md needs:
+
+- Step 6 (the parallelogram law gives a quadratic form, with no regularity assumption): for g on any additive
+  commutative group with real values, B(s,t) = (g(s+t) - g(s-t))/2 is symmetric and biadditive, B(s,s) = 2 g(s),
+  and g(n s) = n^2 g(s) for every integer n. Also for values in any 2-torsion-free abelian group and in any
+  module over a ring in which 2 is invertible. The hand route works as written; it uses the evenness of g
+  silently where it takes one identity as a case of the other, and the proof should say so. Lean's own route
+  is shorter: four instances of the law and linear arithmetic. Mathlib has no lemma that covers it.
+- Step 3: f(u + T v) = f(v + T u) needs only the equation (Q), for any map T. f(u + T T v) = f(u + v) needs (Q)
+  and the invariance of f under T, and not the additivity of T. The invariance itself follows from (Q) and
+  T(0 + 0) = T 0 + T 0, so it is not an independent hypothesis. From (Q) alone the second identity is false
+  (T v = v + 1, f(n) = 2n + 1 on the natural numbers).
+- The converse (a biadditive form gives the law) needs neither symmetry nor commutativity of the group.
+- The maximum argument of part 1 needs no finiteness once a maximum is attained, and the averaging relation
+  only at the maximizer.
+
+Not decided: whether 2-torsion-freeness is needed for the additivity itself (a small brute-force probe found no
+counterexample; it is needed for g(0) = 0). Not formalized: the counting in Lemma 0, Steps 1, 2, 4, 5, 7.
+
+Also parked by the override: the challenger on the draft subsection stopped on the account's rate limit (HTTP
+429) before reporting. It is to be resumed by message, not relaunched, when research resumes.

@@ -448,3 +448,117 @@ Requirements added:
     confinement, which is the same model.
 24. **Compatibility is stated, not assumed.** For each supported system the documents say what was run there
     and what was not. Where something cannot work, it fails with a message naming what is missing.
+
+## 11. Cargo and crates.io (principal, 14 November 2026: "obviously, learning from Rust crates")
+
+Two searches; the same limits as section 1 apply (summaries of the linked pages, not my own reading). This is
+the ecosystem PCP OS itself is written in, and the host has exactly one dependency from it (`sha2`).
+
+Excels:
+- **Index apart from the files, and both apart from the web site.** Resolution reads a per-crate index file;
+  the archive is then fetched from a separate host. The index began as a Git repository and is now also served
+  file by file over HTTPS (the sparse protocol), so a client fetches only the entries it needs.
+  ([RFC 2789](https://github.com/rust-lang/rfcs/blob/master/text/2789-sparse-index.md),
+  [call for testing](https://blog.rust-lang.org/2022/06/22/sparse-registry-testing/),
+  [crates.io glossary](https://socket.dev/glossary/crates-io))
+- **The lock file pins bytes.** Each index entry carries the SHA-256 of the archive, Cargo checks the download
+  against it and writes it into `Cargo.lock`. This is the piece Composer lacks.
+  ([crates.io glossary](https://socket.dev/glossary/crates-io))
+- **Versions are immutable; removal is "yank".** A yanked version cannot be chosen by a new resolution, and a
+  lock file that already names it still works. This answers left-pad without making mistakes permanent for new
+  users. ([Rust blog: Cargo's pillars](https://blog.rust-lang.org/2016/05/05/cargo-pillars/); the yank detail is
+  from a secondary explainer)
+- Alternative registries and vendoring of all dependencies into the source tree for offline builds [own; the
+  search did not return `cargo vendor`].
+
+Fails or is weak:
+- **The checksum proves the bytes are those the registry accepted, not who published them.** There is no
+  signature by the author. ([crates.io glossary](https://socket.dev/glossary/crates-io))
+- **Code runs at build time.** A build script is an ordinary program run on the builder's machine. In 2026 a
+  compromised maintainer account published releases of three widely used crates that added a look-alike
+  dependency whose build script fetched and ran a remote payload.
+  ([The Hacker News](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html); snippet only,
+  details not verified)
+- **Look-alike names and copies that work.** 2025: `faster_log` and `async_println` copied a working logging
+  crate and added a payload that ran when the dependent project ran; `finch-rust` and `sha-rust` imitated an
+  existing name; `evm-units` and `uniswap-utils` downloaded a payload. Each was removed after a report.
+  ([Rust blog, September 2025](https://blog.rust-lang.org/2025/09/24/crates.io-malicious-crates-fasterlog-and-asyncprintln),
+  [December 2025](https://blog.rust-lang.org/2025/12/05/crates.io-malicious-crates-finch-rust-and-sha-rust),
+  [December 2025](https://blog.rust-lang.org/2025/12/03/crates.io-malicious-crates-evm-units-and-uniswap-utils))
+- **Accounts are the weak point.** A phishing campaign against crates.io publishers in 2025; the remedy now
+  pushed is publishing from a declared build pipeline instead of a person's token.
+  ([Rust blog](https://blog.rust-lang.org/2025/09/12/crates-io-phishing-campaign))
+- **Frequency.** By February 2026 crates.io stopped announcing each malicious crate individually.
+  ([Rust blog](https://blog.rust-lang.org/2026/02/13/crates.io-malicious-crate-update))
+- A flat global name space, first come first served; a deep tree of small dependencies [own].
+- Not found by the search and so not relied on: the 2022 `rustdecimal` case, the 2023 dispute over a
+  precompiled binary inside a derive crate, `cargo-vet`.
+
+What this adds for PCP:
+
+- It confirms requirements 1, 2 and 3 from the system PCP OS is built with: index apart from payload, digest
+  in the index and in a lock, immutable versions. **Yank** is the right form of removal: requirement 3 becomes
+  "a published version is never changed; it can be withdrawn from new installs, and an install that already
+  names it by digest still verifies".
+- 25. **Sparse index.** A client fetches only the entries it asks for, by a path computed from the name, over
+  plain file transfer. That fits an index kept on a branch or served as static files, needs no service, and
+  keeps the package manager usable when only part of the index is reachable.
+- 26. **Nothing in a package runs on the installing machine as part of installing or of building.** No build
+  script, no install hook. A Store application is data and a guest program; it is built by its publisher, and
+  what is installed is checked by digest. (Requirement 9, made absolute by the 2026 case.)
+- 27. **The host's own dependency list is part of its security.** Today it is one crate. Each addition (a
+  signature crate, a guest engine) is weighed in writing: what it brings in, whether it has a build script,
+  whether it works without the standard library, and what the alternative is. Vendored and pinned by digest.
+- 28. **Publishing is by a key, not by an account that can be phished**, and the index records which key
+  published each version, so a change of publisher is visible (the event-stream and 2026 lessons together).
+
+## 12. With Rust's crates, not against them (principal, 14 November 2026)
+
+Section 11 drew lessons from Cargo's failures, and requirements 26 and 27 can be read as setting PCP against the
+ecosystem it is written in. That reading is wrong and is corrected here. PCP OS is a Cargo workspace; a Store
+application written in Rust is a crate; the tools people already have must keep working on it.
+
+What Cargo offers that PCP can stand on (one search; summaries of the linked pages):
+- **Alternate registries with a static index.** A registry is a root holding `config.json` (with the download
+  address `dl`) and one file per crate, a line of JSON per version; it is selected with
+  `index = "sparse+https://..."` under `[registries]`. No service is needed to serve it.
+  ([Cargo book: index format](https://doc.rust-lang.org/cargo/reference/registry-index.html),
+  [RFC 2789](https://github.com/rust-lang/rfcs/blob/master/text/2789-sparse-index.md))
+- **Vendoring and offline builds.** `cargo vendor` copies every dependency into the tree and prints the
+  configuration that redirects resolution to it; `--locked`, `--frozen` and `--offline` assert that the lock
+  file is current and that nothing is fetched.
+  ([cargo-vendor(1)](https://dyn.manpages.debian.org/testing/cargo/cargo-vendor.1),
+  [Cameron: Cargo --offline](https://www.ncameron.org/blog/cargo-offline/))
+- Building a crate for a guest target, and machine-readable descriptions of a workspace [own; not returned by
+  the search].
+
+Requirements restated so that they work with Cargo:
+
+- **26, restated.** *Installing* runs nothing from the package. *Building* is Cargo's business and is done the
+  way Cargo does it, build scripts and procedural macros included, by the publisher or by whoever chooses to
+  build from source; it happens before the install transaction and outside the host, never as a side effect of
+  installing. What the package manager installs is the built thing, checked by digest.
+- **27, restated.** The host's own dependency list is kept short and each addition is weighed in writing; that
+  is a rule for the host, the trusted base, and not for Store applications, which may use the crates they
+  need. An application's `Cargo.lock` is part of what is published, so its dependencies are pinned by digest
+  the way Cargo already pins them.
+- **29. A Store application in Rust is an ordinary Cargo package.** It builds with `cargo build`, carries its
+  `Cargo.toml` and `Cargo.lock`, and can be vendored and audited with the usual tools. PCP adds an index entry
+  beside it (publisher key, digest of the built thing, declared capabilities, review record); it does not
+  invent a second manifest for what Cargo already says (name, version, dependencies).
+- **30. The index is laid out so that Cargo can read it where that makes sense.** The source of a Store
+  application can be offered as an alternate registry in Cargo's own static format on the same branch or file
+  tree as the PCP index, so that `cargo` fetches, locks and vendors it with no PCP tool. PCP's own fields live
+  in PCP's index files and never inside Cargo's, so neither tool has to understand the other's.
+- **31. Versions follow Cargo's.** A Store application's version is its crate version; "withdrawn" in the PCP
+  index means what "yanked" means in a registry; the two are kept in step by one publishing step.
+- **32. PCP does not republish other people's crates.** Dependencies come from where the lock file says. The
+  PCP index names applications and modules, not the crates they are made of.
+
+What stays PCP's own, because Cargo does not offer it: a signature by the publisher's key and a visible change
+of publisher (28); the install transaction with undo and the register record (6, 12); the capabilities an
+application declares and the host enforces (16, 23); and modules, which are text and not crates.
+
+Open for stage 2: whether the guest target is one Cargo can build today on every system this side has, and
+whether the engine that runs it can be a dependency that itself needs no build script and works without the
+standard library.
