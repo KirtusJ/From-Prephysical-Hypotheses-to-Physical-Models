@@ -19,6 +19,6 @@ Reviewer's program (xcost.py, twelve predicates fixed first, seed 20261113, none
 Checker rerun: byte-identical to the stored result file. The checker covers the two panels and exponent arithmetic on fixed inputs, as the note says; it overwrites its output and has no predicates in a docstring.
 Lean: the note links no Lean file and claims none.
 
-Rechecked by the queue session: the checker's rerun is byte-identical to Director_G/results/window_source_cost.json; the sentence with 45.4% is at line 53 of the note; the flight-window checker computes its conditional tail from a quantity it names "velocity" compared with p0 and a tolerance (line 174). Whether that quantity is terminal position over time or a spectral velocity was not traced, so GAP 3 stands as the sub-agent's reading.
+Rechecked by the queue session: the checker's rerun is byte-identical to Director_G/results/window_source_cost.json; the sentence with 45.4% is at line 53 of the note; the flight-window checker computes its conditional tail from a quantity it names "velocity" compared with p0 and a tolerance (line 174). That quantity is defined a few lines earlier as (x - center*t)/(s*delta), a rescaled terminal position; so the 45.4% is a terminal-position tail, as the sub-agent read it. The reviewer's 22.35% for the spectral tail was not recomputed.
 Not checked: the proof of the 2w/pi theorem; the four-tick note; the apparatus assumptions; delta below 1/40.
 Cost reported by the sub-agent: about 6 minutes, 8 tool calls.
