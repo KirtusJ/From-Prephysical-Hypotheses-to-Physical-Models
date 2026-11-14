@@ -14,7 +14,7 @@ Write \(H=\dot a/a\), \(E(z)=H(z)/H_0\), and \(X=(1+z)^3\). Conservation gives \
 K_{ij}=\frac{E^2(z_i)-E^2(z_j)}{X_i-X_j}=\Omega_m .
 \]
 
-This is the two-redshift form of the \(Om\) diagnostic. With three distinct redshifts, the prediction \(K_{12}-K_{23}=0\) tests the expansion shape. A common \(H_0\) cancels from the zero test when using \(H^2\); obtaining the numerical dimensionless slope still needs \(H_0\). A zero is compatible with other models that share this expansion history. When radiation matters the added term is \(\Omega_r[(1+z)^4-1]\), which changes the slope even under a constant vacuum term. [Sahni, Shafieloo and Starobinsky](https://doi.org/10.1103/PhysRevD.78.103502)
+This is the two-redshift form of the \(Om\) diagnostic. With three distinct redshifts, the prediction \(K_{12}-K_{23}=0\) tests the expansion shape. A common \(H_0\) cancels from the zero test when using \(H^2\); obtaining the numerical dimensionless slope still needs \(H_0\). A zero is compatible with other models that share this expansion history. When radiation matters the added term is \(\Omega_r[(1+z)^4-1]\), which changes the slope even under a constant vacuum term. [Original Om diagnostic](https://doi.org/10.1103/PhysRevD.78.103502) · [Two-redshift slope, Eqs. (1.1) and (1.5)](https://arxiv.org/pdf/1205.2870)
 
 ## Held-out attack and existing observations
 

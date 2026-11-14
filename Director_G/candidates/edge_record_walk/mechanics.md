@@ -36,7 +36,7 @@ Writing \(q=k-k_*\), differentiation gives \(\omega'(k_*+q)=\sin q/\sqrt{1+\sin^
  \frac{T\delta^2P^4}{6\varepsilon},\qquad \delta P\le1.
 \]
 
-For fixed \(\varepsilon>0\), \(\delta\to0\), this yields \(i\varepsilon\partial_T f=-\varepsilon^2\partial_Y^2 f/2\) in position representation. Smooth vector phases are a choice of section. Rephasing \(u(k)\) requires the inverse phase on its scalar coefficient to represent the same prepared state. The scale choices give dimensionless mass one. Dimensional mass, action, lattice spacing and tick duration require a physical calibration. The leading envelope equation for extended coined walks was previously derived by de Valcárcel, Roldán and Romanelli, Eq. (11). [Program proof and error bound](../../Signed_walk_and_weak_field.md) · [Primary publication](https://doi.org/10.1088/1367-2630/12/12/123022)
+For fixed \(\varepsilon>0\), \(\delta\to0\), this yields \(i\varepsilon\partial_T f=-\varepsilon^2\partial_Y^2 f/2\) in position representation. Smooth vector phases are a choice of section. Rephasing \(u(k)\) requires the inverse phase on its scalar coefficient to represent the same prepared state. The scale choices give dimensionless mass one. Dimensional mass, action, lattice spacing and tick duration require a physical calibration. The leading envelope equation for extended coined walks was previously derived by de Valcárcel, Roldán and Romanelli. Their preprint gives the leading band-edge equation as Eq. (11). [Program proof and error bound](../../Signed_walk_and_weak_field.md) · [Primary publication](https://doi.org/10.1088/1367-2630/12/12/123022) · [Author preprint, p. 3](https://arxiv.org/pdf/1004.0976)
 
 ### A real preparation and a growing ring
 
