@@ -103,4 +103,73 @@ theorem every_repeat_mixes (n : Nat) : (powerColumn (n+1)).2 ≠ 0 := by
   rw [eq] at h
   contradiction
 
+/-- The paired displacement orders have the same endpoint. Each conditional
+rail numerator has a common factor 2; their Gram matrices represent the same
+original-launch weight 1508/128² = 377/4096 for every unit input rail. -/
+def forward : Matrix := ((11,-16),(16,11))
+def backward : Matrix := ((11,16),(-16,11))
+
+set_option maxRecDepth 8000 in
+set_option maxHeartbeats 2000000 in
+theorem native_order_pair :
+    positions 0 [0,8] = [0,0,8] ∧ positions 0 [8,0] = [0,8,8] ∧
+    multiply (block 8) (block 0) = multiply ((2,0),(0,2)) forward ∧
+    multiply (block 0) (block 8) = multiply ((2,0),(0,2)) backward ∧
+    gram forward = ((377,0),(0,377)) ∧ gram backward = gram forward ∧
+    multiply backward forward = ((377,0),(0,377)) ∧
+    multiply forward backward = ((377,0),(0,377)) ∧
+    (4*377 : Int) * 4096 = 377 * 128^2 := by decide
+
+/-- The square of (11+16i)/√377 has numerator -135+352i over 377. -/
+def square : Matrix := ((-135,-352),(352,-135))
+
+theorem square_identity :
+    multiply forward forward = square ∧ gram square = ((377^2,0),(0,377^2)) := by
+  decide
+
+def squareColumn : Nat → Column
+  | 0 => (1,0)
+  | n+1 => applyMatrix square (squareColumn n)
+
+private def residue13 (c : Column) : Column := (c.1 % 13, c.2 % 13)
+private def step13 (r : Column) : Column :=
+  (((8*r.1)%13 + (12*r.2)%13)%13, ((1*r.1)%13 + (8*r.2)%13)%13)
+
+private theorem step13_correct (v : Column) :
+    residue13 (applyMatrix square v) = step13 (residue13 v) := by
+  apply Prod.ext
+  · change (-135 * v.1 + -352 * v.2) % 13 =
+      ((8*(v.1%13))%13 + (12*(v.2%13))%13)%13
+    rw [Int.add_emod, Int.mul_emod (-135), Int.mul_emod (-352)]
+    rfl
+  · change (352 * v.1 + -135 * v.2) % 13 =
+      ((1*(v.1%13))%13 + (8*(v.2%13))%13)%13
+    rw [Int.add_emod, Int.mul_emod 352, Int.mul_emod (-135)]
+    rfl
+
+/-- The numerator residues run on a three-element cycle. -/
+theorem square_residues (n : Nat) :
+    let c := squareColumn (n+1)
+    (c.1 % 13, c.2 % 13) = (8,1) ∨
+    (c.1 % 13, c.2 % 13) = (11,3) ∨
+    (c.1 % 13, c.2 % 13) = (7,9) := by
+  induction n with
+  | zero => decide
+  | succ n ih =>
+    let v := squareColumn (n+1)
+    change residue13 (applyMatrix square v) = (8,1) ∨
+      residue13 (applyMatrix square v) = (11,3) ∨
+      residue13 (applyMatrix square v) = (7,9)
+    rw [step13_correct]
+    change residue13 v = (8,1) ∨ residue13 v = (11,3) ∨ residue13 v = (7,9) at ih
+    rcases ih with h | h | h <;> rw [h] <;> decide
+
+theorem square_repeat_nonzero (n : Nat) :
+    (squareColumn (n+1)).1 ≠ 0 ∧ (squareColumn (n+1)).2 ≠ 0 := by
+  have h := square_residues n
+  rcases h with h | h | h <;> obtain ⟨hr,hi⟩ := Prod.mk.inj h <;>
+    constructor
+  all_goals intro e
+  all_goals first | (rw [e] at hr; contradiction) | (rw [e] at hi; contradiction)
+
 end ClosedPositionTransport
