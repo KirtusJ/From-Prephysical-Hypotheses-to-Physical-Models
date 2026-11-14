@@ -1,0 +1,1172 @@
+{
+  "input_figure": "Nitsche et al., Figure 4, continual origin return",
+  "bracket_denominator": 1000000000,
+  "correlated_even_schedule_controls": [
+    {
+      "tick": 8,
+      "writes": [],
+      "return": "81/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        2
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        4
+      ],
+      "return": "85/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        6
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        2,
+        4
+      ],
+      "return": "85/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        2,
+        6
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        4,
+        6
+      ],
+      "return": "85/128"
+    },
+    {
+      "tick": 8,
+      "writes": [
+        2,
+        4,
+        6
+      ],
+      "return": "85/128"
+    },
+    {
+      "tick": 10,
+      "writes": [],
+      "return": "81/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        4
+      ],
+      "return": "87/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        6
+      ],
+      "return": "83/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        8
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        4
+      ],
+      "return": "87/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        6
+      ],
+      "return": "83/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        8
+      ],
+      "return": "81/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        4,
+        6
+      ],
+      "return": "91/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        4,
+        8
+      ],
+      "return": "87/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        6,
+        8
+      ],
+      "return": "83/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        4,
+        6
+      ],
+      "return": "91/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        4,
+        8
+      ],
+      "return": "87/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        6,
+        8
+      ],
+      "return": "83/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        4,
+        6,
+        8
+      ],
+      "return": "91/128"
+    },
+    {
+      "tick": 10,
+      "writes": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "return": "91/128"
+    }
+  ],
+  "each_tick": {
+    "binding_clock": 36,
+    "runner_up_clock": 34,
+    "upper_rate_bracket_numerators": [
+      96602277,
+      96602278
+    ],
+    "binding_row_one_pixel_higher_bracket": [
+      100525954,
+      100525955
+    ],
+    "all_clocks": [
+      {
+        "tick": 2,
+        "inclusive_bar": [
+          "117/239",
+          "134/239"
+        ],
+        "scale": 4,
+        "power_coefficients_in_z": [
+          2
+        ],
+        "minimum_derivative_bernstein_coefficient": "0",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 4,
+        "inclusive_bar": [
+          "144/239",
+          "325/478"
+        ],
+        "scale": 16,
+        "power_coefficients_in_z": [
+          10
+        ],
+        "minimum_derivative_bernstein_coefficient": "0",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 6,
+        "inclusive_bar": [
+          "144/239",
+          "325/478"
+        ],
+        "scale": 64,
+        "power_coefficients_in_z": [
+          44,
+          -4
+        ],
+        "minimum_derivative_bernstein_coefficient": "1/16",
+        "upper_rate_bracket_numerators": [
+          878661087,
+          878661088
+        ]
+      },
+      {
+        "tick": 8,
+        "inclusive_bar": [
+          "291/478",
+          "164/239"
+        ],
+        "scale": 256,
+        "power_coefficients_in_z": [
+          186,
+          -20,
+          -8,
+          4
+        ],
+        "minimum_derivative_bernstein_coefficient": "5/64",
+        "upper_rate_bracket_numerators": [
+          546802519,
+          546802520
+        ]
+      },
+      {
+        "tick": 10,
+        "inclusive_bar": [
+          "291/478",
+          "164/239"
+        ],
+        "scale": 1024,
+        "power_coefficients_in_z": [
+          772,
+          -84,
+          -48,
+          -4,
+          8,
+          4
+        ],
+        "minimum_derivative_bernstein_coefficient": "21/256",
+        "upper_rate_bracket_numerators": [
+          384344282,
+          384344283
+        ]
+      },
+      {
+        "tick": 12,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 4096,
+        "power_coefficients_in_z": [
+          3172,
+          -336,
+          -232,
+          -52,
+          0,
+          24,
+          16,
+          8
+        ],
+        "minimum_derivative_bernstein_coefficient": "21/256",
+        "upper_rate_bracket_numerators": [
+          310755066,
+          310755067
+        ]
+      },
+      {
+        "tick": 14,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 16384,
+        "power_coefficients_in_z": [
+          12952,
+          -1320,
+          -1024,
+          -288,
+          -64,
+          -48,
+          32,
+          112,
+          32,
+          16
+        ],
+        "minimum_derivative_bernstein_coefficient": "165/2048",
+        "upper_rate_bracket_numerators": [
+          255765661,
+          255765662
+        ]
+      },
+      {
+        "tick": 16,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 65536,
+        "power_coefficients_in_z": [
+          52666,
+          -5148,
+          -4320,
+          -1392,
+          -416,
+          -576,
+          -72,
+          236,
+          320,
+          232,
+          80,
+          40
+        ],
+        "minimum_derivative_bernstein_coefficient": "1287/16384",
+        "upper_rate_bracket_numerators": [
+          217555377,
+          217555378
+        ]
+      },
+      {
+        "tick": 18,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 262144,
+        "power_coefficients_in_z": [
+          213524,
+          -20020,
+          -17776,
+          -6332,
+          -2120,
+          -2980,
+          -1344,
+          460,
+          -40,
+          1364,
+          912,
+          652,
+          200,
+          100
+        ],
+        "minimum_derivative_bernstein_coefficient": "5005/65536",
+        "upper_rate_bracket_numerators": [
+          189725416,
+          189725417
+        ]
+      },
+      {
+        "tick": 20,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 1048576,
+        "power_coefficients_in_z": [
+          863820,
+          -77792,
+          -72072,
+          -27764,
+          -9856,
+          -13480,
+          -8504,
+          -2292,
+          1248,
+          -208,
+          3784,
+          4804,
+          2592,
+          1672,
+          560,
+          280
+        ],
+        "minimum_derivative_bernstein_coefficient": "2431/32768",
+        "upper_rate_bracket_numerators": [
+          168224307,
+          168224308
+        ]
+      },
+      {
+        "tick": 22,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 4194304,
+        "power_coefficients_in_z": [
+          3488872,
+          -302328,
+          -289536,
+          -118768,
+          -43872,
+          -58304,
+          -43520,
+          -17912,
+          -2672,
+          2648,
+          -7584,
+          15904,
+          15296,
+          14032,
+          7648,
+          4912,
+          1568,
+          784
+        ],
+        "minimum_derivative_bernstein_coefficient": "37791/524288",
+        "upper_rate_bracket_numerators": [
+          151256117,
+          151256118
+        ]
+      },
+      {
+        "tick": 24,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 16777216,
+        "power_coefficients_in_z": [
+          14073060,
+          -1175720,
+          -1156272,
+          -499304,
+          -190496,
+          -246288,
+          -203016,
+          -92516,
+          -37632,
+          -36264,
+          7680,
+          -7568,
+          31200,
+          64928,
+          53072,
+          43816,
+          22464,
+          14000,
+          4704,
+          2352
+        ],
+        "minimum_derivative_bernstein_coefficient": "146965/2097152",
+        "upper_rate_bracket_numerators": [
+          137386527,
+          137386528
+        ]
+      },
+      {
+        "tick": 26,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 67108864,
+        "power_coefficients_in_z": [
+          56708264,
+          -4576264,
+          -4599520,
+          -2072776,
+          -813680,
+          -1025144,
+          -901760,
+          -437184,
+          -229312,
+          -275184,
+          -41888,
+          99424,
+          -121056,
+          98240,
+          193120,
+          245232,
+          172128,
+          132496,
+          69376,
+          43120,
+          14112,
+          7056
+        ],
+        "minimum_derivative_bernstein_coefficient": "572033/8388608",
+        "upper_rate_bracket_numerators": [
+          131288047,
+          131288048
+        ]
+      },
+      {
+        "tick": 28,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 268435456,
+        "power_coefficients_in_z": [
+          228318856,
+          -17829600,
+          -18248208,
+          -8524616,
+          -3434240,
+          -4225168,
+          -3890816,
+          -1983968,
+          -1148672,
+          -1379008,
+          -592704,
+          8480,
+          116576,
+          -279200,
+          78368,
+          789616,
+          805120,
+          815936,
+          562912,
+          419376,
+          213440,
+          131040,
+          44352,
+          22176
+        ],
+        "minimum_derivative_bernstein_coefficient": "557175/8388608",
+        "upper_rate_bracket_numerators": [
+          121173796,
+          121173797
+        ]
+      },
+      {
+        "tick": 30,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 1073741824,
+        "power_coefficients_in_z": [
+          918624304,
+          -69535440,
+          -72269312,
+          -34811648,
+          -14361600,
+          -17294496,
+          -16474176,
+          -8768320,
+          -5298432,
+          -6278080,
+          -3772032,
+          -1714944,
+          462592,
+          509760,
+          -1548800,
+          374176,
+          1836992,
+          3237024,
+          3007104,
+          2782848,
+          1821184,
+          1320256,
+          683392,
+          418752,
+          139392,
+          69696
+        ],
+        "minimum_derivative_bernstein_coefficient": "4345965/67108864",
+        "upper_rate_bracket_numerators": [
+          112537046,
+          112537047
+        ]
+      },
+      {
+        "tick": 32,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 4294967296,
+        "power_coefficients_in_z": [
+          3693886906,
+          -271455660,
+          -285867920,
+          -141388728,
+          -59618048,
+          -70436304,
+          -68849168,
+          -38017704,
+          -23447680,
+          -27577584,
+          -19485344,
+          -10797584,
+          -2411552,
+          -556368,
+          -661736,
+          -1289972,
+          -2849024,
+          6746648,
+          9882848,
+          12939328,
+          10622592,
+          9169408,
+          5998064,
+          4283224,
+          2181696,
+          1328976,
+          453024,
+          226512
+        ],
+        "minimum_derivative_bernstein_coefficient": "67863915/1073741824",
+        "upper_rate_bracket_numerators": [
+          105043412,
+          105043413
+        ]
+      },
+      {
+        "tick": 34,
+        "inclusive_bar": [
+          "293/478",
+          "165/239"
+        ],
+        "scale": 17179869184,
+        "power_coefficients_in_z": [
+          14846262964,
+          -1060730100,
+          -1129872240,
+          -571831980,
+          -246006376,
+          -285792756,
+          -285028608,
+          -162477404,
+          -101327032,
+          -118588916,
+          -91924144,
+          -53225644,
+          -25617704,
+          -26756132,
+          5401312,
+          9296652,
+          -12924680,
+          -10583308,
+          11703664,
+          37554748,
+          42340232,
+          46513524,
+          37216096,
+          30993244,
+          19758296,
+          13921140,
+          7182992,
+          4369068,
+          1472328,
+          736164
+        ],
+        "minimum_derivative_bernstein_coefficient": "265182525/4294967296",
+        "upper_rate_bracket_numerators": [
+          98501969,
+          98501970
+        ]
+      },
+      {
+        "tick": 36,
+        "inclusive_bar": [
+          "147/239",
+          "331/478"
+        ],
+        "scale": 68719476736,
+        "power_coefficients_in_z": [
+          59644341436,
+          -4148633280,
+          -4463430600,
+          -2305026420,
+          -1010092288,
+          -1156222504,
+          -1171670216,
+          -686681228,
+          -431258720,
+          -502388496,
+          -413518120,
+          -245938388,
+          -151318400,
+          -172408056,
+          -27460824,
+          44640204,
+          -24146080,
+          -8108832,
+          -74776760,
+          51620724,
+          93625376,
+          166154280,
+          167173768,
+          168506380,
+          128221056,
+          103434960,
+          66125736,
+          46200788,
+          23596256,
+          14308008,
+          4907760,
+          2453880
+        ],
+        "minimum_derivative_bernstein_coefficient": "64822395/1073741824",
+        "upper_rate_bracket_numerators": [
+          96602277,
+          96602278
+        ]
+      }
+    ]
+  },
+  "even_ticks": {
+    "binding_clock": 36,
+    "runner_up_clock": 34,
+    "upper_rate_bracket_numerators": [
+      191898555,
+      191898556
+    ],
+    "binding_row_one_pixel_higher_bracket": [
+      199290315,
+      199290316
+    ],
+    "all_clocks": [
+      {
+        "tick": 2,
+        "inclusive_bar": [
+          "117/239",
+          "134/239"
+        ],
+        "scale": 4,
+        "power_coefficients_in_z": [
+          2
+        ],
+        "minimum_derivative_bernstein_coefficient": "0",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 4,
+        "inclusive_bar": [
+          "144/239",
+          "325/478"
+        ],
+        "scale": 16,
+        "power_coefficients_in_z": [
+          10
+        ],
+        "minimum_derivative_bernstein_coefficient": "0",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 6,
+        "inclusive_bar": [
+          "144/239",
+          "325/478"
+        ],
+        "scale": 64,
+        "power_coefficients_in_z": [
+          40
+        ],
+        "minimum_derivative_bernstein_coefficient": "0",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 8,
+        "inclusive_bar": [
+          "291/478",
+          "164/239"
+        ],
+        "scale": 256,
+        "power_coefficients_in_z": [
+          170,
+          -8
+        ],
+        "minimum_derivative_bernstein_coefficient": "1/32",
+        "upper_rate_bracket_numerators": [
+          1000000000,
+          1000000000
+        ]
+      },
+      {
+        "tick": 10,
+        "inclusive_bar": [
+          "291/478",
+          "164/239"
+        ],
+        "scale": 1024,
+        "power_coefficients_in_z": [
+          728,
+          -96,
+          16
+        ],
+        "minimum_derivative_bernstein_coefficient": "1/16",
+        "upper_rate_bracket_numerators": [
+          723291756,
+          723291757
+        ]
+      },
+      {
+        "tick": 12,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 4096,
+        "power_coefficients_in_z": [
+          3004,
+          -532,
+          112,
+          16
+        ],
+        "minimum_derivative_bernstein_coefficient": "65/1024",
+        "upper_rate_bracket_numerators": [
+          620733192,
+          620733193
+        ]
+      },
+      {
+        "tick": 14,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 16384,
+        "power_coefficients_in_z": [
+          12224,
+          -2128,
+          240,
+          0,
+          64
+        ],
+        "minimum_derivative_bernstein_coefficient": "87/1024",
+        "upper_rate_bracket_numerators": [
+          528333347,
+          528333348
+        ]
+      },
+      {
+        "tick": 16,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 65536,
+        "power_coefficients_in_z": [
+          49914,
+          -8188,
+          -280,
+          -660,
+          720,
+          144
+        ],
+        "minimum_derivative_bernstein_coefficient": "891/8192",
+        "upper_rate_bracket_numerators": [
+          428724480,
+          428724481
+        ]
+      },
+      {
+        "tick": 18,
+        "inclusive_bar": [
+          "291/478",
+          "329/478"
+        ],
+        "scale": 262144,
+        "power_coefficients_in_z": [
+          203528,
+          -34064,
+          -3552,
+          -5488,
+          4528,
+          1248,
+          400
+        ],
+        "minimum_derivative_bernstein_coefficient": "965/8192",
+        "upper_rate_bracket_numerators": [
+          377166638,
+          377166639
+        ]
+      },
+      {
+        "tick": 20,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 1048576,
+        "power_coefficients_in_z": [
+          825300,
+          -141492,
+          -14784,
+          -27156,
+          17816,
+          2116,
+          3920,
+          1072
+        ],
+        "minimum_derivative_bernstein_coefficient": "34915/262144",
+        "upper_rate_bracket_numerators": [
+          340131923,
+          340131924
+        ]
+      },
+      {
+        "tick": 22,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 4194304,
+        "power_coefficients_in_z": [
+          3337568,
+          -558864,
+          -63200,
+          -116304,
+          36608,
+          -17456,
+          28912,
+          16768,
+          3136
+        ],
+        "minimum_derivative_bernstein_coefficient": "34929/262144",
+        "upper_rate_bracket_numerators": [
+          300742880,
+          300742881
+        ]
+      },
+      {
+        "tick": 24,
+        "inclusive_bar": [
+          "146/239",
+          "329/478"
+        ],
+        "scale": 16777216,
+        "power_coefficients_in_z": [
+          13491364,
+          -2180880,
+          -350408,
+          -514564,
+          32464,
+          -121768,
+          158928,
+          109384,
+          38496,
+          9184
+        ],
+        "minimum_derivative_bernstein_coefficient": "136305/1048576",
+        "upper_rate_bracket_numerators": [
+          273451639,
+          273451640
+        ]
+      },
+      {
+        "tick": 26,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 67108864,
+        "power_coefficients_in_z": [
+          54481008,
+          -8665984,
+          -1786416,
+          -2126000,
+          110784,
+          -611136,
+          577392,
+          337760,
+          218304,
+          124864,
+          28224
+        ],
+        "minimum_derivative_bernstein_coefficient": "67703/524288",
+        "upper_rate_bracket_numerators": [
+          262789028,
+          262789029
+        ]
+      },
+      {
+        "tick": 28,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 268435456,
+        "power_coefficients_in_z": [
+          219683128,
+          -34522952,
+          -7581664,
+          -8210256,
+          191008,
+          -3406560,
+          1671520,
+          167344,
+          1089760,
+          1171504,
+          449856,
+          87360
+        ],
+        "minimum_derivative_bernstein_coefficient": "4315369/33554432",
+        "upper_rate_bracket_numerators": [
+          240983688,
+          240983689
+        ]
+      },
+      {
+        "tick": 30,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 1073741824,
+        "power_coefficients_in_z": [
+          884990976,
+          -135973408,
+          -30872928,
+          -33818816,
+          -4386208,
+          -15864384,
+          5290976,
+          -3439104,
+          5249024,
+          6815872,
+          3595968,
+          1293440,
+          278784
+        ],
+        "minimum_derivative_bernstein_coefficient": "4249169/33554432",
+        "upper_rate_bracket_numerators": [
+          223703649,
+          223703650
+        ]
+      },
+      {
+        "tick": 32,
+        "inclusive_bar": [
+          "146/239",
+          "165/239"
+        ],
+        "scale": 4294967296,
+        "power_coefficients_in_z": [
+          3563283002,
+          -533951316,
+          -133648112,
+          -144814360,
+          -30625056,
+          -60024720,
+          18093208,
+          -18332660,
+          18903920,
+          22706728,
+          17010640,
+          9627864,
+          3883168,
+          896544
+        ],
+        "minimum_derivative_bernstein_coefficient": "133487829/1073741824",
+        "upper_rate_bracket_numerators": [
+          209837309,
+          209837310
+        ]
+      },
+      {
+        "tick": 34,
+        "inclusive_bar": [
+          "293/478",
+          "165/239"
+        ],
+        "scale": 17179869184,
+        "power_coefficients_in_z": [
+          14338884392,
+          -2106710512,
+          -578992240,
+          -581495520,
+          -118359312,
+          -244684864,
+          44058048,
+          -78368784,
+          33269232,
+          37394816,
+          64411344,
+          64188576,
+          40272176,
+          15223392,
+          2944656
+        ],
+        "minimum_derivative_bernstein_coefficient": "131669407/1073741824",
+        "upper_rate_bracket_numerators": [
+          196135810,
+          196135811
+        ]
+      },
+      {
+        "tick": 36,
+        "inclusive_bar": [
+          "147/239",
+          "331/478"
+        ],
+        "scale": 68719476736,
+        "power_coefficients_in_z": [
+          57666409444,
+          -8320312564,
+          -2386634432,
+          -2260460732,
+          -539257656,
+          -1157818580,
+          25882672,
+          -384447700,
+          55359656,
+          15220372,
+          221309088,
+          336238748,
+          271779512,
+          133460468,
+          45763088,
+          9740016
+        ],
+        "minimum_derivative_bernstein_coefficient": "2080078141/17179869184",
+        "upper_rate_bracket_numerators": [
+          191898555,
+          191898556
+        ]
+      }
+    ]
+  }
+}
