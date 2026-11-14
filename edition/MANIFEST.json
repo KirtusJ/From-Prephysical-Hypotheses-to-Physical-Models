@@ -1,5 +1,5 @@
 {
- "baseline": "FPHPM-BASELINE-2026-11-14-Z27",
+ "baseline": "FPHPM-BASELINE-2026-11-15-Z28",
  "date": "13 November 2026",
  "author": "Kirtus Justus",
  "author_title": "Theoretical Physicist",
@@ -80,6 +80,30 @@
   "COMPUTATION/Baseline_Additions/Degree_Two_Quadratic_Rule_Results.json": {
    "sha256": "4b1ecb3745e7a79082850cb79c6d4d954f8081cc39722a1178e1108e77f33c2d",
    "size": 11015
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/reduction_challenger/prep_check.py": {
+   "sha256": "6eaffbd1640c70c9b9610704c384432d1040d0f921850a4ec31149ccdbe666cd",
+   "size": 17132
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/reduction_challenger/results.txt": {
+   "sha256": "7334473968f75e206a21ef0f7ad095dd4437c734656143b7380bfdebbe0e6e9b",
+   "size": 1093
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/theorem/four_gain.py": {
+   "sha256": "65cf09618ccd6bbb934c20a1fb18caf00431f9beb0607e0d30e05ebae049823a",
+   "size": 21148
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/theorem/result_run1.txt": {
+   "sha256": "5657f0a54814ecdd8345ede657d7c2d906a27efc2434178d1b55cdfa2b2428af",
+   "size": 8261
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/theorem_challenger/chal.py": {
+   "sha256": "65315f5901a00f68861198139deaa6eb4f7f0b042a4d9a5c2aacfd182fbf7424",
+   "size": 20096
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/theorem_challenger/result.txt": {
+   "sha256": "1acf768b818fab7f0767374bbb449c9b9f23b310a6d41996a6f7547ced52da96",
+   "size": 19591
   },
   "COMPUTATION/Baseline_Additions/Fourier_Blocks_Any_Degree_Followup_Results.json": {
    "sha256": "6b7e120414f7e01c240e40d8dea1a3740425cfc13301b2f1d4fdcd00a75818ab",
@@ -1129,6 +1153,14 @@
    "sha256": "44099cf3d1739699a23f206963d085db06f077cab69daba08bdc87735df1ae02",
    "size": 3085
   },
+  "COMPUTATION/Lean/Mathlib/FourGain.lean": {
+   "sha256": "09241fa40de14b94e85d92292bf49034a0eecb4de95e467a12c1f9e08c951d90",
+   "size": 23799
+  },
+  "COMPUTATION/Lean/Mathlib/FourGain.out": {
+   "sha256": "c6d62c1fe11c023608ab8a715bd39865c7b1b35142bb4f78dcfbe9102784443a",
+   "size": 2570
+  },
   "COMPUTATION/Lean/Mathlib/FourLaw.lean": {
    "sha256": "27eeb78bb4462009bf91ff28a9f86c6cb8c01e563be3c66098589277ea9a9b96",
    "size": 1521
@@ -1176,6 +1208,14 @@
   "COMPUTATION/Lean/Mathlib/PreimageSpan.lean": {
    "sha256": "7b4357c5590711ee19caa65f0e8c31a2f5f0e2f2e1f5ed67403c0ab45ceea5cd",
    "size": 4160
+  },
+  "COMPUTATION/Lean/Mathlib/PrepReduction.lean": {
+   "sha256": "1c8057d47b98fb2cc2666bfec7e7505192451adb64b280b9b657b7cd81ee1aa6",
+   "size": 8059
+  },
+  "COMPUTATION/Lean/Mathlib/PrepReduction.out": {
+   "sha256": "6520e4b987511551b66d0003a02b08e10a035d5e6b2bf4067ece3223f528d549",
+   "size": 929
   },
   "COMPUTATION/Lean/Mathlib/ProductEvents.lean": {
    "sha256": "30cb5de9fb5a1b94857ee7161b1c22c546456aecd8d5a050a970b7ff6b807258",
@@ -1250,8 +1290,8 @@
    "size": 2290
   },
   "COMPUTATION/Lean/README.md": {
-   "sha256": "f0755e2844c2fb71566f77f10af71a9510a39d2902236418d9eed5f01a915111",
-   "size": 2101
+   "sha256": "a7659bf5a886f466500e6daa6569f7db2331fbbac335f466b87c56ce6175670c",
+   "size": 2235
   },
   "COMPUTATION/Lean/SignedLineRecursion.lean": {
    "sha256": "f05d719246a6fc0051c18f79ef8efc1a9c564dcd27000906360ec0766782533f",
@@ -1262,8 +1302,8 @@
    "size": 2762
   },
   "COMPUTATION/RERUN_RECORD_2026-11-12.csv": {
-   "sha256": "af4e589ee958614d3b43f1e4e614e3e7e13120b28d699eae2a096b52d6cee6b2",
-   "size": 23489
+   "sha256": "28eef53b9939a605b2e0577c351a5f15202075946834582e9379e5927ebf6a51",
+   "size": 23821
   },
   "COMPUTATION/requirements.txt": {
    "sha256": "85ffb68313b6caa8059e7e0737aba591f7994abaf72cf3aab302deccf510c1cc",
@@ -1278,7 +1318,7 @@
    "size": 5147
   },
   "CONSTRUCTED_TRIALS/README.md": {
-   "sha256": "526dd5f4b33796f1f93000ce6fb0924296bb1ccd978f70c5438344c6b77ccb1f",
+   "sha256": "f6e663844e57187d66edd331c55b8869a62021947b5e4f006023f3dd2ba4749f",
    "size": 9491
   },
   "LEGACY/2026-11-10_CONTENTS.txt": {
@@ -1326,7 +1366,7 @@
    "size": 7625
   },
   "LEGACY/README.md": {
-   "sha256": "0c6101613c5d083b6498dc2d837e918b0fcd868357a2ea3a68aadf3acaa5a236",
+   "sha256": "0670af4971bc9baa5611eea8b45326b1c925808038568ab82aacec867ab010db",
    "size": 717
   },
   "LEGACY/Related_Source_Editions/Assessment_and_Further_Results/Collections_Assessment_and_Further_Results.pdf": {
@@ -1614,7 +1654,7 @@
    "size": 2279
   },
   "NEGATIVE_CONTROLS/README.md": {
-   "sha256": "effa58923faeaf7aaf8666e2e9eb8bbf61d8b2e7199579265baaa99cdfa4f344",
+   "sha256": "cfeb17a835e2a24c99befcdc04ea2a0f79b3c4eb1d8c092a64c1bacc903529f2",
    "size": 1026
   },
   "PAPERS/A1_Program_Overview_Questions_Models_and_Physical_Correspondence/A1_Program_Overview_Questions_Models_and_Physical_Correspondence.pdf": {
@@ -2934,12 +2974,12 @@
    "size": 329
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an.pdf": {
-   "sha256": "6bbd831646a6bd2aa9f57b87cff0a39229e8f0ceab103fe23826dd949ff206fc",
-   "size": 455442
+   "sha256": "2eaa499e994c9b616b839880047522837abac134451289daef74089a6c55a25a",
+   "size": 481985
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/parts/01_G10_manuscript.pdf": {
-   "sha256": "6bbd831646a6bd2aa9f57b87cff0a39229e8f0ceab103fe23826dd949ff206fc",
-   "size": 455442
+   "sha256": "2eaa499e994c9b616b839880047522837abac134451289daef74089a6c55a25a",
+   "size": 481985
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/G10_manuscript.tex": {
    "sha256": "36dde648cfd8e3298aae31e0a362099a7c7772b321e8ae1605e066b4bf21e8d4",
@@ -2950,8 +2990,8 @@
    "size": 1404
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex": {
-   "sha256": "0bc2d555b1a34b0e9bccc7f55417de29bce7329a05e2ee1d7f07c271a31f014f",
-   "size": 234965
+   "sha256": "02ec096b4cab67f3244e03c7a45e4a7ad825e95a2f0b7782540fb67c0333eec4",
+   "size": 251421
   },
   "PAPERS/G1_Relational_Structures_and_the_Limits_of_Observation/G1_Relational_Structures_and_the_Limits_of_Observation.pdf": {
    "sha256": "42caf8dd5edf76c1ab4c79a7aa8760c67963dd83ce7016bcefaac68492a3f165",
@@ -3134,19 +3174,19 @@
    "size": 37611
   },
   "PROGRAM/CHARTER.md": {
-   "sha256": "1a49d9589b85365a8a74d5a547898f87e77f61b5c4946c51e68c8ce9035a1f0f",
+   "sha256": "a9eec0f149947db1256f1f3c23b36abc44020da5567083169a29bedab25ebae1",
    "size": 4316
   },
   "PROGRAM/CONTRIBUTIONS.md": {
-   "sha256": "722d6ac488b7738d647042e8dcdde97d4783f760d935faea5d65671ec897d14f",
+   "sha256": "3d8b32fd755759eeee666fdd0976e8ee768ec547e47a3eb4bbfdd7cf0955dcd9",
    "size": 4044
   },
   "PROGRAM/PAPER_INDEX.md": {
-   "sha256": "9d32b94b431fdc2f9a7fbbda10d2feb331684a4543619f3215f5dc5f8e4c8dd9",
+   "sha256": "c10edbf1b5ed1b6c785412c10e1c9ee57cedb80fa4a6435084de926cc3340a8e",
    "size": 5128
   },
   "PROGRAM/STANDARDS.md": {
-   "sha256": "18b45a94a55d4d9bbef546f48a34fdcd75e17a5e92d884aea6e4250badec76e2",
+   "sha256": "1a8b6251d29f2a852fddda7b35c8acf430fe61d18fef25e6548e224f574f4c95",
    "size": 3912
   },
   "PROGRAM/figures/Gate_Map_2026-11-12.dot": {
@@ -3158,12 +3198,12 @@
    "size": 18226
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.dot": {
-   "sha256": "c8243aacce474d54864f458f9246f76983d9da79a68438d9b89d5caac6506934",
+   "sha256": "b1645ed6d10b4c23481858982ce5ce0912c203a0b02c8fac44f0406f0ad3aad1",
    "size": 1673
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.pdf": {
-   "sha256": "183b0b494f6dbc1c2a3aa6c6ee95b77027ca2ee485c5e7aeb33b650bc6888c75",
-   "size": 18328
+   "sha256": "a716679c424b92a77340767d08efc8a5976aa24dd728748306508c006184926b",
+   "size": 18336
   },
   "PROGRAM/figures/Program_Questions_Models_and_Physical_Correspondence.pdf": {
    "sha256": "ceeb3637c5b57114fbf12a0cfb03be2d35f34f6239bcfd8c3ab53fbac953a792",
@@ -3182,7 +3222,7 @@
    "size": 24917
   },
   "PROGRAM/registers/COMPONENT_CROSSWALK.csv": {
-   "sha256": "53ccb556d4781a452d3e2467c768df2449218167f9a00118a5a2fc38b3746d0a",
+   "sha256": "d87b6ba30c2c513d3fdd14e7f7f7decf18987f507978735a6ec9ee004cfda465",
    "size": 46050
   },
   "PROGRAM/registers/COMPUTATION_INDEX.csv": {
@@ -3190,31 +3230,31 @@
    "size": 567
   },
   "PROGRAM/registers/ONTOLOGY_GATE_MAP.json": {
-   "sha256": "db3ae92b8db11c4aa57580467306d925cd758f60df036e3fddb9502885ec2677",
-   "size": 19608
+   "sha256": "876a9f906d58e3b49a1f188e54983de2febe3f6c41cec4ce706ad9ba9e0d9d04",
+   "size": 19870
   },
   "PROGRAM/registers/OPEN_PROBLEMS.csv": {
-   "sha256": "0d78101d1fdb27478cd908e0a85d6ea8c0fb077daa960d6a1eb92aebf644409d",
-   "size": 49888
+   "sha256": "cb0aaf9caf8809b5f0190ab93409ce4a18461356898abebf6fafe55cd886d1dd",
+   "size": 50347
   },
   "PROGRAM/registers/PAPER_INDEX.csv": {
-   "sha256": "ed5f21cb30807e57fad0de5109da81d9274749ec1c086ac854f18d1dedf189e5",
+   "sha256": "99d26cebcd8c340f36bdc9f63b90f18b03dffe7f6c7a57aed18bfe093b2a3162",
    "size": 10894
   },
   "PROGRAM/registers/READINESS.csv": {
-   "sha256": "d5eaa9ba1972ebcec386e3e5b208bd6a1426d24ab95e413a45ad3cf913903698",
-   "size": 12909
+   "sha256": "56c21b1c0ff0537eb9468aa2b00d709341b2ee5908c47d20b58f7bcc502717b6",
+   "size": 13308
   },
   "PROGRAM/registers/TEX_SOURCE_EDITS.json": {
    "sha256": "c53b67edb857763f36a51c1b313f43bf96ff86b944a2c4958ca3a3a41e84e228",
    "size": 3428
   },
   "PROGRAM/registers/THEOREM_REGISTRY.csv": {
-   "sha256": "c6f175cc744c2381c7507a7b4f34d62bf836b8746c91c6c462add3aa065a386d",
-   "size": 110902
+   "sha256": "6200efc3f5980766092a893bc8ce4a62842c5f809223bb66d4a582654be29ddf",
+   "size": 113322
   },
   "README.md": {
-   "sha256": "31d6b5b90ab6e7ca48af798ab523aff3d73a27a3aedfbf9f688d3df792e67f86",
+   "sha256": "b13f38e63988469f05399debdb8c96d6ef4f1a5a6a6e36d190a4638c4484e13e",
    "size": 2441
   },
   "REVIEW_RECORDS/Director_B/README.md": {
@@ -3473,6 +3513,10 @@
    "sha256": "a03a1e06ee610875aff20e579003ae06631fcc668cce5706125a61750a026b54",
    "size": 3651
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z28.md": {
+   "sha256": "b3805f051a8cf9ebd2f93cad553d1155792affe5da249511ac83e3fd8caf0a92",
+   "size": 2765
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z5.md": {
    "sha256": "6e4c859cc853647131905a7630dd0c8471def5c860a703bf49c8432233829dda",
    "size": 3439
@@ -3564,6 +3608,10 @@
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z26_TO_Z27.md": {
    "sha256": "007548d98e4c62320eb617037473d83e05f6ef75045bb566ab9791b487bf197a",
    "size": 12660
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z27_TO_Z28.md": {
+   "sha256": "49ad117adf6f3be7aa6f4c6ba1cd2292e749e6fe149401e6e372a43c695e4242",
+   "size": 6676
   },
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z3_TO_Z4.md": {
    "sha256": "2fbaeb3e57c96484e7ca50df9960d93530fb47b3ca4c1fe3a9271c37c1571ff8",
@@ -3661,6 +3709,10 @@
    "sha256": "b8843474b05670ca8546b69d0c61ea6ac3367cbef8e9841a8515b72d8dd7dd7f",
    "size": 2166
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_24.csv": {
+   "sha256": "11f943809af121652bd804830a51bf6fcb022a4ec27fc9e10e783cd737fea52a",
+   "size": 1519
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_3.csv": {
    "sha256": "7787c02824813188d3064cab359d9e58bdff7c3a85ab0976dc150a39b29689fa",
    "size": 3322
@@ -3690,8 +3742,8 @@
    "size": 1351
   },
   "REVIEW_RECORDS/Director_Z/Session_4/README_SESSION_4.md": {
-   "sha256": "1f4dc3239318b0fadd646105be52330fba38772abab29f281d7da87f988d6990",
-   "size": 11361
+   "sha256": "7daf1615a35587144fbf1a8528780276cca61de6f3ec723facd7637190a3737f",
+   "size": 11629
   },
   "REVIEW_RECORDS/Director_Z/Session_4/builder_Q/NOTES.txt": {
    "sha256": "a029e5f3ae7f0be9e1570e22d94528dabafe5b3c9378f4ffc2c5210f9254aa48",
@@ -5193,6 +5245,70 @@
    "sha256": "1d7d0bb779b39b5292b88448da9b0588bec3580d883748bbf47dc311cf5a0459",
    "size": 4018
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/DIRECTOR_CHECK.md": {
+   "sha256": "f21a9cd48c0903ea6d5cd38487383282a37fe26dcad1186bc59e872e9ea11a50",
+   "size": 1466
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/FINDINGS.md": {
+   "sha256": "868676708f668a1a79f0e7550646b2cba0078616ee4b64c6b661fc617b882794",
+   "size": 14130
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/FOLLOW_UP_AFTER_CHALLENGER.md": {
+   "sha256": "a8c42903a1cda2bdd3f4c9add00493ac20e848f1398ddb996f9e2b34ea7d29c7",
+   "size": 6123
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/G10_subsection_four_gains.tex": {
+   "sha256": "421af3c4476038ee0d7e5d52da39787f5bf5089b85b219e4c697e3da1c2cba64",
+   "size": 16615
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/NOTES.md": {
+   "sha256": "8eca541f60ebef5b0f1933fbc11991a558332fbc80e1f4181d84e4361b563257",
+   "size": 3302
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/PREP_REDUCTION.md": {
+   "sha256": "2d4b381ec73d5e7850583f72a61bd73b0b8ea3880342f77b30403da8a7d32345",
+   "size": 5581
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/NOTES.md": {
+   "sha256": "fc33958dc55e69a019feef348969cb99b4ddc565d8a7c68786cf178c102efdd2",
+   "size": 2830
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/REPORT.md": {
+   "sha256": "ea2fce1e85b07377615c09b332a061a268701866773ce7b14e0a32f35ac7ff06",
+   "size": 481
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/formalizer/NOTES.md": {
+   "sha256": "3838fd998e4151b9180f388b5a42ce0c76f9e02bcca5dc22c75310c2a688573a",
+   "size": 1201
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/formalizer/director.out": {
+   "sha256": "6520e4b987511551b66d0003a02b08e10a035d5e6b2bf4067ece3223f528d549",
+   "size": 929
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/formalizer/run_output.txt": {
+   "sha256": "daa80c4bc19c455c92e1cee36d77d45896ab3cd2354573699bad13a3ad5e0e00",
+   "size": 936
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/prep_check.py": {
+   "sha256": "6eaffbd1640c70c9b9610704c384432d1040d0f921850a4ec31149ccdbe666cd",
+   "size": 17132
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/reduction_review/results.txt": {
+   "sha256": "7334473968f75e206a21ef0f7ad095dd4437c734656143b7380bfdebbe0e6e9b",
+   "size": 1093
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/theorem_challenger/NOTES.md": {
+   "sha256": "f5a03e80ac758af9914e8d7bb16b90176bd073b193628422ed632d5a0699dfa5",
+   "size": 703
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/theorem_challenger/chal.py": {
+   "sha256": "65315f5901a00f68861198139deaa6eb4f7f0b042a4d9a5c2aacfd182fbf7424",
+   "size": 20096
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains/theorem_challenger/result.txt": {
+   "sha256": "1acf768b818fab7f0767374bbb449c9b9f23b310a6d41996a6f7547ced52da96",
+   "size": 19591
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/masks/CHALLENGER.md": {
    "sha256": "5f937e912191dbc919d46a68edb774c31c58fdd3d469a3d43cba18c744dfc08c",
    "size": 3757
@@ -5862,8 +5978,8 @@
    "size": 2689
   },
   "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": {
-   "sha256": "75571e5231c4214a696923921be6b0866637c100526a19ac81732ee1c2ba0134",
-   "size": 366022
+   "sha256": "9a97816514a21f310e30e0ab454138d6f2e915c1b27b292cb3052628ad7bf014",
+   "size": 375856
   },
   "REVIEW_RECORDS/Director_Z/Session_4/registers/CALIBRATION_RECORD_SESSION_4.json": {
    "sha256": "82998efb27eb1dfb578297770e65ca6339318fce77362febe7275bf3d011d20a",
@@ -6958,7 +7074,7 @@
    "size": 1212
   },
   "REVIEW_RECORDS/README.md": {
-   "sha256": "2321c73f0bec73f75c244b7a606deb1cd40c5630285085dc78ef8532a1ef8b71",
+   "sha256": "8da7e9f54e3fd544937c9b3f297b5b593def645f5003d6e185db0ad2f3fe6d1f",
    "size": 1643
   },
   "tools/assemble.py": {
@@ -7049,6 +7165,10 @@
    "sha256": "bc1302b9a94e08440c7f83cbe4ab2be34a51d46689e8f92e13a9a4a6708c6517",
    "size": 15223
   },
+  "tools/director_z_update_28.py": {
+   "sha256": "98eca328415b53c277578630a5869935d5d276046ca6d7d458b2ab7b42cff063",
+   "size": 14144
+  },
   "tools/director_z_update_3.py": {
    "sha256": "76938df247f22e6344aa981813904437c62d76b0908fe5e1020a52c15aab43a8",
    "size": 35029
@@ -7090,6 +7210,6 @@
    "size": 6392
   }
  },
- "predecessor": "FPHPM-BASELINE-2026-11-14-Z26",
- "predecessor_manifest_sha256": "ba2c7b00539e3224821ef75230c22793d342bee58d1a3a56cd16445fe350a4c2"
+ "predecessor": "FPHPM-BASELINE-2026-11-14-Z27",
+ "predecessor_manifest_sha256": "c881cb317ab340d646f8e51b1ce8c2a2d83b9372cb043049430e6418f19b3c04"
 }
