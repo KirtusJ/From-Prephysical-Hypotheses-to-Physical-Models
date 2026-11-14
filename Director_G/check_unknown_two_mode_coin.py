@@ -111,14 +111,37 @@ def main():
             check(matched["free_left"]==ideal["free_left"] and matched["D"]==delta**2,
                   "all-clock finite alias and resolving intervention")
             rows.append(matched)
-            redrawn=compare("coin_redrawn_after_record",a,coins,F(0),monitored=s*s)
+            resampled=sum(w1*w2*q1*q2 for w1,q1,_ in coins for w2,q2,_ in coins)
+            redrawn=compare("coin_redrawn_after_record",a,coins,F(0),monitored=resampled)
             check(redrawn["W"]==redrawn["D"]==0,"intervention-disturbance counterexample")
             rows.append(redrawn)
     rows.extend([compare("invisible_diagonal",F(3,2),[(1,F(0),F(4))],F(0)),
                  compare("fair_count",F(3,2),[],F(1)),
                  compare("mixed_with_count",F(3,2),[(s,F(1,3),F(2)),(F(1,4),s,F(3,2))],F(1,4))])
     check(rows[-3]["W"]==0 and rows[-3]["D"]==F(1,4),"diagonal loophole")
+    reduced_checks=[]
+    for row in rows:
+        if row["label"]=="coin_redrawn_after_record":
+            continue
+        a=row["target_trace_squared"]
+        L=row["free_left"]
+        if a>1:
+            fewer=L[2]+2*(1-a)*L[1]+(a*a-1)*(row["monitored_L_then_R"]+F(1,4))
+            check(fewer==row["W"]+(a*a-1)*row["D"] and
+                  ((fewer==0)==(row["W"]==0 and row["D"]==0)), "three-setting certificate")
+            reduced_checks.append(dict(label=row["label"],a=a,three_setting_score=fewer))
+        check((L[1]==1)==(row["count"]==0 and
+              all((q==s and r==2) for w,q,r in row["components"] if w)),"single-setting endpoint")
+    cubic=next(r for r in rows if r["label"]=="unbalanced_pair" and r["target_trace_squared"]==F(3,2))
+    lossy=cubic["monitored_L_then_R"]*F(64,65)
+    check(lossy==F(1,4),"missed joint records can imitate target")
+    p2,p3=cubic["free_left"][1:3]
+    cubic_direct=p3-p2+F(5,4)*(lossy+F(1,4))
+    check(cubic_direct==0,"false three-setting zero")
     result=dict(gaussian_matrix_replay=gaussian_panels(),mixtures=rows,
+                reduced_certificates=reduced_checks,
+                missing_joint_records=dict(true=cubic["monitored_L_then_R"],
+                                          efficiency=F(64,65),observed=lossy),
                 physical_feasibility="0<=q<=1; 0<=r<=4(1-q)")
     out.mkdir(exist_ok=True,parents=True)
     with (out/"unknown_two_mode_coin.json").open("x",encoding="utf8",newline="\n") as f:
