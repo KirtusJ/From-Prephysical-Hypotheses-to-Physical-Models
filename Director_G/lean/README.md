@@ -106,3 +106,5 @@ The same file proves the marginal upper and joint lower count inequalities for a
 [FiveTickRecordPowers.lean](FiveTickRecordPowers.lean) checks the three integer rate equations, the centered product and the old-word numerator in the [five-tick position read](../Two_five_tick_records_and_the_probability_power.md).
 
 [SevenTickPositionScore.lean](SevenTickPositionScore.lean) checks the eight terminal rail pairs and the scaled ordinary and counting numerators for the [single position survey](../Seven_free_ticks_and_one_position_read.md).
+
+[AddressedPositionScore.lean](AddressedPositionScore.lean) derives the three scored rail pairs after the signed ten-tick flight, the integer numerator factorization and the unsigned count score. [Readout and preparation assumptions](../Three_signed_ticks_and_the_probability_power.md)
