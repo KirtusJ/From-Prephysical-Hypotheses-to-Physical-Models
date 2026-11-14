@@ -37,6 +37,11 @@ def binomial_cdf(n, k, p):
     return F(total, d**n)
 
 
+def tilted(q, ratio):
+    """Recorded right fraction after multiplying the true odds by the throughput ratio."""
+    return ratio * q / (1 - q + ratio * q)
+
+
 def small_raw_tree(settings, launches, hits, cutoff):
     """Enumerate fresh raw launches, retaining the sign on every unnamed outcome."""
     complete = reject = F(0)
@@ -113,9 +118,6 @@ def detector_exchange(right, left, boundary, label_power):
         require(switched_read(*autonomous_arrivals, efficiencies, swapped) ==
                 switched_read(*rival_arrivals, efficiencies, swapped), "switch-resolved counter law")
 
-    def tilted(q, ratio):
-        return ratio * q / (1 - q + ratio * q)
-
     critical_squared = (boundary / (1 - boundary)) / (rival / (1 - rival))
     require(critical_squared == F(257, 220), "critical squared throughput bound")
     for kappa in (F(1), F(21, 20), F(27, 25), F(11, 10)):
@@ -135,6 +137,69 @@ def detector_exchange(right, left, boundary, label_power):
         "held_assignment_right_at_true_three_quarters": str(held),
         "matched_upstream_arrivals": [str(p) for p in autonomous_arrivals],
         "critical_squared_residual_ratio": str(critical_squared),
+    }
+
+
+def residual_design(boundary, rival):
+    """Bound rejection for unequal sign-specific arrival rates under a residual mismatch."""
+    kappa, rate_floor = F(21, 20), F(1, 10)
+    hits, cutoff, budget = 13300, 7445, 136130
+    null_min, rival_max = tilted(boundary, 1 / kappa), tilted(rival, kappa)
+    require((null_min, rival_max) == (F(5140, 9067), F(21, 38)), "recorded mean bounds")
+    size = binomial_cdf(hits, cutoff, null_min)
+    next_size = binomial_cdf(hits, cutoff + 1, null_min)
+    mark_power = binomial_cdf(hits, cutoff, rival_max)
+    timeout = binomial_cdf(budget, hits - 1, rate_floor)
+    power = (1 - timeout) * mark_power
+    previous_power = (1 - binomial_cdf(budget - 1, hits - 1, rate_floor)) * mark_power
+    require(size <= SIZE < next_size, "residual cutoff boundary")
+    require(previous_power < POWER <= power, "residual launch boundary")
+
+    # Show simultaneous attainment with positive effective efficiencies on the rival's two paths.
+    right_eff = rate_floor * rival_max / F(40, 512)
+    left_eff = rate_floor * (1 - rival_max) / F(34, 512)
+    require(0 < left_eff <= right_eff <= 1 and right_eff / left_eff == kappa,
+            "feasible equal-rate endpoint")
+
+    # A genuine finite deadline does not justify reusing the old cutoff with this mismatch.
+    old_label_tail = binomial_cdf(HITS, CUTOFF, null_min)
+    old_reject = old_label_tail * (1 - binomial_cdf(18089, HITS - 1, rate_floor))
+    require(old_reject > SIZE, "uncorrected cutoff at the boundary of the probability null")
+
+    # Raw enumeration with a mark above the rival mean limit at one sign and a faster
+    # arrival at that sign. Actual completion and the right count can be dependent.
+    settings = ((rate_floor, F(1, 2)), (F(1, 5), 2 * rival_max - F(1, 2)))
+    reference_finish = 1 - binomial_cdf(4, 1, rate_floor)
+    label_tail = binomial_cdf(2, 0, rival_max)
+    finish, reject = small_raw_tree(settings, 4, 2, 0)
+    require(reference_finish * label_tail <= reject < finish * label_tail,
+            "reference waits independent of marks, actual waits dependent")
+    _, endpoint = small_raw_tree(((rate_floor, rival_max), (rate_floor, rival_max)), 4, 2, 0)
+    require(endpoint == reference_finish * label_tail, "equal rates attain the product")
+
+    # An average of 1/10 across signs allows a strictly smaller completion probability.
+    average_only = ((F(19, 200), rival_max), (F(21, 200), rival_max))
+    finish, reject = small_raw_tree(average_only, 2, 1, 0)
+    proposed_bound = (1 - binomial_cdf(2, 0, rate_floor)) * (1 - rival_max)
+    require(finish == F(7599, 40000) and reject == F(129183, 1520000) < proposed_bound == F(17, 200),
+            "arithmetic average of hit rates is insufficient")
+    return {
+        "throughput_ratio_limit": str(kappa),
+        "minimum_hit_rate_each_sign": str(rate_floor),
+        "recorded_null_minimum": str(null_min),
+        "recorded_rival_maximum": str(rival_max),
+        "named_hits": hits,
+        "maximum_right_to_reject": cutoff,
+        "raw_launch_cap": budget,
+        "size_upper_bound": bounds(size),
+        "uncapped_size_at_cutoff_plus_one": bounds(next_size),
+        "rival_uncapped_power_lower_bound": bounds(mark_power),
+        "rival_timeout_upper_bound": bounds(timeout),
+        "rival_sharp_power_lower_bound": bounds(power),
+        "rival_worst_power_one_fewer_launch": bounds(previous_power),
+        "endpoint_effective_efficiencies": [str(right_eff), str(left_eff)],
+        "old_cutoff_null_rejection_at_18089": bounds(old_reject),
+        "average_rate_only_control": {"actual_power": str(reject), "proposed_bound": str(proposed_bound)},
     }
 
 
@@ -208,6 +273,7 @@ def calculate():
             "null_rejection_enclosure": bounds(wrong_power),
         },
         "detector_exchange": detector_exchange(right, left, boundary, label_power),
+        "finite_residual_mismatch": residual_design(boundary, rival),
     }
 
 

@@ -53,4 +53,17 @@ theorem residual_separation (n d : Nat) :
   rw [hm, hn, hd]
   omega
 
+/-- Given the coupled waits for all requested hits, any reference completion also
+    completes the actual run. Mark uniforms and fair signs are shared by both runs. -/
+theorem coupled_deadline (waits : List (Nat × Nat)) {budget : Nat}
+    (h : ∀ w ∈ waits, w.1 ≤ w.2) (done : (waits.map Prod.snd).sum ≤ budget) :
+    (waits.map Prod.fst).sum ≤ budget := by
+  apply Nat.le_trans _ done
+  clear done
+  induction waits with
+  | nil => exact Nat.le_refl 0
+  | cons w tail ih =>
+    simp only [List.map_cons, List.sum_cons]
+    exact Nat.add_le_add (h w (by simp)) (ih (fun x hx => h x (by simp [hx])))
+
 end TagShotBudget

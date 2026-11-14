@@ -169,3 +169,31 @@ The pair of switch inputs has the same distribution under either model. The reco
 \]
 
 At equality the construction gives identical sign-conditioned right fractions. Larger uncertainty intervals contain the same construction. This boundary concerns the two **mean predictions**, allowing each hypothesis its own admissible nuisance values. A finite test with residual mismatch would have to use the lower null fraction and recompute its power for the specified arrival rates. The 1,029 cutoff and the budgets above use \(\lambda_s=1\). [Proof of counter averaging and the threshold comparison](lean/TagShotBudget.lean)
+
+### A finite test with a residual throughput ratio of 1.05
+
+Suppose a separate calibration bounds each sign's right-to-left throughput ratio between \(20/21\) and \(21/20\). For the power calculation also assume that, under \(c_2\), each sign gives a recorded named hit with probability at least \(a=1/10\) per raw launch. These are prospective design values. The throughput bound gives a recorded equal-sign mean of at least \(L=5140/9067\) under the one-sided null and at most \(U=21/38\) under \(c_2\).
+
+Use the sign and detector-switch rules above. Stop at \(m=13{,}300\) named hits or \(B=136{,}130\) launches. Include a hit on the last launch. Reject the one-sided null when the target is reached with at most \(k=7{,}445\) decoded right hits. A timeout counts as a non-rejection.
+
+| Quantity | Probability (rounded) |
+|---|---:|
+| Upper bound on false rejection | 0.049787662465 |
+| Lower bound on rival power with unlimited launches | 0.952142761658 |
+| Upper bound on rival timeout at 136,130 launches | 0.002249666528 |
+| Worst-case rival power at 136,130 launches, including timeouts | 0.950000757956 |
+| Worst-case rival power at 136,129 launches, including timeouts | 0.949994710825 |
+
+The null bound follows from the unrestricted lower tail \(F_{m,L}(k)\). A deadline alone cannot rescue the earlier cutoff under this mismatch. In the enlarged probability null, take both recorded right fractions equal to \(L\) and both hit rates equal to \(1/10\). The old 1,029-right cutoff at 1,839 hits and 18,089 launches gives false rejection probability 0.062389375014.
+
+**Power when the signs have unequal hit rates.** For the \(i\)-th planned hit with sign \(s\), write \(a_s\) for its recorded hit probability per launch and \(p_s\) for its recorded right fraction. The wait \(G_i\) (in raw launches) and the label are independent conditional on \(s\). Their joint probability for a right hit at launch \(j\) is \((1-a_s)^{j-1}a_sp_s\). The fair sign draws make the unrestricted labels independent Bernoulli draws with mean \(\bar p=(p_++p_-)/2\). A fast sign can favor one label, so the completed sample can have a different distribution.
+
+For each requested hit, use a separate stream of independent uniforms, independent of the signs and labels. The first uniform at most \(a_s\) gives the actual wait in this construction. The first at most \(a\) gives a reference wait \(G_i^*\). Since \(a_s\ge a\), each \(G_i\le G_i^*\). Whenever the reference waits fit the budget, so do the actual waits. Reference completion is independent of all actual labels. For any fixed \(m,k,B\) and \(\bar p\le U\), the rejection probability is therefore at least
+
+\[
+  [1-F_{B,a}(m-1)]\, F_{m,U}(k).
+\]
+
+Both signs can attain this bound simultaneously. For the rival's incoming probabilities \(40/512\) and \(34/512\), effective right and left detection efficiencies \(336/475\) and \(64/95\) give total recorded rate \(1/10\) and conditional right fraction \(21/38\). Hence 136,130 is the smallest qualifying budget for this hit target and cutoff. The ratio bound alone allows both rates to approach zero. [Exact bounds and controls](results/tag_shot_budget.json) · [Arithmetic checker](check_tag_shot_budget.py) · [Lean proof of the deadline comparison](lean/TagShotBudget.lean)
+
+An arithmetic average of the two hit rates cannot replace the per-sign floor. Take rates \(19/200\) and \(21/200\), right fraction \(21/38\) at both signs, and allow two launches for one hit. Completion has probability \(1-[(181/200)^2+(179/200)^2]/2=7599/40000\). With a left hit required to reject, power is \(129183/1520000\), strictly below the \(17/200\) predicted by substituting the average rate \(1/10\). For an experiment, the throughput and rate bounds would need their own evidence. The table treats them as given.
