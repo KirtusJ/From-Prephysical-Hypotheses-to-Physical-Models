@@ -30,7 +30,7 @@ def shifted_tables(p, q, radius):
     return [(1-f)*a+f*b for a,b in zip(p,q)], [f*a+(1-f)*b for a,b in zip(p,q)], False
 
 
-def evaluate(radius):
+def evaluate(radius, shift=shifted_tables):
     largest_clock = iv.mpf(0)
     jump = iv.mpf('4.82e-7')
     best = (iv.mpf(1), None)
@@ -38,7 +38,7 @@ def evaluate(radius):
         p,q = [cells(s,Q(1,10**8)*v) for v in (g,l)]
         if p==q:
             continue
-        left,right,ordered = shifted_tables(p,q,radius)
+        left,right,ordered = shift(p,q,radius)
         for nominal, shifted in [(p,left),(q,right)]:
             assert sum(shifted)==1 and min(shifted)>0
             assert sum(abs(a-b) for a,b in zip(nominal,shifted))<=2*radius
