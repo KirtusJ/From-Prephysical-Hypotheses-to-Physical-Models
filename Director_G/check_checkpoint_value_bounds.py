@@ -4,7 +4,7 @@ from check_finer_checkpoints import PREVIOUS, WIDTHS, selected_laws
 from check_tapered_blocks import SCALE, gaussian_cdf
 
 
-def expected_checks(table, increments, widths, units):
+def expected_checks(table, increments, widths, units, weight_by_survival=False):
     blocks = len(widths)+1
     size = 4_000_000_000_000_000//blocks
     mean = sum(p*z for p,z in zip(table,increments))
@@ -22,12 +22,23 @@ def expected_checks(table, increments, widths, units):
     weights = {j:cdf[j]-cdf[j-1] for j in range(-radius,radius+1)}
     assert min(weights.values()) >= 0
 
+    # Before block i+1, the exact live probability is at most its rounded
+    # Gaussian upper bound plus 2*i*epsilon (one interval per replaced block).
+    survival = [iv.mpf(1)]*blocks
+    if weight_by_survival:
+        live = {0:SCALE}
+        upper_weights = {d:w+1300 for d,w in weights.items()}
+        for i,width in enumerate(widths, 1):
+            live = {y:1+sum(upper_weights[y-s]*v for s,v in live.items())//SCALE
+                    for y in range(1-width,width)}
+            survival[i] = min(iv.mpf(1), (iv.mpf(sum(live.values()))/SCALE+2*i*epsilon).b)
+
     # A live score immediately before the last block pays exactly one check.
     values = {s:SCALE for s in range(1-widths[-1],widths[-1])}
     variations = 0
     for i in range(len(widths)-1,-1,-1):
         sequence = [0,*values.values(),0]
-        variations += sum(abs(y-x) for x,y in zip(sequence,sequence[1:]))
+        variations += survival[i]*sum(abs(y-x) for x,y in zip(sequence,sequence[1:]))
         prior = widths[i-1] if i else 1
         values = {s:SCALE+sum(weights[y-s]*v for y,v in values.items())//SCALE
                   for s in range(1-prior,prior)}
