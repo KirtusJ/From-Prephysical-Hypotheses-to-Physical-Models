@@ -42,6 +42,8 @@ The full contact at fixed \(h\) is a scalar. Storing all raw contacts in a singl
 
 ## A noisy test of memory after the sources disconnect
 
+The [blank carrier capacity test](The_capacity_of_a_blank_contact_carrier.md) additionally requires the primitive contacts to implement their reversible group action. Independent late probes then distinguish 125-state compiled writers from classical carriers implementing individual contacts, with an exact error bound for each size cap.
+
 Choose a source class uniformly, isolate the carrier, and only then draw the later setting independently and uniformly. To query a direction, fix one nonzero representative for each of the 31 lines in the three-dimensional space. Record every trial. An incorrect scalar, wrong flag or missed answer counts as an error. The question is how well a reader can do with one fewer classical memory state than the packet requires for exact predictions. Count every source-dependent channel that remains accessible to the reader. Prearranged shared randomness may be independent of the test inputs. This is an application of the prepare-and-measure method for bounding classical memory through observable responses. [Gallego et al., classical and quantum dimension tests](https://arxiv.org/abs/1010.5064)
 
 | Source population and late setting | Maximum retained classical states | Least achievable average error under that cap |
