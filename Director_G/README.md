@@ -15,6 +15,9 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Repeating a successful position filter](Repeating_a_position_record.md) | The excess joint success probability tests whether a count or character mixture survives. Programmable two-word paths compare the physical unit lag with every other lag at a common well and time. |
 | [Preparing signed sheet residues](Preparing_signed_sheet_residues.md) | Timed position apertures independently set the sign and absolute sheet gain of every admitted word. Finite-ring continuation then gives the count and folded character family even with initially site-dependent scores. |
 | [Independent walks with a shared gain record](Independent_walks_and_shared_gains.md) | Six- and eight-tick comparisons test whether two independent sources can share one summed residue. Within the single-walk family both sources must use the same pure label. |
+| [Probability records across sheet orders](Refining_the_sheet.md) | Matched coarse and fine gain preparations test compatibility. A lower bound on a three-tick probability along doubling towers constrains every pure label to one integer. Native order-four and prime-order ports select its unit magnitude. |
+| [Selection in the full count and character mixture](Mixed_refinement_records.md) | A dark calibration port and the rate of change of a three-tick rail probability under refinement characterize the ordinary response within compatible mixed laws. |
+| [Refinement and free fall](Refinement_and_free_fall.md) | The staircase gain is an exact linear phase gradient on an occupied parity slice. The terminal distance of a rested packet reads the absolute winding in fixed mechanical units. |
 | [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
 | [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
 | [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
@@ -124,6 +127,12 @@ python -B check_clock_reuse.py rerun
 python -B check_holonomy_cone.py rerun
 python -B check_holonomy_embedding.py rerun
 python -B check_multiset_fibres.py rerun
+python -B check_sheet_refinement.py rerun
+python -B check_cover_comparison.py rerun
+python -B check_cover_marginals.py rerun
+python -B check_prime_port_records.py rerun
+python -B check_mixed_refinement.py rerun
+python -B check_staircase_rail_field.py rerun
 python -B check_product_gain_fibers.py rerun
 python -B check_joint_residue_preparation.py rerun
 python -B check_joint_phase_records.py rerun
