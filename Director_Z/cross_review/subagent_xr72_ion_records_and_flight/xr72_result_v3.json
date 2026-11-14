@@ -1,0 +1,1179 @@
+{
+ "predicates": {
+  "A1": {
+   "passed": 5,
+   "failed": 0,
+   "qualifying": null,
+   "detail": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "A2": {
+   "passed": 3,
+   "failed": 0,
+   "qualifying": 16,
+   "group_size": 24,
+   "balanced_x_values": {
+    "0": 8,
+    "1": 4,
+    "-1": 4
+   }
+  },
+  "A3": {
+   "passed": 25,
+   "failed": 0,
+   "qualifying": 6
+  },
+  "A4": {
+   "passed": 6,
+   "failed": 0,
+   "qualifying": 6
+  },
+  "A5": {
+   "passed": 6,
+   "failed": 0,
+   "qualifying": 6
+  },
+  "A9_p2_equals_half(q2 vs q1, Fisher two-sided, x6)": {
+   "passed": 6,
+   "failed": 0,
+   "qualifying": 6,
+   "raw_p": [
+    0.8967148768421069,
+    0.865600917000555,
+    0.8064536356699433,
+    0.15009904824496714,
+    0.7410536231448356,
+    0.3169520886546631
+   ]
+  },
+  "A6": {
+   "passed": 11941,
+   "failed": 0,
+   "qualifying": 11941,
+   "min_q3_minus_q2": 0.0,
+   "unqualified": 8059,
+   "unqualified_with_q3_lt_q2": 4208
+  },
+  "A8_unoriented_decrease_le_q0": {
+   "passed": 8059,
+   "failed": 0,
+   "qualifying": 8059,
+   "max_excess": -0.012850629760943755
+  },
+  "A8_impure_start_decrease_le_4/27_l0": {
+   "passed": 19026,
+   "failed": 974,
+   "qualifying": 20000,
+   "max_ratio": 0.8649335822196773,
+   "bound": 0.14814814814814814
+  },
+  "A8v2_impure_start_decrease_le_l0": {
+   "passed": 20000,
+   "failed": 0,
+   "qualifying": 20000,
+   "max_ratio": 0.8649335822196773,
+   "bound": 1.0,
+   "note": "v2 corrected bound; v1 predicate above kept failed (reviewer error, s=u+v ranges to 2)"
+  },
+  "A7_out_of_class_reproduce": {
+   "passed": 3,
+   "failed": 0,
+   "qualifying": 3,
+   "models": [
+    "time-inhomogeneous 2-state (T1 fair, T2 identity, T3 reset)",
+    "3-state cycle (note's own)",
+    "2-state rail + clock memory"
+   ],
+   "series": [
+    [
+     0.0,
+     0.5,
+     0.5,
+     0.0
+    ],
+    [
+     0,
+     0.5,
+     0.5,
+     0
+    ],
+    [
+     0,
+     0.5,
+     0.5,
+     0
+    ]
+   ],
+   "note": "in-class best: sup(q2-q3)=0; measured q2-q3 per date in detail.dates"
+  },
+  "B1": {
+   "passed": 1560,
+   "failed": 0,
+   "qualifying": 1560
+  },
+  "B2": {
+   "passed": 1520,
+   "failed": 0,
+   "qualifying": 1520,
+   "unqualified_M3": {
+    "n": 40,
+    "bound_fails": 19
+   }
+  },
+  "B3": {
+   "passed": 394,
+   "failed": 0,
+   "qualifying": 394
+  },
+  "B4_q(1-q)>=1/8": {
+   "passed": 1169,
+   "failed": 7,
+   "qualifying": 1176,
+   "failures": [
+    [
+     5,
+     0.1,
+     0.07891260204590322
+    ],
+    [
+     5,
+     0.01,
+     0.04894503029644371
+    ],
+    [
+     5,
+     0.001,
+     0.04581533104492592
+    ],
+    [
+     5,
+     1e-06,
+     0.04546644401438706
+    ],
+    [
+     6,
+     0.01,
+     0.1112437500000003
+    ],
+    [
+     6,
+     0.001,
+     0.10956243750000032
+    ],
+    [
+     6,
+     1e-06,
+     0.10937518749993785
+    ]
+   ],
+   "largest_failing_M": 6
+  },
+  "B5_kl_bound": {
+   "passed": 1169,
+   "failed": 0,
+   "qualifying": 1169,
+   "unqualified": 7,
+   "unqualified_where_bound_fails": 3
+  },
+  "B6": {
+   "passed": 3,
+   "failed": 0,
+   "qualifying": 3,
+   "cases": [
+    {
+     "M": 5,
+     "eta": 1,
+     "N_per_clock": 1166,
+     "trials": 400,
+     "err_null": 0.0,
+     "err_alt": 0.0
+    },
+    {
+     "M": 5,
+     "eta": 0.5,
+     "N_per_clock": 4661,
+     "trials": 400,
+     "err_null": 0.0,
+     "err_alt": 0.0
+    },
+    {
+     "M": 8,
+     "eta": 1,
+     "N_per_clock": 36091,
+     "trials": 60,
+     "err_null": 0.0,
+     "err_alt": 0.0
+    }
+   ],
+   "note": "alternative used is the note's hard alternative (W_M=eta*a*b >= g)"
+  },
+  "B7": {
+   "passed": 41,
+   "failed": 0,
+   "qualifying": 41,
+   "failures": [],
+   "outside_degree_condition": [
+    {
+     "M": 4,
+     "r": 8,
+     "ring_A0_times_4r": 12872.0,
+     "line_value": 12870,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0001554001553978
+    },
+    {
+     "M": 4,
+     "r": 8,
+     "ring_A0_times_4r": 12872.0,
+     "line_value": 12870,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0001554001553978
+    },
+    {
+     "M": 5,
+     "r": 10,
+     "ring_A0_times_4r": 184758.0,
+     "line_value": 184756,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0000108250882211
+    },
+    {
+     "M": 6,
+     "r": 12,
+     "ring_A0_times_4r": 2704158.0,
+     "line_value": 2704156,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0000007396022972
+    },
+    {
+     "M": 7,
+     "r": 14,
+     "ring_A0_times_4r": 40116602.0,
+     "line_value": 40116600,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.000000049854669
+    },
+    {
+     "M": 9,
+     "r": 18,
+     "ring_A0_times_4r": 9075135301.999943,
+     "line_value": 9075135300,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0000000002203762
+    },
+    {
+     "M": 11,
+     "r": 22,
+     "ring_A0_times_4r": 2104098963721.9834,
+     "line_value": 2104098963720,
+     "max_Ak_over_ringA0": 1.0,
+     "max_Ak_over_lineA0": 1.0000000000009426
+    }
+   ]
+  },
+  "B8": {
+   "passed": 14902,
+   "failed": 0,
+   "qualifying": 14902,
+   "unqualified": 5098,
+   "unqualified_B_values": [
+    1.0
+   ],
+   "boundary": "B=0 gives bound 0; B=1: hypothesis (1-B)a>0 fails, expression (2) equals 1 if A0>0, 0/0 if A0=0"
+  },
+  "B9": {
+   "passed": 1020,
+   "failed": 0,
+   "qualifying": 1020
+  },
+  "B10": {
+   "passed": 2,
+   "failed": 0,
+   "qualifying": 2,
+   "values": [
+    0.0,
+    0.9999999999999996
+   ]
+  }
+ },
+ "detail": {
+  "dates": [
+   {
+    "file": "2014_04_17-compensatedTraining.txt",
+    "n_rows": 2599,
+    "counts": [
+     [
+      9,
+      1425
+     ],
+     [
+      691,
+      1425
+     ],
+     [
+      1389,
+      2850
+     ],
+     [
+      37,
+      2850
+     ]
+    ],
+    "W0": "19/1364",
+    "b": "1373/1425",
+    "p2": "1357/2728",
+    "p2_float": 0.4974340175953079,
+    "p3": "2709/2728",
+    "Y_witness": "20/699",
+    "W_upper_simultaneous": 0.042567951628357935,
+    "cp": {
+     "l0": 0.0019227407784324635,
+     "u0": 0.015000091349824123,
+     "l1": 0.44675214705557076,
+     "u3": 0.020301541401158786
+    },
+    "log10_tail": -450.3021228058989,
+    "q2_minus_q3": 0.4743859649122807,
+    "q0": 0.00631578947368421,
+    "fisher_two_sided_q2_vs_q1": 0.8967148768421069,
+    "rows_used": {
+     "null": [
+      [
+       1,
+       "{}",
+       9,
+       1425
+      ]
+     ],
+     "1": [
+      [
+       21,
+       "GyGx",
+       691,
+       1425
+      ]
+     ],
+     "2": [
+      [
+       1245,
+       "Gy(GxGy)^1Gx",
+       712,
+       1425
+      ],
+      [
+       1965,
+       "Gy(GxGy)^1Gx",
+       677,
+       1425
+      ]
+     ],
+     "3": [
+      [
+       1317,
+       "Gy(GxGy)^2Gx",
+       14,
+       1425
+      ],
+      [
+       2037,
+       "Gy(GxGy)^2Gx",
+       23,
+       1425
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": {
+     "two_block": 0.20259730367881415,
+     "three_block": 0.18486118878752988,
+     "W_per_row": [
+      "5/682",
+      "7/341"
+     ]
+    },
+    "Gi_padded_equivalents": [
+     [
+      57,
+      "GyGiGx",
+      657,
+      1425
+     ],
+     [
+      92,
+      "GyGxGi",
+      691,
+      1425
+     ],
+     [
+      117,
+      "GiGyGx",
+      663,
+      1425
+     ],
+     [
+      165,
+      "Gy(Gi)^2Gx",
+      671,
+      1425
+     ],
+     [
+      273,
+      "Gy(Gi)^4Gx",
+      686,
+      1425
+     ],
+     [
+      381,
+      "Gy(Gi)^8Gx",
+      600,
+      1425
+     ],
+     [
+      489,
+      "Gy(Gi)^16Gx",
+      546,
+      1425
+     ],
+     [
+      597,
+      "Gy(Gi)^32Gx",
+      423,
+      1425
+     ],
+     [
+      1268,
+      "Gi(GyGx)^1Gi",
+      681,
+      1425
+     ],
+     [
+      1340,
+      "Gi(GyGx)^2Gi",
+      700,
+      1425
+     ],
+     [
+      1988,
+      "Gi(GyGx)^1Gi",
+      678,
+      1425
+     ],
+     [
+      2060,
+      "Gi(GyGx)^2Gi",
+      696,
+      1425
+     ]
+    ]
+   },
+   {
+    "file": "2014_12_02-GSTCompensatedDrift_randomized_condensed.txt",
+    "n_rows": 2922,
+    "counts": [
+     [
+      6,
+      280
+     ],
+     [
+      134,
+      280
+     ],
+     [
+      131,
+      280
+     ],
+     [
+      1,
+      280
+     ]
+    ],
+    "W0": "-5/128",
+    "b": "131/140",
+    "p2": "131/256",
+    "p2_float": 0.51171875,
+    "p3": "261/256",
+    "Y_witness": "-15/41",
+    "W_upper_simultaneous": 0.07524576840441645,
+    "cp": {
+     "l0": 0.004609566335105009,
+     "u0": 0.059480339276321945,
+     "l1": 0.39243553559444866,
+     "u3": 0.029663035926305783
+    },
+    "log10_tail": -46.24557342543038,
+    "q2_minus_q3": 0.4642857142857143,
+    "q0": 0.02142857142857143,
+    "fisher_two_sided_q2_vs_q1": 0.865600917000555,
+    "rows_used": {
+     "null": [
+      [
+       1,
+       "{}",
+       6,
+       280
+      ]
+     ],
+     "1": [
+      [
+       10,
+       "GyGx",
+       134,
+       280
+      ]
+     ],
+     "2": [
+      [
+       154,
+       "Gy(GxGy)^1Gx",
+       131,
+       280
+      ]
+     ],
+     "3": [
+      [
+       296,
+       "Gy(GxGy)^2Gx",
+       1,
+       280
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": null,
+    "Gi_padded_equivalents": [
+     [
+      70,
+      "GyGiGx",
+      136,
+      280
+     ],
+     [
+      131,
+      "Gy(Gi)^2Gx",
+      144,
+      280
+     ],
+     [
+      169,
+      "GyGxGi",
+      150,
+      280
+     ],
+     [
+      260,
+      "Gy(Gi)^4Gx",
+      139,
+      280
+     ],
+     [
+      325,
+      "Gy(GxGyGi)^1Gx",
+      131,
+      280
+     ],
+     [
+      358,
+      "Gy(GxGiGy)^1Gx",
+      141,
+      280
+     ],
+     [
+      560,
+      "Gy(Gi)^8Gx",
+      131,
+      280
+     ],
+     [
+      667,
+      "Gy(GxGiGy)^2GxGi",
+      2,
+      280
+     ],
+     [
+      908,
+      "Gy(Gi)^16Gx",
+      136,
+      280
+     ],
+     [
+      1256,
+      "Gy(Gi)^32Gx",
+      141,
+      280
+     ]
+    ]
+   },
+   {
+    "file": "2015_02_09-GSTCompensatedDrift_condensed.txt",
+    "n_rows": 3121,
+    "counts": [
+     [
+      2,
+      300
+     ],
+     [
+      152,
+      300
+     ],
+     [
+      156,
+      300
+     ],
+     [
+      2,
+      300
+     ]
+    ],
+    "W0": "0",
+    "b": "151/150",
+    "p2": "73/150",
+    "p2_float": 0.4866666666666667,
+    "p3": "1",
+    "Y_witness": "1/73",
+    "W_upper_simultaneous": 0.08690721558057778,
+    "cp": {
+     "l0": 0.0002202803432722611,
+     "u0": 0.03401107075021396,
+     "l1": 0.42282562637950905,
+     "u3": 0.03401107075021396
+    },
+    "log10_tail": -55.27145142134063,
+    "q2_minus_q3": 0.5133333333333333,
+    "q0": 0.006666666666666667,
+    "fisher_two_sided_q2_vs_q1": 0.8064536356699433,
+    "rows_used": {
+     "null": [
+      [
+       2,
+       "{}",
+       2,
+       300
+      ]
+     ],
+     "1": [
+      [
+       11,
+       "GyGx",
+       152,
+       300
+      ]
+     ],
+     "2": [
+      [
+       155,
+       "Gy(GxGy)^1Gx",
+       156,
+       300
+      ]
+     ],
+     "3": [
+      [
+       249,
+       "Gy(GxGy)^2Gx",
+       2,
+       300
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": null,
+    "Gi_padded_equivalents": [
+     [
+      71,
+      "GyGiGx",
+      138,
+      300
+     ],
+     [
+      132,
+      "Gy(Gi)^2Gx",
+      150,
+      300
+     ],
+     [
+      213,
+      "Gy(Gi)^4Gx",
+      144,
+      300
+     ],
+     [
+      285,
+      "Gy(GxGyGi)^1Gx",
+      138,
+      300
+     ],
+     [
+      319,
+      "Gy(GxGiGy)^1Gx",
+      139,
+      300
+     ],
+     [
+      341,
+      "Gy(GxGiGi)^1",
+      152,
+      300
+     ],
+     [
+      511,
+      "Gy(Gi)^8Gx",
+      158,
+      300
+     ],
+     [
+      583,
+      "Gy(GxGyGi)^2Gx",
+      0,
+      300
+     ],
+     [
+      619,
+      "Gy(GxGiGy)^2Gx",
+      1,
+      300
+     ],
+     [
+      892,
+      "Gy(Gi)^16Gx",
+      150,
+      300
+     ],
+     [
+      1276,
+      "Gy(Gi)^32Gx",
+      146,
+      300
+     ]
+    ]
+   },
+   {
+    "file": "2015_03_02-GST_condensed.txt",
+    "n_rows": 3889,
+    "counts": [
+     [
+      0,
+      140
+     ],
+     [
+      71,
+      140
+     ],
+     [
+      58,
+      140
+     ],
+     [
+      0,
+      140
+     ]
+    ],
+    "W0": "0",
+    "b": "71/70",
+    "p2": "42/71",
+    "p2_float": 0.5915492957746479,
+    "p3": "1",
+    "Y_witness": "4/67",
+    "W_upper_simultaneous": 0.12644762828724018,
+    "cp": {
+     "l0": 0.0,
+     "u0": 0.04314027122090439,
+     "l1": 0.38431132998450857,
+     "u3": 0.04314027122090439
+    },
+    "log10_tail": -20.72309386181319,
+    "q2_minus_q3": 0.4142857142857143,
+    "q0": 0.0,
+    "fisher_two_sided_q2_vs_q1": 0.15009904824496714,
+    "rows_used": {
+     "null": [
+      [
+       2,
+       "{}",
+       0,
+       140
+      ]
+     ],
+     "1": [
+      [
+       11,
+       "GyGx",
+       71,
+       140
+      ]
+     ],
+     "2": [
+      [
+       155,
+       "Gy(GxGy)^1Gx",
+       58,
+       140
+      ]
+     ],
+     "3": [
+      [
+       249,
+       "Gy(GxGy)^2Gx",
+       0,
+       140
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": null,
+    "Gi_padded_equivalents": [
+     [
+      71,
+      "GyGiGx",
+      72,
+      140
+     ],
+     [
+      132,
+      "Gy(Gi)^2Gx",
+      70,
+      140
+     ],
+     [
+      213,
+      "Gy(Gi)^4Gx",
+      49,
+      140
+     ],
+     [
+      285,
+      "Gy(GxGyGi)^1Gx",
+      70,
+      140
+     ],
+     [
+      319,
+      "Gy(GxGiGy)^1Gx",
+      69,
+      140
+     ],
+     [
+      341,
+      "Gy(GxGiGi)^1",
+      67,
+      140
+     ],
+     [
+      511,
+      "Gy(Gi)^8Gx",
+      57,
+      140
+     ],
+     [
+      583,
+      "Gy(GxGyGi)^2Gx",
+      0,
+      140
+     ],
+     [
+      619,
+      "Gy(GxGiGy)^2Gx",
+      2,
+      140
+     ],
+     [
+      892,
+      "Gy(Gi)^16Gx",
+      73,
+      140
+     ],
+     [
+      1276,
+      "Gy(Gi)^32Gx",
+      59,
+      140
+     ]
+    ]
+   },
+   {
+    "file": "2015_03_19-GSTBest_condensed.txt",
+    "n_rows": 4273,
+    "counts": [
+     [
+      0,
+      20
+     ],
+     [
+      14,
+      20
+     ],
+     [
+      12,
+      20
+     ],
+     [
+      0,
+      20
+     ]
+    ],
+    "W0": "0",
+    "b": "7/5",
+    "p2": "4/7",
+    "p2_float": 0.5714285714285714,
+    "p3": "1",
+    "Y_witness": "-10/7",
+    "W_upper_simultaneous": 2.8106199067453947,
+    "cp": {
+     "l0": 0.0,
+     "u0": 0.2655910883832614,
+     "l1": 0.3600866435260438,
+     "u3": 0.2655910883832614
+    },
+    "log10_tail": -4.646900152408524,
+    "q2_minus_q3": 0.6,
+    "q0": 0.0,
+    "fisher_two_sided_q2_vs_q1": 0.7410536231448356,
+    "rows_used": {
+     "null": [
+      [
+       2,
+       "{}",
+       0,
+       20
+      ]
+     ],
+     "1": [
+      [
+       11,
+       "GyGx",
+       14,
+       20
+      ]
+     ],
+     "2": [
+      [
+       155,
+       "Gy(GxGy)^1Gx",
+       12,
+       20
+      ]
+     ],
+     "3": [
+      [
+       249,
+       "Gy(GxGy)^2Gx",
+       0,
+       20
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": null,
+    "Gi_padded_equivalents": [
+     [
+      71,
+      "GyGiGx",
+      8,
+      20
+     ],
+     [
+      132,
+      "Gy(Gi)^2Gx",
+      10,
+      20
+     ],
+     [
+      213,
+      "Gy(Gi)^4Gx",
+      6,
+      20
+     ],
+     [
+      285,
+      "Gy(GxGyGi)^1Gx",
+      12,
+      20
+     ],
+     [
+      319,
+      "Gy(GxGiGy)^1Gx",
+      12,
+      20
+     ],
+     [
+      341,
+      "Gy(GxGiGi)^1",
+      9,
+      20
+     ],
+     [
+      511,
+      "Gy(Gi)^8Gx",
+      12,
+      20
+     ],
+     [
+      583,
+      "Gy(GxGyGi)^2Gx",
+      0,
+      20
+     ],
+     [
+      619,
+      "Gy(GxGiGy)^2Gx",
+      0,
+      20
+     ],
+     [
+      892,
+      "Gy(Gi)^16Gx",
+      10,
+      20
+     ],
+     [
+      1276,
+      "Gy(Gi)^32Gx",
+      13,
+      20
+     ]
+    ]
+   },
+   {
+    "file": "2015_03_30-GST_BB1_XYXY_8192_condensed.txt",
+    "n_rows": 4657,
+    "counts": [
+     [
+      0,
+      50
+     ],
+     [
+      23,
+      50
+     ],
+     [
+      29,
+      50
+     ],
+     [
+      0,
+      50
+     ]
+    ],
+    "W0": "0",
+    "b": "23/25",
+    "p2": "17/46",
+    "p2_float": 0.3695652173913043,
+    "p3": "1",
+    "Y_witness": "3/7",
+    "W_upper_simultaneous": 0.7924326401599877,
+    "cp": {
+     "l0": 0.0,
+     "u0": 0.11615690114261569,
+     "l1": 0.262739582440504,
+     "u3": 0.11615690114261569
+    },
+    "log10_tail": -11.265609309456334,
+    "q2_minus_q3": 0.58,
+    "q0": 0.0,
+    "fisher_two_sided_q2_vs_q1": 0.3169520886546631,
+    "rows_used": {
+     "null": [
+      [
+       2,
+       "{}",
+       0,
+       50
+      ]
+     ],
+     "1": [
+      [
+       11,
+       "GyGx",
+       23,
+       50
+      ]
+     ],
+     "2": [
+      [
+       155,
+       "Gy(GxGy)^1Gx",
+       29,
+       50
+      ]
+     ],
+     "3": [
+      [
+       249,
+       "Gy(GxGy)^2Gx",
+       0,
+       50
+      ]
+     ]
+    },
+    "april_duplicate_homogeneity": null,
+    "Gi_padded_equivalents": [
+     [
+      71,
+      "GyGiGx",
+      24,
+      50
+     ],
+     [
+      132,
+      "Gy(Gi)^2Gx",
+      29,
+      50
+     ],
+     [
+      213,
+      "Gy(Gi)^4Gx",
+      27,
+      50
+     ],
+     [
+      285,
+      "Gy(GxGyGi)^1Gx",
+      28,
+      50
+     ],
+     [
+      319,
+      "Gy(GxGiGy)^1Gx",
+      28,
+      50
+     ],
+     [
+      341,
+      "Gy(GxGiGi)^1",
+      26,
+      50
+     ],
+     [
+      511,
+      "Gy(Gi)^8Gx",
+      22,
+      50
+     ],
+     [
+      583,
+      "Gy(GxGyGi)^2Gx",
+      0,
+      50
+     ],
+     [
+      619,
+      "Gy(GxGiGy)^2Gx",
+      0,
+      50
+     ],
+     [
+      892,
+      "Gy(Gi)^16Gx",
+      23,
+      50
+     ],
+     [
+      1276,
+      "Gy(Gi)^32Gx",
+      19,
+      50
+     ]
+    ]
+   }
+  ]
+ }
+}

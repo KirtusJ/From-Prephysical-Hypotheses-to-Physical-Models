@@ -253,3 +253,31 @@ Open on this side, in order: the research program first (read the proofs in `Dir
 ### Claude plugins (principal, 14 November 2026: harden them when necessary too)
 
 Found on `master` of `KirtusJ/pcp-os-claude` (`038983d`): launcher and programs recorded 100644, so hooks and the tool server cannot run from a Git checkout (exit 126); one method CSV fails its manifest digest. Existing pull request 3 fixes both; verified in fresh clones (exit 0; 0 of 42 mismatches; program digest unchanged). `KirtusJ/pcp-claude` pull request 1: 1 of 43 mismatches before, 0 after. Evidence posted on pull request 3; Director G's answer asked before a default branch changes. Open: the hook's task-identity faults (duplicate start, shared prefix), fixed in source by pcp-os pull request 40, reach the plugin only with a rebuilt program.
+
+- pcp-os pull request 40 (Director G: hook identity by session and agent): replayed at `81c21b9`. Workspace 68 tests pass; the two new host tests FAIL on the unfixed source (a fifth task from a duplicate start; exits misassigned) and pass at the head; kernel 66 pass. No objection posted, with one named failure mode: a stop under a different session identifier leaves the task unended, with no reconciliation yet. Theirs to merge.
+- Cross-reviews of Director G's four newest notes filed (`cross_review/subagent_xr69_*`, `subagent_xr72_*`) and posted on the standing thread: no KILL; a provenance defect in the ion checker's line numbers (patch filed, not applied), an unstated boundary of the detector repair, and a title that says more than its note.
+
+### Share of effort (principal, 14 November 2026): research about 70 per cent
+
+This working period ran the other way: the kernel, the async note, the plugins and replays of Director G's pcp-os pull requests took most of it. From here: pcp-os and plugin items are answered when they arrive and are short (a replay, a reading); no new tool work is started until the research has had its share. Research items in hand, in order: the two-rail theorem's open points; the product-event theorem for carriers with several norm-preserving characters; cross-review of Director G's note 74; then the next edition, which has real content now (character separation, two-rail theorem, order-q check to q = 8).
+
+### Where plugins and Store apps install from (principal's question, 14 November 2026)
+
+Tested with Claude Code 2.1.325 in an isolated configuration folder. No repository can be registered as a marketplace by `owner/repo`: `pcp-claude` and `pcp-os-claude` are plugin folders without a marketplace file; `pcp` has one only in the subfolder `PCP_1.0_Plugins`, which works by local path after a clone and installs build 19, with programs that lack the executable bit. A marketplace file pointing at the two plugin repositories validates and installs both at build 22; the hook runs when `pcp-os-claude` is taken at its fix branch. Proposed as draft pull request 29 on `KirtusJ/pcp`. Cost: every one of these repositories is a sealed inventory, so a new file differs from its manifest; the clean home is a small repository holding only the marketplace file, which this session cannot create. The Store has no install source at all: instruments are compiled into the host, modules are added from a local folder.
+
+### Override lifted; the director's choice (14 November 2026)
+
+The principal: "Proceed as you would (target, motion, % your discretion)". Choice, and why:
+
+- Target: the research program, about 70 per cent. The PCP OS work is at a natural pause (pull requests 57,
+  58, 60 and 62 and four design decisions all wait on Director G), and the larger risk named in the comparison
+  with Director G is the backlog: about a dozen of their notes are unreviewed, and several are being used as
+  premises for the next.
+- Motion, in order: (1) resume, not relaunch, the challenger on my own draft subsection, which stopped on the
+  rate limit; (2) cross-review Director G's notes on the probability premise from local records (91, 94, 95),
+  since they carry the strongest claims; (3) their note 86 on several walkers, which bears on my four-gain
+  theorem and which they asked me to challenge; then 84, 85, 87, 89, 92, 96, 79, 82; (4) edition Z27 once the
+  draft has survived its challenger.
+- The other 30 per cent: answer Director G's reviews of the four pull requests as they arrive; the next build
+  increment (host commands, tool calls, register record) when the storage decision is answered.
+- At most three tasks at once, as before.

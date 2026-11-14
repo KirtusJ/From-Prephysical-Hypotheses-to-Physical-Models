@@ -1,0 +1,140 @@
+four_gain.py  seed 20261113  prime 2147483629
+columns of the summary: group | problem | cases | pass | fail ; details of every failure follow
+
+GROUP Z2  |A|=2  cases=16 (all quadruples)
+  hypotheses per case: {"H_eq_A": 14, "cases": 16, "conj_eq_found": 14, "conj_eq_found_and_H_eq_A": 14, "conj_ne_found_and_H_ne_A": 2, "delta_gen_A": 8, "r_even": 8, "spurious_null_at_top_n": 0}
+  P1    pass 16 fail 0
+  P1c   pass 16 fail 0
+  P2    pass 16 fail 0
+  P3k1  pass 16 fail 0
+  P3k3  pass 16 fail 0
+  P9    pass 64 fail 0
+  P4    ordered pairs of characters tested 64, fail 0, pairs with a solution 8
+  P5    characters tested 32, fail 0, with a solution 18
+  P6    line vertex-length instances 2496, outside predicted coset 0, equal to the whole coset 2048 (on 16 gain choices)
+  P7    ring vertex-length instances 7744, not in one coset 0
+  P8    events 768, mu(Ext S) != 2 mu(S): 0
+
+GROUP Z3  |A|=3  cases=81 (all quadruples)
+  hypotheses per case: {"H_eq_A": 78, "cases": 81, "conj_eq_found": 78, "conj_eq_found_and_H_eq_A": 78, "conj_ne_found_and_H_ne_A": 3, "delta_gen_A": 54, "r_even": 0, "spurious_null_at_top_n": 0}
+  P1    pass 81 fail 0
+  P1c   pass 81 fail 0
+  P2    pass 81 fail 0
+  P3k1  pass 81 fail 0
+  P3k3  pass 81 fail 0
+  P9    pass 324 fail 0
+  P4    ordered pairs of characters tested 729, fail 0, pairs with a solution 0
+  P5    characters tested 243, fail 0, with a solution 87
+  P6    line vertex-length instances 12636, outside predicted coset 0, equal to the whole coset 7668 (on 81 gain choices)
+  P7    ring vertex-length instances 39204, not in one coset 0
+  P8    events 3888, mu(Ext S) != 2 mu(S): 0
+
+GROUP Z4  |A|=4  cases=256 (all quadruples)
+  hypotheses per case: {"H_eq_A": 224, "cases": 256, "conj_eq_found": 224, "conj_eq_found_and_H_eq_A": 224, "conj_ne_found_and_H_ne_A": 32, "delta_gen_A": 128, "r_even": 192, "spurious_null_at_top_n": 0}
+  P1    pass 256 fail 0
+  P1c   pass 256 fail 0
+  P2    pass 256 fail 0
+  P3k1  pass 256 fail 0
+  P3k3  pass 256 fail 0
+  P9    pass 296 fail 0
+  P4    ordered pairs of characters tested 4096, fail 0, pairs with a solution 288
+  P5    characters tested 1024, fail 0, with a solution 296
+  P6    line vertex-length instances 9360, outside predicted coset 0, equal to the whole coset 5848 (on 60 gain choices)
+  P7    ring vertex-length instances 29040, not in one coset 0
+  P8    events 2880, mu(Ext S) != 2 mu(S): 0
+
+GROUP Z2xZ2  |A|=4  cases=256 (all quadruples)
+  hypotheses per case: {"H_eq_A": 168, "cases": 256, "conj_eq_found": 168, "conj_eq_found_and_H_eq_A": 168, "conj_ne_found_and_H_ne_A": 88, "delta_gen_A": 0, "r_even": 192, "spurious_null_at_top_n": 0}
+  P1    pass 256 fail 0
+  P1c   pass 256 fail 0
+  P2    pass 256 fail 0
+  P3k1  pass 256 fail 0
+  P3k3  pass 256 fail 0
+  P9    pass 296 fail 0
+  P4    ordered pairs of characters tested 4096, fail 0, pairs with a solution 480
+  P5    characters tested 1024, fail 0, with a solution 352
+  P6    line vertex-length instances 9360, outside predicted coset 0, equal to the whole coset 6896 (on 60 gain choices)
+  P7    ring vertex-length instances 29040, not in one coset 0
+  P8    events 2880, mu(Ext S) != 2 mu(S): 0
+
+GROUP Z6  |A|=6  cases=120 (seeded sample of 1296)
+  hypotheses per case: {"H_eq_A": 101, "cases": 120, "conj_eq_found": 101, "conj_eq_found_and_H_eq_A": 101, "conj_ne_found_and_H_ne_A": 19, "delta_gen_A": 44, "r_even": 60, "spurious_null_at_top_n": 0}
+  P1    pass 120 fail 0
+  P1c   pass 120 fail 0
+  P2    pass 120 fail 0
+  P3k1  pass 120 fail 0
+  P3k3  pass 120 fail 0
+  P9    pass 128 fail 0
+  P4    ordered pairs of characters tested 4320, fail 0, pairs with a solution 98
+  P5    characters tested 720, fail 0, with a solution 145
+  P6    line vertex-length instances 9360, outside predicted coset 0, equal to the whole coset 4012 (on 60 gain choices)
+  P7    ring vertex-length instances 29040, not in one coset 0
+  P8    events 2880, mu(Ext S) != 2 mu(S): 0
+
+GROUP Z2xZ4  |A|=8  cases=60 (seeded sample of 4096)
+  hypotheses per case: {"H_eq_A": 48, "cases": 60, "conj_eq_found": 48, "conj_eq_found_and_H_eq_A": 48, "conj_ne_found_and_H_ne_A": 12, "delta_gen_A": 0, "r_even": 55, "spurious_null_at_top_n": 0}
+  P1    pass 60 fail 0
+  P1c   pass 60 fail 0
+  P2    pass 60 fail 0
+  P3k1  pass 60 fail 0
+  P3k3  pass 60 fail 0
+  P9    pass 60 fail 0
+  P4    ordered pairs of characters tested 3840, fail 0, pairs with a solution 176
+  P5    characters tested 480, fail 0, with a solution 74
+  P6    line vertex-length instances 9360, outside predicted coset 0, equal to the whole coset 4040 (on 60 gain choices)
+  P7    ring vertex-length instances 29040, not in one coset 0
+  P8    events 2880, mu(Ext S) != 2 mu(S): 0
+
+TABLE full equation: group | r=ord(delta) | |H| | formula | brief-conjecture | (n, null, proj)... | number of cases
+  Z2     r=1 |H|=1 formula=2 conj=1 [(2, 2, 2), (3, 2, 2), (4, 2, 2), (5, 2, 2)] : 2
+  Z2     r=1 |H|=2 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1), (5, 1, 1)] : 6
+  Z2     r=2 |H|=2 formula=2 conj=2 [(2, 2, 2), (3, 2, 2), (4, 2, 2), (5, 2, 2)] : 8
+  Z2xZ2  r=1 |H|=1 formula=4 conj=1 [(2, 4, 4), (3, 4, 4)] : 4
+  Z2xZ2  r=1 |H|=2 formula=2 conj=1 [(2, 2, 2), (3, 2, 2)] : 29
+  Z2xZ2  r=1 |H|=2 formula=2 conj=1 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 7
+  Z2xZ2  r=1 |H|=4 formula=1 conj=1 [(2, 1, 1), (3, 1, 1)] : 21
+  Z2xZ2  r=1 |H|=4 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 3
+  Z2xZ2  r=2 |H|=2 formula=5 conj=3 [(2, 5, 5), (3, 5, 5)] : 40
+  Z2xZ2  r=2 |H|=2 formula=5 conj=3 [(2, 5, 5), (3, 5, 5), (4, 5, 5)] : 8
+  Z2xZ2  r=2 |H|=4 formula=3 conj=3 [(2, 3, 3), (3, 3, 3)] : 122
+  Z2xZ2  r=2 |H|=4 formula=3 conj=3 [(2, 3, 3), (3, 3, 3), (4, 3, 3)] : 22
+  Z2xZ4  r=1 |H|=2 formula=4 conj=1 [(2, 4, 4), (3, 4, 4)] : 1
+  Z2xZ4  r=1 |H|=4 formula=2 conj=1 [(2, 2, 2), (3, 2, 2)] : 1
+  Z2xZ4  r=1 |H|=8 formula=1 conj=1 [(2, 1, 1), (3, 1, 1)] : 3
+  Z2xZ4  r=2 |H|=4 formula=6 conj=3 [(2, 6, 6), (3, 6, 6)] : 2
+  Z2xZ4  r=2 |H|=4 formula=8 conj=3 [(2, 8, 8), (3, 8, 8)] : 1
+  Z2xZ4  r=2 |H|=8 formula=3 conj=3 [(2, 3, 3), (3, 3, 3)] : 4
+  Z2xZ4  r=2 |H|=8 formula=4 conj=4 [(2, 4, 4), (3, 4, 4)] : 13
+  Z2xZ4  r=4 |H|=4 formula=5 conj=3 [(2, 5, 5), (3, 5, 5)] : 7
+  Z2xZ4  r=4 |H|=8 formula=3 conj=3 [(2, 3, 3), (3, 3, 3)] : 28
+  Z3     r=1 |H|=1 formula=3 conj=1 [(2, 3, 3), (3, 3, 3), (4, 3, 3)] : 3
+  Z3     r=1 |H|=3 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 24
+  Z3     r=3 |H|=3 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 54
+  Z4     r=1 |H|=1 formula=4 conj=1 [(2, 4, 4), (3, 4, 4)] : 2
+  Z4     r=1 |H|=1 formula=4 conj=1 [(2, 4, 4), (3, 4, 4), (4, 4, 4)] : 2
+  Z4     r=1 |H|=2 formula=2 conj=1 [(2, 2, 2), (3, 2, 2)] : 10
+  Z4     r=1 |H|=2 formula=2 conj=1 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 2
+  Z4     r=1 |H|=4 formula=1 conj=1 [(2, 1, 1), (3, 1, 1)] : 41
+  Z4     r=1 |H|=4 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 7
+  Z4     r=2 |H|=2 formula=5 conj=2 [(2, 5, 5), (3, 5, 5)] : 13
+  Z4     r=2 |H|=2 formula=5 conj=2 [(2, 5, 5), (3, 5, 5), (4, 5, 5)] : 3
+  Z4     r=2 |H|=4 formula=2 conj=2 [(2, 2, 2), (3, 2, 2)] : 40
+  Z4     r=2 |H|=4 formula=2 conj=2 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 8
+  Z4     r=4 |H|=4 formula=2 conj=2 [(2, 2, 2), (3, 2, 2)] : 110
+  Z4     r=4 |H|=4 formula=2 conj=2 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 18
+  Z6     r=1 |H|=1 formula=6 conj=1 [(2, 6, 6), (3, 6, 6)] : 1
+  Z6     r=1 |H|=2 formula=3 conj=1 [(2, 3, 3), (3, 3, 3)] : 1
+  Z6     r=1 |H|=3 formula=2 conj=1 [(2, 2, 2), (3, 2, 2)] : 7
+  Z6     r=1 |H|=6 formula=1 conj=1 [(2, 1, 1), (3, 1, 1)] : 11
+  Z6     r=1 |H|=6 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 2
+  Z6     r=2 |H|=2 formula=9 conj=3 [(2, 9, 9), (3, 9, 9)] : 1
+  Z6     r=2 |H|=6 formula=3 conj=3 [(2, 3, 3), (3, 3, 3)] : 14
+  Z6     r=2 |H|=6 formula=3 conj=3 [(2, 3, 3), (3, 3, 3), (4, 3, 3)] : 1
+  Z6     r=3 |H|=3 formula=2 conj=1 [(2, 2, 2), (3, 2, 2)] : 8
+  Z6     r=3 |H|=3 formula=2 conj=1 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 1
+  Z6     r=3 |H|=6 formula=1 conj=1 [(2, 1, 1), (3, 1, 1)] : 26
+  Z6     r=3 |H|=6 formula=1 conj=1 [(2, 1, 1), (3, 1, 1), (4, 1, 1)] : 3
+  Z6     r=6 |H|=6 formula=2 conj=2 [(2, 2, 2), (3, 2, 2)] : 43
+  Z6     r=6 |H|=6 formula=2 conj=2 [(2, 2, 2), (3, 2, 2), (4, 2, 2)] : 1
+
+FAILED PREDICATES: 0
