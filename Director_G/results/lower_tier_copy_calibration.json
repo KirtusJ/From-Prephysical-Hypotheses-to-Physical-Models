@@ -1,0 +1,52 @@
+{
+  "assessor": "Director G",
+  "conditions": "Two CPU threads, 144 output tokens, same pinned offline adapter and PCP card. Different tasks. Register verifies delivery. Math and format are scored by the parent.",
+  "runs": [
+    {
+      "task": "blind_mask_inversion",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+      "provider_sha256": "bceb5ccf2ae4a6baa2dd329cd82794c6d54805381421104aa84d378bd02447f8",
+      "started_utc": "2026-11-14T03:38:39.068442+00:00",
+      "ended_utc": "2026-11-14T03:38:57.788525+00:00",
+      "original_files_sha256": {
+        "receipt.json": "423ec82df4db6da5cdbf988771d6f06f98c87b44ff72f7e0cc748304a4ca0c42",
+        "task.txt": "f050178284619d9771c9a3c7b2c00cda96b9e6fe2f774ba62f273631753f21d6",
+        "reply.txt": "06ff2781969fcd87e0664dd571557a5ace4198db58beace771527fe630443762"
+      },
+      "source_directory": "blind_mask_inversion_20261114T033839068442Z",
+      "input": "A detector runs m=3 switches. A hidden mask X of copy boundaries is drawn. With forced mask F, cuts occur at X union F; each segment of length j contributes a_j to the chance all three switches pass, and segment probabilities multiply. The segment probabilities a_1,a_2,a_3 are 1/2,3/8,5/16. The four observed survival probabilities for F=empty,{1},{2},{1,2} respectively are 7/32,5/32,5/32,1/8. Infer P(X=empty), P(X={1}), P(X={2}), P(X={1,2}) as fractions in this order. Can a possible additional copy after switch 3 change those four rates? Give the fractions and final answer concisely.",
+      "reply": "To infer the probabilities of the hidden mask X, we need to consider the probabilities of the four observed survival probabilities for the switch 3. The probabilities of the four observed survival probabilities are given as 7/32, 5/32, 5/32, and 1/8. Since the hidden mask X is a union of three switches, we can use the principle of inclusion-exclusion to find the probability of the union of the four observed probabilities. The principle of inclusion-exclusion states that the probability of the union of the four observed probabilities is equal to the sum of the probabilities of the individual probabilities minus the sum of the probabilities of the individual probabilities. Therefore, the probability of the",
+      "expected": [
+        "1/2",
+        "0",
+        "0",
+        "1/2",
+        "last copy leaves rates unchanged"
+      ],
+      "math_correct": false,
+      "output_shape_met": false,
+      "host_register_deep_verified": true
+    },
+    {
+      "task": "guided_segment_product",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF@9217f5db79a29953eb74d5343926648285ec7e67:Q4_0",
+      "provider_sha256": "bceb5ccf2ae4a6baa2dd329cd82794c6d54805381421104aa84d378bd02447f8",
+      "started_utc": "2026-11-14T03:40:16.149334+00:00",
+      "ended_utc": "2026-11-14T03:40:25.412304+00:00",
+      "original_files_sha256": {
+        "receipt.json": "06df0b9e9a3d06df9704b252d41270a5932e2f39d8d23e7fc6397c139333f115",
+        "task.txt": "60d336fb36a9ec99454a90774c69ef468a3e22e7e3e8a115947c6b68b298ab45",
+        "reply.txt": "22b420ce7f1f748feaad8ea26b56041965ac52d02f5d296f301270152d98de61"
+      },
+      "source_directory": "guided_segment_product_20261114T034016149334Z",
+      "input": "One walk attempt at zero field. Exactly one forced copy divides 3 blocks into segments of lengths 1 and 2. Their success probabilities are 1/2 and 3/8. Give their product in lowest terms. Output the fraction alone.",
+      "reply": "1/2 * 3/8 = 3/16 [end of text]",
+      "expected": [
+        "3/16"
+      ],
+      "math_correct": true,
+      "output_shape_met": false,
+      "host_register_deep_verified": true
+    }
+  ]
+}
