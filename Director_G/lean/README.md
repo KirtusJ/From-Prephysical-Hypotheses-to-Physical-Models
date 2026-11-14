@@ -109,4 +109,4 @@ The same file proves the marginal upper and joint lower count inequalities for a
 
 [AddressedPositionScore.lean](AddressedPositionScore.lean) derives the three scored rail pairs after the signed ten-tick flight, the integer numerator factorization and the unsigned count score. [Readout and preparation assumptions](../Three_signed_ticks_and_the_probability_power.md)
 
-[LocalizedSheetPower.lean](LocalizedSheetPower.lean) checks all joint rail and sheet numerators, the square identity and the counting score for [a sharp sheet in five ticks](../Five_ticks_from_a_localized_sheet.md).
+[LocalizedSheetPower.lean](LocalizedSheetPower.lean) checks all joint rail and sheet numerators for the five-tick and stationary six-tick schedules, their square identity and the two counting scores for [a sharp sheet in five ticks](../Five_ticks_from_a_localized_sheet.md).
