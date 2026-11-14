@@ -17,6 +17,8 @@ For each reported delay $t$, take the **(Iz)GxGx** and **GxGx** rows from the co
 
 The difference $\Delta(500)-\Delta(2020)=-763/1024$ is descriptive. The [replay](check_observed_mark_disturbance.rs) emits all 39 delay rows with the four marked counts, both control counts and the signed difference. The series includes an exact tie at 1,180 ns and positive differences of $1,7,3,8$ counts at 1,260, 1,500, 1,900 and 1,980 ns respectively. Every delay is retained, including the late reversals.
 
+The deposit also contains a **no-following-gates** comparison, **(Iz)** against the empty circuit **{}**. Its final-one counts at 500 ns are 45 marked and 30 unmarked, a difference of $+15/1024$. At 2,020 ns the corresponding counts are 44 and 22, a difference of $+22/1024$. Thus the sign and magnitude of the mark comparison depend on which operations follow it. The replay prints this control over all 39 run delays as well.
+
 The delay is the time **after the measurement pulse** and before subsequent operations on marked circuits. It is a run label in the control columns. The no-mark circuit omits the pulse, and the source documents no duration-matched sham. The 92 control circuit histograms, considered together, differ at every pair of distinct run delays. The single **GxGx** control has 23 distinct count pairs across 39 runs. Thus the file does not simply reuse one common control vector. Within-shot pairing of the two bits is retained in the joint histogram. There are no per-shot time stamps or identifiers to pair individual marked and control repetitions or verify randomized pulse omission.
 
 ## What the discrepancy can reveal

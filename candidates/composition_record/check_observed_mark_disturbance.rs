@@ -62,8 +62,14 @@ fn main() {
     assert_eq!(marked[38], [0,0,35,961,8,20]);
     assert_eq!(control[0], [36,988,0,0,0,0]);
     assert_eq!(control[38], [29,995,0,0,0,0]);
+    let no_gates = &table["{}"];
+    let marked_no_gates = &table["(Iz)"];
+    assert_eq!(marked_no_gates[0], [0,0,966,38,13,7]);
+    assert_eq!(marked_no_gates[38], [0,0,969,35,11,9]);
+    assert_eq!(no_gates[0], [994,30,0,0,0,0]);
+    assert_eq!(no_gates[38], [1002,22,0,0,0,0]);
 
-    println!("delay_ns,mark0_final0,mark0_final1,mark1_final0,mark1_final1,control_final0,control_final1,marked_final1,delta_over_1024");
+    println!("delay_ns,mark0_final0,mark0_final1,mark1_final0,mark1_final1,control_final0,control_final1,marked_final1,gated_delta_num,no_gates_marked_final1,no_gates_control_final1,no_gates_delta_num");
     let mut nonnegative = Vec::new();
     let mut delta = Vec::new();
     for (i, (&m, &c)) in marked.iter().zip(control).enumerate() {
@@ -72,7 +78,10 @@ fn main() {
         let difference = i32::from(hits) - i32::from(c[1]);
         delta.push(difference);
         if difference >= 0 { nonnegative.push((delay, difference)); }
-        println!("{delay},{},{},{},{},{},{},{hits},{difference}",m[2],m[3],m[4],m[5],c[0],c[1]);
+        let bare_hits = marked_no_gates[i][3] + marked_no_gates[i][5];
+        let bare_control = no_gates[i][1];
+        let bare_difference = i32::from(bare_hits) - i32::from(bare_control);
+        println!("{delay},{},{},{},{},{},{},{hits},{difference},{bare_hits},{bare_control},{bare_difference}",m[2],m[3],m[4],m[5],c[0],c[1]);
     }
     assert_eq!(delta[0] - delta[38], -763);
     assert_eq!(nonnegative, [(1180,0), (1260,1), (1500,7), (1900,3), (1980,8)]);
