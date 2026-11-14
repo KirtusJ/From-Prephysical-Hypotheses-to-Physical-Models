@@ -44,6 +44,10 @@ The principal allows every sub-agent and worker in the stack to open pull reques
 
 Every sub-agent and worker using PCP may, when the task needs it and only then, write its own PCP application or helper program, install applications and packages, and generate Lean proofs (principal, 13 November 2026). The agent definitions say so. What is made is reported with what it is for, is kept in the worker's folder, and enters the repository only through the parent or a pull request; an installed tool is named in the report.
 
+### Calibration of the stack
+
+How calibration works for this side and how the stack adapts to its results is kept in `Director_Z/calibration/HOW_CALIBRATION_WORKS.md` (principal, 14 November 2026): known-answer items with the key and thresholds fixed and hashed before the run, an assessor who is not the participant, a control in every brief to a lower-tier agent. Use it on lower-tier models and lower forms of integration, and add each run to that file's log.
+
 ## Lessons paid for
 
 - **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
