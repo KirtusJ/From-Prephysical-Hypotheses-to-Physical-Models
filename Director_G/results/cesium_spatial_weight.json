@@ -1,0 +1,286 @@
+{
+  "pdf": "https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf",
+  "pdf_sha256": "513fb6d398c0c6c51523e5154def4c154c8b35809f1348765d3ea3735b232c31",
+  "reference": "Figure 3 (a), (b), (c)",
+  "sites": [
+    -8,
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "detected_counts": {
+    "blank": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      15,
+      131,
+      33,
+      35,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "retain_negative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31,
+      107,
+      32,
+      31,
+      0,
+      0,
+      22,
+      42,
+      111,
+      27,
+      1
+    ],
+    "retain_positive": [
+      2,
+      22,
+      113,
+      40,
+      31,
+      0,
+      0,
+      27,
+      29,
+      115,
+      25,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detected_totals": [
+    230,
+    404,
+    404
+  ],
+  "retained_and_displaced": [
+    [
+      201,
+      203
+    ],
+    [
+      196,
+      208
+    ]
+  ],
+  "comparisons": {
+    "wells": [
+      -1,
+      1
+    ],
+    "table": [
+      [
+        107,
+        31
+      ],
+      [
+        27,
+        115
+      ]
+    ],
+    "observed_odds": "12305/837",
+    "fair_path_count_odds": 9,
+    "fair_path_count_upper_tail": 0.06569363082564753,
+    "one_sided_95_upper_odds_by_family_rounded_up": {
+      "1": "6207/250",
+      "60": "20007/500"
+    },
+    "sensitivities": [
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "0",
+        "site_power": 1,
+        "spin_blind_odds": "25",
+        "spin_sensitive_odds_lower": "16",
+        "spin_blind_lower_tail": 0.04774654812277133,
+        "largest_lower_tail_with_spin_gains": 0.42208759665916284
+      },
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "0",
+        "site_power": 2,
+        "spin_blind_odds": "625",
+        "spin_sensitive_odds_lower": "400",
+        "spin_blind_lower_tail": 1.5761685257955443e-25,
+        "largest_lower_tail_with_spin_gains": 4.371421914743544e-21
+      },
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 1,
+        "spin_blind_odds": "26896/1089",
+        "spin_sensitive_odds_lower": "38809/2401",
+        "spin_blind_lower_tail": 0.05176907770901605,
+        "largest_lower_tail_with_spin_gains": 0.4087192434337272
+      },
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 2,
+        "spin_blind_odds": "6012304/9801",
+        "spin_sensitive_odds_lower": "962361/2401",
+        "spin_blind_lower_tail": 2.4433611943537903e-25,
+        "largest_lower_tail_with_spin_gains": 4.17698897784297e-21
+      },
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 1,
+        "spin_blind_odds": "58564/2401",
+        "spin_sensitive_odds_lower": "9409/576",
+        "spin_blind_lower_tail": 0.0561805803199368,
+        "largest_lower_tail_with_spin_gains": 0.3949912980056156
+      },
+      {
+        "visibility": "1",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 2,
+        "spin_blind_odds": "1444804/2401",
+        "spin_sensitive_odds_lower": "231361/576",
+        "spin_blind_lower_tail": 3.8346576665068784e-25,
+        "largest_lower_tail_with_spin_gains": 3.983788655712e-21
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "0",
+        "site_power": 1,
+        "spin_blind_odds": "35509681/1562500",
+        "spin_sensitive_odds_lower": "22174681/1562500",
+        "spin_blind_lower_tail": 0.08714467115870503,
+        "largest_lower_tail_with_spin_gains": 0.583171895089725
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "0",
+        "site_power": 2,
+        "spin_blind_odds": "1260937444721761/2441406250000",
+        "spin_sensitive_odds_lower": "787415848586761/2441406250000",
+        "spin_blind_lower_tail": 1.3319309797169734e-23,
+        "largest_lower_tail_with_spin_gains": 4.949337069249094e-19
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 1,
+        "spin_blind_odds": "38255839281/1709574409",
+        "spin_sensitive_odds_lower": "215279296324/15077629681",
+        "spin_blind_lower_tail": 0.0954005471878804,
+        "largest_lower_tail_with_spin_gains": 0.5750927032036174
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 2,
+        "spin_blind_odds": "12137461096606474561/24180150791101761",
+        "spin_sensitive_odds_lower": "7581541905516960144/23584798709111761",
+        "spin_blind_lower_tail": 2.5651947452522935e-23,
+        "largest_lower_tail_with_spin_gains": 5.316766128392803e-19
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 1,
+        "spin_blind_odds": "83418725329/3787294681",
+        "spin_sensitive_odds_lower": "52226875024/3635004681",
+        "spin_blind_lower_tail": 0.10444809311802662,
+        "largest_lower_tail_with_spin_gains": 0.5667150679537828
+      },
+      {
+        "visibility": "47/50",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 2,
+        "spin_blind_odds": "2918636946002693161/5986841259851761",
+        "spin_sensitive_odds_lower": "1823616453530979844/5692465740361761",
+        "spin_blind_lower_tail": 5.0086191191852716e-23,
+        "largest_lower_tail_with_spin_gains": 5.726496413475354e-19
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "0",
+        "site_power": 1,
+        "spin_blind_odds": "9",
+        "spin_sensitive_odds_lower": "4",
+        "spin_blind_lower_tail": 0.9638423415432872,
+        "largest_lower_tail_with_spin_gains": 0.9999991312277265
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "0",
+        "site_power": 2,
+        "spin_blind_odds": "81",
+        "spin_sensitive_odds_lower": "36",
+        "spin_blind_lower_tail": 8.944476275872107e-08,
+        "largest_lower_tail_with_spin_gains": 0.0024115636774151026
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 1,
+        "spin_blind_odds": "88804/10201",
+        "spin_sensitive_odds_lower": "9801/2500",
+        "spin_blind_lower_tail": 0.9722993713652902,
+        "largest_lower_tail_with_spin_gains": 0.9999994074816664
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "1/50",
+        "site_power": 2,
+        "spin_blind_odds": "795664/11449",
+        "spin_sensitive_odds_lower": "5476/169",
+        "spin_blind_lower_tail": 8.635393835439249e-07,
+        "largest_lower_tail_with_spin_gains": 0.0063737582033633776
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 1,
+        "spin_blind_odds": "21904/2601",
+        "spin_sensitive_odds_lower": "2401/625",
+        "spin_blind_lower_tail": 0.9790379883395042,
+        "largest_lower_tail_with_spin_gains": 0.9999995999732246
+      },
+      {
+        "visibility": "0",
+        "symmetric_displacement_error": "1/25",
+        "site_power": 2,
+        "spin_blind_odds": "195364/3249",
+        "spin_sensitive_odds_lower": "21316/729",
+        "spin_blind_lower_tail": 6.41583686427681e-06,
+        "largest_lower_tail_with_spin_gains": 0.015104087729325392
+      }
+    ]
+  },
+  "scope": "Detected atom endpoints reconstructed from the vector figure. Independent stable row sampling conditional on margins. No all-prepared-atoms denominator."
+}
