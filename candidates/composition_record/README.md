@@ -74,6 +74,8 @@ With a fixed coherent filter before either station chooses a read time, the blan
 
 A subsequent stipulated experiment lets the two directions of a signed walker apply different fixed contacts to this memory. At ten ticks the two contact orders change its return probability. With a separately prepared, growing memory the same construction implements the program's weak-field envelope. [Walk experiment, exact controls and mechanical limit](contact_flight.md)
 
+Two remote coin choices also give a test that survives redrawing the weighting power on every launch. For a general fluctuating increasing response, comparing one untouched spectator under three remote refinements identifies the individual response up to scale through half mass, conditional on the preparation and resolution assumptions. Above half mass a smooth fluctuating rival reproduces every normalized one-shot table. [One addressed split](remote_split_read.md) · [One near bit and a five-tick flight](two_remote_splitters.md) · [Spectator proof, sharp boundary and two-read test](spectator_refinements.md)
+
 Starting from blank memory, a controlled comparison of contact order prepares the two weak-force sectors together. Real packet encoding gives both the same position distribution at every tick. At order five the 64-round preparation accepts 38.2% of launches with 99.54% weight on the pair. [Preparation, yield and conjugate flights](sector_preparation.md)
 
 The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
