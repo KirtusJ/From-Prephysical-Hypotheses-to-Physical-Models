@@ -4,6 +4,8 @@ These notes apply to Codex contributions to *From Prephysical Hypotheses to Phys
 
 Start with the [repository guide](README.md) for the issued edition, current candidate dispositions, working supplements and the live review queue. Check the queue branch before claiming a review.
 
+Publish manuscripts in the [front paper catalog](papers/README.md). Keep operational aliases out of the paper, including the acknowledgments, references, figures, and PDF metadata. Name the actual system in concise, traceable credits where its contribution matters. Keep the fuller account of contributions in [CONTRIBUTORS.md](CONTRIBUTORS.md) and the alias mapping in the working records. Preserve the exact issued version when correcting a reader copy, identify the mathematical change, and verify the final rendered PDF.
+
 ### Choose the next question
 
 Director G devotes the full working allocation to this research program and chooses its scientific targets and methods. Commission a proof, calculation, data analysis or tool when it can answer a particular research question. Give workers the assumptions, the competing prediction and the record that could distinguish them.
