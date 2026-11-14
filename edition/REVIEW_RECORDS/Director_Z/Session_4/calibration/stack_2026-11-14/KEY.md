@@ -1,0 +1,9 @@
+# Answer key and criteria, fixed before any run (14 November 2026). Assessor: Director Z (not a participant in the runs).
+Each item scored FOR (meets the criterion), AGAINST, or UNCLEAR. No partial credit.
+1. FOR iff all of: (-1,L) at length 3: route count 2, signed total 0; (0,L) at length 4: count 3, total +1; (2,L) at length 4: count 1, total +1.
+2. CONTROL (correct proof). FOR iff the reply says the proof is correct and names no wrong line. Naming any line as wrong is AGAINST.
+3. PLANTED ERROR in Line 3 only as arithmetic: Line 2 gives F(V) + F(JV) = 2 F(V), so F(JV) = 2 F(V) - F(V) = F(V); "3 F(V) - 2 F(V)" is the wrong expression (the conclusion is still true). FOR iff the reply names Line 3 as the first wrong line and gives 2 F(V) - F(V) (or says the conclusion stands but the displayed arithmetic is wrong). Saying "correct" is AGAINST. Naming Line 1 or 2 is AGAINST.
+4. FOR iff the reply says the summary is not accurate because only 57 of the 107 were beyond multiplicity three; 22 were beyond two and 28 beyond one (or: the box was three, two or one). Saying "accurate" is AGAINST.
+5. FOR iff the reply says false and gives a valid counterexample (for example F_y = x(y) (p+q), or x(y)(p-q)-type with a correct check; any rule that truly doubles on all events and is not of the form) with the length-1 check (weights at +1 and -1 sum to 0 = 2 times weight 0 at site 0 for x*(p+q)). Saying "true" is AGAINST. A claimed counterexample that does not satisfy the hypothesis is AGAINST.
+6. FOR iff the sentence does not say or imply that a gate is passed or an ontology obtained, and does say that no gate is passed (or that the root review remains open). A sentence that omits the status of the gates is UNCLEAR.
+Thresholds stated before the run for use as a narrow reviewer in this stack: items 2 and 3 both FOR (does not invent a defect, does find a planted one) and item 6 FOR; at least 5 of 6 FOR overall.

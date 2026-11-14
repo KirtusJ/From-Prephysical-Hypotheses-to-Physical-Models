@@ -1,0 +1,19 @@
+NOTES (challenger xr60, same model family as director; not independent)
+Step 0/1 (reading). Hypotheses used by note and where stated:
+ H1 start (0,R), first L earns nothing (start counts as rail R)      : statement (para 1 "Start at (0,R)"), used in "incoming R at all control boundaries"
+ H2 mask keeps both rails at its wells; step THEN mask               : para 1 / "Every set retains both rails"; order only explicit in the checker paragraph ("through both actual arcs before each mask") -> surrounding text
+ H3 ring range D=N/gcd(N,2)>=6                                        : statement
+ H4 "exactly" = entire surviving field (nothing elsewhere)            : statement ("entire surviving path multisets")
+ H5 site arbitrary: ring via coast ticks, line via single-path prefix : body (placement section), statement says "any named site"
+ H6 five-tick masks during R assembly: whether wire-4 wells are in mask: NOT stated (table lists Stock 4 row; W={0,2} only defined for short stages) -> ambiguity, test both
+ H7 Z's P_q only needs m_S(x,R)=U, m_S(x,L)=V at the site (THEOREM_Q.tex l.10); emptiness elsewhere is extra, not needed.
+ H8 tick bound 3K+10(q-1)+6 is "before placement" (excludes prefix/coast) : statement
+Step 2/3/5a (replay.py -> replay_result.json). Control OK ({0,0,1} at (0,L); {0} at (2,L)).
+ Line q=2,3 cap2; q=4,5 cap1; x in {-9,0,4}; both clocks: 12540 runs, 0 failures of P1,P1s,P2,P3,P4,P5.
+ Rings q=3: N=7,12,9,14 (qualify) 0 failures; N=10,5 (D=5) 1250/1280, 625/640 fail; N=8,6 all fail (incl. empty target). Consistent with note ("open", failure recorded).
+ Adversarial: without wire-4 wells in R assembly: 0 failures; q=1; q=2,4,5 rings; 300 random (q to 97, |x|<400, mult to 6): 0 failures.
+Step 4. Author's checker: needs sibling check_compact_residue_preparation.py (not among PR files handed over; taken from repo Director_G, sha256 10581bb6...). Rerun in rerun/: bytes equal to stored JSON (sha e1da583a...), second run FileExistsError exit 1. Counts 16280 and 30 match note; extra-well control (tick 1, well 11) matches note; rings 3,5,6,8,10 all 'matches': false.
+ Lean 4.19.0 (already installed): exit 0; all_rings/all_periods [propext, Quot.sound]; gains adds Classical.choice; one_gain_counts none. Proves: five-tick stages only (advance RLLRR, idle LRRLR, three wires, period>=6) + LL counts of LLR, RLL, LLRR. Short stages (deposit/transfer/coast/finish) are NOT in Lean; note's link sentence claims only five-tick isolation + LL counts, so consistent. Short stages checked by author's geometry() at periods none,6,7,8 only, and by hand ([0,5] argument: follows).
+Step 5. Hand check of small-ring paragraph (N=1,2,4): follows. Table distance<=5 claim: checked tick by tick, follows.
+ Wording only: "stationarity across preparations" is not a named hypothesis in THEOREM_Q (i) (it is implicit in F_y depending on the vertex only). P_q needs only the two multisets at the site; note proves more (empty elsewhere).
+No DEFECT found. Failed predicates kept: P1/P1s/P2 on rings N=10,5,8,6 (outside hypothesis; expected by note).

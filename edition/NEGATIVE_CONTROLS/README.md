@@ -2,7 +2,7 @@
 
 **Kirtus Justus**, Theoretical Physicist  
 Port Coquitlam, British Columbia, Canada  
-Baseline FPHPM-BASELINE-2026-11-14-Z25, 14 November 2026
+Baseline FPHPM-BASELINE-2026-11-14-Z26, 14 November 2026
 
 **TO-0** (contextual toy). Withdrawn as a candidate physical ontology: unrestricted contextual tables contain local, quantum and Popescu–Rohrlich-type behaviours and do not select the quantum subset or a mechanism. Its mathematics on contextuality comparisons is retained in the Director B and C records. No separate TO-0 document was supplied with the packets used for this baseline.
 
