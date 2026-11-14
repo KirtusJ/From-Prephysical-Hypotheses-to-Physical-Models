@@ -36,6 +36,42 @@ def selected(start, origin, width, size):
     return (start-origin) % size < width
 
 
+def cumulative_labels(coordinates, weights, *, mirror=False):
+    """The mass strictly before a site (or before its radius), at every integer."""
+    boundary = list(accumulate(weights,initial=0))
+    def label(x):
+        coord = abs(x) if mirror else x
+        return boundary[bisect_left(coordinates,coord)] % boundary[-1]
+    return label
+
+
+def point_site_selected(label, x, origin, width, size):
+    """The same switch for physical site routing and for a completed site read."""
+    return selected(label(x),origin,width,size)
+
+
+def singleton_records(tick, label, size, seeds):
+    stride = size//seeds
+    width = 5*size//8
+    half = tick//2
+    wrong_parity = 1-tick%2
+    probes = sorted({-tick-2,-tick-1,-tick,-half,-wrong_parity,0,wrong_parity,
+                     half,tick,tick+1,tick+2})
+    counts = {}
+    assigned = {}
+    for x in probes:
+        # The same switch handles an input localized at x and a completed
+        # site read reporting x, even when the reference walk never reached it.
+        hits = [u for u in range(seeds)
+                if point_site_selected(label,x,u*stride,width,size)]
+        assigned[x] = str(label(x))
+        if abs(x) > tick:
+            require(label(x) == 0, "exterior sentinel at zero")
+        require(len(hits)==5*seeds//8, "singleton incidence on complete well labels")
+        counts[x] = len(hits)
+    return dict(origin_count=seeds,site_start_or_bin=assigned,site_hit_counts=counts)
+
+
 def masks_by_mass(weights, width):
     """Map selected population to number of integer origins, via changes of membership."""
     size = sum(weights)
@@ -96,16 +132,15 @@ def small_checks():
     trials = 0
     for t, weights in walk_profiles(set(range(7))):
         size = 1 << t
-        starts = list(accumulate(weights, initial=0))[:-1]
         occupied = positive_starts(weights)
-        # Membership of each individual site, including an arbitrary dark
-        # site on the wrong parity and one outside the reached interval.
-        labels = starts + [size//2, size+1]
+        sites = list(range(-t,t+1,2))
+        starts_by_site = cumulative_labels(sites,weights)
+        probes = sites + [-t-2,-t-1,t+1,t+2,1-t%2]
         for k in range(size+1):
             direct = Counter()
-            rates = [0 for _ in labels]
+            rates = [0 for _ in probes]
             for r in range(size):
-                mask = [selected(a,r,k,size) for a in labels]
+                mask = [point_site_selected(starts_by_site,x,r,k,size) for x in probes]
                 mass = sum(n for n, b in zip(weights,mask) if b)
                 require(mass == mass_at_seed(occupied,r,k,size), "half-open endpoint")
                 direct[mass] += 1
@@ -220,6 +255,12 @@ def panel(tick, weights):
         sampled_lower = Fraction(sampled,practical*precision)
         require(lower > Fraction(7348,10000) and sampled_lower>Fraction(7348,10000), "power-rule gap")
         actual_lo, actual_hi = sharp_brackets(weights,prefix)
+        sites = range(-tick,tick+1,2)
+        label = cumulative_labels(sites,weights)
+        row["singleton_extension"] = singleton_records(tick,label,size,practical)
+        require(all(sum(w for x,w in zip(sites,weights)
+                        if point_site_selected(label,x,u*stride,nominal,size)) == n
+                    for u,n in enumerate(nominal_reads)), "site rule reproduces every nominal mass")
         row["ten_bit_seed"] = dict(origins=practical,nominal_width=640,
             nominal_mass_min_max=[str(min(nominal_reads)),str(max(nominal_reads))],
             safe_lower_upper_widths=[sparse_lower,sparse_upper],
@@ -271,12 +312,13 @@ def mirrored_panel(tick, weights):
     grid = min(1024,size)
     stride = size//grid
     width = 5*size//8
-    starts = list(accumulate(shell,initial=0))[:-1]
+    radii = list(range(tick%2,tick+1,2))
+    label = cumulative_labels(radii,shell,mirror=True)
     by_mass = Counter()
     inclusion = Counter()
     for u in range(grid):
         origin = u*stride
-        accepted = [i for i,a in enumerate(starts) if selected(a,origin,width,size)]
+        accepted = [i for i,r in enumerate(radii) if point_site_selected(label,r,origin,width,size)]
         inclusion.update(accepted)
         by_mass[sum(shell[i] for i in accepted)] += 1
     require(all(inclusion[i]==5*grid//8 for i in range(len(shell))), "offline marginals of both mirror sites")
@@ -288,6 +330,7 @@ def mirrored_panel(tick, weights):
     if tick==512:
         require(Fraction(floor_total,den)>Fraction(73,100), "ten-bit mirror-square separation")
     return dict(tick=tick,denominator=str(size),shell_order="increasing radius",
+                singleton_extension=singleton_records(tick,label,size,grid),
                 occupied_parity_shells=len(shell),origin_count=grid,distinct_mass_count=len(by_mass),
                 each_site_inclusion_count=5*grid//8,shell_weight_max_numerator=str(max(shell)),
                 shell_weight_max_decimal=max(shell)/size,
@@ -309,9 +352,16 @@ def balanced_shell_panel(tick, weights):
         bins[dest] += n
         radii[dest].append(r)
     require(sum(bins)==size, "balanced bins retain the whole carrier")
+    radius_bin = {r:b for b,group in enumerate(radii) for r in group}
+    def label(x):
+        return radius_bin.get(abs(x),0)
+    off_grid = [-tick-2,-tick-1,-1,1,tick+1,tick+2]
+    require(all(label(x)==0 for x in off_grid), "untabulated coordinates use bin zero")
     masses = []
     for origin in range(8):
-        masses.append(sum(bins[(origin+j)%8] for j in range(5)))
+        actual = sum(n for r,n in by_radius if point_site_selected(label,r,origin,5,8))
+        require(actual == sum(bins[(origin+j)%8] for j in range(5)), "site/bin agreement")
+        masses.append(actual)
     require(sum(masses)==5*size, "mean three-bit scalar mass")
     for dest in range(8):
         require(sum((dest-origin)%8 < 5 for origin in range(8))==5,
@@ -322,6 +372,7 @@ def balanced_shell_panel(tick, weights):
     floors = sum(precision*n*n//(n*n+(size-n)**2) for n in masses)
     den = 8*precision
     return dict(tick=tick,denominator=str(size),origin_count=8,inclusion_count=5,
+                singleton_extension=singleton_records(tick,label,8,8),
                 bin_numerators=list(map(str,bins)),bin_radii=radii,
                 seed_mass_numerators=list(map(str,masses)),
                 seed_mass_decimals=[n/size for n in masses],
@@ -346,7 +397,17 @@ def main():
             mirrors.append(mirrored_panel(t,weights))
         if t==3:
             escape=iid_tick_three_escape(weights)
-    result=dict(small_integer_origin_cases=small_checks(),clock_panels=rows,
+    # Interior zero-weight sites at a nonzero cumulative boundary keep their
+    # original starts, even when several consecutive entries repeat it.
+    example = cumulative_labels((-4,-2,0,2,4),(3,0,0,2,3))
+    require(example(-2)==example(0)==example(2)==example(-1)==3, "repeated boundary through gap")
+    require(example(3)==5 and example(-9)==example(9)==0, "strictly smaller cumulative mass")
+    explicit = [u for u in range(8) if point_site_selected(example,-2,u,5,8)]
+    omitted = [u for u in range(8) if point_site_selected(example,-1,u,5,8)]
+    require(explicit==omitted==[0,1,2,3,7], "tabulated dark site and intervening gap")
+    repeated=dict(tabulated_dark_site=-2,untabulated_gap=-1,
+                  tabulated_hit_seeds=explicit,untabulated_hit_seeds=omitted)
+    result=dict(repeated_boundary_control=repeated,small_integer_origin_cases=small_checks(),clock_panels=rows,
                 finite_iid_monotone_escape=escape,geometric_coordinate_escape=profile_escape(),
                 independent_hidden_curve_mixture=hidden_mix(),mirrored_shell_masks=mirrors,
                 three_bit_mirrored_shell_bins=balanced)
