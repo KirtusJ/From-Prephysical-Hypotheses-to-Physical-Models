@@ -1,0 +1,248 @@
+{
+ "H0": {
+  "ok": true,
+  "detail": {
+   "per_character": {
+    "chi0": {
+     "H": [
+      1,
+      0
+     ],
+     "chiH_plus_1_normsq": "0",
+     "column_inner_normsq": "0",
+     "qualifies": true
+    },
+    "chi1": {
+     "H": [
+      1,
+      0
+     ],
+     "chiH_plus_1_normsq": "0",
+     "column_inner_normsq": "0",
+     "qualifies": true
+    },
+    "chi2": {
+     "H": [
+      1,
+      0
+     ],
+     "chiH_plus_1_normsq": "0",
+     "column_inner_normsq": "0",
+     "qualifies": true
+    },
+    "bad_trivial_z": {
+     "H": [
+      1,
+      0
+     ],
+     "chiH_plus_1_normsq": "4",
+     "column_inner_normsq": "4",
+     "qualifies": false
+    }
+   },
+   "qualify": 3,
+   "tested": 4
+  }
+ },
+ "P1": {
+  "ok": true,
+  "detail": {
+   "(1, 'R')": [
+    [
+     "RRRRRRRR",
+     [
+      0,
+      0
+     ]
+    ],
+    [
+     "LLLLLLLR",
+     [
+      0,
+      1
+     ]
+    ]
+   ]
+  }
+ },
+ "P2": {
+  "ok": true,
+  "detail": [
+   "1/64",
+   "1/256",
+   "1/128"
+  ]
+ },
+ "P3": {
+  "ok": true,
+  "detail": [
+   "1/256",
+   "1/256",
+   "1/256"
+  ]
+ },
+ "P4": {
+  "ok": true,
+  "detail": {
+   "words": 2047,
+   "bad": 0,
+   "second_gain_set_words": 2047,
+   "bad2": 0
+  }
+ },
+ "P5": {
+  "ok": true,
+  "detail": {
+   "TMAX": 6,
+   "events": 228849,
+   "ports": 794765,
+   "unequal01": 0,
+   "unequal_m": 0,
+   "per_length": {
+    "0": 1,
+    "1": 3,
+    "2": 13,
+    "3": 79,
+    "4": 705,
+    "5": 9763,
+    "6": 218285
+   }
+  }
+ },
+ "P6": {
+  "ok": true,
+  "detail": {
+   "events": 3200,
+   "ports": 14288,
+   "unequal": 0
+  }
+ },
+ "P7": {
+  "ok": true,
+  "detail": "1/256"
+ },
+ "P8": {
+  "ok": true,
+  "detail": {
+   "N=5,blocks=1,t=6,chi0": {
+    "enumerated": "1/16",
+    "closed": "1/16",
+    "count": "1/32"
+   },
+   "N=5,blocks=1,t=6,chi1": {
+    "enumerated": "1/64",
+    "closed": "1/64",
+    "count": "1/32"
+   },
+   "N=8,blocks=1,t=5,chi0": {
+    "enumerated": "0",
+    "closed": "0",
+    "count": "1/16"
+   },
+   "N=8,blocks=1,t=5,chi1": {
+    "enumerated": "3/32",
+    "closed": "3/32",
+    "count": "1/16"
+   },
+   "N=7,blocks=2,t=16,chi0": {
+    "enumerated": "1/4096",
+    "closed": "1/4096",
+    "count": "1/16384"
+   },
+   "N=7,blocks=2,t=16,chi1": {
+    "enumerated": "1/65536",
+    "closed": "1/65536",
+    "count": "1/16384"
+   },
+   "N=9,blocks=1,t=10,chi0": {
+    "enumerated": "1/256",
+    "closed": "1/256",
+    "count": "1/512"
+   },
+   "N=9,blocks=1,t=10,chi1": {
+    "enumerated": "1/256",
+    "closed": "1/256",
+    "count": "1/512"
+   },
+   "N=6,blocks=2,t=8,chi0": {
+    "enumerated": "1/16",
+    "closed": "1/16",
+    "count": "1/64"
+   },
+   "N=6,blocks=2,t=8,chi1": {
+    "enumerated": "1/16",
+    "closed": "1/16",
+    "count": "1/64"
+   }
+  }
+ },
+ "P9": {
+  "ok": false,
+  "detail": {
+   "hypothesis": {
+    "H": [
+     1,
+     0
+    ],
+    "chiH_plus_1_normsq": "0",
+    "column_inner_normsq": "0",
+    "qualifies": true
+   },
+   "chi_i_rate": "1/128",
+   "fair_count": "1/128",
+   "chi_trivial_g": "1/64"
+  }
+ },
+ "P10": {
+  "ok": true,
+  "detail": [
+   {
+    "ring": 3,
+    "depth": 8,
+    "max_deleted": 3,
+    "cases": 2048,
+    "ports": 9084,
+    "span2": 1744,
+    "gaps": 0,
+    "fewer_than_four": 0
+   },
+   {
+    "ring": 5,
+    "depth": 12,
+    "max_deleted": 2,
+    "cases": 1486,
+    "ports": 13770,
+    "span2": 3448,
+    "gaps": 0,
+    "fewer_than_four": 0
+   },
+   {
+    "ring": 4,
+    "depth": 6,
+    "max_deleted": 3,
+    "cases": 299,
+    "ports": 560,
+    "span2": 116,
+    "gaps": 0,
+    "fewer_than_four": 0
+   }
+  ]
+ },
+ "_summary": {
+  "met": [
+   "H0",
+   "P1",
+   "P2",
+   "P3",
+   "P4",
+   "P5",
+   "P6",
+   "P7",
+   "P8",
+   "P10"
+  ],
+  "failed": [
+   "P9"
+  ]
+ }
+}

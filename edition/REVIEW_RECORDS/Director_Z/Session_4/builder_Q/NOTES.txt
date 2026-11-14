@@ -1,0 +1,27 @@
+NOTES build_q (builder; same model family as the director). 14 Nov 2026.
+
+1. CARRIER chosen: signed-line digraph with the sign replaced by a fixed gain h in Z_q on the arc (x,L)->(x-1,L),
+   all other gains trivial. gain of a walk = h^(number of L-after-L). J becomes T = multiplication of every gain by h
+   (a cyclic shift of the count vector by h), NOT a multiplication on both daughters. WLOG h generates (events from (0,R)
+   only carry gains in <h>). Daughters of site x: (x+1,R) gets U+V, (x-1,L) gets U+TV.
+2. One-site equation (E_q): F_R(U+V)+F_L(U+TV)=2F_R(U)+2F_L(V).
+   Program onesite_q.py, result onesite_q_result.json (mode 'x'; second run FileExistsError; fresh-dir rerun byte-identical).
+   P1 (h=1, largest n): q=2 n=10 nullity 2; q=3 n=7: 1; q=4 n=6: 2; q=5 n=6: 1; q=6 n=5: 2. All as predicted 1+[q even]. 5 of 5 q qualify (h generator).
+   Every smaller n >= 2 gave the same nullity (no truncation excess observed). Ranks mod 2^61-1; lower bound over Q from P2 (exact).
+   P2 all true. P3 (h not a generator, order r, k=q/r, full multisets): nullity k+[r even]k(k+1)/2 in 7 of 7 cases
+   ((4,2):5,(4,0):4,(6,2):2,(6,3):9,(6,4):2,(3,0):3,(2,0):2). COMPUTED only. Note q=6: n=5<q, the box does not contain N=(1,..,1).
+   No extra solution found: item 5 of the task is empty.
+3. Proof found (THEOREM_Q.tex): G=F-a|.|, periodic under N=(1,..,1); symmetry in U,V gives G(U+TV)=G(U+T^-1 V), hence
+   invariance under (T^2-1)Z^q; quotient is Z_q (q odd; G additive on a finite group => 0) or Z^2/<(q/2,q/2)> (q even;
+   then down to Z and the recursion of the paper).
+   FAILED/abandoned routes, kept: (a) exponential ansatz x^U-1 with x_g+x_{g+h}=2 (a one-parameter family solves the
+   V=e_g instances for q even) -- fails the full equation (forces x=1). (b) trying to copy the paper's proof with C=(1,1):
+   no T-fixed multiset of size 2 for q>2; replaced by N of size q.
+   (c) polarization (assume F polynomial of degree 2): gives the same answer but assumes polynomiality; not used.
+4. Preparation lemma needed: for every site x and all U,V in N^q a position product event with m_S(x,R)=U, m_S(x,L)=V,
+   where the gain is h^(#LL). Director G's note proves something DIFFERENT: his gain group is {+-1} x Z_M, the Z_M part is the
+   site-dependent shift floor(x/2) on both daughters, and only the sign is #LL mod 2. It does not control #LL mod q for q>2.
+   His control word V=RLLRR (one LL more than S, same endpoint) suggests a construction (use V j times); NOT replayed, CONJECTURED.
+   His one-site equation is the case 'h of order 2 in Z_2 x Z_M' plus shift invariance (dimension 2+floor(M/2)); mine with
+   h a generator has dimension 1+[q even]. Both are cases of: radical of the quadratic part contains (1+T)Z^q.
+5. Not done: parts (ii),(iii) of thm:posprod (site-dependent F, unknown factor) for q>2; general four arc gains; Lean.

@@ -1,0 +1,83 @@
+{
+  "per_sign_plan": {
+    "reference_hit_target": 30000,
+    "reference_launch_cap": 41500,
+    "reference_right_inclusive": [
+      14778,
+      15222
+    ],
+    "signal_pilot_launches": 20000,
+    "minimum_pilot_hits": 2071
+  },
+  "maximum_total_launches": 259130,
+  "error_bounds": {
+    "one_sided_reference_boundary": [
+      "0.048888832433",
+      "0.048888832434"
+    ],
+    "pilot_rate_boundary": [
+      "0.048833279045",
+      "0.048833279046"
+    ],
+    "unconditional_full_procedure": [
+      "0.049787662465",
+      "0.049787662466"
+    ]
+  },
+  "interior_rival": {
+    "reference_gain": "3/4",
+    "signal_named_hit_per_launch": "111/1024",
+    "reference_completion_each_sign": [
+      "0.999999999999",
+      "1.000000000000"
+    ],
+    "reference_label_window_each_sign": [
+      "0.989808070846",
+      "0.989808070847"
+    ],
+    "pilot_pass_each_sign": [
+      "0.987087193165",
+      "0.987087193166"
+    ],
+    "all_calibrations_pass": [
+      "0.954581505530",
+      "0.954581505531"
+    ],
+    "science_rejection_on_fresh_data": [
+      "0.999995990229",
+      "0.999995990230"
+    ],
+    "pass_and_reject": [
+      "0.954577677877",
+      "0.954577677878"
+    ]
+  },
+  "source_dependent_autonomy_control": {
+    "reference_gain": "25/34",
+    "signal_named_hit_per_launch": "925/8704",
+    "reference_completion_each_sign": [
+      "0.999999994196",
+      "0.999999994197"
+    ],
+    "reference_label_window_each_sign": [
+      "0.989808070846",
+      "0.989808070847"
+    ],
+    "pilot_pass_each_sign": [
+      "0.896671701856",
+      "0.896671701857"
+    ],
+    "all_calibrations_pass": [
+      "0.787714617068",
+      "0.787714617069"
+    ],
+    "science_rejection_on_fresh_data": [
+      "0.999995990229",
+      "0.999995990230"
+    ],
+    "pass_and_reject": [
+      "0.787711458514",
+      "0.787711458515"
+    ]
+  }
+}

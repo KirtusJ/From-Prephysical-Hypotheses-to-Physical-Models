@@ -6290,5 +6290,18 @@
       "whole_ring.json": "0a7936840384cdacc9d9ccfae05b035868f85cc373de00cae6307c6ba164895c",
       "whole_ring.py": "5e939caf73cb9c731fbdde351da1bec837766823c0380aec130d87a3ee7e392d"
     }
+  },
+  "stationary_hidden_copy_windows": {
+    "scope": "Stationary exogenous site-copy bits and one sharp zero-field launch, on the line or before wraparound. Independent stationary launches are an extra assumption for the 6,100-launch design.",
+    "checker": "check_hidden_copy_memory.py",
+    "result": "results/hidden_copy_memory.json",
+    "lean": "lean/HiddenCopyMemory.lean",
+    "sha256": {
+      "check_hidden_copy_memory.py": "1b087473b63362b0dd10e84d992118b520e3cfb702b087c6e37cba2666971ac7",
+      "results/hidden_copy_memory.json": "d410333a51fe5a80ae82aef3091b3aa803ac4b6b4ff285d4fb71616e410df0c1",
+      "lean/HiddenCopyMemory.lean": "3eabf7dd8e4e102f88c11983e61f5a0999b8fe1bd2b06d2af48469fc08191421"
+    },
+    "checked": "Python and optimized Python agree byte for byte. Both launch rails match the segment product on 255 internal copy strings each. All 511 middle words through width nine have positive mixed differences. Lean 4.19.0 checks the general no-interior numerator and both four-pass mixed differences.",
+    "standing": "The stationary renewal construction, its tail bound and the link from the model to the instrument are argued in the paper. No detector was measured."
   }
 }

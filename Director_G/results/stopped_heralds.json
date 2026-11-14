@@ -1,0 +1,51 @@
+{
+  "scope": "Prospective calibration examples; no measured heralds",
+  "purity": {
+    "false_pass_max": "1/100",
+    "requested_wrong_fraction": "1/10",
+    "risk": "1/20",
+    "required_rate": "10/109",
+    "best_first_herald_lower": "1/20",
+    "best_first_herald_wrong_upper": "19/99",
+    "second_herald_test_at_four": "6286600/141158161",
+    "second_herald_test_at_five": "1073359000/15386239549",
+    "second_by_four_lower_enclosure": [
+      "488057/5000000",
+      "195223/2000000"
+    ],
+    "wrong_upper_from_lower_end": "501327/5368627"
+  },
+  "coverage": {
+    "fixed_target_cases": 180,
+    "switched_target_failure": "292287211993/3814697265625",
+    "switched_target_nominal_risk": "1/20",
+    "one_launch_completion_probability": "1/25",
+    "one_launch_conditional_failure": "1"
+  },
+  "marked_launches": [
+    {
+      "t": 2,
+      "hit": "1/4",
+      "wrong_and_hit": "1/20",
+      "wrong_given_hit": "1/5"
+    },
+    {
+      "t": 3,
+      "hit": "1/4",
+      "wrong_and_hit": "1/20",
+      "wrong_given_hit": "1/5"
+    },
+    {
+      "t": 4,
+      "hit": "3/16",
+      "wrong_and_hit": "3/80",
+      "wrong_given_hit": "1/5"
+    },
+    {
+      "t": 5,
+      "hit": "1/8",
+      "wrong_and_hit": "1/40",
+      "wrong_given_hit": "1/5"
+    }
+  ]
+}

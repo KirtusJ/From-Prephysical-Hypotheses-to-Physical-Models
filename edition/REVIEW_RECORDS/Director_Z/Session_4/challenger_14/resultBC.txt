@@ -1,0 +1,48 @@
+B1 N=1: MET column sums {2}
+B2 N=1: MET charpoly k*(k - 2)*(k**2 - 2); real roots [-1.414214, 0, 1.414214, 2]
+B3 N=1: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 1.11e-16; at k=2: 1.9999999999999996
+B4 N=1: MET column sums {2}
+B1 N=2: MET column sums {2}
+B2 N=2: MET charpoly k**2*(k - 2)*(k + 2)*(k**2 - 2)**2; real roots [-2, -1.414214, 0, 1.414214, 2]
+B3 N=2: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 1.16e-15; at k=2: 2.82842712474619
+B4 N=2: MET column sums {2}
+B1 N=3: MET column sums {2}
+B2 N=3: MET charpoly k**3*(k - 2)*(k + 1)**2*(k**2 - 2)*(k**4 - k**2 + 4); real roots [-1.414214, -1, 0, 1.414214, 2]
+B3 N=3: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 5.83e-16; at k=2: 3.464101615137755
+B4 N=3: MET column sums {2}
+B1 N=4: MET column sums {2}
+B2 N=4: MET charpoly k**6*(k - 2)*(k + 2)*(k**2 - 2)**2*(k**2 - 2*k + 2)*(k**2 + 2*k + 2); real roots [-2, -1.414214, 0, 1.414214, 2]
+B3 N=4: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 3.44e-15; at k=2: 3.999999999999999
+B4 N=4: MET column sums {2}
+B1 N=5: MET column sums {2}
+B2 N=5: MET charpoly k**5*(k - 2)*(k**2 - 2)*(k**2 + k - 1)**2*(k**8 - 3*k**6 + 9*k**4 - 12*k**2 + 16); real roots [-1.618034, -1.414214, 0, 0.618034, 1.414214, 2]
+B3 N=5: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 8.19e-16; at k=2: 4.47213595499958
+B4 N=5: MET column sums {2}
+B1 N=6: MET column sums {2}
+B2 N=6: MET charpoly k**6*(k - 2)*(k - 1)**2*(k + 1)**2*(k + 2)*(k**2 - 2)**2*(k**4 - k**2 + 4)**2; real roots [-2, -1.414214, -1, 0, 1, 1.414214, 2]
+B3 N=6: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 6.16e-15; at k=2: 4.898979485566356
+B4 N=6: MET column sums {2}
+B1 N=7: MET column sums {2}
+B2 N=7: MET charpoly k**7*(k - 2)*(k**2 - 2)*(k**3 + k**2 - 2*k - 1)**2*(k**6 - 3*k**5 + 2*k**4 + k**3 + 4*k**2 - 12*k + 8)*(k**6 + 3*k**5 + 2*k**4 - k**3 + 4*k**2 + 12*k + 8); real roots [-1.801938, -1.414214, -0.445042, 0, 1.24698, 1.414214, 2]
+B3 N=7: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 9.71e-16; at k=2: 5.291502622129181
+B4 N=7: MET column sums {2}
+B1 N=8: MET column sums {2}
+B2 N=8: MET charpoly k**10*(k - 2)*(k + 2)*(k**2 - 2)**4*(k**2 - 2*k + 2)*(k**2 + 2*k + 2)*(k**4 - 2*k**2 + 4)**2; real roots [-2, -1.414214, 0, 1.414214, 2]
+B3 N=8: MEASURED MET max |entry sum| over eigenvectors with real k!=2: 1.27e-14; at k=2: 5.6568542494923815
+B4 N=8: MET column sums {2}
+C line rule a1: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule a2: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule b_lam2: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule b_lam1/3: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule c: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule iv_a: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C line rule iv_c: MET events 145814 (all subsets T=0..4: 65814; samples T=5,6: 80000), violations 0
+C-a3: MEASURED MET x(1,0)->-inf as x->-inf; -(lam+^x) at m=(0,1) ->-inf as x->+inf; lam-^x at odd x negative, growing as x->-inf
+C-c E0 factor sqrt2: MET pairs 2401, violations 0
+C-iv ring N=1: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+C-iv ring N=2: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+C-iv ring N=3: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+C-iv ring N=4: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+C-iv ring N=5: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+C-iv ring N=6: MET events 65814, violations {'iv_a': 0, 'iv_c': 0}
+COUNTS {'met': 38, 'failed': 0, 'measured': 9}

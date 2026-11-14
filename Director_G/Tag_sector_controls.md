@@ -116,3 +116,134 @@ This bias persists at large depth. Let \(m_n^\pm\) be the tag-one parent mass an
 Joint differentiability matters even if independent sector signs are unobservable. For \(S=u^2+v^2+a^2+b^2>0\), take \(K=1/2+\operatorname{clip}((uv-|ua|)/S,-1/2,1/2)\), with ordinary clipping to the indicated interval. This rule is Lipschitz on the normalized field sphere and agrees with every occupied pure-tag response. Its two edge fractions are exactly \(1/2\) at every depth. The absolute value introduces a cusp at the pure right input. All sign-control results here are predictions from the stated instruments and laws.
 
 The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, and checks the labels in a varying spacetime frame. It verifies the tick-eight and tick-nine differences, the sign and matched-identity panels, and the weighting example. The stored 464 cells across five settings and 24 four-tick panels also give the larger-norm probabilities by checked equality to the autonomous column. [Standard-library checker](check_tag_sector_controls.py) · [Exact four-tick panels](results/tag_sector_controls.json)
+
+## Testing a curvature cap with a finite number of launches
+
+At the tick-eight parent \((6,b=1)\), the pure right fraction is \(h=49/74\). If the spectator curvature is at most six in absolute value on the specified segment, the equal-sign mean \(\mu=(q_++q_-)/2\) must satisfy \(\mu\ge h-1/12=257/444\). This gives a one-sided test against the second analytic rule, \(c_2\). At tick nine that rule assigns \(40/512\) to \((7,R,1)\) and \(34/512\) to \((5,L,1)\) under either sign. Its right fraction among these two ports is \(p_1=20/37\), and the probability of reaching either is \(r=37/256\). The first rule, \(c_1\), lies inside the one-sided null.
+
+Fix the following sampling rule before collecting data. Each launch uses a fresh preparation. Let \(r_s>0\) be the probability of a named hit under sign \(s\), and \(q_s\) the probability of right given that hit. These probabilities must be stable across independent launches at that sign.
+
+1. Draw a fair, independent sign. Use it for successive launches until either named port fires. Record every launch, its setting and its outcome. All other outcomes consume one launch and keep the sign fixed.
+2. Count the named hit as right or left. Draw a fresh sign for the next requested hit. Stop upon recording 1,839 hits or using 13,549 launches, including a hit on the last launch.
+3. With 1,839 hits, reject \(\mu\ge257/444\) if at most 1,029 went right. With fewer hits, report a timeout and count it as a non-rejection in the full set of runs.
+
+To calculate the null error, extend each possible run beyond the deadline until all requested hits have occurred. Given sign \(s\), the probability that the first hit falls on launch \(j\) and is right equals \((1-r_s)^{j-1}r_s q_s\). Summing over \(j\) and averaging the two signs gives \(\mu\). Independent repetitions make the right count in the extended run binomial with parameters \(m=1839\) and \(\mu\). Every rejection observed by the deadline is also a rejection in its extension. Its probability is therefore at most \(F_{m,p_0}(k)\), where \(F_{m,p}(k)=\Pr\{\mathrm{Bin}(m,p)\le k\}\), \(p_0=257/444\) and \(k=1029\). This lower tail decreases with \(p\). The bound holds even when completion and the right count are dependent. [Binomial probabilities, NIST](https://itl.nist.gov/div898/handbook/eda/section3/eda366i.htm)
+
+Under \(c_2\), both signs give the same arrival rate and the same right fraction. The wait for each hit is then independent of its label. With \(B=13549\) the timeout probability is \(F_{B,r}(m-1)\), and the unconditional rejection probability is \([1-F_{B,r}(m-1)]F_{m,p_1}(k)\).
+
+| Quantity | Probability (rounded) |
+|---|---:|
+| Upper bound on false rejection over the one-sided null | 0.049532549250 |
+| Rejection under \(c_2\) with unlimited launches | 0.951525623912 |
+| Timeout under \(c_2\) with 13,549 launches | 0.001597098026 |
+| Rejection under \(c_2\) with 13,549 launches, including timeouts | 0.950005944216 |
+| Rejection under \(c_2\) with 13,548 launches, including timeouts | 0.949988732445 |
+
+For this hit count and cutoff, 13,549 is the first launch budget to achieve 95% power. Raising the cutoff by one would raise the unrestricted boundary tail to 0.054539198659. The checker evaluates the tails as rational numbers before comparing them with 0.05 and 0.95. [Exact enclosures](results/tag_shot_budget.json) · [Reproduce the calculations](check_tag_shot_budget.py) · [Lean proof of the deadline and timeout rules](lean/TagShotBudget.lean)
+
+**What goes wrong if the sign is redrawn after a miss?** Drawing a fair sign on every raw launch and pooling hits gives the right fraction \((r_+q_+ + r_-q_-)/(r_++r_-)\). For a control within the probability null, take \(q_\pm=h\mp1/6\), the two endpoint values of \(g(1/6,z)=h-z\), and arrival probabilities \(r_+=1/4,\ r_-=1/32\). The equal-sign mean is the pure value \(49/74\), yet the pooled mean is \(532/999\). With the same deadline and cutoff, redrawing on every launch would reject this null with probability 0.942229063259. The example allows the arrival rates to vary as nuisance parameters. Conditioning even the prescribed procedure on prompt completion can also distort the mean. With only two launches to get two hits in this example, the conditional probability that both hits are left is \((1-532/999)^2\). The corresponding unlimited probability is \((1-49/74)^2\).
+
+The numerical power uses the two **recorded** port probabilities under \(c_2\). A common loss factor for right and left within a setting preserves \(q_s\) and lowers its arrival rate. Unequal right and left efficiencies can change \(q_s\) itself. Applying the stated threshold to physical counts requires the readout to preserve the right fraction, matched sign operations, and independent preparations. A rejection challenges the joint calibration and curvature assumptions. This design supplies no measurement of the curvature, detector efficiencies or classical limit.
+
+### Randomly exchanging the two detectors
+
+Give the two named daughters a switch after tick nine that can send either daughter to either counter. Keep the physical sign fixed through misses as above. On **every launch**, including retries, draw a second, independent fair bit for the switch. Log this bit and the physical counter that fired, then decode the original port. Assume faithful routing with equal transmission, no false counts and stable counter efficiencies \(e_A,e_B\) that depend only on which counter receives the daughter. The switch must preserve the two incoming port probabilities. An optical receiver using a related random assignment has been tested in a different apparatus. [Taylor et al., Phys. Rev. Applied 25, 054029 (2026)](https://doi.org/10.1103/7zhl-5vv1)
+
+Let \(r_s\) now denote the probability that either daughter reaches the switch. Each port has probability \(\bar e=(e_A+e_B)/2\) of being counted, with any common transmission loss absorbed into the efficiencies. At held sign \(s\), the decoded right and left probabilities per launch are \(r_s q_s\bar e\) and \(r_s(1-q_s)\bar e\). If \(r_s\bar e>0\), the first recorded hit is right with probability \(q_s\). The 1,029-right cutoff therefore keeps the previous false-rejection bound even with an unknown counter efficiency ratio. Choosing the switch setting just once per requested hit gives a different result. For \(q_s=3/4,\ e_A=1,\ e_B=1/2\), the two settings separately give conditional right fractions \(6/7\) and \(3/5\). Their equal mean is \(51/70\).
+
+Under \(c_2\) the named-hit probability becomes \((37/256)\bar e\). For example, with efficiencies \(1\) and \(1/2\) and unit upstream transmission it is \(111/1024\). At the same 1,839-hit target and cutoff, unconditional power is 0.950012511323 with 18,089 launches and 0.949999933316 with 18,088. Thus 18,089 is the first budget attaining 95% for that example. Arbitrarily small positive \(\bar e\) makes the completion probability arbitrarily small at any fixed budget. [Exact arithmetic and adjacent budgets](results/tag_shot_budget.json)
+
+**Loss before the switch.** The following two models predict the same switch-tagged counter records, including misses, for these two ports at both signs. Transmission here is a separate nuisance parameter under each model. Missed and other outcomes share one recorded category.
+
+| Model | True (right, left) per 512 launches in expectation | Transmission (right, left) | Arriving at switch per 512 in expectation |
+|---|---:|---:|---:|
+| Sector autonomy | \((49,25)\) | \((40/49,1)\) | \((40,25)\) |
+| Analytic rule \(c_2\) | \((40,34)\) | \((1,25/34)\) | \((40,25)\) |
+
+The pair of switch inputs has the same distribution under either model. The recorded laws consequently agree even if the orientation, the receiving counter and the launch of every hit are retained. Separately observing upstream losses or calibrating either transmission would give additional evidence.
+
+**How accurately must the paths be matched?** Suppose only that each sign's effective right-to-left throughput ratio \(\lambda_s\) lies in \([1/\kappa,\kappa]\), with \(\kappa\ge1\). Its recorded fraction is \(f_\lambda(q)=\lambda q/(1-q+\lambda q)\). This function is nondecreasing in \(\lambda\), and \(f_{1/\kappa}(q)=q/[\kappa-(\kappa-1)q]\) is increasing and convex in \(q\). For the enlarged null \((q_++q_-)/2\ge257/444\), Jensen's inequality gives a recorded equal-sign mean of at least \(257/(257+187\kappa)\). The sign-even rival has recorded mean at most \(20\kappa/(17+20\kappa)\). Equal true fractions at both signs and endpoint throughput ratios attain each bound. The two recorded means are strictly separated exactly when
+
+\[
+  \kappa < \sqrt{257/220}\ \simeq\ 1.080825 .
+\]
+
+At equality the construction gives identical sign-conditioned right fractions. Larger uncertainty intervals contain the same construction. This boundary concerns the two **mean predictions**, allowing each hypothesis its own admissible nuisance values. A finite test with residual mismatch would have to use the lower null fraction and recompute its power for the specified arrival rates. The 1,029 cutoff and the budgets above use \(\lambda_s=1\). [Proof of counter averaging and the threshold comparison](lean/TagShotBudget.lean)
+
+### A finite test with a residual throughput ratio of 1.05
+
+Suppose a separate calibration bounds each sign's right-to-left throughput ratio between \(20/21\) and \(21/20\). For the power calculation also assume that, under \(c_2\), each sign gives a recorded named hit with probability at least \(a=1/10\) per raw launch. These are prospective design values. The throughput bound gives a recorded equal-sign mean of at least \(L=5140/9067\) under the one-sided null and at most \(U=21/38\) under \(c_2\).
+
+Use the sign and detector-switch rules above. Stop at \(m=13{,}300\) named hits or \(B=136{,}130\) launches. Include a hit on the last launch. Reject the one-sided null when the target is reached with at most \(k=7{,}445\) decoded right hits. A timeout counts as a non-rejection.
+
+| Quantity | Probability (rounded) |
+|---|---:|
+| Upper bound on false rejection | 0.049787662465 |
+| Lower bound on rival power with unlimited launches | 0.952142761658 |
+| Upper bound on rival timeout at 136,130 launches | 0.002249666528 |
+| Worst-case rival power at 136,130 launches, including timeouts | 0.950000757956 |
+| Worst-case rival power at 136,129 launches, including timeouts | 0.949994710825 |
+
+The null bound follows from the unrestricted lower tail \(F_{m,L}(k)\). A deadline alone cannot rescue the earlier cutoff under this mismatch. In the enlarged probability null, take both recorded right fractions equal to \(L\) and both hit rates equal to \(1/10\). The old 1,029-right cutoff at 1,839 hits and 18,089 launches gives false rejection probability 0.062389375014.
+
+**Power when the signs have unequal hit rates.** For the \(i\)-th planned hit with sign \(s\), write \(a_s\) for its recorded hit probability per launch and \(p_s\) for its recorded right fraction. The wait \(G_i\) (in raw launches) and the label are independent conditional on \(s\). Their joint probability for a right hit at launch \(j\) is \((1-a_s)^{j-1}a_sp_s\). The fair sign draws make the unrestricted labels independent Bernoulli draws with mean \(\bar p=(p_++p_-)/2\). A fast sign can favor one label, so the completed sample can have a different distribution.
+
+For each requested hit, use a separate stream of independent uniforms, independent of the signs and labels. The first uniform at most \(a_s\) gives the actual wait in this construction. The first at most \(a\) gives a reference wait \(G_i^*\). Since \(a_s\ge a\), each \(G_i\le G_i^*\). Whenever the reference waits fit the budget, so do the actual waits. Reference completion is independent of all actual labels. For any fixed \(m,k,B\) and \(\bar p\le U\), the rejection probability is therefore at least
+
+\[
+  [1-F_{B,a}(m-1)]\, F_{m,U}(k).
+\]
+
+Both signs can attain this bound simultaneously. For the rival's incoming probabilities \(40/512\) and \(34/512\), effective right and left detection efficiencies \(336/475\) and \(64/95\) give total recorded rate \(1/10\) and conditional right fraction \(21/38\). Hence 136,130 is the smallest qualifying budget for this hit target and cutoff. The ratio bound alone allows both rates to approach zero. [Exact bounds and controls](results/tag_shot_budget.json) · [Arithmetic checker](check_tag_shot_budget.py) · [Lean proof of the deadline comparison](lean/TagShotBudget.lean)
+
+An arithmetic average of the two hit rates cannot replace the per-sign floor. Take rates \(19/200\) and \(21/200\), right fraction \(21/38\) at both signs, and allow two launches for one hit. Completion has probability \(1-[(181/200)^2+(179/200)^2]/2=7599/40000\). With a left hit required to reject, power is \(129183/1520000\), strictly below the \(17/200\) predicted by substituting the average rate \(1/10\). For an experiment, the throughput and rate bounds would need their own evidence. The table treats them as given.
+
+### Calibrating the paths before the curvature test
+
+The following prospective protocol makes a single decision using separate reference, pilot and science launches. At each physical sign, send a reference through the two named daughter inputs **before** any path loss. For each raw reference launch a trusted fair chooser sends one event into exactly one input. Redraw the chooser and the independent downstream counter switch on every launch, including misses. Record the chosen input, switch, counter and misses. A detected reference's input label must be read faithfully. The reference must see the same right-to-left efficiency ratio as the signal at that sign, including any dependence on mode, timing or routing. A common factor affecting only the reference changes its completion rate. Keep the signal preparation and detection law fixed between pilot and science. All these calculations assume independent fresh launches at the specified setting.
+
+| Stage | Exposure | Requirement to proceed or reject |
+|---|---|---|
+| Reference, separately for each sign | First 30,000 detections within 41,500 reference launches | Between 14,778 and 15,222 detected inputs were right, inclusive |
+| Signal pilot, separately for each sign | 20,000 ordinary signal launches with the sign fixed | At least 2,071 recorded named hits |
+| Fresh science sample after all four checks pass | First 13,300 named hits within 136,130 launches | Reject the curvature bound if at most 7,445 hits were right |
+
+Both reference and science deadlines include the last allowed launch. A failed calibration or timeout gives an inconclusive result and counts as a non-rejection. Register all attempts. A new attempt after an inconclusive result would need a rule for repeated testing. The upper exposure for this one experiment, including both signs, is 259,130 launches.
+
+**Why the full decision controls false rejection.** If the reference ratio is \(\lambda\), the fraction of its detections labeled right is \(\theta=\lambda/(1+\lambda)\). The ratio interval \([20/21,21/20]\) corresponds to \([20/41,21/41]\). At the lower boundary the probability of reaching 14,778 or more right labels in an unlimited sample of 30,000 is 0.048888832433. Reflection gives the same tail for the upper boundary. Monotonicity bounds an erroneous pass beyond either edge, and requiring completion before the deadline can only reduce it. In the signal pilot, the chance of reaching 2,071 hits in 20,000 launches at rate \(1/10\) is 0.048833279046. Smaller rates give smaller probabilities.
+
+If either path ratio lies outside the proposed range, declaring a rejection requires that particular reference to pass. A declaration with an incorrectly certified rate similarly requires the corresponding pilot to pass. When the ratios are within range and the physical curvature null holds, a declaration requires the science sample to reject, with probability at most 0.049787662466. Taking the largest applicable bound gives the same 0.049787662466 upper bound on an erroneous declaration. This is an intersection–union test. Its probability bound applies to all attempted experiments, including calibration failures. [Berger and Hsu, Theorem 1](https://www.public.asu.edu/~rlberge1/papers/statsci96.pdf)
+
+**Power including calibration.** At one specified interior point, take \(c_2\) and equal effective efficiencies \(3/4\) on both paths for both signs and sources. The signal hit probability is \(111/1024\) and its conditional right fraction is \(20/37\). Each completed reference has the same fair binomial label law as the unrestricted first 30,000 detections, since the waits and labels are independent within a fixed sign. All four calibration checks pass with probability **0.954581505531**. The fresh science sample rejects with probability **0.999995990230**. Their product gives **0.954577677878** for passing and rejecting in one attempt. If either sign's true hit rate is exactly \(1/10\), that signal pilot limits the overall rejection probability to at most 0.048833279046, even when the rival is true. [Exact enclosures](results/tag_calibration_counts.json) · [Reproduce the counts](check_tag_calibration_counts.py)
+
+**A reference that responds differently to the signal.** Use the two existing, sign-even models and fixed tick-eight prefix. In the \(c_2\) experiment all right and left efficiencies are \(25/34\). In a second experiment the signal obeys sector autonomy, so its spectator curvature is zero and its incoming right and left masses are \(49/512\) and \(25/512\). Give the reference the same efficiencies \(25/34\), but give the autonomous *signal* efficiencies \(500/833\) on the right and \(1\) on the left. The two signals then have identical recorded right and left probabilities, \(125/2176\) and \(25/512\). Both have hit rate \(925/8704\) and recorded right fraction \(20/37\). Place these losses before an ideal downstream switch and counters. All reference, pilot and science logs then agree in law in the two experiments, including the chosen reference inputs, switches, misses and stopping times. The probability of passing all checks and rejecting is **0.787711458514** in both. This is a false rejection in the zero-curvature experiment. The source-dependent right loss violates precisely the transfer premise.
+
+## Bounding the right fraction from signal records alone
+
+An instrument that identifies some of the **other** tick-nine endpoints can bound the true right fraction using only signal launches. It must record every launch and distinguish a verified outside endpoint from a miss. Name the four possible records certified right \((7,R,1)\), certified left \((5,L,1)\), certified outside the named pair, and unresolved. Each certificate must be correct. Any genuine endpoint may go unresolved, with probabilities that can depend on the endpoint and sign. The outside record requires positive evidence of another endpoint. Silence at the two named detectors belongs in the unresolved category.
+
+At one sign let \(a,b,c,u\) be the probabilities of these four records in order. If the true pair mass is positive, \(1-c>0\). The sharp interval for the true right fraction given the pair is
+
+\[
+ \frac{a}{1-c}\ \le\ q\ \le\ \frac{a+u}{1-c}
+      =1-\frac{b}{1-c}.
+\]
+
+The lower endpoint assigns every unresolved launch to true left. The upper endpoint assigns every one to true right. Each assignment is realizable with faithful reporting and suitable efficiencies. Dividing the unresolved mass between the two named ports attains every intermediate fraction. Allowing some of that mass to be outside cannot enlarge the interval, since the true pair mass is at most \(1-c\) and the true right and left masses are at least \(a\) and \(b\). Averaging the two sign intervals gives the sharp interval for their equal-weighted mean when each sign's reporting law is unrestricted. This uses the usual missing-data principle of considering all completions consistent with the observed law. [Manski (2005)](https://doi.org/10.1016/j.ijar.2004.10.006)
+
+**A finite test that keeps unresolved launches.** Draw a fresh fair sign. Hold it while an outside endpoint is certified. At the first other record, score a certified left as 0 and either a certified right or an unresolved launch as 1. Draw the next sign only after a score. Log all launches and their original categories. Require fresh resets such that the next launch has the specified sign's law conditional on the entire preceding history.
+
+At sign \(s\), a launch produces a score with probability \(d_s=1-c_s>0\). An unrestricted score equals 1 with probability \(p_s=1-b_s/d_s\), the upper endpoint above. Thus the first \(m\) scores in the unlimited experiment are independent Bernoulli draws with parameter \(\bar p=(p_++p_-)/2\). Under the curvature null, \(\bar p\ge(q_++q_-)/2\ge257/444\). A rejection by a fixed deadline is also a rejection in the unlimited experiment. Its lower-tail probability is therefore bounded without specifying certification efficiencies, even when the score and the time it takes to obtain it are dependent.
+
+Retain \(m=4{,}000\) scores and reject if at most 2,263 are ones. Allow at most 28,122 raw launches, including a score on the last launch. A timeout is a non-rejection. The upper bound on false rejection is 0.048670116842. For a power calculation, take \(c_2\) with true masses \((40,34,438)/512\) and certification probabilities \(255/256\) for both left and outside at both signs. Right certification can take any value. Then \(d=9691/65536\) and \(p=5356/9691\) for either sign. The wait and score are independent here. Unconditional power is \([1-F_{B,d}(3999)]F_{4000,p}(2263)\). It is **0.950019928679** at \(B=28{,}122\) and **0.949994230736** one launch earlier. This is the first qualifying deadline for the specified target, cutoff and reporting law. [Exact calculations](results/tag_endpoint_bounds.json) · [Reproduce the bounds](check_tag_endpoint_bounds.py) · [Formal inequalities](lean/TagEndpointBounds.lean)
+
+**How many outside endpoints must be resolved?** If left and outside have a common certification probability \(e\) under \(c_2\), the upper right fraction is \((512-472e)/(512-438e)\). It falls strictly below \(257/444\) exactly when \(e>2816/2853\), about 98.7031%. This is a separation threshold for the observed probabilities. The finite example uses \(e=255/256\). If the instrument certifies no outside endpoints, even perfect reporting at both named detectors leaves an upper right fraction of \(239/256\) under \(c_2\).
+
+**What can remain hidden even at known pair mass?** The following logs are identical across the indicated models at each sign. Masses are in units of \(1/512\). All have true named-pair mass \(74/512\).
+
+| Models | Common log (right, left, outside, unresolved) | Fraction of all launches certified |
+|---|---|---:|
+| \(c_2\) and \(c_1\) | \((40,31,438,3)\) | \(509/512\) |
+| \(c_2\) and zero-curvature sector autonomy | \((40,25,438,9)\) | \(503/512\) |
+
+In each row the rival hides left outcomes and the other model hides right outcomes. The first row crosses the necessary probability threshold since \(40/74<257/444<43/74\). The second row includes a model with exactly zero spectator curvature. At known pair mass \(37/256\), the smallest unresolved mass per sign that can hide a shift from \(c_2\) to the same threshold fraction at both signs is \(17/3072\). In units of \(1/3072\), the two true triples are \((240,204,2628)\) and \((257,187,2628)\), and both can report \((240,187,2628,17)\). The true right masses differ by 17, so any common log must leave at least that much unresolved. These witnesses explain why an overall certification percentage by itself cannot justify the power calculation.
