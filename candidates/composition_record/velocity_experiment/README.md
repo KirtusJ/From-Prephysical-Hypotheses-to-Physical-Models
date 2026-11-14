@@ -4,6 +4,8 @@ Run nine Hadamard walk ticks and record position after ticks 3, 6 and 9. Apply a
 
 ## A classical position record that preserves a qubit
 
+A six-qubit source can be routed at release to either the memory or its own inverse. The revival probability bounds how well a classical replacement could exploit a hidden source record. [Sharp bound, counterfeit and counted-launch test](a_source_revival_bounds_hidden_records.md)
+
 Two private source writes followed by a coherent return prepare four rail states at one site. Seven further writes and a matching position probe give a four-state quantum-memory test. The coherent and deliberately dephased preparations have identical downstream position statistics before that probe. [Source, recovery benchmark, control circuit and full simulated counts](four_preparations_at_one_site.md)
 
 Two records can leave the walker at the same site yet yield clockwise probe probabilities of $729/754$ and $25/754$ when their order is switched. Closed records also implement a dense family of real rail gates. At fixed time the final address alone loses all rail entanglement with a reference by write seven. One of three messages computed from the complete path can preserve a Bell fidelity above $0.64$ at write 32. [Position-order probe and stopped gate](closed_position_gates.md) · [Entanglement and the optimal message alphabet](recovering_a_qubit_from_position_messages.md)

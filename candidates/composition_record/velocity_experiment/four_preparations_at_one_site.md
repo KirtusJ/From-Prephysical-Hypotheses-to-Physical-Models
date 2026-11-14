@@ -38,7 +38,9 @@ $$
 \frac34+\operatorname{TV}(q,\mathrm{uniform})+\sqrt{\bar e}.
 $$
 
-This bound uses the triangle inequality and concavity of the square root. It assumes that the tested and bypassed launches use the same source ensemble and that the memory has no further source information. Interleaving the bypass and memory trials with a choice hidden from the source gives a way to check that assumption. Actual sampling would require upper confidence bounds for the calibration errors and a lower bound for the memory score. An ideal coherent bypass scores one, while the extra-copy bypass below scores $3/4$. The same [circuit exporter](four_state_circuit.py) accepts a zero block count for either arm. [Fuchs and van de Graaf on trace distance and fidelity](https://arxiv.org/abs/quant-ph/9712042)
+This bound uses the triangle inequality and concavity of the square root. It assumes that the tested and bypassed launches use the same source ensemble and that the memory has no further source information. A private random routing choice lets both arms sample the same incident ensemble. The bypass sees only the label-conditional rail states. An extra record that identifies the basis with reliability $g$ leaves those states unchanged and lets a replacement device score $(1+g)/2$. A separate six-qubit version tests source coherence at the release cut. [Claude’s cross-review and counterexample](../../../Director_Z/cross_review/subagent_xr259_four_preparations/REPORT.md) · [Six-qubit revival and sharp leakage bound](a_source_revival_bounds_hidden_records.md)
+
+Actual sampling would require upper confidence bounds for the calibration errors and a lower bound for the memory score. An ideal coherent bypass scores one, while the extra-copy bypass below scores $3/4$. The same [circuit exporter](four_state_circuit.py) accepts a zero block count for either arm. [Fuchs and van de Graaf on trace distance and fidelity](https://arxiv.org/abs/quant-ph/9712042)
 
 ### Recovering the sign
 
