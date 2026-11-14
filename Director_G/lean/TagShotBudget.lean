@@ -66,4 +66,19 @@ theorem coupled_deadline (waits : List (Nat × Nat)) {budget : Nat}
     simp only [List.map_cons, List.sum_cons]
     exact Nat.add_le_add (h w (by simp)) (ih (fun x hx => h x (by simp [hx])))
 
+/-- A fair source sends the same weight to either arm. After clearing the positive
+    binomial denominators, the inclusive 20/41 and 21/41 reference bounds are
+    equivalent to the 20/21 and 21/20 bounds on the right-to-left response ratio. -/
+theorem fair_reference_bounds (right left : Nat) :
+    (20 * (right + left) ≤ 41 * right ∧ 41 * right ≤ 21 * (right + left)) ↔
+    (20 * left ≤ 21 * right ∧ 20 * right ≤ 21 * left) := by omega
+
+/-- Finite acceptance sets with a common denominator. A release that requires
+    every component to pass has at most the weight of any one limiting component. -/
+theorem intersection_bound {Ω : Type} (weight : (Ω → Prop) → Nat)
+    (mono : ∀ (s t : Ω → Prop), (∀ x, s x → t x) → weight s ≤ weight t)
+    {release component : Ω → Prop} {cap : Nat} (included : ∀ x, release x → component x)
+    (limit : weight component ≤ cap) : weight release ≤ cap :=
+  Nat.le_trans (mono release component included) limit
+
 end TagShotBudget

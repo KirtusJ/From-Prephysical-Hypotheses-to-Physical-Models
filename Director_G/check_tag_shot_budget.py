@@ -12,6 +12,8 @@ from pathlib import Path
 
 HITS, CUTOFF, LAUNCHES = 1839, 1029, 13549
 SIZE, POWER = F(1, 20), F(19, 20)
+RESIDUAL_HITS, RESIDUAL_CUTOFF, RESIDUAL_BUDGET = 13300, 7445, 136130
+RESIDUAL_RATIO, RESIDUAL_RATE_FLOOR = F(21, 20), F(1, 10)
 
 
 def require(condition, description):
@@ -142,8 +144,8 @@ def detector_exchange(right, left, boundary, label_power):
 
 def residual_design(boundary, rival):
     """Bound rejection for unequal sign-specific arrival rates under a residual mismatch."""
-    kappa, rate_floor = F(21, 20), F(1, 10)
-    hits, cutoff, budget = 13300, 7445, 136130
+    kappa, rate_floor = RESIDUAL_RATIO, RESIDUAL_RATE_FLOOR
+    hits, cutoff, budget = RESIDUAL_HITS, RESIDUAL_CUTOFF, RESIDUAL_BUDGET
     null_min, rival_max = tilted(boundary, 1 / kappa), tilted(rival, kappa)
     require((null_min, rival_max) == (F(5140, 9067), F(21, 38)), "recorded mean bounds")
     size = binomial_cdf(hits, cutoff, null_min)
