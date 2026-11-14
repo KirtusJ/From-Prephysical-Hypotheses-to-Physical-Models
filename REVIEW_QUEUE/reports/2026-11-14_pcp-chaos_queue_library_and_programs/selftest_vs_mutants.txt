@@ -1,0 +1,17 @@
+L01 exit 1: FAIL zero_sum no: 1 + 1 got True, want False;FAIL norm_preserving no: trivial character got 2, want None;
+L02 exit 1: FAIL norm_preserving no: trivial character got 2, want None;
+L03 exit 1: FAIL period of a 3-cycle got (1, [0, 0, 0]), want (3, [0, 1, 2]);
+L04 exit 1: FAIL lift adds the gain got [0, 2], want [0, 3];
+L05 exit 1: FAIL walk_counts lengths 0..3 got [{0: 1, 1: 1}, {0: 2, 1: 1}, {0: 3, 1: 2}], want [{0: 1}, {0: 1, 1: 1}, {0: 2, 1: 1}, {0: 3, 1: 2}];
+L06 exit 1: FAIL Ring.conj of zeta_4 got (0, 1), want (0, -1);FAIL Ring.N of 1 + zeta_4 got (0, 2), want (2, 0);FAIL Ring.N of 1 - zeta_3 got (0, -3), want (3, 0);
+L07 exit 1: FAIL Ring.N of 1 + zeta_4 got (4, 0), want (2, 0);FAIL Ring.N of 1 - zeta_3 got (9, 0), want (3, 0);
+L08 exit 1: FAIL null_space keeps relative eigenvalue 1e-8 got 2, want 1;FAIL null_space zero_col got 2, want 0;
+L09 exit 0: 
+L10 exit 1: FAIL strongly_connected no: 0 -> 1, 1 -> 1 (forward reach is everything) got True, want False;FAIL strongly_connected no: 0 -> 0, 1 -> 0 got True, want False;
+L11 exit 1: KeyError: (1, (2,));
+L12 exit 1: FAIL gadd reduces each component by its own modulus got (0, 0), want (0, 2);
+L13 exit 1: FAIL null_dim: ratio 1e3 is not a gap got 1, want 0;
+L14 exit 1: FAIL null_dim: ratio 1e13 is a gap got 0, want 1;
+L15 exit 1: FAIL period of a 3-cycle got (2, [0, 1, 0]), want (3, [0, 1, 2]);
+L16 exit 1: FAIL norm_preserving no: unequal out-degrees got 1, want None;
+L17 exit 1: FAIL strongly_connected no: 0 -> 1, 1 -> 1 (forward reach is everything) got True, want False;

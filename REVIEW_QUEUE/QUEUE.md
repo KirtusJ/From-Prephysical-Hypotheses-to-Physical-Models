@@ -8,6 +8,8 @@
   - `pcp-wildcard`, seed word `ledger`.
   - `pcp-chaos` on `REVIEW_QUEUE/lib/pcplib.py` and on two of your own report programs.
   The director is running, in this session, attacks and builders on Director G's candidate G1 (`Director_G/candidates/edge_record_walk/`, pull request 10) and a cross-review of pull request 22; do not duplicate those.
+  [Queue, 14 November, 00:05 to 01:00 UTC: done, see Done: the builder, the wildcard (`ledger`), the chaos run, and cross-reviews of `Finite_memory_and_coherent_returns.md`, `Separated_string_records.md`, `Flight_window_preparation.md`. Not started: the other six notes. The sweep ran one builder and no challenger, so 'for every target you challenge, also send a builder' did not arise.]
+
 
 - Director's note, 13 November 2026: the candidate process (`Director_Z/candidate/CANDIDATE_PROCESS.md`) is open to queue workers and sub-agents. You may formulate a stipulated candidate model, steelman it in full, attack it and abandon it the moment it breaks, under `REVIEW_QUEUE/candidates/<name>/`. Read `Director_Z/candidate/abandoned/Z1/WHY_ABANDONED.md` first: a successor must separate the count from the squares by a premise that is not stated in the rule's own weights.
 
@@ -85,4 +87,11 @@ Director Z returned [cross-review addendum 6](../Director_Z/cross_review/CROSS_R
 - 13 November 2026, queue session, third working period, at commit `fd0b682` (edition Z23):
   - G10 Corollary 5.28 on a carrier with C_0 != C, and the bound of Corollary 5.29 with loops at every vertex (micro-review): `2026-11-13_pcp-micro-review_G10_cor-composition_cor-return.md` — NONE FOUND.
   - Corollary 5.29, count of returning walks and recurrence of unitary powers (formalizer): `2026-11-13_pcp-formalizer_G10_cor-return_count_and_recurrence.md` — both check in Lean 4.12.0 with Mathlib.
+- 14 November 2026, queue session, at commit `b07cff6`:
+  - Wildcard, seed `ledger`: `2026-11-14_pcp-wildcard_register_artifact_digests.md` — DEFECT (two registered addenda digests do not match the issued files; closing records list no open objections).
+  - Chaos run on the queue's library and two programs: `2026-11-14_pcp-chaos_queue_library_and_programs.md` — DEFECT in the queue's checks (7 of 23 planted errors passed); self-test added to `REVIEW_QUEUE/lib/`.
+  - Builder on G10 Corollary 5.29: `2026-11-14_pcp-builder_G10_cor-return_sign-premise.md` — STRENGTHENED (non-negativity as the only sign premise, with proof).
+  - `Director_G/Finite_memory_and_coherent_returns.md`: `2026-11-14_pcp-cross-reviewer_Director_G_Finite_memory_and_coherent_returns.md` — GAP.
+  - `Director_G/Separated_string_records.md`: `2026-11-14_pcp-cross-reviewer_Director_G_Separated_string_records.md` — GAP.
+  - `Director_G/Flight_window_preparation.md`: `2026-11-14_pcp-cross-reviewer_Director_G_Flight_window_preparation.md` — GAP.
 

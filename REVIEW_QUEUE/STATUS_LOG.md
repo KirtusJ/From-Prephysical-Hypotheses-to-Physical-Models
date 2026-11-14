@@ -20,3 +20,15 @@
 | Cor. 5.28 on a carrier with C_0 != C; Cor. 5.29 bound with loops at every vertex | micro-review (queue session) | 12 | 3 | NONE FOUND |
 | Cor. 5.29: count of returning walks; recurrence of unitary powers | formalizer (sub-agent), rerun by the session | 6 + 2 | 6 + 1 | NONE FOUND, both check |
 
+
+## 14 November 2026, 00:05 to 01:00 UTC (targets at b07cff6)
+
+| Item | Agent | Minutes | Tool calls | Outcome |
+|---|---|---|---|---|
+| Register against files and git history (seed `ledger`) | wildcard (sub-agent) | 6 + 4 | 12 + 2 | DEFECT: two registered addenda (Z18, Z22) are not the issued texts; closing records list no open objections although 23 are recorded open |
+| The queue's library and two programs | chaos (sub-agent) | 11 + 4 | 16 + 2 | DEFECT in the queue's checks: 7 of 23 planted errors passed; self-test added |
+| G10 Corollary 5.29, sign premise | builder (sub-agent) | 13 + 5 | 12 + 2 | STRENGTHENED, proof written and read |
+| Director G, Finite memory and coherent returns | cross-reviewer (sub-agent) | 7 + 2 | 13 + 1 | GAP |
+| Director G, Separated string records | cross-reviewer (sub-agent) | 7 + 2 | 10 + 1 | GAP |
+| Director G, Flight window preparation | cross-reviewer (sub-agent) | 5 + 2 | 10 + 1 | GAP |
+
