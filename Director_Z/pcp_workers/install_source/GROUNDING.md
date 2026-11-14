@@ -448,3 +448,66 @@ Requirements added:
     confinement, which is the same model.
 24. **Compatibility is stated, not assumed.** For each supported system the documents say what was run there
     and what was not. Where something cannot work, it fails with a message naming what is missing.
+
+## 11. Cargo and crates.io (principal, 14 November 2026: "obviously, learning from Rust crates")
+
+Two searches; the same limits as section 1 apply (summaries of the linked pages, not my own reading). This is
+the ecosystem PCP OS itself is written in, and the host has exactly one dependency from it (`sha2`).
+
+Excels:
+- **Index apart from the files, and both apart from the web site.** Resolution reads a per-crate index file;
+  the archive is then fetched from a separate host. The index began as a Git repository and is now also served
+  file by file over HTTPS (the sparse protocol), so a client fetches only the entries it needs.
+  ([RFC 2789](https://github.com/rust-lang/rfcs/blob/master/text/2789-sparse-index.md),
+  [call for testing](https://blog.rust-lang.org/2022/06/22/sparse-registry-testing/),
+  [crates.io glossary](https://socket.dev/glossary/crates-io))
+- **The lock file pins bytes.** Each index entry carries the SHA-256 of the archive, Cargo checks the download
+  against it and writes it into `Cargo.lock`. This is the piece Composer lacks.
+  ([crates.io glossary](https://socket.dev/glossary/crates-io))
+- **Versions are immutable; removal is "yank".** A yanked version cannot be chosen by a new resolution, and a
+  lock file that already names it still works. This answers left-pad without making mistakes permanent for new
+  users. ([Rust blog: Cargo's pillars](https://blog.rust-lang.org/2016/05/05/cargo-pillars/); the yank detail is
+  from a secondary explainer)
+- Alternative registries and vendoring of all dependencies into the source tree for offline builds [own; the
+  search did not return `cargo vendor`].
+
+Fails or is weak:
+- **The checksum proves the bytes are those the registry accepted, not who published them.** There is no
+  signature by the author. ([crates.io glossary](https://socket.dev/glossary/crates-io))
+- **Code runs at build time.** A build script is an ordinary program run on the builder's machine. In 2026 a
+  compromised maintainer account published releases of three widely used crates that added a look-alike
+  dependency whose build script fetched and ran a remote payload.
+  ([The Hacker News](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html); snippet only,
+  details not verified)
+- **Look-alike names and copies that work.** 2025: `faster_log` and `async_println` copied a working logging
+  crate and added a payload that ran when the dependent project ran; `finch-rust` and `sha-rust` imitated an
+  existing name; `evm-units` and `uniswap-utils` downloaded a payload. Each was removed after a report.
+  ([Rust blog, September 2025](https://blog.rust-lang.org/2025/09/24/crates.io-malicious-crates-fasterlog-and-asyncprintln),
+  [December 2025](https://blog.rust-lang.org/2025/12/05/crates.io-malicious-crates-finch-rust-and-sha-rust),
+  [December 2025](https://blog.rust-lang.org/2025/12/03/crates.io-malicious-crates-evm-units-and-uniswap-utils))
+- **Accounts are the weak point.** A phishing campaign against crates.io publishers in 2025; the remedy now
+  pushed is publishing from a declared build pipeline instead of a person's token.
+  ([Rust blog](https://blog.rust-lang.org/2025/09/12/crates-io-phishing-campaign))
+- **Frequency.** By February 2026 crates.io stopped announcing each malicious crate individually.
+  ([Rust blog](https://blog.rust-lang.org/2026/02/13/crates.io-malicious-crate-update))
+- A flat global name space, first come first served; a deep tree of small dependencies [own].
+- Not found by the search and so not relied on: the 2022 `rustdecimal` case, the 2023 dispute over a
+  precompiled binary inside a derive crate, `cargo-vet`.
+
+What this adds for PCP:
+
+- It confirms requirements 1, 2 and 3 from the system PCP OS is built with: index apart from payload, digest
+  in the index and in a lock, immutable versions. **Yank** is the right form of removal: requirement 3 becomes
+  "a published version is never changed; it can be withdrawn from new installs, and an install that already
+  names it by digest still verifies".
+- 25. **Sparse index.** A client fetches only the entries it asks for, by a path computed from the name, over
+  plain file transfer. That fits an index kept on a branch or served as static files, needs no service, and
+  keeps the package manager usable when only part of the index is reachable.
+- 26. **Nothing in a package runs on the installing machine as part of installing or of building.** No build
+  script, no install hook. A Store application is data and a guest program; it is built by its publisher, and
+  what is installed is checked by digest. (Requirement 9, made absolute by the 2026 case.)
+- 27. **The host's own dependency list is part of its security.** Today it is one crate. Each addition (a
+  signature crate, a guest engine) is weighed in writing: what it brings in, whether it has a build script,
+  whether it works without the standard library, and what the alternative is. Vendored and pinned by digest.
+- 28. **Publishing is by a key, not by an account that can be phished**, and the index records which key
+  published each version, so a change of publisher is visible (the event-stream and 2026 lessons together).
