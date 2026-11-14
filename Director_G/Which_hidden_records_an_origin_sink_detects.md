@@ -24,6 +24,21 @@ At **even ticks only**, a hidden position read preserves both rails at the measu
 
 The authors obtained the first-hit contribution from the continual origin counts divided by the **total unsunk counts at that tick** in the reset run (Methods, Eq. 16). This compensates homogeneous round-trip losses. Dividing by the surviving light alone would instead give a probability conditional on survival. For the separate red reset curve the authors combined independent exposures through \(1-\prod_{t=1}^T[1-p_{\rm free}(0,t)]\). The replay preserves that observable as a control. The ideal reset values fall below the expanded plotted bars at ticks 2 and 4 and lie inside all later bars. The authors used a simulation of their optical settings for the numerical curves and their systematic error estimates, including coin-angle and switch and transmission uncertainties. The first two reset rows and all finite discrepancies remain in the result record. [Definitions and calibration](https://pmc.ncbi.nlm.nih.gov/articles/PMC6025909/#sec-4)
 
+## How much complete recording fits the continual bars?
+
+Suppose a fraction \(f\) of launches writes the exact surviving site on every scheduled tick. The remaining launches retain ideal coherent survival. Each launch keeps its initial choice throughout. Denote the two cumulative predictions at tick \(t\) by \(D_t\) (recorded) and \(C_t\) (coherent). With equal incident intensity and a common calibrated response per launch, Eq. 16 gives \(C_t+f(D_t-C_t)\). The total unsunk reference for a tick is common to the two launch types. Unequal reference brightness would make the fitted fraction intensity-weighted. The experiment combined three initial power and integration settings covering ticks 1–5, 6–21 and 22–36. Comparing all rows with one \(f\) assumes it stays fixed across those settings. [Methods, data acquisition and Eq. 16](https://pmc.ncbi.nlm.nih.gov/articles/PMC6025909/#sec-4)
+
+Intersect \(0\le f\le1\) with the two expanded cap inequalities at each of the 18 positive even clocks. Both intervals below include zero. For each schedule the upper cap at tick 34 is decisive, with \(U_{34}=165/239\) and \(C_{34}=1366504425/2147483648\). Substitution into \((U_{34}-C_{34})/(D_{34}-C_{34})\) gives the exact endpoint. Clocks with equal predictions pass for every fraction. Tick zero also agrees by initialization.
+
+| Eligible write ticks | Clocks with equal predictions among the 18 | Largest compatible launch fraction | Approximate percentage |
+|---|---|---:|---:|
+| Every tick | 2, 4 | 55480488690/233875096949 | 23.72% |
+| Every even tick | 2, 4, 6 | 27740244345/101779613636 | 27.26% |
+
+These fractions describe overlap with the published graphical envelopes under the two ideal mixture models. The bars on cumulative points share earlier measurements. They supply neither a confidence level nor a fit of a common set of apparatus errors across clocks.
+
+Choosing whether to write independently at each eligible tick changes which histories interfere. For a recording probability of one half, summing over all subsets of eligible ticks gives cumulative return \(349/512\) by tick 8 on the every-tick schedule, compared with \(87/128\) when the choice is fixed per launch. On the even-only schedule the corresponding returns by tick 10 are \(171/256\) and \(43/64\). The two launch-fraction endpoints apply only to the fixed choice.
+
 ## A hidden record invisible at every continual clock
 
 Allow the survivor to write only the sign of its well, left or right of zero, into an inaccessible register after each tick. After the initial split, a nearest-neighbor path that survives cannot change sides. Incoming components from the negative and positive halves can meet at zero only on opposite rails. Their squared norms add for the polarization-unresolved sink event, and both components are removed there. The two half-lines therefore give the same whole sequence of first-hit probabilities when their relative coherence is eliminated. The retained intensity at every nonzero well is also identical. This holds at arbitrary depth in the stated sink protocol. The first binary tag can destroy coherence immediately even though the published continual-return histogram would have no sensitivity to it.
