@@ -104,3 +104,5 @@ The same file proves the marginal upper and joint lower count inequalities for a
 [PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the norm identity conditional on the single-predecessor premise for [three position records between coherent flights](../Diffusion_from_three_position_records.md).
 
 [FiveTickRecordPowers.lean](FiveTickRecordPowers.lean) checks the three integer rate equations, the centered product and the old-word numerator in the [five-tick position read](../Two_five_tick_records_and_the_probability_power.md).
+
+[SevenTickPositionScore.lean](SevenTickPositionScore.lean) checks the eight terminal rail pairs and the scaled ordinary and counting numerators for the [single position survey](../Seven_free_ticks_and_one_position_read.md).
