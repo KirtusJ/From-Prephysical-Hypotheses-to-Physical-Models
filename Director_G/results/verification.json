@@ -6935,5 +6935,39 @@
       "lean/ProtectedWordEcho.lean": "da2e0bc123b279fa1081ba9ee2ba5c064f75b4c683a719308687da3e3daff65c"
     },
     "standing": "All 4,096 forward and inverse proposals agree with restricted forward-matrix products at every endpoint. Independent Lean 4.19 sums reproduce the three clean amplitudes, fair counts and sign bounds. Wrong phase, dirty source and spare flags, omitted copy, and merged source-well controls are retained."
+  },
+  "two_tick_instrument": {
+    "paper": "Certifying_a_coherent_half_interval_read.md",
+    "checker": "check_two_tick_instrument.py",
+    "result": "results/two_tick_instrument.json",
+    "lean": "lean/TwoTickInstrument.lean",
+    "sha256": {
+      "check_two_tick_instrument.py": "066205ab55a5f463f3086174910527b3c149bfbef75092f9f6ea979cbcae2f08",
+      "results/two_tick_instrument.json": "a6962f98dce196e75772feaf87e91b428edb1c29cfa68c77c25ad7f6706d604e",
+      "lean/TwoTickInstrument.lean": "eb304249d0400535a6bd50a4505699744d9cd835c708c11908d18285fa1cab30"
+    },
+    "standing": "All 4 through 40 wells and every contiguous cut into two end regions passed the exact connectivity check. Four-word path sums agree with the physical transfer recurrence. Lean checks the eight-well port witnesses and invisible interior phase. Finite channel errors require stationary transfer, trusted reference operations and original exposure."
+  },
+  "actual_word_return": {
+    "paper": "Testing_the_state_left_by_a_position_word.md",
+    "checker": "check_actual_word_return.py",
+    "result": "results/actual_word_return.json",
+    "sha256": {
+      "check_actual_word_return.py": "27991bb18f5d773c1011c3b88675764e393cf7042c1fc71d7387300399d08301",
+      "results/actual_word_return.json": "f84bc1886e5fdb8323fefd084ac7bb3ef33eb798428f1b8bf2c764f2d9a94b70"
+    },
+    "standing": "Eight actual branches under the four-well schedule agree under forward and backward evaluations. Equal word probabilities can hide a conditional fidelity of 1/25."
+  },
+  "tag_echo_resistance": {
+    "paper": "Calibrating_hidden_tags_with_a_source_return.md",
+    "checker": "check_tag_echo_resistance.py",
+    "result": "results/tag_echo_resistance.json",
+    "lean": "lean/TagEchoResistance.lean",
+    "sha256": {
+      "check_tag_echo_resistance.py": "22c694619bd1ad7158bf4de4a9fe86759e02bc966e9c1321b009745370e121c9",
+      "results/tag_echo_resistance.json": "75a63025a81826cb90e19733efa6fd61cd69c9acb807d727d1d99dfdcfd07f54",
+      "lean/TagEchoResistance.lean": "82cf4f155a57b2bdf1396c0b86d95c6ac6896c05560fe751e0bc41e434e5033a"
+    },
+    "standing": "Physical paths and returns were replayed at clocks six and eleven. Lean checks finite identities used for the quantitative tag bounds. The tag model requires reproducible sector-dependent environment vectors."
   }
 }
