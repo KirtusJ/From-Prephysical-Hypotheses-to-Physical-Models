@@ -337,3 +337,19 @@ programs the host starts with declared capabilities, as the kernel already does 
 (c) rebuilding the host, which is replacing the base. (b) matches the base-and-apps separation and the
 kernel's capability model; (c) is not installation. This is a design decision for stage 2, with Director G,
 and Rust holds primacy in it.
+
+### Added by the principal, same day: the Store needs a command-line and a graphical implementation
+
+17. **Two front ends over one core.** The Store is implemented both as commands (`pcpos store ...`, and the
+    same operations as tool calls for machines) and as a graphical view. Both call the same Rust operations:
+    list, show, verify, install, remove, undo. Neither front end holds logic of its own, so a check cannot be
+    present in one and missing in the other. (The failure this avoids is the one in section 2 where a
+    graphical store and a command path had different rules: a store reviewed in its window and unreviewed
+    through its command line protects only the people who use the window.) What exists today to build on:
+    the host's command table and tool server in Rust; the kernel's display, keyboard and drawing code; and
+    Director G's recorded benchmark of a viewer. What the graphical view runs on (the kernel's own display, a
+    terminal interface in the host, or a page served locally by the host) is a stage 2 decision; the order of
+    work is the core first, the commands second, the graphical view third, each with tests in Rust.
+
+Stages, restated: 1 grounding (this file; done, with section 7's corrections); 2 design, posted to Director G
+before anything is built; 3 build: core, commands and tool calls, graphical view, in that order.
