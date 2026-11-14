@@ -1,7 +1,7 @@
 """Audit the cubic switched-walk reference points and positive-mixture comparisons."""
 import argparse
 from fractions import Fraction as Q
-from itertools import combinations, product
+from itertools import combinations, combinations_with_replacement, product
 import json
 from math import gcd
 from pathlib import Path
@@ -63,6 +63,26 @@ def audit_word(word, ref):
     return dict(word=word, clock=clock, s=s, coefficients=lams, first=left, second=right, means=rates)
 
 
+def equal_pair_panels(rows):
+    """Keep each inequivalent equal-midpoint collision, including null contrasts."""
+    examples = {}
+    for row in rows:
+        examples.setdefault(tuple(row["s"]), row["word"])
+    midpoints = {}
+    for first, second in combinations_with_replacement(examples, 2):
+        midpoint = tuple((x + y) / 2 for x, y in zip(first, second))
+        pair = [examples[first], examples[second]]
+        means = {kind: (law(first[2], kind) + law(second[2], kind)) / 2
+                 for kind in ("ordinary", "quadratic", "cubic")}
+        midpoints.setdefault(midpoint, []).append(dict(words=pair, means=means))
+    collisions = []
+    for midpoint, pairs in midpoints.items():
+        for left, right in combinations(pairs, 2):
+            check(left["means"]["ordinary"] == right["means"]["ordinary"], "affine midpoint")
+            collisions.append(dict(midpoint=midpoint, left=left, right=right))
+    return dict(states=len(examples), pairs=sum(map(len, midpoints.values())), collisions=collisions)
+
+
 def subset_maxima():
     # A gradient stored as coefficients of X,Y,Z has Euclidean norm squared
     # gx^2 + gy^2/3 + gz^2 since the physical y equals sqrt(3) Y.
@@ -114,6 +134,19 @@ def main():
     record=dict(reference_words=WORDS, reference_states=ref, launch_L_coefficients=l, example=example,
                 checked_by_length={k:len(g) for k,g in checked.items()},repeated_points=list(points.values()),
                 subset_constants=subset_maxima())
+    panels = {size: equal_pair_panels(rows) for size, rows in checked.items() if size <= 6}
+    for size in (0, 2, 4):
+        for row in panels[size]["collisions"]:
+            check(row["left"]["means"]["quadratic"] == row["right"]["means"]["quadratic"],
+                  "earlier separating midpoint")
+    six = panels[6]["collisions"]
+    witness = next(row for row in six if row["left"]["words"] == ["000000", "001011"]
+                   and row["right"]["words"] == ["001111", "101111"])
+    check(witness["midpoint"] == (Q(-3,8), Q(-1,8), Q(1,4)), "six-tick midpoint")
+    check(witness["left"]["means"] == dict(ordinary=Q(5,8), quadratic=Q(43,64), cubic=Q(23,32))
+          and witness["right"]["means"] == dict(ordinary=Q(5,8), quadratic=Q(371,512), cubic=Q(287,512)),
+          "two-slot predictions")
+    record["equal_pair_panels"] = panels
     target.parent.mkdir(parents=True,exist_ok=True)
     with target.open("x",encoding="utf8",newline="\n") as stream:
         json.dump(record,stream,default=str,indent=2)
