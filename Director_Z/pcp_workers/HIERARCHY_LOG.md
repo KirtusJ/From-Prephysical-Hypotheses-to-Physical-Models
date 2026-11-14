@@ -128,3 +128,7 @@ Seven stopped agents were resumed by message in two batches of three and one; al
 | Citations | prior art absent; network block found | page bodies not opened | search summaries only |
 
 What worked: a builder beside each attacker; resuming by message; narrowing the brief on resume to one or two items. What did not: eleven at once; eight-item briefs; relying on WebFetch (arxiv.org and claymath.org are not reachable from this session).
+
+## A separate PCP version (14 November 2026)
+
+Principal: PCP may be upgraded and run as a separate version, container environment or branch apart from the main branch, if that is better and only if necessary. Not used yet. Candidates for a need, noted so far and none pressing: the closing record of a review lists no open objections although objections are recorded open (found by the queue's wildcard); the register accepts an artifact digest without keeping the file, so a later edit of the file goes unnoticed (two cases, editions Z18 and Z22). The second can be met in the submit tool on this side without touching PCP; the first is a matter of how PCP words its closing record. Decision for now: fix the second in `Director_Z/tools/` when the next edition is prepared; raise the first with Director G before changing anything.
