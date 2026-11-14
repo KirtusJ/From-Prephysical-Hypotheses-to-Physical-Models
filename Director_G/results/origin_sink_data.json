@@ -14,6 +14,47 @@
       "1/2"
     ]
   },
+  "fixed_launch_mixture_all_continual_bars": {
+    "exact_site_each_tick": {
+      "fraction_interval": [
+        "0",
+        "55480488690/233875096949"
+      ],
+      "zero_passes": true,
+      "upper_bound_clocks": [
+        34
+      ],
+      "equal_prediction_clocks": [
+        2,
+        4
+      ],
+      "half_fraction_control": {
+        "tick": 8,
+        "draw_once_per_launch": "87/128",
+        "draw_independently_per_eligible_tick": "349/512"
+      }
+    },
+    "exact_site_each_even_tick": {
+      "fraction_interval": [
+        "0",
+        "27740244345/101779613636"
+      ],
+      "zero_passes": true,
+      "upper_bound_clocks": [
+        34
+      ],
+      "equal_prediction_clocks": [
+        2,
+        4,
+        6
+      ],
+      "half_fraction_control": {
+        "tick": 10,
+        "draw_once_per_launch": "43/64",
+        "draw_independently_per_eligible_tick": "171/256"
+      }
+    }
+  },
   "plot_rgb_sha256": "4d596d90edbc7c4e170bdb5f71d060072350d3e5fc293a2fb12198bf11405aab",
   "axis_rows_for_zero_and_one": [
     537,

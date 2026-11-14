@@ -69,7 +69,7 @@ def even_step(blocks):
     return out
 
 
-def group_by_histories(ticks, interval):
+def group_by_histories(ticks, write_ticks):
     # Independent signed paths with the full site register kept to terminal time.
     from itertools import product
     from collections import Counter
@@ -84,9 +84,44 @@ def group_by_histories(ticks, interval):
                 if t == ticks:
                     amplitudes[tuple(record), move] += sign
                 break
-            if interval and t % interval == 0:
+            if t in write_ticks:
                 record.append(x)
     return F(sum(a*a for a in amplitudes.values()),2**ticks)
+
+
+def launch_mixture(rows, recorded_column):
+    # Every row supplies an exact interval in the same launch fraction.
+    lower, upper = F(0), F(1)
+    limits, degenerate = [], []
+    for row in rows:
+        coherent = F(row["coherent_continual"])
+        delta = F(row[recorded_column]) - coherent
+        low_cap, high_cap = band(*row["continual_cap_rows"])
+        if delta == 0:
+            assert low_cap <= coherent <= high_cap
+            degenerate.append(row["tick"])
+            continue
+        low, high = sorted(((low_cap-coherent)/delta, (high_cap-coherent)/delta))
+        lower, upper = max(lower, low), min(upper, high)
+        limits.append((row["tick"], high))
+    assert lower <= upper
+    return {"fraction_interval": [str(lower), str(upper)],
+            "zero_passes": lower <= 0 <= upper,
+            "upper_bound_clocks": [t for t, value in limits if value == upper],
+            "equal_prediction_clocks": degenerate}
+
+
+def independent_writes_at_half(ticks, interval):
+    # Average over all subsets of eligible writes, each selected independently.
+    from itertools import combinations
+    total = F()
+    for t in range(2, ticks+1, 2):
+        eligible = range(interval, t, interval)
+        subtotal = sum(group_by_histories(t, writes)
+                       for n in range(len(eligible)+1)
+                       for writes in combinations(eligible, n))
+        total += subtotal / 2**len(eligible)
+    return total
 
 
 def run():
@@ -125,8 +160,8 @@ def run():
         assert cumulative_even+F(sum(r+l for r,_,l in blocks.values()),denom)==1
         fine = 1-F(comb(t,t//2),denom)
         if t <= 10:
-            for interval, q in [(0,first),(1,fine-previous_fine),(2,first_even)]:
-                assert q == group_by_histories(t, interval)
+            for writes, q in [((),first),(range(1,t),fine-previous_fine),(range(2,t,2),first_even)]:
+                assert q == group_by_histories(t, writes)
         previous_fine = fine
         raw = CAPS[t//2-1]
         red,blue = band(*raw[:2]),band(*raw[2:])
@@ -147,8 +182,19 @@ def run():
     inverse_control = {"coherent": returned(1,1), "phase_flip": returned(1,-1),
                        "hidden_side": [a+b for a,b in zip(returned(1,0), returned(0,1))]}
     assert list(inverse_control.values()) == [[1,0],[0,1],[F(1,2),F(1,2)]]
+    mixtures = {}
+    for column, step, t in [("exact_site_each_tick",1,8), ("exact_site_each_even_tick",2,10)]:
+        data = launch_mixture(rows, column)
+        row = rows[t//2-1]
+        by_launch = (F(row["coherent_continual"]) + F(row[column])) / 2
+        by_tick = independent_writes_at_half(t, step)
+        assert by_launch != by_tick
+        data["half_fraction_control"] = {"tick":t, "draw_once_per_launch":str(by_launch),
+                                         "draw_independently_per_eligible_tick":str(by_tick)}
+        mixtures[column] = data
     return {"comparison": "Processed figure 4 cumulative recurrence probabilities, not raw counts.",
             "proposed_one_tick_inverse_source_R_then_L": {k:list(map(str,v)) for k,v in inverse_control.items()},
+            "fixed_launch_mixture_all_continual_bars": mixtures,
             "plot_rgb_sha256":PLOT_SHA, "axis_rows_for_zero_and_one":[537,59],
             "source_clock_zero":0, "even_clock_rows":rows}
 
