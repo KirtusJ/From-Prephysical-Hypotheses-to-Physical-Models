@@ -1,0 +1,922 @@
+{
+  "source_hashes": {
+    "2014_04_17-compensatedTraining.txt": "77d0da7bba7c9a54f5e79fb8e2c00f962d5ea75be72b770f08c7c5d729656d99",
+    "2014_12_02-GSTCompensatedDrift_randomized_condensed.txt": "2a3536a2078373e4808d83fed147a3f8eff140d2ee866a1a9fcda2cc36801910",
+    "2015_02_09-GSTCompensatedDrift_condensed.txt": "d76439b88c30559421c7170a0706b0f1afed2be50fe9d2056c449dcf6bb7897c",
+    "2015_03_02-GST_condensed.txt": "3a03ba695f57f4e098d350b61659d3ca1804e90407e0ccd10764efd701bdd4c1",
+    "2015_03_19-GSTBest_condensed.txt": "4f2053233f282cabe65bd587d64688f7c16d4e7d52357da8ee66edd419178be1",
+    "2015_03_30-GST_BB1_XYXY_8192_condensed.txt": "5ca509cb8e6cfe8996b8a1339457bc7f96d4efe0a3bdb8b550c3c496ce53f686"
+  },
+  "shortest_sign_word_length": 14,
+  "midpoint": "GxGyGxGyGyGxGxGyGxGy",
+  "datasets": {
+    "2014_04_17-compensatedTraining.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 1,
+            "label": "{}",
+            "plus": 9,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 5,
+            "label": "GxGx",
+            "plus": 1368,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "line": 15,
+            "label": "GxGx",
+            "plus": 1381,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 21,
+            "label": "GyGx",
+            "plus": 691,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 1245,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 712,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "line": 1965,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 677,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 1317,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 14,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          },
+          {
+            "line": 2037,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 23,
+            "total": 1425,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [],
+      "bounds": null,
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    },
+    "2014_12_02-GSTCompensatedDrift_randomized_condensed.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 1,
+            "label": "{}",
+            "plus": 6,
+            "total": 280,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 6,
+            "label": "GxGx",
+            "plus": 278,
+            "total": 280,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 10,
+            "label": "GyGx",
+            "plus": 134,
+            "total": 280,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 154,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 131,
+            "total": 280,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 296,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 1,
+            "total": 280,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [],
+      "bounds": null,
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    },
+    "2015_02_09-GSTCompensatedDrift_condensed.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 2,
+            "label": "{}",
+            "plus": 2,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 7,
+            "label": "GxGx",
+            "plus": 295,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 11,
+            "label": "GyGx",
+            "plus": 152,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 155,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 156,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 249,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 2,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [
+        {
+          "line": 1180,
+          "label": "Gy(GxGxGyGxGyGy)^2Gx",
+          "plus": 147,
+          "total": 300,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 14,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 1564,
+          "label": "Gy(GxGxGyGxGyGy)^5Gx",
+          "plus": 140,
+          "total": 300,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 32,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        }
+      ],
+      "bounds": {
+        "counts": [
+          [
+            2,
+            300
+          ],
+          [
+            156,
+            300
+          ],
+          [
+            147,
+            300
+          ],
+          [
+            2,
+            300
+          ],
+          [
+            295,
+            300
+          ]
+        ],
+        "bright_rate_fractions": [
+          "1/150",
+          "13/25",
+          "49/100",
+          "1/150",
+          "59/60"
+        ],
+        "families": 6,
+        "one_sided_tail": 0.001388888888888889,
+        "intervals": {
+          "null_low": 0.0001791279604557161,
+          "null_high": 0.03559054437831488,
+          "free2_low": 0.43236817624085777,
+          "echo_low": 0.4029573827595909,
+          "free3_high": 0.03559054437831488,
+          "bright_low": 0.9476528767051775
+        },
+        "D_upper": 0.05191388994853068,
+        "L3_upper": 0.03737456205491143,
+        "fair_upper": 0.07474912410982286
+      },
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [
+          {
+            "line": 1167,
+            "label": "(GxGxGyGxGyGy)^2",
+            "plus": 146,
+            "total": 300,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    },
+    "2015_03_02-GST_condensed.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 2,
+            "label": "{}",
+            "plus": 0,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 7,
+            "label": "GxGx",
+            "plus": 139,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 11,
+            "label": "GyGx",
+            "plus": 71,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 155,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 58,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 249,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 0,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [
+        {
+          "line": 1180,
+          "label": "Gy(GxGxGyGxGyGy)^2Gx",
+          "plus": 70,
+          "total": 140,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 14,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 1564,
+          "label": "Gy(GxGxGyGxGyGy)^5Gx",
+          "plus": 64,
+          "total": 140,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 32,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3484,
+          "label": "Gy(GxGxGyGxGyGy)^170Gx",
+          "plus": 82,
+          "total": 140,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 1022,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3868,
+          "label": "Gy(GxGxGyGxGyGy)^341Gx",
+          "plus": 60,
+          "total": 140,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 2048,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        }
+      ],
+      "bounds": {
+        "counts": [
+          [
+            0,
+            140
+          ],
+          [
+            58,
+            140
+          ],
+          [
+            70,
+            140
+          ],
+          [
+            0,
+            140
+          ],
+          [
+            139,
+            140
+          ]
+        ],
+        "bright_rate_fractions": [
+          "0",
+          "29/70",
+          "1/2",
+          "0",
+          "139/140"
+        ],
+        "families": 6,
+        "one_sided_tail": 0.001388888888888889,
+        "intervals": {
+          "null_low": 0.0,
+          "null_high": 0.0459074994732358,
+          "free2_low": 0.29240464692894985,
+          "echo_low": 0.3723918199782865,
+          "free3_high": 0.0459074994732358,
+          "bright_low": 0.9384029081598628
+        },
+        "D_upper": 0.0998621811710039,
+        "L3_upper": 0.04892088363542792,
+        "fair_upper": 0.09784176727085583
+      },
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [
+          {
+            "line": 1167,
+            "label": "(GxGxGyGxGyGy)^2",
+            "plus": 80,
+            "total": 140,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    },
+    "2015_03_19-GSTBest_condensed.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 2,
+            "label": "{}",
+            "plus": 0,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 7,
+            "label": "GxGx",
+            "plus": 20,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 11,
+            "label": "GyGx",
+            "plus": 14,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 155,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 12,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 249,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 0,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [
+        {
+          "line": 1180,
+          "label": "Gy(GxGxGyGxGyGy)^2Gx",
+          "plus": 10,
+          "total": 20,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 14,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 1564,
+          "label": "Gy(GxGxGyGxGyGy)^5Gx",
+          "plus": 13,
+          "total": 20,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 32,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3484,
+          "label": "Gy(GxGxGyGxGyGy)^170Gx",
+          "plus": 7,
+          "total": 20,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 1022,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3868,
+          "label": "Gy(GxGxGyGxGyGy)^341Gx",
+          "plus": 7,
+          "total": 20,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 2048,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        }
+      ],
+      "bounds": {
+        "counts": [
+          [
+            0,
+            20
+          ],
+          [
+            12,
+            20
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            0,
+            20
+          ],
+          [
+            20,
+            20
+          ]
+        ],
+        "bright_rate_fractions": [
+          "0",
+          "3/5",
+          "1/2",
+          "0",
+          "1"
+        ],
+        "families": 6,
+        "one_sided_tail": 0.001388888888888889,
+        "intervals": {
+          "null_low": 0.0,
+          "null_high": 0.2803300397461559,
+          "free2_low": 0.2605310409229844,
+          "echo_low": 0.18483575235256122,
+          "free3_high": 0.2803300397461559,
+          "bright_low": 0.7196699602538441
+        },
+        "D_upper": 0.25,
+        "L3_upper": 0.3895258316010259,
+        "fair_upper": 0.7790516632020518
+      },
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [
+          {
+            "line": 1167,
+            "label": "(GxGxGyGxGyGy)^2",
+            "plus": 6,
+            "total": 20,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    },
+    "2015_03_30-GST_BB1_XYXY_8192_condensed.txt": {
+      "controls": {
+        "": [
+          {
+            "line": 2,
+            "label": "{}",
+            "plus": 0,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GxGx": [
+          {
+            "line": 7,
+            "label": "GxGx",
+            "plus": 50,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGx": [
+          {
+            "line": 11,
+            "label": "GyGx",
+            "plus": 23,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGx": [
+          {
+            "line": 155,
+            "label": "Gy(GxGy)^1Gx",
+            "plus": 29,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGx": [
+          {
+            "line": 249,
+            "label": "Gy(GxGy)^2Gx",
+            "plus": 0,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      "nonidentity_diagonal_echoes": [
+        {
+          "line": 1180,
+          "label": "Gy(GxGxGyGxGyGy)^2Gx",
+          "plus": 29,
+          "total": 50,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 14,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 1564,
+          "label": "Gy(GxGxGyGxGyGy)^5Gx",
+          "plus": 27,
+          "total": 50,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 32,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3484,
+          "label": "Gy(GxGxGyGxGyGy)^170Gx",
+          "plus": 22,
+          "total": 50,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 1022,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        },
+        {
+          "line": 3868,
+          "label": "Gy(GxGxGyGxGyGy)^341Gx",
+          "plus": 29,
+          "total": 50,
+          "trailing_fields": [
+            "0",
+            "0"
+          ],
+          "block": "GyGx",
+          "length": 2048,
+          "midpoint_x_axis": -1,
+          "final_z_axis": -2
+        }
+      ],
+      "bounds": {
+        "counts": [
+          [
+            0,
+            50
+          ],
+          [
+            29,
+            50
+          ],
+          [
+            29,
+            50
+          ],
+          [
+            0,
+            50
+          ],
+          [
+            50,
+            50
+          ]
+        ],
+        "bright_rate_fractions": [
+          "0",
+          "29/50",
+          "29/50",
+          "0",
+          "1"
+        ],
+        "families": 6,
+        "one_sided_tail": 0.001388888888888889,
+        "intervals": {
+          "null_low": 0.0,
+          "null_high": 0.12329526918481548,
+          "free2_low": 0.3621485082531706,
+          "echo_low": 0.3621485082531706,
+          "free3_high": 0.12329526918481548,
+          "bright_low": 0.8767047308151845
+        },
+        "D_upper": 0.11377783153613036,
+        "L3_upper": 0.14063488521405845,
+        "fair_upper": 0.2812697704281169
+      },
+      "same_midpoint_calibrations": {
+        "GxGyGxGyGyGxGxGyGxGy": [],
+        "GxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGyGxGyGyGxGxGyGxGyGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGy": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GxGxGyGxGyGyGxGxGyGxGyGy": [
+          {
+            "line": 1167,
+            "label": "(GxGxGyGxGyGy)^2",
+            "plus": 22,
+            "total": 50,
+            "trailing_fields": [
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "GyGxGyGxGyGyGxGxGyGxGy": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGx": [],
+        "GyGxGyGxGyGyGxGxGyGxGyGy": []
+      }
+    }
+  }
+}

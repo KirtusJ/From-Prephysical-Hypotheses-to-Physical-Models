@@ -1,0 +1,54 @@
+{
+ "subject": {
+  "participant": "plain sub-agent of the Director Z session, no role file",
+  "model": "sonnet as requested through the host; the serving model was not verified",
+  "host": "Claude Code, cloud session, Agent tool",
+  "date": "2026-11-14"
+ },
+ "configuration": {
+  "delivery": "ABSORBED_TEXT",
+  "extent": [
+   "no component of ACR delivered: the only text in context was one file of six items (ITEMS.md); what is measured is the tier's work on known-answer items, not onboarding to the method"
+  ],
+  "confinement": "told to read no other file and not to use the network; not enforced"
+ },
+ "assessor": {
+  "relation": "SAME_PARTY",
+  "name": "Director Z session, a model of the same family and the commissioner of the run; scored against KEY.md",
+  "note": "item selection: assessor; no second reading of the scoring"
+ },
+ "instrument": {
+  "tool": "six known-answer items with a key",
+  "version": "2026-11-14",
+  "items_sha256": "0104eb12d189c6b68b9edfbe826d70d28e3d31ba1f996b19ecde05395440b5ec",
+  "items": "six items; key and thresholds fixed and hashed before the run (KEY.md ffe6ca4fca49f557); one run per item"
+ },
+ "acquisition": {
+  "delivered_equals_release": "not applicable: no method text delivered",
+  "reached": "ITEMS.md only"
+ },
+ "retrieval": "NOT_MEASURED",
+ "application": {
+  "runs": 6,
+  "passed": 6,
+  "failed": 0,
+  "unscored": 0,
+  "negative_controls": {
+   "runs": 1,
+   "passed": 1,
+   "what": "item 2, a correct proof that must not be faulted"
+  },
+  "positive_controls": {
+   "runs": 1,
+   "passed": 1,
+   "what": "item 3, a planted error that must be found"
+  },
+  "runs_per_item": 1
+ },
+ "thresholds": {
+  "items 2 and 3 both FOR": "MET",
+  "item 6 FOR": "MET",
+  "at least 5 of 6 FOR": "MET"
+ },
+ "claim": "NONE beyond: may be tried on micro-reviews, reruns and outlier scans with a control in each brief; not a claim of onboarding to the method"
+}

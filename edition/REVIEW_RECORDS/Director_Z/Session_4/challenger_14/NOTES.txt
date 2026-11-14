@@ -1,0 +1,32 @@
+CHALLENGER NOTES (same model family as author; not independent review)
+Step 1/2 (hand check, before any program).
+Hypotheses used:
+ one-site lemma: F_y(0,0)=0 [stated]; S' and Ext S' are position product events [stated in definition]; daughters (x+1,R),(x-1,L) distinct [argued, holds N=1,2]; no multiple arcs so walk = vertex sequence [holds; not said]; gain of a walk = product of arc gains, Ext S = all one-step continuations [NOT defined in fragment: GAP, surrounding paper presumably].
+ (i): E at one site for all U,V [prep conclusion, stated]; k=2; site independence [stated]. Recurrence: n=p-q ranges over all integers since U=(p,q) arbitrary in N^2 -> obtained for every integer n. Induction only n>=1 plus evenness: follows.
+ (ii): four equations rechecked by substitution: all four correct. Sums/differences correct. beta_{x+1}=alpha_x correct, M correct. det(M^N-1)=(-1)^N+1-L_N, nonzero N>=1 (N=1:-1, N=2:-1). Bounded below used per m only (pointwise in m): matches statement. follows.
+ (iii): each of A_{x+1},A'_{x+1},B_{x-1},B'_{x-1} occurs in exactly two of the four equations: sum correct. Needs ONE k for all events (stated: "some real k" in (ppcons)); a length-dependent k is not covered (not claimed). a>=0,c>=0,a+c>0: follows.
+ (iv): (y,R)=(x+1,R) iff x=y-1; (y,L)=(x-1,L) iff x=y+1; unique for every N>=1. Algebra correct. follows.
+ Remark (a),(b),(c) checked by hand per walk: correct; (a) second example: lambda^{x+1}+lambda^{x-2}=2lambda^x, lambda^{x+1}-lambda^{x-2}=2lambda^{x-1} using lambda^3=2lambda+1.
+Step 3 A/D (progAD.py -> resultAD.txt; ranks mod two primes 2147483629, 2147483587, agreeing).
+ A1/A2: rings N=1..14, B=1,2,3: solution space of (E), k=2, restricted to box [0..B]^2 has dimension 2 in all 42 cases: MET 42, FAILED 0.
+   (full nullity with unknowns to 2B is larger, e.g. 86 at N=14,B=3: outer shell underdetermined; this is truncation.)
+ D1: restricted dimension to (|x|<=1, box B) on line windows W=3..7 is constant in W: B=1 -> 6, B=2 -> 5. MET (stabilises).
+ D2 (==5): B=2 MET; B=1 FAILED (6). KEPT. Follow-up: identify the sixth B=1 solution and run B=3 (progD2.py).
+ Caveat: restricted dimension is a difference of two mod-p nullities; exact over Q only as lower bound 5 from the known solutions; equality is "two primes agree", measured.
+Follow-up (progD2.py -> resultD2.txt): D3 B=3, W=4,5: restricted dim 5 MET (2/2). D4: the B=2 system restricted to box 1 has dim 5 MET (2/2):
+ the sixth B=1 solution is a truncation artefact (equations with entries 2 remove it). So every solution of (E), k=2, on the line (measured, box<=3)
+ is a(p+q)+c(p-q)^2+b x(p+q)+(p-q)(Fibonacci-type f_x at R, f_{x-1} at L); bounded below at m=(1,0),(0,1) forces b=0, f=0. No counterexample to (ii) found.
+Step 3 B/C (progBC.py -> resultBC.txt): met 38, failed 0, measured 9.
+ B: column sums of the (iii) subsystem matrix L are all 2 for N=1..8 (exact) => (2-k)sum(v)=0; real eigenvalues listed (include sqrt2, -2, golden values);
+    eigenvectors for real k!=2 have entry sum < 1.3e-14 against >= 2.0 at k=2 (measured). Non-negative non-zero solution only at k=2.
+ C: Remark (a) both rules, (b) lam=2 and 1/3, (c) (also on all events), and (iv) on line: 65814 events (all subsets T=0..4) + 80000 samples T=5,6: 0 violations.
+    (iv) rings N=1..6, all subsets T=0..4: 0 violations. (c) E0 with sqrt2 on 2401 pairs: 0 violations.
+Step 4 wording.
+ W1 (GAP, wording, Remark (d)): "On the rings with N/gcd(N,2)<11 ... the conclusion of the lemma is not known there". For N=1 and N=2 it is known FALSE:
+    the position after s steps is determined (0, resp. s mod 2), so the only position product events are the empty one and the set of all walks; e.g. U=(1,0),V=(0,0)
+    is not realised (T=1 gives V=(1,0)). On these rings (i)-(iii) conclusions themselves fail under (ppcons) (alter F at a never-visited m). Not claimed, so no defect in the theorem.
+ W2 (GAP, definitions): gain of a walk (product of arc gains), Ext S (all one-step continuations), N containing 0 are used and not defined in the fragment.
+ W3 (note): (iii) uses one k for all lengths; stated so. Length-dependent k not covered, not claimed.
+ W4 (note): "bounded below" is per m, as the proof uses. No uniformity needed.
+ W5 (note): (i) uses (E) at one site only; statement asks more than used. Remark's "at most five sites", "emptiness elsewhere" unused, said so.
+Not checked: Lemma (preparation) itself (cited); boxes beyond entries 3 (A) / window dims beyond B=3; restricted dimensions are mod two primes, not over Q; no Lean.

@@ -1,0 +1,268 @@
+{
+ "P1": {
+  "failed": 0,
+  "fails": [],
+  "passed": 2047,
+  "qualifying": 2047,
+  "total": 2047
+ },
+ "P10": {
+  "L_star": 1.5790113945475532,
+  "at_t": 12,
+  "distinct_orbit_points_even_t_le_12": 188,
+  "failed": 0,
+  "max_L_on_orbit": 1.578125,
+  "passed": 188,
+  "qualifying": 188,
+  "subset_values_ok": "6/6"
+ },
+ "P11": {
+  "det": [
+   -4,
+   -4
+  ],
+  "failed": 0,
+  "passed": 1,
+  "qualifying": 1,
+  "tr": [
+   0,
+   1
+  ]
+ },
+ "P12": {
+  "deg_le1_annihilated_by_squares": true,
+  "deg_le2_annihilated_by_sixth_turn": true,
+  "deg_le2_annihilated_by_squares": false,
+  "deg_le2_annihilated_by_triangle_azimuth": true,
+  "expected": {
+   "a": 9,
+   "b": 9,
+   "c": 4,
+   "d": 4
+  },
+  "failed": 0,
+  "field": "F_p, random F_p points; rank at a specialisation is a lower bound for the generic rank, and deg<=2 annihilation is an upper bound, so nullity 9 is exact for the family",
+  "nullity": {
+   "a": 9,
+   "b": 9,
+   "c": 4,
+   "d": 4
+  },
+  "passed": 9,
+  "prime": 1000000000000000031,
+  "qualifying": {
+   "a": 140,
+   "b": 140,
+   "c": 140,
+   "rows_each": 140
+  }
+ },
+ "P13": {
+  "cubic_law_visible_in_same_tests": 500,
+  "failed": 0,
+  "passed": 500,
+  "qualifying": 500
+ },
+ "P14": {
+  "difference": "1/16",
+  "failed": 1,
+  "mean_axis_x": "9/16",
+  "mean_axis_z": "5/8",
+  "note": "both triangles have barycentre 0; a nonzero difference means F2 IS visible to equal-barycentre triangle pairs with different axes",
+  "passed": 0,
+  "qualifying": 1
+ },
+ "P15": {
+  "G_at_nondyadic_Z_1_3": "7/9",
+  "differs": true,
+  "failed": 0,
+  "ordinary": "2/3",
+  "passed": 1365,
+  "qualifying": 1365
+ },
+ "P2": {
+  "failed": 0,
+  "passed": 4,
+  "qualifying": 4,
+  "refs": [
+   [
+    "0",
+    "0",
+    "1"
+   ],
+   [
+    "0",
+    "1/2",
+    "-1/2"
+   ],
+   [
+    "-3/4",
+    "-1/4",
+    "-1/2"
+   ],
+   [
+    "3/4",
+    "-1/4",
+    "-1/2"
+   ]
+  ]
+ },
+ "P3_even": {
+  "distinct_states_per_t": {
+   "1": 2,
+   "2": 3,
+   "3": 5,
+   "4": 8,
+   "5": 12,
+   "6": 18,
+   "7": 27,
+   "8": 40,
+   "9": 59,
+   "10": 87,
+   "11": 128,
+   "12": 188,
+   "13": 276,
+   "14": 405,
+   "15": 594,
+   "16": 871,
+   "17": 1277,
+   "18": 1872,
+   "19": 2744,
+   "20": 4022,
+   "21": 5895,
+   "22": 8640,
+   "23": 12663,
+   "24": 18559,
+   "25": 27200,
+   "26": 39864,
+   "27": 58424,
+   "28": 85625,
+   "29": 125490,
+   "30": 183915,
+   "31": 269541,
+   "32": 395032
+  },
+  "failed": 0,
+  "fails": [],
+  "passed": 739149,
+  "qualifying": 739149
+ },
+ "P3_odd": {
+  "failed": 0,
+  "passed": 504337,
+  "qualifying": 504337
+ },
+ "P4": {
+  "TMAX": 32,
+  "failed": 0,
+  "passed": 1243486,
+  "poles": [],
+  "qualifying": 1243486
+ },
+ "P5": {
+  "failed": 0,
+  "first_t_PR_le_0p001": 20,
+  "first_t_bloch_dist_le_0p001_within_TMAX": null,
+  "lower_bound_t_for_bloch_dist_0p001": 22,
+  "min_PR_by_even_t": {
+   "2": 0.25,
+   "4": 0.25,
+   "6": 0.25,
+   "8": 0.015625,
+   "10": 0.015625,
+   "12": 0.015625,
+   "14": 0.015625,
+   "16": 0.0126953125,
+   "18": 0.010498046875,
+   "20": 6.103515625e-05,
+   "22": 6.103515625e-05,
+   "24": 6.103515625e-05,
+   "26": 3.814697265625e-06,
+   "28": 3.814697265625e-06,
+   "30": 3.814697265625e-06,
+   "32": 3.814697265625e-06
+  },
+  "min_norm_a_by_even_t": {
+   "2": 1,
+   "4": 4,
+   "6": 16,
+   "8": 4,
+   "10": 16,
+   "12": 64,
+   "14": 256,
+   "16": 832,
+   "18": 2752,
+   "20": 64,
+   "22": 256,
+   "24": 1024,
+   "26": 256,
+   "28": 1024,
+   "30": 4096,
+   "32": 16384
+  },
+  "passed": 16,
+  "qualifying": 16
+ },
+ "P6": {
+  "failed": 0,
+  "fails": [],
+  "max_L": [
+   "3/2",
+   "1110"
+  ],
+  "max_abs_disc": {
+   "F2": [
+    "-45/512",
+    "11011110"
+   ],
+   "F3": [
+    "-3080025/17825792",
+    "1111011110"
+   ]
+  },
+  "passed": 1365,
+  "qualifying": 1365,
+  "words_by_length": {
+   "0": 1,
+   "2": 4,
+   "4": 16,
+   "6": 64,
+   "8": 256,
+   "10": 1024
+  },
+  "words_with_zero_disc_for_nonaffine_law": {
+   "F2": 609,
+   "F3": 609
+  }
+ },
+ "P7": {
+  "checks": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "d2": "9/256",
+  "d3": "-81/512",
+  "failed": 0,
+  "passed": 9,
+  "qualifying": 9,
+  "slots": 6
+ },
+ "P8": {
+  "failed": 0,
+  "passed": 5,
+  "qualifying": 5
+ },
+ "P9": {
+  "failed": 0,
+  "least_slots_for_these_weights": 12,
+  "passed": 4,
+  "qualifying": 4
+ }
+}

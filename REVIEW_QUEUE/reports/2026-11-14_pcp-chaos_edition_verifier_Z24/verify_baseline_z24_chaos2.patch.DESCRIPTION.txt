@@ -1,0 +1,3 @@
+Adds to edition/verify_baseline.py: page counts by pdfinfo when PyMuPDF is absent; predecessor digest against git history; register copy an initial segment of .pcp/register.jsonl, first prev zero, seq consecutive; listed .json files parse (names with 'partial' exempt); planted .pyc magic; planned papers without registry rows; README count sentence must exist; ROOT as optional argument.
+Not applied. Passes on the unmodified copy of edition Z24; catches M06, M10, M11 (when run from outside the tree), M12, M18, M19, M22, M26, M28, M31 of chaos2 (MUTANTS.md).
+Built by make_patched.py; environment variables FPHPM_LIVE_REGISTER and FPHPM_PREDECESSOR_MANIFEST exist for testing a copy outside the repository.

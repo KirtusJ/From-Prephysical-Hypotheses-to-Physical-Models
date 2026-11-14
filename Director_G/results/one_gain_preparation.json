@@ -1,0 +1,688 @@
+{
+  "primitive_words": [
+    {
+      "stage": "advance",
+      "accepted_words_from_wires": [
+        [
+          "RLLRR"
+        ],
+        [
+          "LRRLR"
+        ],
+        [
+          "LRRLR"
+        ]
+      ]
+    },
+    {
+      "stage": "idle",
+      "accepted_words_from_wires": [
+        [
+          "LRRLR"
+        ],
+        [
+          "LRRLR"
+        ],
+        [
+          "LRRLR"
+        ]
+      ]
+    },
+    {
+      "stage": "deposit",
+      "accepted_words_from_wires": [
+        [
+          "LLR",
+          "RRR"
+        ],
+        [
+          "RRR"
+        ],
+        [
+          "RRR"
+        ]
+      ]
+    },
+    {
+      "stage": "transfer",
+      "accepted_words_from_wires": [
+        [
+          "RRR"
+        ],
+        [
+          "LLR"
+        ]
+      ]
+    },
+    {
+      "stage": "coast",
+      "accepted_words_from_wires": [
+        [
+          "R"
+        ],
+        [
+          "R"
+        ],
+        [
+          "R"
+        ]
+      ]
+    },
+    {
+      "stage": "finish",
+      "accepted_words_from_wires": [
+        [],
+        [
+          "RLL"
+        ],
+        [
+          "RRR"
+        ]
+      ]
+    }
+  ],
+  "exhaustive": [
+    {
+      "q": 1,
+      "cases": {
+        "line": 54,
+        "12": 216,
+        "7": 126
+      },
+      "max_ticks": 37
+    },
+    {
+      "q": 2,
+      "cases": {
+        "line": 216,
+        "12": 864,
+        "7": 504
+      },
+      "max_ticks": 53
+    },
+    {
+      "q": 3,
+      "cases": {
+        "line": 600,
+        "12": 2400,
+        "7": 1400
+      },
+      "max_ticks": 61
+    },
+    {
+      "q": 4,
+      "cases": {
+        "line": 1350,
+        "12": 5400,
+        "7": 3150
+      },
+      "max_ticks": 77
+    }
+  ],
+  "larger": [
+    {
+      "q": 5,
+      "ring": null,
+      "target": -37,
+      "ticks": 145
+    },
+    {
+      "q": 5,
+      "ring": null,
+      "target": 41,
+      "ticks": 81
+    },
+    {
+      "q": 5,
+      "ring": 12,
+      "target": 11,
+      "ticks": 75
+    },
+    {
+      "q": 5,
+      "ring": 7,
+      "target": 6,
+      "ticks": 74
+    },
+    {
+      "q": 5,
+      "ring": 15,
+      "target": 14,
+      "ticks": 84
+    },
+    {
+      "q": 5,
+      "ring": 22,
+      "target": 0,
+      "ticks": 84
+    },
+    {
+      "q": 8,
+      "ring": null,
+      "target": -37,
+      "ticks": 197
+    },
+    {
+      "q": 8,
+      "ring": null,
+      "target": 41,
+      "ticks": 105
+    },
+    {
+      "q": 8,
+      "ring": 12,
+      "target": 11,
+      "ticks": 111
+    },
+    {
+      "q": 8,
+      "ring": 7,
+      "target": 6,
+      "ticks": 105
+    },
+    {
+      "q": 8,
+      "ring": 15,
+      "target": 14,
+      "ticks": 108
+    },
+    {
+      "q": 8,
+      "ring": 22,
+      "target": 0,
+      "ticks": 108
+    },
+    {
+      "q": 17,
+      "ring": null,
+      "target": -37,
+      "ticks": 321
+    },
+    {
+      "q": 17,
+      "ring": null,
+      "target": 41,
+      "ticks": 215
+    },
+    {
+      "q": 17,
+      "ring": 12,
+      "target": 11,
+      "ticks": 195
+    },
+    {
+      "q": 17,
+      "ring": 7,
+      "target": 6,
+      "ticks": 198
+    },
+    {
+      "q": 17,
+      "ring": 15,
+      "target": 14,
+      "ticks": 195
+    },
+    {
+      "q": 17,
+      "ring": 22,
+      "target": 0,
+      "ticks": 202
+    },
+    {
+      "q": 32,
+      "ring": null,
+      "target": -37,
+      "ticks": 485
+    },
+    {
+      "q": 32,
+      "ring": null,
+      "target": 41,
+      "ticks": 463
+    },
+    {
+      "q": 32,
+      "ring": 12,
+      "target": 11,
+      "ticks": 351
+    },
+    {
+      "q": 32,
+      "ring": 7,
+      "target": 6,
+      "ticks": 346
+    },
+    {
+      "q": 32,
+      "ring": 15,
+      "target": 14,
+      "ticks": 345
+    },
+    {
+      "q": 32,
+      "ring": 22,
+      "target": 0,
+      "ticks": 344
+    },
+    {
+      "q": 97,
+      "ring": null,
+      "target": -37,
+      "ticks": 1397
+    },
+    {
+      "q": 97,
+      "ring": null,
+      "target": 41,
+      "ticks": 1243
+    },
+    {
+      "q": 97,
+      "ring": 12,
+      "target": 11,
+      "ticks": 1003
+    },
+    {
+      "q": 97,
+      "ring": 7,
+      "target": 6,
+      "ticks": 999
+    },
+    {
+      "q": 97,
+      "ring": 15,
+      "target": 14,
+      "ticks": 1000
+    },
+    {
+      "q": 97,
+      "ring": 22,
+      "target": 0,
+      "ticks": 996
+    }
+  ],
+  "line_example": {
+    "q": 7,
+    "receipt": {
+      "macros": 12,
+      "core_ticks": 84,
+      "prefix": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLRR",
+      "padding": 0,
+      "deposits": [
+        [
+          "R",
+          5,
+          3,
+          3
+        ],
+        [
+          "R",
+          1,
+          3,
+          6
+        ],
+        [
+          "R",
+          1,
+          0,
+          6
+        ],
+        [
+          "L",
+          3,
+          2,
+          1
+        ],
+        [
+          "L",
+          6,
+          3,
+          4
+        ],
+        [
+          "L",
+          0,
+          1,
+          5
+        ]
+      ],
+      "ticks": 131
+    },
+    "actual": [
+      [
+        -13,
+        "L",
+        0,
+        1
+      ],
+      [
+        -13,
+        "L",
+        3,
+        1
+      ],
+      [
+        -13,
+        "L",
+        6,
+        1
+      ],
+      [
+        -13,
+        "R",
+        1,
+        2
+      ],
+      [
+        -13,
+        "R",
+        5,
+        1
+      ]
+    ]
+  },
+  "controls": {
+    "extra_well": {
+      "tick": 1,
+      "extra_site": 11,
+      "clean": [
+        [
+          0,
+          "L",
+          1,
+          1
+        ],
+        [
+          0,
+          "R",
+          0,
+          1
+        ]
+      ],
+      "actual": [
+        [
+          0,
+          "L",
+          0,
+          1
+        ],
+        [
+          0,
+          "L",
+          1,
+          1
+        ],
+        [
+          0,
+          "R",
+          0,
+          1
+        ],
+        [
+          0,
+          "R",
+          2,
+          1
+        ]
+      ]
+    },
+    "subthreshold_rings": [
+      {
+        "ring": 3,
+        "expected": [
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            0,
+            "L",
+            0,
+            592
+          ],
+          [
+            0,
+            "L",
+            1,
+            481
+          ],
+          [
+            0,
+            "L",
+            2,
+            607
+          ],
+          [
+            0,
+            "R",
+            0,
+            601
+          ],
+          [
+            0,
+            "R",
+            1,
+            580
+          ],
+          [
+            0,
+            "R",
+            2,
+            549
+          ]
+        ],
+        "matches": false
+      },
+      {
+        "ring": 5,
+        "expected": [
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            0,
+            "L",
+            1,
+            4
+          ],
+          [
+            0,
+            "L",
+            2,
+            2
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ],
+          [
+            0,
+            "R",
+            1,
+            2
+          ]
+        ],
+        "matches": false
+      },
+      {
+        "ring": 6,
+        "expected": [
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            0,
+            "L",
+            0,
+            592
+          ],
+          [
+            0,
+            "L",
+            1,
+            481
+          ],
+          [
+            0,
+            "L",
+            2,
+            607
+          ],
+          [
+            0,
+            "R",
+            0,
+            601
+          ],
+          [
+            0,
+            "R",
+            1,
+            580
+          ],
+          [
+            0,
+            "R",
+            2,
+            549
+          ]
+        ],
+        "matches": false
+      },
+      {
+        "ring": 8,
+        "expected": [
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            0,
+            "L",
+            0,
+            4
+          ],
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "L",
+            2,
+            3
+          ],
+          [
+            0,
+            "R",
+            0,
+            3
+          ],
+          [
+            0,
+            "R",
+            1,
+            4
+          ],
+          [
+            0,
+            "R",
+            2,
+            1
+          ]
+        ],
+        "matches": false
+      },
+      {
+        "ring": 10,
+        "expected": [
+          [
+            0,
+            "L",
+            1,
+            1
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            0,
+            "L",
+            1,
+            4
+          ],
+          [
+            0,
+            "L",
+            2,
+            2
+          ],
+          [
+            0,
+            "R",
+            0,
+            1
+          ],
+          [
+            0,
+            "R",
+            1,
+            2
+          ]
+        ],
+        "matches": false
+      }
+    ]
+  }
+}

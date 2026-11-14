@@ -1,0 +1,243 @@
+{
+  "source": "https://quantum-technologies.iap.uni-bonn.de/assets/pdf/SDT/physrevx-alberti.pdf",
+  "original_pdf_sha256": "513fb6d398c0c6c51523e5154def4c154c8b35809f1348765d3ea3735b232c31",
+  "figure": 3,
+  "well_indices": [
+    -8,
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "counts_including_displaced": {
+    "blank": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      15,
+      131,
+      33,
+      35,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "retain_negative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31,
+      107,
+      32,
+      31,
+      0,
+      0,
+      22,
+      42,
+      111,
+      27,
+      1
+    ],
+    "retain_positive": [
+      2,
+      22,
+      113,
+      40,
+      31,
+      0,
+      0,
+      27,
+      29,
+      115,
+      25,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "total_launch_rows": [
+    230,
+    404,
+    404
+  ],
+  "retained_counts": [
+    201,
+    196
+  ],
+  "blank_outside_ideal": {
+    "site": -3,
+    "atoms": 2
+  },
+  "model_wells": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "model_rows": {
+    "blank": {
+      "count": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "square": [
+        1,
+        10,
+        2,
+        2,
+        1
+      ],
+      "denominator": 16
+    },
+    "retain_negative": {
+      "count": [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      "square": [
+        1,
+        5,
+        1,
+        1,
+        0
+      ],
+      "denominator": 8
+    },
+    "retain_positive": {
+      "count": [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      "square": [
+        0,
+        1,
+        1,
+        5,
+        1
+      ],
+      "denominator": 8
+    }
+  },
+  "two_well_table_rows_blank_and_retain_positive": [
+    [
+      131,
+      35
+    ],
+    [
+      27,
+      115
+    ]
+  ],
+  "table_columns": [
+    -1,
+    1
+  ],
+  "conditional_support": [
+    16,
+    158
+  ],
+  "sample_odds": "3013/189",
+  "alpha_matching_sample_odds": [
+    "114463/500000",
+    "228927/1000000"
+  ],
+  "one_sided_exact_conditional_limits": {
+    "fixed_table_and_direction": {
+      "comparisons": 1,
+      "tail_size": "1/20",
+      "alpha_bracket": [
+        "487883/1000000",
+        "121971/250000"
+      ]
+    },
+    "one_specified_arm": {
+      "comparisons": 6,
+      "tail_size": "1/120",
+      "alpha_bracket": [
+        "585973/1000000",
+        "292987/500000"
+      ]
+    },
+    "either_arm_against_blank": {
+      "comparisons": 12,
+      "tail_size": "1/240",
+      "alpha_bracket": [
+        "616923/1000000",
+        "154231/250000"
+      ]
+    },
+    "five_wells_three_row_pairs_two_directions": {
+      "comparisons": 60,
+      "tail_size": "1/1200",
+      "alpha_bracket": [
+        "339651/500000",
+        "679303/1000000"
+      ]
+    }
+  },
+  "pure_count_upper_tail": "1346879805420749371421263247374637605923498997553576465855622498118270722814472037895679576915117588932980813/3363053534427303695463052973372420126829902151430669723343658204858021711852190704230187653790022584041387230086219229",
+  "symmetric_adjacent_misidentification_sensitivity": [
+    {
+      "adjacent_error": "0",
+      "odds_at_zero": "25",
+      "odds_at_one": "3",
+      "alpha_bracket": [
+        "487883/1000000",
+        "121971/250000"
+      ]
+    },
+    {
+      "adjacent_error": "1/50",
+      "odds_at_zero": "161212/6567",
+      "odds_at_one": "298/101",
+      "alpha_bracket": [
+        "476893/1000000",
+        "238447/500000"
+      ]
+    },
+    {
+      "adjacent_error": "1/25",
+      "odds_at_zero": "506/21",
+      "odds_at_one": "148/51",
+      "alpha_bracket": [
+        "116433/250000",
+        "465733/1000000"
+      ]
+    }
+  ]
+}

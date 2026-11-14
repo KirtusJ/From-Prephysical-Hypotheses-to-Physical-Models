@@ -1,0 +1,622 @@
+{
+ "L01": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: CA True->False, RC True->False",
+   "detail": {
+    "CA": {
+     "norm_preserving_characters": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "strongly_connected": true,
+     "r": 4,
+     "r0": 1,
+     "C0": [
+      0,
+      4
+     ],
+     "met": false
+    },
+    "RC": {
+     "carriers": 29,
+     "sizes_of_U": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12
+     ],
+     "violations": "17196",
+     "largest_R_minus_bound": 1.9760427028335726e+153,
+     "largest_sum_defect": 1.1856256217001435e+154,
+     "met": "False"
+    }
+   }
+  }
+ },
+ "L02": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: CA True->False, RC True->False",
+   "detail": {
+    "CA": {
+     "norm_preserving_characters": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "strongly_connected": true,
+     "r": 4,
+     "r0": 1,
+     "C0": [
+      0,
+      4
+     ],
+     "met": false
+    },
+    "RC": {
+     "carriers": 29,
+     "sizes_of_U": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12
+     ],
+     "violations": "17196",
+     "largest_R_minus_bound": 1.9760427028335726e+153,
+     "largest_sum_defect": 1.1856256217001435e+154,
+     "met": "False"
+    }
+   }
+  }
+ },
+ "L03": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: H True->False, B1 True->False, C1 True->False, C2 True->False",
+   "detail": {
+    "H": {
+     "built": 261,
+     "h1": 261,
+     "h1_and_h2": 148,
+     "not_strongly_connected": 113,
+     "non_cyclic_qualifying": 55,
+     "degree_four_qualifying": 51,
+     "with_r_ne_r0": 0,
+     "met": false
+    },
+    "B1": {
+     "pairs": 789,
+     "failures": 54,
+     "met": false
+    },
+    "C1": {
+     "failures_if": 54,
+     "failures_only_if": 0,
+     "met": false
+    },
+    "C2": {
+     "pair_instances_with_unfaithful_character": 693,
+     "found_with_r_ne_r0": 0,
+     "met": false
+    },
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    },
+    "X1": {
+     "d": 2,
+     "r0": 1,
+     "strongly_connected": true,
+     "r": 1,
+     "exactly_two_gains": false,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: CA True->False",
+   "detail": {
+    "CA": {
+     "norm_preserving_characters": [
+      1,
+      3,
+      5,
+      7
+     ],
+     "strongly_connected": true,
+     "r": 1,
+     "r0": 1,
+     "C0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "met": false
+    }
+   }
+  }
+ },
+ "L04": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "TypeError: unsupported operand type(s) for %: 'NoneType' and 'int' | return g, [l % g for l in lev]"
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "TypeError: unsupported operand type(s) for %: 'NoneType' and 'int' | return g, [l % g for l in lev]"
+  }
+ },
+ "L05": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: X1 False->True",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    },
+    "X1": {
+     "d": 2,
+     "r0": 1,
+     "strongly_connected": true,
+     "r": 2,
+     "exactly_two_gains": true,
+     "met": true
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L06": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: K4 True->False",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 59,
+     "met": false
+    },
+    "K4": {
+     "done": 12,
+     "failures": 4,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L07": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: K4 True->False",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    },
+    "K4": {
+     "done": 12,
+     "failures": 12,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L08": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L09": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L10": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "TypeError: unsupported operand type(s) for %: 'NoneType' and 'int' | return g, [l % g for l in lev]"
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: RC",
+   "detail": {
+    "RC": {
+     "carriers": 30,
+     "sizes_of_U": [
+      1,
+      2,
+      4,
+      8
+     ],
+     "violations": "0",
+     "largest_R_minus_bound": 3.7969627442180354e-14,
+     "largest_sum_defect": 3.985700658404312e-13,
+     "met": "True"
+    }
+   }
+  }
+ },
+ "L11": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "KeyError: (1, (2,)) | if E[z][y] is not None: S[i].append(idx[(z, gadd(g, E[z][y], mod))])"
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "KeyError: (0, (8,)) | if E[z][y] is not None: S[i].append(idx[(z, gadd(g, E[z][y], mod))])"
+  }
+ },
+ "L12": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-crash",
+   "how": "KeyError: (0, (2, 2)) | if E[z][y] is not None: S[i].append(idx[(z, gadd(g, E[z][y], mod))])"
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L13": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L14": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 53,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L15": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: A3 True->False, B2 True->False, B1 True->False, C1 True->False, C2 True->False, K1 True->False",
+   "detail": {
+    "H": {
+     "built": 261,
+     "h1": 261,
+     "h1_and_h2": 160,
+     "not_strongly_connected": 101,
+     "non_cyclic_qualifying": 64,
+     "degree_four_qualifying": 56,
+     "with_r_ne_r0": 1,
+     "met": true
+    },
+    "A3": {
+     "failures": 1,
+     "met": false
+    },
+    "B2": {
+     "failures": 149,
+     "met": false
+    },
+    "B1": {
+     "pairs": 842,
+     "failures": 42,
+     "met": false
+    },
+    "C1": {
+     "failures_if": 40,
+     "failures_only_if": 1,
+     "met": false
+    },
+    "C2": {
+     "pair_instances_with_unfaithful_character": 788,
+     "found_with_r_ne_r0": 0,
+     "met": false
+    },
+    "K1": {
+     "cyclic_faithful_with_pair": 79,
+     "failures": 1,
+     "met": false
+    },
+    "K3": {
+     "done": 74,
+     "failures": 19,
+     "met": false
+    },
+    "N1": {
+     "failures": 11,
+     "carriers_not_strongly_connected": 101,
+     "met": false
+    },
+    "X1": {
+     "d": 2,
+     "r0": 1,
+     "strongly_connected": true,
+     "r": 1,
+     "exactly_two_gains": false,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: CA True->False",
+   "detail": {
+    "CA": {
+     "norm_preserving_characters": [
+      1,
+      3,
+      5,
+      7
+     ],
+     "strongly_connected": true,
+     "r": 1,
+     "r0": 1,
+     "C0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "met": false
+    }
+   }
+  }
+ },
+ "L16": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "L17": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "values-only",
+   "how": "no met flipped; values differ in: K3",
+   "detail": {
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  },
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "P01": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: B1 True->False",
+   "detail": {
+    "B1": {
+     "pairs": 789,
+     "failures": 17,
+     "met": false
+    },
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  }
+ },
+ "P02": {
+  "2": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: A2 True->False",
+   "detail": {
+    "A2": {
+     "failures": 17,
+     "met": false
+    },
+    "K3": {
+     "done": 73,
+     "failures": 19,
+     "met": false
+    }
+   }
+  }
+ },
+ "Q01": {
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "CAUGHT-predicate",
+   "how": "met flipped: CD True->False, CE True->False",
+   "detail": {
+    "CD": {
+     "met": false
+    },
+    "CE": {
+     "met": false
+    }
+   }
+  }
+ },
+ "Q02": {
+  "3": {
+   "pcplib_is_local": true,
+   "verdict": "identical",
+   "how": "result bytes identical to baseline",
+   "detail": {}
+  }
+ },
+ "R01": {
+  "3": {
+   "verdict": "CAUGHT-rerun-compare",
+   "how": "stored file vs fresh rerun of the unmutated program: bytes differ"
+  }
+ },
+ "R02": {
+  "2": {
+   "verdict": "CAUGHT-rerun-compare",
+   "how": "stored file vs fresh rerun of the unmutated program: bytes differ"
+  }
+ }
+}

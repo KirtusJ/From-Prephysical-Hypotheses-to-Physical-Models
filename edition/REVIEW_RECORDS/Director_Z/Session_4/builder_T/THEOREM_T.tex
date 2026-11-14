@@ -1,0 +1,99 @@
+% THEOREM_T.tex -- fragment in the style of paper G10. Builder draft; same model family as the director,
+% not independent review. Status of each part is given in the remark at the end and in NOTES.txt.
+
+\subsection{Consistency demanded only on position product events}
+
+Let $D$ be the signed arc digraph of the line $\mathbb{Z}$ or of the ring $\mathbb{Z}_N$, $N\ge1$: vertices $(x,R)$ and $(x,L)$, arcs from either to $(x+1,R)$ and to $(x-1,L)$, all gains $+1$ except $-1$ on the arcs from $(x,L)$ to $(x-1,L)$; on the ring $x\pm1$ is taken modulo $N$. Events are sets of walks from $(0,R)$. For an event $S$ and a vertex $y$ let $m_S(y)=(p,q)\in\mathbb{N}^2$ be the numbers of walks of $S$ that end at $y$ with gain $+1$ and with gain $-1$; put $J(p,q)=(q,p)$, and add pairs by components. A \emph{position product event} of length $T\ge1$ is the set of all walks of length $T$ whose position after $s$ steps lies in a prescribed set $A_s$ of sites, for $s=1,\dots,T$. If $S$ is one, so is $\operatorname{Ext}S$ (take $A_{T+1}$ to be all sites), and so is the set of walks of $S$ that end at one site $x$ (replace $A_T$ by $A_T\cap\{x\}$).
+
+For each vertex $y$ let $F_y\colon\mathbb{N}^2\to\mathbb{R}$ with $F_y(0,0)=0$, and put
+\begin{equation}\label{eq:multirule}
+\mu(S)=\sum_{y}F_y\bigl(m_S(y)\bigr)
+\end{equation}
+for events $S$ of every length; the functions $F_y$ do not depend on the length. For a real number $k$ consider the requirement
+\begin{equation}\label{eq:ppcons}
+\mu(\operatorname{Ext}S)=k\,\mu(S)\qquad\text{for every position product event }S .
+\end{equation}
+
+\begin{lemma}[preparation; Director~G \cite{dgmask}]\label{lem:prep}
+Let $D$ be the line, or the ring $\mathbb{Z}_N$ with $N/\gcd(N,2)\ge11$. For every site $x$ and every $U,V\in\mathbb{N}^2$ there are a length $T\ge1$ and a position product event $S$ of length $T$ with $m_S(x,R)=U$ and $m_S(x,L)=V$.
+\end{lemma}
+
+The lemma is not proved here. The construction of \cite{dgmask} gives more than is stated: $m_S(y)=(0,0)$ at every other vertex $y$, at most five sites in each $A_s$, and, before the site is prescribed, $T=15+6(p_R+q_L)+5(q_R+p_L)$ and $x=T-20$ for $U=(p_R,q_R)$, $V=(p_L,q_L)$. The emptiness of the other vertices is not needed below, because the walks ending at one site can be selected in the last step. For $N/\gcd(N,2)>11$ the deposits may be made in any order; for $N/\gcd(N,2)=11$, that is $N=11$ and $N=22$, the order of \cite{dgmask} is required.
+
+\begin{lemma}\label{lem:onesite}
+Let $D$ be the line or a ring, let $\mu$ be as in \eqref{eq:multirule}, and let $S$ be a position product event with $m_S(x,R)=U$ and $m_S(x,L)=V$. If \eqref{eq:ppcons} holds with the factor $k$, then
+\begin{equation}\label{eq:E}
+F_{(x+1,R)}(U+V)+F_{(x-1,L)}(U+JV)=k\,F_{(x,R)}(U)+k\,F_{(x,L)}(V).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $S'$ be the set of walks of $S$ that end at the site $x$. It is a position product event, $m_{S'}(x,R)=U$, $m_{S'}(x,L)=V$, and $m_{S'}(y)=(0,0)$ at every other vertex. Since $F_y(0,0)=0$, $\mu(S')=F_{(x,R)}(U)+F_{(x,L)}(V)$. A walk of $S'$ that ends at $(x,R)$ with gain $g$ has two continuations, to $(x+1,R)$ and to $(x-1,L)$, both with gain $g$; a walk that ends at $(x,L)$ with gain $g$ has two continuations, to $(x+1,R)$ with gain $g$ and to $(x-1,L)$ with gain $-g$. The vertices $(x+1,R)$ and $(x-1,L)$ are different, also on a ring with $N\le2$, since they differ in the second entry. Hence $m_{\operatorname{Ext}S'}(x+1,R)=U+V$, $m_{\operatorname{Ext}S'}(x-1,L)=U+JV$, and $m_{\operatorname{Ext}S'}$ vanishes elsewhere, so that $\mu(\operatorname{Ext}S')$ is the left side of \eqref{eq:E}. Now apply \eqref{eq:ppcons} to $S'$.
+\end{proof}
+
+\begin{theorem}\label{thm:posprod}
+Let $D$ be the line or a ring for which the conclusion of Lemma~\ref{lem:prep} holds; by that lemma these include the line and the rings with $N/\gcd(N,2)\ge11$. Let $\mu$ be a rule \eqref{eq:multirule}.
+\begin{enumerate}[label=(\roman*)]
+\item Suppose $F_{(x,R)}=F_R$ and $F_{(x,L)}=F_L$ do not depend on the site $x$, and \eqref{eq:ppcons} holds with $k=2$. Then $F_R=F_L=F$ and
+\begin{equation}\label{eq:countsquare}
+F(p,q)=a\,(p+q)+c\,(p-q)^2\qquad\text{for all }(p,q)\in\mathbb{N}^2,
+\end{equation}
+with $a=\tfrac12F(1,1)$ and $c=F(1,0)-\tfrac12F(1,1)$.
+\item Suppose \eqref{eq:ppcons} holds with $k=2$ and, for every $m\in\mathbb{N}^2$, the function $y\mapsto F_y(m)$ is bounded below. Then $F_y$ is the same function $F$ at every vertex $y$, and \eqref{eq:countsquare} holds. The condition on $F_y$ holds on every ring, which has finitely many vertices, and on the line if $F_y\ge0$ for all $y$.
+\item Suppose \eqref{eq:ppcons} holds with some real $k$, that $F_y(m)\ge0$ for all $y$ and $m$, and that $F_y(m)>0$ for some $y$ and $m$. Suppose further that the $F_y$ depend only on the second entry of $y$, as in (i), or that $D$ is a ring. Then $k=2$, the $F_y$ are one function $F$ of the form \eqref{eq:countsquare}, and $a\ge0$, $c\ge0$, $a+c>0$.
+\item Conversely, on the line and on every ring, for all real $a$ and $c$ the rule with $F_y(p,q)=a(p+q)+c(p-q)^2$ at every vertex satisfies $\mu(\operatorname{Ext}S)=2\mu(S)$ for every event $S$, that is, for every set of walks of one length.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the conclusion of Lemma~\ref{lem:prep} and by Lemma~\ref{lem:onesite}, equation \eqref{eq:E} holds for every site $x$ and all $U,V\in\mathbb{N}^2$. Nothing else is used of \eqref{eq:ppcons} in (i) to (iii).
+
+(i) Here \eqref{eq:E} with $k=2$ reads
+\begin{equation}\label{eq:E0}
+F_R(U+V)+F_L(U+JV)=2F_R(U)+2F_L(V)\qquad\text{for all }U,V\in\mathbb{N}^2 .
+\end{equation}
+With $V=(0,0)$ this is $F_R(U)+F_L(U)=2F_R(U)$, so $F_L=F_R$; write $F$ for both. With $U=(0,0)$ it is then $F(V)+F(JV)=2F(V)$, so $F(JV)=F(V)$. Let $C=(1,1)$; since $JC=C$, \eqref{eq:E0} with $V=C$ gives $2F(U+C)=2F(U)+2F(C)$, so $F(U+C)=F(U)+F(C)$ for every $U$. Put $a=\tfrac12F(C)$ and $G(p,q)=F(p,q)-a(p+q)$. The function $(p,q)\mapsto p+q$ is additive and unchanged by $J$, so it satisfies \eqref{eq:E0} with $F_R=F_L$; as \eqref{eq:E0} is linear in $F$, $G$ satisfies it too, and $G(0,0)=0$, $G(JV)=G(V)$, $G(U+C)=G(U)$. By the last property $G(p,q)=G(p-r,q-r)$ with $r=\min(p,q)$, so $G(p,q)=g(p-q)$, where $g(n)=G(n,0)$ and $g(-n)=G(0,n)$ for $n\ge0$; $g$ is defined on $\mathbb{Z}$, $g(0)=0$, and $g(-n)=g(n)$ because $G(0,n)=G(J(n,0))=G(n,0)$. Now take $V=(1,0)$ and $U=(p,q)$ in \eqref{eq:E0} for $G$: $G(p+1,q)+G(p,q+1)=2G(p,q)+2G(1,0)$, that is,
+\[
+g(n+1)+g(n-1)=2g(n)+2g(1)\qquad\text{for every integer }n=p-q .
+\]
+With $g(0)=0$ and $c=g(1)$, induction on $n\ge1$ gives $g(n)=cn^2$: if $g(n)=cn^2$ and $g(n-1)=c(n-1)^2$, then $g(n+1)=2cn^2+2c-c(n-1)^2=c(n+1)^2$. Since $g$ is even, $g(n)=cn^2$ for all integers $n$. Hence $F(p,q)=a(p+q)+c(p-q)^2$, and $c=G(1,0)=F(1,0)-\tfrac12F(1,1)$.
+
+(ii) Fix $m\in\mathbb{N}^2$ and write $A_x=F_{(x,R)}(m)$, $A'_x=F_{(x,R)}(Jm)$, $B_x=F_{(x,L)}(m)$, $B'_x=F_{(x,L)}(Jm)$. Equation \eqref{eq:E} with $k=2$ and $(U,V)=(m,0)$, $(Jm,0)$, $(0,m)$, $(0,Jm)$ gives, for every site $x$,
+\begin{align*}
+A_{x+1}+B_{x-1}&=2A_x, & A'_{x+1}+B'_{x-1}&=2A'_x,\\
+A_{x+1}+B'_{x-1}&=2B_x, & A'_{x+1}+B_{x-1}&=2B'_x .
+\end{align*}
+Let $P_x=\tfrac12(A_x+A'_x)$, $Q_x=\tfrac12(B_x+B'_x)$, $\alpha_x=\tfrac12(A_x-A'_x)$, $\beta_x=\tfrac12(B_x-B'_x)$. Half the sum of the equations of the first row is $P_{x+1}+Q_{x-1}=2P_x$, and of the second row $P_{x+1}+Q_{x-1}=2Q_x$. So $Q_x=P_x$ for all $x$, and $P_{x+1}+P_{x-1}=2P_x$: the differences $P_{x+1}-P_x$ are equal, and $P_x=P_0+x(P_1-P_0)$. On a ring $P$ is periodic, so $N(P_1-P_0)=0$ and $P$ is constant. On the line, $P$ is bounded below, because $A_x$ and $A'_x$ are, and a function $P_0+x(P_1-P_0)$ on $\mathbb{Z}$ that is bounded below is constant. Let $P$ also denote the constant. Then on the line $A_x=2P-A'_x$ is bounded above as well as below, likewise $A'_x$, $B_x$, $B'_x$, so $\alpha_x$ and $\beta_x$ are bounded on $\mathbb{Z}$. Half the differences of the two rows give
+\[
+\alpha_{x+1}+\beta_{x-1}=2\alpha_x,\qquad \alpha_{x+1}-\beta_{x-1}=2\beta_x .
+\]
+Adding, $\alpha_{x+1}=\alpha_x+\beta_x$; subtracting, $\beta_{x-1}=\alpha_x-\beta_x$, for every $x$. Replacing $x$ by $x+1$ in the second relation, $\beta_x=\alpha_{x+1}-\beta_{x+1}$, hence $\beta_{x+1}=\alpha_{x+1}-\beta_x=\alpha_x$. Thus
+\[
+\begin{pmatrix}\alpha_{x+1}\\ \beta_{x+1}\end{pmatrix}=M\begin{pmatrix}\alpha_x\\ \beta_x\end{pmatrix},\qquad M=\begin{pmatrix}1&1\\1&0\end{pmatrix},
+\]
+for every $x$. The matrix $M$ has the eigenvalues $\lambda_\pm=(1\pm\sqrt5)/2$, with $|\lambda_+|>1>|\lambda_-|>0$, and is invertible. Write $(\alpha_0,\beta_0)=u_++u_-$ with $Mu_\pm=\lambda_\pm u_\pm$; then $(\alpha_x,\beta_x)=\lambda_+^xu_++\lambda_-^xu_-$ for all $x\in\mathbb{Z}$ on the line. If $u_+\ne0$ this is unbounded as $x\to+\infty$, and if $u_-\ne0$ it is unbounded as $x\to-\infty$; so $u_+=u_-=0$. On a ring, $(\alpha_N,\beta_N)=(\alpha_0,\beta_0)$ gives $(M^N-1)(\alpha_0,\beta_0)=0$, and $M^N-1$ is invertible because $\lambda_\pm^N\ne1$. In both cases $\alpha_x=\beta_x=0$ for all $x$. Therefore $A_x=A'_x=B_x=B'_x=P$: the value $F_y(m)$ does not depend on $y$. As $m$ was arbitrary, all $F_y$ are one function $F$, and (i) applies.
+
+(iii) Fix $m$ and use the notation of (ii). Equation \eqref{eq:E} with the factor $k$ and the same four pairs gives
+\begin{align*}
+A_{x+1}+B_{x-1}&=kA_x, & A'_{x+1}+B'_{x-1}&=kA'_x,\\
+A_{x+1}+B'_{x-1}&=kB_x, & A'_{x+1}+B_{x-1}&=kB'_x .
+\end{align*}
+The sum of the four is $2(A_{x+1}+A'_{x+1})+2(B_{x-1}+B'_{x-1})=k\,(A_x+A'_x+B_x+B'_x)$. If the $F_y$ do not depend on the site, the indices $x$ may be dropped, and with $\Sigma(m)=A+A'+B+B'$ this is $2\Sigma(m)=k\,\Sigma(m)$. If $D$ is a ring, sum over $x\in\mathbb{Z}_N$: with $\Sigma(m)=\sum_x(A_x+A'_x+B_x+B'_x)$ again $2\Sigma(m)=k\,\Sigma(m)$. By hypothesis all terms of $\Sigma(m)$ are non-negative and for some $m$ one of them is positive; for that $m$, $\Sigma(m)>0$ and $k=2$. Then (i) applies in the first case and (ii) in the second, so all $F_y$ equal one $F$ of the form \eqref{eq:countsquare}. From $F(n,n)=2an\ge0$ at $n=1$, $a\ge0$. From $F(n,0)=an+cn^2\ge0$ for all $n\ge1$, $c\ge-a/n$ for all $n$, so $c\ge0$. Not both vanish, since $F$ is not zero.
+
+(iv) Let $S$ be any event, of length $j$. A vertex $(x+1,R)$ is reached in one step only from $(x,R)$ and $(x,L)$, and so is $(x-1,L)$; as in the proof of Lemma~\ref{lem:onesite}, with $U_x=m_S(x,R)$ and $V_x=m_S(x,L)$,
+\[
+m_{\operatorname{Ext}S}(x+1,R)=U_x+V_x,\qquad m_{\operatorname{Ext}S}(x-1,L)=U_x+JV_x ,
+\]
+and every vertex is of one of these two kinds for exactly one $x$. For $U=(p,q)$ write $|U|=p+q$ and $\delta(U)=p-q$; then $|JV|=|V|$, $\delta(JV)=-\delta(V)$, and both are additive. Hence
+\begin{align*}
+\mu(\operatorname{Ext}S)&=\sum_x\Bigl[a\bigl(2|U_x|+2|V_x|\bigr)+c\bigl(\delta(U_x)+\delta(V_x)\bigr)^2+c\bigl(\delta(U_x)-\delta(V_x)\bigr)^2\Bigr]\\
+&=\sum_x\Bigl[2a|U_x|+2c\,\delta(U_x)^2+2a|V_x|+2c\,\delta(V_x)^2\Bigr]=2\mu(S).
+\end{align*}
+The sums are finite because $S$ is.
+\end{proof}
+
+\begin{remark}\label{rem:posprodlimits}
+(a) In (ii) the condition on the line cannot be dropped: $F_y(p,q)=x\,(p+q)$ for $y=(x,R)$ or $(x,L)$ satisfies $\mu(\operatorname{Ext}S)=2\mu(S)$ for every event, since a walk ending at the site $x$ has its two continuations at $x+1$ and $x-1$, and is not of the form \eqref{eq:countsquare}; so does $F_{(x,R)}=(p-q)\lambda^x$, $F_{(x,L)}=(p-q)\lambda^{x-1}$ with $\lambda^2=\lambda+1$ \cite{zprod}. Neither is bounded below in $y$.
+(b) In (iii) on the line the restriction to functions that do not depend on the site cannot be dropped: for $\lambda>0$, $\lambda\ne1$, the rule $F_y(p,q)=\lambda^x(p+q)$ is non-negative, not zero, and satisfies $\mu(\operatorname{Ext}S)=(\lambda+\lambda^{-1})\mu(S)$ for every event, with $\lambda+\lambda^{-1}>2$.
+(c) In (iii) non-negativity cannot be dropped: $F_R(p,q)=p-q$, $F_L(p,q)=(\sqrt2-1)(p-q)$ satisfies \eqref{eq:E0} with the factor $\sqrt2$ in place of $2$ \cite{zprod}.
+(d) The theorem rests on Lemma~\ref{lem:prep}. Its proof in \cite{dgmask} is an argument on paths for arbitrary $U$, $V$ and every site; the machine-checked part is one isolated corridor of five sites. Exact replays of the whole construction, at every end vertex, cover entries up to $3$ on the line and on all rings with $3\le N\le30$ and $N/\gcd(N,2)\ge11$, and selected larger entries \cite{dgmask,xr39}. On the rings with $N/\gcd(N,2)<11$ that were tried the construction fails, and the conclusion of the lemma is not known there; parts (i) to (iii) are not claimed there. Part (iv) needs no lemma.
+\end{remark}

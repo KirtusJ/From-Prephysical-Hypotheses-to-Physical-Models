@@ -12,3 +12,35 @@
 | Director G, Local mediation | cross-reviewer (sub-agent) | 15 | 12 | GAP |
 | Director G, Internal phase reference | cross-reviewer (sub-agent) | 17 | 9 | GAP |
 
+
+## 13 November 2026, third working period (targets at fd0b682)
+
+| Item | Agent | Minutes | Tool calls | Outcome |
+|---|---|---|---|---|
+| Cor. 5.28 on a carrier with C_0 != C; Cor. 5.29 bound with loops at every vertex | micro-review (queue session) | 12 | 3 | NONE FOUND |
+| Cor. 5.29: count of returning walks; recurrence of unitary powers | formalizer (sub-agent), rerun by the session | 6 + 2 | 6 + 1 | NONE FOUND, both check |
+
+
+## 14 November 2026, 00:05 to 01:00 UTC (targets at b07cff6)
+
+| Item | Agent | Minutes | Tool calls | Outcome |
+|---|---|---|---|---|
+| Register against files and git history (seed `ledger`) | wildcard (sub-agent) | 6 + 4 | 12 + 2 | DEFECT: two registered addenda (Z18, Z22) are not the issued texts; closing records list no open objections although 23 are recorded open |
+| The queue's library and two programs | chaos (sub-agent) | 11 + 4 | 16 + 2 | DEFECT in the queue's checks: 7 of 23 planted errors passed; self-test added |
+| G10 Corollary 5.29, sign premise | builder (sub-agent) | 13 + 5 | 12 + 2 | STRENGTHENED, proof written and read |
+| Director G, Finite memory and coherent returns | cross-reviewer (sub-agent) | 7 + 2 | 13 + 1 | GAP |
+| Director G, Separated string records | cross-reviewer (sub-agent) | 7 + 2 | 10 + 1 | GAP |
+| Director G, Flight window preparation | cross-reviewer (sub-agent) | 5 + 2 | 10 + 1 | GAP |
+
+
+## 14 November 2026, 03:05 to 04:10 UTC (targets at d509426)
+
+| Item | Agent | Minutes | Tool calls | Outcome |
+|---|---|---|---|---|
+| Director G, Four-tick force | cross-reviewer | 11 + 6 | 13 + 4 | DEFECT in the evidence: 6 of 18 forced sharp-launch rows move opposite to the ideal displacement; README index sentence false for them. Theorems not affected. Two GAPs |
+| Edition verifier of Z24 | chaos | 6 + 4 | 13 + 2 | DEFECT in the check: 22 of 32 planted errors pass; one new check does not run without PyMuPDF; patch filed, not applied |
+| Product events of the signed line | builder | 15 + 8 | 6 + 2 | STRENGTHENED: dimension 2 proved over all lengths; bounded-length reading not obtained |
+| Director G, Folded field and native Gaussian | cross-reviewer | 17 + 3 | 10 + 1 | GAP |
+| Director G, Window source cost | cross-reviewer | 6 + 4 | 8 + 3 | GAP |
+| Director G, Renewal launch | cross-reviewer | 7 + 2 | 8 + 1 | GAP |
+

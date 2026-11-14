@@ -1,0 +1,31 @@
+A1 ring N=1: A^T A=2I True; A A^T=2I True
+A1 ring N=2: A^T A=2I True; A A^T=2I True
+A1 ring N=3: A^T A=2I True; A A^T=2I True
+A1 ring N=4: A^T A=2I True; A A^T=2I True
+A1 ring N=5: A^T A=2I True; A A^T=2I True
+A1 ring N=8: A^T A=2I True; A A^T=2I True
+A1 ring N=12: A^T A=2I True; A A^T=2I True
+A1L window m=0: A^T A=2I True; output ports never hit in window (zero rows of AA^T): 4
+A1L window m=1: A^T A=2I True; output ports never hit in window (zero rows of AA^T): 4
+A1L window m=5: A^T A=2I True; output ports never hit in window (zero rows of AA^T): 4
+A2 instances 24: identity with U(k) exact on all: True; with U(-k) fails on 16 of 24
+A3 worst residual 4.4866e-51  min Re lambda_+ on grid 0.708257174182  1/sqrt2 0.707106781187
+A4 U(k*)u = e^(i pi/4) u: True; omega*=-pi/4; omega'=0; omega''=1
+A4 u is eigenvector of the other band: False (expected False)
+B1 q -1.0 closed-form diff 0.0 numdiff-vs-formula 1.3364e-51
+B1 q -0.5 closed-form diff 6.6819e-52 numdiff-vs-formula 1.3364e-51
+B1 q -0.1 closed-form diff 1.3364e-51 numdiff-vs-formula 1.3364e-51
+B1 q 0.1 closed-form diff 3.341e-52 numdiff-vs-formula 3.341e-52
+B1 q 0.333333 closed-form diff 1.3364e-51 numdiff-vs-formula 0.0
+B1 q 0.5 closed-form diff 0.0 numdiff-vs-formula 0.0
+B1 q 1.0 closed-form diff 0.0 numdiff-vs-formula 0.0
+B1 q 2.0 closed-form diff 0.0 numdiff-vs-formula 1.3364e-51
+B1 q 3.0 closed-form diff 3.341e-52 numdiff-vs-formula 0.0
+B1s q-omega' series: -19*q**5/30 + 2*q**3/3  ; q^2/2-(omega-omega*) series: -19*q**6/180 + q**4/6
+D1 h+ -> (2, 0) prob (Fraction(1, 1), Fraction(0, 1)) ; h- -> (0, 2) prob (Fraction(0, 1), Fraction(1, 1)) ; rail R -> (Fraction(1, 2), Fraction(1, 2)) ; rail L -> (Fraction(1, 2), Fraction(1, 2))
+E1 (a) C_t = 2^t C_0 for all 40 sources: True; (b) single-site uniform: True (20 sources); (c) multi-site sources non-uniform: 20 of 20
+H1 claim (even N > W+2n+2): True over 48 (W,n,N) cells x 10 sources
+H1 smallest N with agreement from there on, as (N0, N0-(W+2n)) per (W,n): {(0, 1): (3, 1), (0, 2): (5, 1), (0, 3): (7, 1), (0, 6): (13, 1), (1, 1): (4, 1), (1, 2): (6, 1), (1, 3): (8, 1), (1, 6): (14, 1), (2, 1): (5, 1), (2, 2): (7, 1), (2, 3): (9, 1), (2, 6): (15, 1), (5, 1): (8, 1), (5, 2): (10, 1), (5, 3): (12, 1), (5, 6): (18, 1)}
+H2 10000 pairs (both vectors unit norm: hypothesis satisfied by construction): max ratio random M 0.925013941402; max ratio optimal M 1.000000001421941; margin -1.422e-09
+H2 edge (b not normalised, a=(1,0), b=(1.5,0), M=I): |diff| = 1.25  2 eta = 1.0
+SUMMARY {'A1': True, 'A1L': True, 'A2': True, 'A2neg': True, 'A3': True, 'A4': True, 'B1': True, 'B1s': True, 'D1': True, 'E1a': True, 'E1b': True, 'E1c_edge_nonuniform_exists': True, 'H1': True, 'H2': np.False_}

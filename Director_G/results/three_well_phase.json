@@ -1,0 +1,61 @@
+{
+  "scope": "Prospective model predictions; no experimental phase scan",
+  "well_order": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "sharp_left": [
+    "1/8",
+    "5/8",
+    "1/8",
+    "1/8",
+    "0"
+  ],
+  "sharp_right": [
+    "0",
+    "1/8",
+    "1/8",
+    "5/8",
+    "1/8"
+  ],
+  "fixed_gain_profiles": 3,
+  "exact_cases": {
+    "balanced_phases": 51,
+    "varying_arm_mixtures": 51,
+    "real_unequal_or_sharp_inputs": 192
+  },
+  "predicted_settings": {
+    "identity": {
+      "site_law": [
+        "1/16",
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/16"
+      ],
+      "h_minus_2": "1/2",
+      "h_minus_1": "1",
+      "contrast": "1/2"
+    },
+    "reversal": {
+      "site_law": [
+        "1/16",
+        "1/8",
+        "1/8",
+        "5/8",
+        "1/16"
+      ],
+      "h_minus_2": "1/2",
+      "h_minus_1": "0",
+      "contrast": "-1/2"
+    }
+  },
+  "joint_only_gain_mimic": {
+    "matches_both_full_rows": true,
+    "sharp_controls_unchanged": true,
+    "restored_contrast": "0"
+  }
+}

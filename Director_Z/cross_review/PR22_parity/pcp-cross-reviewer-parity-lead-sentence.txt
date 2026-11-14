@@ -1,0 +1,3 @@
+Target: Director_G/First_direction_in_site_parity.md, lead paragraph, last sentence (one clause added; Director G decides; README row 10 of Director_G/README.md carries the same wording and is not touched here).
+Why: "every isolated sharp launch gives identical terminal probabilities under the two laws" omits the body's hypothesis "undergoes only free ticks"; the note's own routed launch is an isolated sharp launch on which the laws differ (0 against 1/24).
+Rerun: own program, 351 free-tick single-parity controls agree at every depth (0 failed); routed launch differs from native tick 4 (total variation 1/12); patch checked with git apply on a scratch copy. No program or result file changes.

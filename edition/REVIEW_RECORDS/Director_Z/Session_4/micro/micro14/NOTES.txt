@@ -1,0 +1,18 @@
+MICRO-REVIEW NOTES, THEOREM_T.tex boundary cases (same model family as the author; not independent review).
+Program: work/chk.py (own exact enumeration, integers only); output: work/chk_output.txt.
+Carriers: line, rings N=1..5; lengths T=1..4; every prescription A_1..A_T (subsets of reachable sites).
+Prescriptions / distinct events: line 16932/418, N=1 30/8, N=2 30/8, N=3 2340/246, N=4 340/124, N=5 16932/418.
+1 PASS  restriction to one site = event with A_T∩{x}; Ext S = event with A_{T+1}=all. 0 failures, incl. T=1,
+        empty events (line: 10218 empty prescriptions) and an unreachable site x.
+2 PASS  T>=1 excludes the length-0 event {empty walk}, m(0,R)=(1,0). No step needs it: the same counts
+        arise at T=2 from A_1={-1}, A_2={0} (walk LR). Part (iv) holds for it too (a+c -> 2(a+c)).
+        Wording: "for every event S, that is, for every set of walks of one length" leaves length 0 unsaid.
+3 PASS  Collisions exist: events holding two walks with different integer end positions at one vertex:
+        N=3,T=4: 48 prescriptions; N=4: 6 (T=3), 30 (T=4). Lemma holds with counts taken modulo N (0 failures).
+        Text is consistent (m_S defined on ring vertices) but never says it in words.
+4 PASS  daughters U+V at (x+1,R), U+JV at (x-1,L), zero elsewhere: site cases line 101004, N=1 30, N=2 30,
+        N=3 7016, N=4 680, N=5 84072; failures 0. Includes N=1,2 where x+1=x-1.
+5 PASS  admitted N in 1..30: 11,13,15,17,19,21,22,23,...,30 (12,14,16,18,20 excluded); =11 exactly at N=11,22.
+6 PASS  F_y=x(p+q): factor 2 on all 16932 prescriptions and on all 65814 subsets of walks, T=0..4, line.
+Also: (iv) with a=3,c=5 checked on every prescription, all carriers: 0 failures.
+No failed predicate. No repository change needed.
