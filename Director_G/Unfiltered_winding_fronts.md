@@ -2,7 +2,7 @@
 
 **Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
 
-A sharp launch, one clock and a terminal site-and-rail detector distinguish two phase responses that give identical sharp-launch records on the line. The first meeting of the ballistic fronts on an even ring gives opposite changes on the two rails. Their sum measures the coherent fraction in a specified mixture, and their difference supplies a winding cosine. A later read in the interior gives a contrast bounded away from zero as the ring grows. These are predictions per original launch. No intermediate path is measured or removed. [Filtered ring comparison and word gains](Four_arc_gains_and_winding_records.md) · [Interior read and proof](Interior_winding_read.md)
+At sufficiently large even $D$ coprime to three, a sharp launch and a calibrated terminal site-and-rail detector at one chosen clock distinguish two specified cubic phase responses that give identical sharp-launch records on the line. Estimating the lone-port contrast at fixed error takes order $t^{2/3}$ independent launches. The first meeting of the ballistic fronts on an even ring gives opposite changes on the two rails. Their sum measures the coherent fraction in a specified mixture, and their difference supplies a winding cosine. A later read in the interior gives a contrast bounded away from zero as the ring grows. These are predictions per original launch. No intermediate path is measured or removed. [Filtered ring comparison and word gains](Four_arc_gains_and_winding_records.md) · [Interior read and proof](Interior_winding_read.md)
 
 ## Which probabilities are being compared?
 
