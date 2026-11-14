@@ -1,0 +1,73 @@
+NOTES -- builder, target "position product events" (Theorem T). 14 November 2026.
+Same model family as the director; not independent review. Nothing here passes a gate.
+
+FILES (all in this folder)
+  THEOREM_T.tex            the fragment: Lemma prep (cited), Lemma onesite, Theorem posprod (i)-(iv), Remark (limits)
+  t_check.py               exact program, predicates in the docstring before the first run, seed 20261113, result mode 'x'
+  t_check_results.json     sha256 01226ec4...b32ec59; rerun in rerun/ byte-identical; second run in place refused (FileExistsError)
+  NOTES.txt                this file
+
+WHAT WAS CHANGED IN THE TARGET STATEMENT
+ 1. Carrier hypothesis put in the form the proof uses: "the conclusion of the preparation lemma holds on D".
+    The note gives it for the line and rings with N/gcd(N,2) >= 11 (not only > 11): >11 in any deposit order,
+    =11 (N=11, 22) in the note's prescribed order (corridor 0 first). So the ring range is one step wider than the target.
+ 2. Preparation lemma needed only as: for every site x and every U,V there is a position product event S with
+    m_S(x,R)=U, m_S(x,L)=V. NOTHING need be empty elsewhere: the walks of S ending at site x form a position product
+    event (A_T replaced by A_T n {x}), Z's Lemma 1(a). The target's clause "no other walk at any vertex adjacent in
+    the next step" is removed. (The note proves all other vertices empty anyway.)
+    Needed "for every site x" only in (ii) and ring-(iii); for (i) and rail-only (iii) one site per (U,V) suffices
+    (any site, since F does not depend on it).
+ 3. (i) weakened hypothesis: F_y may depend on the rail (F_R, F_L); equality of the two is derived (V=0).
+ 4. (ii) one hypothesis for line and ring: for each m, y -> F_y(m) bounded below. Automatic on a ring; implied by
+    F_y >= 0 on the line. Strictly weaker than F >= 0 on the line.
+ 5. (iii) k any real number (not assumed positive). Scope: F depending on rail only (line or ring), OR ring with
+    site-dependent F (new: sum of the four single-input equations over the ring). HYPOTHESIS ADDED relative to the
+    target wording: on the line, (iii) needs F independent of the site -- see failed strengthening F1.
+ 6. Converse (iv) holds for every event on the line and every ring N >= 1, no lemma.
+
+STATUS
+  Lemma prep (preparation)           CITED (Director_G/Position_mask_preparation.md). Not reproved.
+       what the note proves: arbitrary U,V, every site (prefix), other vertices empty, <=5 sites per layer,
+       T=15+6(pR+qL)+5(qR+pL), x=T-20 before prefix; line and N/gcd(N,2)>11; plus 11 and 22 in prescribed order.
+       The proof is a path argument; Lean covers only one isolated 5-site corridor pulse (xr39 confirms).
+       COMPUTED replays: xr39 entries 0..3 (256 targets) line + rings 3..30 with period>11 all orders, 11/22 order A;
+       prefix 90 line, rings 11,13,22,24. Note's own census: multiplicities 4, 8, 17, a 371-tick target.
+       Mine (P6): entries 0..2 (81 targets), every vertex checked, line and rings 11,13,15,17,19,21,22,23,24,25,26,
+       28,30,31,46,47: 81/81 each; prefix to prescribed sites 16 targets: line 80/80, rings 13 208/208, 24 384/384,
+       11 176/176, 22 352/352. Form cited = form proved in the note = form replayed (the cited form is weaker).
+  Lemma onesite (E_x from one event)  PROVED (in THEOREM_T.tex)
+  (i)   PROVED given the lemma.  COMPUTED also: nullity exactly 2, simplex |m|<=M, M=2..7 (P1); from the four
+        families used in the proof alone, nullity 2 (P2).
+  (ii)  PROVED given the lemma (ring; line with bounded-below).  COMPUTED: single-input ring system nullity 1,
+        N=1..40 (P5).
+  (iii) PROVED given the lemma, in the scope of item 5.  COMPUTED: P4 (k grid, M=5), P5k (rings 1..24).
+  (iv)  PROVED, no lemma.  COMPUTED: 588 random events (588 qualify) line and rings 1,2,3,4,5,13, lengths 1..7;
+        all 16932 position product events of length <=4 on the line (P3).
+  Lean: NOT DONE. Lean 4.12.0 is installed but Mathlib is not built in this environment; the only nonlinear step is
+        the induction g(n)=c n^2, the parallelogram recursion (the edition has a Parallelogram.lean; not rerun by me).
+
+FAILED / KEPT
+  F1 (false strengthening). "(iii) on the line with site-dependent non-negative F": FALSE.
+     F_y(p,q)=lam^x (p+q), lam>0, lam!=1: mu(Ext S)=(lam+1/lam) mu(S) for every event, F>=0, not zero.
+     Checked exactly lam=2, k=5/2, 105 random events (P4c a). Unbounded in x.
+  F2 (not proved). "(iii) on the line, site-dependent, F >= 0 AND bounded in y": I believe k=2 follows (even part
+     C_x(m) solves C_{x+1}+C_{x-1}=kC_x; non-negative bounded solutions on Z are zero unless k=2) but I did not write
+     the proof. CONJECTURED.
+  F3 (kept from Z's THEOREM.md, rechecked P4c b). Line, F_y=x(p+q): consistent, factor 2, not count+square
+     (walks R, L have weights 1, -1). Shows the bounded-below condition in (ii) is needed.
+  F4 (recorded, P2f). Dropping a family from the proof's four: without V=0 or without U=0 nullity stays 2 on the
+     simplex to M=7 (the families V=(1,1), V=(1,0) with U=0 included already force them); without V=(1,1): 4;
+     without V=(1,0): 8 at M=7. So V=0 and U=0 are convenient, not necessary; not turned into a proof.
+  F5 (recorded, P6s, no predicate). Note's construction on small rings, 81 targets: N=3,4,5,6,8,9,10,18,20: 0/81;
+     N=7,12,14,16: 1/81 (the empty target). Agrees with xr39 (N=12: 1/256, N=10: 0/256). Whether SOME other
+     preparation exists on small rings is open; (i)-(iii) are not claimed there. Z's THEOREM.md: ring 6, T=5,
+     dimension 3 (not followed up).
+  F6 (recorded, P4). k=0: null space of dimension 5 at M=5 (signed solutions), Sigma vanishes on it; consistent
+     with (iii), which needs non-negativity. sqrt2 example of Z's Prop 3(a) not in the rational grid.
+  Slip corrected while writing: the note's "B^-_{x+1}=A^-_x" does not come directly from the single-input
+     equations; they give beta_{x-1}=alpha_x-beta_x, and the stated relation follows with alpha_{x+1}=alpha_x+beta_x.
+     The note's relation is correct; the fragment writes both steps.
+
+WHAT IS NOT IN THE FRAGMENT
+  \cite keys dgmask (Director G's note), zprod (Director_Z/computation/Product_Events/THEOREM.md), xr39 (challenger
+  replay) are placeholders for the paper's bibliography.

@@ -30,4 +30,27 @@ theorem capped_implies_full {raw : List Launch} {n k : Nat} (budget : Nat)
     (h : rejects n k (raw.take budget)) : rejects n k raw := by
   simpa using reject_extension (raw.drop budget) h
 
+/-- At integer common denominators, combine the two equally likely switch settings.
+    R has weight x, L has weight y, and the physical counters have responses a,b.
+    The crossed setting decodes counter B as R and counter A as L. -/
+theorem decoded_exchange (x y a b : Nat) :
+    (x * a + x * b, y * b + y * a) = (x * (a + b), y * (a + b)) := by
+  simp [Nat.mul_add, Nat.add_comm]
+
+/-- After clearing positive denominators for a rational residual ratio kappa = n/d,
+    compare the lower null fraction with the upper rival fraction. -/
+theorem residual_separation (n d : Nat) :
+    20 * n * (257 * d + 187 * n) < 257 * d * (17 * d + 20 * n) ↔
+    220 * (n*n) < 257 * (d*d) := by
+  simp only [Nat.mul_add]
+  have hm : 20 * n * (257 * d) = 257 * d * (20 * n) := by ac_rfl
+  have hn : 20 * n * (187 * n) = 17 * (220 * (n*n)) := by
+    calc
+      _ = (20 * 187) * (n*n) := by ac_rfl
+      _ = (17 * 220) * (n*n) := rfl
+      _ = _ := by ac_rfl
+  have hd : 257 * d * (17 * d) = 17 * (257 * (d*d)) := by ac_rfl
+  rw [hm, hn, hd]
+  omega
+
 end TagShotBudget

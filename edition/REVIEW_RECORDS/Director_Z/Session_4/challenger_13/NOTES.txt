@@ -1,0 +1,15 @@
+STEP 1 (read revised note)
+- Order: now stated: "complete all pulses from source 0 into stock 4 to store JV, then all pulses from source 6 into stock 10 to store U. Run one pulse at a time." -> corridor order CLOSED. Order of + and - pulses inside one corridor not stated (to test: Q6).
+- Position independence in lead: "Suppose scores add over terminal ports, vanish on an empty multiset, are independent of position and horizon, and double on extending any admissible event by a free tick." -> CLOSED (also horizon-stationarity now in lead).
+- Ring: "works on a ring of circumference N whenever N/gcd(N,2)>11"; "The same ordering also proves preparation at deficit period 11, namely on rings of 11 and 22 wells."
+STEP 2-4 (t.py -> results_t.json; rerun in fresh dir byte-identical)
+Q1 line 0..5: 1296/1296 exact, T formula 1296/1296, x=T-20, max width 5, max T 125. Q2 300 random (entries<=20): 300/300, max T 418.
+Q3 rings 23,24,25,26,40 (+13 minimal odd): 256/256 each. Q4 rings 11,22 stated order: 256/256 and 1296/1296.
+Q5 daughters one free tick later = U+V on (x+1,R), U+JV on (x-1,L), nothing else: all pass wherever run (line 1296+300, rings).
+Q6 inner +/- order (negatives first; shuffled inside corridor): 256/256 on line, 11, 22, 13, 24 -> inner order immaterial (measured).
+Q7 extremes (entry 60, T up to 1335): 10/10 on line, 11, 13, 22, 24, with daughters.
+Q8 prefix to every residue x_* (h in three representatives on rings): all exact (line 114, r11 198, r22 396, r13 234, r24 432).
+Q9 measured only: reversed corridor order rings 11,22: 31/256 (first fail U=(0,1),V=(0,1)) = note's figure. ring 12: 1/256; rings 10, 20: 0/256; ring 21: 256/256.
+Q10 induction invariant at end of each pulse on rings 11,22: 256/256; surplus at deficit 0 up to 79 words (discarded, as note says).
+Failed predicates kept: 1217 records, all from Q9 (measured-only, outside the claim). No failure of the claim found.
+Not checked: general-N proof beyond listed rings; Lean file; deduction section; author checker.
