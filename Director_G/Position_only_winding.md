@@ -14,7 +14,7 @@ Take gains $(RR,RL,LR,LL)=(1,g,1,zg)$ in $C_2\times C_q$. Each coherent sector h
 | $2D=4$ | $2K+3$ | The fixed pair $\{0,1\}$ |
 | $2D=2$ | No identifying clock | Well parity is deterministic at every tick |
 
-Every rate is unconditional per original launch. There are no intermediate measurements or filters. The minimum concerns the full unknown mixture; a test between two specified pure sectors can finish earlier. Enlarging the ring’s group by labels that map to the same effective conjugate pair cannot distinguish those labels on this apparatus. These are conditional model probabilities, with the probability-law family, sharp preparation, coherence and detector registration all supplied.
+Every rate is unconditional per original launch. There are no intermediate measurements or filters. The minimum concerns the full unknown mixture. A test between two specified pure sectors can finish earlier. On two wells even the fair fraction is invisible when all coherent labels collapse to one effective pair. Enlarging the ring’s group by labels that map to the same effective conjugate pair cannot distinguish those labels on this apparatus. These are conditional model probabilities, with the probability-law family, sharp preparation, coherence and detector registration all supplied.
 
 ## Why a single semicircle suffices on six or more wells
 
@@ -48,6 +48,19 @@ $$
 Indeed the vanishing numerator gives $(1+x^2)F=(1-x)(1-F)/y$. The formal inverse $x(y)$ solves $x=y(1+x^2)^2/(1-x)^2$, and has strictly positive coefficients in every positive degree by the recursion. Consequently $L(a)=1$, $L(a^2)=0$, and $(-1)^j L(a^j)<0$ for every $j\ge3$. Expand the Chebyshev polynomial as $T_k(1-2a)=1+\sum_{j=1}^k(-1)^j c_{kj}a^j$, with $c_{kj}=4^j k(k+j-1)!/[(2j)!(k-j)!]$ (equivalently, expand the Chebyshev recurrence). Each positive coefficient increases with $k$ at fixed $j$, and $c_{k1}=2k^2$. Hence $u_k=L(T_k(h))$ strictly decreases. Its first values are $1,-1,-7,-113,-2335$. Signs and cancellation here concern a signed functional. They place no positivity requirement on a hypothetical affine dependence between experimental rates.
 
 Effective phases obey $T_{K+1}(h)=T_{|m-K-1|}(h)$, where $|m-K-1|\le K$ for $m\ge1$. The strict inequality of the corresponding $u$ values excludes any signed unit-mass coherent ensemble matching fair through $k=K+1$. The coherent response columns are affinely independent by the triangular pivots through $k=K$ and the finite cosine transform. Thus the fair column adds an independent mixture coordinate, and the odd clocks $3,5,\ldots,2K+3$ identify all masses. Before that last clock at most $K$ informative binary frequencies exist by (1), whereas the mixture simplex has affine dimension $K+1$. Distinct positive mixtures then give identical reads by perturbing an interior point in a null direction. This proves the four-well optimum also for the collapsed order $m=1$.
+
+## Selecting a specified cosine without fixing a group order
+
+On **four wells**, now allow an arbitrary positive distribution of unit phases $w$, plus a fair fraction $c$. Let $\nu$ be its coherent subprobability pushed forward to $h=\operatorname{Re}(w^2)$ and $a=(1-h)/2$. Fix a target $r\in[-1,1]$. Write $B_3,B_5,B_7$ for the measured biases of the well $t\bmod4$, recovered from the fixed window by the known tick sign. Fair count contributes zero bias. Since $X_3=a-1$, $X_5=-a^2$ and $X_7=1-4a+2a^2+a^3$, the experiment measures exactly
+
+$$
+C_r=10+2r^2+(13+2r+r^2)B_3+(8-4r)B_5+4B_7
+=\int(h-r)^2(1+a)\,d\nu+(10+2r^2)c.
+$$
+
+Expansion in $a$ proves the identity. In particular $C_r=0$ exactly when $c=0$ and the coherent law has $h=r$ with probability one. The bounds $c\le C_r/(10+2r^2)$ and $\nu(|h-r|\ge\delta)\le C_r/\delta^2$ hold for $\delta>0$. Specifying $h$ fixes $w^2$ up to conjugation. The replacement $w\mapsto-w$ also leaves every well read unchanged. A named ordinary phase would still require a calibrated assignment and actual measured frequencies.
+
+Seven ticks is optimal for each $-1<r<1$ in this unrestricted phase family. To mimic the target at ticks 3 and 5 with a small positive count weight $c$, demand mean $\mu=(r+c)/(1-c)$ and second moment $v=(r^2+3c)/(1-c)$ for the normalized coherent population. Both conditions follow by substituting the first two biases above. For small $c>0$ one has $|\mu|<1$, $v<1$, and $v>\mu^2$ because the derivative of $v-\mu^2$ at zero is $(1-r)(3+r)>0$. Mix an atom at $\mu$ with the endpoint distribution on $\{-1,1\}$ having mean $\mu$, giving that endpoint distribution weight $(v-\mu^2)/(1-\mu^2)$. This is an exact positive rival, and paired even clocks add no information. At $r=1$, tick 3 reaches the unique minimum bias $-1$ and separates the target. At $r=-1$, tick 3 gives zero bias as does fair count. Reproduction of tick 3 therefore confines the coherent fraction to $h=-1$ and the additional tick-5 read fixes $c=0$. These are maximum-clock statements for one terminal read on each fresh launch.
 
 ## A two-frequency cubic experiment
 

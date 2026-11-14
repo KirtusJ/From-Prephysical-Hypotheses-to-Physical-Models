@@ -149,6 +149,41 @@ def four_well_kernel():
                 signed_formal_count_cosine_moments=list(map(str,fake)))
 
 
+def continuous_pure_target():
+    def biases(h):
+        a = (1-h)/2
+        return [a-1,-a*a,-1+a**3+2*(1-a)**2]
+
+    witnesses = []
+    for r in map(Fraction,("-1","-3/4","-1/2","0","1/2","3/4","1")):
+        coeff = [13+2*r+r*r,8-4*r,4]
+        def certificate(observed):
+            return 10+2*r*r+sum(v*x for v,x in zip(coeff,observed))
+        for j in range(11):
+            h = Fraction(j-5,5)
+            check(certificate(biases(h))==(h-r)**2*(1+(1-h)/2),"target polynomial")
+        check(certificate(biases(r))==0 and certificate([0]*3)==10+2*r*r,"count penalty")
+        if r in (-1,1):
+            check((biases(r)[0]==0)==(r==-1),"tick-three extreme alias")
+            witnesses.append(dict(target=str(r),first_selecting_clock=5 if r==-1 else 3))
+            continue
+        c = Fraction(1,100)
+        mean = (r+c)/(1-c)
+        second = (r*r+3*c)/(1-c)
+        spread = (second-mean**2)/(1-mean**2)
+        check(-1<mean<1 and 0<spread<1,"positive exact rival")
+        atoms = [(mean,(1-c)*(1-spread)),(-1,(1-c)*spread*(1-mean)/2),
+                 (1,(1-c)*spread*(1+mean)/2)]
+        actual = [sum(w*biases(Fraction(h))[i] for h,w in atoms) for i in range(3)]
+        check(actual[:2]==biases(r)[:2] and actual[2]!=biases(r)[2],"five-tick exact alias")
+        check(certificate(actual)>=c*(10+2*r*r),"positive target gap")
+        witnesses.append(dict(target=str(r),first_selecting_clock=7,count=str(c),
+                              cosine_and_weight=[[str(h),str(w)] for h,w in atoms],
+                              target_biases=list(map(str,biases(r))),
+                              rival_biases=list(map(str,actual)),rival_certificate=str(certificate(actual))))
+    return witnesses
+
+
 def main():
     cmd = argparse.ArgumentParser(description=__doc__)
     cmd.add_argument("output",type=Path)
@@ -176,6 +211,7 @@ def main():
                       "The rank test uses total coherent weight and its K folded cosine moments.",
                 four_well_fixed_window_inverse=four_well_inverse(),
                 kernel=four_well_kernel(),
+                continuous_phase_target=continuous_pure_target(),
                 tiny_D1_only_occupied_site_by_clock=tiny,
                 native_panels=panels,four_well_effective_orders=timing)
     out.mkdir(parents=True,exist_ok=True)
