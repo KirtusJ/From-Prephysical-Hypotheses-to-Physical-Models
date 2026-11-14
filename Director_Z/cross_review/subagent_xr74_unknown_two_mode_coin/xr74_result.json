@@ -1,0 +1,175 @@
+{
+ "predicates": {
+  "P10_tick_dependent_sequence_outside_class": {
+   "failed": 1,
+   "failed_examples": [
+    {
+     "D": 0.0,
+     "F": 0.375,
+     "L1": 0.625,
+     "L2": 0.9000000000000001,
+     "L3": 0.11875000000000017,
+     "W": 0.0,
+     "q1": 0.625,
+     "q2": 0.6
+    }
+   ],
+   "note": "FAIL means: a clock-dependent unitary sequence with unbalanced first two coins has W=D=0 (residuals shown; tolerance 1e-12)",
+   "passed": 0,
+   "qualify": 1
+  },
+  "P11_phase_plate": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": "[{'sign': 1, 'p': 0.9330127018922187, 'want': 0.9330127018922193, 'resid': 5.551115123125783e-16, 'other_entry': 0.933012701892219}, {'sign': -1, 'p': 0.06698729810778055, 'want': 0.0669872981077807, 'resid': 1.5265566588595902e-16, 'other_entry': 0.06698729810778058}]",
+   "passed": 2,
+   "qualify": 2
+  },
+  "P1_free_rates_chebyshev": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 1029,
+   "qualify": 1029
+  },
+  "P2_monitored_F_is_q_squared": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 1029,
+   "qualify": 1029
+  },
+  "P3_W_D_identities": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": "4000 mixtures drawn; qualify counts (mixture,a) pairs with valid mixture",
+   "passed": 30520,
+   "qualify": 30520
+  },
+  "P4_bounds": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 30520,
+   "qualify": 30520
+  },
+  "P5_alias_pair": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 39,
+   "qualify": 39
+  },
+  "P6_other_aliases_diagonal_plus_one_coin": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": "largest alias F found per a (grid m=k/20): {} cubic: 5/16 ; eta=1/(4F) -> 4/5",
+   "passed": 684,
+   "qualify": 684
+  },
+  "P7_reduced_score": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 15260,
+   "qualify": 15260
+  },
+  "P8_endpoint_inequality": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": "equality cases [('1/2', '2')] (only (1/2,2): True); largest qr below 1 on grid: 1023/1024 at q=31/64, r=33/16; just inside: L2=1-e allows count c=2e or a coin at qr=1-e, so the endpoint statement is exact-only",
+   "passed": 8385,
+   "qualify": 8385
+  },
+  "P9_reported_loss_false_pass": {
+   "failed": 0,
+   "failed_examples": [],
+   "note": null,
+   "passed": 1,
+   "qualify": 1
+  },
+  "P9b_loss_robustness_single_coin": {
+   "failed": 239,
+   "failed_examples": [
+    {
+     "a": "3/2",
+     "eta": "64/289",
+     "q": "17/64"
+    },
+    {
+     "a": "3/2",
+     "eta": "32/81",
+     "q": "9/32"
+    },
+    {
+     "a": "3/2",
+     "eta": "192/361",
+     "q": "19/64"
+    },
+    {
+     "a": "3/2",
+     "eta": "16/25",
+     "q": "5/16"
+    },
+    {
+     "a": "3/2",
+     "eta": "320/441",
+     "q": "21/64"
+    },
+    {
+     "a": "3/2",
+     "eta": "96/121",
+     "q": "11/32"
+    }
+   ],
+   "note": "predicate 'W=0 and D_obs=0 at eta<1 implies balanced' fails in every qualifying case; eta range seen [64/289, 1088/1089]; formula eta=(4q-1)/(4q^2) covers (0,1) as q runs (1/4,1/2)",
+   "passed": 0,
+   "qualify": 239
+  },
+  "P9c_reduced_score_hides_count_under_loss": {
+   "failed": 16,
+   "failed_examples": [
+    {
+     "W": "6/1625",
+     "a": "7/5",
+     "count": "12/1885",
+     "eta": "64/65"
+    },
+    {
+     "W": "3/125",
+     "a": "7/5",
+     "count": "6/145",
+     "eta": "9/10"
+    },
+    {
+     "W": "3/25",
+     "a": "7/5",
+     "count": "6/29",
+     "eta": "1/2"
+    },
+    {
+     "W": "3/1250",
+     "a": "7/5",
+     "count": "3/725",
+     "eta": "99/100"
+    },
+    {
+     "W": "1/208",
+     "a": "3/2",
+     "count": "1/130",
+     "eta": "64/65"
+    },
+    {
+     "W": "1/32",
+     "a": "3/2",
+     "count": "1/20",
+     "eta": "9/10"
+    }
+   ],
+   "note": "four-setting W still detects this count; the reduced three-setting score does not",
+   "passed": 0,
+   "qualify": 16
+  }
+ },
+ "seed": 74
+}
