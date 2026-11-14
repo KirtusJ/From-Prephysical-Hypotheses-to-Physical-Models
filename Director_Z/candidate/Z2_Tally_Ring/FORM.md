@@ -66,7 +66,7 @@ same model family as the writer, or Director G where named; none is independent 
 | D7 | Rings of N = 4, 3, 5 places together fix chi(B) up to complex conjugation; no two ring sizes of 3 or more do so for every value | Draft, Proposition (several rings) | proved; checked in Lean (`Director_Z/lean/CharSeparation.lean`) |
 | D8 | Under T7 no part of a run can start from a state that reads more than D3 allows: whatever screens and steps produce carries a factor that cancels chi(c/a) | Draft, Proposition (the walk cannot prepare) | proved; algebra in Lean (`Director_Z/lean/TwoRail.lean`); challenger found no defect in range |
 
-| D9 | T3 can be tested from inside: with no screen, the reading (tick 3, place -1, rail L) has weight (1 + Re chi(H))/4, which is zero exactly when T3 holds | Draft, Remark (a), from the computation in the proof of Proposition (what is read)(i); found by the challenger, 193 of 193 carriers, and checked by hand by the director | proved |
+| D9 | T3 can be tested from inside: with no screen, the reading (tick 3, place -1, rail L) has weight (1 + Re chi(H))/4, which is zero exactly when T3 holds | Draft, Remark (a), from the computation in the proof of Proposition (what is read)(i); found by the challenger, 193 of 193 sharp-start evaluations across 192 carrier–ring draws, and checked by hand by the director | proved |
 
 Not derived, and marked so that it is not mistaken for a result of the candidate:
 
