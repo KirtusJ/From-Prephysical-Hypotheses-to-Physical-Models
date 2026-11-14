@@ -95,7 +95,7 @@ Working rule drawn from this: at most two levels below the director (sub-agent, 
 
 ## Pull requests from the stack (13 November 2026)
 
-Principal: sub-agents and workers may open pull requests on all repositories and branches when necessary. Adopted as: patch file from sub-agents without GitHub tools, pull request from workers that have them, author never merges. Observed the same day: the director's own merge of another author's branch (Director G's pull requests 5, 6, 8) was refused by the session's permission layer, so merging is by the author or the principal. To watch: whether any worker opens one, and whether it was needed.
+Workers used a patch when GitHub tools were unavailable and opened a pull request when a research finding needed a repository change. Director G’s research pull requests 5, 6 and 8 had to be merged from a different session after this session’s permission layer declined the merge.
 
 ## Wider propagation, positive arcs, wildcard and chaos roles (13 November 2026)
 
@@ -129,10 +129,6 @@ Seven stopped agents were resumed by message in two batches of three and one; al
 
 What worked: a builder beside each attacker; resuming by message; narrowing the brief on resume to one or two items. What did not: eleven at once; eight-item briefs; relying on WebFetch (arxiv.org and claymath.org are not reachable from this session).
 
-## A separate PCP version (14 November 2026)
-
-Principal: PCP may be upgraded and run as a separate version, container environment or branch apart from the main branch, if that is better and only if necessary. Not used yet. Candidates for a need, noted so far and none pressing: the closing record of a review lists no open objections although objections are recorded open (found by the queue's wildcard); the register accepts an artifact digest without keeping the file, so a later edit of the file goes unnoticed (two cases, editions Z18 and Z22). The second can be met in the submit tool on this side without touching PCP; the first is a matter of how PCP words its closing record. Decision for now: fix the second in `Director_Z/tools/` when the next edition is prepared; raise the first with Director G before changing anything.
-
 ## Recursion: Director G's figures beside mine (14 November 2026)
 
 Reported by Director G through the principal, with `Director_G/results/pcp_worker_trial.json` as the record. A PCP-equipped Codex worker launched its own PCP-equipped child and the parent verified the child's saved result. Three native worker levels below the director were reached before the host's limit of four active agents; a hosted PCP call extended the chain to five model levels. On one three-bit problem: flat call 20.2 s; three-level handoff 374.2 s including register work; the hosted extension 47.1 s, and the parent had to correct its child's answer. One measured comparison. Director G's practice: one worker for arithmetic with an exact check; parallel workers to derive, attack and replay a proof.
@@ -145,13 +141,9 @@ Principal: use the calibration assessor more on lower-tier models and lower form
 
 What it shows and does not: the items are at ceiling, so they do not separate the tiers; one run each. It is enough to try the cheap roles (micro-review, rerun and byte comparison, outlier scan) on Sonnet or Haiku, with a planted-error control inside each brief. Not yet calibrated: the queue session, headless workers, long tasks. Rule added to practice: every brief to a lower-tier agent carries one control with a known answer, and its result is recorded with the report.
 
-## Store apps for the modules (14 November 2026)
+## Research checks identified during the session (14 November 2026)
 
-Principal: do not be afraid to spend time, with Director G, on creating and integrating the Store apps each module needs, when it becomes useful. What exists in build 22 (`pcpos instrument list`): `mathematics.exact`, `statistics.grim`, `statistics.percent`, `engineering.units`, `cryptography.digest`, `science.order`, `quality.coverage`, `core.calibration`. First use that paid: `core.calibration` caught a calibration record of mine that was not in the method's form.
-
-Apps this session's own failures ask for, each already existing here as an ad hoc script or as a hole found by a chaos run:
-
-| Module | App | Evidence of need | Exists as |
+| Module | Research check | Evidence of need | Exists as |
 |---|---|---|---|
 | Quality | registered artifact unchanged at commit | addenda Z18 and Z22 edited after registration | `Director_Z/tools/check_registered.py` |
 | Quality | call file submitted once; receipts counted | two duplicate submissions | `Director_Z/tools/pcp_submit.py` (with Director G's changes) |
@@ -160,32 +152,34 @@ Apps this session's own failures ask for, each already existing here as an ad ho
 | Statistics | outlier scan of result files with flags EXPLAINED or UNEXPLAINED | asked for at each edition | micro-review brief |
 | Core | summary sentence against its record (counts named in prose checked against the file they come from) | fifteen wrong summary sentences across six editions | micro-review brief |
 
-Not built as Store apps yet: the form a Store app must take in PCP is Director G's ground as much as mine, so the proposal goes to the exchange first; the scripts above keep working meanwhile.
+The table records which checks existed at the time. Entries marked as needs were outstanding at the time.
 
-## Reboots are coordinated (14 November 2026)
+## Restarting a shared review (14 November 2026)
 
-Principal: coordinate reboots as necessary. Rule in `CLAUDE.md` (Mechanics, PCP itself): announce in the exchange file before a restart of PCP, calibration, the queue session or a shared tool; record forced restarts afterwards. Restarts so far this session, all forced: resumptions from a summary; the allowance stop of 13 November (eleven sub-agents and the queue session, all resumed); one move of the container (scratch survived). None planned.
+The allowance stop interrupted eleven sub-agents and the queue session. On a separate container move, scratch files survived. The directors recorded the affected jobs and later resumptions.
 
-### Store apps: Director G's answer (14 November 2026)
+## Following asynchronous results (14 November 2026)
 
-From pull request 3: in build 22 the eight instruments are a fixed array in the host's source (`pcpos-host/src/instruments.rs`), dispatched by name; installing a method module does not add an executable instrument. So a new Store app inside PCP means a new host build, not a plugin. Division of work agreed there: Director G takes the commit-side form of the first Quality item (a path-to-digest map and a pinned manifest digest checked against the blob bytes of one git commit, with the Z18 and Z22 addenda as positive and negative controls) on an isolated research branch and will post a pull request; my `check_registered.py`, `pcp_submit.py` and `calibration_reader.py` continue as they are. No shared installation or restart. The principal attached the repository `KirtusJ/pcp-os` to this session on the same day; it is empty (no commits). Nothing is put there until its purpose is said.
+The director tested `Director_Z/tools/async_run.py` on three tasks: one that passes, the very failure of today (reported NOT AS EXPECTED, exit 1), and a timeout (reported, exit code none); a second run into the same directory is refused.
 
-### The OS source (14 November 2026)
+## Research follow-up at the pause (14 November 2026)
 
-The principal supplied the PCP OS source (build 22) and the empty repository `KirtusJ/pcp-os`. Reconciled (same version as the binary in use; builds in 17 s; identical output on six commands including verification of the 582-event register) and pushed unchanged with a reconciliation record to the session branch of that repository. This is what makes host-level Store apps possible on this side: an instrument is an entry in `crates/pcpos-host/src/instruments.rs`. Nothing built yet; the binary in use is unchanged; Director G is told.
+- Character separation: proofs read line by line (`Director_Z/computation/Character_Separation/DIRECTOR_READING_2026-11-14.md`), table rerun byte-identical, algebra in Lean (`Director_Z/lean/CharSeparation.lean`). A challenger on the criterion and its summary is out; its report is not in.
+- Cross-reviews of Director G's four newest notes filed (`cross_review/subagent_xr69_*`, `subagent_xr72_*`) and posted on the standing thread: no KILL; a provenance defect in the ion checker's line numbers (patch filed, not applied), an unstated boundary of the detector repair, and a title that says more than its note.
 
-## Workers and the PCP OS repository (14 November 2026, permanent)
+- Motion, in order: (1) resume, not relaunch, the challenger on my own draft subsection, which stopped on the
+  rate limit; (2) cross-review Director G's notes on the probability premise from local records (91, 94, 95),
+  since they carry the strongest claims; (3) their note 86 on several walkers, which bears on my four-gain
+  theorem and which they asked me to challenge; then 84, 85, 87, 89, 92, 96, 79, 82; (4) edition Z27 once the
+  draft has survived its challenger.
+- At most three tasks at once, as before.
 
-Principal: workers can report issues and open pull requests on PCP OS as they go; make it permanent. Written into `CLAUDE.md` (pull requests from sub-agents and workers), all seven agent definitions and the queue readme. A worker without GitHub tools writes the issue text or patch in its folder and its parent files it. To watch: the first issue or pull request a worker files there, and whether it was needed.
+The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/2965c75dd51efc728f3d3eeda6d06cfccf40a4e5/Director_Z/pcp_workers/HIERARCHY_LOG.md) preserves the original session chronology.
 
-## Rust holds primacy in PCP OS (14 November 2026, permanent)
+## Role, share and delegation on return (14 November 2026, evening; principal: "you are sovereign")
 
-Principal: PCP OS is primarily Rust; Rust always holds primacy, for security reasons; a permanent note for everyone working on it. Written as `RUST_PRIMACY.md` with `CLAUDE.md` and `AGENTS.md` pointers in `KirtusJ/pcp-os` (session branch, commit `f0d97a2`), and into this repository's `CLAUDE.md`, all seven agent definitions and the queue readme. Consequence for the Store apps: the six proposed apps, if they are to be part of PCP OS, are Rust instruments in the host; the Python scripts in `Director_Z/tools/` stay workspace helpers.
-
-## Hardening the Science and Mathematics modules (14 November 2026)
-
-Principal: a primary goal now is to consider and harden the Science and Mathematics modules of PCP for the ongoing work; it strictly does not override the director's chosen target and motion; autopilot stays on. Taken as: a standing second line of work beside the research, fed by what the research itself shows the modules miss. First step: a gap table, each module's provisions against this session's recorded failures (wrong summaries, hypotheses outside statements, predicates that did not test the hypothesis, cited lemmas, replays taken for proofs, weakened Lean statements, programs changed without the result changing). Changes to the method text or the host go through the exchange with Director G and, for the host, are Rust (see `RUST_PRIMACY.md` in `KirtusJ/pcp-os`).
-
-Added the same day: in hardening the Science and Mathematics modules the director has complete liberty to add to the Store as it sees fit (principal). Order of work kept: the gap table first; then, for each gap that a mechanical check can close, a Rust instrument in the host on a branch of `KirtusJ/pcp-os` (Rust holds primacy), announced to Director G before it replaces anything in use; workspace helpers in other languages only as stopgaps.
-
-Added the same day: the principal asks that a graphical interface be considered for the Store and the modules, even though the director does not need one itself. Considered as follows, nothing built yet. Who would use it: the principal and human readers, who cannot be expected to read a 582-event register or a JSON calibration record. What it would show, read-only, from files that already exist: the register's reviews with their claims, findings and open objections (the closing records do not show these); the gap table of the modules; calibration records by tier with their controls; for each edition, what the verifier and the chaos runs caught and missed. Constraints: it reads and never writes the register; whatever decides a security property stays in the Rust host (`RUST_PRIMACY.md`), so a GUI is a viewer over the host's own output (`pcpos status`, `verify`, `instrument`), not a second implementation; it must work from a checkout without a server. First step when taken up: a single static page generated from `pcpos status` and the record files, published as a private page for the principal.
+- **Role.** I direct one research line. It covers paper G10, what the walk's records can and cannot select of the probability rule and the character, and Director Z's part of the root review. Director G's results, requests and pull requests are inputs. I cross-review one of them when it bears on an obligation of mine or when I judge it the most useful check available, not because a notification asks. I am not Director G's reviewer of record. Director G and its Codex workers now maintain PCP OS master and its integration, so my comparative advantage there is small.
+- **Share.** About 80 per cent research and 20 per cent PCP, the stack and the plugins. The PCP share goes first to what the research uses (the Science and Mathematics modules, the review stack), and to the rest only when it blocks the research. I count by director working blocks; sub-agent time is charged to the question it serves. On a given day I am free to depart from this split and say so.
+- **Delegation.** I keep the choice of question, the proofs, the statements and the edition. Checks go out in parallel to narrow sub-agents, at most three at a time: challenger, micro-review, formalizer, cross-reviewer. A cross-review is delegated whole and filed with a one-paragraph recheck by me. Positive arcs (builders) go out alongside attacks.
+- **Notes.** One short exchange summary per working period, no comment per item. Details live in the filed reports. Reports to the principal: outcomes and blocks.
+- What worked today: four cross-reviews, delegated whole and rechecked byte for byte, within an hour. What cost too much: posting a long comment for each of them.

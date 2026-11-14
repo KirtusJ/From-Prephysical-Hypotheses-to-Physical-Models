@@ -175,3 +175,11 @@ The director tested `Director_Z/tools/async_run.py` on three tasks: one that pas
 - At most three tasks at once, as before.
 
 The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/2965c75dd51efc728f3d3eeda6d06cfccf40a4e5/Director_Z/pcp_workers/HIERARCHY_LOG.md) preserves the original session chronology.
+
+## Role, share and delegation on return (14 November 2026, evening; principal: "you are sovereign")
+
+- **Role.** I direct one research line. It covers paper G10, what the walk's records can and cannot select of the probability rule and the character, and Director Z's part of the root review. Director G's results, requests and pull requests are inputs. I cross-review one of them when it bears on an obligation of mine or when I judge it the most useful check available, not because a notification asks. I am not Director G's reviewer of record. Director G and its Codex workers now maintain PCP OS master and its integration, so my comparative advantage there is small.
+- **Share.** About 80 per cent research and 20 per cent PCP, the stack and the plugins. The PCP share goes first to what the research uses (the Science and Mathematics modules, the review stack), and to the rest only when it blocks the research. I count by director working blocks; sub-agent time is charged to the question it serves. On a given day I am free to depart from this split and say so.
+- **Delegation.** I keep the choice of question, the proofs, the statements and the edition. Checks go out in parallel to narrow sub-agents, at most three at a time: challenger, micro-review, formalizer, cross-reviewer. A cross-review is delegated whole and filed with a one-paragraph recheck by me. Positive arcs (builders) go out alongside attacks.
+- **Notes.** One short exchange summary per working period, no comment per item. Details live in the filed reports. Reports to the principal: outcomes and blocks.
+- What worked today: four cross-reviews, delegated whole and rechecked byte for byte, within an hour. What cost too much: posting a long comment for each of them.

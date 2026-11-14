@@ -1,0 +1,76 @@
+../z27/lean/Orbit_v1.lean:19:10: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  IsPrimitiveRoot
+has type
+  ?m.3832 → ℕ → Prop
+../z27/lean/Orbit_v1.lean:19:10: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.3935
+N : ℕ
+w : ℂ
+hw : w ^ (N / N.gcd 2) = 1
+hN : N > 0
+ω : ℂ := cexp (2 * ↑Real.pi * I / ↑N)
+hω : IsPrimitiveRoot ω N
+hord : orderOf (ω ^ 2) = N / N.gcd 2
+⊢ IsPrimitiveRoot (ω ^ 2) (N / N.gcd 2)
+../z27/lean/Orbit_v1.lean:44:2: error: ring failed, ring expressions not equal
+l a b c d : ℂ
+hl : Complex.abs l = 1
+h : a * d = -(b * c)
+this : (starRingEnd ℂ) l * l = 1
+⊢ (starRingEnd ℂ) l * b * l * c * 2 - b * c * 2 = 0
+../z27/lean/Orbit_v1.lean:100:4: error: ring failed, ring expressions not equal
+a b c d a' b' c' d' : ℂ
+ha : a ≠ 0
+hc : c ≠ 0
+haa : Complex.abs a' = Complex.abs a
+hcc : Complex.abs c' = Complex.abs c
+h : a * d = -(b * c)
+h' : a' * d' = -(b' * c')
+hA : Complex.abs a ≠ 0
+hC : Complex.abs c ≠ 0
+ha' : a' ≠ 0
+hc' : c' ≠ 0
+g : ℂ := a' / a
+hgdef : g = a' / a
+l : ℂ := c' * a / (a' * c)
+hldef : l = c' * a / (a' * c)
+hg : Complex.abs g = 1
+hl : Complex.abs l = 1
+hcl : (starRingEnd ℂ) l = l⁻¹
+hu : b * c * a' ^ 2 = b' * c' * a ^ 2
+⊢ a' * b' * a ^ 2 * c' + a' ^ 2 * c * b + (-(a' ^ 3 * c * b) - b' * a ^ 2 * c') = 0
+../z27/lean/Orbit_v1.lean:107:4: error: ring failed, ring expressions not equal
+a b c d a' b' c' d' : ℂ
+ha : a ≠ 0
+hc : c ≠ 0
+haa : Complex.abs a' = Complex.abs a
+hcc : Complex.abs c' = Complex.abs c
+h : a * d = -(b * c)
+h' : a' * d' = -(b' * c')
+hA : Complex.abs a ≠ 0
+hC : Complex.abs c ≠ 0
+ha' : a' ≠ 0
+hc' : c' ≠ 0
+g : ℂ := a' / a
+hgdef : g = a' / a
+l : ℂ := c' * a / (a' * c)
+hldef : l = c' * a / (a' * c)
+hg : Complex.abs g = 1
+hl : Complex.abs l = 1
+hcl : (starRingEnd ℂ) l = l⁻¹
+hd : d = -(b * c) / a
+hd' : d' = -(b' * c') / a'
+hu : b * c * a' ^ 2 = b' * c' * a ^ 2
+⊢ -(a' * b' * c' * a ^ 2) + a' ^ 2 * b * c + (a' ^ 3 * b * c - b' * c' * a ^ 2) = 0
+'L1_roots' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'L2_common_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_common_u' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_rail_u_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_rail_det' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'L2_rail_u' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_site_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_site_u_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_site_u' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_conj_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L2_conj_u' depends on axioms: [propext, Classical.choice, Quot.sound]
+'L3_converse' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
