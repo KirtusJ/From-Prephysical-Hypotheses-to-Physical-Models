@@ -1,0 +1,1667 @@
+{
+ "E1": {
+  "passed": true,
+  "value": "5/8"
+ },
+ "E2": {
+  "passed": true,
+  "value": "17/64"
+ },
+ "E3": {
+  "passed": true,
+  "qualifying": 78,
+  "violations": 0
+ },
+ "E4": {
+  "passed": true,
+  "tick6": "1/64",
+  "all_T": {
+   "1": "1/2",
+   "2": "1/4",
+   "3": "1/8",
+   "4": "1/16",
+   "5": "1/32",
+   "6": "1/64",
+   "7": "1/128",
+   "8": "1/256",
+   "9": "1/512",
+   "10": "1/1024",
+   "11": "1/2048",
+   "12": "1/4096"
+  }
+ },
+ "E5": {
+  "passed": true,
+  "qualifying": 40,
+  "violations": 0
+ },
+ "S1": {
+  "passed": true,
+  "max_eigenvalue_error": 1.0235750533041808e-15,
+  "min_gap": 1.4142135623730951,
+  "sqrt2": 1.4142135623730951
+ },
+ "S2": {
+  "passed": true,
+  "max_difference": 2.585331948523617e-11
+ },
+ "S3": {
+  "passed": true,
+  "roots": {
+   "1.5707963267948966": {
+    "weight_plus": 0.4999999999999999,
+    "weight_minus": 0.4999999999999999,
+    "abs_dnu": 0.9999999999398845,
+    "nu": 6.123233995736766e-17
+   },
+   "-1.5707963267948966": {
+    "weight_plus": 0.4999999999999999,
+    "weight_minus": 0.4999999999999999,
+    "abs_dnu": 0.9999999999398845,
+    "nu": 6.123233995736766e-17
+   }
+  },
+  "rho0": 0.3183098861837907
+ },
+ "S4": {
+  "passed": true,
+  "B_t_psi_norms": {
+   "1": 0.8416254115301731,
+   "2": 0.9101820546182062,
+   "3": 0.6032997499048826,
+   "10": 0.814741136026956,
+   "101": 0.754801954613861,
+   "1000": 0.719517185417229,
+   "5001": 0.7321001101343466,
+   "20000": 0.7262981703110224
+  },
+  "sum_sup_Pprime": 1.4142135622841912
+ },
+ "P1": {
+  "passed": true,
+  "T": 30603,
+  "direct": 0.011285395495300493,
+  "spectral": 0.01128539549536121,
+  "difference": 6.071705638266423e-14,
+  "direct_total_norm": 0.9999999999945752
+ },
+ "P2": {
+  "passed": true,
+  "P_yes": 0.011285395495300493,
+  "ratio": 1.0254220475942435,
+  "T": 30603
+ },
+ "acceptance_table": [
+  {
+   "inverse_delta": 4,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 49,
+   "w": 0.217637640824031,
+   "v": 0.25,
+   "window": [
+    2,
+    22
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0827572586919005,
+   "P_yes": 0.2009362620300799,
+   "ratio_to_2w_over_pi": 1.4502543821082223,
+   "spectral_mass_of_V_window": 0.21212570021868973,
+   "ratio_to_spectral_mass": 0.9472509074710224
+  },
+  {
+   "inverse_delta": 6,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 151,
+   "w": 0.13932646701298945,
+   "v": 0.16666666666666666,
+   "window": [
+    5,
+    46
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0941100536623438,
+   "P_yes": 0.11478773527724415,
+   "ratio_to_2w_over_pi": 1.2941414276857381,
+   "spectral_mass_of_V_window": 0.11180148832824284,
+   "ratio_to_spectral_mass": 1.0267102611392243
+  },
+  {
+   "inverse_delta": 8,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 338,
+   "w": 0.10153154954452942,
+   "v": 0.125,
+   "window": [
+    8,
+    76
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1102460482646694,
+   "P_yes": 0.07669542993036128,
+   "ratio_to_2w_over_pi": 1.186556298579194,
+   "spectral_mass_of_V_window": 0.0757685725336953,
+   "ratio_to_spectral_mass": 1.012232741962425
+  },
+  {
+   "inverse_delta": 12,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 1051,
+   "w": 0.06499809515869193,
+   "v": 0.08333333333333333,
+   "window": [
+    20,
+    155
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1320204941160947,
+   "P_yes": 0.045348230739964177,
+   "ratio_to_2w_over_pi": 1.0959218743113808,
+   "spectral_mass_of_V_window": 0.04561408963091926,
+   "ratio_to_spectral_mass": 0.9941715620522903
+  },
+  {
+   "inverse_delta": 16,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 2353,
+   "w": 0.04736614270344993,
+   "v": 0.0625,
+   "window": [
+    36,
+    258
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1489257812499993,
+   "P_yes": 0.03213648964378585,
+   "ratio_to_2w_over_pi": 1.0657376135647272,
+   "spectral_mass_of_V_window": 0.032346675622152356,
+   "ratio_to_spectral_mass": 0.9935020840836403
+  },
+  {
+   "inverse_delta": 20,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 4394,
+   "w": 0.03705672245534738,
+   "v": 0.05,
+   "window": [
+    57,
+    382
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.161522332889459,
+   "P_yes": 0.02490965701942678,
+   "ratio_to_2w_over_pi": 1.0558947244993069,
+   "spectral_mass_of_V_window": 0.024920489826968796,
+   "ratio_to_spectral_mass": 0.9995653051919432
+  },
+  {
+   "inverse_delta": 24,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 7321,
+   "w": 0.030322683585054203,
+   "v": 0.041666666666666664,
+   "window": [
+    84,
+    527
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.172167004358514,
+   "P_yes": 0.020210441583750953,
+   "ratio_to_2w_over_pi": 1.0469550728783914,
+   "spectral_mass_of_V_window": 0.02019194633173282,
+   "ratio_to_spectral_mass": 1.0009159717302272
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 16384,
+   "w": 0.022097086912079605,
+   "v": 0.03125,
+   "window": [
+    150,
+    874
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1892071150027204,
+   "P_yes": 0.014597590153513793,
+   "ratio_to_2w_over_pi": 1.0376861477004002,
+   "spectral_mass_of_V_window": 0.014540493538459187,
+   "ratio_to_spectral_mass": 1.0039267315723215
+  },
+  {
+   "inverse_delta": 40,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 30603,
+   "w": 0.017287572304530974,
+   "v": 0.025,
+   "window": [
+    237,
+    1294
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2025386015183388,
+   "P_yes": 0.01128539549536121,
+   "ratio_to_2w_over_pi": 1.0254220475997604,
+   "spectral_mass_of_V_window": 0.01129724001321231,
+   "ratio_to_spectral_mass": 0.9989515565007695
+  },
+  {
+   "inverse_delta": 48,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 50989,
+   "w": 0.014146032088393582,
+   "v": 0.020833333333333332,
+   "window": [
+    341,
+    1783
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2135651375584955,
+   "P_yes": 0.00922010519562012,
+   "ratio_to_2w_over_pi": 1.0238141185771408,
+   "spectral_mass_of_V_window": 0.009202530093361139,
+   "ratio_to_spectral_mass": 1.0019098119843868
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 114105,
+   "w": 0.010308655552913232,
+   "v": 0.015625,
+   "window": [
+    607,
+    2959
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.231146534229903,
+   "P_yes": 0.006673196631410776,
+   "ratio_to_2w_over_pi": 1.0168380059645934,
+   "spectral_mass_of_V_window": 0.006668979957662224,
+   "ratio_to_spectral_mass": 1.0006322816645605
+  },
+  {
+   "inverse_delta": 96,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 355107,
+   "w": 0.006599357318904767,
+   "v": 0.010416666666666666,
+   "window": [
+    1356,
+    6042
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2563578061163652,
+   "P_yes": 0.004246474372154889,
+   "ratio_to_2w_over_pi": 1.0107569606060636,
+   "spectral_mass_of_V_window": 0.004246092050905412,
+   "ratio_to_spectral_mass": 1.000090040735079
+  },
+  {
+   "inverse_delta": 128,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 794672,
+   "w": 0.004809157864628577,
+   "v": 0.0078125,
+   "window": [
+    2387,
+    10030
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2745606157350522,
+   "P_yes": 0.0030861918597854454,
+   "ratio_to_2w_over_pi": 1.0080307142318552,
+   "spectral_mass_of_V_window": 0.00308594880919218,
+   "ratio_to_spectral_mass": 1.00007876040994
+  },
+  {
+   "inverse_delta": 4,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 49,
+   "w": 0.217637640824031,
+   "v": -0.25,
+   "window": [
+    -22,
+    -2
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0827572586919005,
+   "P_yes": 0.11712151590615255,
+   "ratio_to_2w_over_pi": 0.8453227404848827,
+   "spectral_mass_of_V_window": 0.12216027993403863,
+   "ratio_to_spectral_mass": 0.9587528447822254
+  },
+  {
+   "inverse_delta": 6,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 151,
+   "w": 0.13932646701298945,
+   "v": -0.16666666666666666,
+   "window": [
+    -46,
+    -5
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0941100536623438,
+   "P_yes": 0.07707477060797045,
+   "ratio_to_2w_over_pi": 0.8689574145899499,
+   "spectral_mass_of_V_window": 0.07909802673244419,
+   "ratio_to_spectral_mass": 0.9744209026690694
+  },
+  {
+   "inverse_delta": 8,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 338,
+   "w": 0.10153154954452942,
+   "v": -0.125,
+   "window": [
+    -76,
+    -8
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1102460482646694,
+   "P_yes": 0.060676038385972006,
+   "ratio_to_2w_over_pi": 0.9387200200204796,
+   "spectral_mass_of_V_window": 0.05871743808698822,
+   "ratio_to_spectral_mass": 1.0333563650389885
+  },
+  {
+   "inverse_delta": 12,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 1051,
+   "w": 0.06499809515869193,
+   "v": -0.08333333333333333,
+   "window": [
+    -155,
+    -20
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1320204941160947,
+   "P_yes": 0.038352938938249495,
+   "ratio_to_2w_over_pi": 0.9268680175765889,
+   "spectral_mass_of_V_window": 0.03855944968833203,
+   "ratio_to_spectral_mass": 0.9946443543216587
+  },
+  {
+   "inverse_delta": 16,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 2353,
+   "w": 0.04736614270344993,
+   "v": -0.0625,
+   "window": [
+    -258,
+    -36
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1489257812499993,
+   "P_yes": 0.028498269863234442,
+   "ratio_to_2w_over_pi": 0.945083873547463,
+   "spectral_mass_of_V_window": 0.02853037372343736,
+   "ratio_to_spectral_mass": 0.998874747996149
+  },
+  {
+   "inverse_delta": 20,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 4394,
+   "w": 0.03705672245534738,
+   "v": -0.05,
+   "window": [
+    -382,
+    -57
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.161522332889459,
+   "P_yes": 0.022597554730648048,
+   "ratio_to_2w_over_pi": 0.9578870880505086,
+   "spectral_mass_of_V_window": 0.02254294778410091,
+   "ratio_to_spectral_mass": 1.0024223516405273
+  },
+  {
+   "inverse_delta": 24,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 7321,
+   "w": 0.030322683585054203,
+   "v": -0.041666666666666664,
+   "window": [
+    -527,
+    -84
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.172167004358514,
+   "P_yes": 0.01855645289862807,
+   "ratio_to_2w_over_pi": 0.9612740234467403,
+   "spectral_mass_of_V_window": 0.018574682086028613,
+   "ratio_to_spectral_mass": 0.9990186003014148
+  },
+  {
+   "inverse_delta": 32,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 16384,
+   "w": 0.022097086912079605,
+   "v": -0.03125,
+   "window": [
+    -874,
+    -150
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1892071150027204,
+   "P_yes": 0.013678561172236675,
+   "ratio_to_2w_over_pi": 0.9723559368109734,
+   "spectral_mass_of_V_window": 0.013658693969342299,
+   "ratio_to_spectral_mass": 1.0014545463086713
+  },
+  {
+   "inverse_delta": 40,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 30603,
+   "w": 0.017287572304530974,
+   "v": -0.025,
+   "window": [
+    -1294,
+    -237
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2025386015183388,
+   "P_yes": 0.01075461503754786,
+   "ratio_to_2w_over_pi": 0.9771938765887732,
+   "spectral_mass_of_V_window": 0.010745940603038137,
+   "ratio_to_spectral_mass": 1.0008072289648864
+  },
+  {
+   "inverse_delta": 48,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 50989,
+   "w": 0.014146032088393582,
+   "v": -0.020833333333333332,
+   "window": [
+    -1783,
+    -341
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2135651375584955,
+   "P_yes": 0.008827165863900796,
+   "ratio_to_2w_over_pi": 0.980181553978028,
+   "spectral_mass_of_V_window": 0.008826818354995367,
+   "ratio_to_spectral_mass": 1.0000393696676937
+  },
+  {
+   "inverse_delta": 64,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 114105,
+   "w": 0.010308655552913232,
+   "v": -0.015625,
+   "window": [
+    -2959,
+    -607
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.231146534229903,
+   "P_yes": 0.006467551842649572,
+   "ratio_to_2w_over_pi": 0.9855025833042326,
+   "spectral_mass_of_V_window": 0.006463751931923058,
+   "ratio_to_spectral_mass": 1.00058788003725
+  },
+  {
+   "inverse_delta": 96,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 355107,
+   "w": 0.006599357318904767,
+   "v": -0.010416666666666666,
+   "window": [
+    -6042,
+    -1356
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2563578061163652,
+   "P_yes": 0.004156471312001761,
+   "ratio_to_2w_over_pi": 0.9893341963190262,
+   "spectral_mass_of_V_window": 0.004158538728661719,
+   "ratio_to_spectral_mass": 0.9995028502089667
+  },
+  {
+   "inverse_delta": 128,
+   "p0": -1,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 794672,
+   "w": 0.004809157864628577,
+   "v": -0.0078125,
+   "window": [
+    -10030,
+    -2387
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2745606157350522,
+   "P_yes": 0.0030383317988898415,
+   "ratio_to_2w_over_pi": 0.992398370696632,
+   "spectral_mass_of_V_window": 0.0030381031774761686,
+   "ratio_to_spectral_mass": 1.0000752513658415
+  },
+  {
+   "inverse_delta": 4,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 49,
+   "w": 0.217637640824031,
+   "v": 0.5,
+   "window": [
+    14,
+    35
+   ],
+   "hypothesis_window_inside_cone": false,
+   "T_w_5_2": 1.0827572586919005,
+   "P_yes": 0.6216438729807939,
+   "ratio_to_2w_over_pi": 4.486705096396011
+  },
+  {
+   "inverse_delta": 6,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 151,
+   "w": 0.13932646701298945,
+   "v": 0.3333333333333333,
+   "window": [
+    30,
+    71
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0941100536623438,
+   "P_yes": 0.15796594769979513,
+   "ratio_to_2w_over_pi": 1.7809418104485453,
+   "spectral_mass_of_V_window": 0.15704603880869472,
+   "ratio_to_spectral_mass": 1.0058575746200196
+  },
+  {
+   "inverse_delta": 8,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 338,
+   "w": 0.10153154954452942,
+   "v": 0.25,
+   "window": [
+    51,
+    118
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1102460482646694,
+   "P_yes": 0.09332922264209878,
+   "ratio_to_2w_over_pi": 1.4438979880291882,
+   "spectral_mass_of_V_window": 0.09348605773036166,
+   "ratio_to_spectral_mass": 0.9983223692166459
+  },
+  {
+   "inverse_delta": 12,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 1051,
+   "w": 0.06499809515869193,
+   "v": 0.16666666666666666,
+   "window": [
+    107,
+    243
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1320204941160947,
+   "P_yes": 0.05213638101296834,
+   "ratio_to_2w_over_pi": 1.2599697820005773,
+   "spectral_mass_of_V_window": 0.05131977548158908,
+   "ratio_to_spectral_mass": 1.0159121025709128
+  },
+  {
+   "inverse_delta": 16,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 2353,
+   "w": 0.04736614270344993,
+   "v": 0.125,
+   "window": [
+    183,
+    405
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1489257812499993,
+   "P_yes": 0.0352323032912383,
+   "ratio_to_2w_over_pi": 1.1684036198786767,
+   "spectral_mass_of_V_window": 0.03508519996592497,
+   "ratio_to_spectral_mass": 1.0041927458146511
+  },
+  {
+   "inverse_delta": 20,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 4394,
+   "w": 0.03705672245534738,
+   "v": 0.1,
+   "window": [
+    277,
+    602
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.161522332889459,
+   "P_yes": 0.026605660003194642,
+   "ratio_to_2w_over_pi": 1.1277865454866027,
+   "spectral_mass_of_V_window": 0.026509283787988423,
+   "ratio_to_spectral_mass": 1.003635564656405
+  },
+  {
+   "inverse_delta": 24,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 7321,
+   "w": 0.030322683585054203,
+   "v": 0.08333333333333333,
+   "window": [
+    389,
+    832
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.172167004358514,
+   "P_yes": 0.021249204802819714,
+   "ratio_to_2w_over_pi": 1.1007657933031199,
+   "spectral_mass_of_V_window": 0.021222536512286866,
+   "ratio_to_spectral_mass": 1.0012566024102447
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 16384,
+   "w": 0.022097086912079605,
+   "v": 0.0625,
+   "window": [
+    662,
+    1386
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1892071150027204,
+   "P_yes": 0.015130931581947307,
+   "ratio_to_2w_over_pi": 1.0755993242220045,
+   "spectral_mass_of_V_window": 0.015069884038816306,
+   "ratio_to_spectral_mass": 1.0040509630315506
+  },
+  {
+   "inverse_delta": 40,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 30603,
+   "w": 0.017287572304530974,
+   "v": 0.05,
+   "window": [
+    1002,
+    2059
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2025386015183388,
+   "P_yes": 0.01161057494613001,
+   "ratio_to_2w_over_pi": 1.0549687461077364,
+   "spectral_mass_of_V_window": 0.011616509795527185,
+   "ratio_to_spectral_mass": 0.9994891021914809
+  },
+  {
+   "inverse_delta": 48,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 50989,
+   "w": 0.014146032088393582,
+   "v": 0.041666666666666664,
+   "window": [
+    1404,
+    2845
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2135651375584955,
+   "P_yes": 0.009407789381723267,
+   "ratio_to_2w_over_pi": 1.0446548482097422,
+   "spectral_mass_of_V_window": 0.009414926140245299,
+   "ratio_to_spectral_mass": 0.9992419740297777
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 114105,
+   "w": 0.010308655552913232,
+   "v": 0.03125,
+   "window": [
+    2390,
+    4742
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.231146534229903,
+   "P_yes": 0.006776288801553237,
+   "ratio_to_2w_over_pi": 1.0325468247673837,
+   "spectral_mass_of_V_window": 0.006781532705804341,
+   "ratio_to_spectral_mass": 0.9992267376006879
+  },
+  {
+   "inverse_delta": 96,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 355107,
+   "w": 0.006599357318904767,
+   "v": 0.020833333333333332,
+   "window": [
+    5055,
+    9741
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2563578061163652,
+   "P_yes": 0.0042933409668408805,
+   "ratio_to_2w_over_pi": 1.0219122703164885,
+   "spectral_mass_of_V_window": 0.004292663990301592,
+   "ratio_to_spectral_mass": 1.0001577054576873
+  },
+  {
+   "inverse_delta": 128,
+   "p0": 2,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 794672,
+   "w": 0.004809157864628577,
+   "v": 0.015625,
+   "window": [
+    8596,
+    16238
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2745606157350522,
+   "P_yes": 0.003111209737050848,
+   "ratio_to_2w_over_pi": 1.0162022051287827,
+   "spectral_mass_of_V_window": 0.0031110110385802296,
+   "ratio_to_spectral_mass": 1.0000638694199906
+  },
+  {
+   "inverse_delta": 4,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 49,
+   "w": 0.217637640824031,
+   "v": 0.0,
+   "window": [
+    -10,
+    10
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0827572586919005,
+   "P_yes": 0.13111481359266003,
+   "ratio_to_2w_over_pi": 0.9463191514112707,
+   "spectral_mass_of_V_window": 0.14315863267328602,
+   "ratio_to_spectral_mass": 0.9158708150830682
+  },
+  {
+   "inverse_delta": 6,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 151,
+   "w": 0.13932646701298945,
+   "v": 0.0,
+   "window": [
+    -21,
+    21
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0941100536623438,
+   "P_yes": 0.09404343533063823,
+   "ratio_to_2w_over_pi": 1.060265762446755,
+   "spectral_mass_of_V_window": 0.08986981317879458,
+   "ratio_to_spectral_mass": 1.0464407569596288
+  },
+  {
+   "inverse_delta": 8,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 338,
+   "w": 0.10153154954452942,
+   "v": 0.0,
+   "window": [
+    -34,
+    34
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1102460482646694,
+   "P_yes": 0.06622307112498944,
+   "ratio_to_2w_over_pi": 1.0245382577027302,
+   "spectral_mass_of_V_window": 0.06508607537182098,
+   "ratio_to_spectral_mass": 1.017469109124695
+  },
+  {
+   "inverse_delta": 12,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 1051,
+   "w": 0.06499809515869193,
+   "v": 0.0,
+   "window": [
+    -68,
+    68
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1320204941160947,
+   "P_yes": 0.04126726526592948,
+   "ratio_to_2w_over_pi": 0.9972979752457285,
+   "spectral_mass_of_V_window": 0.04149613644633763,
+   "ratio_to_spectral_mass": 0.994484518318853
+  },
+  {
+   "inverse_delta": 16,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 2353,
+   "w": 0.04736614270344993,
+   "v": 0.0,
+   "window": [
+    -111,
+    111
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1489257812499993,
+   "P_yes": 0.030358733265216976,
+   "ratio_to_2w_over_pi": 1.0067821438978086,
+   "spectral_mass_of_V_window": 0.03019943122691832,
+   "ratio_to_spectral_mass": 1.005275001277397
+  },
+  {
+   "inverse_delta": 20,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 4394,
+   "w": 0.03705672245534738,
+   "v": 0.0,
+   "window": [
+    -162,
+    162
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.161522332889459,
+   "P_yes": 0.023643011958073817,
+   "ratio_to_2w_over_pi": 1.0022029439560165,
+   "spectral_mass_of_V_window": 0.023612670229740403,
+   "ratio_to_spectral_mass": 1.0012849765841052
+  },
+  {
+   "inverse_delta": 24,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 7321,
+   "w": 0.030322683585054203,
+   "v": 0.0,
+   "window": [
+    -221,
+    221
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.172167004358514,
+   "P_yes": 0.019315378708177927,
+   "ratio_to_2w_over_pi": 1.0005884156115006,
+   "spectral_mass_of_V_window": 0.019315864273904203,
+   "ratio_to_spectral_mass": 0.9999748618172405
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 16384,
+   "w": 0.022097086912079605,
+   "v": 0.0,
+   "window": [
+    -362,
+    362
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1892071150027204,
+   "P_yes": 0.014109576764122894,
+   "ratio_to_2w_over_pi": 1.0029951659193177,
+   "spectral_mass_of_V_window": 0.014072024034703071,
+   "ratio_to_spectral_mass": 1.0026686089596788
+  },
+  {
+   "inverse_delta": 40,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 30603,
+   "w": 0.017287572304530974,
+   "v": 0.0,
+   "window": [
+    -529,
+    529
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2025386015183388,
+   "P_yes": 0.011027632700871332,
+   "ratio_to_2w_over_pi": 1.0020010117459888,
+   "spectral_mass_of_V_window": 0.011007803792596355,
+   "ratio_to_spectral_mass": 1.001801350082958
+  },
+  {
+   "inverse_delta": 48,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 50989,
+   "w": 0.014146032088393582,
+   "v": 0.0,
+   "window": [
+    -721,
+    721
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2135651375584955,
+   "P_yes": 0.009015815040600698,
+   "ratio_to_2w_over_pi": 1.0011294375938313,
+   "spectral_mass_of_V_window": 0.009006845394770362,
+   "ratio_to_spectral_mass": 1.0009958698564476
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 114105,
+   "w": 0.010308655552913232,
+   "v": 0.0,
+   "window": [
+    -1176,
+    1176
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.231146534229903,
+   "P_yes": 0.006561681809469293,
+   "ratio_to_2w_over_pi": 0.9998457733897678,
+   "spectral_mass_of_V_window": 0.006563158941296891,
+   "ratio_to_spectral_mass": 0.9997749358440333
+  },
+  {
+   "inverse_delta": 96,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 355107,
+   "w": 0.006599357318904767,
+   "v": 0.0,
+   "window": [
+    -2343,
+    2343
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2563578061163652,
+   "P_yes": 0.004202342037799595,
+   "ratio_to_2w_over_pi": 1.0002524667063932,
+   "spectral_mass_of_V_window": 0.004201403341162831,
+   "ratio_to_spectral_mass": 1.000223424546643
+  },
+  {
+   "inverse_delta": 128,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.8,
+   "T": 794672,
+   "w": 0.004809157864628577,
+   "v": 0.0,
+   "window": [
+    -3821,
+    3821
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.2745606157350522,
+   "P_yes": 0.0030610854844885416,
+   "ratio_to_2w_over_pi": 0.999830317570816,
+   "spectral_mass_of_V_window": 0.003061652192071452,
+   "ratio_to_spectral_mass": 0.9998149013841684
+  }
+ ],
+ "P4": {
+  "passed": true,
+  "per_p0": {
+   "1": {
+    "dev_16": 0.06573761356472718,
+    "dev_128": 0.008030714231855196,
+    "improves": true
+   },
+   "-1": {
+    "dev_16": 0.05491612645253696,
+    "dev_128": 0.0076016293033680515,
+    "improves": true
+   },
+   "2": {
+    "dev_16": 0.1684036198786767,
+    "dev_128": 0.016202205128782676,
+    "improves": true
+   },
+   "0": {
+    "dev_16": 0.0067821438978086235,
+    "dev_128": 0.00016968242918402598,
+    "improves": true
+   }
+  },
+  "qualifying": 51,
+  "instances": 52
+ },
+ "P5": {
+  "passed": true,
+  "qualifying": 27,
+  "violations": []
+ },
+ "release_table": [
+  {
+   "inverse_delta": 8,
+   "T": 338,
+   "S": 512,
+   "N": 2048,
+   "P_yes": 0.07669542993036135,
+   "terminal_mass": 0.07669542993036134,
+   "mean_velocity": 1.1481839439044839,
+   "rms_deviation": 1.0919283204478696,
+   "tail_gt_half": 0.5462095977387508,
+   "tail_gt_one": 0.22937488661926383,
+   "w_over_delta": 0.8122523963562355,
+   "a_T_w": 0.5358867312681466,
+   "ray_optics_tail": 0.6291183975343309
+  },
+  {
+   "inverse_delta": 12,
+   "T": 1051,
+   "S": 1728,
+   "N": 8192,
+   "P_yes": 0.045348230739964274,
+   "terminal_mass": 0.045348230739964274,
+   "mean_velocity": 1.0308509625048405,
+   "rms_deviation": 1.0568954137749023,
+   "tail_gt_half": 0.5218211033102532,
+   "tail_gt_one": 0.17812850716315956,
+   "w_over_delta": 0.7799771419043033,
+   "a_T_w": 0.4745102806263551,
+   "ray_optics_tail": 0.6014308385879568
+  },
+  {
+   "inverse_delta": 16,
+   "T": 2353,
+   "S": 4096,
+   "N": 16384,
+   "P_yes": 0.03213648964378592,
+   "terminal_mass": 0.032136489643785925,
+   "mean_velocity": 1.015876110923456,
+   "rms_deviation": 1.1739801470229894,
+   "tail_gt_half": 0.5008724634091025,
+   "tail_gt_one": 0.16807630280254116,
+   "w_over_delta": 0.757858283255199,
+   "a_T_w": 0.43527528164806206,
+   "ray_optics_tail": 0.5809354336280533
+  },
+  {
+   "inverse_delta": 20,
+   "T": 4394,
+   "S": 8000,
+   "N": 32768,
+   "P_yes": 0.02490965701942704,
+   "terminal_mass": 0.024909657019427045,
+   "mean_velocity": 0.9890505736500363,
+   "rms_deviation": 1.131143278426466,
+   "tail_gt_half": 0.4755230432163969,
+   "tail_gt_one": 0.13410250963551087,
+   "w_over_delta": 0.7411344491069477,
+   "a_T_w": 0.4070905315369044,
+   "ray_optics_tail": 0.5645452690642285
+  },
+  {
+   "inverse_delta": 24,
+   "T": 7321,
+   "S": 13824,
+   "N": 65536,
+   "P_yes": 0.02021044158375082,
+   "terminal_mass": 0.02021044158375082,
+   "mean_velocity": 0.9635295887889771,
+   "rms_deviation": 1.1722769661770773,
+   "tail_gt_half": 0.4715515398722108,
+   "tail_gt_one": 0.1289109833401035,
+   "w_over_delta": 0.7277444060413011,
+   "a_T_w": 0.3854221125344267,
+   "ray_optics_tail": 0.5508309029634317
+  },
+  {
+   "inverse_delta": 32,
+   "T": 16384,
+   "S": 32768,
+   "N": 131072,
+   "P_yes": 0.014597590153513985,
+   "terminal_mass": 0.014597590153513985,
+   "mean_velocity": 1.0388348989139018,
+   "rms_deviation": 1.1619792623729155,
+   "tail_gt_half": 0.47753473983310063,
+   "tail_gt_one": 0.10213861473209805,
+   "w_over_delta": 0.7071067811865475,
+   "a_T_w": 0.3535533905932738,
+   "ray_optics_tail": 0.5285954792089682
+  },
+  {
+   "inverse_delta": 40,
+   "T": 30603,
+   "S": 64000,
+   "N": 262144,
+   "P_yes": 0.011285395495361703,
+   "terminal_mass": 0.011285395495361705,
+   "mean_velocity": 0.9991136648242098,
+   "rms_deviation": 1.1780867242796882,
+   "tail_gt_half": 0.4539642953431058,
+   "tail_gt_one": 0.08928402110038336,
+   "w_over_delta": 0.6915028921812392,
+   "a_T_w": 0.33066025977478425,
+   "ray_optics_tail": 0.5108412986290944
+  },
+  {
+   "inverse_delta": 48,
+   "T": 50989,
+   "S": 110592,
+   "N": 524288,
+   "P_yes": 0.009220105195619154,
+   "terminal_mass": 0.009220105195619156,
+   "mean_velocity": 0.9956541139034427,
+   "rms_deviation": 1.2065412550713934,
+   "tail_gt_half": 0.44169631244903174,
+   "tail_gt_one": 0.07547662465233897,
+   "w_over_delta": 0.6790095402428922,
+   "a_T_w": 0.31306003451477077,
+   "ray_optics_tail": 0.49600309018433797
+  }
+ ],
+ "P3": {
+  "passed": true,
+  "mean_velocity": 0.9991136648242098,
+  "tail": 0.4539642953431058
+ },
+ "P6": {
+  "passed": true,
+  "tails": {
+   "8": 0.5462095977387508,
+   "12": 0.5218211033102532,
+   "16": 0.5008724634091025,
+   "20": 0.4755230432163969,
+   "24": 0.4715515398722108,
+   "32": 0.47753473983310063,
+   "40": 0.4539642953431058,
+   "48": 0.44169631244903174
+  },
+  "delta_for_ray_optics_tail_0p05": 0.00027642897711756167,
+  "T_at_that_delta": 9195302337.046633
+ },
+ "second_scaling_table": [
+  {
+   "inverse_delta": 8,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 416,
+   "w": 0.0915053559966016,
+   "v": 0.125,
+   "window": [
+    14,
+    90
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0536821381539456,
+   "P_yes": 0.06989929850675936,
+   "ratio_to_2w_over_pi": 1.1999031110707372,
+   "spectral_mass_of_V_window": 0.06816384630308066,
+   "ratio_to_spectral_mass": 1.0254600099290503
+  },
+  {
+   "inverse_delta": 12,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 1348,
+   "w": 0.057403922184180646,
+   "v": 0.08333333333333333,
+   "window": [
+    35,
+    189
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.064250369939353,
+   "P_yes": 0.040089669513452844,
+   "ratio_to_2w_over_pi": 1.0970105041273135,
+   "spectral_mass_of_V_window": 0.04025414194106039,
+   "ratio_to_spectral_mass": 0.9959141489626493
+  },
+  {
+   "inverse_delta": 16,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 3104,
+   "w": 0.04123462221165296,
+   "v": 0.0625,
+   "window": [
+    67,
+    321
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0717087152358618,
+   "P_yes": 0.02795828032964285,
+   "ratio_to_2w_over_pi": 1.0650458689759517,
+   "spectral_mass_of_V_window": 0.028147632438819143,
+   "ratio_to_spectral_mass": 0.9932728939249913
+  },
+  {
+   "inverse_delta": 24,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 10060,
+   "w": 0.025867655712084454,
+   "v": 0.041666666666666664,
+   "window": [
+    159,
+    679
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.082656433102921,
+   "P_yes": 0.017194066180046007,
+   "ratio_to_2w_over_pi": 1.044098324908015,
+   "spectral_mass_of_V_window": 0.017222181246450176,
+   "ratio_to_spectral_mass": 0.9983675083892196
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 23170,
+   "w": 0.018581361171917523,
+   "v": 0.03125,
+   "window": [
+    294,
+    1154
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.0904853767304084,
+   "P_yes": 0.012258426897816754,
+   "ratio_to_2w_over_pi": 1.0362799455443352,
+   "spectral_mass_of_V_window": 0.01222580193560543,
+   "ratio_to_spectral_mass": 1.00266853351487
+  },
+  {
+   "inverse_delta": 48,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 75093,
+   "w": 0.0116566183385869,
+   "v": 0.020833333333333332,
+   "window": [
+    690,
+    2439
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1016176803381728,
+   "P_yes": 0.007577994246224272,
+   "ratio_to_2w_over_pi": 1.0211782852182647,
+   "spectral_mass_of_V_window": 0.007582732820561589,
+   "ratio_to_spectral_mass": 0.9993750835682265
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 1,
+   "alpha": 1.15,
+   "beta": 2.9,
+   "T": 172951,
+   "w": 0.008373230176064794,
+   "v": 0.015625,
+   "window": [
+    1255,
+    4150
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 1.1095724175609232,
+   "P_yes": 0.0054136570107501565,
+   "ratio_to_2w_over_pi": 1.0155880548133138,
+   "spectral_mass_of_V_window": 0.0054167600717534466,
+   "ratio_to_spectral_mass": 0.99942713707785
+  }
+ ],
+ "P7": {
+  "passed": true,
+  "dev_16": 0.06504586897595166,
+  "dev_64": 0.015588054813313823
+ },
+ "outside_hypothesis_table": [
+  {
+   "inverse_delta": 16,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 446,
+   "w": 0.04736614270344993,
+   "v": 0.0625,
+   "window": [
+    7,
+    49
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.2177734374999999,
+   "P_yes": 0.03177083293812421,
+   "ratio_to_2w_over_pi": 1.053611394764998,
+   "spectral_mass_of_V_window": 0.032346675622152356,
+   "ratio_to_spectral_mass": 0.9821977785057521
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 2048,
+   "w": 0.022097086912079605,
+   "v": 0.03125,
+   "window": [
+    19,
+    109
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.14865088937534005,
+   "P_yes": 0.014509240605726805,
+   "ratio_to_2w_over_pi": 1.0314057205250913,
+   "spectral_mass_of_V_window": 0.014540493538459187,
+   "ratio_to_spectral_mass": 0.9978506277899221
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 9410,
+   "w": 0.010308655552913232,
+   "v": 0.015625,
+   "window": [
+    51,
+    244
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.10153007218880318,
+   "P_yes": 0.006667714882838653,
+   "ratio_to_2w_over_pi": 1.0160027165830336,
+   "spectral_mass_of_V_window": 0.006668979957662224,
+   "ratio_to_spectral_mass": 0.9998103045995635
+  },
+  {
+   "inverse_delta": 128,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 43238,
+   "w": 0.004809157864628577,
+   "v": 0.0078125,
+   "window": [
+    130,
+    545
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.06934867706821454,
+   "P_yes": 0.00308717358031223,
+   "ratio_to_2w_over_pi": 1.0083513697480224,
+   "spectral_mass_of_V_window": 0.00308594880919218,
+   "ratio_to_spectral_mass": 1.000396886402134
+  },
+  {
+   "inverse_delta": 256,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 198668,
+   "w": 0.002243551474603583,
+   "v": 0.00390625,
+   "window": [
+    331,
+    1221
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.04736614227294916,
+   "P_yes": 0.00143166825578721,
+   "ratio_to_2w_over_pi": 1.0023657860476596,
+   "spectral_mass_of_V_window": 0.0014339170930701551,
+   "ratio_to_spectral_mass": 0.9984316824913984
+  },
+  {
+   "inverse_delta": 512,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 912838,
+   "w": 0.0010466537720080981,
+   "v": 0.001953125,
+   "window": [
+    828,
+    2738
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.03235201372041857,
+   "P_yes": 0.0006678828526722658,
+   "ratio_to_2w_over_pi": 1.0023447674526462,
+   "spectral_mass_of_V_window": 0.0006676274763681301,
+   "ratio_to_spectral_mass": 1.0003825131726527
+  },
+  {
+   "inverse_delta": 1024,
+   "p0": 1,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 4194304,
+   "w": 0.0004882812499999997,
+   "v": 0.0009765625,
+   "window": [
+    2049,
+    6143
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.022097086912079573,
+   "P_yes": 0.00031107310528091634,
+   "ratio_to_2w_over_pi": 1.0007193418546092,
+   "spectral_mass_of_V_window": 0.00031115370522129477,
+   "ratio_to_spectral_mass": 0.9997409642275636
+  },
+  {
+   "inverse_delta": 16,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 446,
+   "w": 0.04736614270344993,
+   "v": 0.0,
+   "window": [
+    -21,
+    21
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.2177734374999999,
+   "P_yes": 0.03005694768461624,
+   "ratio_to_2w_over_pi": 0.9967740736934182,
+   "spectral_mass_of_V_window": 0.03019943122691832,
+   "ratio_to_spectral_mass": 0.9952819130522208
+  },
+  {
+   "inverse_delta": 32,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 2048,
+   "w": 0.022097086912079605,
+   "v": 0.0,
+   "window": [
+    -45,
+    45
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.14865088937534005,
+   "P_yes": 0.01398897127725004,
+   "ratio_to_2w_over_pi": 0.9944217889613067,
+   "spectral_mass_of_V_window": 0.014072024034703071,
+   "ratio_to_spectral_mass": 0.9940980233370683
+  },
+  {
+   "inverse_delta": 64,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 9410,
+   "w": 0.010308655552913232,
+   "v": 0.0,
+   "window": [
+    -97,
+    97
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.10153007218880318,
+   "P_yes": 0.00656323487389004,
+   "ratio_to_2w_over_pi": 1.000082423831221,
+   "spectral_mass_of_V_window": 0.006563158941296891,
+   "ratio_to_spectral_mass": 1.0000115695191643
+  },
+  {
+   "inverse_delta": 128,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 43238,
+   "w": 0.004809157864628577,
+   "v": 0.0,
+   "window": [
+    -207,
+    207
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.06934867706821454,
+   "P_yes": 0.003047874007719058,
+   "ratio_to_2w_over_pi": 0.995515104852665,
+   "spectral_mass_of_V_window": 0.003061652192071452,
+   "ratio_to_spectral_mass": 0.995499755201432
+  },
+  {
+   "inverse_delta": 256,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 198668,
+   "w": 0.002243551474603583,
+   "v": 0.0,
+   "window": [
+    -445,
+    445
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.04736614227294916,
+   "P_yes": 0.0014259768655807423,
+   "ratio_to_2w_over_pi": 0.9983810257549386,
+   "spectral_mass_of_V_window": 0.001428294021967071,
+   "ratio_to_spectral_mass": 0.9983776754990982
+  },
+  {
+   "inverse_delta": 512,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 912838,
+   "w": 0.0010466537720080981,
+   "v": 0.0,
+   "window": [
+    -955,
+    955
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.03235201372041857,
+   "P_yes": 0.0006660247344923304,
+   "ratio_to_2w_over_pi": 0.999556142130833,
+   "spectral_mass_of_V_window": 0.0006663209727130542,
+   "ratio_to_spectral_mass": 0.9995554121319076
+  },
+  {
+   "inverse_delta": 1024,
+   "p0": 0,
+   "alpha": 1.1,
+   "beta": 2.2,
+   "T": 4194304,
+   "w": 0.0004882812499999997,
+   "v": 0.0,
+   "window": [
+    -2047,
+    2047
+   ],
+   "hypothesis_window_inside_cone": true,
+   "T_w_5_2": 0.022097086912079573,
+   "P_yes": 0.00031069772549279694,
+   "ratio_to_2w_over_pi": 0.9995117485007152,
+   "spectral_mass_of_V_window": 0.0003108495476345788,
+   "ratio_to_spectral_mass": 0.9995115896325502
+  }
+ ],
+ "failed": [],
+ "seed": 20261113,
+ "seconds": 49.86780571937561
+}
