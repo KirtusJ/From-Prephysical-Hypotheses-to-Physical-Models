@@ -212,7 +212,12 @@ pub(super) fn render_frame(
     for (i, row) in rows.iter().enumerate() {
         let y = 179. + 39. * i as f64;
         line(&mut out, (583., y - 17.), (1028., y - 17.), "grid");
-        text(&mut out, 583., y, "vertex", &row.label);
+        let label_class = if row.label.len() > 8 {
+            "longlabel"
+        } else {
+            "vertex"
+        };
+        text(&mut out, 583., y, label_class, &row.label);
         let [pp, pm, mp, mm] = row.counts;
         text(&mut out, 687., y, "num", &format!("{pp}, {pm}, {mp}, {mm}"));
         let [a, b, c] = coordinates(row.counts);

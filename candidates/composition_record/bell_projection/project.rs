@@ -134,13 +134,24 @@ impl View {
 }
 
 fn text(out: &mut String, x: f64, y: f64, class: &str, value: &str) {
-    // All user-visible variable strings are decimal numbers or allow-listed labels.
+    // Labels occupy at most 130 px. Use an upper bound for this ASCII subset
+    // so wide identifiers fit the same leader rail as short numeric settings.
+    let label_width: usize = value
+        .bytes()
+        .map(|c| match c {
+            b'0'..=b'9' => 8,
+            b',' | b'.' | b' ' => 4,
+            _ => 13,
+        })
+        .sum();
     let (size, weight, color) = match class {
         "title" => (27, "bold", "#172b3c"),
         "mode" => (18, "bold", "#172b3c"),
         "ptitle" => (15, "bold", "#172b3c"),
         "fraction" => (7, "normal", "#344a57"),
         "smallmean" => (8, "normal", "#344a57"),
+        "longlabel" => (9, "normal", "#344a57"),
+        "marklabel" if label_width > 130 => (8, "normal", "#344a57"),
         "vertex" => (11, "normal", "#465968"),
         _ => (13, "normal", "#344a57"),
     };
@@ -340,7 +351,12 @@ fn figure(rows: &[Row]) -> String {
     for (idx, row) in rows.iter().enumerate() {
         let y = top + 78. + 42. * idx as f64;
         line(&mut out, (32., y - 17.), (1028., y - 17.), "grid");
-        text(&mut out, xs[0], y, "num", &row.label);
+        let label_class = if row.label.len() > 8 {
+            "longlabel"
+        } else {
+            "num"
+        };
+        text(&mut out, xs[0], y, label_class, &row.label);
         for (j, count) in row.counts.iter().enumerate() {
             text(&mut out, xs[j + 1], y, "num", &count.to_string());
         }
