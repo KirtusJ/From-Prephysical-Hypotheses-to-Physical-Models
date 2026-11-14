@@ -6805,5 +6805,15 @@
       "results/encoded_cycle_measurements.json": "9c304759855290eeae3445f5bf2c0fcfdd25f9b9a09face25191eb227d93bbe0"
     },
     "standing": "All four- and eight-node simulator and hardware probability columns, including the initial rows and parity violations, were recovered from the public archive. The sixteen basis shifts and the deposited repeated position measurement wiring were checked. Per-shot histories and the executed instruction records are unavailable."
+  },
+  "two_partial_sheet_reads": {
+    "paper": "Two_partial_terminal_sheet_reads.md",
+    "checker": "check_two_partial_sheet_reads.py",
+    "result": "results/two_partial_sheet_reads.json",
+    "sha256": {
+      "check_two_partial_sheet_reads.py": "6724c2275376812e837c2527e4d895491f9115104f99c2086de8d1550f6f3f87",
+      "results/two_partial_sheet_reads.json": "754127087cfaf01a035d7535720166d1c8eb103b58d530728c7ff4221daf424c"
+    },
+    "standing": "Replayed all 2,048 physical-direction words and all 400 pairs of hidden partition vectors. Integer prefix sums and rational inequalities check the finite inputs to the two-setting bound. The analytic conclusion requires the same type distribution across settings and permits different normalizers."
   }
 }
