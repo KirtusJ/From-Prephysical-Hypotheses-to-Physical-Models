@@ -6,6 +6,8 @@ import json
 from math import comb
 from pathlib import Path
 
+from check_coin_uniform_masks import transfer
+
 
 def threshold_response(mass, u, a, b):
     if a < mass < b:
@@ -66,6 +68,28 @@ def test_conditional_selection(a, b):
                == c for u in types)
 
 
+def routed_midpoint(menu, a, b):
+    denominator = int(menu["mass_denominator"])
+    masks_by_mass = {Q(int(row["numerator"]), denominator): set(row["radii"])
+                     for row in menu["routed_left_half_masks"]}
+    masks = [masks_by_mass[a], masks_by_mass[b]]
+    effects = transfer(menu["ticks"])  # Site Grams from both input columns: RR, RL, LL.
+    overlap = masks[0] & masks[1]
+    assert overlap and any(effects[x][0] > 0 for x in effects if abs(x) in overlap)
+    sectors = [[[0, 0, 0], [0, 0, 0]] for _ in masks]
+    for address, (mask, target) in enumerate(zip(masks, (a, b))):
+        for site, gram in effects.items():
+            flag = int(abs(site) in mask)
+            for i, value in enumerate(gram):
+                sectors[address][flag][i] += value
+        for gram, mass in zip(sectors[address], (1-target, target)):
+            assert gram == [mass * denominator, 0, mass * denominator]
+    for flag, mass in enumerate((1 - (a+b)/2, (a+b)/2)):
+        gram = [left + right for left, right in zip(sectors[0][flag], sectors[1][flag])]
+        assert [Q(x, 2*denominator) for x in gram] == [mass, 0, mass]
+    return len(overlap)
+
+
 def main():
     for endpoints in [(Q(0), Q(1, 4)), (Q(3, 16), Q(5, 16)), (Q(1, 4), Q(1, 2))]:
         test_conditional_selection(*endpoints)
@@ -75,8 +99,10 @@ def main():
                    | {Q(1, 2)})
     a, b = max(zip(nodes, nodes[1:]), key=lambda pair: pair[1] - pair[0])
     h = b - a
+    shared = routed_midpoint(menu, a, b)
     print(f"largest gap endpoints {float(a):.12f} and {float(b):.12f}")
     print(f"one pilot {float(h**2/2):.12f}, informative bit {float(h/2):.12f}")
+    print(f"controlled masks share {shared} radii; both pooled flag effects are scalar")
 
 
 if __name__ == "__main__":
