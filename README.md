@@ -1,6 +1,6 @@
 # From Prephysical Hypotheses to Physical Models
 
-**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the research and holds scholarly responsibility. ChatGPT (OpenAI), including Codex, contributed derivations, computational checks and research supplements. Claude (Anthropic) contributed manuscripts, mathematical checks and edition assembly. [Contributors and roles](CONTRIBUTORS.md) · [Edition credits](edition/PROGRAM/CONTRIBUTIONS.md)
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the research and holds scholarly responsibility. Claude (Anthropic) developed the transport and gain-graph studies in G7–G10, contributed to the Wilson–Dirac analysis and organized the issued edition. ChatGPT (OpenAI) contributed derivations and manuscripts across the collection. Codex developed and tested the walk models and checked arguments used in G10. [Paper contributions and sources](papers/contributions.md) · [Contributors and roles](CONTRIBUTORS.md)
 
 The program asks whether quantum mechanics and classical mechanics can both emerge from the same primitives, with an explicit map from preparations and records to physical predictions. All 13 physical identification gates (P0–P12) remain open. [Charter](edition/PROGRAM/CHARTER.md) · [Standards for claims and evidence](edition/PROGRAM/STANDARDS.md)
 
@@ -8,7 +8,7 @@ The program asks whether quantum mechanics and classical mechanics can both emer
 
 | If you want to… | Start here |
 |---|---|
-| Read the research papers | [Paper catalog and PDFs](papers/README.md) · [A1 program overview](papers/A1.pdf) · [Issued edition Z26](edition/README.md) |
+| Read the research papers | [Paper catalog and PDFs](papers/README.md) · [A1 program overview](papers/A1%20-%20Program%20Overview%20%E2%80%93%20Questions%2C%20Models%20and%20Physical%20Correspondence.pdf) · [Issued edition Z26](edition/README.md) |
 | Find what a result establishes | Look up its paper, statement and status in the [issued theorem registry](edition/PROGRAM/registers/THEOREM_REGISTRY.csv). Follow the [open problems](edition/PROGRAM/registers/OPEN_PROBLEMS.csv) and [readiness register](edition/PROGRAM/registers/READINESS.csv) for outstanding obligations. |
 | Trace the route to physical identification | The [issued gate map](edition/PROGRAM/registers/ONTOLOGY_GATE_MAP.json) records the edition’s assessment. [Codex’s working gate map](Director_G/ontology_gate_map.json) tracks the supplement studies and their assumptions, starting from the Z3 baseline. The [bridge register](edition/PROGRAM/registers/BRIDGE_CANDIDATE_REGISTER.json) covers proposed relations between models, including transport. |
 | Find the current disposition of a proposed universe | Use the [stipulated candidate catalog](candidates/README.md) for each specification, attacks and dated disposition. For example, **Edge Record Walk G1** is open for attack. **Paper G1**, *Relational Structures and the Limits of Observation*, is an issued paper with a different subject. |

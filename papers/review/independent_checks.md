@@ -4,11 +4,11 @@ Each calculation below starts from a stated model in a reader copy. Page numbers
 
 | Paper | Calculation | Result |
 |---|---|---|
-| [A1, p. 5](../A1.pdf#page=5) | Recompute both endpoints of an identified set with uncertain calibration. | The exact interval is \([2/5,3/5]\). |
-| [B4, pp. 2–3](../B4.pdf#page=2) | Construct a nonlocal diagonal success operator and compute its four probabilities and Choi projection independently. | Both discrepancy terms are nonzero and the bound is attained at \(w=13/15\). |
-| [C4, p. 4](../C4.pdf#page=4) | Test the sign of modular evolution on an off-diagonal operator and vary both inverse temperature and energy zero. | A quarter turn distinguishes the two signs. Positive rescaling with a compensating temperature gives exactly the same Gibbs state. |
-| [E1, pp. 3–4](../E1.pdf#page=3) | Verify the five contact conditions in the explicit nonsingleton-face counterexample. | The same face admits measures with different support thresholds, 1 and 2. |
-| [F5, pp. 3–4](../F5.pdf#page=3) | Enumerate a four-trial binary experiment and a coarsened experiment that observes only parity. | The full total variation is \(37/125\), and the parity laws agree exactly. |
+| [A1, p. 5](../A1%20-%20Program%20Overview%20%E2%80%93%20Questions%2C%20Models%20and%20Physical%20Correspondence.pdf#page=5) | Recompute both endpoints of an identified set with uncertain calibration. | The exact interval is \([2/5,3/5]\). |
+| [B4, pp. 2–3](../B4%20-%20Four-Preparation%20Tests%20for%20a%20Conditional%20Quantum%20Operation.pdf#page=2) | Construct a nonlocal diagonal success operator and compute its four probabilities and Choi projection independently. | Both discrepancy terms are nonzero and the bound is attained at \(w=13/15\). |
+| [C4, p. 4](../C4%20-%20Clock-Scale%20Ambiguity%2C%20Static%20CAR%20States%2C%20and%20Gibbs%20Modular%20Equivalence.pdf#page=4) | Test the sign of modular evolution on an off-diagonal operator and vary both inverse temperature and energy zero. | A quarter turn distinguishes the two signs. Positive rescaling with a compensating temperature gives exactly the same Gibbs state. |
+| [E1, pp. 3–4](../E1%20-%20Positive%20Spectral%20Measures%20Under%20Finite%20Moment%20and%20Laplace%20Constraints.pdf#page=3) | Verify the five contact conditions in the explicit nonsingleton-face counterexample. | The same face admits measures with different support thresholds, 1 and 2. |
+| [F5, pp. 3–4](../F5%20-%20Statistical%20Precision%20under%20Weak%20Readout%20Gain.pdf#page=3) | Enumerate a four-trial binary experiment and a coarsened experiment that observes only parity. | The full total variation is \(37/125\), and the parity laws agree exactly. |
 
 ### A1. Calibration uncertainty
 

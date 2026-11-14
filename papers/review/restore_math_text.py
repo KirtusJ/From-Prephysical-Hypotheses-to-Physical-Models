@@ -1,7 +1,8 @@
 """Reproduce seven reader PDFs from the issued edition and the TeX glyph mapping.
 
-Run with Python and PyMuPDF from any directory:
-    python restore_math_text.py /path/to/pdfx/glyphtounicode-cmr.tex
+Run with Python and PyMuPDF to generate the intermediate readers that preceded
+the credit revision. Use a fresh output directory:
+    python restore_math_text.py /path/to/pdfx/glyphtounicode-cmr.tex --output ./intermediate
 """
 import argparse
 import hashlib
@@ -72,6 +73,7 @@ def repair_pdf(source, destination, mapping):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("tex_mapping", type=Path)
+    parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     data = args.tex_mapping.read_bytes()
     if hashlib.sha256(data).hexdigest() != MAPPING_SHA256:
@@ -79,7 +81,8 @@ if __name__ == "__main__":
     definitions = data.decode().split("%% Glyphs from the cmex fonts:")[1]
     mapping = dict(re.findall(r"^\\pdfglyphtounicode\{([^}]+)\}\{([0-9A-F ]+)\}", definitions, re.M))
     papers = Path(__file__).resolve().parents[1]
+    args.output.mkdir(exist_ok=False, parents=True)
     for paper_id in READERS:
         source, = (papers.parent / "edition" / "PAPERS").glob(f"{paper_id}_*/*.pdf")
-        destination = papers / f"{paper_id}.pdf"
+        destination = args.output / f"{paper_id}.pdf"
         repair_pdf(source, destination, mapping)
