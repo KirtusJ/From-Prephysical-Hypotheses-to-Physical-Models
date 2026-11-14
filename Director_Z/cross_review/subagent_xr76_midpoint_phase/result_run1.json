@@ -1,0 +1,204 @@
+{
+ "P1": {
+  "cases": 487,
+  "failed": 0,
+  "nonreal_entries": 483,
+  "passed": 486,
+  "qualifying": 486
+ },
+ "P10": {
+  "failed": 0,
+  "passed": 3888,
+  "qualifying": 3888
+ },
+ "P11": {
+  "cases": 2,
+  "detail": [
+   {
+    "D_sign_test": "49/2500",
+    "d_squared": "49/2500",
+    "persistent_differ": 2304,
+    "q": [
+     "16/25",
+     "9/25"
+    ],
+    "r": "0",
+    "redraw_equal": 8192,
+    "redraw_on_L_only_differ": 1600,
+    "transcripts": 8192
+   },
+   {
+    "D_sign_test": "36/625",
+    "d_squared": "36/625",
+    "persistent_differ": 4752,
+    "q": [
+     "13/50",
+     "37/50"
+    ],
+    "r": "1",
+    "redraw_equal": 8192,
+    "redraw_on_L_only_differ": 3780,
+    "transcripts": 8192
+   }
+  ],
+  "failed": 0,
+  "passed": 2,
+  "qualifying": 2
+ },
+ "P12": {
+  "differing": 7056,
+  "failed": 0,
+  "meaning": "pass = persistent coin is revealed",
+  "passed": 1,
+  "qualifying": 2
+ },
+ "P13": {
+  "differing": 5380,
+  "failed": 0,
+  "meaning": "pass = outcome-dependent redraw is revealed (outside the note's hypothesis)",
+  "passed": 1,
+  "qualifying": 2
+ },
+ "P14": {
+  "failed": 0,
+  "passed": 2,
+  "qualifying": 2
+ },
+ "P15": {
+  "failed": 0,
+  "measured_zero_cases": 82,
+  "note": "loss gives false failure of a balanced coin, never a false pass, per original launch",
+  "passed": 1944,
+  "qualifying": 1944
+ },
+ "P16": {
+  "D_confusion_1_65": "0",
+  "D_postselected_rho_9_10": "-59/10244",
+  "D_true": "1/256",
+  "failed": 0,
+  "meaning": "pass = false pass exists outside the note's per-launch, no-confusion hypotheses",
+  "passed": 2,
+  "qualifying": 2
+ },
+ "P2": {
+  "failed": 0,
+  "passed": 4374,
+  "q_equals_1_cases": 36,
+  "qualifying": 4374
+ },
+ "P3": {
+  "failed": 0,
+  "passed": 200,
+  "qualifying": 200
+ },
+ "P4": {
+  "failed": 0,
+  "passed": 486,
+  "qualifying": 486
+ },
+ "P5": {
+  "balanced": [
+   "3/4",
+   "1/4"
+  ],
+  "failed": 0,
+  "pair": [
+   "3/4",
+   "15/64"
+  ],
+  "passed": 1,
+  "qualifying": 1
+ },
+ "P5f": {
+  "failed": 0,
+  "max_deviation": 1.6653345369377348e-16,
+  "passed": 1,
+  "qualifying": 1
+ },
+ "P6": {
+  "failed": 0,
+  "passed": 81,
+  "qualifying": 81,
+  "re_beta_and_conjugate_rate": [
+   [
+    "1",
+    "1"
+   ],
+   [
+    "-1",
+    "1"
+   ],
+   [
+    "0",
+    "0"
+   ],
+   [
+    "0",
+    "0"
+   ],
+   [
+    "3/5",
+    "9/25"
+   ],
+   [
+    "5/13",
+    "25/169"
+   ],
+   [
+    "-3/5",
+    "9/25"
+   ],
+   [
+    "21/29",
+    "441/841"
+   ],
+   [
+    "-4/5",
+    "16/25"
+   ]
+  ]
+ },
+ "P6c": {
+  "failed": 0,
+  "passed": 82,
+  "qualifying": 82,
+  "tested": 4374
+ },
+ "P6s": {
+  "d": "7/50",
+  "e_count": "1/20",
+  "e_imbalance": "49/1875",
+  "failed": 0,
+  "passed": 2,
+  "qualifying": 2
+ },
+ "P7": {
+  "failed": 0,
+  "meaning": "pass = false pass reproduced: measured D=0, true imbalance>0",
+  "passed": 4,
+  "qualifying": 4
+ },
+ "P8": {
+  "failed": 0,
+  "meaning": "pass = a setting-dependent second coin saturates the sign rate for this U",
+  "passed": 486,
+  "qualifying": 486,
+  "unbalanced_among_them": 404
+ },
+ "P9": {
+  "C_inactive": "1/2",
+  "D_with_working_plate": "1/8",
+  "L2": "1/2",
+  "failed": 0,
+  "meaning": "pass = false pass with inactive plate",
+  "passed": 1,
+  "qualifying": 1,
+  "true_imbalance": "1/8"
+ },
+ "_failed_cases": [],
+ "_rejected_by_hypothesis": {
+  "nonunitary": 1,
+  "panel": 487,
+  "unitary": 486
+ }
+}
