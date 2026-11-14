@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Simultaneous transport of two input columns](Simultaneous_transport_of_two_input_columns.md) | Equal Gram and equal dyadic row module characterize stable two-column transport. A 37-tick mirror sector preserves an input direction modulo five. |
 | [Paired reads for a type-dependent target](Paired_reads_for_a_type_dependent_target.md) | Two reads sharing a detector type bound errors even when the science mass follows that type. Complementary detector curves show the cube-root exponent is sharp. |
 | [Recording the first direction in site parity](First_direction_in_site_parity.md) | One adjacent rail swap stores a permanent direction bit. A radius-one marker agrees on every isolated sharp launch and gives 1/24 at a port dark under on-site routing. |
 | [Reading both interference outcomes of the direction record](Parity_record_eraser.md) | A terminal swap layer and one walk tick recover the blank distribution for a sharp rail using both outcomes. A joint port distinguishes on-site routing, a radius-one response and a persistent copy. |
