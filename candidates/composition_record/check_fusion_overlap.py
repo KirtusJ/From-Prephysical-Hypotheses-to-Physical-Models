@@ -17,7 +17,25 @@ def arm(bits, route):
 
 
 def check_echo():
+    # Read left to right as circuit time, appending one gate at a time.
+    detailed = ("Z3", "X3", "Z1", "X3", "Z2")
+    schematic = ("X3", "Z3", "Z1", "X3", "Z2")  # A1 dagger followed by A2.
+    def propagate(bits, word):
+        state = list(bits)
+        sign = 1
+        for gate in word:
+            qubit = int(gate[1]) - 1
+            if gate[0] == "X":
+                state[qubit] ^= 1
+            else:
+                sign *= (-1) ** state[qubit]
+        return tuple(state), sign
+
     states = list(product(range(2), repeat=3))
+    for basis in states:
+        parity = (-1) ** sum(basis)
+        assert propagate(basis, detailed) == (basis, parity)
+        assert propagate(basis, schematic) == (basis, -parity)
     for a, b in product(states, repeat=2):
         out_a, sign_a = arm(a, 1)
         out_b, sign_b = arm(b, 2)
@@ -70,5 +88,6 @@ if __name__ == "__main__":
     z, y = Fraction(712, 1000), Fraction(177, 1000)
     print(f"Quadrature radius {hypot(z, y):.8f}, polar angle {atan2(y, z)/pi:.8f} pi")
     print(f"Distance from ideal even-parity signal {hypot(1 - z, y):.8f}")
+    print(f"Distance from opposite schematic sign {hypot(-1 - z, y):.8f}")
     print(f"Minimum distance to any real parity expectation {float(abs(y)):.3f}")
     print(f"Verified 64 matrix entries, {entry_count} pair controls, and five determinant seeds.")
