@@ -11,6 +11,34 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Reading both interference outcomes of the direction record](Parity_record_eraser.md) | A terminal swap layer and one walk tick recover the blank distribution for a sharp rail using both outcomes. A joint port distinguishes on-site routing, a radius-one response and a persistent copy. |
 | [A local marker calibrated from one sharp launch](Marker_kernel_from_one_launch.md) | Dense bare rail directions determine a shared continuous routing function. Two tagged-marker models predict 9/16 and 5/16 at the same four-tick detector. |
 | [Calibrating separate detector laws](Separate_rail_scores.md) | A final physical output exchange forces two initially independent, sign-sensitive rail scores to agree with the ordinary square on integer inputs. Separately even scores need only the native walk. |
+| [Preparing arbitrary signed history counts with position filters](Position_mask_preparation.md) | A single sharp walk and whole-position masks prepare any prescribed pair of signed multisets. Continuation leaves the count and square terms. Three ticks give distinct detector predictions for their mixture. |
+| [Repeating a successful position filter](Repeating_a_position_record.md) | The excess joint success probability tests whether a count or character mixture survives. Programmable two-word paths compare the physical unit lag with every other lag at a common well and time. |
+| [Preparing signed sheet residues](Preparing_signed_sheet_residues.md) | Timed position apertures independently set the sign and absolute sheet gain of every admitted word. Finite-ring continuation then gives the count and folded character family even with initially site-dependent scores. |
+| [Independent walks with a shared gain record](Independent_walks_and_shared_gains.md) | Six- and eight-tick comparisons test whether two independent sources can share one summed residue. Within the single-walk family both sources must use the same pure label. |
+| [Probability records across sheet orders](Refining_the_sheet.md) | Matched coarse and fine gain preparations test compatibility. A lower bound on a three-tick probability along doubling towers constrains every pure label to one integer. Native order-four and prime-order ports select its unit magnitude. |
+| [Selection in the full count and character mixture](Mixed_refinement_records.md) | A dark calibration port and the rate of change of a three-tick rail probability under refinement characterize the ordinary response within compatible mixed laws. |
+| [Refinement and free fall](Refinement_and_free_fall.md) | The staircase gain is an exact linear phase gradient on an occupied parity slice. The terminal distance of a rested packet reads the absolute winding in fixed mechanical units. |
+| [Selecting the unit character with routed arms](Routed_sheet_filter.md) | Real turns, two balanced splitters and recorded terminal rails select the unit pair to prescribed accuracy. A localized sheet supplies target weight $2/M$. |
+| [Preparing a sheet by address](Addressed_sheet_preparation.md) | Reversible rail switches on disjoint sheet intervals raise the initial unit-pair weight above $4/\pi^2$ at every order. The cyclic differences of the source control the scaled three-tick force calibration. |
+| [Local resolution and the uninterrupted walk](Local_filter_resolution.md) | A [Lean support bound](lean/FilterPhaseWidth.lean) limits all local preparations. With the physical coin fixed, a [centered product estimate](Uninterrupted_sheet_read.md) and a [terminal fringe](Uninterrupted_sheet_fringes.md) give the sharp time scale for two pairwise tests. |
+| [Quantum and classical flight from one localized source](From_a_local_sheet_to_a_flight.md) | A retained sheet supports a spreading Gaussian at fixed action and a concentrated falling position at shrinking action. The clock, ensemble yield and persistent count rival are explicit. |
+| [Unit selection by the unmodified walk](Native_multiscale_selector.md) | Sharp records at several clocks select the unit pair against every folded label. The worst time has the optimal exponent $2/3$ at fixed confidence, and early rejection gives a bounded mean per localized launch. [Exact stage compiler](certify_native_stage.py) |
+| [Position records and the selected probability law](Position_transcripts_and_selected_laws.md) | Two consecutive wells determine a sharp arrival. The convolution of retained words gives the joint record probabilities of every classified input mixture and shows precisely when selection is possible. |
+| [Reading direction with position toggles](Direction_from_position_toggles.md) | One carried bit and two period-four position patterns measure the outgoing rail without identifying its site. A premature read halves a four-tick interference probability. |
+| [Calibrating probability laws on recorded words](Calibrating_record_sectors.md) | Conserving the event flux across a direction write transfers all coherent coefficients. A fair singleton fork tests the remaining count bias. |
+| [Testing what a direction detector records](Checking_a_direction_record.md) | A five-tick sharp-source record distinguishes a coherent rail read from a hidden site copy at order three. Two eight-tick terminal rates separate the specified partial-copy and count models. |
+| [Hidden site records and preparation time](Hidden_site_records_and_preparation_time.md) | Independent hidden copies can preserve the conditional packet while making release by a polynomial deadline improbable. The renewal law keeps those rejected and timed-out trials. |
+| [Reading direction with whole-position apertures](Straight_pairs_and_direction_records.md) | Two streamed ticks encode one logical tick. The [Lean word identities](lean/RailFromStraightPairs.lean) fix the gain and sign, while the incident yield loses a factor of two per logical tick. |
+| [Unmasked release of the encoded source](Unmasked_release_from_straight_pairs.md) | Four momentum peaks divide into slow and fast components. One spatial aperture keeps the slow half of an already prepared weak-character source. |
+| [Preparation and flight in a permanent field](Field_on_source_and_release.md) | The walker restarts at a failed detector and keeps its field on through preparation. The surviving packet's momentum shift changes the finite-action Gaussian centers and the mean release clock. |
+| [A sharper central flight window](Single_window_in_a_permanent_field.md) | From a sharp well, a position window of velocity half-width $w$ approximates the corresponding velocity projection when $tw^2$ diverges. |
+| [Waves from one central position aperture](Central_window_chirps.md) | At fixed action a single position interval gives two Fresnel waves with a sharp cutoff in the terminal position characteristic function. A shrinking-action window prepares two rested classical rays. |
+| [Translating the fixed-action aperture](Moving_window_quantum_flight.md) | A traveling position window suppresses fair counting exponentially while retaining the quantum position law in a calibrated frame with diverging laboratory velocity. |
+| [Displacing a classical window](Displacing_a_classical_window.md) | A displaced aperture suppresses fair counting at shrinking action while its physical position and velocity approach the launch values. The unit sectors give two equally weighted accelerated arrivals in the laboratory frame. |
+| [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
+| [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
+| [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
+| [Counting in a classical flight](Count_weight_in_classical_flight.md) | A moving aperture can select the ordinary free ray from a mixture. Central and moving acceptance per launch expose the count weight hidden by conditioning. |
 | [Pure pointer preparations and mixed-sector controls](Tag_sector_controls.md) | A four-tick comparison gives odds ratios 1 and 6/5. Even real-analytic rules can match every pure-tag flight and any finite set of autonomous mixed-tag calibrations, then give different positive odds at a later splitter. |
 | [Flight-window preparation](Flight_window_preparation.md) | One binary displacement record selects a terminal position ray from a sharp launch, with an explicit preparation time and success probability. |
 | [Cesium first-step probe](Cesium_negative_read.md) | The four-step atom counts measure a change in terminal positions when one arm is moved aside. A shared-site pointer response still requires a different measurement. |
@@ -116,6 +144,23 @@ python -B check_clock_reuse.py rerun
 python -B check_holonomy_cone.py rerun
 python -B check_holonomy_embedding.py rerun
 python -B check_multiset_fibres.py rerun
+python -B check_sheet_refinement.py rerun
+python -B check_addressed_sheet_source.py rerun
+python -B check_routed_sheet_filter.py rerun
+python -B check_uninterrupted_sheet_read.py rerun
+python -B check_local_sheet_flight.py rerun
+python -B check_native_multiscale_selector.py rerun
+python -B certify_native_stage.py --examples --output rerun/native_stage_certificates.json
+python -B check_direction_from_sites.py rerun
+python -B check_field_on_renewal.py rerun
+python -B check_cover_comparison.py rerun
+python -B check_cover_marginals.py rerun
+python -B check_prime_port_records.py rerun
+python -B check_mixed_refinement.py rerun
+python -B check_staircase_rail_field.py rerun
+python -B check_product_gain_fibers.py rerun
+python -B check_joint_residue_preparation.py rerun
+python -B check_joint_phase_records.py rerun
 python -B check_character_tomography.py rerun
 python -B check_local_clock_detector.py rerun
 python -B check_record_dilation.py rerun
@@ -171,6 +216,14 @@ python -B check_marker_replay.py rerun
 python -B check_parity_direction.py rerun
 python -B check_folded_free_field.py rerun
 python -B check_folded_gaussian.py rerun
+python -B check_record_sector_calibration.py rerun
+python -B check_direction_record_witness.py rerun
+python -B check_hidden_site_records.py rerun
+python -B check_straight_direction.py rerun
+python -B check_unmasked_straight_release.py rerun
+python -B check_central_window_flight.py rerun
+python -B check_moving_window_flight.py rerun
+python -B check_mask_boundary.py rerun
 ```
 
 The previous twenty checkers reproduced thirty-four result files on the recorded Windows runtime. Three further checkers cover the mediator, an exact three-tick signal and a finite two-source quantum read, bringing that verification to 23 programs and 37 generated outputs. Three subsequent gain and flag checkers and the native port calculation bring the cumulative count to 27 programs and 41 generated outputs. Four further programs verify protected coordinate comparisons and their local routing, bringing the total to 31 checkers and 45 generated outputs. Four further checkers cover autonomous calibration, edge-supported record flows, a local echo and its reversible microscopic countermodel, bringing the total to 35 checkers and 49 outputs. The results retain first-run comparisons, seeded trajectories with missed targets, short caps below the Bell threshold and zero-gain controls. One single-thread BLAS rerun changed a norm from 1.0000000000000002 to 1.0, with all thirteen affected predicates passing in both runs. The original runtime configuration reproduced the stored bytes. Four further checkers cover the optical data and detector gains, bringing the cumulative counts to 39 checkers and 53 generated outputs. Three clock studies add physical port counts, sharp support bounds and a dyadic preparation schedule, for 42 checkers and 56 generated outputs. Six further programs check the alternative clock transports, reuse, the finite force cone, the marked ruler and equal-sum history events, bringing the totals to 48 checkers and 62 generated outputs. Five more checkers cover native and optical multiset weights, sensitivity to detector loss, local clock detectors and hidden record sectors, for 53 checkers and 67 generated outputs. Four more checkers cover matched force calibration, returning-path preparation and the resulting flight, for 57 checkers and 71 generated outputs. Eight further checkers cover confined preparations, finite-speed motion, finite clock purity and phase readout, for 65 checkers and 79 generated outputs. Six further programs cover rational and optical references, the local mass clock and a multi-sector ray source, bringing the inventory to 71 checkers and 85 generated outputs. Four phase-contact and network checkers bring the inventory to 75 checkers and 89 generated outputs, alongside 24 Lean source files. Five collision and occupation checkers bring the total to 80 checkers, 94 generated outputs and 26 Lean sources. Four further checkers cover gate composition, finite phase and continuum controls, and the published network functional, bringing the totals to 84 checkers, 98 generated outputs and 27 Lean files. Four electric-string checks bring the totals to 88 programs, 102 generated outputs and 28 Lean files. The common-horizon staircase calculation brings the inventory to 89 programs, 103 generated outputs and 29 Lean files. Four return and coarsening programs bring the totals to 93 checkers and 107 generated outputs. The parity extension uses one of the 29 existing Lean files. Two string-control and readout checkers bring the totals to 95 programs and 109 generated outputs, with 30 Lean files. Three separated-record and memory checkers bring the inventory to 98 programs and 112 generated outputs, with 32 Lean files. [Verification record](results/verification.json)

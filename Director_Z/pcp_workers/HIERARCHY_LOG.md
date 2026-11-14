@@ -112,3 +112,23 @@ What changes:
 - The rule "append to FINDINGS.md after each item" is what made the stop survivable; it stays in every prompt, and the first item of every prompt is now the cheapest one that yields a usable result.
 - Long prompts with eight items cost more than they return when the agent is cut off; prefer one or two items per agent.
 - Stopped agents are resumed by message with their saved context, not relaunched.
+
+### Second attempt, three at a time (13 to 14 November 2026)
+
+Seven stopped agents were resumed by message in two batches of three and one; all seven reported. Tokens per resumed agent: 95k to 160k. The mechanics challenger and the case-study fact-check were not resumed (the director did the case-study check by hand in two commands).
+
+| Role | New to the director | Needed correction on recheck | Note |
+|---|---|---|---|
+| Premises attack (negative) | yes: conservation alone leaves 37 dimensions by tick 12 when the detector sees both route numbers | none; director's rerun reproduced ticks 9 to 12, timed out at 14 | the decisive finding on G1 |
+| Builder on G1 (positive) | yes: a weaker premise plus one measurement replaces "signed total only" | none; proof read, program rerun byte-identical | the attack's wound came back with its repair |
+| Builder on product events (positive) | yes: the target was false as posed, with two explicit counterexamples | none found | a refuted strengthening is a result |
+| Chaos | yes: 16 of 34 planted errors survive the checks | patch applies; not yet in the edition | first measurement of what the checks miss |
+| Wildcard | yes: recomputed a table the director had not; one sentence of G10 depends on horizon | none | chose a record marked "not recomputed" |
+| Lean and fixed rings | no defect; coverage limits of the Lean file | none; recompiled | did not write FINDINGS.md, citing a standing instruction of its own |
+| Citations | prior art absent; network block found | page bodies not opened | search summaries only |
+
+What worked: a builder beside each attacker; resuming by message; narrowing the brief on resume to one or two items. What did not: eleven at once; eight-item briefs; relying on WebFetch (arxiv.org and claymath.org are not reachable from this session).
+
+## A separate PCP version (14 November 2026)
+
+Principal: PCP may be upgraded and run as a separate version, container environment or branch apart from the main branch, if that is better and only if necessary. Not used yet. Candidates for a need, noted so far and none pressing: the closing record of a review lists no open objections although objections are recorded open (found by the queue's wildcard); the register accepts an artifact digest without keeping the file, so a later edit of the file goes unnoticed (two cases, editions Z18 and Z22). The second can be met in the submit tool on this side without touching PCP; the first is a matter of how PCP words its closing record. Decision for now: fix the second in `Director_Z/tools/` when the next edition is prepared; raise the first with Director G before changing anything.

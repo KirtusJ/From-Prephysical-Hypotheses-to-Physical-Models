@@ -1,0 +1,2186 @@
+{
+ "results": [
+  {
+   "detail": {
+    "D_4": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   "id": "A1",
+   "pass": true,
+   "statement": "N=4: D_4 = 4 * launch translated by two sites"
+  },
+  {
+   "detail": {
+    "failing_ticks": [],
+    "ticks_tested": 197
+   },
+   "id": "A2",
+   "pass": true,
+   "statement": "N=4: D_{t+4}(x,r) = 4 D_t(x-2,r), t=0..196"
+  },
+  {
+   "detail": {
+    "magnitudes_by_tick": {
+     "0": [
+      1
+     ],
+     "1": [
+      1
+     ],
+     "2": [
+      1
+     ],
+     "3": [
+      2
+     ]
+    }
+   },
+   "id": "A3",
+   "pass": true,
+   "statement": "N=4: ticks 0..3 each have one nonzero magnitude"
+  },
+  {
+   "detail": {
+    "D_24": [
+     [
+      4096,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   "id": "A4",
+   "pass": true,
+   "statement": "N=8: D_24 = 4096 * D_0"
+  },
+  {
+   "detail": {
+    "failing_ticks": [],
+    "ticks_tested": 177
+   },
+   "id": "A5",
+   "pass": true,
+   "statement": "N=8: D_{t+24} = 4096 D_t, t=0..176"
+  },
+  {
+   "detail": {
+    "magnitudes_by_tick_0_23": {
+     "0": [
+      1
+     ],
+     "1": [
+      1
+     ],
+     "2": [
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      1,
+      3
+     ],
+     "5": [
+      2,
+      4
+     ],
+     "6": [
+      2,
+      6
+     ],
+     "7": [
+      4,
+      8
+     ],
+     "8": [
+      4,
+      12
+     ],
+     "9": [
+      8,
+      16
+     ],
+     "10": [
+      16
+     ],
+     "11": [
+      16
+     ],
+     "12": [
+      32
+     ],
+     "13": [
+      32
+     ],
+     "14": [
+      64
+     ],
+     "15": [
+      64,
+      128
+     ],
+     "16": [
+      64,
+      192
+     ],
+     "17": [
+      128,
+      256
+     ],
+     "18": [
+      128,
+      384
+     ],
+     "19": [
+      256,
+      512
+     ],
+     "20": [
+      256,
+      768
+     ],
+     "21": [
+      512,
+      1024
+     ],
+     "22": [
+      1024
+     ],
+     "23": [
+      2048
+     ]
+    },
+    "ticks_with_32": [
+     12,
+     13
+    ]
+   },
+   "id": "A6",
+   "pass": true,
+   "statement": "N=8: magnitude 32 within ticks 0..23 occurs exactly at {12,13}"
+  },
+  {
+   "detail": {
+    "tick12": [
+     [
+      32,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      -32,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "tick13": [
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      32
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      -32
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      -32,
+      32
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      32
+     ]
+    ]
+   },
+   "id": "A7",
+   "pass": true,
+   "statement": "N=8: at ticks 12, 13 the nonzero magnitudes are exactly {32}"
+  },
+  {
+   "detail": {
+    "failing_ticks": []
+   },
+   "id": "A8",
+   "pass": true,
+   "statement": "N=8: t=24..200 every nonzero total is a multiple of 4096"
+  },
+  {
+   "detail": {
+    "ticks_where_panels_differ": []
+   },
+   "hypothesis": {
+    "ticks_where_magnitude_32_is_occupied": [
+     11
+    ],
+    "vacuous": false
+   },
+   "id": "A9[N=4]",
+   "pass": true,
+   "statement": "N=4: panel(square) == panel(rival32) for t=0..200"
+  },
+  {
+   "detail": {
+    "ticks_where_panels_differ": []
+   },
+   "hypothesis": {
+    "ticks_where_magnitude_32_is_occupied": [
+     12,
+     13
+    ],
+    "vacuous": false
+   },
+   "id": "A9[N=8]",
+   "pass": true,
+   "statement": "N=8: panel(square) == panel(rival32) for t=0..200"
+  },
+  {
+   "detail": {
+    "failing_ticks": []
+   },
+   "id": "A10",
+   "pass": true,
+   "statement": "N=4: every panel t=0..200 has exactly one nonzero magnitude"
+  },
+  {
+   "detail": {
+    "all_ticks_le_200_where_panels_differ": [
+     13,
+     15,
+     17,
+     18,
+     19,
+     23
+    ]
+   },
+   "hypothesis": {
+    "ticks_where_magnitude_32_is_occupied": [
+     13,
+     15,
+     17,
+     18,
+     19,
+     23
+    ]
+   },
+   "id": "A11",
+   "pass": true,
+   "statement": "N=16: panel(square) != panel(rival32) at tick 13"
+  },
+  {
+   "detail": {
+    "failing_ticks": [],
+    "words_at_tick_13": 8192,
+    "words_total": 16382
+   },
+   "id": "B1",
+   "pass": true,
+   "statement": "N=16: propagation == signed-word enumeration, ticks 1..13"
+  },
+  {
+   "detail": {
+    "value": 8192
+   },
+   "id": "B2",
+   "pass": true,
+   "statement": "N=16 t=13: square normalizer = 8192"
+  },
+  {
+   "detail": {
+    "value": 10240
+   },
+   "id": "B3",
+   "pass": true,
+   "statement": "N=16 t=13: rival32 normalizer = 10240"
+  },
+  {
+   "detail": {
+    "value": 32
+   },
+   "id": "B4",
+   "pass": true,
+   "statement": "D_13(7,R) = +32"
+  },
+  {
+   "detail": {
+    "ports": [
+     "7R",
+     "9R"
+    ],
+    "signed_values": [
+     32,
+     32
+    ]
+   },
+   "id": "B5",
+   "pass": true,
+   "statement": "t=13: exactly two ports have magnitude 32"
+  },
+  {
+   "detail": {
+    "field_13": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      20
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      8,
+      -16
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      -28,
+      12
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      52
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      32,
+      12
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      24,
+      -16
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      -4,
+      20
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      -20
+     ]
+    ],
+    "other_occupied_magnitudes": [
+     4,
+     8,
+     12,
+     12,
+     16,
+     16,
+     20,
+     20,
+     20,
+     24,
+     28,
+     52
+    ]
+   },
+   "id": "B6",
+   "pass": true,
+   "statement": "t=13: some occupied port has magnitude != 32"
+  },
+  {
+   "detail": {
+    "rival32": "1/5",
+    "square": "1/8"
+   },
+   "id": "B7",
+   "pass": true,
+   "statement": "p_13(7,R) = 1/8 (square), 1/5 (rival32)"
+  },
+  {
+   "detail": {
+    "each_rail_square": [
+     "121/1024",
+     "25/1024"
+    ],
+    "rival32": "73/512",
+    "square": "73/512",
+    "totals_at_site_6": [
+     22,
+     10
+    ]
+   },
+   "id": "B8",
+   "pass": true,
+   "statement": "p_12(6,R)+p_12(6,L) = 73/512 under both scores"
+  },
+  {
+   "detail": {
+    "daughter_totals": [
+     32,
+     12
+    ],
+    "rival32": "137/640",
+    "square": "73/512"
+   },
+   "id": "B9",
+   "pass": true,
+   "statement": "p_13(7,R)+p_13(5,L) = 73/512 (square), 137/640 (rival32)"
+  },
+  {
+   "detail": {
+    "magnitudes_tick_12": [
+     6,
+     10,
+     14,
+     18,
+     22,
+     42
+    ],
+    "normalizers_tick_12": [
+     4096,
+     4096
+    ]
+   },
+   "id": "B10",
+   "pass": true,
+   "statement": "N=16 t=12: no port has magnitude 32"
+  },
+  {
+   "detail": {
+    "blocks_tested": 3200,
+    "violations": []
+   },
+   "id": "B11",
+   "pass": true,
+   "statement": "N=16 square: parent mass = daughter mass, all x, t=0..199"
+  },
+  {
+   "detail": {
+    "all_violations_t_le_40_as_[t,x]": [
+     [
+      12,
+      0
+     ],
+     [
+      12,
+      2
+     ],
+     [
+      12,
+      4
+     ],
+     [
+      12,
+      6
+     ],
+     [
+      12,
+      8
+     ],
+     [
+      12,
+      10
+     ],
+     [
+      12,
+      12
+     ],
+     [
+      12,
+      14
+     ],
+     [
+      13,
+      1
+     ],
+     [
+      13,
+      3
+     ],
+     [
+      13,
+      5
+     ],
+     [
+      13,
+      7
+     ],
+     [
+      13,
+      9
+     ],
+     [
+      13,
+      11
+     ],
+     [
+      13,
+      13
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      14,
+      2
+     ],
+     [
+      14,
+      4
+     ],
+     [
+      14,
+      6
+     ],
+     [
+      14,
+      8
+     ],
+     [
+      14,
+      10
+     ],
+     [
+      14,
+      12
+     ],
+     [
+      14,
+      14
+     ],
+     [
+      15,
+      1
+     ],
+     [
+      15,
+      3
+     ],
+     [
+      15,
+      5
+     ],
+     [
+      15,
+      7
+     ],
+     [
+      15,
+      9
+     ],
+     [
+      15,
+      11
+     ],
+     [
+      15,
+      13
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      16,
+      0
+     ],
+     [
+      16,
+      2
+     ],
+     [
+      16,
+      4
+     ],
+     [
+      16,
+      6
+     ],
+     [
+      16,
+      8
+     ],
+     [
+      16,
+      10
+     ],
+     [
+      16,
+      12
+     ],
+     [
+      16,
+      14
+     ],
+     [
+      17,
+      3
+     ],
+     [
+      17,
+      5
+     ],
+     [
+      17,
+      11
+     ],
+     [
+      18,
+      0
+     ],
+     [
+      18,
+      2
+     ],
+     [
+      18,
+      4
+     ],
+     [
+      18,
+      6
+     ],
+     [
+      18,
+      8
+     ],
+     [
+      18,
+      10
+     ],
+     [
+      18,
+      12
+     ],
+     [
+      18,
+      14
+     ],
+     [
+      19,
+      1
+     ],
+     [
+      19,
+      3
+     ],
+     [
+      19,
+      5
+     ],
+     [
+      19,
+      7
+     ],
+     [
+      19,
+      9
+     ],
+     [
+      19,
+      11
+     ],
+     [
+      19,
+      13
+     ],
+     [
+      19,
+      15
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      22,
+      2
+     ],
+     [
+      22,
+      4
+     ],
+     [
+      22,
+      6
+     ],
+     [
+      22,
+      8
+     ],
+     [
+      22,
+      10
+     ],
+     [
+      22,
+      12
+     ],
+     [
+      22,
+      14
+     ],
+     [
+      23,
+      1
+     ],
+     [
+      23,
+      3
+     ],
+     [
+      23,
+      5
+     ],
+     [
+      23,
+      7
+     ],
+     [
+      23,
+      9
+     ],
+     [
+      23,
+      11
+     ],
+     [
+      23,
+      13
+     ],
+     [
+      23,
+      15
+     ]
+    ]
+   },
+   "id": "B12",
+   "pass": true,
+   "statement": "N=16 rival32 violates conservation at (t=12, x=6)"
+  },
+  {
+   "detail": {
+    "ticks_tested": 398,
+    "ticks_with_an_odd_total": []
+   },
+   "id": "C1[N=4]",
+   "pass": true,
+   "statement": "N=4: all totals even for t=3..400"
+  },
+  {
+   "detail": {
+    "odd_total_exists_at_cutoff_minus_one": true
+   },
+   "id": "C2[N=4]",
+   "pass": "measured only",
+   "statement": "N=4: some total odd at tick N/2=2"
+  },
+  {
+   "detail": {
+    "ticks_tested": 396,
+    "ticks_with_an_odd_total": []
+   },
+   "id": "C1[N=8]",
+   "pass": true,
+   "statement": "N=8: all totals even for t=5..400"
+  },
+  {
+   "detail": {
+    "odd_total_exists_at_cutoff_minus_one": true
+   },
+   "id": "C2[N=8]",
+   "pass": "measured only",
+   "statement": "N=8: some total odd at tick N/2=4"
+  },
+  {
+   "detail": {
+    "ticks_tested": 392,
+    "ticks_with_an_odd_total": []
+   },
+   "id": "C1[N=16]",
+   "pass": true,
+   "statement": "N=16: all totals even for t=9..400"
+  },
+  {
+   "detail": {
+    "odd_total_exists_at_cutoff_minus_one": true
+   },
+   "id": "C2[N=16]",
+   "pass": "measured only",
+   "statement": "N=16: some total odd at tick N/2=8"
+  },
+  {
+   "detail": {
+    "ticks_tested": 384,
+    "ticks_with_an_odd_total": []
+   },
+   "id": "C1[N=32]",
+   "pass": true,
+   "statement": "N=32: all totals even for t=17..400"
+  },
+  {
+   "detail": {
+    "odd_total_exists_at_cutoff_minus_one": true
+   },
+   "id": "C2[N=32]",
+   "pass": "measured only",
+   "statement": "N=32: some total odd at tick N/2=16"
+  },
+  {
+   "detail": {
+    "ticks_tested": 368,
+    "ticks_with_an_odd_total": []
+   },
+   "id": "C1[N=64]",
+   "pass": true,
+   "statement": "N=64: all totals even for t=33..400"
+  },
+  {
+   "detail": {
+    "odd_total_exists_at_cutoff_minus_one": true
+   },
+   "id": "C2[N=64]",
+   "pass": "measured only",
+   "statement": "N=64: some total odd at tick N/2=32"
+  },
+  {
+   "detail": {
+    "ring4": [
+     1
+    ],
+    "ring8": [
+     1,
+     3
+    ]
+   },
+   "id": "C3",
+   "pass": true,
+   "statement": "positive odd totals, ticks 0..N/2: ring 4 -> {1}, ring 8 -> {1,3}"
+  },
+  {
+   "detail": {
+    "negative_odd_totals_for_information": [
+     -1
+    ],
+    "occurrences_of_+5_as_[N,t]": [],
+    "positive_odd_totals": [
+     1,
+     3
+    ]
+   },
+   "id": "C4",
+   "pass": true,
+   "statement": "rings 4, 8, t=0..400: positive odd totals are exactly {1,3}; +5 never occurs"
+  },
+  {
+   "detail": {
+    "cases": 512,
+    "mismatch_count": 0,
+    "mismatches_[N,t,x]": []
+   },
+   "id": "C5",
+   "pass": true,
+   "statement": "F_2 representation of both rails, N in {3,4,5,6,8,12,16,32}, t=1..64"
+  },
+  {
+   "detail": {
+    "bitmask_by_N": {
+     "4": 0,
+     "8": 0,
+     "16": 0,
+     "32": 0,
+     "64": 0
+    }
+   },
+   "id": "C6",
+   "pass": true,
+   "statement": "(X+1/X)^(N/2) = 0 in F_2[X]/(X^N-1), N in {4,8,16,32,64}"
+  },
+  {
+   "detail": {
+    "3": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "5": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "6": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "7": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "9": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "10": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "11": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    },
+    "12": {
+     "last_tick_le_400_with_an_odd_total": 400,
+     "number_of_ticks_with_an_odd_total": 401
+    }
+   },
+   "id": "C7",
+   "pass": "measured only",
+   "statement": "rings that are not powers of two: odd totals at late ticks"
+  },
+  {
+   "detail": {
+    "component_of_+32": [
+     -32,
+     32
+    ],
+    "component_of_-32": [
+     -32,
+     32
+    ],
+    "number_of_components": 34,
+    "number_of_vertices": 243,
+    "size_of_component_of_+1": 13
+   },
+   "id": "D1",
+   "pass": true,
+   "statement": "rings {4,8}, t<=200: component of +32 (and -32) is inside {+32,-32}, without +1"
+  },
+  {
+   "detail": {
+    "mismatches": []
+   },
+   "hypothesis": {
+    "singleton_components": 9,
+    "values_in_larger_components": 234,
+    "values_tested": 243
+   },
+   "id": "D2",
+   "pass": true,
+   "statement": "doubling at one signed value v preserves all panels <=> component(v) = {v}"
+  },
+  {
+   "detail": {
+    "distinct_constants_used": 34,
+    "failing_panel_indices": [],
+    "panels_tested": 402
+   },
+   "id": "D3",
+   "pass": true,
+   "statement": "score constant*k^2 with a different constant per component preserves all panels"
+  },
+  {
+   "detail": {
+    "size_of_component_of_+32": 331,
+    "smallest_members": [
+     1,
+     -1,
+     2,
+     -2,
+     3,
+     -3,
+     4,
+     -4,
+     5,
+     -5,
+     6,
+     -6
+    ]
+   },
+   "id": "D4",
+   "pass": true,
+   "statement": "rings {4,8,16}, t<=200: component of +32 contains +1"
+  },
+  {
+   "detail": {
+    "all_magnitudes_below_5000": [
+     "32",
+     "2048"
+    ],
+    "count": 17,
+    "first_20": [
+     {
+      "magnitude": "32",
+      "panels_[N,t]": [
+       [
+        4,
+        11
+       ],
+       [
+        8,
+        12
+       ],
+       [
+        8,
+        13
+       ]
+      ]
+     },
+     {
+      "magnitude": "2048",
+      "panels_[N,t]": [
+       [
+        4,
+        23
+       ],
+       [
+        8,
+        23
+       ]
+      ]
+     },
+     {
+      "magnitude": "131072",
+      "panels_[N,t]": [
+       [
+        4,
+        35
+       ],
+       [
+        8,
+        36
+       ],
+       [
+        8,
+        37
+       ]
+      ]
+     },
+     {
+      "magnitude": "8388608",
+      "panels_[N,t]": [
+       [
+        4,
+        47
+       ],
+       [
+        8,
+        47
+       ]
+      ]
+     },
+     {
+      "magnitude": "536870912",
+      "panels_[N,t]": [
+       [
+        4,
+        59
+       ],
+       [
+        8,
+        60
+       ],
+       [
+        8,
+        61
+       ]
+      ]
+     },
+     {
+      "magnitude": "34359738368",
+      "panels_[N,t]": [
+       [
+        4,
+        71
+       ],
+       [
+        8,
+        71
+       ]
+      ]
+     },
+     {
+      "magnitude": "2199023255552",
+      "panels_[N,t]": [
+       [
+        4,
+        83
+       ],
+       [
+        8,
+        84
+       ],
+       [
+        8,
+        85
+       ]
+      ]
+     },
+     {
+      "magnitude": "140737488355328",
+      "panels_[N,t]": [
+       [
+        4,
+        95
+       ],
+       [
+        8,
+        95
+       ]
+      ]
+     },
+     {
+      "magnitude": "9007199254740992",
+      "panels_[N,t]": [
+       [
+        4,
+        107
+       ],
+       [
+        8,
+        108
+       ],
+       [
+        8,
+        109
+       ]
+      ]
+     },
+     {
+      "magnitude": "576460752303423488",
+      "panels_[N,t]": [
+       [
+        4,
+        119
+       ],
+       [
+        8,
+        119
+       ]
+      ]
+     },
+     {
+      "magnitude": "36893488147419103232",
+      "panels_[N,t]": [
+       [
+        4,
+        131
+       ],
+       [
+        8,
+        132
+       ],
+       [
+        8,
+        133
+       ]
+      ]
+     },
+     {
+      "magnitude": "2361183241434822606848",
+      "panels_[N,t]": [
+       [
+        4,
+        143
+       ],
+       [
+        8,
+        143
+       ]
+      ]
+     },
+     {
+      "magnitude": "151115727451828646838272",
+      "panels_[N,t]": [
+       [
+        4,
+        155
+       ],
+       [
+        8,
+        156
+       ],
+       [
+        8,
+        157
+       ]
+      ]
+     },
+     {
+      "magnitude": "9671406556917033397649408",
+      "panels_[N,t]": [
+       [
+        4,
+        167
+       ],
+       [
+        8,
+        167
+       ]
+      ]
+     },
+     {
+      "magnitude": "618970019642690137449562112",
+      "panels_[N,t]": [
+       [
+        4,
+        179
+       ],
+       [
+        8,
+        180
+       ],
+       [
+        8,
+        181
+       ]
+      ]
+     },
+     {
+      "magnitude": "39614081257132168796771975168",
+      "panels_[N,t]": [
+       [
+        4,
+        191
+       ],
+       [
+        8,
+        191
+       ]
+      ]
+     },
+     {
+      "magnitude": "1267650600228229401496703205376",
+      "panels_[N,t]": [
+       [
+        4,
+        200
+       ]
+      ]
+     }
+    ]
+   },
+   "id": "D5",
+   "pass": "measured only",
+   "statement": "magnitudes on rings {4,8}, t<=200, that only ever fill a panel alone"
+  },
+  {
+   "detail": {
+    "3": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "4": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "5": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "6": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "7": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "8": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "9": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "10": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "11": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    },
+    "12": {
+     "AAt_is_2I": true,
+     "AtA_is_2I": true,
+     "matrix_reproduces_propagation_12_ticks": true
+    }
+   },
+   "id": "E1",
+   "pass": true,
+   "statement": "N=3..12: A^T A = A A^T = 2I (A normal, all |eigenvalue| = sqrt 2)"
+  },
+  {
+   "detail": {
+    "hits": []
+   },
+   "id": "E5",
+   "pass": true,
+   "statement": "2^a != 9^b for 0<=a<=800, 0<=b<=300, (a,b) != (0,0)"
+  },
+  {
+   "detail": {
+    "3": {
+     "distinct_j_minus": [
+      1,
+      3
+     ],
+     "distinct_j_plus": [
+      1,
+      2
+     ],
+     "last_tick_minus": 13,
+     "last_tick_plus": 11,
+     "last_tick_plus_one": 5,
+     "minus_3^j_count": 2,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0L",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0L",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "2R",
+       "t": 7,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 10,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0L",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 11,
+       "value": "3"
+      }
+     ],
+     "plus_one_count": 11
+    },
+    "4": {
+     "distinct_j_minus": [],
+     "distinct_j_plus": [],
+     "last_tick_minus": null,
+     "last_tick_plus": null,
+     "last_tick_plus_one": 2,
+     "minus_3^j_count": 0,
+     "plus_3^j_occurrences": [],
+     "plus_one_count": 6
+    },
+    "5": {
+     "distinct_j_minus": [
+      1,
+      4
+     ],
+     "distinct_j_plus": [
+      1,
+      4
+     ],
+     "last_tick_minus": 24,
+     "last_tick_plus": 24,
+     "last_tick_plus_one": 9,
+     "minus_3^j_count": 6,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "4R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 4,
+       "port": "2L",
+       "t": 16,
+       "value": "81"
+      },
+      {
+       "j": 4,
+       "port": "1L",
+       "t": 24,
+       "value": "81"
+      }
+     ],
+     "plus_one_count": 18
+    },
+    "6": {
+     "distinct_j_minus": [
+      1,
+      3
+     ],
+     "distinct_j_plus": [
+      1,
+      2
+     ],
+     "last_tick_minus": 13,
+     "last_tick_plus": 11,
+     "last_tick_plus_one": 5,
+     "minus_3^j_count": 2,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3R",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3L",
+       "t": 5,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "4L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3L",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "5R",
+       "t": 7,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 10,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3R",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3L",
+       "t": 11,
+       "value": "3"
+      }
+     ],
+     "plus_one_count": 11
+    },
+    "7": {
+     "distinct_j_minus": [
+      1,
+      2
+     ],
+     "distinct_j_plus": [
+      1,
+      2
+     ],
+     "last_tick_minus": 18,
+     "last_tick_plus": 18,
+     "last_tick_plus_one": 13,
+     "minus_3^j_count": 5,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "6R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 8,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "5L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 11,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "0L",
+       "t": 18,
+       "value": "9"
+      }
+     ],
+     "plus_one_count": 26
+    },
+    "8": {
+     "distinct_j_minus": [],
+     "distinct_j_plus": [
+      1
+     ],
+     "last_tick_minus": null,
+     "last_tick_plus": 4,
+     "last_tick_plus_one": 4,
+     "minus_3^j_count": 0,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      }
+     ],
+     "plus_one_count": 13
+    },
+    "9": {
+     "distinct_j_minus": [
+      1,
+      2,
+      3
+     ],
+     "distinct_j_plus": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "last_tick_minus": 15,
+     "last_tick_plus": 19,
+     "last_tick_plus_one": 17,
+     "minus_3^j_count": 9,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "8R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 8,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "5R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "7L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "8R",
+       "t": 10,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "0R",
+       "t": 11,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "0L",
+       "t": 11,
+       "value": "9"
+      },
+      {
+       "j": 3,
+       "port": "7R",
+       "t": 11,
+       "value": "27"
+      },
+      {
+       "j": 2,
+       "port": "7L",
+       "t": 11,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 13,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "5L",
+       "t": 13,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "3R",
+       "t": 14,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "6L",
+       "t": 14,
+       "value": "3"
+      },
+      {
+       "j": 4,
+       "port": "5R",
+       "t": 19,
+       "value": "81"
+      }
+     ],
+     "plus_one_count": 31
+    },
+    "10": {
+     "distinct_j_minus": [
+      1,
+      4
+     ],
+     "distinct_j_plus": [
+      1,
+      4
+     ],
+     "last_tick_minus": 24,
+     "last_tick_plus": 24,
+     "last_tick_plus_one": 9,
+     "minus_3^j_count": 6,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "9R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "8L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 4,
+       "port": "2L",
+       "t": 16,
+       "value": "81"
+      },
+      {
+       "j": 4,
+       "port": "6L",
+       "t": 24,
+       "value": "81"
+      }
+     ],
+     "plus_one_count": 18
+    },
+    "11": {
+     "distinct_j_minus": [
+      1,
+      2,
+      3
+     ],
+     "distinct_j_plus": [
+      1,
+      2,
+      3
+     ],
+     "last_tick_minus": 14,
+     "last_tick_plus": 12,
+     "last_tick_plus_one": 21,
+     "minus_3^j_count": 7,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "10R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 8,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "7R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "9L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "8R",
+       "t": 10,
+       "value": "9"
+      },
+      {
+       "j": 3,
+       "port": "7R",
+       "t": 11,
+       "value": "27"
+      },
+      {
+       "j": 2,
+       "port": "8L",
+       "t": 12,
+       "value": "9"
+      }
+     ],
+     "plus_one_count": 38
+    },
+    "12": {
+     "distinct_j_minus": [
+      1,
+      2
+     ],
+     "distinct_j_plus": [
+      1,
+      2
+     ],
+     "last_tick_minus": 14,
+     "last_tick_plus": 16,
+     "last_tick_plus_one": 18,
+     "minus_3^j_count": 9,
+     "plus_3^j_occurrences": [
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 4,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "2L",
+       "t": 6,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "11R",
+       "t": 7,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "0R",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 8,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "10L",
+       "t": 8,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "9R",
+       "t": 9,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "8R",
+       "t": 10,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "8L",
+       "t": 10,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "1L",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 1,
+       "port": "9L",
+       "t": 11,
+       "value": "3"
+      },
+      {
+       "j": 2,
+       "port": "0L",
+       "t": 12,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "3L",
+       "t": 13,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "7L",
+       "t": 13,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "4R",
+       "t": 14,
+       "value": "9"
+      },
+      {
+       "j": 2,
+       "port": "8L",
+       "t": 14,
+       "value": "9"
+      },
+      {
+       "j": 1,
+       "port": "2R",
+       "t": 16,
+       "value": "3"
+      }
+     ],
+     "plus_one_count": 24
+    }
+   },
+   "id": "E6",
+   "pass": "measured only",
+   "statement": "occurrences of +3^j (j>=1) as signed port totals, N=3..12, t=0..400"
+  }
+ ],
+ "summary": {
+  "failed": 0,
+  "failed_ids": [],
+  "measured_only": 8,
+  "met": 39
+ }
+}
