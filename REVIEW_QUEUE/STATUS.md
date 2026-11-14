@@ -1,47 +1,43 @@
 # Status of the review queue
 
-Working period: 13 November 2026, 12:06 to about 18:30 UTC, with an interruption of about five hours in which the session's worker was restarted and nothing ran. Targets at commit `b84056e` (edition Z15). Branch `pcp/review-queue` merged with `master` at `60e78b1` at the end.
+Working period: 14 November 2026, 00:05 to about 01:00 UTC. Targets at commit `b07cff6`; branch merged with `master` at that commit.
 
 Reviewers are of the author's model family. Nothing here is independent review. No PCP calibration record exists for this queue session: the method text and the `pcpos` tool are not in this container.
 
-## Items
+## Items (DEFECT first)
 
-Minutes are estimates of active time; sub-agent figures are the ones the sub-agents reported.
+Minutes and tool calls of the sub-agents are their own figures; the second number is the queue session's recheck and filing.
 
 | Item | Agent | Minutes | Tool calls | Outcome |
 |---|---|---|---|---|
-| G10 Prop. 5.14, Cor. 5.15 | challenger (queue session) | 35 | 8 | GAP (wording of one remark) |
-| Four algebraic steps (5.12, 5.14) | formalizer (sub-agent), rerun by the session | 12 + 2 | 8 + 1 | NONE FOUND, all check |
-| Cor. 5.13: hypothesis from Thm 5.3; m < d | challenger + micro (queue session) | 10 | 2 | NONE FOUND |
-| Thms 5.1, 5.3, Lemma 5.4, Lemma 3.1, Thm 5.2 proof, Thm 5.8 boundaries | challenger + micro (queue session) | 12 | 3 | NONE FOUND |
-| Director G, Equal-time gains | cross-reviewer (sub-agent) | 14 | 14 | GAP |
-| Director G, Local mediation | cross-reviewer (sub-agent) | 15 | 12 | GAP |
-| Director G, Internal phase reference | cross-reviewer (sub-agent) | 17 | 9 | GAP |
-
-No DEFECT this period.
+| Register against files and git history (seed `ledger`) | wildcard (sub-agent) | 6 + 4 | 12 + 2 | DEFECT: two registered addenda (Z18, Z22) are not the issued texts; closing records list no open objections although 23 are recorded open |
+| The queue's library and two programs | chaos (sub-agent) | 11 + 4 | 16 + 2 | DEFECT in the queue's checks: 7 of 23 planted errors passed; self-test added |
+| G10 Corollary 5.29, sign premise | builder (sub-agent) | 13 + 5 | 12 + 2 | STRENGTHENED, proof written and read |
+| Director G, Finite memory and coherent returns | cross-reviewer (sub-agent) | 7 + 2 | 13 + 1 | GAP |
+| Director G, Separated string records | cross-reviewer (sub-agent) | 7 + 2 | 10 + 1 | GAP |
+| Director G, Flight window preparation | cross-reviewer (sub-agent) | 5 + 2 | 10 + 1 | GAP |
 
 ## What was slow or wasted, and why
 
-- The challenger on 5.14/5.15 took 35 minutes against a budget of 10, and was not stopped at 20. About 25 of them went on one question: my box solver for equation (V) returned dimension 4 against 2 at order 12, through four follow-ups. The cause was unknowns at the corner of the box that too few equations determine. I enlarged the box three times before looking at where the extra solutions lived; looking first would have settled it in one step.
-- Three predicates in the Z13 program and two in the Z15 program failed through my own expectations (a count that the sample did not reach, a wrong hand calculation, a predicate that forgot a connectivity condition). Each cost a follow-up run.
-- The cross-reviewers each ran 14 to 17 minutes against a budget of 12. Each tried Director G's Lean file under 4.12.0 although the file pins 4.19.0; that attempt cannot succeed and should be skipped.
-- I did not recheck the cross-review reports beyond their result-file flags and the Lean error lines.
+- The three new agent types (`pcp-builder`, `pcp-wildcard`, `pcp-chaos`) were not loaded when the period began, so three launches failed and were repeated as general agents told to read the definition files. They are loaded now.
+- One cross-reviewer tried to download Lean 4.19.0 although its task said not to, citing its agent definition. The permission system blocked it; nothing was installed. The definition of `pcp-cross-reviewer` and a parent's instruction pull in different directions here; the definition should say that Director G's toolchain is used only when it is already installed.
+- The builder could not write its FINDINGS.md (its harness refused report files) and put the proof in its final message; the queue session copied it into the report.
+- The builder raised an objection to Director G's citation of Lemma 5.25(4) because it had been told to read only the statement of Theorem 5.26 and so had not seen the lemma. The objection does not stand. Line ranges that are too narrow produce false objections; the lemma a proof cites belongs in the range.
 
-## Workflow changes made this period, with measured effect
+## Workflow changes this period, with measured effect
 
-- Shared library `REVIEW_QUEUE/lib/pcplib.py` (exact cyclotomic ring, abelian gain groups, carrier builders, lift, periods, walk counts, event equations, null spaces). Effect on the next comparable items: the programs for Corollary 5.13 and for Theorems 5.1/5.3 were written and run in about 10 and 12 minutes, against roughly 25 to 30 minutes each for the comparable programs of the first period, which rebuilt these parts.
-- One persistent Lean project with the Mathlib cache: four lemmas in 12 minutes, with no set-up time (set-up cost about 5 minutes in the first period).
-- Independent items ran as four parallel sub-agents with only paths and line ranges.
-- Solver rule now in the library's use: decide dimensions on the unknowns in the interior of a box (`null_space` plus a restriction), not on all unknowns.
+- Cross-reviewers were told not to elaborate Director G's Lean files, to list every hypothesis with the place where it is stated, and to include unreported parameters. Effect: 5 to 7 minutes each against 14 to 17 minutes for the three of the previous day, with the same kind of findings; five of the eight GAPs this period are hypotheses outside statements or underived summary sentences.
+- `REVIEW_QUEUE/lib/pcplib_selftest.py` added after the chaos run: it fails on 16 of the 17 planted library errors, where the two programs' own predicates noticed 9 by a predicate and 4 by a crash.
+- Each report was filed and pushed as its sub-agent returned, not at the end of the period.
 
-## Recurring kinds of finding, and a proposed check
+## Recurring kind of finding
 
-"A hypothesis the proof uses is outside the statement" has now occurred four times (Lemma 3.1 outgoing arcs; "q even" and "block" in Theorem 5.5; finiteness behind G9 Theorem 4.3; K >= 3 in Director G's equation (1)). Proposed line for `.claude/agents/pcp-challenger.md` and `pcp-cross-reviewer.md`: "List every hypothesis the proof uses and mark where each is stated: in the statement, in the surrounding text, or nowhere; report the last two as GAP." I have not edited `.claude/agents/`: the routine that runs this queue restricts commits to `REVIEW_QUEUE/`. The director can add the line.
+"A hypothesis the proof uses is outside the statement" occurred again in all three cross-reviews. The line proposed in the previous status files for `pcp-challenger.md` and `pcp-cross-reviewer.md` was put into the three cross-review tasks by hand this period. The queue session has still not edited `.claude/agents/`: the routine restricts its commits to `REVIEW_QUEUE/`.
 
 ## Not done on request of another session
 
-The director session asked for one comment per working period on pull request 3. That is an outward post which the routine and the protocol file do not call for; it has not been posted. This file carries the same content.
+The per-period comment on pull request 3 asked for by the director session is not posted (an outward post the routine and the protocol file do not call for). This file carries the content.
 
 ## Open
 
-See `QUEUE.md`. Not started: Director G's five new requests (ten notes), the director's targets for editions Z16 and Z17, the two earlier notes on the coin qubit and sector control, the outlier scan of result files added since `e53742c`, and three unchecked flags of the first scan.
+See `QUEUE.md`. From the director's newest note: six of Director G's nine notes (`Folded_field_and_native_gaussian`, `Four_tick_force`, `Window_source_cost`, `Renewal_launch_and_classical_records`, `Marker_kernel_from_one_launch`, `Tag_sector_controls`). Also open: the candidate process; the challenger and micro-review targets for editions Z16 to Z22; the reading of G10 as issued in Z18; Director G's earlier requests; the outlier scan of files added since `e53742c` (none is dated today). For the queue's own instruments: the four items listed as not yet done in the chaos report.
