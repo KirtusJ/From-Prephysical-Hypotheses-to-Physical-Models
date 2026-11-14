@@ -6688,6 +6688,38 @@
     },
     "standing": "Exact enumeration, iteration, Lean, and all 64 distinct terminal partitions agree on the specified signed walk. A separate sheet-coordinate computation reproduces the localized-source control. Type-correlated loss can defeat a flat reference. The source, addressable signs, detector law and physical identification remain open."
   },
+  "paired_detector_stopping_tail": {
+    "paper": "Stopping_time_tail_for_paired_detectors.md",
+    "checker": "check_stopping_tail.py",
+    "sha256": {
+      "check_stopping_tail.py": "7badef9c3a2036470616e1b0ab57061d737962d0fda386edfe6b5f3b778755b2",
+      "check_paired_exposure.py": "63d7540759080110611a2e6c0b9dc5e2555e83c9bff594e262843eb773fabc70",
+      "check_sequential_exposure.py": "0440336696b68dc6f200cef451aba4edd4598a58cd4272865ec8557cf9d0da9d",
+      "check_multigap_bias.py": "a92cc88bae48736f0be273a9efe923abfef367b9f453998bbee665fa0de65b7c",
+      "check_sqrt_witness.py": "ac4641bf9113c22b7be43fdc83dc9dc42156f5e3443048e36766d1b3e71d5af4",
+      "results/echo_probability_map.json": "e980be362bd91b17f04df8f88f90c7565178f2c0a77ca538ee71f16164eb3f75"
+    },
+    "replay": "Run python -B Director_G/check_stopping_tail.py with mpmath 1.3.0. At 60 decimal places, its interval assertions check ten survival brackets (five budgets under both laws). The uncapped 95th percentile lies above 4.51632 and at most 4.51636 quadrillion pairs.",
+    "standing": "Fixed single-mass sequential rule, two specified lossless laws, fresh independent pairs, known M = 1e-8. Each pair costs two launches. These model survival bounds do not determine the risk of forcing a decision."
+  },
+  "paired_detector_deadline": {
+    "paper": "Deciding_at_a_paired_detector_deadline.md",
+    "checker": "check_deadline_decision.py",
+    "companions": {
+      "Conditional_errors_at_a_paired_detector_deadline.md": "check_conditional_deadline.py",
+      "Mean_exposure_at_the_paired_detector_deadline.md": "check_capped_mean.py",
+      "Lower_thresholds_at_the_paired_detector_deadline.md": "check_lower_deadline_threshold.py"
+    },
+    "sha256": {
+      "check_deadline_decision.py": "1b1947857244a03d541f0314f06971d9cfb840f3fff2bc92519b5186000d0d91",
+      "check_conditional_deadline.py": "52f7db0a453795a9f356787611ea448274f25a3400e963d8e79186b6f4785b15",
+      "check_capped_mean.py": "a2b8e08b4b0b489f9d631815eb2a202eb7893d494e1f7924f47f23dce1aa6634",
+      "check_lower_deadline_threshold.py": "92551ad242ab160739ed607e3413846b7250c61fbc60ee75fd831973c64fb519"
+    },
+    "shared_inputs": "See paired_detector_stopping_tail for the common rate and interval helpers and the routed mass menu.",
+    "replay": "Run each checker with Python and mpmath 1.3.0. All four 60-decimal interval checks passed. At a cap of four quadrillion pairs, thresholds +/-4 bound error under each law between 4.85860% and 4.92988%. At +/-3.867 the corresponding bounds are 4.96484% and 4.99902%.",
+    "standing": "The overflow is decided by the terminal likelihood sign with fair ties. Error and mean exposure refer to these specified capped rules and lossless detector laws at M = 1e-8. They are model predictions."
+  },
   "localized_sheet_power": {
     "paper": "Five_ticks_from_a_localized_sheet.md",
     "checker": "check_localized_sheet_power.py",

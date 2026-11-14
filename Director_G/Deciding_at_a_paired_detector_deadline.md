@@ -32,3 +32,5 @@ Starting at zero, the killed transition density there at clock u is the sum of e
 $$R(w,t)=\frac{1}{1+e^w}+\sum_{j\ge0}\frac{e^{-r_jt}}{4wr_j}.$$
 
 All terms are positive. The [checker](check_deadline_decision.py) bounds the remainder after six modes by a geometric series, since successive rate gaps are at least π²/w². It applies both clock tails before rounding. For the expected count it uses the uncapped likelihood-overshoot and Wald bounds from the single-mass analysis at a = 4. The calculation assumes a fresh independent latent type for each pair under the fixed model. No detector data were acquired.
+
+At the four-quadrillion-pair cap, the follow-up calculations bound [error under each law](Conditional_errors_at_a_paired_detector_deadline.md) and [mean exposure](Mean_exposure_at_the_paired_detector_deadline.md) at thresholds ±4. The [lower-threshold study](Lower_thresholds_at_the_paired_detector_deadline.md) quantifies the mean saving at ±3.867 and verifies that each conditional error stays below 5%.
