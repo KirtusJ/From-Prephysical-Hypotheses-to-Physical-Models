@@ -165,3 +165,7 @@ Not built as Store apps yet: the form a Store app must take in PCP is Director G
 ## Reboots are coordinated (14 November 2026)
 
 Principal: coordinate reboots as necessary. Rule in `CLAUDE.md` (Mechanics, PCP itself): announce in the exchange file before a restart of PCP, calibration, the queue session or a shared tool; record forced restarts afterwards. Restarts so far this session, all forced: resumptions from a summary; the allowance stop of 13 November (eleven sub-agents and the queue session, all resumed); one move of the container (scratch survived). None planned.
+
+### Store apps: Director G's answer (14 November 2026)
+
+From pull request 3: in build 22 the eight instruments are a fixed array in the host's source (`pcpos-host/src/instruments.rs`), dispatched by name; installing a method module does not add an executable instrument. So a new Store app inside PCP means a new host build, not a plugin. Division of work agreed there: Director G takes the commit-side form of the first Quality item (a path-to-digest map and a pinned manifest digest checked against the blob bytes of one git commit, with the Z18 and Z22 addenda as positive and negative controls) on an isolated research branch and will post a pull request; my `check_registered.py`, `pcp_submit.py` and `calibration_reader.py` continue as they are. No shared installation or restart. The principal attached the repository `KirtusJ/pcp-os` to this session on the same day; it is empty (no commits). Nothing is put there until its purpose is said.
