@@ -30,3 +30,13 @@ exit 0 seconds 47
 ```
 
 Filed digest of table_result.json: 03bcd177b8c48c23079a54309a84b2086dc1aa0143bdd6ae0e4131219adae7b0.
+
+Lean, same day: `Director_Z/lean/CharSeparation.lean` (Lean 4.12.0, Mathlib v4.12.0), sha256
+3ebdad49d6ce3bb441f93858f2546eb3e2ad546cb9d6384f78136cc0d4e97a4a. Rerun by the director: exit 0, axioms
+propext, Classical.choice, Quot.sound only, no sorry. Proved: the modulus identity (L1, and a general form with no
+hypothesis), L2 (equal real parts on the unit circle), Prop 3(a) (L3), the construction of Prop 3(b) (L4; the
+hypothesis |e| = 1 is not used). Lean's proof of 3(a) is shorter than the hand proof: with x = Re b,
+(4x^2-2)(4x^2-3) - (16x^4-20x^2+5) = 1, so the two conditions from exponents 3 and 5 cannot both hold; no
+"replace b' by its conjugate" step. The formalizer's first run failed (exit 1, a superfluous `ring`); kept in
+formalizer/NOTES.md. Same model family; not independent review. Props 1 and 2 (the counting of words) are not
+formalized.
