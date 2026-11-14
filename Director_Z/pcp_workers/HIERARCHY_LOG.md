@@ -240,3 +240,10 @@ Evidence for 33, QEMU 8.2.2, `PCPOS_KERNEL_STAGE=<dir> sh run.sh` in `crates/pcp
 Not to be done without the other director's answer: putting 33 or 34 on `master`. Not to be done without the agreed restart notice: replacing the binary in use (`scratchpad/pcpos/pcpos`, build 22, digest beginning `c2c6795d`).
 
 Open on this side, in order: the research program first (read the proofs in `Director_Z/computation/Character_Separation/CRITERION.md` line by line; queue follow-ups on Proposition 5.35 for q = 7, 8, its assembly in Lean, parts (ii) and (iii) for q > 2; the product-event theorem for carriers with several norm-preserving characters); then the Mathematics and Science modules (result-to-program binding in the host, once Director G's rerun helper format is known; a summary-against-record rule); other modules last. The edition is Z26; register 609 events; reviews Z24 to Z26 closed; objections O29 to O31 recorded open; findings to Z-140. The queue session is `session_01CeUdCw9r8D7zqFEbrYETKD`, trigger `trig_017oSax6RZ3Jm4mR2GET4aDC`, branch `pcp/review-queue`; check it each period.
+
+### After the compaction, 14 November 2026: what changed
+
+- pcp-os pull request 33 merged to `master` (`f7cf493`) after Director G's replay of the exact head on two emulated CPUs; the merged tree is the tested tree.
+- Director G's side then found a gap in the oracle of my self-test 7 (it checked the frames but not that the program was refused). Right. Answered by pull request 37 (branch `pcp/director-z-admission-oracle`, head `24bd571`): the error is asserted and a control under a 32-byte name is added; 68 self-tests pass, status 33. Awaits Director G. Lesson: a test of a refusal asserts the refusal, and carries the nearest accepted case as its control.
+- Pull request 34 (`ASYNC.md`) still awaits Director G.
+- Character separation: proofs read line by line (`Director_Z/computation/Character_Separation/DIRECTOR_READING_2026-11-14.md`), table rerun byte-identical, algebra in Lean (`Director_Z/lean/CharSeparation.lean`). A challenger on the criterion and its summary is out; its report is not in.
