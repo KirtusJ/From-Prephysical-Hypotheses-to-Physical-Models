@@ -1,0 +1,738 @@
+{
+  "source": "Director_Z/computation/Product_Events/gains_of_order_q/onesite_q_result.json",
+  "definitions": "All U,V with total cardinality at most cap, separate rail unknowns with both vacuum scores fixed to zero. Basis columns comprise orbit counts and unordered products of even-orbit alternating differences. Column rank on the box measures dependence introduced by truncating amplitude counts.",
+  "reference_comparisons": [
+    {
+      "q": 2,
+      "h": 1,
+      "published_modular_rank": 8,
+      "permutation": [
+        1,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 10,
+      "equations": 15,
+      "rank_Q": 8,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 2,
+      "h": 1,
+      "published_modular_rank": 16,
+      "permutation": [
+        1,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "cap": 3,
+      "unknowns": 18,
+      "equations": 35,
+      "rank_Q": 16,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 3,
+      "h": 1,
+      "published_modular_rank": 17,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 18,
+      "equations": 28,
+      "rank_Q": 17,
+      "nullity_Q": 1,
+      "candidate_columns": 1,
+      "evaluated_column_rank_Q": 1
+    },
+    {
+      "q": 3,
+      "h": 1,
+      "published_modular_rank": 37,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "cap": 3,
+      "unknowns": 38,
+      "equations": 84,
+      "rank_Q": 37,
+      "nullity_Q": 1,
+      "candidate_columns": 1,
+      "evaluated_column_rank_Q": 1
+    },
+    {
+      "q": 4,
+      "h": 1,
+      "published_modular_rank": 26,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 28,
+      "equations": 45,
+      "rank_Q": 26,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 4,
+      "h": 1,
+      "published_modular_rank": 66,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "cap": 3,
+      "unknowns": 68,
+      "equations": 165,
+      "rank_Q": 66,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 5,
+      "h": 1,
+      "published_modular_rank": 39,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 40,
+      "equations": 66,
+      "rank_Q": 39,
+      "nullity_Q": 1,
+      "candidate_columns": 1,
+      "evaluated_column_rank_Q": 1
+    },
+    {
+      "q": 5,
+      "h": 1,
+      "published_modular_rank": 109,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "cap": 3,
+      "unknowns": 110,
+      "equations": 286,
+      "rank_Q": 109,
+      "nullity_Q": 1,
+      "candidate_columns": 1,
+      "evaluated_column_rank_Q": 1
+    },
+    {
+      "q": 6,
+      "h": 1,
+      "published_modular_rank": 52,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 54,
+      "equations": 91,
+      "rank_Q": 52,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 6,
+      "h": 1,
+      "published_modular_rank": 164,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "cap": 3,
+      "unknowns": 166,
+      "equations": 455,
+      "rank_Q": 164,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 4,
+      "h": 2,
+      "published_modular_rank": 245,
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "orbits": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "cap": 5,
+      "unknowns": 250,
+      "equations": 1287,
+      "rank_Q": 245,
+      "nullity_Q": 5,
+      "candidate_columns": 5,
+      "evaluated_column_rank_Q": 5
+    },
+    {
+      "q": 4,
+      "h": 0,
+      "published_modular_rank": 134,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "cap": 4,
+      "unknowns": 138,
+      "equations": 495,
+      "rank_Q": 134,
+      "nullity_Q": 4,
+      "candidate_columns": 4,
+      "evaluated_column_rank_Q": 4
+    },
+    {
+      "q": 6,
+      "h": 2,
+      "published_modular_rank": 416,
+      "permutation": [
+        2,
+        3,
+        4,
+        5,
+        0,
+        1
+      ],
+      "orbits": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "cap": 4,
+      "unknowns": 418,
+      "equations": 1820,
+      "rank_Q": 416,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 6,
+      "h": 3,
+      "published_modular_rank": 409,
+      "permutation": [
+        3,
+        4,
+        5,
+        0,
+        1,
+        2
+      ],
+      "orbits": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "cap": 4,
+      "unknowns": 418,
+      "equations": 1820,
+      "rank_Q": 409,
+      "nullity_Q": 9,
+      "candidate_columns": 9,
+      "evaluated_column_rank_Q": 9
+    },
+    {
+      "q": 6,
+      "h": 4,
+      "published_modular_rank": 416,
+      "permutation": [
+        4,
+        5,
+        0,
+        1,
+        2,
+        3
+      ],
+      "orbits": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          5,
+          3
+        ]
+      ],
+      "cap": 4,
+      "unknowns": 418,
+      "equations": 1820,
+      "rank_Q": 416,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    },
+    {
+      "q": 3,
+      "h": 0,
+      "published_modular_rank": 107,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "cap": 5,
+      "unknowns": 110,
+      "equations": 462,
+      "rank_Q": 107,
+      "nullity_Q": 3,
+      "candidate_columns": 3,
+      "evaluated_column_rank_Q": 3
+    },
+    {
+      "q": 2,
+      "h": 0,
+      "published_modular_rank": 52,
+      "permutation": [
+        0,
+        1
+      ],
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "cap": 6,
+      "unknowns": 54,
+      "equations": 210,
+      "rank_Q": 52,
+      "nullity_Q": 2,
+      "candidate_columns": 2,
+      "evaluated_column_rank_Q": 2
+    }
+  ],
+  "mixed_cycles": {
+    "rank": {
+      "permutation": [
+        0,
+        2,
+        3,
+        1,
+        5,
+        4,
+        7,
+        8,
+        9,
+        6
+      ],
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "cap": 2,
+      "unknowns": 130,
+      "equations": 231,
+      "rank_Q": 123,
+      "nullity_Q": 7,
+      "candidate_columns": 7,
+      "evaluated_column_rank_Q": 7
+    },
+    "tested_context_pairs": 4356,
+    "positive_matrix": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "orbit_counts": [
+      2,
+      5,
+      3,
+      1
+    ],
+    "source": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "both_rotated": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "independently_rotated": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "scores": [
+      9,
+      9,
+      5
+    ],
+    "indefinite_matrix": [
+      [
+        1,
+        -2
+      ],
+      [
+        -2,
+        1
+      ]
+    ],
+    "unit_axis_scores": [
+      1,
+      1
+    ],
+    "mixed_score": -2
+  },
+  "cap_one_unresolved_parameters": {
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "orbits": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "cap": 1,
+    "unknowns": 8,
+    "equations": 9,
+    "rank_Q": 6,
+    "nullity_Q": 2,
+    "candidate_columns": 5,
+    "evaluated_column_rank_Q": 2
+  },
+  "spatial_rings": [
+    {
+      "ring": 3,
+      "actual_shift_period": 1,
+      "vertices": 6,
+      "reachable": 6,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 3,
+      "actual_shift_period": 2,
+      "vertices": 12,
+      "reachable": 12,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 3,
+      "actual_shift_period": 3,
+      "vertices": 18,
+      "reachable": 18,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 3,
+      "actual_shift_period": 4,
+      "vertices": 24,
+      "reachable": 24,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 4,
+      "actual_shift_period": 1,
+      "vertices": 8,
+      "reachable": 8,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 4,
+      "actual_shift_period": 2,
+      "vertices": 16,
+      "reachable": 16,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 4,
+      "actual_shift_period": 3,
+      "vertices": 24,
+      "reachable": 24,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 4,
+      "actual_shift_period": 4,
+      "vertices": 32,
+      "reachable": 32,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 5,
+      "actual_shift_period": 1,
+      "vertices": 10,
+      "reachable": 10,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 5,
+      "actual_shift_period": 2,
+      "vertices": 20,
+      "reachable": 20,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 5,
+      "actual_shift_period": 3,
+      "vertices": 30,
+      "reachable": 30,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    },
+    {
+      "ring": 5,
+      "actual_shift_period": 4,
+      "vertices": 40,
+      "reachable": 40,
+      "common_indegree": 2,
+      "harmonic_nullity_Q": 1
+    }
+  ],
+  "infinite_line": {
+    "weight": "2^x times the multiset size on either rail",
+    "factor": "5/2",
+    "checked": 144,
+    "positions": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "operand_sizes": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "limits": "Finite equality ranks and lift checks use rational arithmetic. Positive semidefiniteness tests all integer multiples and directions in the infinite cone. Full-input classifications need arbitrary preparations; cyclic translations of one launch alone need not realize them."
+}
