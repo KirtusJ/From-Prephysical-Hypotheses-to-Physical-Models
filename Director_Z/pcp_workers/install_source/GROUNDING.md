@@ -511,3 +511,54 @@ What this adds for PCP:
   whether it works without the standard library, and what the alternative is. Vendored and pinned by digest.
 - 28. **Publishing is by a key, not by an account that can be phished**, and the index records which key
   published each version, so a change of publisher is visible (the event-stream and 2026 lessons together).
+
+## 12. With Rust's crates, not against them (principal, 14 November 2026)
+
+Section 11 drew lessons from Cargo's failures, and requirements 26 and 27 can be read as setting PCP against the
+ecosystem it is written in. That reading is wrong and is corrected here. PCP OS is a Cargo workspace; a Store
+application written in Rust is a crate; the tools people already have must keep working on it.
+
+What Cargo offers that PCP can stand on (one search; summaries of the linked pages):
+- **Alternate registries with a static index.** A registry is a root holding `config.json` (with the download
+  address `dl`) and one file per crate, a line of JSON per version; it is selected with
+  `index = "sparse+https://..."` under `[registries]`. No service is needed to serve it.
+  ([Cargo book: index format](https://doc.rust-lang.org/cargo/reference/registry-index.html),
+  [RFC 2789](https://github.com/rust-lang/rfcs/blob/master/text/2789-sparse-index.md))
+- **Vendoring and offline builds.** `cargo vendor` copies every dependency into the tree and prints the
+  configuration that redirects resolution to it; `--locked`, `--frozen` and `--offline` assert that the lock
+  file is current and that nothing is fetched.
+  ([cargo-vendor(1)](https://dyn.manpages.debian.org/testing/cargo/cargo-vendor.1),
+  [Cameron: Cargo --offline](https://www.ncameron.org/blog/cargo-offline/))
+- Building a crate for a guest target, and machine-readable descriptions of a workspace [own; not returned by
+  the search].
+
+Requirements restated so that they work with Cargo:
+
+- **26, restated.** *Installing* runs nothing from the package. *Building* is Cargo's business and is done the
+  way Cargo does it, build scripts and procedural macros included, by the publisher or by whoever chooses to
+  build from source; it happens before the install transaction and outside the host, never as a side effect of
+  installing. What the package manager installs is the built thing, checked by digest.
+- **27, restated.** The host's own dependency list is kept short and each addition is weighed in writing; that
+  is a rule for the host, the trusted base, and not for Store applications, which may use the crates they
+  need. An application's `Cargo.lock` is part of what is published, so its dependencies are pinned by digest
+  the way Cargo already pins them.
+- **29. A Store application in Rust is an ordinary Cargo package.** It builds with `cargo build`, carries its
+  `Cargo.toml` and `Cargo.lock`, and can be vendored and audited with the usual tools. PCP adds an index entry
+  beside it (publisher key, digest of the built thing, declared capabilities, review record); it does not
+  invent a second manifest for what Cargo already says (name, version, dependencies).
+- **30. The index is laid out so that Cargo can read it where that makes sense.** The source of a Store
+  application can be offered as an alternate registry in Cargo's own static format on the same branch or file
+  tree as the PCP index, so that `cargo` fetches, locks and vendors it with no PCP tool. PCP's own fields live
+  in PCP's index files and never inside Cargo's, so neither tool has to understand the other's.
+- **31. Versions follow Cargo's.** A Store application's version is its crate version; "withdrawn" in the PCP
+  index means what "yanked" means in a registry; the two are kept in step by one publishing step.
+- **32. PCP does not republish other people's crates.** Dependencies come from where the lock file says. The
+  PCP index names applications and modules, not the crates they are made of.
+
+What stays PCP's own, because Cargo does not offer it: a signature by the publisher's key and a visible change
+of publisher (28); the install transaction with undo and the register record (6, 12); the capabilities an
+application declares and the host enforces (16, 23); and modules, which are text and not crates.
+
+Open for stage 2: whether the guest target is one Cargo can build today on every system this side has, and
+whether the engine that runs it can be a dependency that itself needs no build script and works without the
+standard library.
