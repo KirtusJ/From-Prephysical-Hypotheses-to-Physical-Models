@@ -85,6 +85,10 @@ def report_schedule(name, clocks):
     else:
         assert G_rows == {1:16,4:-8,16:1} and hm == {1:32,4:-16,16:2}
         assert all(hscore(word) == 1 for word in max_words)
+        fair_groups = Counter()
+        for word, count in fair.items():
+            fair_groups[hscore(word)] += count
+        assert fair_groups == {1: 20, -8: 8, 8: 12, -2: 4, 0: 84}
         assert sum(hscore(w)*n for w,n in fair.items()) == 44
         assert [w[1] for w in sorted(amps) if hscore(w)==8 and w[0]==-2 and any(amps[w])] == [-4,-2,0]
     local = {}
