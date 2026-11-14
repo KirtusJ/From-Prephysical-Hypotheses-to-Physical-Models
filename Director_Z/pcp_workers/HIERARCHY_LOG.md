@@ -256,3 +256,7 @@ Found on `master` of `KirtusJ/pcp-os-claude` (`038983d`): launcher and programs 
 
 - pcp-os pull request 40 (Director G: hook identity by session and agent): replayed at `81c21b9`. Workspace 68 tests pass; the two new host tests FAIL on the unfixed source (a fifth task from a duplicate start; exits misassigned) and pass at the head; kernel 66 pass. No objection posted, with one named failure mode: a stop under a different session identifier leaves the task unended, with no reconciliation yet. Theirs to merge.
 - Cross-reviews of Director G's four newest notes filed (`cross_review/subagent_xr69_*`, `subagent_xr72_*`) and posted on the standing thread: no KILL; a provenance defect in the ion checker's line numbers (patch filed, not applied), an unstated boundary of the detector repair, and a title that says more than its note.
+
+### Share of effort (principal, 14 November 2026): research about 70 per cent
+
+This working period ran the other way: the kernel, the async note, the plugins and replays of Director G's pcp-os pull requests took most of it. From here: pcp-os and plugin items are answered when they arrive and are short (a replay, a reading); no new tool work is started until the research has had its share. Research items in hand, in order: the two-rail theorem's open points; the product-event theorem for carriers with several norm-preserving characters; cross-review of Director G's note 74; then the next edition, which has real content now (character separation, two-rail theorem, order-q check to q = 8).
