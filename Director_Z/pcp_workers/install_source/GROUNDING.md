@@ -562,3 +562,49 @@ application declares and the host enforces (16, 23); and modules, which are text
 Open for stage 2: whether the guest target is one Cargo can build today on every system this side has, and
 whether the engine that runs it can be a dependency that itself needs no build script and works without the
 standard library.
+
+## 13. Does the package manager lose its independence by being a Rust crate? (principal, 14 November 2026)
+
+No, provided three conditions hold. "Crate" is a unit of compilation in the PCP OS workspace: `pcpos-pkg` is
+marked `publish = false`, is not on crates.io, and at run time needs no Cargo, no registry and no toolchain. It
+builds for `x86_64-unknown-none` [tested], so it needs no operating system either.
+
+33. **Independence of the package manager**, three conditions:
+    (a) *Build.* What it is built from is in the repository: the outside crates are vendored and pinned, so a
+        build needs no network and no registry. Not yet so: `cargo tree` shows `sha2` bringing eight more
+        crates, one with a build script, all fetched from crates.io at build time [tested].
+    (b) *Bootstrap.* The host is the base and is never installed or replaced by its own package manager.
+    (c) *Formats and tools.* PCP's index stands alone in its own form; installing never needs `cargo`. A
+        Cargo-readable view (requirement 30) is an addition and never the only form.
+
+## 14. Grounding closed; what was built first (14 November 2026)
+
+The principal: "You can finish grounding and begin building." Two last searches (summaries, as before):
+
+- Guest engines. Director G's probe used Wasmtime. Wasmtime's own platform notes say its crates do not use
+  `no_std`, and an aggregator lists about 58 direct dependencies for one release (not confirmed from a primary
+  source). `wasmi` describes itself as usable without the standard library and lists fuel metering;
+  `tinywasm` is smaller, depends only on core, alloc and libm with features off, and is young.
+  ([wasmi README](https://docs.rs/crate/wasmi/latest/source/README.md),
+  [Wasmtime platform support](https://docs.wasmtime.dev/stability-platform-support.html),
+  [tinywasm](https://docs.rs/crate/tinywasm/latest/source/src/lib.rs)) For a host that must stay small and a
+  core that must build for bare metal, an interpreter without the standard library is the candidate to try
+  first; Wasmtime stays the reference for behaviour. Not decided; it needs its own probe and Director G's view.
+- Signature crates. `ed25519-compact` describes itself as usable without the standard library and, in older
+  releases, without dependencies when randomness is supplied; `ed25519-dalek` is the longer-established one
+  and brings more. No audit report was found for either by the search.
+  ([ed25519-compact](https://docs.rs/ed25519-compact), [ed25519-dalek](https://docs.rs/crate/ed25519-dalek/latest))
+  Verification only is needed in the host. Not decided.
+
+Built first, as pull request 60 on `KirtusJ/pcp-os` (not merged; awaits Director G): the crate `pcpos-pkg`,
+the core of the package manager. Names, versions and paths that exist as one spelling on every system; index
+entries read whole or refused; the check of supplied bytes against an entry; the choice among ranked sources.
+8 tests; the workspace passes 76; eight planted errors are each caught. It installs nothing yet.
+
+Order of the next increments, each its own pull request with tests in Rust:
+1. Publisher key and signature in the entry form, with rotation signed by the old and the new key.
+2. The install transaction in the host: stage, verify, commit by switching one pointer, read back, undo; the
+   register events; the same operation as `pcpos pkg ...` and as a tool call (Director G's contract).
+3. Modules through it (text; nothing runs).
+4. A first Store application as a guest with declared capabilities, after the engine probe.
+5. The Store catalogue and its commands; then the graphical view.
