@@ -14,13 +14,18 @@ def check(test, message):
 
 
 def physical(d, q, clocks):
+    """Use the even circumference 2*d of the original replay."""
+    yield from physical_ring(2*d, q, clocks)
+
+
+def physical_ring(size, q, clocks):
     """Propagate positive word counts on (physical site, rail, z bit, g exponent)."""
     state = Counter({(0, 0, 0, 0): 1})
     for t in range(1, max(clocks)+1):
         new = Counter()
         for (x, rail, sign, s), n in state.items():
-            new[(x+1) % (2*d), 0, sign, s] += n
-            new[(x-1) % (2*d), 1, sign ^ rail, (s+1) % q] += n
+            new[(x+1) % size, 0, sign, s] += n
+            new[(x-1) % size, 1, sign ^ rail, (s+1) % q] += n
         state = new
         if t in clocks:
             check(sum(state.values()) == 1 << t, "unsigned physical mass")

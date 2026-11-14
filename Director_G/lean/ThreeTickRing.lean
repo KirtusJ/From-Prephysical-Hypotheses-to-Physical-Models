@@ -37,4 +37,21 @@ theorem uniqueWeights (a b c d e f : Int)
     (siteThree : 3*b+2*c = 3*e+2*f) : a = d ∧ b = e ∧ c = f := by
   omega
 
+/-- On an odd N-cycle the two lift representatives of one site have opposite
+    parity. Exactly one agrees with a given tick in a sharp launch from zero. -/
+theorem oddLiftParity (n x t : Nat) (odd : n % 2 = 1) :
+    ((x+n) % 2 = t % 2) ↔ x % 2 ≠ t % 2 := by
+  omega
+
+/-- In a path of length span+1 ending in R, two left-step counts separated by
+    span must be the zero and span extremes. -/
+theorem firstSpanRight (lo hi span : Nat) (lastR : hi ≤ span)
+    (gap : hi = lo+span) : lo = 0 ∧ hi = span := by
+  omega
+
+/-- An L-ending path has at least one left step, shifting both extremes by one. -/
+theorem firstSpanLeft (lo hi span : Nat) (lastL : 1 ≤ lo) (bound : hi ≤ span+1)
+    (gap : hi = lo+span) : lo = 1 ∧ hi = span+1 := by
+  omega
+
 end ThreeTickRing
