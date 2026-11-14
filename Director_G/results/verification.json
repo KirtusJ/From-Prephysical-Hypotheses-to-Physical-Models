@@ -7051,5 +7051,67 @@
       "results/origin_sink_data.json": "9519f04a9251d1bdb76a2042adc13ef402c32fc3b8d869a8c293ec246f3f254e"
     },
     "standing": "Interpolated integer density-matrix results bound independent full-site writes at all 18 even clocks. The plotted bars give conditional envelope compatibility."
+  },
+  "appended_position_read": {
+    "paper": "Four_ticks_after_a_recorded_walk_output.md",
+    "checker": "check_appended_position_read.py",
+    "result": "results/appended_position_read.json",
+    "lean": "lean/AppendedPositionRead.lean",
+    "sha256": {
+      "check_appended_position_read.py": "d254a39908daf8e8021230a75b3ed68b436e467f01708c03ecd514ff34ec153c",
+      "results/appended_position_read.json": "8aad6a62afa95edf5681685d2c0e19730b137c8241b975f39b6b0e83b57a12d2",
+      "lean/AppendedPositionRead.lean": "3285d12e4e1a665c2412535a62a39b6e5f33127be1d5a1be14a85d5cbcc018bb"
+    },
+    "standing": "A pooled four-tick relative-position read identifies powers in the same joint table. Rail splitting and independent normalization have explicit failing controls."
+  },
+  "actual_prefix_memory": {
+    "paper": "Checking_a_cut_with_the_memory_of_the_actual_flight.md",
+    "checker": "check_actual_prefix_memory.py",
+    "result": "results/actual_prefix_memory.json",
+    "lean": "lean/ActualPrefixMemory.lean",
+    "sha256": {
+      "check_actual_prefix_memory.py": "c893949a45d93100181736da8d5c6f4c85c34645c9d2eacb6c6a5d9a528dfb17",
+      "results/actual_prefix_memory.json": "5404974725bbd5a1117cd97df1677cc521fb08db0198b661272c687ce6233025",
+      "lean/ActualPrefixMemory.lean": "3313b3905a86fb62b37a642d14ae6d4b8c251fcd080d75aebaee8f4815905d1e"
+    },
+    "standing": "Eight words and all second-read probes replayed. Preserving the actual detector memory and isolating the causal intervention are premises."
+  },
+  "joint_mass_order": {
+    "paper": "Ordering_joint_counts_to_measure_walk_masses.md",
+    "checker": "check_joint_mass_order.py",
+    "result": "results/joint_mass_order.json",
+    "lean": "lean/JointMassOrder.lean",
+    "sha256": {
+      "check_joint_mass_order.py": "1e5eed20881d4680eaf94f018021e6479169c1835887d3f0d53ae4780d2d060e",
+      "results/joint_mass_order.json": "a2739c93ce51125227e603e07c221125dac2d5f83d3f83158ee519155e7fd842",
+      "lean/JointMassOrder.lean": "6b8a04f7a2250f07c96bee737515d34c5c400cce991de0c26471379502545691"
+    },
+    "standing": "The joint-order witnesses and failure of the smaller reference were replayed. Exact ties identify the six-tick mass table under factorization and a common strictly increasing response."
+  },
+  "conditional_position_reference": {
+    "paper": "Conditioning_the_three_tick_reference_on_the_science_output.md",
+    "checker": "check_conditional_position_reference.py",
+    "result": "results/conditional_position_reference.json",
+    "sha256": {
+      "check_conditional_position_reference.py": "9205403b7e1b777fafef486ff84efe148b42b5a45882f26230a6a9a2f9b6bd17",
+      "results/conditional_position_reference.json": "afef176772bf041781434000fc5caceda859e8fd5c585e9db8cd2ced7b82b65d"
+    },
+    "standing": "Three-tick conditional comparisons were replayed. The science spectrum is fixed and nonuniform, with a common suffix rail grouping across old labels on each launch."
+  },
+  "velocity_readout": {
+    "paper": "Which_probability_powers_preserve_the_classical_velocity_law.md",
+    "checker": "check_velocity_readout.py",
+    "result": "results/velocity_readout.json",
+    "lean": "lean/VelocityMeshParity.lean",
+    "figure": "results/velocity_readout.png",
+    "figure_generator": "plot_velocity_readout.py",
+    "sha256": {
+      "check_velocity_readout.py": "705fbf5926b8b8c38a9433344bca06a67109976a9e7f6e05e46070d641f4c25e",
+      "results/velocity_readout.json": "35ab0ac3d1fad8d39134750770ac9aa95c733318fe9caa51845f69ad7a4171ca",
+      "lean/VelocityMeshParity.lean": "31b85b2d9629f6641694830181b9d778378713a5f24726bd2b8b2591745384c5",
+      "results/velocity_readout.png": "56a244cb60eaddba0779517ca78f43e03b12647f8243f57e1cc1ae25dcaaff70",
+      "plot_velocity_readout.py": "dbcd775b4ce455813da1aa7454c2d1c55b17e06bcd9b90b4e16ed92801a4c37d"
+    },
+    "standing": "Exact finite flights, the reflected fold and the Pascal parity theorem were replayed. The analytic velocity-law selection uses a common exponent population and binning before powering. The macroscopic window probabilities are model predictions."
   }
 }
