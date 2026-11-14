@@ -1,4 +1,17 @@
 {
+  "stable_bin_flattening": {
+    "paper": "Stable_flattening_inside_a_recorded_bin.md",
+    "checker": "check_stable_flattening.py",
+    "lean": "lean/StableBin.lean",
+    "result": "results/stable_flattening.json",
+    "sha256": {
+      "check_stable_flattening.py": "1d1778054b2cabcbecddd091bedfb6221054c8db05b8b840cb866b4dd6971419",
+      "lean/StableBin.lean": "dbbd10bc63580b3a94beb558fc58b0246108b15b7a6d5282ea4629226e856042",
+      "results/stable_flattening.json": "c47ed68321420da81cfc9cc29601dc805e00fb7628c171fbeb09470af8735534"
+    },
+    "replay": "Python 3 normal and optimized gate-word replay on all 2,800 signed box rows, exact case histories and the four-tick site bin. Lean 4.19.0 verifies parity and the fourth-power identity for descent.",
+    "scope": "Known real-amplitude vectors with coherent within-bin access and blank slots. Converting kinematic amplitudes tests a specified instrument. Equal physical counts require operational interchangeability and preserved complete record weights."
+  },
   "research_rerun": "All twenty research checkers ran in new directories with bundled Python 3.12.14 and NumPy 2.3.5 on Windows. Thirty-four final outputs and twenty sources match both research copies byte for byte. An additional single-thread BLAS variant and its differing norm are recorded below.",
   "output_sha256": {
     "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
