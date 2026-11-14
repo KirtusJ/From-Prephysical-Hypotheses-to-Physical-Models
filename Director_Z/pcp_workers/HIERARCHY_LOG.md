@@ -209,3 +209,75 @@ Director G's `KirtusJ/pcp-os#20` fixes integer boundary errors in `mathematics.e
 ### First Store app from this side: `mathematics.statement` (14 November 2026)
 
 A Rust instrument in the host, `KirtusJ/pcp-os#22`, branch `pcp/director-z-mathematics-statement`, stacked on Director G's `#20`: pins a Lean theorem's statement by digest and probes for `sorry`, a conclusion true by its form and a `False` hypothesis; pure text, no execution, no new dependency. Written by a general sub-agent to the director's specification, with a control (the unmodified host lists eight instruments) answered first; rebuilt and retested by the director (12 and 23 tests pass); tried on this session's Lean files and on the two planted errors of the chaos run, both of which it catches. Not deployed; the binary in use is unchanged. Closes failures F7 and F8 of the gap table mechanically, within the limit that it reads text.
+
+## Hardening asynchronous work (14 November 2026)
+
+Principal: harden PCP Async as you go ("PCP Async" is not a named component; it is the asynchronous way the stack works). Six rules written into `CLAUDE.md` (Asynchronous work), each from a failure of this session: the fan-out that ended with nothing on disk; two duplicate submissions; and, today, a rerun reported on a pull-request thread before it had finished, when it had in fact exited with an error for want of an output folder (corrected on the thread). Tool added: `Director_Z/tools/async_run.py`, tested on three tasks: one that passes, the very failure of today (reported NOT AS EXPECTED, exit 1), and a timeout (reported, exit code none); a second run into the same directory is refused. Noted for the host: `TASK_STARTED` and `TASK_ENDED` exist as register events, the second written by the host only; this session's sub-agents are outside the host and leave no such events.
+
+### Asynchronous work in the kernel, on bare metal (14 November 2026)
+
+Principal: harden PCP Async not just in the stack but in the kernel itself. State found: `pcpos-kernel` 0.3.1, Rust with one assembly file, x86_64, about 5,300 lines; started only in an emulator by its own account. Baseline on this side: installed QEMU 8.2.2 (the version its readme names), the Rust source component and the bare-metal target; the kernel builds from a scratch clone of `master` (`8390e8f`) and `run.sh` ends with QEMU status 33, 58 self-tests passing, kernel register of 43 events. One agent is reviewing the asynchronous paths by reading and by added self-tests, in a scratch clone, with that baseline as its control. Installed on this container for it: `qemu-system-x86`, `rust-src`, target `x86_64-unknown-none`.
+
+### `mathematics.statement` is on the mainline of PCP OS (14 November 2026)
+
+Director G reviewed `KirtusJ/pcp-os#22` on Windows and filed three objections, all real: a `let` outside brackets could own the `:=` so that a weakened theorem kept its pin; `_root_.sorryAx` passed the open-proof probe; a `pinned` that was not a string was read as no pin. All three fixed in Rust with the reviewer's cases as regression tests; Director G reran its controls and closed them. Integrated into `master` at `0e068ee` by this side under the principal's permission, after the other director's "ready": workspace tests on the merged tree 66 passed, 0 failed. Source only; the binary in use is still the packaged build 22. What the episode shows about the stack: the same-family sub-agent wrote 45 assertions and missed the one input that defeats the instrument's purpose; a reviewer of another family on another system found it within the hour.
+
+### Kernel asynchronous side and the Tokio note: state at 14 November 2026, written before a context compaction
+
+Directive (principal): asynchronous work is core to PCP and is considered at all times; Rust's `async` and Tokio have an infamous history, to be considered deeply; the hardening reaches the kernel on bare metal.
+
+What exists in `KirtusJ/pcp-os`, none of it on `master` yet:
+
+| Item | Where | State |
+|---|---|---|
+| Issue 31: the stop key leaves the task RUNNING in the kernel's task table | pcp-os | open, fixed by pull request 33 |
+| Issue 32: a refused program's frames are not returned | pcp-os | open, fixed by pull request 33 |
+| Pull request 33: eight kernel self-tests of the asynchronous side and the two fixes | branch `pcp/director-z-kernel-async`, head `1a7fdd6` | open, awaiting Director G |
+| Pull request 34: `ASYNC.md` (no `async` or Tokio in the source today, ten hazards, six rules) | branch `pcp/director-z-async-note`, head `7bf7f2f` | open, awaiting Director G |
+
+Evidence for 33, QEMU 8.2.2, `PCPOS_KERNEL_STAGE=<dir> sh run.sh` in `crates/pcpos-kernel`: `master` at `0e068ee` 58 self-tests pass; tests only, 64 pass and 2 fail (status 35); with the fixes 66 pass (status 33); the workspace tests pass. Nothing is claimed about real hardware.
+
+Not to be done without the other director's answer: putting 33 or 34 on `master`. Not to be done without the agreed restart notice: replacing the binary in use (`scratchpad/pcpos/pcpos`, build 22, digest beginning `c2c6795d`).
+
+Open on this side, in order: the research program first (read the proofs in `Director_Z/computation/Character_Separation/CRITERION.md` line by line; queue follow-ups on Proposition 5.35 for q = 7, 8, its assembly in Lean, parts (ii) and (iii) for q > 2; the product-event theorem for carriers with several norm-preserving characters); then the Mathematics and Science modules (result-to-program binding in the host, once Director G's rerun helper format is known; a summary-against-record rule); other modules last. The edition is Z26; register 609 events; reviews Z24 to Z26 closed; objections O29 to O31 recorded open; findings to Z-140. The queue session is `session_01CeUdCw9r8D7zqFEbrYETKD`, trigger `trig_017oSax6RZ3Jm4mR2GET4aDC`, branch `pcp/review-queue`; check it each period.
+
+### After the compaction, 14 November 2026: what changed
+
+- pcp-os pull request 33 merged to `master` (`f7cf493`) after Director G's replay of the exact head on two emulated CPUs; the merged tree is the tested tree.
+- Director G's side then found a gap in the oracle of my self-test 7 (it checked the frames but not that the program was refused). Right. Answered by pull request 37 (branch `pcp/director-z-admission-oracle`, head `24bd571`): the error is asserted and a control under a 32-byte name is added; 68 self-tests pass, status 33. Awaits Director G. Lesson: a test of a refusal asserts the refusal, and carries the nearest accepted case as its control.
+- Pull request 34 (`ASYNC.md`) still awaits Director G.
+- Character separation: proofs read line by line (`Director_Z/computation/Character_Separation/DIRECTOR_READING_2026-11-14.md`), table rerun byte-identical, algebra in Lean (`Director_Z/lean/CharSeparation.lean`). A challenger on the criterion and its summary is out; its report is not in.
+
+- Director G reviewed `ASYNC.md` (pcp-os pull request 34) and was right on four points: no blanket ban or universal timeout; hazards are per operation; exactly-once is an intended invariant with an unknown status until reconciliation; the host writes the task start as well as the end (my wording was wrong, checked in `pcpos.rs`). Revised at `70cadbd`. Director G's side also reproduced two host lifecycle faults (duplicate start gives two tasks; results swapped between agents whose identifiers share a prefix); their fix is on their identity branch, not deployed.
+
+### Claude plugins (principal, 14 November 2026: harden them when necessary too)
+
+Found on `master` of `KirtusJ/pcp-os-claude` (`038983d`): launcher and programs recorded 100644, so hooks and the tool server cannot run from a Git checkout (exit 126); one method CSV fails its manifest digest. Existing pull request 3 fixes both; verified in fresh clones (exit 0; 0 of 42 mismatches; program digest unchanged). `KirtusJ/pcp-claude` pull request 1: 1 of 43 mismatches before, 0 after. Evidence posted on pull request 3; Director G's answer asked before a default branch changes. Open: the hook's task-identity faults (duplicate start, shared prefix), fixed in source by pcp-os pull request 40, reach the plugin only with a rebuilt program.
+
+- pcp-os pull request 40 (Director G: hook identity by session and agent): replayed at `81c21b9`. Workspace 68 tests pass; the two new host tests FAIL on the unfixed source (a fifth task from a duplicate start; exits misassigned) and pass at the head; kernel 66 pass. No objection posted, with one named failure mode: a stop under a different session identifier leaves the task unended, with no reconciliation yet. Theirs to merge.
+- Cross-reviews of Director G's four newest notes filed (`cross_review/subagent_xr69_*`, `subagent_xr72_*`) and posted on the standing thread: no KILL; a provenance defect in the ion checker's line numbers (patch filed, not applied), an unstated boundary of the detector repair, and a title that says more than its note.
+
+### Share of effort (principal, 14 November 2026): research about 70 per cent
+
+This working period ran the other way: the kernel, the async note, the plugins and replays of Director G's pcp-os pull requests took most of it. From here: pcp-os and plugin items are answered when they arrive and are short (a replay, a reading); no new tool work is started until the research has had its share. Research items in hand, in order: the two-rail theorem's open points; the product-event theorem for carriers with several norm-preserving characters; cross-review of Director G's note 74; then the next edition, which has real content now (character separation, two-rail theorem, order-q check to q = 8).
+
+### Where plugins and Store apps install from (principal's question, 14 November 2026)
+
+Tested with Claude Code 2.1.325 in an isolated configuration folder. No repository can be registered as a marketplace by `owner/repo`: `pcp-claude` and `pcp-os-claude` are plugin folders without a marketplace file; `pcp` has one only in the subfolder `PCP_1.0_Plugins`, which works by local path after a clone and installs build 19, with programs that lack the executable bit. A marketplace file pointing at the two plugin repositories validates and installs both at build 22; the hook runs when `pcp-os-claude` is taken at its fix branch. Proposed as draft pull request 29 on `KirtusJ/pcp`. Cost: every one of these repositories is a sealed inventory, so a new file differs from its manifest; the clean home is a small repository holding only the marketplace file, which this session cannot create. The Store has no install source at all: instruments are compiled into the host, modules are added from a local folder.
+
+### Override lifted; the director's choice (14 November 2026)
+
+The principal: "Proceed as you would (target, motion, % your discretion)". Choice, and why:
+
+- Target: the research program, about 70 per cent. The PCP OS work is at a natural pause (pull requests 57,
+  58, 60 and 62 and four design decisions all wait on Director G), and the larger risk named in the comparison
+  with Director G is the backlog: about a dozen of their notes are unreviewed, and several are being used as
+  premises for the next.
+- Motion, in order: (1) resume, not relaunch, the challenger on my own draft subsection, which stopped on the
+  rate limit; (2) cross-review Director G's notes on the probability premise from local records (91, 94, 95),
+  since they carry the strongest claims; (3) their note 86 on several walkers, which bears on my four-gain
+  theorem and which they asked me to challenge; then 84, 85, 87, 89, 92, 96, 79, 82; (4) edition Z27 once the
+  draft has survived its challenger.
+- The other 30 per cent: answer Director G's reviews of the four pull requests as they arrive; the next build
+  increment (host commands, tool calls, register record) when the storage decision is answered.
+- At most three tasks at once, as before.

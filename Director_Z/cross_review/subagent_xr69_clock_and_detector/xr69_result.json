@@ -1,0 +1,631 @@
+{
+ "predicates": {
+  "A1": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 16,
+   "qualify": 16
+  },
+  "A10_t1": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4,
+   "qualify": 4
+  },
+  "A10_t2": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 8,
+   "qualify": 8
+  },
+  "A10_t3": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 16,
+   "qualify": 16
+  },
+  "A11_m0_t3_p1_iff": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2000,
+   "qualify": 2000
+  },
+  "A11_t2_alias_pm1": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 184,
+   "qualify": 184
+  },
+  "A11_t3_alias_minus_m": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 352,
+   "qualify": 352
+  },
+  "A11_t3_unknown_bank_alias_m0": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 2,
+   "pass": 16,
+   "qualify": 16
+  },
+  "A12_distinct_pR_startR": {
+   "4": [
+    "1*x^0",
+    "1*x^2",
+    "1/2*x^0 + -1/2*x^1 + 1/2*x^2 + 1/2*x^3",
+    "1/2*x^0 + 1/2*x^1"
+   ],
+   "5": [
+    "1*x^0 + -1/2*x^2",
+    "1/2*x^0",
+    "1/2*x^0 + 1*x^1 + -1*x^3",
+    "1/2*x^0 + 1*x^1 + 1/2*x^2 + -1*x^3 + -1/2*x^4"
+   ]
+  },
+  "A12_t4_by_schedule": {
+   "0000": "1*x^0",
+   "0001": "1*x^0",
+   "0010": "1/2*x^0 + 1/2*x^1",
+   "0011": "1/2*x^0 + 1/2*x^1",
+   "0100": "1*x^0",
+   "0101": "1*x^0",
+   "0110": "1/2*x^0 + 1/2*x^1",
+   "0111": "1/2*x^0 + 1/2*x^1",
+   "1000": "1/2*x^0 + 1/2*x^1",
+   "1001": "1/2*x^0 + 1/2*x^1",
+   "1010": "1*x^2",
+   "1011": "1*x^2",
+   "1100": "1/2*x^0 + 1/2*x^1",
+   "1101": "1/2*x^0 + 1/2*x^1",
+   "1110": "1/2*x^0 + -1/2*x^1 + 1/2*x^2 + 1/2*x^3",
+   "1111": "1/2*x^0 + -1/2*x^1 + 1/2*x^2 + 1/2*x^3"
+  },
+  "A12_t4_separates_m_from_minus_m": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 22,
+   "qualify": 22
+  },
+  "A13_false_pass_exists_outside_premise": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "A13_varying_gain_adversary": {
+   "S_m": "0",
+   "p_{1,3}": "1/4",
+   "p_{1}": "1/4",
+   "p_{3}": "1",
+   "reading": "gain omega at tick 1, gain 1 at tick 3: settings {1},{1,3} give S=0 (false pass); setting {3} gives p=1 != 1/4. Excluded by the note's stated premise that the gain stays fixed during a flight."
+  },
+  "A2": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 124,
+   "qualify": 124
+  },
+  "A2_norm": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 124,
+   "qualify": 124
+  },
+  "A3": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 744,
+   "qualify": 744
+  },
+  "A4": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "A5_nonpure_implies_positive": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 122,
+   "pass": 3878,
+   "qualify": 3878
+  },
+  "A5_pure_implies_zero": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 3878,
+   "pass": 122,
+   "qualify": 122
+  },
+  "A6_count": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "A6_count_check_h0": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "A6_tail": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "A7_E0zero_all_contrasts_vanish": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1278,
+   "qualify": 1278
+  },
+  "A7_E0zero_means_T0_or_blind": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1278,
+   "qualify": 1278
+  },
+  "A7_Vm": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A7_midpoint": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "A7_ratio_consistent": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 1278,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_B0_implies_E0": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_below_lower_infeasible": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_reproduce_lower": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_reproduce_mid": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_reproduce_one": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A8_true_T_in_interval": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2722,
+   "qualify": 2722
+  },
+  "A9_columns": {
+   "T=1": [
+    [
+     "31/48",
+     "3/16",
+     "1/6"
+    ],
+    [
+     "11/48",
+     "7/16",
+     "1/3"
+    ]
+   ],
+   "T=10/21": [
+    [
+     "7/8",
+     "1/20",
+     "3/40"
+    ],
+    [
+     "0",
+     "23/40",
+     "17/40"
+    ]
+   ]
+  },
+  "A9_lower_10_21": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B10_bound": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 6,
+   "pass": 3091,
+   "qualify": 3091
+  },
+  "B10_contrast_certified": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 795,
+   "pass": 2296,
+   "qualify": 2296
+  },
+  "B10_dW_identity": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 3097,
+   "qualify": 3097
+  },
+  "B10_dW_raw_bound": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 3097,
+   "qualify": 3097
+  },
+  "B10_identity": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 3091,
+   "qualify": 3091
+  },
+  "B1_b1": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B1_b2": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B1_b3": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B1_unreported_b4_b5": {
+   "b4": "-1*x^1 + 1*x^2 + 1*x^3",
+   "b5": "2*x^1 + 1*x^2 + -2*x^3 + -1*x^4"
+  },
+  "B2_KL": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "B2_recover_bias": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 1806,
+   "pass": 6194,
+   "qualify": 6194
+  },
+  "B2_segment": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 8000,
+   "qualify": 8000
+  },
+  "B3_identity": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 4000,
+   "qualify": 4000
+  },
+  "B3_nonpure_positive": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 134,
+   "pass": 3866,
+   "qualify": 3866
+  },
+  "B3_pure_implies_zero": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 3866,
+   "pass": 134,
+   "qualify": 134
+  },
+  "B4_biased_bit_11_20": {
+   "W": "55/204",
+   "resp": [
+    "9/10",
+    "123/250",
+    "21/50",
+    "41/50"
+   ]
+  },
+  "B4_false_pass": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B4_left_column_13_50": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B4_pure_cubic_twirled": [
+   "9/10",
+   "1/2",
+   "3/10",
+   "4/5"
+  ],
+  "B4_pure_cubic_twirled_W0": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B4_twirled_45_25_21_41": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B4_twirled_W_quarter": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B4_untwirled_45_29_21_41": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B5_populations_only": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 193,
+   "pass": 107,
+   "qualify": 107
+  },
+  "B5_twirl_diagonal": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 193,
+   "pass": 107,
+   "qualify": 107
+  },
+  "B6_false_pass_count": 162,
+  "B6_false_pass_examples": [
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "-3/5",
+     "-1/5",
+     "2/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "-2/5",
+     "0",
+     "3/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "-1/5",
+     "1/5",
+     "4/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "1/5",
+     "-1/5",
+     "-4/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "2/5",
+     "0",
+     "-3/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "i",
+    "1/10",
+    [
+     "3/5",
+     "1/5",
+     "-2/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "-i",
+    "1/10",
+    [
+     "-3/5",
+     "1/5",
+     "2/5"
+    ],
+    "9/20"
+   ],
+   [
+    "1",
+    "-i",
+    "1/10",
+    [
+     "-2/5",
+     "0",
+     "3/5"
+    ],
+    "9/20"
+   ]
+  ],
+  "B6_search_size": 29870,
+  "B6_twirl_repairs": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 28,
+   "pass": 134,
+   "qualify": 134
+  },
+  "B6_twirled_blind_count(false signal removed but nothing measured)": 28,
+  "B7_biased_bit_still_false_pass_count": 28,
+  "B8_bound_count": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2242,
+   "qualify": 2242
+  },
+  "B8_bound_tail": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2242,
+   "qualify": 2242
+  },
+  "B8_eq3": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 7138,
+   "qualify": 7138
+  },
+  "B8_mixedsign_W_negative_or_falsezero(kept, not a claim)": {
+   "fail": 129,
+   "failures": [
+    "([(Fraction(0, 1), Fraction(4, 5)), ('count', Fraction(1, 5))], [Fraction(1, 4), Fraction(-1, 2)], Fraction(-2, 7), '-45/49')",
+    "([(Fraction(0, 1), Fraction(4, 19)), (Fraction(-1, 1), Fraction(5, 19)), (Fraction(0, 1), Fraction(6, 19)), (Fraction(-1, 1), Fraction(4, 19))], [Fraction(1, 2), Fraction(-1, 12), Fraction(-1, 28), Fraction(-1, 8)], Fraction(1, 1), '-158/73')",
+    "([(Fraction(-1, 2), Fraction(3, 55)), (Fraction(3, 5), Fraction(7, 55)), (Fraction(1, 1), Fraction(1, 55)), ('count', Fraction(4, 5))], [Fraction(-3, 4), Fraction(3, 8), Fraction(-1, 2), Fraction(0, 1)], Fraction(-1, 2), '-1641/100')",
+    "([(Fraction(-1, 2), Fraction(2, 3)), (Fraction(-1, 1), Fraction(1, 3))], [Fraction(0, 1), Fraction(1, 28)], Fraction(-1, 1), '0')",
+    "([(Fraction(-1, 4), Fraction(3, 5)), (Fraction(-1, 2), Fraction(3, 10)), ('count', Fraction(1, 10))], [Fraction(1, 4), Fraction(-3, 8), Fraction(0, 1)], Fraction(0, 1), '-1/2')"
+   ],
+   "not_qualifying": 0,
+   "pass": 1198,
+   "qualify": 1327
+  },
+  "B8_reweighted": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 1327,
+   "pass": 2242,
+   "qualify": 2242
+  },
+  "B8_zero_iff_pure": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 2242,
+   "qualify": 2242
+  },
+  "B9_ex1": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B9_ex1_signed_masses": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B9_ex2": {
+   "fail": 0,
+   "failures": [],
+   "not_qualifying": 0,
+   "pass": 1,
+   "qualify": 1
+  },
+  "B9_ex2_common_well_W": "1/4"
+ },
+ "seed": 6969
+}

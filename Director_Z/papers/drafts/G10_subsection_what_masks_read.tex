@@ -1,0 +1,113 @@
+% Draft subsection for paper G10 (Director Z, 14 November 2026). Not issued. To follow the subsection
+% "The same with one gain of order q". Cites \cite{dgfour}: K. Justus, "What the line hides and the ring reads
+% with four arc gains", research supplement prepared with Director G (Codex), file
+% Four_arc_gains_and_winding_records.md in folder Director_G of the program repository.
+
+\subsection{What position masks read of a character}
+
+The theorems of this section leave a choice among the norm-preserving characters of the gain group. This subsection asks what an instrument that selects positions can learn about that choice. The answer is a short list, and it is the same whatever the gain group. The word-gain identity and the fork event used below are Director~G's \cite{dgfour}.
+
+\paragraph{Setting.} In this subsection $D$ is the two-rail digraph of the ring $\mathbb{Z}_N$, $N\ge1$, or of the line: vertices $(x,R)$ and $(x,L)$, a right step from either to $(x+1,R)$, a left step from either to $(x-1,L)$. The gain of an arc depends on the rail it leaves and the rail it enters: $a$ from $R$ to $R$, $b$ from $R$ to $L$, $c$ from $L$ to $R$, $d$ from $L$ to $L$, four elements of an abelian group $C$. Put
+\[
+B=bc\,a^{-2},\qquad H=ad\,(bc)^{-1},\qquad M=N/\gcd(N,2).
+\]
+Let $\chi$ be a unitary character of $C$ and write $u=\chi(B)$, $\eta=\chi(H)$, $\omega=u^{M}$, $\gamma=\chi(c\,a^{-1})$ and $s=(-1)^{M-1}$. The step is norm-preserving for $\chi$ exactly when $\eta=-1$ (the two columns $(\chi(a),\chi(b))$ and $(\chi(c),\chi(d))$ are orthogonal exactly then). A \emph{word} is a sequence of $t$ steps. A \emph{position-mask event} of length $t$ is given by sets of sites $S_1,\dots,S_t$; a word is \emph{admitted} when the site it occupies after its $j$-th step lies in $S_j$ for every $j$. A \emph{port} is a triple (length, site, rail). For complex numbers $\alpha,\beta$, the \emph{start} $\alpha\,|0,R\rangle+\beta\,|0,L\rangle$, an event and a port $(t,x,\rho)$, put
+\begin{equation}\label{eq:portprob}
+P=2^{-t}\Bigl|\;\alpha\!\!\sum_{w}\chi\bigl(G_R(w)\bigr)+\beta\!\!\sum_{w}\chi\bigl(G_L(w)\bigr)\Bigr|^{2},
+\end{equation}
+both sums over the admitted words that end at $(x,\rho)$, where $G_R(w)$ and $G_L(w)$ are the gains of $w$ taken from $(0,R)$ and from $(0,L)$. The start is \emph{sharp} when $\beta=0$. These are the statistics of the model with the squared law at the last step; nothing here derives that law. Write $\kappa=\bar\alpha\beta\gamma$ and $n=|\alpha|^{2}+|\beta|^{2}$.
+
+\begin{lemma}[word gain; from $R$, Director~G \cite{dgfour}]\label{lem:wordgain}
+Let $w$ have $t\ge1$ steps, of which $l$ are left steps, and let $e=1$ if $w$ ends on rail $L$ and $e=0$ otherwise. Then
+\[
+G_R(w)=a^{t}\,(a\,c^{-1})^{e}\,B^{\,l}\,H^{\,m},\qquad G_L(w)=c\,a^{-1}\;a^{t}\,(a\,c^{-1})^{e}\,B^{\,l}\,H^{\,m'},
+\]
+where $m$ is the number of arcs from $L$ to $L$ in $w$ taken from $(0,R)$, and $m'$ the same number taken from $(0,L)$ (so $m'=m+1$ if the first step is a left step, and $m'=m$ otherwise).
+\end{lemma}
+\begin{proof}
+From $(0,R)$ let $n_{RR},n_{RL},n_{LR},n_{LL}$ count the arcs. The rail entered is $L$ exactly at a left step, so $n_{RL}+n_{LL}=l$; the rail changes alternate beginning with $R$ to $L$, so $n_{RL}-n_{LR}=e$. With $m=n_{LL}$ this gives $n_{RL}=l-m$, $n_{LR}=l-m-e$, $n_{RR}=t-2l+m+e$, and $a^{n_{RR}}b^{n_{RL}}c^{n_{LR}}d^{n_{LL}}$ is the first formula. For the second, the word $Lw$ taken from $(0,R)$ has gain $b\,G_L(w)$, has $t+1$ steps, $l+1$ left steps, the same $e$, and $m'$ arcs from $L$ to $L$; apply the first formula and use $aB\,b^{-1}=c\,a^{-1}$.
+\end{proof}
+
+\begin{proposition}[what the statistics can depend on]\label{prop:maskinv}
+Let $\eta$ be real. For every position-mask event and every port there are polynomials $S_R,S_L$ in $\omega$ and $\omega^{-1}$ with real coefficients, determined by the event, the port and $\eta$, such that
+\begin{equation}\label{eq:maskinv}
+2^{t}P=|\alpha|^{2}|S_R|^{2}+|\beta|^{2}|S_L|^{2}+2\operatorname{Re}\kappa\,\operatorname{Re}\bigl(\overline{S_R}S_L\bigr)-2\operatorname{Im}\kappa\,\operatorname{Im}\bigl(\overline{S_R}S_L\bigr).
+\end{equation}
+Consequently $P$ depends on the start, the gains and the character only through
+\[
+|\alpha|^{2},\quad|\beta|^{2},\quad\eta,\quad\operatorname{Re}\omega,\quad\operatorname{Re}\kappa,\quad\operatorname{Im}\omega\cdot\operatorname{Im}\kappa .
+\]
+For a sharp start it depends only on $|\alpha|^{2}$, $\eta$ and $\operatorname{Re}\omega$. On the line $M$ is not defined, $\omega$ does not enter, the polynomials are constants, and $P$ depends only on $|\alpha|^{2}$, $|\beta|^{2}$, $\eta$ and $\operatorname{Re}\kappa$.
+\end{proposition}
+\begin{proof}
+A word that ends at the site $x$ after $t$ steps has $x\equiv t-2l \pmod N$, so $l$ is fixed modulo $M$ at a port; write $l=l_0+kM$ with $l_0$ fixed and $k$ depending on the word (on the line $l$ itself is fixed and $k=0$). By Lemma~\ref{lem:wordgain}, $\chi(G_R(w))=\chi(a)^{t}\chi(a\,c^{-1})^{e}u^{\,l_0}\cdot\omega^{k}\eta^{m}$ and $\chi(G_L(w))$ is $\gamma$ times the same with $m'$ for $m$. The first three factors have modulus one and are the same for all words at the port. So the sum in \eqref{eq:portprob} is a number of modulus one times $\alpha S_R+\beta\gamma S_L$, with $S_R=\sum_k c_k\omega^{k}$, $c_k$ the sum of $\eta^{m}$ over the admitted words at the port with that $k$, and $S_L$ likewise with $\eta^{m'}$. The coefficients are real because $\eta$ is, and they do not depend on $\chi$ otherwise, because which words are admitted does not. Expanding the squared modulus gives \eqref{eq:maskinv}. Since $|\omega|=1$ and the coefficients are real, $|S_R|^{2}$, $|S_L|^{2}$ and $\operatorname{Re}(\overline{S_R}S_L)$ are unchanged when $\omega$ is replaced by $\bar\omega$, hence are polynomials in $\operatorname{Re}\omega$; and $\operatorname{Im}(\overline{S_R}S_L)$ changes sign, hence is $\operatorname{Im}\omega$ times a polynomial in $\operatorname{Re}\omega$.
+\end{proof}
+
+\begin{proposition}[what is read]\label{prop:maskread}
+Let $N\ge3$ and $\eta=-1$.
+\begin{enumerate}[label=(\roman*)]
+\item With no mask, the port $(3,1,R)$ has $P=|\alpha|^{2}/2$ and the port $(3,-1,L)$ has $P=|\beta|^{2}/2$.
+\item With no mask, the port $(1,1,R)$ has $P=n/2+\operatorname{Re}\kappa$ and the port $(1,-1,L)$ has $P=n/2-\operatorname{Re}\kappa$.
+\item \emph{The fork} \cite{dgfour}: $S_j=\{j,-j\}$ for $1\le j<M$, $S_M=\{M\}$, $S_{M+1}=\{M+1\}$, read at the port $(M+1,\,M+1,\,R)$. Then
+\[
+2^{M+1}P=|\alpha|^{2}\,(2+2s\operatorname{Re}\omega)+|\beta|^{2}\,(2-2s\operatorname{Re}\omega)+4s\,\operatorname{Im}\omega\,\operatorname{Im}\kappa .
+\]
+For a sharp start with $\alpha=1$ this is $2^{-(M+1)}(2+2s\operatorname{Re}\omega)$.
+\item \emph{The fork after one tick}: $S_1=\{1\}$, then the fork moved by one site and one tick ($S_{1+j}=\{1+j,1-j\}$ for $1\le j<M$, $S_{1+M}=\{1+M\}$, $S_{2+M}=\{2+M\}$), read at $(M+2,\,M+2,\,R)$: $P=(n/2+\operatorname{Re}\kappa)\,2^{-(M+1)}(2+2s\operatorname{Re}\omega)$. Its mirror image under $x\mapsto-x$ with the rails exchanged (so $S_1=\{-1\}$, port $(M+2,\,-M-2,\,L)$) has $P=(n/2-\operatorname{Re}\kappa)\,2^{-(M+1)}(2+2s\operatorname{Re}\omega)$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(i) Three steps end on rail $R$ at the site $1$ modulo $N$ only as $RLR$ or $LRR$: one left step that is not the last (for $N=4$ three left steps also reach the site, but end on rail $L$). From $(0,R)$ both words have gain $abc$; from $(0,L)$ they have gains $bc^{2}$ and $acd$, and $acd=H\cdot bc^{2}$. So the sum is $2\alpha\chi(abc)+\beta\chi(bc^{2})(1+\eta)=2\alpha\chi(abc)$. For the other port the words are $RLL$ and $LRL$ (for $N=4$ the word $RRR$ reaches the site on rail $R$ and does not enter); from $(0,L)$ both have gain $bcd$, from $(0,R)$ they have gains $abd$ and $b^{2}c$ with $abd=H\cdot b^{2}c$.
+(ii) One right step from either rail: the sum is $\alpha\chi(a)+\beta\chi(c)=\chi(a)(\alpha+\beta\gamma)$. One left step: $\alpha\chi(b)+\beta\chi(d)=\chi(b)(\alpha+\beta\eta\gamma)$, because $d\,b^{-1}=H\,c\,a^{-1}$.
+(iii) For $1\le j<M$ the sites $j$ and $-j$ are different, and from $j$ only a right step, from $-j$ only a left step, stays in the next mask; at tick $M$ both are at the site $M\equiv-M$, and from there only a right step reaches $M+1$ when $N\ge3$. So the admitted words are $R^{M+1}$ and $L^{M}R$, from either rail, both ending on rail $R$. They have $l=0$ and $l=M$, so $k=0$ and $k=1$; and $(m,m')=(0,0)$ for the first, $(M-1,M)$ for the second. Hence $S_R=1+\eta^{M-1}\omega=1+s\omega$ and $S_L=1+\eta^{M}\omega=1-s\omega$, so $|S_R|^{2}=2+2s\operatorname{Re}\omega$, $|S_L|^{2}=2-2s\operatorname{Re}\omega$ and $\overline{S_R}S_L=-2is\operatorname{Im}\omega$; insert in \eqref{eq:maskinv}.
+(iv) After the mask $S_1=\{1\}$ only the words beginning with a right step remain; they are at $(1,R)$ with the common factor $\chi(a)(\alpha+\beta\gamma)/\sqrt2$, of squared modulus $n/2+\operatorname{Re}\kappa$ by (ii). From there the event is the fork of (iii) for a sharp start, moved by one site, and the gains do not depend on the site. The mirror image is the same with the roles of the rails exchanged: from a sharp start on rail $L$ the admitted words are $L^{M+1}$ and $R^{M}L$, with $l$ differing by $M$ and $m'$ by $M+1$, and $\eta^{M+1}=s$.
+\end{proof}
+
+\begin{corollary}[the complete list]\label{cor:masklist}
+Let $N\ge3$. Consider two sets of data on the ring $\mathbb{Z}_N$, each consisting of gains in a group, a character with $\eta=-1$, and a start with $n=1$. They give the same probability at every port of every position-mask event if and only if they have the same $|\alpha|^{2}$, $\operatorname{Re}\omega$, $\operatorname{Re}\kappa$ and $\operatorname{Im}\omega\cdot\operatorname{Im}\kappa$. In particular, for sharp starts, two norm-preserving characters (of the same or of different gain groups) are separated by some position-mask event on $\mathbb{Z}_N$ if and only if their values of $\operatorname{Re}\bigl(\chi(B)^{M}\bigr)$ differ; then the fork separates them, and no port of length at most $M$ does.
+\end{corollary}
+\begin{proof}
+If the four numbers agree, so do the six of Proposition~\ref{prop:maskinv}, since $|\beta|^{2}=1-|\alpha|^{2}$. Conversely Proposition~\ref{prop:maskread}(i) reads $|\alpha|^{2}$ and (ii) reads $\operatorname{Re}\kappa$; one of $1/2\pm\operatorname{Re}\kappa$ is not zero, so (iv) reads $\operatorname{Re}\omega$; then (iii) reads $\operatorname{Im}\omega\cdot\operatorname{Im}\kappa$. For the last sentence: at a port of length $t\le M$ the left counts lie in $[0,t]$ and in one class modulo $M$, so two different values can only be $0$ and $M$ with $t=M$, that is, the words $R^{M}$ and $L^{M}$, which end on different rails. So all words at one port have the same $k$, $S_R$ is a real number times a power of $\omega$, and $P$ does not depend on $\omega$.
+\end{proof}
+
+Only the real part of one power of one value of the character is read from a sharp start. For a sharp start with $\alpha=1$ the fork has the probability of fair counting, $2^{-M}$, exactly when $\operatorname{Re}\omega=0$. On rings with $N\le2$ every word of one length is at one site, a mask keeps everything or nothing, and, for $\eta=-1$, no probability summed over the two rails separates anything; the port $(2,\,2\bmod N,\,R)$ with no mask has $P=(1+\operatorname{Re}u)/2$ for a sharp start with $\alpha=1$ and any $\eta$, so such a ring ($M=1$) fixes $\chi(B)$ up to complex conjugation by itself.
+
+\begin{proposition}[several rings]\label{prop:rings}
+Let $u,u'$ be complex numbers of modulus one.
+\begin{enumerate}[label=(\alph*)]
+\item If $\operatorname{Re}u^{M}=\operatorname{Re}u'^{M}$ for $M=2,3$ and $5$, then $u'=u$ or $u'=\bar u$.
+\item For any $M_1,M_2\ge2$ there are $u,u'$ with $u'\ne u$, $u'\ne\bar u$ and $\operatorname{Re}u^{M}=\operatorname{Re}u'^{M}$ for $M=M_1$ and $M=M_2$.
+\item If $u,u'$ are $q$-th roots of unity and $\gcd(M,q)=1$, then $\operatorname{Re}u^{M}=\operatorname{Re}u'^{M}$ implies $u'=u$ or $u'=\bar u$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+For $v,v'$ of modulus one, $\operatorname{Re}v=\operatorname{Re}v'$ exactly when $v'\in\{v,\bar v\}$. (a) Put $x=\operatorname{Re}u$, $x'=\operatorname{Re}u'$. Then $\operatorname{Re}u^{2}=2x^{2}-1$, $\operatorname{Re}u^{3}=4x^{3}-3x$, $\operatorname{Re}u^{5}=16x^{5}-20x^{3}+5x$. The first gives $x'=\pm x$. If $x'=-x\ne0$, the other two give $4x^{2}-3=0$ and $16x^{4}-20x^{2}+5=0$, which is impossible because $(4x^{2}-2)(4x^{2}-3)-(16x^{4}-20x^{2}+5)=1$. So $x'=x$. (b) Choose $\epsilon\ne1$ with $\epsilon^{M_1}=1$, $\tau\ne1$ with $\tau^{M_2}=1$, $u$ with $u^{2}=\tau\epsilon^{-1}$, and $u'=\epsilon u$. Then $u'^{M_1}=u^{M_1}$; $u'^{M_2}u^{M_2}=\epsilon^{M_2}u^{2M_2}=\tau^{M_2}=1$, so $u'^{M_2}=\overline{u^{M_2}}$; $u'\ne u$ because $\epsilon\ne1$; and $u'u=\tau\ne1$, so $u'\ne\bar u$. (c) Raising to the power $M$ is a bijection of the $q$-th roots of unity that commutes with conjugation.
+\end{proof}
+
+So one ring with $N\ge3$ fixes $\operatorname{Re}\bigl(\chi(B)^{M}\bigr)$ and nothing else about a character; rings with $M=2,3,5$ (for instance $N=4,3,5$) together fix $\chi(B)$ up to complex conjugation; no two rings with $N\ge3$ do so for every value; and inside a known finite group one ring with $M$ prime to the order of $B$ does.
+
+\begin{proposition}[the walk cannot prepare a start that reads more]\label{prop:maskprep}
+Let $\eta$ be real, and let the start be sharp, $\alpha=1$, $\beta=0$. For every position-mask event of length $t$ and every site $x$, the two sums of \eqref{eq:portprob} at the ports $(t,x,R)$ and $(t,x,L)$ are
+\[
+\psi_R=\zeta\,p(\omega),\qquad\psi_L=\zeta\,\bar\gamma\,q(\omega),
+\]
+with $|\zeta|=1$ and $p,q$ polynomials in $\omega$ and $\omega^{-1}$ with real coefficients determined by the event, the site and $\eta$. On the line $p$ and $q$ are real constants. If $S_{t}=\{x\}$ and the event is continued, the later statistics are $2^{-t}$ times those of the start $\psi_R|x,R\rangle+\psi_L|x,L\rangle$, for which $\bar\psi_R\psi_L\gamma=\overline{p(\omega)}\,q(\omega)$ does not contain $\gamma$.
+\end{proposition}
+\begin{proof}
+At the site $x$ after $t$ steps the left count is fixed modulo $M$ for both rails, and by Lemma~\ref{lem:wordgain} a word ending on rail $L$ carries the extra factor $\chi(a\,c^{-1})=\bar\gamma$. Take $\zeta=\chi(a)^{t}u^{\,l_0}$.
+\end{proof}
+
+So a start in both rails reads two numbers more than a sharp start, $\operatorname{Re}\kappa$ and $\operatorname{Im}\omega\cdot\operatorname{Im}\kappa$, and these involve $\chi(c\,a^{-1})$; but every state that steps and position masks produce from a sharp start carries the factor $\bar\gamma$ on rail $L$, which cancels it. What position masks read from a sharp start therefore does not grow by letting the walk prepare its own starts. Among position-mask events it grows only if a superposition of the two rails is supplied whose relative phase is fixed independently of the gains.
+
+\begin{corollary}[the conjugate character]\label{cor:maskconj}
+Let $N\ge3$, $\eta=-1$, $n=1$. The characters $\chi$ and $\bar\chi$ give the same probability at every port of every position-mask event, for the same gains and the same start, if and only if $\operatorname{Im}(\bar\alpha\beta)=0$, or $\gamma=\pm1$ and $\omega=\pm1$. In particular they are never separated from a sharp start.
+\end{corollary}
+\begin{proof}
+Passing to $\bar\chi$ replaces $\omega,\gamma$ by their conjugates. With $z=\bar\alpha\beta$, $\operatorname{Re}(z\gamma)-\operatorname{Re}(z\bar\gamma)=-2\operatorname{Im}z\operatorname{Im}\gamma$, and $\operatorname{Im}\omega\operatorname{Im}(z\gamma)+\operatorname{Im}\omega\operatorname{Im}(z\bar\gamma)=2\operatorname{Im}\omega\operatorname{Im}z\operatorname{Re}\gamma$. By Corollary~\ref{cor:masklist} the two agree exactly when both expressions vanish; if $\operatorname{Im}z\ne0$ this means $\operatorname{Im}\gamma=0$, so $\gamma=\pm1$ and $\operatorname{Re}\gamma\ne0$, and then $\operatorname{Im}\omega=0$.
+\end{proof}
+
+\begin{remark}
+(a) \emph{What this does to the choice among characters.} Position masks on rings read, from a sharp start, the numbers $\operatorname{Re}\bigl(\chi(B)^{M}\bigr)$ and, given $\eta=-1$, nothing else: not the orientation ($\chi$ against $\bar\chi$), not $\chi(a)$ and $\chi(c)$, and not the gain group, since two carriers with the same $\chi(H)$ and the same $\chi(B)$ up to conjugation give the same statistics. That $\eta=-1$ is assumed in these statements; it can itself be tested from a sharp start, since by the computation in the proof of Proposition~\ref{prop:maskread}(i) the port $(3,-1,L)$ with no mask has $P=(1+\operatorname{Re}\eta)/4$ for $\alpha=1$, $\beta=0$ and any $\eta$, which is zero exactly when $\eta=-1$. The physical identification of a gain group or of a character is not obtained.
+(b) \emph{Status.} Lemma~\ref{lem:wordgain}, Propositions~\ref{prop:maskinv} to~\ref{prop:maskprep} and the corollaries are \textbf{PROVED}. \textbf{COMPUTED}, in exact arithmetic with the hypothesis tested for each carrier: for sharp starts every mask sequence to lengths between $6$ and $9$ on rings of $1$ to $12$ sites for three groups ($2{,}574{,}977$ port and well events, no failure), and independently $187{,}707$ comparisons on $336$ qualifying carriers of $700$ with $a$, $c$ not trivial; for starts in both rails $12{,}170$ qualifying data, all $9{,}234{,}733$ pairs with different lists separated and all $98{,}852$ pairs with equal lists not separated, on rings of $3$ to $8$ sites; the two ports of Proposition~\ref{prop:maskread}(i) on rings of $3$ to $12$ sites and the line. The algebra of Proposition~\ref{prop:maskread}, of Proposition~\ref{prop:rings}(a),(b) and of Proposition~\ref{prop:maskprep} is checked in Lean~4 with Mathlib; the counting of admitted words is not. The computations and the Lean files are by sub-agents of the same model family as the writer and were rerun by the writer; that is not independent review.
+(c) \emph{Not done.} $\eta$ not real (Propositions~\ref{prop:maskinv} and~\ref{prop:maskprep} assume it real); rings with $N\le2$, where Proposition~\ref{prop:maskread}(i) and (iv) are false already for sharp starts (for $N=2$ and a sharp start, $P(3,1,R)=|\alpha|^{2}(1+(\operatorname{Im}u)^{2})/2$), while (ii) and (iii) hold; events that are not position masks; mixtures of starts.
+\end{remark}

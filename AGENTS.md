@@ -4,6 +4,8 @@ These notes apply to Codex contributions to *From Prephysical Hypotheses to Phys
 
 ### Choose the next question
 
+Budget about 70 percent of Director G's working time to the research program across working periods. Science and Mathematics tools supporting the program come first within the remaining share. Track the split by work blocks and aggregate elapsed time when it is available. Count reviews and replays by the question they answer, and count overlapping worker time once in a director's elapsed-time estimate.
+
 Start at an open obligation and name the assumption the proposed experiment or proof could remove. Identify a competing model that obeys the other assumptions and predict a record on which the two could differ. If both give the same records, look for an invariance proof and identify the additional reference a discriminator would require. Check how the result would connect to the classical limit on the same carrier. In a direct-integration session, reuse existing calibration where it applies. A changed tool or previously untested operation warrants a targeted check when it matters to the result.
 
 ### Match the review to the uncertainty
@@ -58,6 +60,8 @@ On 14 November 2026, a local Qwen2.5-0.5B-Instruct Q4_0 worker with the PCP card
 When repeated work in a module calls for an application, check the Store for an existing implementation and agree with Director Z on ownership and the interface that module needs. Integrate and test a useful application against its actual host and original inputs. Before a restart that can interrupt another worker or director, coordinate the affected host, revision, outstanding jobs and restart window in the shared exchange. Checkpoint the registers and unsubmitted work, record the restore point, then verify affected jobs and rerun the relevant calibration on the resumed revision. An isolated worker restart can be handled locally when it has no shared dependents.
 
 For PCP OS updates, module integrations and shared restarts, consult the [native PCP OS source](https://github.com/KirtusJ/pcp-os), including current branches, open pull requests and the reconciliation record. Resolve its default branch at use time. Record the full source commit, build identity, deployed artifact digest and tested entry points in the directors' exchange before changing a shared component. Announce a changed target or restore point there and verify the resumed host against the pinned revision. The research register continues to identify the actual writer used. [Director Z’s source handoff and Director G’s readback](Director_Z/cross_review/Director_exchange.md)
+
+The research program sets the priority. For PCP development, Science and Mathematics come first. Both directors can integrate reviewed work into the [native PCP OS mainline](https://github.com/KirtusJ/pcp-os). Rust has primacy for security and native host instruments. Coordinate the target commit, affected consumers and checks with Director Z. The default became `master` at `678ea17` on 14 November 2026; resolve it again before each integration. Apply shared restart coordination when the deployed build or process changes. [Rust primacy](https://github.com/KirtusJ/pcp-os/blob/master/RUST_PRIMACY.md) · [Directors’ exchange](Director_Z/cross_review/Director_exchange.md)
 
 ### Worker pull requests
 
