@@ -1,0 +1,515 @@
+{
+  "source": "sharp right rail at floor(L/4), positive reflection at both ends",
+  "observable": "cos(m*pi*(x+1/2)/L)",
+  "difference": "absolute scalar moment difference from limit at y0=1/4",
+  "quadrature": "periodic midpoint average of both Bloch bands, 8192 and 4096 points",
+  "ballistic_wall_control": "At tau=1.5 both y0 +/- tau/sqrt(2) extend past a wall.",
+  "ballistic": [
+    {
+      "length": 32,
+      "start": 8,
+      "ticks": 8,
+      "tau": 0.25,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.46160058430248224,
+          "limit_quadrature": 0.4884014633391445,
+          "absolute_difference": 0.026800879036662284,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": -0.42698335398904136,
+          "limit_quadrature": -0.3889368466302802,
+          "absolute_difference": 0.03804650735876114,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": -0.5310819690543254,
+          "limit_quadrature": -0.5587317308522539,
+          "absolute_difference": 0.02764976179792855,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 32,
+      "start": 8,
+      "ticks": 48,
+      "tau": 1.5,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": -0.43539161652208147,
+          "limit_quadrature": -0.44250199791747896,
+          "absolute_difference": 0.0071103813953974915,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": 0.021996501395735557,
+          "limit_quadrature": 0.06792748971572304,
+          "absolute_difference": 0.04593098831998749,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": 0.2568594899063465,
+          "limit_quadrature": 0.2286388777109101,
+          "absolute_difference": 0.028220612195436395,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 64,
+      "start": 16,
+      "ticks": 16,
+      "tau": 0.25,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.4764898180820651,
+          "limit_quadrature": 0.4884014633391445,
+          "absolute_difference": 0.01191164525707944,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": -0.40538466181602323,
+          "limit_quadrature": -0.3889368466302802,
+          "absolute_difference": 0.01644781518574301,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": -0.5435414975607225,
+          "limit_quadrature": -0.5587317308522539,
+          "absolute_difference": 0.015190233291531463,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 64,
+      "start": 16,
+      "ticks": 96,
+      "tau": 1.5,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": -0.4423474656071112,
+          "limit_quadrature": -0.44250199791747896,
+          "absolute_difference": 0.00015453231036777204,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": 0.05684276453820324,
+          "limit_quadrature": 0.06792748971572304,
+          "absolute_difference": 0.011084725177519801,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": 0.23135731640493443,
+          "limit_quadrature": 0.2286388777109101,
+          "absolute_difference": 0.0027184386940243277,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 128,
+      "start": 32,
+      "ticks": 32,
+      "tau": 0.25,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.48298198018503613,
+          "limit_quadrature": 0.4884014633391445,
+          "absolute_difference": 0.005419483154108395,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": -0.3960639618895557,
+          "limit_quadrature": -0.3889368466302802,
+          "absolute_difference": 0.007127115259275507,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": -0.5503403869302651,
+          "limit_quadrature": -0.5587317308522539,
+          "absolute_difference": 0.008391343921988814,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 128,
+      "start": 32,
+      "ticks": 192,
+      "tau": 1.5,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": -0.4420928203862124,
+          "limit_quadrature": -0.44250199791747896,
+          "absolute_difference": 0.0004091775312665691,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": 0.06256611018246572,
+          "limit_quadrature": 0.06792748971572304,
+          "absolute_difference": 0.005361379533257327,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": 0.23069655373136383,
+          "limit_quadrature": 0.2286388777109101,
+          "absolute_difference": 0.0020576760204537303,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 256,
+      "start": 64,
+      "ticks": 64,
+      "tau": 0.25,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.4858805358340498,
+          "limit_quadrature": 0.4884014633391445,
+          "absolute_difference": 0.00252092750509475,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": -0.3920725103616881,
+          "limit_quadrature": -0.3889368466302802,
+          "absolute_difference": 0.0031356637314078895,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": -0.5541782759532017,
+          "limit_quadrature": -0.5587317308522539,
+          "absolute_difference": 0.004553454899052234,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    },
+    {
+      "length": 256,
+      "start": 64,
+      "ticks": 384,
+      "tau": 1.5,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": -0.44241693853001923,
+          "limit_quadrature": -0.44250199791747896,
+          "absolute_difference": 8.505938745972941e-05,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 2,
+          "finite": 0.06591506152770478,
+          "limit_quadrature": 0.06792748971572304,
+          "absolute_difference": 0.0020124281880182643,
+          "absolute_quadrature_mesh_change": 0.0
+        },
+        {
+          "mode": 3,
+          "finite": 0.2295271785644987,
+          "limit_quadrature": 0.2286388777109101,
+          "absolute_difference": 0.0008883008535885972,
+          "absolute_quadrature_mesh_change": 0.0
+        }
+      ]
+    }
+  ],
+  "heat": [
+    {
+      "length": 32,
+      "start": 8,
+      "ticks": 32,
+      "s": 0.03125,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.5754434013404794,
+          "finite_eigenvalue_formula": 0.5754434013404802,
+          "absolute_finite_formula_difference": 7.771561172376096e-16,
+          "limit": 0.6060540175300521,
+          "absolute_difference": 0.030610616189572615
+        },
+        {
+          "mode": 2,
+          "finite": -0.0526827075454697,
+          "finite_eigenvalue_formula": -0.05268270754546966,
+          "absolute_finite_formula_difference": 4.163336342344337e-17,
+          "limit": 3.304351091460251e-17,
+          "absolute_difference": 0.052682707545469734
+        },
+        {
+          "mode": 3,
+          "finite": -0.1964008294485276,
+          "finite_eigenvalue_formula": -0.19640082944852733,
+          "absolute_finite_formula_difference": 2.7755575615628914e-16,
+          "limit": -0.17649076813106807,
+          "absolute_difference": 0.019910061317459538
+        }
+      ]
+    },
+    {
+      "length": 32,
+      "start": 8,
+      "ticks": 256,
+      "s": 0.25,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.19517846714181827,
+          "finite_eigenvalue_formula": 0.19517846714182033,
+          "absolute_finite_formula_difference": 2.0539125955565396e-15,
+          "limit": 0.20591863984485934,
+          "absolute_difference": 0.010740172703041062
+        },
+        {
+          "mode": 2,
+          "finite": -0.0006827009385321188,
+          "finite_eigenvalue_formula": -0.0006827009385320642,
+          "absolute_finite_formula_difference": 5.4643789493269423e-17,
+          "limit": 4.403758465776943e-19,
+          "absolute_difference": 0.0006827009385321193
+        },
+        {
+          "mode": 3,
+          "finite": -1.02648388584964e-05,
+          "finite_eigenvalue_formula": -1.0264838858574634e-05,
+          "absolute_finite_formula_difference": 7.823365707430169e-17,
+          "limit": -1.0650768151531425e-05,
+          "absolute_difference": 3.859292930350242e-07
+        }
+      ]
+    },
+    {
+      "length": 64,
+      "start": 16,
+      "ticks": 128,
+      "s": 0.03125,
+      "mass_sum_error": 0.0,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.5909615517218748,
+          "finite_eigenvalue_formula": 0.5909615517218756,
+          "absolute_finite_formula_difference": 7.771561172376096e-16,
+          "limit": 0.6060540175300521,
+          "absolute_difference": 0.015092465808177247
+        },
+        {
+          "mode": 2,
+          "finite": -0.026452660205126002,
+          "finite_eigenvalue_formula": -0.026452660205126162,
+          "absolute_finite_formula_difference": 1.5959455978986625e-16,
+          "limit": 3.304351091460251e-17,
+          "absolute_difference": 0.026452660205126037
+        },
+        {
+          "mode": 3,
+          "finite": -0.1880448254831576,
+          "finite_eigenvalue_formula": -0.1880448254831585,
+          "absolute_finite_formula_difference": 9.159339953157541e-16,
+          "limit": -0.17649076813106807,
+          "absolute_difference": 0.01155405735208953
+        }
+      ]
+    },
+    {
+      "length": 64,
+      "start": 16,
+      "ticks": 1024,
+      "s": 0.25,
+      "mass_sum_error": 4.440892098500626e-16,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.20070359774499935,
+          "finite_eigenvalue_formula": 0.20070359774500188,
+          "absolute_finite_formula_difference": 2.525757381022231e-15,
+          "limit": 0.20591863984485934,
+          "absolute_difference": 0.0052150420998599845
+        },
+        {
+          "mode": 2,
+          "finite": -0.0003500954830533969,
+          "finite_eigenvalue_formula": -0.00035009548305339446,
+          "absolute_finite_formula_difference": 2.439454888092385e-18,
+          "limit": 4.403758465776943e-19,
+          "absolute_difference": 0.00035009548305339733
+        },
+        {
+          "mode": 3,
+          "finite": -1.0954217089786662e-05,
+          "finite_eigenvalue_formula": -1.0954217089732828e-05,
+          "absolute_finite_formula_difference": 5.383402599569431e-17,
+          "limit": -1.0650768151531425e-05,
+          "absolute_difference": 3.0344893825523707e-07
+        }
+      ]
+    },
+    {
+      "length": 128,
+      "start": 32,
+      "ticks": 512,
+      "s": 0.03125,
+      "mass_sum_error": 2.220446049250313e-16,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.5985618987480283,
+          "finite_eigenvalue_formula": 0.5985618987480374,
+          "absolute_finite_formula_difference": 9.103828801926284e-15,
+          "limit": 0.6060540175300521,
+          "absolute_difference": 0.007492118782023716
+        },
+        {
+          "mode": 2,
+          "finite": -0.013240182595291462,
+          "finite_eigenvalue_formula": -0.013240182595291498,
+          "absolute_finite_formula_difference": 3.642919299551295e-17,
+          "limit": 3.304351091460251e-17,
+          "absolute_difference": 0.013240182595291495
+        },
+        {
+          "mode": 3,
+          "finite": -0.18263778785591608,
+          "finite_eigenvalue_formula": -0.1826377878559151,
+          "absolute_finite_formula_difference": 9.71445146547012e-16,
+          "limit": -0.17649076813106807,
+          "absolute_difference": 0.0061470197248480185
+        }
+      ]
+    },
+    {
+      "length": 128,
+      "start": 32,
+      "ticks": 4096,
+      "s": 0.25,
+      "mass_sum_error": 2.220446049250313e-16,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.20335100299510392,
+          "finite_eigenvalue_formula": 0.20335100299512868,
+          "absolute_finite_formula_difference": 2.475797344914099e-14,
+          "limit": 0.20591863984485934,
+          "absolute_difference": 0.002567636849755417
+        },
+        {
+          "mode": 2,
+          "finite": -0.0001761479930234911,
+          "finite_eigenvalue_formula": -0.0001761479930234812,
+          "absolute_finite_formula_difference": 9.893344823930228e-18,
+          "limit": 4.403758465776943e-19,
+          "absolute_difference": 0.00017614799302349154
+        },
+        {
+          "mode": 3,
+          "finite": -1.0925253017782623e-05,
+          "finite_eigenvalue_formula": -1.0925253017882031e-05,
+          "absolute_finite_formula_difference": 9.940778668976469e-17,
+          "limit": -1.0650768151531425e-05,
+          "absolute_difference": 2.7448486625119824e-07
+        }
+      ]
+    },
+    {
+      "length": 256,
+      "start": 64,
+      "ticks": 2048,
+      "s": 0.03125,
+      "mass_sum_error": 4.440892098500626e-16,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.602321599693679,
+          "finite_eigenvalue_formula": 0.602321599693632,
+          "absolute_finite_formula_difference": 4.707345624410664e-14,
+          "limit": 0.6060540175300521,
+          "absolute_difference": 0.0037324178363730143
+        },
+        {
+          "mode": 2,
+          "finite": -0.006621820978956843,
+          "finite_eigenvalue_formula": -0.006621820978957234,
+          "absolute_finite_formula_difference": 3.9118014383277e-16,
+          "limit": 3.304351091460251e-17,
+          "absolute_difference": 0.006621820978956876
+        },
+        {
+          "mode": 3,
+          "finite": -0.1796531301778005,
+          "finite_eigenvalue_formula": -0.17965313017781626,
+          "absolute_finite_formula_difference": 1.5765166949677223e-14,
+          "limit": -0.17649076813106807,
+          "absolute_difference": 0.0031623620467324254
+        }
+      ]
+    },
+    {
+      "length": 256,
+      "start": 64,
+      "ticks": 16384,
+      "s": 0.25,
+      "mass_sum_error": 1.3322676295501878e-15,
+      "moments": [
+        {
+          "mode": 1,
+          "finite": 0.20464493317486326,
+          "finite_eigenvalue_formula": 0.2046449331747357,
+          "absolute_finite_formula_difference": 1.2756462552943049e-13,
+          "limit": 0.20591863984485934,
+          "absolute_difference": 0.001273706669996072
+        },
+        {
+          "mode": 2,
+          "finite": -8.821174973600592e-05,
+          "finite_eigenvalue_formula": -8.821174973602828e-05,
+          "absolute_finite_formula_difference": 2.236166980751353e-17,
+          "limit": 4.403758465776943e-19,
+          "absolute_difference": 8.821174973600635e-05
+        },
+        {
+          "mode": 3,
+          "finite": -1.0817832277538911e-05,
+          "finite_eigenvalue_formula": -1.081783227750217e-05,
+          "absolute_finite_formula_difference": 3.674090112010253e-17,
+          "limit": -1.0650768151531425e-05,
+          "absolute_difference": 1.6706412600748624e-07
+        }
+      ]
+    }
+  ]
+}
