@@ -1,0 +1,764 @@
+{
+  "deposit": "https://doi.org/10.15128/r15x21tf47n",
+  "archive_sha256": "caeb0702714bc830c3fff572c2809f04995d19528bb2823caa695732ad9301af",
+  "member_sha256": {
+    "4_node_DTQW_code.py": "21ee9918add25a09ad792daede3f9a619133199ea8d22279e8acafbd6be6ccf6",
+    "4_node_DTQW_data.xlsx": "bbd2af933b882f62f45ca368ab3ce14461cce22b038e231ca9f18a8ef032ddac",
+    "8_node_DTQW_code.py": "c79bec217eb0e442244fc110c603cadcb769778f906ccd1e9a8b146866427700",
+    "8_node_DTQW_data.xlsx": "bdceca5dc89d70f3f3377d8c8edb74db2ebed16b0eb88179315eeb83dbca2271",
+    "Custom_noise_model_code.py": "7e2c81cc5a7a21a27a5e73289b46f6a25745e93ea3b601279020a2c8c326960f",
+    "Custom_noise_model_data.xlsx": "28b4c08d747df267c5e86ef28609c8681cb01f4af62ab96e77b638bacd7c62da",
+    "README.txt": "b691fdf09632e0f578b913b76e3d4665388088c3925c939ff0dcfac7a140e400"
+  },
+  "entry_kind": "Integer equivalents of workbook probabilities; configured shots = 1000. Step zero is a listed initial row.",
+  "position_qr_to_classical_bit": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "eight_site_shift_coin_source_destination_phase_real_imag": [
+    [
+      0,
+      0,
+      7,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      3,
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      4,
+      3,
+      1,
+      0
+    ],
+    [
+      0,
+      5,
+      4,
+      1,
+      0
+    ],
+    [
+      0,
+      6,
+      5,
+      0,
+      1
+    ],
+    [
+      0,
+      7,
+      6,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      1,
+      0
+    ],
+    [
+      1,
+      3,
+      4,
+      1,
+      0
+    ],
+    [
+      1,
+      4,
+      5,
+      1,
+      0
+    ],
+    [
+      1,
+      5,
+      6,
+      0,
+      1
+    ],
+    [
+      1,
+      6,
+      7,
+      1,
+      0
+    ],
+    [
+      1,
+      7,
+      0,
+      1,
+      0
+    ]
+  ],
+  "cycles": {
+    "4": [
+      {
+        "step": 0,
+        "simulator": [
+          1000,
+          0,
+          0,
+          0
+        ],
+        "quito": [
+          969,
+          13,
+          18,
+          0
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 13
+      },
+      {
+        "step": 1,
+        "simulator": [
+          0,
+          469,
+          0,
+          531
+        ],
+        "quito": [
+          65,
+          409,
+          69,
+          457
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 134
+      },
+      {
+        "step": 2,
+        "simulator": [
+          491,
+          0,
+          509,
+          0
+        ],
+        "quito": [
+          441,
+          90,
+          386,
+          83
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 173
+      },
+      {
+        "step": 3,
+        "simulator": [
+          0,
+          493,
+          0,
+          507
+        ],
+        "quito": [
+          64,
+          335,
+          73,
+          528
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 137
+      },
+      {
+        "step": 4,
+        "simulator": [
+          527,
+          0,
+          473,
+          0
+        ],
+        "quito": [
+          542,
+          57,
+          359,
+          42
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 99
+      }
+    ],
+    "8": [
+      {
+        "step": 0,
+        "simulator": [
+          1000,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quito": [
+          1000,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 0,
+        "ideal_denominator": 1,
+        "monitored_numerators": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coherent_plain_numerators": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coherent_archived_shift_numerators": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "simulator_TV_monitored": "0",
+        "simulator_TV_plain": "0",
+        "simulator_TV_archived_coherent": "0"
+      },
+      {
+        "step": 1,
+        "simulator": [
+          0,
+          517,
+          0,
+          0,
+          0,
+          0,
+          0,
+          483
+        ],
+        "quito": [
+          121,
+          223,
+          97,
+          140,
+          82,
+          119,
+          79,
+          139
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 379,
+        "ideal_denominator": 2,
+        "monitored_numerators": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "coherent_plain_numerators": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "coherent_archived_shift_numerators": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "simulator_TV_monitored": "17/1000",
+        "simulator_TV_plain": "17/1000",
+        "simulator_TV_archived_coherent": "17/1000"
+      },
+      {
+        "step": 2,
+        "simulator": [
+          500,
+          0,
+          242,
+          0,
+          0,
+          0,
+          258,
+          0
+        ],
+        "quito": [
+          128,
+          176,
+          141,
+          157,
+          63,
+          124,
+          77,
+          134
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 591,
+        "ideal_denominator": 4,
+        "monitored_numerators": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coherent_plain_numerators": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coherent_archived_shift_numerators": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "simulator_TV_monitored": "1/125",
+        "simulator_TV_plain": "1/125",
+        "simulator_TV_archived_coherent": "1/125"
+      },
+      {
+        "step": 3,
+        "simulator": [
+          0,
+          372,
+          0,
+          125,
+          0,
+          127,
+          0,
+          376
+        ],
+        "quito": [
+          146,
+          124,
+          167,
+          135,
+          118,
+          103,
+          114,
+          93
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 545,
+        "ideal_denominator": 8,
+        "monitored_numerators": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          1,
+          0,
+          3
+        ],
+        "coherent_plain_numerators": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          5
+        ],
+        "coherent_archived_shift_numerators": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          5
+        ],
+        "simulator_TV_monitored": "3/1000",
+        "simulator_TV_plain": "249/1000",
+        "simulator_TV_archived_coherent": "249/1000"
+      },
+      {
+        "step": 4,
+        "simulator": [
+          391,
+          0,
+          246,
+          0,
+          134,
+          0,
+          229,
+          0
+        ],
+        "quito": [
+          110,
+          176,
+          116,
+          167,
+          68,
+          129,
+          99,
+          135
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 607,
+        "ideal_denominator": 16,
+        "monitored_numerators": [
+          6,
+          0,
+          4,
+          0,
+          2,
+          0,
+          4,
+          0
+        ],
+        "coherent_plain_numerators": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          10,
+          0
+        ],
+        "coherent_archived_shift_numerators": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          10,
+          0
+        ],
+        "simulator_TV_monitored": "1/40",
+        "simulator_TV_plain": "99/250",
+        "simulator_TV_archived_coherent": "99/250"
+      },
+      {
+        "step": 5,
+        "simulator": [
+          0,
+          315,
+          0,
+          166,
+          0,
+          190,
+          0,
+          329
+        ],
+        "quito": [
+          138,
+          167,
+          129,
+          139,
+          116,
+          107,
+          98,
+          106
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 481,
+        "ideal_denominator": 32,
+        "monitored_numerators": [
+          0,
+          10,
+          0,
+          6,
+          0,
+          6,
+          0,
+          10
+        ],
+        "coherent_plain_numerators": [
+          0,
+          4,
+          0,
+          4,
+          0,
+          20,
+          0,
+          4
+        ],
+        "coherent_archived_shift_numerators": [
+          0,
+          4,
+          0,
+          0,
+          0,
+          8,
+          0,
+          20
+        ],
+        "simulator_TV_monitored": "43/2000",
+        "simulator_TV_plain": "87/200",
+        "simulator_TV_archived_coherent": "89/250"
+      },
+      {
+        "step": 6,
+        "simulator": [
+          308,
+          0,
+          267,
+          0,
+          174,
+          0,
+          251,
+          0
+        ],
+        "quito": [
+          134,
+          153,
+          147,
+          135,
+          105,
+          118,
+          102,
+          106
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 512,
+        "ideal_denominator": 64,
+        "monitored_numerators": [
+          20,
+          0,
+          16,
+          0,
+          12,
+          0,
+          16,
+          0
+        ],
+        "coherent_plain_numerators": [
+          8,
+          0,
+          8,
+          0,
+          40,
+          0,
+          8,
+          0
+        ],
+        "coherent_archived_shift_numerators": [
+          8,
+          0,
+          4,
+          0,
+          16,
+          0,
+          36,
+          0
+        ],
+        "simulator_TV_monitored": "9/500",
+        "simulator_TV_plain": "451/1000",
+        "simulator_TV_archived_coherent": "31/80"
+      },
+      {
+        "step": 7,
+        "simulator": [
+          0,
+          284,
+          0,
+          243,
+          0,
+          218,
+          0,
+          255
+        ],
+        "quito": [
+          109,
+          132,
+          137,
+          168,
+          92,
+          104,
+          114,
+          144
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 452,
+        "ideal_denominator": 128,
+        "monitored_numerators": [
+          0,
+          36,
+          0,
+          28,
+          0,
+          28,
+          0,
+          36
+        ],
+        "coherent_plain_numerators": [
+          0,
+          16,
+          0,
+          16,
+          0,
+          80,
+          0,
+          16
+        ],
+        "coherent_archived_shift_numerators": [
+          0,
+          4,
+          0,
+          20,
+          0,
+          52,
+          0,
+          52
+        ],
+        "simulator_TV_monitored": "27/1000",
+        "simulator_TV_plain": "407/1000",
+        "simulator_TV_archived_coherent": "679/2000"
+      },
+      {
+        "step": 8,
+        "simulator": [
+          277,
+          0,
+          238,
+          0,
+          216,
+          0,
+          269,
+          0
+        ],
+        "quito": [
+          126,
+          163,
+          96,
+          143,
+          99,
+          146,
+          102,
+          125
+        ],
+        "simulator_wrong_parity": 0,
+        "quito_wrong_parity": 577,
+        "ideal_denominator": 256,
+        "monitored_numerators": [
+          72,
+          0,
+          64,
+          0,
+          56,
+          0,
+          64,
+          0
+        ],
+        "coherent_plain_numerators": [
+          32,
+          0,
+          32,
+          0,
+          160,
+          0,
+          32,
+          0
+        ],
+        "coherent_archived_shift_numerators": [
+          104,
+          0,
+          40,
+          0,
+          104,
+          0,
+          8,
+          0
+        ],
+        "simulator_TV_monitored": "19/1000",
+        "simulator_TV_plain": "409/1000",
+        "simulator_TV_archived_coherent": "639/2000"
+      }
+    ]
+  }
+}
