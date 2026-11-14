@@ -100,3 +100,5 @@ The same file proves the marginal upper and joint lower count inequalities for a
 [RelativeCoinContact.lean](RelativeCoinContact.lean) checks the sign on the one coincident rail pair, the scaled input agreement identity and the maximum difference for a binary subset of four affected sites. The [three-tick position calculation](../Two_coin_position_read_at_one_contact.md) connects these identities to the full site effects.
 
 [CrossedCoinPairs.lean](CrossedCoinPairs.lean) checks the table partition and the covariance rearrangement used in the [contact partner comparison](../Reassigning_the_two_coin_partners.md).
+
+[PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the single-predecessor norm identity for [three position records between coherent flights](../Diffusion_from_three_position_records.md).

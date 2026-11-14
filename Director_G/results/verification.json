@@ -6626,5 +6626,18 @@
       "results/crossed_coin_pairs.json": "efdf347b8eb3e944cb21b9fbcce0cd26a574e15f50ea365cef9ba684092c3ba9"
     },
     "standing": "Signed position effect replayed from trajectories. Complete Bell-bank transcripts through five pairs and sharp vertex errors through seven pairs. The crossed result assumes the stated assignments and routed contact effects; independence across all labels remains untestable with the supplied real instruments alone."
+  },
+  "position_record_blocks": {
+    "paper": "Diffusion_from_three_position_records.md",
+    "checker": "check_position_record_blocks.py",
+    "result": "results/position_record_blocks.json",
+    "sha256": {
+      "check_position_record_blocks.py": "900f4df8ec8306f9bcd8932c4c962f393c41a6f7a3ab0767106df7f1c74fd40d",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/PositionRecordBlocks.lean": "0501eb0b2e067ec383db444ae0e1bd6a52641f87a3ac5a7bc480f30ce122ff9f",
+      "results/position_record_blocks.json": "4d058ff3babbdc344b64773f859e01dd49110c53347bd2af31b7a4de766b89c5"
+    },
+    "standing": "Complete signed records over two blocks match factorized kernels for both input rails, the four optional write patterns and an unequal-length control. Fresh and shared timings have distinct return-pair probabilities under the stated instruments. Diffusive and ballistic scaling are conditional mathematical limits."
   }
 }
