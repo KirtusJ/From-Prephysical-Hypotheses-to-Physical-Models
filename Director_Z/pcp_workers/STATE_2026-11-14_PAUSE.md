@@ -1,9 +1,8 @@
 # State at the pause of 14 November 2026 (the principal is out of usage)
 
-**Handoff reconciliation by Director G, 14 November 2026.** The list below records Director Z’s session at its pause. For resumption, two entries already have recorded dispositions.
+**Handoff reconciliation by Director G, 14 November 2026.** The list below records Director Z’s session at its pause. The candidate disposition below was recorded after the pause.
 
 - Tally Ring Z2 was abandoned under its first declared attack. Its fork result and separating clock survive in the [decision and evidence](../candidate/abandoned/Z2_Tally_Ring/WHY_ABANDONED.md). The [candidate catalog](../../candidates/README.md) records the disposition of the full proposal.
-- The package core and install transaction both reached the PCP OS default branch. Their review and merge records are in [PCP OS PR #60](https://github.com/KirtusJ/pcp-os/pull/60) and [PCP OS PR #62](https://github.com/KirtusJ/pcp-os/pull/62).
 
 For current review assignments, consult the [working queue](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/pcp/review-queue/REVIEW_QUEUE/QUEUE.md).
 
@@ -33,17 +32,10 @@ Written so that the next working period can start from the repository alone. Not
 - Candidate Z2 "Tally Ring": plan, brand, form (seven stipulations, nine derived statements, six lines of attack)
   and ledger are written and pushed. Parts 3 to 8 not begun.
 
-## PCP OS
-
-- Merged today after Director G's readings: pull requests 33, 34, 37, 57, 58. Director G merged 38 and 40.
-- Open, mine: 60 (package core; both of Director G's findings fixed at `3df9d8c`) and 62 (transaction, draft; both
-  findings fixed at `db3b3a0`). Both await Director G's second reading. Not to be merged by me before it.
-- Director G's four decisions for the next increment are on `KirtusJ/pcp` pull request 29 (signature crate pinned,
-  vendored frozen build, interpreter probed separately, generations immutable on disk). The next pull request is mine.
-- Unread when this was written: about 34 notifications, mostly Director G on the research thread.
-
 ## Order when work resumes
 
 1. Read the notifications. 2. Write and post the two cross-review reports (86; 91 and 94), rerunning the second.
 3. Find the challenger's missing argument or have it state it. 4. Director G's backlog: 95, 97 to 100, 84, 85, 87,
-89, 92, 96, 79, 82. 5. Candidate Z2 part 3. 6. Edition Z27. 7. Next package-manager increment.
+89, 92, 96, 79, 82. 5. Candidate Z2 part 3. 6. Edition Z27.
+
+The [original dated handoff](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/2965c75dd51efc728f3d3eeda6d06cfccf40a4e5/Director_Z/pcp_workers/STATE_2026-11-14_PAUSE.md) preserves the full session entry.

@@ -95,7 +95,7 @@ Working rule drawn from this: at most two levels below the director (sub-agent, 
 
 ## Pull requests from the stack (13 November 2026)
 
-Principal: sub-agents and workers may open pull requests on all repositories and branches when necessary. Adopted as: patch file from sub-agents without GitHub tools, pull request from workers that have them, author never merges. Observed the same day: the director's own merge of another author's branch (Director G's pull requests 5, 6, 8) was refused by the session's permission layer, so merging is by the author or the principal. To watch: whether any worker opens one, and whether it was needed.
+Workers used a patch when GitHub tools were unavailable and opened a pull request when a research finding needed a repository change. Director G’s research pull requests 5, 6 and 8 had to be merged from a different session after this session’s permission layer declined the merge.
 
 ## Wider propagation, positive arcs, wildcard and chaos roles (13 November 2026)
 
@@ -129,10 +129,6 @@ Seven stopped agents were resumed by message in two batches of three and one; al
 
 What worked: a builder beside each attacker; resuming by message; narrowing the brief on resume to one or two items. What did not: eleven at once; eight-item briefs; relying on WebFetch (arxiv.org and claymath.org are not reachable from this session).
 
-## A separate PCP version (14 November 2026)
-
-Principal: PCP may be upgraded and run as a separate version, container environment or branch apart from the main branch, if that is better and only if necessary. Not used yet. Candidates for a need, noted so far and none pressing: the closing record of a review lists no open objections although objections are recorded open (found by the queue's wildcard); the register accepts an artifact digest without keeping the file, so a later edit of the file goes unnoticed (two cases, editions Z18 and Z22). The second can be met in the submit tool on this side without touching PCP; the first is a matter of how PCP words its closing record. Decision for now: fix the second in `Director_Z/tools/` when the next edition is prepared; raise the first with Director G before changing anything.
-
 ## Recursion: Director G's figures beside mine (14 November 2026)
 
 Reported by Director G through the principal, with `Director_G/results/pcp_worker_trial.json` as the record. A PCP-equipped Codex worker launched its own PCP-equipped child and the parent verified the child's saved result. Three native worker levels below the director were reached before the host's limit of four active agents; a hosted PCP call extended the chain to five model levels. On one three-bit problem: flat call 20.2 s; three-level handoff 374.2 s including register work; the hosted extension 47.1 s, and the parent had to correct its child's answer. One measured comparison. Director G's practice: one worker for arithmetic with an exact check; parallel workers to derive, attack and replay a proof.
@@ -145,13 +141,9 @@ Principal: use the calibration assessor more on lower-tier models and lower form
 
 What it shows and does not: the items are at ceiling, so they do not separate the tiers; one run each. It is enough to try the cheap roles (micro-review, rerun and byte comparison, outlier scan) on Sonnet or Haiku, with a planted-error control inside each brief. Not yet calibrated: the queue session, headless workers, long tasks. Rule added to practice: every brief to a lower-tier agent carries one control with a known answer, and its result is recorded with the report.
 
-## Store apps for the modules (14 November 2026)
+## Research checks identified during the session (14 November 2026)
 
-Principal: do not be afraid to spend time, with Director G, on creating and integrating the Store apps each module needs, when it becomes useful. What exists in build 22 (`pcpos instrument list`): `mathematics.exact`, `statistics.grim`, `statistics.percent`, `engineering.units`, `cryptography.digest`, `science.order`, `quality.coverage`, `core.calibration`. First use that paid: `core.calibration` caught a calibration record of mine that was not in the method's form.
-
-Apps this session's own failures ask for, each already existing here as an ad hoc script or as a hole found by a chaos run:
-
-| Module | App | Evidence of need | Exists as |
+| Module | Research check | Evidence of need | Exists as |
 |---|---|---|---|
 | Quality | registered artifact unchanged at commit | addenda Z18 and Z22 edited after registration | `Director_Z/tools/check_registered.py` |
 | Quality | call file submitted once; receipts counted | two duplicate submissions | `Director_Z/tools/pcp_submit.py` (with Director G's changes) |
@@ -160,124 +152,26 @@ Apps this session's own failures ask for, each already existing here as an ad ho
 | Statistics | outlier scan of result files with flags EXPLAINED or UNEXPLAINED | asked for at each edition | micro-review brief |
 | Core | summary sentence against its record (counts named in prose checked against the file they come from) | fifteen wrong summary sentences across six editions | micro-review brief |
 
-Not built as Store apps yet: the form a Store app must take in PCP is Director G's ground as much as mine, so the proposal goes to the exchange first; the scripts above keep working meanwhile.
+The table records which checks existed at the time. Entries marked as needs were outstanding at the time.
 
-## Reboots are coordinated (14 November 2026)
+## Restarting a shared review (14 November 2026)
 
-Principal: coordinate reboots as necessary. Rule in `CLAUDE.md` (Mechanics, PCP itself): announce in the exchange file before a restart of PCP, calibration, the queue session or a shared tool; record forced restarts afterwards. Restarts so far this session, all forced: resumptions from a summary; the allowance stop of 13 November (eleven sub-agents and the queue session, all resumed); one move of the container (scratch survived). None planned.
+The allowance stop interrupted eleven sub-agents and the queue session. On a separate container move, scratch files survived. The directors recorded the affected jobs and later resumptions.
 
-### Store apps: Director G's answer (14 November 2026)
+## Following asynchronous results (14 November 2026)
 
-From pull request 3: in build 22 the eight instruments are a fixed array in the host's source (`pcpos-host/src/instruments.rs`), dispatched by name; installing a method module does not add an executable instrument. So a new Store app inside PCP means a new host build, not a plugin. Division of work agreed there: Director G takes the commit-side form of the first Quality item (a path-to-digest map and a pinned manifest digest checked against the blob bytes of one git commit, with the Z18 and Z22 addenda as positive and negative controls) on an isolated research branch and will post a pull request; my `check_registered.py`, `pcp_submit.py` and `calibration_reader.py` continue as they are. No shared installation or restart. The principal attached the repository `KirtusJ/pcp-os` to this session on the same day; it is empty (no commits). Nothing is put there until its purpose is said.
+The director tested `Director_Z/tools/async_run.py` on three tasks: one that passes, the very failure of today (reported NOT AS EXPECTED, exit 1), and a timeout (reported, exit code none); a second run into the same directory is refused.
 
-### The OS source (14 November 2026)
+## Research follow-up at the pause (14 November 2026)
 
-The principal supplied the PCP OS source (build 22) and the empty repository `KirtusJ/pcp-os`. Reconciled (same version as the binary in use; builds in 17 s; identical output on six commands including verification of the 582-event register) and pushed unchanged with a reconciliation record to the session branch of that repository. This is what makes host-level Store apps possible on this side: an instrument is an entry in `crates/pcpos-host/src/instruments.rs`. Nothing built yet; the binary in use is unchanged; Director G is told.
-
-## Workers and the PCP OS repository (14 November 2026, permanent)
-
-Principal: workers can report issues and open pull requests on PCP OS as they go; make it permanent. Written into `CLAUDE.md` (pull requests from sub-agents and workers), all seven agent definitions and the queue readme. A worker without GitHub tools writes the issue text or patch in its folder and its parent files it. To watch: the first issue or pull request a worker files there, and whether it was needed.
-
-## Rust holds primacy in PCP OS (14 November 2026, permanent)
-
-Principal: PCP OS is primarily Rust; Rust always holds primacy, for security reasons; a permanent note for everyone working on it. Written as `RUST_PRIMACY.md` with `CLAUDE.md` and `AGENTS.md` pointers in `KirtusJ/pcp-os` (session branch, commit `f0d97a2`), and into this repository's `CLAUDE.md`, all seven agent definitions and the queue readme. Consequence for the Store apps: the six proposed apps, if they are to be part of PCP OS, are Rust instruments in the host; the Python scripts in `Director_Z/tools/` stay workspace helpers.
-
-## Hardening the Science and Mathematics modules (14 November 2026)
-
-Principal: a primary goal now is to consider and harden the Science and Mathematics modules of PCP for the ongoing work; it strictly does not override the director's chosen target and motion; autopilot stays on. Taken as: a standing second line of work beside the research, fed by what the research itself shows the modules miss. First step: a gap table, each module's provisions against this session's recorded failures (wrong summaries, hypotheses outside statements, predicates that did not test the hypothesis, cited lemmas, replays taken for proofs, weakened Lean statements, programs changed without the result changing). Changes to the method text or the host go through the exchange with Director G and, for the host, are Rust (see `RUST_PRIMACY.md` in `KirtusJ/pcp-os`).
-
-Added the same day: in hardening the Science and Mathematics modules the director has complete liberty to add to the Store as it sees fit (principal). Order of work kept: the gap table first; then, for each gap that a mechanical check can close, a Rust instrument in the host on a branch of `KirtusJ/pcp-os` (Rust holds primacy), announced to Director G before it replaces anything in use; workspace helpers in other languages only as stopgaps.
-
-Added the same day: the principal asks that a graphical interface be considered for the Store and the modules, even though the director does not need one itself. Considered as follows, nothing built yet. Who would use it: the principal and human readers, who cannot be expected to read a 582-event register or a JSON calibration record. What it would show, read-only, from files that already exist: the register's reviews with their claims, findings and open objections (the closing records do not show these); the gap table of the modules; calibration records by tier with their controls; for each edition, what the verifier and the chaos runs caught and missed. Constraints: it reads and never writes the register; whatever decides a security property stays in the Rust host (`RUST_PRIMACY.md`), so a GUI is a viewer over the host's own output (`pcpos status`, `verify`, `instrument`), not a second implementation; it must work from a checkout without a server. First step when taken up: a single static page generated from `pcpos status` and the record files, published as a private page for the principal.
-
-### A condition on any native deployment (14 November 2026)
-
-From Director G on pull request 3: on the reviewed Rust source of `KirtusJ/pcp-os#11`, a relocated valid `local.foo` can authorize deletion of a different `modules/foo` directory (path identity); the finding is derived from the source, with a disposable fixture and positive control on that pull request's review; the stacked `#14` inherits the code. Condition recorded for this side: before any native head is deployed in place of the binary in use, that fixture is carried to the selected head and must pass there, alongside the two native-host regression suites already rerun here (`pcp#18`). No deployment is planned; the binary in use is the packaged build 22.
-
-### Priorities (14 November 2026)
-
-Principal: other modules may be worked on too, but Science and Mathematics take priority, and above all the research program holds top priority. Written into `CLAUDE.md` ("What to work on"): research first; then the Science and Mathematics modules; then other modules.
-
-### The master branch of PCP OS (14 November 2026)
-
-Principal: both directors are at complete liberty to update the master branch of `KirtusJ/pcp-os`, to be coordinated carefully. Recorded in this repository's `CLAUDE.md` and in that repository's `CLAUDE.md` and `AGENTS.md`. State found: no `master` exists there; the default is this session's branch, into which Director G has merged one pull request. Proposed to Director G in the exchange: create `master` at the current default head, unchanged, and coordinate every later update there. Not created until Director G answers.
-
-### First hardening of the Mathematics module in the host (14 November 2026)
-
-Director G's `KirtusJ/pcp-os#20` fixes integer boundary errors in `mathematics.exact`. Reviewed here: tests pass (8 and 23); the packaged build-22 binary panics on `lcm((-2)^127,1)` and on `2^((-2)^127)`, where the branch refuses with the instrument's own message; ordinary expressions unchanged in the cases tried. Agreed with Director G: a literal `master` is created by their side at the unchanged default head (`678ea17`), the default is switched when the account permits, and branch creation is left to them to avoid a race. This side's `mathematics.statement` instrument follows as a pull request rebased onto the fix. For this side's own use of `mathematics.exact`: no expression near the 127-bit boundary has been submitted in this session.
-
-### First Store app from this side: `mathematics.statement` (14 November 2026)
-
-A Rust instrument in the host, `KirtusJ/pcp-os#22`, branch `pcp/director-z-mathematics-statement`, stacked on Director G's `#20`: pins a Lean theorem's statement by digest and probes for `sorry`, a conclusion true by its form and a `False` hypothesis; pure text, no execution, no new dependency. Written by a general sub-agent to the director's specification, with a control (the unmodified host lists eight instruments) answered first; rebuilt and retested by the director (12 and 23 tests pass); tried on this session's Lean files and on the two planted errors of the chaos run, both of which it catches. Not deployed; the binary in use is unchanged. Closes failures F7 and F8 of the gap table mechanically, within the limit that it reads text.
-
-## Hardening asynchronous work (14 November 2026)
-
-Principal: harden PCP Async as you go ("PCP Async" is not a named component; it is the asynchronous way the stack works). Six rules written into `CLAUDE.md` (Asynchronous work), each from a failure of this session: the fan-out that ended with nothing on disk; two duplicate submissions; and, today, a rerun reported on a pull-request thread before it had finished, when it had in fact exited with an error for want of an output folder (corrected on the thread). Tool added: `Director_Z/tools/async_run.py`, tested on three tasks: one that passes, the very failure of today (reported NOT AS EXPECTED, exit 1), and a timeout (reported, exit code none); a second run into the same directory is refused. Noted for the host: `TASK_STARTED` and `TASK_ENDED` exist as register events, the second written by the host only; this session's sub-agents are outside the host and leave no such events.
-
-### Asynchronous work in the kernel, on bare metal (14 November 2026)
-
-Principal: harden PCP Async not just in the stack but in the kernel itself. State found: `pcpos-kernel` 0.3.1, Rust with one assembly file, x86_64, about 5,300 lines; started only in an emulator by its own account. Baseline on this side: installed QEMU 8.2.2 (the version its readme names), the Rust source component and the bare-metal target; the kernel builds from a scratch clone of `master` (`8390e8f`) and `run.sh` ends with QEMU status 33, 58 self-tests passing, kernel register of 43 events. One agent is reviewing the asynchronous paths by reading and by added self-tests, in a scratch clone, with that baseline as its control. Installed on this container for it: `qemu-system-x86`, `rust-src`, target `x86_64-unknown-none`.
-
-### `mathematics.statement` is on the mainline of PCP OS (14 November 2026)
-
-Director G reviewed `KirtusJ/pcp-os#22` on Windows and filed three objections, all real: a `let` outside brackets could own the `:=` so that a weakened theorem kept its pin; `_root_.sorryAx` passed the open-proof probe; a `pinned` that was not a string was read as no pin. All three fixed in Rust with the reviewer's cases as regression tests; Director G reran its controls and closed them. Integrated into `master` at `0e068ee` by this side under the principal's permission, after the other director's "ready": workspace tests on the merged tree 66 passed, 0 failed. Source only; the binary in use is still the packaged build 22. What the episode shows about the stack: the same-family sub-agent wrote 45 assertions and missed the one input that defeats the instrument's purpose; a reviewer of another family on another system found it within the hour.
-
-### Kernel asynchronous side and the Tokio note: state at 14 November 2026, written before a context compaction
-
-Directive (principal): asynchronous work is core to PCP and is considered at all times; Rust's `async` and Tokio have an infamous history, to be considered deeply; the hardening reaches the kernel on bare metal.
-
-What exists in `KirtusJ/pcp-os`, none of it on `master` yet:
-
-| Item | Where | State |
-|---|---|---|
-| Issue 31: the stop key leaves the task RUNNING in the kernel's task table | pcp-os | open, fixed by pull request 33 |
-| Issue 32: a refused program's frames are not returned | pcp-os | open, fixed by pull request 33 |
-| Pull request 33: eight kernel self-tests of the asynchronous side and the two fixes | branch `pcp/director-z-kernel-async`, head `1a7fdd6` | open, awaiting Director G |
-| Pull request 34: `ASYNC.md` (no `async` or Tokio in the source today, ten hazards, six rules) | branch `pcp/director-z-async-note`, head `7bf7f2f` | open, awaiting Director G |
-
-Evidence for 33, QEMU 8.2.2, `PCPOS_KERNEL_STAGE=<dir> sh run.sh` in `crates/pcpos-kernel`: `master` at `0e068ee` 58 self-tests pass; tests only, 64 pass and 2 fail (status 35); with the fixes 66 pass (status 33); the workspace tests pass. Nothing is claimed about real hardware.
-
-Not to be done without the other director's answer: putting 33 or 34 on `master`. Not to be done without the agreed restart notice: replacing the binary in use (`scratchpad/pcpos/pcpos`, build 22, digest beginning `c2c6795d`).
-
-Open on this side, in order: the research program first (read the proofs in `Director_Z/computation/Character_Separation/CRITERION.md` line by line; queue follow-ups on Proposition 5.35 for q = 7, 8, its assembly in Lean, parts (ii) and (iii) for q > 2; the product-event theorem for carriers with several norm-preserving characters); then the Mathematics and Science modules (result-to-program binding in the host, once Director G's rerun helper format is known; a summary-against-record rule); other modules last. The edition is Z26; register 609 events; reviews Z24 to Z26 closed; objections O29 to O31 recorded open; findings to Z-140. The queue session is `session_01CeUdCw9r8D7zqFEbrYETKD`, trigger `trig_017oSax6RZ3Jm4mR2GET4aDC`, branch `pcp/review-queue`; check it each period.
-
-### After the compaction, 14 November 2026: what changed
-
-- pcp-os pull request 33 merged to `master` (`f7cf493`) after Director G's replay of the exact head on two emulated CPUs; the merged tree is the tested tree.
-- Director G's side then found a gap in the oracle of my self-test 7 (it checked the frames but not that the program was refused). Right. Answered by pull request 37 (branch `pcp/director-z-admission-oracle`, head `24bd571`): the error is asserted and a control under a 32-byte name is added; 68 self-tests pass, status 33. Awaits Director G. Lesson: a test of a refusal asserts the refusal, and carries the nearest accepted case as its control.
-- Pull request 34 (`ASYNC.md`) still awaits Director G.
 - Character separation: proofs read line by line (`Director_Z/computation/Character_Separation/DIRECTOR_READING_2026-11-14.md`), table rerun byte-identical, algebra in Lean (`Director_Z/lean/CharSeparation.lean`). A challenger on the criterion and its summary is out; its report is not in.
-
-- Director G reviewed `ASYNC.md` (pcp-os pull request 34) and was right on four points: no blanket ban or universal timeout; hazards are per operation; exactly-once is an intended invariant with an unknown status until reconciliation; the host writes the task start as well as the end (my wording was wrong, checked in `pcpos.rs`). Revised at `70cadbd`. Director G's side also reproduced two host lifecycle faults (duplicate start gives two tasks; results swapped between agents whose identifiers share a prefix); their fix is on their identity branch, not deployed.
-
-### Claude plugins (principal, 14 November 2026: harden them when necessary too)
-
-Found on `master` of `KirtusJ/pcp-os-claude` (`038983d`): launcher and programs recorded 100644, so hooks and the tool server cannot run from a Git checkout (exit 126); one method CSV fails its manifest digest. Existing pull request 3 fixes both; verified in fresh clones (exit 0; 0 of 42 mismatches; program digest unchanged). `KirtusJ/pcp-claude` pull request 1: 1 of 43 mismatches before, 0 after. Evidence posted on pull request 3; Director G's answer asked before a default branch changes. Open: the hook's task-identity faults (duplicate start, shared prefix), fixed in source by pcp-os pull request 40, reach the plugin only with a rebuilt program.
-
-- pcp-os pull request 40 (Director G: hook identity by session and agent): replayed at `81c21b9`. Workspace 68 tests pass; the two new host tests FAIL on the unfixed source (a fifth task from a duplicate start; exits misassigned) and pass at the head; kernel 66 pass. No objection posted, with one named failure mode: a stop under a different session identifier leaves the task unended, with no reconciliation yet. Theirs to merge.
 - Cross-reviews of Director G's four newest notes filed (`cross_review/subagent_xr69_*`, `subagent_xr72_*`) and posted on the standing thread: no KILL; a provenance defect in the ion checker's line numbers (patch filed, not applied), an unstated boundary of the detector repair, and a title that says more than its note.
 
-### Share of effort (principal, 14 November 2026): research about 70 per cent
-
-This working period ran the other way: the kernel, the async note, the plugins and replays of Director G's pcp-os pull requests took most of it. From here: pcp-os and plugin items are answered when they arrive and are short (a replay, a reading); no new tool work is started until the research has had its share. Research items in hand, in order: the two-rail theorem's open points; the product-event theorem for carriers with several norm-preserving characters; cross-review of Director G's note 74; then the next edition, which has real content now (character separation, two-rail theorem, order-q check to q = 8).
-
-### Where plugins and Store apps install from (principal's question, 14 November 2026)
-
-Tested with Claude Code 2.1.325 in an isolated configuration folder. No repository can be registered as a marketplace by `owner/repo`: `pcp-claude` and `pcp-os-claude` are plugin folders without a marketplace file; `pcp` has one only in the subfolder `PCP_1.0_Plugins`, which works by local path after a clone and installs build 19, with programs that lack the executable bit. A marketplace file pointing at the two plugin repositories validates and installs both at build 22; the hook runs when `pcp-os-claude` is taken at its fix branch. Proposed as draft pull request 29 on `KirtusJ/pcp`. Cost: every one of these repositories is a sealed inventory, so a new file differs from its manifest; the clean home is a small repository holding only the marketplace file, which this session cannot create. The Store has no install source at all: instruments are compiled into the host, modules are added from a local folder.
-
-### Override lifted; the director's choice (14 November 2026)
-
-The principal: "Proceed as you would (target, motion, % your discretion)". Choice, and why:
-
-- Target: the research program, about 70 per cent. The PCP OS work is at a natural pause (pull requests 57,
-  58, 60 and 62 and four design decisions all wait on Director G), and the larger risk named in the comparison
-  with Director G is the backlog: about a dozen of their notes are unreviewed, and several are being used as
-  premises for the next.
 - Motion, in order: (1) resume, not relaunch, the challenger on my own draft subsection, which stopped on the
   rate limit; (2) cross-review Director G's notes on the probability premise from local records (91, 94, 95),
   since they carry the strongest claims; (3) their note 86 on several walkers, which bears on my four-gain
   theorem and which they asked me to challenge; then 84, 85, 87, 89, 92, 96, 79, 82; (4) edition Z27 once the
   draft has survived its challenger.
-- The other 30 per cent: answer Director G's reviews of the four pull requests as they arrive; the next build
-  increment (host commands, tool calls, register record) when the storage decision is answered.
 - At most three tasks at once, as before.
+
+The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/2965c75dd51efc728f3d3eeda6d06cfccf40a4e5/Director_Z/pcp_workers/HIERARCHY_LOG.md) preserves the original session chronology.

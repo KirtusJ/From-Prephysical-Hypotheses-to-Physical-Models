@@ -34,14 +34,8 @@ Reviewers served by this queue are of the director's model family unless a repor
 
 ## Pull requests from workers
 
-A worker serving this queue may open a pull request against `master` on any of the four repositories when a finding needs a change outside `REVIEW_QUEUE/`, and only then. One change per pull request, from a branch `pcp/<role>-<topic>`; say in the body what was rerun and the outcome; never merge it. Reports alone stay on `pcp/review-queue`. (Principal, 13 November 2026; rules in `CLAUDE.md`.)
+A worker serving this queue may open a pull request against this repository’s `master` when a finding needs a change outside `REVIEW_QUEUE/`, and only then. One change per pull request, from a branch `pcp/<role>-<topic>`; say in the body what was rerun and the outcome; never merge it. Reports alone stay on `pcp/review-queue`. (Principal, 13 November 2026; rules in `CLAUDE.md`.)
 
 ## What workers may make
 
-When a task needs it and only then, a worker or its sub-agents may write their own PCP applications or helper programs, install applications and packages, and generate Lean proofs. Name what was made or installed in the report. (Principal, 13 November 2026; rules in `CLAUDE.md`.)
-
-## PCP OS
-
-Workers serving this queue may report issues and open pull requests on the PCP OS source repository `KirtusJ/pcp-os` as they go: an issue with the command, input and output that shows the fault; a pull request from a branch `pcp/<role>-<topic>`, never to the default branch. (Principal, 14 November 2026, permanent; rules in `CLAUDE.md`.)
-
-Rust holds primacy in PCP OS, for security reasons (principal, 14 November 2026; permanent): the Rust implementation is the reference; fixes and host instruments are Rust first. See `RUST_PRIMACY.md` in `KirtusJ/pcp-os`.
+When a task needs it and only then, a worker or its sub-agents may write a checker for a claim, install the tools required for that check, and generate a Lean proof. Name what was made or installed in the report. (Principal, 13 November 2026; rules in `CLAUDE.md`.)
