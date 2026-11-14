@@ -6851,5 +6851,17 @@
       "results/two_partial_sheet_reads.json": "754127087cfaf01a035d7535720166d1c8eb103b58d530728c7ff4221daf424c"
     },
     "standing": "Replayed all 2,048 physical-direction words and all 400 pairs of hidden partition vectors. Integer prefix sums and rational inequalities check the finite inputs to the two-setting bound. The analytic conclusion requires the same type distribution across settings and permits different normalizers."
+  },
+  "static_six_coins": {
+    "paper": "Three_ticks_and_one_position_read_on_six_wells.md",
+    "checker": "check_static_six_coins.py",
+    "result": "results/static_six_coins.json",
+    "lean": "lean/StaticSixCoins.lean",
+    "sha256": {
+      "check_static_six_coins.py": "ccda674093f729fb207d95ded09fd68339b9e00bf411f016edd7fe4d5ef16b6e",
+      "results/static_six_coins.json": "6c99db791e0fbb6b7d11b365ccb03844ae731aeb700e5c9deff61c2a05765569",
+      "lean/StaticSixCoins.lean": "bbc17439d47e35af5cedefc201140aa05a2d2f2d9b8c6e3f649810014caf2df0"
+    },
+    "standing": "Three ticks from a sharp launch, 729 static assignments at four clocks, both seam controls and both source rails. Physical word sums on the ring match the cover evolution. Lean proves the obstruction for every common Hadamard count. The weighted-mean test and the associated measurement assumptions are given in the paper."
   }
 }
