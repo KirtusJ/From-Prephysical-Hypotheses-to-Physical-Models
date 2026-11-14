@@ -68,7 +68,7 @@ For $Q=2$, these populations are the pure winding phases $+1$ and $-1$. At eithe
 
 The two distinguishing wells are different for every $N\ge3$, so discarding the rail preserves their one-launch total variation. It can still cost information on repetition. On the triangle at clock 4 the site probabilities in order $0,1,2$ are $(2,5,9)/16$ and $(2,1,13)/16$. For two independent launches at that clock, summing half the smaller likelihood over the nine ordered site pairs gives equal-prior error $19/64$. Reading the rail as well gives $9/32$. Thus equality of the one-launch distances alone does not extend the sharp repeated-launch formula to coarser records.
 
-These costs concern known clocks, ideal terminal measurement, independent launches and this specified pair of laws. Later clocks, other measurements and a persistent label across launches pose different experiments. [Physical-ring checker](check_first_winding_clock.py) · [Exact finite results](results/first_winding_clock.json)
+These costs concern known clocks, ideal terminal measurement, independent launches and this specified pair of laws. On the same 16-well ring with phase order 21, a four-port read at tick 144 distinguishes the pair with both errors below 5% in 163 independent launches. When one label persists across the run, the equal-prior error exceeds 18.13% at any launch count. [Later clocks and the persistent-label control](Later_winding_clocks.md) · [Physical-ring checker](check_first_winding_clock.py) · [Exact finite results](results/first_winding_clock.json)
 
 ## What would select the ordinary embedding?
 

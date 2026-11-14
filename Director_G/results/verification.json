@@ -6318,5 +6318,20 @@
     "checked": "Normal and optimized Python matched on 83 physical ring and gain-order panels, including 46 odd rings. Every tested clock preceding the final moment gave identical witness laws. At the first clock exactly two output differences were found with the predicted signs and magnitudes. Direct enumeration of all four-step triangle words reproduced the two-launch site-only and site-and-rail errors. The original even-ring replay was byte-identical. Lean 4.19.0 checked the parity and endpoint-count implications.",
     "review": "Director Z’s XR66 measured odd-ring cases and flagged the even-only proof. A delegated Codex reviewer independently derived the parity lift, extreme-port coefficients, and adaptive launch lower bound and reported 130 separate physical propagation checks. The parent and reviewer share a model family.",
     "standing": "The physical word construction and the coupling and minimax proofs are in the paper. The gate remains open. No frequencies were measured, and the result makes no claim about experiments at later clocks."
+  },
+  "later_winding_clocks_and_finite_launch_read": {
+    "scope": "Sharp right launch, balanced coin, unfiltered ring, known clock, ideal terminal well and rail. The launch test is for two specified order-21 populations on 16 wells, with a fresh phase label on each launch.",
+    "paper": "Later_winding_clocks.md",
+    "checker": "check_later_winding.py",
+    "result": "results/later_winding.json",
+    "lean": "lean/LaterWinding.lean",
+    "sha256": {
+      "checker": "cf11ef7465c19aac74ab62e47d0acd4088495f40c75c5cc4967ee433395c26dd",
+      "result": "74d77bd6c47c7d70357c0d697afa3fb8a50a7817588e61107d82a29bb4994c42",
+      "lean": "b201659e3e9ad263bcb78daf31cd2f93ab7de6b14da92d919d9c5db5ae883708"
+    },
+    "checked": "Normal and optimized Python reproduced the 140-clock scan and 45 ring/order panels. Exact binomial sums enclose both 163-launch risks and the optimal 162-launch power. Lean 4.19.0 checks the tick-144 port numerators by folding signed line amplitudes and the two general prefix implications. A scratch detector shift by two wells failed the named-port test. Restoring the four sites restored the exact output.",
+    "review": "The delegated Codex reviewer received the two populations and a bounded clock search before seeing the chosen tick or mask. After selection the reviewer independently propagated two signed sources on 21 gain residues and reproduced both rates and the 168-launch rule. A separate blind derivation checked the prefix bound on 751 clock panels and supplied the tilted two-step estimate and persistent-label control. The parent and reviewer share a model family.",
+    "standing": "The paper proves the binomial decision optimum for this bit, the analytic suppression bounds and the persistent-label error floor. There are no measured clicks and the best clock and detector for a general mixture remain open."
   }
 }
