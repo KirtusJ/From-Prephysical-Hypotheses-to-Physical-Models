@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Concentration in a twenty-step optical walk](Concentration_in_a_twenty_step_optical_walk.md) | At four steps Cheng et al. plot 0.409. Local powers of two or greater predict at least 0.795. The ordinary ideal gives 0.430 and also exceeds the plotted upper cap. |
 | [Which probability powers preserve the classical velocity law?](Which_probability_powers_preserve_the_classical_velocity_law.md) | For one sharp source, the long-flight velocity distribution identifies the ordinary exponent within a fixed mixture of bin-wise powers. Squaring the intensity of each resolved well concentrates arrivals at the fastest fronts, even after one reflection. |
 | [Four ticks after a recorded walk output](Four_ticks_after_a_recorded_walk_output.md) | A reference flight attached to each science outcome tests the probability power on the same launch. [Three ticks suffice with the joint table](Conditioning_the_three_tick_reference_on_the_science_output.md) under a common rule for grouping the two arrival rails across saved labels. |
 | [Checking a detector after the actual flight prefix](Checking_a_cut_with_the_memory_of_the_actual_flight.md) | Replacing the walker with a probe while preserving the detector's memory tests whether earlier positions change the next read. A four-well example passes every fresh-detector test and changes two later position words. |
