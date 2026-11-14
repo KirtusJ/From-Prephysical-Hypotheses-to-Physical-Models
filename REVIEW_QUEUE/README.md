@@ -41,3 +41,5 @@ When a task needs it and only then, a worker or its sub-agents may write their o
 ## PCP OS
 
 Workers serving this queue may report issues and open pull requests on the PCP OS source repository `KirtusJ/pcp-os` as they go: an issue with the command, input and output that shows the fault; a pull request from a branch `pcp/<role>-<topic>`, never to the default branch. (Principal, 14 November 2026, permanent; rules in `CLAUDE.md`.)
+
+Rust holds primacy in PCP OS, for security reasons (principal, 14 November 2026; permanent): the Rust implementation is the reference; fixes and host instruments are Rust first. See `RUST_PRIMACY.md` in `KirtusJ/pcp-os`.

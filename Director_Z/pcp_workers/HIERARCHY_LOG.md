@@ -177,3 +177,7 @@ The principal supplied the PCP OS source (build 22) and the empty repository `Ki
 ## Workers and the PCP OS repository (14 November 2026, permanent)
 
 Principal: workers can report issues and open pull requests on PCP OS as they go; make it permanent. Written into `CLAUDE.md` (pull requests from sub-agents and workers), all seven agent definitions and the queue readme. A worker without GitHub tools writes the issue text or patch in its folder and its parent files it. To watch: the first issue or pull request a worker files there, and whether it was needed.
+
+## Rust holds primacy in PCP OS (14 November 2026, permanent)
+
+Principal: PCP OS is primarily Rust; Rust always holds primacy, for security reasons; a permanent note for everyone working on it. Written as `RUST_PRIMACY.md` with `CLAUDE.md` and `AGENTS.md` pointers in `KirtusJ/pcp-os` (session branch, commit `f0d97a2`), and into this repository's `CLAUDE.md`, all seven agent definitions and the queue readme. Consequence for the Store apps: the six proposed apps, if they are to be part of PCP OS, are Rust instruments in the host; the Python scripts in `Director_Z/tools/` stay workspace helpers.
