@@ -1,0 +1,272 @@
+{
+  "wells": 4,
+  "cut_after_well": 1,
+  "source": [
+    1,
+    "R"
+  ],
+  "read_clocks": [
+    2,
+    4,
+    8
+  ],
+  "word_denominator": 256,
+  "ideal_counts": {
+    "000": 100,
+    "001": 12,
+    "010": 20,
+    "011": 60,
+    "100": 12,
+    "101": 4,
+    "110": 28,
+    "111": 20
+  },
+  "actual_prefix_counts": {
+    "000": 100,
+    "001": 12,
+    "010": 20,
+    "011": 60,
+    "100": 12,
+    "101": 4,
+    "110": 12,
+    "111": 36
+  },
+  "armed_prefix_mass": "1/4",
+  "terminal_word_tv": "1/16",
+  "all_probes_at_second_read": [
+    {
+      "source": 0,
+      "read_tick": 1,
+      "label": 0,
+      "dark_port": [
+        0,
+        0
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 0,
+      "read_tick": 1,
+      "label": 1,
+      "dark_port": [
+        0,
+        0
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 0,
+      "read_tick": 2,
+      "label": 0,
+      "dark_port": [
+        0,
+        0
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 0,
+      "read_tick": 2,
+      "label": 1,
+      "dark_port": [
+        0,
+        0
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 1,
+      "read_tick": 1,
+      "label": 0,
+      "dark_port": [
+        0,
+        1
+      ],
+      "paths_in_label": 1,
+      "fresh": "1/8",
+      "armed": "1/8",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 1,
+      "read_tick": 1,
+      "label": 1,
+      "dark_port": [
+        0,
+        1
+      ],
+      "paths_in_label": 1,
+      "fresh": "1/8",
+      "armed": "1/8",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 1,
+      "read_tick": 2,
+      "label": 0,
+      "dark_port": [
+        0,
+        1
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 1,
+      "read_tick": 2,
+      "label": 1,
+      "dark_port": [
+        0,
+        1
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 2,
+      "read_tick": 1,
+      "label": 0,
+      "dark_port": [
+        1,
+        1
+      ],
+      "paths_in_label": 1,
+      "fresh": "1/8",
+      "armed": "1/8",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 2,
+      "read_tick": 1,
+      "label": 1,
+      "dark_port": [
+        1,
+        1
+      ],
+      "paths_in_label": 1,
+      "fresh": "1/8",
+      "armed": "1/8",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 2,
+      "read_tick": 2,
+      "label": 0,
+      "dark_port": [
+        1,
+        1
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 2,
+      "read_tick": 2,
+      "label": 1,
+      "dark_port": [
+        1,
+        1
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "1/2",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 3,
+      "read_tick": 1,
+      "label": 0,
+      "dark_port": [
+        2,
+        1
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 3,
+      "read_tick": 1,
+      "label": 1,
+      "dark_port": [
+        2,
+        1
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "1/2",
+      "actual_prefix": "1/8"
+    },
+    {
+      "source": 3,
+      "read_tick": 2,
+      "label": 0,
+      "dark_port": [
+        2,
+        1
+      ],
+      "paths_in_label": 0,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    },
+    {
+      "source": 3,
+      "read_tick": 2,
+      "label": 1,
+      "dark_port": [
+        2,
+        1
+      ],
+      "paths_in_label": 2,
+      "fresh": "0",
+      "armed": "0",
+      "actual_prefix": "0"
+    }
+  ],
+  "correlated_control": [
+    {
+      "degeneracy": 2,
+      "correlated_source_dark": "1",
+      "separate_mode_and_mixed_memory_dark": "1/4",
+      "ratio": "4"
+    },
+    {
+      "degeneracy": 4,
+      "correlated_source_dark": "1",
+      "separate_mode_and_mixed_memory_dark": "1/16",
+      "ratio": "16"
+    },
+    {
+      "degeneracy": 8,
+      "correlated_source_dark": "1",
+      "separate_mode_and_mixed_memory_dark": "1/64",
+      "ratio": "64"
+    },
+    {
+      "degeneracy": 16,
+      "correlated_source_dark": "1",
+      "separate_mode_and_mixed_memory_dark": "1/256",
+      "ratio": "256"
+    }
+  ]
+}
