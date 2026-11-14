@@ -1,0 +1,28 @@
+{
+ "reader": "calibration_reader.py",
+ "key": "key_fraction.json",
+ "key_sha256": "cbe087ee11fabe0c344e1c13d7c80795f7f36b148474a1ea283d0a19d0a4cc66",
+ "reply": "qwen_reply.txt",
+ "reply_sha256": "22b420ce7f1f748feaad8ea26b56041965ac52d02f5d296f301270152d98de61",
+ "rows": [
+  {
+   "item": "1",
+   "property": "value",
+   "kind": "fraction",
+   "verdict": "FOR",
+   "note": "last number read: 3/16"
+  },
+  {
+   "item": "1",
+   "property": "fraction only",
+   "kind": "fullmatch",
+   "verdict": "AGAINST",
+   "note": "whole item text against the pattern"
+  }
+ ],
+ "counts": {
+  "FOR": 1,
+  "AGAINST": 1,
+  "NEEDS_READER": 0
+ }
+}
