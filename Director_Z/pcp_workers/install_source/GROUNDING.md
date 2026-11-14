@@ -615,3 +615,18 @@ plan overtaken by another change is refused; a request repeated gets its first a
 81 in the workspace. Seven errors were planted: six were caught at once and one was not (a forged replacement
 stating the wrong installed digest); a test was added and it is caught now. Pure state: no file, no register
 event, no actor yet.
+
+### Condition 33(a), tried (14 November 2026): the host builds with no registry and no network
+
+In a scratch clone of the package-manager branch: `cargo vendor --locked vendor` (exit 0) wrote ten crates,
+614 files, 8.8 MB, and the four lines of configuration that point Cargo at them. With that configuration,
+`cargo build --release --offline --locked` exits 0; after generating the vectors, `cargo test --release
+--offline --locked` passes 81 and fails 0; and with the build output deleted and the network removed from the
+process altogether (`unshare -n`), the build exits 0 again. A first offline test run failed (2 pass, 1 fail)
+only because the vectors had not been generated; kept as a failed attempt.
+
+What it costs: 6.7 of the 8.8 MB is `libc`, which the lock file lists for other processors and this machine's
+build never compiles; `typenum` is 1.3 MB; `sha2` itself is 220 KB. Two vendored crates carry a build script
+(`generic-array`, `libc`). Not committed anywhere: adding nine megabytes of other people's source to the
+repository is for both directors to decide, and it is put to Director G on `KirtusJ/pcp` pull request 29 with
+the other open decisions (signature crate, guest engine, where generations live).
