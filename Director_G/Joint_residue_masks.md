@@ -1,0 +1,59 @@
+# Which endpoint laws survive joint position masks on two cyclic walks?
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+Two distinguishable walkers start together at site zero on their right rails. From this one preparation, a sequence of joint position masks can put any prescribed signed multiset of **two separate sheet residues** on the right-right port and any other such multiset on the left-left port at the same well pair. This suffices to classify all stationary nonnegative additive endpoint scores satisfying one common continuation law. The resulting family contains counting and squared joint-character sums. Which weights describe an instrument remains an experimental question.
+
+## Walk and score
+
+Each walker uses the signed Hadamard walk on the ring of $N=4M$ sites, $M\ge3$. At $x$, a step to R or L moves one site right or left and adds $\lfloor x/2\rfloor\bmod M$ to that walker's sheet. Only an incoming L followed by an outgoing L contributes a minus. A simultaneous step has four possible successors. Its sign is the product of the two signs. Thus a joint history has gain in $G=\{\pm1\}\times A$, where $A=(\mathbb Z/M)^2$. Both sites have the same parity at every tick. The theorem concerns this accessible component.
+
+A product event in **time** keeps the histories whose successive *pairs* of sites belong to prescribed sets $A_t$. Each mask accepts all four rail pairs at an admitted well pair and preserves coherent alternatives there. An admitted set may correlate the walkers. Separate local masks give only Cartesian sets. For example, keep $\{(-1,-1),(1,1)\}$ at tick one, $\{(0,0)\}$ at two, and $\{(1,1)\}$ at three. The surviving joint words are $(RLR,RLR)$ and $(LRR,LRR)$, both positive on RR. Their residues are $(0,0)$ and $(-1,-1)$. Using separate first masks admits both additional off-diagonal residue pairs. For separate masks from this source the signed residue differences at any fixed joint port form an outer product of the two single-walker signed vectors. The example has rank two. [Exact joint and Cartesian control](results/joint_residue_preparation.json)
+
+At oriented joint port $v$, write $U_v$ for the surviving nonnegative multiplicities of each gain. Assume a finite nonnegative score $F_v(U_v)$, with $F_v(0)=0$, stationary across depths and mask programs. The score of an event is the sum over its terminal ports. Some attainable score must be positive. Assume that extending each surviving history by *every* simultaneous successor multiplies the event score by a constant $k$ for every finite position-mask program. These premises allow a different initial score function for each port. They already stipulate dependence on the gain multiset and addition across the named records.
+
+## Preparing both diagonal inputs
+
+Use the compact single-walker construction on both coordinates with the same storage schedule. In moving deficits $d$, a well is $x=x_0+t-2d\bmod N$. A right step holds $d$, a left step increases it. Reservoir, active stock and parked stock begin each control at relative deficits 0, 2 and 4, all on R. The five-step stock word is $S=LRRLR$. For a reservoir word, $V=RLLRR$ changes its sign relative to $S$, while $W=RLRLR$ preserves sign and adds one sheet unit relative to $S$. All three end on R at the same well. The stock word and either reservoir alternative are isolated by their prescribed whole-position masks even at $M=3$. [Single-walker construction and five-tick isolation table](Preparing_signed_sheet_residues.md#a-compact-construction-on-every-original-ring)
+
+During a joint control, keep the **pairs** on the reservoir, active-stock, and parked-stock paths. Each coordinate of the reservoir pair may choose $S,V,W$ independently. Stock always takes $(S,S)$. Any unintended transfer between two named paths would require an unintended arrow between their corresponding single-walker paths, excluded by the isolation table. At deposition the reservoir forks. Keep only the paired reservoir successor or the paired traveling successor, excluding both crossed choices. The traveling pair takes LLR in each coordinate to join stock 2. Transfer the future RR stock from 2 to 4 by LLR on both coordinates, then build the future LL stock at 2. Remove the reservoir and transfer the latter stock with two L steps while the parked stock takes R. The final site pair has precisely two possible arrival labels, RR and LL. Transfer signs in the two coordinates multiply, and all transfer residues enter the calculation of each complete word. This procedure uses at most four *paired* wells per mask.
+
+For each requested history reserve $M$ five-tick controls and a three-tick deposition. Compute that history's terminal sign and both absolute residues using the controls already programmed and baseline $S$ in future controls. Use $V$ in the first control of one coordinate if its joint sign must flip. Use $W$ in the other $M-1$ controls as many times as required in each coordinate to set that coordinate's residue. The calculation includes the preparation prefix, all coasts and final transfers. After deposition the history always takes the stock path in subsequent controls, so later switches cannot alter it. Chronological programming gives all the requested bins, including duplicate gains, cancelling pairs, and empty rail inputs.
+
+To reach a target $(x,y)$ from the fixed origin, choose $d=((x-y)\bmod N)/2$, an integer on the accessible component. First retain just the positions of $R^{N+1}$ in coordinate one and $L^dR^{N+1-d}$ in coordinate two at each tick. Both finish on R and the two new starting sites differ by $y-x$ in second-minus-first order modulo $N$. Both coordinates subsequently have equal net displacement at the schedule's end. For $K$ requested items the main schedule takes $(5M+3)K+6+P$ ticks. The moving origin advances $2MK$ deficits; the terminal stock is four deficits farther. Choose the common coast $0\le P<N$ to place the first stock at $x$; the second is then at $y$. The source prefix costs another $N+1$ ticks. Position and clock references, coherent joint masks, and the duration of a physical implementation are distinct apparatus inputs. [Compiler and independent four-successor replay](check_joint_residue_preparation.py)
+
+## Homogeneity from one unrestricted tick
+
+Any multiset can occupy one *arbitrary* rail pair alone. To address $(x,a;y,b)$, prepare it on RR at the unique predecessor well pair for outputs $a,b$, with the two common departure gains subtracted. Keep only $(x,y)$ on the next tick. The incoming RR contributes no coin minus. The four destination pairs from that one predecessor are distinct. This gives the single-input continuation equation at each accessible port, including RL and LR.
+
+Fix a multiset $U$. On the finite gain lift let $h(v,g)=F_v(gU)$, where $g$ multiplies all gain labels in $U$. Writing $e_{vw}$ for the gain of a native edge gives $\sum_{v\to w}h(w,ge_{vw})=k h(v,g)$. Every lifted state has four incoming and four outgoing edges. Summation yields $k=4$ for any $U$ with some positive score, hence for all programs by the common-factor premise.
+
+The lifted graph is strongly connected. In the base, any accessible target rail pair can be reached in a common sufficiently large number of steps of the appropriate parity. In each coordinate prescribe its last direction and fill the previous steps to give the requisite displacement modulo $N$. At the joint origin on RR, use either RLR or LRR in one coordinate and hold the other coordinate's three-step word fixed. The alternatives have equal signs and terminal port but differ by one in that coordinate's departure gain. Append an identical base route back to the joint origin. Closed-walk gains at this port form a subgroup of the finite gain group, so taking the quotient of these loops yields a pure unit shift in the chosen coordinate. Both residue axes are obtained this way. The paired closed words RLRLLR and LLLRRR each return to the origin on R, and their signs multiply to minus. Their two residues can already be undone by the unit shifts. Hence every gain is a closed-walk gain. Routes to and from the origin now connect all lifted states.
+
+At $k=4$, $h$ equals its average over the four successors. Its maximum propagates around the finite strongly connected lift, so $h$ is constant. For each $U$ this gives a common function $F(U)$ at all ports and invariance under translating the two residues independently or reversing every sign.
+
+## Classification of the joint score
+
+Prepare $U$ on RR and $V$ on LL at the same well pair. Both inherit the same pair of departure shifts. RR histories keep their sign for all four outputs. LL histories keep it for RR and LL and reverse it for RL and LR. Ignoring the two common shifts by the preceding invariance, the continuation equation reads
+
+$$
+ 2F(U+V)+2F(U+JV)=4F(U)+4F(V),
+$$
+
+where $J$ reverses every sign. The equality holds for arbitrary $U,V$; simultaneous preparation of four independent incoming multisets is unnecessary.
+
+The signed multiset block theorem applies with one opposite-sign pair for each $r\in A$. For clarity, adding $C_r=\{(+,r),(-,r)\}$ increases $F(U)$ by $F(C_r)$, since $JC_r=C_r$. Translation makes $a=F(C_r)/2$ independent of $r$. Subtracting $a|U|$ leaves a function only of $D_r(U)=n_{+,r}-n_{-,r}$, since cancelling pairs may then be deleted. The displayed identity reduces to the parallelogram equation on $\mathbb Z^{M^2}$. Its polarization gives a real symmetric quadratic form on this lattice. Nonnegativity yields $a\ge0$, and evaluating on large integer multiples of a fixed difference vector makes the quadratic form nonnegative on integer vectors, hence on real vectors by scaling and density. [Polarization and signed multiset classification](Multiset_block_law.md)
+
+Invariance under all translations of $A$ makes the quadratic matrix a convolution matrix on $A$. The finite two-dimensional Fourier basis diagonalizes it. Its eigenvalues are nonnegative, and reality identifies opposite frequencies. Writing $\mathcal O$ for the orbits of $\nu\mapsto-\nu$ on $A$, the normalized result is
+
+$$
+ F(U)=a|U|+\sum_{[\nu]\in\mathcal O} b_{[\nu]}
+ \left|\sum_{r\in A}D_r(U)\exp(2\pi i\,\nu\cdot r/M)\right|^2,\qquad
+ a,b_{[\nu]}\ge0,\quad a+\sum_{[\nu]}b_{[\nu]}=1 .
+$$
+
+Normalization is by the common singleton score, positive by nontriviality and the nonnegative decomposition. Conjugation here is *simultaneous* on the two frequencies. For instance $(s,t)$ and $(s,-t)$ need not share a coefficient.
+
+Conversely, counts multiply by four on an unrestricted tick. In each character, the four complex input sums at a well pair undergo the unnormalized $H\otimes H$, where $H(u,v)=(u+v,u-v)$, and acquire a common unit departure phase. The four squared moduli sum to four times the incoming squared norm. Each oriented destination has a unique predecessor well pair, so summing proves continuation for every mask program and for arbitrary simultaneous occupation of all four rails. With the stated launch normalization, a terminal accepted score at depth $T$ has denominator $4^T$ if these scores describe probabilities per original launch.
+
+The checker exercised all 1,304 accessible well pairs across five ring orders. At $M=3,4$ it prepared every sign and absolute residue pair on both diagonal inputs simultaneously. It also tested each isolated output rail pair and the unrestricted successor signs. These checks are finite model calculations. An implementation in separated laboratories would need an apparatus for coherent joint masks. Determining the weights and the physical length and time scales would require additional records. [All checked endpoints, sign controls and adverse Cartesian replacement](results/joint_residue_preparation.json)

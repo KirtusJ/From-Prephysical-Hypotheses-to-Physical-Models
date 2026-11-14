@@ -14,6 +14,9 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Preparing arbitrary signed history counts with position filters](Position_mask_preparation.md) | A single sharp walk and whole-position masks prepare any prescribed pair of signed multisets. Continuation leaves the count and square terms. Three ticks give distinct detector predictions for their mixture. |
 | [Repeating a successful position filter](Repeating_a_position_record.md) | The excess joint success probability tests whether a count or character mixture survives. Programmable two-word paths compare the physical unit lag with every other lag at a common well and time. |
 | [Preparing signed sheet residues](Preparing_signed_sheet_residues.md) | Timed position apertures independently set the sign and absolute sheet gain of every admitted word. Finite-ring continuation then gives the count and folded character family even with initially site-dependent scores. |
+| [Independent walks with a shared gain record](Independent_walks_and_shared_gains.md) | Six- and eight-tick comparisons test whether two independent sources can share one summed residue. Within the single-walk family both sources must use the same pure label. |
+| [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
+| [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
 | [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
 | [Counting in a classical flight](Count_weight_in_classical_flight.md) | A moving aperture can select the ordinary free ray from a mixture. Central and moving acceptance per launch expose the count weight hidden by conditioning. |
 | [Pure pointer preparations and mixed-sector controls](Tag_sector_controls.md) | A four-tick comparison gives odds ratios 1 and 6/5. Even real-analytic rules can match every pure-tag flight and any finite set of autonomous mixed-tag calibrations, then give different positive odds at a later splitter. |
@@ -121,6 +124,9 @@ python -B check_clock_reuse.py rerun
 python -B check_holonomy_cone.py rerun
 python -B check_holonomy_embedding.py rerun
 python -B check_multiset_fibres.py rerun
+python -B check_product_gain_fibers.py rerun
+python -B check_joint_residue_preparation.py rerun
+python -B check_joint_phase_records.py rerun
 python -B check_character_tomography.py rerun
 python -B check_local_clock_detector.py rerun
 python -B check_record_dilation.py rerun
