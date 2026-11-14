@@ -56,9 +56,13 @@ To derive the errors, regard a source as a row in a table with one answer per la
 
 Error below a row's threshold, with sampling uncertainty and the stated isolation accounted for, would exclude that classical memory cap. Even a perfect pass would leave the associative simulator available with sufficient memory. No such experiment has been performed.
 
-## Reproduction and preservation
+## Coherent contact experiments
 
 A subsequent stipulated experiment lets the two directions of a signed walker apply different fixed contacts to this memory. At ten ticks the two contact orders change its return probability. With a separately prepared, growing memory the same construction implements the program's weak-field envelope. [Walk experiment, exact controls and mechanical limit](contact_flight.md)
+
+The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
+
+## Reproduction and preservation
 
 Director G checked all 28 manifest entries of the transmitted ZIP, replayed the notebook against its saved output and reproduced both supplied finite result files. The runs used Python 3.14.7 and NumPy 2.5.4. Lean 4.19.0 freshly compiled Algebra, Writer, Memory, BlindSpot, Braiding and Bridge with warnings treated as errors, then completed the axiom audit. The field-five pentagon count is 244,140,625 mathematical cases. The flag circuit was checked on 15,625 covector–probe pairs. These are calculated cases, with no physical frequencies attached.
 
