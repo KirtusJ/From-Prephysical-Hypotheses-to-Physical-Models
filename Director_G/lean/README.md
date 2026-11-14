@@ -101,4 +101,4 @@ The same file proves the marginal upper and joint lower count inequalities for a
 
 [CrossedCoinPairs.lean](CrossedCoinPairs.lean) checks the table partition and the covariance rearrangement used in the [contact partner comparison](../Reassigning_the_two_coin_partners.md).
 
-[PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the single-predecessor norm identity for [three position records between coherent flights](../Diffusion_from_three_position_records.md).
+[PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the norm identity conditional on the single-predecessor premise for [three position records between coherent flights](../Diffusion_from_three_position_records.md).
