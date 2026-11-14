@@ -1,0 +1,215 @@
+{
+  "analytical_variational_certificate": {
+    "chi_lower": 15.714961024450556,
+    "diagonal_explicit_trial_upper": 16.861854694096095,
+    "diagonal_trial_direct_quadrature": 16.59049202248434,
+    "phi_lower": 1.3063945294843613,
+    "positive_binding_margin_proved_lower": 0.1595008598388219,
+    "separated_lower_sum": 17.021355553934917
+  },
+  "composite_coupled_fluctuations": {
+    "1000": [
+      -0.006494369,
+      1.646043039,
+      4.361240978,
+      5.949637349
+    ],
+    "1600": [
+      -0.002536552,
+      1.646498862,
+      4.361456066,
+      5.949656137
+    ],
+    "600": [
+      -0.018061774,
+      1.644722945,
+      4.360614094,
+      5.949582525
+    ]
+  },
+  "exact_structure": {
+    "bulk_probe_mass_squared": 5.8,
+    "late_H": 0.003333333333333333,
+    "vacua": "(\u00b1sqrt(21/5), \u00b1sqrt(4/5))",
+    "vacuum_epsilon": 0.9905669811320752
+  },
+  "gravitational_horizon_ratios": {
+    "chi": 5.3078742988963645,
+    "diag": 5.501532472358989,
+    "phi": 0.4359395952205883
+  },
+  "homogeneous_background": {
+    "chi_at_t3": 2.7713177091988643,
+    "epsilon_at_t3": 0.9948193064376613,
+    "initial_chi": 0.0001,
+    "initial_epsilon": 0.00010024997493750626,
+    "initial_phi": 0.01,
+    "late_H_numeric": 0.0033336256406512337,
+    "late_chi": 2.0494034482902808,
+    "late_epsilon": 0.9905671023667549,
+    "late_phi": 0.8949705504037663
+  },
+  "limitations": [
+    "Model begins after a stipulated prephysical-to-physical bridge; not a derivation of spacetime",
+    "Static wall profiles are flat-background solutions with psi=0, not self-gravitating configurations",
+    "A strict tension inequality is proved using a trial profile, not a theorem of global dynamic stability",
+    "Instantaneous adiabaticity is not an invariant particle count",
+    "Reference gradient projector is defined only when X3 gradient remains nonzero spacelike",
+    "Ordinary chiral matter and gauge sector are not constructed",
+    "Cosmological wall networks and quantum backreaction are unsolved"
+  ],
+  "mode_tests": {
+    "0": {
+      "max_instantaneous_adiabaticity": 0.7786448091459157,
+      "omega": 1.6678692389586154,
+      "time": 7.971
+    },
+    "1": {
+      "max_instantaneous_adiabaticity": 0.6609983341395765,
+      "omega": 1.8290566678373612,
+      "time": 7.942
+    },
+    "10": {
+      "max_instantaneous_adiabaticity": 1.4208376509506215,
+      "omega": 1.6963548859338327,
+      "time": 1.653
+    },
+    "3": {
+      "max_instantaneous_adiabaticity": 1.1413745618617643,
+      "omega": 1.4532466161494346,
+      "time": 1.922
+    },
+    "30": {
+      "max_instantaneous_adiabaticity": 1.4085301759502107,
+      "omega": 1.7919737291810935,
+      "time": 1.379
+    }
+  },
+  "parameters": {
+    "M": 30.0,
+    "a_vac": 2.04939015319192,
+    "b_vac": 0.8944271909999159,
+    "delta_squared": 0.04,
+    "epsilon_seed": 0.0001,
+    "reference_fX": 0.03,
+    "rho_lambda": 0.03
+  },
+  "scope": "fictional conditional field theory; fixed-flat static defects are not full gravitating wall network solutions",
+  "title": "Iris F three-wall refinement, with background and scattering cross-tests",
+  "wall_sectors": {
+    "chi": {
+      "core_chi": 0.0,
+      "core_phi": 0.5898369369193611,
+      "first_integral_residual": 5.273754766221828e-10,
+      "scattering": {
+        "10.0": {
+          "R": 0.996330116997377,
+          "T": 0.0036698830134720595,
+          "flux_error": 1.084909939663703e-11
+        },
+        "2.5": {
+          "R": 0.995061010461708,
+          "T": 0.004938989539716568,
+          "flux_error": 1.4246381851990009e-12
+        },
+        "20.0": {
+          "R": 0.1370221564904502,
+          "T": 0.8629778495810593,
+          "flux_error": 6.0715095173691225e-09
+        },
+        "3.0": {
+          "R": 0.9938888762150232,
+          "T": 0.0061111237862630985,
+          "flux_error": 1.2863043963307064e-12
+        },
+        "4.0": {
+          "R": 0.9962697858470164,
+          "T": 0.0037302141571342526,
+          "flux_error": 4.15067979986361e-12
+        },
+        "6.0": {
+          "R": 0.9975643238283662,
+          "T": 0.0024356761757100645,
+          "flux_error": 4.076294857213725e-12
+        }
+      },
+      "tension_fixed_flat": 15.923622896689094
+    },
+    "diag": {
+      "core_chi": 0.0,
+      "core_phi": 7.733349670342252e-34,
+      "first_integral_residual": 4.883595750015957e-10,
+      "scattering": {
+        "10.0": {
+          "R": 0.9960205179901636,
+          "T": 0.003979482021832814,
+          "flux_error": 1.1996403870284666e-11
+        },
+        "2.5": {
+          "R": 0.9942885777167964,
+          "T": 0.005711422285823511,
+          "flux_error": 2.6199042935104444e-12
+        },
+        "20.0": {
+          "R": 0.06256995885300058,
+          "T": 0.9374300476896643,
+          "flux_error": 6.542664854336522e-09
+        },
+        "3.0": {
+          "R": 0.9949358178326564,
+          "T": 0.0050641821705704314,
+          "flux_error": 3.226752198770555e-12
+        },
+        "4.0": {
+          "R": 0.9966554339972753,
+          "T": 0.0033445660061522118,
+          "flux_error": 3.4274805216227833e-12
+        },
+        "6.0": {
+          "R": 0.9976048826116953,
+          "T": 0.002395117392375431,
+          "flux_error": 4.070743742090599e-12
+        }
+      },
+      "tension_fixed_flat": 16.50459741707697
+    },
+    "phi": {
+      "core_chi": 2.003581695066303,
+      "core_phi": 0.0,
+      "first_integral_residual": 3.1449953752371584e-11,
+      "scattering": {
+        "10.0": {
+          "R": 7.472832562001812e-22,
+          "T": 1.0000000033771868,
+          "flux_error": 3.377186752473449e-09
+        },
+        "2.5": {
+          "R": 0.09938943247532164,
+          "T": 0.9006105680430114,
+          "flux_error": 5.183331541758207e-10
+        },
+        "20.0": {
+          "R": 8.767918176022647e-26,
+          "T": 1.0000000066172128,
+          "flux_error": 6.617212777726422e-09
+        },
+        "3.0": {
+          "R": 0.0003135088023232779,
+          "T": 0.9996864920154644,
+          "flux_error": 8.177876154036312e-10
+        },
+        "4.0": {
+          "R": 2.1917428821097244e-07,
+          "T": 0.9999997821902135,
+          "flux_error": 1.3645016228025497e-09
+        },
+        "6.0": {
+          "R": 1.5746487930438807e-12,
+          "T": 1.000000002039016,
+          "flux_error": 2.0405908074394574e-09
+        }
+      },
+      "tension_fixed_flat": 1.307818785661765
+    }
+  }
+}

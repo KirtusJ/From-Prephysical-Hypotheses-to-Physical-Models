@@ -41,4 +41,23 @@ B's handoff titled `Director_B_Candidate_V3_Weyl_Positivity_Audit` examines **A'
 | B's subsequent review | B challenged the selection claim against the original four-context example and preserved its conditional complete-record comparisons. | B reports nonidentification in scope for the quantum-selection claim. This is a cross-review of C's decision and carries its own checking scope. [B's eight findings](sources/nov11/b-to0-withdrawal-findings.csv) |
 | FAR-1, subsequent stipulated specimen | The Finite Amplitude-Record Universe adds complex amplitude dynamics, recording instruments and a scalar size register. Its comparison table includes the earlier contextual example. | FAR-1's specification retains TO-0's withdrawal and describes its own selection as selection for stipulation. Its full packet is already in the edition. [FAR-1 overview](../edition/NEGATIVE_CONTROLS/FAR-1/Toy_Universe_Overview.md) · [FAR-1 specification](../edition/NEGATIVE_CONTROLS/FAR-1/Toy_Universe_Specification.md) |
 
+## Internal models of TO-0 and FAR-1
+
+Director C specified four different joint laws for the same TO-0 contexts. In each case the two local marginals are uniform. TO-0's withdrawal concerns the claim that context compatibility selects a physical law. The individual laws below remain specified comparators. [Original TO-0 tables and controls](sources/nov11/c-to0-construction.md)
+
+| TO-0 model | Distinguishing rule and prediction |
+|---|---|
+| **Local shared bit** | Both observers output the same uniform bit at all settings. Its CHSH value is 2. |
+| **Quantum reference** | A supplied Bell state, Pauli settings and Born read give CHSH \(2\sqrt2\). |
+| **PR box** | Select uniformly from the two outputs satisfying \(a\oplus b=xy\). CHSH reaches 4. |
+| **Uniform joint outputs** | Each ordered pair has probability \(1/4\) in each setting. All four correlations vanish. |
+
+FAR-1 imports its probability and evolution rules. Its specification distinguishes the following constructions from the external Bell sample-size control. [FAR-1 specification, §§4–8](../edition/NEGATIVE_CONTROLS/FAR-1/Toy_Universe_Specification.md) · [Retained outputs](../edition/NEGATIVE_CONTROLS/FAR-1/verified_toy_results.json)
+
+| FAR-1 instance or comparator | Distinguishing rule and prediction |
+|---|---|
+| **Single-site interference with a tunable record** | Two balanced operations surround a phase and a recording channel of strength \(\kappa\). The return is \([1+(1-\kappa)\cos\phi]/2\), with complete dephasing removing phase dependence. |
+| **Stationary binary identity and flip histories** | On a uniform dephased input, the identity preserves the state label and the flip changes it every step. Their one-time distributions agree while their consecutive records differ. |
+| **Four-site matter and scale instance** | A ring state is propagated and recorded while a prescribed scale update uses the matter observable. At step five the specified launch gives scale 1.565839943. The unconditioned state loses purity in this run. This checks the toy's dynamics under its own rules. |
+
 The source index identifies each original archive, member path, byte count and SHA-256. It also identifies the nested V4 archive. Each of the sixteen preserved documents matches its local archive member byte-for-byte and has its digest listed in the corresponding source manifest. These checks establish the identities of the local records. [Source index](sources/nov11/source_index.json)
