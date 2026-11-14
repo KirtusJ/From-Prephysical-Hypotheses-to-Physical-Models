@@ -73,6 +73,71 @@ def bounds(x):
     return [decimal(lo), decimal(lo + int(rem != 0))]
 
 
+def switched_read(right, left, efficiencies, crossed):
+    """Physical launch probabilities in counter order (A, B, no named count)."""
+    at_a, at_b = (left, right) if crossed else (right, left)
+    a = at_a * efficiencies[0]
+    b = at_b * efficiencies[1]
+    return a, b, 1 - a - b
+
+
+def detector_exchange(right, left, boundary, label_power):
+    total = right + left
+    rival = right / total
+    efficiencies = (F(1), F(1, 2))
+    direct = switched_read(right, left, efficiencies, False)
+    crossed = switched_read(right, left, efficiencies, True)
+    decoded_right = (direct[0] + crossed[1]) / 2
+    decoded_left = (direct[1] + crossed[0]) / 2
+    rate = decoded_right + decoded_left
+    require(rate == F(111, 1024) and decoded_right / rate == rival, "decoded counter assignments")
+
+    budget = 18089
+    timeout = binomial_cdf(budget, HITS - 1, rate)
+    power = (1 - timeout) * label_power
+    previous_power = (1 - binomial_cdf(budget - 1, HITS - 1, rate)) * label_power
+    require(previous_power < POWER <= power, "deadline with unequal counters")
+
+    # Choosing the assignment once per hit weights the two normalized orientations equally.
+    direct_control = switched_read(F(3, 4), F(1, 4), efficiencies, False)
+    crossed_control = switched_read(F(3, 4), F(1, 4), efficiencies, True)
+    held = (direct_control[0] / (1 - direct_control[2]) +
+            crossed_control[1] / (1 - crossed_control[2])) / 2
+    require(held == F(51, 70) != F(3, 4), "holding the detector assignment through misses")
+
+    # Compare the complete counter log at either orientation for two upstream loss models.
+    autonomous_arrivals = F(49, 512) * F(40, 49), F(25, 512)
+    rival_arrivals = right, left * F(25, 34)
+    require(autonomous_arrivals == rival_arrivals == (F(40, 512), F(25, 512)), "upstream alias")
+    for swapped in (False, True):
+        require(switched_read(*autonomous_arrivals, efficiencies, swapped) ==
+                switched_read(*rival_arrivals, efficiencies, swapped), "switch-resolved counter law")
+
+    def tilted(q, ratio):
+        return ratio * q / (1 - q + ratio * q)
+
+    critical_squared = (boundary / (1 - boundary)) / (rival / (1 - rival))
+    require(critical_squared == F(257, 220), "critical squared throughput bound")
+    for kappa in (F(1), F(21, 20), F(27, 25), F(11, 10)):
+        lower, upper = tilted(boundary, 1 / kappa), tilted(rival, kappa)
+        require((lower > upper) == (kappa**2 < critical_squared), "residual throughput threshold")
+        for delta in (F(0), F(1, 10), 1 - boundary):
+            observed_mean = (tilted(boundary + delta, 1 / kappa) +
+                             tilted(boundary - delta, 1 / kappa)) / 2
+            require(observed_mean >= lower, "least favorable null sign fractions")
+    return {
+        "counter_efficiencies": [str(e) for e in efficiencies],
+        "rival_named_hit_per_launch": str(rate),
+        "raw_launch_cap": budget,
+        "rival_timeout": bounds(timeout),
+        "rival_unconditional_power": bounds(power),
+        "rival_power_one_fewer_launch": bounds(previous_power),
+        "held_assignment_right_at_true_three_quarters": str(held),
+        "matched_upstream_arrivals": [str(p) for p in autonomous_arrivals],
+        "critical_squared_residual_ratio": str(critical_squared),
+    }
+
+
 def calculate():
     depth = 6
     pure = F(1, 2) + F(depth, depth**2 + 1)
@@ -142,6 +207,7 @@ def calculate():
             "named_hit_per_launch": str(raw_rate),
             "null_rejection_enclosure": bounds(wrong_power),
         },
+        "detector_exchange": detector_exchange(right, left, boundary, label_power),
     }
 
 
