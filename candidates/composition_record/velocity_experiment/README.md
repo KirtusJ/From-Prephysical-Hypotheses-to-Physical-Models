@@ -2,6 +2,21 @@
 
 Run nine Hadamard walk ticks and record position after ticks 3, 6 and 9. Apply a quarter-turn to the coin after each of the first two records. For a fair mixture of sharp right and left launches, equal-sign pulses give the first and third displacements the same sign with probability **1/2**. Opposite-sign pulses give **5/8**. The entire distribution of any two adjacent displacements agrees across the four phase patterns. Independent fair pulse signs give **9/16** for the endpoint sign test. These are ideal circuit predictions. [Two-flight velocity theory](../../../Director_G/Velocity_memory_after_a_position_record.md) · [Three-record phase memory](../../../Director_G/A_phase_kept_between_three_position_records.md)
 
+## Testing the probability rule
+
+The original phase difference also occurs for a nonordinary exponent near 4.665. Three words from one setting distinguish ordinary scoring if a single exponent persists over the three writes. If it can change, the original first write admits a mixture that reproduces all 64 ordinary word probabilities. [Which words identify an exponent](joint_and_conditional_powers.md)
+
+Two modified walks test the probability rule at each position write, including exponents chosen after earlier records. One inserts a T phase after ticks 2, 5 and 8. All 64 words have positive ideal weight. A second uses only real walk matrices and selects the middle coin of each flight by address parity. It has 27 positive and 37 dark words. Both require the specified normalized post-write states and adequate reporting controls. In the addressed version, three terminal words also distinguish the two real algebraic embeddings in a mixture of nonnegative power responses, provided the relative phase of the addressed coin is fixed. [Per-write theorem and finite-data bounds](test_each_write.md) · [Addressed real walk](addressed_embedding.md) · [Bound on the competing embedding from three terminal words](selecting_the_real_embedding.md)
+
+    python -I -B -O check_joint_power.py
+    python -I -B -O check_all_writes.py --qasm uniform_t.qasm --table uniform_tree.csv
+    python -I -B -O addressed_write_test.py --qasm addressed.qasm
+    python -I -B analyze_write_powers.py --ideal uniform-t
+    python -I -B analyze_write_powers.py --ideal addressed-real
+    python -I -B analyze_write_powers.py acquired.json --alpha 0.05
+
+The [per-write analyzer](analyze_write_powers.py) accepts one assigned circuit. Provide JSON fields `schema` set to `write-power-counts-v1`, `protocol` set to `uniform-t` or `addressed-real`, `provenance` set to `hardware` or `simulator`, integer `attempts`, and `counts` keyed by six-bit display words. It includes reports on ideal-dark words, missing launches and simultaneous sampling intervals. The `--ideal` options calculate theoretical means without sampling.
+
 ## Generate and verify
 
 Use Python 3 with the standard library. From this directory:
