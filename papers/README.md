@@ -6,7 +6,7 @@ Open a title for the complete PDF. The filename pairs the series ID with the ful
 
 [Mathematical review and corrections](review/math.md) · [Checks across series](review/independent_checks.md) · [PDF review](review/pdf.md) · [Machine-readable catalog with SHA-256 hashes](catalog.csv)
 
-The [issued edition](../edition/README.md) preserves the original pagination used in its [theorem register](../edition/PROGRAM/registers/THEOREM_REGISTRY.csv). For G7–G10, cite the numbered statement or section and identify the reading copy. The working supplements, [candidate specifications](../candidates/README.md) and [review case studies](../case_studies/README.md) have their own catalogs.
+The [issued edition](../edition/README.md) preserves the original pagination used in its [theorem register](../edition/PROGRAM/registers/THEOREM_REGISTRY.csv). For G7–G10, cite the numbered statement or section and identify the reading copy. The [working supplements](../Director_G/README.md), [candidate specifications](../candidates/README.md) and [review case studies](../case_studies/README.md) have their own catalogs.
 
 ## A · Program
 

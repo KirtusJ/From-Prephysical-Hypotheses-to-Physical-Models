@@ -435,6 +435,10 @@
       "baseline_evidence": "Dephasing gives a stochastic channel, not a Hamiltonian flow (FAR-1; Director A). Recorded walks give the counting measure (G8-01-07). Classical and quantum pure states share a Poisson description (Landsman 1997). No derivation. Edition Z3: in GH-2 position over steps has the distribution of the group velocity (quoted, Grimmett-Janson-Scudo), a linear gain translates the quasi-momentum exactly (G9-01-09), and packets follow the rays of w(k) + Phi x over one period in instances (deviation 0.61 to 0.65 site; no error bound). One walk, one dimension, linear potential only. A staircase of order-4 gains does not follow the ray of its mean field.",
       "evidence_updates": [
         {
+          "sources": ["Velocity_memory_after_a_position_record.md", "A_phase_kept_between_three_position_records.md", "What_two_velocity_records_can_identify.md", "When_detector_resolution_erases_a_classical_track.md"],
+          "result": "The specified sharp-source site-write instrument gives a classical kinetic limit whose directional persistence depends on retained coin coherence, with an iterated long-time Brownian limit for the three velocity Markov kernels. A phase operation preserves adjacent pair data and changes three-flight statistics and the diffusion coefficient. Converting terminal calibration to track concentration requires a bound on the weights of the actually resolved cells. These deductions use supplied dynamics, ordinary probabilities and particular instruments; physically realizing them and deriving interacting classical dynamics remain open."
+        },
+        {
           "prs": [
             102,
             108
@@ -522,6 +526,10 @@
       "name": "Empirical correspondence",
       "baseline_evidence": "None.",
       "evidence_updates": [
+        {
+          "sources": ["../candidates/composition_record/velocity_experiment/README.md", "../candidates/composition_record/velocity_experiment/phase_comparison.md", "../candidates/composition_record/return_memory/experimental_coverage.md"],
+          "result": "Eight three-qubit settings give a prospective nine-tick phase-memory test with an exact 1/8 sign-agreement contrast and two edge controls. Every joint record is represented. The reference calculation agrees with independent path enumeration. Available hardware archives do not supply the assigned phases and both position bits at each clock."
+        },
         {
           "sources": ["../candidates/composition_record/observed_mark_disturbance.md", "../candidates/composition_record/check_observed_mark_disturbance.rs"],
           "result": "In the public superconducting-qubit circuit data, the final-one count after two X rotations was 211/1024 with a prior measurement versus 988/1024 in the unmarked circuit in the 500 ns run column. At 2020 ns the counts were 981 and 995. The replay retains all 39 delay contrasts and checks all 4992 circuit-column totals. This observed operation dependence motivates a non-disturbance control for prechoice walk diagnostics. The archive contains no walk-mode sensor or duration-matched sham for this comparison."
