@@ -6528,5 +6528,15 @@
       "results/ion_pooled_coin.json": "dca6730fa6d39d5c179fb7b64fe0ff747ad04e0b4389491c077bafe447975883"
     },
     "standing": "Published pooled electronic coin with an external motion model. Mean-readout constraints permit source variation. The proposed displacement bound was not independently certified by the cited experiment."
+  },
+  "coherent_selector_at_each_prefix": {
+    "paper": "A_selector_for_each_prefix_split.md",
+    "checker": "check_midpoint_selector.py",
+    "result": "results/midpoint_selector.json",
+    "sha256": {
+      "check_midpoint_selector.py": "eb0c024b943047ff055a63c3d5437142e0fee30d250cee23150589067f1ee5b0",
+      "results/midpoint_selector.json": "6223efd36e2fec8a0eca731d7b2c8283344e4d04675b7e842c7e3a96fcb71b54"
+    },
+    "standing": "Exact passive selector flip and child exchange; retained-tag and sign controls, 1,022 error recurrences, and the 9/16 detector rival. Detector branch comparisons and real walk transfers remain unmeasured."
   }
 }
