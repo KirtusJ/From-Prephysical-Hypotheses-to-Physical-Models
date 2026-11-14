@@ -149,6 +149,15 @@ def exported(word,blocks=1):
     return exported_flights([word]*blocks)
 
 
+def qasm_tick(gate):
+    """H or I on the rail, then increment the left-step counter on L."""
+    if gate not in ("H", "I"):
+        raise ValueError("expected an H or I tick")
+    instructions = ["h q[0];"] if gate == "H" else []
+    return instructions + ["ctrl(3) @ x q[0], q[1], q[2], q[3];",
+                           "ccx q[0], q[1], q[2];", "cx q[0], q[1];"]
+
+
 def exported_flights(words):
     # q[0] coin; q[1:3] low through high address bits. High carry must be
     # computed before lower bits change. y counts left steps modulo eight.
@@ -156,10 +165,7 @@ def exported_flights(words):
     lines=['OPENQASM 3.0;','include "stdgates.inc";','qubit[4] q;',f'bit[{3*blocks}] site_code;']
     for block,word in enumerate(words):
         for gate in word:
-            if gate=="H":
-                lines.append('h q[0];')
-            lines += ['ctrl(3) @ x q[0], q[1], q[2], q[3];',
-                      'ccx q[0], q[1], q[2];','cx q[0], q[1];']
+            lines.extend(qasm_tick(gate))
         if blocks>1:
             lines.append('barrier q;')
         lines += [f'site_code[{3*block+j}] = measure q[{j+1}];' for j in range(3)]
