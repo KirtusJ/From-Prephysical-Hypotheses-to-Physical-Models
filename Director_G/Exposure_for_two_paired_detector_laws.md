@@ -23,3 +23,18 @@ For transcript laws $P,Q$ of affinity $A$, Cauchy–Schwarz applied to the facto
 At the stated budget the resulting necessary and sufficient exposure bounds are about **2.33312 quadrillion** and **6.46968 quadrillion pairs**, respectively. Each pair uses two launches. The exact optimal exposure is between the bounds. The fixed-mass guarantee concerns average error and does not set separate 5% limits on each conditional error. Affinity minimization need not coincide with optimal finite-sample Bayes risk.
 
 The computation forms the cell probabilities as rational numbers and evaluates $1-\rho$ stably as half the sum of $(P-Q)^2/(\sqrt P+\sqrt Q)^2$. A direct affinity calculation cross-checks each node; 60- and 90-digit decimal evaluations gave the same minimizing node and integer ceilings. A same-family second reader checked the adaptive recursion, testing inequalities and 5% constants. These are model-based exposure bounds; there are no measured detector counts, runtime estimate, or evidence here of physical realization.
+
+
+## The five-percent crossing for a repeated mass
+
+Fix one routed mass for the entire experiment. With equal prior probabilities the likelihood-ratio decision is optimal for mean error. Across all such designs the minimum exposure $N_*$ with mean error at most 5% satisfies
+$$3{,}800{,}940{,}000{,}000{,}000 < N_* \le 3{,}800{,}950{,}000{,}000{,}000.$$
+At the upper endpoint the mass $0.123279641138\ldots$ and its reflection each give both conditional errors below 5%. Every other distinct node pair still has optimal average error above 5% at that exposure. Since optimal error cannot increase with extra pairs, only these two reflected masses can attain the first fixed-node crossing. For designs that change the mass between pairs, the earlier lower bound of about 2.33 quadrillion remains applicable. Repeating a fixed mass is permissible in that broader class, so its sufficient bound also improves to 3.80095 quadrillion.
+
+For one ordered observation let $Z=\log(P(z)/Q(z))$. Under each of the two laws separately compute its mean $\mu$, standard deviation $\sigma$, and third centered absolute moment $m_3$. The total log likelihood is a sum of $N$ independent copies. Under $P$ a negative total is an error; under $Q$ a positive total is an error. Since the means have opposite signs, the finite-sample Berry–Esseen inequality encloses each error within
+$$
+\Phi(-\sqrt N\,|\mu|/\sigma)\ \pm\ \frac{0.475\,m_3}{\sigma^3\sqrt N}.
+$$
+The same enclosure applies to either assignment of a tie, by continuity of the normal CDF and its approximation to both one-sided limits. Nodes with identical pair laws have mean error $1/2$. [Shevtsova, iid Berry–Esseen constant](https://arxiv.org/abs/1111.6554)
+
+The [interval checker](check_fixed_exposure.py) constructs the cell probabilities as fractions, evaluates the likelihood moments with 50-decimal interval arithmetic (mpmath 1.3.0), and encloses the normal tail using consecutive partial sums of its alternating integrated exponential series. It checks the average-error lower bound at the lower endpoint for every informative node. At the upper endpoint it checks both conditional upper bounds at the winning mass and the average-error lower bound for every other informative lower-half node. On the winning mass, the upper conditional bounds are below 0.049999904 and 0.049999896 under the global and local populations respectively. A same-family second reader reviewed the handling of ties, sample-size monotonicity and fixed-design scope. The crossing is a model prediction under the pair protocol above; no quadrillion-pair data set was generated.
