@@ -1,0 +1,6 @@
+step0: files extracted
+step2: checker rerun in fresh dir (needs check_hidden_site_records.py from branch): rc 0, bytes identical sha d410333a..., second run FileExistsError (refuses overwrite). Checker docstring gives no run instruction; argparse takes a directory.
+step4: Lean 4.19.0 (installed) on copy lean/H.lean: exit 0; axioms: noMiddleNumerator, numeratorPositive [propext, Quot.sound]; fourPassMiddleZero/One none. Formalized: numerator polynomial identity, d^2+d+1>0, two d=2 values 14/256 and 4/256. Not formalized: walk, a_j ratio, stationary law, ergodicity, general positivity, range, design.
+step3: own/xr52_own.py -> own/xr52_own_result.json (mode x, refusal confirmed). 28 (d,p) cases, 28 qualify, 0 failed predicates. New params p=3/7, 9/10, 1/50, d=7. Stationarity P1 checked (note's checker does not). Design at other p: 6100-launch bounds fail (p=1/5 null bound fails; p=1/2 and d=4 miss bound fails; p=1/10 iid 4.3e-4/launch) - kept as measured rows.
+step5: stored JSON: no outliers; positive_middle_words=511 is a hardcoded sum, alternative_miss_upper_bound a string.
+step1: GAP: "reject independence" in launch design holds only for iid at p=1/3 exactly.
