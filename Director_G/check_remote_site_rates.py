@@ -50,6 +50,23 @@ def probabilities(masses, power):
     return {x: Fraction(n, total) for x, n in weights.items()}
 
 
+def pointer_panel(ticks, control, ring=None):
+    """Propagate both physical record sectors, or a single blank sector if disabled."""
+    state = {(0, False): (1, 0)}
+    for t in range(ticks):
+        outputs = {}
+        for (x, record), (right, left) in state.items():
+            record ^= control == (t, x)
+            for step, rail, amplitude in ((1, 0, right + left), (-1, 1, right - left)):
+                y = (x + step) % ring if ring else x + step
+                outputs.setdefault((y, record), [0, 0])[rail] += amplitude
+        state = outputs
+    masses = {}
+    for (x, _), (a, b) in state.items():
+        masses[x] = masses.get(x, 0) + a*a + b*b
+    return dict(sorted(masses.items()))
+
+
 def check_choice(horizon, change, monitors, expected, reverse):
     states = [walk(horizon, setting) for setting in (None, change)]
     masses = [site_masses(s) for s in states]
@@ -98,7 +115,24 @@ def main():
     fair_dark = Fraction(sum(bits.bit_count() == 3 for bits in range(32)), 32)
     require(first["site_mass_numerators"][1][-1] == 0 and fair_dark == Fraction(5,16),
             "five-tick count component")
+    pointer_rows = {}
+    for record in (first, second):
+        bare, signed = record["site_mass_numerators"]
+        recorded = pointer_panel(record["ticks"], record["change"])
+        require(all(2*value == bare[x]+signed[x] for x, value in recorded.items()),
+                "tracing out the pointer")
+        pointer_rows[record["ticks"]] = recorded
+    ring_bare = pointer_panel(9, None, ring=8)
+    ring_recorded = pointer_panel(9, (7, 1), ring=8)
+    require(list(ring_bare.values()) == [0,128,256,128] and
+            list(ring_recorded.values()) == [64,96,256,96], "ring pointer tables")
+    ring_count = Fraction(sum((9 - 2*b.bit_count()) % 8 == 1 for b in range(512)), 512)
+    require(ring_count == Fraction(17,64), "wrapped dark-well path count")
+    record_limit = probabilities(ring_bare, 0)[5] - probabilities(ring_recorded, 0)[5]
+    require(record_limit == Fraction(1,12), "remote support boundary")
     data = dict(five_ticks=first, seven_ticks=second, marked_count_dark_rate=fair_dark,
+                copied_site_numerators=pointer_rows, ring_bare=ring_bare,
+                ring_copied=ring_recorded, ring_dark_well_fair_rate=ring_count,
                 unmodified_quartic=dict(earlier=early, later=later,
                                        reachable_mass=reachable, missing_mass=deficit))
     out.parent.mkdir(parents=True, exist_ok=True)
