@@ -302,3 +302,38 @@ Composer:
 Effect on the requirements: none is removed. Requirement 4 gains "rotation signed by both the old and the new
 key" (TUF) beside "next key shipped in the current release" (OpenBSD). Requirement 11 becomes "names carry their
 owner, and sources have an explicit priority with the first holder of a name final" (Composer 2).
+
+## 8. Scope, extended by the principal (14 November 2026)
+
+"Likewise, users and machines need to be able to install applications from the store, and modules, the same."
+So the design covers three kinds of thing through one mechanism, and two kinds of installer:
+
+| What is installed | Today [tested or read in the source] | Needed |
+|---|---|---|
+| Plugins (Claude, and Director G's side's packages) | by a marketplace file on a branch; works, with the executable-bit fault open | the same index, pinned and checked |
+| Store applications (instruments) | a fixed table compiled into the host; none can be added without rebuilding the host | an application that can be fetched, checked and installed without replacing the host |
+| Modules | `pcpos module add <register> <folder>` from a local folder only | the same, from the index |
+
+| Who installs | Needed |
+|---|---|
+| A person | one command (and, where there is a screen, one action) that names the thing, shows what it is and where it comes from before anything changes, and can be undone |
+| A machine (an assistant or a program through the tool server, a scheduled job) | the same operation as a tool call with the same checks and the same record; no step that needs a person unless the standard in force says a person must allow it |
+
+Requirements added to section 5:
+
+14. **One mechanism for plugins, Store applications and modules.** One index format, one verifier, one install
+    record. A second path for one kind is a second place for the failures of section 2.
+15. **The same operation for a person and for a machine**, with the same checks. A machine's install is
+    recorded with the machine as actor and is bounded by what the register's standard allows; a person can see
+    and undo it. (From the failures above: a channel that installs for everyone without their say is the Snap
+    and CrowdStrike shape; a check that only a person can pass is no check for a machine.)
+16. **An installed application cannot widen its own reach.** What it may touch is declared in the index entry,
+    shown before install, and enforced by the host, not by the application (the Flatpak lesson: a sandbox the
+    application declares for itself protects nobody).
+
+The hard part, stated now so that it is not discovered later: instruments are compiled Rust inside the host.
+Installing one at run time means either (a) data-only applications interpreted by the host, (b) separate
+programs the host starts with declared capabilities, as the kernel already does for user programs, or
+(c) rebuilding the host, which is replacing the base. (b) matches the base-and-apps separation and the
+kernel's capability model; (c) is not installation. This is a design decision for stage 2, with Director G,
+and Rust holds primacy in it.
