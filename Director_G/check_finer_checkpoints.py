@@ -61,19 +61,16 @@ def check(table, increments, schedule, scale, lower):
     correction = blocks*(blocks-1)*eps
     if lower:
         pairs = block_size*(iv.mpf(exposure)/SCALE-correction)
-        print('previous mean lower', float(pairs.a))
-        assert pairs > 2263373670000000
+        return pairs.a, None
     else:
         risk = iv.mpf(error)/SCALE + blocks*eps
         pairs = block_size*(iv.mpf(exposure)/SCALE+correction)
-        print('new error and mean upper', float(risk.b), float(pairs.b))
-        assert risk < iv.mpf('0.04999529') and pairs < 2255410570000000
+        return pairs.b, risk.b
 
 
 
 
-def main():
-    iv.dps = 85
+def selected_laws():
     candidates = []
     for s,g,l in rates():
         p,q = [cells(s,Q(1,10**8)*v) for v in (g,l)]
@@ -81,8 +78,18 @@ def main():
         candidates.append((sum(dec(a)*v for a,v in zip(p,z)),p,q,z))
     _,p,q,z = max(candidates, key=lambda row: row[0].a)
     for table, increments in [(p,z), (q,[-v for v in z])]:
-        check(list(map(dec,table)), increments, PREVIOUS, 20, True)
-        check(list(map(dec,table)), increments, WIDTHS, 40, False)
+        yield list(map(dec,table)), increments
+
+
+def main():
+    iv.dps = 85
+    for table, increments in selected_laws():
+        old, _ = check(table, increments, PREVIOUS, 20, True)
+        new, risk = check(table, increments, WIDTHS, 40, False)
+        print('previous mean lower', float(old))
+        print('new error and mean upper', float(risk), float(new))
+        assert old > 2263373670000000
+        assert risk < iv.mpf('0.04999529') and new < 2255410570000000
 
 
 if __name__ == '__main__':
