@@ -38,3 +38,20 @@ $$
 The same enclosure applies to either assignment of a tie, by continuity of the normal CDF and its approximation to both one-sided limits. Nodes with identical pair laws have mean error $1/2$. [Shevtsova, iid Berry–Esseen constant](https://arxiv.org/abs/1111.6554)
 
 The [interval checker](check_fixed_exposure.py) constructs the cell probabilities as fractions, evaluates the likelihood moments with 50-decimal interval arithmetic (mpmath 1.3.0), and encloses the normal tail using consecutive partial sums of its alternating integrated exponential series. It checks the average-error lower bound at the lower endpoint for every informative node. At the upper endpoint it checks both conditional upper bounds at the winning mass and the average-error lower bound for every other informative lower-half node. On the winning mass, the upper conditional bounds are below 0.049999904 and 0.049999896 under the global and local populations respectively. A same-family second reader reviewed the handling of ties, sample-size monotonicity and fixed-design scope. The crossing is a model prediction under the pair protocol above; no quadrillion-pair data set was generated.
+
+
+## Mixing routed masses on a predetermined schedule
+
+Allow arbitrary counts at different routed masses, fixed in advance, under the same two hypotheses and independent-pair protocol. The minimum exposure for 5% equal-prior average error satisfies
+$$3{,}800{,}938{,}000{,}000{,}000 < N_{\rm pre} \le 3{,}800{,}950{,}000{,}000{,}000.$$
+The earlier repeated-mass protocol gives the upper endpoint. Thus any advantage of predetermined mixing over that demonstrated exposure is less than 12 billion pairs, about 3.16 parts per million. This does not establish a strict advantage for mixing.
+
+For one schedule and either law, write $V=\sum_i v_i$ for the total log-likelihood variance, $\mu_i$ for the one-pair mean, and $b_i$ for the third absolute centered moment. The [interval checker](check_mixed_exposure.py) verifies $-\log\rho_i<0.126 v_i$ under each law at each informative node. Nodes with identical laws have affinity one and contribute zero throughout. Reflection permutes the cells and preserves these values.
+
+If either variance total is below six, the product affinity exceeds $\exp(-0.126\cdot6)$. The total-variation inequality above gives average error greater than 0.05854. This handles schedules for which a uniform normal approximation would be poor.
+
+Otherwise both variances are at least six. Under either law the standardized mean magnitude is at most $\sqrt{N}\max_j |\mu_j|/\sqrt{v_j}$ by Cauchy–Schwarz. The independent, unequal-summand Berry–Esseen error is at most
+$$0.56\,\frac{\sum_i b_i}{V^{3/2}}\ \le\ \frac{0.56}{\sqrt{6}}\max_j\frac{b_j}{v_j}.$$
+Take the maxima over informative nodes separately for each law. At the displayed lower exposure, the resulting lower bounds on the two likelihood-ratio decision errors are respectively greater than 0.0500000170 and 0.0500000091 in this variance regime. Normal continuity covers strict as well as weak threshold tails. Hence the optimal equal-prior decision still misses 5% in both variance regimes. Smaller caps cannot improve the optimum, since a larger experiment can ignore extra observations. [Shevtsova, independent-summand Berry–Esseen constant](https://www.mathnet.ru/eng/ia252)
+
+The conclusion also holds after averaging over schedules randomized before data collection, by conditioning on the schedule. Conditioning on an outcome-dependent schedule would select the observations themselves and would invalidate this proof. The earlier affinity lower bound therefore remains the one established here for adaptive protocols. A second same-family reader checked the variance split, tie treatment and randomization scope. The 60-decimal interval calculation applies to the specified model laws at the common budget; no exposures were physically acquired.
