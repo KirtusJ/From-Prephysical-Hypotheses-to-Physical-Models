@@ -84,6 +84,8 @@ A superconducting-qubit experiment records both the intermediate measurement and
 
 On a ring prepared with empty wells between designated inputs, two free steps can divide every input well's mass in half for any complex two-rail state. A three-step arrangement that also uses addressed swaps attains the minimum required output dimension. A half-calibrated terminal detector can then recover the original position weights by grouping its recorded wells. [Native position read and the dimension bound](guarded_position_reads.md)
 
+Two preparations put every well of a three-tick walk in the half-calibrated range. Their hit rates fix the sharp-right source's heavy-well rate for any common affine detector, with optimal worst-case error amplification of two. A reversible echo tests a fluctuating terminal sampler only if its pointer carries the sampler's actual per-mode probabilities. [Preparations, sensitivity and counterexample](light_probe_extrapolation.md)
+
 Starting from blank memory, a controlled comparison of contact order prepares the two weak-force sectors together. Real packet encoding gives both the same position distribution at every tick. At order five the 64-round preparation accepts 38.2% of launches with 99.54% weight on the pair. [Preparation, yield and conjugate flights](sector_preparation.md)
 
 The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
