@@ -127,6 +127,53 @@ def rational_examples():
     return rows
 
 
+def multiply_cyclic(left, right):
+    order = len(left)
+    out = [0]*order
+    for i, a in enumerate(left):
+        for j, b in enumerate(right):
+            out[(i+j) % order] += a*b
+    return out
+
+
+def hard_alternatives():
+    """Clear all denominators in the moment comparisons before cyclotomic reduction.
+
+    C_j represents 2*cos(2*pi*j/M). For A=2a, B=2b and S=A+B,
+    (B,A)/S are the alternative masses at zero and two. Thus the two
+    polynomial identities below compare the first and second moments directly.
+    """
+    rows = []
+    for order in (5,6,7,8,9,12,16,24,32,48,64):
+        cosines = []
+        for j in range(3):
+            c = [0]*order
+            c[j] += 1
+            c[-j % order] += 1
+            cosines.append(c)
+        top, mid, low = cosines
+        a = [x-y for x,y in zip(top,mid)]
+        b = [x-y for x,y in zip(mid,low)]
+        total = [x+y for x,y in zip(a,b)]
+        mean_numerator = [x+y-z for x,y,z in zip(multiply_cyclic(b,top),
+                              multiply_cyclic(a,low),multiply_cyclic(total,mid))]
+        require(reduced(mean_numerator,order)==[0], "hard alternative has same first moment")
+        variance_scaled = multiply_cyclic(a,b)
+        raw = [x+y-z for x,y,z in zip(multiply_cyclic(b,multiply_cyclic(top,top)),
+                    multiply_cyclic(a,multiply_cyclic(low,low)),
+                    multiply_cyclic(total,multiply_cyclic(mid,mid)))]
+        predicted = multiply_cyclic(total,variance_scaled)
+        require(reduced([x-y for x,y in zip(raw,predicted)],order)==[0],
+                "hard alternative second moment differs by a*b")
+        require(reduced(variance_scaled,order)!=[0], "tick three separates")
+        rows.append(dict(M=order,
+                         weight_numerator_zero=reduced(b,order),
+                         weight_numerator_two=reduced(a,order),
+                         weight_denominator=reduced(total,order),
+                         first_moment_delta=[0], eight_times_tick_three_gap=reduced(variance_scaled,order)))
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_directory",type=Path)
@@ -137,7 +184,8 @@ def main():
     data = dict(convention="k=0..M-1; each coefficient vector is an ascending polynomial "
                            "evaluated at exp(2pi i/M); divide by 4^blocks. The "
                            "source-count panel uses 0..1 probabilities including original launch.",
-                acceptance=rows, witness_controls=rational_examples())
+                acceptance=rows, witness_controls=rational_examples(),
+                hard_alternative_controls=hard_alternatives())
     path.mkdir(parents=True,exist_ok=True)
     with (path/"witness_flight.json").open("x",encoding="utf8",newline="\n") as out:
         json.dump(data,out,indent=2)
