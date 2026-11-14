@@ -353,3 +353,69 @@ and Rust holds primacy in it.
 
 Stages, restated: 1 grounding (this file; done, with section 7's corrections); 2 design, posted to Director G
 before anything is built; 3 build: core, commands and tool calls, graphical view, in that order.
+
+## 9. The Store and the package manager are two things (principal, 14 November 2026: "We can't truly conflate them; figure this out")
+
+Sections 5 and 8 spoke of "the Store" and "installing" as one. They are not one. Requirement 14 ("one
+mechanism") is right for the package manager and wrong if read as "one thing".
+
+### What practice shows
+
+- **Composer and Packagist.** Composer is the package manager: it resolves, fetches, pins in a lock file and
+  installs. Packagist is a catalogue of metadata. Composer works without Packagist (a `repositories` entry of
+  type `vcs`, `path` or `composer`), and Packagist installs nothing.
+  ([repositories](https://getcomposer.org/doc/05-repositories.md), [Packagist](https://socket.dev/glossary/packagist))
+- **winget and the Microsoft Store.** winget is the client. It has sources: `msstore` is the Microsoft Store
+  catalogue, `winget` is a community repository of manifests, and an organization can add its own source of
+  type `Microsoft.Rest`. Administrators can restrict which sources may be added. One manager, several
+  catalogues, each with its own checks. ([Microsoft Learn: source](https://learn.microsoft.com/en-us/windows/package-manager/winget/source),
+  [private sources](https://www.mintlify.com/microsoft/winget-cli/guides/private-sources))
+- **Snap: what conflating them costs.** Each `snapd` is tied to a single store by a key built into the client;
+  there is no setting to use another, and using another server means a forked client. This was a deliberate
+  choice, and it is the main standing objection to Snap. The client is open, the store's back end is not.
+  ([snapcraft forum: external repositories](https://forum.snapcraft.io/t/external-repositories/1760/15),
+  [store not open](https://forum.snapcraft.io/t/please-address-store-is-not-open-source-again/18442/19))
+- GNOME Software and KDE Discover as graphical stores over PackageKit, apt and Flatpak: [own]; the search
+  returned nothing on it.
+- Review in a store is not verification of bytes: Apple notarized malware; the Snap store carried fake wallets
+  (section 2).
+
+### The two things, for PCP
+
+| | Package manager | Store |
+|---|---|---|
+| What it is | Mechanism. Part of the host, in Rust, in the trusted base. | Catalogue, policy and presentation. Data plus front ends. |
+| Its question | "Is this exactly the thing named, from a source this machine trusts, and can it be put in and taken out safely?" | "What exists, what is it for, who publishes it, has it been reviewed, under which edition and licence may it be used?" |
+| It does | Knows a list of sources; resolves a name and version to a pinned commit and digest; fetches; verifies; installs atomically; removes; undoes; records each step in the register. | Lists, searches, describes, groups by module, shows publisher and review state, shows edition and licence terms; hands a pinned reference to the package manager. |
+| It never does | Judge whether a thing is good, or know about prices and editions. | Install, remove, or touch files; skip or repeat the manager's checks. |
+| Works without the other | Yes: from a local folder or a private index, with no Store reachable. | Yes, as a catalogue to read; it cannot install without the manager. |
+| Sources | Several, each with its own key and an explicit priority (Composer 2, winget). The official Store's index is one source. | One catalogue per publisher; the official one is the rights holder's. |
+| Trust it gives | Bytes are the bytes named, signed by the key bound to that source. | A statement about review and terms. In PCP this can be more than a badge: an entry can name the register and the review in which the application was examined under the method. |
+| Front ends | Commands and tool calls (`pcpos pkg ...`). A person or a machine uses the same operations. | Commands (`pcpos store ...`) and the graphical view. Both end by calling the package manager. |
+| Who may change it | Replacing it is replacing the base: the agreed notice applies. | Entries change often; each change is a new version of the index, signed. |
+
+### Consequences for the requirements
+
+- Requirement 14 becomes: **one package manager for applications and modules, with several sources; the Store
+  is one source and one catalogue, not the mechanism.**
+- Requirement 17 becomes: the command line and the graphical view are front ends of the **Store**; the package
+  manager has commands and tool calls of its own and no graphical logic. The graphical view may show the
+  manager's state (installed, history, undo) by asking it.
+- New, 18. **The package manager must never be tied to one store** (the Snap failure). A source is added by
+  naming it and its key; which sources may be added is a setting of the register's standard, not a constant
+  in the program.
+- New, 19. **Store review is not byte verification, and neither replaces the other.** An entry can be reviewed
+  and its bytes wrong, or its bytes right and unreviewed; the manager reports the second, the Store the first,
+  and the front end shows both.
+- New, 20. **Licence and edition are Store matters.** The manager installs what it is given a valid reference
+  to; whether a user is entitled to it is decided before the reference is handed over. A licence check built
+  into byte verification would make a commercial outage into an availability failure (the Apple lesson).
+
+### Plugins are a third case, and not ours to conflate either
+
+Claude plugins are installed by Claude Code's own package manager, from a marketplace file; Director G's side
+has its own. PCP does not replace those. For plugins PCP supplies only an **index in the format the other
+manager expects** (the marketplace file on its branch), pinned to commits. So there are three package managers
+in play (Claude Code's, the other assistant's, and PCP OS's own for applications and modules) and one Store
+catalogue that can describe all three kinds of thing. The Store entry for a plugin says where its index is; it
+does not pretend PCP installs it.
