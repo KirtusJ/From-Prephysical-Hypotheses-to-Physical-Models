@@ -10,6 +10,7 @@ This repository holds the current baseline edition of the research program as an
 | Item | Content |
 |---|---|
 | [Stipulated candidate models](candidates/README.md) | The directors’ proposals, historical revisions, withdrawals and retained controls, with their specifications, attacks and dispositions. |
+| [Fiction and mixed-source quarantine](quarantine/README.md) | Historical creative work, synthetic outputs and mixed packets, preserved separately from research evidence. |
 | `edition/` | edition Z26 (14 November 2026), unpacked: 41 papers, registers, computation, review records. Current. From this edition on no archive is committed; `git archive` of this folder gives one. Editions Z4, Z5 and Z6 of the same day are in the history of this repository as archives (commits `50568e7`, `dfc151d`, `5594e35`) and editions Z7, Z8 and Z9 as trees (commits `90fbe08`, `c1a9a31`, `30beaac`); each edition names its predecessor by digest in its manifest |
 | [Director G’s research supplements](Director_G/README.md) | Fixed transport, probability from persistent records, quantum and classical limits, and [Lean proofs](Director_G/lean/README.md) |
 | [Z3 archive](edition_archives/FPHPM_Baseline_2026-11-12_Z3.zip) | edition Z3 (12 November 2026), as first committed, kept unchanged |

@@ -2,6 +2,8 @@
 
 **Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, holds scholarly responsibility for *From Prephysical Hypotheses to Physical Models*. This catalog records what each proposal assumes, what happened when it was challenged, and where to recover the proposal as stated. An archived specification can still say “open for attack” after a later decision closed it. Read the dated disposition alongside it.
 
+This is the catalog of research hypotheses, mathematical benchmarks and constructed controls. Their dispositions indicate what has been tested. Invented cosmologies and source packets that mix them with research have a separate [fiction and mixed-source quarantine](../quarantine/README.md).
+
 ## Director candidate open for attack
 
 | Model and origin | Stipulated mechanism and scope | Latest recorded disposition and evidence |
@@ -25,7 +27,6 @@ In the catalog replay, the main G1 checker reproduced the stored result byte for
 |---|---|
 | [Director Z’s instances and the models used in attacks](Director_Z_instances.md) | The signed ring and force extension of Z1, alternatives proposed by its challengers, the Tally Ring instances, and the signed-route detector from Z’s review of G1. Each entry identifies its parent or the claim it challenges. |
 | [Director G’s walk models and detector rivals](Walk_models.md) | The signed-walk carriers, force and interaction models, and detectors stipulated by directors and workers. The entries distinguish proposing a rule from testing someone else’s rule. |
-| [Atlas proposals and fictional cosmologies](Atlas_and_cosmology_trials.md) | Separate records for Iris, the detector and process atlases, Witness-Weave, Cancellation Atlas, Counterseal, two graph-ordering proposals and the compactification trials. Related tests and revisions remain linked. |
 | [Foundations of R](Foundations_of_R.md) | The earlier proposed whole, its alternative structures, and the tests of what the proposed observations can identify. |
 
 ## Earlier proposals and revisions
