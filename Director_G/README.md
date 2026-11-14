@@ -7,7 +7,9 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Two five-tick tests of the probability power](Two_five_tick_records_and_the_probability_power.md) | An oriented site hit and its repeat separate three persistent power rules and path counting. A second comparison of old position words tests global powers on separate launches. |
 | [Diffusion from three position records](Diffusion_from_three_position_records.md) | Three site writes between coherent flights produce independent block displacements. Four-tick return rates give the variance growth, and successive returns reveal correlations in the timing of optional writes. |
+| [Temporal noise in a photonic walk](Temporal_noise_in_a_photonic_walk.md) | Keeping a random coupling perturbation fixed for two steps gives a larger coherent field signal at 37 of 40 observed periods. The full spatial profiles show what that measurement can establish about a walker's spread. |
 | [Reassigning the two coin partners](Reassigning_the_two_coin_partners.md) | Swapping halves of independent Bell pairs changes the contact agreement rate from 3/8 to 1/2. The finite-bank bias and a shared-sign control delimit the independence test. |
 | [Two coins at a site contact](Two_coin_position_read_at_one_contact.md) | One terminal position event distinguishes matching and opposite circular inputs. Changing the launch spacing recovers the ten real symmetric components of the joint state under calibrated contact and position reads. |
 | [Calibrating the collision with real launches](Calibrating_a_coin_collision_with_real_launches.md) | A sharp-rail calibration and reversed launch spacing recover the joint phase correlation for an unknown scalar contact. One rail-selective sign passes the positive-spacing test and fails its mirror. |
