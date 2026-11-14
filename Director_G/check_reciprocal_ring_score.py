@@ -43,6 +43,54 @@ def seam_words(length, ticks, with_sheet=True):
             for s in (0,1) for x in range(length)]
 
 
+def terminal_mode_masks(rows):
+    # Count physical unsigned words by their outgoing rail; verify the
+    # rail-resolved signed sums independently against the cover calculation.
+    counts, amplitudes = Counter(), Counter()
+    for word in product((1, -1), repeat=11):
+        x = sum(word) % 12
+        mode = (x % 6, 2*(x//6) + int(word[-1] == -1))
+        changes = sum(a == b == -1 for a, b in zip(word, word[1:]))
+        counts[mode] += 1
+        amplitudes[mode] += (-1)**changes
+    sites = (1, 3, 5)
+    masses = {}
+    for x in sites:
+        for mode in range(4):
+            j = x + 6*(mode//2)
+            require(amplitudes[x,mode] == rows[j][mode%2], "mode amplitude")
+            masses[x,mode] = amplitudes[x,mode]**2
+    require(sum(counts.values()) == sum(masses.values()) == 2048, "mode totals")
+
+    # A mask and its complement differ only by a flip of the reported bit.
+    # Each triple is (base well, pure mass, unsigned count in its full bin).
+    candidates = {}
+    lower_lambda = {1: Fraction(1,16), 3: Fraction(1,3),
+                    4: Fraction(1,4), 6: Fraction(1,16)}
+    for mask in range(1,8):
+        pure = []
+        for x in sites:
+            for bit in (0,1):
+                modes = [k for k in range(4) if (mask >> k) & 1 == bit]
+                positive = [masses[x,k] for k in modes if masses[x,k]]
+                if len(positive) == 1:
+                    pure.append((x, positive[0], sum(counts[x,k] for k in modes)))
+        has_three = len({r[1] for r in pure}) >= 3
+        require(has_three == (mask in lower_lambda), "pure-mass classification")
+        if has_three:
+            (_,a,na), (_,b,nb), (_,c,nc) = sorted(pure, key=lambda r:r[1])
+            low = lower_lambda[mask]
+            require((Fraction(c,b)**low.denominator >
+                     Fraction(c,a)**low.numerator), "log weight lower bound")
+            # If the coefficient of lambda is positive, its lower endpoint
+            # bounds the whole weighted ratio, including the large cell.
+            ra, rb, rc = Fraction(na,a), Fraction(nb,b), Fraction(nc,c)
+            require(ra > rc and low*ra+(1-low)*rc > rb, "fair-count separation")
+        candidates[mask] = dict(pure_site_mass_unsigned=pure,
+                                three_distinct_masses=has_three)
+    return candidates
+
+
 def partition_panel(rows):
     support = {j: [v*v for v in row[:2] if v] for j,row in enumerate(rows) if any(row[:2])}
     mixed = [j for j,row in support.items() if len(row)==2]
@@ -94,7 +142,7 @@ def analyze():
     require(dark==seam_words(4,9) and dark[1]==(0,0,136), "dark coordinate control")
     return {"sharp_launch":"well 0, sheet 0, R", "physical_site": "j mod L",
             "sheet":"floor(j/L)", "all_cover_rows_R_L_unsigned":rows,
-            "trivial_connection_rows":flat, "robustness":partition_panel(rows),
+            "trivial_connection_rows":flat, "terminal_mode_masks":terminal_mode_masks(rows), "robustness":partition_panel(rows),
             "other_dark_example_L4_t9":dark, "wrapped_scan_L_t_distinct_pure_masses":prior}
 
 
