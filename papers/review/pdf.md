@@ -26,6 +26,12 @@ The equation shapes rendered in the issued papers, but a raw character trace ret
 
 At the 14 November math-text revision (commit `c143ec4`), all 90 pages in those seven reader files were pixel-identical to the issued copies under two independent renderers, PyMuPDF at 144 dpi and Poppler at 90 dpi. Object-level comparison confined the differences to the seven Unicode maps and the five text-equivalence spans. The drawing commands inside each span and every other decoded page-content stream matched the originals. All five semantic arrows read back correctly. These checks cover the repaired glyphs. Flattened line extraction can still reorder multidimensional expressions. Use the typeset mathematics or its TeX source for the full expression.
 
+## Contribution revision and filenames
+
+All 40 PDFs now carry their full manuscript titles in the filenames. A comparison with the preceding reader edition covered all 683 pages at 108 dpi. On 87 pages the only changed pixels fell within the declared acknowledgment regions. The other 596 pages matched pixel for pixel. The 27 papers that carried a broader-program roster retain that acknowledgment. The seven repaired math-font mappings were byte-identical, and all five composite arrows still copied correctly. In D6 the credit paragraph on page 15 now says “even-size” where it previously used a typeset $N$. The mathematical text elsewhere retained its glyph positions.
+
+The 36 readings updated by localized replacement reproduced byte for byte from the pinned revision. An independent Tectonic 0.17 build of G7–G10 reproduced the text and rendered page content across their 89 pages. PDF creation metadata can differ on rebuild. [Credit edit specification](reader_credits.json) · [Reproduction script](repair_reader_credits.py) · [Paper contribution records](../contributions.md)
+
 ## Ancillary clipping
 
 Two references pages in the retained FAR-1 negative control have visible right-edge clipping. The overview’s page 6 extends up to 69.0 points beyond the page and the specification’s page 11 extends up to 89.3 points. The same bytes occur inside the historical Z3 archive. Both documents are filed under negative controls. [Overview](../../edition/NEGATIVE_CONTROLS/FAR-1/Toy_Universe_Overview.pdf#page=6) · [Specification](../../edition/NEGATIVE_CONTROLS/FAR-1/Toy_Universe_Specification.pdf#page=11)
