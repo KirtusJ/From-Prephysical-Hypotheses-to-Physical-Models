@@ -77,11 +77,11 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--write",action="store_true",help="replace the stored exact report")
     args=p.parse_args()
-    out=(json.dumps(report(),indent=2)+"\n").encode()
+    out = json.dumps(report(), indent=2) + "\n"
     if args.write:
-        RESULT.write_bytes(out)
+        RESULT.write_text(out, encoding="utf-8", newline="\n")
     else:
-        assert RESULT.read_bytes()==out
+        assert RESULT.read_text(encoding="utf-8") == out
         print("Verified simplex projections, all 992 late flags, and the additive-write control.")
 
 
