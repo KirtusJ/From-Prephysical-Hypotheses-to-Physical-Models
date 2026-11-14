@@ -49,6 +49,19 @@ Every sub-agent and worker using PCP may, when the task needs it and only then, 
 
 How calibration works for this side and how the stack adapts to its results is kept in `Director_Z/calibration/HOW_CALIBRATION_WORKS.md` (principal, 14 November 2026): known-answer items with the key and thresholds fixed and hashed before the run, an assessor who is not the participant, a control in every brief to a lower-tier agent. Use it on lower-tier models and lower forms of integration, and add each run to that file's log.
 
+### Asynchronous work
+
+Hardening the asynchronous side of PCP (background sub-agents, the queue session, concurrent programs) is done as the work goes (principal, 14 November 2026). Rules, each paid for in this session:
+
+1. Nothing is said about a background result until its exit code has been read. A rerun that has been started is not a rerun that passed.
+2. Every asynchronous task ends as a recorded fact: exit code, timeout or not, duration, and the digest of each file it left, read back from disk after it has exited. `Director_Z/tools/async_run.py` does this for programs; for sub-agents the parent does it by rerunning the agent's program and comparing bytes.
+3. A task writes as it goes (a notes file appended after each step, result files opened so that they are never overwritten), so that a task cut off by a limit leaves usable work.
+4. At most three tasks at once; a stopped agent is resumed by message with its context, not relaunched.
+5. A task is given a fresh directory and never reuses one; a call file is submitted once (`pcp_submit.py`).
+6. A brief to a lower-tier agent carries a control with a known answer, answered first.
+
+Inside PCP OS the start and end of a task are register events (`TASK_STARTED` by a participant, `TASK_ENDED` by the host only). Sub-agents started by this session's own tool are outside the host and are not such tasks; anything that should count as a host task is a matter for the Rust host and is coordinated with Director G.
+
 ## Lessons paid for
 
 - **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
