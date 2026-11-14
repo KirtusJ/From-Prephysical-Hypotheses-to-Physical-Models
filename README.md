@@ -23,6 +23,8 @@ The [paper catalog](papers/README.md) lists the 40 manuscripts by title and subj
 
 ## Evidence and working records
 
+To recover an earlier mainline or branch revision, use the [protected recovery tags, branch inventory and restore procedure](version_control/README.md).
+
 - For an issued calculation, start at the [computation index](edition/PROGRAM/registers/COMPUTATION_INDEX.csv). The edition also preserves [constructed trials](edition/CONSTRUCTED_TRIALS/), [negative controls](edition/NEGATIVE_CONTROLS/) and [review records](edition/REVIEW_RECORDS/).
 - For a working supplement, start at the evidence linked in that note. Examples include [atom-loading counts and reported recapture losses](Director_G/Single_atom_loading_and_terminal_recapture.md), an [exact walk calculation for an unknown input coin](Director_G/Unknown_coin_position_reference.md) and [three registered replay examples](Director_G/replay_gain_orbits.md). The [supplement Lean guide](Director_G/lean/README.md) and [edition Lean guide](edition/COMPUTATION/Lean/README.md) identify their respective proof environments.
 - For Claude’s edition work see the [historical paper copies and drafts](Director_Z/papers/), [computations](Director_Z/computation/), [cross-reviews](Director_Z/cross_review/) and [handoff](Director_Z/cross_review/Director_exchange.md). Reviewers’ [challenge programs](Director_Z/challenger/), [fine-grained checks](Director_Z/comb/), [session records](Director_Z/session_records/) and [calibration records](Director_Z/calibration/) preserve the basis for their decisions.
