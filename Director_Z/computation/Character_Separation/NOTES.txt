@@ -1,0 +1,7 @@
+STEP0 control.py -> control_result.json: C1 1/64, 1/256, 1/128 reproduced by brute word enumeration with arc gains; C2, C3 see file.
+STEP1 table.py v1 (kept as table_v1.py) CAP=3000 -> table_result_cap3000.json: 0 failures of P1-P7; 632042 port events, 447380 well events. H0: 3 of 6, 4 of 8, 12 of 24 characters qualify. P6 as predicted (non-conjugate agreement on D in {2,3}: order 12 only; on {2,5}: order 20 only; none on {2,3,5}).
+  Shortcoming of v1 (not a predicate change): when the state cap was hit, level t was only partly evaluated, so T was t-1 and P4 was not reached for N=5,10. v2 evaluates all events of length t before generating children; predicates unchanged.
+STEP2 table.py v2 CAP=20000 -> table_result.json (sha256 03bcd177b8c4...dae7b0); rerun in rerun/ byte-identical; second run in place refused (FileExistsError). 0 failures P1-P7; 1499612 port events, 1075365 well events. T(N)=9,9,8,9,6,8,6,7,6,6,6,6. P4 reached N=3,4,5,6,8,10; not reached N=7,9,11,12.
+STEP3 proofs written in CRITERION.md: Prop 1 (ring adds only Re chi(B^D)), Prop 2 (criterion; fork of D+1 ticks; minimal length; N=1,2), Prop 3 (D=2,3,5 fix chi(B) up to conjugation; no two rings do).
+FAILED (kept): F1 criterion with chi(B^D) instead of Re chi(B^D) (conjugate pair chi_1,chi_2); F2 single-ring / two-ring identification (zeta_12 vs zeta_12^5 on D=2,3); F3 fair count; F4 N=2 well events; F5 v1 exhaustive range one level short.
+Not done: Lean; carriers with a,c nontrivial not computed.
