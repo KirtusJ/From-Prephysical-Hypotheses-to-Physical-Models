@@ -60,6 +60,8 @@ Error below a row's threshold, with sampling uncertainty and the stated isolatio
 
 A subsequent stipulated experiment lets the two directions of a signed walker apply different fixed contacts to this memory. At ten ticks the two contact orders change its return probability. With a separately prepared, growing memory the same construction implements the program's weak-field envelope. [Walk experiment, exact controls and mechanical limit](contact_flight.md)
 
+Starting from blank memory, a controlled comparison of contact order prepares the two weak-force sectors together. Real packet encoding gives both the same position distribution at every tick. At order five the 64-round preparation accepts 38.2% of launches with 99.54% weight on the pair. [Preparation, yield and conjugate flights](sector_preparation.md)
+
 The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
 
 [A joint read after undoing the translation](coherent_flag.md) distinguishes an ideal coherent record from every separable route–memory state using one binary flag. A separate spin–photon experiment supplies a raw coincidence check with two complementary analyzers and a position-basis read.
