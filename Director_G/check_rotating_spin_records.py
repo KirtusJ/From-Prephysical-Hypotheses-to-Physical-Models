@@ -72,9 +72,19 @@ def summarize(heights):
     all_same = sum(h for w,h in bins.items() if w[0] == w[1] == w[2]) / total
     double = sum(h for w,h in bins.items() if w[0] != w[1] and w[2] == w[0]) / total
     require(double == same02 - all_same, "event partition")
+    flip_words = {}
+    for word, height in bins.items():
+        changes = "".join("0" if x == y else "1" for x, y in zip(word, word[1:]))
+        flip_words[changes] = flip_words.get(changes, 0) + height / total
+    order_spread = {}
+    for flips in (1, 2):
+        group = [p for sequence,p in flip_words.items() if sequence.count("1") == flips]
+        order_spread[str(flips)] = float(max(group) - min(group))
     return dict(words={w: dict(pdf_height=str(h), frequency=float(h/total)) for w,h in bins.items()},
                 first_flip_given_initial_bit={k:float(v) for k,v in first_flip.items()},
                 double_flip_given_initial_bit={k:float(v) for k,v in double_flip.items()},
+                pooled_flip_words={w:float(p) for w,p in sorted(flip_words.items())},
+                within_flip_count_order_spread=order_spread,
                 endpoint_same=float(same02), first_three_same=float(all_same), two_flips=float(double))
 
 
