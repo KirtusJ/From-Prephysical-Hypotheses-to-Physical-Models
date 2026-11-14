@@ -173,3 +173,7 @@ From pull request 3: in build 22 the eight instruments are a fixed array in the 
 ### The OS source (14 November 2026)
 
 The principal supplied the PCP OS source (build 22) and the empty repository `KirtusJ/pcp-os`. Reconciled (same version as the binary in use; builds in 17 s; identical output on six commands including verification of the 582-event register) and pushed unchanged with a reconciliation record to the session branch of that repository. This is what makes host-level Store apps possible on this side: an instrument is an entry in `crates/pcpos-host/src/instruments.rs`. Nothing built yet; the binary in use is unchanged; Director G is told.
+
+## Workers and the PCP OS repository (14 November 2026, permanent)
+
+Principal: workers can report issues and open pull requests on PCP OS as they go; make it permanent. Written into `CLAUDE.md` (pull requests from sub-agents and workers), all seven agent definitions and the queue readme. A worker without GitHub tools writes the issue text or patch in its folder and its parent files it. To watch: the first issue or pull request a worker files there, and whether it was needed.
