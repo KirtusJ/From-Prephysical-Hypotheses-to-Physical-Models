@@ -1,5 +1,7 @@
 # A lower exposure bound for adaptive routed-mass selection
 
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement prepared by OpenAI Codex for Director G.
+
 Under the [two-detector pair protocol](Exposure_for_two_paired_detector_laws.md) at $M=10^{-8}$, even a policy selecting each next mass using its full observed history needs **more than 3.800930 quadrillion pairs** for 5% equal-prior error. Repeating a single mass suffices at 3.800950 quadrillion. The difference is at most 20 billion pairs, or less than 5.27 parts per million of that demonstrated exposure. The exact advantage, if any, is unresolved. These are hard caps, including early decisions within the cap.
 
 ### Simulating an adaptive experiment
