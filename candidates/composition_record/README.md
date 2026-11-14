@@ -88,6 +88,10 @@ Two preparations put every well of a three-tick walk in the half-calibrated rang
 
 With two detection opportunities in a fixed setting, the timing and location of first clicks can expose heavy-well response errors that cancel in the first bin. The test requires a stable response after a miss. A measured three-qubit walk supplies a check on that timing assumption across 99 settings. [First-click identity and detector counterexamples](first_click_clock.md) · [Published counts and reconstruction](first_return_data/README.md)
 
+Repeated measurements of the three-site circuit also test whether a recorded hit resets subsequent records. Six settings exclude a homogeneous classical generator with at most three states under independent shots. A complementary-angle comparison tests a classical walk with matched site transitions. [Reset across observed histories](return_memory/README.md) · [Ideal and measured memory bounds](return_memory/finite_memory.md) · [Angle pairs and a proposed phase intervention](return_memory/angle_pairs/README.md)
+
+The original signed walk can test positive probability exponents using one translated sharp source, a fixed two-well detector and three or five identical ticks. One quarter-weight preparation at each clock gives a joint test even when detector modes switch between two scoring orders. [Five-setting joint comparison and its limits](return_memory/mixed_order.md) [Four launch sites, both scoring orders and an explicit impostor](return_memory/translated_mask.md)
+
 Starting from blank memory, a controlled comparison of contact order prepares the two weak-force sectors together. Real packet encoding gives both the same position distribution at every tick. At order five the 64-round preparation accepts 38.2% of launches with 99.54% weight on the pair. [Preparation, yield and conjugate flights](sector_preparation.md)
 
 The [record accuracy and fringe visibility supplement](Record_accuracy_and_fringe_visibility.md) adds a coherent translation model for the covector memory. It gives the exact maximum mean fringe contrast at a specified flag error and a blank preparation attaining it.
