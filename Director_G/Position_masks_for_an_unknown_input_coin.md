@@ -1,0 +1,48 @@
+# Position masks that bracket a probability for every input coin
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+Start one signed Hadamard walk at a known site. Its two input rails can be in any mixed or coherent state, possibly correlated with the detector. A fixed tick and a pair of whole-site masks can bracket a chosen mass for every such launch. At tick 256, for instance, two masks have masses 0.62499865 and 0.62500781 for **all** input coins. They let a detector measure its mean response near $5/8$ without a prepared balanced splitter, matched inverse, continuous detector curve or fresh source copy. Each setting pools all marked sites and both their rails into one binary event. The mask, clock, sharp origin, walk rule and full binary readout are physical premises. [Earlier fixed-clock readout comparisons](One_threshold_on_several_walks.md)
+
+## Why distance from the launch has a common mass
+
+Let $B_x=\langle x|U^t|0\rangle$ be the two-by-two transfer block before any measurement, including the tick factors $2^{-t/2}$. A full site read has kinematic effect $M_x=B_x^\dagger B_x$ on the input coin. The effects are real symmetric, positive and sum to $I$. A coin state $\rho$ gives mass $\operatorname{tr}(\rho M_x)$, including when $\rho$ is the reduced state of the two rails in the presence of an untouched spectator.
+
+Let reflection take $x$ to $-x$, and apply $J=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$ on both rails. Their product commutes with the conditional shift, while $JH=-HJ$ for the Hadamard coin. It therefore commutes or anticommutes with $U^t$ according to tick parity. It follows that $M_{-x}=JM_xJ^\dagger$. For a real symmetric matrix this is $\operatorname{tr}(M_x)I-M_x$. Thus the union of the two sites $x,-x$ for $x>0$ has scalar effect $\operatorname{tr}(M_x)I$. At the origin the effect itself is $\tfrac12\operatorname{tr}(M_0)I$. Every union of complete distance shells is exactly independent of the input coin. The scalar masses describe the walk's norm. The detector can report a different law. The integer quadratic-form identity for the reflected pair has a separate formal check. [Lean proof](lean/MirroredSiteMask.lean)
+
+Denote the positive shell weights in increasing order by $a_1,\ldots,a_n$, let $T_i=\sum_{j\le i}a_j$, and set $T_0=0$. The largest gap between successive masses of **all** shell unions is exactly
+
+$$D_t=\max_{1\le i\le n}(a_i-T_{i-1}).$$
+
+Any positive gap $(T_{i-1},a_i)$ is empty, including after adding the larger shells. For the converse, process the shells in decreasing order, accepting a shell precisely when its weight fits the residual target $q$. The resulting sum is at most $q$. Induct on the number of available shells with residual in $[0,T_i]$. A residual at least $a_i$ leaves at most $T_{i-1}$ after accepting the shell. When a smaller residual exceeds $T_{i-1}$, all smaller shells fit and the deficit is at most $a_i-T_{i-1}$. The other cases reduce to the preceding list. Hence the lower deficit is at most $D_t$ for every $q$. Taking $q$ up to the right endpoint of any actual gap proves the upper bound on gap length. Complementing the greedy lower mask for $1-q$ supplies an upper mask for $q$. Each one-sided error is bounded by $D_t$. An exhaustive nearest-element search can improve an individual target. The greedy masks require one sort followed by a linear scan per target.
+
+| Fixed tick | Largest shell, also the mesh of radius prefixes | Exact mesh of all shell unions |
+|---:|---:|---:|
+| 8 | 0.453125 | 0.093750 |
+| 32 | 0.231101 | 0.016437 |
+| 128 | 0.130415 | 0.003988 |
+| 256 | 0.083752 | 0.001756 |
+
+At a fixed tick the mesh is a statement about exact mass values. No statistical outlier has been dropped. On the line $D_t\to0$ because it is bounded by the largest shell mass, and the scaled position distribution of the localized Hadamard walk in one fixed basis coin has an atomless weak limit. To see how this implies uniform decay, a subsequence of sites with mass bounded below would have scaled positions with a convergent subsequence in $[-1,1]$. Every closed neighborhood of its limit would then have mass at least that lower bound under the limiting law, giving an atom. The shell mass is a sum of at most two such site masses for that basis coin and already equals the mass for every other coin. The argument supplies no asymptotic rate or arbitrary fixed-cycle guarantee. [Grimmett, Janson and Scudo](https://doi.org/10.1103/PhysRevE.69.026119)
+
+## What the readout comparisons identify
+
+Assign masks independently across original launches from one common population. At a hidden type $A$ assume a common nondecreasing decoded response $g_A(s)$ to the total binary mass $s$, applied after putting all marked histories into the same event. It may jump, and it may depend on the coin state. For two scalar shell masks with $p_-\le q\le p_+$ the measured rates satisfy
+
+$$R_-=\mathbb E\,g_A(p_-)\ \le\ \mathbb E\,g_A(q)\ \le\ \mathbb E\,g_A(p_+)=R_+.$$
+
+If the lower rate is at least $p_--e_-$ and the upper rate at most $p_++e_+$, the population response at $q$ lies in $[q-D_t-e_-,q+D_t+e_+]$. Confidence limits from actual original-launch counts can replace the rate bounds. Different targets can use the same clock. Comparing a shell read to a classical $p$-lottery of all-open and all-closed masks also uses their calibrated endpoint responses and an independent classical random choice. A fair physical port exchange can implement complementarity if the readout is stable under the exchange. Neither complementarity nor a particular detector curve is needed for the order bracket itself. A mask-addressable reversible flag and a physical read that ignores the site label are additional to freely ticking the autonomous walk. A meter that separately normalizes the site, or is influenced by the mask identity, need not obey these bounds.
+
+A variable-mass target can still disagree with every scalar calibration. At tick three, site $+1$ has input effect $\tfrac18\left(\begin{smallmatrix}5&1\\1&1\end{smallmatrix}\right)$. Consider equally likely R and L source types with respective complementary **increasing** responses $g_\pm(s)=s\pm s(1-s)(2s-1)$. Their slopes lie in $[0,2]$. Every scalar reference has mean rate $s$. This actual single-site target has masses $5/8,1/8$ at the two types, ordinary mean $3/8$, and observed mean $3/8+9/128$. Scalar reference agreement therefore constrains the population average at common masses. Extension to an arbitrary binary bin whose mass depends on the hidden type requires additional evidence about the conditional response or the source. Increasing the number of scalar calibrations cannot remove this example.
+
+## An operator bracket when reflection fails
+
+Suppose the sharp origin and calibrated two-rail dynamics still give known positive effects $E_x$ summing to $I$, but reflection no longer makes shells scalar. For a target $q$, start with $z_x=q$ so that $\sum z_x E_x=qI$. Among fractional coordinates, if their number exceeds the real dimension $r$ of the span of the effects, select a nonzero real dependence $\sum d_x E_x=0$ supported there. Move a positive distance in direction $d$ until a coordinate first reaches zero or one. The matrix sum stays exact and integral coordinates stay fixed. After at most one such move per site at most $r$ coordinates remain fractional. This is the usual nullspace step in iterated rounding. Real two-rail evolution gives $r\le3$, arbitrary complex two-rail evolution $r\le4$. [Bansal on iterated and randomized rounding](https://arxiv.org/abs/1811.01597)
+
+Set $L=\{x:z_x=1\}$ and $H=\{x:z_x>0\}$. In positive-semidefinite order,
+
+$$ E_L\le qI\le E_H,\qquad 0\le E_H-E_L\le r\,\max_x\|E_x\|_{\rm op}\, I .$$
+
+The sum over the actual fractional coordinates gives a directly checkable, often tighter width. Every input state, including a conditional mixed coin, has its own mass below $q$ in $L$ and above $q$ in $H$. Monotone common pooling at that type therefore still brackets $\mathbb E g_A(q)$ using the measured rates $R_L,R_H$. With this instrument the two masks may have type-dependent masses. An ordinary reference prediction needs their calibrated ranges or the incident density operator. The matrix inequalities alone give a common one-sided deviation bound even if the density operator fluctuates. Fractional coordinates are used only in designing the masks; every actual site is wholly selected or wholly excluded. Complex phases, a wider unknown launch subspace and a different tick may change the matrices and the dimension of their span. With unrestricted spatial input at a fixed tick, inverse evolution can concentrate the output on any single site, defeating any nontrivial uniform deterministic binary bracket of small width.
+
+The [exact checker](check_coin_uniform_masks.py) propagates both input columns through signed integer ports and checks ticks 2, 3, 5 and 8 independently by summing every signed word. It retains every shell including the extremal ballistic tails. For seven clocks up to tick 256 it reports the gap witness and actual radii of 35 pairs of masks. For a broken-reflection control it exchanges the two outgoing rails at site $+1$ after the fourth coin and before the shift. At three clocks it constructs six brackets and checks both matrix differences by their diagonal entries and determinant. These are kinematic calculations and predicted tests on a stipulated apparatus. [All masks, shell weights and matrix certificates](results/coin_uniform_masks.json)
