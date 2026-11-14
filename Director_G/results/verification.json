@@ -6771,8 +6771,17 @@
     "result": "results/reciprocal_ring_score.json",
     "sha256": {
       "check_reciprocal_ring_score.py": "3f60b90016c2db436bb5865c002a9f10705f7f84df521fab6e7257d81d5fe173",
-      "lean/ReciprocalRingScore.lean": "3bd35f6018cb9720d1a6a085db58172f46adfe7e68bcc272e6a67d0e9baecb5e",
+      "lean/ReciprocalRingScore.lean": "c8bda4e8b11f63bafe3a86777e57002924075178f87b848818f6a69688fa37e7",
       "results/reciprocal_ring_score.json": "b3112761b4acdc88b0f0b6c04e12d2fb42d2619603f7b675e73ee6346cdd2673"
+    },
+    "odd_ring_controls": {
+      "checker": "check_odd_ring_visibility.py",
+      "result": "results/odd_ring_visibility.json",
+      "sha256": {
+        "check_odd_ring_visibility.py": "2d2589cbf4e09d78ecb4d1274c5d7a72877fe62918b47b114e530a0aa663e8d7",
+        "results/odd_ring_visibility.json": "90daa55c751d026cf169e65bdbb24e291468e5d3b0b03d556549ccb0e6d328f3"
+      },
+      "standing": "Independent signed-word and seam replays verify both source phases and sheet choices, both coherent clock outcomes and the even-ring control. 1,008 sharp-start instrument comparisons agree. Lean 4.19.0 also checks the odd-length parity identities. The general sequential instrument law and its operational premises are derived in the paper."
     },
     "standing": "Independent signed-path and cover recurrences match all twelve joint coordinates. Lean checks the physical-seam integers. All eight partitions, a dark counted control and the trivial-connection run are retained. The two-statistic proof is analytic and conditional on matched source, terminal readout family and calibrated detection."
   }
