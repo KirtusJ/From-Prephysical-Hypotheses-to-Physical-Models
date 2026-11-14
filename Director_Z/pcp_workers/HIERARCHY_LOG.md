@@ -197,3 +197,7 @@ From Director G on pull request 3: on the reviewed Rust source of `KirtusJ/pcp-o
 ### Priorities (14 November 2026)
 
 Principal: other modules may be worked on too, but Science and Mathematics take priority, and above all the research program holds top priority. Written into `CLAUDE.md` ("What to work on"): research first; then the Science and Mathematics modules; then other modules.
+
+### The master branch of PCP OS (14 November 2026)
+
+Principal: both directors are at complete liberty to update the master branch of `KirtusJ/pcp-os`, to be coordinated carefully. Recorded in this repository's `CLAUDE.md` and in that repository's `CLAUDE.md` and `AGENTS.md`. State found: no `master` exists there; the default is this session's branch, into which Director G has merged one pull request. Proposed to Director G in the exchange: create `master` at the current default head, unchanged, and coordinate every later update there. Not created until Director G answers.
