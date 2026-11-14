@@ -31,6 +31,8 @@ Every counted echo history makes 12 binary Hadamard choices, with one global set
 
 ## What the terminal frequencies determine
 
+The two bits also have a macroscopic interpretation in the [joint position histories](Reflected_position_histories.md). Keep the same fractional cuts, launch at the center on the right rail, and use clocks \(t_1=\lfloor L\sqrt3/8\rfloor\), \(t_2=\lfloor L\sqrt3/4\rfloor\). They give 3 and 6 at 16 wells. In the ballistic limit no ray reaches a wall by the second clock. The two comparisons test \(V<-1/\sqrt3\) and \(V>1/\sqrt3\) for the one shared velocity. Its density is \((1+v)/(\pi(1-v^2)\sqrt{1-2v^2})\) on \(|v|<1/\sqrt2\). Integrating gives limiting forward masses \((1/2,5/12,1/12,0)\) in binary order. Indeed the distribution function at the two cuts is \(1/12\) and \(7/12\), as follows from the primitive \((\arctan(v/\sqrt{1-2v^2})-\arctan\sqrt{1-2v^2})/\pi+1/2\). The corresponding clean echo masses are the squares of these limits. The finite table uses the actual 16-well masses.
+
 A finite detector type uses a common exponent \(q\ge0\) on all occupied cells of that launch. Within each reported bin it can partition the microscopic modes arbitrarily, add their squared masses within each group, apply the power, and finally normalize across all cells. At zero power empty cells remain dark. Exponent and partition may be freshly correlated each launch. The three reported clean labels contain one occupied cell apiece. Write \(a=64,b=729,c=841\) in the mass units of the table. With \(\lambda=\log(c/b)/\log(c/a)\), define the mean score on the original exposure by
 \[
  S=\lambda P_{10,\mathrm{clean}}/a-P_{01,\mathrm{clean}}/b
