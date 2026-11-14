@@ -97,10 +97,10 @@ def real_fringe_replay():
 
 def main():
     words = cycles()
-    # The cyclic product telescopes over ordered pairs, including the unit.
-    # Boundary at (x,0) cancels (0,x) only after using normalized unitors.
+    # The oriented boundary vanishes as a formal sum of ordered pairs,
+    # including the endpoints with a zero input.
     boundary = [boundary_pairs(word) for word in words]
-    assert all(a == ZERO or b == ZERO for residual in boundary for a, b in residual)
+    assert all(not residual for residual in boundary)
     matrix = [[cycle_value(word, seed, 5) for seed in SEEDS] for word in words]
     assert rank(matrix) == 7
     basis = BASIS

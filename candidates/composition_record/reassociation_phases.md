@@ -4,7 +4,7 @@
 
 The [review of Composition as a Record](README.md) recovered ten coefficients from calibrated contacts with values in the field of five elements. Suppose instead that two ways to combine three inputs differ by a complex phase, and the phase convention for each input pair can be changed freely. Seven independent fifth-root values then survive. Three independent field-valued differences can be detected by the original reader while every convention-independent phase experiment gives identical results. This is a distinction between two possible physical implementations of the proposed mathematical record.
 
-## Seven settings
+## Seven coherent cycles
 
 Keep the input labels and their order fixed in \(V=\mathbb F_5^3\). Use representatives from 0 through 4 and put \(C_j(b,c)=\lfloor(b_j+c_j)/5\rfloor\), with vector sums taken in \(V\). The candidate family in a calibrated scalar convention is
 \[
