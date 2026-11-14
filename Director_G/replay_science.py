@@ -39,8 +39,10 @@ def load_manifest(raw, pin):
         raise ValueError("manifest bytes differ from their supplied SHA-256")
     obj = json.loads(raw, object_pairs_hook=unique_paths)
     fields = {"commit", "program", "inputs", "expected_output", "sha256"}
-    if not isinstance(obj, dict) or set(obj) != fields:
-        raise ValueError(f"expected manifest fields {sorted(fields)}")
+    if not isinstance(obj, dict) or set(obj) - {"output_argument"} != fields:
+        raise ValueError(f"expected manifest fields {sorted(fields)} and optional output_argument")
+    if obj.get("output_argument", "directory") not in ("directory", "file"):
+        raise ValueError("output_argument must be 'directory' or 'file'")
     if not isinstance(obj["commit"], str):
         raise ValueError("expected a full Git commit ID")
     if not isinstance(obj["inputs"], list) or not isinstance(obj["sha256"], dict):
@@ -93,17 +95,22 @@ def replay(repo, raw, pin):
 
         # Keep the reference bytes outside the temporary program tree.
         output = root / "generated"
+        result_file = output / Path(reference).name
+        argument = output
+        if spec.get("output_argument") == "file":
+            output.mkdir()
+            argument = result_file
         python = Path(sys.executable).resolve()
         flags = ["-E", "-s", "-B"]
         threads = {key: "1" for key in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS")}
-        child = subprocess.run([str(python), *flags, str(source / spec["program"]), str(output)],
+        child = subprocess.run([str(python), *flags, str(source / spec["program"]), str(argument)],
                                cwd=source, env={**os.environ, **threads}, stdin=subprocess.DEVNULL,
                                capture_output=True, check=False)
         runtime = {"python": sys.version, "executable_sha256": sha(python.read_bytes()),
                    "platform": platform.platform(), "flags": flags, "thread_environment": threads}
         record.update(ran=True, exit_code=child.returncode, runtime=runtime,
                       stdout_sha256=sha(child.stdout), stderr_sha256=sha(child.stderr))
-        result = compare_output(output / Path(reference).name, expected)
+        result = compare_output(result_file, expected)
         record["output"] = result
         if child.returncode:
             record["stderr_tail"] = child.stderr[-2000:].decode("utf-8", errors="replace")
