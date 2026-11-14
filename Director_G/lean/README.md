@@ -112,4 +112,6 @@ The same file proves the marginal upper and joint lower count inequalities for a
 
 [LocalizedSheetPower.lean](LocalizedSheetPower.lean) checks all joint rail and sheet numerators for the five-tick and stationary six-tick schedules, their square identity and the two counting scores for [a sharp sheet in five ticks](../Five_ticks_from_a_localized_sheet.md).
 
+[PureMassControls.lean](PureMassControls.lean) checks the integer mixture for the sheet-blind ring and the elimination identity for two mass classes. [Full criterion and proof](../When_a_position_histogram_identifies_its_probability_power.md)
+
 [UnsignedRailScore.lean](UnsignedRailScore.lean) calculates the pure terminal rails of the [five-, six- and nine-tick unsigned swap protocols](../Unsigned_rail_swaps_and_one_position_read.md) and checks the nine-tick integer polynomial and fair-count numerator.
