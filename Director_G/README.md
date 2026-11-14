@@ -119,6 +119,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Relative sheet transport](Relative_sheet_transport.md) | An exact dark output, finite relative-character preparation and conditional transfer of an external tag |
 | [Sequential position records](Sequential_position_records.md) | A measured path limit through a field reversal and the joint preparation yield |
 | [Reading force from a crossing record](Force_from_a_crossing_record.md) | Four positions distinguish a smooth passage from a turn with impulse twice the crossing speed. The position theorem sets the resolution needed for a force estimate. |
+| [A reversible tag at a two-body crossing](Tag_identity_at_a_two_body_crossing.md) | Two tag transports agree on every original occupation word but disagree on a three-gate tagged return. The tag-overlap sectors give a bound for transferring entire occupation words to the untagged walk. |
 | [Rank paths and classical flight](Rank_paths_and_classical_flight.md) | Keeping a local rank reproduces the oriented walk panels and tracks a single Newtonian ray throughout a flight. At a two-ray crossing its paths and the measured coarse records have different continuations. |
 | [Fixed transport and record weights](Fixed_transport_and_record_weights.md) | Relative holonomy tests on a fixed graph and the all-integer squared response from persistent corridor records |
 | [Lean proofs](lean/README.md) | Universal response recurrence, physical corridor counts, shared-sheet character reduction and integer rounding |
