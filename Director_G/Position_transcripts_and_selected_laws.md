@@ -57,3 +57,29 @@ For a fixed number $n$ of independent original preparations using one unchanged 
 To certify unwanted fraction at most $\epsilon$ from this bound one needs $L\ge\alpha/[\alpha+(1-\alpha)\epsilon]$ with $L>0$. The bound is sharp from the rate and these nuisance constraints alone. For $p\ge\alpha$ one can take unit acceptance one and rival acceptance $\alpha$. For $0<p\le\alpha$ one can instead take zero unit mass and rival acceptance $p$. An observed rate does not independently validate the nuisance bounds or the detector model.
 
 These measurements operationally select the ordinary *folded* response relative to the designated cyclic unit. They allow competing initial laws to keep distinct yields. They neither assign the initial coefficients nor break the simultaneous relabeling of preparation, cyclic representation and readout. A primitive warrant for the stationary score or for the apparatus that realizes its product events remains open. [Absolute embedding equivalence](Native_preparations_and_probability_embeddings.md)
+
+## Validating a source when serial launches stop on a herald
+
+The serial waiting cost above ends at the first herald. An experimenter can also choose a positive integer $k$ in advance and record the number $T_k$ of original launches needed for the $k$th herald. Count every miss. Assume independent fresh launches from one unchanged source, using the same apparatus and full within-launch decision rule. Write $p=P(A)$ for the original herald rate and $S_t$ for the number of heralds in the first $t$ launches. The events $T_k\le t$ and $S_t\ge k$ coincide for every sequence of flags. At a completed time $t$, define the one-sided lower limit $L_k(t)$ as the solution of
+$$
+ \sum_{j=k}^{t}{t\choose j}L_k(t)^j[1-L_k(t)]^{t-j}=\rho.
+$$
+Under the stated launch model the sum at $p$ is the cumulative probability of $T_k\le t$. It increases with $p$ and with $t$. The times for which $L_k(t)>p$ therefore form an initial segment of probability at most $\rho$. A prespecified deadline can return $L=0$ whenever fewer than $k$ heralds arrive, including when $p=0$. The bound covers over the whole design. [Scholz, negative binomial confidence bounds, §3](https://faculty.washington.edu/fscholz/DATAFILES/ConfidenceBounds.pdf)
+
+On the coverage event the original unit mass and the probability of a **genuine unit herald per original launch** are each at least $\max(0,(L-\alpha)/(1-\alpha))$, where $0\le\alpha<1$ bounds each rival's herald probability. Indeed if $u$ is the genuine herald mass, then $u\le b_1$ and the false mass $p-u\le\alpha(1-b_1)\le\alpha(1-u)$. When $L>0$ the wrong fraction among heralds is at most $\min(1,\alpha(1-L)/[(1-\alpha)L])$.
+
+The launch that triggers release has the ordinary herald's component distribution for every feasible waiting time. For component prior $b_i$ and herald probability $h_i$, independence gives
+$$
+ \Pr(I_{T_k}=i,T_k=t)=\Pr(S_{t-1}=k-1)b_i h_i,\qquad
+ \Pr(I_{T_k}=i\mid T_k=t)=b_i h_i/p .
+$$
+Waiting gives information about the unknown rate. At a fixed source law and given a herald, waiting supplies no further evidence of that particular launch's component. This assertion also conditions on meeting a deadline measured **in launches**. Conditioning on the internal winning transcript or selecting by its physical run time can reveal additional information.
+
+| Illustrative design | What the timing alone certifies |
+|---|---|
+| 95% one-sided confidence, rival passage at most 1%, desired purity at least 90% | The required rate lower limit is $10/109$. |
+| Stop at the first herald | $L_1(t)=1-(1-\rho)^{1/t}\le\rho=0.05$. Even an immediate herald leaves the wrong-fraction upper bound at $19/99$. |
+| Preassign two heralds and the second arrives on launch four | At $p=10/109$, the probability of two or more flags by four is 0.044536. The lower limit is approximately 0.09761146, giving a wrong-fraction upper bound below 9.34%. |
+| The second herald arrives on launch five | At the same threshold the tail is 0.069761. Launch four is the last arrival time certifying 90% purity in this design. |
+
+These are prospective numbers under the stipulated false-passage bound. Retaining only successful runs can invalidate the confidence statement. With $p=1/25$, $\rho=1/20$, and a one-launch deadline for the first herald, every completed run reports $L>p$. Such runs have probability $1/25$ across all launches. Choosing the target using the data also changes coverage. At the same $p,\rho$, report the first-herald bound if launch one succeeds and otherwise take the second-herald bound. Exact enumeration gives a probability of overstating $p$ of **7.6621%**, exceeding the nominal 5%. A proof in Lean checks the flag identity at all list lengths and the four-versus-five boundary. The exact checker tests the deadline, the target switch and the component law at each stopping time. [Checker](check_stopped_heralds.py) · [Exact outputs](results/stopped_heralds.json) · [Formal check](lean/StoppedHeralds.lean)
