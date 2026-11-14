@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Three signed ticks and one position read](Three_signed_ticks_and_the_probability_power.md) | Three wells with one occupied rail give an integer score that detects fresh powers, including arbitrarily large exponents, and fair path counting. A two-sign alternative takes six ticks. |
 | [Seven free ticks and one position read](Seven_free_ticks_and_one_position_read.md) | One histogram separates the ordinary finite power from all other site or rail-cell powers and full path counting on fresh launches. Very large powers approach zero on this contrast. |
 | [Two five-tick tests of the probability power](Two_five_tick_records_and_the_probability_power.md) | An oriented site hit and its repeat separate three persistent power rules and path counting. A second comparison of old position words tests global powers on separate launches. |
 | [Diffusion from three position records](Diffusion_from_three_position_records.md) | Three site writes between coherent flights produce independent block displacements. Four-tick return rates give the variance growth, and successive returns reveal correlations in the timing of optional writes. |
