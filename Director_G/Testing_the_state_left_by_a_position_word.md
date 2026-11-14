@@ -1,0 +1,50 @@
+# Testing the state left by a recorded position word
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+A sequence of coarse position reads predicts both a word and the walk state left at its end. Two apparatuses can have identical probabilities for **every word** and leave distinguishable states. A coherent inverse of the specified reference flight converts the missing state overlap into a clean-return frequency. The test covers the actually prepared input and the actual conditional branches, even when an intermediate read leaks amplitude outside its reported cell. It assumes ordinary probabilities, a calibrated reference inverse and a trusted final source-and-register read. [Coherent reflected histories](Reflected_position_histories.md) · [Protected return in the ideal forward circuit](Returning_a_protected_position_word.md)
+
+## Run the actual flight, reverse the reference flight
+
+Let \(e\) be one specified source mode with blank reference registers. The ideal reversible sequence \(V\) alternates walk steps with coherent copying of the appropriate bin labels into successive registers. More generally it can choose the next reversible step conditioned on the stored prefix. It obeys
+\[
+ V e=\sum_{w:p_w>0}\sqrt{p_w}\,\phi_w\otimes|w\rangle,\qquad \|\phi_w\|=1.
+\]
+The vectors \(\phi_w\) are the normalized conditional walk states of the ideal sequence of coherent bin projections. Nonuniform word masses, zero words and coincidence of the final wells from different words are allowed.
+
+In the science arm let the actual apparatus make its reads. Log the displayed word \(w\), with probability \(q_w\), and preserve the actual terminal walk state \(\sigma_w\), possibly mixed. For the audit, initialize the reference registers to that same classical word, keep the logged copy, apply **the ideal inverse** \(V^\dagger\) to the walk and reference registers, and check for the full basis event \(e\). For a pass, the source rail and well and all original blank registers have to match. Keep the word even on a failure. With \(h_w\) the joint pass-and-word frequency per incident trial, projection on \(e\) gives exactly
+\[
+ h_w=p_wq_w\,\langle\phi_w|\sigma_w|\phi_w\rangle.
+\]
+Indeed the pass effect before the inverse is \(V|e\rangle\langle e|V^\dagger\). Its diagonal block in the supplied reference label is \(p_w|\phi_w\rangle\langle\phi_w|\). At \(p_wq_w=0\), \(h_w=0\) and the ratio carries no conditional fidelity information. Any loss must appear as a reported outcome; one can extend the output by a no-response state orthogonal to the reference outputs. The reference requires a known treatment of extra visible modes. Hidden degrees of freedom are traced out if they remain isolated during this read. The formula permits arbitrary actual history-dependent operations; it imposes no premise that their bin effects or updated walk states are ideal. It concerns an incoherently readable label. It does not test relative phases between different recorded words.
+
+For a single read on known pure state \(\psi=Ue_0\), with correct effect \(P\), write \(p=\|P\psi\|^2>0\), \(\phi=P\psi/\sqrt p\). Conditional on this label the inverse experiment amounts to checking the same ideal bin \(P\) again coherently, then applying \(U^\dagger\) and testing the sharp source \(e_0\), keeping all rejected cases. Its joint pass frequency is \(p^2\langle\phi|\sigma|\phi\rangle\). Omitting the repeated bin yields \(p\langle\psi|\sigma|\psi\rangle\). If \(\sigma\) has support within \(P\), the values coincide. Correct label probabilities on all inputs do not by themselves enforce this support.
+
+For an exact leakage witness take four reflecting wells, sharp \(0,R\), and one tick. The two equal-amplitude outputs are \(0,R\) and \(1,R\). Measure the bit for well 0 versus the other wells. One instrument leaves the projected component in place. A second makes the same measurement then swaps the two occupied directed modes. Both give incident probabilities \(1/2,1/2\) and bare source-return probabilities \(1/4,1/4\). A repeat of the position bit always agrees in the first case and always disagrees in the second. Including the bin check before inversion gives the pairs \((1/4,1/4)\) and \((0,0)\). The two instruments have identical first effects on every input, since the swap is a unitary after the projection.
+
+## How much can a later visible record change?
+
+Use \(D(A,B)=\tfrac12\|A-B\|_1\). Keep the final word as an orthogonal classical label. The trace distance between the actual and ideal labeled walk states satisfies
+\[
+ \frac12\sum_w|q_w-p_w|\ \le D_{\rm out}
+ \ \le\ \frac12\sum_w\sqrt{(p_w+q_w)^2-4h_w}
+ \ \le\ \sqrt{1-\left(\sum_w\sqrt{h_w}\right)^2}.
+\]
+The first bound follows by reading only the word. For pure conditional states, the difference of the two weighted rank-one projectors in a block has trace \(q-p\) and determinant \(h-pq\) on their span, with a zero eigenvalue adjoined if necessary. Its trace norm equals \(\sqrt{(p+q)^2-4h}\). For a mixed actual block, decompose into pure states. Convexity of the norm and concavity of this square root in \(h\) give the same upper bound. Apply Cauchy–Schwarz to the product of the square roots of \(p+q-2\sqrt h\) and \(p+q+2\sqrt h\) and sum over blocks for the last inequality. The middle bound is sharp given only \(p_w,q_w,h_w\), since a pure conditional state with any prescribed overlap exists whenever the accessible walk space contains an orthogonal alternative. This is a labeled form of the usual distinction between trace distance and fidelity. [Fuchs and van de Graaf](https://arxiv.org/abs/quant-ph/9712042)
+
+Any common continuation channel acting on the visible terminal walk and word has total variation error in its final record at most \(D_{\rm out}\), by contraction. In particular \(h_w=p_w^2\) at every ideal occupied word forces \(q_w\ge p_w\) there. Normalization forces exact word probabilities and unit overlap in every positive branch. This permits auditing the model’s full final state on the tested sequence without postselecting a rare word into an apparent success. Conditional certification for one rare word still requires precision relative to \(p_wq_w\). A device retaining private memory can behave differently on a later reuse even if its visible outputs here are ideal. For example it can copy the first label into a private bit while performing the correct projection, then use the bit on the next call to reverse the next displayed label. The clean-return check up to the first read passes. The longer protocol can instead be tested in its entirety. A detector that knows it is being audited presents an additional transfer problem. Matching the audit and science populations and isolating the surviving mode through the final inverse are physical obligations.
+
+There is a complementary per-read estimate under stronger control. Suppose each tested read is a channel on the visible walk and classical prefix, with correct bin effects and no dependence on unobserved memory. At read \(j\), on each *ideal conditional input* with prefix \(s\) and ideal weight \(p_s>0\), let \(p_{b|s}\) be its next bin probability. A trusted branch test gives \(h_{b|s}=p_{b|s}^2F_{b|s}\), conditional on this preparation and prior to normalization on \(b\). The one-step labeled-state distance is at most \(\epsilon_s=\sum_b p_{b|s}\sqrt{1-F_{b|s}}\), summing positive bins. Telescoping the full sequence with actual channels to the left and ideal channels to the right, and using contraction after each replaced step, bounds the final distance by \(\min(1,\sum_{j,s}p_s\epsilon_s)\), with prefixes of length \(j-1\). This route needs the specified ideal conditional inputs and a matched apparatus. The uninterrupted free state generally differs from the selected prefix. The whole-word inverse instead tests what the actual sequence produced. A prefix can likewise be audited by ending the actual schedule at that prefix, subject to matched operation up to that time.
+
+## Four reflected wells with a wrong phase inside the correct bin
+
+Launch at well 1 on rail \(R\). Copy the left/right half at ticks 2, 4 and 8, with the midpoint assigned to the right. Label right by 1. After read two returns bit 1, flip the sign of the left rail **at well 2** before continuing. This changes coherence while keeping the displayed bit and the instantaneous well populations. Integer propagation and a separate backward pass give the following two affected words. The signed return amplitude for a pure actual branch is expressed before normalization on the word. All six other words agree block by block with the ideal prediction.
+
+| Word | Ideal numerator \(256p\) | Actual numerator \(256q\) | Signed overlap in units of \(1/256\) | Incident pass \(h\) | Conditional fidelity |
+|---|---:|---:|---:|---:|---:|
+| 110 | 28 | 12 | −4 | \(1/4096\) | \(1/21\) |
+| 111 | 20 | 36 | 20 | \(25/4096\) | \(5/9\) |
+
+The word probabilities alone change by \(1/16\) in total variation. A second setting flips the left rail throughout the right half after the same second bit. **All eight word probabilities then agree exactly**. Its conditional terminal fidelities at 110 and 111 are \(25/49\) and \(1/25\); the return test detects both. These two settings distinguish errors in the observed record from errors left in the walker for a later experiment.
+
+The [replay](check_actual_word_return.py) uses the existing ideal reflected step and half-bin projectors. It computes the source projection by reversing the masked physical flight and independently compares it with the forward inner product for every word and intervention. The [full table](results/actual_word_return.json) retains the equal-histogram control, both changed branches and both one-tick leakage instruments. No physical apparatus was tested. The results assess a stated preparation and read; a microscopic derivation of the comparator, terminal probability rule and calibrated inverse remains open.
