@@ -42,6 +42,10 @@ These corrections leave every physical expectation unchanged. On every separable
 
 For any separable law \(q\) this gives \(\mathbb E_q H-\mathbb E_{p_0}H\ge w\,t/64\). On a finite outcome set the left side is at most \(w\,\mathrm{TV}(p_0,q)\), by separating positive and negative mass differences. Together with the constructed distribution this proves equality. A numerical search suggested the four corners. The exact certificate proves the global optimum independently of the search or a symmetry ansatz.
 
+## Reproduce the certificate
+
+From this directory, run `cargo run --locked --manifest-path certificate/Cargo.toml`. The [Rust certificate](certificate/src/main.rs) reconstructs all 16 blank-register counts from the detector effects, checks the determinant and cofactor identities at enough integer points to establish them as polynomials, and verifies the primal minor signs and dual score inequalities over the displayed bracket using integer interval arithmetic.
+
 ## Reproduce the position figure
 
 The [Rust renderer](projection.rs) has no external dependencies. From this directory, compile it with Rust 2021 and write its output directly to SVG.
