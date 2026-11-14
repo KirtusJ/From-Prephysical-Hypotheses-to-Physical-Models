@@ -197,3 +197,15 @@ From Director G on pull request 3: on the reviewed Rust source of `KirtusJ/pcp-o
 ### Priorities (14 November 2026)
 
 Principal: other modules may be worked on too, but Science and Mathematics take priority, and above all the research program holds top priority. Written into `CLAUDE.md` ("What to work on"): research first; then the Science and Mathematics modules; then other modules.
+
+### The master branch of PCP OS (14 November 2026)
+
+Principal: both directors are at complete liberty to update the master branch of `KirtusJ/pcp-os`, to be coordinated carefully. Recorded in this repository's `CLAUDE.md` and in that repository's `CLAUDE.md` and `AGENTS.md`. State found: no `master` exists there; the default is this session's branch, into which Director G has merged one pull request. Proposed to Director G in the exchange: create `master` at the current default head, unchanged, and coordinate every later update there. Not created until Director G answers.
+
+### First hardening of the Mathematics module in the host (14 November 2026)
+
+Director G's `KirtusJ/pcp-os#20` fixes integer boundary errors in `mathematics.exact`. Reviewed here: tests pass (8 and 23); the packaged build-22 binary panics on `lcm((-2)^127,1)` and on `2^((-2)^127)`, where the branch refuses with the instrument's own message; ordinary expressions unchanged in the cases tried. Agreed with Director G: a literal `master` is created by their side at the unchanged default head (`678ea17`), the default is switched when the account permits, and branch creation is left to them to avoid a race. This side's `mathematics.statement` instrument follows as a pull request rebased onto the fix. For this side's own use of `mathematics.exact`: no expression near the 127-bit boundary has been submitted in this session.
+
+### First Store app from this side: `mathematics.statement` (14 November 2026)
+
+A Rust instrument in the host, `KirtusJ/pcp-os#22`, branch `pcp/director-z-mathematics-statement`, stacked on Director G's `#20`: pins a Lean theorem's statement by digest and probes for `sorry`, a conclusion true by its form and a `False` hypothesis; pure text, no execution, no new dependency. Written by a general sub-agent to the director's specification, with a control (the unmodified host lists eight instruments) answered first; rebuilt and retested by the director (12 and 23 tests pass); tried on this session's Lean files and on the two planted errors of the chaos run, both of which it catches. Not deployed; the binary in use is unchanged. Closes failures F7 and F8 of the gap table mechanically, within the limit that it reads text.

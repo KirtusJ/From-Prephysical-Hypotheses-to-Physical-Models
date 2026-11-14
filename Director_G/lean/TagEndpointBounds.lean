@@ -32,4 +32,17 @@ theorem two_sign_pass_bounds (both plusOnly minusOnly neither : Nat) :
     both ≤ both + plusOnly ∧ both ≤ both + minusOnly := by
   omega
 
+/-- Clearing a common denominator gives the arithmetic–geometric mean step
+    for the two nonnegative Bernoulli moment factors. -/
+theorem two_moment_factors (a b : Int) :
+    4 * (a*b) ≤ (a+b)*(a+b) := by
+  have h : 0 ≤ (a-b)*(a-b) := by
+    by_cases hab : 0 ≤ a-b
+    · exact Int.mul_nonneg hab hab
+    · exact Int.mul_nonneg_of_nonpos_of_nonpos (by omega) (by omega)
+  simp only [Int.sub_mul, Int.mul_sub] at h
+  simp only [Int.add_mul, Int.mul_add]
+  rw [Int.mul_comm b a] at h ⊢
+  omega
+
 end TagEndpointBounds

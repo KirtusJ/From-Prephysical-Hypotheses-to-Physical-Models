@@ -274,3 +274,32 @@ Passing by a deadline persists when the allowance increases. This makes 33,285 t
 Within each sign the raw iid law gives \(D_s\sim\mathrm{Bin}(32000,d_s)\) and \(K_s\mid D_s=n\sim\mathrm{Bin}(n,p_s)\). At any sign with \(q_s\ge q_0\), the conditional chance of passing is at most 5% for every \(n\), so averaging over \(D_s\) also gives at most 5%. Requiring both passes gives the same size bound over arbitrary cross-sign dependence.
 
 For the symmetric \(c_2\) law the sharp worst-case joint power lies between **0.95110990 and 0.95111000**. For each retained count \(n\), use the largest \(k\) with \(F_{n,q_0}(k)\le0.05\), treating an empty rejection region as zero power. When \(n\) increases by one, the cutoff stays fixed or increases by one because \(F_{n+1,q_0}(k)\le F_{n,q_0}(k)\le F_{n+1,q_0}(k+1)\). The checker uses integer weights for \(4380\le n\le5080\), bounds the omitted probability on both sides, and applies the same pass-event coupling as above. The choice of 32,000 demonstrates sufficiency. [Bounds for both designs](results/tag_sign_dependence.json)
+
+### Testing the mean with unequal sign responses
+
+The curvature bound concerns the **mean** of the two true right fractions. Consider the same \(c_2\) source with right and left masses \(40/512\) and \(34/512\) at both signs. Suppose every outside endpoint is certified, but left certification varies as follows. Right certification can be arbitrary because both a certified right and an unresolved record score one.
+
+| Sign | Fraction of true lefts certified | True right fraction \(q_s\) | Probability \(p_s\) of one among scores |
+|---|---:|---:|---:|
+| Plus | \(1\) | \(20/37\) | \(20/37=240/444\) |
+| Minus | \(185/204\) | \(20/37\) | \(7/12=259/444\) |
+
+Each sign retains a fraction \(37/256\) of its raw launches. The mean one probability is \(499/888\), below \(q_0=257/444\) by \(5/296\). Yet the minus probability alone exceeds \(q_0\). Its chance of passing the 32,000-launch conditional test is at most 5%, by binomial monotonicity at every retained count. Requiring both signs to pass therefore gives **at most 5% power** at this alternative, under every cross-sign coupling and even with the same true preparation at both signs.
+
+**A combined-count decision.** Prespecify up to 155,000 raw launches at each sign. Keep the first 22,000 scores per sign, including any score on the last allowed launch. Reject only if both targets are reached and there are at most **25,096 ones in total**. Timeouts are non-rejections. Use the same four recorded endpoint categories as above. The maximum exposure is 310,000 launches. This test targets unequal sign responses without specifying their difference in the decision rule.
+
+To bound its error, extend each stream to obtain \(m\) scores. Write \(K_s\) for that stream's count of ones and \(T=(K_++K_-)/2\). Each marginal is binomial with parameters \(m,p_s\). For \(z>0\), Cauchy–Schwarz and the arithmetic–geometric mean inequality give
+
+\[
+\mathbb E[z^T]
+\le \sqrt{\mathbb E[z^{K_+}]\,\mathbb E[z^{K_-}]}
+=\big[(1-p_++p_+z)(1-p_-+p_-z)\big]^{m/2}
+\le (1-\bar p+\bar p z)^m ,
+\qquad \bar p=(p_++p_-)/2.
+\]
+
+No step factors an expectation across the signs. At \(\bar p\ge q_0\) and \(0<z<1\), replacing \(\bar p\) by \(q_0\) bounds the right side from above. Markov's inequality for \(z^T\) then bounds the lower tail. For the rival's upper tail use \(z>1\). At an interior threshold fraction \(x\), choosing \(z=x(1-p)/(p(1-x))\) gives the bound \((1-p+pz)^m/z^{mx}\) with \(p=q_0\) or \(p=\bar p\), respectively. This uses the usual binomial Chernoff bound with \(m\) scores per sign. [Exponential-moment bounds for Bernoulli counts](https://www.inf.fu-berlin.de/lehre/WS12/CCT/chernoff.pdf)
+
+Taking \(m=22000\) and \(x=25096/44000\) bounds the false-rejection probability under the null below **0.039651**. At the tabulated rival, use \(x=25097/44000\) for excess ones. Its probability is below 0.040970. Each sign's timeout probability is \(F_{155000,37/256}(21999)<0.001771\). Adding the three possible failure probabilities gives unconditional power **at least 0.955489509622**, using the unrounded bounds. The cutoff and budget establish sufficiency for this example. A separate exact timeout calculation and integer enclosures for both tail bounds are available in the [arithmetic record](results/tag_mean.json) and [checker](check_tag_mean.py).
+
+Two retained scores per sign show why a binomial calculation on all \(2m\) observations would be unsafe. At \(p_+=p_-=q_0\), use identical iid label sequences across signs. Zero ones then has probability \((187/444)^2\), or 17.74%. Independent sign streams give \((187/444)^4\), or 3.15%. Both examples have the same fixed-sign distributions. The combined-count guarantee still needs independent resets within each sign and faithful certificates. The numerical power uses the specified efficiencies.
