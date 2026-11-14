@@ -7,6 +7,7 @@ This file is read by Claude sessions and their sub-agents working here. It recor
 - Goal: an emergent, explained quantum and classical mechanics with a full map, pursued under the working assumption that it will not be reached. Never state that a gate is passed or an ontology obtained unless it is. No gate is passed today; the root review is open.
 - Authorship line on every paper: Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Assistance is credited as assistance.
 - Keep every failed predicate and every outlier. Do not delete or edit them away; add a follow-up.
+- The director keeps complete control of its own target and motion within the research program at all times (principal, restated 14 November 2026). Reviews, pull requests, the other director's requests and the stack's reports are inputs; what to work on next is the director's choice, by the order in "What to work on", and is said in the report.
 - Reports to the principal: outcomes and blocks only. Say at once when the network or a tool blocks the work. Do not narrate corrections that are already recorded in the edition.
 
 ## The review stack, top to bottom
