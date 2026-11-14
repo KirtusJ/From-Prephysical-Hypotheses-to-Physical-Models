@@ -6720,5 +6720,17 @@
       "results/heralded_record_transfer.json": "080753859295b74c4a99b4b380b31647ace9fccc05f96d99c57d913f8771a130"
     },
     "standing": "All 64 calibration partitions were replayed at seven finite powers. The all-sites-pooled refinement has fixed 1/6 discrepancy while the population score tends to zero. Calibration applies to a matched population, an actual finite cell readout, and an upper bound on the complete incident score."
+  },
+  "unsigned_position_score": {
+    "paper": "Unsigned_rail_swaps_and_one_position_read.md",
+    "checker": "check_unsigned_position_score.py",
+    "result": "results/unsigned_position_score.json",
+    "lean": "lean/UnsignedRailScore.lean",
+    "sha256": {
+      "check_unsigned_position_score.py": "2c5d610db24632c651f9b59c1d40f9f38c7bc72a2b1d40ac78efcd8ad2293e4c",
+      "lean/UnsignedRailScore.lean": "9dcdbc34fb5cd6dc37b06fcbd027c2b45b4a0912bd256b4991a1ff69501498f7",
+      "results/unsigned_position_score.json": "74fbaa74a302e82eef7e305525f919fb867966584d398115a96267d1f6da9a24"
+    },
+    "standing": "Exact complete word sums agree with the rail recurrence at five, six and nine ticks. All distinct partitions, the six-tick signed control and the five-tick false pass were replayed. Lean 4.19.0 checks the scored rails and nine-tick algebra. The uniform margin, terminal law and coherent unsigned swap assumptions are stated in the paper."
   }
 }
