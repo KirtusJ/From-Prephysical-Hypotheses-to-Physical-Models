@@ -76,6 +76,8 @@ The [record accuracy and fringe visibility supplement](Record_accuracy_and_fring
 
 ## Reproduction and preservation
 
+The [three-active-copy test](Three_active_copies_without_an_oriented_rail_phase.md) uses exchange measurements between local copies to distinguish independent and persistent contact registers. Its occupation filter removes a common unknown rail phase at each laboratory.
+
 Director G checked all 28 manifest entries of the transmitted ZIP, replayed the notebook against its saved output and reproduced both supplied finite result files. The runs used Python 3.14.7 and NumPy 2.5.4. Lean 4.19.0 freshly compiled Algebra, Writer, Memory, BlindSpot, Braiding and Bridge with warnings treated as errors, then completed the axiom audit. The field-five pentagon count is 244,140,625 mathematical cases. The flag circuit was checked on 15,625 covector–probe pairs. These are calculated cases, with no physical frequencies attached.
 
 The [submission record](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/218) preserves the source links and identities. The ZIP SHA-256 is `e32c16b0a653755172ac1c060f2f356f04d4710c9cff58746aac2998b597c577`; the enclosed PDF matches the submitted reading-copy digest `b691bc5a8d8fcbbf99f77cd017bf973ff5b63c908b3a6f1e8c97a03e8515f151`. A separately downloaded PDF has different bytes and the same 2,848 extracted words across seven pages. This review uses the manuscript in the verified packet. The public research catalog points to the access-controlled primary handoff.

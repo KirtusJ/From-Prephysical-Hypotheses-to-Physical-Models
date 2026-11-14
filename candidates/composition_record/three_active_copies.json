@@ -1,0 +1,1967 @@
+{
+  "herald_probability": "9/64",
+  "blank_fresh": {
+    "gamma": "0",
+    "t": "0",
+    "conditional_score": "-1/18",
+    "per_launch_score": "-1/128",
+    "settings": [
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other1/+": "1/9",
+          "other1/-": "1/9",
+          "other1/other": "1/9",
+          "other2/+": "1/9",
+          "other2/-": "1/9",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "1/6",
+          "+/-": "1/18",
+          "+/other": "2/9",
+          "-/+": "1/18",
+          "-/-": "1/6",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/9",
+          "+/other1": "1/9",
+          "-/hit": "0",
+          "-/other0": "1/9",
+          "-/other1": "1/9",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other1": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "1/6",
+          "+/-": "1/18",
+          "+/other": "2/9",
+          "-/+": "1/18",
+          "-/-": "1/6",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/9",
+          "+/other2": "1/9",
+          "-/hit": "0",
+          "-/other0": "1/9",
+          "-/other2": "1/9",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other1": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/9",
+          "other0/-": "1/9",
+          "other0/other": "1/9",
+          "other2/+": "1/9",
+          "other2/-": "1/9",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other1": "1/9",
+          "+/other2": "1/9",
+          "-/hit": "0",
+          "-/other1": "1/9",
+          "-/other2": "1/9",
+          "other/hit": "1/9",
+          "other/other1": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "1/6",
+          "+/-": "1/18",
+          "+/other": "2/9",
+          "-/+": "1/18",
+          "-/-": "1/6",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other1": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/9",
+          "other0/-": "1/9",
+          "other0/other": "1/9",
+          "other1/+": "1/9",
+          "other1/-": "1/9",
+          "other1/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      }
+    ]
+  },
+  "blank_persistent": {
+    "gamma": "0",
+    "t": "1",
+    "conditional_score": "-1/9",
+    "per_launch_score": "-1/64",
+    "settings": [
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other1/+": "1/9",
+          "other1/-": "1/9",
+          "other1/other": "1/9",
+          "other2/+": "1/9",
+          "other2/-": "1/9",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "2/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "2/9",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/9",
+          "+/other1": "1/9",
+          "-/hit": "0",
+          "-/other0": "1/9",
+          "-/other1": "1/9",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other1": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "2/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "2/9",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/9",
+          "+/other2": "1/9",
+          "-/hit": "0",
+          "-/other0": "1/9",
+          "-/other2": "1/9",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other1": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/9",
+          "other0/-": "1/9",
+          "other0/other": "1/9",
+          "other2/+": "1/9",
+          "other2/-": "1/9",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other1": "1/9",
+          "+/other2": "1/9",
+          "-/hit": "0",
+          "-/other1": "1/9",
+          "-/other2": "1/9",
+          "other/hit": "1/9",
+          "other/other1": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "5/18",
+          "+/-": "1/18",
+          "+/other": "1/9",
+          "-/+": "1/18",
+          "-/-": "1/18",
+          "-/other": "1/9",
+          "other/+": "1/9",
+          "other/-": "1/9",
+          "other/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "2/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "2/9",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other1": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/9",
+          "other0/-": "1/9",
+          "other0/other": "1/9",
+          "other1/+": "1/9",
+          "other1/-": "1/9",
+          "other1/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      }
+    ]
+  },
+  "signed_fresh": {
+    "gamma": "-1/2",
+    "t": "1/4",
+    "conditional_score": "-1/8",
+    "per_launch_score": "-9/512",
+    "settings": [
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other1/+": "1/18",
+          "other1/-": "1/6",
+          "other1/other": "1/9",
+          "other2/+": "1/18",
+          "other2/-": "1/6",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "5/72",
+          "+/-": "1/24",
+          "+/other": "2/9",
+          "-/+": "1/24",
+          "-/-": "7/24",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "5/18"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/18",
+          "+/other1": "1/18",
+          "-/hit": "0",
+          "-/other0": "1/6",
+          "-/other1": "1/6",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other1": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "5/72",
+          "+/-": "1/24",
+          "+/other": "2/9",
+          "-/+": "1/24",
+          "-/-": "7/24",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "5/18"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "1/18",
+          "+/other2": "1/18",
+          "-/hit": "0",
+          "-/other0": "1/6",
+          "-/other2": "1/6",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other1": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/18",
+          "other0/-": "1/6",
+          "other0/other": "1/9",
+          "other2/+": "1/18",
+          "other2/-": "1/6",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other1": "1/18",
+          "+/other2": "1/18",
+          "-/hit": "0",
+          "-/other1": "1/6",
+          "-/other2": "1/6",
+          "other/hit": "1/9",
+          "other/other1": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "7/36",
+          "+/-": "1/12",
+          "+/other": "1/18",
+          "-/+": "1/12",
+          "-/-": "1/12",
+          "-/other": "1/6",
+          "other/+": "1/18",
+          "other/-": "1/6",
+          "other/other": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "5/72",
+          "+/-": "1/24",
+          "+/other": "2/9",
+          "-/+": "1/24",
+          "-/-": "7/24",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "5/18"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other1": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "1/18",
+          "other0/-": "1/6",
+          "other0/other": "1/9",
+          "other1/+": "1/18",
+          "other1/-": "1/6",
+          "other1/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      }
+    ]
+  },
+  "invariant_persistent": {
+    "gamma": "1",
+    "t": "1",
+    "conditional_score": "0",
+    "per_launch_score": "0",
+    "settings": [
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other1/+": "2/9",
+          "other1/-": "0",
+          "other1/other": "1/9",
+          "other2/+": "2/9",
+          "other2/-": "0",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          0
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "2/9",
+          "+/other1": "2/9",
+          "-/hit": "0",
+          "-/other0": "0",
+          "-/other1": "0",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other1": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other0": "2/9",
+          "+/other2": "2/9",
+          "-/hit": "0",
+          "-/other0": "0",
+          "-/other2": "0",
+          "other/hit": "1/9",
+          "other/other0": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other2/hit": "1/9",
+          "other2/other1": "1/9",
+          "other2/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "2/9",
+          "other0/-": "0",
+          "other0/other": "1/9",
+          "other2/+": "2/9",
+          "other2/-": "0",
+          "other2/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          1
+        ],
+        "second": [
+          2,
+          2
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other1": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other1": "1/9",
+          "other2/hit": "1/9",
+          "other2/other0": "1/9",
+          "other2/other1": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "+/hit": "2/9",
+          "+/other1": "2/9",
+          "+/other2": "2/9",
+          "-/hit": "0",
+          "-/other1": "0",
+          "-/other2": "0",
+          "other/hit": "1/9",
+          "other/other1": "1/9",
+          "other/other2": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          0,
+          2
+        ],
+        "coefficient": "1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "second": [
+          1,
+          2
+        ],
+        "coefficient": "-1/12",
+        "conditional_outcomes": {
+          "+/+": "4/9",
+          "+/-": "0",
+          "+/other": "2/9",
+          "-/+": "0",
+          "-/-": "0",
+          "-/other": "0",
+          "other/+": "2/9",
+          "other/-": "0",
+          "other/other": "1/9"
+        },
+        "moment": "4/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          0
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other1": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other1": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other1": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          0,
+          1
+        ],
+        "coefficient": "-1/6",
+        "conditional_outcomes": {
+          "hit/+": "2/9",
+          "hit/-": "0",
+          "hit/other": "1/9",
+          "other0/+": "2/9",
+          "other0/-": "0",
+          "other0/other": "1/9",
+          "other1/+": "2/9",
+          "other1/-": "0",
+          "other1/other": "1/9"
+        },
+        "moment": "2/9"
+      },
+      {
+        "first": [
+          2,
+          2
+        ],
+        "second": [
+          1,
+          1
+        ],
+        "coefficient": "1/6",
+        "conditional_outcomes": {
+          "hit/hit": "1/9",
+          "hit/other0": "1/9",
+          "hit/other2": "1/9",
+          "other0/hit": "1/9",
+          "other0/other0": "1/9",
+          "other0/other2": "1/9",
+          "other1/hit": "1/9",
+          "other1/other0": "1/9",
+          "other1/other2": "1/9"
+        },
+        "moment": "1/9"
+      }
+    ]
+  }
+}
