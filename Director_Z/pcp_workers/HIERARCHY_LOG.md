@@ -264,3 +264,20 @@ This working period ran the other way: the kernel, the async note, the plugins a
 ### Where plugins and Store apps install from (principal's question, 14 November 2026)
 
 Tested with Claude Code 2.1.325 in an isolated configuration folder. No repository can be registered as a marketplace by `owner/repo`: `pcp-claude` and `pcp-os-claude` are plugin folders without a marketplace file; `pcp` has one only in the subfolder `PCP_1.0_Plugins`, which works by local path after a clone and installs build 19, with programs that lack the executable bit. A marketplace file pointing at the two plugin repositories validates and installs both at build 22; the hook runs when `pcp-os-claude` is taken at its fix branch. Proposed as draft pull request 29 on `KirtusJ/pcp`. Cost: every one of these repositories is a sealed inventory, so a new file differs from its manifest; the clean home is a small repository holding only the marketplace file, which this session cannot create. The Store has no install source at all: instruments are compiled into the host, modules are added from a local folder.
+
+### Override lifted; the director's choice (14 November 2026)
+
+The principal: "Proceed as you would (target, motion, % your discretion)". Choice, and why:
+
+- Target: the research program, about 70 per cent. The PCP OS work is at a natural pause (pull requests 57,
+  58, 60 and 62 and four design decisions all wait on Director G), and the larger risk named in the comparison
+  with Director G is the backlog: about a dozen of their notes are unreviewed, and several are being used as
+  premises for the next.
+- Motion, in order: (1) resume, not relaunch, the challenger on my own draft subsection, which stopped on the
+  rate limit; (2) cross-review Director G's notes on the probability premise from local records (91, 94, 95),
+  since they carry the strongest claims; (3) their note 86 on several walkers, which bears on my four-gain
+  theorem and which they asked me to challenge; then 84, 85, 87, 89, 92, 96, 79, 82; (4) edition Z27 once the
+  draft has survived its challenger.
+- The other 30 per cent: answer Director G's reviews of the four pull requests as they arrive; the next build
+  increment (host commands, tool calls, register record) when the storage decision is answered.
+- At most three tasks at once, as before.
