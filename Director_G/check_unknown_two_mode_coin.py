@@ -95,6 +95,56 @@ def compare(name,a,components,c,monitored=None):
                 free_left=L,monitored_L_then_R=flip,W=score,D=balance)
 
 
+def loss_controls():
+    windows = []
+    pure = []
+    concealed_count = []
+    for a in (F(0), F(1,4), F(1), F(3,2), F(19,10), F(2)):
+        cap = 1 - a/4
+        target_rates, target_joint = rates([(1, F(1,2), a)], F(0), 40)
+        roof_weight = 1/(2*cap)
+        for fraction in (F(0), F(1,5), F(1,2), F(1)):
+            coins = [(1-fraction, F(1,2), a), (fraction*roof_weight, cap, a),
+                     (fraction*(1-roof_weight), F(0), F(4))]
+            free, joint = rates(coins, F(0), 40)
+            check(free == target_rates and joint == (1-fraction)/4 + fraction*cap/2,
+                  "all-clock extremal interpolation")
+            efficiency = target_joint/joint
+            check(1/(2*cap) <= efficiency <= 1 and efficiency*joint == F(1,4),
+                  "sharp false-pass interval")
+            windows.append(dict(a=a, extremal_fraction=fraction, joint=joint, efficiency=efficiency,
+                                maximum_variance=cap/2-F(1,4)))
+        for q in (F(17,64), F(9,32), F(3,8), F(31,64)):
+            efficiency = (4*q-1)/(4*q*q)
+            free, joint = rates([(1, q, a)], F(0), 3)
+            w = free[2] + 2*(1-a)*free[1] + (a*a-1)*free[0]
+            d = efficiency*joint - free[0] + F(1,4)
+            check(w == d == 0 and free[0] != target_rates[0], "score-only false pass")
+            pure.append(dict(a=a, q=q, efficiency=efficiency, free=free, observed_d=d))
+        if a > 1:
+            for efficiency in (F(0), F(1,2), F(4,5), F(64,65), F(1)):
+                c = (1-efficiency)*(a*a-1)/(2*(1+(a-1)**2))
+                free, joint = rates([(1-c, F(1,2), a)], c, 3)
+                w = free[2] + 2*(1-a)*free[1] + (a*a-1)*free[0]
+                reduced = free[2] + 2*(1-a)*free[1] + (a*a-1)*(efficiency*joint+F(1,4))
+                check(reduced == 0 and (w > 0) == (c > 0), "loss hidden by reduced score")
+                concealed_count.append(dict(a=a, efficiency=efficiency, count=c, four_setting_w=w))
+    # Interference of the first two tick-dependent coins. The final unitary
+    # can map their one output pure state to any normalized target column.
+    q1, q2 = F(5,8), F(3,5)
+    p, r = q2*(1-q1), q1*(1-q2)
+    l2 = F(9,10)
+    cosine_squared = (l2 - p - r)**2/(4*p*r)
+    l3 = l2 - F(5,4)*q1
+    check(0 <= cosine_squared <= 1 and cosine_squared == F(289,360), "accessible second tick")
+    check(0 <= l3 <= 1 and l3 == F(19,160) and q1*q2-q1+F(1,4) == 0,
+          "time-dependent exact zero")
+    return dict(all_clock_extrema=windows, single_coin_score_aliases=pure,
+                count_hidden_by_reduction=concealed_count,
+                clock_dependent=dict(q1=q1, q2=q2, relative_cosine_squared=cosine_squared,
+                                     l2=l2, l3=l3, joint=q1*q2))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_directory",type=Path)
@@ -142,7 +192,7 @@ def main():
                 reduced_certificates=reduced_checks,
                 missing_joint_records=dict(true=cubic["monitored_L_then_R"],
                                           efficiency=F(64,65),observed=lossy),
-                physical_feasibility="0<=q<=1; 0<=r<=4(1-q)")
+                loss_controls=loss_controls(), physical_feasibility="0<=q<=1; 0<=r<=4(1-q)")
     out.mkdir(exist_ok=True,parents=True)
     with (out/"unknown_two_mode_coin.json").open("x",encoding="utf8",newline="\n") as f:
         json.dump(result,f,indent=2,default=str)
