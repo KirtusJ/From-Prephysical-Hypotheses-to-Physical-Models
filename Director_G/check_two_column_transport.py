@@ -104,14 +104,25 @@ def squares(value, digit_padding):
     return [Q(x, scale) for x in entries if x]
 
 
-def midpoint(x, y, delta, digit_padding=False):
+def midpoint(x, y, delta, digit_padding=False, *, right_x=None, right_y=None):
+    """Optionally supply dyadic right inverses of the transposed source/target."""
     h = gram(x, x)
     check(gram(y, y) == h, "equal joint Gram")
     cross = minus(h, diag(delta))
     aim = times(inverse(h), cross)
     k0 = minus(h, times(times(cross, aim), diag(2)))
     check(positive(k0), "chosen chart and scale must give positive-definite ideal slack")
-    r_x, r_y = right_inverse(x), right_inverse(y)
+    def verified(frame, supplied, name):
+        if supplied is None:
+            return right_inverse(frame)
+        check(len(supplied) == len(frame) and all(len(row) == 2 for row in supplied),
+              f"{name}: right inverse must have one two-entry row per frame row")
+        check(all(type(v) in (int, Q) and is_dyadic(v) for row in supplied for v in row),
+              f"{name}: right inverse must use exact dyadic entries")
+        check(gram(frame, supplied) == diag(1), f"{name}: transpose times right inverse must be identity")
+        return supplied
+
+    r_x, r_y = verified(x, right_x, "right_x"), verified(y, right_y, "right_y")
     grid = 1
     while True:
         a = repair(x, times(x, aim), cross, grid, r_x)
@@ -218,6 +229,22 @@ def main():
     check(times(times(xx, inverse(row_basis)), inverse(chart)) == a, "first chart cancellation")
     check(times(times(yy, inverse(row_basis)), inverse(chart)) == b, "second chart cancellation")
     mid, grid, slack = midpoint(a, b, 2)
+    for options in [dict(right_x=right_inverse(a)), dict(right_y=right_inverse(b)),
+                    dict(right_x=right_inverse(a), right_y=right_inverse(b))]:
+        check(midpoint(a, b, 2, **options) == (mid, grid, slack), "supplied and computed inverses agree")
+    alternative = [[1, 0], [0, 1], [0, 0], [0, 0]]  # a starts with the identity
+    z_alt, _, _ = midpoint(a, b, 2, right_x=alternative)
+    certify(a, b, z_alt, 2, xx, yy)
+    non_dyadic = [[Q(2,3), 0], [0,1], [0,0], [Q(1,3),0]]
+    check(gram(a, non_dyadic) == diag(1), "negative control is a rational right inverse")
+    for key, invalid in [("right_x", zeros(len(a))), ("right_y", right_inverse(b)[:-1]),
+                         ("right_x", non_dyadic), ("right_y", right_inverse(b)+[[0,0]])]:
+        try:
+            midpoint(a, b, 2, **{key:invalid})
+        except ValueError as error:
+            check(str(error).startswith(key+":"), "refusal names the supplied right inverse")
+        else:
+            raise ValueError("invalid supplied right inverse accepted")
     tilted = certify(a, b, mid, 2, xx, yy)
     tilted.update(grid=grid, slack=slack, original_gram=gram(xx, xx), common_row_basis=row_basis,
                   inverse_chart=inverse(chart), source=xx, target=yy)
