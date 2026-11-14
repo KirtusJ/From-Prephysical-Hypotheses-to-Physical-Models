@@ -77,4 +77,4 @@ The principal's process (13 November 2026) is in `Director_Z/candidate/CANDIDATE
 
 ## What to work on
 
-Prefer, in order: a statement that removes an assumption from the map; a generalization that makes two results one; a machine check of a step already used; a cross-review of the other director's newest result. Do not issue an edition for bookkeeping alone.
+Order of priority (principal, 14 November 2026): the research program first; then hardening the Science and Mathematics modules of PCP for that work; then other modules, which may be worked on but come last. Within the research program prefer, in order: a statement that removes an assumption from the map; a generalization that makes two results one; a machine check of a step already used; a cross-review of the other director's newest result. Do not issue an edition for bookkeeping alone.

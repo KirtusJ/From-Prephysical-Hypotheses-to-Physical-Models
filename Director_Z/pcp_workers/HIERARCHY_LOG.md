@@ -193,3 +193,7 @@ Added the same day: the principal asks that a graphical interface be considered 
 ### A condition on any native deployment (14 November 2026)
 
 From Director G on pull request 3: on the reviewed Rust source of `KirtusJ/pcp-os#11`, a relocated valid `local.foo` can authorize deletion of a different `modules/foo` directory (path identity); the finding is derived from the source, with a disposable fixture and positive control on that pull request's review; the stacked `#14` inherits the code. Condition recorded for this side: before any native head is deployed in place of the binary in use, that fixture is carried to the selected head and must pass there, alongside the two native-host regression suites already rerun here (`pcp#18`). No deployment is planned; the binary in use is the packaged build 22.
+
+### Priorities (14 November 2026)
+
+Principal: other modules may be worked on too, but Science and Mathematics take priority, and above all the research program holds top priority. Written into `CLAUDE.md` ("What to work on"): research first; then the Science and Mathematics modules; then other modules.
