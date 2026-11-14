@@ -4,7 +4,8 @@ Default: verify and print all named effects, including dark sites. --search
 replays limited clock/ring enumeration. --qasm NEW_FILE exports the
 ten-tick geometric ring protocol; --eight-tick exports a shorter alternative
 and --all-scalar selects the twelve-tick ring with a completely scalar site
-POVM. The emitted QASM example initializes the coin in R.
+POVM. --order-probe writes positions at ticks 12, 24 and 25, using a
+terminal H-and-shift to read the retained rail. All exports start in R.
 """
 import argparse
 from itertools import product
@@ -145,10 +146,15 @@ def schedules():
 
 
 def exported(word,blocks=1):
+    return exported_flights([word]*blocks)
+
+
+def exported_flights(words):
     # q[0] coin; q[1:3] low through high address bits. High carry must be
     # computed before lower bits change. y counts left steps modulo eight.
+    blocks=len(words)
     lines=['OPENQASM 3.0;','include "stdgates.inc";','qubit[4] q;',f'bit[{3*blocks}] site_code;']
-    for block in range(blocks):
+    for block,word in enumerate(words):
         for gate in word:
             if gate=="H":
                 lines.append('h q[0];')
@@ -195,17 +201,14 @@ def check_export(word,text):
                 "exported register effect differs from physical ring")
 
 
-def check_two_blocks():
-    """Execute the actual exported 2-block syntax, split branches on writes,
-    and keep both *signed* initial columns. The independent oracle uses
-    signed infinite-line kernels folded coherently to the physical ring.
-    """
-    word=ALL_SCALAR
-    lines=exported(word,2).splitlines()
-    require(lines[3]=='bit[6] site_code;', "two distinct address registers in classical bits")
+def written_columns(text,writes):
+    """Replay every emitted instruction; exact signed amplitudes per recorded history."""
+    lines=text.splitlines()
+    require(lines[:4]==['OPENQASM 3.0;','include "stdgates.inc";','qubit[4] q;',
+                        f'bit[{3*writes}] site_code;'], "written address declarations")
     offsets=[j for j,line in enumerate(lines) if ' = measure ' in line]
     require([lines[j] for j in offsets]==[
-        f'site_code[{k}] = measure q[{1+k%3}];' for k in range(6)], "chronological absolute bits")
+        f'site_code[{k}] = measure q[{1+k%3}];' for k in range(3*writes)], "chronological absolute bits")
     columns=[]
     for src in (0,1):
         amps={(0,src):1}
@@ -234,6 +237,13 @@ def check_two_blocks():
                     raise ValueError(instruction)
             amps=nxt
         columns.append(amps)
+    return columns
+
+
+def check_two_blocks():
+    """Compare both emitted input columns with folded, signed infinite-line kernels."""
+    word=ALL_SCALAR
+    columns=written_columns(exported(word,2),2)
     route=[[0]*4 for _ in range(16)]
     for j,row in enumerate(kernels(word)):
         x=(2*j-len(word))%16
@@ -252,6 +262,40 @@ def check_two_blocks():
     require(all((basis//2)==(record>>3) or amp==0
                 for board in columns for (record,basis),amp in board.items()),"final address mismatch")
     print("Two-block exported record verified: all 64 chronological pairs and both signed source columns.")
+
+
+def check_order_probe(text):
+    """Keep all shots. Absolute address y at tick t decodes to x=(t-2*y)%16."""
+    # Compare the third write to the independently verified two-block rail
+    # columns, applying the final H and physical (+1,-1) shift on the 16-ring.
+    before=written_columns(exported(ALL_SCALAR,2),2)
+    after=written_columns(text,3)
+    require(text.count('h q[0];')==15, "expected 15 Hadamard normalization factors")
+    for src in (0,1):
+        total=0
+        for y1,y2 in product(range(8),repeat=2):
+            prefix=y1+8*y2
+            r=before[src].get((prefix,2*y2),0)
+            l=before[src].get((prefix,2*y2+1),0)
+            x2=(24-2*y2)%16
+            for y3 in range(8):
+                record=prefix+64*y3
+                x3=(25-2*y3)%16
+                expect=(r+l if x3==(x2+1)%16 else 0,
+                        r-l if x3==(x2-1)%16 else 0)
+                actual=tuple(after[src].get((record,2*y3+rail),0) for rail in (0,1))
+                require(actual==expect, "terminal position or rail amplitude differs from H-and-shift")
+                total+=sum(a*a for a in actual)
+        require(total==32768, "original-launch normalization")
+        require(all(basis//2==record>>6 or amplitude==0
+                    for (record,basis),amplitude in after[src].items()), "terminal address mismatch")
+    # For source R, y1=6 then y2=0 decodes to sites (0,8);
+    # y1=2 then y2=0 decodes to (8,8). y3=0,1 mean x3=9,7.
+    for y1,expected in [(6,[2916,100]+[0]*6),(2,[100,2916]+[0]*6)]:
+        cells=[sum(after[0].get((y1+64*y3,2*y3+rail),0)**2 for rail in (0,1))
+               for y3 in range(8)]
+        require(cells==expected and sum(cells)==3016, "order-probe branch or final site weights")
+        print(f"Order probe y1={y1}, y2=0: absolute y3=0..7 masses {cells} / 32768.")
 
 
 def compare_which_way():
@@ -298,6 +342,8 @@ def main():
     variants=parser.add_mutually_exclusive_group()
     variants.add_argument("--eight-tick",action="store_true",help="export the eight-tick 16-site option")
     variants.add_argument("--all-scalar",action="store_true",help="export the all-scalar 16-site option")
+    variants.add_argument("--order-probe",action="store_true",
+                          help="two all-scalar writes, then H and shift for a final position read")
     args=parser.parse_args()
     if args.blocks<1 or (args.blocks>1 and not args.all_scalar):
         parser.error("--blocks must be positive; more than one requires --all-scalar")
@@ -306,13 +352,16 @@ def main():
     for word in (GEOMETRIC,EIGHT,ALL_SCALAR):
         check_export(word,exported(word))
     check_two_blocks()
+    if args.order_probe:
+        probe_text=exported_flights([ALL_SCALAR,ALL_SCALAR,"H"])
+        check_order_probe(probe_text)
     compare_which_way()
     if args.search:
         schedules()
     if args.qasm:
         with args.qasm.open('x',encoding='ascii',newline='\n') as f:
             selection=ALL_SCALAR if args.all_scalar else (EIGHT if args.eight_tick else GEOMETRIC)
-            f.write(exported(selection,args.blocks))
+            f.write(probe_text if args.order_probe else exported(selection,args.blocks))
 
 
 if __name__=="__main__":

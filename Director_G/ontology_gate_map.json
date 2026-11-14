@@ -130,6 +130,10 @@
       "baseline_evidence": "Transition probabilities fix all Bargmann phases up to one conjugation, constructively (G7-01-10, G7-01-11); three overlaps alone do not (Directors A, G; Li-Wagner-Zhang 2026); the determinant of one loop does not (Director B, B2). Global conjugation of a whole model is unobservable (Director B, B2); relative orientation is fixed by composition (G7-01-15). Complex structure, symplectic form, dynamical correspondence and equality of generator and observable counts are forms of one postulate (G7-01-06, G7-01-12). Edition Z3: a real reversible step has a complex structure of its own, unique under a positive generator and reversed with the step (G9-01-05; Stueckelberg 1960; Moretti-Oppio 2017 for Poincare symmetry); the vertex records do not commute with it and the commutant of step and records is real (G9-01-06). On signed Cayley rectagraphs the class matrices have a central complex structure exactly for k = 3 mod 4, with k supplied (G9-01-12). No warrant for complex amplitudes.",
       "evidence_updates": [
         {
+          "sources": ["../candidates/composition_record/velocity_experiment/closed_position_gates.md", "lean/ClosedPositionTransport.lean"],
+          "result": "A native closed four-write position word produces a real rotation of infinite projective order. A zero-displacement reflection completes a dense family of real qubit gates on return to the original site. A position-only probe separates two equally likely orders. Coherent rail transport, ordinary writes and the clock are supplied; this does not identify a complex phase reference."
+        },
+        {
           "prs": [
             115
           ],
@@ -384,6 +388,10 @@
       "name": "Composition",
       "baseline_evidence": "Single-system data do not fix the composite: minimal against quantum (Director B; G7-01-14); interpolated family K_t and failure of its uniform four-system extension by t(1-t)/4 (Director G); CNOT closure forces the quantum composite once a complex representation is given (Director G). Product of gain graphs gives the full tensor product with a common step count (G8-01-06). Edition Z3: the interpolated composites are not closed under selective local filters, no four-party weight repairs them, a matching hierarchy is closed under weaker operations and excludes GHZ, one pure entangled seed with local filters gives all states (Directors A, B; recomputed); the product of gain graphs is a tensor product at each length and can be smaller over all lengths (Director G).",
       "evidence_updates": [
+        {
+          "sources": ["../candidates/composition_record/velocity_experiment/recovering_a_qubit_from_position_messages.md", "../candidates/composition_record/velocity_experiment/check_position_memory.py", "../candidates/composition_record/velocity_experiment/check_record_messages.py"],
+          "result": "The full scalar position history retains a reversibly transformed reference-entangled qubit. Discarding all reports gives an entanglement-breaking rail channel from five writes; keeping only the final site does so for every branch from seven. Three terminal labels from the full record are necessary and sufficient for a persistent positive margin over Bell fidelity one half at fixed time, with arbitrary local recovery and no missing launches. The initial reference pair and physical read instrument remain assumptions."
+        },
         {
           "prs": [
             102,
