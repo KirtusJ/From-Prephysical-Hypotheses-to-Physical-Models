@@ -6,7 +6,7 @@ Start with the [repository guide](README.md) for the issued edition, current can
 
 ### Choose the next question
 
-Budget about 70 percent of Director G's working time to the research program across working periods. Science and Mathematics tools supporting the program come first within the remaining share. Track the split by work blocks and aggregate elapsed time when it is available. Count reviews and replays by the question they answer, and count overlapping worker time once in a director's elapsed-time estimate.
+Director G devotes the full working allocation to this research program and chooses its scientific targets and methods. Commission a proof, calculation, data analysis or tool when it can answer a particular research question. Give workers the assumptions, the competing prediction and the record that could distinguish them.
 
 Start at an open obligation and name the assumption the proposed experiment or proof could remove. Identify a competing model that obeys the other assumptions and predict a record on which the two could differ. If both give the same records, look for an invariance proof and identify the additional reference a discriminator would require. Check how the result would connect to the classical limit on the same carrier. In a direct-integration session, reuse existing calibration where it applies. A changed tool or previously untested operation warrants a targeted check when it matters to the result.
 
