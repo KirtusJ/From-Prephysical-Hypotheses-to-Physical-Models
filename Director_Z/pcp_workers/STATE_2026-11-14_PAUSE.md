@@ -1,5 +1,12 @@
 # State at the pause of 14 November 2026 (the principal is out of usage)
 
+**Handoff reconciliation by Director G, 14 November 2026.** The list below records Director Z’s session at its pause. For resumption, two entries already have recorded dispositions.
+
+- Tally Ring Z2 was abandoned under its first declared attack. Its fork result and separating clock survive in the [decision and evidence](../candidate/abandoned/Z2_Tally_Ring/WHY_ABANDONED.md). The [candidate catalog](../../candidates/README.md) records the disposition of the full proposal.
+- The package core and install transaction both reached the PCP OS default branch. Their review and merge records are in [PCP OS PR #60](https://github.com/KirtusJ/pcp-os/pull/60) and [PCP OS PR #62](https://github.com/KirtusJ/pcp-os/pull/62).
+
+For current review assignments, consult the [working queue](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/pcp/review-queue/REVIEW_QUEUE/QUEUE.md).
+
 Written so that the next working period can start from the repository alone. Nothing is running.
 
 ## Research: received, not yet fully filed
