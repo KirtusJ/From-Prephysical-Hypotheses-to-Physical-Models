@@ -1,0 +1,166 @@
+{
+  "forward_walk": {
+    "launch": "one R at 0; L means x < 0; reads after ticks 2, 4, 6",
+    "reference_denominator": 64,
+    "all_reference_word_numerators": {
+      "LLL": 12,
+      "LLR": 0,
+      "LRL": 1,
+      "LRR": 3,
+      "RLL": 0,
+      "RLR": 0,
+      "RRL": 1,
+      "RRR": 47
+    },
+    "normalized_square_sequential_words": {
+      "LLL": "9/100",
+      "LLR": "0",
+      "LRL": "1/1000",
+      "LRR": "9/1000",
+      "RLL": "0",
+      "RLR": "0",
+      "RRL": "9/22100",
+      "RRR": "19881/22100"
+    },
+    "nominated_words": [
+      "LLL",
+      "RRR"
+    ],
+    "reference_pass": "59/64",
+    "deferred_normalized_square_pass": "3481/3506",
+    "sequential_normalized_square_pass": "2187/2210"
+  },
+  "repeated_probes": {
+    "enclosure_denominator": 16777216,
+    "rows": [
+      {
+        "k": 3,
+        "one_probe_error": "1/5",
+        "reference_fail": [
+          8187281,
+          8187282
+        ],
+        "live_root_pass": [
+          4971026,
+          4971027
+        ],
+        "terminal_root_fail": [
+          8287930,
+          8287931
+        ]
+      },
+      {
+        "k": 4,
+        "one_probe_error": "1/10",
+        "reference_fail": [
+          5769684,
+          5769685
+        ],
+        "live_root_pass": [
+          5308416,
+          5308416
+        ],
+        "terminal_root_fail": [
+          7045581,
+          7045582
+        ]
+      },
+      {
+        "k": 8,
+        "one_probe_error": "1/50",
+        "reference_fail": [
+          2503781,
+          2503782
+        ],
+        "live_root_pass": [
+          5764801,
+          5764801
+        ],
+        "terminal_root_fail": [
+          4952501,
+          4952502
+        ]
+      },
+      {
+        "k": 16,
+        "one_probe_error": "1/226",
+        "reference_fail": [
+          1149152,
+          1149153
+        ],
+        "live_root_pass": [
+          5973932,
+          5973933
+        ],
+        "terminal_root_fail": [
+          3578934,
+          3578935
+        ]
+      },
+      {
+        "k": 32,
+        "one_probe_error": "1/962",
+        "reference_fail": [
+          549178,
+          549179
+        ],
+        "live_root_pass": [
+          6074279,
+          6074280
+        ],
+        "terminal_root_fail": [
+          2606793,
+          2606794
+        ]
+      },
+      {
+        "k": 64,
+        "one_probe_error": "1/3970",
+        "reference_fail": [
+          268329,
+          268330
+        ],
+        "live_root_pass": [
+          6123457,
+          6123458
+        ],
+        "terminal_root_fail": [
+          1897065,
+          1897066
+        ]
+      },
+      {
+        "k": 128,
+        "one_probe_error": "1/16130",
+        "reference_fail": [
+          132613,
+          132614
+        ],
+        "live_root_pass": [
+          6147804,
+          6147805
+        ],
+        "terminal_root_fail": [
+          1374817,
+          1374818
+        ]
+      },
+      {
+        "k": 256,
+        "one_probe_error": "1/65026",
+        "reference_fail": [
+          65920,
+          65921
+        ],
+        "live_root_pass": [
+          6159918,
+          6159919
+        ],
+        "terminal_root_fail": [
+          991451,
+          991452
+        ]
+      }
+    ]
+  }
+}
