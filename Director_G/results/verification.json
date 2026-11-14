@@ -6612,5 +6612,19 @@
       "results/two_coin_contact.json": "09194af5a06bc8d1723b0928a8c35343ade3c0295cad321dcf12f251ed5bea04"
     },
     "standing": "Five launch spacings at three ticks, all 16 position effects per spacing. The exact effect spans and signed path sums agree. Physical availability of the contact and a calibrated joint position read remain premises."
+  },
+  "crossed_coin_pairs": {
+    "paper": "Reassigning_the_two_coin_partners.md",
+    "checker": "check_crossed_coin_pairs.py",
+    "result": "results/crossed_coin_pairs.json",
+    "sha256": {
+      "check_crossed_coin_pairs.py": "d500bceb77c9240b35237e2841369b3102d4d73b24985da7c742f12065a68495",
+      "check_two_coin_contact.py": "b177ee845da7e8b5e78a2a4bc73b60cb8dbc38b7f88b9786eba1f043bb467eb0",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/CrossedCoinPairs.lean": "9b945b9bfa7ca5e8c38420dcd53f7ac830a15f76bbd2f3bdd2700eee90137578",
+      "results/crossed_coin_pairs.json": "efdf347b8eb3e944cb21b9fbcce0cd26a574e15f50ea365cef9ba684092c3ba9"
+    },
+    "standing": "Signed position effect replayed from trajectories. Complete Bell-bank transcripts through five pairs and sharp vertex errors through seven pairs. The crossed result assumes the stated assignments and routed contact effects; independence across all labels remains untestable with the supplied real instruments alone."
   }
 }
