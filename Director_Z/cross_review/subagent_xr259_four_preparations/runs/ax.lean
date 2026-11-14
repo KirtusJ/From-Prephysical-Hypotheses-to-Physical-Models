@@ -1,0 +1,4 @@
+
+#print axioms FourLocalPreparations.private_records
+#print axioms FourLocalPreparations.four_at_one_site
+#print axioms FourLocalPreparations.extra_position_copy
