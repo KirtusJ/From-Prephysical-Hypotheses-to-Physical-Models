@@ -61,6 +61,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Probability scores for one gain-bearing arc](Scores_on_gain_orbits.md) | Odd gain cycles admit a count. Even cycles also contribute a positive-semidefinite quadratic form in their parity differences. On a sufficiently controllable finite ring, continuation fixes its own multiplier. |
 | [Joint masks with separate residues](Joint_residue_masks.md) | Joint position masks prepare arbitrary signed residue pairs on two diagonal input rails. Constant continuation gives counting and squares of joint characters. |
 | [Relative orientation at local contact](Local_contact_and_joint_sheet_records.md) | Comparing the two arrival rails at one well recovers the relative orientations invisible to separate preparations. The same three-tick port gives 0 or 1/16 at order four. |
+| [Pair contacts on a joint launch](Paired_contacts_and_joint_characters.md) | Disjoint two-walker comparators recover joint cyclic-character weights in the product instrument model. Four-walker parity is invisible to every proper marginal, and correlated misses can counterfeit its complete decoded record. |
 | [A count fraction from two wells in a cesium walk](Cesium_count_fraction.md) | Published counts at two wells bound the counting fraction under matched dynamics, fixed well responses and independent sampling. All plotted cells and the selection adjustment are retained. |
 | [Counting in a classical flight](Count_weight_in_classical_flight.md) | A moving aperture can select the ordinary free ray from a mixture. Central and moving acceptance per launch expose the count weight hidden by conditioning. |
 | [Pure pointer preparations and mixed-sector controls](Tag_sector_controls.md) | A four-tick comparison gives odds ratios 1 and 6/5. Even real-analytic rules can match every pure-tag flight and any finite set of autonomous mixed-tag calibrations, then give different positive odds at a later splitter. |
@@ -185,6 +186,7 @@ python -B check_staircase_rail_field.py rerun
 python -B check_product_gain_fibers.py rerun
 python -B check_joint_residue_preparation.py rerun
 python -B check_joint_phase_records.py rerun
+python -B check_paired_character_records.py rerun/paired_character_records.json
 python -B check_character_tomography.py rerun
 python -B check_local_clock_detector.py rerun
 python -B check_record_dilation.py rerun
