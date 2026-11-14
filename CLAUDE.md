@@ -1,6 +1,8 @@
 # Working method for Director Z sessions on this repository
 
-This file is read by Claude sessions and their sub-agents working here. It records how the work is done and what has gone wrong before. It is method, not findings; findings live in `edition/`.
+This file is read by Claude sessions and their sub-agents working here. It records how the work is done and what has gone wrong before. The issued findings are in `edition/`.
+
+The [repository guide](README.md) links the issued edition, working research, candidate dispositions and the live review queue. At issue, check its edition label, paper links and verification command against the new edition.
 
 ## Goal and standing limits
 

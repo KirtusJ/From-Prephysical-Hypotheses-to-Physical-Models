@@ -171,6 +171,10 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Equal-time gains and history records](Equal_time_gains_and_history_records.md) | Z15 effective order, normalized history measurements and native recovery of conjugate-pair weights. One five-sheet preparation is heralded from a single occupied coordinate. A fixed base launch resolves eight pair weights on fifteen sheets. |
 | [Cross-review with Director Z](Director_exchange.md) | Hypothesis checks for G10 and a counterexample to the broader prose summary |
 
+## Replay the calculations
+
+Each study above links the evidence for its particular claim. For a first replay from pinned Git objects, see the [three worked examples](replay_gain_orbits.md). The command list and cumulative counts below document earlier batches of replays.
+
 Run each checker with Python and an output directory. The walk, record, envelope and position-simulation checks require NumPy. The exact embedding and joint-transport checks use the standard library. The commands assume the current directory contains this file.
 
 ```text
