@@ -1,0 +1,11 @@
+xr67 NOTES (in-project review, same model family as Director Z; not independent)
+Step 0. PR 67 = merge a3614d4; new note Director_G/Two_well_phase_witness.md (commit 357a1dd). The commit 4582749 named in the brief only edits four older notes.
+Control run: see control.out.
+Step 3 first run: v1 aborted (AssertionError) in C2: my own example mixture used spread s=1/4, giving weight w>1/2 at eta=11/10 (not a valid mixture). Kept as xr67_check_v1_failed_construction.py. Changed s to 2/5 (construction only; predicates unchanged). No result file was written by v1.
+Step 1-3 done. Result xr67_result.json (reproduced bytes in fresh1/). P1 P2 A1 A2 B2 C1 C2 C3 C5 met; B1 FAILED (my predicate: 896 non-unitary rank-one assignments stay normalised from (0,R) through t=5; none has target rates; see b1_followup.json); B3 B4 C4 measured.
+B3: 900 non-unitary, non-normalised assignments (e.g. gains (1,1,w,1), no minus sign) give right-rail squared numbers 1/4 and 7/8; total over both rails exceeds 1 so they are not in the family; right-rail-only read would not see this.
+unbalanced.py: no unbalanced U(2) coin (pure) gives (1/4,7/8) other than the target.
+Step 4. Author's checker rerun in author_run/out1: exit 0, bytes identical to Director_G/results/two_well_witness.json (sha256 2ce0ab93...), second run FileExistsError. Checker hard-codes the template (1,beta,1,-beta), nine rational cases, no scale/efficiency test.
+Lean 4.19.0 (already installed): TwoWellWitness.lean exit 0, no axioms. Proves only: right-ending word counts 2 and 4, coefficients [1,1,0] and [1,2,-1,0], lags [2,1,0] and [6,0,-1,0] (i.e. 2+2x and 8-4x^2 after the Chebyshev step, which is not in Lean). Identity (2), the measure, the bounds are not formalised.
+Verdicts. Generator scope: body holds for every unit-modulus unitary gain assignment through u=bc/a^2 (B2, 9612/9612); lead wording GAP. Calibration: GAP; target lies on the boundary S=mu^2, so false zeros at arbitrarily small per-clock factor (C1), at any common over-count eta>1 (C2), at any rail bias r<1 (C3); none under common loss (target then falsely rejected, C5).
+Not checked: mixtures of unbalanced coins; continuous nu beyond finite atoms; Hoeffding constants; site-dependent gains; README/gate-map wording.
