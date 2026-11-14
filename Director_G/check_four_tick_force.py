@@ -188,7 +188,8 @@ def trial(N,F,s):
         T=j*dt
         L=P+abs(F)*T
         Q=delta*L
-        assert Q<1
+        if not Q<1:
+            raise ArithmeticError("folded bandwidth must be below one")
         phase=T*p*p/2-F*T*T*p/2+F*F*T**3/6
         exact=np.fft.ifft(np.roll(initial_fft*np.exp(-1j*phase),-F*j))
         splitfield=np.fft.ifft(split)
@@ -197,9 +198,15 @@ def trial(N,F,s):
         error=float(np.linalg.norm(observed-exact))
         free_bound=j*(4*np.sqrt(2)*Q**3+2*Q**4/3)
         quad_bound=T*dt*abs(F)*L/2
-        assert pure_error<=free_bound+2e-12 and quad_error<=quad_bound+2e-12
-        assert error<=free_bound+quad_bound+2e-12
-        assert abs(np.linalg.norm(observed)-1)<2e-12
+        # Binary64 diagnostic allowance for j four-tick propagations, the
+        # FFT stages and the final array reduction. This is a numerical check,
+        # separate from the analytic error bound above.
+        allowance = 32*np.finfo(float).eps*(4*j + math.log2(N) + 1)
+        if not (pure_error <= free_bound + allowance and
+                quad_error <= quad_bound + allowance and
+                error <= free_bound + quad_bound + allowance and
+                abs(np.linalg.norm(observed)-1) <= allowance):
+            raise ArithmeticError(f"four-tick comparison failed at N={N}, F={F}, parity={s}, block={j}")
         bare_p=np.sum(abs(initial_fft)**2*p)/sum(abs(initial_fft)**2)
         out_fft=np.fft.fft(observed)
         mean_p=float(np.sum(abs(out_fft)**2*p)/sum(abs(out_fft)**2))
@@ -224,7 +231,12 @@ if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_directory",type=Path)
     dest=parser.parse_args().output_directory
+    output=dest/"four_tick_force.json"
+    if output.exists():
+        parser.exit(2,f"Refusing to overwrite {output}\n")
     data=main()
     dest.mkdir(parents=True,exist_ok=True)
-    (dest/"four_tick_force.json").write_bytes((json.dumps(data,default=str,indent=1)+"\n").encode())
+    with output.open("x",encoding="utf-8",newline="\n") as stream:
+        json.dump(data,stream,default=str,indent=1,allow_nan=False)
+        stream.write("\n")
     print("Verified matched integer cells, two exact flights and all periodic four-tick trial rows.")
