@@ -90,3 +90,5 @@ Its deadline comparison proves that when each actual wait is at most its paired 
 The same file verifies the reference ratio endpoints after clearing denominators and the event inclusion for a finite measure with monotone event weights. The [calibration protocol](../Tag_sector_controls.md#calibrating-the-paths-before-the-curvature-test) supplies the binomial component bounds and the source-transfer assumption.
 
 [TagEndpointBounds.lean](TagEndpointBounds.lean) bounds the true conditional right fraction for every allocation of integer unresolved weights among the right, left and outside outcomes. It checks the common certification threshold at rational efficiencies. The [signal-only test](../Tag_sector_controls.md#bounding-the-right-fraction-from-signal-records-alone) supplies the endpoint instrument and the finite-sample calculation.
+
+The same file proves the marginal upper and joint lower count inequalities for arbitrary two-sign pass tables. The [separate-sample design](../Tag_sector_controls.md#when-the-two-sign-streams-can-be-dependent) constructs a raw-stream coupling attaining the probability bound and evaluates the binomial tails.

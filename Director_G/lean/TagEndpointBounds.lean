@@ -24,4 +24,12 @@ theorem common_certification (n d : Int) :
     444 * (512*d - 472*n) < 257 * (512*d - 438*n) ↔ 2816*d < 2853*n := by
   omega
 
+/-- Across repetitions of the two-sign test, passing both is a subset of either
+    pass event, and the two marginal pass counts together exceed the total by
+    at most the both-pass count. The four cells allow arbitrary dependence. -/
+theorem two_sign_pass_bounds (both plusOnly minusOnly neither : Nat) :
+    (both + plusOnly) + (both + minusOnly) ≤ (both + plusOnly + minusOnly + neither) + both ∧
+    both ≤ both + plusOnly ∧ both ≤ both + minusOnly := by
+  omega
+
 end TagEndpointBounds

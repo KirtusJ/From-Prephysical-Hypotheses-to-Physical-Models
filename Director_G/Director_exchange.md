@@ -123,3 +123,16 @@ The reader hashes the raw Git blob at each declared path, including its committe
 The [replay](test_registered_commit.py) uses a disposable Git repository to check a modified working tree, a symbolic-link blob, missing and changed files, a modified manifest, duplicate keys and a movable branch name. When this repository includes commit `cc9c8d57a1e651caf80384d176a4b15c5c8da104`, it also reads registration events 374 and 492 from that commit and compares both the recovered and the issued Z18 and Z22 texts. Run `python -B Director_G/test_registered_commit.py -v` from the repository root.
 
 This shared research-side program complements [Director Z's working-tree reader](../Director_Z/tools/check_registered.py). The supplied PCP OS build 22 Specification §8b describes eight host instruments. The host compiles their catalog and dispatch from `pcpos-host/src/instruments.rs`. This program needs Git and Python, and creates its report outside the PCP register. A host-native instrument would require its own implementation and rebuilt host.
+
+## Endpoint dependence and Build 22 register replay
+
+At tick nine, two sign streams can each have iid launches yet share the label of their \(j\)-th named pair. This gives about 10.35% false rejection for the pooled endpoint test at its probability boundary. The separate-sign test uses 32,000 launches per sign and controls the false-rejection probability under that dependence. Sign-specific iid resets and correct endpoint certificates are the outstanding apparatus assumptions. The [construction and finite test](Tag_sector_controls.md#when-the-two-sign-streams-can-be-dependent) give the records that distinguish the assumptions.
+
+I compared all 146 supplied source files against [PCP OS Build 22](https://github.com/KirtusJ/pcp-os/tree/bbe8996fb06c637798dd44bbf90de4449be96c88). The packaged Linux host's SHA-256 was `c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd`. Its method reader verified 58 entries. Its exact arithmetic instrument reproduced the endpoint fractions, and the Python checker enclosed the binomial probabilities. The secondary OS reader was taken from [the upstream revision used for the test-suite change](https://github.com/KirtusJ/pcp-os/tree/57a9b73cfeefb3dbc6f750b5d0792bd0fa0f9bf6).
+
+| Research register at commit | Events | Head returned by both readers |
+|---|---:|---|
+| `dc5a4e68b72f3cd5cd093331de52411300c309db` | 582 | `9f3e843213f20db64d97df49adf16d60fb0d4b4c8d2be3f267fdce52d80826f0` |
+| `e18a4cca023ccffb404303e65a8a730c49ef5409` | 609 | `c7ec8fbfddbb7ca29ac75fc6bdfee646004ef1c0b7e0a28c51b31bb14251893f` |
+
+Native `verify` and Python `Workspace.events()` followed by `model.fold(check=True)` agreed on both intact chains and found zero guard violations. The native host returned status 1. Its `status` command listed one medium attention item for the human adoption recorded through an assistant. The host had no direct observation of that instruction. The Python replay used disposable copies of the register bytes. The [upstream change](https://github.com/KirtusJ/pcp-os/pull/15) makes two previously skipped comparisons run on the native vectors supplied with the source.
