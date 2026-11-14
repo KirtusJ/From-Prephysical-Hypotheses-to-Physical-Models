@@ -1,0 +1,206 @@
+{
+  "census": [
+    {
+      "ticks": 0,
+      "nonempty_masks": 1,
+      "real_rank_two": 1,
+      "rank_two_and_individually_odd_primitive": 1,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 1,
+      "nonempty_masks": 3,
+      "real_rank_two": 1,
+      "rank_two_and_individually_odd_primitive": 1,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 2,
+      "nonempty_masks": 7,
+      "real_rank_two": 5,
+      "rank_two_and_individually_odd_primitive": 5,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 3,
+      "nonempty_masks": 15,
+      "real_rank_two": 13,
+      "rank_two_and_individually_odd_primitive": 13,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 4,
+      "nonempty_masks": 31,
+      "real_rank_two": 29,
+      "rank_two_and_individually_odd_primitive": 29,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 5,
+      "nonempty_masks": 63,
+      "real_rank_two": 61,
+      "rank_two_and_individually_odd_primitive": 61,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 6,
+      "nonempty_masks": 127,
+      "real_rank_two": 125,
+      "rank_two_and_individually_odd_primitive": 125,
+      "primitive_pairs_with_odd_rank_drop": []
+    },
+    {
+      "ticks": 7,
+      "nonempty_masks": 255,
+      "real_rank_two": 253,
+      "rank_two_and_individually_odd_primitive": 251,
+      "primitive_pairs_with_odd_rank_drop": [
+        {
+          "sites": [
+            -3
+          ],
+          "odd_minor_gcd": 7
+        },
+        {
+          "sites": [
+            3
+          ],
+          "odd_minor_gcd": 7
+        }
+      ]
+    },
+    {
+      "ticks": 8,
+      "nonempty_masks": 511,
+      "real_rank_two": 509,
+      "rank_two_and_individually_odd_primitive": 504,
+      "primitive_pairs_with_odd_rank_drop": [
+        {
+          "sites": [
+            -4
+          ],
+          "odd_minor_gcd": 11
+        },
+        {
+          "sites": [
+            4
+          ],
+          "odd_minor_gcd": 11
+        },
+        {
+          "sites": [
+            -8,
+            0
+          ],
+          "odd_minor_gcd": 3
+        },
+        {
+          "sites": [
+            0,
+            8
+          ],
+          "odd_minor_gcd": 3
+        }
+      ]
+    }
+  ],
+  "tick_seven_plus_three": {
+    "source": [
+      [
+        5,
+        -1
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "target": [
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "source_and_target_marked_gram_RR_RL_LL": [
+      41,
+      3,
+      5
+    ],
+    "complement_gram": [
+      87,
+      -3,
+      123
+    ],
+    "forced_isometry_numerators_over_7": [
+      [
+        -4,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "single_column_gate_counts": [
+      [
+        23,
+        11
+      ],
+      [
+        17,
+        15
+      ]
+    ],
+    "source_and_target_for_test_direction": [
+      [
+        7,
+        0
+      ],
+      [
+        -4,
+        1,
+        4,
+        4
+      ]
+    ],
+    "both_pooled_masses_normalized_test_coin": "49/640",
+    "benign_simultaneous_Walsh_image_numerators_over_2": [
+      [
+        9,
+        1
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        1,
+        -3
+      ]
+    ]
+  }
+}
