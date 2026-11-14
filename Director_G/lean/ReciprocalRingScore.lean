@@ -18,4 +18,15 @@ theorem full_terminal :
 -- Integer certificates for the two strict inequalities in the fair-path check.
 example : 576^2 * 81 > 225^3 ∧ 463 * 225 > 3 * 81 * 341 := by decide
 
+/-- For an odd circumference, a base label's two sheet representatives
+    have opposite parity. -/
+theorem odd_sheet_parity (x h : Nat) :
+    (x + (2*h+1)) % 2 = 1 - x % 2 := by omega
+
+/-- A modular seam crossing also flips the parity of the lifted coordinate
+    even when the base step stays in the same parity class. -/
+theorem odd_seam_step (h : Nat) :
+    ((2*h+1) % 2 = 1 - (2*h) % 2) ∧
+    ((2*(2*h+1)-1) % 2 = 1 - 0 % 2) := by omega
+
 end ReciprocalRingScore
