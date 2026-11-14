@@ -116,3 +116,31 @@ This bias persists at large depth. Let \(m_n^\pm\) be the tag-one parent mass an
 Joint differentiability matters even if independent sector signs are unobservable. For \(S=u^2+v^2+a^2+b^2>0\), take \(K=1/2+\operatorname{clip}((uv-|ua|)/S,-1/2,1/2)\), with ordinary clipping to the indicated interval. This rule is Lipschitz on the normalized field sphere and agrees with every occupied pure-tag response. Its two edge fractions are exactly \(1/2\) at every depth. The absolute value introduces a cusp at the pure right input. All sign-control results here are predictions from the stated instruments and laws.
 
 The checker enumerates signed words independently of the marker update, includes zero and inaccessible bins, and checks the labels in a varying spacetime frame. It verifies the tick-eight and tick-nine differences, the sign and matched-identity panels, and the weighting example. The stored 464 cells across five settings and 24 four-tick panels also give the larger-norm probabilities by checked equality to the autonomous column. [Standard-library checker](check_tag_sector_controls.py) · [Exact four-tick panels](results/tag_sector_controls.json)
+
+## Testing a curvature cap with a finite number of launches
+
+At the tick-eight parent \((6,b=1)\), the pure right fraction is \(h=49/74\). If the spectator curvature is at most six in absolute value on the specified segment, the equal-sign mean \(\mu=(q_++q_-)/2\) must satisfy \(\mu\ge h-1/12=257/444\). This gives a one-sided test against the second analytic rule, \(c_2\). At tick nine that rule assigns \(40/512\) to \((7,R,1)\) and \(34/512\) to \((5,L,1)\) under either sign. Its right fraction among these two ports is \(p_1=20/37\), and the probability of reaching either is \(r=37/256\). The first rule, \(c_1\), lies inside the one-sided null.
+
+Fix the following sampling rule before collecting data. Each launch uses a fresh preparation. Let \(r_s>0\) be the probability of a named hit under sign \(s\), and \(q_s\) the probability of right given that hit. These probabilities must be stable across independent launches at that sign.
+
+1. Draw a fair, independent sign. Use it for successive launches until either named port fires. Record every launch, its setting and its outcome. All other outcomes consume one launch and keep the sign fixed.
+2. Count the named hit as right or left. Draw a fresh sign for the next requested hit. Stop upon recording 1,839 hits or using 13,549 launches, including a hit on the last launch.
+3. With 1,839 hits, reject \(\mu\ge257/444\) if at most 1,029 went right. With fewer hits, report a timeout and count it as a non-rejection in the full set of runs.
+
+To calculate the null error, extend each possible run beyond the deadline until all requested hits have occurred. Given sign \(s\), the probability that the first hit falls on launch \(j\) and is right equals \((1-r_s)^{j-1}r_s q_s\). Summing over \(j\) and averaging the two signs gives \(\mu\). Independent repetitions make the right count in the extended run binomial with parameters \(m=1839\) and \(\mu\). Every rejection observed by the deadline is also a rejection in its extension. Its probability is therefore at most \(F_{m,p_0}(k)\), where \(F_{m,p}(k)=\Pr\{\mathrm{Bin}(m,p)\le k\}\), \(p_0=257/444\) and \(k=1029\). This lower tail decreases with \(p\). The bound holds even when completion and the right count are dependent. [Binomial probabilities, NIST](https://itl.nist.gov/div898/handbook/eda/section3/eda366i.htm)
+
+Under \(c_2\), both signs give the same arrival rate and the same right fraction. The wait for each hit is then independent of its label. With \(B=13549\) the timeout probability is \(F_{B,r}(m-1)\), and the unconditional rejection probability is \([1-F_{B,r}(m-1)]F_{m,p_1}(k)\).
+
+| Quantity | Probability (rounded) |
+|---|---:|
+| Upper bound on false rejection over the one-sided null | 0.049532549250 |
+| Rejection under \(c_2\) with unlimited launches | 0.951525623912 |
+| Timeout under \(c_2\) with 13,549 launches | 0.001597098026 |
+| Rejection under \(c_2\) with 13,549 launches, including timeouts | 0.950005944216 |
+| Rejection under \(c_2\) with 13,548 launches, including timeouts | 0.949988732445 |
+
+For this hit count and cutoff, 13,549 is the first launch budget to achieve 95% power. Raising the cutoff by one would raise the unrestricted boundary tail to 0.054539198659. The checker evaluates the tails as rational numbers before comparing them with 0.05 and 0.95. [Exact enclosures](results/tag_shot_budget.json) · [Reproduce the calculations](check_tag_shot_budget.py) · [Lean proof of the deadline and timeout rules](lean/TagShotBudget.lean)
+
+**What goes wrong if the sign is redrawn after a miss?** Drawing a fair sign on every raw launch and pooling hits gives the right fraction \((r_+q_+ + r_-q_-)/(r_++r_-)\). For a control within the probability null, take \(q_\pm=h\mp1/6\), the two endpoint values of \(g(1/6,z)=h-z\), and arrival probabilities \(r_+=1/4,\ r_-=1/32\). The equal-sign mean is the pure value \(49/74\), yet the pooled mean is \(532/999\). With the same deadline and cutoff, redrawing on every launch would reject this null with probability 0.942229063259. The example allows the arrival rates to vary as nuisance parameters. Conditioning even the prescribed procedure on prompt completion can also distort the mean. With only two launches to get two hits in this example, the conditional probability that both hits are left is \((1-532/999)^2\). The corresponding unlimited probability is \((1-49/74)^2\).
+
+The numerical power uses the two **recorded** port probabilities under \(c_2\). A common loss factor for right and left within a setting preserves \(q_s\) and lowers its arrival rate. Unequal right and left efficiencies can change \(q_s\) itself. Applying the stated threshold to physical counts therefore requires faithful or efficiency-matched ports, matched sign operations, and independent preparations. A correction based on separately measured efficiency ratios needs its own sampling calculation. A rejection challenges the joint calibration and curvature assumptions. This design supplies no measurement of the curvature, detector efficiencies or classical limit.

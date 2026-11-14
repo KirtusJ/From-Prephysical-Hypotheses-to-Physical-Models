@@ -82,3 +82,5 @@ The extended [staircase proof](StaircaseAbundance.lean) reaches every site and e
 [FlightWindow.lean](FlightWindow.lean) proves the reversible bit operation, the conditional signed tally, and an accepted two-path example distinguishing the bit from a separate record of each port. The later free-flight and continuum estimates are given in the [flight-window paper](../Flight_window_preparation.md).
 
 [ThreeWellPhase.lean](ThreeWellPhase.lean) derives the signed masses of three terminal wells and the determinant factors for independent row brightnesses and fixed well gains. Their normalized contrast measures the real first-arm coherence in the [proposed cesium sign reversal](../Cesium_negative_read.md#comparing-three-wells-with-unknown-detector-efficiencies).
+
+[TagShotBudget.lean](TagShotBudget.lean) proves that a timeout cannot reject and that every rejection within a raw launch budget survives any continuation of the same tick-nine port log. The [sampling calculation](../Tag_sector_controls.md#testing-a-curvature-cap-with-a-finite-number-of-launches) gives the independence assumptions and the resulting binomial probabilities.
