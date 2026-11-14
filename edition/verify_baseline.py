@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Local consistency check of the baseline.  Requires PyMuPDF for the front-matter check (skipped with a notice if absent)."""
-import csv, hashlib, json, os, sys
+import csv, hashlib, json, os, re, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 man = json.load(open(os.path.join(ROOT, "MANIFEST.json"))); bad = []
 listed = set(man["files"])
@@ -8,10 +8,11 @@ for rel, meta in man["files"].items():
     p = os.path.join(ROOT, rel)
     if not os.path.exists(p): bad.append(("missing", rel)); continue
     if hashlib.sha256(open(p, "rb").read()).hexdigest() != meta["sha256"]: bad.append(("digest", rel))
+    if os.path.getsize(p) != meta["size"]: bad.append(("size", rel))
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
         rel = os.path.relpath(os.path.join(dp, f), ROOT)
-        if rel not in listed and rel != "MANIFEST.json" and "__pycache__" not in rel: bad.append(("unlisted", rel))
+        if rel not in listed and rel != "MANIFEST.json" and not (os.path.basename(dp) == "__pycache__" and f.endswith(".pyc")): bad.append(("unlisted", rel))
 reg = os.path.join(ROOT, "PROGRAM", "registers")
 rd = lambda n: list(csv.DictReader(open(os.path.join(reg, n))))
 cross, registry, index = rd("COMPONENT_CROSSWALK.csv"), rd("THEOREM_REGISTRY.csv"), rd("PAPER_INDEX.csv")
@@ -27,11 +28,23 @@ for r in registry:
 for c in cross:
     if c["kind"] != "legacy" and hashlib.sha256(open(os.path.join(ROOT, c["baseline_path"]), "rb").read()).hexdigest() != c["baseline_sha256"]:
         bad.append(("crosswalk digest", c["baseline_path"]))
+for r in index:
+    if r["kind"] != "planned" and int(r["statements"] or 0) != sum(1 for q in registry if q["paper"] == r["id"] and q["kind"] != "Note"):
+        bad.append(("PAPER_INDEX statements differ from registry", r["id"]))
+for n in re.findall(r"theorem registry \((\d+) rows\)", open(os.path.join(ROOT, "README.md")).read()):
+    if int(n) != len(registry): bad.append(("README registry count", n))
+for dp, _, fs in os.walk(ROOT):
+    if "register.jsonl" in fs:
+        ls = [l for l in open(os.path.join(dp, "register.jsonl"), "rb").read().split(b"\n") if l]
+        for i in range(len(ls) - 1):
+            if json.loads(ls[i + 1])["prev"] != hashlib.sha256(ls[i]).hexdigest(): bad.append(("register chain", os.path.relpath(dp, ROOT) + " seq %d" % i))
 try:
     import pymupdf
     for r in index:
         if r["kind"] == "planned": continue
-        d = pymupdf.open(os.path.join(ROOT, r["file"])); t = d[0].get_text() + (d[1].get_text() if d.page_count > 1 else "")
+        d = pymupdf.open(os.path.join(ROOT, r["file"]))
+        if d.page_count != int(r["pages"]): bad.append(("PAPER_INDEX pages differ from PDF", r["id"]))
+        t = d[0].get_text() + (d[1].get_text() if d.page_count > 1 else "")
         t = " ".join(t.split())
         for need in ("Kirtus Justus", "Theoretical Physicist", "Port Coquitlam, British Columbia, Canada"):
             if need not in t: bad.append(("front matter lacks " + need, r["id"]))

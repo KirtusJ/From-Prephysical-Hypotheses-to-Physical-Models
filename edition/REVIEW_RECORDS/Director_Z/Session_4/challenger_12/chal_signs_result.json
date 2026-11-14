@@ -1,0 +1,9586 @@
+{
+ "seed": 20261113,
+ "tmax": 5000,
+ "groups": {
+  "2": {
+   "order": 2,
+   "classes": [
+    [
+     1
+    ]
+   ],
+   "order2": [
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.0,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 16
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       6
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       2
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       501,
+       501
+      ],
+      "V3_normalised|order2": [
+       6,
+       6
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 4,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       501,
+       501
+      ],
+      "V3_normalised|order2": [
+       6,
+       6
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    }
+   }
+  },
+  "3": {
+   "order": 3,
+   "classes": [
+    [
+     1
+    ]
+   ],
+   "order2": [
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.16666666666666666,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 64
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       1333
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       15
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       5
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       5
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       11
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "4/3",
+        "-1/3"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "9/7",
+        "-2/7"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "8/7",
+        "-1/7"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       1333,
+       1333
+      ],
+      "V3_normalised|order>2": [
+       15,
+       15
+      ],
+      "R_random_normalised|order>2": [
+       3,
+       11
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       1333,
+       1333
+      ],
+      "V3_normalised|order>2": [
+       15,
+       15
+      ],
+      "R_random_normalised|order>2": [
+       3,
+       11
+      ]
+     }
+    }
+   }
+  },
+  "4": {
+   "order": 4,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "order2": [
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.0,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 256
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       1001
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       6
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       2
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/20",
+        "-1/10",
+        "11/20"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       2,
+       2
+      ],
+      "V2_small_neg_big_count|order>2": [
+       1001,
+       1001
+      ],
+      "V3_normalised|order>2": [
+       6,
+       6
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       2,
+       2
+      ],
+      "V2_small_neg_big_count|order>2": [
+       1001,
+       1001
+      ],
+      "V3_normalised|order>2": [
+       6,
+       6
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       1001
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       12
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       5
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       9
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "4/3",
+        "-1/3"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "8/7",
+        "-1/7"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       2,
+       2
+      ],
+      "V2_small_neg_big_count|order>2": [
+       1001,
+       1001
+      ],
+      "V3_normalised|order>2": [
+       6,
+       12
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       3,
+       9
+      ]
+     }
+    }
+   }
+  },
+  "5": {
+   "order": 5,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ],
+   "order2": [
+    false,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.3213595499957939,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 1024
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       800
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       4
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       800
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       4
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/20",
+        "-1/10",
+        "11/20"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       2,
+       [
+        "11/20",
+        "11/20",
+        "-1/10"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       800,
+       800
+      ],
+      "V3_normalised|order>2": [
+       4,
+       4
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       800,
+       800
+      ],
+      "V3_normalised|order>2": [
+       4,
+       4
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       800
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       8
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       5
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "5/4",
+        "-1/4"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "8/7",
+        "-1/7"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       800,
+       800
+      ],
+      "V3_normalised|order>2": [
+       4,
+       8
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       5
+      ]
+     }
+    }
+   }
+  },
+  "6": {
+   "order": 6,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.16666666666666666,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 4096
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "n_vectors_with_negative": 17,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       667
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       667
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       167
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/30",
+        "-1/10",
+        "11/30",
+        "11/30"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       667,
+       667
+      ],
+      "V3_normalised|order>2": [
+       1,
+       3
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       167,
+       167
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       667,
+       667
+      ],
+      "V3_normalised|order>2": [
+       1,
+       3
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       167,
+       167
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       667
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       3
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       167
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       667,
+       667
+      ],
+      "V3_normalised|order>2": [
+       1,
+       3
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       167,
+       167
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    }
+   }
+  },
+  "7": {
+   "order": 7,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.2853464398416034,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 16384
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "n_vectors_with_negative": 17,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       571
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       571
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       571
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/30",
+        "-1/10",
+        "11/30",
+        "11/30"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       2,
+       [
+        "11/30",
+        "11/30",
+        "-1/10",
+        "11/30"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       3,
+       [
+        "11/30",
+        "11/30",
+        "11/30",
+        "-1/10"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       571,
+       571
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 4,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       571,
+       571
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       571
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       6
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       571,
+       571
+      ],
+      "V3_normalised|order>2": [
+       2,
+       6
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "8": {
+   "order": 8,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.25,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 65536
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ]
+     ],
+     "n_vectors_with_negative": 20,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       500
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       500
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       500,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       500,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       4
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       500
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       5
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/20",
+        "-1/10",
+        "11/20"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       500,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       3
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       5
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "9": {
+   "order": 9,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.24918443959880646,
+   "small_search": {
+    "box": 2,
+    "n_vectors": 39683
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ]
+     ],
+     "n_vectors_with_negative": 20,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       444
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       444
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       444
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       4
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "2/9",
+        "5/18",
+        "-1/36",
+        "5/18",
+        "1/4"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       444,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       4
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       444,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       4
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "n_vectors_with_negative": 17,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       444
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       444
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       444,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       4
+      ]
+     }
+    }
+   }
+  },
+  "10": {
+   "order": 10,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.3213595499957939,
+   "small_search": {
+    "box": 2,
+    "n_vectors": 79049
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ],
+      [
+       5
+      ]
+     ],
+     "n_vectors_with_negative": 23,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       400
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       400
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       400
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       400
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        5
+       ],
+       101
+      ],
+      [
+       "V3_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       2
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       400,
+       400
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       101,
+       101
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       400,
+       400
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       101,
+       101
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       4
+      ],
+      [
+       5
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       400
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        5
+       ],
+       101
+      ],
+      [
+       "V3_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       400,
+       400
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       101,
+       101
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "11": {
+   "order": 11,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.27485333173566884,
+   "small_search": {
+    "box": 1,
+    "n_vectors": 22048
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ],
+      [
+       5
+      ]
+     ],
+     "n_vectors_with_negative": 23,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       364
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       364
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       364
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       364
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        5
+       ],
+       364
+      ],
+      [
+       "V3_normalised",
+       [
+        5
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       364,
+       364
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       364,
+       364
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 11,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       363
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       4
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "V3_normalised",
+       1,
+       [
+        "11/10",
+        "-1/10"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       363,
+       364
+      ],
+      "V3_normalised|order>2": [
+       2,
+       4
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ]
+     }
+    }
+   }
+  },
+  "12": {
+   "order": 12,
+   "classes": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.16666666666666666,
+   "small_search": {
+    "box": 1,
+    "n_vectors": 24096
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ],
+      [
+       5
+      ],
+      [
+       6
+      ]
+     ],
+     "n_vectors_with_negative": 26,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        2
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        5
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        5
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        6
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       6,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 4,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ],
+      [
+       5
+      ],
+      [
+       6
+      ]
+     ],
+     "n_vectors_with_negative": 23,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        3
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        4
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        5
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        5
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        6
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        6
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        4
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        3
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        5
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ],
+      [
+       "R_random_normalised",
+       null,
+       [
+        "1/6",
+        "-1/24",
+        "7/24",
+        "5/24",
+        "1/24",
+        "1/3"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "2x2": {
+   "order": 4,
+   "classes": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "order2": [
+    true,
+    true,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.0,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 256
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 17,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 4,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       251
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       251,
+       251
+      ],
+      "V3_normalised|order2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "2x4": {
+   "order": 8,
+   "classes": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order2": [
+    false,
+    true,
+    true,
+    false,
+    true
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.0,
+   "small_search": {
+    "box": 3,
+    "n_vectors": 65536
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 23,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        2
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        2
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       501,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       501,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 20,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        2
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       501
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        2
+       ],
+       126
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        2
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       501,
+       501
+      ],
+      "V3_normalised|order>2": [
+       2,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       126,
+       126
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       2
+      ],
+      "R_random_normalised|order2": [
+       1,
+       2
+      ]
+     }
+    }
+   }
+  },
+  "3x3": {
+   "order": 9,
+   "classes": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order2": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.16666666666666666,
+   "small_search": {
+    "box": 2,
+    "n_vectors": 39683
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 20,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        2
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       445,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       445,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "n_vectors_with_negative": 17,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        2
+       ],
+       445
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        2
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1
+       ],
+       3
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       445,
+       445
+      ],
+      "V3_normalised|order>2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ]
+     }
+    }
+   }
+  },
+  "2x2x3": {
+   "order": 12,
+   "classes": [
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     1
+    ],
+    [
+     1,
+     1,
+     0
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "order2": [
+    false,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false
+   ],
+   "class_list_distinct_nontrivial": true,
+   "max_rounding_dev_over_order": 0.16666666666666666,
+   "small_search": {
+    "box": 1,
+    "n_vectors": 24096
+   },
+   "index_sets": {
+    "full": {
+     "classes": [
+      [
+       0,
+       0,
+       1
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       1,
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 29,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        0,
+        1
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1,
+        0
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        0,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        0,
+        1,
+        1
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        0,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0,
+        0
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0,
+        1
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1,
+        0
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1,
+        1
+       ],
+       334
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        1
+       ],
+       3
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        0,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        0,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1,
+        0
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       3,
+       [
+        "10",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       4,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       5,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       6,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       7,
+       [
+        "10",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       1
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "empty": {
+     "classes": [],
+     "n_vectors_with_negative": 2,
+     "n_controls": 4,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ]
+     ],
+     "small_search_not_found": [],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       1
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    },
+    "subset": {
+     "classes": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       1,
+       1
+      ]
+     ],
+     "n_vectors_with_negative": 14,
+     "n_controls": 5,
+     "witness": [
+      [
+       "V1_minus1",
+       "count",
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       "count",
+       1
+      ],
+      [
+       "V3_normalised",
+       "count",
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        0,
+        0
+       ],
+       84
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "V1_minus1",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "V2_small_neg_big_count",
+       [
+        1,
+        1,
+        1
+       ],
+       333
+      ],
+      [
+       "V3_normalised",
+       [
+        1,
+        1,
+        1
+       ],
+       2
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        0,
+        0
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ],
+      [
+       "R_random_normalised",
+       "count",
+       1
+      ],
+      [
+       "R_random_normalised",
+       [
+        1,
+        1,
+        1
+       ],
+       1
+      ]
+     ],
+     "small_search_not_found": [
+      [
+       "V2_small_neg_big_count",
+       1,
+       [
+        "10",
+        "-1/100",
+        "1"
+       ],
+       0.0
+      ],
+      [
+       "V2_small_neg_big_count",
+       2,
+       [
+        "10",
+        "1",
+        "-1/100"
+       ],
+       0.0
+      ]
+     ],
+     "witness_T_ranges": {
+      "V1_minus1|order>2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order>2": [
+       333,
+       334
+      ],
+      "V3_normalised|order>2": [
+       1,
+       2
+      ],
+      "V1_minus1|order2": [
+       1,
+       1
+      ],
+      "V2_small_neg_big_count|order2": [
+       84,
+       84
+      ],
+      "V3_normalised|order2": [
+       1,
+       1
+      ],
+      "R_random_normalised|order>2": [
+       1,
+       3
+      ],
+      "R_random_normalised|order2": [
+       1,
+       1
+      ]
+     }
+    }
+   }
+  }
+ },
+ "failures": [
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3
+    ],
+    "full",
+    "R_random_normalised",
+    [
+     "4/3",
+     "-1/3"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3
+    ],
+    "full",
+    "R_random_normalised",
+    [
+     "9/7",
+     "-2/7"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3
+    ],
+    "full",
+    "R_random_normalised",
+    [
+     "8/7",
+     "-1/7"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/20",
+     "-1/10",
+     "11/20"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "subset",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "subset",
+    "R_random_normalised",
+    [
+     "4/3",
+     "-1/3"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     4
+    ],
+    "subset",
+    "R_random_normalised",
+    [
+     "8/7",
+     "-1/7"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/20",
+     "-1/10",
+     "11/20"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/20",
+     "11/20",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "subset",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "subset",
+    "R_random_normalised",
+    [
+     "5/4",
+     "-1/4"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     5
+    ],
+    "subset",
+    "R_random_normalised",
+    [
+     "8/7",
+     "-1/7"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/30",
+     "-1/10",
+     "11/30",
+     "11/30"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     6
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/30",
+     "-1/10",
+     "11/30",
+     "11/30"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/30",
+     "11/30",
+     "-1/10",
+     "11/30"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "full",
+    "V3_normalised",
+    [
+     "11/30",
+     "11/30",
+     "11/30",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     7
+    ],
+    "subset",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "subset",
+    "V3_normalised",
+    [
+     "11/20",
+     "-1/10",
+     "11/20"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     8
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "full",
+    "R_random_normalised",
+    [
+     "2/9",
+     "5/18",
+     "-1/36",
+     "5/18",
+     "1/4"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     9
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     10
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     11
+    ],
+    "subset",
+    "V3_normalised",
+    [
+     "11/10",
+     "-1/10"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     12
+    ],
+    "subset",
+    "R_random_normalised",
+    [
+     "1/6",
+     "-1/24",
+     "7/24",
+     "5/24",
+     "1/24",
+     "1/3"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     4
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     3,
+     3
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "full",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "-1/100",
+     "1"
+    ],
+    0.0
+   ]
+  },
+  {
+   "pred": "P5",
+   "info": [
+    [
+     2,
+     2,
+     3
+    ],
+    "subset",
+    "V2_small_neg_big_count",
+    [
+     "10",
+     "1",
+     "-1/100"
+    ],
+    0.0
+   ]
+  }
+ ],
+ "P7": [
+  [
+   [
+    8
+   ],
+   [
+    1
+   ],
+   [
+    3
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    8
+   ],
+   [
+    1
+   ],
+   [
+    5
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    8
+   ],
+   [
+    1
+   ],
+   [
+    7
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    8
+   ],
+   [
+    1
+   ],
+   [
+    2
+   ],
+   "different",
+   true
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    2,
+    2
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   "different",
+   true
+  ],
+  [
+   [
+    12
+   ],
+   [
+    1
+   ],
+   [
+    5
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    12
+   ],
+   [
+    1
+   ],
+   [
+    7
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    12
+   ],
+   [
+    2
+   ],
+   [
+    6
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    12
+   ],
+   [
+    1
+   ],
+   [
+    11
+   ],
+   "same",
+   true
+  ],
+  [
+   [
+    12
+   ],
+   [
+    1
+   ],
+   [
+    2
+   ],
+   "different",
+   true
+  ]
+ ],
+ "P8": [
+  [
+   "trivial H",
+   "-1",
+   true
+  ],
+  [
+   "trivial H",
+   "-1/1000",
+   true
+  ],
+  [
+   "trivial H",
+   "0",
+   false
+  ],
+  [
+   "trivial H",
+   "1",
+   false
+  ],
+  [
+   "Z2 witness",
+   1,
+   [
+    2,
+    0
+   ]
+  ],
+  [
+   "Z2 witness",
+   2,
+   [
+    4,
+    0
+   ]
+  ],
+  [
+   "Z2 witness",
+   17,
+   [
+    34,
+    0
+   ]
+  ],
+  [
+   "Z2 witness",
+   1000,
+   [
+    2000,
+    0
+   ]
+  ],
+  [
+   "Z2 threshold",
+   "10",
+   "-1/100",
+   501,
+   501
+  ],
+  [
+   "Z2 threshold",
+   "1",
+   "-1",
+   1,
+   1
+  ],
+  [
+   "Z2 threshold",
+   "1000",
+   "-1/1000",
+   500001,
+   500001
+  ]
+ ],
+ "P9": {
+  "multiplicities": [
+   9,
+   4,
+   4,
+   4,
+   4
+  ],
+  "rows": [
+   [
+    [
+     -1,
+     1,
+     1
+    ],
+    [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "-5",
+    true
+   ],
+   [
+    [
+     1,
+     -1,
+     1
+    ],
+    [
+     2,
+     2,
+     0,
+     0,
+     2
+    ],
+    "6 - 4*sqrt(5)",
+    true
+   ],
+   [
+    [
+     1,
+     1,
+     -1
+    ],
+    [
+     2,
+     0,
+     2,
+     2,
+     0
+    ],
+    "6 - 4*sqrt(5)",
+    true
+   ]
+  ]
+ },
+ "tally": {
+  "P1": {
+   "met": 424,
+   "failed": 0
+  },
+  "P2": {
+   "met": 84800,
+   "failed": 0
+  },
+  "P3": {
+   "met": 11000,
+   "failed": 0
+  },
+  "P4": {
+   "met": 574,
+   "failed": 0
+  },
+  "P5": {
+   "met": 399,
+   "failed": 107
+  },
+  "P6": {
+   "met": 210,
+   "failed": 0
+  },
+  "P7": {
+   "met": 11,
+   "failed": 0
+  },
+  "P8": {
+   "met": 11,
+   "failed": 0
+  },
+  "P9": {
+   "met": 4,
+   "failed": 0
+  }
+ }
+}

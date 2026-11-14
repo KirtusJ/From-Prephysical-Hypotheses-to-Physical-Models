@@ -93,3 +93,38 @@ Working rule drawn from this: at most two levels below the director (sub-agent, 
 
 `Director_Z/tools/pcp_submit.py` was written after the second duplicate register submission: it refuses to send a call file whose digest is already in its ledger and saves the server's output to a file. This is rule 6 turned into a program. Applications are written only when a step has failed more than once or recurs at every edition.
 
+## Pull requests from the stack (13 November 2026)
+
+Principal: sub-agents and workers may open pull requests on all repositories and branches when necessary. Adopted as: patch file from sub-agents without GitHub tools, pull request from workers that have them, author never merges. Observed the same day: the director's own merge of another author's branch (Director G's pull requests 5, 6, 8) was refused by the session's permission layer, so merging is by the author or the principal. To watch: whether any worker opens one, and whether it was needed.
+
+## Wider propagation, positive arcs, wildcard and chaos roles (13 November 2026)
+
+Principal: propagate among the stack more and see if it works; not only negative arcs but positive ones; include wildcard parrots and chaos parrots. Adopted as three agent definitions (`pcp-builder`, `pcp-wildcard`, `pcp-chaos`) and rule 7 of the stack in `CLAUDE.md`.
+
+First use, on Director G's candidate G1 and pull request 22: six narrow agents in parallel (theorem, premises, citations, mechanics, Lean and fixed rings, the parity note) in place of one reading by the director, then one builder, one wildcard and one chaos agent. What to record when they report: how many findings were new to the director, how many reports needed correction on recheck, wall time against a single reading, and for the chaos agent the count caught / survived.
+
+### Result of the first wide fan-out (13 November 2026, about 23:00 UTC)
+
+It did not work as launched. Eleven sub-agents started within a few minutes, with the queue session woken at the same time, used up the account's five-hour model allowance in about six minutes of wall time; all eleven stopped with rate-limit errors (reset 01:30 UTC) and none delivered a report. What was saved: the agents that had been told to append to `FINDINGS.md` as they went left usable partial work (citations: 11 of 11 links assessed; theorem: hypothesis list; mechanics: 4 of 8 items; pull request 22: rerun, own program and a patch); the agents that had not yet written anything left programs without findings.
+
+What changes:
+- Width is limited by the allowance, not by the tool. At most three sub-agents at once, and the queue session is not woken in the same window.
+- The rule "append to FINDINGS.md after each item" is what made the stop survivable; it stays in every prompt, and the first item of every prompt is now the cheapest one that yields a usable result.
+- Long prompts with eight items cost more than they return when the agent is cut off; prefer one or two items per agent.
+- Stopped agents are resumed by message with their saved context, not relaunched.
+
+### Second attempt, three at a time (13 to 14 November 2026)
+
+Seven stopped agents were resumed by message in two batches of three and one; all seven reported. Tokens per resumed agent: 95k to 160k. The mechanics challenger and the case-study fact-check were not resumed (the director did the case-study check by hand in two commands).
+
+| Role | New to the director | Needed correction on recheck | Note |
+|---|---|---|---|
+| Premises attack (negative) | yes: conservation alone leaves 37 dimensions by tick 12 when the detector sees both route numbers | none; director's rerun reproduced ticks 9 to 12, timed out at 14 | the decisive finding on G1 |
+| Builder on G1 (positive) | yes: a weaker premise plus one measurement replaces "signed total only" | none; proof read, program rerun byte-identical | the attack's wound came back with its repair |
+| Builder on product events (positive) | yes: the target was false as posed, with two explicit counterexamples | none found | a refuted strengthening is a result |
+| Chaos | yes: 16 of 34 planted errors survive the checks | patch applies; not yet in the edition | first measurement of what the checks miss |
+| Wildcard | yes: recomputed a table the director had not; one sentence of G10 depends on horizon | none | chose a record marked "not recomputed" |
+| Lean and fixed rings | no defect; coverage limits of the Lean file | none; recompiled | did not write FINDINGS.md, citing a standing instruction of its own |
+| Citations | prior art absent; network block found | page bodies not opened | search summaries only |
+
+What worked: a builder beside each attacker; resuming by message; narrowing the brief on resume to one or two items. What did not: eleven at once; eight-item briefs; relying on WebFetch (arxiv.org and claymath.org are not reachable from this session).
