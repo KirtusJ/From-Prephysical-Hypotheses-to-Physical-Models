@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-def physical_words(length, ticks, source, connected, records=()):
+def physical_words(length, ticks, source, connected, records=(), prepare_route=False):
     """Enumerate words from (site, sheet, rail, signed source coefficient)."""
     end = Counter()
     for origin, sheet, rail, coefficient in source:
@@ -22,6 +22,8 @@ def physical_words(length, ticks, source, connected, records=()):
                 for time, kind in records:
                     if t == time:
                         labels += (x if kind == "site" else c,)
+                if prepare_route and t == 1 and c == -1 and x in (0, 1):
+                    x = 1-x
             end[labels, x, s, c] += value
     return end
 
@@ -114,6 +116,32 @@ def unequal_flights():
     return out
 
 
+def routed_source():
+    rows = []
+    for connected in (False, True):
+        for initial in (1, -1):
+            sharp = ((1, 0, initial, 1),)
+            first = propagated(3, 1, sharp, connected)
+            assert first == {(0, 0, -1): initial, (2, 0, 1): 1}
+            after = []
+            for (x, s, c), value in first.items():
+                target = 1 - x if c == -1 and x in (0, 1) else x
+                after.append((target, s, c, value))
+            state = propagated(3, 2, after, connected)
+            words = physical_words(3, 3, sharp, connected, prepare_route=True)
+            assert state == {(x, s, c): v for (_, x, s, c), v in words.items() if v}
+            coherent = base_masses(3, state)
+            recorded = physical_words(3, 3, sharp, connected, ((1, "rail"),), True)
+            law = ordinary_record_law(recorded)
+            incoherent = [sum(v for (_, y, _), v in law.items() if x == y) for x in range(3)]
+            assert incoherent == [2, 3, 3]
+            expected = [2, 3, 3] if connected else [2, 3-2*initial, 3+2*initial]
+            assert coherent == expected
+            rows.append(dict(reciprocal=connected, launch_rail=initial, denominator=8,
+                             coherent=coherent, direction_recorded=incoherent))
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
@@ -122,6 +150,7 @@ def main():
     even = [base_masses(4, table(4, 3, source, c)) for c in (False, True)]
     assert even == [[0, 8, 0, 0], [0, 6, 0, 2]]
     data = dict(sharp_source_record_checks=check_charts(), two_site_inputs=coherent_sources(),
+                sharp_launch_router=routed_source(),
                 controlled_hold=dict(coefficient_basis=["1", "sqrt(2)"], runs=unequal_flights()),
                 even_four_cycle=dict(identity=even[0], reciprocal=even[1], denominator=8))
     with args.output.open("x", encoding="utf-8", newline="\n") as output:
