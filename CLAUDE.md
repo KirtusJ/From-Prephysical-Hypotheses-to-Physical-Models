@@ -60,6 +60,8 @@ Hardening the asynchronous side of PCP (background sub-agents, the queue session
 5. A task is given a fresh directory and never reuses one; a call file is submitted once (`pcp_submit.py`).
 6. A brief to a lower-tier agent carries a control with a known answer, answered first.
 
+Asynchronous work is core to PCP and is considered at all times (principal, 14 November 2026). Rust's `async` and the Tokio runtime have an infamous history, to be considered deeply before any of it is brought in. PCP OS uses neither today (checked on `master` at `0e068ee`: no `async`, no runtime, one dependency, `sha2`); the standing note with the hazards and the rules is `ASYNC.md` in `KirtusJ/pcp-os` (pull request 34 until it is on `master`).
+
 The hardening reaches the kernel itself, on bare metal, and not only the stack (principal, 14 November 2026): the scheduler and preemption, sleep and wake, blocking device writes, interrupts, and the record of each process as a task in the kernel's own register, in `PCP_OS_Rust/crates/pcpos-kernel` of `KirtusJ/pcp-os`. The kernel builds and passes its self-tests in QEMU 8.2.2 on this side (`sh run.sh`, exit status 33); a fault is shown by a kernel self-test that fails before the fix and passes after, and nothing is claimed about real hardware. Inside PCP OS the start and end of a task are register events (`TASK_STARTED` by a participant, `TASK_ENDED` by the host only). Sub-agents started by this session's own tool are outside the host and are not such tasks; anything that should count as a host task is a matter for the Rust host and is coordinated with Director G.
 
 ## Lessons paid for
