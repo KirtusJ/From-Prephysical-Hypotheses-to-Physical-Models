@@ -4,6 +4,8 @@ This file is read by Claude sessions and their sub-agents working here. It recor
 
 The [repository guide](README.md) links the issued edition, working research, candidate dispositions and the live review queue. At issue, check its edition label, paper links and verification command against the new edition.
 
+File reading copies in the [paper catalog](papers/README.md) and follow the shared manuscript attribution rule in [AGENTS.md](AGENTS.md). The paper uses actual contributor names and systems. Operational aliases belong in the working records.
+
 ## Goal and standing limits
 
 - Goal: an emergent, explained quantum and classical mechanics with a full map, pursued under the working assumption that it will not be reached. Never state that a gate is passed or an ontology obtained unless it is. No gate is passed today; the root review is open.
