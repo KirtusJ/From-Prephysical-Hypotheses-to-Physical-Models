@@ -1,0 +1,2094 @@
+{
+  "panels": {
+    "empty_0": {
+      "ticks": 0,
+      "sites": [],
+      "scale": 1,
+      "effect": [
+        0,
+        0,
+        0
+      ],
+      "analyzer_weights": {
+        "hit": 1,
+        "miss": 3,
+        "X": 0,
+        "Z": 0
+      },
+      "analyzer_signs": {
+        "X": 0,
+        "Z": 0
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 1,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 1
+        },
+        {
+          "start": 1,
+          "size": 1,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 1
+        },
+        {
+          "start": 2,
+          "size": 2,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 1
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 2,
+        "parity_label_H": 1,
+        "addressed_two_mode_H": 6,
+        "addressed_four_mode_Walsh": 0,
+        "total_if_only_two_mode_H": 6
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "source_rows": 6,
+          "reference_rows": 6,
+          "target_pivots": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "1/3",
+              "0"
+            ],
+            [
+              "0",
+              "1/3"
+            ]
+          ],
+          "rounding_grid": 4,
+          "exact_slack": [
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "0",
+              "1/4"
+            ]
+          ],
+          "padded_slots": 16,
+          "reflection_gates": [
+            23,
+            29,
+            37,
+            31
+          ],
+          "midpoint_rows": 14,
+          "midpoint_sha256": "0f5d1efce3554baef85094797dd0a7481035dfc7f216589199d959e8c58612c6",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "source_rows": 2,
+          "reference_rows": 2,
+          "target_pivots": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "padded_slots": 8,
+          "reflection_gates": [
+            9,
+            9,
+            11,
+            11
+          ],
+          "midpoint_rows": 6,
+          "midpoint_sha256": "6af36f444a54670cfadbba539f5032f87b5f491171e64a926cc9f74aed24755a",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "full_0": {
+      "ticks": 0,
+      "sites": [
+        0
+      ],
+      "scale": 1,
+      "effect": [
+        1,
+        0,
+        1
+      ],
+      "analyzer_weights": {
+        "hit": 3,
+        "miss": 1,
+        "X": 0,
+        "Z": 0
+      },
+      "analyzer_signs": {
+        "X": 0,
+        "Z": 0
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 2,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 1
+        },
+        {
+          "start": 2,
+          "size": 1,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 1
+        },
+        {
+          "start": 3,
+          "size": 1,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 1
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 2,
+        "parity_label_H": 1,
+        "addressed_two_mode_H": 6,
+        "addressed_four_mode_Walsh": 0,
+        "total_if_only_two_mode_H": 6
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "source_rows": 2,
+          "reference_rows": 2,
+          "target_pivots": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "padded_slots": 8,
+          "reflection_gates": [
+            9,
+            9,
+            11,
+            11
+          ],
+          "midpoint_rows": 6,
+          "midpoint_sha256": "6af36f444a54670cfadbba539f5032f87b5f491171e64a926cc9f74aed24755a",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "source_rows": 6,
+          "reference_rows": 6,
+          "target_pivots": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "1/3",
+              "0"
+            ],
+            [
+              "0",
+              "1/3"
+            ]
+          ],
+          "rounding_grid": 4,
+          "exact_slack": [
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "0",
+              "1/4"
+            ]
+          ],
+          "padded_slots": 16,
+          "reflection_gates": [
+            23,
+            29,
+            37,
+            31
+          ],
+          "midpoint_rows": 14,
+          "midpoint_sha256": "0f5d1efce3554baef85094797dd0a7481035dfc7f216589199d959e8c58612c6",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "plus_one_3": {
+      "ticks": 3,
+      "sites": [
+        1
+      ],
+      "scale": 8,
+      "effect": [
+        5,
+        1,
+        1
+      ],
+      "analyzer_weights": {
+        "hit": 8,
+        "miss": 12,
+        "X": 4,
+        "Z": 8
+      },
+      "analyzer_signs": {
+        "X": 1,
+        "Z": 1
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 4,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 4,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 8,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 12,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 16,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 20,
+          "size": 4,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 24,
+          "size": 8,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 2
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 6,
+        "parity_label_H": 1,
+        "addressed_two_mode_H": 14,
+        "addressed_four_mode_Walsh": 1,
+        "total_if_only_two_mode_H": 18
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              14,
+              -2
+            ],
+            [
+              -2,
+              22
+            ]
+          ],
+          "source_rows": 20,
+          "reference_rows": 10,
+          "target_pivots": [
+            [
+              4,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "166/19",
+              "22/19"
+            ],
+            [
+              "22/19",
+              "78/19"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "9/2",
+              "1"
+            ],
+            [
+              "1",
+              "3/2"
+            ]
+          ],
+          "padded_slots": 64,
+          "reflection_gates": [
+            49,
+            39,
+            33,
+            47
+          ],
+          "midpoint_rows": 38,
+          "midpoint_sha256": "38aa638be397cf57d61d01c749c8424f1c44ce114da2eac45adecd0389ab6656",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              18,
+              2
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "source_rows": 12,
+          "reference_rows": 8,
+          "target_pivots": [
+            [
+              2,
+              2
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "74/11",
+              "-6/11"
+            ],
+            [
+              "-6/11",
+              "98/11"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "11/2",
+              "0"
+            ],
+            [
+              "0",
+              "7"
+            ]
+          ],
+          "padded_slots": 32,
+          "reflection_gates": [
+            43,
+            35,
+            31,
+            21
+          ],
+          "midpoint_rows": 28,
+          "midpoint_sha256": "f15bf5096ba304919843ea942e0174f7baa46eacd661b0b039c56c0821f191f5",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "minus_one_3": {
+      "ticks": 3,
+      "sites": [
+        -1
+      ],
+      "scale": 8,
+      "effect": [
+        1,
+        -1,
+        5
+      ],
+      "analyzer_weights": {
+        "hit": 8,
+        "miss": 12,
+        "X": 4,
+        "Z": 8
+      },
+      "analyzer_signs": {
+        "X": -1,
+        "Z": -1
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 4,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 4,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 8,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 12,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 16,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 20,
+          "size": 4,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 24,
+          "size": 8,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 2
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 6,
+        "parity_label_H": 1,
+        "addressed_two_mode_H": 14,
+        "addressed_four_mode_Walsh": 1,
+        "total_if_only_two_mode_H": 18
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              22,
+              2
+            ],
+            [
+              2,
+              14
+            ]
+          ],
+          "source_rows": 20,
+          "reference_rows": 10,
+          "target_pivots": [
+            [
+              2,
+              2
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "78/19",
+              "-22/19"
+            ],
+            [
+              "-22/19",
+              "166/19"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "3/2",
+              "-1"
+            ],
+            [
+              "-1",
+              "9/2"
+            ]
+          ],
+          "padded_slots": 64,
+          "reflection_gates": [
+            41,
+            47,
+            37,
+            37
+          ],
+          "midpoint_rows": 38,
+          "midpoint_sha256": "24b3f052e9d0a3a032b7f972daacdc633646cebdd1fd7dedcde0f202afa014b1",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              10,
+              -2
+            ],
+            [
+              -2,
+              18
+            ]
+          ],
+          "source_rows": 12,
+          "reference_rows": 8,
+          "target_pivots": [
+            [
+              4,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "98/11",
+              "6/11"
+            ],
+            [
+              "6/11",
+              "74/11"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "7",
+              "0"
+            ],
+            [
+              "0",
+              "11/2"
+            ]
+          ],
+          "padded_slots": 32,
+          "reflection_gates": [
+            35,
+            47,
+            23,
+            35
+          ],
+          "midpoint_rows": 28,
+          "midpoint_sha256": "4b1a86a78251eaeddcb6459595893547f73a8283680e83f7f587d47afdb1ea3c",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "mirror_3": {
+      "ticks": 3,
+      "sites": [
+        -1,
+        1
+      ],
+      "scale": 8,
+      "effect": [
+        6,
+        0,
+        6
+      ],
+      "analyzer_weights": {
+        "hit": 20,
+        "miss": 12,
+        "X": 0,
+        "Z": 0
+      },
+      "analyzer_signs": {
+        "X": 0,
+        "Z": 0
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 16,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 16,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 20,
+          "size": 4,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 24,
+          "size": 8,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 2
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 3,
+        "parity_label_H": 1,
+        "addressed_two_mode_H": 8,
+        "addressed_four_mode_Walsh": 0,
+        "total_if_only_two_mode_H": 8
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              12,
+              0
+            ],
+            [
+              0,
+              12
+            ]
+          ],
+          "source_rows": 16,
+          "reference_rows": 6,
+          "target_pivots": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "28/3",
+              "0"
+            ],
+            [
+              "0",
+              "28/3"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "15/2",
+              "0"
+            ],
+            [
+              "0",
+              "15/2"
+            ]
+          ],
+          "padded_slots": 64,
+          "reflection_gates": [
+            43,
+            49,
+            25,
+            23
+          ],
+          "midpoint_rows": 34,
+          "midpoint_sha256": "e5add27488e39c8bb005e62c5f2fe4a7a08c919320bd004109ceb368655a07b3",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              20,
+              0
+            ],
+            [
+              0,
+              20
+            ]
+          ],
+          "source_rows": 16,
+          "reference_rows": 4,
+          "target_pivots": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "28/5",
+              "0"
+            ],
+            [
+              "0",
+              "28/5"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "17/4",
+              "0"
+            ],
+            [
+              "0",
+              "17/4"
+            ]
+          ],
+          "padded_slots": 32,
+          "reflection_gates": [
+            25,
+            27,
+            29,
+            31
+          ],
+          "midpoint_rows": 24,
+          "midpoint_sha256": "3eb192679e3cc985900cf910f558cb192396fbd8c694b28505338bdf7db8b32c",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "plus_three_7": {
+      "ticks": 7,
+      "sites": [
+        3
+      ],
+      "scale": 128,
+      "effect": [
+        41,
+        3,
+        5
+      ],
+      "analyzer_weights": {
+        "hit": 132,
+        "miss": 296,
+        "X": 12,
+        "Z": 72
+      },
+      "analyzer_signs": {
+        "X": 1,
+        "Z": 1
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 8,
+          "arm": "X",
+          "copies": 2,
+          "numerator": 2
+        },
+        {
+          "start": 8,
+          "size": 4,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 12,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 16,
+          "size": 16,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 32,
+          "size": 32,
+          "arm": "Z",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 64,
+          "size": 16,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 80,
+          "size": 4,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 84,
+          "size": 4,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 2
+        },
+        {
+          "start": 88,
+          "size": 8,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 2
+        },
+        {
+          "start": 96,
+          "size": 32,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 128,
+          "size": 64,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 8
+        },
+        {
+          "start": 192,
+          "size": 16,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 208,
+          "size": 8,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 2
+        },
+        {
+          "start": 216,
+          "size": 8,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 2
+        },
+        {
+          "start": 224,
+          "size": 32,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 256,
+          "size": 256,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 16
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 15,
+        "parity_label_H": 7,
+        "addressed_two_mode_H": 44,
+        "addressed_four_mode_Walsh": 3,
+        "total_if_only_two_mode_H": 56
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              302,
+              -6
+            ],
+            [
+              -6,
+              374
+            ]
+          ],
+          "source_rows": 44,
+          "reference_rows": 22,
+          "target_pivots": [
+            [
+              12,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "716018/7057",
+              "30054/7057"
+            ],
+            [
+              "30054/7057",
+              "355370/7057"
+            ]
+          ],
+          "rounding_grid": 2,
+          "exact_slack": [
+            [
+              "24741/256",
+              "2335/256"
+            ],
+            [
+              "2335/256",
+              "11309/256"
+            ]
+          ],
+          "padded_slots": 128,
+          "reflection_gates": [
+            265,
+            289,
+            225,
+            259
+          ],
+          "midpoint_rows": 97,
+          "midpoint_sha256": "4566656bb7e9bcd861ce9af6f8f16eb9b7a5541bbeb78874936a566fdc5e60cb",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              210,
+              6
+            ],
+            [
+              6,
+              138
+            ]
+          ],
+          "source_rows": 20,
+          "reference_rows": 30,
+          "target_pivots": [
+            [
+              6,
+              2
+            ],
+            [
+              13,
+              2
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "87898/603",
+              "478/603"
+            ],
+            [
+              "478/603",
+              "82162/603"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "1577/16",
+              "251/16"
+            ],
+            [
+              "251/16",
+              "2015/16"
+            ]
+          ],
+          "padded_slots": 128,
+          "reflection_gates": [
+            183,
+            181,
+            153,
+            115
+          ],
+          "midpoint_rows": 79,
+          "midpoint_sha256": "fd93ca69906e7270a9c46da1d3c1502c67f7087abca2a6252b1dbe4f34566ae1",
+          "both_original_columns_reversed": true
+        }
+      ]
+    },
+    "nonnegative_12": {
+      "ticks": 12,
+      "sites": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "scale": 4096,
+      "effect": [
+        3172,
+        1124,
+        1124
+      ],
+      "analyzer_weights": {
+        "hit": 4096,
+        "miss": 3696,
+        "X": 4496,
+        "Z": 4096
+      },
+      "analyzer_signs": {
+        "X": 1,
+        "Z": 1
+      },
+      "emitted_leaves": [
+        {
+          "start": 0,
+          "size": 4096,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 64
+        },
+        {
+          "start": 4096,
+          "size": 256,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 16
+        },
+        {
+          "start": 4352,
+          "size": 128,
+          "arm": "X",
+          "copies": 2,
+          "numerator": 8
+        },
+        {
+          "start": 4480,
+          "size": 16,
+          "arm": "X",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 4496,
+          "size": 16,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 4512,
+          "size": 32,
+          "arm": "Z",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 4544,
+          "size": 64,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 8
+        },
+        {
+          "start": 4608,
+          "size": 512,
+          "arm": "Z",
+          "copies": 2,
+          "numerator": 16
+        },
+        {
+          "start": 5120,
+          "size": 1024,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 32
+        },
+        {
+          "start": 6144,
+          "size": 2048,
+          "arm": "Z",
+          "copies": 2,
+          "numerator": 32
+        },
+        {
+          "start": 8192,
+          "size": 256,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 16
+        },
+        {
+          "start": 8448,
+          "size": 128,
+          "arm": "Z",
+          "copies": 2,
+          "numerator": 8
+        },
+        {
+          "start": 8576,
+          "size": 16,
+          "arm": "Z",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 8592,
+          "size": 16,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 8608,
+          "size": 32,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 8640,
+          "size": 64,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 8
+        },
+        {
+          "start": 8704,
+          "size": 512,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 16
+        },
+        {
+          "start": 9216,
+          "size": 1024,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 32
+        },
+        {
+          "start": 10240,
+          "size": 2048,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 32
+        },
+        {
+          "start": 12288,
+          "size": 256,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 16
+        },
+        {
+          "start": 12544,
+          "size": 128,
+          "arm": "hit",
+          "copies": 2,
+          "numerator": 8
+        },
+        {
+          "start": 12672,
+          "size": 16,
+          "arm": "hit",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 12688,
+          "size": 16,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 4
+        },
+        {
+          "start": 12704,
+          "size": 32,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 4
+        },
+        {
+          "start": 12736,
+          "size": 64,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 8
+        },
+        {
+          "start": 12800,
+          "size": 512,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 16
+        },
+        {
+          "start": 13312,
+          "size": 1024,
+          "arm": "miss",
+          "copies": 1,
+          "numerator": 32
+        },
+        {
+          "start": 14336,
+          "size": 2048,
+          "arm": "miss",
+          "copies": 2,
+          "numerator": 32
+        }
+      ],
+      "preparation_gates": {
+        "prefix_label_H": 27,
+        "parity_label_H": 12,
+        "addressed_two_mode_H": 78,
+        "addressed_four_mode_Walsh": 5,
+        "total_if_only_two_mode_H": 98
+      },
+      "bins": [
+        {
+          "flag": 0,
+          "gram": [
+            [
+              5944,
+              -2248
+            ],
+            [
+              -2248,
+              10040
+            ]
+          ],
+          "source_rows": 50,
+          "reference_rows": 41,
+          "target_pivots": [
+            [
+              23,
+              4
+            ],
+            [
+              10,
+              4
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "7122520/1667",
+              "1445464/1667"
+            ],
+            [
+              "1445464/1667",
+              "4488792/1667"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "8038197/2048",
+              "1464625/2048"
+            ],
+            [
+              "1464625/2048",
+              "5182469/2048"
+            ]
+          ],
+          "padded_slots": 256,
+          "reflection_gates": [
+            585,
+            675,
+            547,
+            671
+          ],
+          "midpoint_rows": 138,
+          "midpoint_sha256": "93ed79373a7dc62f86cfbc9e0869f34683a8599bb73caa5b205ed8cd8eecf3b9",
+          "both_original_columns_reversed": true
+        },
+        {
+          "flag": 1,
+          "gram": [
+            [
+              10440,
+              2248
+            ],
+            [
+              2248,
+              6344
+            ]
+          ],
+          "source_rows": 54,
+          "reference_rows": 49,
+          "target_pivots": [
+            [
+              10,
+              4
+            ],
+            [
+              24,
+              4
+            ]
+          ],
+          "ideal_slack": [
+            [
+              "4601192/1867",
+              "-1895064/1867"
+            ],
+            [
+              "-1895064/1867",
+              "8054120/1867"
+            ]
+          ],
+          "rounding_grid": 1,
+          "exact_slack": [
+            [
+              "3754861/2048",
+              "-1161835/1024"
+            ],
+            [
+              "-1161835/1024",
+              "8735545/2048"
+            ]
+          ],
+          "padded_slots": 256,
+          "reflection_gates": [
+            671,
+            623,
+            679,
+            623
+          ],
+          "midpoint_rows": 163,
+          "midpoint_sha256": "2e184a5fb753b19ad1c8e4d571ea7eb42eeb69e823ad150003874cb3f9a82910",
+          "both_original_columns_reversed": true
+        }
+      ]
+    }
+  },
+  "rate_controls": {
+    "definition": "Each fixture is one homogeneous joint source. The square reader applies g(p)=p^2/(p^2+(1-p)^2) to the pooled mass of each binary read. Classically assigned arms average those separately read rates. All rates are per original launch with sharp dark and bright endpoints.",
+    "signed_endpoints": [
+      {
+        "site": -3,
+        "rail": "L",
+        "input_numerators": [
+          1,
+          -1
+        ]
+      },
+      {
+        "site": -1,
+        "rail": "R",
+        "input_numerators": [
+          -1,
+          1
+        ]
+      },
+      {
+        "site": -1,
+        "rail": "L",
+        "input_numerators": [
+          0,
+          -2
+        ]
+      },
+      {
+        "site": 1,
+        "rail": "R",
+        "input_numerators": [
+          2,
+          0
+        ]
+      },
+      {
+        "site": 1,
+        "rail": "L",
+        "input_numerators": [
+          1,
+          1
+        ]
+      },
+      {
+        "site": 3,
+        "rail": "R",
+        "input_numerators": [
+          1,
+          1
+        ]
+      }
+    ],
+    "fixtures": {
+      "R": {
+        "rho_RR": "1",
+        "rho_RL_real": "0",
+        "rho_RL_imag": "0",
+        "rho_LL": "0",
+        "ordinary_site": "5/8",
+        "ordinary_X": "1/2",
+        "ordinary_Z": "1",
+        "ordinary_coherent_and_assigned_mixes": "9/16",
+        "square_site": "25/34",
+        "square_X": "1/2",
+        "square_Z": "1",
+        "square_analyzer_inference": "5/8",
+        "square_coherent": "81/130",
+        "square_assigned_source": "21/34",
+        "square_assigned_analyzer": "9/16",
+        "square_site_minus_analyzer": "15/136"
+      },
+      "L": {
+        "rho_RR": "0",
+        "rho_RL_real": "0",
+        "rho_RL_imag": "0",
+        "rho_LL": "1",
+        "ordinary_site": "1/8",
+        "ordinary_X": "1/2",
+        "ordinary_Z": "0",
+        "ordinary_coherent_and_assigned_mixes": "5/16",
+        "square_site": "1/50",
+        "square_X": "1/2",
+        "square_Z": "0",
+        "square_analyzer_inference": "1/8",
+        "square_coherent": "25/146",
+        "square_assigned_source": "13/50",
+        "square_assigned_analyzer": "5/16",
+        "square_site_minus_analyzer": "-21/200"
+      },
+      "+": {
+        "rho_RR": "1/2",
+        "rho_RL_real": "1/2",
+        "rho_RL_imag": "0",
+        "rho_LL": "1/2",
+        "ordinary_site": "1/2",
+        "ordinary_X": "1",
+        "ordinary_Z": "1/2",
+        "ordinary_coherent_and_assigned_mixes": "1/2",
+        "square_site": "1/2",
+        "square_X": "1",
+        "square_Z": "1/2",
+        "square_analyzer_inference": "1/2",
+        "square_coherent": "1/2",
+        "square_assigned_source": "1/2",
+        "square_assigned_analyzer": "1/2",
+        "square_site_minus_analyzer": "0"
+      },
+      "-": {
+        "rho_RR": "1/2",
+        "rho_RL_real": "-1/2",
+        "rho_RL_imag": "0",
+        "rho_LL": "1/2",
+        "ordinary_site": "1/4",
+        "ordinary_X": "0",
+        "ordinary_Z": "1/2",
+        "ordinary_coherent_and_assigned_mixes": "3/8",
+        "square_site": "1/10",
+        "square_X": "0",
+        "square_Z": "1/2",
+        "square_analyzer_inference": "1/4",
+        "square_coherent": "9/34",
+        "square_assigned_source": "3/10",
+        "square_assigned_analyzer": "3/8",
+        "square_site_minus_analyzer": "-3/20"
+      },
+      "+i": {
+        "rho_RR": "1/2",
+        "rho_RL_real": "0",
+        "rho_RL_imag": "-1/2",
+        "rho_LL": "1/2",
+        "ordinary_site": "3/8",
+        "ordinary_X": "1/2",
+        "ordinary_Z": "1/2",
+        "ordinary_coherent_and_assigned_mixes": "7/16",
+        "square_site": "9/34",
+        "square_X": "1/2",
+        "square_Z": "1/2",
+        "square_analyzer_inference": "3/8",
+        "square_coherent": "49/130",
+        "square_assigned_source": "13/34",
+        "square_assigned_analyzer": "7/16",
+        "square_site_minus_analyzer": "-15/136"
+      },
+      "maximally_mixed": {
+        "rho_RR": "1/2",
+        "rho_RL_real": "0",
+        "rho_RL_imag": "0",
+        "rho_LL": "1/2",
+        "ordinary_site": "3/8",
+        "ordinary_X": "1/2",
+        "ordinary_Z": "1/2",
+        "ordinary_coherent_and_assigned_mixes": "7/16",
+        "square_site": "9/34",
+        "square_X": "1/2",
+        "square_Z": "1/2",
+        "square_analyzer_inference": "3/8",
+        "square_coherent": "49/130",
+        "square_assigned_source": "13/34",
+        "square_assigned_analyzer": "7/16",
+        "square_site_minus_analyzer": "-15/136"
+      },
+      "rational_mixed": {
+        "rho_RR": "3/4",
+        "rho_RL_real": "1/8",
+        "rho_RL_imag": "0",
+        "rho_LL": "1/4",
+        "ordinary_site": "17/32",
+        "ordinary_X": "5/8",
+        "ordinary_Z": "3/4",
+        "ordinary_coherent_and_assigned_mixes": "33/64",
+        "square_site": "289/514",
+        "square_X": "25/34",
+        "square_Z": "9/10",
+        "square_analyzer_inference": "431/680",
+        "square_coherent": "1089/2050",
+        "square_assigned_source": "273/514",
+        "square_assigned_analyzer": "771/1360",
+        "square_site_minus_analyzer": "-12507/174760"
+      }
+    },
+    "hidden_R_or_L_equal_frequency": {
+      "description": "Each launch retains the R or L type and the square reader acts within that type before averaging. The reduced coin is I/2.",
+      "typewise_square_site": "321/850",
+      "homogeneous_square_site": "9/34"
+    },
+    "plot": {
+      "title": "Three-step site read for a varying input coin",
+      "provenance": "model",
+      "source": "Signed Hadamard walk, site +1, normalized R + u L",
+      "x_label": "Real input amplitude ratio u",
+      "y_label": "Rate per original launch",
+      "x_domain": [
+        -1,
+        1
+      ],
+      "y_domain": [
+        0,
+        1
+      ],
+      "series": [
+        {
+          "name": "Ordinary site read",
+          "data": [
+            [
+              "-1",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "-11/12",
+              "577/2120",
+              "577/2120"
+            ],
+            [
+              "-5/6",
+              "145/488",
+              "145/488"
+            ],
+            [
+              "-3/4",
+              "13/40",
+              "13/40"
+            ],
+            [
+              "-2/3",
+              "37/104",
+              "37/104"
+            ],
+            [
+              "-7/12",
+              "601/1544",
+              "601/1544"
+            ],
+            [
+              "-1/2",
+              "17/40",
+              "17/40"
+            ],
+            [
+              "-5/12",
+              "625/1352",
+              "625/1352"
+            ],
+            [
+              "-1/3",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "-1/4",
+              "73/136",
+              "73/136"
+            ],
+            [
+              "-1/6",
+              "169/296",
+              "169/296"
+            ],
+            [
+              "-1/12",
+              "697/1160",
+              "697/1160"
+            ],
+            [
+              "0",
+              "5/8",
+              "5/8"
+            ],
+            [
+              "1/12",
+              "149/232",
+              "149/232"
+            ],
+            [
+              "1/6",
+              "193/296",
+              "193/296"
+            ],
+            [
+              "1/4",
+              "89/136",
+              "89/136"
+            ],
+            [
+              "1/3",
+              "13/20",
+              "13/20"
+            ],
+            [
+              "5/12",
+              "865/1352",
+              "865/1352"
+            ],
+            [
+              "1/2",
+              "5/8",
+              "5/8"
+            ],
+            [
+              "7/12",
+              "937/1544",
+              "937/1544"
+            ],
+            [
+              "2/3",
+              "61/104",
+              "61/104"
+            ],
+            [
+              "3/4",
+              "113/200",
+              "113/200"
+            ],
+            [
+              "5/6",
+              "265/488",
+              "265/488"
+            ],
+            [
+              "11/12",
+              "221/424",
+              "221/424"
+            ],
+            [
+              "1",
+              "1/2",
+              "1/2"
+            ]
+          ]
+        },
+        {
+          "name": "Normalized-square site read",
+          "data": [
+            [
+              "-1",
+              "1/10",
+              "1/10"
+            ],
+            [
+              "-11/12",
+              "332929/2713778",
+              "332929/2713778"
+            ],
+            [
+              "-5/6",
+              "21025/138674",
+              "21025/138674"
+            ],
+            [
+              "-3/4",
+              "169/898",
+              "169/898"
+            ],
+            [
+              "-2/3",
+              "1369/5858",
+              "1369/5858"
+            ],
+            [
+              "-7/12",
+              "361201/1250450",
+              "361201/1250450"
+            ],
+            [
+              "-1/2",
+              "289/818",
+              "289/818"
+            ],
+            [
+              "-5/12",
+              "390625/919154",
+              "390625/919154"
+            ],
+            [
+              "-1/3",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "-1/4",
+              "5329/9298",
+              "5329/9298"
+            ],
+            [
+              "-1/6",
+              "28561/44690",
+              "28561/44690"
+            ],
+            [
+              "-1/12",
+              "485809/700178",
+              "485809/700178"
+            ],
+            [
+              "0",
+              "25/34",
+              "25/34"
+            ],
+            [
+              "1/12",
+              "22201/29090",
+              "22201/29090"
+            ],
+            [
+              "1/6",
+              "37249/47858",
+              "37249/47858"
+            ],
+            [
+              "1/4",
+              "7921/10130",
+              "7921/10130"
+            ],
+            [
+              "1/3",
+              "169/218",
+              "169/218"
+            ],
+            [
+              "5/12",
+              "748225/985394",
+              "748225/985394"
+            ],
+            [
+              "1/2",
+              "25/34",
+              "25/34"
+            ],
+            [
+              "7/12",
+              "877969/1246418",
+              "877969/1246418"
+            ],
+            [
+              "2/3",
+              "3721/5570",
+              "3721/5570"
+            ],
+            [
+              "3/4",
+              "12769/20338",
+              "12769/20338"
+            ],
+            [
+              "5/6",
+              "70225/119954",
+              "70225/119954"
+            ],
+            [
+              "11/12",
+              "48841/90050",
+              "48841/90050"
+            ],
+            [
+              "1",
+              "1/2",
+              "1/2"
+            ]
+          ]
+        },
+        {
+          "name": "Inferred from normalized-square X and Z reads",
+          "data": [
+            [
+              "-1",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "-11/12",
+              "11605642801/39599881736",
+              "11605642801/39599881736"
+            ],
+            [
+              "-5/6",
+              "37953985/112509128",
+              "37953985/112509128"
+            ],
+            [
+              "-3/4",
+              "1230161/3237896",
+              "1230161/3237896"
+            ],
+            [
+              "-2/3",
+              "101509/242888",
+              "101509/242888"
+            ],
+            [
+              "-7/12",
+              "5445053137/12118790408",
+              "5445053137/12118790408"
+            ],
+            [
+              "-1/2",
+              "2641/5576",
+              "2641/5576"
+            ],
+            [
+              "-5/12",
+              "3614644945/7341519368",
+              "3614644945/7341519368"
+            ],
+            [
+              "-1/3",
+              "709/1394",
+              "709/1394"
+            ],
+            [
+              "-1/4",
+              "382289/725768",
+              "382289/725768"
+            ],
+            [
+              "-1/6",
+              "8654017/15698888",
+              "8654017/15698888"
+            ],
+            [
+              "-1/12",
+              "2095283761/3583519496",
+              "2095283761/3583519496"
+            ],
+            [
+              "0",
+              "5/8",
+              "5/8"
+            ],
+            [
+              "1/12",
+              "2383942801/3583519496",
+              "2383942801/3583519496"
+            ],
+            [
+              "1/6",
+              "10957489/15698888",
+              "10957489/15698888"
+            ],
+            [
+              "1/4",
+              "522097/725768",
+              "522097/725768"
+            ],
+            [
+              "1/3",
+              "2033/2788",
+              "2033/2788"
+            ],
+            [
+              "5/12",
+              "5347449265/7341519368",
+              "5347449265/7341519368"
+            ],
+            [
+              "1/2",
+              "4001/5576",
+              "4001/5576"
+            ],
+            [
+              "7/12",
+              "8445829489/12118790408",
+              "8445829489/12118790408"
+            ],
+            [
+              "2/3",
+              "162037/242888",
+              "162037/242888"
+            ],
+            [
+              "3/4",
+              "2038961/3237896",
+              "2038961/3237896"
+            ],
+            [
+              "5/6",
+              "66077425/112509128",
+              "66077425/112509128"
+            ],
+            [
+              "11/12",
+              "21505542481/39599881736",
+              "21505542481/39599881736"
+            ],
+            [
+              "1",
+              "1/2",
+              "1/2"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "scale_convention": "integer rows divided by sqrt(4S)"
+}

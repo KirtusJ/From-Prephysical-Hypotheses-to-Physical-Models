@@ -1,0 +1,390 @@
+{
+  "exact_controls": [
+    {
+      "h": "1/4",
+      "through": "-3/4",
+      "ordered": "2",
+      "attained_error": "1",
+      "rounded_positions": [
+        "0",
+        "0",
+        "0"
+      ],
+      "true_acceleration": 1
+    },
+    {
+      "h": "1/16",
+      "through": "-3/16",
+      "ordered": "2",
+      "attained_error": "1/4",
+      "rounded_positions": [
+        "0",
+        "0",
+        "0"
+      ],
+      "true_acceleration": 1
+    },
+    {
+      "h": "1/64",
+      "through": "-3/64",
+      "ordered": "2",
+      "attained_error": "1/16",
+      "rounded_positions": [
+        "0",
+        "0",
+        "0"
+      ],
+      "true_acceleration": 1
+    },
+    {
+      "h": "1/256",
+      "through": "-3/256",
+      "ordered": "2",
+      "attained_error": "1/64",
+      "rounded_positions": [
+        "0",
+        "0",
+        "0"
+      ],
+      "true_acceleration": 1
+    }
+  ],
+  "finite_flights": [
+    {
+      "order": 127,
+      "ticks": [
+        31,
+        36,
+        46,
+        51
+      ],
+      "times": [
+        1.9336207933135925,
+        2.245495114815785,
+        2.8692437578201697,
+        3.1811180793223617
+      ],
+      "width": 0.5,
+      "offset": 0.125,
+      "switch_tick": 12,
+      "crossing": 2.5555332917488607,
+      "preparation_blocks": 10,
+      "preparation_probability": 0.14226113934511342,
+      "named_words": [
+        {
+          "kind": "through",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            -2,
+            -2
+          ],
+          "conditional_mass": 0.0018478921271656346,
+          "joint_mass": 0.0002628832393974484,
+          "model_impulse": -0.9356229645065708,
+          "binned_impulse": 0.0
+        },
+        {
+          "kind": "ordered",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "conditional_mass": 9.258039557944148e-05,
+          "joint_mass": 1.3170592556152647e-05,
+          "model_impulse": 2.1207453862149004,
+          "binned_impulse": 1.6032099006794498
+        },
+        {
+          "kind": "through",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            0,
+            1
+          ],
+          "conditional_mass": 0.0013609757676858385,
+          "joint_mass": 0.00019361396333207777,
+          "model_impulse": 0.9356229645065708,
+          "binned_impulse": 2.220446049250313e-15
+        },
+        {
+          "kind": "ordered",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            -2,
+            -2
+          ],
+          "conditional_mass": 0.0003491704381360447,
+          "joint_mass": 4.9673384354866155e-05,
+          "model_impulse": -2.1207453862149004,
+          "binned_impulse": -1.6032099006794476
+        }
+      ],
+      "totals": {
+        "through": 0.003208867894851473,
+        "ordered": 0.00044175083371548616
+      },
+      "other_words_conditional_mass": 0.996349381271433
+    },
+    {
+      "order": 509,
+      "ticks": [
+        89,
+        102,
+        130,
+        143
+      ],
+      "times": [
+        1.9598104741530569,
+        2.2460749254338404,
+        2.862644512807836,
+        3.1489089640886196
+      ],
+      "width": 0.5,
+      "offset": 0.125,
+      "switch_tick": 34,
+      "crossing": 2.5561931575074524,
+      "preparation_blocks": 24,
+      "preparation_probability": 0.09575448950353571,
+      "named_words": [
+        {
+          "kind": "through",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            -1,
+            -2
+          ],
+          "conditional_mass": 0.002667770401030137,
+          "joint_mass": 0.0002554509928632835,
+          "model_impulse": -0.9028340386547796,
+          "binned_impulse": -1.7466367121832158
+        },
+        {
+          "kind": "ordered",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "conditional_mass": 0.00033067668225731793,
+          "joint_mass": 3.1663776900272364e-05,
+          "model_impulse": 2.1139528709965547,
+          "binned_impulse": 1.7466367121832158
+        },
+        {
+          "kind": "through",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            0,
+            1
+          ],
+          "conditional_mass": 0.003381720528490747,
+          "joint_mass": 0.0003238149228492585,
+          "model_impulse": 0.9028340386547796,
+          "binned_impulse": 0.0
+        },
+        {
+          "kind": "ordered",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            -1,
+            -2
+          ],
+          "conditional_mass": 0.0010348066541395018,
+          "joint_mass": 9.908738290198983e-05,
+          "model_impulse": -2.1139528709965547,
+          "binned_impulse": -3.4932734243664316
+        }
+      ],
+      "totals": {
+        "through": 0.006049490929520884,
+        "ordered": 0.0013654833363968197
+      },
+      "other_words_conditional_mass": 0.9925850257340822
+    },
+    {
+      "order": 2039,
+      "ticks": [
+        251,
+        289,
+        366,
+        405
+      ],
+      "times": [
+        1.9519703056153854,
+        2.2474877224017784,
+        2.846299330100522,
+        3.1495935210128727
+      ],
+      "width": 0.5,
+      "offset": 0.125,
+      "switch_tick": 96,
+      "crossing": 2.548950498466271,
+      "preparation_blocks": 58,
+      "preparation_probability": 0.06325653206717866,
+      "named_words": [
+        {
+          "kind": "through",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            -1,
+            -2
+          ],
+          "conditional_mass": 0.004647799062220687,
+          "joint_mass": 0.0002940036504211658,
+          "model_impulse": -0.8982174115481176,
+          "binned_impulse": -1.6485643806626542
+        },
+        {
+          "kind": "ordered",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "conditional_mass": 0.0005629487736331913,
+          "joint_mass": 3.561018715150686e-05,
+          "model_impulse": 2.111394175197517,
+          "binned_impulse": 1.6485643806626542
+        },
+        {
+          "kind": "through",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            0,
+            1
+          ],
+          "conditional_mass": 0.0022273842021732606,
+          "joint_mass": 0.0001408966002107,
+          "model_impulse": 0.8982174115481176,
+          "binned_impulse": -0.043383273175332304
+        },
+        {
+          "kind": "ordered",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            -1,
+            -2
+          ],
+          "conditional_mass": 6.0752571554490806e-05,
+          "joint_mass": 3.842996990700213e-06,
+          "model_impulse": -2.111394175197517,
+          "binned_impulse": -3.340512034500641
+        }
+      ],
+      "totals": {
+        "through": 0.006875183264393948,
+        "ordered": 0.0006237013451876821
+      },
+      "other_words_conditional_mass": 0.9925011153904184
+    },
+    {
+      "order": 8191,
+      "ticks": [
+        717,
+        826,
+        1045,
+        1154
+      ],
+      "times": [
+        1.965073801929883,
+        2.2638088708425155,
+        2.8640196973734002,
+        3.162754766286032
+      ],
+      "width": 0.5,
+      "offset": 0.125,
+      "switch_tick": 274,
+      "crossing": 2.563899254418383,
+      "preparation_blocks": 136,
+      "preparation_probability": 0.042705021567475646,
+      "named_words": [
+        {
+          "kind": "through",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            -1,
+            -2
+          ],
+          "conditional_mass": 0.009351699132092463,
+          "joint_mass": 0.00039936451312855194,
+          "model_impulse": -0.8989458954435162,
+          "binned_impulse": -1.6737238176286235
+        },
+        {
+          "kind": "ordered",
+          "sign": 1,
+          "word": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "conditional_mass": 0.001053148968134912,
+          "joint_mass": 4.4974749397966134e-05,
+          "model_impulse": 2.1240337468558734,
+          "binned_impulse": 1.6737238176286235
+        },
+        {
+          "kind": "through",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            0,
+            1
+          ],
+          "conditional_mass": 0.0040141020293639005,
+          "joint_mass": 0.00017142231373803312,
+          "model_impulse": 0.8989458954435162,
+          "binned_impulse": 3.774758283725532e-15
+        },
+        {
+          "kind": "ordered",
+          "sign": -1,
+          "word": [
+            -2,
+            -1,
+            -1,
+            -2
+          ],
+          "conditional_mass": 0.00010593626352000829,
+          "joint_mass": 4.524010418399737e-06,
+          "model_impulse": -2.1240337468558734,
+          "binned_impulse": -3.347447635257243
+        }
+      ],
+      "totals": {
+        "through": 0.013365801161456364,
+        "ordered": 0.0011590852316549203
+      },
+      "other_words_conditional_mass": 0.9854751136068887
+    }
+  ]
+}

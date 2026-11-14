@@ -90,3 +90,15 @@ Its deadline comparison proves that when each actual wait is at most its paired 
 The same file verifies the reference ratio endpoints after clearing denominators and the event inclusion for a finite measure with monotone event weights. The [calibration protocol](../Tag_sector_controls.md#calibrating-the-paths-before-the-curvature-test) supplies the binomial component bounds and the source-transfer assumption.
 
 [TagEndpointBounds.lean](TagEndpointBounds.lean) bounds the true conditional right fraction for every allocation of integer unresolved weights among the right, left and outside outcomes. It checks the common certification threshold at rational efficiencies. The [signal-only test](../Tag_sector_controls.md#bounding-the-right-fraction-from-signal-records-alone) supplies the endpoint instrument and the finite-sample calculation.
+
+The same file proves the marginal upper and joint lower count inequalities for arbitrary two-sign pass tables. The [separate-sample design](../Tag_sector_controls.md#when-the-two-sign-streams-can-be-dependent) constructs a raw-stream coupling attaining the probability bound and evaluates the binomial tails. For the [combined-count test](../Tag_sector_controls.md#testing-the-mean-with-unequal-sign-responses), `two_moment_factors` proves the arithmetic–geometric mean step at integer common denominators.
+
+[ThreeTickRing.lean](ThreeTickRing.lean) checks the four-well cubic port counts and integer weight inversion. It also proves that adding an odd circumference changes parity and that the first full left-count span forces the two extreme counts on each rail. The [fixed-ring paper](../Fixed_ring_winding_weights.md#launch-cost-at-the-earliest-clock) derives the signs, probability differences and decision bounds.
+
+[LaterWinding.lean](LaterWinding.lean) propagates signed line amplitudes, folds them onto the 16 physical wells and 21 gain residues, and checks both integer numerators at the four right-rail detectors at tick 144. It also checks the prefix-length implications for the [later-clock bound](../Later_winding_clocks.md#how-far-the-first-clock-obstruction-extends).
+
+[RelativeCoinContact.lean](RelativeCoinContact.lean) checks the sign on the one coincident rail pair, the scaled input agreement identity and the maximum difference for a binary subset of four affected sites. The [three-tick position calculation](../Two_coin_position_read_at_one_contact.md) connects these identities to the full site effects.
+
+[CrossedCoinPairs.lean](CrossedCoinPairs.lean) checks the table partition and the covariance rearrangement used in the [contact partner comparison](../Reassigning_the_two_coin_partners.md).
+
+[PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the norm identity conditional on the single-predecessor premise for [three position records between coherent flights](../Diffusion_from_three_position_records.md).

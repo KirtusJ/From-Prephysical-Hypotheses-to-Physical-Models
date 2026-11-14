@@ -1,4 +1,30 @@
 {
+  "compact_bin_reflections": {
+    "paper": "Compact_transport_of_a_flight_bin.md",
+    "checker": "check_compact_bin_reflections.py",
+    "result": "results/compact_bin_reflections.json",
+    "lean": "lean/CompactBinReflection.lean",
+    "sha256": {
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "results/compact_bin_reflections.json": "05ce9d2f6a9f59ea0d7aeab798c1d616f64e7b01ffca836c0ccec3ac34de2f9b",
+      "lean/CompactBinReflection.lean": "b09b42a165caea7cbae6d980f99caa7ac70d5c0a00f2f7dfe248a4e46b65f81d"
+    },
+    "replay": "Python signed walk to tick 256, exact forward and inverse gate words, full-column checks at up to 32 padded slots. Lean 4.19.0 checks four scalar identities. The small-panel four-square finder is exhaustive; large panels use deterministic base four.",
+    "scope": "The uniform expected polynomial four-slot construction uses a modification of the cited number-theoretic algorithm and is proved in the paper. Coherent within-bin controls and a known input vector are assumed. No physical rate is inferred."
+  },
+  "stable_bin_flattening": {
+    "paper": "Stable_flattening_inside_a_recorded_bin.md",
+    "checker": "check_stable_flattening.py",
+    "lean": "lean/StableBin.lean",
+    "result": "results/stable_flattening.json",
+    "sha256": {
+      "check_stable_flattening.py": "1d1778054b2cabcbecddd091bedfb6221054c8db05b8b840cb866b4dd6971419",
+      "lean/StableBin.lean": "dbbd10bc63580b3a94beb558fc58b0246108b15b7a6d5282ea4629226e856042",
+      "results/stable_flattening.json": "c47ed68321420da81cfc9cc29601dc805e00fb7628c171fbeb09470af8735534"
+    },
+    "replay": "Python 3 normal and optimized gate-word replay on all 2,800 signed box rows, exact case histories and the four-tick site bin. Lean 4.19.0 verifies parity and the fourth-power identity for descent.",
+    "scope": "Known real-amplitude vectors with coherent within-bin access and blank slots. Converting kinematic amplitudes tests a specified instrument. Equal physical counts require operational interchangeability and preserved complete record weights."
+  },
   "research_rerun": "All twenty research checkers ran in new directories with bundled Python 3.12.14 and NumPy 2.3.5 on Windows. Thirty-four final outputs and twenty sources match both research copies byte for byte. An additional single-thread BLAS variant and its differing norm are recorded below.",
   "output_sha256": {
     "band_preparation.json": "53b4f53ad321d4ce2cacfdfd87660b1b5b4471fc96db7f842bd56ddbcab09259",
@@ -6303,5 +6329,315 @@
     },
     "checked": "Python and optimized Python agree byte for byte. Both launch rails match the segment product on 255 internal copy strings each. All 511 middle words through width nine have positive mixed differences. Lean 4.19.0 checks the general no-interior numerator and both four-pass mixed differences.",
     "standing": "The stationary renewal construction, its tail bound and the link from the model to the instrument are argued in the paper. No detector was measured."
+  },
+  "first_clock_winding_resolution_and_launch_cost": {
+    "scope": "Sharp right launch, known clock, calibrated terminal site and rail, stable finite winding mixture on N >= 3 wells. The decision bound assumes fresh independent launches.",
+    "paper": "Fixed_ring_winding_weights.md",
+    "checker": "check_first_winding_clock.py",
+    "result": "results/first_winding_clock.json",
+    "lean": "lean/ThreeTickRing.lean",
+    "sha256": {
+      "checker": "35b64bcfe3c9bf18394fb30c137dd79d02b92bb01d17581c5fa3f5699d63e082",
+      "result": "d2a0aca23038630071a9ba6a1b4146380bc108f166490d1c9d9fad54ab9b7b88",
+      "lean": "a7ff25b8e5fd018ac572457b10675e210329edb8a9f59136f27ad4761212d9ce"
+    },
+    "checked": "Normal and optimized Python matched on 83 physical ring and gain-order panels, including 46 odd rings. Every tested clock preceding the final moment gave identical witness laws. At the first clock exactly two output differences were found with the predicted signs and magnitudes. Direct enumeration of all four-step triangle words reproduced the two-launch site-only and site-and-rail errors. The original even-ring replay was byte-identical. Lean 4.19.0 checked the parity and endpoint-count implications.",
+    "review": "Director Z’s XR66 measured odd-ring cases and flagged the even-only proof. A delegated Codex reviewer independently derived the parity lift, extreme-port coefficients, and adaptive launch lower bound and reported 130 separate physical propagation checks. The parent and reviewer share a model family.",
+    "standing": "The physical word construction and the coupling and minimax proofs are in the paper. The gate remains open. No frequencies were measured, and the result makes no claim about experiments at later clocks."
+  },
+  "later_winding_clocks_and_finite_launch_read": {
+    "scope": "Sharp right launch, balanced coin, unfiltered ring, known clock, ideal terminal well and rail. The launch test is for two specified order-21 populations on 16 wells, with a fresh phase label on each launch.",
+    "paper": "Later_winding_clocks.md",
+    "checker": "check_later_winding.py",
+    "result": "results/later_winding.json",
+    "lean": "lean/LaterWinding.lean",
+    "sha256": {
+      "checker": "cf11ef7465c19aac74ab62e47d0acd4088495f40c75c5cc4967ee433395c26dd",
+      "result": "74d77bd6c47c7d70357c0d697afa3fb8a50a7817588e61107d82a29bb4994c42",
+      "lean": "b201659e3e9ad263bcb78daf31cd2f93ab7de6b14da92d919d9c5db5ae883708"
+    },
+    "checked": "Normal and optimized Python reproduced the 140-clock scan and 45 ring/order panels. Exact binomial sums enclose both 163-launch risks and the optimal 162-launch power. Lean 4.19.0 checks the tick-144 port numerators by folding signed line amplitudes and the two general prefix implications. A scratch detector shift by two wells failed the named-port test. Restoring the four sites restored the exact output.",
+    "review": "The delegated Codex reviewer received the two populations and a bounded clock search before seeing the chosen tick or mask. After selection the reviewer independently propagated two signed sources on 21 gain residues and reproduced both rates and the 168-launch rule. A separate blind derivation checked the prefix bound on 751 clock panels and supplied the tilted two-step estimate and persistent-label control. The parent and reviewer share a model family.",
+    "standing": "The paper proves the binomial decision optimum for this bit, the analytic suppression bounds and the persistent-label error floor. There are no measured clicks and the best clock and detector for a general mixture remain open."
+  },
+  "dependence_between_endpoint_sign_streams": {
+    "scope": "Tick-nine endpoint tests assuming faithful certificates and iid raw launches within each sign, with arbitrary cross-sign dependence. The symmetric efficiency example is prospective.",
+    "checker": "check_tag_sign_dependence.py",
+    "result": "results/tag_sign_dependence.json",
+    "lean": "lean/TagEndpointBounds.lean",
+    "sha256": {
+      "checker": "9613016bef45b7c209b3781594fd12e974de9db65b19679c5159845727f26def",
+      "result": "8842707977f9769de89170c9c6c09e3923d1939d5308ee5bf3bbde1781208a38",
+      "lean": "dec32ca8c4dc9fb2fede5da1f0a23b3471220a886f140602951d0795b61712ed"
+    },
+    "checked": "Python 3.12.14 and optimized Python produced identical enclosures. The pooled test rejected with probability between 0.103506244470 and 0.103506254147 on the shared-label boundary example. The 64,000-launch design has worst joint power between 0.951109909073 and 0.951109983774 at the specified example. Lean 4.19.0 checked the four-cell event inequalities.",
+    "review": "A delegated Codex reviewer proposed the shared-label law and the fixed-exposure conditional test. A separate integer-weight implementation checked small shared-label paths by enumeration and enclosed the large tails. A SciPy calculation reproduced the probabilities within those bounds.",
+    "standing": "The raw-stream coupling is proved in the paper. No detector efficiency or cross-sign behavior was measured."
+  },
+  "mean_endpoint_test_at_unequal_certification": {
+    "scope": "Equal-sign mean right-fraction null under faithful certification, iid launches within each sign and arbitrary cross-sign dependence.",
+    "checker": "check_tag_mean.py",
+    "result": "results/tag_mean.json",
+    "lean": "lean/TagEndpointBounds.lean",
+    "sha256": {
+      "checker": "a4b3fe191f7ca45bebde3f12073f46684b9c65ed326d044a579354a69c863007",
+      "result": "83bb7d26125d2b28c6a18715a203ad88f27a16e51548d3433dbab63332aba0f6",
+      "lean": "dec32ca8c4dc9fb2fede5da1f0a23b3471220a886f140602951d0795b61712ed"
+    },
+    "checked": "The native exact instrument and independent rational arithmetic agreed on the retained fractions and mean gap. Ordinary and optimized Python returned the same integer enclosures. Pooled-independent calibration failed the two-score control. Lean 4.19.0 checked the moment-factor inequality with integer common denominators.",
+    "review": "A delegated Codex reviewer received the c2 efficiencies, sampling premises and threshold, and supplied the moment argument, finite design and shared-label counterexample. The parent checked each conclusion. The reviewer and parent share a model family.",
+    "standing": "The combined-count proof uses Cauchy–Schwarz and Markov in the paper. The one-sided guarantees include timeouts. All detector efficiencies and within-sign resets are experimental premises."
+  },
+  "one_position_pointer_and_the_classical_ray": {
+    "paper": "One_position_pointer_and_the_classical_ray.md",
+    "checker": "check_position_pointer_recoil.py",
+    "result": "results/position_pointer_recoil.json",
+    "scope": "One translated pointer during a positive-band linear-potential flight on the line. The position coupling and Born instrument are specified. The limit covers finite epsilon/width.",
+    "sha256": {
+      "checker": "df5e0e328043b78e0d91ea767fd974a66348e8b001ef9e352e340c49410e0240",
+      "result": "3fa540ae3ef0cb305e781e444c05cad7e72b9ad0c58dd28cf485e3c0c4e65047"
+    },
+    "checked": "All 169 joint cells for each finite pointer on the 13-cycle were included. A direct real-space tick and both Fourier bands agreed. Two pointer phases gave identical first marginals and different final distributions. Ordinary and optimized Python 3.12.14 / NumPy 2.3.5 gave the same result file.",
+    "standing": "The line-limit argument uses the two compact-band norm comparisons and the exact translated-pointer overlap in the paper. The continuous pointer is an additional instrument; there is no physical implementation or empirical measurement here."
+  },
+  "three_position_recoil": {
+    "paper": "Measuring_pointer_recoil_with_three_positions.md",
+    "checker": "check_three_position_recoil.py",
+    "result": "results/three_position_recoil.json",
+    "lean": "lean/RecoilPositionFilter.lean",
+    "sha256": {
+      "checker": "eac3034269462ac18dbb16fbf6adfcc6ec83ea65461ef36c3616203424c958dd",
+      "result": "383363d3c32ec0bc128444db6ffe766a8f09eaf69cc083dec6e1b7d38a0621f4",
+      "lean": "c5282494384a00a9e5eb6552ecaf1c5c0d3e93eae8945a1125f497db456a9dc1"
+    },
+    "checked": "Twelve complete seven-site position experiments retain each of 343 cells. Both-band propagation with two pointer readouts uses six refinements/launch settings. The integer numerator cancels unknown launch position, momentum and the first recoil at unequal times in Lean 4.19.0.",
+    "standing": "A translation instrument, squared complete readings and a force-clock calibration are stipulated. The line limit uses the uniform compact-band propagation estimate. The torus samples one character and is a separate finite control."
+  },
+  "coin_uniform_masks": {
+    "paper": "Position_masks_for_an_unknown_input_coin.md",
+    "checker": "check_coin_uniform_masks.py",
+    "result": "results/coin_uniform_masks.json",
+    "lean": "lean/MirroredSiteMask.lean",
+    "sha256": {
+      "checker": "275d28ad449391228df85b13a15f7d09509bf5305cc4b8717692175d036063ef",
+      "result": "f14a329efb8eb336204a930d157d29d5f3f8aab20b8b27b5be762ba43ad5b7cd",
+      "lean": "14bd8463b8f157fa38b8f33cb33a7d4378a149d348d03f28a879cc50775f3e56"
+    },
+    "checked": "Both input columns, mirrored effects at all sites of seven clocks, 35 pairs of shell masks, and six noncommuting operator brackets after a local coin defect. Full signed-word controls at four clocks. Normal and optimized Python replay agreed. Standalone Lean 4.19.0 checked the reflected integer quadratic form.",
+    "standing": "Kinematic transfer and simulation only. Conditional calibration uses the specified source family, whole-site read, random setting assignment and monotonicity of a common pooled response at each hidden type. The checker retains a type-dependent single-well counterexample."
+  },
+  "shifted_site_masks": {
+    "paper": "Random_apertures_for_a_spreading_walk.md",
+    "checker": "check_shifted_site_mask.py",
+    "result": "results/shifted_site_mask.json",
+    "lean": "lean/ShiftedSiteMask.lean",
+    "sha256": {
+      "checker": "33233a9b7950e8968f0554e7c707337caa2223a559764316ff2b6ef1352ba476",
+      "result": "5f0e00bc6623e966fabcc9acd48a520d3dbd55c1475bdc1511b12e8012379e65",
+      "lean": "6ae4f9231b77ba079b26e639bd28d6315ae838cc1ba9ea24aa40238bf140d2b5"
+    },
+    "checked": "Integer successor and subgrid calculations, 5,588 small-clock cases, exact threshold masks to tick 512 and complete eight-start mirror-shell counts at tick 256. Normal and optimized Python matched. Lean 4.19.0 checked the discrepancy, grid count, profile tolerance and bracket arithmetic.",
+    "standing": "A programmed comparison of a pooled physical binary read with a mask on a complete site label. Its numerical rates are predictions. Unknown coins are covered by the scalar shell construction at a known origin. A physical measurement and a test of coherence are open."
+  },
+  "scalar_sign_echo_probability": {
+    "paper": "Checking_probability_by_reversing_a_shell_sign.md",
+    "checker": "check_echo_probability_map.py",
+    "result": "results/echo_probability_map.json",
+    "trajectory_checker": "check_shell_sign_return.py",
+    "trajectory_result": "results/shell_sign_return.json",
+    "lean": "lean/EchoProbabilityMap.lean",
+    "sha256": {
+      "checker": "ef35b0c1dbae1fce6e59450daad00ae1e739fa70bdd64fcd00b495f0ad14425f",
+      "result": "e980be362bd91b17f04df8f88f90c7565178f2c0a77ca538ee71f16164eb3f75",
+      "trajectory_checker": "5fef80422b06cf735f53eaaddea535b7e05fedd1c58953262321116d66c688b4",
+      "trajectory_result": "8fcbc23522a0df9b387fb1510673879bd55a0ba4d4f5557da0df9d7281044765",
+      "lean": "713c09e9aaf06cb8791c0a6bc38c6638ea0881617697a7254419442865fda762"
+    },
+    "checked": "Normal and optimized Python reproduced the exact rational enclosures and both launch columns after forward, sign and inverse propagation. A separate derivation checked the uniform response bound and the finite-menu bound including jumps. Lean 4.19 checked the integer escape and quarter identities and the stated order inequalities.",
+    "standing": "This is a proposed same-meter test. No physical sign-echo counts have been acquired. The curve bound assumes comparable populations, scalar shell effects and the stated shape and port symmetry of the common response. The program retains its finite-menu and correlated-type counterexamples."
+  },
+  "position_color_reference": {
+    "paper": "Probability_reference_after_a_position_record.md",
+    "sector_checker": "check_color_return.py",
+    "sector_result": "results/color_return.json",
+    "pointer_checker": "check_returned_pointer.py",
+    "pointer_result": "results/returned_pointer.json",
+    "lean": "lean/ReturningColor.lean",
+    "sha256": {
+      "sector_checker": "a004bc20d55c2b39c38aec55454b765c428a6e0b0d1f271134d65e0f7b84e952",
+      "sector_result": "08bb5b00b85eebb473b2a88e5e85d3b13be4d1be490d4e202480b036e0e3d308",
+      "pointer_checker": "87d9d7a1f3a55aa3a49c140f9a047fba7f1b73c59904a1aa89ebed35323b9750",
+      "pointer_result": "39a3bc27e6a0d3ddde6f367a51ab3519f499cd4f6d7df21c2d78ced7b92f0d3c",
+      "lean": "a341016452cce5c8c85bfe7f3f725e777725eda8b2e175d1086af6bd7225d3fb"
+    },
+    "checked": "Normal and optimized Python replays matched the stored bytes for both programs. Nine valid sector panels and two failing ones, complete rail columns on five pointer rings, and all 67 address thresholds at depths one through five were checked. Lean 4.19.0 verified the two signed ticks on the line, the blank input split and corrections, the signed cross term and its sharp-site support, componentwise with spectators.",
+    "standing": "The calculated masses are conditional circuit predictions. Known blank coherent bits, matched gates, a common conditional read, and correspondence to a physical spatial instrument remain hypotheses. Dirty inputs can force a deterministic output. The classical path application needs disturbance and population controls."
+  },
+  "paired_read_calibration_for_type_dependent_mass": {
+    "paper": "Paired_reads_for_a_type_dependent_target.md",
+    "checker": "check_paired_curve_calibration.py",
+    "result": "results/paired_curve_calibration.json",
+    "lean": "lean/PairedCurveCalibration.lean",
+    "input": "results/echo_probability_map.json, 256-tick scalar shell masks",
+    "result_sha256": "2e0ae2bb34ebe9bdc287fc29a53b93d31e238898b0bdc86461b920973b8f12f2",
+    "replay": "Exact fractions, freshly generated output, 462 monotone finite curves, 10 complementary examples, three matched/redrawn/dependent pair controls, and rational moving tents. Lean 4.19.0 checks directed rounding and four-cell score algebra.",
+    "scope": "The continuum inequality and its sharpness argument are analytic. Shared-type conditional covariance and physical incidence are apparatus premises. No measured calibration scores."
+  },
+  "position_flag_exchange": {
+    "paper": "Exchanging_a_written_position_flag.md",
+    "checker": "check_flag_exchange.py",
+    "result": "results/flag_exchange.json",
+    "lean": "lean/FlagExchange.lean",
+    "sha256": {
+      "checker": "2a9235aeaa70b78e96d6081b8c89af151ca75f4f4f4647f16279ebddb3e37470",
+      "result": "181c286fadd292243740f2db612784b96359549aecf17ac7968f7b6d00510e5d",
+      "lean": "978608470667274872a8ff6ec4971a3b6338a9cbae0ae58ddbf36db068161e58"
+    },
+    "standing": "Known complete signed columns only. Same flag, matched populations and coherent vs classical helper comparisons are physical premises. Exact column replays include retained-tag, one-sign and unequal-amplitude failures, and a 9/16 rail with 34 marked cells among 64 after the helper."
+  },
+  "endpoint_ray_records": {
+    "paper": "Reading_a_classical_track_at_the_end_of_flight.md",
+    "checker": "check_endpoint_ray_records.py",
+    "result": "results/endpoint_ray_records.json",
+    "sha256": {
+      "checker": "231c6bda5ea40fd9e74a01cc30d7e072e4191f025d5fae0769b4e9f1c13f0226",
+      "result": "b756dcf66bb9c1c3ad8bcc2a73ec1ec2a1b05fc829f2776130ed422af8e6d51a"
+    },
+    "standing": "Replayed terminal and live nonordinary readings for a six-tick line walk and a repeated probe. The first-side odds and physical near-endpoint response remain open."
+  },
+  "compact_position_reference": {
+    "paper": "A_compact_reference_for_a_written_position.md",
+    "checker": "check_compact_position_reference.py",
+    "result": "results/compact_position_reference.json",
+    "sha256": {
+      "check_compact_position_reference.py": "ae5cfc840fbd4fb68bfdb5c6a225e1192fcd8c10f6461c26f1eae58909dc8a12",
+      "check_prefix_reference.py": "09ce66ca717c7fc52c49fbee27b0de0a6ffb41de2094f97d59f2b6abd21311e9",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "results/compact_position_reference.json": "c07447e287bf1f9b2b0ae47456698217ff9158cf471e6a26016435cd355e76fb",
+      "results/prefix_reference.json": "a6fc71bbc97a0bc4c79a27ba8cde03d54e78354d07432b0e0df93dcfaff0bf42",
+      "lean/PrefixReference.lean": "cd1294ba00db7b1adcc403526efd784aee83050feb90ac67d02f504138662128"
+    },
+    "standing": "Two compiled reflections per nonempty bin of a known complete column, linear occupied reference width, physical sign and mixture comparisons open. Preserves endpoint, odd-divisor and correlated-tape controls. Lean 4.19.0 checks the binary-prefix and parity identities."
+  },
+  "ion_pooled_coin": {
+    "paper": "Three_steps_and_one_fluorescence_read.md",
+    "checker": "check_ion_pooled_coin.py",
+    "result": "results/ion_pooled_coin.json",
+    "sha256": {
+      "check_ion_pooled_coin.py": "676a414652560f85714220332cbf60c0b3685090a0b079c9fa0bdb2c764aba1b",
+      "results/ion_pooled_coin.json": "dca6730fa6d39d5c179fb7b64fe0ff747ad04e0b4389491c077bafe447975883"
+    },
+    "standing": "Published pooled electronic coin with an external motion model. Mean-readout constraints permit source variation. The proposed displacement bound was not independently certified by the cited experiment."
+  },
+  "coherent_selector_at_each_prefix": {
+    "paper": "A_selector_for_each_prefix_split.md",
+    "checker": "check_midpoint_selector.py",
+    "result": "results/midpoint_selector.json",
+    "sha256": {
+      "check_midpoint_selector.py": "eb0c024b943047ff055a63c3d5437142e0fee30d250cee23150589067f1ee5b0",
+      "results/midpoint_selector.json": "6223efd36e2fec8a0eca731d7b2c8283344e4d04675b7e842c7e3a96fcb71b54"
+    },
+    "standing": "Exact passive selector flip and child exchange; retained-tag and sign controls, 1,022 error recurrences, and the 9/16 detector rival. Detector branch comparisons and real walk transfers remain unmeasured."
+  },
+  "stopped_position_decisions": {
+    "paper": "Monitoring_the_first_position_reference_decisions.md",
+    "checker": "check_stopped_position.py",
+    "result": "results/stopped_position.json",
+    "sha256": {
+      "check_stopped_position.py": "225630395dcc0d094cb4bca2d3f44bfb85ce4082ace7f833cb34d694f32c89d4",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "results/stopped_position.json": "ad76f525c2e4a0e757ab9946451f582b9c4145108dccd22d60f3a9dfbeef490a",
+      "lean/StoppedPosition.lean": "bc211b8bd86a14d26174574425c790cd0218bd296d7eec05502e62833db393ef",
+      "plot_stopped_position.py": "67b18784f728a12c5ec1b36f7f0317af065c35dd7663071bdf076e9b75888f81",
+      "results/stopped_position.png": "28526061dc5262d61ac339210d6fd2cf0807939472dc3e51508fe323fca0f23e",
+      "results/stopped_position.svg": "c9a78e87b6e294ef812041ec8ad7090e4cf2d76782a5663a5277b2881e1a6f8b"
+    },
+    "standing": "Conditional sharp bounds on measured-prefix protocols. The checker retains every depth, 960 corner panels and 1040 small incident tables. The graph uses the same exact data as the replay. A monitored-vs-bare comparison remains a physical obligation."
+  },
+  "atom_recapture": {
+    "paper": "Single_atom_loading_and_terminal_recapture.md",
+    "checker": "check_atom_recapture.py",
+    "result": "results/atom_recapture.json",
+    "sha256": {
+      "check_atom_recapture.py": "0bd79f37ebc5972e86f532cb4ec1256e355103b0cfe162feb4b631ddd6ee34e9",
+      "results/atom_recapture.json": "9aa725fcf3ff83de232784828b2428adf7f423130c1673084110eeb0208fc4f0",
+      "results/atom_recapture.png": "bbd0e0ea507c7364642193415aec7210222c5d71f3a50f69691fe770a3df8ddc"
+    },
+    "standing": "1,000 calibration exposures and six terminal-pulse comparisons from Zenodo 19690318. Loading threshold stability and pulse-protocol dependence were checked. Each setting lacks paired incident/final observations in the deposit."
+  },
+  "two_column_transport": {
+    "paper": "Simultaneous_transport_of_two_input_columns.md",
+    "checker": "check_two_column_transport.py",
+    "result": "results/two_column_transport.json",
+    "sha256": {
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/TwoColumnTransport.lean": "7e9b9fb61cb58129a3e30d20c6f2ddb0d68be216294a5b95a29305db49c55819",
+      "results/two_column_transport.json": "21c43a2918cf80130a9301c17bfb53bfba2dec29aea858fd08ce61ee503a5c75"
+    },
+    "standing": "Stable full-rank two-column dyadic transport, explicit compiled source/destination coordinates, inverse replay, and a native mirror-shell obstruction. Lean covers three algebraic identities. No physical read equivalence is inferred."
+  },
+  "unknown_coin_reference": {
+    "paper": "Unknown_coin_position_reference.md",
+    "checker": "check_unknown_coin_reference.py",
+    "result": "results/unknown_coin_reference.json",
+    "sha256": {
+      "Unknown_coin_position_reference.md": "f1f374dcabfb95b3ba7919f751c0415a613c98563500b3ddc1167cfe4ec95810",
+      "check_unknown_coin_reference.py": "0abfbf367f0e32833e86d8ff18b708de6265fe8aec1a5d62add645acb8bad2e1",
+      "walk_analyzer_reference.py": "a050bc946ed37f8b8d9bfc5970faf8f3ea722fad3480809ac1f98bcb50aae660",
+      "unknown_coin_rates.py": "b61f12228b6b668e59ed4b4c99a7ffebabf47c88108fe357614690b5f0586363",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/UnknownCoinRead.lean": "7ee7e9171e3a5253d0d4f99852d8965085b94e0c6c6f722fec8b665ea24e10c9",
+      "results/unknown_coin_reference.json": "755ccef082ec772f2de1a463a5e678aa595a380bcf455b808edad38c7bf98576",
+      "results/unknown_coin_rates.svg": "3e0b536eafa3b73cf5142f91089f610681462385f9ec042cd93512809887a77b"
+    },
+    "plot_renderer": {
+      "repository": "KirtusJ/pcp-os",
+      "commit": "e8d62e4b00b7bcb404b67fbba9151c50814f1d70",
+      "windows_executable_sha256": "63370e530ea08fa1ec7be473d7275eaa891304bc0e3fb5cf70a599389cee9d05",
+      "input": "rate_controls.plot"
+    },
+    "standing": "Seven two-input signed walk panels compile and reverse both launch columns. Seven state fixtures and 25 plotted pure inputs distinguish a homogeneous nonlinear detector from ordinary reads on selected states. Physical preparation and detector comparisons remain open."
+  },
+  "two_coin_contact": {
+    "paper": "Two_coin_position_read_at_one_contact.md",
+    "checker": "check_two_coin_contact.py",
+    "result": "results/two_coin_contact.json",
+    "sha256": {
+      "check_two_coin_contact.py": "b177ee845da7e8b5e78a2a4bc73b60cb8dbc38b7f88b9786eba1f043bb467eb0",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/RelativeCoinContact.lean": "f012fb7b342c39b9cc291150caf84af89a9eb7d9d4dc7760fc0af047496298e6",
+      "results/two_coin_contact.json": "09194af5a06bc8d1723b0928a8c35343ade3c0295cad321dcf12f251ed5bea04"
+    },
+    "standing": "Five launch spacings at three ticks, all 16 position effects per spacing. The exact effect spans and signed path sums agree. Physical availability of the contact and a calibrated joint position read remain premises."
+  },
+  "crossed_coin_pairs": {
+    "paper": "Reassigning_the_two_coin_partners.md",
+    "checker": "check_crossed_coin_pairs.py",
+    "result": "results/crossed_coin_pairs.json",
+    "sha256": {
+      "check_crossed_coin_pairs.py": "d500bceb77c9240b35237e2841369b3102d4d73b24985da7c742f12065a68495",
+      "check_two_coin_contact.py": "b177ee845da7e8b5e78a2a4bc73b60cb8dbc38b7f88b9786eba1f043bb467eb0",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/CrossedCoinPairs.lean": "9b945b9bfa7ca5e8c38420dcd53f7ac830a15f76bbd2f3bdd2700eee90137578",
+      "results/crossed_coin_pairs.json": "efdf347b8eb3e944cb21b9fbcce0cd26a574e15f50ea365cef9ba684092c3ba9"
+    },
+    "standing": "Signed position effect replayed from trajectories. Complete Bell-bank transcripts through five pairs and sharp vertex errors through seven pairs. The crossed result assumes the stated assignments and routed contact effects; independence across all labels remains untestable with the supplied real instruments alone."
+  },
+  "position_record_blocks": {
+    "paper": "Diffusion_from_three_position_records.md",
+    "checker": "check_position_record_blocks.py",
+    "result": "results/position_record_blocks.json",
+    "sha256": {
+      "check_position_record_blocks.py": "900f4df8ec8306f9bcd8932c4c962f393c41a6f7a3ab0767106df7f1c74fd40d",
+      "check_two_column_transport.py": "988d7d4e7cdd930cb5ac8333a9e78ebfb14742985d2db934e1b3ff2eea1f1912",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "lean/PositionRecordBlocks.lean": "0501eb0b2e067ec383db444ae0e1bd6a52641f87a3ac5a7bc480f30ce122ff9f",
+      "results/position_record_blocks.json": "4d058ff3babbdc344b64773f859e01dd49110c53347bd2af31b7a4de766b89c5"
+    },
+    "standing": "Complete signed records over two blocks match factorized kernels for both input rails, the four optional write patterns and an unequal-length control. Fresh and shared timings have distinct return-pair probabilities under the stated instruments. Diffusive and ballistic scaling are conditional mathematical limits."
   }
 }
