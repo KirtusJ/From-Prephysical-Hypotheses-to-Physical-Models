@@ -32,6 +32,11 @@ class ScienceReplayTest(unittest.TestCase):
                         b"(folder/'out.json').write_bytes(Path('input').read_bytes())\n"
                         b"raise SystemExit(7)\n"),
             "quiet.py": b"pass\n",
+            "file.py": (b"from pathlib import Path\nimport sys\n"
+                        b"if Path('archived/out.json').exists(): raise ValueError('exposed reference')\n"
+                        b"path = Path(sys.argv[1])\n"
+                        b"if path.name != 'out.json': raise ValueError('wrong basename')\n"
+                        b"with path.open('xb') as f: f.write(Path('input').read_bytes())\n"),
             "input": b"123\n",
             "archived/out.json": b"123\n",
             "other/out.json": b"124\n",
@@ -50,12 +55,15 @@ class ScienceReplayTest(unittest.TestCase):
     def git(self, *args):
         return subprocess.check_output(["git", "-C", str(self.repo), *args]).decode().strip()
 
-    def manifest(self, program="trial.py", inputs=("input",), reference="archived/out.json", change=None):
+    def manifest(self, program="trial.py", inputs=("input",), reference="archived/out.json", change=None,
+                 output_argument=None):
         pins = {key: digest(self.files[key]) for key in (program, *inputs, reference)}
         if change:
             pins.update(change)
         spec = dict(commit=self.commit, program=program, inputs=list(inputs),
                     expected_output=reference, sha256=pins)
+        if output_argument is not None:
+            spec["output_argument"] = output_argument
         return json.dumps(spec).encode()
 
     def execute(self, *args, **kwargs):
@@ -76,6 +84,15 @@ class ScienceReplayTest(unittest.TestCase):
         self.assertEqual((changed["status"], changed["ran"]), ("REGISTRATION_DIFFERS", False))
         self.assertEqual(self.git("status", "--porcelain"), "M trial.py")
 
+    def test_output_argument(self):
+        self.assertEqual(self.execute(output_argument="directory")["status"], "MATCH")
+        self.assertEqual(self.execute("file.py", output_argument="file")["status"], "MATCH")
+        self.assertEqual(self.execute("file.py", reference="other/out.json",
+                                      output_argument="file")["status"], "DIFFERS")
+        self.assertEqual(self.execute("quiet.py", output_argument="file")["status"], "NO_REGULAR_OUTPUT")
+        self.assertEqual(self.execute("file.py", inputs=(), output_argument="file")["status"], "PROGRAM_FAILED")
+        self.assertEqual(self.execute("trial.py", output_argument="file")["status"], "NO_REGULAR_OUTPUT")
+
     def test_invalid_setup(self):
         raw = self.manifest()
         with self.assertRaises(ValueError):
@@ -92,6 +109,10 @@ class ScienceReplayTest(unittest.TestCase):
             invalid = json.dumps(doc).encode()
             with self.assertRaises(ValueError):
                 load_manifest(invalid, digest(invalid))
+        for mode in ("stdout", "../escape", None, [], True):
+            invalid = json.dumps({**json.loads(raw), "output_argument": mode}).encode()
+            with self.assertRaisesRegex(ValueError, "output_argument"):
+                load_manifest(invalid,digest(invalid))
 
     def test_cli_exit_codes(self):
         manifest = Path(self.temp.name) / "registration.json"

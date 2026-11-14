@@ -247,3 +247,59 @@ Retain \(m=4{,}000\) scores and reject if at most 2,263 are ones. Allow at most 
 | \(c_2\) and zero-curvature sector autonomy | \((40,25,438,9)\) | \(503/512\) |
 
 In each row the rival hides left outcomes and the other model hides right outcomes. The first row crosses the necessary probability threshold since \(40/74<257/444<43/74\). The second row includes a model with exactly zero spectator curvature. At known pair mass \(37/256\), the smallest unresolved mass per sign that can hide a shift from \(c_2\) to the same threshold fraction at both signs is \(17/3072\). In units of \(1/3072\), the two true triples are \((240,204,2628)\) and \((257,187,2628)\), and both can report \((240,187,2628,17)\). The true right masses differ by 17, so any common log must leave at least that much unresolved. These witnesses explain why an overall certification percentage by itself cannot justify the power calculation.
+
+### When the two sign streams can be dependent
+
+Suppose successive launches **within each sign** are independent and identically distributed. The two complete streams may still share a random source. At the boundary \(q_+=q_-=q_0=257/444\), the pooled test above can then reject about **10.35%** of the time. The following example concerns the necessary probability inequality. Realizing the boundary with a specific microscopic walk is a separate question.
+
+In each stream, generate named-pair arrivals as independent Bernoulli draws with rate \(37/256\), independently of the fair sign choices. Use one shared sequence of independent Bernoulli labels \(Z_j\) with success probability \(q_0\), independent of arrivals and choices. At both signs the \(j\)-th named pair is right exactly when \(Z_j=1\). Certify every endpoint faithfully. Each sign separately has independent raw triples with probabilities \((257,187,2628)/3072\) for right, left and outside. Comparing the \(j\)-th named outcomes across signs reveals the shared labels.
+
+For 4,000 scores let \(N\) be the number of plus signs selected in the unlimited experiment. It is binomial with parameters \(4000,1/2\). Given \(N\), put \(a=\min(N,4000-N)\) and \(v=|2N-4000|\). The one count has law \(2X+Y\) for independent \(X\sim\mathrm{Bin}(a,q_0)\) and \(Y\sim\mathrm{Bin}(v,q_0)\). Each of the first \(a\) labels appears twice, and the remaining \(v\) appear once. The waits have the same geometric law at each sign, independently of the labels and sign choices. Including the 28,122-launch deadline gives an unconditional rejection probability between **0.103506244470 and 0.103506254147**. The calculation sums the exact conditional tails for \(|N-2000|\le180\) and bounds the remaining sign probability by assigning it either zero or full rejection.
+
+**A decision using separate samples.** Prespecify a launch schedule with a separate allowance for each sign. Keep that sign's first 4,700 scores within 33,285 launches, including its final allowed launch. A verified outside gives no score, verified left gives 0, and verified right or unresolved gives 1. Reject only if **both** signs reach their targets and each has at most 2,664 ones. A timeout at either sign closes the experiment without rejection. Keep every launch in the log and all timeouts in the denominator. The maximum exposure is 66,570 launches.
+
+If \((q_++q_-)/2\ge q_0\), at least one sign has \(q_s\ge q_0\). Its probability of scoring 1 satisfies \(p_s\ge q_s\) by the endpoint bound. Joint rejection requires this sign's unlimited sample to pass. Thus the false-rejection probability is at most \(F_{4700,q_0}(2664)<0.049171\), where \(F_{n,p}(k)=\Pr\{\mathrm{Bin}(n,p)\le k\}\). This argument permits any dependence between streams. Because both must pass, an alternative with a low mean can still have low power if one sign has a high right fraction.
+
+For the symmetric \(c_2\) example above, each sign has retention probability \(d=9691/65536\) and conditional one probability \(p=5356/9691\). Within a sign its retained marks are independent of their waiting times, so its probability of passing at allowance \(B\) is \(t=[1-F_{B,d}(4699)]F_{4700,p}(2664)\). The smallest joint pass probability over all couplings is \(\max(0,2t-1)\). To attain it, draw \(U\) uniformly on \([0,1]\), give the plus sign a pass when \(U<t\) and the minus sign a pass when \(1-U<t\). Then draw each entire \(B\)-launch stream from its original product law conditional on its assigned pass or failure. Each stream recovers its prescribed iid law on averaging. This constructs the worst allowed joint law at the raw-record level. [Fréchet–Hoeffding bounds](https://doi.org/10.1016/j.jmva.2003.09.002)
+
+| Raw allowance at each sign | Minimum joint power at the stated \(c_2\) law |
+|---:|---:|
+| 33,284 | 0.9499979212 |
+| 33,285 | 0.9500024395 |
+
+Passing by a deadline persists when the allowance increases. This makes 33,285 the first common allowance reaching 95% power for this target, cutoff and reporting law. The sign-specific resets, faithful certificates and example efficiencies still require experimental evidence. [Exact probability enclosures](results/tag_sign_dependence.json) · [Reproduce the calculation](check_tag_sign_dependence.py) · [Formal event-count inequalities](lean/TagEndpointBounds.lean)
+
+**A fixed exposure using every score.** Prespecify 32,000 raw launches at each sign. For sign \(s\) let \(D_s\) count all records except certified outside, and let \(K_s\) count the ones among those records. An unresolved launch counts toward both. Reject only if each sign satisfies \(F_{D_s,q_0}(K_s)\le0.05\). A sign with \(D_s=0\) cannot pass. This design uses exactly 64,000 launches.
+
+Within each sign the raw iid law gives \(D_s\sim\mathrm{Bin}(32000,d_s)\) and \(K_s\mid D_s=n\sim\mathrm{Bin}(n,p_s)\). At any sign with \(q_s\ge q_0\), the conditional chance of passing is at most 5% for every \(n\), so averaging over \(D_s\) also gives at most 5%. Requiring both passes gives the same size bound over arbitrary cross-sign dependence.
+
+For the symmetric \(c_2\) law the sharp worst-case joint power lies between **0.95110990 and 0.95111000**. For each retained count \(n\), use the largest \(k\) with \(F_{n,q_0}(k)\le0.05\), treating an empty rejection region as zero power. When \(n\) increases by one, the cutoff stays fixed or increases by one because \(F_{n+1,q_0}(k)\le F_{n,q_0}(k)\le F_{n+1,q_0}(k+1)\). The checker uses integer weights for \(4380\le n\le5080\), bounds the omitted probability on both sides, and applies the same pass-event coupling as above. The choice of 32,000 demonstrates sufficiency. [Bounds for both designs](results/tag_sign_dependence.json)
+
+### Testing the mean with unequal sign responses
+
+The curvature bound concerns the **mean** of the two true right fractions. Consider the same \(c_2\) source with right and left masses \(40/512\) and \(34/512\) at both signs. Suppose every outside endpoint is certified, but left certification varies as follows. Right certification can be arbitrary because both a certified right and an unresolved record score one.
+
+| Sign | Fraction of true lefts certified | True right fraction \(q_s\) | Probability \(p_s\) of one among scores |
+|---|---:|---:|---:|
+| Plus | \(1\) | \(20/37\) | \(20/37=240/444\) |
+| Minus | \(185/204\) | \(20/37\) | \(7/12=259/444\) |
+
+Each sign retains a fraction \(37/256\) of its raw launches. The mean one probability is \(499/888\), below \(q_0=257/444\) by \(5/296\). Yet the minus probability alone exceeds \(q_0\). Its chance of passing the 32,000-launch conditional test is at most 5%, by binomial monotonicity at every retained count. Requiring both signs to pass therefore gives **at most 5% power** at this alternative, under every cross-sign coupling and even with the same true preparation at both signs.
+
+**A combined-count decision.** Prespecify up to 155,000 raw launches at each sign. Keep the first 22,000 scores per sign, including any score on the last allowed launch. Reject only if both targets are reached and there are at most **25,096 ones in total**. Timeouts are non-rejections. Use the same four recorded endpoint categories as above. The maximum exposure is 310,000 launches. This test targets unequal sign responses without specifying their difference in the decision rule.
+
+To bound its error, extend each stream to obtain \(m\) scores. Write \(K_s\) for that stream's count of ones and \(T=(K_++K_-)/2\). Each marginal is binomial with parameters \(m,p_s\). For \(z>0\), Cauchy–Schwarz and the arithmetic–geometric mean inequality give
+
+\[
+\mathbb E[z^T]
+\le \sqrt{\mathbb E[z^{K_+}]\,\mathbb E[z^{K_-}]}
+=\big[(1-p_++p_+z)(1-p_-+p_-z)\big]^{m/2}
+\le (1-\bar p+\bar p z)^m ,
+\qquad \bar p=(p_++p_-)/2.
+\]
+
+No step factors an expectation across the signs. At \(\bar p\ge q_0\) and \(0<z<1\), replacing \(\bar p\) by \(q_0\) bounds the right side from above. Markov's inequality for \(z^T\) then bounds the lower tail. For the rival's upper tail use \(z>1\). At an interior threshold fraction \(x\), choosing \(z=x(1-p)/(p(1-x))\) gives the bound \((1-p+pz)^m/z^{mx}\) with \(p=q_0\) or \(p=\bar p\), respectively. This uses the usual binomial Chernoff bound with \(m\) scores per sign. [Exponential-moment bounds for Bernoulli counts](https://www.inf.fu-berlin.de/lehre/WS12/CCT/chernoff.pdf)
+
+Taking \(m=22000\) and \(x=25096/44000\) bounds the false-rejection probability under the null below **0.039651**. At the tabulated rival, use \(x=25097/44000\) for excess ones. Its probability is below 0.040970. Each sign's timeout probability is \(F_{155000,37/256}(21999)<0.001771\). Adding the three possible failure probabilities gives unconditional power **at least 0.955489509622**, using the unrounded bounds. The cutoff and budget establish sufficiency for this example. A separate exact timeout calculation and integer enclosures for both tail bounds are available in the [arithmetic record](results/tag_mean.json) and [checker](check_tag_mean.py).
+
+Two retained scores per sign show why a binomial calculation on all \(2m\) observations would be unsafe. At \(p_+=p_-=q_0\), use identical iid label sequences across signs. Zero ones then has probability \((187/444)^2\), or 17.74%. Independent sign streams give \((187/444)^4\), or 3.15%. Both examples have the same fixed-sign distributions. The combined-count guarantee still needs independent resets within each sign and faithful certificates. The numerical power uses the specified efficiencies.

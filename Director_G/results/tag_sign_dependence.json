@@ -1,0 +1,71 @@
+{
+  "pooled_test_with_shared_pair_labels": {
+    "pair_rate": "37/256",
+    "right_given_pair": "257/444",
+    "score_target": 4000,
+    "maximum_ones": 2263,
+    "raw_cap": 28122,
+    "largest_sign_count_offset_summed": 180,
+    "omitted_sign_mass": [
+      "0.000000011186",
+      "0.000000011187"
+    ],
+    "completion": [
+      "0.864963433804",
+      "0.864963433805"
+    ],
+    "unconditional_rejection_enclosure": [
+      "0.103506244470",
+      "0.103506254147"
+    ]
+  },
+  "conditional_test_at_fixed_raw_exposure": {
+    "raw_launches_per_sign": 32000,
+    "total_raw_limit": 64000,
+    "inclusive_retained_count_window_summed": [
+      4380,
+      5080
+    ],
+    "omitted_retention_mass": [
+      "0.000000037349",
+      "0.000000037350"
+    ],
+    "marginal_pass_enclosure": [
+      "0.975554954536",
+      "0.975554991887"
+    ],
+    "worst_joint_power_enclosure": [
+      "0.951109909073",
+      "0.951109983774"
+    ]
+  },
+  "separate_sign_test": {
+    "null_threshold": "257/444",
+    "scores_per_sign": 4700,
+    "maximum_ones_per_sign": 2664,
+    "raw_launches_per_sign": 33285,
+    "total_raw_limit": 66570,
+    "false_rejection_upper_bound": [
+      "0.049170209424",
+      "0.049170209425"
+    ],
+    "next_uncapped_marginal_size": [
+      "0.052243227023",
+      "0.052243227024"
+    ],
+    "example_retention": "9691/65536",
+    "example_one_given_retention": "5356/9691",
+    "example_pass_per_sign": [
+      "0.975001219748",
+      "0.975001219749"
+    ],
+    "worst_joint_power": [
+      "0.950002439497",
+      "0.950002439498"
+    ],
+    "worst_joint_power_one_fewer_per_sign": [
+      "0.949997921212",
+      "0.949997921213"
+    ]
+  }
+}

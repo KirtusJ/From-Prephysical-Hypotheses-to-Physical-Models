@@ -1,0 +1,18 @@
+{
+  "contract_id": "FR-MSC-T2-FINITE-SPLIT-CANDIDATE-001",
+  "state_space": "Schmidt spectra p (d=3) of faithful pure states on a 3x3 finite split: a declared formal T2 object; the explicit finite set is t2_source/T2_180_state_source.csv. Candidate only; no claim that R's state space is this set.",
+  "source_distribution_or_uncertainty_model": "Uniform weights 1/180 over the declared 180 states (60 groups of base p, normalized reciprocal p*, equal-entropy partner). A toy ensemble, not an R ontology premise.",
+  "target_task": "Candidate tasks, each to be declared separately: (a) state identity (Schmidt spectrum); (b) entanglement-entropy class; (c) modular-spectrum class.",
+  "candidate_readouts_or_channels": "Signed sum of spec(log Delta) with multiplicities; modular spectrum multiset {log p_i - log p_j}; entanglement entropy H(p); Schmidt spectrum (identity). Deterministic, noiseless.",
+  "admissibility_and_resource_constraints": "Mathematical comparison only; all four readouts are functions of the T2 data. No physical availability, cost or detector is claimed.",
+  "selection_criterion": "Exact task recovery by the partition/fiber criterion H(T|Y)=0; mutual information I(X;Y)=H(Y) as a diagnostic only; no winner selected.",
+  "falsification_conditions": [
+    "a recomputed readout partition differs from the stated fiber profile at any tolerance in [1e-9,1e-5]",
+    "the multiset of spec(log Delta) fails to be symmetric, or its multiplicity-counted sum is nonzero beyond 1e-12, for a faithful finite pure state",
+    "the modular spectra of p and its normalized reciprocal p* differ",
+    "I(X;Y_mod) != log2(180) - 2/3 for this source"
+  ],
+  "physical_interpretation": "UNSPECIFIED_FOR_R",
+  "evidence_mapping_formal_objects_to_R": "UNSPECIFIED_FOR_R (kinematic T2 consequence only: J Delta J = Delta^{-1} in the finite standard setting)",
+  "selection_status": "UNSELECTED"
+}
