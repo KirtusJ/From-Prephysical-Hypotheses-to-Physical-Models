@@ -124,6 +124,21 @@ The [replay](test_registered_commit.py) uses a disposable Git repository to chec
 
 This shared research-side program complements [Director Z's working-tree reader](../Director_Z/tools/check_registered.py). The supplied PCP OS build 22 Specification §8b describes eight host instruments. The host compiles their catalog and dispatch from `pcpos-host/src/instruments.rs`. This program needs Git and Python, and creates its report outside the PCP register. A host-native instrument would require its own implementation and rebuilt host.
 
+## Endpoint dependence and Build 22 register replay
+
+At tick nine, two sign streams can each have iid launches yet share the label of their \(j\)-th named pair. This gives about 10.35% false rejection for the pooled endpoint test at its probability boundary. The separate-sign test uses 32,000 launches per sign and controls the false-rejection probability under that dependence. Sign-specific iid resets and correct endpoint certificates are the outstanding apparatus assumptions. The [construction and finite test](Tag_sector_controls.md#when-the-two-sign-streams-can-be-dependent) give the records that distinguish the assumptions.
+
+I compared all 146 supplied source files against [PCP OS Build 22](https://github.com/KirtusJ/pcp-os/tree/bbe8996fb06c637798dd44bbf90de4449be96c88). The packaged Linux host's SHA-256 was `c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd`. Its method reader verified 58 entries. Its exact arithmetic instrument reproduced the endpoint fractions, and the Python checker enclosed the binomial probabilities. The secondary OS reader was taken from [the upstream revision used for the test-suite change](https://github.com/KirtusJ/pcp-os/tree/57a9b73cfeefb3dbc6f750b5d0792bd0fa0f9bf6).
+
+| Research register at commit | Events | Head returned by both readers |
+|---|---:|---|
+| `dc5a4e68b72f3cd5cd093331de52411300c309db` | 582 | `9f3e843213f20db64d97df49adf16d60fb0d4b4c8d2be3f267fdce52d80826f0` |
+| `e18a4cca023ccffb404303e65a8a730c49ef5409` | 609 | `c7ec8fbfddbb7ca29ac75fc6bdfee646004ef1c0b7e0a28c51b31bb14251893f` |
+
+Native `verify` and Python `Workspace.events()` followed by `model.fold(check=True)` agreed on both intact chains and found zero guard violations. The native host returned status 1. Its `status` command listed one medium attention item for the human adoption recorded through an assistant. The host had no direct observation of that instruction. The Python replay used disposable copies of the register bytes. The [upstream change](https://github.com/KirtusJ/pcp-os/pull/15) makes two previously skipped comparisons run on the native vectors supplied with the source.
+
+With every outside endpoint certified, left certification of 1 and 185/204 gives observable right-or-unresolved fractions of 20/37 and 7/12. The 64,000-launch rule that requires both signs to pass has at most 5% power on this example. Testing the combined count over equal numbers of scores recovers power of at least 95.5489% with the stated exposure. The differing left responses and within-sign resets would need experimental support. [Mean test and adverse control](Tag_sector_controls.md#testing-the-mean-with-unequal-sign-responses)
+
 ## First-clock winding read after XR66
 
 XR66 checked the odd-ring clocks numerically. The parity lift now proves the fixed-ring inversion for every circumference of at least three wells. At the earliest clock for the last winding moment, only two oriented outputs can distinguish populations agreeing on the earlier moments. For the existing 16-well, order-21 panel their one-launch total variation is exactly $2^{-80}$ at clock 81. Any protocol restricted to those clocks needs over $10^{24}$ fresh launches to bring both decision errors to 5% for this pair. The launch law, clock and calibrated terminal read remain physical premises. [Proof and controls](Fixed_ring_winding_weights.md#launch-cost-at-the-earliest-clock) · [XR66 calculations](../Director_Z/cross_review/subagent_xr66_ring_mixtures/NOTES.txt)
