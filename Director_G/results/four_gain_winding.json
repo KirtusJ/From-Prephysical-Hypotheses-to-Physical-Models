@@ -1,0 +1,269 @@
+{
+  "arc_formula": {
+    "words": 1023,
+    "cyclic_orders": [
+      10,
+      11
+    ],
+    "edge_gains": {
+      "RR": [
+        3,
+        8
+      ],
+      "RL": [
+        7,
+        1
+      ],
+      "LR": [
+        4,
+        5
+      ],
+      "LL": [
+        9,
+        10
+      ]
+    }
+  },
+  "support": [
+    {
+      "ring": 3,
+      "depth": 7,
+      "cases": 211,
+      "occupied_ports": 1020,
+      "two_winding_spans": 92
+    },
+    {
+      "ring": 4,
+      "depth": 5,
+      "cases": 56,
+      "occupied_ports": 136,
+      "two_winding_spans": 14
+    },
+    {
+      "ring": 5,
+      "depth": 11,
+      "cases": 1226,
+      "occupied_ports": 11270,
+      "two_winding_spans": 932
+    },
+    {
+      "ring": 6,
+      "depth": 7,
+      "cases": 211,
+      "occupied_ports": 1020,
+      "two_winding_spans": 92
+    },
+    {
+      "ring": 7,
+      "depth": 15,
+      "cases": 4096,
+      "occupied_ports": 54810,
+      "two_winding_spans": 4034
+    }
+  ],
+  "repeated_forks": [
+    {
+      "ring": 3,
+      "deficit_period": 3,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 4,
+      "deficit_period": 2,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 5,
+      "deficit_period": 5,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 6,
+      "deficit_period": 3,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 7,
+      "deficit_period": 7,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 8,
+      "deficit_period": 4,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 9,
+      "deficit_period": 9,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 12,
+      "deficit_period": 6,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ring": 15,
+      "deficit_period": 15,
+      "repetitions": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "splice": {
+    "ring": 7,
+    "cut": 7,
+    "paths": [
+      "RRRRRRRRRRRRRRR",
+      "LLLLLLLLLLLLLLR",
+      "LLLLLLLRRRRRRRR",
+      "RRRRRRRLLLLLLLR"
+    ],
+    "left_counts": [
+      0,
+      14,
+      7,
+      7
+    ]
+  },
+  "physical_probe": {
+    "gains": {
+      "RR": [
+        0,
+        0
+      ],
+      "RL": [
+        0,
+        1
+      ],
+      "LR": [
+        0,
+        0
+      ],
+      "LL": [
+        1,
+        1
+      ]
+    },
+    "ring": 7,
+    "target": [
+      1,
+      "R"
+    ],
+    "masks": [
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "fork": {
+      "signed_coefficients": [
+        1,
+        1,
+        0
+      ],
+      "unnormalized": [
+        4,
+        1,
+        2
+      ],
+      "probabilities": [
+        "1/64",
+        "1/256",
+        "1/128"
+      ]
+    },
+    "reference": {
+      "signed_coefficients": [
+        1,
+        0,
+        0
+      ],
+      "unnormalized": [
+        1,
+        1,
+        1
+      ],
+      "probabilities": [
+        "1/256",
+        "1/256",
+        "1/256"
+      ]
+    },
+    "line_ports_checked": 157
+  },
+  "tiny_ring": {
+    "ring": 2,
+    "depth": 2,
+    "admitted_paths": 4
+  }
+}
