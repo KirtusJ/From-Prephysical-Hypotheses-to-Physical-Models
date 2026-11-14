@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from check_reflecting_path import physical_step
+from check_exchangeable_words import walk_profiles
 
 
 def hadamard_layers(state):
@@ -107,6 +108,33 @@ def strings(table):
     return [[str(x) for x in row] for row in table]
 
 
+def pooled_word_reference():
+    h, _ = walk_profiles()
+    assert h == (F(29,64),F(27,64),F(8,64),0)
+    # Hand the detector a bin label. The microscopic address stays orthogonal.
+    sizes = [1,8,27,29,63]
+    addresses = [j for j,count in enumerate(sizes) for _ in range(count)]
+    assert len(addresses) == 128
+    ref = [F(addresses.count(j),128) for j in range(len(sizes))]
+    table = product_cells(h,ref)
+    displayed = respond(table,lambda x:x+x*x)
+    a,b,c = (sizes.index(n) for n in [8,27,29])
+    assert displayed[1][c] == displayed[0][b]
+    assert displayed[2][c] == displayed[0][a]
+    assert sum(displayed[3]) == 0
+    ratios = [1,F(ref[b],ref[c]),F(ref[a],ref[c]),0]
+    recovered = [q/F(sum(ratios)) for q in ratios]
+    assert recovered == list(h)
+    # The same table with scoring on every individual address before merging.
+    fine = respond(product_cells(h,[F(1,128)]*128),lambda x:x+x*x)
+    after = [[sum(p for j,p in zip(addresses,row) if j == k) for k in range(len(sizes))]
+             for row in fine]
+    assert after[1][c] != after[0][b] and after[2][c] != after[0][a]
+    return {"bin_sizes":sizes,"word_masses_recovered_by_ties":list(map(str,recovered)),
+            "observed_before_address_resolution":strings(displayed),
+            "observed_scoring_every_address_then_merging":strings(after)}
+
+
 def run():
     h = five_ticks()
     ref = reference(4)
@@ -128,6 +156,7 @@ def run():
     refsum = sum(ref)
     assert refsum == 1 and sum(r*r for r in ref) > 0
     return {
+        "pooled_word_comparison":pooled_word_reference(),
         "science_kinematic_by_well_then_R_L":list(map(str,h)),
         "reference_K":4,"reference_mass_rows":strings([ref[k*8:(k+1)*8] for k in range(4)]),
         "equal_mix_identity_and_x_plus_x_squared":{
