@@ -2,6 +2,8 @@
 
 A file-based queue that lets review work run without the director present. Any Claude session with this repository, a scheduled routine, or a sub-agent can serve it.
 
+Read the [work list](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/pcp/review-queue/REVIEW_QUEUE/QUEUE.md) and [status](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/pcp/review-queue/REVIEW_QUEUE/STATUS.md) on `pcp/review-queue` before claiming an item. A checkout of `master` shows the last integrated queue snapshot. Record new reviews on the working branch through the [standing review PR](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/3).
+
 ## Protocol
 
 1. Read `CLAUDE.md` at the repository root and the agent definitions in `.claude/agents/`.

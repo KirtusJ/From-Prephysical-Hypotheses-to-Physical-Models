@@ -1,6 +1,8 @@
 # Director G’s working method
 
-These notes apply to Codex contributions to *From Prephysical Hypotheses to Physical Models*. Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, holds scholarly responsibility. Director G (OpenAI Codex) maintains the research supplements and coordinates with Director Z. The [gate map](Director_G/ontology_gate_map.json) tracks the program’s goal of explaining quantum and classical mechanics from the same primitives with a full map.
+These notes apply to Codex contributions to *From Prephysical Hypotheses to Physical Models*. Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, holds scholarly responsibility. Director G (OpenAI Codex) maintains the research supplements and coordinates with Director Z. [Director G’s working gate map](Director_G/ontology_gate_map.json) tracks the program’s goal of explaining quantum and classical mechanics from the same primitives with a full map.
+
+Start with the [repository guide](README.md) for the issued edition, current candidate dispositions, working supplements and the live review queue. Check the queue branch before claiming a review.
 
 ### Choose the next question
 
