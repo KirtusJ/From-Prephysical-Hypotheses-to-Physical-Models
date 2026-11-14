@@ -181,3 +181,7 @@ Principal: workers can report issues and open pull requests on PCP OS as they go
 ## Rust holds primacy in PCP OS (14 November 2026, permanent)
 
 Principal: PCP OS is primarily Rust; Rust always holds primacy, for security reasons; a permanent note for everyone working on it. Written as `RUST_PRIMACY.md` with `CLAUDE.md` and `AGENTS.md` pointers in `KirtusJ/pcp-os` (session branch, commit `f0d97a2`), and into this repository's `CLAUDE.md`, all seven agent definitions and the queue readme. Consequence for the Store apps: the six proposed apps, if they are to be part of PCP OS, are Rust instruments in the host; the Python scripts in `Director_Z/tools/` stay workspace helpers.
+
+## Hardening the Science and Mathematics modules (14 November 2026)
+
+Principal: a primary goal now is to consider and harden the Science and Mathematics modules of PCP for the ongoing work; it strictly does not override the director's chosen target and motion; autopilot stays on. Taken as: a standing second line of work beside the research, fed by what the research itself shows the modules miss. First step: a gap table, each module's provisions against this session's recorded failures (wrong summaries, hypotheses outside statements, predicates that did not test the hypothesis, cited lemmas, replays taken for proofs, weakened Lean statements, programs changed without the result changing). Changes to the method text or the host go through the exchange with Director G and, for the host, are Rust (see `RUST_PRIMACY.md` in `KirtusJ/pcp-os`).
