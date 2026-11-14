@@ -56,6 +56,8 @@ To derive the errors, regard a source as a row in a table with one answer per la
 
 Error below a row's threshold, with sampling uncertainty and the stated isolation accounted for, would exclude that classical memory cap. Even a perfect pass would leave the associative simulator available with sufficient memory. No such experiment has been performed.
 
+An error-free unassisted quantum memory also requires 32 dimensions for the first row. A 31-dimensional real quantum code with nonorthogonal preparations achieves lower mean and worst-case error than the classical mean threshold on this late binary query. Its states cannot accept subsequent arbitrary additive writes. [Quantum memory for the late flag](Quantum_memory_for_the_late_flag.md)
+
 ## Coherent contact experiments
 
 A subsequent stipulated experiment lets the two directions of a signed walker apply different fixed contacts to this memory. At ten ticks the two contact orders change its return probability. With a separately prepared, growing memory the same construction implements the program's weak-field envelope. [Walk experiment, exact controls and mechanical limit](contact_flight.md)
