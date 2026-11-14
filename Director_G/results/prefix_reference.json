@@ -1,0 +1,149 @@
+{
+  "convention": "b=1 means strictly less than P; equality is unmarked; original labels kept.",
+  "tested_thresholds": 4083,
+  "sweep": [
+    {
+      "t": 1,
+      "interior_thresholds": 1,
+      "cell_count": 2,
+      "odd_remaining_exponent_splits": 0,
+      "with_lower_reduced_denominator": 0,
+      "literal_prefix_mean_inspections": "1"
+    },
+    {
+      "t": 2,
+      "interior_thresholds": 3,
+      "cell_count": 4,
+      "odd_remaining_exponent_splits": 1,
+      "with_lower_reduced_denominator": 1,
+      "literal_prefix_mean_inspections": "3/2"
+    },
+    {
+      "t": 3,
+      "interior_thresholds": 7,
+      "cell_count": 5,
+      "odd_remaining_exponent_splits": 1,
+      "with_lower_reduced_denominator": 3,
+      "literal_prefix_mean_inspections": "7/4"
+    },
+    {
+      "t": 4,
+      "interior_thresholds": 15,
+      "cell_count": 7,
+      "odd_remaining_exponent_splits": 2,
+      "with_lower_reduced_denominator": 7,
+      "literal_prefix_mean_inspections": "15/8"
+    },
+    {
+      "t": 5,
+      "interior_thresholds": 31,
+      "cell_count": 8,
+      "odd_remaining_exponent_splits": 2,
+      "with_lower_reduced_denominator": 15,
+      "literal_prefix_mean_inspections": "31/16"
+    },
+    {
+      "t": 6,
+      "interior_thresholds": 63,
+      "cell_count": 10,
+      "odd_remaining_exponent_splits": 3,
+      "with_lower_reduced_denominator": 31,
+      "literal_prefix_mean_inspections": "63/32"
+    },
+    {
+      "t": 7,
+      "interior_thresholds": 127,
+      "cell_count": 11,
+      "odd_remaining_exponent_splits": 3,
+      "with_lower_reduced_denominator": 63,
+      "literal_prefix_mean_inspections": "127/64"
+    },
+    {
+      "t": 8,
+      "interior_thresholds": 255,
+      "cell_count": 13,
+      "odd_remaining_exponent_splits": 4,
+      "with_lower_reduced_denominator": 127,
+      "literal_prefix_mean_inspections": "255/128"
+    },
+    {
+      "t": 9,
+      "interior_thresholds": 511,
+      "cell_count": 14,
+      "odd_remaining_exponent_splits": 4,
+      "with_lower_reduced_denominator": 255,
+      "literal_prefix_mean_inspections": "511/256"
+    },
+    {
+      "t": 10,
+      "interior_thresholds": 1023,
+      "cell_count": 16,
+      "odd_remaining_exponent_splits": 5,
+      "with_lower_reduced_denominator": 511,
+      "literal_prefix_mean_inspections": "1023/512"
+    },
+    {
+      "t": 11,
+      "interior_thresholds": 2047,
+      "cell_count": 17,
+      "odd_remaining_exponent_splits": 5,
+      "with_lower_reduced_denominator": 1023,
+      "literal_prefix_mean_inspections": "2047/1024"
+    }
+  ],
+  "four_tick_9_of_16": {
+    "t": 4,
+    "threshold": 9,
+    "width": 7,
+    "controlled_H_count": 6,
+    "parked_labels": [
+      "different at 1",
+      "different at 2",
+      "different at 3",
+      "different at 4",
+      "equal",
+      "different at 1 twin",
+      "different at 3 twin"
+    ],
+    "marked": [
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
+    ],
+    "positive_integer_numerators": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      2,
+      1
+    ]
+  },
+  "binary_threshold": "1001",
+  "conditionally_fair_tape": {
+    "hit": "9/16",
+    "mean_inspections": "15/8"
+  },
+  "fair_marginals_same_hidden_bit": {
+    "hit": "1/2",
+    "mean_inspections": "3/2"
+  },
+  "one_quarter_tapes": {
+    "literal_4_bits": {
+      "hit": "1/4",
+      "mean_inspections": "15/8"
+    },
+    "reduced_2_bits": {
+      "hit": "1/4",
+      "mean_inspections": "3/2"
+    }
+  },
+  "endpoints": {
+    "zero_and_one": "sharp deterministic outputs, zero inspections"
+  }
+}

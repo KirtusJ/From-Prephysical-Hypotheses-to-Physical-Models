@@ -6504,5 +6504,29 @@
       "result": "b756dcf66bb9c1c3ad8bcc2a73ec1ec2a1b05fc829f2776130ed422af8e6d51a"
     },
     "standing": "Replayed terminal and live nonordinary readings for a six-tick line walk and a repeated probe. The first-side odds and physical near-endpoint response remain open."
+  },
+  "compact_position_reference": {
+    "paper": "A_compact_reference_for_a_written_position.md",
+    "checker": "check_compact_position_reference.py",
+    "result": "results/compact_position_reference.json",
+    "sha256": {
+      "check_compact_position_reference.py": "ae5cfc840fbd4fb68bfdb5c6a225e1192fcd8c10f6461c26f1eae58909dc8a12",
+      "check_prefix_reference.py": "09ce66ca717c7fc52c49fbee27b0de0a6ffb41de2094f97d59f2b6abd21311e9",
+      "check_compact_bin_reflections.py": "ef70dde502beb7840fe458b401135348d32f776bc26b073085e9c6af318bcc3c",
+      "results/compact_position_reference.json": "c07447e287bf1f9b2b0ae47456698217ff9158cf471e6a26016435cd355e76fb",
+      "results/prefix_reference.json": "a6fc71bbc97a0bc4c79a27ba8cde03d54e78354d07432b0e0df93dcfaff0bf42",
+      "lean/PrefixReference.lean": "cd1294ba00db7b1adcc403526efd784aee83050feb90ac67d02f504138662128"
+    },
+    "standing": "Two compiled reflections per nonempty bin of a known complete column, linear occupied reference width, physical sign and mixture comparisons open. Preserves endpoint, odd-divisor and correlated-tape controls. Lean 4.19.0 checks the binary-prefix and parity identities."
+  },
+  "ion_pooled_coin": {
+    "paper": "Three_steps_and_one_fluorescence_read.md",
+    "checker": "check_ion_pooled_coin.py",
+    "result": "results/ion_pooled_coin.json",
+    "sha256": {
+      "check_ion_pooled_coin.py": "676a414652560f85714220332cbf60c0b3685090a0b079c9fa0bdb2c764aba1b",
+      "results/ion_pooled_coin.json": "dca6730fa6d39d5c179fb7b64fe0ff747ad04e0b4389491c077bafe447975883"
+    },
+    "standing": "Published pooled electronic coin with an external motion model. Mean-readout constraints permit source variation. The proposed displacement bound was not independently certified by the cited experiment."
   }
 }
