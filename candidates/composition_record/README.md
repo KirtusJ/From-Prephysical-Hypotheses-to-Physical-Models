@@ -66,6 +66,8 @@ An error-free unassisted quantum memory also requires 32 dimensions for the firs
 
 ## Coherent contact experiments
 
+An unread contact register can entangle two walkers. A closed sequence of four local visits writes the conjunction of their routes. Two more free ticks give a single position measurement on each walker that distinguishes the predicted pair from every separable state. Two position-controlled loops also implement a cosine interaction for the program’s conditional Schrödinger and Newton limits. [Derivation, controls and detector thresholds](unread_contact_loop.md)
+
 A subsequent stipulated experiment lets the two directions of a signed walker apply different fixed contacts to this memory. At ten ticks the two contact orders change its return probability. With a separately prepared, growing memory the same construction implements the program's weak-field envelope. [Walk experiment, exact controls and mechanical limit](contact_flight.md)
 
 Starting from blank memory, a controlled comparison of contact order prepares the two weak-force sectors together. Real packet encoding gives both the same position distribution at every tick. At order five the 64-round preparation accepts 38.2% of launches with 99.54% weight on the pair. [Preparation, yield and conjugate flights](sector_preparation.md)
