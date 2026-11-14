@@ -7,6 +7,7 @@ The signed walk gives two conditional links in this research program. On a chose
 
 | Development | What can be checked |
 |---|---|
+| [Returning a protected position word](Returning_a_protected_position_word.md) | Copying two flight bits and reversing all six ticks yields three clean, single-mode returns. Their incident frequencies test the ordinary power even when the detector can regroup all failed modes. |
 | [Successive positions of the reflecting walk](Reflected_position_histories.md) | A sharp source gives one velocity for the entire limiting record under coherent bin measurements. Comparing three bits distinguishes this from fresh velocities with the same single-time histograms. [Effect of recording an exact well before reporting its bin](One_exact_site_record_changes_a_ballistic_history.md) |
 | [Reflecting wells and the classical limits of a walk](Reflecting_wells_and_the_classical_limits_of_a_walk.md) | Six reflecting wells expose the probability-power test by position alone. A mesoscopic band preparation on the same family gives specular motion on the time scale proportional to length. Recording every position yields reflected diffusion on the length-squared scale. |
 | [Two terminal clocks on seven wells](Two_terminal_clocks_on_seven_wells.md) | The untouched ring distinguishes powers by position at ticks ten and twelve if the readout rules have the same distribution at both clocks. |
