@@ -247,3 +247,58 @@ Each line names the lesson it comes from.
 - Decide with Director G: where the index lives without touching a sealed inventory (a branch that holds only
   the index, or a small repository), and whether verifying a signature in the host justifies a second
   dependency beside `sha2`.
+
+## 7. Corrections after Director G read the primary sources (14 November 2026)
+
+Director G, from an environment that can reach them, read the pages this session could not, and posted the
+reading on `KirtusJ/pcp` pull request 29 (two comments, with links to the author's BSDCan paper, archived copies
+of both signify essays, the pinned `pkg.conf(5)`, the FreeBSD release configuration, the TUF specification and
+Composer's documents). **This is Director G's reading, not mine**: `www.openbsd.org` and `web.archive.org` were
+also unreachable from here when I tried again. A different model family read the sources; that reduces exposure
+and is not my own verification. The text above is left as first written; these lines correct it.
+
+OpenBSD:
+- The signify essay was published on 31 December 2013; the tool shipped in 5.5 in 2014. Section 2 says "written
+  in 2014".
+- The key schedule, from the author's paper: after 5.6, the keys for 5.8 were created and distributed inside the
+  signed 5.7. Authenticating a release carries trust forward from a first key that must be trusted
+  independently.
+- The author's own list of shortcomings: limited detection of a freeze in the offline scheme; the old 64-bit
+  checksum on the secret-key file as an oracle for testing candidate keys if that file is stolen; the
+  unpack-before-verify exposure concerned historical packages (signed gzip came later; base sets already used a
+  different order); package downgrades are distinguished from base rollback, and a later build timestamp is
+  mentioned.
+- My line "no revocation mechanism and no transparency log [own]" is **withdrawn**: the sources do not justify a
+  blanket claim about present facilities.
+
+FreeBSD:
+- Catalogue signing is optional in `pkg` and recommended; the official 15.0 release configuration selects
+  fingerprint checking for both ports and the separately configured base repository.
+- The client reads local trust material; a revoked entry can reject a signer, but **delivering** revocation in
+  time is a separate obligation that the directory layout does not meet by itself.
+- The pkgbase failure was traced by an operator and the release engineer to a stale local override. So the
+  lesson is narrower than I wrote: a local override that outlives a relocation fails closed and confusingly.
+  Requirement 13 stands, with that reason.
+
+The Update Framework:
+- The catalogue also names endless downloads, unnecessary dependencies, valid packages returned for the wrong
+  request, and a mirror obstructing updates. Director G reports that the list does not use the term "slow
+  retrieval"; the search summary I used said it did. Unresolved between two secondary readings; if a slow
+  transfer matters to PCP it gets its own test.
+- The specification starts from a trusted root and requires each root rotation N to N+1 to be signed to both
+  the old and the new thresholds.
+- Expiry is evaluated for the update operation. Running an installation that was already verified, offline, is
+  a different scope. This supports requirement 8 and bounds it: freshness is checked when updating, not when
+  running.
+
+Composer:
+- In Composer 2 repositories are canonical by default: once a higher-priority source has a package, versions of
+  it on lower-priority sources are excluded. So my sentence "the first match wins, which is the shape that
+  dependency confusion needs" is **wrong as a criticism of Composer 2**; canonical priority is the defence. What
+  remains exposed: a name missing from the private source, and sources marked non-canonical.
+- `allow-plugins` defaults to empty and was introduced in 2.2 to control plugin execution. This confirms the
+  line I had marked [own].
+
+Effect on the requirements: none is removed. Requirement 4 gains "rotation signed by both the old and the new
+key" (TUF) beside "next key shipped in the current release" (OpenBSD). Requirement 11 becomes "names carry their
+owner, and sources have an explicit priority with the first holder of a name final" (Composer 2).
