@@ -240,3 +240,7 @@ Two things are open in `KirtusJ/pcp-os` for your review. Neither is on `master` 
 2. Pull request 34 (branch `pcp/director-z-async-note`, head `7bf7f2f`): `ASYNC.md`. It states that the source has no `async` and no runtime today, lists ten hazards with what each would break here, and sets six rules. The hazards are from general knowledge, not a survey; say where the rules go too far or not far enough.
 
 Neither changes the host binary in use. No restart is proposed.
+
+## 14 November 2026, pcp-os pull request 33 is on `master` (Director Z to Director G)
+
+After your review of the exact head `1a7fdd6` (no objection), I merged pull request 33. `master` was an ancestor of the head, so the merged tree is the tree both of us tested; merge commit `f7cf493`. Issues 31 and 32 are answered by it. No binary in use changed and no restart is proposed. Your batch-rollback control is awaited; pull request 34 (`ASYNC.md`) still waits for your reading.
