@@ -1,0 +1,78 @@
+% THEOREM_Q.tex -- builder draft, 14 November 2026. Extends the subsection
+% "Consistency demanded only on position product events" of G10 from signs to a gain of order q.
+% Status marks: PROVED (proof below, given Hypothesis P_q), CITED, COMPUTED (range), CONJECTURED.
+% The builder is of the director's model family; this is not independent review.
+
+\subsection*{Position product events with a gain of order $q$}
+
+\paragraph{Carrier.} Let $q\ge1$, let $C$ be a cyclic group of order $q$, written multiplicatively, and $h$ a generator. Let $D_h$ be the arc digraph of the line $\mathbb{Z}$ or of the ring $\mathbb{Z}_N$, $N\ge1$, as in the subsection: vertices $(x,R)$, $(x,L)$, arcs from either to $(x+1,R)$ and to $(x-1,L)$, all gains $1$ except the gain $h$ on the arcs from $(x,L)$ to $(x-1,L)$. The gain of a walk is $h^{\ell}$ with $\ell$ the number of its steps $L$ that follow an $L$. For $q=2$ this is the signed digraph of the subsection. (If $h$ is an element of order $q$ of a larger abelian group, the walks from $(0,R)$ have gains in $\langle h\rangle$ only, and everything below concerns multisets supported on $\langle h\rangle$.) Events are sets of walks from $(0,R)$; position product events, $\operatorname{Ext}$ and the requirement \eqref{eq:ppcons} are as in the subsection. For an event $S$ and a vertex $y$, $m_S(y)\in\mathbb{N}^C$ is the multiset of the gains of the walks of $S$ that end at $y$; $|m|=\sum_gm(g)$; multisets are added by components; $(Tm)(g)=m(gh^{-1})$, so that $T$ multiplies every gain by $h$ and $Te_g=e_{gh}$ for the multiset $e_g$ of the single gain $g$. $T$ replaces $J$; it acts at one of the two daughters only. Put $\mathbf{1}=\sum_{g\in C}e_g$; then $T\mathbf{1}=\mathbf{1}$ and $|\mathbf{1}|=q$. If $q$ is even let $\psi$ be the character of $C$ with $\psi(h)=-1$ and $\varepsilon(m)=\sigma_\psi(m)=\sum_{j=0}^{q-1}(-1)^jm(h^j)$; it is an integer, $\varepsilon(Tm)=-\varepsilon(m)$. The rule is \eqref{eq:multirule} with $F_y\colon\mathbb{N}^C\to\mathbb{R}$, $F_y(0)=0$.
+
+\paragraph{Hypothesis $\mathrm{P}_q$ (preparation).} For every site $x$ and all $U,V\in\mathbb{N}^C$ there are $T_0\ge1$ and a position product event $S$ of length $T_0$ with $m_S(x,R)=U$ and $m_S(x,L)=V$.
+
+\emph{Status.} For $q=2$ this is the conclusion of Lemma~\ref{lem:prep} (CITED, line and rings with $N/\gcd(N,2)\ge11$). For $q>2$ it is CONJECTURED and not proved anywhere known to the writer. Director~G's note on sheet residues proves a different statement: there the gains lie in $\{\pm1\}\times\mathbb{Z}/M$, the second entry is changed by $\lfloor x/2\rfloor$ on both arcs leaving the site $x$, on rings of $4M$ sites, and only the sign counts the steps $L$ after $L$, modulo $2$. It does not control that number modulo $q>2$. Its control word $RLLRR$, which has the end point of $LRRLR$ and one more step $L$ after $L$, indicates how a construction for $D_h$ could go; this was not replayed.
+
+\begin{lemma}[one site]\label{lem:onesiteq}
+Let $S$ be a position product event on $D_h$ with $m_S(x,R)=U$, $m_S(x,L)=V$. If \eqref{eq:ppcons} holds with the factor $k$, then
+\begin{equation}\label{eq:Eq}
+F_{(x+1,R)}(U+V)+F_{(x-1,L)}(U+TV)=k\,F_{(x,R)}(U)+k\,F_{(x,L)}(V).
+\end{equation}
+\end{lemma}
+\begin{proof}
+As for Lemma~\ref{lem:onesite}: the walks of $S$ that end at the site $x$ form a position product event $S'$ with value $F_{(x,R)}(U)+F_{(x,L)}(V)$; a walk ending at $(x,R)$ with gain $g$ continues to $(x+1,R)$ and $(x-1,L)$ with gain $g$, one ending at $(x,L)$ continues to $(x+1,R)$ with gain $g$ and to $(x-1,L)$ with gain $gh$; the two end vertices differ in the second entry. \textbf{PROVED.}
+\end{proof}
+
+\begin{proposition}[solution of the one-site equation]\label{prop:solveq}
+Let $F_R,F_L\colon\mathbb{N}^C\to\mathbb{R}$ with $F_R(0)=F_L(0)=0$ and
+\begin{equation}\label{eq:Eq0}
+F_R(U+V)+F_L(U+TV)=2F_R(U)+2F_L(V)\qquad\text{for all }U,V\in\mathbb{N}^C .
+\end{equation}
+Then $F_R=F_L=F$, and
+\[
+F(m)=a\,|m|\quad(q\text{ odd}),\qquad F(m)=a\,|m|+c\,\varepsilon(m)^2\quad(q\text{ even}),
+\]
+with $a=F(\mathbf{1})/q$ and $c=F(e_1)-a$. Conversely these functions satisfy \eqref{eq:Eq0}. The solution space has dimension $1$ for $q$ odd and $2$ for $q$ even. \textbf{PROVED.}
+\end{proposition}
+\begin{proof}
+\emph{Step 1.} $V=0$ in \eqref{eq:Eq0}: $F_R(U)+F_L(U)=2F_R(U)$, so $F_L=F_R=:F$. $U=0$: $F(V)+F(TV)=2F(V)$, so $F(TV)=F(V)$. $V=\mathbf{1}$: $2F(U+\mathbf{1})=2F(U)+2F(\mathbf{1})$.
+
+\emph{Step 2.} Put $a=F(\mathbf{1})/q$ and $G(m)=F(m)-a|m|$. The function $|m|$ is additive and unchanged by $T$, so it satisfies \eqref{eq:Eq0} with $F_R=F_L$; hence so does $G$, and $G(0)=0$, $G(Tm)=G(m)$, $G(m+\mathbf{1})=G(m)$.
+
+\emph{Step 3.} For $W\in\mathbb{Z}^C$ put $\tilde G(W)=G(W+n\mathbf{1})$ for any $n\ge0$ with $W+n\mathbf{1}\in\mathbb{N}^C$; by the last property this does not depend on $n$, and $\tilde G=G$ on $\mathbb{N}^C$. For $U,V\in\mathbb{Z}^C$ choose $n$ with $U+n\mathbf{1},V+n\mathbf{1}\in\mathbb{N}^C$; since $T\mathbf{1}=\mathbf{1}$, \eqref{eq:Eq0} for these two multisets is \eqref{eq:Eq0} for $\tilde G$ at $U,V$. Also $\tilde G(TW)=\tilde G(W)$ and $\tilde G(W+\mathbf{1})=\tilde G(W)$. Write $G$ for $\tilde G$.
+
+\emph{Step 4.} The right side of \eqref{eq:Eq0} is symmetric in $U,V$, and so is the first term on the left; hence $G(U+TV)=G(V+TU)$ for all $U,V\in\mathbb{Z}^C$. By invariance under $T^{-1}$, $G(V+TU)=G(T^{-1}V+U)$. Replacing $V$ by $TV$: $G(U+T^2V)=G(U+V)$, and replacing $U$ by $U-V$: $G(U+(T^2-1)V)=G(U)$ for all $U,V\in\mathbb{Z}^C$. So $G$ is constant on the cosets of the subgroup $K$ generated by $\mathbf{1}$ and the elements $e_{gh^2}-e_g$, $g\in C$.
+
+\emph{Step 5, $q$ odd.} Then $h^2$ generates $C$, so $e_g-e_{g'}\in K$ for all $g,g'$, every $W$ is congruent to $|W|\,e_1$ modulo $K$, and $q\,e_1\equiv\mathbf{1}\equiv0$. Hence $G(W)=\gamma(|W|\bmod q)$ with $\gamma\colon\mathbb{Z}/q\to\mathbb{R}$, $\gamma(0)=0$. Equation \eqref{eq:Eq0} at $U=s\,e_1$, $V=t\,e_1$ reads $2\gamma(s+t)=2\gamma(s)+2\gamma(t)$; so $\gamma$ is additive, $q\gamma(1)=\gamma(0)=0$, and $\gamma=0$. Thus $F(m)=a|m|$.
+
+\emph{Step 6, $q$ even.} Now $e_{h^j}\equiv e_1$ for $j$ even and $e_{h^j}\equiv e_h$ for $j$ odd, modulo $K$ (the parity of $j$ modulo $q$ is defined because $q$ is even). So $W\equiv P\,e_1+Q\,e_h$ with $P=\sum_{j\text{ even}}W(h^j)$, $Q=\sum_{j\text{ odd}}W(h^j)$, and $G(W)=\Gamma(P,Q)$ for a function $\Gamma$ on $\mathbb{Z}^2$, $\Gamma(P,Q)=G(Pe_1+Qe_h)$. Since $T(Pe_1+Qe_h)=Pe_h+Qe_{h^2}\equiv Qe_1+Pe_h$, $\Gamma(Q,P)=\Gamma(P,Q)$, and \eqref{eq:Eq0} at $U=Pe_1+Qe_h$, $V=P'e_1+Q'e_h$ is
+\[
+\Gamma(P+P',Q+Q')+\Gamma(P+Q',Q+P')=2\Gamma(P,Q)+2\Gamma(P',Q').
+\]
+With $(P',Q')=(1,1)$: $\Gamma(P+1,Q+1)=\Gamma(P,Q)+\Gamma(1,1)$; so $\Gamma(n,n)=n\Gamma(1,1)$, and $\Gamma(q/2,q/2)=G(\mathbf{1})=G(0)=0$ gives $\Gamma(1,1)=0$. Hence $\Gamma(P,Q)=g(P-Q)$ with $g(n)=\Gamma(n,0)$ for all $n\in\mathbb{Z}$, $g(0)=0$, $g(-n)=g(n)$. With $(P',Q')=(1,0)$: $g(n+1)+g(n-1)=2g(n)+2g(1)$ for all integers $n$, and as in the proof of Theorem~\ref{thm:posprod}(i), $g(n)=cn^2$ with $c=g(1)=G(e_1)$. Since $P-Q=\varepsilon(W)$, $F(m)=a|m|+c\,\varepsilon(m)^2$.
+
+\emph{Converse and dimension.} $|U+V|+|U+TV|=2|U|+2|V|$, and $(\varepsilon(U)+\varepsilon(V))^2+(\varepsilon(U)-\varepsilon(V))^2=2\varepsilon(U)^2+2\varepsilon(V)^2$. For $q$ even $|m|$ and $\varepsilon(m)^2$ are independent: they take the values $(1,1)$ at $e_1$ and $(2,0)$ at $e_1+e_h$.
+\end{proof}
+
+\emph{Computed.} Exact ranks modulo $2^{61}-1$ of \eqref{eq:Eq0} with two unknown functions on the multisets of size at most $n$, all pairs with $|U|+|V|\le n$: nullity $2,1,2,1,2$ for $q=2,3,4,5,6$ at $n=10,7,6,6,5$, and the same at every smaller $n\ge2$ (program \texttt{onesite\_q.py}, result \texttt{onesite\_q\_result.json}). No further solution was found. \textbf{COMPUTED} to these sizes; for $q=6$ the box does not contain $\mathbf{1}$.
+
+\begin{theorem}\label{thm:posprodq}
+Let $D_h$ be the line or a ring, with $h$ of order $q$, and let $\mu$ be a rule \eqref{eq:multirule} on the multisets of gains in $\langle h\rangle$.
+\begin{enumerate}[label=(\roman*)]
+\item Suppose Hypothesis $\mathrm{P}_q$ holds on $D_h$, that $F_{(x,R)}=F_R$ and $F_{(x,L)}=F_L$ do not depend on the site, and that \eqref{eq:ppcons} holds with $k=2$. Then $F_R=F_L=F$ with
+\[
+F(m)=a\,|m|+c\,|\sigma_\psi(m)|^2 ,\qquad \psi(h)=-1,
+\]
+where the second term is present only if $q$ is even; $a=F(\mathbf{1})/q$, $c=F(e_1)-a$. For $q$ odd the rule is a multiple of the count. \textbf{PROVED given $\mathrm{P}_q$}; $\mathrm{P}_2$ CITED, $\mathrm{P}_q$ for $q>2$ CONJECTURED.
+\item Conversely, on the line and on every ring, for every $q$, the rule with $F_y(m)=a|m|$ ($q$ odd) or $a|m|+c\,\varepsilon(m)^2$ ($q$ even) at every vertex satisfies $\mu(\operatorname{Ext}S)=2\mu(S)$ for every event $S$ of every length. \textbf{PROVED}, no hypothesis.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(i) By $\mathrm{P}_q$ and Lemma~\ref{lem:onesiteq}, \eqref{eq:Eq0} holds for all $U,V$; apply Proposition~\ref{prop:solveq}. (ii) As in Theorem~\ref{thm:posprod}(iv): with $U_x=m_S(x,R)$, $V_x=m_S(x,L)$, $m_{\operatorname{Ext}S}(x+1,R)=U_x+V_x$ and $m_{\operatorname{Ext}S}(x-1,L)=U_x+TV_x$, every vertex is of one of these kinds for exactly one $x$, and the two identities of the converse of Proposition~\ref{prop:solveq} are summed over $x$.
+\end{proof}
+
+\begin{remark}
+(a) \emph{Agreement with Theorem~\ref{thm:periodic}.} On a ring with $N\ge3$ the two vertices $(x,R)$, $(x,L)$ have the same two successors with gains $(1,1)$ and $(1,h)$, so the step is norm-preserving in $\psi$ exactly when $1+\psi(h)=0$: one character for $q$ even, none for $q$ odd. The closed walks $LRLR$ and $LLRR$ at $(0,R)$ have one length and the gains $1$ and $h$, so $C_0=\langle h\rangle$. Theorem~\ref{thm:periodic} then gives, for consistency on all events, the same space as (i) gives from position product events. The comparison is \textbf{PROVED} given that theorem (CITED); that its hypothesis on $\hat D$ holds here was not checked beyond this.
+(b) \emph{Where it stops.} The generalization of the algebra does not stop: \eqref{eq:Eq0} has no solutions besides the count and the one square, for every $q$. For $q$ odd nothing but the count survives, so on $D_h$ with $q$ odd position product events carry no rule that depends on the gains. What is missing for $q>2$ is the preparation $\mathrm{P}_q$.
+(c) \emph{The neighbouring case.} If $h$ has order $r<q$ in $C$ and \eqref{eq:Eq0} is asked for all multisets on $C$, the computed nullity is $k+[r\text{ even}]\,k(k+1)/2$, $k=q/r$, in seven cases ($q\le6$, sizes $4$ to $6$); \textbf{COMPUTED}. It is the number of $T$-invariant additive functions plus the number of quadratic forms whose radical contains $(1+T)\mathbb{Z}^C$; that every solution is of this kind is \textbf{CONJECTURED}. Director~G's equation for $\{\pm1\}\times\mathbb{Z}/M$ is the case $r=2$, $k=M$, with invariance under the shifts added, which leaves $2+\lfloor M/2\rfloor$.
+(d) Parts (ii) and (iii) of Theorem~\ref{thm:posprod} (functions that vary with the site, unknown factor) and carriers with four different arc gains were not attempted for $q>2$. No step was checked in Lean.
+(e) \emph{Kept.} The exponential ansatz $F(m)=\prod_gx_g^{m(g)}-1$ with $x_g+x_{gh}=2$ satisfies the instances of \eqref{eq:Eq0} with $|V|=1$ up to a constant for a one-parameter family when $q$ is even, and fails \eqref{eq:Eq0} unless all $x_g=1$.
+\end{remark}
