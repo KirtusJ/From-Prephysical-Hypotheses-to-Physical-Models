@@ -69,6 +69,25 @@ theorem all_rings (M : Nat) (three : 3 ≤ M) :
     isolated (2*M) stock ∧ isolated (2*M) flip ∧ isolated (2*M) shift :=
   all_isolated _ (by omega)
 
+/-- The period in deficits is N/gcd(N,2), including odd periods. -/
+theorem all_periods (p : Nat) (width : 6 ≤ p) :
+    isolated p stock ∧ isolated p flip := by
+  by_cases seven : p = 7
+  · subst p; unfold isolated; decide
+  · have h := all_isolated p (by omega)
+    exact ⟨h.1, h.2.1⟩
+
+/-- Count actual LL arcs as a natural number before reduction at any order. -/
+def llCount (previous : Bool) : Word → Nat
+  | [] => 0
+  | c :: cs => (previous && c).toNat + llCount c cs
+
+theorem one_gain_counts :
+    llCount false stock = 0 ∧ llCount false flip = 1 ∧
+    llCount false [true,true,false] = 1 ∧
+    llCount false [false,true,true] = 1 ∧
+    llCount false [true,true,false,false] = 1 := by decide
+
 /-- The common starting clock includes the physical launch position.
 Departure deficit d has gain floor((clock-2*d)/2); on moving left the
 next deficit increases by one. An LL pair flips the signed history. -/
