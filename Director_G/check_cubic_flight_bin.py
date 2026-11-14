@@ -113,6 +113,20 @@ def tetrahedron(pop):
     return sorted({(1+axis_sign*t)/2 for t in (Q(1),-Q(1,3))})
 
 
+def endpoint_port_obstruction(psi, bin_ports):
+    # Every native port square is an Eisenstein norm divided by 2**ticks.
+    # For either target packet, one non-dyadic port square suffices.
+    result = {}
+    for name, inside in (("in_bin", True), ("complement", False)):
+        masses = {i: norm(z) for i, z in enumerate(psi) if ((i in bin_ports) == inside) and norm(z)}
+        total = sum(masses.values())
+        conditional = {i: Q(mass, total) for i, mass in masses.items()}
+        witnesses = [i for i, q in conditional.items() if q.denominator & (q.denominator - 1)]
+        check(bool(witnesses), "target packet lacks a non-dyadic port witness")
+        result[name] = dict(occupied_port_squares=conditional, non_dyadic_ports=witnesses)
+    return result
+
+
 def main():
     args=argparse.ArgumentParser(description=__doc__)
     args.add_argument("output",type=Path)
@@ -135,6 +149,7 @@ def main():
     check(fixed[0][1]==0 and fixed[1][1]==1-Q(2,3) and fixed[-1][1]>1-Q(9,10),
           "cubic phase is not the sixth-root fixed point")
     result=dict(revival_columns_at_24=cycles,short_panel=short,sharp_panel=sharp,
+                exact_endpoint_obstruction=endpoint_port_obstruction(psi,{2,3}),
                 exceptional_orbit_populations={str(q):tetrahedron(q) for q in (Q(1,3),Q(2,3))},
                 same_cubic_pair_input_and_unwanted_output=fixed)
     with path.open("x",encoding="utf8",newline="\n") as out:
