@@ -6688,6 +6688,32 @@
     },
     "standing": "Exact enumeration, iteration, Lean, and all 64 distinct terminal partitions agree on the specified signed walk. A separate sheet-coordinate computation reproduces the localized-source control. Type-correlated loss can defeat a flat reference. The source, addressable signs, detector law and physical identification remain open."
   },
+  "paired_detector_conditional_drift": {
+    "paper": "Unknown_direction_in_detector_pair_laws.md",
+    "checker": "check_unknown_tv_direction.py",
+    "companions": {
+      "Detector_drift_with_fixed_marginals.md": "check_fixed_marginal_radius.py"
+    },
+    "sha256": {
+      "check_unknown_tv_direction.py": "9ac44c10da647ddcf06fbadfd36c270e77b6578bb606b5e7c4c35f912f13547b",
+      "check_fixed_marginal_radius.py": "07241416fce55a0634edb0bbdde5c546335694fae8db4f13a49644317a1053c3",
+      "check_adaptive_contamination.py": "6ff03b36b7da06875399d9aace2d224af1ee816064406466788124367ccf81cb",
+      "check_fixed_exposure.py": "887b1cef283b793214108200dac81bf6789833fd80c7d2689822fe5e535e3e6f"
+    },
+    "shared_inputs": "The paired_detector_stopping_tail record fingerprints the common rate reconstruction and finite mass menu.",
+    "replay": "Both 70-decimal interval checkers passed with mpmath 1.3.0. The full four-quadrillion-pair test meets each 5% target at TV radius 8.29577e-11 with free margins, or 1.4532909e-10 when both individual rates are fixed. The corresponding impossibility radii are 8.29617e-11 and 1.4533604e-10.",
+    "standing": "At known M = 1e-8 the bounds apply after each preceding history at the selected mass. The displacements may depend on history. The converse uses admissible independent endpoint laws."
+  },
+  "paired_detector_persistent_state": {
+    "paper": "Persistent_state_and_pair_calibration.md",
+    "checker": "check_persistent_pair_calibration.py",
+    "sha256": {
+      "check_persistent_pair_calibration.py": "6500406608b2ab37e5420b37401e9869e2bcc70d7dc8b0a175bdd87d93744c45"
+    },
+    "shared_inputs": "The paired_detector_stopping_tail record fingerprints the common rate reconstruction and finite mass menu.",
+    "replay": "Exact rational reconstruction and mixture checks passed at every informative lower-half mass. The largest single-pair TV distance is 1.15461404388488e-8 at mass 0.141270071844. The minimax error is half of one minus this distance.",
+    "standing": "One-pair calibration is unconditional over repeated runs at predetermined settings. An allowed state can persist throughout each run. At equal priors a single best pair attains the worst-case risk for every budget of at least one pair; adaptation cannot lower that guarantee. No physical persistence was measured."
+  },
   "paired_detector_stopping_tail": {
     "paper": "Stopping_time_tail_for_paired_detectors.md",
     "checker": "check_stopping_tail.py",
