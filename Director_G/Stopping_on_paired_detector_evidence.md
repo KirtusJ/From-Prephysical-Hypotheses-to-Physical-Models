@@ -16,7 +16,7 @@ Here $D_*\approx1.42361683104\times10^{-15}$ nats per pair.
 
 ### An explicit rule that almost attains the bound
 
-Repeat mass $s=0.123279641138\ldots$. Let $L$ accumulate $\log(P_s(z)/Q_s(z))$ over the observed pair outcomes. Stop at the first exit from $(-a,a)$ and choose $P$ at the upper exit and $Q$ at the lower exit. Set $a=\log19+b$, where $b$ bounds the largest absolute one-pair increment at this mass (about $3.795\times10^{-7}$). This is a sequential probability-ratio test. [Background on the sequential probability-ratio test](https://philsci-archive.pitt.edu/11155/1/How_Much_Evidence_Should_One_Collect.pdf)
+Repeat mass $s=0.123279641138\ldots$. Let $L$ accumulate $\log(P_s(z)/Q_s(z))$ over the observed pair outcomes. Stop at the first exit from $(-a,a)$ and choose $P$ at the upper exit and $Q$ at the lower exit. Set $a=\log19+b$, where $b$ bounds the largest absolute one-pair increment at this mass (about $3.795\times10^{-7}$). This is a sequential probability-ratio test. [Wald, sequential tests](https://doi.org/10.1214/aoms/1177731118) · [Wald and Wolfowitz, optimality for a fixed experiment](https://doi.org/10.1214/aoms/1177730197) · [Background on the sequential probability-ratio test](https://philsci-archive.pitt.edu/11155/1/How_Much_Evidence_Should_One_Collect.pdf)
 
 For $\tau\wedge n$, Wald's expectation identity and $|L_{\tau\wedge n}|\le a+b$ give a uniform bound on the truncated mean time under each law, because both directional divergences are positive. Hence the test terminates almost surely with finite means. Under $Q$ the stopped likelihood has expectation one; under $P$ its reciprocal has expectation one, by bounded convergence from the truncated times. The exit values consequently put *each* conditional error between
 $$
