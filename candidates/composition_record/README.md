@@ -38,6 +38,8 @@ For example, add \(a_1 C_2-a_2 C_1\) to the determinant. Its matrix is skew, so 
 
 ## Where the proposed carrier needs an extra convention
 
+If the physical readout is an interference phase, arbitrary pair-phase conventions hide three of the ten field coefficients. Seven phase cycles identify the surviving class. Real interference can recover their relative signs. [Phase measurements and the three hidden coefficients](reassociation_phases.md)
+
 The full contact at fixed \(h\) is a scalar. Storing all raw contacts in a single covector that a later free choice of \(h\) can evaluate imposes linearity in \(h\). A permitted recalibration can violate that condition even for the determinant class. Use \(f(a,b)=a_1^2 b_2^2\) and replace \(\omega\) by \(\omega+\delta f\). At \(x=y=e_1\) the recalibrated raw contact is \(-2h_2^2\). Its values at \(e_2\) and \(2e_2\) are three and two, while twice three is one modulo five. No covector has those readings. All closed commutators and fifth powers still agree. The packet's alternating writer and its particular five-contact counterexample survive this attack. Extending its raw contacts to arbitrary representatives requires a chosen section, a separate fixed-reference scalar contact, or a larger memory.
 
 ## A noisy test of memory after the sources disconnect
