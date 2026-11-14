@@ -27,7 +27,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Reading direction with position toggles](Direction_from_position_toggles.md) | One carried bit and two period-four position patterns measure the outgoing rail without identifying its site. A premature read halves a four-tick interference probability. |
 | [Calibrating probability laws on recorded words](Calibrating_record_sectors.md) | Conserving the event flux across a direction write transfers all coherent coefficients. A fair singleton fork tests the remaining count bias. |
 | [Testing what a direction detector records](Checking_a_direction_record.md) | A five-tick sharp-source record distinguishes a coherent rail read from a hidden site copy at order three. Two eight-tick terminal rates separate the specified partial-copy and count models. |
-| [Hidden site records and preparation time](Hidden_site_records_and_preparation_time.md) | Independent hidden copies can preserve the conditional packet while making release by a polynomial deadline improbable. The renewal law keeps those rejected and timed-out trials. |
+| [Hidden site records and preparation time](Hidden_site_records_and_preparation_time.md) | Independent hidden copies can preserve the conditional packet while making release by a polynomial deadline improbable. The renewal law keeps those rejected and timed-out trials. A detector with memory can match every calibration in a fixed short window and give a larger long-run yield. |
 | [Reading direction with whole-position apertures](Straight_pairs_and_direction_records.md) | Two streamed ticks encode one logical tick. The [Lean word identities](lean/RailFromStraightPairs.lean) fix the gain and sign, while the incident yield loses a factor of two per logical tick. |
 | [Unmasked release of the encoded source](Unmasked_release_from_straight_pairs.md) | Four momentum peaks divide into slow and fast components. One spatial aperture keeps the slow half of an already prepared weak-character source. |
 | [Preparation and flight in a permanent field](Field_on_source_and_release.md) | The walker restarts at a failed detector and keeps its field on through preparation. The surviving packet's momentum shift changes the finite-action Gaussian centers and the mean release clock. |
@@ -219,6 +219,7 @@ python -B check_folded_gaussian.py rerun
 python -B check_record_sector_calibration.py rerun
 python -B check_direction_record_witness.py rerun
 python -B check_hidden_site_records.py rerun
+python -B check_hidden_copy_memory.py rerun
 python -B check_straight_direction.py rerun
 python -B check_unmasked_straight_release.py rerun
 python -B check_central_window_flight.py rerun

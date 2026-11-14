@@ -68,3 +68,44 @@ At $m=1024$ and zero field the full-record calculation gives clean fraction 0.72
 ## What a detector calibration must establish
 
 On the matched two-output witness with a localized sheet, an independent full site copy gives the two-path marker overlap $\gamma=1-p$. A measured short-word contrast could constrain $p$ if the same instrument applies at each use. A fixed nonzero tolerance on one use does not settle either scaling limit. A detector with memory can reproduce the single-use contrast and have a different survival curve. Comparing joint switch records and timeouts at multiple depths tests that extension. Published measurements of coherence within an atomic parity outcome establish such preservation on that apparatus; they do not supply a per-block copy rate for a cyclic sheet walker. [Localized witness, count nuisance and primary-source comparison](Checking_a_direction_record.md)
+
+## How much can a finite calibration window establish?
+
+Keep the same zero-field switch and site dephasing. Start one sharp walker independently of the detector at a stationary instant. Write $X_i=1$ when the detector would copy the site after pass $i$. For any fixed window width $d\ge1$ and $0<p<1$, there is a stationary ergodic law for these bits that agrees with independent Bernoulli$(p)$ on **every contiguous window of at most $d$ uses**. It nevertheless gives a polynomial lower bound on the chance of $m$ passes, while the independent law above decays exponentially.
+
+Construct the detector from independent intervals. An interval lasts $B$ uses with $\Pr(B\ge b)=2/[b(b+1)]$ for $b\ge1$, so $\mathbb EB=2$. Draw $d$ independent Bernoulli$(p)$ bits and repeat them in order for those $B$ uses. At the boundary, draw both the length and the bits anew. A stationary start selects length $b$ with probability $b\Pr(B=b)/2$ and an offset uniformly among its $b$ positions. Shifting from one regeneration to the next shifts a sequence of independent intervals, so a shift-invariant event has probability zero or one. The length counter is unbounded. Conditional on the boundaries, a window of width at most $d$ encounters distinct bits within each interval and independent draws across intervals. Any control or readout confined to such a window therefore has the same outcome law if its only access to the detector memory is through the copy action and its starting state is independent of that memory.
+
+The chance that $n$ successive uses stay in the starting interval is $\tfrac12\sum_{b\ge n}\Pr(B\ge b)=1/n$. All $d$ bits there are zero with probability $q^d$, independently of its length. Only the first $m-1$ copies affect the trace, so on the line, for $m\ge2$,
+
+$$
+S_m^{\rm mem}\ \ge\ \frac{q^d}{m-1}\,a_m
+\ =\ \Omega_{p,d}(m^{-3/2}).
+$$
+
+The finite-prefix bound also holds before ring wraparound under $2m<4M$. It concerns one launch. A restart triggered by an observed failure can select a different distribution of the retained detector memory.
+
+### The first count that separates the two detectors
+
+Let $W$ denote the probability that all switches pass for a fixed internal copy word. Each copy splits the $m$ switches into segments, and $W$ is the product of their ideal probabilities $a_j$. Thus $S_1$ through $S_{d+1}$ agree. At $m=d+2$ all $d+1$ internal uses occupy one interval with probability $1/(d+1)$. On that event the first and last bits are identical. On its complement every interval contributes at most $d$ distinct bits and the entire word has the independent law. Given the $d-1$ middle bits, write $W_{ij}$ for endpoint choices $i,j$. The increase in survival is
+$$
+\frac{pq}{d+1}\,\mathbb E\big[W_{00}-W_{01}-W_{10}+W_{11}\big]>0.
+$$
+With no middle copy the mixed difference is $a_{d+2}-a_{d+1}+a_d/4=a_d(d^2+d+1)/[4(d+1)(d+2)]$. Otherwise the first and last uncut segments have lengths $u,v\ge2$. The difference factors into their two terms $a_j-a_1a_{j-1}$ times the intervening segment probabilities. Both terms are positive since $a_j/a_{j-1}=(2j-1)/(2j)>1/2$.
+
+For $d=2$ and $p=1/3$, the three predictions for four passes in one attempt are as follows.
+
+| Detector law | Probability |
+|---|---:|
+| Independent copies | $37/216$ |
+| Regenerating detector above | $113/648$ |
+| Full range over stationary copy laws with independent adjacent pairs | $[1/6,\,13/72]$ |
+
+To see sharpness, condition on the middle bit $X_2=b$. Both endpoint marginals are Bernoulli$(p)$. Write $c_b=\Pr(X_1=X_3=1\mid X_2=b)-p^2$. The marginal constraints allow each $c_b$ anywhere in $[-\min(p^2,q^2),pq]$. Every such pair defines a stationary order-two chain. Use the specified triple law to draw the third bit given the first two, and initialize the first pair independently. Its output pair has the same product law.
+
+The mixed differences for $b=0,1$ are $7/128$ and $1/64$, respectively. Hence $S_4-S_4^{\rm iid}=(7q/128)c_0+(p/64)c_1$, which attains both tabulated endpoints. Even exact agreement with the independent four-pass value can conceal memory. For example, $c_0=1/126$ and $c_1=-1/18$ cancel at $p=1/3$.
+
+### A test with a fixed number of launches
+
+Count all launches, including those that fail at the first switch. At 64 passes the independent probability is about $5.0454\times10^{-9}$. The regenerative lower bound alone is $4.9655\times10^{-4}$ to five significant figures. A prospective test could use 6,100 independent stationary launches at the specified rate and reject independence if any walker completes all 64 passes. The null probability of doing so is at most $6100 S_{64}^{\rm iid}<1/32000$. Under the specified alternative the chance of missing every launch is at most $\exp(-6100q^2a_{64}/63)<e^{-3}<1/20$. This design requires independent stationary initializations or distinct independently prepared detectors. Resetting the counter to the beginning of a new interval would change the prediction. The rates are model calculations.
+
+[Exact stationary windows and two-rail replay](check_hidden_copy_memory.py) · [Numerical record](results/hidden_copy_memory.json) · [Lean checks of the mixed differences](lean/HiddenCopyMemory.lean) · [Instrument-specific memory in quantum processes](https://doi.org/10.1103/PhysRevLett.122.140401)
