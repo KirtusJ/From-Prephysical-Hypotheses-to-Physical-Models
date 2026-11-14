@@ -115,4 +115,3 @@ if __name__ == "__main__":
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
     args.output.write_bytes((json.dumps(audit(), indent=2, default=str) + "\n").encode())
-

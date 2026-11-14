@@ -32,4 +32,3 @@ theorem at_most_nine (n : Nat) (hn : 0 < n) (hm : n*(n-1) ≤ n*8) : n ≤ 9 := 
     omega
 
 end ExchangeableWord
-
