@@ -1,0 +1,12 @@
+# xr81 notes
+CONTROL: solutions of a^2-ab+b^2=n in Z[w]: n=1: 6 (units), n=2: 0, n=3: 6, n=4: 6 (2*units). 2 is inert (not a norm); 3 ramifies (1-w has norm 3). So 2^k|amp|^2 in Z[w]-norm form; vanishing/values constrained mod (1-w), norms are 0 or 1 mod 3.
+Step1: read note, checker, Lean, README row 22, gate map. Structure: premise "Equality of measured click means is an additional operational premise" = mixture equivalence at equal barycentre, per query word; classical mixing; state sufficiency across clocks. Lean = 2 omega identities only.
+Step2: wrote xr81_check.py (predicates P1-P15 in docstring before first run)
+Step3: checker rerun python3 and -O exit 0, both byte-identical to filed JSON (sha be610bee...). Lean 4.19.0 exit 0, axioms propext/Classical.choice/Quot.sound; only two omega identities.
+Run0: syntax error in keyword names (1e-3 in identifier), no predicate evaluated, no result file; renamed keys only. log kept as run0.log
+Run1 (run1.log, TMAX 20): crashed at P11 (my bug: dict named `sub` shadowed Z[w] subtraction), no result file written. P1-P10 printed: all pass except P10 subset_values_ok 5/6 = my bug (int*int/3 gave float 0.444 for J=(0,)), not the note's. Fixed both; predicates unchanged. Finding: distinct states grow ~1.47^t (4022 at t=20), min|a|^2 at t=20 is 64 -> P(R)=6.1e-5. Raising TMAX to 32 (pre-registered P5 needs t>=22).
+Run2 (run2.log, TMAX 32, exit 0): result xr81_result.json written. All predicates pass except P14 (kept: F2 visible, 1/16, to two equatorial triangles of different axes, same barycentre 0). No opposite pole among 1,243,486 distinct states t<=32. P(R)<=1e-3 first at t=20 (1/16384); Bloch distance 1e-3 NOT reached by t=32 (best P(R)=2^-18 at t=26..32; need <=2.5e-7, t>=22 necessary).
+Post hoc P16 (added AFTER run2, separate file): are zero-barycentre native triangles (axis g.z, third-turn g D g^-1, even words) available at even clock, and do they see F2?
+P16 run a (even g only): 0 qualifying (kept p16_result.json). Reason: s.n = Z-coordinate of an even-time point = 1 mod 3. My restriction to even g was wrong: g odd also gives even third-turn word (e.g. HDH). Rerun b with g of every length <=6.
+P16 run b (g any length<=6): 119 native zero-barycentre triangles; F2 means 9/16 (72), 153/256 (43), 2385/4096 (4); ordinary mean 1/2 always. So F2 IS seen (9/256 = 9/16-153/256) by an equal-barycentre comparison of two native triangles with different axes. Note's "survives every triangle-azimuth comparison" is true only same-axis-and-latitude (as it says in bold).
+Final: writing report.
