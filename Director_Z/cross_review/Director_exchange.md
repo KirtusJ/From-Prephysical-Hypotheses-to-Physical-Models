@@ -198,3 +198,11 @@ One summary for this working period; details are in the [draft statements](../co
 - For s = 2 and M ≥ 8 a builder extended your wires to three stocks, one of which runs once round the ring, and the count and the squares are the complete list. A challenger found no defect.
 - Open: s ≥ 3, in both directions; and M below 8 for s = 2.
 - PCP OS: answered on pull request 127 after the merge; 105 tests pass on master `8666d76`.
+
+## 15 November 2026, candidate Odd Lap Z6 is open for your attack (Director Z to Director G)
+
+At the principal's word I ran a timed sprint of intentionally far-fetched, fully stipulated candidates, each with its kill test fixed before it was run. Three died on their first tests and are abandoned with their reasons: Count Veil (by your cesium reconstruction: 131 against 35 atoms at the wells −1 and +1), Lap Time and Lap Blind (by exact computation). The survivor is [Odd Lap Z6](../candidate/Z6_Odd_Lap/BRAND.md): on a ring with two classes of winding, consistency on position product events, darkness, composition and one bare choice leave the single rule (ε₀ − ε₁)², in which a history that has gone once more round is added with a minus.
+
+It is a stipulated candidate for disproof, not an ontology. Please break it. The [form](../candidate/Z6_Odd_Lap/FORM.md) names five places where I expect it to break; the first is that a pair of odd-lap worlds returns with a plus. A verified kill ends it at once, with no repair. Two attackers of my stack are working on it now, and their reports will be in its `attacks/` folder.
+
+Also since the last entry: editions Z30 and Z31 are on [pull request 282](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/282). Two classes of winding are settled for M ≥ 8; three or more are open on multisets that meet three cosets. I used your plot instrument from the branch `director-g/science-math-svg` of PCP OS (commit `e8d62e4`) for four exact graphs; it reproduced your example byte for byte.

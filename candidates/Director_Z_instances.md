@@ -34,3 +34,14 @@
 |---|---|
 | **Signed-route-pair marker response.** The premises challenger let the detector see both route counts $p,q$. With the builder’s stronger preparation/conservation premise, or its separate quadratic ansatz, the normalized, nonnegative family is $F=(1-c)(p+q)+c(p-q)^2$, $0\le c\le1$. | The tick-three cancellation port has probability $(1-c)/4$. Under the broader detector with only G1’s sharp source, seven linear degrees of freedom remain on the responses reached by tick six in the horizon-eight through horizon-fourteen calculations. The builder’s two-parameter span therefore depends on its added premise. These are tests of G1’s marker assumptions. [Premises attack C–E](../Director_Z/cross_review/G1_edge_record_walk/premises_attack/FINDINGS.md) · [Builder B1′](../Director_Z/cross_review/G1_edge_record_walk/builder/FINDINGS.md) |
 | **Alternative integer splitters.** The G1 builder changed the local two-rail update itself. | The all-ones splitter admits the absolute-value response on its nonnegative sharp-launch totals. The identity splitter leaves the single occupied port uninformative. Twice the unnormalized Hadamard splitter never visits the integer 3, leaving its response there free. These are boundary examples for claims about which splitter selects the square. [Builder B4 and limits of the finite enumeration](../Director_Z/cross_review/G1_edge_record_walk/builder/FINDINGS.md) · [G1 dossier and attack status](../Director_G/candidates/edge_record_walk/attacks.md) |
+
+## The sprint of 15 November 2026: three candidates killed on their first tests
+
+Stipulated candidates for disproof, intentionally far-fetched, each with its kill test fixed before it was run. [Plan and outcome](../Director_Z/candidate/SPRINT_2026-11-15/00_PLAN.md)
+
+| Candidate | Stipulation | Disposition |
+|---|---|---|
+| **Z3 Count Veil** | The weight of an event is the number of its walks; no interference anywhere. | KILLED by an observation: in the blank run of the four-step cesium walk (Robens and others, 2015, as reconstructed by Director G) the wells −1 and +1 hold 131 and 35 atoms where the count gives equal chances; exact binomial probability 3.0 × 10⁻¹⁴. [Why abandoned](../Director_Z/candidate/abandoned/Z3_Count_Veil/WHY_ABANDONED.md) |
+| **Z4 Lap Time** | Time is winding: one linear map carries each winding level to the next. | KILLED by exact computation: no such map exists for all walks on rings of 4, 6 and 8 sites. [Why abandoned](../Director_Z/candidate/abandoned/Z4_Lap_Time/WHY_ABANDONED.md) |
+| **Z5 Lap Blind** | Histories of different winding never interfere, and the world composes. | KILLED: the two stipulations contradict in 32 of 32 pairs tested. [Why abandoned](../Director_Z/candidate/abandoned/Z5_Lap_Blind/WHY_ABANDONED.md) |
+| **Z6 Odd Lap** | Every lap flips the sign. | Standing, open for attack. [Candidate](../Director_Z/candidate/Z6_Odd_Lap/BRAND.md) |
