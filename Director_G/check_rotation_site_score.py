@@ -290,13 +290,13 @@ def shared_sheet_probe(reflect, fixed=False):
     return rates
 
 
-def free_sheet_read(ticks, flip):
+def free_sheet_read(ticks, flip, multiplier=-1, offset=0):
     numerators = Counter()
     for word in product((1,-1),repeat=ticks):
         x,r,y,sign = 0,1,0,1
         for j,d in enumerate(word):
             if j == flip:
-                y = -y
+                y = multiplier*y + offset
             y = (y+int(x in (1,6)))%3
             sign *= -1 if r==d==-1 else 1
             x,r = (x+d)%8,d
@@ -314,6 +314,38 @@ def earliest_free_sheet_read():
             require((actual != reference) == (t==4 and k==2), "first unfiltered reflection")
     require(reference==(6,0,6,0,2,0,2,0), "ordinary free read")
     require(free_sheet_read(4,2)==(4,0,6,0,2,0,4,0), "reflected free read")
+
+
+def classical_sheet_read(multiplier, offset):
+    state = Counter({(0,0): Q(1)})
+    for tick in range(4):
+        later = Counter()
+        for (x,y),mass in state.items():
+            if tick == 2:
+                y = (multiplier*y+offset)%3
+            right = Q(1,2)
+            if x == 1 and y:
+                right = Q(1)
+            if x == 7 and y:
+                right = Q(y == 1)
+            sheet = (y+int(x in (1,6)))%3
+            later[(x+1)%8,sheet] += mass*right
+            later[(x-1)%8,sheet] += mass*(1-right)
+        state = later
+    return tuple(sum(p for (x,_),p in state.items() if x==j) for j in range(8))
+
+
+def permutation_controls():
+    classical = {}
+    for sign in (1,-1):
+        target = free_sheet_read(4,2,sign,0)
+        for offset in range(3):
+            require(free_sheet_read(4,2,sign,offset) == target, "translated sheet panel")
+            classical[sign,offset] = classical_sheet_read(sign,offset)
+        require(tuple(16*p for p in classical[sign,0]) == target, "active trit rival")
+    for site in range(8):
+        require(sum(classical[1,k][site]-classical[-1,k][site] for k in range(3)) == 0,
+                "permutation averaging identity")
 
 
 def static_inverse_search():
@@ -343,6 +375,7 @@ def static_inverse_search():
 
 if __name__ == "__main__":
     earliest_free_sheet_read()
+    permutation_controls()
     static_inverse_search()
     for reflect in (False,True):
         print("Shared-sheet probe, reflection",reflect,shared_sheet_probe(reflect))
