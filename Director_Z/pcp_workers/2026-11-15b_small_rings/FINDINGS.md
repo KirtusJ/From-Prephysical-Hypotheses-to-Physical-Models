@@ -30,7 +30,12 @@ Statements in full: PROOFS.md. Log: NOTES.md.
   9 of the 33 requests of size ≤ 2 fail. Closed search, plus an unrelaxed exhaustive check to length 9 (micro-review).
   No invariant found.
 - **Statement C′** (builder): M = 3, every q: G1={1}, G2={1,1}, G3={1} fails in both modes (counts (1,2,1)).
-- (3) on M = 3: see the challenger section below.
+- (3) by exact ranks (challenger, `fgtwo_beam.py`, ulimit 3 GB): NOT BROKEN IN RANGE on M = 3, 5, 6, 7 (40 qualifying
+  ring/carrier pairs). On N=3 at L=9, L0=6 there are two excesses: Z8_r4_kodd 3 vs 2 and Z4Z2_r4_keven 6 vs 3. Both sit
+  only at L0 = L-3; at L0 ≤ 5, and with width cap 2 at L=10, the dimensions equal the prediction. Full enumeration at
+  L=10 ran out of memory. **Unsettled; probably a bound artefact.** Coverage of the winding is thin on M = 7 (2
+  two-coset keys) and absent on the M = 8 control.
+  So (3) on M = 3, where Theorems A/B do not apply, has only this computation.
 
 ## Failed or kept
 - My bugs, all caught before results were kept (NOTES steps 2, 5, 9): a phantom removal, the split tick of dep−,
@@ -46,7 +51,7 @@ Statements in full: PROOFS.md. Log: NOTES.md.
 - challenger_theoremA: control correct. NOT BROKEN IN RANGE (M = 6..14). Two gaps in the text of Lemmas S and T,
   corrected. Rerun: large run byte-identical.
 - micro_m3: control correct. Confirmed to length 9. Rerun: T=8 byte-identical.
-- challenger_fgtwo_ranks: see below.
+- challenger_fgtwo_ranks: control correct. Rerun: both r=4 excess runs give output identical except timing fields.
 
 ## Nobody checked
 - The body's proofs of thm:fgtwo etc. themselves (Corollary B1 is conditional on them).

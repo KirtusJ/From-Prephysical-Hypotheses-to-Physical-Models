@@ -94,3 +94,7 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   in the relaxed search all 33 P^+ and all 486 mode requests had been met, but witnesses were NOT replayed, so this
   is only a log (results/bfs_M5/log_M5_q3_W2_STOPPED.txt). The queued M=6,7 controls were not run (constructions of
   Theorems A, B make them unnecessary). The watcher on summary.txt hit its background time limit (killed) first.
+- step 16: challenger_fgtwo_ranks report: NOT BROKEN IN RANGE; two unsettled excesses on N=3 at L0=L-3 (r=4 carriers);
+  control correct. RERUN by worker in /tmp/claude-0/w_rerun_rk: `fgtwo_beam.py Z8_r4_kodd 3 9 6 600000 0 ...` and
+  `fgtwo_beam.py Z4Z2_r4_keven 3 9 6 600000 0 ...`, exit 0 both; JSON identical except rank_seconds, seconds.
+  FINDINGS.md completed.
