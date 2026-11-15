@@ -1,0 +1,26 @@
+\subsection{Consistency demanded only on position product events}
+
+The theorems above ask for consistency on every event, that is, on every set of walks of one length. An attack on a candidate model built on them showed that this is far more than any instrument selects: on most sets of walks the weight is not a frequency of anything \cite{comp4s}. This subsection asks for consistency only on events that are selected by prescribing, at each time, a set of positions; on the signed line and on most rings the result is the same. The preparation on which it rests is Director~G's \cite{dgmask}.
+
+Let $D$ be the signed arc digraph of the line $\mathbb{Z}$ or of the ring $\mathbb{Z}_N$, $N\ge1$: vertices $(x,R)$ and $(x,L)$, arcs from either to $(x+1,R)$ and to $(x-1,L)$, all gains $+1$ except $-1$ on the arcs from $(x,L)$ to $(x-1,L)$; on the ring $x\pm1$ is taken modulo $N$, and a walk is counted at the vertex of the ring at which it ends, whatever its winding. The gain of a walk is the product of the gains of its arcs, $\operatorname{Ext}S$ is the set of walks of $S$ continued by one arc (Section~\ref{sec:cyl}), and $\mathbb{N}$ contains $0$. Events are sets of walks from $(0,R)$. For an event $S$ and a vertex $y$ let $m_S(y)=(p,q)\in\mathbb{N}^2$ be the numbers of walks of $S$ that end at $y$ with gain $+1$ and with gain $-1$; put $J(p,q)=(q,p)$, and add pairs by components. A \emph{position product event} of length $T\ge1$ is the set of all walks of length $T$ whose position after $s$ steps lies in a prescribed set $A_s$ of sites, for $s=1,\dots,T$. If $S$ is one, so is $\operatorname{Ext}S$ (take $A_{T+1}$ to be all sites), and so is the set of walks of $S$ that end at one site $x$ (replace $A_T$ by $A_T\cap\{x\}$).
+
+For each vertex $y$ let $F_y\colon\mathbb{N}^2\to\mathbb{R}$ with $F_y(0,0)=0$, and put
+\begin{equation}\label{eq:multirule}
+\mu(S)=\sum_{y}F_y\bigl(m_S(y)\bigr)
+\end{equation}
+for events $S$ of every length; the functions $F_y$ do not depend on the length. For a real number $k$ consider the requirement
+\begin{equation}\label{eq:ppcons}
+\mu(\operatorname{Ext}S)=k\,\mu(S)\qquad\text{for every position product event }S .
+\end{equation}
+
+\begin{lemma}[preparation; Director~G \cite{dgmask}]\label{lem:prep}
+Let $D$ be the line, or the ring $\mathbb{Z}_N$ with $N/\gcd(N,2)\ge11$. For every site $x$ and every $U,V\in\mathbb{N}^2$ there are a length $T\ge1$ and a position product event $S$ of length $T$ with $m_S(x,R)=U$ and $m_S(x,L)=V$.
+\end{lemma}
+
+The lemma is not proved here. The construction of \cite{dgmask} gives more than is stated: $m_S(y)=(0,0)$ at every other vertex $y$, at most five sites in each $A_s$, and, before the site is prescribed, $T=15+6(p_R+q_L)+5(q_R+p_L)$ and $x=T-20$ for $U=(p_R,q_R)$, $V=(p_L,q_L)$. The emptiness of the other vertices is not needed below, because the walks ending at one site can be selected in the last step. For $N/\gcd(N,2)>11$ the deposits may be made in any order; for $N/\gcd(N,2)=11$, that is $N=11$ and $N=22$, the order of \cite{dgmask} is required.
+
+\begin{lemma}\label{lem:onesite}
+Let $D$ be the line or a ring, let $\mu$ be as in \eqref{eq:multirule}, and let $S$ be a position product event with $m_S(x,R)=U$ and $m_S(x,L)=V$. If \eqref{eq:ppcons} holds with the factor $k$, then
+\begin{equation}\label{eq:E}
+F_{(x+1,R)}(U+V)+F_{(x-1,L)}(U+JV)=k\,F_{(x,R)}(U)+k\,F_{(x,L)}(V).
+\end{equation}
