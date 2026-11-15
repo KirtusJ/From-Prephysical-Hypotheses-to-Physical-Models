@@ -166,6 +166,20 @@ def finite_response_grid():
     print("41-rotation mesh and ordinary longest-panel yield:", float(gap), float(yields[23]**41))
 
 
+def multiwell_control():
+    def score(u):
+        return u*(1+u*(1-u))
+
+    for n in range(-41,42):
+        w = mass_table(1,orbit(n))[1]
+        require(score(w)/(score(w)+score(1-w)) == w, "binary control")
+        masses = mass_table(2,orbit(n))
+        require((masses[0],masses[2],masses[6]) ==
+                (Q(1,2),w/2,(1-w)/2), "center and both calibration edges")
+    masses = mass_table(2,(1,0))
+    require(score(masses[0])/sum(map(score,masses)) == Q(20,39), "multiwell control")
+
+
 def binary_record_game():
     # Any acceptance mask can depend on the hidden signs and the panel.
     from itertools import product
@@ -199,6 +213,7 @@ def next_rotation_challenge():
 
 
 if __name__ == "__main__":
+    multiwell_control()
     finite_response_grid()
     next_rotation_challenge()
     binary_record_game()
