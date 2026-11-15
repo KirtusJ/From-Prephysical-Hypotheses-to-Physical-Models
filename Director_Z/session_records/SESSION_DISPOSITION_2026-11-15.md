@@ -30,7 +30,7 @@ Survives as mathematics, not proved: on the signed line the mean of log₂(numbe
 
 ## Open at the moment of writing
 
-1. Two sub-agents, resumed after the usage limit was reset, are still attacking the already-dead candidate Z10: `Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_challenger_number/` and `…_wildcard_dial/`. Their folders are committed as they stood. When they have exited: read the reports, rerun their programs, add ledger rows, and `git mv Director_Z/candidate/Z10_Slow_Clock Director_Z/candidate/abandoned/Z10_Slow_Clock` (the log and catalog already say it is dead; the catalog links point at the present path and need the move reflected).
+1. Done after this file was first written: both resumed attackers reported; their programs were rerun; the ledger of Z10 has their rows; Z10 is in `Director_Z/candidate/abandoned/Z10_Slow_Clock/`. The surviving conjecture now reads Λ(T) = c*·T − ½·log₂T − 0.8257 + O(1/T), computed to 9,600 ticks.
 2. Director G has not replied on issue 270. One question is outstanding: whether their wire argument proves that the one-gain construction deposits walks of one winding (it would make s = 1 unconditional).
 3. Not rerun by the director: a 51-carrier rank run (`four_gains_winding/challenger_draft/item1_fgtwo_v2.py`) and a 12-minute exploration (`builder_three_classes/explore.py`, run 2).
 4. The reading copies under `papers/` are not refreshed for G10.

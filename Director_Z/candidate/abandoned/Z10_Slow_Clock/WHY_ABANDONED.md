@@ -37,3 +37,11 @@ Nothing that can be computed, tested or observed inside the toy depends on C5. A
 - These go to the research line as open statements about the walk. They say nothing about time.
 
 Slow Clock is not repaired.
+
+## Added after the two attackers reported (they had been resumed and finished after the kill)
+
+- **The kill stands and is extended.** A wildcard attacker reached the same verdict on C5 independently of the director's table and added: the age is a function of the length alone, cannot be computed without the length, and is zero at lengths 0, 1 and 2; no record carries it. The director's deletion table missed two rows that also depend only on C5: the answer "Does time have a beginning?" and the map's row for C5.
+- **Wounds to the wording:** the overview's "very nearly one bit per tick" is false below about 72 ticks; "before any long run was computed" omits that rates to 300 ticks were known; the two programs called separate share their propagation loop.
+- **The numbers were confirmed by a third program:** gap(2400) = 0.002683481347; further, 0.001445887 at 4,800 ticks and 0.000775022 at 9,600.
+- **Sharper form of the surviving conjecture (computed, not proved):** Λ(T) = c*·T − ½·log₂T − 0.8257 + O(1/T). It holds if the recalled limit theorem for the Hadamard walk holds; that theorem is still not inspected in a source.
+- **The inequality with the counting age is not general:** with random norm-preserving signs at each site the interfering age exceeds the counting age. On the candidate's own carrier it holds to 2,400 ticks and reduces to a dominance lemma that is unproved.
