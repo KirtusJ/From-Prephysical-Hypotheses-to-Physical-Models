@@ -1,5 +1,7 @@
 # Wilson–Dirac interval entropy as mass and length vary
 
+[Seven-page working paper](../../papers/drafts/D9%20-%20Relative%20Entropy%20of%20Wilson%E2%80%93Dirac%20Intervals%20at%20Vanishing%20Scaled%20Mass.pdf) · [Editable TeX](../../papers/source/D9/D9_manuscript.tex)
+
 For the half-filled infinite Wilson–Dirac chain, compare the massive occupied-band state with the massless one on the same interval of $L$ consecutive two-orbital cells. Write $m=\mu/L$ for the bare mass, $D_L(\mu)$ for the massive-first relative entropy, and $h=\log(1/\mu)$. All logarithms are natural. At fixed positive $\mu$, the Z33 expansion has leading term $\mu^2\log L/6$. Taking $\mu$ to zero with $L$ gives different scales. [Model and entropy convention](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/0ca75f60c76af1be7f3c25c2ed8914e82243ff5d/edition/PAPERS/D1_Relative_Entropy_of_Finite_Interval_Wilson_Dirac_Quasifree_States/D1_Relative_Entropy_of_Finite_Interval_Wilson_Dirac_Quasifree_States.pdf#page=4) · [Fixed-positive-mass expansion](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/0ca75f60c76af1be7f3c25c2ed8914e82243ff5d/edition/PAPERS/D3_Finite_Part_of_Wilson_Dirac_Relative_Entropy/D3_Finite_Part_of_Wilson_Dirac_Relative_Entropy.pdf#page=2)
 
 | Limit | Result for the specified chain |

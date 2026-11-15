@@ -110,7 +110,7 @@ $$
 
 Indeed $\operatorname{arcosh}(\sec v)$ has bounded derivative near $v=\pi/4$, and its value there is $\log(1+\sqrt2)$. Both semicircles obey the bound, hence $g_L\ge c/[N(1+\sqrt2)^{2N}]$. With N=2L this gives the explicit sufficient condition in the opening, independently of D2's concentration analysis.
 
-**Limit of this approach.** For polynomially small $\mu$, (1) alone does not control the small-t remainder in the entropy Hessian. Even when the reference eigenvalue is b, a rank-one error $x$ in that eigenspace has Hessian $x^2/[b(1-b)]$. Thus a Hilbert–Schmidt bound by itself loses an inverse spectral gap. The two special constant-orbital directions avoid that loss by (2); the full Wilson remainder needs additional spectral localization or cancellation. No sharp polynomial-sector upper bound is established here. 
+**Limit of this approach.** For polynomially small $\mu$, (1) alone does not control the small-t remainder in the entropy Hessian. Even when the reference eigenvalue is b, a rank-one error $x$ in that eigenspace has Hessian $x^2/[b(1-b)]$. Thus a Hilbert–Schmidt bound by itself loses an inverse spectral gap. The two special constant-orbital directions avoid that loss by (2); the full Wilson remainder needs additional spectral localization or cancellation. No sharp polynomial-sector upper bound is established here.
 
 ## Finite check
 
