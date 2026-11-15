@@ -46,3 +46,16 @@ Common ground for all four (STIPULATED, taken from paper G10 as issued in editio
 ## What is not done in this sprint
 
 No candidate is repaired. A killed candidate's surviving statements may seed a later one under a new name, not in this period.
+
+## Outcome (written at the end of the testing part of the period)
+
+| Candidate | First test | Verdict | Where it is now |
+|---|---|---|---|
+| Z3 "Count Veil" | KZ3 | KILLED by an observation (binomial probability 3.0 x 10^-14) | `../abandoned/Z3_Count_Veil/` |
+| Z4 "Lap Time" | KZ4 | KILLED by exact computation (no clock map on rings of 4, 6, 8 sites) | `../abandoned/Z4_Lap_Time/` |
+| Z5 "Lap Blind" | KZ5 | KILLED: its two stipulations contradict (32 of 32 pairs) | `../abandoned/Z5_Lap_Blind/` |
+| Z6 "Odd Lap" | KZ6 (a), (b), (c) and a follow-up for odd M | STANDS | `../Z6_Odd_Lap/`, steelmanned, branded, open for attack |
+
+Deviation from the plan, recorded: test KZ6(c) named rings of 6, 8, 10, 12 and 14 sites; the carrier of the first program has two classes with k even only for M = 2 modulo 4, so it ran on 4, 12 and 20 sites, and a follow-up with its predicate fixed first ran on 6, 10, 14, 7, 9 and 11 sites with another carrier. Rings of 8 sites (M = 4) were covered by neither; the instances program covers M = 8, 9, 10, 11.
+
+**Final candidate of the sprint: Z6 "Odd Lap".**
