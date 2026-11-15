@@ -9,6 +9,7 @@ import argparse
 from collections import Counter
 from fractions import Fraction
 from itertools import product
+from math import comb
 import json
 from pathlib import Path
 
@@ -110,6 +111,28 @@ def two_time(source, ranks):
     return rows
 
 
+def sign_reversals(n):
+    """Count strict sign changes from n to 2n, on a common dyadic grid."""
+    total = 2**(2*n)
+    fresh = fixed = start = 0
+    counts = [comb(n, k) for k in range(n+1)]
+    for i, count in enumerate(counts):
+        x = 2*i - n
+        stop = start + count * 2**n
+        for j, increment_count in enumerate(counts):
+            if x * (x + 2*j - n) < 0:
+                fresh += count * increment_count
+        lower = 0
+        for j in range(2*n+1):
+            upper = lower + comb(2*n, j)
+            if x * (2*j - 2*n) < 0:
+                fixed += max(0, min(stop, upper) - max(start, lower))
+            lower = upper
+        start = stop
+    require(start == total and fixed == 0, "common-rank sign partition")
+    return [n, str(Fraction(fixed, total)), str(Fraction(fresh, total))]
+
+
 def run():
     launches = []
     for source in (0,1):
@@ -126,7 +149,8 @@ def run():
             "periodic flow ambiguity")
     return dict(ports=["site","rail (0=R)","signed tally","number of prefixes"],
                 joint_columns=["site at 2","site at 4","rank","fresh site split","position read at 2"],
-                launches=launches,mixed_parity_after=mixed_rows,ring_flows=ring)
+                launches=launches,mixed_parity_after=mixed_rows,ring_flows=ring,
+                sign_reversals=[sign_reversals(n) for n in (1,2,3,4,8,16,32,64)])
 
 
 if __name__ == "__main__":
