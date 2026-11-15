@@ -55,3 +55,12 @@ When B^M ≠ 1 the question is open. A builder is attacking it.
 ## After the challenger (15 November 2026)
 
 No defect in the proof in range. The rerun is recorded in `review_ring/`. Corrections made: two hypotheses (B^M = 1 in Lemma R_N; Δ_N = ⟨δ⟩ in P_N) moved into the statements; the reason the prefixes are unique corrected; a slip (s − 2) corrected. End to end, following the proof with a brute-force stand-in for Lemma 5.34 on rings N = 3 to 8: 22,449 targets passed, 0 failed, 19,971 beyond the search bound. The lemma holds in all 10,226 instances with B^M = 1 and breaks in all 22,574 with B^M ≠ 1 (lengths up to 12). Same model family; not independent review.
+
+## Builder on the case B^M ≠ 1 (15 November 2026)
+
+Report filed in `builder_ring/`. The builder did not strengthen the statement, and found two things:
+
+- **Doubling law.** On ℤ_N with N ∈ {1, 2, 4}, every position product event leaves 0 or a power of 2 walks at a site. The director checked this by hand: on these rings both neighbours of a site have the parity opposite to it, and on Z_4 they are the two sites of that parity. So a mask either keeps both continuations of every walk or keeps exactly one. Hence PREP fails there for every group and every gains. This is consistent with the range M ≥ 6 of Lemma 5.34.
+- **The black box cannot do it.** Lemma 5.34 used unchanged cannot supply the case B^M ≠ 1. A homomorphism carrying D_h's single statistic to the pair (n, winding) exists only when B^M = 1. That case needs a new construction; a two-track excursion gadget is CONJECTURED only.
+
+Bounded searches on rings of 3, 5 and 6 sites are tabulated in the report; a bounded miss is not a refutation. **Status:** open for M ≥ 6 with B^M ≠ 1.
