@@ -290,6 +290,32 @@ def shared_sheet_probe(reflect, fixed=False):
     return rates
 
 
+def free_sheet_read(ticks, flip):
+    numerators = Counter()
+    for word in product((1,-1),repeat=ticks):
+        x,r,y,sign = 0,1,0,1
+        for j,d in enumerate(word):
+            if j == flip:
+                y = -y
+            y = (y+int(x in (1,6)))%3
+            sign *= -1 if r==d==-1 else 1
+            x,r = (x+d)%8,d
+        numerators[x,r,y] += sign
+    return tuple(sum(a*a for (x,_,_),a in numerators.items() if x==site)
+                 for site in range(8))
+
+
+def earliest_free_sheet_read():
+    for t in range(1,5):
+        reference = free_sheet_read(t,None)
+        for k in range(t+1):
+            actual = free_sheet_read(t,k)
+            require(sum(actual)==2**t, "all launches")
+            require((actual != reference) == (t==4 and k==2), "first unfiltered reflection")
+    require(reference==(6,0,6,0,2,0,2,0), "ordinary free read")
+    require(free_sheet_read(4,2)==(4,0,6,0,2,0,4,0), "reflected free read")
+
+
 def static_inverse_search():
     # The shorter off-diagonal target entry has Eisenstein norm four.
     matches = tested = 0
@@ -316,6 +342,7 @@ def static_inverse_search():
 
 
 if __name__ == "__main__":
+    earliest_free_sheet_read()
     static_inverse_search()
     for reflect in (False,True):
         print("Shared-sheet probe, reflection",reflect,shared_sheet_probe(reflect))
