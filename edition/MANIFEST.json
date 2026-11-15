@@ -1,5 +1,5 @@
 {
- "baseline": "FPHPM-BASELINE-2026-11-15-Z30",
+ "baseline": "FPHPM-BASELINE-2026-11-15-Z31",
  "date": "13 November 2026",
  "author": "Kirtus Justus",
  "author_title": "Theoretical Physicist",
@@ -136,6 +136,50 @@
   "COMPUTATION/Baseline_Additions/Four_Gains/winding/level_visibility.py": {
    "sha256": "c23b67888667917436238540f8224a694af14d3037067e00660cd99d8afcef52",
    "size": 4129
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring3_by_classes.json": {
+   "sha256": "67ef12f5d4fdd71e5a3dd68c94edf0f02cc3cb5527c1682b73c33db76dc5c46e",
+   "size": 839
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring3_by_classes.receipt.txt": {
+   "sha256": "61f7aece8fb1b8d3f8446311e9c5fa7f3906d538af1c20da9d68dd05d5d416b1",
+   "size": 385
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring3_by_classes.svg": {
+   "sha256": "fe1b966b3df1a14442f586cbb8a05e3ea18a290df574ad4c0a7052d559749be6",
+   "size": 4957
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring4_three_classes.json": {
+   "sha256": "370eab57f3c403e96fcd358a52fa102dbd05f92421b3e7637bc243d6dae2de08",
+   "size": 1915
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring4_three_classes.receipt.txt": {
+   "sha256": "7b9c82e6faa52022e3ccd07e8de4602e95e59c82c00f78f2edbdfbf11cb27e21",
+   "size": 386
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/dimension_ring4_three_classes.svg": {
+   "sha256": "5f76511340eb5bca12cd5eb1dd81573dce6670b847c4ffbeb91086e5a885383d",
+   "size": 8391
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/make_plots.py": {
+   "sha256": "5e01185724ccd4771cc3f04bda9aaa6000b1c23ab67998d8f60b676f23414ae0",
+   "size": 4455
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/plots_record.json": {
+   "sha256": "6fcfae3d72b7cd91862a78163e2bea6b02ff8f6a0b01319e03188ec487e0a03d",
+   "size": 1009
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/winding_profile_ring4.json": {
+   "sha256": "99ffde72dadd76f22e677b0fd0a5bc96b13ffecd2d69e6576cc59c9513afa986",
+   "size": 623
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/winding_profile_ring4.receipt.txt": {
+   "sha256": "521710e04cdc778e007f9b46a5d41b8ea98b4b44cd678de7db8cf15405218eba",
+   "size": 385
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/winding/plots/winding_profile_ring4.svg": {
+   "sha256": "564fce810eee1dbc9e82b23ab04e812a86fa79b9ad14cc59d652d2caf25944a3",
+   "size": 2882
   },
   "COMPUTATION/Baseline_Additions/Four_Gains/winding/result_analyse_extract_T10.json": {
    "sha256": "5d57227205ed4c5752432f38ff7c99ef1c8b9ff9e2c5ae4158947438e591be90",
@@ -1502,7 +1546,7 @@
    "size": 5147
   },
   "CONSTRUCTED_TRIALS/README.md": {
-   "sha256": "15483678af0d912eb2bb5d5fa99393a0e43541e9d2ed1a318ac5604060abab7c",
+   "sha256": "591e1cc82a328fe5c9ec6707123448cd0858e1f7809632751b63db83b6d2ed27",
    "size": 9491
   },
   "LEGACY/2026-11-10_CONTENTS.txt": {
@@ -1550,7 +1594,7 @@
    "size": 7625
   },
   "LEGACY/README.md": {
-   "sha256": "2bbe71581ca293f37988657b4a44458b71614fc21c9f9d5ab43eda0d655fe4fc",
+   "sha256": "60631060a0a41c1978b92dd76609ccda5e2b9b3c6fb56bfafcf2f6283dcddd87",
    "size": 717
   },
   "LEGACY/Related_Source_Editions/Assessment_and_Further_Results/Collections_Assessment_and_Further_Results.pdf": {
@@ -1838,7 +1882,7 @@
    "size": 2279
   },
   "NEGATIVE_CONTROLS/README.md": {
-   "sha256": "66e4e187b168cbd61db3164404f3f0298649ba447753e314e30dbbbb0746f778",
+   "sha256": "2620adb358009f5df8955fd2e0f3ba6adbb402fa03bb164a7dc98b6186f76019",
    "size": 1026
   },
   "PAPERS/A1_Program_Overview_Questions_Models_and_Physical_Correspondence/A1_Program_Overview_Questions_Models_and_Physical_Correspondence.pdf": {
@@ -3158,12 +3202,12 @@
    "size": 329
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an.pdf": {
-   "sha256": "438316ddc9955a95429370ca2d70689c864b4907422c3d261a0326d871d7aa55",
-   "size": 511988
+   "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+   "size": 531631
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/parts/01_G10_manuscript.pdf": {
-   "sha256": "438316ddc9955a95429370ca2d70689c864b4907422c3d261a0326d871d7aa55",
-   "size": 511988
+   "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+   "size": 531631
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/G10_manuscript.tex": {
    "sha256": "25f7e8a1c9216d9f867c3f34b76ff13be07e269a8587931a600295f7a518d52b",
@@ -3174,8 +3218,8 @@
    "size": 1404
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex": {
-   "sha256": "e1d65e51bafa50565bc2be80a6e2408ab498a0f89fcad0b9400f6cc3e1fd6a5b",
-   "size": 272303
+   "sha256": "e3988cf98287adb6aed7b3c2ae765e2c723b92ca802a1dc06eba930d8fadd42c",
+   "size": 285761
   },
   "PAPERS/G1_Relational_Structures_and_the_Limits_of_Observation/G1_Relational_Structures_and_the_Limits_of_Observation.pdf": {
    "sha256": "42caf8dd5edf76c1ab4c79a7aa8760c67963dd83ce7016bcefaac68492a3f165",
@@ -3358,19 +3402,19 @@
    "size": 37611
   },
   "PROGRAM/CHARTER.md": {
-   "sha256": "5f8ad4514c94674fce004fa9090e129202441d69cb7d972120e8089b28efcb85",
+   "sha256": "0471e104862317434a3f00673dce3f579ad758f5d511979bd8a9cf7d26be2063",
    "size": 4316
   },
   "PROGRAM/CONTRIBUTIONS.md": {
-   "sha256": "358ed9abf6ad70e56f203fae7a1ae17aa6748c33428ca090633a73e6a9014915",
+   "sha256": "9cf0082992d067e87d66db03277748d6231e68170b5bb6805d57cdffdcab4a15",
    "size": 4044
   },
   "PROGRAM/PAPER_INDEX.md": {
-   "sha256": "ccbcbbba5bf4464283787acb6994ac1d1139d0e6fdf016562e0c199b92b399d7",
+   "sha256": "b1bb6b465a88bf53ce108f500919bb6dad5758a7fde2a81a1be1b3d807390fcc",
    "size": 5128
   },
   "PROGRAM/STANDARDS.md": {
-   "sha256": "50674878c86fa4aa037a49b2b7053b2f03221643115d9f45976076227e452659",
+   "sha256": "18b6a512392841c6c6fb92b68171d4235c61810f2144e94740c2561a8f974bee",
    "size": 3912
   },
   "PROGRAM/figures/Gate_Map_2026-11-12.dot": {
@@ -3382,12 +3426,12 @@
    "size": 18226
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.dot": {
-   "sha256": "a382f8462b799ba252c28f79d2b9581cc95121ebe53046f2bdac90fd15db640a",
+   "sha256": "047dd89b0e39ad9e2862c3f0141278b6b1e69c7f9954f970ffcf30b20cf07743",
    "size": 1673
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.pdf": {
-   "sha256": "0fe9957918c2a5d47b40176e340e8d3a67131fd06e2ea01ccfa68673b0e9200b",
-   "size": 18336
+   "sha256": "e9a0a1c6415631f15748309c027cebe6bb13c8b6d2b0c652209661aa5a61546c",
+   "size": 18339
   },
   "PROGRAM/figures/Program_Questions_Models_and_Physical_Correspondence.pdf": {
    "sha256": "ceeb3637c5b57114fbf12a0cfb03be2d35f34f6239bcfd8c3ab53fbac953a792",
@@ -3406,7 +3450,7 @@
    "size": 24917
   },
   "PROGRAM/registers/COMPONENT_CROSSWALK.csv": {
-   "sha256": "0bcd1969766afa570cf28b74cfddb403304435ad037c2a71224502ed53f3edd5",
+   "sha256": "c3e727c6868be69594677458bde68e350d94f0f2fb15eb273cd4bd8628b6a8f4",
    "size": 46093
   },
   "PROGRAM/registers/COMPUTATION_INDEX.csv": {
@@ -3414,31 +3458,31 @@
    "size": 567
   },
   "PROGRAM/registers/ONTOLOGY_GATE_MAP.json": {
-   "sha256": "23d154beb5e4bb1a60e0241bcdfc6a856145ae453801afeb206ce7804769d9e0",
-   "size": 20254
+   "sha256": "529657887178da54549f8e9e874f8e0c4772a471e47752a31633e576687a4bfc",
+   "size": 20407
   },
   "PROGRAM/registers/OPEN_PROBLEMS.csv": {
-   "sha256": "44cd8a7e7ba5f50611ba3927b53e74051a9705bf806cf380bec2b48dff809ee1",
-   "size": 51319
+   "sha256": "86e70bae5d948d2e28774af5f10ba1633efad37358dd8f87d5411024b2601009",
+   "size": 51707
   },
   "PROGRAM/registers/PAPER_INDEX.csv": {
-   "sha256": "3e5965e5ee3d0aba778bf4b524858f896f9a6c5605fc144076e9a2c13835de67",
+   "sha256": "0206fa6a971d9b1003955d5b8c62b4d8eb1abe6d31273f851e0ed1e36b1a5344",
    "size": 10894
   },
   "PROGRAM/registers/READINESS.csv": {
-   "sha256": "554e6dcaf66a75ae7262b653da8f212c6c4fb3ad33b11ff3adefb2927d403562",
-   "size": 14316
+   "sha256": "ca2a52dde17447382c600cf6ee343fb2ee9f8e9a85847d3577de64699dbc1b03",
+   "size": 14828
   },
   "PROGRAM/registers/TEX_SOURCE_EDITS.json": {
    "sha256": "c53b67edb857763f36a51c1b313f43bf96ff86b944a2c4958ca3a3a41e84e228",
    "size": 3428
   },
   "PROGRAM/registers/THEOREM_REGISTRY.csv": {
-   "sha256": "d21cac9533a19dd519b0c23a70d5deae72a1f088b7dc633382675884301da849",
-   "size": 116752
+   "sha256": "caae1202250a2963968ca133b88eed633d13a26a535e4a458841852049dc0374",
+   "size": 118197
   },
   "README.md": {
-   "sha256": "502ed9849392ba5d936e4685a5d928ea6321b4c3549ece6a878aaf03f120b79a",
+   "sha256": "a5a3ad370ba39b1158e39b129e9eaa06bbd09432784a6dff73d284222b53b54b",
    "size": 2441
   },
   "REVIEW_RECORDS/Director_B/README.md": {
@@ -3709,6 +3753,10 @@
    "sha256": "7bf1b34251d3ea17ccf1a2ac2199abfc70dd570a7df45531862f9a869c5dfe68",
    "size": 3814
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z31.md": {
+   "sha256": "94d9664a961a7ff4270981e0b6ae6a488e45b1308ba412602d382c45f9ef93cf",
+   "size": 5043
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z5.md": {
    "sha256": "6e4c859cc853647131905a7630dd0c8471def5c860a703bf49c8432233829dda",
    "size": 3439
@@ -3812,6 +3860,10 @@
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z29_TO_Z30.md": {
    "sha256": "f1296b8bf929f3cda1661152b5838b6296038ccc38b99dbd9a93ff127aa460e0",
    "size": 15788
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z30_TO_Z31.md": {
+   "sha256": "d97253102ca3a61ea179f572df42f5478145f300bd530196ce016d116ad587b8",
+   "size": 9297
   },
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z3_TO_Z4.md": {
    "sha256": "2fbaeb3e57c96484e7ca50df9960d93530fb47b3ca4c1fe3a9271c37c1571ff8",
@@ -3921,6 +3973,10 @@
    "sha256": "06f4b7c5d2e371c105e832adfd89f34a27b3b0c7d02973ae3c5c14ee7d8b6129",
    "size": 3976
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_27.csv": {
+   "sha256": "fc3d5eda2e6ea4e4c1a33510e3250c2a07b2563d82603fd618181ff50a9959c1",
+   "size": 1963
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_3.csv": {
    "sha256": "7787c02824813188d3064cab359d9e58bdff7c3a85ab0976dc150a39b29689fa",
    "size": 3322
@@ -3950,8 +4006,8 @@
    "size": 1351
   },
   "REVIEW_RECORDS/Director_Z/Session_4/README_SESSION_4.md": {
-   "sha256": "eb9ac9e80e245a1a3f82ff87583d2d8b1b09d1a94a3938e597d28c4335644dfa",
-   "size": 12370
+   "sha256": "930badc94f73af169fe9744bfed676342d95e92f4991cbd9ab4cf90c6974259d",
+   "size": 12849
   },
   "REVIEW_RECORDS/Director_Z/Session_4/builder_Q/NOTES.txt": {
    "sha256": "a029e5f3ae7f0be9e1570e22d94528dabafe5b3c9378f4ffc2c5210f9254aa48",
@@ -5693,6 +5749,42 @@
    "sha256": "3706e4a098967ba4bc3f533f427011eff2f06ba868d9893cc45ecc3ab83bf31c",
    "size": 9502
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/FINDINGS.md": {
+   "sha256": "590d5fb88cf068874c48dcf6cc41ba82e8e703c808d6a88217dab11d0acc6f24",
+   "size": 7384
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/PROOFS.md": {
+   "sha256": "2f3c58df85e6bc02d01a714b9788853b5449bbaea2788bacabcf13e655c06369",
+   "size": 10857
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/check_wprime.py": {
+   "sha256": "c87c10a21d7a40ef0c0130e0d7783e626f99ae1daa185c7fea4bdd95db68d1af",
+   "size": 3796
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/explore.py": {
+   "sha256": "d1afd09ab72c219c6db15e32bf1cd536fe0f9f70bbf8283217c12df0b3218774",
+   "size": 13178
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/results_run1.json": {
+   "sha256": "eb96f9c4a3a0d002ab3e3123ba48c3e61ae6aff6974ba210da5fe99e5da55ab4",
+   "size": 45447
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/results_run2.json": {
+   "sha256": "05ed32dabace9a31c427a360f4ab32aecf10dd0167715bbdd45f4f8616a3b706",
+   "size": 89914
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/results_wprime1.json": {
+   "sha256": "741bbe7e957e494876476502cdf3439ae66cccfd3407e0b9c023ad54272ffb9f",
+   "size": 6838
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/run1.log": {
+   "sha256": "fa1037fe58e332c550163884fd97dc5b5ac01ae04a8f8dabb4015cc670ddc185",
+   "size": 3628
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/builder_three_classes/run2.log": {
+   "sha256": "0dafda4e5dbbf013aa658abd00113e2be6a282b0273a5c07bcdcc507cf17467f",
+   "size": 4446
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_W/NOTES.md": {
    "sha256": "251c8a0bd22424cf99b2837589299cf4d8a4778f4fba99a8b9964dcf84fe38a1",
    "size": 832
@@ -5792,6 +5884,82 @@
   "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_draft/item6b_z2z9.py": {
    "sha256": "b2e46fe0f9b6d54ac8cdc4aac52319e4f329a137b8dac1880eb4dc392695f368",
    "size": 5010
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/NOTES.md": {
+   "sha256": "ca85eef8583e2649399b2e5d7fba4fd881b4f8e10c458bc31e3ffedb73c70259",
+   "size": 1911
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/result_main_1.json": {
+   "sha256": "3e125fd46f1d8a13ed3292e98c249bb29439e37cd629b3717c6834c1f0b8302e",
+   "size": 41861
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/result_main_2.json": {
+   "sha256": "768130efc8c84b3d8036a414d8b5f8bfee77bb13f4925a19b5e7bc768994d237",
+   "size": 30644
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/result_small_1.json": {
+   "sha256": "a84f48d8985beb7ffd919b046eaec7571c4315588f6852b24a31d8be608a39f9",
+   "size": 26915
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/small.log": {
+   "sha256": "e4910aa320646794d2de90feeb28432ae52c582c133042ee5ad293ca38bdbbcc",
+   "size": 464
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/threegroups.py": {
+   "sha256": "9a1b8fe5e07e4d37f5dfa7670fe04c3d2673649d0ca762a174862995d6373775",
+   "size": 12278
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_proof/threegroups_v2.py": {
+   "sha256": "778cc1a81a2cf7fa05b115bd8c0ff83808b2eaae46e76a96998b0f90bb7b5e08",
+   "size": 12284
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/NOTES.md": {
+   "sha256": "091997c7beb853dd1d1bca6b1cc48d8afc8de35f7cdc23d22080b4710f72e789",
+   "size": 1405
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/RENAMED.txt": {
+   "sha256": "647ff555e97bd66b12607782f853bf8832218ed272ee1bdcb1958960e717f779",
+   "size": 212
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/plot_input.json": {
+   "sha256": "82d69b2bd13877e9d2341a50c8fb567453c53b20200c4495e81618fae95c5bd6",
+   "size": 613
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/plot_output.svg": {
+   "sha256": "9016b030a4ae4798c192083429cc840846a6d908cb19752036f27c6df8d39fc6",
+   "size": 6872
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/plot_receipt.txt": {
+   "sha256": "8ce804b016c1f1355b60f4378df602e74c9e00be2d9294395a0d0ef4f5ffdfac",
+   "size": 379
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/receipt_arg.json": {
+   "sha256": "017edb50975c0f29e619df1af8384f1230b0f854034e5b049dda47c1e1ba89e5",
+   "size": 799
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s1s2_results.jsonl": {
+   "sha256": "6f8ca1956657c945fe3b19d780f88a0567c61102f12adac3e10b0171387d4753",
+   "size": 7700
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s1s2_stdout.txt": {
+   "sha256": "484ebc219a97b39ecfec9a657c2c724e28681941d5aacfa13ada7475823d12f6",
+   "size": 999
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s1s2_walks.py": {
+   "sha256": "68c2f4298beb84dd4d5dbc9dfce2484b10c8ea0b96f07ae974d78ee13a24b4ac",
+   "size": 7713
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s3_adjacent.py": {
+   "sha256": "7f233c2275446e0a79570c07227ad8f6a16a3334408480fb9397e12bb014f3e0",
+   "size": 8635
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s3_results.jsonl": {
+   "sha256": "4b1a501a2dfba177b58218ad71c66212ab36dbb12cffecee756c7eb5205dfda9",
+   "size": 23988
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/challenger_three/s3_stdout.txt": {
+   "sha256": "36c95b6e6b20d408434382016362bf18d34224fc69d5eaf3d20f61c000adc6f8",
+   "size": 24032
   },
   "REVIEW_RECORDS/Director_Z/Session_4/four_gains_winding/micro_Pplus/NOTES.md": {
    "sha256": "c119f4268694acfaa66d8ff56426615c97d78981f4248962b99cf9d16f9bb413",
@@ -6474,8 +6642,8 @@
    "size": 2689
   },
   "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": {
-   "sha256": "8892b0c49612f28d6bfe27d4b02f1612b2d4182dc0b6aea1ad6e6ac0249f27cd",
-   "size": 404562
+   "sha256": "96742a5bab26f4e99ffa41ae7778ae8cc00b4737d0d8e0cbecadf1d7669dbdad",
+   "size": 423086
   },
   "REVIEW_RECORDS/Director_Z/Session_4/registers/CALIBRATION_RECORD_SESSION_4.json": {
    "sha256": "82998efb27eb1dfb578297770e65ca6339318fce77362febe7275bf3d011d20a",
@@ -7570,7 +7738,7 @@
    "size": 1212
   },
   "REVIEW_RECORDS/README.md": {
-   "sha256": "00c3f7d4b28cfbf05bf2b07f88dc7f691cea15afaa13013598b1c8a879b04cef",
+   "sha256": "bedcbfd294ec2c86facc4ae9c543f142d73a1f14e157fb5e811a4259e218a618",
    "size": 1643
   },
   "tools/assemble.py": {
@@ -7677,6 +7845,10 @@
    "sha256": "e7ddfbac8dcef59e03fe72f2ed10ca715b4361b6a805595572e9236ec864cd33",
    "size": 14985
   },
+  "tools/director_z_update_31.py": {
+   "sha256": "1b0eecffd5996fd3ec396bd65e61521a5cfeb8220433c9761acb0044e8c4b29d",
+   "size": 12953
+  },
   "tools/director_z_update_4.py": {
    "sha256": "fe10c4cf726e101284c5993452e3334d9e7d3f976e2ac557bc2aec348feaa741",
    "size": 39356
@@ -7714,6 +7886,6 @@
    "size": 6392
   }
  },
- "predecessor": "FPHPM-BASELINE-2026-11-15-Z29",
- "predecessor_manifest_sha256": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+ "predecessor": "FPHPM-BASELINE-2026-11-15-Z30",
+ "predecessor_manifest_sha256": "135ff5722896e1627517d1fc7338f0eba93257b1454ea3b027d3d791a3ecb61e"
 }
