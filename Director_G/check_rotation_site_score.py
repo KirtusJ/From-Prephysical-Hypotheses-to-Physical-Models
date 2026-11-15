@@ -290,7 +290,7 @@ def shared_sheet_probe(reflect, fixed=False):
     return rates
 
 
-def free_sheet_read(ticks, flip, multiplier=-1, offset=0):
+def free_sheet_amplitudes(ticks, flip, multiplier=-1, offset=0):
     numerators = Counter()
     for word in product((1,-1),repeat=ticks):
         x,r,y,sign = 0,1,0,1
@@ -301,6 +301,11 @@ def free_sheet_read(ticks, flip, multiplier=-1, offset=0):
             sign *= -1 if r==d==-1 else 1
             x,r = (x+d)%8,d
         numerators[x,r,y] += sign
+    return numerators
+
+
+def free_sheet_read(ticks, flip, multiplier=-1, offset=0):
+    numerators = free_sheet_amplitudes(ticks, flip, multiplier, offset)
     return tuple(sum(a*a for (x,_,_),a in numerators.items() if x==site)
                  for site in range(8))
 
@@ -350,6 +355,18 @@ def permutation_controls():
         for offset in range(3):
             counts = free_sheet_read(10,2,sign,offset)
             require(counts[::2]==even and sum(counts)==1024, "ten-tick all-launch read")
+
+    # Pool independent uniform offsets before the terminal decision.
+    for sign, panel in ((1, ((314,366),(26,94),(6,94),(118,6))),
+                        (-1, ((168,74),(38,110),(14,98),(138,384)))):
+        pooled = Counter()
+        for k in range(3):
+            for cell, amplitude in free_sheet_amplitudes(10,2,sign,k).items():
+                pooled[cell] += amplitude**2
+        for site, row in zip(range(0,8,2), panel):
+            for rail, expected in zip((1,-1), row):
+                require(all(pooled[site,rail,y] == expected for y in range(3)),
+                        "ten-tick joint position, rail and sheet panel")
 
 
 def static_inverse_search():
