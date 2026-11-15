@@ -1,6 +1,8 @@
 """Exact physical-coordinate checks for the rotation and early-write experiment."""
 
 from fractions import Fraction as Q
+from collections import Counter
+from math import comb
 
 
 def field(ticks, rail, origin=0):
@@ -119,7 +121,29 @@ def selection_witness():
         require(keep * Q(wrong,len(triples)) == yield_rate*expected, "per-launch mismatch")
 
 
+def recovered_gate():
+    # After the initial positive attempt, r=0 is the only unfinished exponent.
+    pending = {0: Q(3,8)}
+    yields = [Q(5,8)]
+    for _ in range(10):
+        following = Counter()
+        for r, mass in pending.items():
+            for hits in range(5):
+                new = r + (hits if r < 1 else -hits)
+                probability = Q(comb(4,hits)*5**hits*3**(4-hits), 8**4)
+                if new != 1:
+                    following[new] += mass*probability
+        require(set(following) <= {-2,-1,0,2,3,4}, "reachable controller states")
+        pending = following
+        yields.append(1-sum(pending.values()))
+    require(yields[-2]**2 < Q(25,27) < yields[-1]**2, "two-gate yield")
+    q = yields[-1]
+    require(q*q*Q(9,25) > 2*(1-q+q*Q(1,10)), "loss-inclusive binary bound")
+    return q
+
+
 if __name__ == "__main__":
+    print("Ten recovery rounds, two-gate yield:", float(recovered_gate()**2))
     selection_witness()
     physical_rotations()
     check_menus()
