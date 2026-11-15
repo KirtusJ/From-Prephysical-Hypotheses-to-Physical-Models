@@ -11,7 +11,7 @@ $$
 
 For $a>0$, choosing the positive tag on the right and the negative tag on the left is a maximum-likelihood decision at each site. Reverse the labels for $a<0$. At $x=0$, and at any other tied site, either decision gives the same equal-prior success. For $a=0$, the walk exchanges the rails at each tick. On even ticks it returns to the starting site and on odd ticks the two sharp directions have equal weights for either tag. The site then carries no tag information. These statements assume a single free flight with faithful terminal position and no intermediate read.
 
-**Proof.** Set $U(z)=\operatorname{diag}(z,z^{-1})C$, so $K=[z^x]U(z)^t$. The trace derivative and cyclicity give
+**Proof.** Set $U(z)=\operatorname{diag}(z,z^{-1})C$, so $K=[z^x]U(z)^t$. With $Z=\operatorname{diag}(1,-1)$, the trace derivative and cyclicity give
 $$
  z\partial_z\operatorname{tr}(U^t)=t\operatorname{tr}(ZU^t),\qquad
  x\operatorname{tr}K=t(K_{11}-K_{22}).
