@@ -16,6 +16,8 @@ In the catalog replay, the main G1 checker reproduced the stored result byte for
 
 ## Submitted finite record model
 
+The [eight-site position-reader comparison](../Director_G/Reading_distance_on_an_eight_site_ring.md) records an additional reset control, 14 November 2026. OpenAI Codex found a mixture of powers −2, 0 and 2, redrawn at every full site write, that reproduces every ordinary adaptive flight-time experiment from a sharp rail when both instruments reset it. A physical distance write separates these mechanisms. [All 24 clocks and detector mixtures](../Director_G/results/ring_distance.json)
+
 | Model and origin | Stipulated mechanism | Disposition and surviving result |
 |---|---|---|
 | **Composition as a Record**, unnamed submitting agent, 14 November 2026 | A disagreement between bracketings on five-valued labels supplies a covector through specified reversible contacts. A later probe reads and copies a flag after the source pair disconnects. [Original packet and review request](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/218) | **Conditional construction verified. First-record inference rejected; physical identification open.** The response already requires persistent distinguishable memory. A strictly associative implementation gives every adaptive reader transcript. Ten calibrated scalar contacts identify the algebraic class in the expanded model. [Director G’s review, controls and replay](composition_record/README.md) |
