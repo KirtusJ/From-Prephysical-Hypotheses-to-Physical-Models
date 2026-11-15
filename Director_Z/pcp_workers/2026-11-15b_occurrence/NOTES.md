@@ -38,3 +38,16 @@ M=6 B=9 K=4: seen = allowed = 550, P1 and P2 pass.  NOTE: M=6 is the ring of 12 
 P3 FAILED as fixed: P3b (a negative minor of order <=4 in rows 0..4) has no witness for 6 resp. 10 root-rejected sequences,
 all on ONE rail, e.g. (1,2,2,1), (1,3,3): not real-rooted, but the first negative minor is of higher order. Kept. Follow-up
 predicate P3c (added after the first run, said so in the program): for these, a negative Toeplitz minor of order <=6.
+
+Step 4 (Q2). Runs in q2_run1 (each: timeout 600 ../q2/enum_profiles M B K; source sha256 584c5d32...):
+ "4 12 6" exit 0, 2 s, closed, 117,480 states, 1644 profiles; "5 11 5" exit 0, 6 s, closed, 1,105,341 states, 1144 profiles;
+ "7 8 4" exit 0, 161 s, closed, 14,344,720 states, 368 profiles.
+compare_profiles_v2.py (follow-up P3c; pruned candidate generator; P0 regression PASS 550/228), dir q2_cmp1, exit 0:
+ M=4 B=12 K=6: allowed 1656, seen 1644, P1 pass, P2 FAIL: 12 allowed profiles NOT SEEN (kept), smallest total 11:
+   w=(1,2,3,3,2) i.e. v=1+3z+2z^2, u=2+3z; and its mirror/shifts (0,1,2,3,3,2),(2,3,3,2,1),(0,2,3,3,2,1); total 12: (1,2,8,1),(1,8,2,1),(1,2,3,5,1),(1,5,3,2,1) and shifts.
+ M=5 B=11 K=5: allowed 1148, seen 1144, P2 FAIL: the same four of total 11 not seen.
+ => the draft's "exactly those allowed" on 5 and 8 sites holds only within its size bounds; first failure at total 11.
+ P3c: 6 resp. 4 sequences still without a negative minor in the windows tried, e.g. one rail (1,4,5,1), (1,1,2,2,2,2,1,1)... kept;
+ they are rejected by the root criterion (not real-rooted); a larger minor would be needed. Not pursued.
+Idea (step 5): in a trimmed event every occupied point has a continuation to the site, so the WHOLE state has total <= profile
+total. Stronger lossless bound -> program enum2 with whole-state total <= B; cross-check against enum_profiles on equal bounds.
