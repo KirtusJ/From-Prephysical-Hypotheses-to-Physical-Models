@@ -23,6 +23,11 @@ So everything below depends on $M$ only, and every statement is for all $N$ with
 
 ## Lemma S (site) and Lemma T (common gain translation)
 
+*Correction after challenger_theoremA (two gaps, kept as found):* Lemma S is used and proved only for the
+constructions of Theorems A and B (prefix $R^{z}$ or coast); it is not claimed for arbitrary events. Lemma T
+needs $N\ge3$ (for $N=2$ the two neighbours of a site coincide and singleton masks do not isolate one walk);
+it is used only for $M\ge5$, hence $N\ge5$. Read the statements below with these restrictions.
+
 *Statement S.* If an event realises a content $C$ (walks with rails, deficits, gains) at a site $y$, then for
 every site $x$ some event realises $C$ at $x$ with all deficits increased by one common integer and all
 gains multiplied by one common power of $\delta$ that the construction may choose to be $1$.

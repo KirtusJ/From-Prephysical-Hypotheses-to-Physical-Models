@@ -65,3 +65,10 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   then KILLED by the kernel for lack of memory during layer 11 (shared limit; the challenger's four rank processes
   held ~10 GB at the time). No result file. FAILED RUN, kept here; my CAP was per layer and not a memory bound.
   Evidence kept from the log only: no ({g},{g+1}) one-level pair at lengths <= 10 on Z_3 without relaxation.
+- step 12: challenger_theoremA report: NOT BROKEN IN RANGE (M=6..12 all q<=4, |G|<=4, 20 blocks x 13,770 cases;
+  M=6..14 sampled q<=8, |Gi|<=6, 26 x 600; 0 failures of P1-P5); M=5 fails as stated (P-S distance 1), as predicted;
+  two gaps in proof text: Lemma S stated for arbitrary events but proved only for the constructions; Lemma T needs
+  N>=3. Both corrected in PROOFS.md (restrictions stated; neither is used outside M>=5). Control answered correctly.
+  RERUN by worker: `cd /tmp/claude-0/w_rerun_chA && python3 challenger_theoremA/chal_theoremA.py res_large_M6-14.jsonl
+  6,7,8,9,10,11,12,13,14 large` exit 0, 48 s, result byte-identical (sha256 4a26a1c9...). Small runs (364 s, 127 s)
+  not rerun.
