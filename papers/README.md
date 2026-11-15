@@ -81,7 +81,7 @@ The [issued edition](../edition/README.md) preserves the original pagination use
 | G7 | [Transport, Holonomy and Monodromy as Bridge Candidates between Classical and Quantum Models](G7%20-%20Transport%2C%20Holonomy%20and%20Monodromy%20as%20Bridge%20Candidates%20between%20Classical%20and%20Quantum%20Models.pdf) | 17 | [Revised TeX](source/G7/) | [Credits](contributions.md#G7) |
 | G8 | [Gauge-Invariant Pair Measures on Gain Graphs and the Squared-Amplitude Rule](G8%20-%20Gauge-Invariant%20Pair%20Measures%20on%20Gain%20Graphs%20and%20the%20Squared-Amplitude%20Rule.pdf) | 10 | [Revised TeX](source/G8/) | [Credits](contributions.md#G8) |
 | G9 | [Reversible Steps on Gain Digraphs: Arc Structure, Complex Structure and the Ray Limit](G9%20-%20Reversible%20Steps%20on%20Gain%20Digraphs%20%E2%80%93%20Arc%20Structure%2C%20Complex%20Structure%20and%20the%20Ray%20Limit.pdf) | 12 | [Revised TeX](source/G9/) | [Credits](contributions.md#G9) |
-| G10 | [Histories as Events: the Order of the Pair Rule, First-Order Weights and Forces from Gains of Bounded Order](G10%20-%20Histories%20as%20Events%20%E2%80%93%20the%20Order%20of%20the%20Pair%20Rule%2C%20First-Order%20Weights%20and%20Forces%20from%20Gains%20of%20Bounded%20Order.pdf) | 78 | [Revised TeX](source/G10/) | [Credits](contributions.md#G10) |
+| G10 | [Histories as Events: the Order of the Pair Rule, First-Order Weights and Forces from Gains of Bounded Order](G10%20-%20Histories%20as%20Events%20%E2%80%93%20the%20Order%20of%20the%20Pair%20Rule%2C%20First-Order%20Weights%20and%20Forces%20from%20Gains%20of%20Bounded%20Order.pdf) | 79 | [Revised TeX](source/G10/) | [Credits](contributions.md#G10) |
 
 ## Planned manuscript
 
