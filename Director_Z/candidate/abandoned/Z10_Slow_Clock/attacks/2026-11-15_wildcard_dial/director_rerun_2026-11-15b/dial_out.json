@@ -1,0 +1,171 @@
+{
+ "argv": [
+  "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_wildcard_dial/dial_attack.py",
+  "out.json"
+ ],
+ "predicates": {
+  "D1": true,
+  "D2": true,
+  "D3": true,
+  "D4": true,
+  "D5": true,
+  "D6": true,
+  "D7": false,
+  "D8": true,
+  "D9": true,
+  "D10": false,
+  "D11": true,
+  "D12": true
+ },
+ "report": {
+  "T3_records_chance_histories": {
+   "(-3,L)": [
+    "1/8",
+    1
+   ],
+   "(-1,R)": [
+    "1/8",
+    1
+   ],
+   "(-1,L)": [
+    "0",
+    2
+   ],
+   "(1,R)": [
+    "1/2",
+    2
+   ],
+   "(1,L)": [
+    "1/8",
+    1
+   ],
+   "(3,R)": [
+    "1/8",
+    1
+   ]
+  },
+  "D3_common_records_100_102": 200,
+  "ages_100_102": [
+   "73.00318922135",
+   "74.53154056372"
+  ],
+  "D3_example": [
+   [
+    0,
+    0
+   ],
+   "ledger entry at 100",
+   "95.3487171",
+   "at 102",
+   "97.3345033"
+  ],
+  "T100": {
+   "record_of_largest_interfering_chance": [
+    [
+     68,
+     0
+    ],
+    0.11158167026636047,
+    "log2 n",
+    59.97169595999346
+   ],
+   "record_of_largest_count": [
+    [
+     2,
+     0
+    ],
+    "interfering chance",
+    0.0034139382697942373,
+    "log2 n",
+    95.34871716287934
+   ],
+   "interfering_chance_absx_ge_50": 0.6222705871662089,
+   "counting_chance_absx_ge_50": 5.636282034205402e-07,
+   "interfering_chance_absx_le_10": 0.0703420426726099,
+   "counting_chance_absx_le_10": 0.7287469759261652,
+   "interfering_chance_x_gt_0": 0.7468485714010857,
+   "interfering_mean_x": 28.975560156371696
+  },
+  "counting_increment": {
+   "T_below_0.99": [
+    1,
+    72,
+    72
+   ],
+   "samples": {
+    "1": "0",
+    "2": "0.5",
+    "3": "0.68872187",
+    "4": "0.78063906",
+    "5": "0.83244665",
+    "10": "0.92349854",
+    "20": "0.96296060",
+    "50": "0.98542471",
+    "100": "0.99274996",
+    "600": "0.99879675",
+    "1199": "0.99939812"
+   },
+   "rate_Lc_over_T": {
+    "5": "0.39387218",
+    "10": "0.63700724",
+    "20": "0.79146583",
+    "50": "0.90291203",
+    "100": "0.94638238",
+    "600": "0.98889949",
+    "1200": "0.99403258"
+   }
+  },
+  "interfering_increment": {
+   "min_1000_1199": "0.7708153455",
+   "max_1000_1199": "0.7709661232",
+   "mean_1000_1199": "0.7708961061",
+   "samples": {
+    "2": "0.5",
+    "3": "0.68872187",
+    "4": "0.63439843",
+    "5": "0.60368727",
+    "6": "0.66628780",
+    "7": "0.71163214",
+    "8": "0.69333449",
+    "50": "0.75743264",
+    "51": "0.75929149",
+    "100": "0.76442498",
+    "101": "0.76392635",
+    "600": "0.77035341",
+    "601": "0.77031633",
+    "1198": "0.77095175",
+    "1199": "0.77096612"
+   },
+   "min_100_1199": "0.7639263544",
+   "max_100_1199": "0.7709661232"
+  },
+  "c_star_trapezoid_N400": "0.7715533031636119726436123698514642615725592",
+  "c_star_N200_minus_N400": "5E-60",
+  "author_c_star_minus_mine": "-7.072643612",
+  "D10": {
+   "rates_agree": true,
+   "identical_code_lines_40plus_chars": 6,
+   "of_code_lines_in_instances_program": 16,
+   "examples": [
+    "OUT = sys.argv[1]; assert not os.path.exists(OUT)",
+    "def h(x): return 0.0 if x <= 0 or x >= 1 else -(x * math.log2(x) + (1 - x) * math.log2(1 - x))",
+    "def g(t): return h((1 + math.sin(t) / math.sqrt(2)) / 2) / (1 - math.sin(t) ** 2 / 2)",
+    "for i in range(1, n): s += (4 if i % 2 else 2) * f(a + i * hh)"
+   ]
+  },
+  "plot_misses": [],
+  "plot_min_value_vs_y_floor": [
+   "0.698395",
+   [
+    "13/20",
+    1
+   ]
+  ],
+  "rates": {
+   "300": "0.7550809746",
+   "600": "0.7624850736",
+   "1200": "0.7666028441"
+  },
+  "strict_rise_3_to_1199": true
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "tool": "async_run.py",
+ "plan": "plan_z10.json",
+ "plan_sha256": "56ad87ca5f881268c08f9ea807d4949b212cbfd0d30ff5ef598079cbd3d78a7f",
+ "width": 3,
+ "tasks": [
+  {
+   "id": "t1_4_9600",
+   "argv": [
+    "python3",
+    "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_challenger_number/t1_exact.py",
+    "4",
+    "9600",
+    "out.json"
+   ],
+   "exit": 0,
+   "expect_exit": 0,
+   "timed_out": false,
+   "seconds": 45.88,
+   "ended_as_expected": true,
+   "copied_in": [],
+   "files": {
+    "STDERR.txt": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    "STDOUT.txt": {
+     "sha256": "4f15e2e5a84dded739bc0794b8e5e98ff3a2c5a0dd5760309eb3b8f5379a33e5",
+     "bytes": 310
+    },
+    "out.json": {
+     "sha256": "49be04e088de272e2a6ce8849c9333a01c81a7a8c3e633cb856d3d0b68648e81",
+     "bytes": 6452
+    }
+   }
+  },
+  {
+   "id": "t1_2400_4800",
+   "argv": [
+    "python3",
+    "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_challenger_number/t1_exact.py",
+    "2400",
+    "4800",
+    "out.json"
+   ],
+   "exit": 0,
+   "expect_exit": 0,
+   "timed_out": false,
+   "seconds": 241.96,
+   "ended_as_expected": true,
+   "copied_in": [],
+   "files": {
+    "STDERR.txt": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    "STDOUT.txt": {
+     "sha256": "761ea02c21b1208f007bcd28087361205728aa9cc6c70ebbd7bb269a0288361c",
+     "bytes": 210
+    },
+    "out.json": {
+     "sha256": "77fb5f52cd055717e1d4c570f253a248d92a578840ada327bcfdb865adb41d48",
+     "bytes": 16072
+    }
+   }
+  },
+  {
+   "id": "t5",
+   "argv": [
+    "python3",
+    "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_challenger_number/t5_carriers.py",
+    "out.json"
+   ],
+   "exit": 0,
+   "expect_exit": 0,
+   "timed_out": false,
+   "seconds": 26.5,
+   "ended_as_expected": true,
+   "copied_in": [],
+   "files": {
+    "STDERR.txt": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    "STDOUT.txt": {
+     "sha256": "d1212871bc1c13b708c0fe7addcfa077ac6e442cc4111f5a786d01c99324fa82",
+     "bytes": 4163
+    },
+    "out.json": {
+     "sha256": "d52f0a1c5563bca4da4d319bd23d7af4323c6b06fc361172d99e55a1953c4c9a",
+     "bytes": 10706
+    }
+   }
+  },
+  {
+   "id": "dial",
+   "argv": [
+    "python3",
+    "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_wildcard_dial/dial_attack.py",
+    "out.json"
+   ],
+   "exit": 0,
+   "expect_exit": 0,
+   "timed_out": false,
+   "seconds": 187.81,
+   "ended_as_expected": true,
+   "copied_in": [],
+   "files": {
+    "STDERR.txt": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    "STDOUT.txt": {
+     "sha256": "098f4d39ed8ef9d2497449efd184cb53cb3c8284084155a0d47b56a2d2b9400a",
+     "bytes": 3495
+    },
+    "out.json": {
+     "sha256": "60e1748a217815b303e09fa932a9adfd5ec93069427f8e89c9b01f9664a0caa4",
+     "bytes": 3494
+    }
+   }
+  }
+ ],
+ "all_ended_as_expected": true
+}

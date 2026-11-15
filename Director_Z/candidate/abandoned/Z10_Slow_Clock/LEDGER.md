@@ -8,6 +8,8 @@
 | 2 | 15 Nov 2026 | director | K1 to K4: start of the age, its rise to T = 600, the bound T − 1, the constant at two resolutions | HELD | `function/result_instances_run1.json` |
 | 3 | 15 Nov 2026 | director (the two sub-agents assigned had been stopped by the account's usage limit and had written nothing) | the forward prediction R7, and E6 and the bound by c* extended to T = 2400 | HELD: gap(2400) = 0.002683 | `attacks/2026-11-15_director_forward_prediction/` |
 | 4 | 15 Nov 2026 | director | weak point 3: C5 deleted, every statement, prediction and kill condition unchanged | **KILL**: C5 is an empty stipulation, by the criterion fixed in FORM before release | `WHY_ABANDONED.md` |
+| 5 | 15 Nov 2026 | challenger sub-agent's programs, finished by the director of the next session (the agent ended with its container and left no report) | the forward prediction and the bounds to T = 2400 in full, rates at 4800 and 9600; other carriers | HELD on the candidate's carrier; **the inequality with counting FAILS for 40 of 40 random static admissible sign rules** (predicate QB, kept) | `attacks/DIRECTOR_REPORT_2026-11-15b.md`, `attacks/2026-11-15_challenger_number/` |
+| 6 | 15 Nov 2026 | wildcard sub-agent's program, finished by the director of the next session (no report left) | the dial stipulation, the overview's and brand's sentences, the plot, the two programs | ten predicates True; D7 False as the attacker expected; **D10 False: the "two programs written separately" share six code lines** (kept) | `attacks/DIRECTOR_REPORT_2026-11-15b.md`, `attacks/2026-11-15_wildcard_dial/` |
 
 **Closed: the candidate was abandoned on 15 November 2026 at 09:57 UTC. See `WHY_ABANDONED.md`.** The text below is kept as written before the kill.
 
