@@ -156,6 +156,33 @@ def scored_fork():
                 fork=result, reference=reference, line_ports_checked=line_checked)
 
 
+def winding_register_probe():
+    rows = []
+    for repetitions in range(1, 5):
+        masks = fork(12, repetitions)
+        depth = len(masks)
+        state = census(12, masks)
+        amplitudes = Counter()
+        for (x, rail, left, ll, _), count in state.items():
+            require((x, rail) == (depth % 12, "R"), "fork port")
+            winding, residue = divmod(depth - 2 * left - x, 12)
+            require(residue == 0, "nonintegral seam count")
+            amplitudes[winding] += (-1)**ll * count
+        exact = sum(a*a for a in amplitudes.values())
+        fair = sum(state.values())
+        parity = sum(sum(a for w, a in amplitudes.items() if w % 2 == k)**2
+                     for k in (0, 1))
+        twisted = [sum(a * sign**(w % 2) for w, a in amplitudes.items())**2
+                   for sign in (1, -1)]
+        require(2 * parity == sum(twisted), "two static twists")
+        require((fair, exact, parity) ==
+                (2**repetitions, comb(2*repetitions, repetitions), 4**repetitions // 2),
+                "register numerators")
+        rows.append(dict(ticks=depth, denominator=2**depth, full_history=fair,
+                         integer_winding=exact, winding_parity=parity, static_twists=twisted))
+    return rows
+
+
 def checks():
     forks = []
     for size in (3, 4, 5, 6, 7, 8, 9, 12, 15):
@@ -171,6 +198,7 @@ def checks():
     require(sum(small.values()) == 4, "tiny-ring control")
     return dict(arc_formula=arc_identity(), support=support_tests(), repeated_forks=forks,
                 splice=splices(7, "R"*15, "L"*14+"R"), physical_probe=scored_fork(),
+                winding_register=winding_register_probe(),
                 tiny_ring=dict(ring=2, depth=2, admitted_paths=sum(small.values())))
 
 
