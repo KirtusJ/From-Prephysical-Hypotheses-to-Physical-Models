@@ -1,0 +1,12 @@
+T=0 states=1 maxrss_MB=11 first={}
+T=1 states=3 maxrss_MB=11 first={}
+T=2 states=11 maxrss_MB=11 first={0: 2}
+T=3 states=42 maxrss_MB=11 first={0: 2, 2: 3}
+T=4 states=168 maxrss_MB=11 first={0: 2, 2: 3}
+T=5 states=693 maxrss_MB=11 first={0: 2, 2: 3}
+T=6 states=2874 maxrss_MB=14 first={0: 2, 2: 3}
+T=7 states=12014 maxrss_MB=28 first={0: 2, 2: 3}
+EXHAUSTED_TO=7
+diff=0 firstT=2 example_state=(((0, 0, 1, 0), 1), ((0, 1, 1, 0), 1), ((2, 0, 0, 0), 1), ((4, 1, 2, 1), 1))
+diff=2 firstT=3 example_state=(((1, 0, 0, 0), 1), ((5, 0, 1, 1), 1), ((5, 1, 1, 0), 1))
+P1 PASS
