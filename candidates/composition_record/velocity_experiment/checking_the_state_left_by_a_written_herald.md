@@ -58,6 +58,8 @@ Each square root bounds the trace norm of the difference of the weighted Choi st
 
 The [replay](check_written_herald.py) computes the projections directly from the filter’s signed amplitudes. The eleven-wire OpenQASM circuit includes the actual herald measurement, a separate fair choice made afterwards and a fresh terminal pointer. Its output bits are `herald`, `test` and `answer`. On the sector arm (`test=0`), `answer=1` denotes the physical good sector. On the return arm it denotes successful all-zero return. The optional Qiskit check propagates all eight possible recorded triples including both dark ones. All results here are circuit predictions.
 
+The two hidden label rates in the third comparison also have a bounded realization in the original walk circuit. It uses a second sector measurement and one conditional reflection. [Explicit controller and an intermediate record that distinguishes it](a_private_controller_for_the_walk_herald.md)
+
     python -I -B check_written_herald.py
     python -I -B check_written_herald.py --qiskit
     python -I -B check_written_herald.py --qasm fresh.qasm
