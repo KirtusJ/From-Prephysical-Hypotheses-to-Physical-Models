@@ -20,6 +20,29 @@ def correlation(h, port_x, minus, gates, swap):
                for i, j in product(range(2), range(3)))
 
 
+def conditional_floor():
+    a = 7/8
+    endpoints = [3/8 + sign*sqrt(2)/16 for sign in (-1, 1)]
+    floor = 0
+    for port_x in (False, True):
+        conditional = []
+        for port in (0, 1):
+            combined = 0
+            for minus in (False, True):
+                terms = []
+                for b in endpoints:
+                    if port_x:
+                        amplitude = (a + (-1)**(port + minus)*b)/sqrt(2)
+                    else:
+                        amplitude = b if port else a
+                    sign = (-1)**(port + (port_x and minus))
+                    terms.append(sign * (2*amplitude**2 - 1))
+                combined += min(terms)
+            conditional.append(combined)
+        floor += min(conditional)
+    return floor
+
+
 if __name__ == "__main__":
     cases = [
         ([(0,1),(1,2),(0,1)], True, 1.25, 1),
@@ -34,3 +57,7 @@ if __name__ == "__main__":
             score = zz + zm + xz - xm
             assert isclose(score, rational + sign*radical*sqrt(2))
             print(len(gates), sign, correlations, score)
+
+    floor = conditional_floor()
+    assert isclose(floor, 19/8 - 7*sqrt(2)/32)
+    print("Conditional CHSH lower bound", floor)
