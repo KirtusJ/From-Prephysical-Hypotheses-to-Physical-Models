@@ -69,6 +69,19 @@ def check_half_ring():
     require(v == u*u and v*u == unit, "Eight-step walk and 24-step period")
     q = diag(*([1]*8 + [-1]*8))
     observables = q, u.T*q*u, v.T*q*v
+    parity = diag(*[(-1)**(j//2) for j in range(16)])
+    for parity_sign in (-1, 1):
+        source = (unit + parity_sign*parity)/16
+        require(source.trace() == 1 and (source*parity).trace() == parity_sign, "Parity label")
+        for observable in observables:
+            require(parity*observable == observable*parity, "Block preserves parity")
+            require((source*observable).trace() == 0, "Same first-read distribution for both sectors")
+            for bit in (-1, 1):
+                selected = (unit + bit*observable)/2
+                prepared = 2 * selected*source*selected
+                require(prepared.trace() == 1 and (prepared*parity).trace() == parity_sign,
+                        "Post-read eigenpreparation retains its source-sector label")
+
     require(sum(observables, zeros(16)) == zeros(16), "Three half-ring observables")
     for earlier, later in combinations(observables, 2):
         require(earlier*later + later*earlier == -unit, "Projective pair anticommutator")
