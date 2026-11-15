@@ -202,6 +202,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Signed walk and weak field](Signed_walk_and_weak_field.md) | Real sheet transport, classical displacement bound, free envelope |
 | [Records and complex structure](Records_and_complex_structure.md) | Plane preparation, parity restriction, composition, entangling contact |
 | [Probability from record composition](Probability_from_record_composition.md) | Conditional quadratic law, exact field-embedding classification, five-sheet discriminator |
+| [Preparing one transport band with rail records](Preparing_one_transport_band_with_rail_records.md) | A two-tick rail filter and stopped tag select a conditional ballistic ray. Finite-width estimates continue through a weak field with a finite accumulated impulse. |
 | [Forced envelope and classical motion](Forced_envelope_and_classical_motion.md) | Uniform spinor error estimate and convergence of the position law |
 | [Native preparations and probability embeddings](Native_preparations_and_probability_embeddings.md) | Identical transcript laws, finite-preparation obstruction and a measurable limiting frequency |
 | [Base preparation and two rays](Base_preparation_and_two_rays.md) | Full-readout obstruction, coherent direction filter and a two-point classical position limit |
