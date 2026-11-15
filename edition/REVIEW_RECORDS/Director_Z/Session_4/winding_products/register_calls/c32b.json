@@ -1,0 +1,578 @@
+[
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_COMMISSIONED",
+   "body": {
+    "arrangement": "UNARY",
+    "author": "assistant",
+    "claims": [
+     {
+      "label": "A",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Theorem 5.64 and Corollary 5.65: the winding counts at one site of a position product event on a ring form a totally non-negative array; their generating polynomials are real-rooted, and the associated polynomial W has no root in the open right half-plane.",
+      "criterion": "Supported in scope if the proof follows on reading, a challenger finds no defect of substance, and every profile enumerated satisfies the corollary."
+     },
+     {
+      "label": "B",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Lemmas 5.66 to 5.68, Theorems 5.69 and 5.70: products of multisets in two adjacent cosets occur, a consistent rule on them is the count plus a banded form, and for three classes of winding it is the count and the two squares on all products.",
+      "criterion": "Supported in scope if each proof follows on reading, the algebraic steps are checked in Lean, and challengers find no defect of substance."
+     },
+     {
+      "label": "C",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Proposition 5.73 and Corollaries 5.72, 5.74: three groups on two levels for M at least 5, and the dependent results with M at least 5.",
+      "criterion": "Supported in scope if the construction for M at least 6 follows tick by tick on reading and the table for M = 5 is exclusive in every replay."
+     },
+     {
+      "label": "D",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "Total positivity is sufficient for a profile to occur, on large rings.",
+      "criterion": "Refuted in scope by an allowed profile that occurs at no site; resolved only for the rings searched."
+     }
+    ],
+    "director": "principal",
+    "expectation": "NO_DIRECTIONAL_EXPECTATION",
+    "extent": "PARTIAL",
+    "label": "Z32",
+    "modules": [
+     {
+      "id": "acr.mathematics",
+      "sha256": "8da02f39bd7f91a6f3768644695e6d51739ac9cd5216f606f32647eac5c03361",
+      "version": "1.0"
+     },
+     {
+      "id": "acr.science",
+      "sha256": "e1a3466816fb4b57e787ed91e51dd2f1c3a67eca5fb8d033900e31f07c5b417e",
+      "version": "1.0"
+     }
+    ],
+    "procedure": "FOCUSED",
+    "required_gates": [
+     "G1",
+     "G5",
+     "G6"
+    ],
+    "target": {
+     "sha256": "ed58b062fd3d5c688849988b33f66e9d1e1e343a45145f90e641cfc6d331bee5",
+     "t": "artifact"
+    },
+    "title": "Twenty-eighth revision of paper G10: total positivity of the winding, products of multisets, three groups for M at least 5"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the new subsection (Theorem 5.64 to Corollary 5.74) read in the typeset paper",
+    "ref": {
+     "sha256": "ed58b062fd3d5c688849988b33f66e9d1e1e343a45145f90e641cfc6d331bee5",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "all of it; written by this participant",
+    "ref": {
+     "sha256": "834ce10b5ee39c662204173bb88dd1247fccb80e209578f4091fb5960f0bfe58",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "produced and read by this participant",
+    "ref": {
+     "sha256": "cb6ca806c9d003cfdcb0b7c965e0b56dcd8989dc76fbf6e252ce7c8193803a22",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "produced and read by this participant",
+    "ref": {
+     "sha256": "1f59509e52ee9acb8a29581447384ab5bc28607b324ee2a856f686b5b0dafb69",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the challenger's report and the participant's recheck; program rerun byte-identical",
+    "ref": {
+     "sha256": "68e7bea8c90d045ccbd495ba3f88a39e051599044070d8eeed18f5820deaf4a5",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the challenger's report and the participant's recheck; program rerun, equal except timing",
+    "ref": {
+     "sha256": "9b2d81f3be7f0e0fa4d40dc23ac68910b7928102ec93cca68b675f9d4d7bc63c",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the micro-review and the participant's recheck by hand",
+    "ref": {
+     "sha256": "2c4d7c63ebae6af5ab204f75d85cca95d277d60a0c6b3482c4222960e42418d9",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "ca7aa18ec404aa4e85f0ba1d4d7b93ff431ca2179c9be707aced142b161b6fd7",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the second program's result for M = 5 rerun, byte-identical",
+    "ref": {
+     "sha256": "7ba91d90505353ded8f09249fcbd2e0b2286e06038b40146aafa6cbeb94fd2bc",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "read; its three Lean files rerun, exit 0",
+    "ref": {
+     "sha256": "a510ee774a44c5e57c873e79998daf23964f48518cdcb4df6b0831bc4e1967e2",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant at both sizes, byte-identical",
+    "ref": {
+     "sha256": "9f98f18899307c70b763c717b1fbcea50595021e382492f16223fe4f83bb0b40",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "Theorem A read tick by tick by this participant; Theorem B's programs rerun, exit 0",
+    "ref": {
+     "sha256": "2f7963cd718bdc7e06d7a0ed8398dfc6c846dd88222dde1555667ba389ad8267",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "run by this participant, exit 0",
+    "ref": {
+     "sha256": "039f751ba41c488dd9cc5dd729588d8c20c0c97b1fe70d7b26f26cb6809b9c91",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G1",
+    "note": null,
+    "review": "Z32"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "A",
+    "id": "O41",
+    "review": "Z32",
+    "text": "Part (iii) of the corollary rests on a theorem of Holtz and Tyaglov read only through a secondary account; all reviewers share the participant's model family."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "B",
+    "id": "O42",
+    "review": "Z32",
+    "text": "Products only; the rule on multisets that occur and are not products is open; four to six classes computed, seven and more open."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "C",
+    "id": "O43",
+    "review": "Z32",
+    "text": "The case M = 5 is a finite table found by search; the dependent results are checked to cite only the statement of the proposition; no reviewer outside the model family has yet read it."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "D",
+    "id": "O44",
+    "review": "Z32",
+    "text": "Refuted only for M from 3 to 8 and totals up to 13; larger rings open."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O41",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O42",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O43",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O44",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "ed58b062fd3d5c688849988b33f66e9d1e1e343a45145f90e641cfc6d331bee5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "68e7bea8c90d045ccbd495ba3f88a39e051599044070d8eeed18f5820deaf4a5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "cb6ca806c9d003cfdcb0b7c965e0b56dcd8989dc76fbf6e252ce7c8193803a22",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "A",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F98",
+    "left_open": "The quoted half-plane theorem.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z32",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "ed58b062fd3d5c688849988b33f66e9d1e1e343a45145f90e641cfc6d331bee5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "9b2d81f3be7f0e0fa4d40dc23ac68910b7928102ec93cca68b675f9d4d7bc63c",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "2c4d7c63ebae6af5ab204f75d85cca95d277d60a0c6b3482c4222960e42418d9",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "1f59509e52ee9acb8a29581447384ab5bc28607b324ee2a856f686b5b0dafb69",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "039f751ba41c488dd9cc5dd729588d8c20c0c97b1fe70d7b26f26cb6809b9c91",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "B",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F99",
+    "left_open": "Multisets that are not products; s at least 4 in the paper.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z32",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "ed58b062fd3d5c688849988b33f66e9d1e1e343a45145f90e641cfc6d331bee5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "2f7963cd718bdc7e06d7a0ed8398dfc6c846dd88222dde1555667ba389ad8267",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "C",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F100",
+    "left_open": "Reading of the M = 5 table by a reviewer outside the model family.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z32",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "ca7aa18ec404aa4e85f0ba1d4d7b93ff431ca2179c9be707aced142b161b6fd7",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "7ba91d90505353ded8f09249fcbd2e0b2286e06038b40146aafa6cbeb94fd2bc",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "D",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "REFUTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F101",
+    "left_open": "Rings with M at least 9.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z32",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G5",
+    "note": "Each claim has a finding; four objections are recorded open.",
+    "review": "Z32"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G6",
+    "note": "Deliverable checked: paper G10 revised a twenty-eighth time, programs, Lean files and review records; edition Z32 assembled from Z31 by a program, verify_baseline.py run before the push.",
+    "review": "Z32"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_CLOSED",
+   "body": {
+    "examined_extent": "PARTIAL",
+    "lifecycle": "CLOSED_COMPLETE",
+    "note": null,
+    "review": "Z32"
+   }
+  }
+ }
+]
