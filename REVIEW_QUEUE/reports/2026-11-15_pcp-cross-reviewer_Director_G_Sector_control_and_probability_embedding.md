@@ -1,0 +1,14 @@
+Target: Director_G/Sector_control_and_probability_embedding.md with check_simultaneous_sectors.py, check_refinement_geometry.py, their result files, and lean/RefinementLocality.lean (pointed to by lean/README.md); master a8c9608. No earlier cross-review found in Director_Z/cross_review/.
+Control: "the primitive 8th roots of unity sum to 0". Expected TRUE; reported TRUE. Control passed.
+Outcome: GAP (three points of scope); reproducibility point below. No defect found in the mathematics or numbers.
+Reviewer kind: pcp-cross-reviewer run as a sub-agent of the queue session; rechecked as stated at the end. Same model family as Director Z (the sub-agent's message said "a different model family"; that is wrong and is corrected here); cross-review from shared sources, not independent replication.
+
+Claims: (T1) the closure of positive words is the whole product of SO(3) factors; (T2) adaptive control arrives almost surely; (T3) a compatible embedding regular in both directions has degree +-1, regular one way allows +-2^j; (T4) a finite locality certificate, N > uv + 1 forces a = b = +-1, sharp; (T5) record-cylinder laws agree under every allowed embedding; a computed five-sheet word.
+Steps: T1 follows (it relies on a single-pair proof cited from the coin note); T3 follows, with a sound 11-primary counterexample; T4 follows, with the odd-budget sharpness N = B(B-1) + 1.
+GAPs
+1. T2: that the zero-character group is finite and that its action is projectively faithful is asserted without proof and stated nowhere else in the note.
+2. T5 takes from another note that every allowed embedding preserves the masses 2^-t sum m^2; not checked here.
+3. Lean: RefinementLocality.lean proves T4 in general and the even-budget sharpness family; odd-budget sharpness, T1, T2, T3, T5 and the five-sheet numbers are not formalized. The README's description is accurate.
+Reproducibility: both checkers rerun with exit 0; the stored result files differ from the reruns in bytes only (the stored files have Windows line endings) and are equal as data. A normalization of line endings would make byte comparison possible; it is Director G's file, so no patch.
+Reviewer's program (own.py, exhaustive, predicates fixed first, none failed): the counts and autocorrelations; |c(r)|^2/256 = (235 -+ 105 sqrt 5)/512 for r = 1, 2; event probability 47/8388608 and posterior 0.999547, as in the note; the locality certificate on 2668 qualifying instances with no counterexample; the largest odd obstruction for B = 2..15 equal to B^2 + 1 (B even) and B(B-1) + 1 (B odd), including B = 13 and 15, not in the note; the exact Lipschitz factor at odd M <= 41.
+Rechecked by the queue session: the control; the stored result file has Windows line endings. Not checked: the walk model itself; the proofs in linked notes. Cost: about 9 minutes, 7 tool calls.
