@@ -346,6 +346,10 @@ def permutation_controls():
     for site in range(8):
         require(sum(classical[1,k][site]-classical[-1,k][site] for k in range(3)) == 0,
                 "permutation averaging identity")
+    for sign,even in ((1,(680,120,100,124)),(-1,(242,148,112,522))):
+        for offset in range(3):
+            counts = free_sheet_read(10,2,sign,offset)
+            require(counts[::2]==even and sum(counts)==1024, "ten-tick all-launch read")
 
 
 def static_inverse_search():
