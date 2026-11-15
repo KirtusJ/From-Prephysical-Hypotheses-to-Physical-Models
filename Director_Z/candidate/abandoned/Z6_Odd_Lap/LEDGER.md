@@ -13,6 +13,9 @@
 | 7 | 15 Nov 2026 | wildcard sub-agent, seed `seam` | the ADDED answer and the brand against O6 (weak point 1) | **KILL**, accepted by the director | `attacks/2026-11-15_wildcard_seam/` |
 | 8 | 15 Nov 2026 | same | brand's parity commitment; OVERVIEW "far side" | WOUND twice | same |
 | 9 | 15 Nov 2026 | same | P1 to P5, plot, gate names, D4 | HELD | same |
+| 10 | 15 Nov 2026 | challenger sub-agent | D2 to D4, O5 as hidden assumption, symmetries, O2 | HELD (140 carriers); reported after the kill | `attacks/2026-11-15_challenger_form/` |
+| 11 | 15 Nov 2026 | same | O7 as a choice of rule | WOUND: the odd-lap weights equal those of the single square on a one-class carrier outside O2, so the choice depends on the description | same |
+| 12 | 15 Nov 2026 | same | FORM section 3 item 3 wording (a map changing β but not χ(β) exists on 6 of 140 carriers); brand one-line (in the fork with M even the two histories add) | WOUND, wording | same |
 
 **Closed: the candidate was abandoned on 15 November 2026. See `WHY_ABANDONED.md`.** The text below is kept as written before the kill.
 

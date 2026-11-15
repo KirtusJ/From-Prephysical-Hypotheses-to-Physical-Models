@@ -59,3 +59,21 @@ No candidate is repaired. A killed candidate's surviving statements may seed a l
 Deviation from the plan, recorded: test KZ6(c) named rings of 6, 8, 10, 12 and 14 sites; the carrier of the first program has two classes with k even only for M = 2 modulo 4, so it ran on 4, 12 and 20 sites, and a follow-up with its predicate fixed first ran on 6, 10, 14, 7, 9 and 11 sites with another carrier. Rings of 8 sites (M = 4) were covered by neither; the instances program covers M = 8, 9, 10, 11.
 
 **Final candidate of the sprint: Z6 "Odd Lap".**
+
+## After the testing part: the survivor was killed, and a second batch
+
+At 08:46 UTC a wildcard attacker killed Z6 "Odd Lap" (its ADDED answer and brand against its own composition stipulation); the director checked the files and abandoned it at once: `../abandoned/Z6_Odd_Lap/WHY_ABANDONED.md`. A second attacker, reporting after the kill, found no kill and one wound of substance: the odd-lap weights equal those of the plain square on another carrier, so the "choice" was a matter of description.
+
+The period runs to 10:05 UTC. Rule 3 asks for a final candidate by its end, so a second batch follows. Stipulations and kill tests are fixed here before any test is run. **Label as before: STIPULATED CANDIDATES FOR DISPROOF.**
+
+Common ground for both: the signed two-rail carrier (gain −1 on a left step that follows a left step), walks from (0,R), on the line and on rings; the weight of a vertex is the square of the signed sum of the walks ending there, divided by 2^T; n(v) is the number of walks ending at v.
+
+### Z7 "Dark Arrow"
+- **Stipulation.** The arrow of time is the growth of darkness. In the event of all walks, a vertex is dark at length T if walks end there and their signed sum is zero. Z7 says: the number of dark vertices never decreases as T grows.
+- **Kill test KZ7 (fixed now).** The line, T = 1 to 60, and rings of 16 and 18 sites, T = 1 to 60. Predicate: the number of dark vertices at T + 1 is at least the number at T, for every T in the range, on all three carriers. One decrease KILLS Z7.
+
+### Z8 "Two Books"
+- **Stipulation.** The same histories are read in two books. The book of chance weighs a record (an end vertex) by the square of its signed sum. The book of heat gives the same record the entropy log n(v), the logarithm of the number of histories that end there. Z8 says: these two are the quantum and the thermal description of one world, and the second law holds between them: for an event of all walks continued freely, the mean entropy H(T) = Σ_v p_T(v)·log n_T(v), the average over the book of chance of the entropy in the book of heat, never decreases with T.
+- **Kill test KZ8 (fixed now).** (a) The line, T = 1 to 80; rings of 16 and 18 sites, T = 1 to 80: H(T+1) ≥ H(T) for every T. (b) 200 random position product events on the ring of 16 sites (seed 20261115, length 4 to 16, mask density 0.5 to 0.9), each continued freely for 12 further steps: H non-decreasing over the free steps. Arithmetic: probabilities exact; logarithms in 60-digit decimal arithmetic; a decrease counts if it exceeds 10^−40 (far above the rounding of 60 digits over at most a few hundred terms, far below any real difference). Predicate: (a) and (b) both hold. One decrease KILLS Z8.
+
+If both die, the sprint ends with no standing candidate, and that is said.
