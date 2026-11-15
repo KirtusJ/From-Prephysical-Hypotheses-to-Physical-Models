@@ -105,7 +105,22 @@ def check_menus():
                 "different conditional type")
 
 
+def selection_witness():
+    triples = [(1,-1,-1)]*9 + [(1,1,-1)]*9 + [(1,1,1)]*36
+    panels = [(0,1,Q(1,10),Q(5,8)), (1,2,Q(1,10),Q(5,8)),
+              (0,2,Q(9,25),Q(25,64))]
+    for a,b,expected,yield_rate in panels:
+        eligible = [j for j,x in enumerate(triples) if (x[a] != x[b]) == (b-a == 1)]
+        rejected = set(eligible[:4])
+        accepted = [x for j,x in enumerate(triples) if j not in rejected]
+        keep = yield_rate / Q(len(accepted),len(triples))
+        wrong = sum(x[a] != x[b] for x in accepted)
+        require(len(accepted) == 50 and 0 < keep <= 1, "acceptance threshold")
+        require(keep * Q(wrong,len(triples)) == yield_rate*expected, "per-launch mismatch")
+
+
 if __name__ == "__main__":
+    selection_witness()
     physical_rotations()
     check_menus()
     print("All signed columns at 8 origins and both rail inputs passed.")
