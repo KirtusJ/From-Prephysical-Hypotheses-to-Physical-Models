@@ -78,19 +78,18 @@ def prepare(q, right, left, target, size=None, matched=False, allow_alias_test=F
                        padding=padding, deposits=receipts, ticks=len(sites))
 
 
-def census(q, sites, size):
-    """Evolve ordinary path multiplicity in physical coordinates, one native arc at a time."""
+def census(q, sites, size, *, lifted=False):
+    """Apply masks at physical wells. Optionally retain the integer endpoint."""
     state = Counter({(0, "R", 0): 1})
     for allowed in sites:
         following = Counter()
         for (x, incoming, exponent), amount in state.items():
             for outgoing, step in (("R", 1), ("L", -1)):
                 y = x + step
-                if size is not None:
-                    y %= size
-                if y in allowed:
+                well = y if size is None else y % size
+                if well in allowed:
                     gain = (exponent + (incoming == outgoing == "L")) % q
-                    following[y, outgoing, gain] += amount
+                    following[y if lifted else well, outgoing, gain] += amount
         state = following
     return state
 
@@ -105,6 +104,11 @@ def trial(q, right, left, target, size, matched):
     expected = Counter((target, side, gain)
                        for side, group in (("R", right), ("L", left)) for gain in group)
     require(actual == expected, (q, size, target, right, left, matched, actual))
+    if size is not None:
+        endpoint = len(sites) - 2 * (2 * receipt["macros"] + 4)
+        lifted = census(q, sites, size, lifted=True)
+        predicted = Counter({(endpoint, rail, j): n for (_, rail, j), n in expected.items()})
+        require(lifted == predicted, (q, size, target, right, left, matched, lifted, predicted))
     return receipt, actual
 
 
@@ -139,6 +143,11 @@ def geometry():
 
 
 def controls():
+    # On twelve wells the two straight fronts meet at tick six. One more
+    # R step gives the same final rail and well but two different lifts.
+    fork = [{t % 12, -t % 12} for t in range(1, 7)] + [{7}]
+    require(census(1, fork, 12, lifted=True) ==
+            Counter({(7, "R", 0): 1, (-5, "R", 0): 1}), "winding fork")
     # One changed physical well in an otherwise exact named-port preparation.
     sites, _ = prepare(3, [0], [1], 0, 12)
     clean = census(3, sites, 12)
