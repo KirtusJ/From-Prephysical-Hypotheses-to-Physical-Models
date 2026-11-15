@@ -52,6 +52,8 @@ Suppose the herald is a binary read in its own right. At every visit choose $q=0
 
 No hardware data enter these calculations. The instrument specifies synchronized signed propagation, protected relative phases for the auxiliary paths, faithful address readout and a single coarse failure-or-position record per flight. Its survival through $j$ flights has ordinary probability $(5/16)^j$, while the surviving channel preserves a rail and coherent position information. Connecting those stipulated operations and the observed event grouping to a prephysical law remains open.
 
+Three later comparisons address the ambiguity of a binary herald. A reversible phase intervention changes its probability while preserving the successful channel. A five-outcome pointer supplies three references on the same launch. A protected return constrains an earlier record using only monotonicity of the terminal response. [Matched phase intervention](changing_a_herald_before_it_is_written.md) · [Three reference outcomes](reading_a_herald_with_three_references.md) · [Order-based return test](how_a_hidden_herald_changes_the_return.md)
+
     python -I -B check_rational_reference_walk.py
     python -I -B check_rational_reference_walk.py --table new_table.json
 
