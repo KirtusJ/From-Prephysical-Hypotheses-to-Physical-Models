@@ -1,0 +1,43 @@
+FLP_ax.lean:38:31: error: invalid field 'sum', the environment does not contain 'List.sum'
+  List.map (fun s => ?m.1663 s * ?m.1664 s + ?m.1668 s * ?m.1669 s) f
+has type
+  List ?m.1602
+FLP_ax.lean:40:34: error: invalid field 'flatMap', the environment does not contain 'List.flatMap'
+  axes
+has type
+  List Bool
+FLP_ax.lean:52:51: error: tactic 'decide' failed for proposition
+  norm2 (tick launch true) = 2 ∧
+    List.map (fun b => norm2 (firstWrite b)) axes = [1, 1] ∧
+      List.map (fun b => norm2 (tick (coast (firstWrite b)) true)) axes = [2, 2] ∧
+        List.map (fun p => norm2 (secondWrite p.fst p.snd)) pairs = [1, 1, 1, 1] ∧
+          coast (firstWrite false) = atSite 8 (1, 0) ∧ coast (firstWrite true) = atSite 8 (0, 1)
+since its 'Decidable' instance
+  instDecidableAnd
+did not reduce to 'isTrue' or 'isFalse'.
+
+After unfolding the instances 'instDecidableAnd', 'Int.decEq' and 'Int.instDecidableEq', reduction got stuck at the 'Decidable' instance
+  match norm2 (tick launch true), 2 with
+  | Int.ofNat a, Int.ofNat b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+  | Int.ofNat a, Int.negSucc a_1 => isFalse ⋯
+  | Int.negSucc a, Int.ofNat a_1 => isFalse ⋯
+  | Int.negSucc a, Int.negSucc b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+FLP_ax.lean:79:77: error: tactic 'decide' failed for proposition
+  List.map (fun p => norm2 (final p.fst p.snd)) pairs = [1, 1, 2, 2] ∧
+    List.map (fun c => outer (final true c)[8]!) axes = [(1, 1, 1), (1, -1, 1)] ∧
+      List.map extraWriteEffects axes = [[(1, 0, 0), (0, 0, 1)], [(1, 0, 0), (0, 0, 1)]]
+since its 'Decidable' instance
+  instDecidableAnd
+did not reduce to 'isTrue' or 'isFalse'.
+
+After unfolding the instances 'instDecidableAnd' and 'instDecidableEqList', reduction got stuck at the 'Decidable' instance
+  (List.map (fun p => norm2 (final p.fst p.snd)) pairs).hasDecEq [1, 1, 2, 2]
+'FourLocalPreparations.private_records' depends on axioms: [sorryAx]
+'FourLocalPreparations.four_at_one_site' does not depend on any axioms
+'FourLocalPreparations.extra_position_copy' depends on axioms: [sorryAx]

@@ -1,0 +1,116 @@
+{
+  "source": "right rail at displacement zero",
+  "modes": [
+    {
+      "x": -5,
+      "rail": "L",
+      "signed": 1,
+      "squared_numerator": 1,
+      "unsigned": 1
+    },
+    {
+      "x": -3,
+      "rail": "L",
+      "signed": 2,
+      "squared_numerator": 4,
+      "unsigned": 4
+    },
+    {
+      "x": -3,
+      "rail": "R",
+      "signed": -1,
+      "squared_numerator": 1,
+      "unsigned": 1
+    },
+    {
+      "x": -1,
+      "rail": "L",
+      "signed": -2,
+      "squared_numerator": 4,
+      "unsigned": 6
+    },
+    {
+      "x": -1,
+      "rail": "R",
+      "signed": 0,
+      "squared_numerator": 0,
+      "unsigned": 4
+    },
+    {
+      "x": 1,
+      "rail": "L",
+      "signed": 2,
+      "squared_numerator": 4,
+      "unsigned": 4
+    },
+    {
+      "x": 1,
+      "rail": "R",
+      "signed": 0,
+      "squared_numerator": 0,
+      "unsigned": 6
+    },
+    {
+      "x": 3,
+      "rail": "L",
+      "signed": 1,
+      "squared_numerator": 1,
+      "unsigned": 1
+    },
+    {
+      "x": 3,
+      "rail": "R",
+      "signed": 4,
+      "squared_numerator": 16,
+      "unsigned": 4
+    },
+    {
+      "x": 5,
+      "rail": "R",
+      "signed": 1,
+      "squared_numerator": 1,
+      "unsigned": 1
+    }
+  ],
+  "power_controls": [
+    {
+      "q": "0",
+      "score": "9/8",
+      "normalizer": "8"
+    },
+    {
+      "q": "1/2",
+      "score": "2/7",
+      "normalizer": "14"
+    },
+    {
+      "q": "1",
+      "score": "0",
+      "normalizer": "32"
+    },
+    {
+      "q": "3/2",
+      "score": "4/23",
+      "normalizer": "92"
+    },
+    {
+      "q": "2",
+      "score": "36/77",
+      "normalizer": "308"
+    },
+    {
+      "q": "4",
+      "score": "15876/16577",
+      "normalizer": "66308"
+    }
+  ],
+  "fair_score": "-3/8",
+  "fair_canceled_mass": "5/16",
+  "zero_uncorrected_score_mixture": {
+    "other_power": "3/2",
+    "fair_fraction": "32/101",
+    "canceled_rate": "10/101"
+  },
+  "outside_window_score_at_half": "2/7",
+  "outside_window_score_at_three_halves": "4/23"
+}

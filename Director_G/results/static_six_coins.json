@@ -1,0 +1,1753 @@
+{
+  "coin_order": "wells 0 through 5",
+  "witness": "HHIIIX",
+  "pair_encoding": "(a,b) denotes a+b*sqrt(2) over the stated denominator",
+  "controls": [
+    {
+      "seam": true,
+      "launch": "R",
+      "tick": 0,
+      "squared_mass_groups": [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "denominator": 1,
+      "words": [
+        {
+          "word": "",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 0
+        }
+      ],
+      "legal_word_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "R",
+      "tick": 1,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "denominator": 2,
+      "words": [
+        {
+          "word": "R",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        },
+        {
+          "word": "L",
+          "x": 5,
+          "sheet": 1,
+          "sign": 1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fair_branch_masses": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "R",
+      "tick": 2,
+      "squared_mass_groups": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        []
+      ],
+      "denominator": 4,
+      "words": [
+        {
+          "word": "RR",
+          "x": 2,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RL",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LR",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "3/4",
+        "0",
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "R",
+      "tick": 3,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            3,
+            2
+          ]
+        ],
+        [],
+        [
+          [
+            2,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            3,
+            -2
+          ]
+        ]
+      ],
+      "denominator": 8,
+      "words": [
+        {
+          "word": "RRR",
+          "x": 3,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RLR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 3
+        },
+        {
+          "word": "RLL",
+          "x": 5,
+          "sheet": 1,
+          "sign": -1,
+          "hadamards": 3
+        },
+        {
+          "word": "LRR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LRL",
+          "x": 5,
+          "sheet": 1,
+          "sign": 1,
+          "hadamards": 2
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "fair_branch_masses": [
+        "0",
+        "3/8",
+        "0",
+        "1/4",
+        "0",
+        "3/8"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "L",
+      "tick": 0,
+      "squared_mass_groups": [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "denominator": 1,
+      "words": [
+        {
+          "word": "",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 0
+        }
+      ],
+      "legal_word_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "L",
+      "tick": 1,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "denominator": 2,
+      "words": [
+        {
+          "word": "R",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        },
+        {
+          "word": "L",
+          "x": 5,
+          "sheet": 1,
+          "sign": -1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fair_branch_masses": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "L",
+      "tick": 2,
+      "squared_mass_groups": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        []
+      ],
+      "denominator": 4,
+      "words": [
+        {
+          "word": "RR",
+          "x": 2,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RL",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LR",
+          "x": 0,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "3/4",
+        "0",
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": true,
+      "launch": "L",
+      "tick": 3,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            3,
+            -2
+          ]
+        ],
+        [],
+        [
+          [
+            2,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "denominator": 8,
+      "words": [
+        {
+          "word": "RRR",
+          "x": 3,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RLR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 3
+        },
+        {
+          "word": "RLL",
+          "x": 5,
+          "sheet": 1,
+          "sign": -1,
+          "hadamards": 3
+        },
+        {
+          "word": "LRR",
+          "x": 1,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 2
+        },
+        {
+          "word": "LRL",
+          "x": 5,
+          "sheet": 1,
+          "sign": -1,
+          "hadamards": 2
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "fair_branch_masses": [
+        "0",
+        "3/8",
+        "0",
+        "1/4",
+        "0",
+        "3/8"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "R",
+      "tick": 0,
+      "squared_mass_groups": [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "denominator": 1,
+      "words": [
+        {
+          "word": "",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 0
+        }
+      ],
+      "legal_word_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "R",
+      "tick": 1,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "denominator": 2,
+      "words": [
+        {
+          "word": "R",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        },
+        {
+          "word": "L",
+          "x": 5,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fair_branch_masses": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "R",
+      "tick": 2,
+      "squared_mass_groups": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        []
+      ],
+      "denominator": 4,
+      "words": [
+        {
+          "word": "RR",
+          "x": 2,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RL",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LR",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "3/4",
+        "0",
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "R",
+      "tick": 3,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            3,
+            2
+          ]
+        ],
+        [],
+        [
+          [
+            2,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            3,
+            -2
+          ]
+        ]
+      ],
+      "denominator": 8,
+      "words": [
+        {
+          "word": "RRR",
+          "x": 3,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RLR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 3
+        },
+        {
+          "word": "RLL",
+          "x": 5,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 3
+        },
+        {
+          "word": "LRR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LRL",
+          "x": 5,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "fair_branch_masses": [
+        "0",
+        "3/8",
+        "0",
+        "1/4",
+        "0",
+        "3/8"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "L",
+      "tick": 0,
+      "squared_mass_groups": [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "denominator": 1,
+      "words": [
+        {
+          "word": "",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 0
+        }
+      ],
+      "legal_word_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "L",
+      "tick": 1,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "denominator": 2,
+      "words": [
+        {
+          "word": "R",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 1
+        },
+        {
+          "word": "L",
+          "x": 5,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fair_branch_masses": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "L",
+      "tick": 2,
+      "squared_mass_groups": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [],
+        [],
+        []
+      ],
+      "denominator": 4,
+      "words": [
+        {
+          "word": "RR",
+          "x": 2,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RL",
+          "x": 0,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "LR",
+          "x": 0,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 1
+        }
+      ],
+      "legal_word_counts": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fair_branch_masses": [
+        "3/4",
+        "0",
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "seam": false,
+      "launch": "L",
+      "tick": 3,
+      "squared_mass_groups": [
+        [],
+        [
+          [
+            3,
+            -2
+          ]
+        ],
+        [],
+        [
+          [
+            2,
+            0
+          ]
+        ],
+        [],
+        [
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "denominator": 8,
+      "words": [
+        {
+          "word": "RRR",
+          "x": 3,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 2
+        },
+        {
+          "word": "RLR",
+          "x": 1,
+          "sheet": 0,
+          "sign": 1,
+          "hadamards": 3
+        },
+        {
+          "word": "RLL",
+          "x": 5,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 3
+        },
+        {
+          "word": "LRR",
+          "x": 1,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 2
+        },
+        {
+          "word": "LRL",
+          "x": 5,
+          "sheet": 0,
+          "sign": -1,
+          "hadamards": 2
+        }
+      ],
+      "legal_word_counts": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "fair_branch_masses": [
+        "0",
+        "3/8",
+        "0",
+        "1/4",
+        "0",
+        "3/8"
+      ]
+    }
+  ],
+  "counts_by_tick": [
+    {
+      "1": 729
+    },
+    {
+      "1": 729
+    },
+    {
+      "0": 27,
+      "1": 648,
+      "2": 54
+    },
+    {
+      "0": 45,
+      "1": 576,
+      "2": 90,
+      "3": 18
+    }
+  ],
+  "all_static_assignments": [
+    {"coins": "HHHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHHHHI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHHHHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHHIH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HHHHII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHHIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHHXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHHXI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHHXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHHIHI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHHIHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHIIH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HHHIII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHIIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHIXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHIXI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHIXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHHXHI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHHXHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHXIH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HHHXII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHXIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHXXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHHXXI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHHXXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIHHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIHHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIHHX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHIHII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIHIX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIHXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIHXI", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHIHXX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIIHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIIHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIIHX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHIIII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIIIX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIIXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIIXI", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHIIXX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIXHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIXHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIXHX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHIXII", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHIXIX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHIXXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HHIXXI", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHIXXX", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HHXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXHHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXHII", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXHXI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIII", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXIXI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXHI", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HHXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXII", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HHXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HHXXXI", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HHXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHHHH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHHIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHHXH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHHXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHIHH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHIIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHIXH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHIXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHXHH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHXIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIHXXH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIHXXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIHHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIHHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIHIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIHII", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HIIHIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIHXH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIHXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIIHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIIHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIIIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIIII", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HIIIIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIIXH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIIXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIXHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIXHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIXIH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIIXII", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "HIIXIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIIXXH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIIXXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIXHHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIXHHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXHIH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXHXH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXIHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIXIHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXIIH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXIXH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXXHH", "distinct_pure_masses": [1, 1, 2, 1]},
+    {"coins": "HIXXHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HIXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXXIH", "distinct_pure_masses": [1, 1, 2, 2]},
+    {"coins": "HIXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXXXH", "distinct_pure_masses": [1, 1, 2, 0]},
+    {"coins": "HIXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HIXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHHHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHHHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHHIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXHHII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHHIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHHXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHIHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHIHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHIIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXHIII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHIIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHIXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHXHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHXHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHXIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXHXII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXHXIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXHXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXHXXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIHHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIHHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIHIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXIHII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIHIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIHXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIIHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIIHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIIIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXIIII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIIIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIIXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIXHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIXHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIXIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXIXII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXIXIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXIXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXIXXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXHHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXHHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXHIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXXHII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXHIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXHXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXIHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXIHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXIIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXXIII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXIIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXIXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXXHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXXHX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXXIH", "distinct_pure_masses": [1, 1, 1, 3]},
+    {"coins": "HXXXII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "HXXXIX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "HXXXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "HXXXXX", "distinct_pure_masses": [1, 1, 0, 1]},
+    {"coins": "IHHHHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHIH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHHXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIIH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHIXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXHH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXHI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXHX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXIH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXII", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXIX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXXH", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXXI", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHHXXX", "distinct_pure_masses": [1, 1, 1, 2]},
+    {"coins": "IHIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IHXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IIXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXXH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "IXXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XHXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XHXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XIXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XIXXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXHHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXHIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXHXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXHXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXIHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXIIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXIXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXIXXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXXHXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXHXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXXIXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXIXX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXHH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXHI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXHX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXIH", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXII", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXIX", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXXH", "distinct_pure_masses": [1, 1, 1, 0]},
+    {"coins": "XXXXXI", "distinct_pure_masses": [1, 1, 1, 1]},
+    {"coins": "XXXXXX", "distinct_pure_masses": [1, 1, 1, 1]}
+  ]
+}

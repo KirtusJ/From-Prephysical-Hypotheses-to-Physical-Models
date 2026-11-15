@@ -1,0 +1,13 @@
+diff --git a/candidates/composition_record/velocity_experiment/four_preparations_at_one_site.md b/candidates/composition_record/velocity_experiment/four_preparations_at_one_site.md
+index 29febe7..15f87e1 100644
+--- a/candidates/composition_record/velocity_experiment/four_preparations_at_one_site.md
++++ b/candidates/composition_record/velocity_experiment/four_preparations_at_one_site.md
+@@ -38,7 +38,7 @@ $$
+ \frac34+\operatorname{TV}(q,\mathrm{uniform})+\sqrt{\bar e}.
+ $$
+ 
+-This bound uses the triangle inequality and concavity of the square root. It assumes that the tested and bypassed launches use the same source ensemble and that the memory has no further source information. Interleaving the bypass and memory trials with a choice hidden from the source gives a way to check that assumption. Actual sampling would require upper confidence bounds for the calibration errors and a lower bound for the memory score. An ideal coherent bypass scores one, while the extra-copy bypass below scores $3/4$. The same [circuit exporter](four_state_circuit.py) accepts a zero block count for either arm. [Fuchs and van de Graaf on trace distance and fidelity](https://arxiv.org/abs/quant-ph/9712042)
++This bound uses the triangle inequality and concavity of the square root. It assumes that the tested and bypassed launches use the same source ensemble and that the memory has no further source information. Interleaving the bypass and memory trials with a choice hidden from the source gives a way to check the first assumption. No bypass statistic can check the second: the bypass sees only the label-conditional rail states, which are unchanged when the source also leaks its basis to the memory through a separate record, and such a leak lets a measure-and-prepare memory score $(1+p)/2$ for leak reliability $p$. Actual sampling would require upper confidence bounds for the calibration errors and a lower bound for the memory score. An ideal coherent bypass scores one, while the extra-copy bypass below scores $3/4$. The same [circuit exporter](four_state_circuit.py) accepts a zero block count for either arm. [Fuchs and van de Graaf on trace distance and fidelity](https://arxiv.org/abs/quant-ph/9712042)
+ 
+ ### Recovering the sign
+ 

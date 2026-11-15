@@ -1,0 +1,396 @@
+{
+  "source": "Even physical wells; Gaussian envelope of probability width sqrt(L), centred at (x+1/2)/L=1/4; carrier k0=acos(1/sqrt(3)); constant normalized coin from the chosen band at k0.",
+  "step": "Hadamard then shift; outward proposals stay one tick and reverse rail with sign +1.",
+  "lengths": {
+    "64": {
+      "velocity_plus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.09575738332750021,
+          "mean_distance_to_prepared_band_ray": 0.09575738332750021,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 64,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.75,
+          "mean_distance_to_positive_ray": 0.09804140354466853,
+          "mean_distance_to_prepared_band_ray": 0.09804140354466853,
+          "total_probability": 0.9999999999999887
+        },
+        {
+          "tick": 96,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 1.0,
+          "mean_distance_to_positive_ray": 0.1049157548127453,
+          "mean_distance_to_prepared_band_ray": 0.1049157548127453,
+          "total_probability": 0.999999999999983
+        },
+        {
+          "tick": 144,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.625,
+          "mean_distance_to_positive_ray": 0.1105525010580541,
+          "mean_distance_to_prepared_band_ray": 0.1105525010580541,
+          "total_probability": 0.9999999999999744
+        }
+      ],
+      "velocity_minus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.09575738332750021,
+          "mean_distance_to_prepared_band_ray": 0.09575738332750021,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 64,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.5054627226039865,
+          "mean_distance_to_prepared_band_ray": 0.09611738643668045,
+          "total_probability": 0.9999999999999888
+        },
+        {
+          "tick": 96,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 0.5,
+          "mean_distance_to_positive_ray": 0.5097595645112144,
+          "mean_distance_to_prepared_band_ray": 0.10308027379525875,
+          "total_probability": 0.9999999999999832
+        },
+        {
+          "tick": 144,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.875,
+          "mean_distance_to_positive_ray": 0.21617646814611582,
+          "mean_distance_to_prepared_band_ray": 0.09300130554201679,
+          "total_probability": 0.9999999999999746
+        }
+      ]
+    },
+    "128": {
+      "velocity_plus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.07012368296925889,
+          "mean_distance_to_prepared_band_ray": 0.07012368296925889,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 128,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.75,
+          "mean_distance_to_positive_ray": 0.0728178732092321,
+          "mean_distance_to_prepared_band_ray": 0.0728178732092321,
+          "total_probability": 0.9999999999999777
+        },
+        {
+          "tick": 192,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 1.0,
+          "mean_distance_to_positive_ray": 0.07604420088930916,
+          "mean_distance_to_prepared_band_ray": 0.07604420088930916,
+          "total_probability": 0.9999999999999666
+        },
+        {
+          "tick": 288,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.625,
+          "mean_distance_to_positive_ray": 0.08171392165872104,
+          "mean_distance_to_prepared_band_ray": 0.08171392165872104,
+          "total_probability": 0.9999999999999495
+        }
+      ],
+      "velocity_minus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.07012368296925889,
+          "mean_distance_to_prepared_band_ray": 0.07012368296925889,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 128,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.5011814215212311,
+          "mean_distance_to_prepared_band_ray": 0.07281942872722988,
+          "total_probability": 0.9999999999999778
+        },
+        {
+          "tick": 192,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 0.5,
+          "mean_distance_to_positive_ray": 0.5018507781015752,
+          "mean_distance_to_prepared_band_ray": 0.0757584257974875,
+          "total_probability": 0.9999999999999666
+        },
+        {
+          "tick": 288,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.875,
+          "mean_distance_to_positive_ray": 0.23710141208002766,
+          "mean_distance_to_prepared_band_ray": 0.07171913639825775,
+          "total_probability": 0.9999999999999496
+        }
+      ]
+    },
+    "256": {
+      "velocity_plus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.04986996732870028,
+          "mean_distance_to_prepared_band_ray": 0.04986996732870028,
+          "total_probability": 0.9999999999999999
+        },
+        {
+          "tick": 256,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.75,
+          "mean_distance_to_positive_ray": 0.05176269713739897,
+          "mean_distance_to_prepared_band_ray": 0.05176269713739897,
+          "total_probability": 0.9999999999999547
+        },
+        {
+          "tick": 384,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 1.0,
+          "mean_distance_to_positive_ray": 0.05384638487952871,
+          "mean_distance_to_prepared_band_ray": 0.05384638487952871,
+          "total_probability": 0.9999999999999323
+        },
+        {
+          "tick": 576,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.625,
+          "mean_distance_to_positive_ray": 0.058194404334149255,
+          "mean_distance_to_prepared_band_ray": 0.058194404334149255,
+          "total_probability": 0.9999999999998983
+        }
+      ],
+      "velocity_minus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.04986996732870028,
+          "mean_distance_to_prepared_band_ray": 0.04986996732870028,
+          "total_probability": 0.9999999999999999
+        },
+        {
+          "tick": 256,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.5003543598264532,
+          "mean_distance_to_prepared_band_ray": 0.05176361964002398,
+          "total_probability": 0.9999999999999546
+        },
+        {
+          "tick": 384,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 0.5,
+          "mean_distance_to_positive_ray": 0.5005860780325393,
+          "mean_distance_to_prepared_band_ray": 0.053806440324671474,
+          "total_probability": 0.9999999999999323
+        },
+        {
+          "tick": 576,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.875,
+          "mean_distance_to_positive_ray": 0.24644800160290692,
+          "mean_distance_to_prepared_band_ray": 0.05577288778281282,
+          "total_probability": 0.9999999999998983
+        }
+      ]
+    },
+    "512": {
+      "velocity_plus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.035264717582447445,
+          "mean_distance_to_prepared_band_ray": 0.035264717582447445,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 512,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.75,
+          "mean_distance_to_positive_ray": 0.03656357137087779,
+          "mean_distance_to_prepared_band_ray": 0.03656357137087779,
+          "total_probability": 0.9999999999999091
+        },
+        {
+          "tick": 768,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 1.0,
+          "mean_distance_to_positive_ray": 0.03803324691812563,
+          "mean_distance_to_prepared_band_ray": 0.03803324691812563,
+          "total_probability": 0.9999999999998638
+        },
+        {
+          "tick": 1152,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.625,
+          "mean_distance_to_positive_ray": 0.04111286813099292,
+          "mean_distance_to_prepared_band_ray": 0.04111286813099292,
+          "total_probability": 0.9999999999997956
+        }
+      ],
+      "velocity_minus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.035264717582447445,
+          "mean_distance_to_prepared_band_ray": 0.035264717582447445,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 512,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.5001699728791765,
+          "mean_distance_to_prepared_band_ray": 0.03656324198936407,
+          "total_probability": 0.9999999999999085
+        },
+        {
+          "tick": 768,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 0.5,
+          "mean_distance_to_positive_ray": 0.5002846951475032,
+          "mean_distance_to_prepared_band_ray": 0.03802257929545727,
+          "total_probability": 0.9999999999998629
+        },
+        {
+          "tick": 1152,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.875,
+          "mean_distance_to_positive_ray": 0.24921165723109653,
+          "mean_distance_to_prepared_band_ray": 0.040864025284430006,
+          "total_probability": 0.9999999999997946
+        }
+      ]
+    },
+    "1024": {
+      "velocity_plus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.02493490717447829,
+          "mean_distance_to_prepared_band_ray": 0.02493490717447829,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 1024,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.75,
+          "mean_distance_to_positive_ray": 0.025835005403718945,
+          "mean_distance_to_prepared_band_ray": 0.025835005403718945,
+          "total_probability": 0.9999999999998197
+        },
+        {
+          "tick": 1536,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 1.0,
+          "mean_distance_to_positive_ray": 0.026873725218279756,
+          "mean_distance_to_prepared_band_ray": 0.026873725218279756,
+          "total_probability": 0.9999999999997292
+        },
+        {
+          "tick": 2304,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.625,
+          "mean_distance_to_positive_ray": 0.029057308011318735,
+          "mean_distance_to_prepared_band_ray": 0.029057308011318735,
+          "total_probability": 0.9999999999995929
+        }
+      ],
+      "velocity_minus_half": [
+        {
+          "tick": 0,
+          "positive_ray_clock": "launch",
+          "positive_ray": 0.25,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.02493490717447829,
+          "mean_distance_to_prepared_band_ray": 0.02493490717447829,
+          "total_probability": 1.0000000000000002
+        },
+        {
+          "tick": 1024,
+          "positive_ray_clock": "before_right_impact",
+          "positive_ray": 0.75,
+          "prepared_band_ray": 0.25,
+          "mean_distance_to_positive_ray": 0.5000835843922184,
+          "mean_distance_to_prepared_band_ray": 0.0258349194570657,
+          "total_probability": 0.9999999999998189
+        },
+        {
+          "tick": 1536,
+          "positive_ray_clock": "right_impact",
+          "positive_ray": 1.0,
+          "prepared_band_ray": 0.5,
+          "mean_distance_to_positive_ray": 0.5001409166203634,
+          "mean_distance_to_prepared_band_ray": 0.026869974069438685,
+          "total_probability": 0.9999999999997282
+        },
+        {
+          "tick": 2304,
+          "positive_ray_clock": "after_right_impact",
+          "positive_ray": 0.625,
+          "prepared_band_ray": 0.875,
+          "mean_distance_to_positive_ray": 0.24972419409150687,
+          "mean_distance_to_prepared_band_ray": 0.029051961824484333,
+          "total_probability": 0.9999999999995922
+        }
+      ]
+    }
+  }
+}

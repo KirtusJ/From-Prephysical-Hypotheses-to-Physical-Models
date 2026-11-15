@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user/1b3e59a6-be8f-5e36-be7c-26b1885eea91/scratchpad/xr256/run2/../xr_check.py", line 259, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/tmp/claude-0/-home-user/1b3e59a6-be8f-5e36-be7c-26b1885eea91/scratchpad/xr256/run2/../xr_check.py", line 94, in main
+    out = open("results_xr.txt", "x")
+FileExistsError: [Errno 17] File exists: 'results_xr.txt'

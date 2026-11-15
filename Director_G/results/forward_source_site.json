@@ -1,0 +1,977 @@
+{
+  "amplitude_units": "1/4",
+  "all_lengths": [
+    {
+      "wells": 4,
+      "cuts": 3,
+      "basis_launch_and_insert_time_combinations": 16
+    },
+    {
+      "wells": 5,
+      "cuts": 4,
+      "basis_launch_and_insert_time_combinations": 20
+    },
+    {
+      "wells": 6,
+      "cuts": 5,
+      "basis_launch_and_insert_time_combinations": 24
+    },
+    {
+      "wells": 7,
+      "cuts": 6,
+      "basis_launch_and_insert_time_combinations": 28
+    },
+    {
+      "wells": 8,
+      "cuts": 7,
+      "basis_launch_and_insert_time_combinations": 32
+    },
+    {
+      "wells": 9,
+      "cuts": 8,
+      "basis_launch_and_insert_time_combinations": 36
+    },
+    {
+      "wells": 10,
+      "cuts": 9,
+      "basis_launch_and_insert_time_combinations": 40
+    },
+    {
+      "wells": 11,
+      "cuts": 10,
+      "basis_launch_and_insert_time_combinations": 44
+    },
+    {
+      "wells": 12,
+      "cuts": 11,
+      "basis_launch_and_insert_time_combinations": 48
+    },
+    {
+      "wells": 13,
+      "cuts": 12,
+      "basis_launch_and_insert_time_combinations": 52
+    },
+    {
+      "wells": 14,
+      "cuts": 13,
+      "basis_launch_and_insert_time_combinations": 56
+    },
+    {
+      "wells": 15,
+      "cuts": 14,
+      "basis_launch_and_insert_time_combinations": 60
+    },
+    {
+      "wells": 16,
+      "cuts": 15,
+      "basis_launch_and_insert_time_combinations": 64
+    },
+    {
+      "wells": 17,
+      "cuts": 16,
+      "basis_launch_and_insert_time_combinations": 68
+    },
+    {
+      "wells": 18,
+      "cuts": 17,
+      "basis_launch_and_insert_time_combinations": 72
+    },
+    {
+      "wells": 19,
+      "cuts": 18,
+      "basis_launch_and_insert_time_combinations": 76
+    },
+    {
+      "wells": 20,
+      "cuts": 19,
+      "basis_launch_and_insert_time_combinations": 80
+    },
+    {
+      "wells": 21,
+      "cuts": 20,
+      "basis_launch_and_insert_time_combinations": 84
+    },
+    {
+      "wells": 22,
+      "cuts": 21,
+      "basis_launch_and_insert_time_combinations": 88
+    },
+    {
+      "wells": 23,
+      "cuts": 22,
+      "basis_launch_and_insert_time_combinations": 92
+    },
+    {
+      "wells": 24,
+      "cuts": 23,
+      "basis_launch_and_insert_time_combinations": 96
+    },
+    {
+      "wells": 25,
+      "cuts": 24,
+      "basis_launch_and_insert_time_combinations": 100
+    },
+    {
+      "wells": 26,
+      "cuts": 25,
+      "basis_launch_and_insert_time_combinations": 104
+    },
+    {
+      "wells": 27,
+      "cuts": 26,
+      "basis_launch_and_insert_time_combinations": 108
+    },
+    {
+      "wells": 28,
+      "cuts": 27,
+      "basis_launch_and_insert_time_combinations": 112
+    },
+    {
+      "wells": 29,
+      "cuts": 28,
+      "basis_launch_and_insert_time_combinations": 116
+    },
+    {
+      "wells": 30,
+      "cuts": 29,
+      "basis_launch_and_insert_time_combinations": 120
+    },
+    {
+      "wells": 31,
+      "cuts": 30,
+      "basis_launch_and_insert_time_combinations": 124
+    },
+    {
+      "wells": 32,
+      "cuts": 31,
+      "basis_launch_and_insert_time_combinations": 128
+    }
+  ],
+  "eight_well_source_coefficients": [
+    {
+      "x": 0,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 0,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            1,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            0,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 0,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          2,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 0,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            0,
+            0
+          ],
+          -2
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            1,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 1,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 1,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            2,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            0,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 1,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          3,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 1,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            2,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 2,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 2,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            3,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            3,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            1,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 2,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          4,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 2,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            1,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            3,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 3,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 3,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            4,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            2,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 3,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          5,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 3,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            2,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            4,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 4,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          2,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 4,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            5,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            5,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            3,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 4,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          6,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 4,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            3,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            3,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            5,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 5,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          3,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 5,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            6,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            6,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            4,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 5,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          7,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 5,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            4,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            6,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 6,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          4,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 6,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            7,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            7,
+            1
+          ],
+          -1
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            5,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 6,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          7,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 6,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            5,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            5,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            7,
+            1
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 7,
+      "launch_rail": 0,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          6,
+          -1
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          5,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 7,
+      "launch_rail": 0,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            7,
+            0
+          ],
+          -1
+        ],
+        [
+          [
+            7,
+            1
+          ],
+          2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            6,
+            0
+          ],
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 7,
+      "launch_rail": 1,
+      "clock": 2,
+      "opposite_rail_source_amplitude": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          6,
+          -1
+        ]
+      ]
+    },
+    {
+      "x": 7,
+      "launch_rail": 1,
+      "clock": 3,
+      "opposite_rail_source_amplitude": [
+        [
+          [
+            6,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            6,
+            1
+          ],
+          -2
+        ]
+      ],
+      "same_rail_source_amplitude": [
+        [
+          [
+            7,
+            0
+          ],
+          -1
+        ]
+      ]
+    }
+  ],
+  "short_source_only_phase_control": {
+    "wells": 16,
+    "cut": 8,
+    "phase_flip_at": [
+      4,
+      0
+    ],
+    "matched_joint_source_events": 640
+  }
+}

@@ -1,0 +1,10 @@
+P0 control: delta=(0,) r=1 gain(RLLR)=(4,) end=(0, 'R') -> PASS
+P1 walks T<=12: 8191, distinct (T,x,rail,arc-count) classes: 377
+P1 sanity traversal == arc-count gain on 300 random walks: True
+P1 Lemma R: carriers 19318 (all qualify: finite abelian), class checks 7282886, failures 0 -> PASS
+P2 Prop P: carriers 64, cosets kappa<delta> in H tested 130, target cases 390, SEARCH-BOUND 18, failures 0 -> PASS (on 372 constructed)
+P3 ring factor B^(-Mj): checks 808320, rho-differences divisible by M: True, failures 0 -> PASS
+P4 B^M=1 => (a/d)^M in <delta>: (carrier,M) pairs 125620, failures 0 -> PASS
+P4b pairs with B^M != 1 but B^M in <delta> (Delta_N=<delta>, ratio not fixed): 20360; example (M>=6) ((2,), ((0,), (0,), (1,), (0,)), 7)
+P5 odd N with B^M=1: carriers 2160; carriers where lengths T=x (mod 2) at fixed site x=0 miss a coset: 1024; example [(7, (2,), ((1,), (0,), (0,), (1,)), 1, 2, 2), (7, (2,), ((1,), (1,), (1,), (1,)), 1, 2, 2)]
+P6 ring N=12, B^M!=1: vertex where four-gain multiset is no translate of the D_delta multiset: ((4,), ((0,), (0,), (1,), (0,)), 12, 8, (8, 'R'))

@@ -1,7 +1,9 @@
 # Contributors
 
-**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, directs the research program and holds scholarly responsibility for its claims.
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, is the sole named author of the issued papers. He sets the research direction and publication standards and holds scholarly responsibility for their claims.
 
-**Director G (OpenAI Codex)** contributes mathematical derivations, computational experiments, Lean formalizations and cross-reviews with Director Z. The supplements record the premises, proofs, test results and scope of each contribution. [Director G’s research](Director_G/README.md) · [Cross-reviews](Director_G/Director_exchange.md)
+**ChatGPT (OpenAI)** assisted with derivations, critical checks, computation and manuscript preparation across the collection. Reviews using **GPT-6 (OpenAI)** supplied specific examples, bounds and corrections in papers G7–G10. **OpenAI Codex** contributed subsequent derivations, experiments, Lean proofs and cross-reviews, including the cited G10 supplements. [Research supplements](Director_G/README.md) · [Cross-review record](Director_G/Director_exchange.md)
 
-**Director Z (Claude)** maintains the editions and contributes research papers, formal and computational checks, and cross-reviews. The edition ledger credits ChatGPT, the earlier directors and the other contributors individually. [Edition contributions](edition/PROGRAM/CONTRIBUTIONS.md)
+**Claude (Anthropic)** developed the mathematical manuscripts on transport and holonomy (G7), gain-graph pair measures (G8), reversible gain walks (G9) and histories and their continuation (G10). Within the Wilson–Dirac studies, Claude proposed the endpoint connection used in D2. D6, parts 2–5, trace the earlier even-length, half-filled connection formula to correspondence prepared with Claude. Claude drafted the proof of the uniform Sobolev estimate in D8, part 17. Claude also cross-reviewed other arguments, organized the edition into paper series, compiled the result registers and reran selected calculations. [Contributions by paper and source](papers/contributions.md)
+
+**Gemini, Grok and DeepSeek** contributed to the wider research program. Paper-specific credits follow the surviving records. Some earlier review handoffs identify the session but omit the model provider. The historical ledger preserves those distinctions. [Paper contributions](papers/contributions.md) · [Issued contribution ledger](edition/PROGRAM/CONTRIBUTIONS.md)

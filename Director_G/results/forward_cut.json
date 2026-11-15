@@ -1,0 +1,643 @@
+{
+  "units": "path amplitudes at tick three in multiples of 1/sqrt(8)",
+  "all_lengths": [
+    {
+      "wells": 3,
+      "connected_cuts": 2,
+      "right_launch_clocks": 6
+    },
+    {
+      "wells": 4,
+      "connected_cuts": 3,
+      "right_launch_clocks": 8
+    },
+    {
+      "wells": 5,
+      "connected_cuts": 4,
+      "right_launch_clocks": 10
+    },
+    {
+      "wells": 6,
+      "connected_cuts": 5,
+      "right_launch_clocks": 12
+    },
+    {
+      "wells": 7,
+      "connected_cuts": 6,
+      "right_launch_clocks": 14
+    },
+    {
+      "wells": 8,
+      "connected_cuts": 7,
+      "right_launch_clocks": 16
+    },
+    {
+      "wells": 9,
+      "connected_cuts": 8,
+      "right_launch_clocks": 18
+    },
+    {
+      "wells": 10,
+      "connected_cuts": 9,
+      "right_launch_clocks": 20
+    },
+    {
+      "wells": 11,
+      "connected_cuts": 10,
+      "right_launch_clocks": 22
+    },
+    {
+      "wells": 12,
+      "connected_cuts": 11,
+      "right_launch_clocks": 24
+    },
+    {
+      "wells": 13,
+      "connected_cuts": 12,
+      "right_launch_clocks": 26
+    },
+    {
+      "wells": 14,
+      "connected_cuts": 13,
+      "right_launch_clocks": 28
+    },
+    {
+      "wells": 15,
+      "connected_cuts": 14,
+      "right_launch_clocks": 30
+    },
+    {
+      "wells": 16,
+      "connected_cuts": 15,
+      "right_launch_clocks": 32
+    },
+    {
+      "wells": 17,
+      "connected_cuts": 16,
+      "right_launch_clocks": 34
+    },
+    {
+      "wells": 18,
+      "connected_cuts": 17,
+      "right_launch_clocks": 36
+    },
+    {
+      "wells": 19,
+      "connected_cuts": 18,
+      "right_launch_clocks": 38
+    },
+    {
+      "wells": 20,
+      "connected_cuts": 19,
+      "right_launch_clocks": 40
+    },
+    {
+      "wells": 21,
+      "connected_cuts": 20,
+      "right_launch_clocks": 42
+    },
+    {
+      "wells": 22,
+      "connected_cuts": 21,
+      "right_launch_clocks": 44
+    },
+    {
+      "wells": 23,
+      "connected_cuts": 22,
+      "right_launch_clocks": 46
+    },
+    {
+      "wells": 24,
+      "connected_cuts": 23,
+      "right_launch_clocks": 48
+    },
+    {
+      "wells": 25,
+      "connected_cuts": 24,
+      "right_launch_clocks": 50
+    },
+    {
+      "wells": 26,
+      "connected_cuts": 25,
+      "right_launch_clocks": 52
+    },
+    {
+      "wells": 27,
+      "connected_cuts": 26,
+      "right_launch_clocks": 54
+    },
+    {
+      "wells": 28,
+      "connected_cuts": 27,
+      "right_launch_clocks": 56
+    },
+    {
+      "wells": 29,
+      "connected_cuts": 28,
+      "right_launch_clocks": 58
+    },
+    {
+      "wells": 30,
+      "connected_cuts": 29,
+      "right_launch_clocks": 60
+    },
+    {
+      "wells": 31,
+      "connected_cuts": 30,
+      "right_launch_clocks": 62
+    },
+    {
+      "wells": 32,
+      "connected_cuts": 31,
+      "right_launch_clocks": 64
+    },
+    {
+      "wells": 33,
+      "connected_cuts": 32,
+      "right_launch_clocks": 66
+    },
+    {
+      "wells": 34,
+      "connected_cuts": 33,
+      "right_launch_clocks": 68
+    },
+    {
+      "wells": 35,
+      "connected_cuts": 34,
+      "right_launch_clocks": 70
+    },
+    {
+      "wells": 36,
+      "connected_cuts": 35,
+      "right_launch_clocks": 72
+    },
+    {
+      "wells": 37,
+      "connected_cuts": 36,
+      "right_launch_clocks": 74
+    },
+    {
+      "wells": 38,
+      "connected_cuts": 37,
+      "right_launch_clocks": 76
+    },
+    {
+      "wells": 39,
+      "connected_cuts": 38,
+      "right_launch_clocks": 78
+    },
+    {
+      "wells": 40,
+      "connected_cuts": 39,
+      "right_launch_clocks": 80
+    }
+  ],
+  "eight_well_controls": [
+    {
+      "right_launch": 0,
+      "read_tick": 1,
+      "dark_port": [
+        0,
+        0
+      ],
+      "ports_at_read": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        0,
+        0
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 0,
+      "read_tick": 2,
+      "dark_port": [
+        0,
+        0
+      ],
+      "ports_at_read": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        1,
+        0
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 1,
+      "read_tick": 1,
+      "dark_port": [
+        0,
+        1
+      ],
+      "ports_at_read": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        0,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 1,
+      "read_tick": 2,
+      "dark_port": [
+        0,
+        1
+      ],
+      "ports_at_read": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        0,
+        0
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 2,
+      "read_tick": 1,
+      "dark_port": [
+        1,
+        1
+      ],
+      "ports_at_read": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        1,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 2,
+      "read_tick": 2,
+      "dark_port": [
+        1,
+        1
+      ],
+      "ports_at_read": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        0,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 3,
+      "read_tick": 1,
+      "dark_port": [
+        2,
+        1
+      ],
+      "ports_at_read": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        2,
+        1
+      ],
+      "split_by_middle_cut": true
+    },
+    {
+      "right_launch": 3,
+      "read_tick": 2,
+      "dark_port": [
+        2,
+        1
+      ],
+      "ports_at_read": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        1,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 4,
+      "read_tick": 1,
+      "dark_port": [
+        3,
+        1
+      ],
+      "ports_at_read": [
+        [
+          5,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        3,
+        1
+      ],
+      "split_by_middle_cut": true
+    },
+    {
+      "right_launch": 4,
+      "read_tick": 2,
+      "dark_port": [
+        3,
+        1
+      ],
+      "ports_at_read": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        2,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 5,
+      "read_tick": 1,
+      "dark_port": [
+        4,
+        1
+      ],
+      "ports_at_read": [
+        [
+          6,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        4,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 5,
+      "read_tick": 2,
+      "dark_port": [
+        4,
+        1
+      ],
+      "ports_at_read": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        3,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 6,
+      "read_tick": 1,
+      "dark_port": [
+        5,
+        1
+      ],
+      "ports_at_read": [
+        [
+          7,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        5,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 6,
+      "read_tick": 2,
+      "dark_port": [
+        5,
+        1
+      ],
+      "ports_at_read": [
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        4,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 7,
+      "read_tick": 1,
+      "dark_port": [
+        6,
+        1
+      ],
+      "ports_at_read": [
+        [
+          7,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        6,
+        1
+      ],
+      "split_by_middle_cut": false
+    },
+    {
+      "right_launch": 7,
+      "read_tick": 2,
+      "dark_port": [
+        6,
+        1
+      ],
+      "ports_at_read": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "path_signs": [
+        -1,
+        1
+      ],
+      "companion_path_port_at_read": [
+        5,
+        1
+      ],
+      "split_by_middle_cut": false
+    }
+  ],
+  "left_wall_same_bin_probabilities": {
+    "coherent": {
+      "dark": "0",
+      "site": "1/8"
+    },
+    "mark_only_1R_with_minus": {
+      "dark": "1/2",
+      "site": "5/8"
+    },
+    "orthogonal_tags_on_0R_and_1R": {
+      "dark": "1/4",
+      "site": "3/8"
+    }
+  }
+}

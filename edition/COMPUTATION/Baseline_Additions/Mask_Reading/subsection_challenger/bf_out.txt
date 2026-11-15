@@ -1,0 +1,86 @@
+PASS fork N=1 M=1 words=['RR', 'LR'] |P-formula|=0.0e+00
+PASS fork formula N=1 
+FAIL (iv) N=1 7.2e-01
+FAIL (iv) mirror x->-x N=1 8.9e-02
+FAIL (i) N=1 0.542 -0.042
+PASS (ii) N=1 
+PASS no port of length<=M has two k, N=1 []
+PASS fork N=2 M=1 words=['RR', 'LR'] |P-formula|=5.6e-17
+PASS fork formula N=2 
+FAIL (iv) N=2 5.6e-02
+FAIL (iv) mirror x->-x N=2 4.8e-02
+FAIL (i) N=2 -0.003 0.503
+PASS (ii) N=2 
+PASS no port of length<=M has two k, N=2 []
+PASS fork N=3 M=3 words=['RRRR', 'LLLR'] |P-formula|=2.8e-17
+PASS fork formula N=3 
+PASS (iv) N=3 1.7e-18
+PASS (iv) mirror x->-x N=3 2.8e-17
+PASS (i) N=3 0.000 0.000
+PASS (ii) N=3 
+PASS no port of length<=M has two k, N=3 []
+PASS fork N=4 M=2 words=['RRR', 'LLR'] |P-formula|=1.4e-16
+PASS fork formula N=4 
+PASS (iv) N=4 1.3e-17
+PASS (iv) mirror x->-x N=4 5.6e-17
+PASS (i) N=4 -0.000 -0.000
+PASS (ii) N=4 
+PASS no port of length<=M has two k, N=4 []
+PASS fork N=5 M=5 words=['RRRRRR', 'LLLLLR'] |P-formula|=3.5e-18
+PASS fork formula N=5 
+PASS (iv) N=5 6.9e-18
+PASS (iv) mirror x->-x N=5 1.7e-18
+PASS (i) N=5 0.000 -0.000
+PASS (ii) N=5 
+PASS no port of length<=M has two k, N=5 []
+PASS fork N=6 M=3 words=['RRRR', 'LLLR'] |P-formula|=1.1e-16
+PASS fork formula N=6 
+PASS (iv) N=6 1.4e-17
+PASS (iv) mirror x->-x N=6 3.0e-18
+PASS (i) N=6 -0.000 -0.000
+PASS (ii) N=6 
+PASS no port of length<=M has two k, N=6 []
+PASS fork N=7 M=7 words=['RRRRRRRR', 'LLLLLLLR'] |P-formula|=5.2e-18
+PASS fork formula N=7 
+PASS (iv) N=7 3.9e-18
+PASS (iv) mirror x->-x N=7 5.2e-18
+PASS (i) N=7 -0.000 -0.000
+PASS (ii) N=7 
+PASS no port of length<=M has two k, N=7 []
+PASS fork N=8 M=4 words=['RRRRR', 'LLLLR'] |P-formula|=1.4e-17
+PASS fork formula N=8 
+PASS (iv) N=8 3.0e-19
+PASS (iv) mirror x->-x N=8 1.9e-17
+PASS (i) N=8 -0.000 0.000
+PASS (ii) N=8 
+PASS no port of length<=M has two k, N=8 []
+PASS fork N=9 M=9 words=['RRRRRRRRRR', 'LLLLLLLLLR'] |P-formula|=2.0e-18
+PASS fork formula N=9 
+PASS (iv) N=9 7.6e-19
+PASS (iv) mirror x->-x N=9 3.5e-18
+PASS (i) N=9 0.000 0.000
+PASS (ii) N=9 
+PASS no port of length<=M has two k, N=9 []
+PASS line (i) 
+Q6 N=1 eta=-1 words=['RR', 'LR'] P-(1+Re u)/2=+1.110e-16  alpha=0.5: P/((1+Re u)/2)=0.250
+Q6 N=1 eta=generic words=['RR', 'LR'] P-(1+Re u)/2=+0.000e+00  alpha=0.5: P/((1+Re u)/2)=0.250
+Q6 N=2 eta=-1 words=['RR', 'LR'] P-(1+Re u)/2=+1.110e-16  alpha=0.5: P/((1+Re u)/2)=0.250
+Q6 N=2 eta=generic words=['RR', 'LR'] P-(1+Re u)/2=+0.000e+00  alpha=0.5: P/((1+Re u)/2)=0.250
+Q6 N=3 eta=-1 words=['RR'] P-(1+Re u)/2=-6.840e-01  alpha=0.5: P/((1+Re u)/2)=0.067
+Q6 N=3 eta=generic words=['RR'] P-(1+Re u)/2=-1.908e-01  alpha=0.5: P/((1+Re u)/2)=0.142
+Q6 N=4 eta=-1 words=['RR'] P-(1+Re u)/2=+1.654e-01  alpha=0.5: P/((1+Re u)/2)=0.739
+Q6 N=4 eta=generic words=['RR'] P-(1+Re u)/2=+1.686e-01  alpha=0.5: P/((1+Re u)/2)=0.768
+N=1 eta=-1 rail-summed P at t=1,2,3 for two random data (n=1): [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0]]
+N=1 eta=1 rail-summed P at t=1,2,3 for two random data (n=1): [[0.467412, 0.000327, 0.0], [0.535344, 0.242082, 0.109469]]
+N=2 eta=-1 rail-summed P at t=1,2,3 for two random data (n=1): [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0]]
+N=2 eta=1 rail-summed P at t=1,2,3 for two random data (n=1): [[1.137035, 2.255756, 4.475179], [0.278724, 0.507187, 0.922912]]
+PASS rings(b) M1=2 M2=2 
+PASS rings(b) M1=3 M2=3 
+PASS rings(b) M1=2 M2=3 
+PASS rings(b) M1=2 M2=4 
+rings(b) M1=1 M2=2: construction impossible (no root of unity != 1 of order dividing 1); statement false for M=1 since Re u = Re u' forces u' in {u, conj u}
+rings(b) M1=1 M2=1: construction impossible (no root of unity != 1 of order dividing 1); statement false for M=1 since Re u = Re u' forces u' in {u, conj u}
+Q4 alpha=0: (iv) P=0.027735 formula=0.027735; mirror P=0.027735 formula=0.027735
+Q4 beta=0: (iv) P=0.027735 formula=0.027735; mirror P=0.027735 formula=0.027735
+Q4 Re kappa=+1/2: (iv) P=0.055470 formula=0.055470; mirror P=0.000000 formula=-0.000000
+Q4 Re kappa=-1/2: (iv) P=0.000000 formula=-0.000000; mirror P=0.055470 formula=0.055470

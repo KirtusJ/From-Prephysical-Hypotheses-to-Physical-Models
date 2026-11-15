@@ -1,0 +1,74 @@
+{
+  "field": 5,
+  "fixed_direction_representative": "first nonzero coordinate equals 1",
+  "directions_per_kernel_counts": {
+    "6": 31
+  },
+  "pairwise_kernel_intersection_size_counts": {
+    "1": 465
+  },
+  "binary_one_write": {
+    "target_rows": 32,
+    "uniform_queries_per_row": 31,
+    "row_pair_distance_counts": {
+      "10": 465,
+      "25": 31
+    },
+    "retained_states": 31,
+    "merged_input": [
+      0,
+      1,
+      0
+    ],
+    "decoded_as": [
+      1,
+      0,
+      0
+    ],
+    "miscoded_assignments": 10,
+    "total_assignments": 992,
+    "sharp_mean_error": "5/496"
+  },
+  "scalar_one_write": {
+    "target_rows": 125,
+    "uniform_queries_per_row": 31,
+    "row_pair_distance_counts": {
+      "25": 7750
+    },
+    "retained_states": 124,
+    "merged_input": [
+      0,
+      1,
+      0
+    ],
+    "decoded_as": [
+      1,
+      0,
+      0
+    ],
+    "miscoded_assignments": 25,
+    "total_assignments": 3875,
+    "sharp_mean_error": "1/155"
+  },
+  "binary_after_independent_additive_write": {
+    "target_rows": 125,
+    "uniform_queries_per_row": 3875,
+    "row_pair_distance_counts": {
+      "1250": 7750
+    },
+    "retained_states": 124,
+    "merged_input": [
+      0,
+      1,
+      0
+    ],
+    "decoded_as": [
+      1,
+      0,
+      0
+    ],
+    "miscoded_assignments": 1250,
+    "total_assignments": 484375,
+    "sharp_mean_error": "2/775"
+  }
+}

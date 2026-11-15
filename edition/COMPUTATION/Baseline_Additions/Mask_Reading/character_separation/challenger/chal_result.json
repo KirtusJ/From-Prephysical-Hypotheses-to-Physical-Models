@@ -1,0 +1,538 @@
+{
+ "A1": {
+  "carriers": 700,
+  "comparisons": 187707,
+  "events": 12246,
+  "examples": [],
+  "mismatch": 0,
+  "nonzero_events": 10532,
+  "pairs": 942,
+  "qual_ac_nontrivial": 334,
+  "qual_carriers": 336,
+  "qual_noncyclic": 273
+ },
+ "A1b": {
+  "carriers": 700,
+  "comparisons": 269373,
+  "events": 17589,
+  "examples": [],
+  "mismatch": 0,
+  "nonzero_events": 15329,
+  "pairs": 1353,
+  "qual_ac_nontrivial": 457,
+  "qual_carriers": 472,
+  "qual_noncyclic": 337
+ },
+ "A1c": {
+  "carriers": 700,
+  "comparisons": 318786,
+  "events": 20449,
+  "examples": [],
+  "mismatch": 0,
+  "nonzero_events": 18046,
+  "pairs": 1573,
+  "qual_ac_nontrivial": 466,
+  "qual_carriers": 473,
+  "qual_noncyclic": 286
+ },
+ "A1d": {
+  "carriers": 700,
+  "comparisons": 97656,
+  "events": 6578,
+  "examples": [
+   {
+    "N": 6,
+    "PA": [
+     163,
+     98,
+     0,
+     -98
+    ],
+    "PB": [
+     163,
+     -56,
+     0,
+     56
+    ],
+    "masks": [
+     [
+      0,
+      1,
+      3,
+      4
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      0,
+      1,
+      3,
+      4,
+      5
+     ],
+     null,
+     [
+      0,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      2,
+      4,
+      5
+     ],
+     null,
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "port": "(3, 1)",
+    "tag": "(8, 8) ((1, 6), (4, 7), (0, 6), (4, 1)) ((0, 1), (4, 7))"
+   },
+   {
+    "N": 6,
+    "PA": [
+     163,
+     98,
+     0,
+     -98
+    ],
+    "PB": [
+     163,
+     -56,
+     0,
+     56
+    ],
+    "masks": [
+     [
+      0,
+      1,
+      3,
+      4
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      0,
+      1,
+      3,
+      4,
+      5
+     ],
+     null,
+     [
+      0,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      2,
+      4,
+      5
+     ],
+     null,
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "port": "(3, 'w')",
+    "tag": "(8, 8) ((1, 6), (4, 7), (0, 6), (4, 1)) ((0, 1), (4, 7))"
+   },
+   {
+    "N": 6,
+    "PA": [
+     41,
+     -4,
+     0,
+     4
+    ],
+    "PB": [
+     41,
+     8,
+     0,
+     -8
+    ],
+    "masks": [
+     [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     null,
+     [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      0,
+      1,
+      2,
+      4,
+      5
+     ],
+     [
+      1,
+      2,
+      3,
+      5
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      5
+     ],
+     null
+    ],
+    "port": "(1, 0)",
+    "tag": "(8, 8) ((1, 6), (4, 7), (0, 6), (4, 1)) ((0, 1), (4, 7))"
+   }
+  ],
+  "mismatch": 14090,
+  "nonzero_events": 5791,
+  "pairs": 506,
+  "qual_ac_nontrivial": 134,
+  "qual_carriers": 135,
+  "qual_noncyclic": 125
+ },
+ "A1e": {
+  "chars": 1410,
+  "examples": [],
+  "fork_not_separating": 0,
+  "formula_fail": 0,
+  "pairs_diff_Re": 1454
+ },
+ "A2": {
+  "N_range": [
+   1,
+   14
+  ],
+  "control_t_eq_D_plus_1_ports_with_two_l": {
+   "1": 2,
+   "2": 2,
+   "3": 2,
+   "4": 2,
+   "5": 2,
+   "6": 2,
+   "7": 2,
+   "8": 2,
+   "9": 2,
+   "10": 2,
+   "11": 2,
+   "12": 2,
+   "13": 2,
+   "14": 2
+  },
+  "ports_checked": 672,
+  "violations": []
+ },
+ "A2b": {
+  "carriers_with_pair": 366,
+  "comparisons": 117726,
+  "events": 7665,
+  "examples": [],
+  "mismatch": 0,
+  "pairs": 1095
+ },
+ "A3": {
+  "N_le_2": {
+   "carriers_qual": 135,
+   "fork_well_N12": {
+    "1": "1",
+    "2": "1"
+   },
+   "port_fail": 0,
+   "well_not_0_1": 0,
+   "well_values_seen": {
+    "0": 3724,
+    "1": 3620
+   }
+  },
+  "fail": [],
+  "fork_words": {
+   "1": [
+    "RR",
+    "RL",
+    "LR",
+    "LL"
+   ],
+   "2": [
+    "RR",
+    "RL",
+    "LR",
+    "LL"
+   ],
+   "3": [
+    "RRRR",
+    "LLLR"
+   ],
+   "4": [
+    "RRR",
+    "LLR"
+   ],
+   "5": 2,
+   "6": 2,
+   "7": 2,
+   "8": 2,
+   "9": 2,
+   "10": 2,
+   "11": 2,
+   "12": 2,
+   "13": 2,
+   "14": 2
+  }
+ },
+ "A4": {
+  "comparisons": 2943,
+  "diff_group": 21,
+  "events": 207,
+  "examples": [],
+  "mismatch": 0,
+  "qual_pairs": 23,
+  "tried": 3307
+ },
+ "A4s": {
+  "note": "outside the stated setting (Start (0,R)); kept as scope marker, not a defect",
+  "same_carriers_sharp_start_agree": true,
+  "separates": true,
+  "superposed_start_port_(1,1,R)_numerators_over_4": [
+   [
+    4,
+    0
+   ],
+   [
+    2,
+    0
+   ]
+  ]
+ },
+ "A4w": {
+  "comparisons": 1431,
+  "diff_group": 8,
+  "events": 81,
+  "examples": [],
+  "mismatch": 0,
+  "qual_pairs": 9,
+  "tried": 3307
+ },
+ "A5": {
+  "cases": 8712,
+  "fail": [],
+  "named": {
+   "2,2": {
+    "K": 8,
+    "beta'_exp": 4,
+    "beta_exp": 0,
+    "ok": true,
+    "other_D_agreeing_up_to_12": [
+     2,
+     4,
+     6,
+     8,
+     10,
+     12
+    ]
+   },
+   "2,3": {
+    "K": 12,
+    "beta'_exp": 11,
+    "beta_exp": 5,
+    "ok": true,
+    "other_D_agreeing_up_to_12": [
+     2,
+     3,
+     4,
+     6,
+     8,
+     9,
+     10,
+     12
+    ]
+   },
+   "3,5": {
+    "K": 30,
+    "beta'_exp": 23,
+    "beta_exp": 13,
+    "ok": true,
+    "other_D_agreeing_up_to_12": [
+     3,
+     5,
+     6,
+     9,
+     10,
+     12
+    ]
+   },
+   "4,6": {
+    "K": 48,
+    "beta'_exp": 34,
+    "beta_exp": 22,
+    "ok": true,
+    "other_D_agreeing_up_to_12": [
+     4,
+     6,
+     8,
+     12
+    ]
+   }
+  }
+ },
+ "A5a": {
+  "pairs": 284440,
+  "viol": []
+ },
+ "A5c": {
+  "cases": 26469,
+  "viol": []
+ },
+ "A6": {
+  "fail": [],
+  "rows": [
+   [
+    1,
+    true,
+    false
+   ],
+   [
+    2,
+    true,
+    false
+   ],
+   [
+    3,
+    false,
+    false
+   ],
+   [
+    4,
+    true,
+    false
+   ],
+   [
+    5,
+    true,
+    false
+   ],
+   [
+    6,
+    false,
+    false
+   ],
+   [
+    7,
+    true,
+    false
+   ],
+   [
+    8,
+    true,
+    false
+   ],
+   [
+    9,
+    false,
+    false
+   ],
+   [
+    10,
+    true,
+    false
+   ],
+   [
+    11,
+    true,
+    false
+   ],
+   [
+    12,
+    false,
+    false
+   ],
+   [
+    13,
+    true,
+    false
+   ],
+   [
+    14,
+    true,
+    false
+   ]
+  ]
+ },
+ "C0": {
+  "chi(g)=w^0 rail L": {
+   "P": "0",
+   "admitted": []
+  },
+  "chi(g)=w^0 rail R": {
+   "P": "1/64",
+   "admitted": [
+    "RRRRRRRR",
+    "LLLLLLLR"
+   ]
+  },
+  "chi(g)=w^1 rail L": {
+   "P": "0",
+   "admitted": []
+  },
+  "chi(g)=w^1 rail R": {
+   "P": "1/256",
+   "admitted": [
+    "RRRRRRRR",
+    "LLLLLLLR"
+   ]
+  },
+  "chi(g)=w^2 rail L": {
+   "P": "0",
+   "admitted": []
+  },
+  "chi(g)=w^2 rail R": {
+   "P": "1/256",
+   "admitted": [
+    "RRRRRRRR",
+    "LLLLLLLR"
+   ]
+  }
+ },
+ "I1": {
+  "fail": 0,
+  "words_checked": 81840
+ },
+ "failed_predicates": []
+}

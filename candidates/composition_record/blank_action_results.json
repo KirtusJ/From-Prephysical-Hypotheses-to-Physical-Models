@@ -1,0 +1,68 @@
+{
+  "field": 5,
+  "projective_directions": 31,
+  "subspaces_per_factor": 64,
+  "optimal_orbits": [
+    {
+      "ordinary_stabilizer_axes": [
+        1
+      ],
+      "central_stabilizer_axes": [],
+      "blank_orbit_size": 3125,
+      "perfectly_readable_probe_directions": 31,
+      "misses": 0,
+      "assignments": 3875,
+      "mean_error": "0"
+    },
+    {
+      "ordinary_stabilizer_axes": [
+        1,
+        2
+      ],
+      "central_stabilizer_axes": [
+        3
+      ],
+      "blank_orbit_size": 125,
+      "perfectly_readable_probe_directions": 6,
+      "misses": 625,
+      "assignments": 3875,
+      "mean_error": "5/31"
+    },
+    {
+      "ordinary_stabilizer_axes": [
+        1,
+        2
+      ],
+      "central_stabilizer_axes": [
+        2,
+        3
+      ],
+      "blank_orbit_size": 25,
+      "perfectly_readable_probe_directions": 1,
+      "misses": 750,
+      "assignments": 3875,
+      "mean_error": "6/31"
+    },
+    {
+      "ordinary_stabilizer_axes": [
+        1,
+        2,
+        3
+      ],
+      "central_stabilizer_axes": [
+        1,
+        2,
+        3
+      ],
+      "blank_orbit_size": 1,
+      "perfectly_readable_probe_directions": 0,
+      "misses": 775,
+      "assignments": 3875,
+      "mean_error": "1/5"
+    }
+  ],
+  "unclosed_prefix_raw_readings": [
+    0,
+    3
+  ]
+}

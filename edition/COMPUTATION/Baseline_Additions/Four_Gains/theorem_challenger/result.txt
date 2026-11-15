@@ -1,0 +1,181 @@
+prime p=2147483497
+P0 control walks,gains: [('RLLR', 2), ('LRLR', 0), ('LLRR', 2)]
+done P1,P2  {'P0': (1, 1, 0), 'P1': (112, 112, 0), 'P1b': (112, 112, 0), 'P2': (896, 896, 0), 'P2b': (896, 896, 0)}
+done P3 Z2: {'P3': (24, 24, 0), 'P3b': (16, 16, 0)}
+done P3 Z3: {'P3': (132, 132, 0), 'P3b': (97, 97, 0)}
+done P3 Z4: {'P3': (580, 580, 0), 'P3b': (353, 353, 0)}
+done P3 Z2xZ2: {'P3': (1156, 1156, 0), 'P3b': (609, 609, 0)}
+done P3 Z6: {'P3': (1233, 1233, 0), 'P3b': (656, 656, 0)}
+P3 categories (qualifying, pass): {'r=1': (463, 463), 'a=d&b=c': (115, 115), 'H trivial': (37, 37), 'K<Delta': (164, 164), 'r odd & Delta>⟨delta⟩': (311, 311), 'r even': (688, 688), 'nonconj pair present': (66, 66)}
+FAIL P4n Z2 ((1,), (1,), (0,), (0,)) N=1 nonsol=((1,), (1,)) not detected
+FAIL P4n Z2 ((0,), (0,), (0,), (1,)) N=2 nonsol=((0,), (1,)) not detected
+FAIL P4n Z2xZ2 ((0, 0), (0, 0), (0, 0), (0, 0)) N=5 nonsol=((0, 0), (0, 0)) not detected
+FAIL P4n Z2xZ2 ((0, 0), (0, 0), (0, 0), (0, 0)) N=5 nonsol=((0, 0), (0, 1)) not detected
+FAIL P4n Z2xZ2 ((0, 0), (0, 0), (0, 0), (0, 0)) N=5 nonsol=((0, 0), (1, 0)) not detected
+done P4 {'P4': (1197, 1197, 0), 'P4n': (1232, 1227, 5)}
+FAIL P5a(all) Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((0,), (0,), (1,), (1,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((0,), (0,), (1,), (1,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z2 ((1,), (0,), (0,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(hyp) Z2 ((1,), (0,), (0,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2
+FAIL P5a(all) Z3 ((0,), (2,), (0,), (2,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((0,), (2,), (0,), (2,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((0,), (2,), (0,), (2,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((0,), (2,), (0,), (2,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (2,), (2,), (2,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (2,), (2,), (2,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (2,), (2,), (2,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (2,), (2,), (2,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (2,), (2,), (2,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (2,), (2,), (2,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (2,), (2,), (2,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (2,), (2,), (2,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (2,), (2,), (2,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (2,), (2,), (2,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (0,), (2,), (0,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (0,), (2,), (0,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((2,), (0,), (2,), (0,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((2,), (0,), (2,), (0,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((1,), (1,), (1,), (1,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((1,), (1,), (1,), (1,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((1,), (1,), (1,), (1,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((1,), (1,), (1,), (1,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((1,), (1,), (1,), (1,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((1,), (1,), (1,), (1,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((1,), (1,), (1,), (1,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((1,), (1,), (1,), (1,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z3 ((1,), (1,), (1,), (1,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(hyp) Z3 ((1,), (1,), (1,), (1,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=3 |C_II|=1 |Delta_N|=1 |A|=3
+FAIL P5a(all) Z4 ((1,), (3,), (1,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z4 ((1,), (3,), (1,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z4 ((1,), (3,), (1,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z4 ((1,), (3,), (1,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z4 ((1,), (3,), (1,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z4 ((1,), (3,), (1,), (1,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z4 ((2,), (3,), (2,), (3,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z4 ((2,), (3,), (2,), (3,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z4 ((2,), (0,), (0,), (2,)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z4 ((2,), (0,), (0,), (2,)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z4 ((2,), (0,), (0,), (2,)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (0, 1), (0, 1), (1, 0)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 1), (0, 0), (0, 0), (1, 1)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (1, 0), (1, 1), (1, 1)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 1), (1, 0), (1, 1), (1, 1)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 0), (1, 0), (0, 0), (0, 1)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 0), (1, 0), (0, 0), (0, 1)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((1, 1), (1, 1), (1, 1), (1, 0)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 0), (1, 0), (0, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 1), (0, 0), (1, 0), (0, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 0), (0, 0), (1, 1), (1, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(hyp) Z2xZ2 ((0, 0), (0, 0), (1, 1), (1, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 1), (0, 1), (0, 1)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 1), (0, 1), (0, 1)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z2xZ2 ((0, 1), (0, 1), (0, 1), (0, 1)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=4
+FAIL P5a(all) Z6 ((2,), (4,), (0,), (5,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(hyp) Z6 ((2,), (4,), (0,), (5,)) N=3 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(all) Z6 ((2,), (4,), (0,), (5,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(hyp) Z6 ((2,), (4,), (0,), (5,)) N=4 strongly_conn=True pI=2 pII=6 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(all) Z6 ((2,), (4,), (0,), (5,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(hyp) Z6 ((2,), (4,), (0,), (5,)) N=5 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(all) Z6 ((2,), (4,), (0,), (5,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(hyp) Z6 ((2,), (4,), (0,), (5,)) N=6 strongly_conn=True pI=2 pII=6 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(all) Z6 ((2,), (4,), (0,), (5,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(hyp) Z6 ((2,), (4,), (0,), (5,)) N=7 strongly_conn=True pI=1 pII=3 |C_I|=6 |C_II|=2 |Delta_N|=2 |A|=6
+FAIL P5a(all) Z6 ((1,), (4,), (3,), (4,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(hyp) Z6 ((1,), (4,), (3,), (4,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(all) Z6 ((0,), (5,), (4,), (5,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(hyp) Z6 ((0,), (5,), (4,), (5,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(all) Z6 ((5,), (5,), (1,), (3,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(hyp) Z6 ((5,), (5,), (1,), (3,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(all) Z6 ((5,), (5,), (1,), (3,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(hyp) Z6 ((5,), (5,), (1,), (3,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(all) Z6 ((5,), (5,), (1,), (3,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(hyp) Z6 ((5,), (5,), (1,), (3,)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=6 |C_II|=3 |Delta_N|=3 |A|=6
+FAIL P5a(all) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=4 strongly_conn=False pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 2), (0, 3), (0, 0), (1, 3)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (0, 2), (0, 2)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (0, 2), (0, 2)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (0, 2), (0, 2)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((1, 3), (0, 2), (0, 2), (0, 3)) N=7 strongly_conn=True pI=1 pII=2 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (1, 0), (1, 0), (1, 3)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (1, 0), (1, 0), (1, 3)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (1, 0), (1, 0), (1, 3)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (0, 3), (1, 2), (1, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((0, 2), (0, 3), (1, 2), (1, 0)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=8 |C_II|=4 |Delta_N|=4 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=3 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=3 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=4 strongly_conn=False pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=5 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=5 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=6 strongly_conn=False pI=2 pII=4 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=7 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(hyp) Z2xZ4 ((0, 3), (1, 3), (0, 1), (0, 3)) N=7 strongly_conn=True pI=1 pII=4 |C_I|=8 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 3), (0, 1), (1, 1)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 3), (0, 1), (1, 1)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((1, 3), (0, 3), (0, 1), (1, 1)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=4 |C_II|=2 |Delta_N|=2 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (1, 0), (0, 2)) N=3 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (1, 0), (0, 2)) N=5 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=8
+FAIL P5a(all) Z2xZ4 ((0, 2), (1, 0), (1, 0), (0, 2)) N=7 strongly_conn=False pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=8
+done P5 {'P5a(all)': (360, 279, 81), 'P5b(all)': (360, 360, 0), 'P5a(hyp)': (206, 146, 60), 'P5b(hyp)': (206, 206, 0)}
+done P6 (585, 585, 0)
+done P7 {'P7b': (84, 84, 0), 'P7': (134, 134, 0)}
+P-categories (qualifying, pass): {'r=1': (463, 463), 'a=d&b=c': (115, 115), 'H trivial': (37, 37), 'K<Delta': (164, 164), 'r odd & Delta>⟨delta⟩': (311, 311), 'r even': (688, 688), 'nonconj pair present': (66, 66), 'P4 linear nontrivial omega': (329, 329), 'P4 mixed nonconj': (105, 105), 'P7 coefficient identically 0 on H (skipped)': (51, 51)}
+TABLE predicate: qualifying, pass, fail
+  P0              1      1      0
+  P1            112    112      0
+  P1b           112    112      0
+  P2            896    896      0
+  P2b           896    896      0
+  P3           1233   1233      0
+  P3b           656    656      0
+  P4           1197   1197      0
+  P4n          1232   1227      5
+  P5a(all)      360    279     81
+  P5a(hyp)      206    146     60
+  P5b(all)      360    360      0
+  P5b(hyp)      206    206      0
+  P6            585    585      0
+  P7            134    134      0
+  P7b            84     84      0
+FAILSUMMARY P4n: 5, first: ['Z2 ((1,), (1,), (0,), (0,)) N=1 nonsol=((1,), (1,)) not detected', 'Z2 ((0,), (0,), (0,), (1,)) N=2 nonsol=((0,), (1,)) not detected', 'Z2xZ2 ((0, 0), (0, 0), (0, 0), (0, 0)) N=5 nonsol=((0, 0), (0, 0)) not detected']
+FAILSUMMARY P5a(all): 81, first: ['Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2', 'Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2', 'Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2']
+FAILSUMMARY P5a(hyp): 60, first: ['Z2 ((1,), (1,), (0,), (0,)) N=4 strongly_conn=True pI=2 pII=4 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2', 'Z2 ((1,), (0,), (0,), (1,)) N=3 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2', 'Z2 ((1,), (0,), (0,), (1,)) N=5 strongly_conn=True pI=1 pII=2 |C_I|=2 |C_II|=1 |Delta_N|=1 |A|=2']
+END

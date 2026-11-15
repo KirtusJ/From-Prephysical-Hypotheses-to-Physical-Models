@@ -26,3 +26,7 @@ $$
 The computed interval lies inside $(0.0499999629,0.0499999830)$. The expected signed log likelihood toward the true model at exit is at most $a+b-(2a+b)l$ under either model. Dividing by each directional KL bounds the two expected stopping times. Their average gives the reported upper endpoint. The [60-decimal interval checker](check_sequential_exposure.py) uses the earlier rational cell probabilities and checks both endpoints with outward margins. A same-family second reader checked the stopped-information argument, sign conventions and overshoot bounds.
 
 The demonstrated mean is about 51% below the earlier [necessary deterministic cap](Adaptive_exposure_for_two_paired_detector_laws.md). These are different exposure criteria: an individual sequential run can exceed the fixed cap. The result supplies neither an exposure quantile nor a laboratory time forecast. It applies to these two fully specified populations; no empirical detector data entered the calculation.
+
+At 3.800950 quadrillion pairs, the uncapped rule is still running in about 8.62% of trials under either specified law. [Stopping-time distribution](Stopping_time_tail_for_paired_detectors.md)
+
+Forcing a likelihood-sign decision at that budget gives approximately 6.76% error averaged over the two laws with equal weights. [Deadline decision rule](Deciding_at_a_paired_detector_deadline.md)

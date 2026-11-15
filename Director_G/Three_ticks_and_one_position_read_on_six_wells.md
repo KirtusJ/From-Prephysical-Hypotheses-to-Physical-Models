@@ -1,0 +1,39 @@
+# Three ticks and one position read on six wells
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+A sharp launch on the six-well reciprocal ring can test ordinary weighting with one terminal position histogram. The step uses fixed site-dependent coins on both sheets. At three ticks the three occupied wells each contain one terminal mode and all three squared amplitudes differ. Three ticks are minimal for this property with the stated gates. The uniformly splitting six-well walk has an all-time arithmetic obstruction to this property, even if addressed unsigned rail swaps are added. [Uniform ring and terminal-bit protocol](A_reciprocal_sheet_connection_on_six_wells.md) · [Single-histogram criterion](When_a_position_histogram_identifies_its_probability_power.md)
+
+## Why the uniform ring cannot isolate three masses
+
+Start from one mode of unit amplitude. Allow compulsory nearest-neighbor shifts of both outgoing rails on the six-cycle, with the reciprocal sheet swap at either traversal of the seam. Between shifts allow onsite signed rail permutations, and any number of simultaneous real Hadamard layers acting on every rail pair. Identity or unsigned rail swaps are enough for the routing operations considered here. Every path crosses the same number \(h\) of Hadamard layers, so each terminal amplitude is an integer divided by \(2^{h/2}\). At a fixed shift count the parity of the base well is fixed. There are at most three occupied wells. If three reported wells were pure, each would contain exactly one nonzero mode. Norm preservation would give \(a^2+b^2+c^2=2^h\) with all three integers positive after taking absolute values.
+
+For \(h\ge2\), a sum of three square residues equal to zero modulo four forces all three to be even. Dividing the equation by four continues with exponent \(h-2\). At exponents zero and one the sum is at least three. This excludes even three pure wells of equal masses. Consequently, at every fixed tick the ordinary base-position histogram has an exact finite mixture of nonordinary powers in the readout family that permits arbitrary hidden partitions. This follows from the [necessity proof](When_a_position_histogram_identifies_its_probability_power.md#why-fewer-than-three-cannot-work) for that family. The argument uses real amplitudes, the common Hadamard count and the compulsory shift parity. Spatially mixed gate choices in the same layer can remove the common count.
+
+## A time-independent step with spatially different coins
+
+Use the same directed shift and reciprocal seam at wells 5 and 0. At wells 0 and 1 use \(H(r,l)=(r+l,r-l)/\sqrt2\), at well 5 use the reflection \(X(r,l)=(l,r)\), and at wells 2, 3 and 4 use the transmission \(I\). Apply the indicated onsite gate, then shift. All gates act identically on both sheets at every tick. The control requires a phase-calibrated transmission or reflection at one site while a balanced splitter acts at another. Position- and time-dependent transmission, reflection and coin control have been demonstrated in time-multiplexed optical walks. Their implementation phases must be checked for this specific real-gate interference test. [Nitsche et al., *Quantum walks with dynamical control*](https://doi.org/10.1088/1367-2630/18/6/063017)
+
+Launch in \((0,0,R)\) and record just the well after three ticks. At tick two, the return via well 5 reaches \((0,0,R)\) with amplitude \(1/\sqrt2\), and the branch returning via well 1 reaches \((0,0,L)\) with amplitude \(1/2\). The remaining branch occupies \((2,0,R)\) with amplitude \(1/2\). The last splitter at 0 interferes the two returning inputs. All nonzero outputs are listed below.
+
+| Final well | Sheet and rail | Signed amplitude | Ordinary mass | Fair local branching | Equal complete legal words |
+|---:|---|---|---|---:|---:|
+| 1 | 0, R | \((\sqrt2+1)/\sqrt8\) | \(c=(3+2\sqrt2)/8\) | 3/8 | 2/5 |
+| 3 | 0, R | \(1/2\) | \(b=1/4\) | 1/4 | 1/5 |
+| 5 | 1, L | \((\sqrt2-1)/\sqrt8\) | \(a=(3-2\sqrt2)/8\) | 3/8 | 2/5 |
+
+Both classical columns refer to this same fixed graph of allowed transitions. The first gives each outgoing edge from a splitter probability one half and follows a deterministic coin with probability one. The second gives every complete legal three-step word the same probability. Different words can visit different numbers of splitters. Under ordinary propagation, dephasing the two arriving rails at well 0 just before the third coin also produces the fair-local-branching column. Reversing the sharp source rail exchanges the bright and dim masses in the coherent experiment and leaves both classical columns unchanged. Removing the seam preserves all three base masses. This record tests the weighting and recombination laws without identifying the presence of the sheet connection.
+
+Minimality holds even if the choice of H, I and X at each well can change between ticks. At one tick there are at most two occupied modes. Before the second coin the two possible first-step outputs are at distinct sites, so each occupied input mode meets a vacuum partner. A second-step terminal *mode* has a single parent word and squared mass in \(\{1,1/2,1/4\}\). Three positive distinct pure bins would have total mass at least \(1+1/2+1/4>1\). For static assignments the exhaustive replay retains all \(3^6=729\) coin patterns. Exactly 18 reach three distinct pure masses by tick three from the specified launch.
+
+## A scalar test and its limits
+
+Let \(P_1,P_3,P_5\) be the terminal well frequencies per incident launch and set \(\lambda=\log(c/b)/\log(c/a)\). Score each incident outcome with the coefficients of
+\[
+D=\lambda P_5/a-P_3/b+(1-\lambda)P_1/c .
+\]
+Permit each launch to draw a common exponent \(q\ge0\), arbitrary partitions of the modes within the reported wells, and normalization over all occupied cells. Since each well has only one occupied mode, hidden partitions are immaterial. On an individual powered type the numerator of \(D\) is \(\lambda a^{q-1}+(1-\lambda)c^{q-1}-b^{q-1}\). The weighted arithmetic-geometric mean inequality gives equality exactly at \(q=1\). A maximal-cell type always chooses well 1 and has positive score. Each classical column also has strictly positive score. In fact \(\lambda>1/4\) follows from \(ac=1/64\), \(c>1/2\) and hence \(ac^3>b^4\). Since \(a<1/16\), its first term alone exceeds \(P_3/b\) in both columns. An exact ordinary mean of zero therefore selects ordinary weighting almost surely against arbitrary mixtures of these types.
+
+This experiment changes the fixed step of the ring. It does not decode the terminal record of the original eleven-tick preparation. It uses coherent unequal splitter counts and calibrated relative phases, a sharp incident state, known site labels and measured terminal response. A lost launch must be included in the exposure. If fraction \(\ell\) is missing and each miss is scored zero, its unknown contribution to the underlying mean lies between \(-\ell/b\) and \(\ell\max(\lambda/a,(1-\lambda)/c)\), assuming the declared set of underlying well outcomes. Sampling and calibration uncertainty also enter a physical test. A train of strong which-path records gives a classical Markov process on this same carrier under the stipulated ordinary rule. Deriving the carrier, its coin phases, the probability rule itself or a continuum classical dynamics remains open.
+
+[Exact replay](check_static_six_coins.py) · [All controls and coin assignments](results/static_six_coins.json) · [Lean 4.19 proof of the three-square obstruction](lean/StaticSixCoins.lean). Run `python -B Director_G/check_static_six_coins.py fresh.json` from the repository root. The replay compares physical signed words at the seam with independent propagation on the cover. It keeps both sharp rails, every clock through three, both seam conditions and each rejected static pattern.

@@ -1,0 +1,44 @@
+# Seven mask comparisons determine an eight-bin velocity law
+
+**Kirtus Justus**, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Research supplement by Director G (OpenAI Codex).
+
+After seven free ticks from a sharp right rail, eight positions are reachable. Seven comparisons between ways of grouping these positions determine the ordinary population histogram. The comparisons can be made on **one terminal instrument** with three protected address bits. They retain their meaning even if detector response functions have no common exponent, fluctuate from launch to launch, or fail monotonicity. Testing only contiguous interval comparisons on these eight sites loses five independent constraints. This is a finite test of a particular position read. It complements the [limiting velocity law](Which_probability_powers_preserve_the_classical_velocity_law.md) and the [single-histogram test under powered readers](Seven_free_ticks_and_one_position_read.md).
+
+## The single setting
+
+Use at least fifteen reflecting wells. Launch at least seven steps from either wall and take seven ordinary Hadamard and shift ticks. At the final time label the eight positions \(a,b,c,d,e,f,g,h\), in increasing order of displacement divided by seven. Their displacements are \(-7,-5,-3,-1,1,3,5,7\). The masses computed from the signed amplitudes, pooling both rails before reading position, are
+\[
+ m/128=(1,17,5,9,17,41,37,1)/128 .
+\]
+
+Prepare three blank address bits with three balanced Hadamards, without changing the science field. Retain the address. At address zero copy the fine position label into a clean terminal register. At address \(j=1,\ldots,7\) copy one of three codes: the site belongs to \(A_j\), to \(B_j\), or to their remainder. These masks are disjoint within each row. The final read pools the old position and both rails within each addressed code. A reversible lookup can retain the old fine label in unobserved coordinates. The read must score one whole addressed cell after this pooling. A device that scores the retained sites first and only groups its reports afterwards implements a different instrument. All ideal outcomes are accounted for. A physical test must also check misses and forbidden positions or retain their probabilities as uncertainty on the original exposure.
+
+| Address | \(A_j\) | \(B_j\) | Common squared-mass numerator before adding the address |
+|---:|---|---|---:|
+| 1 | \(a\) | \(h\) | 1 |
+| 2 | \(b\) | \(e\) | 17 |
+| 3 | \(a,f\) | \(c,g\) | 42 |
+| 4 | \(c,f\) | \(d,g\) | 46 |
+| 5 | \(a,g,h\) | \(b,c,e\) | 39 |
+| 6 | \(a,b,g\) | \(c,d,f\) | 55 |
+| 7 | \(a,b,c,e,h\) | \(f\) | 41 |
+
+The two cells for a mask pair have equal kinematic masses, each the tabulated number divided by \(8\cdot128\). A detector giving these two cells equal weights, with any common normalizer in their context, gives equal joint frequencies. This is true for any positive response \(f_\lambda(x)\) common to the two cells at fixed launch type, even if different address rows have different responses. A common random type can be arbitrarily distributed. Bin-specific efficiencies or a finer hidden resolution can spoil the equality. Each coarse tie is observed and can fail. Uniform kinematic address amplitudes do not require the *reported* address frequencies to be uniform.
+
+Conditional on a reported fine-address event of positive probability, let \(p_i\) be its normalized position frequencies and let \(p(A)=\sum_{i\in A}p_i\). Across the same incident runs, compare each coarse pair's ordinal result with \(p(A_j)-p(B_j)\) on the fine subpopulation. If coarse ties and their counterparts on the fine address are verified, the normalization and seven fine equalities force \(p=m/128\). Indeed the seven rows \(\mathbf1_{A_j}-\mathbf1_{B_j}\), followed by the all-ones row, make an invertible matrix \(B\). Its last inverse column is \(m/128\); an integer left inverse scaled by 128 appears in the [finite Lean certificate](lean/VelocityMaskBalance.lean). This conclusion needs no relation between *magnitudes* of coarse and fine rates, no known analog probability for any science cell, and no fixed response curve between separate experimental settings. It identifies only the reported fine-address distribution in the stipulated panel. Rows designed from a candidate law and then tested on that panel do not derive the kinematics or establish that a bare detector uses the same law.
+
+**Rate errors.** Write \(e_j=p(A_j)-p(B_j)\). If all \(|e_j|\le\eta\), linear inversion gives
+\[
+ {\rm TV}(p,m/128)\le\min(1,393\eta/128).
+\]
+For the first seven columns \(M\) of \(B^{-1}\), the difference is \(Me\). Over the seven-dimensional box the largest \(\|Me\|_1\) is attained at a vertex, since each point is a convex combination of vertices. Evaluating all 128 sign vectors gives \(\max\|Me\|_1/2=393/128\) at unit radius. This constant is attained for sufficiently small \(\eta>0\) since \(m/128\) has positive coordinates. When empirical bounds concern the *difference* between fine and coarse conditional contrasts, add the bound on the observed coarse contrast to obtain a bound on \(e_j\). Conditional rates need sufficient exposure in the relevant address; a vanishing fine-address yield gives no measurement. The seven contrasts share counts, so estimating \(\eta\) calls for simultaneous uncertainty bounds.
+
+## What other coarsenings can identify
+
+For any fixed positive target table \(m\), a menu of equal-mass pairs yields one zero-sum-of-frequencies comparison per row, with matrix \(D\) formed from differences of indicators. Overlap cancels. The normalized positive target is uniquely identified by these equalities if and only if \({\rm rank}(D)=d-1\) for \(d\) occupied cells. Indeed \(Dm=0\), and if the null space is larger one can choose a nonzero null direction of ordinary coordinate sum zero. Adding a sufficiently small multiple to the normalized target gives another strictly positive normalized law. For any finite menu the perturbation can also preserve all the strict event comparisons at once, because all originally unequal pairs have positive separation. Thus the same rank condition determines whether adding *every* strict ordering in that menu gives uniqueness. Canceled or forbidden cells must have their darkness checked before restricting to positive cells. Finite qualitative probability comparisons via event indicators have long been studied. [Kraft, Pratt and Seidenberg](https://doi.org/10.1214/aoms/1177706260)
+
+At seven ticks there are 36 nonempty contiguous intervals in the ordered list and 630 distinct unordered pairs of these intervals. Their ties impose exactly two independent conditions, \(p_a=p_h\) and \(p_b=p_e\). For instance move \(1/2048\) from \(d\) to \(c\) in the target probability vector. All 630 interval orderings and ties are preserved. The third mask comparison detects the discrepancy. Consequently even unlimited replication of this finite interval-only ordinal menu could not determine the full fine frequencies. Recording actual numerical probabilities for singleton intervals would be a different calibration. For all subsets together the equalities have full identifying rank at ticks 1, 2, 7 and 10 among the first ten ticks. They fall short at 3, 4, 5, 6, 8 and 9. The first pulse with several unequal masses need not be the most informative one.
+
+**Control on the operational premise.** Let the terminal response of every addressed cell of kinematic mass \(x\) be \(x+x^3\), normalized once over the joint display. All seven coarse ties pass, but on the fine address comparison 3 has contrast \(1134/8396749\) and comparison 7 has contrast \(-7371/16793498\). Thus even perfect agreement between all pairs of physical coarse bins does not imply agreement under adding up fine counts. Conversely, a reader that outputs the stipulated fine histogram and alters its behavior on unrelated states can pass these particular rate tests. This distinguishes population validation on one source from uniqueness of a microscopic detector law.
+
+The [checker](check_velocity_mask_balance.py) compares signed-word enumeration with physical site recurrence, computes ranks for all masks and intervals independently at each clock, retains all ten scanned clocks and inverts the seven-tick matrix with exact fractions. The [result](results/velocity_mask_balance.json) includes the full inverse, the ordinary and nonlinear joint tables and the interval-order control. The [joint reference ratio test](Ordering_joint_counts_to_measure_walk_masses.md) addresses an unknown mass vector under strict ordering using a separate reference register. Here the native position table supplies all mass equalities. Feasibility of the controlled masks, the assumed pooling and the corresponding counts remain experimental obligations.

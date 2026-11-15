@@ -1,0 +1,145 @@
+{
+  "two_tick_integer_amplitudes": {
+    "-2,L": -1,
+    "0,L": 1,
+    "0,R": 1,
+    "2,R": 1
+  },
+  "squared_norm_denominator": 4,
+  "initial_nonblank_mass": "3/4",
+  "exact_integer_interval_grid": "1000000000000000000000000000000000000000000000000",
+  "required_observed_band_at_each_node": [
+    "1/8",
+    "7/8"
+  ],
+  "certificates": [
+    {
+      "depth": 0,
+      "word": "",
+      "forward_or_reverse_source_calls_in_deepest_word": 1,
+      "root_interval_zero_residual": [
+        "0.125000",
+        "0.875000"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.125000",
+        "0.875000"
+      ]
+    },
+    {
+      "depth": 1,
+      "word": "D",
+      "forward_or_reverse_source_calls_in_deepest_word": 3,
+      "root_interval_zero_residual": [
+        "0.500000",
+        "0.875000"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.498663",
+        "0.875000"
+      ]
+    },
+    {
+      "depth": 2,
+      "word": "DU",
+      "forward_or_reverse_source_calls_in_deepest_word": 9,
+      "root_interval_zero_residual": [
+        "0.500000",
+        "0.793701"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.498663",
+        "0.794936"
+      ]
+    },
+    {
+      "depth": 3,
+      "word": "DUD",
+      "forward_or_reverse_source_calls_in_deepest_word": 27,
+      "root_interval_zero_residual": [
+        "0.590880",
+        "0.793701"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.588738",
+        "0.794936"
+      ]
+    },
+    {
+      "depth": 4,
+      "word": "DUDD",
+      "forward_or_reverse_source_calls_in_deepest_word": 81,
+      "root_interval_zero_residual": [
+        "0.742363",
+        "0.793701"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.740466",
+        "0.794936"
+      ]
+    },
+    {
+      "depth": 6,
+      "word": "DUDDUU",
+      "forward_or_reverse_source_calls_in_deepest_word": 729,
+      "root_interval_zero_residual": [
+        "0.742363",
+        "0.769781"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.740466",
+        "0.771917"
+      ]
+    },
+    {
+      "depth": 8,
+      "word": "DUDDUUDU",
+      "forward_or_reverse_source_calls_in_deepest_word": 6561,
+      "root_interval_zero_residual": [
+        "0.742363",
+        "0.755658"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.740466",
+        "0.757985"
+      ]
+    },
+    {
+      "depth": 10,
+      "word": "DUDDUUDUDD",
+      "forward_or_reverse_source_calls_in_deepest_word": 59049,
+      "root_interval_zero_residual": [
+        "0.748179",
+        "0.755658"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.745740",
+        "0.757985"
+      ]
+    },
+    {
+      "depth": 12,
+      "word": "DUDDUUDUDDUU",
+      "forward_or_reverse_source_calls_in_deepest_word": 531441,
+      "root_interval_zero_residual": [
+        "0.748179",
+        "0.752083"
+      ],
+      "root_interval_residual_at_most_0.001": [
+        "0.745740",
+        "0.754543"
+      ]
+    }
+  ],
+  "rival": {
+    "native": "51/64",
+    "coherent_first_echo": "105597/262144",
+    "independent_three_hit_rate": "132651/262144",
+    "absolute_discrepancy": "13527/131072"
+  },
+  "shared_fair_bit_control": {
+    "native": "1/2",
+    "AND": "1/2",
+    "OR": "1/2"
+  }
+}

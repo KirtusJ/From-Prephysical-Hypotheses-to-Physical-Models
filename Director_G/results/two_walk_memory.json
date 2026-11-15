@@ -1,0 +1,389 @@
+{
+  "one_walk_gram_rows_RR_RL_LL": [
+    {
+      "-1": [
+        0,
+        0,
+        1
+      ],
+      "1": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "-2": [
+        0,
+        0,
+        1
+      ],
+      "0": [
+        1,
+        0,
+        1
+      ],
+      "2": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "-3": [
+        0,
+        0,
+        1
+      ],
+      "-1": [
+        1,
+        -1,
+        2
+      ],
+      "1": [
+        2,
+        1,
+        1
+      ],
+      "3": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "two_tick_mask_grams": [
+    {
+      "site_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "gram": [
+        -4,
+        0,
+        -4
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "gram": [
+        -2,
+        0,
+        -4
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "gram": [
+        0,
+        2,
+        -2
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "gram": [
+        2,
+        2,
+        -2
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "gram": [
+        -2,
+        -2,
+        0
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "gram": [
+        0,
+        -2,
+        0
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "gram": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "site_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "gram": [
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "gram": [
+        -4,
+        0,
+        -2
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "gram": [
+        -2,
+        0,
+        -2
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "gram": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        -1,
+        1,
+        1
+      ],
+      "gram": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "gram": [
+        -2,
+        -2,
+        2
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        1,
+        -1,
+        1
+      ],
+      "gram": [
+        0,
+        -2,
+        2
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "gram": [
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "site_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "gram": [
+        4,
+        0,
+        4
+      ]
+    }
+  ],
+  "effect_denominators": [
+    1,
+    2,
+    4
+  ],
+  "joint_pair_order": [
+    "++",
+    "+-",
+    "-+",
+    "--"
+  ],
+  "models": {
+    "coherent": {
+      "immediate": {
+        "denominator": 4,
+        "success_sign_pairs": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "failure_sign_pairs": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "-1/2"
+      },
+      "delayed": {
+        "denominator": 64,
+        "success_sign_pairs": [
+          10,
+          6,
+          6,
+          10
+        ],
+        "failure_sign_pairs": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "1/8"
+      },
+      "score": "5/8"
+    },
+    "first_copy": {
+      "immediate": {
+        "denominator": 4,
+        "success_sign_pairs": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "failure_sign_pairs": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "-1/2"
+      },
+      "delayed": {
+        "denominator": 64,
+        "success_sign_pairs": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "failure_sign_pairs": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "0"
+      },
+      "score": "1/2"
+    },
+    "reset": {
+      "immediate": {
+        "denominator": 4,
+        "success_sign_pairs": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "failure_sign_pairs": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "0"
+      },
+      "delayed": {
+        "denominator": 64,
+        "success_sign_pairs": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "failure_sign_pairs": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "herald_probability": "1/2",
+        "success_weighted_correlation": "0"
+      },
+      "score": "0"
+    }
+  }
+}

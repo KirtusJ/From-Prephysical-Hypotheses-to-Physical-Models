@@ -1,0 +1,93 @@
+% Draft subsection for paper G10 (Director Z, 14 November 2026). Not issued. To follow "The same with one gain of order q"
+% and "What position masks read of a character" (placed after it, so that the numbers issued in edition Z27 stay). Uses \cite{dgone} (Lemma 5.34) already in the paper.
+
+\subsection{Four arc gains}
+
+Theorems~\ref{thm:posprod} and~\ref{thm:posprodq} put one gain on one arc. This subsection allows every arc of the two-rail digraph its own gain and asks the same question. The answer depends on the four gains only through one quotient.
+
+\paragraph{Setting.} $D$ is the two-rail digraph of the line or of the ring $\mathbb{Z}_N$ (vertices $(x,R)$, $(x,L)$; a right step from either to $(x+1,R)$, a left step from either to $(x-1,L)$), with gains in a finite abelian group $A$: $a$ on the arcs from $(x,R)$ to $(x+1,R)$, $b$ from $(x,R)$ to $(x-1,L)$, $c$ from $(x,L)$ to $(x+1,R)$, $d$ from $(x,L)$ to $(x-1,L)$. Put
+\[
+\delta=ad\,(bc)^{-1},\qquad r=\operatorname{ord}\delta,\qquad H=\langle a,d,bc\rangle=\langle a,bc,\delta\rangle,\qquad M=N/\gcd(N,2),\qquad \Delta_N=\langle\delta,(a/d)^{M}\rangle .
+\]
+For $X\subseteq A$ let $\mathcal{M}(X)$ be the multisets of elements of $X$, written additively, and $T_g$ the translation of a multiset by $g$. Events are sets of walks from $(0,R)$, position product events are as in the subsection on them above, and $m_S(y)\in\mathcal{M}(A)$ is the multiset of gains of the walks of $S$ that end at $y$. The rule adds $F_{(x,R)}(m_S(x,R))+F_{(x,L)}(m_S(x,L))$ over the sites, with $F(\emptyset)=0$. For one arc of gain $h$ on the arcs from $(x,L)$ to $(x-1,L)$, that is $(a,b,c,d)=(1,1,1,h)$, this is the setting of Theorem~\ref{thm:posprodq}; we write $D_h$ for that carrier.
+
+\begin{lemma}[gains at one length]\label{lem:fgcoset}
+Let $w$ be a walk from $(0,R)$ with $\rho$ right and $\lambda$ left steps, and $n$ arcs from rail $L$ to rail $R$. Its gain is $a^{\rho}d^{\lambda}\delta^{-n}$ if it ends on $R$ and $a^{\rho}d^{\lambda-1}b\,\delta^{-n}$ if it ends on $L$. Consequently, on the line, the gains of the walks of length $T$ that end at $(x,R)$ lie in one coset $\kappa\langle\delta\rangle$ with $\kappa=a^{x}(bc)^{(T-x)/2}\in H$, and those that end at $(x,L)$ lie in $\kappa\,b\,d^{-1}\langle\delta\rangle$; on $\mathbb{Z}_N$ the same holds with $\Delta_N$ in place of $\langle\delta\rangle$.
+\end{lemma}
+\begin{proof}
+The rail after a step is $R$ exactly when the step is to the right. With $n_{XY}$ the number of arcs from rail $X$ to rail $Y$, $n_{RR}+n_{LR}=\rho$ and $n_{RL}+n_{LL}=\lambda$; the changes of rail alternate and the first is from $R$, so $n_{RL}=n_{LR}=n$ for a walk that ends on $R$ and $n_{RL}=n+1$ for one that ends on $L$. The gain is $a^{n_{RR}}b^{n_{RL}}c^{n_{LR}}d^{n_{LL}}$; substitute. On the line $\rho=(T+x)/2$ and $\lambda=(T-x)/2$ are fixed, and $a^{\rho}d^{\lambda}=a^{x}(bc)^{\lambda}\delta^{\lambda}$. On the ring $\rho$ is fixed only modulo $M$, and $(\rho+Mj,\lambda-Mj)$ multiplies the gain by $(a/d)^{Mj}$.
+\end{proof}
+
+\begin{lemma}[one site]\label{lem:fgonesite}
+Let $S$ be a position product event with $m_S(x,R)=U$, $m_S(x,L)=V$, and let the functions not depend on the site. If \eqref{eq:ppcons} holds with the factor $2$, then
+\begin{equation}\label{eq:fg}
+F_R(T_aU+T_cV)+F_L(T_bU+T_dV)=2F_R(U)+2F_L(V).
+\end{equation}
+\end{lemma}
+\begin{proof}
+As Lemma~\ref{lem:onesite}: apply \eqref{eq:ppcons} to the walks of $S$ that end at the site $x$. A walk at $(x,R)$ with gain $g$ continues to $(x+1,R)$ with gain $ga$ and to $(x-1,L)$ with gain $gb$; one at $(x,L)$ continues with $gc$ and $gd$.
+\end{proof}
+
+By Lemma~\ref{lem:fgcoset}, on the line \eqref{eq:fg} can be asked only for $U\in\mathcal{M}(\kappa\langle\delta\rangle)$, $V\in\mathcal{M}(\kappa bd^{-1}\langle\delta\rangle)$ with one $\kappa\in H$; values on other multisets never enter $\mu$. In particular the preparation of all pairs of multisets of $A$, which Lemma~\ref{lem:prepq} provides for $D_h$, is impossible for four gains unless $\langle\delta\rangle=A$. For a subgroup $\Delta\ni\delta$ write $\mathcal{M}_R(\Delta)=\bigcup_{\kappa\in H}\mathcal{M}(\kappa\Delta)$ and $\mathcal{M}_L(\Delta)=\bigcup_{\kappa\in H}\mathcal{M}(\kappa b\Delta)$, and let $N_G$ be the set of characters $\chi$ of a group $G\ni\delta$ with $\chi(\delta)=-1$; it is empty when $r$ is odd.
+
+\begin{theorem}[the equation for four gains]\label{thm:fgsolve}
+Let $\delta\in\Delta\le A$ and $K=H\cap\Delta$. Let $F_R$ on $\mathcal{M}_R(\Delta)$ and $F_L$ on $\mathcal{M}_L(\Delta)$ be real, vanish at $\emptyset$, and satisfy \eqref{eq:fg} for all $\kappa\in H$, $U\in\mathcal{M}(\kappa\Delta)$, $V\in\mathcal{M}(\kappa bd^{-1}\Delta)$.
+\begin{enumerate}[label=(\roman*)]
+\item $F_R\circ T_h=F_R$ for $h\in H$, and $F_L=F_R\circ T_c$.
+\item The restriction $f$ of $F_R$ to $\mathcal{M}(\Delta)$ is $K$-invariant and satisfies
+\begin{equation}\label{eq:fgQ}
+f(u+v)+f(u+T_\delta v)=2f(u)+2f(v)\qquad(u,v\in\mathcal{M}(\Delta)),
+\end{equation}
+and $(F_R,F_L)\mapsto f$ is a linear bijection onto the $K$-invariant solutions of \eqref{eq:fgQ}, with inverse $F_R(m)=f(T_{\kappa}^{-1}m)$ for $m\in\mathcal{M}(\kappa\Delta)$ and $F_L=F_R\circ T_c$.
+\item These $f$ are exactly the real combinations of the sums $\sigma_\omega$, $\omega$ a character of $\Delta$ trivial on $K$, and of the products $\sigma_\chi\sigma_{\chi'}$, $\{\chi,\chi'\}\subseteq N_\Delta$ with $\chi\chi'=1$ on $K$ ($\chi=\chi'$ allowed); these functions are linearly independent, so the dimension is
+\[
+|\Delta/K|+\#\bigl\{\{\chi,\chi'\}\subseteq N_\Delta:\ \chi\chi'=1\text{ on }K\bigr\}.
+\]
+\item Conversely every such $f$ gives a solution.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(i) The domains are closed under the translations used. With $V=\emptyset$, and with $U=\emptyset$, \eqref{eq:fg} gives $F_R(T_am)+F_L(T_bm)=2F_R(m)$ and $F_R(T_cm)+F_L(T_dm)=2F_L(m)$. Fix $m_0$ and let $\Omega$ be the finite set of pairs $(R,T_hm_0)$ and $(L,T_{hb}m_0)$, $h\in H$; put $\varphi=F$ on $\Omega$, and let $\alpha(R,m)=(R,T_am)$, $\beta(R,m)=(L,T_bm)$, $\alpha(L,m)=(R,T_cm)$, $\beta(L,m)=(L,T_dm)$. Then $\varphi=(\varphi\circ\alpha+\varphi\circ\beta)/2$, so the set where the real function $\varphi$ attains its maximum is closed under $\alpha$ and $\beta$. From $(R,m)$ one reaches $(R,T_am)$, $(R,T_{bc}m)$ and $(R,T_{bdc}m)$; these three translations have finite order and generate $H$, and from $(L,m)$ one step $\alpha$ leads to rail $R$. So $\Omega$ lies in the maximum set, $\varphi$ is constant, and $F_R(T_hm_0)=F_R(m_0)=F_L(T_bm_0)$; hence $F_L=F_R\circ T_{b^{-1}}=F_R\circ T_c$ on $\mathcal{M}_L(\Delta)$, since $bc\in H$.
+(ii), (iv) Put $u=T_{\kappa}^{-1}U$ and $v=T_{\kappa a}^{-1}T_cV$; both lie in $\mathcal{M}(\Delta)$, because $\kappa bcd^{-1}=\kappa a\delta^{-1}$. Then $T_aU+T_cV=T_{\kappa a}(u+v)$ and $T_bU+T_dV=T_{\kappa b}(u+T_\delta v)$, so by (i) the equation \eqref{eq:fg} at $(U,V)$ is \eqref{eq:fgQ} at $(u,v)$, and every pair $(u,v)$ arises with $\kappa=1$. Conversely $F_R(m)=f(T_\kappa^{-1}m)$ is well defined because a non-empty $m$ in $\mathcal{M}(\kappa\Delta)\cap\mathcal{M}(\kappa'\Delta)$ has $\kappa'\kappa^{-1}\in K$; read the computation backwards.
+(iii) Write $G=\Delta$; $\delta\in K$. Step 1: $E_g=\sum_{j<r}e_{g\delta^j}$ is $T_\delta$-invariant, so \eqref{eq:fgQ} gives $f(u+E_g)=f(u)+f(E_g)$. The additive function $l(m)=\frac1r\sum_g m(g)f(E_g)$ is $K$-invariant, solves \eqref{eq:fgQ} and agrees with $f$ on every $E_g$; so $G_0=f-l$ solves \eqref{eq:fgQ}, is $K$-invariant and satisfies $G_0(u+E_g)=G_0(u)$. Step 2: the all-ones multiset is a sum of the $E_g$, so $G_0$ extends to $\mathbb{Z}^G$ by $G_0(W)=G_0(W+n\mathbf 1)$, with \eqref{eq:fgQ} and invariance. Step 3: the symmetry of \eqref{eq:fgQ} gives $G_0(u+T_\delta v)=G_0(v+T_\delta u)$; replacing $v$ by $T_\delta v$ and using the invariance under $T_\delta$ ($\delta\in K$) gives $G_0(u+T_\delta^2v)=G_0(u+v)$. So $G_0$ is constant on the cosets of the subgroup $L$ generated by the $E_g$ and the $e_{g\delta^2}-e_g$. Step 4, $r$ odd: then $e_{g\delta^j}\equiv e_g$ and $re_g\equiv0$ modulo $L$, so $T_\delta$ acts trivially, \eqref{eq:fgQ} is additivity, and $rG_0(W)=G_0(rW)=0$; so $f=l$. Step 5, $r$ even: $P_g=e_g+e_{g\delta}$ is $T_\delta$-invariant modulo $L$, so $G_0(U+P_g)=G_0(U)+G_0(P_g)$, and $\frac r2P_g=E_g\equiv0$ gives $G_0(P_g)=0$. The map $\varepsilon(W)(g)=\sum_j(-1)^jW(g\delta^j)$ is onto the free group $D'=\{w:w(g\delta)=-w(g)\}$ of rank $|G|/r$, with kernel $L+\langle P_g\rangle$; so $G_0=\gamma\circ\varepsilon$, and since $T_\delta=-1$ on $D'$, $\gamma(s+t)+\gamma(s-t)=2\gamma(s)+2\gamma(t)$ on $D'$, with $\gamma$ $K$-invariant. Step 6: $\gamma(0)=0$ and $\gamma$ is even; $B(s,t)=\frac12(\gamma(s+t)-\gamma(s-t))$ satisfies $2B(s,t)+2B(s',t)=B(s+s',2t)$ and $B(s,2t)=2B(s,t)$, hence $B(s+s',2t)=2B(s+s',t)$ and $B$ is additive in $s$; it is symmetric and $B(s,s)=2\gamma(s)$, so $\gamma$ is a quadratic form, and conversely. Step 7: $f(nm)=n\,l(m)+n^2\gamma(\varepsilon m)$ determines $l$ and $\gamma\circ\varepsilon$ from $f$. The $K$-invariant additive functions on $\mathcal{M}(G)$ are spanned by the $\sigma_\omega$, $\omega$ trivial on $K$. For $\chi\in N_G$, $\sigma_\chi(\varepsilon(e_x))=r\chi(x)$, so the $|G|/r$ functionals $\sigma_\chi$ form a basis of the dual of $D'\otimes\mathbb{C}$; $T_k$ multiplies $\sigma_\chi\sigma_{\chi'}$ by $(\chi\chi')(k)$, so the invariant quadratic forms are spanned by the products with $\chi\chi'=1$ on $K$, and the real dimension equals the complex one.
+\end{proof}
+
+With $\Delta=A$ the theorem solves \eqref{eq:fg} on all multisets: the dimension is $|A/H|+\#\{\{\chi,\chi'\}\subseteq N_A:\chi\chi'=1\text{ on }H\}$, which exceeds $1+\#\{\{\chi,\bar\chi\}\subseteq N_A\}$ exactly when $H\ne A$. For example $A=\mathbb{Z}_2$, $a=d=1$, $b=c=h$ has dimension $2$, with the extra solution $F_R(m)=m(1)-m(h)$, $F_L=-F_R$; and $A=\mathbb{Z}_4$, $a=h^2$, $b=c=d=1$ has dimension $5$. On the walk these extra solutions do not survive, because the multisets that occur are confined to cosets of $\langle\delta\rangle$:
+
+\begin{lemma}[recoding]\label{lem:fgrecode}
+On the line, every walk $w$ of length $T$ from $(0,R)$ to the site $x$ has gain $\kappa_{T,x}\,g_\delta(w)$ if it ends on $R$ and $\kappa_{T,x}\,b\delta d^{-1}\,g_\delta(w)$ if it ends on $L$, where $\kappa_{T,x}=a^{x}(bc)^{(T-x)/2}$ and $g_\delta(w)$ is the gain of $w$ in $D_\delta$. Hence $m_S(x,R)=T_{\kappa_{T,x}}m^{\delta}_S(x,R)$ and $m_S(x,L)=T_{\kappa_{T,x}b\delta d^{-1}}m^{\delta}_S(x,L)$ for every event $S$ of walks of length $T$, $m^\delta$ denoting multisets in $D_\delta$.
+\end{lemma}
+\begin{proof}
+Lemma~\ref{lem:fgcoset} for both carriers ($D_\delta$ has $a=b=c=1$ and $d=\delta$, and the same $\delta$): the ratio of the gains is $a^{\rho}(d/\delta)^{\lambda}=a^{x}(bc)^{\lambda}$ on $R$ and $a^{\rho}(d/\delta)^{\lambda-1}b$ on $L$, since $d/\delta=bc/a$.
+\end{proof}
+
+\begin{proposition}[preparation for four gains on the line]\label{prop:fgprep}
+Assume the conclusion of Lemma~\ref{lem:prepq} for $D_\delta$ on the line. Then for every $\kappa\in H$, $U\in\mathcal{M}(\kappa\langle\delta\rangle)$ and $V\in\mathcal{M}(\kappa bd^{-1}\langle\delta\rangle)$ there are a site $x$ and a position product event $S$ with $m_S(x,R)=U$ and $m_S(x,L)=V$.
+\end{proposition}
+\begin{proof}
+If $U=V=\emptyset$, an event with $A_1=\emptyset$ will do. Otherwise, since $H$ is finite and generated by $a$, $bc$ and $\delta$, there are $x,\mu_0\ge0$ with $\kappa_0=a^{x}(bc)^{\mu_0}\in\kappa\langle\delta\rangle$. Put $U'=T_{\kappa_0}^{-1}U$ and $V'=T_{\kappa_0b\delta d^{-1}}^{-1}V$, multisets of $\langle\delta\rangle$. Lemma~\ref{lem:prepq} gives an event $S'$ in $D_\delta$ of some length $T_0$, and $T_0=x+2\lambda_1$ with $\lambda_1\ge0$ because a walk of $S'$ ends at $x$; with $m^\delta_{S'}(x,R)=U'$ and $m^\delta_{S'}(x,L)=V'$. Prefixing the sets $\{-1\}$, $\{0\}$ (one step left, one step right) gives an event of length $T_0+2$ whose walks in $D_\delta$ have the same gains and the same ends, since the prefix is a single walk of gain $1$ back to $(0,R)$. Repeat it $k$ times, with $\lambda_1+k\equiv\mu_0$ modulo the order of $bc$; then $\kappa_{T_0+2k,x}=\kappa_0$, and Lemma~\ref{lem:fgrecode} gives $m_S(x,R)=U$ and $m_S(x,L)=V$.
+\end{proof}
+
+\begin{theorem}[four gains on the line]\label{thm:fgline}
+Let $D$ be the line with four gains in a finite abelian group, and let $F_{(x,R)}=F_R$ and $F_{(x,L)}=F_L$ not depend on the site.
+\begin{enumerate}[label=(\roman*)]
+\item Given the conclusion of Lemma~\ref{lem:prepq} for $D_\delta$: if \eqref{eq:ppcons} holds with the factor $2$, then on the multisets that occur $F_R=F_L=F$ with $F(m)=\alpha|m|$ if $r$ is odd and $F(m)=\alpha|m|+\gamma|\sigma_\chi(m)|^2$, $\chi(\delta)=-1$, if $r$ is even; all such $\chi$ give the same function on the multisets that occur.
+\item Conversely, on the line and on every ring, every solution of Theorem~\ref{thm:fgsolve} placed at every site satisfies $\mu(\operatorname{Ext}S)=2\mu(S)$ for every event $S$ of every length.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(i) By Proposition~\ref{prop:fgprep} and Lemma~\ref{lem:fgonesite}, $(F_R,F_L)$ solves \eqref{eq:fg} on the domain of Theorem~\ref{thm:fgsolve} with $\Delta=\langle\delta\rangle$, so $K=\langle\delta\rangle=\Delta$. Then $|\Delta/K|=1$, the only $\omega$ is trivial and $\sigma_\omega$ is the count; the characters of $\langle\delta\rangle$ with $\chi(\delta)=-1$ exist only for $r$ even, there is exactly one, and $\chi\chi'=1$ on $K$ forces $\chi'=\chi^{-1}=\chi$; and any character of $A$ with $\chi(\delta)=-1$ restricts to it. By Theorem~\ref{thm:fgsolve}(i), (ii), $F_R(m)=f(T_\kappa^{-1}m)$ and $F_L=F_R\circ T_c$, and $|m|$ and $|\sigma_\chi(m)|^2$ are unchanged by translations. (ii) By Lemma~\ref{lem:fgcoset} the multisets $U_x=m_S(x,R)$, $V_x=m_S(x,L)$ of an event of walks of one length lie in the domain with one $\kappa$ for each $x$; \eqref{eq:fg} holds there by Theorem~\ref{thm:fgsolve}(iv) and (i), and summing over $x$ as in Theorem~\ref{thm:posprod}(iv) gives the claim; events of mixed lengths are sums of events of one length.
+\end{proof}
+
+So on the line four gains add nothing to Theorem~\ref{thm:posprodq}: the consistent rules are the count, and for $r$ even one square, with $h$ replaced by $\delta=ad(bc)^{-1}$; the linear and mixed solutions of the full equation that exist when $H\ne A$ collapse to these on the multisets that occur. On the ring $\mathbb{Z}_N$ the recoding ratio $g(w)/g_\delta(w)$ of Lemma~\ref{lem:fgrecode} changes by $(a\delta/d)^{Mj}=B^{-Mj}$ between walks to one vertex at one length whose windings differ by $j$, with $B=bc\,a^{-2}$; so it is a function of the length and the end vertex exactly when $B^{M}=1$.
+
+\begin{proposition}[preparation for four gains on rings]\label{prop:fgprepring}
+Let $D$ be the ring $\mathbb{Z}_N$ with $M\ge6$ and $B^{M}=1$, so that $\Delta_N=\langle\delta\rangle$, and assume the conclusion of Lemma~\ref{lem:prepq} for $D_\delta$ on this ring. Then the conclusion of Proposition~\ref{prop:fgprep} holds on $D$, and so does that of Theorem~\ref{thm:fgline}(i).
+\end{proposition}
+\begin{proof}
+For a walk of length $T$ to the vertex $(\bar x,\text{rail})$ with $\rho$ right and $\lambda$ left steps put $\kappa=a^{\rho-\lambda}(bc)^{\lambda}$; the ratio is $\kappa$ on $R$ and $\kappa b\delta d^{-1}$ on $L$, as in Lemma~\ref{lem:fgrecode}. Two walks of length $T$ to $\bar x$ have $(\rho',\lambda')=(\rho+k,\lambda-k)$ with $2k\equiv0\pmod N$, so $M\mid k$, and their values of $\kappa$ differ by $B^{-k}=1$. Choose $x_0,\mu_0\ge0$ with $\kappa_0=a^{x_0}(bc)^{\mu_0}\in\kappa\langle\delta\rangle$, put $\bar x=x_0\bmod N$, and take the event $S'$ of Lemma~\ref{lem:prepq} for the translated targets, as in the proof of Proposition~\ref{prop:fgprep}; the empty target is trivial. Its common value of $\kappa$ is $a^{x_0+Ns}(bc)^{\lambda_1}$ for some integers $s$ and $\lambda_1\ge0$. Two prefixes leave the multisets of $D_\delta$ unchanged, since each is a single walk of gain $1$ from $(0,R)$ back to $(0,R)$ for $N\ge3$: one step left and one right multiplies $\kappa$ by $bc$, and $N$ steps right multiplies it by $a^{N}$. With $i\equiv-s$ modulo the order of $a^N$ prefixes of the second kind and $j\equiv\mu_0-\lambda_1$ modulo the order of $bc$ of the first, $\kappa$ becomes $\kappa_0$. The second prefix removes the parity obstruction of odd $N$, where padding by two ticks alone does not suffice.
+\end{proof}
+
+When $B^M\ne1$ the preparation of all pairs in $\mathcal{M}(\kappa\Delta_N)\times\mathcal{M}(\kappa bd^{-1}\Delta_N)$ is not obtained: Lemma~\ref{lem:prepq} used as it stands controls one statistic of the walks at a vertex, and the gain depends on two, the number of arcs from $L$ to $R$ and the winding. Theorem~\ref{thm:fgsolve} with $\Delta=\Delta_N$ then gives the answer conditionally on it: the count and the squares $|\sigma_\chi|^2$ of the characters of $\Delta_N$ with $\chi(\delta)=-1$, one for each pair $\{\chi,\chi^{-1}\}$. On rings of $1$, $2$ and $4$ sites no such preparation exists for any gains: there both neighbours of a site are all the sites of the other parity, so every position product event leaves $0$ or a power of $2$ walks at a site. The condition $B^M=1$ says that every character has $\chi(B)^M=1$; it is the quantity that position masks read (Corollary~\ref{cor:masklist}).
+
+The four-gain question was put by the author; a builder sub-agent solved the equation and wrote Theorem~\ref{thm:fgsolve} and its proof, which the author read; the reduction of the preparation to Lemma~\ref{lem:prepq} (Lemma~\ref{lem:fgrecode} and Proposition~\ref{prop:fgprep}) is the author's. Lemma~\ref{lem:fgrecode} and the group algebra of Proposition~\ref{prop:fgprep} are checked in Lean~4 with Mathlib, and Steps~3 and~6 of Theorem~\ref{thm:fgsolve}; a challenger of the theorem found no defect in range and one fault in a side claim, since removed; a challenger of the reduction rebuilt the prepared multisets end to end in $372$ of $390$ small targets ($18$ beyond its search bound, none failing) and found two gaps and two sentences too strong, all corrected. A challenger of the ring case followed Proposition~\ref{prop:fgprepring} end to end on rings of $3$ to $8$ sites ($22{,}449$ targets passed, none failed, $19{,}971$ beyond its search bound); a builder found the obstruction on rings of $1$, $2$ and $4$ sites, which the author checked by hand. All reviewers are of the author's model family; Lemma~\ref{lem:prepq} is Director~G's and is not reproved here.

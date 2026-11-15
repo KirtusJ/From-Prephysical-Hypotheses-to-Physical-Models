@@ -13,6 +13,7 @@ Director G’s supplements in this directory use Lean 4.19.0. Director Z’s edi
 
 | Lean statement | Scope of the check |
 |---|---|
+| [ReciprocalRingScore.lean](ReciprocalRingScore.lean) | Evaluates all twelve joint outputs of the eleven-tick reciprocal seam recurrence and checks the two integer inequalities used to distinguish fair counting. |
 | `five_step_histograms` | Enumerates the four and thirty-two signed paths on the specified ten-site, two-register, five-sheet-per-register walk. It sums signs at common endpoints before taking magnitudes. The four histograms reproduce the persistent-flag witness by kernel evaluation. |
 | `double_from_five_step_odds` | The cross-multiplied odds equation fixes the response to a count of two at four copies of the unit response. |
 | `at_most_one_left`, `admitted_left_time`, `each_left_time_survives` | On rings of size 2m, m ≥ 3, the reduced lag-and-direction masks exclude a second left turn. A permitted left time has residue one. Each positive time in that residue class admits a surviving one-turn path for any number of further right steps. |
@@ -104,3 +105,13 @@ The same file proves the marginal upper and joint lower count inequalities for a
 [PositionRecordBlocks.lean](PositionRecordBlocks.lean) checks the four-tick calibration identities and the norm identity conditional on the single-predecessor premise for [three position records between coherent flights](../Diffusion_from_three_position_records.md).
 
 [FiveTickRecordPowers.lean](FiveTickRecordPowers.lean) checks the three integer rate equations, the centered product and the old-word numerator in the [five-tick position read](../Two_five_tick_records_and_the_probability_power.md).
+
+[SevenTickPositionScore.lean](SevenTickPositionScore.lean) checks the eight terminal rail pairs and the scaled ordinary and counting numerators for the [single position survey](../Seven_free_ticks_and_one_position_read.md).
+
+[AddressedPositionScore.lean](AddressedPositionScore.lean) derives the three scored rail pairs after the signed ten-tick flight, the integer numerator factorization and the unsigned count score. [Readout and preparation assumptions](../Three_signed_ticks_and_the_probability_power.md)
+
+[LocalizedSheetPower.lean](LocalizedSheetPower.lean) checks all joint rail and sheet numerators for the five-tick and stationary six-tick schedules, their square identity and the two counting scores for [a sharp sheet in five ticks](../Five_ticks_from_a_localized_sheet.md).
+
+[PureMassControls.lean](PureMassControls.lean) checks the integer mixture for the sheet-blind ring and the elimination identity for two mass classes. [Full criterion and proof](../When_a_position_histogram_identifies_its_probability_power.md)
+
+[UnsignedRailScore.lean](UnsignedRailScore.lean) calculates the pure terminal rails of the [five-, six- and nine-tick unsigned swap protocols](../Unsigned_rail_swaps_and_one_position_read.md) and checks the nine-tick integer polynomial and fair-count numerator.

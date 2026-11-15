@@ -1,0 +1,598 @@
+{
+  "six_well_tick": 11,
+  "studies": {
+    "well": {
+      "labels_well_bit": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "positive_mode_masses": [
+        [
+          144,
+          9,
+          576
+        ],
+        [
+          225,
+          324,
+          9
+        ],
+        [
+          4,
+          676,
+          81
+        ]
+      ],
+      "bounds": [
+        {
+          "power": 0,
+          "incident_target": [
+            "729/2048",
+            "279/1024",
+            "761/2048"
+          ],
+          "retention_ceiling": "1",
+          "no_click": "0",
+          "bottleneck_bin": 2,
+          "distinct_partition_vectors": 27,
+          "pre_erasure": [
+            "729/2048",
+            "279/1024",
+            "761/2048"
+          ],
+          "accept_given_bin": [
+            "1",
+            "1",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                1,
+                1,
+                3
+              ],
+              "launch_share": "3045/194816"
+            },
+            {
+              "scores": [
+                1,
+                3,
+                3
+              ],
+              "launch_share": "6391/194816"
+            },
+            {
+              "scores": [
+                3,
+                1,
+                3
+              ],
+              "launch_share": "1013173/3117056"
+            },
+            {
+              "scores": [
+                3,
+                3,
+                3
+              ],
+              "launch_share": "1952907/3117056"
+            }
+          ]
+        },
+        {
+          "power": 1,
+          "incident_target": [
+            "729/2048",
+            "279/1024",
+            "761/2048"
+          ],
+          "retention_ceiling": "1",
+          "no_click": "0",
+          "bottleneck_bin": 0,
+          "distinct_partition_vectors": 1,
+          "pre_erasure": [
+            "729/2048",
+            "279/1024",
+            "761/2048"
+          ],
+          "accept_given_bin": [
+            "1",
+            "1",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                729,
+                558,
+                761
+              ],
+              "launch_share": "1"
+            }
+          ]
+        },
+        {
+          "power": 2,
+          "incident_target": [
+            "729/2048",
+            "279/1024",
+            "761/2048"
+          ],
+          "retention_ceiling": "1142784/1181699",
+          "no_click": "38915/1181699",
+          "bottleneck_bin": 1,
+          "distinct_partition_vectors": 125,
+          "pre_erasure": [
+            "406782/1181699",
+            "311364/1181699",
+            "463553/1181699"
+          ],
+          "accept_given_bin": [
+            "1",
+            "1",
+            "424638/463553"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                352593,
+                311364,
+                463553
+              ],
+              "launch_share": "289206315/434865232"
+            },
+            {
+              "scores": [
+                531441,
+                311364,
+                463553
+              ],
+              "launch_share": "145658917/434865232"
+            }
+          ]
+        }
+      ]
+    },
+    "well_and_sheet": {
+      "labels_well_bit": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "positive_mode_masses": [
+        [
+          576
+        ],
+        [
+          144,
+          9
+        ],
+        [
+          324,
+          9
+        ],
+        [
+          225
+        ],
+        [
+          81
+        ],
+        [
+          4,
+          676
+        ]
+      ],
+      "bounds": [
+        {
+          "power": 0,
+          "incident_target": [
+            "9/32",
+            "153/2048",
+            "333/2048",
+            "225/2048",
+            "81/2048",
+            "85/256"
+          ],
+          "retention_ceiling": "256/445",
+          "no_click": "189/445",
+          "bottleneck_bin": 0,
+          "distinct_partition_vectors": 8,
+          "pre_erasure": [
+            "72/445",
+            "72/445",
+            "72/445",
+            "72/445",
+            "72/445",
+            "17/89"
+          ],
+          "accept_given_bin": [
+            "1",
+            "17/64",
+            "37/64",
+            "25/64",
+            "9/64",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "launch_share": "354/445"
+            },
+            {
+              "scores": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2
+              ],
+              "launch_share": "91/445"
+            }
+          ]
+        },
+        {
+          "power": 1,
+          "incident_target": [
+            "9/32",
+            "153/2048",
+            "333/2048",
+            "225/2048",
+            "81/2048",
+            "85/256"
+          ],
+          "retention_ceiling": "1",
+          "no_click": "0",
+          "bottleneck_bin": 0,
+          "distinct_partition_vectors": 1,
+          "pre_erasure": [
+            "9/32",
+            "153/2048",
+            "333/2048",
+            "225/2048",
+            "81/2048",
+            "85/256"
+          ],
+          "accept_given_bin": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                576,
+                153,
+                333,
+                225,
+                81,
+                680
+              ],
+              "launch_share": "1"
+            }
+          ]
+        },
+        {
+          "power": 2,
+          "incident_target": [
+            "9/32",
+            "153/2048",
+            "333/2048",
+            "225/2048",
+            "81/2048",
+            "85/256"
+          ],
+          "retention_ceiling": "41472/242957",
+          "no_click": "201485/242957",
+          "bottleneck_bin": 4,
+          "distinct_partition_vectors": 8,
+          "pre_erasure": [
+            "82944/242957",
+            "20817/971828",
+            "105057/971828",
+            "50625/971828",
+            "6561/971828",
+            "114248/242957"
+          ],
+          "accept_given_bin": [
+            "9/64",
+            "153/257",
+            "333/1297",
+            "9/25",
+            "1",
+            "6885/57124"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                331776,
+                20817,
+                105057,
+                50625,
+                6561,
+                456992
+              ],
+              "launch_share": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "well_and_0R": {
+      "labels_well_bit": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "positive_mode_masses": [
+        [
+          9,
+          576
+        ],
+        [
+          144
+        ],
+        [
+          324,
+          9
+        ],
+        [
+          225
+        ],
+        [
+          676,
+          81
+        ],
+        [
+          4
+        ]
+      ],
+      "bounds": [
+        {
+          "power": 0,
+          "incident_target": [
+            "585/2048",
+            "9/128",
+            "333/2048",
+            "225/2048",
+            "757/2048",
+            "1/512"
+          ],
+          "retention_ceiling": "256/357",
+          "no_click": "101/357",
+          "bottleneck_bin": 4,
+          "distinct_partition_vectors": 8,
+          "pre_erasure": [
+            "195/952",
+            "757/5712",
+            "757/5712",
+            "757/5712",
+            "757/2856",
+            "757/5712"
+          ],
+          "accept_given_bin": [
+            "1",
+            "288/757",
+            "666/757",
+            "450/757",
+            "1",
+            "8/757"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+              ],
+              "launch_share": "43/102"
+            },
+            {
+              "scores": [
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+              ],
+              "launch_share": "59/102"
+            }
+          ]
+        },
+        {
+          "power": 1,
+          "incident_target": [
+            "585/2048",
+            "9/128",
+            "333/2048",
+            "225/2048",
+            "757/2048",
+            "1/512"
+          ],
+          "retention_ceiling": "1",
+          "no_click": "0",
+          "bottleneck_bin": 0,
+          "distinct_partition_vectors": 1,
+          "pre_erasure": [
+            "585/2048",
+            "9/128",
+            "333/2048",
+            "225/2048",
+            "757/2048",
+            "1/512"
+          ],
+          "accept_given_bin": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                585,
+                144,
+                333,
+                225,
+                757,
+                4
+              ],
+              "launch_share": "1"
+            }
+          ]
+        },
+        {
+          "power": 2,
+          "incident_target": [
+            "585/2048",
+            "9/128",
+            "333/2048",
+            "225/2048",
+            "757/2048",
+            "1/512"
+          ],
+          "retention_ceiling": "2048/242957",
+          "no_click": "240909/242957",
+          "bottleneck_bin": 5,
+          "distinct_partition_vectors": 8,
+          "pre_erasure": [
+            "331857/971828",
+            "5184/242957",
+            "105057/971828",
+            "50625/971828",
+            "463537/971828",
+            "4/242957"
+          ],
+          "accept_given_bin": [
+            "260/36873",
+            "1/36",
+            "148/11673",
+            "4/225",
+            "3028/463537",
+            "1"
+          ],
+          "attaining_partitions": [
+            {
+              "scores": [
+                331857,
+                20736,
+                105057,
+                50625,
+                463537,
+                16
+              ],
+              "launch_share": "1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routing_controls": {
+    "type_examples": [
+      {
+        "cyclic_after_routing": [
+          "1/14",
+          "1/7",
+          "2/7"
+        ],
+        "loss_at_input_label": [
+          "0",
+          "1/7",
+          "4/7"
+        ]
+      },
+      {
+        "cyclic_after_routing": [
+          "1/252",
+          "1/63",
+          "4/63"
+        ],
+        "loss_at_input_label": [
+          "0",
+          "1/21",
+          "0"
+        ]
+      }
+    ],
+    "type_correlated_shifts": [
+      "1/7",
+      "0",
+      "0"
+    ],
+    "entirely_blind_type": [
+      "0",
+      "0",
+      "0"
+    ]
+  }
+}
