@@ -86,3 +86,22 @@ If both die, the sprint ends with no standing candidate, and that is said.
 | Z8 "Two Books" | KZ8 (a), (b) | STANDS; its second law turned out to have a two-line proof | `../Z8_Two_Books/`, steelmanned, branded, open for attack |
 
 **Final candidate of the sprint: Z8 "Two Books".** Six candidates were stipulated in the period; five are dead: four by the director's own first tests and one, after release, by an attacker of the stack.
+
+## Two Books was killed; a third batch
+
+At 09:06 UTC Z8 "Two Books" was killed (`../abandoned/Z8_Two_Books/WHY_ABANDONED.md`): its entropy is not a function of state, and one branded prediction was false as worded. What survived: the mean log-count of histories does not fall under free running, it is additive, and it belongs to the preparation record, not to the state.
+
+Lessons carried into the wording of what follows: no universal sentence that the stipulations do not support; no identification with a named physical quantity whose known properties the toy lacks; every prediction worded exactly as tested.
+
+The period runs to 10:05 UTC. One more candidate is stipulated, seeded by what survived. Its stipulations and kill test are fixed here before any test is run. **Label as before: STIPULATED CANDIDATE FOR DISPROOF.**
+
+### Z9 "Ledger Clock"
+- **Stipulations.** (1) Carrier, events and the book of chance as in Z8: the signed two-rail line or ring, position product events, chance of a record = its squared signed sum over the total. (2) Each record v carries a ledger entry, log₂ n(v), the base-2 logarithm of the number of histories behind it. (3) The **age** of a world, given its event, is Λ = Σ_v p(v)·log₂ n(v). Age is a property of the record of what was done, not of the present state: two worlds in the same state may have different ages, as two clocks set at different times do. (4) The far-fetched part: Λ, not the number of ticks, is the time that the world's own records keep; and a world that interferes ages more slowly than one that only counts.
+- **What is already proved (from Z8, kept):** Λ does not fall when a world runs free; it is additive over independent parts; Λ ≤ T − 1.
+- **Kill test KZ9 (fixed now).** On the line from a sharp start, T = 3 to 300. Let Λ_q(T) be the age with squared chances and Λ_c(T) the age with counting chances (p = n/Σn) on the same histories.
+  (a) Λ_q(T) < Λ_c(T) for every T in the range ("interference slows the clock").
+  (b) The rate Λ_q(T)/T is larger at T + 2 than at T for every T from 3 to 298 ("the clock keeps speeding up towards a limit and never runs backwards against the ticks").
+  (c) Λ_q(T)/T < 1 for every T.
+  Logarithms in 60-digit decimals; a comparison counts as failed if it is violated by more than 10^−40. Predicate: (a), (b), (c) all hold. Any failure KILLS Z9.
+
+If Z9 dies the sprint ends with no standing candidate, and that is said.
