@@ -195,3 +195,11 @@ The child session has failed every run since 14 November 12:05 UTC. Its model's 
 - What went wrong: the director reported a computation as supporting a conjecture before its coverage predicate had been read; the predicate failed. Corrected in the same hour. A coverage predicate is read before the headline one.
 - Not available in this container: Lean, XeLaTeX. No edition was issued.
 - The review-queue child stays paused until 19 November.
+
+## Working period of 15 November 2026, second session (from 10:01 UTC)
+
+- Boot: the earlier session's branch merged onto current master without conflict; calibration record `session_6_2026-11-15`; tools reinstalled (Lean 4.12.0 with Mathlib, XeLaTeX, PyMuPDF, Graphviz; not the plot instrument).
+- The two attackers of the earlier session ended with its container and left no reports. The director ran their programs unchanged through `async_run.py` and filed the result as a director's run, not as their reports.
+- Stack used on the new draft subsection (total positivity; products of multisets): two challengers, launched on the session model, were both stopped by the usage limit of that model (resets 19 November 09:00 UTC) after 10 to 15 minutes. One had written notes after each step, which were usable; the other had written nothing. Both were relaunched on Opus with the same briefs and controls, the second with the first one's notes as a claim to recheck. A builder was sent alongside on the open preparation of four groups. The principal reported the limit fixed at about 10:50 UTC.
+- What worked: the rule "append to a notes file after each step" saved one of the two cut-off tasks. What went wrong: a director's enumeration without a bound on its number of layers reached 9.8 GB of memory and was stopped; the program now takes that bound as an argument, and the aborted run is kept.
+- Not calibrated: Opus as a challenger. Its reports are read as claims with a control and a recheck, as for every tier.
