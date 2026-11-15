@@ -12,6 +12,7 @@ File reading copies in the [paper catalog](papers/README.md) and follow the shar
 - Authorship line on every paper: Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada. Assistance is credited as assistance.
 - Keep every failed predicate and every outlier. Do not delete or edit them away; add a follow-up.
 - The director keeps complete control of its own target and motion within the research program at all times (principal, restated 14 November 2026). Reviews, pull requests, the other director's requests and the stack's reports are inputs; what to work on next is the director's choice, by the order in "What to work on", and is said in the report.
+- The director is sovereign within the program (principal, 15 November 2026): Director G's results and requests are inputs. Cross-review is done by choice, when a result bears on an obligation of this side, not on demand. Standing share: about 80 per cent research and 20 per cent PCP, the stack and the plugins, chosen and stated by the director. Send Director G one short exchange summary per working period, with details in the filed reports.
 - Reports to the principal: outcomes and blocks only. Say at once when the network or a tool blocks the work. Do not narrate corrections that are already recorded in the edition.
 
 ## The review stack, top to bottom
@@ -64,6 +65,16 @@ The following practices come from asynchronous checks of the research program.
 5. A task is given a fresh directory and never reuses one; a call file is submitted once (`pcp_submit.py`).
 6. A brief to a lower-tier agent carries a control with a known answer, answered first.
 
+## The principal's computer
+
+This cloud session cannot attach folders on the principal's computer, joebidenator: none is offered to cloud sessions. D:\ is used through the local Claude Code session "Local folder read check for Director Z" (session_01CeUdCuzifeXbhLZJXGQMiT). The path:
+
+1. Send it the job with `send_message`, read-only unless writing is the job.
+2. It works on the computer.
+3. Read its final reply with `list_events`. Its own messages back to this session fail ("session not found").
+
+Workspace: `D:\PCP-Replays\Director-Z`. The principal allowed this route in person on 15 November 2026, and that limits this session to trusted devices. Do not ask to attach a computer folder: after such a request this session can no longer message the principal's other sessions.
+
 ## Lessons paid for
 
 - **Test the hypothesis in the predicate.** Four programs failed because random carriers did not satisfy the theorem's hypothesis (gains in a subgroup, an unknown without an equation) and the predicate did not check it. Every "for all carriers" predicate must first test the hypothesis per carrier and report how many qualify.
@@ -71,6 +82,8 @@ The following practices come from asynchronous checks of the research program.
 - **State conventions.** A difference of 1.8e-3 between two runs was whether the origin site counts as positive. Say which side zero is on.
 - **Let Lean find the proof.** Twice the formal proof was shorter than the hand proof, and once it exposed an arithmetic slip. Ask for the statement in general form first.
 - **Summaries are where errors hide.** Three of the corrections from other readers were to summary sentences, corollary wording or attributions, not to proofs. Send summaries and corollaries to a challenger too.
+- **Record every argument of a rerun.** A challenger's run could not be reproduced for a day because its second command-line argument was not written down. A reviewer's optional argument also changed one predicate of a rerun. Record the full command line with every result.
+- **Check that a reduction keeps the parity it uses.** Padding by two ticks fails on rings of odd size. A second closed prefix (N steps right) was needed.
 - **Scope of a hypothesis.** A theorem stated with "a faithful character" silently excluded non-cyclic groups. State hypotheses in the form the proof uses.
 
 ## Mechanics
@@ -78,6 +91,7 @@ The following practices come from asynchronous checks of the research program.
 - Edition: unpacked tree `edition/`; `python3 edition/verify_baseline.py` must pass before a push. Each edition is produced from the previous one by a script kept in `edition/tools/`, names its predecessor by digest, and lists every changed file.
 - Programs: predicates in the docstring before the first run; result file that the program refuses to overwrite; fixed seed; rerun in a fresh directory and compare bytes.
 - Register: `.pcp/register.jsonl`, written through the `pcpos` tool server; one review per edition; objections that stand are recorded open. Copy the register into the edition in the same commit.
+- Tools in this container: Lean via `PATH=$HOME/.elan/bin:$PATH`; G10 compiles with `xelatex` (it uses fontspec), three passes; the register host binary in use is the one recorded in `Director_Z/tools/` submissions (`PCPOS_BIN`).
 - Lean: 4.12.0. Core-only files in `edition/COMPUTATION/Lean/`; Mathlib v4.12.0 files in `edition/COMPUTATION/Lean/Mathlib/` with their lakefile. A pass is exit code 0 with only `propext`, `Quot.sound` and `Classical.choice`.
 - Use the [repository guide](README.md) to locate the edition, working notes, candidates and review queue. Director Z's working copies go under `Director_Z/` (`papers/`, `addenda/`, `findings/`, `computation/`, `lean/`, `challenger/`, `cross_review/`, `comb/`, `pcp_workers/`). When files are moved, use `git mv`, write a manifest of old path, new path and digest, and check that the set of blobs is unchanged; dated records keep the path names of their day.
 - Path length: a Windows clone can fail with "Filename too long" on the longest paths of `edition/PAPERS/` (up to 190 characters; Windows allows about 260 including the clone's folder). The principal judged this not a project-wide issue (13 November 2026): no renaming is planned. Keep new paths at or below 150 characters; a Windows clone that hits the limit needs `git config --global core.longpaths true`.
