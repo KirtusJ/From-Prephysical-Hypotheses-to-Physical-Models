@@ -117,6 +117,44 @@ def binary_square(x):
     return x*x / (x*x + (1-x)**2)
 
 
+def check_fair_tag_resolution():
+    # Score each of the two equally likely fair-tag branches first. Keep
+    # the same q,c across settings and pool the tag only after this read.
+    x, t, contrast = F(187,512), F(11,256), F(165,512)
+    modes = (
+        (0, F(0), F(6333239,259391488)),
+        (2, F(1,2), F(34413788331,71332659200)),
+        (2, F(1), F(549644221,1114572800)),
+    )
+    require(sum(w for _, _, w in modes) == 1, "separately scored tag weights")
+    rates = [F(0)]*3
+    pooled = F(0)
+    for q, c, weight in modes:
+        require(weight > 0, "positive separately scored tag incidence")
+        response = (lambda p: F(1,2)) if q == 0 else binary_square
+        pi_fail = response(x - contrast*c)
+        zero_fail = response(x + contrast*c)
+        for i, p in enumerate(((pi_fail+zero_fail)/2, pi_fail, zero_fail)):
+            rates[i] += weight*p
+        pooled += weight*response(x)
+    require(rates == [x,t,2*x-t] and pooled != x,
+            "branchwise finite rival matches fair, pi and zero only at its stated resolution")
+
+    # For s=3/8 even a pooled intact-marker reader admits a rival. Chords
+    # from q=3/2 and q=2 to the minimum-selector endpoint straddle the
+    # ordinary point. Rational squares enclose the two 3/2 powers.
+    s = F(3,8)
+    t = (1-s)*(1-4*s)**2
+    x = ((1-s)+t)/2
+    a, b = x/(1-x), t/(1-t)
+    require((x,t) == (F(25,64),F(5,32)) and (1-t)/(1-x) == F(18,13),
+            "hypothetical herald mass")
+    require(a**3 > F(51,100)**2 and b**3 < F(8,100)**2
+            and 13*F(51,100)-18*F(8,100) > 5
+            and (1+a*a)/(1+b*b) == F(2997,2197) < F(18,13),
+            "strict chord comparisons for the 3/8 example")
+
+
 def check_binary_rules():
     s, t = F(5, 16), F(11, 256)  # Success of direct arm; failure of amplified arm.
     alpha = F(55, 128)
@@ -183,6 +221,7 @@ def check_binary_rules():
         for i, mass in enumerate(masses):
             rates[i] += w * mass**q / (mass**q + (1-mass)**q)
     require(rates == [F(n, 512) for n in counts], "finite signed-power rival")
+    check_fair_tag_resolution()
 
 
 def zero_mask_phase(wires):
@@ -272,6 +311,7 @@ def main():
     print("Marker overlap c: phase-zero/pi success = (325 -/+ 165 Re(c))/512.")
     print("Fair unresolved phase: failure 187/512 at every overlap; ideal amplified failure 11/256.")
     print("Separate thinning rival, unmatched signed-power rival and tangent certificates verified.")
+    print("Scoring the fair tag branchwise: powers 0 and 2 match all three matched-arm rates.")
     if args.qiskit:
         check_qiskit(columns)
     if args.qasm:
