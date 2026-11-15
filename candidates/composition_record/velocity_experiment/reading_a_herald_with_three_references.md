@@ -60,4 +60,6 @@ An audit choice must be fresh at the cut for conclusions about the science popul
 
 The [matrix and outcome checker](check_anchored_herald.py) compares the direct, coherent-return and hidden-copy cases. [An order-only return test](how_a_hidden_herald_changes_the_return.md) gives a different guarantee when each unknown common response is monotone and need not be a power. No hardware counts enter these predictions.
 
+After the genuine science label exists, an experiment with two protected reference wires can check the effective state update on all logical inputs. The ideal joint good/return and bad/return rates are $25/256$ and $121/256$. The test assumes a common quantum instrument and leaves hidden per-launch label biases unidentified. [Post-write sector and Bell checks](checking_the_state_left_by_a_written_herald.md)
+
 Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada, retains scholarly responsibility. OpenAI Codex developed the measurement design, conditional proof and controls.
