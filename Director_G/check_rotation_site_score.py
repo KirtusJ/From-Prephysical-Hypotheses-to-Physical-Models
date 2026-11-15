@@ -139,10 +139,25 @@ def recovered_gate():
     require(yields[-2]**2 < Q(25,27) < yields[-1]**2, "two-gate yield")
     q = yields[-1]
     require(q*q*Q(9,25) > 2*(1-q+q*Q(1,10)), "loss-inclusive binary bound")
+    win = lambda y: (2*y*Q(9,10) + y*y*Q(9,25))/3
+    print("First winning round budget:", next(i for i,y in enumerate(yields) if win(y)>Q(2,3)))
+    print("Ten-round unconditional win probability:", float(win(q)))
     return q
 
 
+def binary_record_game():
+    # Any acceptance mask can depend on the hidden signs and the panel.
+    from itertools import product
+    maximum = 0
+    for x,y,z in product((-1,1), repeat=3):
+        wanted = [x == y, y == z, x != z]
+        for accepted in product((0,1), repeat=3):
+            maximum = max(maximum, sum(a*b for a,b in zip(accepted,wanted)))
+    require(maximum == 2, "sharp three-panel game bound")
+
+
 if __name__ == "__main__":
+    binary_record_game()
     print("Ten recovery rounds, two-gate yield:", float(recovered_gate()**2))
     selection_witness()
     physical_rotations()
