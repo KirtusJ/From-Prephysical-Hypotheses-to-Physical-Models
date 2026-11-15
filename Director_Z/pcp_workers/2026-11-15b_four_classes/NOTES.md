@@ -72,3 +72,19 @@ m | h_i, u1 h1 + u2 h2 = m), both exit 0, axioms within propext, Classical.choic
 No single relation with h0 = const*m was found for s = 4 sigma=-1, 5, 6 in these boxes (kept; not a proof of absence).
 s=7 (+1, and -1 by X -> -X) and s=8 (+-1): too few relations at BF=30/80; rerunning at larger boxes.
 Failures kept: FAILED_ver_small_typeerror.json (JSON of sympy Integer), FAILED_RelSmall*.lean (quotient printed in X).
+
+## Step 7. Proofs (hand), hypotheses as used
+Setting: hypotheses of thm:fgprod, r even, beta^s = delta^{k0}, sigma = (-1)^{k0}; G(pi) = L(pi(z)pi(1/z)), L(1)=c_0, L(C_d)=c_d.
+(i) Realisation (Step 4 (c')): characters of the finite group <delta,beta> separate Z[<delta,beta>]; chi(delta)=1 sees
+counts mod X^s-1, chi(delta)=-1 sees signs mod X^s-sigma, all other chi kill D0, D1 (sum of an (r/2)-th root != 1).
+(ii) Forcing: a realised coincidence P_A = T_kappa P_B, kappa in H, gives F_R(P_A*C) = F_R(P_B*C) for every product C, and
+|P_A| = |P_B|, so L(h0 |pi_C|^2) = 0.  The |pi_C|^2 span R[w]: (1+t^2+tw)^k, t = 1..k+1, have distinct ratios t/(1+t^2).
+Hence L vanishes on the ideal (gcd of the h0); if that gcd is m, then L(m g) = 0 for all g.
+(iii) L((m)) = 0 => G(pi) depends only on pi mod X^s - sigma: for pi = (X^s-sigma)tau, the symmetric Laurent polynomial
+pi(z)rho(1/z) + rho(z)pi(1/z) vanishes at every zeta with zeta^s = sigma, so it is m times a polynomial in w.
+(iv) C_{s-d} == sigma C_d and C_s == 2 sigma mod m (zeta^{-s} = sigma), so c_{s-d} = sigma c_d, c_{s+d} = sigma c_d;
+pairing d with s-d in the unwrapped form of phi(pi) gives Qbar_s.  For s even, sigma = -1: c_{s/2} = -c_{s/2} = 0.
+Free constants c_0..c_{floor(s/2)} (minus c_{s/2} if s even, sigma=-1): deg m of them.  For s = 3 this is the draft's Qbar.
+(v) For the product itself, eps_j = phi(pi)_j because beta^{i+s} delta^n = beta^i delta^{n+k0}, sign sigma.
+s=7 (+-1), s=8 (+-1): index calculus at BF up to 400 / 200 found only the trivial relation X (s=7, s=8 sigma=-1) or too
+few relations (s=8 sigma=+1: 20 relations at BF=30, gcd degree 57/21/13, not m).  OPEN; not a proof of absence.
