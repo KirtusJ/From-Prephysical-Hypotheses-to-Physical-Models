@@ -1,0 +1,26 @@
+diff --git a/Director_Z/papers/drafts/G10_subsection_winding_products.tex b/Director_Z/papers/drafts/G10_subsection_winding_products.tex
+index 13f4489..d5a66eb 100644
+--- a/Director_Z/papers/drafts/G10_subsection_winding_products.tex
++++ b/Director_Z/papers/drafts/G10_subsection_winding_products.tex
+@@ -59,7 +59,7 @@ A walk of the new event is a walk of $S_1$ followed by a sequence of steps; afte
+ So the multisets that occur alone on $R$ are closed under $*$, up to the site, and the pairs $(m_S(y,R),m_S(y,L))$ that occur at one site are closed under multiplication by any of them. The first step of the proof of Lemma~\ref{lem:fginv} (which uses $N\ge3$) shows that every multiset that occurs, occurs alone at its site.
+ 
+ \begin{lemma}[two levels, in the abstract]\label{lem:twolevelabs}
+-Let $\delta$ have even order $r$ in an abelian group and let $\beta$ be an element with $\beta\langle\delta\rangle\ne\langle\delta\rangle$; write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$. Let $f\colon\mathcal{M}(C_0\cup C_1)\to\mathbb{R}$ vanish at $\emptyset$, be invariant under $T_\delta$, take equal values at $m$ and $T_\beta m$ for $m\in\mathcal{M}(C_0)$, and satisfy \eqref{eq:fgQ} at the pairs $(u,v)$ with $u\in\mathcal{M}(C_0\cup C_1)$, $v\in\mathcal{M}(C_1)$ and at those with $u\in\mathcal{M}(C_0)$, $v\in\mathcal{M}(C_0\cup C_1)$. Then there are real $\alpha$, $q$, $c$ with
++Let $\delta$ have finite order $r$ in an abelian group and let $\beta$ be an element with $\beta\langle\delta\rangle\ne\langle\delta\rangle$; write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$. Let $f\colon\mathcal{M}(C_0\cup C_1)\to\mathbb{R}$ vanish at $\emptyset$, be invariant under $T_\delta$, take equal values at $m$ and $T_\beta m$ for $m\in\mathcal{M}(C_0)$, and satisfy \eqref{eq:fgQ} at the pairs $(u,v)$ with $u\in\mathcal{M}(C_0\cup C_1)$, $v\in\mathcal{M}(C_1)$ and at those with $u\in\mathcal{M}(C_0)$, $v\in\mathcal{M}(C_0\cup C_1)$. If $r$ is even, there are real $\alpha$, $q$, $c$ with
+ \[
+ f(m)=\alpha|m|+q\bigl(\varepsilon_0(m)^{2}+\varepsilon_1(m)^{2}\bigr)+c\,\varepsilon_0(m)\varepsilon_1(m),\qquad\varepsilon_i(m)=\sum_n(-1)^{n}m(\beta^{i}\delta^{n}).
+ \]
+@@ -77,10 +77,10 @@ The polynomials that are quadratic forms in each $p^{(i)}$ are the tensors in $W
+ \end{proof}
+ 
+ \begin{theorem}[products of multisets in two adjacent cosets]\label{thm:fgprod}
+-Let $D$ be the ring $\mathbb{Z}_N$ with $M\ge8$ and four gains in a finite abelian group with $\mathsf{s}\ge2$, $r$ even, and let $F_R$, $F_L$ not depend on the site, vanish at $\emptyset$ and satisfy \eqref{eq:ppcons} with the factor $2$. Write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$, and for $P\in\mathcal{M}(C_0\cup C_1)$ let $p=(\varepsilon_0(P),\varepsilon_1(P))$.
++Let $D$ be the ring $\mathbb{Z}_N$ with $M\ge8$ and four gains in a finite abelian group with $\mathsf{s}\ge2$, and let $F_R$, $F_L$ not depend on the site, vanish at $\emptyset$ and satisfy \eqref{eq:ppcons} with the factor $2$. Write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$, and for $P\in\mathcal{M}(C_0\cup C_1)$ let $p=(\varepsilon_0(P),\varepsilon_1(P))$.
+ \begin{enumerate}[label=(\roman*)]
+ \item For all $P^{(1)},\dots,P^{(k)}\in\mathcal{M}(C_0\cup C_1)$, none empty, and every multiset $m$ that occurs on $R$, the multiset $P^{(1)}*\dots*P^{(k)}*m$ occurs on $R$ up to a translation by an element of $H$.
+-\item For every such $m$ there are a real $\alpha_m$ and quadratic forms $G_{m,k}$ on $\mathbb{R}^{k+1}$, $k\ge1$, with
++\item If $r$ is even: for every such $m$ there are a real $\alpha_m$ and quadratic forms $G_{m,k}$ on $\mathbb{R}^{k+1}$, $k\ge1$, with
+ \[
+ F_R\bigl(P^{(1)}*\dots*P^{(k)}*m\bigr)=\alpha_m\prod_i|P^{(i)}|+G_{m,k}(\pi),\qquad \pi=\text{the coefficients of }\prod_i\bigl(p^{(i)}_0+p^{(i)}_1X\bigr),
+ \]

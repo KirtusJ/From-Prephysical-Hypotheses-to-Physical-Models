@@ -1,0 +1,7 @@
+# Matched application check proctored by Director Z, 15 November 2026
+
+Two source-stripped cases. Answer both in one first reply. Disclose prior exposure. Say whether you calculated by hand or ran code.
+
+**C.** On a ring, the numbers of walks at one rail of one site, listed by winding, are (u_0, u_1, u_2) and on the other rail (v_0, v_1, v_2), with the joint array known to be totally non-negative (all minors of the interleaved Toeplitz-type array are >= 0). A cataloguer proposes the one-rail profile (1, 3, 3) with the other rail empty. (a) Is it excluded by real-rootedness of u_0 + u_1 x + u_2 x^2? (b) Does passing that test show that some event realizes it? (c) A second proposal is the one-rail profile (1, 2, 3, 3, 2) read as v = (1, 3, 2) on L and u = (2, 3) on R, interleaved as (v_0, u_0, v_1, u_1, v_2) = (1, 2, 3, 3, 2). Give the strongest justified disposition if all you know is the condition and that an exhaustive search on rings with M from 3 to 8 never produced it.
+
+**D.** A rule F on finite multisets is known to satisfy F(A*C) = F(B*C) for every product C, where A and B are fixed products with |pi_A(z)|^2 - |pi_B(z)|^2 = h(w), w = z + 1/z. Write F on products as L(|pi(z)|^2) for a linear functional L on R[w]. (a) If h = w^2 + 1, what does L vanish on, and is L then a combination of point evaluations at real points? (b) If h = (w - 1)^2, name a linear functional vanishing on (h) that is not a combination of evaluations. (c) What property of the polynomial makes the conclusion "combination of evaluations at real roots" valid?

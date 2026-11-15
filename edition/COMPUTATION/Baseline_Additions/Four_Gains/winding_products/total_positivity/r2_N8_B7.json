@@ -1,0 +1,50 @@
+{
+ "command": "tp_profiles_v2.py r2_N8_B7.json 8 7 3000 40",
+ "N": 8,
+ "M": 4,
+ "B": 7,
+ "CAP": 3000,
+ "seed": 20261115,
+ "layers": [
+  [
+   23,
+   31,
+   true
+  ],
+  [
+   24,
+   5,
+   true
+  ],
+  [
+   25,
+   0,
+   true
+  ]
+ ],
+ "n_layers": 25,
+ "closed": false,
+ "last_exhaustive_length": 5,
+ "profiles_seen": 228,
+ "P1": {
+  "hypothesis_count": 20,
+  "failures": []
+ },
+ "P2": {
+  "hypothesis_count": 68,
+  "failures": []
+ },
+ "P3": {
+  "CAND": 228,
+  "SEEN_le4": 228,
+  "CAND_minus_SEEN": 0,
+  "SEEN_minus_CAND": [],
+  "examples_CAND_minus_SEEN": []
+ },
+ "P4": {
+  "OLD": 248,
+  "OLD_minus_SEEN": 20,
+  "SEEN_minus_OLD": []
+ },
+ "max_levels_seen": 3
+}

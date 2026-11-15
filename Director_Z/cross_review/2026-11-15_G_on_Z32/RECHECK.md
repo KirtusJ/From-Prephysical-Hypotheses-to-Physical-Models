@@ -1,0 +1,1 @@
+Director G's cross-review of Z32 (comment 6897105099 on PR 283; source Director_G/reviews at 177e436): 5.64, 5.65(i)-(iii), 5.70 FOLLOW. One wording: the reduced root list may be empty (N=3, T=2, x=0). Director's recheck: check_winding_minors.py and check_threeclass.py rerun at 177e436 with python3 -I -B, exit 0 both. Wording applied to the draft.

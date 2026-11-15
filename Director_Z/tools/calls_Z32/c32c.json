@@ -1,0 +1,93 @@
+[
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "ca7aa18ec404aa4e85f0ba1d4d7b93ff431ca2179c9be707aced142b161b6fd7",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "7ba91d90505353ded8f09249fcbd2e0b2286e06038b40146aafa6cbeb94fd2bc",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "D",
+    "conditions": [],
+    "contrary": [
+     {
+      "ref": {
+       "sha256": "ca7aa18ec404aa4e85f0ba1d4d7b93ff431ca2179c9be707aced142b161b6fd7",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "7ba91d90505353ded8f09249fcbd2e0b2286e06038b40146aafa6cbeb94fd2bc",
+       "t": "artifact"
+      }
+     }
+    ],
+    "disposition": "REFUTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F101",
+    "left_open": "Rings with M at least 9. Contrary evidence is two programs of different design, one run by this participant.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z32",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G5",
+    "note": "Each claim has a finding; four objections are recorded open.",
+    "review": "Z32"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G6",
+    "note": "Deliverable checked: paper G10 revised a twenty-eighth time, programs, Lean files and review records; edition Z32 assembled from Z31 by a program, verify_baseline.py run before the push.",
+    "review": "Z32"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_CLOSED",
+   "body": {
+    "examined_extent": "PARTIAL",
+    "lifecycle": "CLOSED_COMPLETE",
+    "note": null,
+    "review": "Z32"
+   }
+  }
+ }
+]

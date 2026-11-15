@@ -1,0 +1,235 @@
+{
+ "argv": [
+  "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/pcp_workers/2026-11-15b_small_rings/worker/spb_schedule.py",
+  "/tmp/claude-0/w_spb_run4/result_M5-14_q3_s3.json",
+  "5",
+  "14",
+  "3",
+  "3"
+ ],
+ "P1": {
+  "5": {
+   "all_exclusive": false,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": [
+    {
+     "config": [
+      false,
+      false
+     ],
+     "gadget": "depPneg",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(1, {'S': 'R', 'Plow': 'R'}, {'S': 1, 'Plow': 0}, [1])"
+    },
+    {
+     "config": [
+      false,
+      false
+     ],
+     "gadget": "depPpos",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(4, {'S': 'R', 'Ph': 'R'}, {'S': 0, 'Ph': 4}, [0])"
+    },
+    {
+     "config": [
+      true,
+      false
+     ],
+     "gadget": "adv",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(0, {'S': 'L', 'Plow': 'L'}, {'S': 0, 'Plow': -1}, [0])"
+    },
+    {
+     "config": [
+      true,
+      false
+     ],
+     "gadget": "depB",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(0, {'S': 'S', 'Plow': 'R'}, {'S': 0, 'Plow': -1}, [0])"
+    },
+    {
+     "config": [
+      true,
+      false
+     ],
+     "gadget": "depPneg",
+     "exclusive": false,
+     "returns": true,
+     "fail": "('collision', 1, {'S': 0, \"S'\": 1, 'Plow': 0})"
+    },
+    {
+     "config": [
+      true,
+      false
+     ],
+     "gadget": "depPpos",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(0, {'S': 'S', 'Ph': 'R'}, {'S': 0, 'Ph': 4}, [0])"
+    },
+    {
+     "config": [
+      true,
+      true
+     ],
+     "gadget": "adv",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(0, {'S': 'L', 'Plow': 'L', 'B': 'L'}, {'S': 0, 'Plow': -1, 'B': 2}, [0])"
+    },
+    {
+     "config": [
+      true,
+      true
+     ],
+     "gadget": "depB",
+     "exclusive": false,
+     "returns": true,
+     "fail": "(0, {'S': 'S', 'Plow': 'R', 'B': 'R'}, {'S': 0, 'Plow': -1, 'B': 2}, [0])"
+    }
+   ]
+  },
+  "6": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "7": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "8": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "9": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "10": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "11": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "12": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "13": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  },
+  "14": {
+   "all_exclusive": true,
+   "n_pairs": 20,
+   "hypothesis_ok": 20,
+   "failures": []
+  }
+ },
+ "P2": {
+  "6": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    12
+   ]
+  },
+  "7": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    14,
+    7
+   ]
+  },
+  "8": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    16
+   ]
+  },
+  "9": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    18,
+    9
+   ]
+  },
+  "10": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    20
+   ]
+  },
+  "11": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    22,
+    11
+   ]
+  },
+  "12": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    24
+   ]
+  },
+  "13": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    26,
+    13
+   ]
+  },
+  "14": {
+   "tested": 648,
+   "passed": 648,
+   "failures": [],
+   "Ns": [
+    28
+   ]
+  }
+ },
+ "P3": {
+  "M": 5,
+  "P1_fails": true
+ }
+}

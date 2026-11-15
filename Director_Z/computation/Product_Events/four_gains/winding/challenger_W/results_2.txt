@@ -1,0 +1,58 @@
+CMD chal_w2.py --seed 20261115 --out results_2.txt --tlim 25
+CTRL N=4 T=4 vertex (0,R): {0: 1, 2: 3}
+CTRL N=4 T=4 vertex (0,L): {2: 3, 4: 1}
+EXH N=1: all mask sequences (nonempty masks) complete to T=13, distinct events analysed=13 (layer T=14 n/a)
+EXH N=2: all mask sequences (nonempty masks) complete to T=12, distinct events analysed=12 (layer T=13 n/a)
+EXH N=3: all mask sequences (nonempty masks) complete to T=8, distinct events analysed=82097 (layer T=9 n/a)
+EXH N=4: all mask sequences (nonempty masks) complete to T=7, distinct events analysed=3279 (layer T=8 n/a)
+EXH N=5: all mask sequences (nonempty masks) complete to T=6, distinct events analysed=37540 (layer T=7 n/a)
+EXH N=6: all mask sequences (nonempty masks) complete to T=5, distinct events analysed=1027 (layer T=6 n/a)
+EXH N=7: all mask sequences (nonempty masks) complete to T=4, distinct events analysed=414 (layer T=5 n/a)
+after EXH: CNT {'vertices': 403548, 'WS_qual': 135586, 'W2p_qual': 10830, 'W3p_qual': 10028, 'H_pairs': 14880642, 'H_pairs_N1': 11969022, 'H_pairs_N1_exact2M': 5254260, 'tau=1': 5783168, 'Hg_qual': 6609346, 'tau=mid': 9097474, 'pairs_sharing_first_step': 7166360, 'H_pairs_N2': 2888250, 'H_pairs_N2_exact2M': 1331748, 'H_pairs_N3': 20378, 'H_pairs_N3_exact2M': 20378, 'H_pairs_N4': 2992, 'H_pairs_N4_exact2M': 2960}
+after EXH: FAIL {}
+after RAND: CNT {'vertices': 403749, 'WS_qual': 135757, 'W2p_qual': 11813, 'W3p_qual': 10317, 'H_pairs': 14936340, 'H_pairs_N1': 11969022, 'H_pairs_N1_exact2M': 5254260, 'tau=1': 5783168, 'Hg_qual': 6660502, 'tau=mid': 9153172, 'pairs_sharing_first_step': 7190002, 'H_pairs_N2': 2888250, 'H_pairs_N2_exact2M': 1331748, 'H_pairs_N3': 23358, 'H_pairs_N3_exact2M': 23342, 'H_pairs_N4': 51962, 'H_pairs_N4_exact2M': 47420, 'rand_events': 54, 'rand_hyb_skipped_big': 15, 'rand_empty': 13, 'H_pairs_N6': 3532, 'H_pairs_N6_exact2M': 3516, 'H_pairs_N8': 216, 'H_pairs_N8_exact2M': 216}
+after RAND: FAIL {}
+E N=3 achieved (|U|,|V|) with common lambda at a site, entries<=4: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4)]
+E N=4 achieved (|U|,|V|) with common lambda at a site, entries<=4: [(0, 1), (0, 2), (0, 4), (1, 0), (1, 1), (2, 0), (2, 2), (4, 0), (4, 4)]
+E N=5 achieved (|U|,|V|) with common lambda at a site, entries<=4: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4)]
+E N=6 achieved (|U|,|V|) with common lambda at a site, entries<=4: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (4, 0), (4, 1), (4, 2), (4, 3)]
+E N=7 achieved (|U|,|V|) with common lambda at a site, entries<=4: [(0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2, 0), (2, 1), (2, 2), (2, 3), (3, 0), (3, 1), (3, 2), (3, 3)]
+F0 group Z(4,): all 256 gain 4-tuples, all walks T<=9, walk-gain comparisons=261632 (independent of ring/line: gain depends on step sequence only); identities for N=1..8
+F0 group Z(6,): all 1296 gain 4-tuples, all walks T<=7, walk-gain comparisons=329184 (independent of ring/line: gain depends on step sequence only); identities for N=1..8
+F0 group Z(2, 3): all 1296 gain 4-tuples, all walks T<=7, walk-gain comparisons=329184 (independent of ring/line: gain depends on step sequence only); identities for N=1..8
+F0 group Z(2, 2): all 256 gain 4-tuples, all walks T<=7, walk-gain comparisons=65024 (independent of ring/line: gain depends on step sequence only); identities for N=1..8
+after F0: FAIL {}
+C1 group Z(7,): gain tuples tried=400, with s>=3 (qualify)=38, s histogram={1: 362, 7: 38}
+C1 group Z(12,): gain tuples tried=400, with s>=3 (qualify)=118, s histogram={1: 227, 2: 55, 3: 53, 4: 43, 6: 17, 12: 5}
+C1 group Z(9,): gain tuples tried=400, with s>=3 (qualify)=81, s histogram={1: 319, 3: 56, 9: 25}
+C1 group Z(2, 8): gain tuples tried=400, with s>=3 (qualify)=86, s histogram={1: 184, 2: 130, 4: 57, 8: 29}
+C1 group Z(3, 3): gain tuples tried=400, with s>=3 (qualify)=200, s histogram={1: 200, 3: 200}
+after C1: CNT {'C1_vertices': 24339, 'C1_vertices_3+cosets_railR': 1761, 'C1_vertices_3+cosets_railL': 1769}
+after C1: FAIL {}
+P N=1 prefix LR: walks=4 ['00', '01', '10', '11'] -> NOT single
+P N=1 prefix N*R: walks=2 ['0', '1'] -> NOT single
+P N=2 prefix LR: walks=4 ['00', '01', '10', '11'] -> NOT single
+P N=2 prefix N*R: walks=4 ['00', '01', '10', '11'] -> NOT single
+P N=3 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=3 prefix N*R: walks=1 ['000'] -> single,(0,R),gain1
+P N=4 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=4 prefix N*R: walks=1 ['0000'] -> single,(0,R),gain1
+P N=5 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=5 prefix N*R: walks=1 ['00000'] -> single,(0,R),gain1
+P N=6 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=6 prefix N*R: walks=1 ['000000'] -> single,(0,R),gain1
+P N=7 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=7 prefix N*R: walks=1 ['0000000'] -> single,(0,R),gain1
+P N=8 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=8 prefix N*R: walks=1 ['00000000'] -> single,(0,R),gain1
+P N=9 prefix LR: walks=1 ['10'] -> single,(0,R),gain1
+P N=9 prefix N*R: walks=1 ['000000000'] -> single,(0,R),gain1
+A group Z(6,): (event,site) cases=416, qualifying (common lambda)=325
+A group Z(2, 3): (event,site) cases=378, qualifying (common lambda)=315
+A group Z(4,): (event,site) cases=403, qualifying (common lambda)=329
+A group Z(12,): (event,site) cases=419, qualifying (common lambda)=330
+A group Z(3, 3): (event,site) cases=394, qualifying (common lambda)=304
+A: cases with negative i = 1397
+FINAL CNT {'vertices': 403749, 'WS_qual': 135757, 'W2p_qual': 11813, 'W3p_qual': 10317, 'H_pairs': 14936340, 'H_pairs_N1': 11969022, 'H_pairs_N1_exact2M': 5254260, 'tau=1': 5783168, 'Hg_qual': 6660502, 'tau=mid': 9153172, 'pairs_sharing_first_step': 7190002, 'H_pairs_N2': 2888250, 'H_pairs_N2_exact2M': 1331748, 'H_pairs_N3': 23358, 'H_pairs_N3_exact2M': 23342, 'H_pairs_N4': 51962, 'H_pairs_N4_exact2M': 47420, 'rand_events': 54, 'rand_hyb_skipped_big': 15, 'rand_empty': 13, 'H_pairs_N6': 3532, 'H_pairs_N6_exact2M': 3516, 'H_pairs_N8': 216, 'H_pairs_N8_exact2M': 216, 'C1_vertices': 24339, 'C1_vertices_3+cosets_railR': 1761, 'C1_vertices_3+cosets_railL': 1769, 'A_notqual_mixed_lambda': 407}
+FINAL FAIL (kept, all predicates that failed) {}
+END

@@ -1,0 +1,261 @@
+{
+ "seed": 20261115,
+ "argv": [
+  "check_products.py",
+  "result_run1.json",
+  "20261115"
+ ],
+ "predicates": {
+  "P1": {
+   "qualify": 3,
+   "pass": 3,
+   "fail": 0,
+   "info": {
+    "2": {
+     "d_sym_orbits": 6,
+     "d_form_pairs": 6,
+     "rank_G_of_pi": 6,
+     "multiquad_and_symmetric": true
+    },
+    "3": {
+     "d_sym_orbits": 10,
+     "d_form_pairs": 10,
+     "rank_G_of_pi": 10,
+     "multiquad_and_symmetric": true
+    },
+    "4": {
+     "d_sym_orbits": 15,
+     "d_form_pairs": 15,
+     "rank_G_of_pi": 15,
+     "multiquad_and_symmetric": true
+    }
+   }
+  },
+  "P2": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P3": {
+   "qualify": 35,
+   "pass": 35,
+   "fail": 0,
+   "info": null
+  },
+  "P4": {
+   "qualify": 64220,
+   "pass": 64220,
+   "fail": 0,
+   "info": null
+  },
+  "P6a": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": {
+    "Z2xZ3 d=(1,0) b=(0,1)": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 429,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    },
+    "Z6 d=3 b=1": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 429,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "-1",
+      "0",
+      "-1",
+      "1",
+      "0"
+     ]
+    },
+    "Z4xZ3 d=(1,0) b=(0,1)": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1550,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    },
+    "Z12 d=3 b=1": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1545,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "-1",
+      "0",
+      "-1",
+      "1",
+      "0"
+     ]
+    },
+    "Z12 d=3 b=2": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1542,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    }
+   }
+  },
+  "P6b": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P6c": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P8": {
+   "qualify": 2505,
+   "pass": 2505,
+   "fail": 0,
+   "info": null
+  },
+  "P5": {
+   "qualify": 8004,
+   "pass": 8004,
+   "fail": 0,
+   "info": null
+  }
+ },
+ "instances_qualifying": [
+  [
+   "Z2xZ3 d=(1,0) b=(0,1)",
+   2,
+   3,
+   0,
+   1
+  ],
+  [
+   "Z6 d=3 b=1",
+   2,
+   3,
+   1,
+   -1
+  ],
+  [
+   "Z4xZ3 d=(1,0) b=(0,1)",
+   4,
+   3,
+   0,
+   1
+  ],
+  [
+   "Z12 d=3 b=1",
+   4,
+   3,
+   1,
+   -1
+  ],
+  [
+   "Z12 d=3 b=2",
+   4,
+   3,
+   2,
+   1
+  ]
+ ],
+ "instances_not_qualifying": [
+  [
+   "Z2xZ9 d=(1,0) b=(0,1)  [control: s=9, must NOT qualify]",
+   2,
+   9
+  ],
+  [
+   "Z3xZ3 [control: r odd, must NOT qualify]",
+   3,
+   3
+  ]
+ ],
+ "completed": false,
+ "error": "NoConvergence('convergence to root failed; try n < 30 or maxsteps > 50')",
+ "seconds": 7.7
+}

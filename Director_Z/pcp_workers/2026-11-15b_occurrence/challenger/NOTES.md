@@ -1,0 +1,5 @@
+# Challenger notes (same model family as the worker; not independent review)
+Step 1. Lemma checked by hand: trim, class/whole-state total, span (K+1)M: follows (details in report).
+Step 2. Rebuilt enum_profiles.cpp (g++ -O2). `enum_profiles 4 12 6` exit 0 (117480 states, 1644 profiles); `5 11 5` exit 0 (1105341, 1144). Seen files byte-identical to q2_run1. compare_profiles_v2.py on them exit 0; JSON equal except the "file" path field; 12 / 4 not seen.
+Step 3. Extension: `6 11 4` exit 0 closed 13404325 states 1144 profiles, (1,2,3,3,2) absent (seen_M6_B11_K4.txt). `7 11 4` exit 4, NOT closed (hit 44M-state cap, 361 s): seen_M7_B11_K4.txt partial. `7 11 3 200000000` exit 124 (600 s timeout), no file.
+Step 4. bfs_target.py (own, whole-state total <= B, K=3), predicates in docstring before run. Control `4 4 2 1,2,1` found. `M 11 3 1,2,3,3,2 0,1,2,3,3,2 2,3,3,2,1 0,2,3,3,2,1 0,1,1,5,4` for M=4,5,6,7: all exit 0, closed; states 11780/42870/126510/332101; only positive control 0,1,1,5,4 found.

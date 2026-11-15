@@ -187,3 +187,26 @@ The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypot
 ## Review-queue child paused (15 November 2026, 00:30 UTC)
 
 The child session has failed every run since 14 November 12:05 UTC. Its model's usage limit resets 19 November at 09:00 UTC; the failed runs since 15:04 UTC on the 14th report it. Its scheduled sweep, trig_017oSax6RZ3Jm4mR2GET4aDC, is now paused. A first attempt to pause it was refused by the permission system; it succeeded after the principal said they could not act on it. A reminder is scheduled for 19 November, 09:30 UTC, to re-enable the sweep. Until then the queue is served by this session.
+
+## Working period of 15 November 2026 (new session)
+
+- Stack used on one question (four gains on rings): challenger, micro-review, builder, second challenger; at most three at once; every brief carried a control, all four answered correctly; every program rerun by the director in a fresh directory, bytes identical.
+- What worked: sending the builder alongside the first challenger. The builder disproved the construction it was asked for (Lemma X), built a weaker one and showed it suffices.
+- What went wrong: the director reported a computation as supporting a conjecture before its coverage predicate had been read; the predicate failed. Corrected in the same hour. A coverage predicate is read before the headline one.
+- Not available in this container: Lean, XeLaTeX. No edition was issued.
+- The review-queue child stays paused until 19 November.
+
+## Working period of 15 November 2026, second session (from 10:01 UTC)
+
+- Boot: the earlier session's branch merged onto current master without conflict; calibration record `session_6_2026-11-15`; tools reinstalled (Lean 4.12.0 with Mathlib, XeLaTeX, PyMuPDF, Graphviz; not the plot instrument).
+- The two attackers of the earlier session ended with its container and left no reports. The director ran their programs unchanged through `async_run.py` and filed the result as a director's run, not as their reports.
+- Stack used on the new draft subsection (total positivity; products of multisets): two challengers, launched on the session model, were both stopped by the usage limit of that model (resets 19 November 09:00 UTC) after 10 to 15 minutes. One had written notes after each step, which were usable; the other had written nothing. Both were relaunched on Opus with the same briefs and controls, the second with the first one's notes as a claim to recheck. A builder was sent alongside on the open preparation of four groups. The principal reported the limit fixed at about 10:50 UTC.
+- What worked: the rule "append to a notes file after each step" saved one of the two cut-off tasks. What went wrong: a director's enumeration without a bound on its number of layers reached 9.8 GB of memory and was stopped; the program now takes that bound as an argument, and the aborted run is kept.
+- Not calibrated: Opus as a challenger. Its reports are read as claims with a control and a recheck, as for every tier.
+
+### Deeper recursion (principal, 15 November 2026, about 11:00 UTC)
+
+- Tried: three coordinators launched as general sub-agents with the brief to delegate one level further down, plus a wildcard and a builder. Finding: in this host a sub-agent has no tool for launching sub-agents, so a coordinator below the director cannot delegate; the Lean coordinator said so and did the work itself (four files, rerun by the director, exit 0). Depth below the director's sub-agents therefore needs a child session, which has that tool.
+- Done: child session `session_01CeUdCxXepzhxXeGF2ZTXrb` ("small rings, M at most 7"), on its own branch `pcp/worker-small-rings-2026-11-15`, briefed to delegate to the role agents, to commit as it goes and to open draft pull requests against the director's branch. It shares the account's limits and stops silently: check its status at the start of each working period.
+- All five tasks running at about 11:00 UTC were stopped once more by the usage limit of the session model and were resumed by message with their context after the principal reported it lifted. Two had written nothing and were told to write their notes first.
+- The wildcard (seed word "unrolled") brought back a finite search that closes a question the director had left to exploration; rerun by the director, bytes equal.

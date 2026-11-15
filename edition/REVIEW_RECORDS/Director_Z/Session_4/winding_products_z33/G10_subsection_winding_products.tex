@@ -1,0 +1,194 @@
+% Draft subsection for G10, to follow "Four arc gains on rings: the winding of the walks at one vertex".
+% Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada; drafted with the assistance of
+% Director Z (a Claude session).  NOT ISSUED.  Root review open; no gate is passed by anything here.
+% Labels of the issued body (lem:winding, lem:windingrails, lem:fgkappa, lem:fginv, lem:fgonesite,
+% prop:threegroups, thm:fgsolve, thm:fgtwo, thm:fgadj, eq:fg, eq:fgQ, eq:ppcons) are used as there.
+
+\subsection{Four arc gains on rings: total positivity of the winding, and products of multisets}
+
+The last subsection left open, for three or more classes of winding, the rule on the multisets that meet three cosets of $\langle\delta\rangle$. This subsection does two things. It replaces the inequalities of Lemmas~\ref{lem:winding} and~\ref{lem:windingrails} by the full family they belong to: the numbers of walks at the two rails of one site, listed by winding, form a totally non-negative array. And it shows that the multisets that occur are closed under a product, which carries Theorem~\ref{thm:fgadj} from two adjacent cosets to an infinite family of multisets that meet every coset; for three classes the rule is the count and the two squares on all of them. What stays open is said at the end.
+
+\paragraph{Notation.} $S$ is a position product event of length $T\ge1$ on $\mathbb{Z}_N$ with masks $A_1,\dots,A_T$, $N\ge3$, $M=N/\gcd(N,2)$, and $x\in A_T$ is a site at which walks of $S$ end. All such walks have congruent $\lambda$ modulo $M$; let $l_0$ be the least $\lambda$ among them, on either rail. Put
+\[
+u_j=\#\{w\in S:\ w\text{ ends at }(x,R),\ \lambda(w)=l_0+jM\},\qquad v_j=\#\{w\in S:\ w\text{ ends at }(x,L),\ \lambda(w)=l_0+jM\}\qquad(j\in\mathbb{Z}),
+\]
+and $\mathsf{w}_{2j}=v_j$, $\mathsf{w}_{2j+1}=u_j$; so the sequence $\mathsf{w}$ lists $\dots,v_j,u_j,v_{j+1},u_{j+1},\dots$.
+
+\begin{theorem}[total positivity of the winding at one site]\label{thm:tp}
+For every $k\ge1$, all integers $i_1<\dots<i_k$ and $c_1<\dots<c_k$,
+\[
+\det\bigl[\mathsf{w}_{c_b-2i_a}\bigr]_{a,b=1}^{k}\ \ge\ 0,
+\]
+and the determinant is the number of families of $k$ pairwise vertex-disjoint paths described in the proof.
+\end{theorem}
+\begin{proof}
+\emph{The unrolled lattice.} Let the points be the pairs $(t,e)$, $0\le t\le T-1$, $e\in\mathbb{Z}$, with arcs from $(t,e)$ to $(t+1,e)$ and to $(t+1,e+1)$. Call $(t,e)$ \emph{open} if $t=0$ or the site $t-2e \bmod N$ lies in $A_t$. A walk of length $T-1$ from the site $0$ is a path from $(0,0)$: after $t$ steps it is at $(t,\lambda_t)$, and its site is $t-2\lambda_t$; it belongs to the event of the first $T-1$ masks exactly if all its points are open. Openness of $(t,e)$ depends on $e$ modulo $M$ only, because $2M\equiv0\pmod N$. Hence, with $n(e)$ the number of paths from $(0,0)$ to $(T-1,e)$ through open points, the number of such paths from $(0,iM)$ to $(T-1,e)$ is $n(e-iM)$.
+
+\emph{Sources and sinks.} A walk of $S$ that ends at $(x,R)$ with $\lambda=l$ is a walk of length $T-1$ with $\lambda_{T-1}=l$ followed by a right step, and one that ends at $(x,L)$ is a walk of length $T-1$ with $\lambda_{T-1}=l-1$ followed by a left step; in both cases the last site is $x\in A_T$ and nothing else is required. So $u_j=n(l_0+jM)$ and $v_j=n(l_0-1+jM)$. Let $s_i=(0,iM)$ and let $d_{2j}=(T-1,\,l_0-1+jM)$, $d_{2j+1}=(T-1,\,l_0+jM)$. Since $M\ge2$, the second coordinate of $d_c$ is strictly increasing in $c$, that of $s_i$ in $i$, and the number of paths from $s_i$ to $d_c$ through open points is $\mathsf{w}_{c-2i}$.
+
+\emph{Crossing paths meet.} Let $p$ go from $s_i$ to $d_{c'}$ and $p'$ from $s_{i'}$ to $d_c$ with $i<i'$ and $c<c'$. The difference of their second coordinates is negative at $t=0$, positive at $t=T-1$ and changes by at most one per step, so it vanishes at some $t$: the two paths have a common point. Exchanging their parts after the first common point gives again two paths through open points.
+
+\emph{The determinant.} By the lemma of Lindstr\"om and of Gessel and Viennot \cite{lgv}, for a locally finite acyclic digraph the determinant $\det[\#\{\text{paths }s_{i_a}\to d_{c_b}\}]$ equals the signed number of families of $k$ pairwise vertex-disjoint paths from the $s_{i_a}$ to the $d_{c_b}$, the sign being that of the permutation by which the family matches sources to sinks. By the last paragraph a family whose permutation is not the identity contains two paths that meet. So the determinant is the number of vertex-disjoint families that join $s_{i_a}$ to $d_{c_a}$ for every $a$.
+\end{proof}
+
+\begin{corollary}\label{cor:tp}
+In the situation of Theorem~\ref{thm:tp} let $u(X)=\sum_ju_jX^j$ and $v(X)=\sum_jv_jX^j$.
+\begin{enumerate}[label=(\roman*)]
+\item The minors of order $2$ in two consecutive rows are the inequalities of Lemma~\ref{lem:winding}(i) (columns of one parity) and of Lemma~\ref{lem:windingrails} (columns of different parity).
+\item Each of $u$ and $v$ is zero or has only real roots, none positive. In particular a rail with exactly three levels has $n_1^{2}\ge4\,n_0n_2$, which contains parts (ii) and (iii) of Lemma~\ref{lem:winding} for three levels.
+\item The polynomial $W(Y)=v(Y^{2})+Y\,u(Y^{2})$ has no root with positive real part. For polynomials $u\ne0\ne v$ with non-negative coefficients this is equivalent to the following: with $g=\gcd(u,v)$, the roots of $g$ are real and not positive, and the roots of $u/g$ and $v/g$ are real, simple and not positive and, listed in decreasing order, alternate; if that list is not empty, it begins with a root of $v/g$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(i) With rows $i<i'$ and columns $c<c'$ the minor is $\mathsf{w}_{c-2i}\mathsf{w}_{c'-2i'}-\mathsf{w}_{c'-2i}\mathsf{w}_{c-2i'}$. For $i=0$, $i'=1$, $c=2j+2$, $c'=2j'+1$ with $j'\ge j+1$ this is $v_{j+1}u_{j'-1}-u_{j'}v_j\ge0$, the first inequality of Lemma~\ref{lem:windingrails}; $c=2j+3$, $c'=2j'$ with $j'\ge j+2$ gives $u_{j+1}v_{j'-1}-v_{j'}u_j\ge0$, the second, and two columns of one parity give Lemma~\ref{lem:winding}(i), which concerns one vertex and so one rail. The totals $n_j=u_j+v_j$ of the site satisfy the same inequality: for $j'\ge j+2$, $n_{j+1}n_{j'-1}-n_jn_{j'}$ is the sum of the four minors $u_{j+1}u_{j'-1}-u_ju_{j'}$, $v_{j+1}v_{j'-1}-v_jv_{j'}$, $u_{j+1}v_{j'-1}-u_jv_{j'}$ and $v_{j+1}u_{j'-1}-v_ju_{j'}$, the last two in columns of different parity. Minors of order $2$ in rows further apart are further inequalities of the same kind.
+(ii) The columns of odd index form the array $(u_{j-i})$, which is therefore totally non-negative: $(u_j)$ is a P\'olya frequency sequence with finitely many non-zero terms, and by the theorem of Aissen, Schoenberg, Whitney and Edrei \cite{aswe} its generating polynomial has only real non-positive roots; likewise $v$. For three levels the discriminant gives $n_1^{2}\ge4n_0n_2$; then $n_1\ge2$, and $n_1^{2}/4\le n_1(n_1-1)/2$.
+(iii) With $W(Y)=\sum_{t=0}^{D}\mathsf{w}_tY^t$ and descending coefficients $a_t=\mathsf{w}_{D-t}$, the entries $a_{2s-r}=\mathsf{w}_{D+r-2s}$ of the infinite Hurwitz matrix of $W$ form a shifted transpose of a submatrix of $(\mathsf{w}_{c-2i})$, so that matrix is totally non-negative. A real polynomial whose infinite Hurwitz matrix is totally non-negative has no root in the open right half-plane \cite[Theorem~3.44]{holtztyaglov}; the equivalent form is the Hermite--Biehler theorem in the version for roots on the closed left half-plane, given in the same place.
+\end{proof}
+
+Part (iii) is quoted, not reproved here, and is \textbf{COMPUTED}: see the remark at the end. The theorem itself is \textbf{PROVED}. On the rings of $1$ and $2$ sites, which the notation excludes, two of the sinks coincide and the proof does not apply as written; there $W=Y(1+Y)(1+Y^{2})^{T-1}$ and the conclusions hold.
+
+\paragraph{Products of multisets.} Write a multiset of elements of the gain group $A$ as an element of the semiring $\mathbb{N}[A]$, so that $m*m'$ is the multiset of all products $gg'$, $g$ from $m$ and $g'$ from $m'$; $T_g m=e_g*m$.
+
+\begin{lemma}[an event after an event]\label{lem:twist}
+Let $D$ be the ring $\mathbb{Z}_N$, $N\ge3$, with four gains. Let $S_1$ be a position product event of length $T_1$ all of whose walks end at one vertex $(x_1,R)$, with multiset of gains $m_1$, and let $S_2$ be a position product event of length $T_2$ with masks $A_t$. Then the masks of $S_1$ followed by the masks $x_1+A_t$ define a position product event of length $T_1+T_2$ whose multiset at every vertex $(x_1+y,\rho)$ is $m_1*m_{S_2}(y,\rho)$. If $m_1$ occurs on $L$, then $T_cm_1$ occurs alone on $R$ after one right step.
+\end{lemma}
+\begin{proof}
+A walk of the new event is a walk of $S_1$ followed by a sequence of steps; after the first $T_1$ steps it is at $(x_1,R)$, and the remaining steps pass the masks exactly if the same steps taken from $(0,R)$ pass the masks of $S_2$, the ring being invariant under translation. The gain of an arc depends on the rail it leaves and the rail it enters, and both parts leave from the rail $R$; so the gain of the walk is the product of the gains of its two parts. For the last sentence: by the first step of the proof of Lemma~\ref{lem:fginv} the multiset $m_1$ occurs alone at a vertex $(x,L)$; one more step with the mask $\{x+1\}$ leaves the walks at $(x+1,R)$ with the gains multiplied by $c$.
+\end{proof}
+
+So the multisets that occur alone on $R$ are closed under $*$, up to the site, and the pairs $(m_S(y,R),m_S(y,L))$ that occur at one site are closed under multiplication by any of them. The first step of the proof of Lemma~\ref{lem:fginv} (which uses $N\ge3$) shows that every multiset that occurs, occurs alone at its site. Separate events are compared only through the rule, which by Lemma~\ref{lem:fginv} is invariant under translation by $H$; absolute gain labels at a common clock are never compared, and need not agree (with $a=b=c=\eta$, $d=-\eta$, $\eta^3=1$, on four sites, the gains at one clock lie in $\{\pm\eta^T\}$).
+
+\begin{lemma}[two levels, in the abstract]\label{lem:twolevelabs}
+Let $\delta$ have finite order $r$ in an abelian group and let $\beta$ be an element with $\beta\langle\delta\rangle\ne\langle\delta\rangle$; write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$. Let $f\colon\mathcal{M}(C_0\cup C_1)\to\mathbb{R}$ vanish at $\emptyset$, be invariant under $T_\delta$, take equal values at $m$ and $T_\beta m$ for $m\in\mathcal{M}(C_0)$, and satisfy \eqref{eq:fgQ} at the pairs $(u,v)$ with $u\in\mathcal{M}(C_0\cup C_1)$, $v\in\mathcal{M}(C_1)$ and at those with $u\in\mathcal{M}(C_0)$, $v\in\mathcal{M}(C_0\cup C_1)$. If $r$ is even, there are real $\alpha$, $q$, $c$ with
+\[
+f(m)=\alpha|m|+q\bigl(\varepsilon_0(m)^{2}+\varepsilon_1(m)^{2}\bigr)+c\,\varepsilon_0(m)\varepsilon_1(m),\qquad\varepsilon_i(m)=\sum_n(-1)^{n}m(\beta^{i}\delta^{n}).
+\]
+If $r$ is odd the same holds with $q=c=0$.
+\end{lemma}
+\begin{proof}
+This is what the proof of Theorem~\ref{thm:fgadj} establishes for $i=0$ from the pairs $(A_0)$ and $(B_0)$ and the invariance under $T_\delta$; the equality of the two coefficients of the squares, and of the two values $f(E_g)$, $g\in C_0$ and $g\in C_1$, which there came from the translation $T_\beta$, comes here from the hypothesis on $T_\beta$ applied to the multisets of one coset. The evenness of $\gamma$ used there follows from the pairs of the second family with $u=\emptyset$, which read $f(T_\delta v)=f(v)$, and from the invariance under $T_\delta$.
+\end{proof}
+
+\begin{lemma}[symmetric functions that are quadratic in each factor]\label{lem:symquad}
+Let $k\ge1$ and let $\mathcal{T}$ be a real polynomial in $p^{(1)},\dots,p^{(k)}\in\mathbb{R}^{2}$ that is a quadratic form in each $p^{(i)}$ when the others are fixed and is unchanged by permutations of the $p^{(i)}$. Then there is a unique quadratic form $G$ on $\mathbb{R}^{k+1}$ with $\mathcal{T}=G(\pi)$, where $\pi=(\pi_0,\dots,\pi_k)$ are the coefficients of $\prod_i\bigl(p^{(i)}_0+p^{(i)}_1X\bigr)$.
+\end{lemma}
+\begin{proof}
+The polynomials that are quadratic forms in each $p^{(i)}$ are the tensors in $W^{\otimes k}$, $W$ the space of quadratic forms on $\mathbb{R}^{2}$, of dimension $3$; the symmetric ones form a space of dimension $\binom{k+2}{2}$. Each $G(\pi)$ is one of them, since $\pi$ is linear in each $p^{(i)}$ and symmetric. The map $G\mapsto G(\pi)$ is injective: over $\mathbb{C}$ every polynomial of degree at most $k$ in $X$ is a product of $k$ factors $p_0+p_1X$, so a form $G$ with $G(\pi)=0$ identically vanishes on $\mathbb{C}^{k+1}$. The quadratic forms on $\mathbb{R}^{k+1}$ have dimension $\binom{k+2}{2}$ as well.
+\end{proof}
+
+\begin{theorem}[products of multisets in two adjacent cosets]\label{thm:fgprod}
+Let $D$ be the ring $\mathbb{Z}_N$ with $M\ge8$ and four gains in a finite abelian group with $\mathsf{s}\ge3$, and let $F_R$, $F_L$ not depend on the site, vanish at $\emptyset$ and satisfy \eqref{eq:ppcons} with the factor $2$. Write $C_0=\langle\delta\rangle$, $C_1=\beta\langle\delta\rangle$, and for $P\in\mathcal{M}(C_0\cup C_1)$ let $p=(\varepsilon_0(P),\varepsilon_1(P))$.
+\begin{enumerate}[label=(\roman*)]
+\item For all $P^{(1)},\dots,P^{(k)}\in\mathcal{M}(C_0\cup C_1)$, none empty, and every multiset $m$ that occurs on $R$, the multiset $P^{(1)}*\dots*P^{(k)}*m$ occurs on $R$ up to a translation by an element of $H$.
+\item If $r$ is even: for every such $m$ there are a real $\alpha_m$ and quadratic forms $G_{m,k}$ on $\mathbb{R}^{k+1}$, $k\ge1$, with
+\[
+F_R\bigl(P^{(1)}*\dots*P^{(k)}*m\bigr)=\alpha_m\prod_i|P^{(i)}|+G_{m,k}(\pi),\qquad \pi=\text{the coefficients of }\prod_i\bigl(p^{(i)}_0+p^{(i)}_1X\bigr),
+\]
+and $G_{m,k}(\pi)=\sum_{d=0}^{k}c_d(m)\sum_{i}\pi_i\pi_{i+d}$ with numbers $c_d(m)$ that do not depend on $k$.
+\item For the multiset $m=e_1$ of the walk of length $0$: $\alpha_m=\alpha$, $c_0=q$ and $c_1=c$ are the constants of Theorem~\ref{thm:fgadj}.
+\end{enumerate}
+If $r$ is odd, (i) holds and $F_R(P^{(1)}*\dots*P^{(k)}*m)=\alpha_m\prod_i|P^{(i)}|$.
+\end{theorem}
+\begin{proof}
+(i) By Proposition~\ref{prop:threegroups}, mode (ii) with $G_2=\emptyset$, and the bookkeeping of Lemma~\ref{lem:fgkappa} as in the proof of Theorem~\ref{thm:fgtwo}, every $T_\kappa P$ with $P\in\mathcal{M}(C_0\cup C_1)$ and some $\kappa\in H$ occurs alone on $R$; Lemma~\ref{lem:twist} multiplies them.
+
+(ii) Fix $m$, alone at a vertex on $R$. By Lemma~\ref{lem:twist} applied to the events of Proposition~\ref{prop:threegroups}, the pairs of the proof of Theorem~\ref{thm:fgadj}, each multiplied by $m$, occur at one site; so $f_m(P)=F_R(P*m)$, which is well defined by the invariance of $F_R$ under $H$ (Lemma~\ref{lem:fginv}), satisfies the hypotheses of Lemma~\ref{lem:twolevelabs}: $\beta\in H$, and $*$ commutes with translations. Hence $f_m(P)=\alpha_m|P|+q_m(p_0^{2}+p_1^{2})+c_mp_0p_1$. Now let $g(P^{(1)},\dots,P^{(k)})=F_R(P^{(1)}*\dots*P^{(k)}*m)$. Applying the last sentence to the multiset $\prod_{j\ne i}P^{(j)}*m$, which occurs by (i), $g$ is in each argument a combination of $|P^{(i)}|$, $(p^{(i)}_0)^{2}+(p^{(i)}_1)^{2}$ and $p^{(i)}_0p^{(i)}_1$ with coefficients depending on the other arguments; these functions of $P^{(i)}$ are linearly independent, so $g$ is a sum of products in which each factor $i$ contributes either $|P^{(i)}|$ or a quadratic form in $p^{(i)}$. For $A\in\mathcal{M}(C_0)$ the multisets $(A*P^{(i)})*P^{(j)}$ and $P^{(i)}*(A*P^{(j)})$ are equal; $A$ multiplies $|P|$ by $|A|$ and $p$ by $\varepsilon_0(A)$, and there are $A$ with equal $\varepsilon_0$ and different $|A|$ (add $E_1$). Collect the terms of $g$ that carry the count for the factor $i$ and a quadratic form for the factor $j$, and those with the two exchanged: the transfer multiplies the first kind by $|A|$ on one side and by $\varepsilon_0(A)^{2}$ on the other, and the second kind the other way round, the remaining terms by the same number on both sides; since the count and the quadratic forms are independent as functions of each factor, comparing two such $A$ shows that both kinds vanish. So no product contains a count for one factor and a quadratic form for another: $g=\alpha_m\prod_i|P^{(i)}|+\mathcal{T}$ with $\mathcal{T}$ a quadratic form in each $p^{(i)}$. It is symmetric because $*$ is commutative, and Lemma~\ref{lem:symquad} gives $G_{m,k}$; the values of $p$ fill $\mathbb{Z}^{2}$, so the forms are determined. Taking $P^{(k)}\in\mathcal{M}(C_0)$ or $P^{(k)}\in\mathcal{M}(C_1)$, and using the invariance under $T_\beta$ in the second case, the restrictions of $G_{m,k}$ to $\pi_k=0$ and to $\pi_0=0$ are both $G_{m,k-1}$ (times $\varepsilon(P^{(k)})^{2}$); so the coefficient of $\pi_i\pi_j$ depends on $j-i$ only, and the coefficients for $j-i<k$ are those of $G_{m,k-1}$; the same restriction shows that the coefficient of the product of the counts is the same for $k$ and $k-1$ factors, so $\alpha_m$ does not depend on $k$.
+
+(iii) is the case $k=1$. For $r$ odd Lemma~\ref{lem:twolevelabs} gives $f_m=\alpha_m|P|$ and the same argument applies with the count alone.
+\end{proof}
+
+For $k+1\le\mathsf{s}$ the cosets $\beta^{i}\langle\delta\rangle$, $0\le i\le k$, are different and the product $P^{(1)}*\dots*P^{(k)}$ determines $\pi$; its value is then $\alpha\prod|P^{(i)}|+\sum_dc_d\sum_i\pi_i\pi_{i+d}$ with constants $c_2,\dots,c_{\mathsf{s}-1}$ about which the theorem says nothing more. For $k+1>\mathsf{s}$ the coefficient $\pi_{i+\mathsf{s}}$ belongs to the coset of $\pi_i$, different products give the same multiset, and this constrains the $c_d$. For three classes one coincidence settles all of them:
+
+\begin{theorem}[three classes: the rule on products]\label{thm:fgthree}
+In the situation of Theorem~\ref{thm:fgprod} let $r$ be even, $\mathsf{s}=3$ and $\beta^{3}=\delta^{k_0}$, $\sigma=(-1)^{k_0}$. Then for all $k\ge1$ and all $P^{(1)},\dots,P^{(k)}\in\mathcal{M}(C_0\cup C_1)$
+\[
+F_R\bigl(P^{(1)}*\dots*P^{(k)}\bigr)=\alpha|m|+q\bigl(\varepsilon_0^{2}+\varepsilon_1^{2}+\varepsilon_2^{2}\bigr)+c\bigl(\varepsilon_0\varepsilon_1+\varepsilon_1\varepsilon_2+\sigma\,\varepsilon_2\varepsilon_0\bigr),
+\]
+with $|m|$ and $\varepsilon_j$ as in Theorem~\ref{thm:fgadj} evaluated at the product $P^{(1)}*\dots*P^{(k)}$ itself: a consistent rule is, on every such multiset, the combination of the count and the two squares $|\sigma_\chi|^{2}$, $\chi(\delta)=-1$, that Theorem~\ref{thm:fgadj} determines on two adjacent cosets. More generally, for every multiset $m$ that occurs on $R$ there are $\alpha_m,q_m,c_m$ with $F_R(P^{(1)}*\dots*P^{(k)}*m)=\alpha_m\prod_i|P^{(i)}|+q_m\sum_j\bar\pi_j^{2}+c_m(\bar\pi_0\bar\pi_1+\bar\pi_1\bar\pi_2+\sigma\bar\pi_2\bar\pi_0)$, where $\bar\pi_j=\sum_{i\equiv j\,(3)}\sigma^{\lfloor i/3\rfloor}\pi_i$.
+\end{theorem}
+\begin{proof}
+Let $\phi(\pi)=(\bar\pi_0,\bar\pi_1,\bar\pi_2)$; for the product $P^{(1)}*\dots*P^{(k)}$ one has $\varepsilon_j=\bar\pi_j$, because $\beta^{i+3}\delta^{n}=\beta^{i}\delta^{n+k_0}$. Let $\bar Q(e)=q\sum e_j^{2}+c(e_0e_1+e_1e_2+\sigma e_2e_0)$. Then $\bar Q(\phi(X\pi))=\bar Q(\phi(\pi))$, so $\bar Q\circ\phi=\sum_dc^{\ast}_d\sum_i\pi_i\pi_{i+d}$ with $c^{\ast}_0=q$, $c^{\ast}_1=c$, and by Theorem~\ref{thm:fgprod} the difference is $L(\pi)=G_{e_1,k}(\pi)-\bar Q(\phi(\pi))=\sum_{d\ge2}b_d\sum_i\pi_i\pi_{i+d}$. In $\mathbb{N}[A]$ put $\eta=\delta^{-k_0}$ and
+\[
+\mathsf{A}=(4e_1+e_\eta+e_{\eta\beta})*(e_1+e_\beta),\qquad \mathsf{B}=(e_1+2e_\beta)*(e_1+2e_\beta+e_{\eta\beta}).
+\]
+Expanding and using $\beta^{3}\eta=1$ one finds $e_\beta*\mathsf{A}=\mathsf{B}$. For $d\ge2$ let $\mathsf{C}=(e_1+e_\beta)^{*(d-2)}$. Then $F_R(\mathsf{A}*\mathsf{C})=F_R(\mathsf{B}*\mathsf{C})$ by the invariance under $H$, and $\bar Q\circ\phi$ takes equal values at the two for the same reason, so $L(\pi_{\mathsf{A}})=L(\pi_{\mathsf{B}})$ with $\pi_{\mathsf{A}}=(4+\sigma+\sigma X)(1+X)^{d-1}$ and $\pi_{\mathsf{B}}=(1+2X)(1+(2+\sigma)X)(1+X)^{d-2}$, both of degree $d$. If $b_{d'}=0$ for $d'<d$ this reads $b_d\,\sigma(4+\sigma)=b_d\,2(2+\sigma)$, and $4\sigma+1\ne4+2\sigma$; so $b_d=0$ for all $d\ge2$ by induction. The statement for $m$ is the same argument applied to $F_R(\,\cdot*m)$.
+\end{proof}
+
+\begin{remark}\label{rem:tpprod}
+(a) \emph{What the open dimension was.} For any unit $u$ the function of Remark~\ref{rem:winding}(b) is, on a multiset whose levels are determined by its cosets, the form $\sum_dc_d\sum_i\pi_i\pi_{i+d}$ with $c_0=1$ and $c_d=2\operatorname{Re}u^{dM}$ for $d\ge1$. On three levels it differs from the squares by a multiple of $\varepsilon_{\rm low}\varepsilon_{\rm high}$. This is the one further dimension that exact ranks left on rings of $3$, $5$ and $6$ sites at sizes $4$ and $5$ \cite{comp4s}: all multisets of those sizes that meet three cosets have the profile $(1,2,1)$ or $(1,3,1)$, whose middle coset is the one with two or three walks, so their levels are determined. On rings with $M\ge8$ and for three classes, Theorem~\ref{thm:fgthree} leaves no such dimension on the products (for the function above it requires $u^{3M}=\sigma$); it says nothing about the rings of $3$, $5$ and $6$ sites, where the dimension was seen: there the multiset $\mathsf{A}$, with levels $(5,6,1)$, is a translate of $\mathsf{B}$, with levels $(1,5,6)$.
+(b) \emph{Open.} For $\mathsf{s}\ge3$: the rule on the multisets that occur and are not, up to translation, products of multisets in two adjacent cosets. The smallest has the profile $(1,3,1)$. By Theorem~\ref{thm:fgprod} such an $m$ carries constants $\alpha_m$, $c_d(m)$; the open statement is $\alpha_m=\alpha|m|$ and $\sum_dc_d(m)\sum_i\pi_i\pi_{i+d}=\sum_dc_d\sum_i(\pi\mu)_i(\pi\mu)_{i+d}$, $\mu$ the signed sums of $m$ by level. It would follow from a preparation of pairs: for instance, for $r=2$ and in the notation of levels, $1+3X+X^{2}$ on $R$ together with $(e_1+e_\delta)X+(2e_1+3e_\delta)X^{2}$ on $L$ has both sums products. Not every pair allowed by Corollary~\ref{cor:tp} occurs: on the rings with $3\le M\le8$ the profiles $\mathsf{w}=(1,2,3,3,2)$, its reverse, and $(1,2,3,5,1)$ are allowed and occur at no site of any position product event without gains (\textbf{COMPUTED} by a complete search, finite by a trimming lemma that bounds every total along a run by the total at the end \cite{comptp}). Whether they occur for $M\ge9$, and what further condition separates the profiles that occur, is open. For $\mathsf{s}\ge4$: coincidences that fix $c_d$ for $\mathsf{s}/2<d$, as $\mathsf{A}$, $\mathsf{B}$ do for $\mathsf{s}=3$. With trivial twist ($\beta^{\mathsf{s}}=1$) and in the form used above, such a coincidence is a pair of lists $a$, $b$ of $\mathsf{s}-1$ positive integers whose elementary symmetric functions satisfy $e_j(b)=e_{\mathsf{s}-j}(a)$, $1\le j\le\mathsf{s}-1$: then $X\prod_i(a_i+X)\equiv\prod_j(1+b_jX)$ modulo $X^{\mathsf{s}}-1$. The equations for $j=1$ and $j=\mathsf{s}-1$ give $\sum b=\prod a$ and $\prod b=\sum a$, so $\prod a-\sum a=-(\prod b-\sum b)$; since $\prod c-\sum c\ge-(\mathsf{s}-2)$ for positive integers and grows with the entries, the pairs for a given $\mathsf{s}$ lie in a finite set and can be listed. For $\mathsf{s}=3$ the only pair with $a\ne b$ is $a=(5,1)$, $b=(2,3)$; for $\mathsf{s}=4$ there are two, $(7,1,1)$, $(1,3,3)$ and $(8,1,1)$, $(1,2,5)$; for $5\le\mathsf{s}\le80$ there is \textbf{none} (\textbf{COMPUTED} by a wildcard reviewer and rerun by the author \cite{comptp}). So for five or more classes a coincidence, if there is one, has another form (factors with both coefficients above one, a shift by more than one level, a non-trivial twist), and looking for one class by class is not a method. Theorem~\ref{thm:fgfoursix} below settles $\mathsf{s}=4,5,6$ on products by another route. Both open points would follow from a rule known on all multisets that occur, because coincidences among those are plentiful.
+(c) \emph{Computed.} Position product events without gains were enumerated over all masks, with every site total at most $9$ on the rings of $3$, $5$ and $6$ sites and at most $7$ on those of $7$ and $8$ sites; the search is complete on $3$ and $6$ sites, exhaustive to length $6$ and sampled beyond on $5$ sites, and exhaustive to length $5$ and sampled to length $40$ on $7$ and $8$ sites. Every profile $(u,v)$ seen satisfies Corollary~\ref{cor:tp}(ii) and (iii), tested by exact isolation of real roots. On the ring of $5$ sites the profiles seen with at most four levels and total at most $9$ are \emph{exactly} the $550$ that the corollary allows, and on the ring of $8$ sites those with total at most $7$ are exactly the $228$ it allows; the two lemmas of the last subsection allow $620$ and $248$. On $3$ and $6$ sites, where $M=3$ and the search is complete, $96$ of the $550$ do not occur; on $7$ sites the sampled search saw $217$ of the $228$. A first run for $7$ sites with a larger bound was stopped for lack of memory and is kept as such. The identity $e_\beta*\mathsf{A}=\mathsf{B}$, the values used in the induction, and the dimension count of Lemma~\ref{lem:symquad} for $k\le5$ were checked by program \cite{comptp}.
+(d) \emph{Status.} Theorem~\ref{thm:tp}, Corollary~\ref{cor:tp}(i),(ii), Lemmas~\ref{lem:twist} and~\ref{lem:symquad} are \textbf{PROVED}, (ii) with the quoted theorem of Aissen, Schoenberg, Whitney and Edrei. Corollary~\ref{cor:tp}(iii) is \textbf{QUOTED AND COMPUTED}. Theorems~\ref{thm:fgprod} and~\ref{thm:fgthree} are \textbf{PROVED} given Proposition~\ref{prop:threegroups} and the argument of Theorem~\ref{thm:fgadj}, on which Lemma~\ref{lem:twolevelabs} rests. Theorems~\ref{thm:tp} and~\ref{thm:fgthree} and Corollary~\ref{cor:tp} were read by Director~G, outside the author's model family, with programs of their own: all steps follow; so did Sessions A and B (GPT-6), separately, with one gap of presentation in part (i), now closed, and the indexing of part (iii) given here.
+\end{remark}
+
+\begin{corollary}[one class of winding without the one-gain note, $M\ge8$]\label{cor:pplus8}
+For $M\ge8$ the property $P^{+}_\delta$ of Proposition~\ref{prop:fgonelevel} holds. Hence that proposition, and with it the case $\mathsf{s}=1$, holds on rings with $M\ge8$ without the statements of \cite{dgone}.
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:threegroups}, mode (i), with $G_1=\emptyset$, $G_2=U'$, $G_3=V'$: the walks that end at the site $x$ are $U'$ on $R$ and $V'$ on $L$, all with $\lambda=l$, and no walk ends at another site. The empty group is omitted with its stages, as the proposition allows.
+\end{proof}
+
+Corollary~\ref{cor:five} below lowers the bound to $M\ge5$.
+
+\paragraph{Four to six classes.} For $\mathsf{s}\ge4$ the coincidences of the kind used for three classes are rarer, and a different bookkeeping is needed. Write $G(\pi)=\sum_dc_d\sum_i\pi_i\pi_{i+d}$ as $L(|\pi(z)|^{2})$, where, with $A_d=\sum_i\pi_i\pi_{i+d}$, $|\pi(z)|^{2}=A_0+\sum_{d\ge1}A_d(z^{d}+z^{-d})$ on the unit circle is a polynomial in $w=z+z^{-1}$, and $L$ is the linear functional on $\mathbb{R}[w]$ with $L(1)=c_0$ and $L(z^{d}+z^{-d})=c_d$ for $d\ge1$.
+
+\begin{proposition}[the schema]\label{prop:schema}
+In the situation of Theorem~\ref{thm:fgprod} let $r$ be even, $\beta^{\mathsf{s}}=\delta^{k_0}$, $\sigma=(-1)^{k_0}$, and let $m(w)$ be the squarefree part of $C_{\mathsf{s}}(w)-2\sigma$, where $C_{\mathsf{s}}(z+z^{-1})=z^{\mathsf{s}}+z^{-\mathsf{s}}$. Suppose there are pairs of products $(\mathsf{A}_t,\mathsf{B}_t)$ of non-empty multisets in two adjacent cosets with $\mathsf{A}_t=T_{h_t}\mathsf{B}_t$, $h_t\in H$, such that the polynomials $h_t(w)=|\pi_{\mathsf{A}_t}|^{2}-|\pi_{\mathsf{B}_t}|^{2}$ have greatest common divisor $m$. Then for every $k$ and all $P^{(i)}$
+\[
+F_R\bigl(P^{(1)}*\dots*P^{(k)}\bigr)=\alpha\prod_i|P^{(i)}|+\bar Q(\phi(\pi)),
+\]
+where $\phi$ is the reduction modulo $X^{\mathsf{s}}-\sigma$ and $\bar Q$ is a quadratic form invariant under $\phi(X\,\cdot)$; equivalently, $F_R$ is on these products a combination of the count and the squares $|\sigma_\chi|^{2}$, $\chi(\delta)=-1$.
+\end{proposition}
+\begin{proof}
+By Theorem~\ref{thm:fgprod}, $F_R(P^{(1)}*\dots*P^{(k)})=\alpha\prod|P^{(i)}|+L(|\pi|^{2})$. For any product $\mathsf{C}$, $F_R(\mathsf{A}_t*\mathsf{C})=F_R(\mathsf{B}_t*\mathsf{C})$ by the invariance under $H$, and the counts agree, so $L(h_t\,|\pi_{\mathsf{C}}|^{2})=0$. Taking $\mathsf{C}=(e_1+e_\beta)^{*k}$, $k\ge0$, gives $|\pi_{\mathsf{C}}|^{2}=(2+w)^{k}$, polynomials of every degree, which span $\mathbb{R}[w]$. Hence $L$ vanishes on the ideal generated by the $h_t$, that is on $(m)$. Since $C_{\mathsf{s}}(z+z^{-1})-2\sigma=(z^{\mathsf{s}}-\sigma)^{2}/z^{\mathsf{s}}$, the roots of $m$ are real, and since $m$ is squarefree, Lagrange interpolation makes $L$ a real combination of evaluations at its roots $w=z+z^{-1}$, $z^{\mathsf{s}}=\sigma$; so $L(|\pi|^{2})$ depends only on the values of $\pi$ at the $\mathsf{s}$-th roots of $\sigma$, that is on $\phi(\pi)$, and is a combination of $|\pi(z)|^{2}$ at those roots, which are the squares $|\sigma_\chi|^{2}$. Conversely every such combination vanishes on $(m)$.
+\end{proof}
+
+\begin{theorem}[four, five and six classes on products]\label{thm:fgfoursix}
+In the situation of Proposition~\ref{prop:schema}, for $\mathsf{s}=4,5,6$ and both values of $\sigma$, a consistent rule is on every product of multisets in two adjacent cosets a combination of the count and the squares $|\sigma_\chi|^{2}$, $\chi(\delta)=-1$. For $\mathsf{s}=4$ and $\sigma=1$ one pair suffices: $\mathsf{A}=(7D_0+D_0e_\beta)*(D_0+D_0e_\beta)^{*2}$ and $\mathsf{B}=(D_0+3D_0e_\beta)^{*2}*(D_0+D_0e_\beta)$, with $e_\beta*\mathsf{A}=\mathsf{B}$ and $h=-2(r/2)^{6}(w^{3}-4w)$; the rule then has one further free constant, the coefficient of $\varepsilon_0\varepsilon_2+\varepsilon_1\varepsilon_3$.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:schema}, with one pair for $\mathsf{s}=4$, $\sigma=1$ and two pairs in each other case. The pairs, the identities of multisets, the polynomials $h_t$, the divisibility $m\mid h_t$ and an explicit B\'ezout relation $u_1h_1+u_2h_2=m$ are checked in Lean \cite{comptp}.
+\end{proof}
+
+For $\mathsf{s}=7$ and $8$ no pair with these properties has been found; a search of the relations in $\mathbb{Q}[X]/(X^{\mathsf{s}}-\sigma)$ returned only the trivial one, or relations whose $h$ have a common factor of larger degree than $m$. The pairs and the schema are a worker's of the author's stack, read by the author; the Lean files were rerun by the author.
+
+\paragraph{Smaller rings.} Proposition~\ref{prop:threegroups} needs $M\ge8$ because its three stocks and the source sit at four residues. One residue can carry both levels.
+
+\begin{proposition}[three groups on two levels, $M\ge5$]\label{prop:threegroups5}
+The conclusion of Proposition~\ref{prop:threegroups} holds for every $N$ with $M=N/\gcd(N,2)\ge5$.
+\end{proposition}
+\begin{proof}[Proof for $M\ge6$]
+Use the frame of the proof of Proposition~\ref{prop:threegroups}: deficits relative to the source $S$ at the boundaries between stages, where every walk has arrived by a right step. A tick is given by a move of each packet (right, left, both, none); it is \emph{exclusive} if no candidate that a packet must lose lies in the mask formed by the candidates that the packets keep. Then each packet continues exactly by its move. Two packets at circular distance at least $2$ modulo $M$ have disjoint candidates, so only pairs at distance $0$ or $1$ need checking. Packets: the source at $0$; one packet $P$ at $4$, whose walks have deficit $4$ (\emph{high}, the group $G_1$) or $4-M$ (\emph{low}, the group $G_3$); the packet $B$ at $2$ (the group $G_2$). For $M\ge6$ these three are pairwise at distance at least $2$. Stages:
+\begin{itemize}
+\item Advance (four ticks): the source $LLRR$, the other packets $LRLR$. Positions after each tick: $(1,3,5)$, $(2,3,5)$, $(2,4,6)$, $(2,4,6)$; at each tick the kept and the lost candidates are disjoint modulo $M$ for $M\ge6$. The source gains one factor $\delta$, the others none, and all relative positions are restored.
+\item Deposit into the high level: the source takes both steps and the others a right step; the copy then steps left from $1$ to $4$ while all others step right, merging into $P$ at $4$; one idle tick. Its deficit is that of the source plus $4$.
+\item Deposit into the low level: the source takes both steps and the others a left step; the right-hand part is the copy, which then steps right, while the new source and $P$ step left; after $M-4$ ticks in all $P$ arrives at the copy's residue and merges with it; one idle tick. The low walks of $P$ and the copy then have the deficit of the old source, which is the new source's deficit minus $M-4$: the configuration is restored.
+\item Deposit into $B$: the source takes both steps, the others a right step; the copy steps left onto $B$ at $2$; one idle tick.
+\item Removal of the source; coast to the site $x$ (every packet a right step).
+\item End (i): $P$ steps left and $B$ right until $P$ is at $2$, where both arrive, $P$ on $L$, $B$ on $R$, with the deficit of $B$ equal to that of the low walks. End (ii): two ticks in which $B$ steps left and $P$ right; they arrive at $4$, $B$ on $L$ at the deficit of the high walks.
+\end{itemize}
+In each tick the only pairs at distance at most $1$ are a split source and its copy (the source keeps $0$ and loses $1$, the copy keeps $2$ and loses $1$), a copy arriving at its packet (both keep the same residue, an intended merge), and $P$ meeting $B$ or the copy in the last tick of a merge or an end. The candidates kept and lost are listed in the worker's record \cite{comptp} for every tick; they are disjoint modulo $M$ for $M\ge6$. The schedule is: every deposit into $P$, each preceded by advances; then every deposit into $B$, likewise; removal; coast; an end. Gains: an advance adds $1$ to the exponent of the source and $0$ to every other walk; every other stage adds to each walk an exponent fixed by the stage and the walk's part in it. So the walk deposited $i$-th ends with exponent $n_i+\kappa_i$, $n_i$ the number of advances before its deposit and $\kappa_i$ independent of the $n_j$, and the advances are chosen as in Proposition~\ref{prop:threegroups}. An empty group is omitted with its stages.
+\end{proof}
+For $M=5$ three packets always include an adjacent pair, and the configuration rotates. A different schedule (an advance of seven ticks, a deposit of three, an end of four or one tick) is exclusive at every tick by a finite table, and the gains follow as above; this part of the proof is the table \cite{comptp}, which was found by a bounded search and checked in every replay. On rings with $M=3$ and $\delta$ of order $3$ the property $P^{+}_\delta$ is false: no event leaves exactly $e_{\delta^{g}}$ on $R$ and $e_{\delta^{g+1}}$ on $L$ at one level (\textbf{COMPUTED} by a closed search).
+
+\begin{corollary}\label{cor:five}
+Theorems~\ref{thm:fgtwo}, \ref{thm:fgadj}, \ref{thm:fgprod} and~\ref{thm:fgthree} and Corollary~\ref{cor:pplus8} hold with $M\ge5$ in place of $M\ge8$. In particular the case of one class of winding holds for $M\ge5$ without \cite{dgone}.
+\end{corollary}
+\begin{proof}
+Their proofs use Proposition~\ref{prop:threegroups} only through its statement, together with results that need $N\ge3$.
+\end{proof}
+
+The construction for $M\ge6$ is a worker's of the author's stack, read tick by tick by the author; the table for $M=5$ is the worker's and is \textbf{COMPUTED}. Replays on the rings: $648$ requests for each $M$ from $6$ to $14$, and $1{,}926$ on $\mathbb{Z}_5$ and $\mathbb{Z}_{10}$, all met \cite{comptp}.
+
+% Bibliography entries needed:
+% \bibitem{lgv} B. Lindstr\"om, On the vector representations of induced matroids, Bull. London Math. Soc. 5 (1973) 85--90;
+%   I. Gessel and G. Viennot, Binomial determinants, paths, and hook length formulae, Adv. Math. 58 (1985) 300--321.
+% \bibitem{aswe} M. Aissen, I. J. Schoenberg and A. M. Whitney, On the generating functions of totally positive sequences I,
+%   J. Analyse Math. 2 (1952) 93--103; A. Edrei, On the generating functions of totally positive sequences II, ibid. 104--109.
+% \bibitem{holtztyaglov} O. Holtz and M. Tyaglov, Structured matrices, continued fractions, and root localization of polynomials,
+%   SIAM Review 54 (2012) 421--509, Theorem 3.44 (arXiv:0912.4703).  Checked on 15 November 2026 only through the
+%   account of it in M. Adm, J. Garloff and M. Tyaglov, Total nonnegativity of finite Hurwitz matrices and root location
+%   of polynomials (arXiv:1711.04651): the infinite Hurwitz matrix of a real polynomial is totally non-negative exactly
+%   when the polynomial is quasi-stable (roots in the closed left half-plane).  The theorem's own text and its
+%   normalisation have not been read by the author.
+% \bibitem{comptp} Director_Z/computation/Product_Events/four_gains/winding/total_positivity/

@@ -1,0 +1,1 @@
+Director's recheck: bfs_target.py for M=5 rerun in a fresh directory, exit 0, result file compared above. The challenger's remark on 'site total' concerns another program: the draft's figures come from tp_profiles.py, which does bound the site total. Agreement: two programs of different design find (1,2,3,3,2) absent for M = 4 to 7.
