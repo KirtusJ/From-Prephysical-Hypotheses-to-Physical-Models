@@ -59,3 +59,9 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
 - step 10: w_m5_g4 `m5_schedule.py /tmp/claude-0/w_m5_g4/m5_q3_s3.json 3 3 8` exit 0, 88 s: G3 1926/1926 replays
   (q<=3, total size <=3, modes (i),(ii), z in {0,1,3}, N=5 and 10, exact gains). PROOFS.md: Theorem B (M=5),
   Corollary B1 (prop:threegroups and its consequences for M >= 5), Statement C (M=3, q=3: P^+ false; COMPUTED).
+- step 11: cross-check of Statement C without relaxation, worker/m3_brute.py (full states on the actual ring, no
+  dropping): `m3_brute.py /tmp/claude-0/w_m3_brute/m3_N3_T14.json 3 14 3000000`: reached length 10 (802,803 states
+  in layer 10) with L-R gain differences 0 (first at length 2) and 2 (length 3) seen and difference 1 NOT seen;
+  then KILLED by the kernel for lack of memory during layer 11 (shared limit; the challenger's four rank processes
+  held ~10 GB at the time). No result file. FAILED RUN, kept here; my CAP was per layer and not a memory bound.
+  Evidence kept from the log only: no ({g},{g+1}) one-level pair at lengths <= 10 on Z_3 without relaxation.
