@@ -11,7 +11,7 @@ The setting is that of G10's subsection "Four arc gains", on the ring ℤ_N.
 
 ## Lemma R_N (ring recoding)
 
-**Statement.** Let w be a walk of length T from (0,R) on ℤ_N, ending at the vertex (x̄, rail), with ρ right steps and λ left steps. Then:
+**Statement.** Assume B^M = 1. Let w be a walk of length T from (0,R) on ℤ_N, ending at the vertex (x̄, rail), with ρ right steps and λ left steps. Then:
 
 - if w ends on R, g(w) = κ(w) · g_δ(w), where κ(w) = a^(ρ−λ) (bc)^λ;
 - if w ends on L, g(w) = κ(w) · bδd⁻¹ · g_δ(w).
@@ -27,7 +27,7 @@ Write κ_{T,x̄} for this common value.
 
 ## Proposition P_N (PREP on rings)
 
-**Statement.** Let N/gcd(N,2) ≥ 6 and B^M = 1. Assume the ring case of G10 Lemma 5.34 for D_δ. Then, for every κ ∈ H, U ∈ M(κ⟨δ⟩) and V ∈ M(κ b d⁻¹⟨δ⟩), there are a site x̄ and a position product event S with m_S(x̄,R) = U and m_S(x̄,L) = V.
+**Statement.** Let N/gcd(N,2) ≥ 6 and B^M = 1, so that Δ_N = ⟨δ⟩. Assume the ring case of G10 Lemma 5.34 for D_δ. Then, for every κ ∈ H, U ∈ M(κ⟨δ⟩) and V ∈ M(κ b d⁻¹⟨δ⟩), there are a site x̄ and a position product event S with m_S(x̄,R) = U and m_S(x̄,L) = V.
 
 **Proof.**
 1. **Empty target.** If U = V = ∅, take A_1 = ∅.
@@ -36,7 +36,7 @@ Write κ_{T,x̄} for this common value.
 4. **Read off κ₁.** Since U' or V' is non-empty, some walk of S' ends at x̄. Its ρ₁ − λ₁ = x₀ + N s for some integer s, so κ_{T₀,x̄} = κ₁ = a^(x₀ + N s) (bc)^(λ₁).
 5. **Two prefixes.** Each is a single walk from (0,R) back to (0,R), so in D_δ it has gain 1 and leaves the multisets of D_δ unchanged.
    - The prefix "left, then right" (A_1 = {−1}, A_2 = {0}) multiplies the four-gain ratio by bc, since λ grows by 1.
-   - The prefix "N steps right" (A_s = {s mod N} for s = 1, …, N) multiplies it by a^N, since ρ grows by N. On ℤ_N with N ≥ 3 these are distinct sites, so the walk is unique.
+   - The prefix "N steps right" (A_s = {s mod N} for s = 1, …, N) multiplies it by a^N, since ρ grows by N. For N ≥ 3 both prefixes are single walks, because from site s a left step lands at s − 1, which is not s + 1 (mod N); for N = 1 or 2 neither is unique, but M ≥ 6 excludes these.
 6. **Adjust the ratio.** Use i prefixes of the second kind and j of the first, with i ≡ −s modulo the order of a^N and j ≡ μ₀ − λ₁ modulo the order of bc. Then the ratio becomes a^(x₀) (bc)^(μ₀) = κ₀.
 7. **Conclude.** By Lemma R_N, m_S(x̄,R) = T_{κ₀} U' = U and m_S(x̄,L) = V. ∎
 
@@ -49,5 +49,9 @@ When B^M ≠ 1 the question is open. A builder is attacking it.
 ## What would break this
 
 - The well-definedness step in Lemma R_N: it needs 2k ≡ 0 (mod N) ⇒ M | k. For N odd, k ≡ 0 (mod N). For N even, k ≡ 0 (mod N/2) = M. ✓
-- The prefix of N right steps being not unique or not closed. It returns to site N ≡ 0 on rail R. The masks {1}, …, {N−1}, {0} admit only right steps, because a left step from s lands at s − 2 ≠ s + 1 (mod N) when N ≥ 3. ✓
+- The prefix of N right steps being not unique or not closed. It returns to site N ≡ 0 on rail R. The masks {1}, …, {N−1}, {0} admit only right steps, because from site s a left step lands at s − 1, not s + 1 (mod N), when N ≥ 3. ✓ (Corrected after the challenger: an earlier wording said s − 2.)
 - Lemma 5.34 on rings, which is Director G's (M ≥ 6).
+
+## After the challenger (15 November 2026)
+
+No defect in the proof in range. The rerun is recorded in `review_ring/`. Corrections made: two hypotheses (B^M = 1 in Lemma R_N; Δ_N = ⟨δ⟩ in P_N) moved into the statements; the reason the prefixes are unique corrected; a slip (s − 2) corrected. End to end, following the proof with a brute-force stand-in for Lemma 5.34 on rings N = 3 to 8: 22,449 targets passed, 0 failed, 19,971 beyond the search bound. The lemma holds in all 10,226 instances with B^M = 1 and breaks in all 22,574 with B^M ≠ 1 (lengths up to 12). Same model family; not independent review.
