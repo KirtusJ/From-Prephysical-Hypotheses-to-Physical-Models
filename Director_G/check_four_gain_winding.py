@@ -183,6 +183,53 @@ def winding_register_probe():
     return rows
 
 
+def free_winding_reads(size, modulus, horizon):
+    """Propagate signed counts with a register updated on actual seam crossings."""
+    state = {(0, "R", 0): 1}
+    reads = []
+    for tick in range(1, horizon + 1):
+        later = Counter()
+        for (well, incoming, record), amplitude in state.items():
+            for rail, step in (("L", -1), ("R", 1)):
+                crossing, target = divmod(well + step, size)
+                new_record = record + crossing
+                if modulus is not None:
+                    new_record %= modulus
+                sign = -1 if incoming == rail == "L" else 1
+                later[target, rail, new_record] += sign * amplitude
+        wells = Counter()
+        for (well, _, _), amplitude in later.items():
+            wells[well] += amplitude**2
+        require(sum(wells.values()) == 2**tick, "free walk normalization")
+        reads.append(wells)
+        state = later
+    return reads
+
+
+def first_register_reads():
+    rows = []
+    for size in range(3, 9):
+        period = size // gcd(size, 2)
+        stride = 2 * period // size
+        horizon = 5 * period + 1
+        integer = free_winding_reads(size, None, horizon)
+        by_order = {}
+        for modulus in range(1, 6):
+            order = modulus // gcd(modulus, stride)
+            reads = free_winding_reads(size, modulus, horizon)
+            tick = order * period + 1
+            well = tick % size
+            require(reads[:tick-1] == integer[:tick-1], "premature winding read")
+            difference = reads[tick-1][well] - integer[tick-1][well]
+            require(difference == 2 * (-1)**(tick-2), "first winding read")
+            if order in by_order:
+                require(reads == by_order[order], "equivalent register orders")
+            by_order[order] = reads
+            rows.append(dict(ring=size, modulus=modulus, effective_order=order,
+                             tick=tick, well=well, numerator_difference=difference))
+    return rows
+
+
 def checks():
     forks = []
     for size in (3, 4, 5, 6, 7, 8, 9, 12, 15):
@@ -199,6 +246,7 @@ def checks():
     return dict(arc_formula=arc_identity(), support=support_tests(), repeated_forks=forks,
                 splice=splices(7, "R"*15, "L"*14+"R"), physical_probe=scored_fork(),
                 winding_register=winding_register_probe(),
+                first_register_reads=first_register_reads(),
                 tiny_ring=dict(ring=2, depth=2, admitted_paths=sum(small.values())))
 
 
