@@ -227,7 +227,30 @@ def next_rotation_challenge():
             require((w,measured) == (knot,Q(175,513)), "third rotation missed rival")
 
 
+def complementary_branch_scores():
+    for site in (0,2,4,6):
+        p = Q(5,8) if site == 4 else Q(1,8)
+        for dephase in (False,True):
+            scores = []
+            for ray in ((1,0),(0,1),(1,1),(1,-1)):
+                target = field(18,ray)[site]
+                q = Q(norm(target),2**18*norm(ray))
+                r,l = target
+                x,z = Q(2*r*l,norm(target)), Q(r*r-l*l,norm(target))
+                wells = mass_table(3,target)
+                if dephase:
+                    wells = [(r*r*a+l*l*b)/norm(target) for a,b in
+                             zip(mass_table(3,(1,0)),mass_table(3,(0,1)))]
+                observed_x = 4*(wells[3]-wells[5])
+                observed_z = 2*(wells[1]-wells[7])-observed_x/2
+                scores.append(q*(1+x*observed_x+z*observed_z)/2)
+                require(q == p, "unconditional branch yield")
+            lower = sum(scores)/2-p
+            require(lower == (p/2 if dephase else p), "complementary branch bound")
+
+
 if __name__ == "__main__":
+    complementary_branch_scores()
     post_write_probe()
     multiwell_control()
     finite_response_grid()
