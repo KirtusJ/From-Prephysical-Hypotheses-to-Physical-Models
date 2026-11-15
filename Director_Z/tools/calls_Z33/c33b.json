@@ -1,0 +1,357 @@
+[
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_COMMISSIONED",
+   "body": {
+    "arrangement": "UNARY",
+    "author": "assistant",
+    "claims": [
+     {
+      "label": "A",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Proposition 5.73 (the schema): coincidences of products whose polynomials h_t have greatest common divisor m force a consistent rule on products to be the count and the squares.",
+      "criterion": "Supported in scope if the proof follows on reading and a reviewer outside the author's model family finds no defect of substance."
+     },
+     {
+      "label": "B",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Theorem 5.74: four, five and six classes of winding, both twists, on products.",
+      "criterion": "Supported in scope if the schema holds and the coincidences, the polynomials h_t and a Bezout relation are checked in Lean."
+     },
+     {
+      "label": "C",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "Corrections to Corollary 5.65 from the cross-reviews of edition Z32 (pooled totals as a sum of four minors; Hurwitz indexing; empty root list).",
+      "criterion": "Supported in scope if each corrected sentence is true on reading and on the reviewers' examples."
+     }
+    ],
+    "director": "principal",
+    "expectation": "NO_DIRECTIONAL_EXPECTATION",
+    "extent": "PARTIAL",
+    "label": "Z33",
+    "modules": [
+     {
+      "id": "acr.mathematics",
+      "sha256": "8da02f39bd7f91a6f3768644695e6d51739ac9cd5216f606f32647eac5c03361",
+      "version": "1.0"
+     },
+     {
+      "id": "acr.science",
+      "sha256": "e1a3466816fb4b57e787ed91e51dd2f1c3a67eca5fb8d033900e31f07c5b417e",
+      "version": "1.0"
+     }
+    ],
+    "procedure": "FOCUSED",
+    "required_gates": [
+     "G1",
+     "G5",
+     "G6"
+    ],
+    "target": {
+     "sha256": "2fe80c2a43a59638d895db791281b055d6fddf80fc30b9be10f11ebb0441f5a5",
+     "t": "artifact"
+    },
+    "title": "Twenty-ninth revision of paper G10: the schema, four to six classes on products, corrections from cross-review"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "Proposition 5.73, Theorem 5.74 and Corollary 5.65 read in the typeset paper",
+    "ref": {
+     "sha256": "2fe80c2a43a59638d895db791281b055d6fddf80fc30b9be10f11ebb0441f5a5",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "all of it; written by this participant",
+    "ref": {
+     "sha256": "14ee0de84db40b53dc5549a1795308647d9eaf87d722e589f4e8f874cd11777c",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "read; the worker's schema and pairs",
+    "ref": {
+     "sha256": "a510ee774a44c5e57c873e79998daf23964f48518cdcb4df6b0831bc4e1967e2",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant, exit 0",
+    "ref": {
+     "sha256": "36114423c6004928c0166c7c6d44b35892a1a7192acfb248a5680e117ed1bc52",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "written by this participant; Director G's checkers rerun",
+    "ref": {
+     "sha256": "211f8f8016f0db63d40cc1d762fdf74f5fb5b7cbe998eeaef02203be21a3deb3",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G1",
+    "note": null,
+    "review": "Z33"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "A",
+    "id": "O45",
+    "review": "Z33",
+    "text": "Reviewed outside the model family by Director G (Codex) and Session B (GPT-6) on the PR thread; their records are not in this register."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "B",
+    "id": "O46",
+    "review": "Z33",
+    "text": "Seven and more classes open; multisets that are not products open."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O45",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper states the limit.",
+    "id": "O46",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "2fe80c2a43a59638d895db791281b055d6fddf80fc30b9be10f11ebb0441f5a5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "14ee0de84db40b53dc5549a1795308647d9eaf87d722e589f4e8f874cd11777c",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "A",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F102",
+    "left_open": "Records of the outside reviewers are on the PR thread only.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z33",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "2fe80c2a43a59638d895db791281b055d6fddf80fc30b9be10f11ebb0441f5a5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "a510ee774a44c5e57c873e79998daf23964f48518cdcb4df6b0831bc4e1967e2",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "36114423c6004928c0166c7c6d44b35892a1a7192acfb248a5680e117ed1bc52",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "B",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F103",
+    "left_open": "Seven and more classes.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z33",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "2fe80c2a43a59638d895db791281b055d6fddf80fc30b9be10f11ebb0441f5a5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "211f8f8016f0db63d40cc1d762fdf74f5fb5b7cbe998eeaef02203be21a3deb3",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "C",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "EXECUTED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F104",
+    "left_open": "None.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z33",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G5",
+    "note": "Each claim has a finding; two objections recorded open.",
+    "review": "Z33"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G6",
+    "note": "Deliverable checked: G10 revised a twenty-ninth time; edition Z33 assembled from Z32 by a program; verify_baseline.py run before the push.",
+    "review": "Z33"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_CLOSED",
+   "body": {
+    "examined_extent": "PARTIAL",
+    "lifecycle": "CLOSED_COMPLETE",
+    "note": null,
+    "review": "Z33"
+   }
+  }
+ }
+]
