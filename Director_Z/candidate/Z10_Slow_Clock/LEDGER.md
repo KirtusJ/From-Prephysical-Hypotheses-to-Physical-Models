@@ -8,6 +8,9 @@
 | 2 | 15 Nov 2026 | director | K1 to K4: start of the age, its rise to T = 600, the bound T − 1, the constant at two resolutions | HELD | `function/result_instances_run1.json` |
 | 3 | 15 Nov 2026 | director (the two sub-agents assigned had been stopped by the account's usage limit and had written nothing) | the forward prediction R7, and E6 and the bound by c* extended to T = 2400 | HELD: gap(2400) = 0.002683 | `attacks/2026-11-15_director_forward_prediction/` |
 | 4 | 15 Nov 2026 | director | weak point 3: C5 deleted, every statement, prediction and kill condition unchanged | **KILL**: C5 is an empty stipulation, by the criterion fixed in FORM before release | `WHY_ABANDONED.md` |
+| 5 | 15 Nov 2026 | wildcard sub-agent, seed `dial` (resumed after the usage limit; reported after the kill) | C5 | **KILL confirmed and extended**: the age is a function of the length alone, needs the length to be computed, and is not injective (0 at lengths 0, 1, 2); no record carries it; the director's deletion table missed two rows (ANSWERS "Does time have a beginning?", MAP's row for C5) | `attacks/2026-11-15_wildcard_dial/` |
+| 6 | 15 Nov 2026 | same | OVERVIEW "very nearly one bit per tick" (false below about 72 ticks); OVERVIEW "before any long run was computed" (omits that rates to 300 ticks were known); SPECIFICATION "two programs written separately" (they share their propagation loop) | WOUND three times | same |
+| 7 | 15 Nov 2026 | same | c* to thirteen places (recomputed in 50-digit decimals: 0.7715533031636119726…), E2, E3, the plot, the map | HELD | same |
 
 **Closed: the candidate was abandoned on 15 November 2026 at 09:57 UTC. See `WHY_ABANDONED.md`.** The text below is kept as written before the kill.
 

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/user/From-Prephysical-Hypotheses-to-Physical-Models/Director_Z/candidate/Z10_Slow_Clock/attacks/2026-11-15_challenger_number/t2_limit.py", line 92, in <module>
+    cdf = {str(v): float(mp.quad(fn, [-s2, mp.mpf(str(v))])) for v in vs}
+                   ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'mpc'
+exit=1

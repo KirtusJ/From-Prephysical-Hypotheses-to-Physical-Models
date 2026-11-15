@@ -1,0 +1,76 @@
+{
+ "command": "t3b_structure.py 600 t3b_result.json",
+ "failed": [],
+ "S3_site_weight_doubling": true,
+ "S3_child_counts": true,
+ "S1_violations_count": 0,
+ "S1_first_violations": [],
+ "S1_min_margins": {
+  "5": {
+   "k_of_min": 3,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "10": {
+   "k_of_min": 8,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "50": {
+   "k_of_min": 48,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "100": {
+   "k_of_min": 98,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "200": {
+   "k_of_min": 198,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "400": {
+   "k_of_min": 398,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  },
+  "600": {
+   "k_of_min": 598,
+   "min_(Binom-P)(|x|<=k)": 0.0
+  }
+ },
+ "S2": {
+  "start_0L": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": false
+  },
+  "minus_RR": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": true
+  },
+  "minus_RL(L after R)": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": true
+  },
+  "minus_LR(R after L)": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": true
+  },
+  "start_R+L": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": false
+  },
+  "start_R-L": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": false
+  },
+  "start_R+iL": {
+   "n_lengths_where_symmetrised_law_differs": 0,
+   "first": [],
+   "unsymmetrised_law_identical_too": false
+  }
+ }
+}
+exit=0
