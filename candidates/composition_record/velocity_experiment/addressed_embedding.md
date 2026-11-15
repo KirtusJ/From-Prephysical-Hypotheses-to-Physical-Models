@@ -2,6 +2,8 @@
 
 A walk with a sharp right-rail source can test a change of real algebraic embedding using a position record after only three ticks. The apparatus applies a different coin coherently on even and odd values of its position address. This supplies the relative phase between paths that pass through different numbers of Hadamards. The [synchronized-walk theorem](../../../Director_G/Native_preparations_and_probability_embeddings.md) identifies this extra operation explicitly. In that earlier apparatus every path of a given duration had the same number of Hadamards.
 
+A [reference built from stopped fair direction records](../../../Director_G/A_stopped_walk_reference_for_the_real_embedding.md) produces the entire specified first-address distribution using a classical counter and a finite-error deadline. It provides a separate rate comparison for a labeled gate.
+
 ## A register with an observable square root
 
 Use the same two-bit address as the [three-qubit position experiment](README.md). A free shift increments it modulo four on L and holds it on R. In each group of three ticks, use the Hadamard coin \(H\) on the first and third ticks. For the middle tick use \(X\) on an even address and \(H\) on an odd address, before the shift. Apply identity at the intermediate site writes. Start on R at address zero. Immediately after the middle shift of the first flight, the amplitudes are \(1/2\) on (address 1, R), \(1/\sqrt2\) on (address 1, L), and \(-1/2\) on (address 2, L). The last Hadamard mixes the two amplitudes at address 1 before the last shift. Writing the address then gives these probabilities per incident launch.
