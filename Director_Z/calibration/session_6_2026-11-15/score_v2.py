@@ -3,8 +3,7 @@ ABSENT is FOR when the tool reports no such provision; NOT_INSPECTED is FOR when
 participant supplied no words (the tool is not consulted for the text). Usage:
 score_v2.py <pcpos> <method dir> <answers.json> <out.json>  (refuses to overwrite out).
 Version 2 (15 Nov 2026, after Director G's controls): an empty WORDS answer is AGAINST; an unknown kind is AGAINST;
-NOT_INSPECTED is FOR only when the tool reports no such provision is absent... no: only when the answer supplies no words
-AND the kind is exactly NOT_INSPECTED; duplicate ids are refused."""
+NOT_INSPECTED is FOR only when the kind is exactly NOT_INSPECTED and the answer supplies no words; duplicate ids are refused."""
 import json,subprocess,sys,hashlib,os
 b,m,a,o=sys.argv[1:5]
 assert not os.path.exists(o)
