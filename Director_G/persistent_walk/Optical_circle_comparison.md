@@ -1,0 +1,34 @@
+# What the ten-site optical experiment measures
+
+Director G research note for Kirtus Justus · 15 November 2026 · B.C. Pacific Time (PCT, UTC−07:00)
+
+Lorz and colleagues published a time-resolved experiment that can be compared with a five-site walk by an exact change of site labels. The comparison also exposes two material differences from the program's five-site return test. The optical coin carries different phases, and the published position intensities are normalized at each step. No launch-normalized, rail-resolved dataset for the specified five-site Hadamard test was identified in the sources inspected here.
+
+## Primary record
+
+The 2019 journal article gives a ten-site experiment in Figure 7, page 033036-8. The launch is at circle coordinate m=2. In Figure 7(c) the left heatmap is labeled “Numeric” and the right heatmap “Experiment.” Each shows a single intensity color at each accessible site and roundtrip. The mixing experiment uses the balanced coin H′ of Eq. (13), with diagonal entries 1/√2 and off-diagonal entries −i/√2. The paper reports a mean similarity of 79.9% across 19 steps. Its figure of merit in Eq. (12) uses the internal-state-resolved probability distributions. The heatmap does not list those separate counts. [Journal paper, Figure 7 and Eqs. (11)–(13)](https://doi.org/10.1103/PhysRevResearch.1.033036) · [Author's institutional copy, page 8](https://physik.uni-paderborn.de/fileadmin-nw/physik/Arbeitsgruppen/integrierte-quantenoptik/publications/2019/PhysRevResearch.1.033036.pdf#page=8) · [Figure 7 image in version 2](https://arxiv.org/html/1809.00591v2/Fig7_asymmetricwalk_circle.png)
+
+There is a version-specific preparation discrepancy. The journal and the October 2019 preprint revision label the ten-site input |ccV⟩. The September 2018 version identifies the ten-site trial as Figure 10, gives the same mean similarity, and labels its input |ccD⟩. Its Figure 7 is an eight-site experiment. The paper's traveling-line convention identifies ccH and ccV with R and L. The diagonal polarization D is a superposition. We use the journal caption as the current published description. An assessment from original counts would also need the preparation record for the Figure 7 run. A fixed change of spatial orientation exchanges R and L for the comparison below. [Version 1, section IV.3, Figs. 7 and 10](https://arxiv.org/html/1809.00591v1#S4.SS3) · [Version 2, section IV.3, Fig. 7](https://arxiv.org/html/1809.00591v2#S4.SS3)
+
+The authors report 63 ± 3% transmission from one roundtrip to the next. They combined measurements at two starting powers to cover detector saturation at early rounds and weak signals at late rounds, and normalized the total intensity at each round to one. A return fraction among transmitted light and an unconditional click probability per original launch have different denominators. The reported transmission gives an apparatus benchmark, not a calibration of a different five-site device. For illustration, independent homogeneous transmission of 0.63 for 19 steps would retain about 0.000154 of the input. The 79.9% similarity is a separate observable. [Journal paper, section II, page 033036-3](https://physik.uni-paderborn.de/fileadmin-nw/physik/Arbeitsgruppen/integrierte-quantenoptik/publications/2019/PhysRevResearch.1.033036.pdf#page=3)
+
+## Exact relation between the two cycles
+
+Set the origin at the launch site. A nearest-neighbor path on C₁₀ is specified by its word in R and L. Reducing each position modulo five preserves its word, each coin transition, and its terminal rail. Conversely every word on C₅ has exactly one lift to C₁₀ from the specified starting site. At tick t only positions with displacement congruent to t modulo two can be occupied on C₁₀. Of the two lifts x and x+5 of a five-site displacement x, exactly one satisfies this condition. With the same homogeneous coin, **the complex amplitudes agree** at the unique lift, for every tick, rail and sharp launch rail. This is a statement about ideal walks with the specified shifts and no extra phase on closing the ring.
+
+For the published origin m=2, the five-site launch position therefore lifts to m=2 on even ticks and m=7 on odd ticks. At t=7 the nominal cell (m=2,t=7) is on the forbidden parity. Its lack of signal in an ideal model says nothing about the five-site return at that time. Experimental leakage or stray counts would require their own readout. Figure 7(c) supplies a visual comparison at the allowed cell (m=7,t=7). Its colors were not converted to a numerical measurement here.
+
+The same-coin condition matters. For a word starting and ending on R, let l be its number of L steps and b its number of visits to a contiguous block of L steps (its number of L-runs). The standard Hadamard coin H gives the signed path factor (−1)^(l−b), because there are l−b successive LL transitions. H′ gives (−i)^(2b)=(−1)^b. All paths share the magnitude 2^(−t/2). The ratio of the two factors is (−1)^l. Words with the same endpoint modulo five can have left counts differing by five, so the relative phase can change upon circling the ring.
+
+| Calculated ideal return at t=7, for a sharp launch rail | Five-site H | Five-site H′ or its ten-site lift |
+|---|---:|---:|
+| Return to the launch rail at the launch site modulo five | 25/128 | 49/128 |
+| Return summed over both rails at that site | 25/64 | 29/64 |
+
+The entries hold for either sharp launch rail, as also checked directly. An orientation convention therefore cannot remove this discrepancy. The probabilities in the table are exact calculations. They are not measurements read from the heatmap.
+
+## Other comparison sources and reproducibility
+
+Bian and colleagues observed periodic revivals on three- and four-node optical circles. Their experiment identifies the smaller ring sizes explicitly. Qiang and colleagues implemented continuous-time dynamics on graphs with up to five vertices using programmable photonics. Its time samples implement a Hamiltonian evolution, distinct from repeating a two-rail coin and shift. These experiments provide related observations. Neither paper supplies the launch, coin, rail and denominator required for this test. [Bian et al.](https://doi.org/10.1103/PhysRevA.95.052338) · [Qiang et al.](https://doi.org/10.1126/sciadv.abb8375)
+
+Run `python -I -B check_cycle_cover.py` beside this note. The checker evolves integer pairs for the real and imaginary amplitude numerators, compares all ports of C₅ and C₁₀ for both coins and initial rails at ticks 0–64, checks the other sheet is zero at every time, and recovers the exact t=7 table. The executable verified 2,600 amplitude comparisons and returned status zero. The probability table can be independently recomputed by enumerating the 128 step words at tick seven. The source experiment supplies no evidence here of the asymptotic finite-state obstruction or a physical primitive.

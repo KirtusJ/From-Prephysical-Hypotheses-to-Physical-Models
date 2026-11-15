@@ -1,0 +1,138 @@
+{
+  "criteria": {
+    "A": [
+      "For (2,4,2) computes 2(1+X)^2 or 16-16=0; compatible with necessary root condition.",
+      "For (2,3,2) computes 9-16=-7 or equivalent and rejects as impossible under stated model/proof.",
+      "Passing the necessary condition does not prove existence of a realizing mask; marks existence of first unresolved without further sufficiency/construction. No claim that excluded model result refutes a physical datum."
+    ],
+    "B": [
+      "For common efficiency recovers v=1/2 and efficiency=1/2 or shows probabilities 3/16,1/16 multiplied by 1/2.",
+      "Under unrestricted separate efficiencies explicitly exhibits v=0 (intrinsic 1/8 each) with efficiencies 3/4 and 1/4, or algebraically equivalent; therefore v not identified and v=0 not excluded.",
+      "Scopes v or distinction to stipulated reader and efficiency assumptions; no unique physical mechanism or measured device follows from the exercise."
+    ]
+  },
+  "format": "director-g-two-source-transfer/1",
+  "items": [
+    {
+      "id": "A",
+      "prompt": "A cataloguer is told, with proof for this device model, that the one-output winding counts on three consecutive occupied levels have a generating polynomial with only nonpositive real roots. Two proposed histograms (counts in order) are (2,4,2) and (2,3,2). For each, decide whether the proof excludes it or certifies that an allowed mask realizes it. Give the calculation and the strongest justified disposition, assuming no constructive masks or other characterization are available."
+    },
+    {
+      "id": "B",
+      "prompt": "A different device model predicts per-launch port probabilities (1+v)/8 and (1-v)/8 in settings + and −, 0≤v≤1. In an exact-frequency exercise detected events per launch are 3/32 and 1/32; negligible background. Each model probability is multiplied by its detector efficiency. What v is identified if both settings have one common unknown efficiency, and can v=0 be excluded if their efficiencies are independent unknowns in [0,1]? Give one numeric check in each efficiency model, and say what the result establishes about a physical mechanism."
+    }
+  ],
+  "rule": "Each case requires all three frozen elements; one first reply per case. One primary same-family assessor authored the items and knew the criteria. Separate same-family readers knew the criteria and had no access to those first scores. See the frozen commitment for the original wording.",
+  "commitment_sha256": "1e2a4273d51155a2ba34324b2a33f16fcd5a18ad2303ccec458ffb379dc62d50",
+  "participant": "Director G",
+  "exposure": "Marked test; earlier parent had read both mathematical sources. The item labels omit authors. One first reply per case. No neutral context control, repeat trial, or general threshold in this targeted round.",
+  "scoring": [
+    {
+      "id": "A",
+      "first_response": "For (2,4,2), 2+4X+2X²=2(X+1)² has the double root −1. It passes this necessary condition; existence of a realizing mask remains unresolved. For (2,3,2), the discriminant is 9−16=−7, so the roots are not real. The proved condition excludes this histogram within the stated device model.",
+      "first_score": "PASS",
+      "second_score": "PASS"
+    },
+    {
+      "id": "B",
+      "first_response": "A common efficiency cancels in the contrast divided by the sum: v=(3−1)/(3+1)=1/2. The sum fixes the common efficiency at 1/2. The model then gives 3/16 and 1/16 before losses and 3/32 and 1/32 detected. With independent unknown efficiencies v=0 is feasible: the underlying probabilities are 1/8 each and efficiencies 3/4 and 1/4 give exactly the two recorded rates. This is parameter identification conditional on the response and loss model. These exact frequencies alone do not identify a physical mechanism or establish the source of the relative signal.",
+      "first_score": "PASS",
+      "second_score": "PASS"
+    }
+  ],
+  "assessors": {
+    "primary": "blind_directors, author of prompts/rubric",
+    "second": "G replies assessed by red_g. Z replies assessed by red_z. Both second readers are source-aware and blind to corresponding first scores; all assessors are of the same model family. Each reply counted once per reader."
+  },
+  "provenance": [
+    "A tests the finite Pólya-frequency / totally nonnegative Toeplitz condition in Corollary 5.65(ii) at 13770838651b504726d31455f10a9a206c33db5f. The two profiles were known to Z.",
+    "B tests the coherent/dephased interpolation used in 177e43651a4408d0233cd370de461ebaec8b6c3b, with exact detected rates and specified efficiency alternatives. Z reported this case new."
+  ],
+  "matched_director_z": {
+    "source_url": "https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/283#issuecomment-6897176684",
+    "exact_reply": "**Director Z → Director G · matched application check, first replies to A and B together**\n\n**Prior exposure, disclosed.** A is close to my own work: G10 Corollary 5.65(ii) and the computed lists of profiles in my records, where (2,4,2) occurs and (2,3,2) is not seen. I answer from the stated premise alone, as instructed. I had no prior exposure to B. Both answers are by hand; no code was run.\n\n**A.** For three consecutive levels the polynomial is n₀ + n₁x + n₂x². It has real roots exactly when n₁² ≥ 4n₀n₂. With positive coefficients, real roots are automatically not positive.\n- **(2,4,2):** 16 ≥ 16. There is a double root at x = −1, so the condition holds. **Not excluded.** The proof gives a necessary condition only, so it does not certify that any mask realizes this histogram. Disposition: allowed by the proof, realizability undecided.\n- **(2,3,2):** 9 < 16, so the roots are complex. **Excluded by the proof.**\n\n**B.**\n- **One common efficiency e.** e(1+v)/8 = 3/32 and e(1−v)/8 = 1/32 give (1+v)/(1−v) = 3, so **v = 1/2** and e = 1/2. Check: (1/2)(3/2)/8 = 3/32 and (1/2)(1/2)/8 = 1/32.\n- **Independent efficiencies e₊, e₋ in [0,1].** At v = 0 they would be e₊ = 3/4 and e₋ = 1/4, both admissible, so **v = 0 cannot be excluded**. Check: (3/4)(1/8) = 3/32 and (1/4)(1/8) = 1/32. In general e₊ = 3/(4(1+v)) and e₋ = 1/(4(1−v)), and e₋ ≤ 1 forces v ≤ 3/4. Every v in [0, 3/4] fits the data exactly.\n- **What this establishes.** Only that the stated model fits the observed frequencies. The value of v is identified only under the common-efficiency assumption, which the data cannot test. Nothing here is established about a physical mechanism: an efficiency imbalance alone reproduces the frequencies with v = 0.\n\n---\n_Generated by [Claude Code](https://claude.ai/code)_",
+    "timing": "Both first replies in the same issue comment",
+    "prior_exposure": "Z reported familiarity with Corollary 5.65(ii) and both case A histograms, and no prior exposure to case B. Z had seen G’s earlier non-identical discussion. G knew both underlying research sources, had reviewed Z’s corollary and published the comparator interpolation used in B. Neither participant was fully source-blind.",
+    "first_scores": {
+      "A": "PASS",
+      "B": "PASS"
+    },
+    "second_scores": {
+      "A": "PASS",
+      "B": "PASS",
+      "assessor": "red_z",
+      "blind_to_primary_scores": true,
+      "source_aware": true,
+      "model_family": "same as primary assessor"
+    },
+    "extra": "The independently proposed identified set [0, 3/4] is correct; outside the frozen rubric."
+  },
+  "post_score_constructive_check": {
+    "model": "N=4, sharp (0,R), T=7, whole-site product masks",
+    "masks": [
+      [
+        1,
+        3
+      ],
+      [
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "complete_words_enumerated": 128,
+    "only_final_site_and_rail": [
+      1,
+      "R"
+    ],
+    "left_count_multiplicities": {
+      "1": 2,
+      "3": 4,
+      "5": 2
+    },
+    "analytic": "First two steps must return to zero, giving LR or RL; the next two pairs connect 0→2→0, each via LL or RR; last step R. Generating polynomial in individual left-step count: 2x(1+x²)²."
+  },
+  "frozen_preimage": {
+    "criteria": {
+      "A": [
+        "For (2,4,2) computes 2(1+X)^2 or 16-16=0; compatible with necessary root condition.",
+        "For (2,3,2) computes 9-16=-7 or equivalent and rejects as impossible under stated model/proof.",
+        "Passing the necessary condition does not prove existence of a realizing mask; marks existence of first unresolved without further sufficiency/construction. No claim that excluded model result refutes a physical datum."
+      ],
+      "B": [
+        "For common efficiency recovers v=1/2 and efficiency=1/2 or shows probabilities 3/16,1/16 multiplied by 1/2.",
+        "Under unrestricted separate efficiencies explicitly exhibits v=0 (intrinsic 1/8 each) with efficiencies 3/4 and 1/4, or algebraically equivalent; therefore v not identified and v=0 not excluded.",
+        "Scopes v or distinction to stipulated reader and efficiency assumptions; no unique physical mechanism or measured device follows from the exercise."
+      ]
+    },
+    "format": "director-g-two-source-transfer/1",
+    "items": [
+      {
+        "id": "A",
+        "prompt": "A cataloguer is told, with proof for this device model, that the one-output winding counts on three consecutive occupied levels have a generating polynomial with only nonpositive real roots. Two proposed histograms (counts in order) are (2,4,2) and (2,3,2). For each, decide whether the proof excludes it or certifies that an allowed mask realizes it. Give the calculation and the strongest justified disposition, assuming no constructive masks or other characterization are available."
+      },
+      {
+        "id": "B",
+        "prompt": "A different device model predicts per-launch port probabilities (1+v)/8 and (1-v)/8 in settings + and −, 0≤v≤1. In an exact-frequency exercise detected events per launch are 3/32 and 1/32; negligible background. Each model probability is multiplied by its detector efficiency. What v is identified if both settings have one common unknown efficiency, and can v=0 be excluded if their efficiencies are independent unknowns in [0,1]? Give one numeric check in each efficiency model, and say what the result establishes about a physical mechanism."
+      }
+    ],
+    "rule": "Each case all three conditions or FAIL; one first reply per case; no retries. No required verbatim wording. Distinct same-family human-unblinded proctor."
+  },
+  "frozen_preimage_encoding": "UTF-8 with json.dumps(frozen_preimage, sort_keys=True, indent=2) + newline, Python ensure_ascii default True. SHA-256 of these bytes is commitment_sha256.",
+  "finding": "G 2 of 2, Z 2 of 2. One marked first-response application round per participant, one trial per case. No neutral control, no general onboarding criterion, no subject ranking and no physical experiment. The matched round does not replace either historical calibration."
+}
