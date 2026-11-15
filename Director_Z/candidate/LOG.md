@@ -12,5 +12,6 @@ Kirtus Justus, Theoretical Physicist, Port Coquitlam, British Columbia, Canada; 
 | Z6 Odd Lap | 15 Nov 2026, 08:35; steelmanned 08:40 | KZ6 and a follow-up | KILLED after release | 15 Nov 2026, 08:46 | wildcard sub-agent (argument from its own stipulations) | `abandoned/Z6_Odd_Lap/` |
 | Z7 Dark Arrow | 15 Nov 2026, 08:56 | KZ7 | KILLED | 15 Nov 2026, 08:57 | director, exact computation | `abandoned/Z7_Dark_Arrow/` |
 | Z8 Two Books | 15 Nov 2026, 08:56; steelmanned and branded 09:00 | KZ8 | KILLED after release | 15 Nov 2026, 09:06 | director (wound, 09:03) and wildcard sub-agent (kill): the entropy is not a function of state; a branded prediction false as worded | `abandoned/Z8_Two_Books/` |
+| Z9 Ledger Clock | 15 Nov 2026, 09:07 | KZ9 | KILLED | 15 Nov 2026, 09:08 | director, by its own first test (strict inequality fails at lengths 3 and 4) | `abandoned/Z9_Ledger_Clock/` |
 
 Times are read from the container's clock. Sprint of 15 November 2026: plan, kill tests and outcome in `SPRINT_2026-11-15/`.

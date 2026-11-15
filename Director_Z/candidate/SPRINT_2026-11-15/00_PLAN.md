@@ -105,3 +105,22 @@ The period runs to 10:05 UTC. One more candidate is stipulated, seeded by what s
   Logarithms in 60-digit decimals; a comparison counts as failed if it is violated by more than 10^−40. Predicate: (a), (b), (c) all hold. Any failure KILLS Z9.
 
 If Z9 dies the sprint ends with no standing candidate, and that is said.
+
+## Ledger Clock was killed by its own test; a last candidate
+
+Z9 died at 09:08 UTC on part (a) of KZ9: at lengths 3 and 4 the two ages are equal, and the test asked for strict inequality from length 3. Parts (b) and (c) held to length 300. The range is not adjusted; Z9 is abandoned (`../abandoned/Z9_Ledger_Clock/WHY_ABANDONED.md`).
+
+One last candidate, with a new name and a sharper claim. Its stipulations and kill test are fixed here before any test is run and before its constant is computed. **Label: STIPULATED CANDIDATE FOR DISPROOF.**
+
+### Z10 "Slow Clock"
+- **Stipulations.** (1) The signed two-rail line, sharp start at (0,R), running free; chance of a record = squared signed sum over the total. (2) The ledger entry of a record is log₂ of the number of histories behind it, and the age Λ(T) is its mean under the chances; with counting chances on the same histories the age is Λ_c(T). Age belongs to the record of what was done, not to the state. (3) The far-fetched part: the interfering world keeps a slower clock than the counting world by a fixed factor in the long run: Λ(T)/T tends to a constant c* strictly between 0 and 1, while Λ_c(T)/T tends to 1; and
+  c* = (1/(π√2)) ∫ from −π/2 to π/2 of h((1 + sin θ/√2)/2) / (1 − (sin²θ)/2) dθ, with h(x) = −x·log₂x − (1−x)·log₂(1−x).
+  The formula is what one gets by averaging the binomial exponent h over the limiting distribution of the walk's position; that limiting distribution is RECALLED from the literature on the Hadamard walk and was NOT INSPECTED in a source by this session. The candidate stakes itself on the number, whatever its origin.
+- **Kill test KZ10 (fixed now).** c* by Simpson's rule with 200,000 panels on the smooth integrand above (double precision; the error of the rule is far below 10^−9, and the comparisons below are at the scale 10^−3). Λ(T) and Λ_c(T) exactly as in KZ9 for T up to 1200 (60-digit decimal logarithms).
+  (a) 0 < c* < 1.
+  (b) Λ(T)/T < c* at T = 300, 600 and 1200.
+  (c) c* − Λ(T)/T is smaller at 600 than at 300, and smaller at 1200 than at 600.
+  (d) c* − Λ(1200)/1200 < 0.01.
+  (e) Λ(T) ≤ Λ_c(T) for every T from 1 to 1200, with equality exactly for T ≤ 4.
+  (f) 1 − Λ_c(1200)/1200 < 0.01.
+  Predicate: all six hold. Any failure KILLS Z10, and then the sprint ends with no standing candidate.
