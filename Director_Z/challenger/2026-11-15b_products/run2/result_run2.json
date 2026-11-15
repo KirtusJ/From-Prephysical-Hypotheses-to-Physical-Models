@@ -1,0 +1,380 @@
+{
+ "seed": 20261115,
+ "argv": [
+  "check_products_v2.py",
+  "result_run2.json",
+  "20261115"
+ ],
+ "predicates": {
+  "P1": {
+   "qualify": 3,
+   "pass": 3,
+   "fail": 0,
+   "info": {
+    "2": {
+     "d_sym_orbits": 6,
+     "d_form_pairs": 6,
+     "rank_G_of_pi": 6,
+     "multiquad_and_symmetric": true
+    },
+    "3": {
+     "d_sym_orbits": 10,
+     "d_form_pairs": 10,
+     "rank_G_of_pi": 10,
+     "multiquad_and_symmetric": true
+    },
+    "4": {
+     "d_sym_orbits": 15,
+     "d_form_pairs": 15,
+     "rank_G_of_pi": 15,
+     "multiquad_and_symmetric": true
+    }
+   }
+  },
+  "P2": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P3": {
+   "qualify": 35,
+   "pass": 35,
+   "fail": 0,
+   "info": null
+  },
+  "P4": {
+   "qualify": 64220,
+   "pass": 64220,
+   "fail": 0,
+   "info": null
+  },
+  "P6a": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": {
+    "Z2xZ3 d=(1,0) b=(0,1)": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 429,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    },
+    "Z6 d=3 b=1": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 429,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "-1",
+      "0",
+      "-1",
+      "1",
+      "0"
+     ]
+    },
+    "Z4xZ3 d=(1,0) b=(0,1)": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1550,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    },
+    "Z12 d=3 b=1": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1545,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "-1",
+      "0",
+      "-1",
+      "1",
+      "0"
+     ]
+    },
+    "Z12 d=3 b=2": {
+     "products": 12844,
+     "distinct_multisets_up_to_translation": 1542,
+     "multisets_with_two_different_S_rows": 5,
+     "dim_all": 2,
+     "dim_ABC_only": 2,
+     "cstar_q": [
+      "1",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "2"
+     ],
+     "cstar_c": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0"
+     ]
+    }
+   }
+  },
+  "P6b": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P6c": {
+   "qualify": 5,
+   "pass": 5,
+   "fail": 0,
+   "info": null
+  },
+  "P8": {
+   "qualify": 2505,
+   "pass": 2505,
+   "fail": 0,
+   "info": null
+  },
+  "P5": {
+   "qualify": 8004,
+   "pass": 8004,
+   "fail": 0,
+   "info": null
+  },
+  "P7": {
+   "qualify": 2,
+   "pass": 0,
+   "fail": 2,
+   "info": {
+    "1": {
+     "gcd": "(x - 1)**2*(x**2 + x + 1)",
+     "N_d_factored": {
+      "2": "-(x - 1)**2*(x**2 + x + 1)",
+      "3": "-(x - 1)**2*(x + 1)**2*(x**2 + x + 1)",
+      "4": "-(x - 1)**2*(x + 1)**4*(x**2 + x + 1)",
+      "5": "-(x - 1)**2*(x + 1)**6*(x**2 + x + 1)",
+      "6": "-(x - 1)**2*(x + 1)**8*(x**2 + x + 1)"
+     },
+     "gcd_with_x3_minus_sigma_degree": 3,
+     "rest": "x - 1",
+     "rest_is_monomial": false,
+     "rest_root_distance_from_circle": [
+      0.0
+     ]
+    },
+    "-1": {
+     "gcd": "5*(x + 1)**2*(x**2 - x + 1)",
+     "N_d_factored": {
+      "2": "-5*(x + 1)**2*(x**2 - x + 1)",
+      "3": "-5*(x + 1)**4*(x**2 - x + 1)",
+      "4": "-5*(x + 1)**6*(x**2 - x + 1)",
+      "5": "-5*(x + 1)**8*(x**2 - x + 1)",
+      "6": "-5*(x + 1)**10*(x**2 - x + 1)"
+     },
+     "gcd_with_x3_minus_sigma_degree": 3,
+     "rest": "5*x + 5",
+     "rest_is_monomial": false,
+     "rest_root_distance_from_circle": [
+      0.0
+     ]
+    }
+   }
+  },
+  "P9a": {
+   "qualify": 2203,
+   "pass": 2203,
+   "fail": 0,
+   "info": {
+    "tried": 6000,
+    "first_fail": null
+   }
+  },
+  "P9n_control_expected_fail": {
+   "qualify": 2183,
+   "pass": 462,
+   "fail": 1721,
+   "info": null
+  },
+  "P9c": {
+   "qualify": 2183,
+   "pass": 2183,
+   "fail": 0,
+   "info": null
+  },
+  "P9d_boundary_N2_expected_fail": {
+   "qualify": 173,
+   "pass": 0,
+   "fail": 173,
+   "info": null
+  },
+  "P10a": {
+   "qualify": 1,
+   "pass": 1,
+   "fail": 0,
+   "info": {
+    "S=4": {
+     "S": 4,
+     "unknowns": 69,
+     "rows": 289,
+     "pairs": 211,
+     "dim": 3,
+     "dim_restricted": 3,
+     "stated_three_are_solutions": true
+    },
+    "S=5": {
+     "S": 5,
+     "unknowns": 125,
+     "rows": 687,
+     "pairs": 547,
+     "dim": 3,
+     "dim_restricted": 3,
+     "stated_three_are_solutions": true
+    },
+    "S=6": {
+     "S": 6,
+     "unknowns": 209,
+     "rows": 1446,
+     "pairs": 1219,
+     "dim": 3,
+     "dim_restricted": 3,
+     "stated_three_are_solutions": true
+    }
+   }
+  },
+  "P10b": {
+   "qualify": 3,
+   "pass": 3,
+   "fail": 0,
+   "info": null
+  },
+  "P10c_info_no_Tbeta": {
+   "qualify": 1,
+   "pass": 1,
+   "fail": 0,
+   "info": {
+    "S": 6,
+    "unknowns": 209,
+    "rows": 1419,
+    "pairs": 1219,
+    "dim": 5,
+    "dim_restricted": 5,
+    "stated_three_are_solutions": true
+   }
+  }
+ },
+ "instances_qualifying": [
+  [
+   "Z2xZ3 d=(1,0) b=(0,1)",
+   2,
+   3,
+   0,
+   1
+  ],
+  [
+   "Z6 d=3 b=1",
+   2,
+   3,
+   1,
+   -1
+  ],
+  [
+   "Z4xZ3 d=(1,0) b=(0,1)",
+   4,
+   3,
+   0,
+   1
+  ],
+  [
+   "Z12 d=3 b=1",
+   4,
+   3,
+   1,
+   -1
+  ],
+  [
+   "Z12 d=3 b=2",
+   4,
+   3,
+   2,
+   1
+  ]
+ ],
+ "instances_not_qualifying": [
+  [
+   "Z2xZ9 d=(1,0) b=(0,1)  [control: s=9, must NOT qualify]",
+   2,
+   9
+  ],
+  [
+   "Z3xZ3 [control: r odd, must NOT qualify]",
+   3,
+   3
+  ]
+ ],
+ "completed": true,
+ "seconds": 9.4
+}
