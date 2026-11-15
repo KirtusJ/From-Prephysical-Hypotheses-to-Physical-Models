@@ -156,7 +156,29 @@ def binary_record_game():
     require(maximum == 2, "sharp three-panel game bound")
 
 
+def next_rotation_challenge():
+    low, knot, high = Q(1,4), Q(81,250), Q(9,25)
+    def score(x):
+        if low < x <= knot:
+            return low + (x-low)*(Q(7,20)-low)/(knot-low)
+        if knot < x < high:
+            return high - (high-x)*(high-Q(7,20))/(high-knot)
+        return x
+
+    for n in range(4):
+        for ticks in (6,12,18):
+            masses = mass_table(ticks,orbit(n))
+            require([score(x) for x in masses] == masses, "feedback write changed")
+        w = mass_table(1,orbit(n))[1]
+        measured = score(w)/(score(w)+score(1-w))
+        if n < 3:
+            require(measured == w, "calibration rate changed")
+        else:
+            require((w,measured) == (knot,Q(175,513)), "third rotation missed rival")
+
+
 if __name__ == "__main__":
+    next_rotation_challenge()
     binary_record_game()
     print("Ten recovery rounds, two-gate yield:", float(recovered_gate()**2))
     selection_witness()
