@@ -65,3 +65,20 @@ M=3: missing in both modes e.g. (n1,n2,n3) = (1,2,1), (1,2,3), (1,3,2), (1,4,1),
 KEY LEMMA found (proof in FINDINGS): shrinking every mask to the sites visited by the final walks keeps the final
 walks and leaves at most n = (number of final walks) walks at every time. So the count-pruned search is COMPLETE for
 profiles of total <= W. Hence M=3, profile (1,2,1) is impossible (computed + lemma), for every q (take all exponents 0).
+
+## Step 6 (gains, complete by the shrinking lemma; tg_exhg.py)
+  python3 tg_exhg.py exg_q1_W5.jsonl 1 5 30 100 3 5 6 7   exit 0  sha256 66de06d9...
+  python3 tg_exhg.py exg_q2_W5.jsonl 2 5 30 100 3 5 6 7   exit 0  sha256 831a77be...
+  python3 tg_exhg.py exg_q3_W4.jsonl 3 4 30 100 5 6 7     exit 0  sha256 ce20d1bb...  (background; exit read)
+  python3 tg_exhg.py exg_q2_W6.jsonl 2 6 30 100 5 6       exit 0  sha256 509619cc...  (background; exit read)
+  Frontier emptied every time; no bound hit. M=5,6,7: no request missing (q=1 tot<=5; q=2 tot<=5, and tot<=6 for
+  M=5,6; q=3 tot<=4). M=3, q=2: 46 of 461 requests missing per mode, smallest G1={0},G2={0},G3={1} (exponents).
+  q=1 run agrees with tg_exh (M=3 missing exactly (1,2,1) at total <= 5).
+
+## Step 7 (explicit certificate for M=7, tg_cert.py; replay tg_certreplay.py)
+  python3 tg_cert.py cert_M7.jsonl 7  exit 0  sha256 0263c749...  (12 sequences, 43 ticks; all valid; bounds not hit)
+  python3 tg_cert.py cert_M8.jsonl 8  exit 0  sha256 b222a594...  (control)
+  python3 tg_certreplay.py cr_M7.jsonl 7 cert_M7.jsonl 400  exit 0  sha256 ec3ec0a9...  H3 432/432, H1 432/432, H2 432/432
+  python3 tg_certreplay.py cr_M8.jsonl 8 cert_M8.jsonl 200  exit 0  sha256 af7b54ae...  216/216
+  Negative control: replay compared against a planted wrong target (G3 changed) -> detected (False).
+  Hand check of U3, D3 and E_i ticks at M=7 done (FINDINGS).

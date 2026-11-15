@@ -72,3 +72,9 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   RERUN by worker: `cd /tmp/claude-0/w_rerun_chA && python3 challenger_theoremA/chal_theoremA.py res_large_M6-14.jsonl
   6,7,8,9,10,11,12,13,14 large` exit 0, 48 s, result byte-identical (sha256 4a26a1c9...). Small runs (364 s, 127 s)
   not rerun.
+- step 13: micro_m3 report: CONFIRMED TO LENGTH 9 on Z_3 (exhaustive, no relaxation, own program) and 7 on Z_6; no
+  invariant found; control correct (M=3 for N=6, 5 for N=10). Wording caveat: the extract does not define
+  position product events (defined in PAPER_TEXT_ppcons.tex, which it was not given) — its reading matches.
+  RERUN by worker: `cd /tmp/claude-0/w_rerun_m3 && python3 micro_m3/enum_pp.py 3 3 8 z3_T8.txt` (ulimit -v 2.5 GB)
+  exit 0, byte-identical (47ad6571...). So Statement C has: closed relaxed search (all lengths, my program) and
+  unrelaxed exhaustive search to length 9 (micro) / 10 (my killed run, log only).
