@@ -1,6 +1,6 @@
 # Changing a herald before it is written
 
-A signed reflection can change the four-path walk gate's success probability from $5/16$ to $245/256$ while preserving its successful action on an arbitrary input. An isolated fair phase tag gives a second binary comparison. The two failure rates $187/512$ and $11/256$ together distinguish ordinary scoring from the competing powers and a prior good/bad copy under the conditions below. Both numbers are predictions for a single measured pointer. No experimental frequencies enter the result. [Original filter and its two Pell paths](a_phase_reference_from_synchronized_walks.md) · [Ambiguity of a separately scored binary herald](records_with_a_heralded_reference.md)
+A signed reflection can change the four-path walk gate's success probability from $5/16$ to $245/256$ while preserving its successful action on an arbitrary input. The fair arm places two equal tag branches behind one binary pointer. When their kinematic masses are added before the response is applied, the two failure rates $187/512$ and $11/256$ select ordinary scoring under the conditions below. Applying the same power separately on each tag branch and then averaging reproduces both rates with powers zero and two. Both numbers are predictions for a single measured pointer. No experimental frequencies enter the result. [Original filter and its two Pell paths](a_phase_reference_from_synchronized_walks.md) · [Ambiguity of a separately scored binary herald](records_with_a_heralded_reference.md)
 
 ## Four circuits and one terminal read
 
@@ -33,9 +33,9 @@ With a complete copy the ordinary phase contrast vanishes. Even if the subsequen
 
 Matching the recombiner matters. Consider comparing the **direct** arm, which omits $D$, with the amplified arm. An earlier good/bad writer and the final binary writer may share an exponent $q$ on that launch. Give $q=1$ weight $2/17$. Give the other $15/17$ to minus and plus infinity in the proportions $5:11$. For the direct read the first extremum always selects good, the second always selects bad. On amplification, a previously selected good branch has final success mass $9/64$, so its minimum selector chooses success. The bad branch has final success mass $55/64$, so its maximum selector also chooses success. The ordinary type succeeds on $325/512$. This mixture therefore gives exactly $5/16$ and $245/256$ respectively with an intermediate record. Using the same recombiner on the matched arms removes this way of distinguishing the settings from inside the scorer.
 
-## Two matched binary rates select the ordinary response
+## Two matched binary rates select the ordinary response when the tag is pooled before scoring
 
-For a positive mass $z$ with positive complement let $R_q(z)=z^q/[z^q+(1-z)^q]$. Zero is uniform and the two infinite powers select an extreme. Randomly assign the phase after the release cut, using the same distribution of latent modes on both arms. A mode applies its common $q$ to the terminal binary effects. It may correlate $q$ with the marker overlap. Allow $c\in[0,1]$ for arbitrary signed $q$, and $c\in[-1,1]$ when $q\ge0$. Also allow fully recorded modes with any phase-blind failure rate $d$ on both arms.
+For a positive mass $z$ with positive complement let $R_q(z)=z^q/[z^q+(1-z)^q]$. Zero is uniform and the two infinite powers select an extreme. Randomly assign the phase after the release cut, using the same distribution of latent modes on both arms. A mode first adds the masses of all unresolved tag alternatives within each terminal binary effect, then applies its common $q$ once to that pair. The order is a hypothesis about the competing reader. One visible pointer and the absence of a published tag do not establish it. It may correlate $q$ with the marker overlap. Allow $c\in[0,1]$ for arbitrary signed $q$, and $c\in[-1,1]$ when $q\ge0$. Also allow fully recorded modes with any phase-blind failure rate $d$ on both arms.
 
 Put $x=187/512$, $t=11/256$, and $y_c=(187-165c)/512$. The observed failure pair for a power mode is $(X,Y)=(R_q(x),R_q(y_c))$. For the ideal source and ordinary reader it is $(x,t)$. Define
 
@@ -50,13 +50,47 @@ Here $g(x)=t$ and $L$ is its tangent. The integer comparison $325/187<245/11<(32
 * For finite $q>0$, $y_c\ge t$ and $X<1/2$, so $Y\ge R_q(t)=g(X)\ge L(X)$. Equality requires $c=1$ and $X=x$, hence $q=1$.
 * For finite $q<0$ the allowed overlap gives $y_c\le x$, so $Y\ge X>L(X)$. Zero power and fully recorded phase-blind modes also lie on the identity line. At positive infinity $X=0$ and $Y\ge0>L(0)$. At negative infinity $X=1$ and $y_c\le x<1/2$ gives $Y=1>L(1)$.
 
-Averages preserve this inequality. Exact ordinary population rates imply $E[Y-L(X)]=0$, forcing an intact marker ($c=1$) and ordinary power almost surely among the power modes, with zero incidence of the separate fully recorded class. No single launch is observed in two settings. A setting-dependent population, a phase-aware scorer, or access to the supposedly isolated tag changes the experiment.
+Averages preserve this inequality. Exact ordinary population rates imply $E[Y-L(X)]=0$, forcing an intact marker ($c=1$) and ordinary power almost surely among the power modes, with zero incidence of the separate fully recorded class. No single launch is observed in two settings. A setting-dependent population, a phase-aware scorer, or a reader that applies its response on each tag branch changes the experiment. Branchwise scoring counts as access to the tag even if both branches are later reported under the same pointer value.
 
 The same tangent also tests **coherent** direct and amplified arms with $x$ replaced by $s=5/16$. Independent dilution of the original success by a fair two-bit $00$ tag gives $t'=5/64$ and works for a single coarse binary read. In these two versions $1<\log[(1-u)/u]/\log(11/5)<4\le s/u$ for $u=11/256$ or $5/64$. For negative powers $g(X)\ge X$ on the upper half. If the original herald is separately scored, however, the previous mixture of zero and two powers in proportions $55:73$ already gives its ordinary mean. Two separately scored balanced bits remain fair under either power. Their classical conjunction then gives $5/64$ as well.
 
+## A branchwise reader matches all three reported rates
+
+Write $h=165/512$ and keep the same $q,c$ distribution in every arm. When the fair tag is scored first, both of its branches have probability $1/2$ for either finite power below. The reader applies its binary response to each branch’s pointer and subsequently hides the tag. Its failure probabilities are
+
+$$
+X'=\tfrac12\left[R_q(x-hc)+R_q(x+hc)\right],\qquad
+Y_\pi=R_q(x-hc),\qquad Y_0=R_q(x+hc).
+$$
+
+The following exact mixture uses only nonnegative exponents and nonnegative marker overlaps.
+
+| $q$ | $c$ | Population weight |
+|---:|---:|---:|
+| 0 | 0 | $6333239/259391488$ |
+| 2 | $1/2$ | $34413788331/71332659200$ |
+| 2 | 1 | $549644221/1114572800$ |
+
+The weights sum to one. Substituting $R_0(p)=1/2$ and $R_2(p)=p^2/[p^2+(1-p)^2]$ gives $(E X',E Y_\pi,E Y_0)=(187,22,352)/512$. Indeed the first two means already fix the third because $Y_0=2X'-Y_\pi$ for every type. If instead these same types pool the fair tag before scoring, $E R_q(x)\ne x$. Thus the reported failure rates alone cannot determine which of these physical groupings the reader used. Director Z’s review found the displayed weights by enumerating triples of modes. Our replay checks them by direct rational substitution. [Archived review and director's arithmetic recheck](../../../Director_Z/cross_review/subagent_xr262_herald_line/REPORT.md) · [Enumerated triples and weights](../../../Director_Z/cross_review/subagent_xr262_herald_line/p5_run1.txt)
+
+## Why the herald mass matters
+
+For a different ideal input-independent success $s$, the deterministic phase-zero failure is $1-s$ and the amplified failure is $t=(1-s)(1-4s)^2$. The fair failure is their mean $x$. The strict comparison $1<r<x/t$ used above was checked for $s=5/16$. At $s=1/4$ the ideal amplified failure is zero, outside the assumed positive-support comparison.
+
+At $s=3/8$, even **pooling before scoring** with all markers intact admits a rival. Now $x=25/64$ and $t=5/32$. Consider the line joining $(R_q(x),R_q(t))$ to the infinite minimum selector $(1,1)$. Its slope is
+
+$$
+S_q=\frac{1-R_q(t)}{1-R_q(x)}
+=\frac{1+(25/39)^q}{1+(5/27)^q}.
+$$
+
+The ordinary point has slope $S_1=18/13$. At $q=3/2$ the bounds $(25/39)^{3/2}>0.51$ and $(5/27)^{3/2}<0.08$ give $S_{3/2}>18/13$. At $q=2$ one has $S_2=2997/2197<18/13$. Both finite-power points lie to the left of the ordinary point. The two segments to $(1,1)$ therefore intersect the vertical line at $x$ on opposite sides of $t$. Their convex hull contains $(x,t)$ with positive weights on three nonordinary modes. The two strict inequalities also persist if the minimum selector is replaced by a sufficiently large finite negative power. This is a parameter check for a hypothetical gate of different yield. The four-path circuit implements $5/16$.
+
+The probability-curve tangent, convexity and mixture argument in this section are analytic. The [Lean integer certificate](../../../Director_G/lean/HeraldAuditResolution.lean) concerns the three-reference square and the random-resolution return in the companion papers.
+
 ## A signed phase can defeat all three matched arms
 
-Dropping the overlap condition for negative powers admits the following exact distribution. The entries are the reported failure bits of each type. Every extremum is unique.
+Within the pooled-tag model, dropping the overlap condition for negative powers admits the following exact distribution. The entries are the reported failure bits of each type. Every extremum is unique.
 
 | Weight over 512 | Exponent | $c$ | Fair phase | Phase $\pi$ | Phase zero |
 |---:|---:|---:|---:|---:|---:|
