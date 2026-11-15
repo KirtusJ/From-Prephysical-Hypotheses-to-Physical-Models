@@ -65,7 +65,7 @@ Dropping the overlap condition for negative powers admits the following exact di
 | 187 | $+\infty$ | $+1$ | 0 | 0 | 1 |
 | 138 | $+\infty$ | 0 | 0 | 0 | 0 |
 
-The three means are $(187,22,352)/512$, the ordinary predictions. A relative phase $\pi$ gives $c=-1$ even without leaking any information to a further system. This example identifies the needed phase convention for inverse powers. The [five-outcome read with three references](reading_a_herald_with_three_references.md) uses a different comparison and lets the exponent vary across settings.
+The three means are $(187,22,352)/512$, the ordinary predictions. The same rates can be reproduced using only the finite exponents $-5$ and $+5$. Keep the four overlaps and signs in table order. Solving for three rates and normalization gives positive weights approximately $(0.328519,0.018573,0.347092,0.305816)$. The checker substitutes all four exact rational weights into the actual binary-power probabilities. A relative phase $\pi$ gives $c=-1$ even without leaking any information to a further system. This example identifies the needed phase convention for inverse powers. The [five-outcome read with three references](reading_a_herald_with_three_references.md) uses a different comparison and lets the exponent vary across settings.
 
 The [exact replay and circuit exporter](check_amplified_herald.py) reconstructs all four input columns from the original gate's signed paths, checks the full good and bad maps and propagates explicit marker states. The optional Qiskit calculation checks the emitted QASM and the final pointer for all four logical basis inputs and a complex superposition.
 

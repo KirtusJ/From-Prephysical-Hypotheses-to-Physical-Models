@@ -167,6 +167,22 @@ def check_binary_rules():
             if exponent_sign * (2*mass-1) > 0:
                 counts[i] += weight
     require(counts == [187, 22, 352], "signed-phase and signed-power rival")
+    # Finite counterexample obtained by solving the four linear equations
+    # for the three ordinary rates and normalization. Check by substitution.
+    finite_modes = (
+        (-5, -1, F(35381824448281, 107701044426250)),
+        (-5, 1, F(49244213021335161869859, 2651349046163136613126250)),
+        (5, 1, F(8544600350, 24617672561)),
+        (5, 0, F(7528471861, 24617672561)),
+    )
+    require(sum(w for _, _, w in finite_modes) == 1, "finite mixture normalization")
+    rates = [F(0)] * 3
+    for q, overlap, w in finite_modes:
+        require(w > 0, "positive incidence for each finite mode")
+        masses = (x, F(187-165*overlap, 512), F(187+165*overlap, 512))
+        for i, mass in enumerate(masses):
+            rates[i] += w * mass**q / (mass**q + (1-mass)**q)
+    require(rates == [F(n, 512) for n in counts], "finite signed-power rival")
 
 
 def zero_mask_phase(wires):
