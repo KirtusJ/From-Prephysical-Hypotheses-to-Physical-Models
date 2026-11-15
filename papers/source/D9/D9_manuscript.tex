@@ -1,0 +1,256 @@
+% Compile twice with xelatex or lualatex. All mathematical content is in this source.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.00in,top=.95in,bottom=.96in,headheight=14pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,enumitem,fancyhdr}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{193E48}
+\usepackage[unicode,colorlinks=true,allcolors=ink,bookmarksnumbered]{hyperref}
+\hypersetup{pdftitle={Relative Entropy of Wilson–Dirac Intervals at Vanishing Scaled Mass},
+pdfauthor={Kirtus Justus},pdfsubject={Finite-interval relative entropy for a two-orbital Wilson–Dirac chain},
+pdfkeywords={Wilson–Dirac chain, relative entropy, sine kernel, massless limit}}
+\setlength{\parindent}{0.95em}
+\setlength{\parskip}{2pt plus .4pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily D9\enspace Working paper}
+\fancyhead[R]{\small\sffamily Wilson--Dirac interval entropy}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{.3pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{I}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cH}{\mathsf H}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\lmu}{\ell_\mu}
+\newcommand{\arc}{\mathcal A}
+\newcommand{\pin}{https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/0ca75f60c76af1be7f3c25c2ed8914e82243ff5d/}
+\newcommand{\edition}{\href{https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/tree/0ca75f60c76af1be7f3c25c2ed8914e82243ff5d/edition/PAPERS}{pinned edition}}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small\sffamily\color{ink} Series D\enspace|\enspace Working paper D9\par}
+\vspace{8pt}
+{\Large\bfseries Relative Entropy of Wilson--Dirac Intervals\\[2pt] at Vanishing Scaled Mass\par}
+\vspace{9pt}
+{\large Kirtus Justus\par}
+{\small Theoretical Physicist\\Port Coquitlam, British Columbia, Canada\\15 November 2026\par}
+\end{center}
+\begin{abstract}
+We study the relative entropy of the occupied band of a massive one-dimensional Wilson--Dirac chain against its massless reference, restricted to \(L\) consecutive cells. Write \(\mu=mL\) and \(h=\log(1/\mu)\). For every joint limit \(L\to\infty,\ \mu\downarrow0\), the lower limit of the relative entropy divided by \(\mu^2h^2\) is at least \(1/6\). The ratio converges to \(1/6\) when \(h/[\sqrt L(1+\sqrt2)^{2L}]\to\infty\). At each fixed \(L\) its limiting value is an explicit spectral integral which also tends to \(1/6\) as \(L\to\infty\). The proof isolates a rank-two perturbation, controls its spectral weight at the two endpoints of the massless interval covariance, and evaluates its continuum trace Hessian. Under separately stated finite modular estimates, a slow shrinking-mass window instead has leading term \(\mu^2\log L/6\).
+\end{abstract}
+
+\section{The interval and the order of limits}
+The infinite chain has two orbitals per cell. Its one-particle Hamiltonian, dispersion, and occupied-band projector at momentum \(k\in[-\pi,\pi]\) are
+\begin{align}
+ H_m(k)&=\sin k\,\sigma_x+(1+m-\cos k)\sigma_z,\notag\\
+ E_m(k)^2&=m^2+4(1+m)\sin^2(k/2),&
+ P_m(k)&=\tfrac12\bigl(\Id-H_m(k)/E_m(k)\bigr).
+ \label{eq:model}
+\end{align}
+At \(m=k=0\) a single point has no effect on the integrals. Define \(C_{L,m}\) by its \(2\times2\) blocks \((2\pi)^{-1}\int_{-\pi}^{\pi}e^{i(j-l)k}P_m(k)\dd k\), \(0\le j,l<L\). This is a compression of the infinite-volume projector. The open-chain ground-state projector is a different finite operator. Put \(A=C_{L,\mu/L}\), \(B=C_{L,0}\), \(\Delta=A-B\), and
+\begin{equation}
+ \cD_L(\mu)=\Tr\bigl[A(\log A-\log B)+(\Id-A)
+       \{\log(\Id-A)-\log(\Id-B)\}\bigr].
+ \label{eq:rel}
+\end{equation}
+All logarithms are natural and all traces unnormalized. This is the finite gauge-invariant quasifree relative entropy in the specified order \cite{d1}. The two positive contractions are strictly inside both spectral endpoints. Indeed, equality at an endpoint would give a nonzero vector-valued Laurent polynomial \(v(z)\) on the interval satisfying \(H_m(k)v(z)=\pm E_m(k)v(z)\) almost everywhere. A nonzero component would express \(E_m\) as a rational function of \(z=e^{ik}\). But \(E_m^2=m^2+2(1+m)-(1+m)(z+z^{-1})\) has a pole of odd order at zero and cannot be a rational square.
+
+\begin{theorem}\label{thm:main}
+Let \(L\to\infty\), \(0<\mu<1\), and \(\mu\to0\), with \(h=\log(1/\mu)\). Then
+\begin{equation}
+ \liminf\frac{\cD_L(\mu)}{\mu^2h^2}\ge \frac16.
+ \label{eq:lower}
+\end{equation}
+If \(h/[\sqrt L(1+\sqrt2)^{2L}]\to\infty\), the ratio converges to \(1/6\). For fixed \(L\), \(\cD_L(\mu)=\kappa_L\mu^2h^2+O_L(\mu^2h)\) with \(\kappa_L\) given by \eqref{eq:finite}, and \(\lim_{L\to\infty}\kappa_L=1/6\).
+\end{theorem}
+
+For example, \eqref{eq:lower} applies to \(\mu=L^{-b}\) for every \(b>0\). Along that sequence \(\cD_L(\mu)/(\mu^2\log L/6)\) diverges. At \(\mu=\exp[-c\sqrt{\log L}]\) its lower limit is at least \(c^2\), excluding convergence to one when \(c>1\). The sufficient condition for equality in Theorem~\ref{thm:main} includes \(\mu=\exp[-\exp(4L)]\). The exact leading term on the polynomial sequences remains open here. Section~\ref{sec:slow} gives a different asymptotic on a slower window under the earlier finite modular estimates.
+
+\section{A rank-two approximation uniform in interval length}
+Let \(u=L^{-1/2}(1,\ldots,1)^T\), let \(E:\mathbb C^2\to\mathbb C^{2L}\) map \(w\) to \(u\otimes w\), and put \(Q=E\sigma_z E^*\), \(a=\mu h/(2\pi)\).
+\begin{lemma}\label{lem:tangent}
+There is an absolute constant \(C\) such that \(\|\Delta+aQ\|_{\HS}\le C\mu\) for \(L\ge1\) and \(0<\mu<1\).
+\end{lemma}
+\begin{proof}
+For \(u_j(k)=L^{-1/2}e^{ijk}\), the compression of the symbol difference is the integral of \(L|u(k)\rangle\langle u(k)|\otimes(P_m-P_0)\) against \(\dd k/(2\pi)\). Frequencies \(|k|<m=\mu/L\) contribute \(O(Lm)\) in Hilbert--Schmidt norm. Differentiation of the normalized two-component Hamiltonian gives \(\|P_m-P_0\|\le Cm/|k|\), since \(E_t\ge2\sin(|k|/2)\) for \(t\ge0\). On \(m\le |k|\le1/L\), \(\|u(k)-u\|\le L|k|\), so replacing both spatial factors by \(u\) costs at most \(CL\int_m^{1/L}(m/k)Lk\dd k=O(\mu)\). The odd \(\sigma_x\) coefficient then integrates to zero. For the even coefficient put \(g_t=(t+1-\cos k)/E_t\). Direct differentiation gives, for \(0\le t\le m\le k\le1/L\),
+\[
+ k\partial_t g_t=\frac{k\cos^2(k/2)}{2\sin(k/2)}
+ \left(1+t+\frac{t^2}{4\sin^2(k/2)}\right)^{-3/2}
+ =1+O\bigl(k^2+m+(m/k)^2\bigr).
+\]
+The even part is \(-Q L(2\pi)^{-1}\int_m^{1/L}(g_m-g_0)\dd k\).
+The integrated errors here are \(O(\mu)\): the \(k^2\) and \((m/k)^2\) integrals against \(\dd k/k\) are bounded, and \(m\log(1/\mu)\) is bounded. The leading integral is \(-aQ\). On \(|k|>1/L\), Parseval bounds the squared Hilbert--Schmidt norm of this Toeplitz compression by \(L(2\pi)^{-1}\int_{|k|>1/L}\|P_m-P_0\|_{\HS}^2\dd k=O(\mu^2)\), by the same symbol estimate. Summing the pieces proves the claim.
+\end{proof}
+
+\section{Spectral weight of the constant spatial orbitals}
+Set \(N=2L\). The massless interval covariance is unitarily equivalent to the scalar sine kernel \(B_N=(b_{p-q})\), where \(b_0=1/2\) and \(b_d=\sin(\pi d/2)/(\pi d)\) for \(d\ne0\). Explicitly, the unitary on cell \(j\) is \((-1)^j RW\), where \(R=\sigma_z\), \(W=(I-i\sigma_x)H_2/\sqrt2\), and \(H_2\) is the normalized Hadamard. Fourier integration of the massless symbol gives the like-orbital diagonal \(1/2\); the unlike-orbital blocks at displacement \(d\) become \(b_{2d-1},b_{2d+1}\). The full calculation is in \cite[part 3, Theorem 1, pp.~17--18]{d8}. The matrix \(B_N\) compresses the Fourier projection on the semicircle \(\arc=[-\pi/2,\pi/2]\). Under the same unitary the range of \(E\) becomes the span of the two unit edge vectors \(e_{\pm,n}=N^{-1/2}e^{\pm i\pi n/2}\), \(0\le n<N\). These are orthogonal since \(N\) is even.
+
+\begin{lemma}\label{lem:edge}
+Uniformly in \(L\), for \(t>0\) the two matrices \(E^*(B+tI)^{-1}E\) and \(E^*(I-B+tI)^{-1}E\) each have norm at most \(C\min(t^{-1/3},t^{-1})\). For every fixed \(t>0\) they both converge to \(r(t)I_2\) with \(r(t)=\log(1+1/t)\).
+\end{lemma}
+\begin{proof}
+For a unit vector \(v\) in the spectral subspace \(1_{[0,x]}(B_N)\), let \(p(q)=N^{-1/2}\sum_{n=0}^{N-1}v_n e^{-inq}\). Cauchy--Schwarz gives \(|p|\le1,\ |p'|\le N\), while \(N(2\pi)^{-1}\int_\arc|p|^2\le x\). An endpoint value of modulus \(A_0\) gives \(|p|\ge A_0/2\) on an inside segment of length \(A_0/(2N)\). Thus \(A_0^3\le16\pi x\). Taking the supremum over the whole unit sphere in the subspace gives
+\[
+ \|1_{[0,x]}(B_N)e_\pm\|^2\le(16\pi x)^{2/3}.
+\]
+The complementary semicircle gives the same bound for \(I-B_N\). Every unit vector in the span of the two edges satisfies the estimate with an additional factor two. Integration by parts in this spectral measure bounds its resolvent for \(0<t<1\) by \(C[1+\int_0^1 x^{2/3}(x+t)^{-2}\dd x]\le C't^{-1/3}\). For \(t\ge1\) use \(t^{-1}\).
+
+To compute the limit, identify \(\ell^2(\mathbb Z;\mathbb C^2)\) with its step-function subspace on \(\mathbb R\) by sending \(\psi_j\) to \(\sqrt L\,\psi_j\) on \([j/L,(j+1)/L)\). Denote the isometry by \(J_L\). The embedded massless full-line projector converges strongly to the Fourier multiplier \(P_\infty(\xi)=(I-\operatorname{sgn}(\xi)\sigma_x)/2\). Indeed, for a band-limited \(f\) with support \(|\xi|\le K<\pi L\), the Fourier series of \(J_L^*f\) is supported on \(|k|\le K/L\); averaging cells contributes a bounded phase and sinc factor. By Parseval the squared norm of \(P_0 J_L^*f-J_L^*P_\infty f\) is bounded by the integral of \(\|(P_0(\xi/L)-P_\infty(\xi))\widehat f(\xi)\|^2\dd\xi\), in unitary Fourier normalization. It tends to zero by dominated convergence. The step projections \(J_LJ_L^*\) converge strongly to the identity and band-limited functions are dense. This proves the asserted convergence, including the step embedding on the output side. Compression to \((0,1)\) preserves it. The complement also converges strongly since the embedded identities tend strongly to the identity. Uniform norm bounds and the resolvent identity give strong convergence of the resolvents on those step subspaces. The normalized spatial constant is exactly 1 on \((0,1)\).
+
+In the eigenbasis of \(\sigma_x\), the two continuum chiral compressions are \((I\pm iH)/2\) up to interchange, where \(Hf(x)=\pi^{-1}\mathrm{PV}\int_0^1 f(y)/(x-y)\dd y\). With \(x(v)=e^v/(1+e^v)\), send \(f\) to \(\sqrt{x'(v)}f(x(v))\). Then \(H\) becomes convolution with \([2\pi\sinh(v/2)]^{-1}\), by direct substitution in the principal value. With Fourier variable \(s\) its multiplier is \(-i\tanh(\pi s)\). This follows by expanding the odd kernel on the positive half-line in exponentials and using \(\sum_{n\ge0}[(n+1/2)^2+s^2]^{-1}=\pi\tanh(\pi s)/(2s)\), obtained from the logarithmic derivative of the product for \(\cosh\). The transformed constant function is \(1/[2\cosh(v/2)]\). Its unitary Fourier transform has squared modulus \((\pi/2)\operatorname{sech}^2(\pi s)\), by the beta integral \(\int_0^\infty y^{z-1}/(1+y)\dd y=\pi/\sin(\pi z)\) at \(z=1/2-is\). Each chiral multiplier \(b_\pm(s)=(1\pm\tanh(\pi s))/2\) has absolute derivative equal to that squared modulus. Its spectral measure in the spatial constant is therefore uniform on \((0,1)\). The cross terms between the distinct spin blocks vanish. Finally \(\int_0^1(x+t)^{-1}\dd x=r(t)\) for the covariance and its complement.
+\end{proof}
+
+Casini and Huerta obtained this continuum spectral weight in their study of a massless Dirac field, and the leading negative correction \(-m^2L_t^2\log^2(m)/6\) to the continuum entanglement entropy for intervals of total length \(L_t\) \cite[Eqs.~(71)--(75)]{ch}. We use the constant-orbital spectral law above inside a finite-lattice relative-entropy argument. Identification of differently regularized entropy increments would require further control of their ultraviolet contributions.
+
+\section{Trace Hessian and proof of Theorem \ref{thm:main}}
+Put \(f(p)=p\log p+(1-p)\log(1-p)\). Equation~\eqref{eq:rel} equals
+\(\Tr[f(B+\Delta)-f(B)-f'(B)\Delta]\). Differentiating the finite-dimensional spectral logarithms and applying the fundamental theorem of calculus twice gives
+\begin{align}
+ \cD_L(\mu)&=\int_0^1(1-s)\cH_{B+s\Delta}(\Delta,\Delta)\dd s,\label{eq:hess}\\
+ \cH_C(X,X)&=\sum_{T=C,I-C}\int_0^\infty
+ \Tr[(T+tI)^{-1}X(T+tI)^{-1}X]\dd t .\notag
+\end{align}
+The trace integrands are nonnegative, as each is the square of the Hilbert--Schmidt norm of \((T+tI)^{-1/2}X(T+tI)^{-1/2}\) for Hermitian \(X\). In particular \(\cH_C\) defines a norm by taking its square root.
+
+For \(X=Q=E\sigma_z E^*\), the integrand at the reference is \(\Tr[\sigma_z R(t)\sigma_z R(t)]\) for the corresponding two-dimensional compression \(R(t)\). It tends to \(2r(t)^2\) and is bounded by \(2\|R(t)\|^2\); Lemma~\ref{lem:edge} gives an integrable bound at both zero and infinity. Therefore
+\begin{equation}
+ \lim_{L\to\infty}\cH_B(Q,Q)=4\int_0^\infty\log^2(1+1/t)\dd t
+        =\frac{4\pi^2}{3}.\label{eq:hlim}
+\end{equation}
+For the integral, substitute \(w=\log(1+1/t)\) and expand \(e^w/(e^w-1)^2=\sum_{n\ge1}ne^{-nw}\). Integration termwise gives \(2\sum_{n\ge1}1/n^2=\pi^2/3\).
+
+\paragraph{The joint lower estimate.}
+Fix \(0<\delta<T_0<\infty\) and retain only \(\delta\le t\le T_0\) in \eqref{eq:hess}. Positivity gives a lower bound. On this compact range each resolvent has norm at most \(1/\delta\), and replacing \(B+s\Delta\) by \(B\) costs at most \(\|\Delta\|/\delta^2\) in operator norm, uniformly in \(s\). Lemma~\ref{lem:tangent} gives \(\Delta/a=-Q+O_{\HS}(1/h)\), with bounded Hilbert--Schmidt norm. The trace Cauchy--Schwarz inequality now bounds every replacement error in the normalized integrand by \(C_{\delta,T_0}(\|\Delta\|+1/h)\), independent of dimension. Integrating \(1-s\) and summing both complement terms gives
+\[
+ \liminf\frac{\cD_L(\mu)}{a^2}\ge 2\int_\delta^{T_0}r(t)^2\dd t.
+\]
+Let \(\delta\downarrow0,\ T_0\uparrow\infty\) and use \(a=\mu h/(2\pi)\). This proves \eqref{eq:lower} on arbitrary joint sequences.
+
+\paragraph{Fixed interval.}
+For fixed \(L\) the two reference endpoint gaps are positive, so the trace Taylor expansion has cubic remainder \(O_L(\|\Delta\|_{\HS}^3)\). The tangent lemma gives \(\kappa_L=\cH_B(Q,Q)/(8\pi^2)\) and the error in the theorem. An explicit scalar expression follows. For \(g(x,y)=(f'(x)-f'(y))/(x-y)\) put \(g(x,x)=1/[x(1-x)]\), and let \(\nu_L\) be the spectral measure of \(B_N\) at the real unit vector \(r_{2j}=r_{2j+1}=(-1)^j/\sqrt N\). Then
+\begin{equation}
+ \kappa_L=\frac1{4\pi^2}\iint g(x,y)\dd\nu_L(x)\dd\nu_L(y).
+ \label{eq:finite}
+\end{equation}
+Indeed the scalarized \(-Q\) equals \(rr^*-ww^*\) with \(w_n=(-1)^n r_n\), since \(RW\sigma_zW^*R^*=-\sigma_x\). The two vectors have opposite reversal parity, and \(B_N\) commutes with reversal. Their cross terms in the trace Hessian vanish. Staggering by \((-1)^n\) interchanges \(B_N\) and \(I-B_N\), while \(g(1-x,1-y)=g(x,y)\). Hence the two terms coincide and the usual divided-difference formula for the trace Hessian gives \eqref{eq:finite}. Equation~\eqref{eq:hlim} proves its large-\(L\) limit. At \(L=1\), \(r\) is an eigenvector at \(1/2+1/\pi\), giving \(\kappa_1=1/(\pi^2-4)\).
+
+\paragraph{A sufficient joint condition for equality.}
+Let \(\gamma_L=\min(\lambda_{\min}(B),\lambda_{\min}(I-B))\). First suppose \(h\sqrt{\gamma_L}\to\infty\). Since \(a=e^{-h}h/(2\pi)\), this implies \(\|\Delta\|/\gamma_L=:\varepsilon_L\to0\). The operators \(B+s\Delta+tI\) lie between \(1-\varepsilon_L\) and \(1+\varepsilon_L\) times \(B+tI\) in the positive order; the analogous complement bounds also hold. On inversion the order reverses. For a positive resolvent \(R\), the integrand on vectorized \(X\) is represented by \(R^{\mathsf T}\otimes R\), which is order preserving on positive \(R\). Thus its two bounds at \(B+s\Delta\) are the reference integrand times \((1\pm\varepsilon_L)^{-2}\). Integration gives \(\cD_L(\mu)=(1+o(1))\cH_B(\Delta,\Delta)/2\). For \(Y=\Delta+aQ\),
+\[
+ \cH_B(Y,Y)\le 2\|Y\|_{\HS}^2\int_0^\infty(\gamma_L+t)^{-2}\dd t
+   = O(\mu^2/\gamma_L)=o(a^2).
+\]
+The triangle inequality for the Hessian norm, followed by \eqref{eq:hlim}, gives \(\cD_L(\mu)/a^2\to 2\pi^2/3\).
+
+To obtain an explicit sufficient condition, take a polynomial \(p\) of degree at most \(N-1\) with unit coefficient norm. Parseval gives \(\sup_{\mathbb T}|p|\ge1\). Write \(\lambda=(2\pi)^{-1}\int_\arc |p|^2\dd q\). The part of the semicircle on which \(|p|>\sqrt{2\pi N\lambda}\) has length at most \(1/N\). On the rest, length at least \(\pi-1/N\), apply the complex-polynomial Remez inequality \cite[Theorem 1.2]{ty} to get
+\[
+ 1\le\sqrt{2\pi N\lambda}\,
+ T_{N-1}\!\left(\sec\frac{\pi+1/N}{4}\right)
+ \le C\sqrt{N\lambda}\,(1+\sqrt2)^N .
+\]
+Here \(T_n\) is the Chebyshev polynomial; the last estimate uses the bounded derivative of \(\operatorname{arcosh}(\sec v)\) near \(\pi/4\) and its value \(\log(1+\sqrt2)\) there. The complementary semicircle satisfies the same estimate. Minimizing over the coefficient vectors gives \(\gamma_L\ge c/[N(1+\sqrt2)^{2N}]\). With \(N=2L\) this proves the explicit condition in Theorem~\ref{thm:main}.
+
+\section{A slow shrinking-mass window}\label{sec:slow}
+We give a conditional complement to Theorem~\ref{thm:main}. It uses earlier Wilson boundary and modular estimates from the same manuscript series. Put \(N=2L\), \(\lmu=\log(e/\mu)\), and \(S(C)=-\Tr f(C)\). The inherited inputs are as follows.
+
+\begin{enumerate}[label=(\roman*)]
+\item For the interval projection \(\chi\), put \(X_m=\chi P_m(1-\chi)\). The cross-boundary estimate and half-line Laplace formula of \cite[part 9, Eqs.~(3)--(6), Theorem 1]{d8} give \(\|X_m-X_0\|_1\le C\sqrt\mu\) for \(L\ge4,\ 0<\mu\le1\). Put \(k_0=\log(1+\mu/L)\). In the rank-one integration on either boundary the normalized exterior spatial vector is \(v_t(j)=\sqrt{1-e^{-2t}}e^{-tj}\), \(j\ge0\). The spatial trace norm is \(W_L(t)\); the orbital trace norms are bounded by \(CM(t)\), where
+\[
+ W_L(t)=e^{-t}\frac{\sqrt{1-e^{-2Lt}}}{1-e^{-2t}},\qquad
+ M(t)\le C\begin{cases}
+ 1,&0<t<k_0,\\
+ 1+(t+k_0)/\sqrt{t^2-k_0^2},&k_0<t<2k_0,\\
+ k_0/t,&2k_0<t\le1,\\
+ k_0 e^{t/2},&t\ge1 .
+ \end{cases}
+\]
+Only \(0<\mu\le1/4\) will use the piecewise density bounds.
+\item The exact decomposition and uniform finite estimates in \cite[Corollary 4 and Eq.~(8)]{d4} and \cite[pp.~2--3]{d5}, with truncation \(K=\lfloor\sqrt{N/\log N}\rfloor\), give
+\begin{align*}
+ \cD_L(\mu)&=\mathcal P+\mathcal Q+\mathcal F-[S(A)-S(B)],\\
+ \mathcal F&=O(\sqrt{\log N}/N),\qquad
+ \mathcal Q=c_\eta\mu^2+O(\sqrt{\log N/N}),\\
+ \mathcal P&=\frac{\mu^2}6\log L
+    +\mu^2\!\left[\frac16\log(8/\mu)-\frac14\right]+O(\log N/N).
+\end{align*}
+Only finiteness of the fixed coefficient \(c_\eta\) is used. These estimates assume the spectral and operator-domain inputs specified in those papers. The two terms \(\mathcal Q,\mathcal F\) share the same reference modular analysis.
+\end{enumerate}
+
+\begin{prop}\label{prop:slow}
+On input (i), \(|S(A)-S(B)|\le C\mu\lmu^3\). Using (ii) as well, for \(0<\mu\le1\) and all sufficiently large \(L\),
+\[
+ \left|\cD_L(\mu)-\frac{\mu^2}{6}\log L\right|
+   \le C\left[\mu\lmu^3+\sqrt{\frac{\log(2L)}{2L}}\right].
+\]
+Along \(\mu\to0\) with \(\mu\log L/\lmu^3\to\infty\), it follows that \(\cD_L(\mu)\sim\mu^2\log L/6\). Examples include \(\mu=(\log L)^{-b}\) with \(0<b<1\).
+\end{prop}
+\begin{proof}
+Define \(H(X)=\left(\begin{smallmatrix}0&X\\X^*&0\end{smallmatrix}\right)\),
+\(H_0=H(X_0)\), \(Y=H(X_m)-H_0\), and \(F(x)=-f((1+\sqrt{1-4x^2})/2)\).
+The identity \(X_m X_m^*=A(I-A)\) gives \(\Tr F(H(X_m))=2S(A)\), and similarly at zero mass. These self-adjoint operators act on a common finite-dimensional subspace containing both ranges and vanish on its complement. Their norms are at most \(1/2\). Hence
+\begin{equation}
+ 2[S(A)-S(B)]=\Tr[F'(H_0)Y]
+ +\int_0^1\Tr\!\left([F'(H_0+\theta Y)-F'(H_0)]Y\right)\dd\theta .
+ \label{eq:tracepath}
+\end{equation}
+For Hermitian \(U,V\) of norm at most \(1/2\), with \(d=\|U-V\|\le1\), one has \(\|F'(U)-F'(V)\|\le C d\log(e/d)\). Indeed, differentiation gives \(F'(x)=4\int_0^1 x(1-u^2+4u^2x^2)^{-1}\dd u\). On \(u\le1/2\) the inverse-difference identity costs \(Cd\). On \(u>1/2\), put \(c=\sqrt{1-u^2}/(2u)\). The integrand including its prefactor is \(u^{-2}\) times the average of \((x\pm ic)^{-1}\); its operator difference is bounded by \(C\min(c^{-1},d/c^2)\). Splitting at \(1-u=d^2\) proves the estimate for \(d\le1/2\); boundedness of \(F'\) covers the rest. Now \(\|Y\|\le\|Y\|_1\le C\sqrt\mu\) by (i), bounding the integral remainder in \eqref{eq:tracepath} by \(C\mu\lmu\).
+
+For the linear trace, the Fourier coefficients of the massless symbol at nonzero cell distance \(d\) are \(O(1/|d|)\) by bounded variation of \(\operatorname{sgn}(k)\cos(k/2)\) and \(|\sin(k/2)|\). On one exterior half-line take \(\xi=(0,v_t\otimes w)\) with a unit spinor \(w\) and put \(z=Lt\). For \(0<z\le1\), number the interior cells \(i=0,\ldots,L-1\) from that boundary. Splitting the exterior sum at \(j=1/t\) gives
+\[
+ \|(X_0(v_t\otimes w))(i)\|
+ \le C\sqrt t\sum_{j\ge0}\frac{e^{-tj}}{i+j+1}
+ \le C\sqrt t\,[1+\log(1/[t(i+1)])].
+\]
+Since \(\sum_{i=1}^L\log^2(L/i)\le2L\), it follows that \(\|H_0\xi\|\le C\sqrt z[1+\log(1/z)]\). The scalar integral yields \(|F'(x)|\le C|x|\log(e/|x|)\). Applying Jensen to the increasing concave function \(y\mapsto y\log^2(e/\sqrt y)\) on \([0,1/4]\), in the spectral measure of \(H_0^2\) at \(\xi\), gives
+\[
+ \|F'(H_0)\xi\|\le C\sqrt z[1+\log(1/z)]^2.
+\]
+For \(z\) bounded away from zero this also follows from boundedness of \(F'\).
+
+In each rank-one trace integrand from (i), this estimate multiplies \(CM(t)W_L(t)\) for \(Lt\le1\) by Cauchy--Schwarz on the normalized exterior factor. For \(Lt>1\) use the uniform bound on \(F'\). Suppose \(\mu\le1/4\), so \(2k_0\le1/L\) and \(Lk_0\) is comparable to \(\mu\). For \(t\le1/L\), \(W_L(t)\le C\sqrt{L/t}\), giving a product bound \(CL[1+\log(1/Lt)]^2\) before multiplication by \(M(t)\). Integration on \((0,k_0)\) gives \(O(\mu\lmu^2)\). On \((k_0,2k_0)\) the density estimate has integral \(O(k_0)\), giving the same order. The next interval contributes at most
+\[
+ CLk_0\int_{2k_0}^{1/L}[1+\log(1/Lt)]^2\frac{\dd t}{t}=O(\mu\lmu^3).
+\]
+For \(1/L<t\le1\), \(W_L\le C/t\) gives \(O(k_0 L)\). For \(t>1\), \(W_L\le Ce^{-t}\) gives \(O(k_0)\). This bounds the first term of \eqref{eq:tracepath}. For \(\mu\in[1/4,1]\), input (i) and bounded \(F'\) bound the entire trace path by \(C\sqrt\mu\). Finally add (ii); its explicit mass terms are \(O(\mu\lmu^3)\). The relative error vanishes in the stated window since \(\mu\log L\to\infty\) also gives \(\sqrt{\log N/N}=o(\mu^2\log L)\).
+\end{proof}
+
+\clearpage
+\section{Numerical checks and the intermediate regime}
+The table evaluates \eqref{eq:finite}. Direct calculation of \(\cH_B(Q,Q)\) in the original complex two-orbital basis gives the same coefficients to the displayed precision for \(L=1,2,3,4,6\). Diagonalizing the scalar sine kernel requires enough precision to resolve its smallest eigenvalues.
+\begin{center}
+\begin{tabular}{@{}rr@{\qquad}rr@{\qquad}rr@{}}
+\toprule
+\(L\)&\(\kappa_L\)&\(L\)&\(\kappa_L\)&\(L\)&\(\kappa_L\)\\ \midrule
+1&0.170369233029&3&0.167102292834&8&0.166731439264\\
+2&0.167493850652&4&0.166920696923&16&0.166682922637\\
+\bottomrule
+\end{tabular}
+\end{center}
+As a check of mass, spin and logarithm conventions, independent quadrature of the exact projector and evaluation of \eqref{eq:rel} at \(L=1\) give \(\cD_1(\mu)/(\mu^2h^2)=0.1909213513,\ 0.1804990318,\ 0.1770899306\) at \(\mu=10^{-8},10^{-16},10^{-24}\), respectively. The \(O_L(1/h)\) relative correction allows slow approach to the exact one-cell coefficient.
+
+In the intermediate regime the spectral weight of the remaining Wilson perturbation matters. A perturbation of size \(x\) along an eigenvector of eigenvalue \(b\) has trace Hessian \(x^2/[b(1-b)]\). The two constant spatial orbitals obey Lemma~\ref{lem:edge}. The Hilbert--Schmidt bound alone allows a larger contribution at the reference spectral endpoints. Controlling the localization of the remaining perturbation could extend the matching upper bound to polynomially vanishing scaled mass. These results concern the specified quasifree chain and its mathematical interval covariances.
+
+\section*{Acknowledgments}
+Kirtus Justus directed the research and is responsible for its claims. OpenAI Codex assisted with the present derivations, checks in two orbital representations, literature comparison and preparation of this manuscript. The earlier Wilson papers record derivations, numerical work and drafting with ChatGPT (OpenAI), including the boundary and reference-modular estimates. Claude (Anthropic) contributed to the earlier endpoint-connection proposal, the continuum Sobolev proof in D8 part 17, and editorial assembly of the earlier edition, including separation of D5. The earlier program also records wider participation by Gemini (Google), Grok and DeepSeek.
+
+\begin{thebibliography}{9}\small
+\bibitem{d1} K.~Justus, \emph{Relative Entropy of Finite-Interval Wilson--Dirac Quasifree States}, paper D1, 2026, especially pp.~4--5 of the \edition.
+\bibitem{d4} K.~Justus, \emph{Uniform Modular Control and Nonlinear Convergence for Wilson--Dirac Intervals}, paper D4, 2026, Corollary~4 and Theorem~6, \edition.
+\bibitem{d5} K.~Justus, \emph{Conditional Uniform Additive Limit of Wilson--Dirac Relative Entropy on Bounded Scaled Masses}, paper D5, 2026, Proposition~1 and its inputs, \edition.
+\bibitem{d8} K.~Justus, \emph{Wilson--Dirac Covariance, Majorant and Boundary Estimates}, paper D8, 2026, part 3 pp.~17--18 and parts 1, 7 and 9, \edition.
+\bibitem{ch} H.~Casini and M.~Huerta, \emph{Reduced density matrix and internal dynamics for multicomponent regions}, Classical and Quantum Gravity \textbf{26}, 185005 (2009).
+\href{https://doi.org/10.1088/0264-9381/26/18/185005}{doi:10.1088/0264-9381/26/18/185005}.
+\bibitem{ty} S.~Tikhonov and P.~Yuditskii, \emph{Sharp Remez inequality}, Theorem~1.2.
+\href{https://arxiv.org/abs/1809.09726v2}{arXiv:1809.09726v2} (2018).
+\end{thebibliography}
+\end{document}
+

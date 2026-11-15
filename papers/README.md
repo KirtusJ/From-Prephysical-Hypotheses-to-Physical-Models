@@ -50,6 +50,10 @@ The [issued edition](../edition/README.md) preserves the original pagination use
 | D7 | [Reference Modular and Jacobi Estimates for a Half-Filled Fermion Interval](D7%20-%20Reference%20Modular%20and%20Jacobi%20Estimates%20for%20a%20Half-Filled%20Fermion%20Interval.pdf) | 38 | [Edition folder](../edition/PAPERS/D7_Reference_Modular_and_Jacobi_Estimates_for_a_Half_Filled_Fermion_Inter/) | [Credits](contributions.md#D7) |
 | D8 | [Wilson–Dirac Covariance, Majorant and Boundary Estimates](D8%20-%20Wilson%E2%80%93Dirac%20Covariance%2C%20Majorant%20and%20Boundary%20Estimates.pdf) | 74 | [Edition folder](../edition/PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/) | [Credits](contributions.md#D8) |
 
+## Research draft
+
+**Proposed D9.** [Relative Entropy of Wilson–Dirac Intervals at Vanishing Scaled Mass](drafts/D9%20-%20Relative%20Entropy%20of%20Wilson%E2%80%93Dirac%20Intervals%20at%20Vanishing%20Scaled%20Mass.pdf) (7 pages). For a half-filled interval of the infinite Wilson chain, the draft bounds the relative entropy as scaled mass vanishes and distinguishes the limits in which the leading coefficient is determined. [TeX source](source/D9/D9_manuscript.tex) · [Derivations and numerical checks](../Director_G/wilson_mass_limits/README.md) · [Credits](contributions.md#draft-d9)
+
 ## E · Spectral measures and compact groups
 
 | Paper | Title | Pages | Source material | Contributions |
