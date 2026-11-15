@@ -134,6 +134,6 @@ if __name__ == "__main__":
     record = extract(args.figure) if args.figure else json.loads(RECORD.read_text())
     check(record)
     if args.write_transcription:
-        RECORD.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+        RECORD.write_bytes((json.dumps(record, indent=2) + "\n").encode("utf-8"))
     elif args.figure:
         require(record == json.loads(RECORD.read_text()), "Published extraction differs from transcription")
