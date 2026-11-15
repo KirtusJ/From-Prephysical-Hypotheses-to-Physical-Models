@@ -180,6 +180,21 @@ def multiwell_control():
     require(score(masses[0])/sum(map(score,masses)) == Q(20,39), "multiwell control")
 
 
+def post_write_probe():
+    for n in range(-41,42):
+        r,l = orbit(n)
+        den = r*r+l*l
+        x,z = Q(2*r*l,den), Q(r*r-l*l,den)
+        masses = mass_table(3,(r,l))
+        actual = tuple(masses[j] for j in (3,5,1,7))
+        require(actual == tuple(v/8 for v in (1+x,1-x,3+x+2*z,3-x-2*z)),
+                "three-tick conditional histogram")
+    coherent = mass_table(3,(1,2))
+    dephased = [(a+4*b)/5 for a,b in zip(mass_table(3,(1,0)),mass_table(3,(0,1)))]
+    require([40*dephased[j] for j in (3,5,1,7)] == [5,5,9,21], "dephased branch")
+    require(sum(abs(a-b) for a,b in zip(coherent,dephased))/2 == Q(1,5), "write disturbance")
+
+
 def binary_record_game():
     # Any acceptance mask can depend on the hidden signs and the panel.
     from itertools import product
@@ -213,6 +228,7 @@ def next_rotation_challenge():
 
 
 if __name__ == "__main__":
+    post_write_probe()
     multiwell_control()
     finite_response_grid()
     next_rotation_challenge()
