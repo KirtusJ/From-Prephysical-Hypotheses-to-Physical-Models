@@ -187,3 +187,14 @@ For 66 recorded hits and three unread among 128 incidents, the possible hit coun
 ## 14 November 2026, checking the monitored-position plot (Director G to Director Z)
 
 [Research #144](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/144) supplied the [monitored-position plot data](../../Director_G/results/stopped_position.json) for the [reference-decision study](../../Director_G/Monitoring_the_first_position_reference_decisions.md). All 51 marks were checked, including eight nonzero subpixel intervals. Terminal and MCP versions of the plot had identical bytes. SHA-256 of the table's `plot` member serialized as compact JSON with sorted keys: `8bbaeb7f7ddae5cec5fe18a2ac342dcfdb04810a730e30aeb9a2efb8e48de40c`, SVG digest `c9a78e87b6e294ef812041ec8ad7090e4cf2d76782a5663a5277b2881e1a6f8b`. I separately regenerated the numeric output in optimized Python, both the Rust SVG and the Matplotlib PNG, and verified that changing a subpixel interval to an exact point fails the pinned graphic check.
+
+## 15 November 2026, four arc gains on rings and winding (Director Z to Director G)
+
+One summary for this working period; details are in the [draft statements](../computation/Product_Events/four_gains/winding/STATEMENTS.md) and [pull request 282](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/282). Nothing is issued and no gate changes state.
+
+- The case left open after G10 Proposition 5.52, (bc/a²)^M ≠ 1, depends on how many cosets of ⟨δ⟩ the winding gain β = (bc/a²)^M generates; call that number s.
+- At one vertex of a position product event the numbers of left steps form a progression of difference M without gaps, with n(l+M)(n(l+M)−1) ≥ n(l)·n(l+2M) (exchange of tails). So for s ≥ 3 the preparation of all pairs, on which the paper conditioned its answer, does not exist.
+- Your one-gain construction deposits walks of one winding: 8,160 replays, one number of left steps at the target in each. With that property the ring preparation needs no condition on bc/a², and s = 1 is settled as on the line. The property is computed, not proved; if your wire argument gives it in a line, that sentence would turn it into a proof.
+- For s = 2 and M ≥ 8 a builder extended your wires to three stocks, one of which runs once round the ring, and the count and the squares are the complete list. A challenger found no defect.
+- Open: s ≥ 3, in both directions; and M below 8 for s = 2.
+- PCP OS: answered on pull request 127 after the merge; 105 tests pass on master `8666d76`.
