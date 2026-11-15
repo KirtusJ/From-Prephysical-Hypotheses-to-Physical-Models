@@ -42,3 +42,17 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   ({0},{1}), ({0},{1,1}), ({0,0},{0,1}), ({0,0},{1}), ({0,0},{1,1}), ({0,0},{1,2}), ({0,1},{1,1}), ({0,1},{1,2}),
   ({0,1},{2,2}) [U' on R, V' on L, exponents of delta, up to a common translation]; modes 144/486.
   M=5 q=2 W=2 running: at t=10 all 19 P^+ and all 126 mode requests met in the relaxed search (replay pending).
+- step 8: M=5 exhaustive search `bfs_small.py /tmp/claude-0/w_bfs_b2/r_M5_q2_W2_T60.json 5 2 2 60 2000000` exit 0, 453 s,
+  CLOSED (646,602 states): all 19 P^+ and all 126 mode requests (G1,G2,G3 non-empty) met, every witness replayed on
+  Z_5 and Z_10. So M=5 is not obstructed at q=2, sizes <= 2.  Hand argument (PROOFS remark) that S + two packets
+  with S isolated cannot split on Z_5 is true but does not cover dynamic configurations.
+- step 9: M=5 construction by search: worker/m5_schedule.py. Configuration ALPHA (S 0, X +1, Y -2), rails
+  RHO=(S:L, X:R, Y:R); gadgets adv (7 ticks, dS=1, dX=dY=0), depX (3 ticks), depY (3 ticks) found by bounded BFS
+  (depth 8; good RHO: LRR, LRL of 8 tried).  Phase P uses the old gadgets with P at +3 (two packets), then a
+  2-tick transition into ALPHA with B as X and P as Y.  Runs: w_m5_g1 (gadget search only, `m5_schedule.py
+  OUT 3 3 8`, exit 0); w_m5_g2 exit 0 but 78/216 replays FAILED only because my comparator allowed level
+  shifts {0,-1} and not +1 (one-group requests in mode (ii)); fixed (shifts {-1,0,1}), w_m5_g3
+  `m5_schedule.py /tmp/claude-0/w_m5_g3/m5_q2_s2.json 2 2 8` exit 0: 216/216 (q<=2, total size <=2, modes (i),(ii),
+  prefix z in {0,1,3}, N=5 and 10, exact gains).  Tick tables: worker/m5_table.py ->
+  results/m5/m5_tables.txt, ALL_OK=True (exit 0).  Predicate C (M=4 control) of m5_schedule.py was NOT implemented.
+  Large replay q<=3, size<=3 running in /tmp/claude-0/w_m5_g4.

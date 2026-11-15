@@ -37,6 +37,9 @@ every pair (U,V) met at one site of an enumerated state (equivalent system, Lemm
 most BEAM states per layer are kept (random sample, seed 20261113) and expanded; all children give equations.
 With a beam the enumeration is a subset: P3 equality is evidence, an excess is only a candidate to recheck
 without the beam. P4 also reports whether the beam cut any layer.
+BEAM < 0 (added after the beam runs failed): W = -BEAM, enumerate ALL position product events with at most W
+sites in every A_s (no sampling). This family is closed: the single-site restriction of a child is in it, so every
+Ext multiset of a pair at layer < L is itself constrained by its own site equation.
 usage: fgtwo_beam.py CARRIER N L L0 MAXSTATES BEAM OUTFILE
 """
 import sys, time, json, itertools, hashlib, cmath, math
@@ -162,7 +165,7 @@ def main():
         for st in layer:
             full = ext_full(st, N, mod, a, b, c, d)
             sites = sorted(set(x for (x, rl, g) in full))
-            for nsub in range(1, len(sites) + 1):
+            for nsub in range(1, (len(sites) if BEAM >= 0 else min(len(sites), -BEAM)) + 1):
                 for sub in itertools.combinations(sites, nsub):
                     ss = set(sub)
                     ns = {k_: v for k_, v in full.items() if k_[0] in ss}
@@ -175,7 +178,7 @@ def main():
                             bound_hit = True; break
                 if bound_hit: break
             if bound_hit: break
-        if BEAM > 0 and len(new) > BEAM:
+        if BEAM > 0 and len(new) > BEAM:  # BEAM<0: width cap W=-BEAM, all events with |A_s|<=W, no sampling
             beam_cut.append((t, len(new)))
             new = rng.sample(new, BEAM)
         layer = new

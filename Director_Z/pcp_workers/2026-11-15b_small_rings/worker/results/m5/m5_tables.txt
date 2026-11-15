@@ -1,0 +1,36 @@
+## adv: start {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'R', 'X': 'L', 'Y': 'R'} required [0, 2, 3] excluded [1, 4] exclusive=True distinct_after=True
+  tick 2: pos {'S': 0, 'X': 2, 'Y': -2} moves {'S': 'R', 'X': 'R', 'Y': 'L'} required [0, 2, 4] excluded [1, 3] exclusive=True distinct_after=True
+  tick 3: pos {'S': 0, 'X': 2, 'Y': -1} moves {'S': 'L', 'X': 'L', 'Y': 'R'} required [1, 3, 4] excluded [0, 2] exclusive=True distinct_after=True
+  tick 4: pos {'S': 1, 'X': 3, 'Y': -1} moves {'S': 'L', 'X': 'R', 'Y': 'L'} required [0, 2, 3] excluded [1, 4] exclusive=True distinct_after=True
+  tick 5: pos {'S': 2, 'X': 3, 'Y': 0} moves {'S': 'R', 'X': 'L', 'Y': 'R'} required [0, 2, 4] excluded [1, 3] exclusive=True distinct_after=True
+  tick 6: pos {'S': 2, 'X': 4, 'Y': 0} moves {'S': 'R', 'X': 'R', 'Y': 'L'} required [1, 2, 4] excluded [0, 3] exclusive=True distinct_after=True
+  tick 7: pos {'S': 2, 'X': 4, 'Y': 1} moves {'S': 'L', 'X': 'R', 'Y': 'R'} required [1, 3, 4] excluded [0, 2] exclusive=True distinct_after=True
+  end: relative {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  returns to ALPHA(LRR): True; increments (dS,dX,dY,stage,copy) = (1,0,0)
+## depX: start {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'S', 'X': 'R', 'Y': 'R'} required [0, 1, 3] excluded [2, 4] exclusive=True distinct_after=True
+  tick 2: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'R', 'X': 'L', 'Y': 'L'} required [0, 2, 4] excluded [1, 3] exclusive=True distinct_after=True
+  tick 3: pos {'S': 0, 'X': 2, 'Y': -1} moves {'S': 'L', 'X': 'R', 'Y': 'R'} required [1, 2, 4] excluded [0, 3] exclusive=True distinct_after=True
+  end: relative {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  returns to ALPHA(LRR): True; increments (dS,dX,dY,stage,copy) = (0, 0, 0, 1, 2)
+## depY: start {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'R', 'X': 'L', 'Y': 'L'} required [0, 2, 4] excluded [1, 3] exclusive=True distinct_after=True
+  tick 2: pos {'S': 0, 'X': 2, 'Y': -1} moves {'S': 'S', 'X': 'L', 'Y': 'L'} required [0, 1, 3] excluded [2, 4] exclusive=True distinct_after=True
+  tick 3: pos {'S': 1, 'X': 3, 'Y': 0} moves {'S': 'L', 'X': 'R', 'Y': 'R'} required [0, 2, 3] excluded [1, 4] exclusive=True distinct_after=True
+  end: relative {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  returns to ALPHA(LRR): True; increments (dS,dX,dY,stage,copy) = (1, 1, 1, 1, 0)
+## trans (phase P end -> ALPHA): start {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'R', 'X': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'R', 'X': 'L', 'Y': 'L'} required [0, 2, 4] excluded [1, 3] exclusive=True distinct_after=True
+  tick 2: pos {'S': 0, 'X': 2, 'Y': -1} moves {'S': 'L', 'X': 'R', 'Y': 'R'} required [1, 2, 4] excluded [0, 3] exclusive=True distinct_after=True
+  end: relative {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+## remove: start {'S': 0, 'X': 1, 'Y': -2} rails {'S': 'L', 'X': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'X': 1, 'Y': -2} moves {'S': 'X', 'X': 'L', 'Y': 'R'} required [2, 3] excluded [0, 1, 4] exclusive=True distinct_after=True
+  end: relative {'X': 2, 'Y': -2} rails {'S': 'L', 'X': 'L', 'Y': 'R'}
+## phase P adv (P at +3, P-low -2): start {'S': 0, 'Y': 3} rails {'S': 'R', 'Y': 'R'}
+  tick 1: pos {'S': 0, 'Y': 3} moves {'S': 'L', 'Y': 'L'} required [1, 4] excluded [0, 3] exclusive=True distinct_after=True
+  tick 2: pos {'S': 1, 'Y': 4} moves {'S': 'L', 'Y': 'R'} required [2, 4] excluded [0, 1] exclusive=True distinct_after=True
+  tick 3: pos {'S': 2, 'Y': 4} moves {'S': 'R', 'Y': 'L'} required [0, 2] excluded [3, 4] exclusive=True distinct_after=True
+  tick 4: pos {'S': 2, 'Y': 5} moves {'S': 'R', 'Y': 'R'} required [0, 2] excluded [1, 3] exclusive=True distinct_after=True
+  end: relative {'S': 0, 'Y': 3} rails {'S': 'R', 'Y': 'R'}
+ALL_OK=True
