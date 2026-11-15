@@ -77,3 +77,12 @@ Common ground for both: the signed two-rail carrier (gain −1 on a left step th
 - **Kill test KZ8 (fixed now).** (a) The line, T = 1 to 80; rings of 16 and 18 sites, T = 1 to 80: H(T+1) ≥ H(T) for every T. (b) 200 random position product events on the ring of 16 sites (seed 20261115, length 4 to 16, mask density 0.5 to 0.9), each continued freely for 12 further steps: H non-decreasing over the free steps. Arithmetic: probabilities exact; logarithms in 60-digit decimal arithmetic; a decrease counts if it exceeds 10^−40 (far above the rounding of 60 digits over at most a few hundred terms, far below any real difference). Predicate: (a) and (b) both hold. One decrease KILLS Z8.
 
 If both die, the sprint ends with no standing candidate, and that is said.
+
+## Outcome of the second batch
+
+| Candidate | First test | Verdict | Where it is now |
+|---|---|---|---|
+| Z7 "Dark Arrow" | KZ7 | KILLED by exact computation (one dark vertex at length 3, none at length 4) | `../abandoned/Z7_Dark_Arrow/` |
+| Z8 "Two Books" | KZ8 (a), (b) | STANDS; its second law turned out to have a two-line proof | `../Z8_Two_Books/`, steelmanned, branded, open for attack |
+
+**Final candidate of the sprint: Z8 "Two Books".** Six candidates were stipulated in the period; five are dead: four by the director's own first tests and one, after release, by an attacker of the stack.
