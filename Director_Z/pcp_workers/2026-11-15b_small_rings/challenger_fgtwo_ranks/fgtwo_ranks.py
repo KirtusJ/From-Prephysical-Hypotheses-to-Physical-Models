@@ -326,11 +326,22 @@ def main():
     res['dim_proj_P'] = len(P) - rkR
     res['P3_pass'] = (res['dim_proj_P'] == res['predicted_dim_on_P'])
     res['rank_seconds'] = round(time.time() - t1, 2)
+    print('DIMS', res['dim_proj_P'], res['predicted_dim_on_P'], flush=True)
     if res['dim_proj_P'] > res['predicted_dim_on_P']:
         # projected solution space = nullspace of the residual system on P; remove the predicted span
         if R is not None:
-            X, nul = R.nullspace()
-            vecs = [[X[i, j] for i in range(len(P))] for j in range(nul)]
+            E, rk_ = R.rref()
+            piv = []; prow = 0
+            for col in range(len(P)):
+                if prow < rk_ and E[prow, col] != 0:
+                    piv.append(col); prow += 1
+            free = [col for col in range(len(P)) if col not in set(piv)]
+            vecs = []
+            for fcol in free:
+                v = [flint.fmpq(0)] * len(P); v[fcol] = flint.fmpq(1)
+                for ri, pc in enumerate(piv):
+                    v[pc] = -E[ri, fcol]
+                vecs.append(v)
         else:
             vecs = [[flint.fmpq(1 if i == j else 0) for i in range(len(P))] for j in range(len(P))]
         cur = [[flint.fmpq(pv[P[i]][j]) for i in range(len(P))] for j in range(nb)]

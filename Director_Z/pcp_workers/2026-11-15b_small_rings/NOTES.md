@@ -32,3 +32,13 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   profiles and all 54 mode profiles met; the search CLOSED (empty layer at t=17, 86,177 states), so the
   relaxed reachable set is complete for all lengths.  Batch M in {3,5,6,7}, q in {2,3}, W=2 started in
   /tmp/claude-0/w_bfs_b1 (run.sh, summary.txt).
+- step 6: PROOFS.md written: Lemmas R, S, T, E and Theorem A (three groups, modes (i),(ii), for M >= 6, hand proof
+  by the pairwise-distance rule of Lemma E), Corollary A1 (thm:fgtwo, thm:fgadj, cor:pplus8, thm:fgprod, thm:fgthree
+  carry over to M >= 6 given the body's proofs as written).  Challenger on Theorem A launched (folder
+  challenger_theoremA/, statement extract STATEMENT_theoremA.md sha256 002d8ae8...).
+- step 7: exhaustive search batch /tmp/claude-0/w_bfs_b2 (run.sh: `bfs_small.py OUT M q 2 60 2000000`, ulimit -v 4 GB):
+  M=3 q=2 W=2: exit 0, CLOSED at t=13 (1,396 states): P^+ 19/19 met; modes 84/126 met (42 not met).
+  M=3 q=3 W=2: exit 0, CLOSED at t=15 (2,262 states): P^+ 24/33 met; NOT met (any length, relaxation sound):
+  ({0},{1}), ({0},{1,1}), ({0,0},{0,1}), ({0,0},{1}), ({0,0},{1,1}), ({0,0},{1,2}), ({0,1},{1,1}), ({0,1},{1,2}),
+  ({0,1},{2,2}) [U' on R, V' on L, exponents of delta, up to a common translation]; modes 144/486.
+  M=5 q=2 W=2 running: at t=10 all 19 P^+ and all 126 mode requests met in the relaxed search (replay pending).
