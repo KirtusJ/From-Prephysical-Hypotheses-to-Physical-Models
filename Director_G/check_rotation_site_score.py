@@ -249,7 +249,47 @@ def complementary_branch_scores():
             require(lower == (p/2 if dephase else p), "complementary branch bound")
 
 
+def shared_sheet_probe(reflect):
+    """Propagate integer signed paths on eight wells, two rails and three sheets."""
+    state = {(0,1,0): 1}
+    ticks = 0
+    def step(center, phase, retain):
+        nonlocal state,ticks
+        following = Counter()
+        for (x,rail,y), count in state.items():
+            relative = (x-center+4)%8-4
+            for direction in (1,-1):
+                site = (x+direction)%8
+                if retain(site,direction):
+                    sign = -1 if rail == direction == -1 else 1
+                    following[site,direction,(y+phase*relative)%3] += sign*count
+        state = following
+        ticks += 1
+    def excursion():
+        step(7,1,lambda x,r: x in (6,0))
+        step(7,1,lambda x,r: x == 7)
+
+    for j in range(3):
+        step(0,1,lambda x,r: j < 2 or (x,r)==(7,-1))
+    require(sum(v*v for v in state.values()) == 2, "dipole source")
+    excursion()
+    for length,port in ((18,3),(6,7)):
+        for j in range(length):
+            step(0,0,lambda x,r: j+1 < length or x == port)
+        if length == 18 and reflect:
+            state = {(x,r,(-y)%3): count for (x,r,y),count in state.items()}
+    excursion()
+    excursion()
+    rates = tuple(Q(sum(v*v for (_,r,_),v in state.items() if r==rail),2**ticks)
+                  for rail in (1,-1))
+    expected = (175,25) if reflect else (25,175)
+    require(rates == tuple(Q(n,16384) for n in expected), "shared-sheet branch probe")
+    return rates
+
+
 if __name__ == "__main__":
+    for reflect in (False,True):
+        print("Shared-sheet probe, reflection",reflect,shared_sheet_probe(reflect))
     complementary_branch_scores()
     post_write_probe()
     multiwell_control()
