@@ -1,0 +1,509 @@
+[
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_COMMISSIONED",
+   "body": {
+    "arrangement": "UNARY",
+    "author": "assistant",
+    "claims": [
+     {
+      "label": "A",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Proposition 5.60 with its written proof (three groups on two levels, M at least 8, delta of finite order) and Theorem 5.61 (two classes of winding) without that proposition as a hypothesis.",
+      "criterion": "Supported in scope if the proof follows on reading tick by tick and a rebuild from the paper text alone meets every request examined."
+     },
+     {
+      "label": "B",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "G10 Lemma 5.54(iii), Corollary 5.57, Lemma 5.59 and Theorem 5.62: the sharper winding inequality, three levels on one rail force two on the other, invariance without preparation, and for three or more classes the rule on multisets in two adjacent cosets.",
+      "criterion": "Supported in scope if each proof follows on reading, the exchanged walks satisfy every step in the range examined and exact ranks equal the statement."
+     },
+     {
+      "label": "C",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "The one-gain construction deposits walks of one number of left steps at the target (used in G10 Proposition 5.58).",
+      "criterion": "Conditional unless the stage statements of the one-gain note are proved here; supported as a conditional if the inference from those statements is valid for every stage."
+     },
+     {
+      "label": "D",
+      "kind": "DERIVATION",
+      "origin": "TARGET_TEXT",
+      "text": "For three or more classes of winding a consistent site-independent rule equals a combination of the count and the squares on the multisets that meet three cosets.",
+      "criterion": "Supported only by a proof; computations on single rings leave it unresolved."
+     }
+    ],
+    "director": "principal",
+    "expectation": "NO_DIRECTIONAL_EXPECTATION",
+    "extent": "PARTIAL",
+    "label": "Z31",
+    "modules": [
+     "mathematics",
+     "science"
+    ],
+    "procedure": "FOCUSED",
+    "required_gates": [
+     "G1",
+     "G5",
+     "G6"
+    ],
+    "target": {
+     "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+     "t": "artifact"
+    },
+    "title": "Twenty-seventh revision of paper G10: proofs for the hypotheses of edition Z30; three or more classes of winding"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "the subsection on the winding (Lemma 5.53 to Remark 5.63) read line by line in the typeset paper",
+    "ref": {
+     "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "all of it; written by this participant",
+    "ref": {
+     "sha256": "94d9664a961a7ff4270981e0b6ae6a488e45b1308ba412602d382c45f9ef93cf",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "all of it; Theorem A, Proposition N and Lemma W' read step by step",
+    "ref": {
+     "sha256": "2f3c58df85e6bc02d01a714b9788853b5449bbaea2788bacabcf13e655c06369",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "eb96f9c4a3a0d002ab3e3123ba48c3e61ae6aff6974ba210da5fe99e5da55ab4",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "741bbe7e957e494876476502cdf3439ae66cccfd3407e0b9c023ad54272ffb9f",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "a84f48d8985beb7ffd919b046eaec7571c4315588f6852b24a31d8be608a39f9",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "4b1a501a2dfba177b58218ad71c66212ab36dbb12cffecee756c7eb5205dfda9",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant in a fresh folder, byte-identical",
+    "ref": {
+     "sha256": "6f8ca1956657c945fe3b19d780f88a0567c61102f12adac3e10b0171387d4753",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "produced by this participant's program; the three receipts read, exit 0 each",
+    "ref": {
+     "sha256": "6fcfae3d72b7cd91862a78163e2bea6b02ff8f6a0b01319e03188ec487e0a03d",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rendered and looked at by this participant",
+    "ref": {
+     "sha256": "5f76511340eb5bca12cd5eb1dd81573dce6670b847c4ffbeb91086e5a885383d",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "INSPECTION_DECLARED",
+   "body": {
+    "extent": "rerun by this participant: exit 0, standard axioms",
+    "ref": {
+     "sha256": "e0410257a9ed52702c6357a1cc66510e2eeab071802020f99c3cc1ff285cf7d8",
+     "t": "artifact"
+    }
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G1",
+    "note": null,
+    "review": "Z31"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "A",
+    "id": "O38",
+    "review": "Z31",
+    "text": "Replays reach orders of delta up to 4 and M up to 20; rings with M at most 7 are open; all reviewers share the participant's model family."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "C",
+    "id": "O39",
+    "review": "Z31",
+    "text": "Rests on the stage statements of Director G's one-gain note, whose short stages are stated by test and are not reproved here."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RAISED",
+   "body": {
+    "basis": [],
+    "claim": "D",
+    "id": "O40",
+    "review": "Z31",
+    "text": "No proof on any ring; a builder's exact ranks leave one dimension undecided on rings of 3, 5 and 6 sites in searches that are sampled; the ring of 4 sites agrees to the sizes examined."
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper and the addendum state the limit.",
+    "id": "O38",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper and the addendum state the limit.",
+    "id": "O39",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "OBJECTION_RESOLVED",
+   "body": {
+    "basis": [],
+    "how": "Stands. The paper and the addendum state the limit.",
+    "id": "O40",
+    "resolution": "OPEN_RECORDED"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "a84f48d8985beb7ffd919b046eaec7571c4315588f6852b24a31d8be608a39f9",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "e0410257a9ed52702c6357a1cc66510e2eeab071802020f99c3cc1ff285cf7d8",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "A",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "REASONED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F94",
+    "left_open": "Rings with M at most 7.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z31",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "2f3c58df85e6bc02d01a714b9788853b5449bbaea2788bacabcf13e655c06369",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "4b1a501a2dfba177b58218ad71c66212ab36dbb12cffecee756c7eb5205dfda9",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "6f8ca1956657c945fe3b19d780f88a0567c61102f12adac3e10b0171387d4753",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "B",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "SUPPORTED_IN_SCOPE",
+    "estimate": null,
+    "execution": "REASONED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F95",
+    "left_open": "Multisets that meet three cosets.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z31",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "7f024afe0ba19b2ac1ff4ec35a4ec156f31cdb9ab7c5fdd8c160aeab932fdad5",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "C",
+    "conditions": [
+     "the stage statements of the one-gain note of Director G"
+    ],
+    "contrary": [],
+    "disposition": "CONDITIONAL",
+    "estimate": null,
+    "execution": "REASONED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F96",
+    "left_open": "A proof of those statements for the short stages.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z31",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "FINDING_RECORDED",
+   "body": {
+    "basis": [
+     {
+      "ref": {
+       "sha256": "eb96f9c4a3a0d002ab3e3123ba48c3e61ae6aff6974ba210da5fe99e5da55ab4",
+       "t": "artifact"
+      }
+     },
+     {
+      "ref": {
+       "sha256": "6fcfae3d72b7cd91862a78163e2bea6b02ff8f6a0b01319e03188ec487e0a03d",
+       "t": "artifact"
+      }
+     }
+    ],
+    "claim": "D",
+    "conditions": [],
+    "contrary": [],
+    "disposition": "UNRESOLVED",
+    "estimate": null,
+    "execution": "REASONED",
+    "grounding": "SUPPLIED_ONLY",
+    "grounding_observed": "SUPPLIED_ONLY",
+    "id": "F97",
+    "left_open": "The converse on multisets that meet three cosets, on every ring.",
+    "noncritical": [],
+    "relation": {
+     "author": "assistant",
+     "exposure": "NOT_OBSERVED",
+     "label": "SELF_CHECK",
+     "lineage": "SAME"
+    },
+    "review": "Z31",
+    "session": 1,
+    "supersedes": null
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G5",
+    "note": "Each claim has a finding; three objections are recorded open.",
+    "review": "Z31"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "GATE_COMMITTED",
+   "body": {
+    "basis": [],
+    "gate": "G6",
+    "note": "Deliverable checked: paper G10 revised a twenty-seventh time (70 pages, 63 labelled statements), programs, plots, review records, and edition Z31 assembled from edition Z30 by a program, with verify_baseline.py run before the push.",
+    "review": "Z31"
+   }
+  }
+ },
+ {
+  "name": "acr_submit",
+  "arguments": {
+   "kind": "REVIEW_CLOSED",
+   "body": {
+    "examined_extent": "PARTIAL",
+    "lifecycle": "CLOSED_COMPLETE",
+    "note": null,
+    "review": "Z31"
+   }
+  }
+ }
+]

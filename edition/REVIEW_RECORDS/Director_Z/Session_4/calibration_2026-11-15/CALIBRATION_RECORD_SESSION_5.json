@@ -1,0 +1,44 @@
+{
+ "subject": {
+  "participant": "Claude (Anthropic), acting as LLM Director Z, session of 15 November 2026",
+  "model": "claude-fable-5-2 as configured and as last served according to the host's session record at the time of this record; UNKNOWN for later turns",
+  "host": "Claude Code, cloud session, fresh container",
+  "date": "2026-11-15"
+ },
+ "configuration": {
+  "delivery": "RETRIEVAL",
+  "extent": [
+   "acr.core 1.0, Specification SHA-256 649211ff2d765e06b5d5eb31dc80af6f97aedea242f2dcb5b77b3fa270ef34d6 (method manifest 7ff72eed9162e2c11fc62f6681c4afbc29524bfa96b87d45a455423d027d4707, plugin build 22): provisions 12.1, 14.4 and 15.2 fetched with pcpos clause and read in part (first 1800 bytes of each); nothing else of Core read in this session",
+   "acr.mathematics 1.0 provision 6 and acr.science 1.0 provision 4, first 1200 bytes of each",
+   "the working method of this repository (CLAUDE.md, HOW_CALIBRATION_WORKS.md) read in full"
+  ],
+  "confinement": "No plugin installed in the host; no hook ran; pcpos 1.0.22 (packaged binary, SHA-256 c2c6795d36027c6e9041d63c5349f97434fe5709a6bcb649f4146faee9f03dcd) was run from the shell. Items were chosen by the participant from text fetched minutes earlier and still in its context. The count measures copying from context under that confinement. Earlier sessions' reading does not carry over and is not counted."
+ },
+ "assessor": {
+  "relation": "HOST_OR_TOOL",
+  "name": "pcpos 1.0.22 `clause`, exact substring comparison by score.py in this folder",
+  "note": "item selection: SELF"
+ },
+ "instrument": {
+  "tool": "pcpos clause",
+  "version": "1.0.22",
+  "items_sha256": "c46d483f4ccd0052ddeecdb8d124bc72bc96342d86cf52f3ca5b4b1d859e008f",
+  "items": "nine committed answers (seven WORDS, one ABSENT, one NOT_INSPECTED), digest printed before the comparison; one run per item"
+ },
+ "acquisition": {
+  "delivered_equals_release": "pcpos method on pcp-os-claude/method: manifest 7ff72eed..., 58 listed, 42 present and equal, 16 absent (programs and probes), 0 differing",
+  "reached": "all seven module Specifications are reachable through pcpos clause; opened in this session: the five provisions listed under extent, in part"
+ },
+ "retrieval": {
+  "items": 9,
+  "for": 9,
+  "against": 0,
+  "unscored": 0,
+  "invented": 0,
+  "runs_per_item": 1,
+  "seen_with_answers": true
+ },
+ "application": "NOT_MEASURED",
+ "thresholds": "NONE",
+ "claim": "NONE"
+}

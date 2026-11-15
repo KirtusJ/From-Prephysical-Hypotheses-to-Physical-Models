@@ -1,0 +1,120 @@
+{
+ "argv": [
+  "/home/user/From-Prephysical-Hypotheses-to-Physical-Models",
+  "result_kill_run1.json"
+ ],
+ "seed": 20261115,
+ "KZ3": {
+  "counts_at_minus1_plus1": [
+   131,
+   35
+  ],
+  "all_blank_counts": {
+   "-3": 2,
+   "-2": 15,
+   "-1": 131,
+   "0": 33,
+   "1": 35,
+   "2": 14
+  },
+  "two_sided_binomial_p": 2.979399616066074e-14,
+  "p_exact_numerator_over_2^n": [
+   2786814346971924036900979220607026084,
+   166
+  ],
+  "predicate_p_below_1e-6": true,
+  "verdict": "KILLED"
+ },
+ "KZ4": {
+  "rings": [
+   {
+    "N": 4,
+    "pairs": 21,
+    "rank_of_inputs": 4,
+    "inconsistent_output_coordinates": 4,
+    "consistent": false
+   },
+   {
+    "N": 6,
+    "pairs": 20,
+    "rank_of_inputs": 6,
+    "inconsistent_output_coordinates": 6,
+    "consistent": false
+   },
+   {
+    "N": 8,
+    "pairs": 20,
+    "rank_of_inputs": 8,
+    "inconsistent_output_coordinates": 8,
+    "consistent": false
+   }
+  ],
+  "predicate_consistent_on_some_ring": false,
+  "verdict": "KILLED"
+ },
+ "KZ5": {
+  "cases": [],
+  "pairs": 32,
+  "failures": 32,
+  "first_failure": {
+   "N": 4,
+   "T": 4,
+   "v": [
+    0,
+    0
+   ],
+   "w": [
+    0,
+    0
+   ],
+   "eps_v": [
+    1,
+    -1
+   ],
+   "eps_w": [
+    1,
+    -1
+   ],
+   "product_formula": "8",
+   "product_of_weights": "4"
+  },
+  "predicate_equal_in_every_pair": false,
+  "verdict": "KILLED"
+ },
+ "KZ6": {
+  "a_events": 208,
+  "a_failures": 0,
+  "b_pairs": 32,
+  "b_failures": 0,
+  "c_rows": [
+   {
+    "N": 4,
+    "M": 2,
+    "weights_at_vertices_times_2^(M+1)": {
+     "(3, 0)": 4,
+     "(1, 1)": 0
+    },
+    "sum": "4"
+   },
+   {
+    "N": 12,
+    "M": 6,
+    "weights_at_vertices_times_2^(M+1)": {
+     "(7, 0)": 4,
+     "(5, 1)": 0
+    },
+    "sum": "4"
+   },
+   {
+    "N": 20,
+    "M": 10,
+    "weights_at_vertices_times_2^(M+1)": {
+     "(11, 0)": 4,
+     "(9, 1)": 0
+    },
+    "sum": "4"
+   }
+  ],
+  "note": "this carrier has s = 2 with k even only for M = 2 mod 4, so the rings of the plan (N = 6, 8, 10, 12, 14) are replaced by N = 4, 12, 20; the fork weights are listed per vertex for comparison with the plan's formula"
+ }
+}
