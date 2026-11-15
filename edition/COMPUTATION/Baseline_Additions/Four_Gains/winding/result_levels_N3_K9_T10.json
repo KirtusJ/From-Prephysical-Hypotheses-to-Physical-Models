@@ -1,0 +1,133 @@
+{
+ "argv": [
+  "3",
+  "9",
+  "10",
+  "result_levels_N3_K9_T10.json"
+ ],
+ "M": 3,
+ "classes": 17481,
+ "exact_multisets": 34893,
+ "greatest_number_of_levels": 4,
+ "occurrences_with_a_different_number_of_levels": {
+  "classes": 281,
+  "exact": 0
+ },
+ "predicates": {
+  "V1": "FAIL",
+  "V2": "FAIL"
+ },
+ "first_failure_V1": {
+  "multiset": [
+   [
+    [
+     0,
+     0
+    ],
+    1
+   ],
+   [
+    [
+     0,
+     3
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     6
+    ],
+    5
+   ],
+   [
+    [
+     1,
+     3
+    ],
+    3
+   ],
+   [
+    [
+     1,
+     6
+    ],
+    3
+   ]
+  ],
+  "first": {
+   "r": [
+    5,
+    0,
+    2
+   ],
+   "levels": 3,
+   "length": 9
+  },
+  "second": {
+   "r": [
+    5,
+    2
+   ],
+   "levels": 3,
+   "length": 9
+  }
+ },
+ "first_failure_V2": {
+  "multiset": [
+   [
+    [
+     0,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     0,
+     4
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     7
+    ],
+    4
+   ],
+   [
+    [
+     1,
+     4
+    ],
+    4
+   ],
+   [
+    [
+     1,
+     7
+    ],
+    2
+   ]
+  ],
+  "first": {
+   "r": [
+    6,
+    -3,
+    2
+   ],
+   "levels": 3,
+   "length": 10
+  },
+  "second": {
+   "r": [
+    6,
+    0,
+    -1
+   ],
+   "levels": 3,
+   "length": 10
+  }
+ }
+}

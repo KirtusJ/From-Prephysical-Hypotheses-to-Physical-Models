@@ -1,0 +1,150 @@
+{
+ "P5_coverage": {
+  "1": {
+   "three_or_more_values": 16,
+   "vertices": 20
+  },
+  "10": {
+   "three_or_more_values": 79208,
+   "vertices": 160160
+  },
+  "12": {
+   "three_or_more_values": 97553,
+   "vertices": 203560
+  },
+  "14": {
+   "three_or_more_values": 69986,
+   "vertices": 141045
+  },
+  "2": {
+   "three_or_more_values": 1008,
+   "vertices": 1020
+  },
+  "3": {
+   "three_or_more_values": 18599,
+   "vertices": 1009343
+  },
+  "4": {
+   "three_or_more_values": 43286,
+   "vertices": 538904
+  },
+  "5": {
+   "three_or_more_values": 33741,
+   "vertices": 968537
+  },
+  "6": {
+   "three_or_more_values": 59907,
+   "vertices": 121703
+  },
+  "7": {
+   "three_or_more_values": 63103,
+   "vertices": 274872
+  },
+  "8": {
+   "three_or_more_values": 97143,
+   "vertices": 201639
+  },
+  "9": {
+   "three_or_more_values": 46610,
+   "vertices": 213296
+  }
+ },
+ "argv": [
+  "result_run1.json"
+ ],
+ "exhaustive": [
+  {
+   "N": 1,
+   "T": 10,
+   "nonempty_events": 10
+  },
+  {
+   "N": 2,
+   "T": 8,
+   "nonempty_events": 510
+  },
+  {
+   "N": 3,
+   "T": 7,
+   "nonempty_events": 498948
+  },
+  {
+   "N": 4,
+   "T": 5,
+   "nonempty_events": 271452
+  },
+  {
+   "N": 5,
+   "T": 4,
+   "nonempty_events": 428920
+  }
+ ],
+ "failures": {
+  "P1": 0,
+  "P2": 0,
+  "P3": 0,
+  "P4": 0
+ },
+ "first_failing_case": {},
+ "predicates": {
+  "P1": "PASS",
+  "P2": "PASS",
+  "P3": "PASS",
+  "P4": "PASS",
+  "P5": "PASS"
+ },
+ "program": "winding_offsets.py",
+ "random": [
+  {
+   "N": 3,
+   "nonempty_events": 21254,
+   "trials": 4000
+  },
+  {
+   "N": 4,
+   "nonempty_events": 21628,
+   "trials": 4000
+  },
+  {
+   "N": 5,
+   "nonempty_events": 31581,
+   "trials": 4000
+  },
+  {
+   "N": 6,
+   "nonempty_events": 33906,
+   "trials": 4000
+  },
+  {
+   "N": 7,
+   "nonempty_events": 41512,
+   "trials": 4000
+  },
+  {
+   "N": 8,
+   "nonempty_events": 44152,
+   "trials": 4000
+  },
+  {
+   "N": 9,
+   "nonempty_events": 25699,
+   "trials": 2000
+  },
+  {
+   "N": 10,
+   "nonempty_events": 28399,
+   "trials": 2000
+  },
+  {
+   "N": 12,
+   "nonempty_events": 31036,
+   "trials": 2000
+  },
+  {
+   "N": 14,
+   "nonempty_events": 18182,
+   "trials": 1000
+  }
+ ],
+ "seed": 20261115
+}
