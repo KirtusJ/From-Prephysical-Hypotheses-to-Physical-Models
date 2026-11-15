@@ -8,7 +8,7 @@ Include empty ports, all launches, both input rails and parity/ring controls.
 import argparse
 from collections import Counter
 from fractions import Fraction
-from itertools import product
+from itertools import accumulate, combinations, product
 from math import comb
 import json
 from pathlib import Path
@@ -133,6 +133,26 @@ def sign_reversals(n):
     return [n, str(Fraction(fixed, total)), str(Fraction(fresh, total))]
 
 
+def block_history_check():
+    """Three four-tick blocks. Check every cell of every pair of clock reads."""
+    differences = Counter()
+    likelihoods = Counter()
+    for steps in product((-1, 1), repeat=12):
+        positions = [0, *accumulate(steps)]
+        correction = 1
+        for i in (0, 4, 8):
+            gap = 2*positions[i+2] - positions[i] - positions[i+4]
+            correction *= (gap > 0) - (gap < 0)
+        likelihoods[1+correction] += 1
+        for i, j in combinations(range(13), 2):
+            differences[i, j, positions[i], positions[j]] += correction
+    require(not any(differences.values()), "two-clock marginal changed")
+    require(likelihoods == {0: 500, 1: 3096, 2: 500}, "block weight census")
+    return dict(two_clock_cells=len(differences), likelihood_counts=dict(likelihoods),
+                entropy_deficit_bits=str(Fraction(2*likelihoods[2], 4096)),
+                total_variation=str(Fraction(likelihoods[0], 4096)))
+
+
 def run():
     launches = []
     for source in (0,1):
@@ -150,7 +170,8 @@ def run():
     return dict(ports=["site","rail (0=R)","signed tally","number of prefixes"],
                 joint_columns=["site at 2","site at 4","rank","fresh site split","position read at 2"],
                 launches=launches,mixed_parity_after=mixed_rows,ring_flows=ring,
-                sign_reversals=[sign_reversals(n) for n in (1,2,3,4,8,16,32,64)])
+                sign_reversals=[sign_reversals(n) for n in (1,2,3,4,8,16,32,64)],
+                block_histories=block_history_check())
 
 
 if __name__ == "__main__":
