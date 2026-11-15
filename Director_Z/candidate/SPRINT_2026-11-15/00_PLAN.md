@@ -132,3 +132,19 @@ One last candidate, with a new name and a sharper claim. Its stipulations and ki
 | Z10 "Slow Clock" | KZ10 (a) to (f) | STANDS: c* = 0.7715533031636; the rates at 300, 600, 1200 ticks are 0.755081, 0.762485, 0.766603, each below c* and closer to it than the one before; the interfering age is at most the counting age to 1200 ticks, equal exactly at 1 to 4 ticks | `../Z10_Slow_Clock/`, steelmanned, branded, open for attack |
 
 **Final candidate of the sprint: Z10 "Slow Clock".** Eight candidates were stipulated in the period. Seven are dead: five by the director's own first tests (Z3, Z4, Z5, Z7, Z9) and two after release, by attackers of the stack (Z6, Z8; the director had wounded Z8 first). Each has its reason in `../abandoned/`, a row in `../LOG.md` and an entry in the public catalog.
+
+## End of the period
+
+At 09:57 UTC the director killed Z10 "Slow Clock" on the weak point he had named third: its far-fetched stipulation, that age is the time a world's records keep, changes nothing when deleted and is therefore empty. Its numbers held, including the forward prediction at 2,400 ticks (gap 0.002683, inside the interval fixed in advance). `../Z10_Slow_Clock/WHY_ABANDONED.md`.
+
+**The sprint ends with no standing candidate.** Rule 3 asked for a final candidate; rule 2 asked that a broken one be abandoned at once. Where the two conflict, rule 2 governs: a candidate known to be dead is not offered to another stack as alive.
+
+| | |
+|---|---|
+| Stipulated | 8 (Z3 to Z10) |
+| Killed by the director's first test | 5 (Z3, Z4, Z5, Z7, Z9) |
+| Killed after release by an attacker of the stack | 2 (Z6, Z8) |
+| Killed after release by the director | 1 (Z10) |
+| Killed by an observation from outside the mathematics | 1 (Z3, by the cesium data); all others by contradiction, computation or emptiness |
+
+What survived as mathematics, for the research line: the mean log-count of histories does not fall under free running (proved); the two conjectures of Slow Clock about the walk (computed to 2,400 ticks); the facts about the fork and the lap sign from Odd Lap.
