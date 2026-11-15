@@ -37,3 +37,5 @@ Across the six matched source/reader preparations the two tables give 6,054 oppo
 Run `python check_three_readings.py` for the exact discrete constructions. To replay the photon counts, install openpyxl and run `python check_three_readings.py --photons POOLED.xlsx PER_RUN.xlsx` using the two files in that order. The checker verifies the published-file fingerprints before pooling. [Pooled workbook](https://static-content.springer.com/esm/art%3A10.1038%2Fncomms11780/MediaObjects/41467_2016_BFncomms11780_MOESM1462_ESM.xlsx) · [Per-run workbook](https://static-content.springer.com/esm/art%3A10.1038%2Fncomms11780/MediaObjects/41467_2016_BFncomms11780_MOESM1463_ESM.xlsx) · [Exact checker](check_three_readings.py)
 
 OpenAI Codex supplied the memory construction, geometric proof, independent internal checks and photon-count reanalysis. Kirtus Justus holds scholarly responsibility for the research program.
+
+A [four-reader check of the source mixtures](Optical_source_mixtures_and_a_ring_control.md) reweights the original preparations, retains the failed chronological separation, and constructs a site-parity reader for a hidden difference in the ring model.
