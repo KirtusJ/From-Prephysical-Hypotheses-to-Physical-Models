@@ -121,11 +121,11 @@ def selection_witness():
         require(keep * Q(wrong,len(triples)) == yield_rate*expected, "per-launch mismatch")
 
 
-def recovered_gate():
+def recovery_yields(rounds):
     # After the initial positive attempt, r=0 is the only unfinished exponent.
     pending = {0: Q(3,8)}
     yields = [Q(5,8)]
-    for _ in range(10):
+    for _ in range(rounds):
         following = Counter()
         for r, mass in pending.items():
             for hits in range(5):
@@ -136,6 +136,11 @@ def recovered_gate():
         require(set(following) <= {-2,-1,0,2,3,4}, "reachable controller states")
         pending = following
         yields.append(1-sum(pending.values()))
+    return yields
+
+
+def recovered_gate():
+    yields = recovery_yields(10)
     require(yields[-2]**2 < Q(25,27) < yields[-1]**2, "two-gate yield")
     q = yields[-1]
     require(q*q*Q(9,25) > 2*(1-q+q*Q(1,10)), "loss-inclusive binary bound")
@@ -143,6 +148,22 @@ def recovered_gate():
     print("First winning round budget:", next(i for i,y in enumerate(yields) if win(y)>Q(2,3)))
     print("Ten-round unconditional win probability:", float(win(q)))
     return q
+
+
+def finite_response_grid():
+    anchors = {Q(0), Q(1,2), Q(1)}
+    rays = [(1,1), (1,0)]
+    for depth in range(1,42):
+        rays = [rotate(ray,1) for ray in rays]
+        for ray in rays:
+            w = mass_table(1,ray)[1]
+            anchors.update((w,1-w))
+        grid = sorted(anchors)
+        gap = max(b-a for a,b in zip(grid,grid[1:]))
+        require((gap < Q(1,100)) == (depth == 41), "first sub-percent mesh")
+    yields = recovery_yields(23)
+    require(yields[22]**41 < Q(95,100) < yields[23]**41, "longest panel exposure")
+    print("41-rotation mesh and ordinary longest-panel yield:", float(gap), float(yields[23]**41))
 
 
 def binary_record_game():
@@ -178,6 +199,7 @@ def next_rotation_challenge():
 
 
 if __name__ == "__main__":
+    finite_response_grid()
     next_rotation_challenge()
     binary_record_game()
     print("Ten recovery rounds, two-gate yield:", float(recovered_gate()**2))
