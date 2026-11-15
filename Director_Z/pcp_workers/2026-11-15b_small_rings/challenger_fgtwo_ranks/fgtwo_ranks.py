@@ -215,6 +215,12 @@ def main():
     P = [i for i in range(nU) if firstlayer[keys[i]] <= L0]
     Q = [i for i in range(nU) if firstlayer[keys[i]] > L0]
     res['P_size'] = len(P); res['Q_size'] = len(Q)
+    dsub = set(mul(j, cl['delta'], mod) for j in range(cl['r']))
+    def two_cosets(ms):
+        g0 = ms[0][0]
+        return any(add(g, neg(g0, mod), mod) not in dsub for g, _ in ms)
+    res['P_keys_meeting_two_delta_cosets'] = sum(1 for i in P if two_cosets(keys[i][1]))
+    res['all_keys_meeting_two_delta_cosets'] = sum(1 for i in range(nU) if two_cosets(keys[i][1]))
 
     # predicted basis
     def rep(g):

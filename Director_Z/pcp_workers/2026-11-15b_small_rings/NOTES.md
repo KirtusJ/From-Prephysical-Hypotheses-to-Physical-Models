@@ -22,3 +22,13 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   P1 (finite stage check) True for M=6..9, False for M=5 (control P3 as predicted: S,B,P cannot be pairwise
   >=2 apart on Z_5); P2 replays 76/76 for each M=6..9 (q<=2, total size <=2, both modes, N=M and 2M).
 - step 3: larger replay started: `spb_schedule.py .../w_spb_run4/result_M5-14_q3_s3.json 5 14 3 3` (background).
+- step 4: run4 `python3 worker/spb_schedule.py /tmp/claude-0/w_spb_run4/result_M5-14_q3_s3.json 5 14 3 3` exit 0 (~3 min):
+  P1 True for every M = 6..14, False for M = 5 (control); P2 648/648 replays for each M = 6..14
+  (q = 1..3, |G1|+|G2|+|G3| <= 3, modes (i) and (ii), N = 2M and N = M for odd M).
+- step 5: worker/bfs_small.py (exhaustive relaxed search; contents recorded before the relaxation; witnesses
+  replayed on the real ring). Two trial bugs of mine, fixed before any kept result: (a) dropping classes at W
+  removed the final site itself; (b) dedup before recording lost witnesses.  Control C1
+  `bfs_small.py /tmp/claude-0/w_bfs_t2/r_M5_q1_W3_T40.json 5 1 3 40 2000000` exit 0: all 15 P^+ count
+  profiles and all 54 mode profiles met; the search CLOSED (empty layer at t=17, 86,177 states), so the
+  relaxed reachable set is complete for all lengths.  Batch M in {3,5,6,7}, q in {2,3}, W=2 started in
+  /tmp/claude-0/w_bfs_b1 (run.sh, summary.txt).
