@@ -230,6 +230,31 @@ def first_register_reads():
     return rows
 
 
+def covering_walk_checks():
+    """Independent amplitudes on the line or a covering cycle; project only at readout."""
+    cases = 0
+    for size in (3, 4, 7, 12):
+        for modulus in (1, 2, 3, 7, None):
+            reads = free_winding_reads(size, modulus, 30)
+            state = {(0, "R"): 1}
+            for actual in reads:
+                following = Counter()
+                for (y, incoming), amplitude in state.items():
+                    for rail, step in (("L", -1), ("R", 1)):
+                        target = y + step
+                        if modulus is not None:
+                            target %= modulus * size
+                        sign = -1 if incoming == rail == "L" else 1
+                        following[target, rail] += sign * amplitude
+                projected = Counter()
+                for (y, _), amplitude in following.items():
+                    projected[y % size] += amplitude**2
+                require(actual == projected, (size, modulus, "covering projection"))
+                state = following
+                cases += 1
+    return cases
+
+
 def checks():
     forks = []
     for size in (3, 4, 5, 6, 7, 8, 9, 12, 15):
@@ -247,6 +272,7 @@ def checks():
                 splice=splices(7, "R"*15, "L"*14+"R"), physical_probe=scored_fork(),
                 winding_register=winding_register_probe(),
                 first_register_reads=first_register_reads(),
+                covering_walk_distributions=covering_walk_checks(),
                 tiny_ring=dict(ring=2, depth=2, admitted_paths=sum(small.values())))
 
 
