@@ -13,7 +13,7 @@ The classifications describe document structure. In particular, the original ext
 
 ## Reproduce the register checks
 
-From a Git checkout containing the Z33 commit, run the following, adjusting the script path to this directory. The default command requires Python 3.8 or later and checks all 33 IDs, original labels and page references against the pinned Git objects. With PyMuPDF available, the second command also replays the issued extraction function on the original five components. The F1 entry is a positive control outside the 33. The PDF replay was verified with PyMuPDF 1.26.6.
+From a Git checkout containing the Z33 commit, run the following, adjusting the script path to this directory. The default command requires Python 3.8 or later and checks all 33 IDs, issued headings, status labels and assembled-paper page links against the pinned theorem register and paper index. With PyMuPDF available, the second command also replays the issued extraction function on the original five components. The F1 entry is a positive control outside the 33. The PDF replay was verified with PyMuPDF 1.26.6.
 
 ```sh
 python3 path/to/check_register.py
