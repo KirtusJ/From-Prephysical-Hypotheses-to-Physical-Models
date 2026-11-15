@@ -1,6 +1,6 @@
 """Exact binomial boundary calculation for the pinned five-site score bounds."""
 from fractions import Fraction as F
-from math import comb
+from math import ceil, comb, floor
 
 
 def boundary_probabilities(n, k, p):
@@ -22,7 +22,8 @@ def main():
     p1 = F(1,2) + F(20699999689,258750000000)/F(636625,10**6) - F(1,10**9)
     alpha = F(1,20)
     coin = F(115, 1024)
-    print(f'Finite-bit success bounds: {float(p0):.12f}, {float(p1):.12f}')
+    print(f'Finite-bit null success <= {ceil(p0 * 10**12) / 10**12:.12f}, '
+          f'target success >= {floor(p1 * 10**12) / 10**12:.12f}')
     for n in (803, 804):
         null_tail, null_point = boundary_probabilities(n, 480, p0)
         target_tail, target_point = boundary_probabilities(n, 480, p1)
@@ -31,13 +32,13 @@ def main():
             power = target_tail + optimal * target_point
             if not (0 <= optimal <= 1 and power < 1-alpha):
                 raise ArithmeticError('803 endpoint ceiling')
-            print(f'803: maximum endpoint power at size .05 = {float(power):.12f}')
+            print(f'803: maximum endpoint power at size .05 <= {ceil(power * 10**12) / 10**12:.12f}')
         else:
             size = null_tail + coin * null_point
             power = target_tail + coin * target_point
             if not (size < alpha and power > 1-alpha):
                 raise ArithmeticError('804 boundary rule')
-            print(f'804: size <= {float(size):.12f}, power >= {float(power):.12f}')
+            print(f'804: size <= {ceil(size * 10**12) / 10**12:.12f}, power >= {floor(power * 10**12) / 10**12:.12f}')
 
 
 if __name__ == '__main__':

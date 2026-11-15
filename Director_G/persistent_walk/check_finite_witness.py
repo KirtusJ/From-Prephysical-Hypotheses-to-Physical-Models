@@ -5,7 +5,7 @@ The only transcendentals in the definition are specified by algebraic roots.
 The output certifies conservative thresholds; no fitting and no device data.
 """
 from dataclasses import dataclass
-from decimal import Decimal, localcontext
+from decimal import Decimal, ROUND_CEILING, ROUND_FLOOR, localcontext
 from fractions import Fraction
 from math import ceil, isqrt, log
 import json
@@ -60,7 +60,11 @@ def point(integer):
 def numerical_bounds(value):
     with localcontext() as context:
         context.prec = 48
-        return [str(Decimal(bound) / SCALE) for bound in (value.lo, value.hi)]
+        context.rounding = ROUND_FLOOR
+        lower = Decimal(value.lo) / SCALE
+        context.rounding = ROUND_CEILING
+        upper = Decimal(value.hi) / SCALE
+        return [str(lower), str(upper)]
 
 
 def walk_mode(cosine):

@@ -1,7 +1,7 @@
 """Exact checks for cosine-weighted time assignment in the five-site return test."""
 from array import array
 from fractions import Fraction as Q
-from math import isqrt
+from math import ceil, isqrt
 
 SCALE = 1 << 112
 ACCEPT_LEVELS = 1 << 32
@@ -143,7 +143,7 @@ def profile(n, k, stochastic_upper, alternative_lower):
     second = upper_tail(n, n-k+1, 1-alternative_p)
     require(max(first,second) < Q(1,20), "one or both error tails exceed .05")
     print(f"{n} launches, >= {k} successes, "
-          f"tails <= {float(first):.8f}, {float(second):.8f}")
+          f"tails <= {ceil(first * 10**8) / 10**8:.8f}, {ceil(second * 10**8) / 10**8:.8f}")
 
 
 def main():

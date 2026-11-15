@@ -1,4 +1,5 @@
 """Short-horizon tests for the ideal five-site Hadamard launch-port return."""
+from math import inf, nextafter
 from fractions import Fraction as F
 from itertools import product
 import json
@@ -111,8 +112,8 @@ def main():
                       "successive_exact_prefix_minima": [1,2,2,3,3,4],
                       "remaining_count_rows_t_n_L_U_ideal_low_high": rows,
                       "launches": 47997, "largest_tick": 5,
-                      "ideal_error_upper": float(ideal_reject),
-                      "rival_error_upper": float(rival_accept)}, indent=2))
+                      "ideal_error_upper": nextafter(float(ideal_reject), inf),
+                      "rival_error_upper": nextafter(float(rival_accept), inf)}, indent=2))
 
 
 if __name__ == "__main__":

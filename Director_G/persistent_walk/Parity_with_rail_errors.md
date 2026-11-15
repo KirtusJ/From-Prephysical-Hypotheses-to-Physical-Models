@@ -17,7 +17,7 @@ Under the alternative, assume on every launch conditional on its past that the h
 | Swap probability at most 5% given a hit, its true rail and the current settings | $0.95(0.95)=0.9025$ | 41 | 0.049900 | 0.951950 |
 | Swap probability at most 5% among all hits | $0.95-0.05=0.90$ | 42 | 0.049886 | 0.953241 |
 
-For the first row, at least 95% of the true correct readings keep their labels. For the second, swaps can be concentrated on previously correct readings. The second row permits the reported probabilities $(.45,.05,.50)$ per preparation for correct, wrong and loss. Independent draws with that law give only **0.948391058** power for the 41-launch version of this rule. An explicit realization takes true correct fraction .95 among hits and swaps labels only on a fraction $1/19$ of the correct hits. Both specifications require error control conditional on the preceding record. A device-wide average that allows long bad runs is a different assumption.
+For the first row, at least 95% of the true correct readings keep their labels. For the second, swaps can be concentrated on previously correct readings. The second row permits the reported probabilities $(.45,.05,.50)$ per preparation for correct, wrong and loss. Independent draws with that law give approximately **0.948391058** power for the 41-launch version of this rule. An explicit realization takes true correct fraction .95 among hits and swaps labels only on a fraction $1/19$ of the correct hits. Both specifications require error control conditional on the preceding record. A device-wide average that allows long bad runs is a different assumption.
 
 ## The decision rule
 

@@ -1,4 +1,5 @@
 """Check the 41-preparation three-tick parity decision with exact integers."""
+from math import ceil, floor
 from fractions import Fraction as F
 
 
@@ -58,8 +59,8 @@ def main():
         expected_pass = (n == 41 and weights[0] == 361) or n == 42
         if not (size <= F(1, 20) and (power >= F(19, 20)) == expected_pass):
             raise ArithmeticError((label, n, float(size), float(power)))
-        print(f'{n}, {label}: null size <= {float(size):.12f}, '
-              f'target power >= {float(power):.12f}')
+        print(f'{n}, {label}: null size <= {ceil(size * 10**12) / 10**12:.12f}, '
+              f'target power >= {floor(power * 10**12) / 10**12:.12f}')
 
 
 if __name__ == '__main__':

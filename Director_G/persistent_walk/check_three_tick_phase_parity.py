@@ -1,7 +1,7 @@
 """Three-tick port amplitudes and finite-decision bounds, using exact arithmetic."""
 from fractions import Fraction as F
 from itertools import product
-from math import comb
+from math import ceil, comb, floor
 
 
 def require(test, description):
@@ -46,7 +46,7 @@ def main():
     for n, expected in ((12, F(76009, 81920)), (13, F(156047, 163840))):
         power = ideal_power(n)
         require(power == expected, 'ideal power')
-        print(f'Ideal cap {n}: exact power {power} = {float(power):.12f}')
+        print(f'Ideal cap {n}: exact power {power}, approximately {float(power):.12f}')
 
     for traffic, flag, baseline, actual in product(
             (False, True), (False, True), (-1, 0, 1), (-1, 0, 1)):
@@ -64,7 +64,7 @@ def main():
     size = veto_bound(17, 5, null_vertices, max)
     power = veto_bound(17, 5, target_vertices, min)
     require(size < F(1,20) and power > F(19,20), 'seventeen-launch decision')
-    print(f'Monitored cap 17: size <= {float(size):.12f}, power >= {float(power):.12f}')
+    print(f'Monitored cap 17: size <= {ceil(size * 10**12) / 10**12:.12f}, power >= {floor(power * 10**12) / 10**12:.12f}')
     pooled_size = drift + (1 - drift) / 2**5
     pooled_power = (1 + F(1,20))/2
     require(pooled_size == F(81, 1600) and pooled_size > F(1,20), 'clustered errors')
