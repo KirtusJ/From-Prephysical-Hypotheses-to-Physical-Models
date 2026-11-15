@@ -1,0 +1,40 @@
+{
+ "roots": [
+  "/tmp/claude-0/-home-user-From-Prephysical-Hypotheses-to-Physical-Models/6a3b23af-3f38-5394-be90-e78127520d98/scratchpad/p7/scan/ctl2"
+ ],
+ "files_found": 1,
+ "files_parsed": 1,
+ "unreadable": [],
+ "cutoff_R3": 10.0,
+ "cutoff_note": "10 is a conventional screening cut-off, not a derived tolerance",
+ "stats": {
+  "mad0_skipped": 1,
+  "columns_tested": 0,
+  "resid_groups_tested": 0,
+  "r5_records_tested": 0
+ },
+ "counts": {
+  "R1": 0,
+  "R2": 1,
+  "R3": 1,
+  "R4": 0,
+  "R5": 0
+ },
+ "flags": [
+  {
+   "rule": "R3",
+   "file": "/tmp/claude-0/-home-user-From-Prephysical-Hypotheses-to-Physical-Models/6a3b23af-3f38-5394-be90-e78127520d98/scratchpad/p7/scan/ctl2/control.json",
+   "path": "/col",
+   "value": 1000,
+   "median": 1.0,
+   "mad": 0,
+   "note": "MAD=0 fallback"
+  },
+  {
+   "rule": "R2",
+   "file": "/tmp/claude-0/-home-user-From-Prephysical-Hypotheses-to-Physical-Models/6a3b23af-3f38-5394-be90-e78127520d98/scratchpad/p7/scan/ctl2/control.json",
+   "path": "/predicate_ok",
+   "value": false
+  }
+ ]
+}
