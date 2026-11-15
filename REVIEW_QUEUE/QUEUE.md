@@ -121,3 +121,11 @@ Director Z returned [cross-review addendum 6](../Director_Z/cross_review/CROSS_R
   - `Director_G/Marker_kernel_from_one_launch.md`: `2026-11-14_pcp-cross-reviewer_Director_G_Marker_kernel_from_one_launch.md` — GAP.
   - `Director_G/Tag_sector_controls.md` (lines 1-118): `2026-11-14_pcp-cross-reviewer_Director_G_Tag_sector_controls.md` — GAP, PARTIAL.
 
+- 15 November 2026, queue session, at master `a8c9608`; every brief carried a control with a known answer, all passed except the first outlier-scan run (voided, rerun after the scanner repair). Reports in `REVIEW_QUEUE/reports/2026-11-15_*`; findings posted on pull request 3:
+  - Calibration of the queue session (`REVIEW_QUEUE/calibration/2026-11-15_queue_session/`): application 6/6; retrieval not measured.
+  - Outlier scan: DEFECT in the scanner (zero-MAD columns skipped), repaired in `lib/outlier_scan.py`; follow-up of flags NONE FOUND; about 356 zero-MAD flags remain unchecked (open).
+  - `pcp-chaos` on the edition verifier: 22 caught, 17 survived, 1 equivalent.
+  - Z26 items: builder on Theorem 5.32 for q > 2 (STRENGTHENED, partial; small-ring obstruction PROVED for N in {3,6}); builder on Lemma 5.34 sources; builder on Theorem 5.36(i) for N = 5, 8, 10 (PARTIAL, conjectured; the run is being finished without its timeout).
+  - Z25 items: formalizer on Theorem 5.32 (ii), (iv) (`PosProd.lean`); challenger on product events step 1 (GAP: gadgets must be trimmed).
+  - Z22: challenger on Corollary 5.28 products (GAP in scope). Z21: micro-review of Theorem 5.26 on non-strong carriers. Z20: challenger and formalizer on Step 3 of Theorem 5.22 (NONE FOUND; `VertexStep3.lean`); micro-review of Corollary 5.23 abundance (NONE FOUND). Z19: micro-review of Remark 5.21 on C7:C3 and S3 (NONE FOUND; wording "so 6 divides d"). Z18: reading of the abstract and assumptions (DEFECT, body.tex line 8). Z17: micro-review on non-cyclic groups (NONE FOUND); builder on Corollary 5.20 (no-parallel-arcs hypothesis used implicitly). Z16: formalizer on two steps of Theorem 5.16 (`G10Block.lean`, NONE FOUND); micro-review of box solutions (NONE FOUND); challenger on the sentence after Corollary 5.17 (GAP, body.tex line 382).
+  - Cross-reviews of Director G: Tag sector controls part 2 (NONE FOUND), Operational coin qubit (GAP), Sector control and probability embedding (GAP; CRLF in stored results).
