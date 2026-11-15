@@ -34,6 +34,29 @@ def signal(t,x,rail,enabled):
     return (2*rail-1)*2*c*s
 
 
+def null_information(start, initial_rail, blocks):
+    """Differentiate the real coin path amplitude at plate angle h=0."""
+    ticks = 4*blocks
+    score_sum = score_squares = 0
+    for word in product((0, 1), repeat=ticks):
+        x, rail, amplitude, derivative = start, initial_rail, 1, 0
+        for tick, direction in enumerate(word):
+            sign = 1-2*direction
+            coin = 1 if rail == 0 else sign
+            slope = (-sign*x if rail == 0 else x) if tick % 4 == 0 else 0
+            derivative = derivative*coin + amplitude*slope
+            amplitude *= coin
+            x += sign
+            rail = direction
+        score = 2*derivative*amplitude  # amplitude is +/-1 with common normalization omitted
+        score_sum += score
+        score_squares += score*score
+    information = F(score_squares, 2**ticks)
+    require(score_sum == 0 and information == 4*(blocks*start**2 + 2*blocks*(blocks-1)),
+            "null likelihood score and information")
+    return int(information)
+
+
 def histories(start, rail, enabled):
     rows = []
     masses = {(start,rail):F(1)}
@@ -67,7 +90,10 @@ def histories(start, rail, enabled):
     if enabled and start==1:
         expected = F(1,50) if rail==0 else F(49,50)
         require(rows[0]["ports"][2] == [2,0,str(expected)],"named right daughter")
-    return dict(origin=start,rail=rail,plate=enabled,panels=rows)
+    result = dict(origin=start,rail=rail,plate=enabled,panels=rows)
+    if not enabled:
+        result["information_for_h_at_zero"] = [null_information(start,rail,b) for b in (1,2,3)]
+    return result
 
 
 if __name__ == "__main__":
