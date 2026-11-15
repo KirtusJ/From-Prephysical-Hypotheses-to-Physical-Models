@@ -8,13 +8,15 @@ PREDICATES fixed before the first run; hypothesis per event: W12 > 0 and W1 > 0 
  P_prod (control) for product sets A x B: H12 = H1 + H2 exactly (m: not expected; s: T-2).
 Families: (i) every non-empty set of pairs, ring 1 and ring 3, T=2 (65535 sets each);
  (ii) joint-mask events (mask = non-empty set of reachable site pairs after each step): ring 3 T<=2 exhaustive, ring 3 and line T=3 sampled 4000 each;
- (iii) random sets of pairs, rings 1,3,4, T=3, 20000 each; (iv) 'same end site' and 'same end vertex' events T=1..5 rings 1..6.
- (b) coarse-graining: for every distinct qualifying single-world event state of ring 3 (T<=5), ring 4 (T<=7), merge each pair of
+ (iii) random sets of pairs, rings 1,3,4, T=3, 20000 each; (iv) 'same end site' and 'same end vertex' events T=1..4 rings 1..6 (run 2; run 1 planned T<=5).
+ (b) coarse-graining: for every distinct qualifying single-world event state of ring 3 (T<=5), ring 4 (T<=5 in run 2; T<=7 planned in run 1), line (T<=4), merge each pair of
  records into one with eps = sum, n = sum; qualifies if merged W > 0; count H rises / falls / equal.
 All violations counted, smallest (fewest pairs) kept."""
 import json, random, itertools
 from lib import *
 random.seed(20261115)
+import lib
+lib.BITLIM = 100_000   # run 2: run 1 was killed after 9 min without output (BITLIM 3e6 too slow); decimal fallback counted
 def walks(N, T):
     ws = [((0, 0), 1, "")]
     for _ in range(T):
@@ -38,7 +40,7 @@ def analyse(pairs, ws1, ws2):
         h12, h1, h2 = Hterms(st), Hterms(a), Hterms(b)
         out[tag] = (sign_lin(h1 + h2 + neg(h12)) if (h1 or h2 or h12) else 0, sign_lin(h12 + neg(h1)), sign_lin(h12 + neg(h2)))
     return out
-res = {"command": "python3 t2.py", "seed": 20261115, "families": {}}
+res = {"command": "python3 t2.py > t2_run2.log 2>&1", "seed": 20261115, "families": {}}
 best = {}
 def run(name, gen, ws1, ws2):
     c = {"events": 0, "zero_pair_weight": 0}
@@ -123,14 +125,14 @@ for N in (1, 3, 4):
             yield [(i, j) for i in range(m) for j in range(m) if random.random() < d]
     run("iii_random_ring%d_T3" % N, g(), ws, ws)
 for N in range(1, 7):
-    for T in range(1, 6):
+    for T in range(1, 5):
         ws = walks(N, T); m = len(ws)
         run("iv_same_site_ring%d_T%d" % (N, T), [[(i, j) for i in range(m) for j in range(m) if ws[i][0][0] == ws[j][0][0]]], ws, ws)
         run("iv_same_vertex_ring%d_T%d" % (N, T), [[(i, j) for i in range(m) for j in range(m) if ws[i][0] == ws[j][0]]], ws, ws)
 res["smallest_violations"] = {"%s/%s" % k: v for k, v in best.items()}
 # (b) coarse-graining
 cg = {}
-for N, Tmax in ((3, 5), (4, 7), (None, 4)):
+for N, Tmax in ((3, 5), (4, 5), (None, 4)):
     seen = set(); c = dict(states=0, merges=0, qualify=0, rise=0, fall=0, equal=0); ex = {}
     for T, ms, st in events(N, Tmax):
         k = key(st)
@@ -151,6 +153,6 @@ for N, Tmax in ((3, 5), (4, 7), (None, 4)):
     print(N, c, flush=True)
 res["coarse_graining"] = cg
 res["sign_fallbacks_to_decimal"] = FALLBACK[0]
-json.dump(res, open("result_t2_run1.json", "x"), indent=1, default=str)
+json.dump(res, open("result_t2_run2.json", "x"), indent=1, default=str)
 print(json.dumps(res["smallest_violations"], indent=0, default=str))
 print(json.dumps({k: v["examples"] for k, v in cg.items() if k == "ring3"}, default=str))

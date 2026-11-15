@@ -124,3 +124,11 @@ One last candidate, with a new name and a sharper claim. Its stipulations and ki
   (e) Λ(T) ≤ Λ_c(T) for every T from 1 to 1200, with equality exactly for T ≤ 4.
   (f) 1 − Λ_c(1200)/1200 < 0.01.
   Predicate: all six hold. Any failure KILLS Z10, and then the sprint ends with no standing candidate.
+
+## Outcome of the last candidate
+
+| Candidate | First test | Verdict | Where it is now |
+|---|---|---|---|
+| Z10 "Slow Clock" | KZ10 (a) to (f) | STANDS: c* = 0.7715533031636; the rates at 300, 600, 1200 ticks are 0.755081, 0.762485, 0.766603, each below c* and closer to it than the one before; the interfering age is at most the counting age to 1200 ticks, equal exactly at 1 to 4 ticks | `../Z10_Slow_Clock/`, steelmanned, branded, open for attack |
+
+**Final candidate of the sprint: Z10 "Slow Clock".** Eight candidates were stipulated in the period. Seven are dead: five by the director's own first tests (Z3, Z4, Z5, Z7, Z9) and two after release, by attackers of the stack (Z6, Z8; the director had wounded Z8 first). Each has its reason in `../abandoned/`, a row in `../LOG.md` and an entry in the public catalog.
