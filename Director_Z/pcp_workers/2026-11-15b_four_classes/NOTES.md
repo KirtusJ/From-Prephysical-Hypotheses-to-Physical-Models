@@ -42,3 +42,33 @@ Commands (all exit 0):  python3 search_relations.py S SIGMA K B res_sS_sigSIGMA_
  4 -1 3 5 : NO relation in the box (K=3,B=5)          <- kept
  5 +-1, 6 +-1, 7 +-1 with K=4,B=5 : NO relation in the box   <- kept (negative within the box; not a proof of absence)
 Next: index-calculus search (valuations at degree-1 primes of each cyclotomic component, integer kernel, unit logs, torsion).
+
+## Step 4 (continuation worker, after the usage-limit stop; same model family as author and coordinator; no Agent tool either)
+Control rechecked from the draft: phi(pi) = (pibar_0, pibar_1, pibar_2), pibar_j = sum_{i = j mod 3} sigma^{floor(i/3)} pi_i
+(reduction of pi mod X^3 - sigma); Qbar(e) = q(e0^2+e1^2+e2^2) + c(e0e1 + e1e2 + sigma e2e0).
+Step 2 (a),(b) rechecked by hand: correct.  Added: L vanishes on (m) <=> G(pi) depends only on pi mod X^s - sigma
+(proof: for u Laurent, f = (z^s-sigma)u(z) + (z^-s - sigma)u(1/z) vanishes at every zeta with zeta^s = sigma, so m | f).
+Step 2 (c) rechecked: FALSE AS WRITTEN for j != 0 mod s.  Counts (2N,2N) give count polynomials K(1+X)^k on both sides,
+but T_{beta^j} multiplies the count polynomial by X^j, and (1+zeta)^k zeta^j != (1+zeta)^k at zeta = e^{2 pi i/s}, s >= 3.
+Correct form (c'): every sign relation with j = 0 mod s is realised (pad the shorter side with factors of sign (1,0); the
+constants then agree, r^k on both sides).  j != 0 needs in addition a count relation X^j prod n_A == prod n_B mod X^s - 1
+with n dominating the signs coefficientwise and of equal parity.  Since j mod s is a homomorphism on relations,
+the j = 0 relations have index dividing s in all relations.
+Program fc2/check_c.py (scratch), exit 0: C1 j=0 realisation exact for r in {2,4,6}, k0 in {0,2}: pass.
+C2 the coordinator's relation (-3+X)(1+X) == -X^2(1+X)^2(-1+2X) (j=2) with counts (2N,2N): NOT a multiset identity (kept).
+C3 the Remark (b) pair as multisets with D0 = sum delta^even: e_beta*(7D0+D0e_b)*(D0+D0e_b)^2 = (D0+3D0e_b)^2*(D0+D0e_b)
+exact for k0 in {0,2}; with e_1 in place of D0 it holds for k0 = 0 and FAILS for k0 = 2 (beta^4 = delta^2 != 1).
+
+## Step 5. Four classes, trivial twist: one coincidence (the Remark (b) pair, realised with D0)
+A = (7D0+D0e_b)*(D0+D0e_b)^2, B = (D0+3D0e_b)^2*(D0+D0e_b), D0 = sum_{n even} delta^n, r even, beta^4 = delta^{k0}, k0 even.
+e_beta*A = B exactly (fc2/check_c.py C3; Lean four_pair: X(7+X)(1+X)^2 - (1+3X)^2(1+X) = X^4-1).
+h0 = (r/2)^6 [ (50+7w)(2+w)^2 - (10+3w)^2(2+w) ] = -2 (r/2)^6 (w^3 - 4w)  (Lean four_h0, four_h0z). One relation suffices.
+Lean file FourClasses.lean, exit 0, axioms propext, Quot.sound.
+## Step 6. Index calculus (fc2/relsearch.py, relpick.py; flint 0.9.0 installed --user for nullspace, LLL, Q[w] gcd)
+j = 0 relations (realisable) with gcd of h0 = m: s=4 sigma=-1, s=5 +-1, s=6 +-1 at BF=30, BL=1000 (Q3a true); two
+relations suffice in each case (relpick Q5).  Rechecked by sympy (verify_pick.py: V1 identity, V2 h0, V3 gcd all true)
+and in Lean: RelSmall2.lean (the 10 relations, linear_combination with x^s = sigma), Bezout2.lean (h0 from the factors,
+m | h_i, u1 h1 + u2 h2 = m), both exit 0, axioms within propext, Classical.choice, Quot.sound.
+No single relation with h0 = const*m was found for s = 4 sigma=-1, 5, 6 in these boxes (kept; not a proof of absence).
+s=7 (+1, and -1 by X -> -X) and s=8 (+-1): too few relations at BF=30/80; rerunning at larger boxes.
+Failures kept: FAILED_ver_small_typeerror.json (JSON of sympy Integer), FAILED_RelSmall*.lean (quotient printed in X).

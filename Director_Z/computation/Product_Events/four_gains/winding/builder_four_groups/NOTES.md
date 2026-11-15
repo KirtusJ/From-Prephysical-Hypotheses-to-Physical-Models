@@ -47,3 +47,21 @@ Exploration results (scratch, abstract model, counts only, delta = 1):
    TO DO: write the proof of completeness, rerun as a fixed program with result file.
  - a new operation for gains not in the list above: R-packet P and L-packet Q at one site, both stepping both ways,
    give (P+Q at e, P + delta Q at e+1). For delta = 1 it is copy+merge. This is the extension step itself.
+
+## Continuation (second builder, same model family; not independent review)
+Step C0. Control: s_i=(0,iM); d_{2j}=(T-1,l0-1+jM), d_{2j+1}=(T-1,l0+jM). M>=2 makes the second coordinate of d_c
+strictly increasing in c (l0+jM < l0-1+(j+1)M iff M>1), needed for "crossing paths meet".
+Step C1. The earlier abstract packet model (copy/merge/delete) is NOT used. Replaced by the exact model:
+n: Z->N, tick n' = 1_{B+MZ}(n + shift n), B subset of Z_M arbitrary (Lemma 1, PROOFS.md). Trimming to relevant classes
+(Lemma 2) makes totals nondecreasing forward, so a run to a profile of total K uses only states of total <= K.
+Width grows by <= 1 per tick, so a BFS with width cap W that finds max width < W is complete (Lemma 3).
+First run res_cap11_a.txt crashed (nroots no convergence on control (1,2,1), double root); kept.
+res_cap11_b.txt: control (1,2,1) ABSENT at M=3 (expected value was wrong: independent brute force brute.py on N=3, T<=7
+also never shows (1,2,1)); present M=4,5. Targets absent M=3,4,5. brute (N=3,5, T<=7) subset of model: confirmed.
+Max gap between occupied points = M in all states (cap 11, M=3,4,5): CONJECTURED invariant; naive induction fails
+(S={0,2,5,7}, M=4, B={0} would give a gap 8; S apparently unreachable).
+Step C2. Exhaustive runs (complete by Lemmas 2,3): targets absent for M=3..8 (cap 12), M=3..7 (cap 11), M=5,6 (cap 13).
+Profile sets equal for M=4..7 (cap 11), M=5..8 (cap 12); M=4 cap 12 lacks (1,2,8,1),(1,8,2,1) (+R-first forms).
+Step C3. Allowed (cor:tp ii,iii, len<=6) but unreachable: total 11: 1,2,3,3,2 and reverse; 12: 1,2,3,5,1 and reverse;
+13: 1,3,3,4,2 / 2,4,3,3,1 / 1,2,3,4,2,1 / 1,2,4,3,2,1 (each in both rail placements). No general condition found.
+Reachable-not-allowed: empty in every run. Files in run1/ with SHA256SUMS.
