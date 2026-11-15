@@ -1,0 +1,1 @@
+Director's recheck (15 Nov): spb_schedule.py o 5 14 3 3, m5_table.py, m5_schedule.py o 3 3 8 rerun in a fresh directory, exit 0 each; ALL_OK=True; 1926/1926 replays. Proofs (Lemma E, tables) not yet read line by line by the director.
