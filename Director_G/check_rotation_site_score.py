@@ -3,6 +3,7 @@
 from fractions import Fraction as Q
 from collections import Counter
 from math import comb
+from itertools import product
 
 
 def field(ticks, rail, origin=0):
@@ -197,7 +198,6 @@ def post_write_probe():
 
 def binary_record_game():
     # Any acceptance mask can depend on the hidden signs and the panel.
-    from itertools import product
     maximum = 0
     for x,y,z in product((-1,1), repeat=3):
         wanted = [x == y, y == z, x != z]
@@ -249,7 +249,7 @@ def complementary_branch_scores():
             require(lower == (p/2 if dephase else p), "complementary branch bound")
 
 
-def shared_sheet_probe(reflect):
+def shared_sheet_probe(reflect, fixed=False):
     """Propagate integer signed paths on eight wells, two rails and three sheets."""
     state = {(0,1,0): 1}
     ticks = 0
@@ -262,7 +262,8 @@ def shared_sheet_probe(reflect):
                 site = (x+direction)%8
                 if retain(site,direction):
                     sign = -1 if rail == direction == -1 else 1
-                    following[site,direction,(y+phase*relative)%3] += sign*count
+                    shift = int(x in (1,6)) if fixed else phase*relative
+                    following[site,direction,(y+shift)%3] += sign*count
         state = following
         ticks += 1
     def excursion():
@@ -273,23 +274,52 @@ def shared_sheet_probe(reflect):
         step(0,1,lambda x,r: j < 2 or (x,r)==(7,-1))
     require(sum(v*v for v in state.values()) == 2, "dipole source")
     excursion()
-    for length,port in ((18,3),(6,7)):
+    for length,port in (((4,3),(4,7)) if fixed else ((18,3),(6,7))):
         for j in range(length):
             step(0,0,lambda x,r: j+1 < length or x == port)
-        if length == 18 and reflect:
+        if port == 3 and reflect:
             state = {(x,r,(-y)%3): count for (x,r,y),count in state.items()}
     excursion()
     excursion()
     rates = tuple(Q(sum(v*v for (_,r,_),v in state.items() if r==rail),2**ticks)
                   for rail in (1,-1))
     expected = (175,25) if reflect else (25,175)
-    require(rates == tuple(Q(n,16384) for n in expected), "shared-sheet branch probe")
+    if fixed:
+        expected = (7,1) if reflect else (1,7)
+    require(rates == tuple(Q(n,16384) for n in expected), ("shared-sheet branch probe",rates))
     return rates
 
 
+def static_inverse_search():
+    # The shorter off-diagonal target entry has Eisenstein norm four.
+    matches = tested = 0
+    for inner in product(range(3), repeat=6):
+        shifts = (0,)+inner+(0,)
+        if shifts[1] == shifts[7] or shifts[0] == shifts[6]:
+            continue
+        tested += 1
+        columns = []
+        for incoming in (1,-1):
+            state = Counter({(3,incoming,0):1})
+            for _ in range(6):
+                later = Counter()
+                for (x,r,y),count in state.items():
+                    for d in (1,-1):
+                        later[(x+d)%8,d,(y+shifts[x])%3] += -count if r==d==-1 else count
+                state = later
+            for d in (1,-1):
+                a,b,c = [state[7,d,y] for y in range(3)]
+                columns.append((a-c,b-c))
+        units = ((1,0),(0,1),(-1,-1),(-1,0),(0,-1),(1,1))
+        matches += any(columns == [(u*v,w*v) for v in (6,-2,2,6)] for u,w in units)
+    require((tested,matches)==(324,0), "fixed-shift six-tick inverse control")
+
+
 if __name__ == "__main__":
+    static_inverse_search()
     for reflect in (False,True):
         print("Shared-sheet probe, reflection",reflect,shared_sheet_probe(reflect))
+        print("Fixed shift, reflection",reflect,shared_sheet_probe(reflect,True))
     complementary_branch_scores()
     post_write_probe()
     multiwell_control()
