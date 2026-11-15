@@ -1,0 +1,18 @@
+P0 control: B= (0,) M*B= (0,) end= (0, 'R') kappa= (1,) g-gdelta= (1,) PASS
+walk tables built
+P1 formula failures: 0 []
+P2 hyp instances (group,quad,N): 10226 well-definedness failures: 0 []
+P2' nohyp instances: 22574 broken: 22574 not broken within T<=12: 0
+P4 N=1 right-prefix walks=2 ends=[(0, 'L'), (0, 'R')] | left-right prefix walks=4 ends=[(0, 'L'), (0, 'R')] OK
+P4 N=2 right-prefix walks=4 ends=[(0, 'L'), (0, 'R')] | left-right prefix walks=4 ends=[(0, 'L'), (0, 'R')] OK
+P4 N=3 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=4 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=5 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=6 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=7 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=8 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=9 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P4 N=10 right-prefix walks=1 ends=[(0, 'R')] | left-right prefix walks=1 ends=[(0, 'R')] OK
+P3: {'nohyp_skipped': 1007, 'hyp_quads': 468, 'targets': 42420, 'pass': 22449, 'i>0': 2475, 'j>0': 8955, 'oddN': 13393, 's!=0': 5048, 'beyond_bound': 19971}
+P3 failures (first): []
+BFS keys: {(3, 1): 45, (3, 2): 210, (4, 2): 136, (4, 1): 36, (5, 1): 75, (5, 2): 350, (6, 1): 90, (6, 2): 332, (7, 1): 105, (7, 2): 333, (8, 2): 404, (8, 1): 120, (3, 3): 517, (4, 3): 336, (5, 3): 954, (6, 3): 471, (7, 3): 447, (8, 3): 596, (3, 4): 917, (4, 4): 644, (5, 4): 1437, (6, 4): 578, (7, 4): 459, (8, 4): 590, (3, 6): 1506, (4, 6): 1054, (5, 6): 1807, (6, 6): 697, (7, 6): 474, (8, 6): 737}

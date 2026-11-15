@@ -1,5 +1,5 @@
 {
- "baseline": "FPHPM-BASELINE-2026-11-15-Z28",
+ "baseline": "FPHPM-BASELINE-2026-11-15-Z29",
  "date": "13 November 2026",
  "author": "Kirtus Justus",
  "author_title": "Theoretical Physicist",
@@ -88,6 +88,30 @@
   "COMPUTATION/Baseline_Additions/Four_Gains/reduction_challenger/results.txt": {
    "sha256": "7334473968f75e206a21ef0f7ad095dd4437c734656143b7380bfdebbe0e6e9b",
    "size": 1093
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_builder/res_A.jsonl": {
+   "sha256": "bf589d3c03ae6e7451984d35c9953d8b7f67eaad29fa2ed5f2f8fbb027d0f275",
+   "size": 1509
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_builder/res_B.jsonl": {
+   "sha256": "86d95a68171af6914a3ced430281968a6244fda0d392d77994624eaf1fdbbd56",
+   "size": 2272
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_builder/res_C.jsonl": {
+   "sha256": "9aca2f50789a588b9dfeeeeb106e7e11e09e4e2b684c401e0b7a7bd0635b4687",
+   "size": 2694
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_builder/ringprep.py": {
+   "sha256": "953bc8e39645a38afe5969f11749554bfe7bc24518a98cf2125b65c0658af0a1",
+   "size": 6601
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_challenger/chal.py": {
+   "sha256": "a425184dec55d21f7973ddad864a2fcdab818a9c25410f3e695f1f69c9499287",
+   "size": 12312
+  },
+  "COMPUTATION/Baseline_Additions/Four_Gains/ring_challenger/results.txt": {
+   "sha256": "3151e545f63714a8a572429bdec3d1d85f3a8b94b0b6a2231e89867cfceea505",
+   "size": 1737
   },
   "COMPUTATION/Baseline_Additions/Four_Gains/theorem/four_gain.py": {
    "sha256": "65cf09618ccd6bbb934c20a1fb18caf00431f9beb0607e0d30e05ebae049823a",
@@ -1318,7 +1342,7 @@
    "size": 5147
   },
   "CONSTRUCTED_TRIALS/README.md": {
-   "sha256": "f6e663844e57187d66edd331c55b8869a62021947b5e4f006023f3dd2ba4749f",
+   "sha256": "55f9bdc86a076af5be0c5fc8a2a232c41d054273a700099f82833636afa135d9",
    "size": 9491
   },
   "LEGACY/2026-11-10_CONTENTS.txt": {
@@ -1366,7 +1390,7 @@
    "size": 7625
   },
   "LEGACY/README.md": {
-   "sha256": "0670af4971bc9baa5611eea8b45326b1c925808038568ab82aacec867ab010db",
+   "sha256": "e2df71650d1eab953981621830f429d682b83232bd7e6bf02de52ff20e1279a4",
    "size": 717
   },
   "LEGACY/Related_Source_Editions/Assessment_and_Further_Results/Collections_Assessment_and_Further_Results.pdf": {
@@ -1654,7 +1678,7 @@
    "size": 2279
   },
   "NEGATIVE_CONTROLS/README.md": {
-   "sha256": "cfeb17a835e2a24c99befcdc04ea2a0f79b3c4eb1d8c092a64c1bacc903529f2",
+   "sha256": "2b914009330b7e26a77dc9d22f41e565b8189d85c9fea0a1f4248a10194ee23f",
    "size": 1026
   },
   "PAPERS/A1_Program_Overview_Questions_Models_and_Physical_Correspondence/A1_Program_Overview_Questions_Models_and_Physical_Correspondence.pdf": {
@@ -2974,12 +2998,12 @@
    "size": 329
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an.pdf": {
-   "sha256": "2eaa499e994c9b616b839880047522837abac134451289daef74089a6c55a25a",
-   "size": 481985
+   "sha256": "87cc181d1f0d18f608f0823a4c2c95e08efa9b1d497118f7708419fb6ebbd1b2",
+   "size": 484857
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/parts/01_G10_manuscript.pdf": {
-   "sha256": "2eaa499e994c9b616b839880047522837abac134451289daef74089a6c55a25a",
-   "size": 481985
+   "sha256": "87cc181d1f0d18f608f0823a4c2c95e08efa9b1d497118f7708419fb6ebbd1b2",
+   "size": 484857
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/G10_manuscript.tex": {
    "sha256": "36dde648cfd8e3298aae31e0a362099a7c7772b321e8ae1605e066b4bf21e8d4",
@@ -2990,8 +3014,8 @@
    "size": 1404
   },
   "PAPERS/G10_Histories_as_Events_the_Order_of_the_Pair_Rule_First_Order_Weights_an/source/body.tex": {
-   "sha256": "02ec096b4cab67f3244e03c7a45e4a7ad825e95a2f0b7782540fb67c0333eec4",
-   "size": 251421
+   "sha256": "47c8250293b9ed32bc106e7e0277b04230a296ec98f20252a7b508d308d82ab6",
+   "size": 253461
   },
   "PAPERS/G1_Relational_Structures_and_the_Limits_of_Observation/G1_Relational_Structures_and_the_Limits_of_Observation.pdf": {
    "sha256": "42caf8dd5edf76c1ab4c79a7aa8760c67963dd83ce7016bcefaac68492a3f165",
@@ -3174,19 +3198,19 @@
    "size": 37611
   },
   "PROGRAM/CHARTER.md": {
-   "sha256": "a9eec0f149947db1256f1f3c23b36abc44020da5567083169a29bedab25ebae1",
+   "sha256": "39d8c6c521cc0c9c4d7c7cf8bcfceecf9d8f792c4103970a7446f376b796cb89",
    "size": 4316
   },
   "PROGRAM/CONTRIBUTIONS.md": {
-   "sha256": "3d8b32fd755759eeee666fdd0976e8ee768ec547e47a3eb4bbfdd7cf0955dcd9",
+   "sha256": "eea6b4383b875ba8bbf61d3d47fce741b71fae7df04a8917446a9bf6b091f09a",
    "size": 4044
   },
   "PROGRAM/PAPER_INDEX.md": {
-   "sha256": "c10edbf1b5ed1b6c785412c10e1c9ee57cedb80fa4a6435084de926cc3340a8e",
+   "sha256": "33dc23d8420888617ce7efe854f04948f8a91baa8de38bde332f0ae3be603790",
    "size": 5128
   },
   "PROGRAM/STANDARDS.md": {
-   "sha256": "1a8b6251d29f2a852fddda7b35c8acf430fe61d18fef25e6548e224f574f4c95",
+   "sha256": "5d57c7fa9405f6054aa342339b371165130f03a656e2c25c5cfadc8b1ad7caa4",
    "size": 3912
   },
   "PROGRAM/figures/Gate_Map_2026-11-12.dot": {
@@ -3198,12 +3222,12 @@
    "size": 18226
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.dot": {
-   "sha256": "b1645ed6d10b4c23481858982ce5ce0912c203a0b02c8fac44f0406f0ad3aad1",
+   "sha256": "e9de6af5fa8df71d86a8d80c6b44978e52989f5e4dc4bfc36b6d576517e3fb34",
    "size": 1673
   },
   "PROGRAM/figures/Gate_Map_2026-11-13.pdf": {
-   "sha256": "a716679c424b92a77340767d08efc8a5976aa24dd728748306508c006184926b",
-   "size": 18336
+   "sha256": "311a02a607b6f64ab4caa28e1e4b35ae222e4a4bf5b58937a82fdce89dcfc41a",
+   "size": 18322
   },
   "PROGRAM/figures/Program_Questions_Models_and_Physical_Correspondence.pdf": {
    "sha256": "ceeb3637c5b57114fbf12a0cfb03be2d35f34f6239bcfd8c3ab53fbac953a792",
@@ -3222,7 +3246,7 @@
    "size": 24917
   },
   "PROGRAM/registers/COMPONENT_CROSSWALK.csv": {
-   "sha256": "d87b6ba30c2c513d3fdd14e7f7f7decf18987f507978735a6ec9ee004cfda465",
+   "sha256": "f235a3ead947d88310e2eebff820758e5a390fe1efd2a76efb3a195209fd619f",
    "size": 46050
   },
   "PROGRAM/registers/COMPUTATION_INDEX.csv": {
@@ -3230,31 +3254,31 @@
    "size": 567
   },
   "PROGRAM/registers/ONTOLOGY_GATE_MAP.json": {
-   "sha256": "876a9f906d58e3b49a1f188e54983de2febe3f6c41cec4ce706ad9ba9e0d9d04",
-   "size": 19870
+   "sha256": "905761600970b07508cdff7bf62378ccf7b438792103542d4f0a84dd70cb2585",
+   "size": 20004
   },
   "PROGRAM/registers/OPEN_PROBLEMS.csv": {
-   "sha256": "cb0aaf9caf8809b5f0190ab93409ce4a18461356898abebf6fafe55cd886d1dd",
-   "size": 50347
+   "sha256": "9a0e792a750f9440110dc70fd76ef3d10b174672f64c260721253c70169e1615",
+   "size": 50613
   },
   "PROGRAM/registers/PAPER_INDEX.csv": {
-   "sha256": "99d26cebcd8c340f36bdc9f63b90f18b03dffe7f6c7a57aed18bfe093b2a3162",
+   "sha256": "22f676b30e86ac45afe84e224ab0ff8428ee7548e2516f139dd55c876418a91c",
    "size": 10894
   },
   "PROGRAM/registers/READINESS.csv": {
-   "sha256": "56c21b1c0ff0537eb9468aa2b00d709341b2ee5908c47d20b58f7bcc502717b6",
-   "size": 13308
+   "sha256": "7b000e9cb60aee45b2b1a4b484d7e7d9c83f55b36da456772ee3562c58710ccb",
+   "size": 13542
   },
   "PROGRAM/registers/TEX_SOURCE_EDITS.json": {
    "sha256": "c53b67edb857763f36a51c1b313f43bf96ff86b944a2c4958ca3a3a41e84e228",
    "size": 3428
   },
   "PROGRAM/registers/THEOREM_REGISTRY.csv": {
-   "sha256": "6200efc3f5980766092a893bc8ce4a62842c5f809223bb66d4a582654be29ddf",
-   "size": 113322
+   "sha256": "f5f458c0eac42bb7a915324b59dbf1f7f3608e9b50b93d1e201e15fe5cce55ce",
+   "size": 113788
   },
   "README.md": {
-   "sha256": "b13f38e63988469f05399debdb8c96d6ef4f1a5a6a6e36d190a4638c4484e13e",
+   "sha256": "cd8f91d3ea3a5e5f7ffcdc1307d1b01b12764d50540fd6d687a1c7e8ce11e4f3",
    "size": 2441
   },
   "REVIEW_RECORDS/Director_B/README.md": {
@@ -3517,6 +3541,10 @@
    "sha256": "b3805f051a8cf9ebd2f93cad553d1155792affe5da249511ac83e3fd8caf0a92",
    "size": 2765
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z29.md": {
+   "sha256": "69f4a7e308886deacea01fedfbff3a104c934141dbfec3d726a92f4fe4243928",
+   "size": 2330
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z5.md": {
    "sha256": "6e4c859cc853647131905a7630dd0c8471def5c860a703bf49c8432233829dda",
    "size": 3439
@@ -3612,6 +3640,10 @@
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z27_TO_Z28.md": {
    "sha256": "49ad117adf6f3be7aa6f4c6ba1cd2292e749e6fe149401e6e372a43c695e4242",
    "size": 6676
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z28_TO_Z29.md": {
+   "sha256": "386b4f85f46952dd15837be33cb679ff838bef40b01e88a178ebe5a279572118",
+   "size": 8818
   },
   "REVIEW_RECORDS/Director_Z/Session_4/CHANGES_Z3_TO_Z4.md": {
    "sha256": "2fbaeb3e57c96484e7ca50df9960d93530fb47b3ca4c1fe3a9271c37c1571ff8",
@@ -3713,6 +3745,10 @@
    "sha256": "11f943809af121652bd804830a51bf6fcb022a4ec27fc9e10e783cd737fea52a",
    "size": 1519
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_25.csv": {
+   "sha256": "16df7a71c3d523f62947bc0208b9024637cfc797cbbcea2d2d1e7c353eddbd08",
+   "size": 810
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/NEW_Z_SCOPED_FINDINGS_SESSION_4_ADDENDUM_3.csv": {
    "sha256": "7787c02824813188d3064cab359d9e58bdff7c3a85ab0976dc150a39b29689fa",
    "size": 3322
@@ -3742,8 +3778,8 @@
    "size": 1351
   },
   "REVIEW_RECORDS/Director_Z/Session_4/README_SESSION_4.md": {
-   "sha256": "7daf1615a35587144fbf1a8528780276cca61de6f3ec723facd7637190a3737f",
-   "size": 11629
+   "sha256": "99c6f95ca4f14c38218da4a1aadafbdc97e8cf9459d14fcdc2a6b65e696b6e9c",
+   "size": 11929
   },
   "REVIEW_RECORDS/Director_Z/Session_4/builder_Q/NOTES.txt": {
    "sha256": "a029e5f3ae7f0be9e1570e22d94528dabafe5b3c9378f4ffc2c5210f9254aa48",
@@ -5181,6 +5217,82 @@
    "sha256": "3296a74045274cc5f402302cd0001c110c2130d101871f5c68ac4939260b5832",
    "size": 4716
   },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/NOTES.md": {
+   "sha256": "7c9fef3161bffd8ba43f6526abfe84cf0546d9c6ab8ff3ccd95901d01ba5c52d",
+   "size": 1861
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/REPORT.md": {
+   "sha256": "87d314610b151e213e22ee3b02f7c43b69c3dffe97d8938817c2a892878f764b",
+   "size": 721
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/digests.txt": {
+   "sha256": "029dc9f657caa9df8fb32732a6061b269831eeb4ab6a607bfeca41739a442469",
+   "size": 1169
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/p5_lp.py": {
+   "sha256": "a5e8969b85c12c1db6d60dd28fbfc4c7156e98d6f61ed5f537d320088b566812",
+   "size": 1678
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/p5_run1.txt": {
+   "sha256": "c00089d3ff1116559a95bee5ec5907388387da20d49a36497d9eb81a762772ae",
+   "size": 2326
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_amplified_herald.out": {
+   "sha256": "e9b9d366d12c715fa8c7ca09835f80f96a7b3a4570ee84018e76fa4724d46a68",
+   "size": 393
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_anchored_herald.out": {
+   "sha256": "b918a84f4bec0529d11ebbeaf3ae8099b3e620b9b2763c841857a6409514623b",
+   "size": 497
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_heralded_gate_reference.out": {
+   "sha256": "9f52fdae169cd96d4aa93bb3ea13fede5aefbfd2b2fb958e64f5e81cf6ebb2a0",
+   "size": 598
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_hidden_herald_return.out": {
+   "sha256": "65bd725a7f8252ce1b02659bd9eceaab60a1b1c6c1e404418d4ac0d82d32dcd9",
+   "size": 359
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_rational_reference_walk.out": {
+   "sha256": "42d21cc78bf4adacd21166b7a49b41add6e5a5fe738b6e52efdd15e67e71be89",
+   "size": 280
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_revival_benchmark.out": {
+   "sha256": "9ea31b2e7664cf312a38b1b651c53ae97a49ffe1c24a544a48e828433f85559a",
+   "size": 208
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/check_three_tick_phase_transfer.out": {
+   "sha256": "95a77a7323c4197369c36f467a17b4f7d5a472fee2891a588fb860cbfe40acc5",
+   "size": 249
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/coherent_source_revival.out": {
+   "sha256": "154016e5d658c81e27371b5a272c7f967386bcd94ddbdff0e167705c6b384534",
+   "size": 319
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/replay_leaking_source.out": {
+   "sha256": "cf159457caf5c8a2d511c3686efe971d21b97ca429904745e535a03e17080cfc",
+   "size": 319
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/rerun_facts.txt": {
+   "sha256": "62ecfaf404bb35336d0a18f2da799a89ea39c15dc74a02c520ab61e1bdfa2f0e",
+   "size": 775
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/rr64.json": {
+   "sha256": "bc908621017c4e7680eddc0efcdc766a8298d8ea0bf5ecdc7542629fc9709f22",
+   "size": 17168
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/rerun/score_revival_routes.out": {
+   "sha256": "0b3572ea9241bfc2f60a94e1f1d63c53c901455437bb55dc63b4134d381edec9",
+   "size": 376
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/run3.json": {
+   "sha256": "8bc821ef896a38e80495110db0a7953916539fc56f4c91ef99295249a18ab037",
+   "size": 2378
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr262_herald_line/xr_check.py": {
+   "sha256": "9bcd01e92d73df0c84fa1f43494ffe8669a259efdaccb961ab37dcb88fceeec6",
+   "size": 10301
+  },
   "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_xr39_position_masks/FINDINGS.md": {
    "sha256": "3b9bb25b3252ba9e27677b12dcc68b71aeae43da65a7f2aa2bb3f499f6805980",
    "size": 2986
@@ -5308,6 +5420,62 @@
   "REVIEW_RECORDS/Director_Z/Session_4/four_gains/theorem_challenger/result.txt": {
    "sha256": "1acf768b818fab7f0767374bbb449c9b9f23b310a6d41996a6f7547ced52da96",
    "size": 19591
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/PREP_RING.md": {
+   "sha256": "9e044e69f801471ccb990e17b55adadfbeea0642ca1c1fd6ad9060a43130eb3d",
+   "size": 5540
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/NOTES.md": {
+   "sha256": "4f703f22a4fbca99322d8bab78caaa9bc13d60d3e53c34653c12c7b804bab612",
+   "size": 2636
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/REPORT.md": {
+   "sha256": "30ebb9de738531472270ac45bb7e12401ccbe9e27dfe26e627d5ed5e67012951",
+   "size": 4431
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/SHA256SUMS": {
+   "sha256": "ddef4284c2a521fbfe857522040a049426c17e316a0048215c9b86744fb6c314",
+   "size": 562
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/res_A.jsonl": {
+   "sha256": "bf589d3c03ae6e7451984d35c9953d8b7f67eaad29fa2ed5f2f8fbb027d0f275",
+   "size": 1509
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/res_B.jsonl": {
+   "sha256": "86d95a68171af6914a3ced430281968a6244fda0d392d77994624eaf1fdbbd56",
+   "size": 2272
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/res_C.jsonl": {
+   "sha256": "9aca2f50789a588b9dfeeeeb106e7e11e09e4e2b684c401e0b7a7bd0635b4687",
+   "size": 2694
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/builder_ring/ringprep.py": {
+   "sha256": "953bc8e39645a38afe5969f11749554bfe7bc24518a98cf2125b65c0658af0a1",
+   "size": 6601
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/NOTES.md": {
+   "sha256": "936d44d955d03fbaf1ccb74bc192011aee191f1d58fa42f96833c90db692732f",
+   "size": 1010
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/REPORT.md": {
+   "sha256": "3081a203d8ac7363d004a5c7816c91f472650406ae3a0a742988c10dc14fa00e",
+   "size": 1181
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/chal.py": {
+   "sha256": "a425184dec55d21f7973ddad864a2fcdab818a9c25410f3e695f1f69c9499287",
+   "size": 12312
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/cov.py": {
+   "sha256": "f6711db281c7eeb6dbe8b242fad5e8e77ab7298fa8bfd0aff6261252b2c4f290",
+   "size": 12395
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/results.txt": {
+   "sha256": "3151e545f63714a8a572429bdec3d1d85f3a8b94b0b6a2231e89867cfceea505",
+   "size": 1737
+  },
+  "REVIEW_RECORDS/Director_Z/Session_4/four_gains_ring/review_ring/results_cov.txt": {
+   "sha256": "13334550f091a10e259fd81566e06fb21f96f99b8ce8d669ee5e001b8f3a55c4",
+   "size": 1792
   },
   "REVIEW_RECORDS/Director_Z/Session_4/masks/CHALLENGER.md": {
    "sha256": "5f937e912191dbc919d46a68edb774c31c58fdd3d469a3d43cba18c744dfc08c",
@@ -5978,8 +6146,8 @@
    "size": 2689
   },
   "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": {
-   "sha256": "9a97816514a21f310e30e0ab454138d6f2e915c1b27b292cb3052628ad7bf014",
-   "size": 375856
+   "sha256": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037",
+   "size": 384262
   },
   "REVIEW_RECORDS/Director_Z/Session_4/registers/CALIBRATION_RECORD_SESSION_4.json": {
    "sha256": "82998efb27eb1dfb578297770e65ca6339318fce77362febe7275bf3d011d20a",
@@ -7074,7 +7242,7 @@
    "size": 1212
   },
   "REVIEW_RECORDS/README.md": {
-   "sha256": "8da7e9f54e3fd544937c9b3f297b5b593def645f5003d6e185db0ad2f3fe6d1f",
+   "sha256": "6ee41ab474c024c3fb7aaf86b396e8e94cd7adc40ad5504617ce170326b60c25",
    "size": 1643
   },
   "tools/assemble.py": {
@@ -7169,6 +7337,10 @@
    "sha256": "98eca328415b53c277578630a5869935d5d276046ca6d7d458b2ab7b42cff063",
    "size": 14144
   },
+  "tools/director_z_update_29.py": {
+   "sha256": "1720c4f46160dea66b6a0b2c3dfa801bdb84fb356449a9951d6e62498ec50627",
+   "size": 10829
+  },
   "tools/director_z_update_3.py": {
    "sha256": "76938df247f22e6344aa981813904437c62d76b0908fe5e1020a52c15aab43a8",
    "size": 35029
@@ -7210,6 +7382,6 @@
    "size": 6392
   }
  },
- "predecessor": "FPHPM-BASELINE-2026-11-14-Z27",
- "predecessor_manifest_sha256": "c881cb317ab340d646f8e51b1ce8c2a2d83b9372cb043049430e6418f19b3c04"
+ "predecessor": "FPHPM-BASELINE-2026-11-15-Z28",
+ "predecessor_manifest_sha256": "e6077ae450cce1e198ddf48b9090c227c7cbfe03ff04dcfda5d1a007313029c5"
 }

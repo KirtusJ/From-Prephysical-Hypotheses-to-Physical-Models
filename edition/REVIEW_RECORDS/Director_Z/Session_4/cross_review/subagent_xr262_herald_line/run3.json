@@ -1,0 +1,138 @@
+{
+ "predicates": {
+  "P0_control": {
+   "pass": true,
+   "detail": "3/4"
+  },
+  "P1_numbers_5/16": {
+   "pass": true,
+   "detail": {
+    "s": "5/16",
+    "direct": "5/16",
+    "phase0_c1": "5/16",
+    "pi": "245/256",
+    "fair": "325/512",
+    "x": "187/512",
+    "t": "11/256",
+    "pre": {
+     "r": 5.6147456609673085,
+     "1<r<x/t": true,
+     "L0<0": true,
+     "L1<1": true
+    },
+    "in_class_modes": 2148,
+    "violations": 0,
+    "equalities": [
+     [
+      "1",
+      "1"
+     ]
+    ],
+    "outside_class_negative": 379
+   }
+  },
+  "P3_tangent_5/16": {
+   "pass": true,
+   "detail": {
+    "s": "5/16",
+    "direct": "5/16",
+    "phase0_c1": "5/16",
+    "pi": "245/256",
+    "fair": "325/512",
+    "x": "187/512",
+    "t": "11/256",
+    "pre": {
+     "r": 5.6147456609673085,
+     "1<r<x/t": true,
+     "L0<0": true,
+     "L1<1": true
+    },
+    "in_class_modes": 2148,
+    "violations": 0,
+    "equalities": [
+     [
+      "1",
+      "1"
+     ]
+    ],
+    "outside_class_negative": 379
+   }
+  },
+  "P3b_outside_class_has_negatives": {
+   "pass": true,
+   "detail": 379
+  },
+  "P4_tangent_s=1/4": {
+   "pass": false,
+   "detail": {
+    "precondition": false,
+    "s": "1/4",
+    "direct": "1/4",
+    "phase0_c1": "1/4",
+    "pi": "1",
+    "fair": "5/8",
+    "x": "3/8",
+    "t": "0"
+   }
+  },
+  "P4_tangent_s=3/8": {
+   "pass": false,
+   "detail": {
+    "s": "3/8",
+    "direct": "3/8",
+    "phase0_c1": "3/8",
+    "pi": "27/32",
+    "fair": "39/64",
+    "x": "25/64",
+    "t": "5/32",
+    "pre": {
+     "r": 3.7923380349443123,
+     "1<r<x/t": false,
+     "L0<0": true,
+     "L1<1": false
+    },
+    "in_class_modes": 2148,
+    "violations": 580,
+    "equalities": [
+     [
+      "1",
+      "1"
+     ]
+    ],
+    "outside_class_negative": 631
+   }
+  },
+  "P2_table": {
+   "pass": true,
+   "detail": [
+    187,
+    22,
+    352
+   ]
+  },
+  "P5_per_tag_branch_exposed": {
+   "pass": false,
+   "detail": {
+    "max_over_slopes_of_min_slack": -0.04296875,
+    "slope": 0.0,
+    "n_modes": 1467
+   }
+  },
+  "P6_revival_bound": {
+   "pass": false,
+   "detail": {
+    "cases": 4000,
+    "qualifying": 4000,
+    "max_A_minus_f": -0.044386057694060455,
+    "attain_err": 0.24750004166645834
+   }
+  }
+ },
+ "failures": [
+  "P4_tangent_s=1/4",
+  "P4_tangent_s=3/8",
+  "P5_per_tag_branch_exposed",
+  "P6_revival_bound"
+ ],
+ "design_target_p_for_A_0.824222": 0.9774561538654623
+}
