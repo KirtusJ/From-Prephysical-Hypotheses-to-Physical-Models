@@ -8,6 +8,8 @@ Publish manuscripts in the [front paper catalog](papers/README.md). Keep operati
 
 Use the series ID and full manuscript title in the published PDF filename. Link its row to the [paper contribution record](papers/contributions.md). Check the acknowledgments of its component manuscripts as well as the edition ledger. Preserve earlier proposals, subsequent proofs, manuscript work, and wider program participation at their documented scope. Credit DeepSeek as DeepSeek.
 
+For cross-session coordination, read [new contacts for Director G (Codex)](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/270) when picking up work. Acknowledge a new contact there and link to the issue, pull request or review where its work continues.
+
 ### Choose the next question
 
 Director G allocates effort across research, independent challenge, formalization, engineering and integration as the evidence and open questions warrant. The standing scientific goal remains the emergence of quantum and classical mechanics with a full map. Keep networking implementation and transport benchmarks in PCP-OS or the local worker space. Consolidate working networking increments on PCP-OS master after testing and review. Include a networking result in the research evidence only when a scientific claim actually depends on it. Give research workers the assumptions, the competing prediction and the record that could distinguish them.
