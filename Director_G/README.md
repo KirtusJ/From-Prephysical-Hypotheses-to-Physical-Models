@@ -205,6 +205,7 @@ The signed walk gives two conditional links in this research program. On a chose
 | [Records and complex structure](Records_and_complex_structure.md) | Plane preparation, parity restriction, composition, entangling contact |
 | [Probability from record composition](Probability_from_record_composition.md) | Conditional quadratic law, exact field-embedding classification, five-sheet discriminator |
 | [Preparing one transport band with rail records](Preparing_one_transport_band_with_rail_records.md) | A two-tick rail filter and stopped tag select a conditional ballistic ray. Finite-width estimates continue through a weak field with a finite accumulated impulse. |
+| [Steering a filtered rail with two sign pulses](Steering_a_filtered_rail_with_two_sign_pulses.md) | Count changes in the two-tick rail record, then time two uniform sign pulses to prepare either extremal velocity. The count gives both the conditional transport error and the yield per incident launch. |
 | [Forced envelope and classical motion](Forced_envelope_and_classical_motion.md) | Uniform spinor error estimate and convergence of the position law |
 | [Native preparations and probability embeddings](Native_preparations_and_probability_embeddings.md) | Identical transcript laws, finite-preparation obstruction and a measurable limiting frequency |
 | [Base preparation and two rays](Base_preparation_and_two_rays.md) | Full-readout obstruction, coherent direction filter and a two-point classical position limit |
