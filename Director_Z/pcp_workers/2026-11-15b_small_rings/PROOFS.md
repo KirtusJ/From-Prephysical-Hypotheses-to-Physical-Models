@@ -157,3 +157,59 @@ Hence, by Theorem A, each of them holds with "$M\ge8$" replaced by "$M\ge6$". In
 for $M\ge6$ without \cite{dgone} (mode (i) with $G_1=\emptyset$), i.e. for $M=6,7$ the condition left open
 after cor:pplus8 is removed. Status: **PROVED given the body's proofs as written** (the worker checked that
 these proofs cite only the statement of prop:threegroups; it did not re-review those proofs).
+
+## Theorem B (three groups on two levels for $M=5$)
+
+*Statement.* The statement of Theorem A holds for $M=5$, that is on $\mathbb Z_5$ and $\mathbb Z_{10}$, for every
+$q\ge1$, every site $x$ and all $G_1,G_2,G_3$. In particular $P^+_\delta$ holds for $M=5$ (mode (i), $G_1=\emptyset$).
+
+Status: **PROVED by a finite check written out** (`worker/results/m5/m5_tables.txt`, produced by
+`worker/m5_table.py`, and the exclusivity flag of every replay of `worker/m5_schedule.py`), with the gain
+bookkeeping argued below; **COMPUTED**: replays on $\mathbb Z_5$ and $\mathbb Z_{10}$ (FINDINGS). The gadgets were
+found by a bounded search, not designed by hand.
+
+*Proof.* Three packets on $\mathbb Z_5$ always contain an adjacent pair, so the configuration cannot be static.
+Phase P (packets $S$ and $P$ only, $P$ at relative position $+3$, i.e. $P$-low at $-2$, $P$-high at $+3$):
+the gadgets adv, dep$P^+$, dep$P^-$ of Theorem A with $a=3$; two packets at circular distance $2$; every
+tick is exclusive (table "phase P adv"; dep$P^\pm$ are fixed move sequences from a fixed configuration and
+are verified exclusive in every replay; on $\mathbb Z_5$: split $\{0,1\}$ vs $\{3,4\}$; copy at $1,2$ with $P$
+at $3$; merge at $3$; dep$P^-$: $P$ at $4$ then merging at $0$ with the copy, the new source at $1$, then $2$).
+Boundaries: all walks on $R$. Transition (2 ticks) into configuration ALPHA: $S$ at $0$, $X{=}B$ at $+1$
+(a position without walks until the first deposit), $Y{=}P$ at $-2$, with rails $(S{:}L, X{:}R, Y{:}R)$.
+Phase B: gadgets adv (7 ticks; $S$ gains one factor, $X$ and $Y$ none) and dep$X$ (3 ticks: $S$ splits, the
+left part lands on $X$, which steps R, in the same tick), each from ALPHA with these rails back to ALPHA with
+these rails; tables in `m5_tables.txt` list for each tick the positions, the moves, the required and the
+excluded residues, which are disjoint (Lemma E). Removal (1 tick: $S$ dies, $X$ steps L, $Y$ steps R), then
+end (i): four ticks ($X$: R, $Y$: L) to $e_X=e_{P,\rm low}$, $X$ arriving by R and $P$ by L; end (ii): one tick
+($X$: L, $Y$: R) to $e_X=e_{P,\rm low}+5$; both exclusive (two packets at distance $\ge2$ before the last
+tick, merge intended in the last). Levels as in Theorem A ($P$-low and $P$-high differ by $M=5$). Gains: at
+every boundary of each phase the rails of every packet are fixed, each advance adds $1$ to the exponent of
+$S$ and $0$ to every other walk, and every other gadget adds constants fixed by its type and the role of the
+walk; hence final exponents are $n_i+\kappa_i$ and the advances are chosen as in Theorem A. Site: a prefix of
+$z$ right steps (one walk of gain $1$ ending on $R$ at the site $z$, deficit $0$; as in the proof of Lemma T)
+moves the final site by $z$ and changes nothing else. Empty groups: positions without walks. $\square$
+
+(A gadget dep$Y$ into the packet at $-1$ also exists from ALPHA, 3 ticks; it is not needed.)
+
+## Corollary B1
+
+By Theorems A and B, Proposition prop:threegroups holds for $M\ge5$; by the argument of Corollary A1,
+Theorems thm:fgtwo, thm:fgadj, thm:fgprod, thm:fgthree and Corollary cor:pplus8 hold for $M\ge5$, given the
+body's proofs as written. Status: PROVED given those proofs.
+
+## Statement C ($M=3$: $P^+_\delta$ is false for $q=3$) — COMPUTED, not proved by hand
+
+On $\mathbb Z_3$ and $\mathbb Z_6$ with $q=3$, no position product event of any length has, at one site and at one
+level, exactly one walk on $R$ with gain $\delta^{g}$ and one walk on $L$ with gain $\delta^{g+1}$ (and no other
+walk at that site). Nine requests with sizes $\le2$ fail in all (FINDINGS). Evidence: the relaxed search of
+`worker/bfs_small.py` closes (its layer becomes empty at length 15, 2,262 states), and the relaxation is sound
+for "not met" by the argument in its docstring (a site's number of walks never decreases except by dying).
+This is an exhaustive computation over all lengths, resting on the correctness of one program; no invariant
+explaining it was found (the obvious pairwise rule "$g_L-g_R\not\equiv1$" is false: requests containing such a
+pair are met). For $q\le2$ all $P^+$ requests of sizes $\le2$ are met on $M=3$.
+
+**Separation by Theorem thm:tp / Corollary cor:tp.** For modes (i) and (ii) with arbitrary non-empty sizes,
+$W(Y)=|G_3|+|G_2|Y+|G_1|Y^2$ resp. $Y(|G_3|+|G_2|Y+|G_1|Y^2)$, whose roots have negative real part, and the
+inequalities of the corollary hold; one-level profiles are trivially allowed. Since Theorems A and B realise
+every such request on every ring with $M\ge5$, nothing in (1) or (2) is impossible on every ring: every
+failure found (on $M=3$) is a property of that ring.

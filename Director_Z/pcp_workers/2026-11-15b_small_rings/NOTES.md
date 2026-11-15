@@ -56,3 +56,6 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   prefix z in {0,1,3}, N=5 and 10, exact gains).  Tick tables: worker/m5_table.py ->
   results/m5/m5_tables.txt, ALL_OK=True (exit 0).  Predicate C (M=4 control) of m5_schedule.py was NOT implemented.
   Large replay q<=3, size<=3 running in /tmp/claude-0/w_m5_g4.
+- step 10: w_m5_g4 `m5_schedule.py /tmp/claude-0/w_m5_g4/m5_q3_s3.json 3 3 8` exit 0, 88 s: G3 1926/1926 replays
+  (q<=3, total size <=3, modes (i),(ii), z in {0,1,3}, N=5 and 10, exact gains). PROOFS.md: Theorem B (M=5),
+  Corollary B1 (prop:threegroups and its consequences for M >= 5), Statement C (M=3, q=3: P^+ false; COMPUTED).
