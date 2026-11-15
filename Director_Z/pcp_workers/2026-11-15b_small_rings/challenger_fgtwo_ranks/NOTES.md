@@ -20,3 +20,5 @@ eps_0^2 + eps_1^2 = |sigma_chi(m)|^2 (chi(delta) = -1, chi(beta) = +-i; one pair
 - step 10: batch3.sh with beams sized so that L layers finish (children ~ beam*2^N per layer), L0 = L-4.
 - step 11: batch3 beam runs: Z2Z2_keven N=5 L=12 L0=8 dim 7 > pred 3; Z2Z3_rodd N=5 dim 69 > pred 1. FAILED DESIGN (kept): with random sampling most Ext multisets of an equation have no equation of their own, so P is under-constrained; beam excess carries no information. batch3 stopped.
 - step 12: width-capped enumeration (BEAM=-W): all PP events with |A_s| <= W, closed family, no sampling. Check: W=3 on N=3 equals full.
+- step 13: Z8_r4_kodd N=3 full L=10 L0=6: MemoryError under the 3 GB cap (exit 1, 314 s): the L0=L-3 excess on N=3 remains unresolved by full enumeration.
+- step 14: width W=2: Z2Z2_keven N=5 L=12 L0=8: 355001 states (no bound hit), 16999 unknowns, |P|=305 with 41 P-keys meeting both delta-cosets, dim_proj 3 = pred 3, P2 pass. W=3 N=5 L=10 L0=6: bound 2e6 hit, dim 3 = pred 3 (only 2 two-coset P keys). Launch batch4.sh (W=2) on the rest.
