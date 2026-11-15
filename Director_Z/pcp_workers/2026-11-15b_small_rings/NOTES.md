@@ -90,3 +90,7 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   RERUN by worker in /tmp/claude-0/w_rerun_bld (ulimit -v 3 GB): `tg_cert.py cert_M7.jsonl 7` exit 0 and
   `tg_exh.py ex_W12_M3.jsonl 12 40 200 3` exit 0; both identical to the kept files except line 1 (argv records the
   script path as typed). Not rerun: tg_search run4, tg_exhg, tg_certreplay, tg_replay.
+- step 15: bfs M=5 q=3 W=2 STOPPED by the worker at t=12 (2,500,908 states, ~29 min; not closed, no result file):
+  in the relaxed search all 33 P^+ and all 486 mode requests had been met, but witnesses were NOT replayed, so this
+  is only a log (results/bfs_M5/log_M5_q3_W2_STOPPED.txt). The queued M=6,7 controls were not run (constructions of
+  Theorems A, B make them unnecessary). The watcher on summary.txt hit its background time limit (killed) first.
