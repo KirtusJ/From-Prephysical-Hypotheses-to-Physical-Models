@@ -30,3 +30,11 @@ periodicity, the same continuations from each of its levels, so its total is <= 
 a window of length KM, so d1-d2 > M; the translate of P by iM, i maximal with iM < e2-e1, starts below Q and ends above it,
 so they meet; Q then P+iM is an open path from an occupied point ending in a target class above the window: contradiction.
 So bounds (a) class totals <= B and (b) span <= (K+1)M lose no such profile, and a closed search is exhaustive over all lengths.
+
+Step 3 (Q2). Wrote compare_profiles.py (predicates in docstring first). First run (dir q2_cmp0), exit 0:
+P0 control PASS (550 and 228 reproduced). M=3 B=7 K=4: seen 210 of 228 allowed, 18 not seen (kept in the json), P1 pass.
+M=6 B=9 K=4: seen = allowed = 550, P1 and P2 pass.  NOTE: M=6 is the ring of 12 sites (or 6 odd is impossible): the draft's
+"6 sites" has M=3.
+P3 FAILED as fixed: P3b (a negative minor of order <=4 in rows 0..4) has no witness for 6 resp. 10 root-rejected sequences,
+all on ONE rail, e.g. (1,2,2,1), (1,3,3): not real-rooted, but the first negative minor is of higher order. Kept. Follow-up
+predicate P3c (added after the first run, said so in the program): for these, a negative Toeplitz minor of order <=6.
