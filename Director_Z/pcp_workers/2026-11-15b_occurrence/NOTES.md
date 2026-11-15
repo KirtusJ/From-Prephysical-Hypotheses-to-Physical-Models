@@ -14,3 +14,19 @@ Step 1. Reformulation used by the programs (derived from the proof of thm:tp, un
 n_t: Z -> N (walk counts by deficit e = number of left steps); a mask is a set E of residues mod M;
 n_t(e) = [e mod M in E](n_{t-1}(e)+n_{t-1}(e-1)); profile at a site = (classes c-1, c) of n_{T-1}: v_j=n(c-1+jM), u_j=n(c+jM).
 Only M matters, not N.
+
+Step 2 (Q2). Wrote scratch/occ/q2/enum_profiles.cpp (predicates in its header before the first run). Trial runs, all exit 0,
+closed (breadth-first search ended with no new state): M=3 B=7 K=4: 210 profiles; M=4 B=7 K=4: 228; M=5 B=7 K=4: 228;
+probe dir: M=7 B=7 K=4: 228 (5,324,115 states, 55 s); M=5 B=9 K=4: 550; M=6 B=9 K=4: 550 (3,529,453 states, 21 s).
+The numbers 228 and 550 are the draft's allowed counts. Probe M=7 B=9 K=4 was cut off by a usage limit and then killed by me
+(no exit code, no result file): kept as a stopped run.
+Interruption: stopped by a usage limit after step 2; resumed on the caller's message. No child existed, so none to resume.
+
+Lossless-bounds lemma (mine, hand proof, unchecked by anyone else). Fix a profile at classes (c-1,c) of n_{T-1} with total <= B
+and <= K levels. (1) Trim: delete from each mask E_t every residue class from which no open path leads to the two target
+classes at time T-1; the target classes are unchanged. (2) In the trimmed event every occupied class at every time has, by
+periodicity, the same continuations from each of its levels, so its total is <= the target total <= B. (3) Span: if (t,e1),
+(t,e2) are occupied with e2-e1 > (K+1)M, take open continuations P from e1 (adds d1) and Q from e2 (adds d2); both ends lie in
+a window of length KM, so d1-d2 > M; the translate of P by iM, i maximal with iM < e2-e1, starts below Q and ends above it,
+so they meet; Q then P+iM is an open path from an occupied point ending in a target class above the window: contradiction.
+So bounds (a) class totals <= B and (b) span <= (K+1)M lose no such profile, and a closed search is exhaustive over all lengths.
