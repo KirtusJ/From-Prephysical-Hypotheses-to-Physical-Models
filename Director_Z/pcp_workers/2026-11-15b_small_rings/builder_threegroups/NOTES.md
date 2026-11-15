@@ -82,3 +82,10 @@ profiles of total <= W. Hence M=3, profile (1,2,1) is impossible (computed + lem
   python3 tg_certreplay.py cr_M8.jsonl 8 cert_M8.jsonl 200  exit 0  sha256 af7b54ae...  216/216
   Negative control: replay compared against a planted wrong target (G3 changed) -> detected (False).
   Hand check of U3, D3 and E_i ticks at M=7 done (FINDINGS).
+
+## Step 8 (rerun and close)
+Fresh-directory rerun /tmp/claude-0/builder_tg_rerun1 of tg_search (run4 args), tg_cert M7, tg_certreplay M7 400,
+tg_exh W12 M3, tg_exhg q2 W5: all exit 0, outputs byte-identical to the kept files.
+FINDINGS.md could not be written (tool refused a findings file for a sub-agent); the statements and full proofs
+are in the final report to the parent. Summary: T7 (M=7 holds; proof + computed certificate), T3 (M=3 false:
+G1={1},G2={1,1},G3={1}, every q), E56 (M=5,6 computed complete to small sizes, packet model fails, conjectured true).

@@ -78,3 +78,15 @@ Input: `Director_Z/papers/drafts/G10_body_Z31_candidate.tex` (subsections "Four 
   RERUN by worker: `cd /tmp/claude-0/w_rerun_m3 && python3 micro_m3/enum_pp.py 3 3 8 z3_T8.txt` (ulimit -v 2.5 GB)
   exit 0, byte-identical (47ad6571...). So Statement C has: closed relaxed search (all lengths, my program) and
   unrelaxed exhaustive search to length 9 (micro) / 10 (my killed run, log only).
+- step 14: builder_threegroups report (control correct: lambda(G1)-lambda(G2)=M, G1 larger). Claims: T7 (modes (i),(ii)
+  for M=7 by a 4-packet certificate with a rotating gap of 1; ticks checked by program, some by hand; replays 432/432 on
+  Z_7, Z_14); T3 (M=3: request G1={1},G2={1,1},G3={1} met by no event, every q, both modes; complete search + its Lemma
+  L-shrink); E56 (M=5,6: all requests met up to total size 7/6/4 for q=1/2/3, deficit picture only, no construction);
+  TP (cor:tp excludes nothing for modes (i),(ii)). Its claim R3 in NOTES ("all stocks lie in (S,S+M) while S lives";
+  "G1 one lap above G3 forces S dead before that merge") is FALSE in general: Theorems A/B put a stock on the minus
+  side of S and fill one packet at two levels from both sides; it only restricts the builder's own model, and its M=7
+  result is subsumed by Theorem A. Its Lemma L-shrink (restrict each mask to the sites occupied by final walks) is a
+  cleaner soundness argument than my relaxation; adopted in PROOFS with credit.
+  RERUN by worker in /tmp/claude-0/w_rerun_bld (ulimit -v 3 GB): `tg_cert.py cert_M7.jsonl 7` exit 0 and
+  `tg_exh.py ex_W12_M3.jsonl 12 40 200 3` exit 0; both identical to the kept files except line 1 (argv records the
+  script path as typed). Not rerun: tg_search run4, tg_exhg, tg_certreplay, tg_replay.

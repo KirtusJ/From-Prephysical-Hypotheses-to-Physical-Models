@@ -218,3 +218,26 @@ $W(Y)=|G_3|+|G_2|Y+|G_1|Y^2$ resp. $Y(|G_3|+|G_2|Y+|G_1|Y^2)$, whose roots have 
 inequalities of the corollary hold; one-level profiles are trivially allowed. Since Theorems A and B realise
 every such request on every ring with $M\ge5$, nothing in (1) or (2) is impossible on every ring: every
 failure found (on $M=3$) is a property of that ring.
+
+## Lemma L-shrink (builder_threegroups; read and checked by the worker)
+
+*Statement.* Let $S$ be a position product event of length $T$ with set $F$ of walks (all of length $T$), and
+let $A'_t$ be the set of sites occupied at time $t$ by walks of $F$. The event $S'$ with masks $A'_t$ has walk
+set $F$, and for every $t$ at most $|F|$ walks of length $t$ pass its first $t$ masks.
+
+*Proof.* $A'_t\subseteq A_t$ and every walk of $F$ passes $A'$, so $S'$ has walk set $F$. A walk $p$ of length $t$
+passing the first $t$ masks of $S'$ is at a site $y\in A'_t$, occupied at time $t$ by some $w_y\in F$; $p$ followed
+by the last $T-t$ steps of $w_y$ passes all masks of $S'$ (sites after $t$ are those of $w_y$), so lies in $F$, and
+distinct $p$ give distinct walks. $\square$
+
+Applied after restricting $A_T$ to one site $x$ (so $F$ = the walks at $x$), a request with $n$ walks in all is met
+by some event iff it is met by an event in which at most $n$ walks are alive at every time. Hence a breadth-first
+search over states of at most $n$ walks that closes (its frontier empties) decides the requests of size $\le n$ for
+all lengths. This is the soundness argument for the closed searches behind Statements C and C'.
+
+## Statement C' ($M=3$: three groups fail) — builder_threegroups, COMPUTED (closed search) with L-shrink
+
+On $\mathbb Z_3$ and $\mathbb Z_6$, for every $q\ge1$, the request $G_1=\{1\}$, $G_2=\{1,1\}$, $G_3=\{1\}$ is met by
+no position product event, in either mode (already the profile of counts $(1,2,1)$ fails). The profile $(1,2,1)$
+satisfies cor:tp and is realised on every ring with $M\ge5$ (Theorems A, B), so the failure is a property of the
+ring $M=3$. Rerun by the worker: identical output (NOTES step 14).
