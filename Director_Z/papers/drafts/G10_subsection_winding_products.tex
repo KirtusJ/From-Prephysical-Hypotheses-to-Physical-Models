@@ -128,7 +128,35 @@ For $M\ge8$ the property $P^{+}_\delta$ of Proposition~\ref{prop:fgonelevel} hol
 Proposition~\ref{prop:threegroups}, mode (i), with $G_1=\emptyset$, $G_2=U'$, $G_3=V'$: the walks that end at the site $x$ are $U'$ on $R$ and $V'$ on $L$, all with $\lambda=l$, and no walk ends at another site. The empty group is omitted with its stages, as the proposition allows.
 \end{proof}
 
-A worker of the author's stack has since proved the conclusion of Proposition~\ref{prop:threegroups} for $M\ge5$ (a schedule in which one packet holds two levels, for $M\ge6$, and finite tick tables for $M=5$), and found $P^{+}_\delta$ false on rings with $M=3$ and gains of order $3$; with that, this corollary, Theorems~\ref{thm:fgtwo}, \ref{thm:fgadj}, \ref{thm:fgprod} and~\ref{thm:fgthree} hold for $M\ge5$ (\cite{comptp}; to be written into the paper before issue). So, among the rings with $M\ge6$ for which the last subsection obtained $P^{+}_\delta$ from \cite{dgone}, the condition remains for $M=6$ and $M=7$; for $M\le5$ nothing is changed.
+Corollary~\ref{cor:five} below lowers the bound to $M\ge5$.
+
+\paragraph{Smaller rings.} Proposition~\ref{prop:threegroups} needs $M\ge8$ because its three stocks and the source sit at four residues. One residue can carry both levels.
+
+\begin{proposition}[three groups on two levels, $M\ge5$]\label{prop:threegroups5}
+The conclusion of Proposition~\ref{prop:threegroups} holds for every $N$ with $M=N/\gcd(N,2)\ge5$.
+\end{proposition}
+\begin{proof}[Proof for $M\ge6$]
+Use the frame of the proof of Proposition~\ref{prop:threegroups}: deficits relative to the source $S$ at the boundaries between stages, where every walk has arrived by a right step. A tick is given by a move of each packet (right, left, both, none); it is \emph{exclusive} if no candidate that a packet must lose lies in the mask formed by the candidates that the packets keep. Then each packet continues exactly by its move. Two packets at circular distance at least $2$ modulo $M$ have disjoint candidates, so only pairs at distance $0$ or $1$ need checking. Packets: the source at $0$; one packet $P$ at $4$, whose walks have deficit $4$ (\emph{high}, the group $G_1$) or $4-M$ (\emph{low}, the group $G_3$); the packet $B$ at $2$ (the group $G_2$). For $M\ge6$ these three are pairwise at distance at least $2$. Stages:
+\begin{itemize}
+\item Advance (four ticks): the source $LLRR$, the other packets $LRLR$. Positions after each tick: $(1,3,5)$, $(2,3,5)$, $(2,4,6)$, $(2,4,6)$; at each tick the kept and the lost candidates are disjoint modulo $M$ for $M\ge6$. The source gains one factor $\delta$, the others none, and all relative positions are restored.
+\item Deposit into the high level: the source takes both steps and the others a right step; the copy then steps left from $1$ to $4$ while all others step right, merging into $P$ at $4$; one idle tick. Its deficit is that of the source plus $4$.
+\item Deposit into the low level: the source takes both steps and the others a left step; the right-hand part is the copy, which then steps right, while the new source and $P$ step left; after $M-4$ ticks in all $P$ arrives at the copy's residue and merges with it; one idle tick. The low walks of $P$ and the copy then have the deficit of the old source, which is the new source's deficit minus $M-4$: the configuration is restored.
+\item Deposit into $B$: the source takes both steps, the others a right step; the copy steps left onto $B$ at $2$; one idle tick.
+\item Removal of the source; coast to the site $x$ (every packet a right step).
+\item End (i): $P$ steps left and $B$ right until $P$ is at $2$, where both arrive, $P$ on $L$, $B$ on $R$, with the deficit of $B$ equal to that of the low walks. End (ii): two ticks in which $B$ steps left and $P$ right; they arrive at $4$, $B$ on $L$ at the deficit of the high walks.
+\end{itemize}
+In each tick the only pairs at distance at most $1$ are a split source and its copy (the source keeps $0$ and loses $1$, the copy keeps $2$ and loses $1$), a copy arriving at its packet (both keep the same residue, an intended merge), and $P$ meeting $B$ or the copy in the last tick of a merge or an end. The candidates kept and lost are listed in the worker's record \cite{comptp} for every tick; they are disjoint modulo $M$ for $M\ge6$. The schedule is: every deposit into $P$, each preceded by advances; then every deposit into $B$, likewise; removal; coast; an end. Gains: an advance adds $1$ to the exponent of the source and $0$ to every other walk; every other stage adds to each walk an exponent fixed by the stage and the walk's part in it. So the walk deposited $i$-th ends with exponent $n_i+\kappa_i$, $n_i$ the number of advances before its deposit and $\kappa_i$ independent of the $n_j$, and the advances are chosen as in Proposition~\ref{prop:threegroups}. An empty group is omitted with its stages.
+\end{proof}
+For $M=5$ three packets always include an adjacent pair, and the configuration rotates. A different schedule (an advance of seven ticks, a deposit of three, an end of four or one tick) is exclusive at every tick by a finite table, and the gains follow as above; this part of the proof is the table \cite{comptp}, which was found by a bounded search and checked in every replay. On rings with $M=3$ and $\delta$ of order $3$ the property $P^{+}_\delta$ is false: no event leaves exactly $e_{\delta^{g}}$ on $R$ and $e_{\delta^{g+1}}$ on $L$ at one level (\textbf{COMPUTED} by a closed search).
+
+\begin{corollary}\label{cor:five}
+Theorems~\ref{thm:fgtwo}, \ref{thm:fgadj}, \ref{thm:fgprod} and~\ref{thm:fgthree} and Corollary~\ref{cor:pplus8} hold with $M\ge5$ in place of $M\ge8$. In particular the case of one class of winding holds for $M\ge5$ without \cite{dgone}.
+\end{corollary}
+\begin{proof}
+Their proofs use Proposition~\ref{prop:threegroups} only through its statement, together with results that need $N\ge3$.
+\end{proof}
+
+The construction for $M\ge6$ is a worker's of the author's stack, read tick by tick by the author; the table for $M=5$ is the worker's and is \textbf{COMPUTED}. Replays on the rings: $648$ requests for each $M$ from $6$ to $14$, and $1{,}926$ on $\mathbb{Z}_5$ and $\mathbb{Z}_{10}$, all met \cite{comptp}.
 
 % Bibliography entries needed:
 % \bibitem{lgv} B. Lindstr\"om, On the vector representations of induced matroids, Bull. London Math. Soc. 5 (1973) 85--90;
