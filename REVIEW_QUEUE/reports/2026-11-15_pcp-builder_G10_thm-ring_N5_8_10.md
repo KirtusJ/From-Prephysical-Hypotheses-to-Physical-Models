@@ -9,3 +9,9 @@ Reviewer kind: pcp-builder sub-agent of the queue session; same model family as 
 - CONJECTURED: 5.36(i) holds on N = 5, 8, 10.
 Not run: N=10 with q=3,4; control rings N=6,12. Program's own total line not reached.
 Rerun: timeout 300 python3 explore.py res_T8_W6_B2.txt 8 6 2 (mode 'x' output; seed 20261113, no randomness). Not rerun by the queue session; digests checked against the sub-agent's.
+
+Addendum (queue session, same day): full pass without the timeout, in a fresh directory, by the queue session.
+Command: timeout 3000 python3 explore.py res_T8_W6_B2_full.txt 8 6 2; exit 0; 32 min 57 s; result sha256 f9b62d77124539008f27023a7fa5ef8b4d880ef85deb798b8d8f5d89e253d685 (`res_T8_W6_B2_full.txt`, `run.log`). The first seven cases agree with the cut-off run.
+- New open cases: N=10 q=3 (203/270 pairs reached, projected dim 1 = expected), q=4 (220/440, dim 2 = expected). All 9 open (N, q) cases now give the claimed dimension at |m| <= 2.
+- Control rings N=12 (M=6, where the lemma is claimed): pairs also missing (146/168, 204/324, 220/528) at the same bound. So missing pairs at T <= 8 are an artefact of the bound, not evidence about the small rings.
+- Tension, not resolved: N=6 (M=3) with q=3, 4 also gives the claimed dimension at |m| <= 2, while the queue's small-ring report PROVED an obstruction for N=6, q >= 3. Either the obstruction appears only beyond |m| <= 2 or one of the two is wrong. Not checked; wanted: a micro-review comparing the two.
