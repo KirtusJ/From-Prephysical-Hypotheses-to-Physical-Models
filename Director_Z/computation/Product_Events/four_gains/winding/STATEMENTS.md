@@ -1,0 +1,61 @@
+# Four arc gains on a ring: winding of the walks at one vertex (draft statements, 15 November 2026)
+
+Draft for G10, to follow Proposition `prop:fgprepring` (`prop:fgprepring`). Nothing here is issued. Notation is that of the subsection "Four arc gains" of G10.
+
+## Setting
+
+$D$ is the two-rail digraph of the ring $\mathbb{Z}_N$, $N\ge1$: vertices $(x,R)$, $(x,L)$; a right step from either rail of $x$ leads to $(x+1,R)$, a left step to $(x-1,L)$. A walk from $(0,R)$ is its sequence of step directions. Gains in a finite abelian group $A$: $a$ on arcs $R\to R$, $b$ on $R\to L$, $c$ on $L\to R$, $d$ on $L\to L$. $\delta=ad(bc)^{-1}$, $H=\langle a,bc,\delta\rangle$, $M=N/\gcd(N,2)$, $B=bc\,a^{-2}$, $\beta=B^{M}$, $\Delta_N=\langle\delta,(a/d)^M\rangle=\langle\delta,\beta\rangle$ (because $(a/d)^M=\beta^{-1}\delta^{-M}$). $D_\delta$ is the carrier with $(a,b,c,d)=(1,1,1,\delta)$; $g_\delta(w)$ is the gain of $w$ in $D_\delta$. A position product event of length $T$ is the set of all walks of length $T$ whose site after $t$ steps lies in a prescribed set $A_t$, $t=1,\dots,T$ (the letter $T$ with a subscript, as in $T_g$, is a translation of multisets). $m_S(y)$ is the multiset of gains of the walks of $S$ that end at the vertex $y$. For a walk $w$, $\lambda(w)$ is its number of left steps and $\lambda_t(w)$ the number among its first $t$ steps. Let $s\ge1$ be the least integer with $\beta^{s}\in\langle\delta\rangle$.
+
+**Fact 0 (gain of one walk).** A walk of length $T$ with $\lambda$ left steps has gain $\kappa\,g_\delta(w)$ if it ends on $R$ and $\kappa\,b\delta d^{-1}g_\delta(w)$ if it ends on $L$, where $\kappa=a^{T-2\lambda}(bc)^{\lambda}$. (Lemma `lem:fgcoset` of G10 for $D$ and for $D_\delta$; this is a statement about one walk and holds on the line and on every ring.) Replacing $\lambda$ by $\lambda+M$ multiplies $\kappa$ by $B^{M}=\beta$.
+
+## Lemma W (winding at one vertex)
+
+Let $S$ be a position product event of length $T$ on $\mathbb{Z}_N$, $y$ a vertex, and $n(l)$ the number of walks of $S$ that end at $y$ with $\lambda=l$.
+
+1. All $l$ with $n(l)>0$ are congruent modulo $M$.
+2. For $l'-l\in M\mathbb{Z}$, $l'-l\ge 2M$: $\;n(l+M)\,n(l'-M)\ \ge\ n(l)\,n(l')$.
+3. $n(l+M)\bigl(n(l+M)-1\bigr)\ \ge\ n(l)\,n(l+2M)$.
+
+In particular the values of $l$ that occur form an arithmetic progression of difference $M$ without gaps, and every value that is neither the least nor the greatest is taken by at least two walks.
+
+*Proof.* (1) The site after $T$ steps is $T-2\lambda$ modulo $N$, so two walks to one site have $2\lambda\equiv2\lambda'\pmod N$, that is $\lambda\equiv\lambda'\pmod M$.
+(2) Let $w,w'\in S$ end at $y$ with $\lambda(w)=l$, $\lambda(w')=l'$. Put $\Phi(t)=\lambda_t(w')-\lambda_t(w)$. Then $\Phi(0)=0$, $\Phi(T)=l'-l\ge2M$, and $\Phi$ changes by $-1$, $0$ or $1$ in one step. Let $\tau$ be the least $t$ with $\Phi(t)=M$; $0<\tau<T$. After $\tau$ steps the sites of $w$ and $w'$ are $\tau-2\lambda_\tau(w)$ and $\tau-2\lambda_\tau(w)-2M$, equal modulo $N$. Let $h$ consist of the first $\tau$ steps of $w'$ followed by the last $T-\tau$ steps of $w$, and $h'$ of the first $\tau$ steps of $w$ followed by the last $T-\tau$ steps of $w'$. The sites of $h$ are those of $w'$ up to time $\tau$ and those of $w$ afterwards (a walk's site after $t>\tau$ steps is its site after $\tau$ steps plus the displacement of the later steps, and the two sites at time $\tau$ agree), so $h\in S$; likewise $h'\in S$. Since $\tau<T$ the last step of $h$ is the last step of $w$, so $h$ ends at the site and on the rail of $w$, that is at $y$; likewise $h'$. Further $\lambda(h)=\lambda_\tau(w')+l-\lambda_\tau(w)=l+M$ and $\lambda(h')=l'-M$. The map $(w,w')\mapsto(h,h')$ is injective: $\lambda_t(h)-\lambda_t(h')=\Phi(t)$ for $t\le\tau$, so $\tau$ is the least $t$ with $\lambda_t(h)-\lambda_t(h')=M$, and exchanging the parts after $\tau$ returns $(w,w')$. Counting pairs gives (2).
+(3) For $l'=l+2M$ both $h$ and $h'$ have $\lambda=l+M$, and $h\ne h'$ because their first $\tau$ steps contain $\lambda_\tau(w)+M$ and $\lambda_\tau(w)$ left steps. So the injection of (2) lands in the ordered pairs of distinct walks. The last sentence: if $l<l'$ occur and $l'-l\ge2M$ then by (2) $l+M$ occurs; induction on $l'-l$. A value that is neither least nor greatest has both neighbours occurring, and (3) gives $n(n-1)\ge1$. $\square$
+
+## Corollary W1 (the preparation of all pairs fails when $s\ge3$)
+
+On no ring, for no position product event $S$ and no vertex $y$, does $m_S(y)$ consist of exactly three walks whose gains lie in three different cosets of $\langle\delta\rangle$. (For $s\le2$ this says nothing, since the gains at a vertex lie in at most $s$ cosets.) In particular, if $s\ge3$, then for $\kappa\in H$ the multiset $e_\kappa+e_{\kappa\beta}+e_{\kappa\beta^2}\in\mathcal{M}(\kappa\Delta_N)$ is not prepared at any vertex, so the preparation of all pairs in $\mathcal{M}(\kappa\Delta_N)\times\mathcal{M}(\kappa bd^{-1}\Delta_N)$, on which the sentence after Proposition `prop:fgprepring` conditions the answer for $B^M\ne1$, does not exist when $s\ge3$.
+
+*Proof.* By Fact 0 the walks at $y$ with $\lambda=l_0+jM$ have gains in $\kappa_0\beta^{j}\langle\delta\rangle$ (times $b\delta d^{-1}$ on $L$), and these cosets for $j,j'$ are equal exactly when $s\mid j-j'$. Three walks in three different cosets have three different values of $j$; by Lemma W these form a gap-free progression with at least one inner value, which is taken by at least two walks. $\square$
+
+For $s\le2$ Lemma W forbids nothing of this kind: two cosets can sit at two adjacent values of $\lambda$, on which the lemma puts no condition. This is not a claim that such multisets are prepared; on rings of 1, 2 and 4 sites they are not, for any gains (G10, after Proposition `prop:fgprepring`).
+
+## Proposition W2 (preparation on rings without the condition $B^M=1$)
+
+**Hypothesis $P^+_\delta$ on $\mathbb{Z}_N$.** For every site $x$ and all $U',V'\in\mathcal{M}(\langle\delta\rangle)$ there is a position product event $S'$ in $D_\delta$ with $m^\delta_{S'}(x,R)=U'$, $m^\delta_{S'}(x,L)=V'$, such that all walks of $S'$ that end at the site $x$, on either rail, have the same number of left steps.
+
+Let $N\ge3$ and assume $P^+_\delta$ on $\mathbb{Z}_N$. Then for arbitrary four gains:
+
+(a) for every $\kappa\in H$, $U\in\mathcal{M}(\kappa\langle\delta\rangle)$ and $V\in\mathcal{M}(\kappa bd^{-1}\langle\delta\rangle)$ there are a site $x$ and a position product event $S$ of $D$ with $m_S(x,R)=U$ and $m_S(x,L)=V$;
+
+(b) if the functions $F_R,F_L$ do not depend on the site and (5.x, `eq:ppcons`) holds with the factor 2, then on $\mathcal{M}_R(\langle\delta\rangle)$ and $\mathcal{M}_L(\langle\delta\rangle)$, that is on the multisets whose gains lie in one coset $\kappa\langle\delta\rangle$, $\kappa\in H$ (rail $R$) or $\kappa b\langle\delta\rangle$ (rail $L$), $F_R=F_L=F$ with $F(m)=\alpha|m|$ for $r$ odd and $F(m)=\alpha|m|+\gamma|\sigma_\chi(m)|^2$, $\chi(\delta)=-1$, for $r$ even;
+
+(c) if $s=1$, that is $B^M\in\langle\delta\rangle$, every multiset that occurs is of this kind and the conclusion of Theorem `thm:fgline`(i) holds on $D$.
+
+*Proof.* (a) The empty pair is trivial. Choose $x_0,\mu_0\ge0$ with $\kappa_0=a^{x_0}(bc)^{\mu_0}\in\kappa\langle\delta\rangle$ and let $x=x_0\bmod N$. Take $S'$ from $P^+_\delta$ at the site $x$ for $U'=T_{\kappa_0}^{-1}U$, $V'=T^{-1}_{\kappa_0b\delta d^{-1}}V$, of length $T_0$ and with common number $\lambda_1$ of left steps. By Fact 0 every walk of $S'$ ending at $x$ has the same $\kappa=a^{T_0-2\lambda_1}(bc)^{\lambda_1}$, and $T_0-2\lambda_1=x_0+Ni$ for an integer $i$. The prefix "one step left, one step right" (masks $\{N-1\},\{0\}$) and the prefix "$N$ steps right" (masks $\{1\},\dots,\{N-1\},\{0\}$) each consist of a single walk from $(0,R)$ to $(0,R)$ with gain 1 in $D_\delta$, for $N\ge3$; prefixing leaves the multisets of $D_\delta$ and the equality of the numbers of left steps unchanged, and multiplies $\kappa$ by $bc$ and by $a^N$. Suitable numbers of the two prefixes give $\kappa=\kappa_0$, and Fact 0 gives $m_S(x,R)=T_{\kappa_0}U'=U$, $m_S(x,L)=T_{\kappa_0b\delta d^{-1}}V'=V$.
+(b) By (a) and Lemma `lem:fgonesite` the pair $(F_R,F_L)$ solves (5.y, `eq:fg`) on the domain of Theorem `thm:fgsolve` with $\Delta=\langle\delta\rangle$; conclude as in Theorem `thm:fgline`(i).
+(c) By Fact 0 the gains at one vertex lie in $\kappa_0\Delta_N$ (times $b\delta d^{-1}$), and $\Delta_N=\langle\delta\rangle$. $\square$
+
+**Remark.** Proposition `prop:fgprepring` assumed $B^M=1$ and the conclusion of Lemma `lem:prepq`. Proposition W2 assumes the stronger property $P^+_\delta$ and no condition on $B$. On the ring of 4 sites $P^+_\delta$ is false (a site carries 0 or a power of 2 walks), so the proposition says nothing there. The construction of Lemma `lem:prepq` (Director G) has the property $P^+_\delta$ in a replay of 8,160 requests on rings of 7, 9, 11, 12, 13, 14, 16 and 24 sites, orders 1 to 4, every request met and one number of left steps at the target in each (`micro_Pplus/`); in Director G's description every stock travels on one wire of fixed deficit, which is the reason, but that argument is not written out here. COMPUTED, not PROVED.
+
+## What stays open
+
+For $s\ge2$ the multisets at a vertex can mix cosets of $\langle\delta\rangle$. The rules $\alpha|m|+\sum\gamma_\chi|\sigma_\chi(m)|^2$, $\chi$ a character of $\Delta_N$ with $\chi(\delta)=-1$, one $\gamma_\chi$ for each pair $\{\chi,\chi^{-1}\}$, are consistent on every ring (Theorem `thm:fgline`(ii)). That there are no others on the multisets that occur is not proved for any $s\ge2$; for $s\ge3$ it cannot be proved through the preparation of all pairs (Corollary W1).
+
+## Checks so far (15 November 2026)
+
+- `winding_offsets.py result_run1.json`: Lemma W(1) to (3) and the absence of gaps on every vertex of every event examined; exhaustive for N = 1 (length 10), 2 (8), 3 (7), 4 (5), 5 (4), random for N = 3 to 14; 3.8 million vertices, 635,160 with three or more values; no failure. Rerun in a fresh directory, bytes identical.
+- Challenger (`challenger_W/`, rerun by the director, bytes identical): no defect; the hybrid walks of the proof built one by one for 14,936,340 pairs (N = 1, 2, 3, 4, 6, 8; none for odd N of 5 or more, where only the counts were tested); Fact 0 on 985,024 walks in four groups; Proposition W2(a) end to end in 1,603 cases on rings of 3 to 8 sites. Five gaps of wording, all applied above.
+- Micro-review of $P^+_\delta$ (`micro_Pplus/`, rerun by the director, bytes identical): as in the Remark.
+- No Lean: this container has no Lean installed, and Lemma W is a counting argument, not algebra. Fact 0 is the algebra of Lemma `lem:fgrecode`, already in `PrepReduction.lean`.
+- All reviewers are sub-agents of the author's model family; that is not independent review.
