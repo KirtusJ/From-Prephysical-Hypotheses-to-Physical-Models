@@ -5,7 +5,7 @@ Use the half-filled, two-orbital infinite Wilson–Dirac chain, compressed to L 
 **Two joint estimates.** For every such sequence,
 
 $$
- \liminf \frac{\mathcal D_L(\mu)}{\mu^2 h^2}\ ≥\ \frac16 .
+ \liminf \frac{\mathcal D_L(\mu)}{\mu^2 h^2} \ge \frac16 .
 $$
 
 When $h/[\sqrt L(1+\sqrt 2)^{2L}]\to\infty$, there is equality in the stronger sense

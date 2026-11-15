@@ -2,14 +2,20 @@
 from fractions import Fraction as F
 from math import cos, exp, hypot, log, pi, sin, sqrt
 
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
 def check_constants():
     # (23/24)^2*25/(216 sqrt(3)) > 1/20, with no floating square roots.
     lhs = 20*25*F(23,24)**2
-    assert lhs**2 > 3*216**2
-    assert 1-F(1,6) == F(5,6)
-    assert 1-F(1,24) == F(23,24)
-    assert F(2,20**2) == F(1,200)
-    assert F(6,200) == F(3,100)
+    require(lhs**2 > 3*216**2, "squared occupation constant is too small")
+    require(1-F(1,6) == F(5,6), "first Taylor constant differs")
+    require(1-F(1,24) == F(23,24), "second Taylor constant differs")
+    require(F(2,20**2) == F(1,200), "entropy lower-bound coefficient differs")
+    require(F(6,200) == F(3,100), "relative-law comparison coefficient differs")
     print("Squared rational comparisons for the occupation and entropy constants passed.")
 
 def check_interval(L):
@@ -34,7 +40,7 @@ def check_interval(L):
         return k*fejer(k)*quad(deriv,0,1,epsabs=1e-14)[0]/(2*pi)
     positive_band=quad(band,log(m),log(1/L),epsabs=1e-14)[0]
     lower=mu*log(1/mu)/(20*pi)
-    assert occupancy>=positive_band>=lower
+    require(occupancy>=positive_band>=lower, "positive-band integral violates the occupation bounds")
     print(f"L={L}, mu=1/L: delta={occupancy:.12g}, positive band={positive_band:.12g}, "
           f"rigorous delta floor={lower:.12g}")
 
@@ -65,9 +71,9 @@ def compare(length, mass):
     matrix = integral(defect)
     for r in range(1, length):
         matrix += 2*(length-r)/length * integral(lambda k: cos(r*k)*defect(k))
-    assert abs(mode-matrix) <= 2e-12*abs(mode)
+    require(abs(mode-matrix) <= 2e-12*abs(mode), "Fejér integral and Toeplitz mean disagree")
     bound = mass*log(1/mass)/(20*pi)
-    assert mode >= bound
+    require(mode >= bound, "full occupation shift falls below the analytical bound")
     return mode, matrix, 2*pi*mode/mass - log(1/mass), mode/bound
 
 
