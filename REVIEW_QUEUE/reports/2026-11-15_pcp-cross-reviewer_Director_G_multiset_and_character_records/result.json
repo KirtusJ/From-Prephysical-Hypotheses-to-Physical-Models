@@ -1,0 +1,245 @@
+{
+ "P0": {
+  "value": 3,
+  "pass": true
+ },
+ "P1": {
+  "(0, 2)": {
+   "hyp_fpf": true,
+   "nosw": 14,
+   "sw": 3,
+   "pass": "True"
+  },
+  "(1, 0)": {
+   "hyp_fpf": true,
+   "nosw": 14,
+   "sw": 4,
+   "pass": "True"
+  },
+  "(1, 2)": {
+   "hyp_fpf": true,
+   "nosw": 14,
+   "sw": 4,
+   "pass": "True"
+  }
+ },
+ "P2": {
+  "(0, 2)": {
+   "formula": 14,
+   "brute": 14,
+   "pass": "True"
+  },
+  "(1, 0)": {
+   "formula": 14,
+   "brute": 14,
+   "pass": "True"
+  },
+  "(1, 2)": {
+   "formula": 14,
+   "brute": 14,
+   "pass": "True"
+  }
+ },
+ "P3": {
+  "nosw": 20,
+  "sw": 4,
+  "pass": true
+ },
+ "P4": {
+  "faithful": [
+   true,
+   true
+  ],
+  "s0": [
+   10.0,
+   0.0
+  ],
+  "sq": [
+   20,
+   0
+  ],
+  "tot": [
+   100,
+   0
+  ],
+  "pass": true
+ },
+ "P5": {
+  "5": {
+   "interval_hyp": true,
+   "formula": true,
+   "second_diff": true,
+   "CM=1-c": true,
+   "pass": true
+  },
+  "6": {
+   "interval_hyp": true,
+   "formula": true,
+   "second_diff": true,
+   "CM=1-c": true,
+   "pass": true
+  },
+  "7": {
+   "interval_hyp": true,
+   "formula": true,
+   "second_diff": true,
+   "CM=1-c": true,
+   "pass": true
+  },
+  "9": {
+   "interval_hyp": true,
+   "formula": true,
+   "second_diff": true,
+   "CM=1-c": true,
+   "pass": true
+  }
+ },
+ "P6": {
+  "5": {
+   "list": [
+    [
+     -3,
+     -1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "list_match": true,
+   "eq3": true,
+   "applies(M>=5)": true,
+   "pass": true
+  },
+  "6": {
+   "list": [
+    [
+     -3,
+     -1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "list_match": true,
+   "eq3": true,
+   "applies(M>=5)": true,
+   "pass": true
+  },
+  "7": {
+   "list": [
+    [
+     -3,
+     -1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "list_match": true,
+   "eq3": true,
+   "applies(M>=5)": true,
+   "pass": true
+  },
+  "9": {
+   "list": [
+    [
+     -3,
+     -1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "list_match": true,
+   "eq3": true,
+   "applies(M>=5)": true,
+   "pass": true
+  }
+ },
+ "P7": {
+  "5": {
+   "diff": -0.015625,
+   "pass": true
+  },
+  "6": {
+   "diff": -0.0078125,
+   "pass": true
+  },
+  "7": {
+   "diff": -0.00390625,
+   "pass": true
+  },
+  "9": {
+   "diff": -0.0009765625,
+   "pass": true
+  }
+ }
+}
