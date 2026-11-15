@@ -1,0 +1,912 @@
+{
+  "flight_effects_and_path_counts": {
+    "6": [
+      {
+        "displacement": 0,
+        "matrix_times_2_to_half_ticks": [
+          [
+            -2,
+            2
+          ],
+          [
+            -2,
+            -2
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 20
+      },
+      {
+        "displacement": 1,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 2,
+        "matrix_times_2_to_half_ticks": [
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 16
+      },
+      {
+        "displacement": 3,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 4,
+        "matrix_times_2_to_half_ticks": [
+          [
+            6,
+            2
+          ],
+          [
+            -2,
+            6
+          ]
+        ],
+        "effect": "5/8",
+        "fair_paths": 12
+      },
+      {
+        "displacement": 5,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 6,
+        "matrix_times_2_to_half_ticks": [
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 16
+      },
+      {
+        "displacement": 7,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      }
+    ],
+    "18": [
+      {
+        "displacement": 0,
+        "matrix_times_2_to_half_ticks": [
+          [
+            -128,
+            -128
+          ],
+          [
+            128,
+            -128
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 65792
+      },
+      {
+        "displacement": 1,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 2,
+        "matrix_times_2_to_half_ticks": [
+          [
+            128,
+            128
+          ],
+          [
+            -128,
+            128
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 65536
+      },
+      {
+        "displacement": 3,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 4,
+        "matrix_times_2_to_half_ticks": [
+          [
+            384,
+            -128
+          ],
+          [
+            128,
+            384
+          ]
+        ],
+        "effect": "5/8",
+        "fair_paths": 65280
+      },
+      {
+        "displacement": 5,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      },
+      {
+        "displacement": 6,
+        "matrix_times_2_to_half_ticks": [
+          [
+            128,
+            128
+          ],
+          [
+            -128,
+            128
+          ]
+        ],
+        "effect": "1/8",
+        "fair_paths": 65536
+      },
+      {
+        "displacement": 7,
+        "matrix_times_2_to_half_ticks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "effect": "0",
+        "fair_paths": 0
+      }
+    ]
+  },
+  "sharp_clock_table": [
+    {
+      "ticks": 0,
+      "denominator": 1,
+      "site_numerators": {
+        "R": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "L": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 1,
+      "denominator": 2,
+      "site_numerators": {
+        "R": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "L": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "ticks": 2,
+      "denominator": 4,
+      "site_numerators": {
+        "R": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "L": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 3,
+      "denominator": 8,
+      "site_numerators": {
+        "R": [
+          0,
+          5,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "L": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "ticks": 4,
+      "denominator": 16,
+      "site_numerators": {
+        "R": [
+          2,
+          0,
+          10,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "L": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          10,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 5,
+      "denominator": 32,
+      "site_numerators": {
+        "R": [
+          0,
+          4,
+          0,
+          20,
+          0,
+          4,
+          0,
+          4
+        ],
+        "L": [
+          0,
+          4,
+          0,
+          4,
+          0,
+          20,
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "ticks": 6,
+      "denominator": 64,
+      "site_numerators": {
+        "R": [
+          8,
+          0,
+          8,
+          0,
+          40,
+          0,
+          8,
+          0
+        ],
+        "L": [
+          8,
+          0,
+          8,
+          0,
+          40,
+          0,
+          8,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 7,
+      "denominator": 128,
+      "site_numerators": {
+        "R": [
+          0,
+          16,
+          0,
+          80,
+          0,
+          16,
+          0,
+          16
+        ],
+        "L": [
+          0,
+          16,
+          0,
+          16,
+          0,
+          80,
+          0,
+          16
+        ]
+      }
+    },
+    {
+      "ticks": 8,
+      "denominator": 256,
+      "site_numerators": {
+        "R": [
+          32,
+          0,
+          32,
+          0,
+          160,
+          0,
+          32,
+          0
+        ],
+        "L": [
+          32,
+          0,
+          32,
+          0,
+          160,
+          0,
+          32,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 9,
+      "denominator": 512,
+      "site_numerators": {
+        "R": [
+          0,
+          0,
+          0,
+          128,
+          0,
+          256,
+          0,
+          128
+        ],
+        "L": [
+          0,
+          128,
+          0,
+          256,
+          0,
+          128,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 10,
+      "denominator": 1024,
+      "site_numerators": {
+        "R": [
+          256,
+          0,
+          256,
+          0,
+          256,
+          0,
+          256,
+          0
+        ],
+        "L": [
+          256,
+          0,
+          256,
+          0,
+          256,
+          0,
+          256,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 11,
+      "denominator": 2048,
+      "site_numerators": {
+        "R": [
+          0,
+          512,
+          0,
+          512,
+          0,
+          512,
+          0,
+          512
+        ],
+        "L": [
+          0,
+          512,
+          0,
+          512,
+          0,
+          512,
+          0,
+          512
+        ]
+      }
+    },
+    {
+      "ticks": 12,
+      "denominator": 4096,
+      "site_numerators": {
+        "R": [
+          1024,
+          0,
+          1024,
+          0,
+          1024,
+          0,
+          1024,
+          0
+        ],
+        "L": [
+          1024,
+          0,
+          1024,
+          0,
+          1024,
+          0,
+          1024,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 13,
+      "denominator": 8192,
+      "site_numerators": {
+        "R": [
+          0,
+          2048,
+          0,
+          2048,
+          0,
+          2048,
+          0,
+          2048
+        ],
+        "L": [
+          0,
+          2048,
+          0,
+          2048,
+          0,
+          2048,
+          0,
+          2048
+        ]
+      }
+    },
+    {
+      "ticks": 14,
+      "denominator": 16384,
+      "site_numerators": {
+        "R": [
+          4096,
+          0,
+          8192,
+          0,
+          4096,
+          0,
+          0,
+          0
+        ],
+        "L": [
+          4096,
+          0,
+          0,
+          0,
+          4096,
+          0,
+          8192,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 15,
+      "denominator": 32768,
+      "site_numerators": {
+        "R": [
+          0,
+          4096,
+          0,
+          20480,
+          0,
+          4096,
+          0,
+          4096
+        ],
+        "L": [
+          0,
+          4096,
+          0,
+          4096,
+          0,
+          20480,
+          0,
+          4096
+        ]
+      }
+    },
+    {
+      "ticks": 16,
+      "denominator": 65536,
+      "site_numerators": {
+        "R": [
+          8192,
+          0,
+          8192,
+          0,
+          40960,
+          0,
+          8192,
+          0
+        ],
+        "L": [
+          8192,
+          0,
+          8192,
+          0,
+          40960,
+          0,
+          8192,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 17,
+      "denominator": 131072,
+      "site_numerators": {
+        "R": [
+          0,
+          16384,
+          0,
+          81920,
+          0,
+          16384,
+          0,
+          16384
+        ],
+        "L": [
+          0,
+          16384,
+          0,
+          16384,
+          0,
+          81920,
+          0,
+          16384
+        ]
+      }
+    },
+    {
+      "ticks": 18,
+      "denominator": 262144,
+      "site_numerators": {
+        "R": [
+          32768,
+          0,
+          32768,
+          0,
+          163840,
+          0,
+          32768,
+          0
+        ],
+        "L": [
+          32768,
+          0,
+          32768,
+          0,
+          163840,
+          0,
+          32768,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 19,
+      "denominator": 524288,
+      "site_numerators": {
+        "R": [
+          0,
+          65536,
+          0,
+          65536,
+          0,
+          327680,
+          0,
+          65536
+        ],
+        "L": [
+          0,
+          65536,
+          0,
+          327680,
+          0,
+          65536,
+          0,
+          65536
+        ]
+      }
+    },
+    {
+      "ticks": 20,
+      "denominator": 1048576,
+      "site_numerators": {
+        "R": [
+          131072,
+          0,
+          131072,
+          0,
+          131072,
+          0,
+          655360,
+          0
+        ],
+        "L": [
+          131072,
+          0,
+          655360,
+          0,
+          131072,
+          0,
+          131072,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 21,
+      "denominator": 2097152,
+      "site_numerators": {
+        "R": [
+          0,
+          524288,
+          0,
+          0,
+          0,
+          524288,
+          0,
+          1048576
+        ],
+        "L": [
+          0,
+          1048576,
+          0,
+          524288,
+          0,
+          0,
+          0,
+          524288
+        ]
+      }
+    },
+    {
+      "ticks": 22,
+      "denominator": 4194304,
+      "site_numerators": {
+        "R": [
+          2097152,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2097152,
+          0
+        ],
+        "L": [
+          2097152,
+          0,
+          2097152,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "ticks": 23,
+      "denominator": 8388608,
+      "site_numerators": {
+        "R": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8388608
+        ],
+        "L": [
+          0,
+          8388608,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "joint_final_radius_given_first_radius_two_per_incident": {
+    "fine_rail_preserving": [
+      "3/32",
+      "1/16",
+      "3/32"
+    ],
+    "coherent": [
+      "1/8",
+      "0",
+      "1/8"
+    ]
+  },
+  "fresh_powers": [
+    -2,
+    0,
+    2
+  ],
+  "fresh_weights": [
+    "19/68",
+    "7/204",
+    "35/51"
+  ],
+  "direct_distance_for_same_mixture": [
+    "2201/8772",
+    "689/4386",
+    "1731/2924"
+  ],
+  "counting_false_pass_at_six": {
+    "q0": "1/52",
+    "q2": "35/52",
+    "counting": "16/52"
+  },
+  "antipode_count_change": "63/1024",
+  "clock_dependent_q2_probabilities": [
+    "1/2",
+    "7/12"
+  ],
+  "rail_split_persistent_q2_probability": "11/20"
+}
