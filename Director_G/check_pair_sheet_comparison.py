@@ -31,7 +31,27 @@ def check_sheet_relabel():
         assert diff == -skew(a,c)*skew(b,d)
 
 
+def check_miss_calibration():
+    # Input outer products avoid square roots in this real three-mode basis.
+    for sign in (1, -1):
+        launch = [1, 0, sign]
+        rho = [[F(x*y, 2) for y in launch] for x in launch]
+        miss = [[F(1,2), F(1,2), 0], [F(1,2), F(1,2), 0], [0, 0, 1]]
+        state = multiply(multiply(miss, rho), miss)
+        for visibility in (-1, 0, F(1,3), 1):
+            def entry(i, j):
+                crosses = (i == 2) != (j == 2)
+                return state[i][j] * (visibility if crosses else 1)
+
+            ports = [(entry(0,0) + entry(2,2) + d*(entry(0,2)+entry(2,0)))/2
+                     for d in (-1, 1)]
+            assert ports[0] == (5 - 4*sign*visibility) / F(16)
+            assert entry(1,1) == F(1,8)
+            assert sum(ports) + entry(1,1) + F(1,4) == 1
+
+
 if __name__ == "__main__":
     check_sheet_relabel()
     check_pass_effects()
-    print("All 81 sheet entries and pass effects through eight rounds agree.")
+    check_miss_calibration()
+    print("All 81 sheet entries and pass effects through eight rounds agree; signed miss probes pass.")
