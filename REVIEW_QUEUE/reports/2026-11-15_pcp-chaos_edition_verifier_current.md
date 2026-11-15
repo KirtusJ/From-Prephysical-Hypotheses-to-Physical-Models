@@ -1,11 +1,11 @@
 Target: edition/verify_baseline.py as on master a8c9608 (it carries the queue's second chaos patch), on a copy of the edition.
 Control: the untouched copy passes (exit 0). Control passed.
-Outcome: DEFECT in the check, smaller than before: 14 of 40 planted errors pass (22 of 32 did on 14 November).
+Outcome: DEFECT in the check, smaller than before: 17 of 40 planted errors pass (22 of 32 did on 14 November).
 Reviewer kind: pcp-chaos run as a sub-agent of the queue session; copies only; the repository was untouched. The queue session rechecked what is stated at the end. Same model family as the author.
 
 Baseline: exit 0, 1842 files, 41 papers, 434 registry rows. Outside the repository two checks are skipped with a notice (predecessor digest: no git history; live register: no .pcp/), so the mutant runs supplied copies of both; with them the copy also passes. pdfinfo is present, so the page check runs; PyMuPDF is absent, so the front-matter check is skipped.
 
-Counts: CAUGHT 25, SURVIVED 14, EQUIVALENT 1 (registry line endings). Of the 32 kinds replanted: 21 caught, 10 survived. Of 8 new kinds: 4 caught.
+Counts, from chaos3_result.json: CAUGHT 22, SURVIVED 17, EQUIVALENT 1 (registry line endings). The sub-agent's message said 25 / 14 (21 and 4 caught among old and new kinds); its own result file and its own list of survivors (17 entries, below) say 22 / 17. The file is taken as the record.
 Earlier survivors now caught (9): page count, predecessor digest, register copy truncated at the end or the start or altered and re-chained (three), a result file cut short, a planned paper with registry rows, the count sentence removed, a fake compiled file. Four of these are caught only when git history and .pcp/ are reachable; in a bare copy they pass with a notice.
 
 Remaining survivors and the cheapest check
@@ -21,5 +21,5 @@ Remaining survivors and the cheapest check
 - A result truncated and renamed to a name containing "partial" (escapes the parse check): forbid new partial files not in the predecessor (one line).
 - A compiled-file name whose first bytes pass the magic test with arbitrary content: reject every .pyc (one line).
 
-Rechecked by the queue session: the control log; the counts in chaos3_result.json. Not rechecked: the 40 runs.
+Rechecked by the queue session: the control log; the counts in chaos3_result.json, which differ from the sub-agent's summary as stated above. Not rechecked: the 40 runs.
 Cost reported by the sub-agent: about 6 minutes, 9 tool calls.
