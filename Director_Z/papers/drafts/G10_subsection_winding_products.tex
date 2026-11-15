@@ -8,7 +8,7 @@
 
 The last subsection left open, for three or more classes of winding, the rule on the multisets that meet three cosets of $\langle\delta\rangle$. This subsection does two things. It replaces the inequalities of Lemmas~\ref{lem:winding} and~\ref{lem:windingrails} by the full family they belong to: the numbers of walks at the two rails of one site, listed by winding, form a totally non-negative array. And it shows that the multisets that occur are closed under a product, which carries Theorem~\ref{thm:fgadj} from two adjacent cosets to an infinite family of multisets that meet every coset; for three classes the rule is the count and the two squares on all of them. What stays open is said at the end.
 
-\paragraph{Notation.} $S$ is a position product event of length $T\ge1$ on $\mathbb{Z}_N$ with masks $A_1,\dots,A_T$, $N\ge3$, $M=N/\gcd(N,2)$, and $x\in A_T$ is a site at which walks of $S$ end. All such walks have $\lambda\equiv l_0\pmod M$ for one $l_0$. Put
+\paragraph{Notation.} $S$ is a position product event of length $T\ge1$ on $\mathbb{Z}_N$ with masks $A_1,\dots,A_T$, $N\ge3$, $M=N/\gcd(N,2)$, and $x\in A_T$ is a site at which walks of $S$ end. All such walks have congruent $\lambda$ modulo $M$; let $l_0$ be the least $\lambda$ among them, on either rail. Put
 \[
 u_j=\#\{w\in S:\ w\text{ ends at }(x,R),\ \lambda(w)=l_0+jM\},\qquad v_j=\#\{w\in S:\ w\text{ ends at }(x,L),\ \lambda(w)=l_0+jM\}\qquad(j\in\mathbb{Z}),
 \]
@@ -34,18 +34,18 @@ and the determinant is the number of families of $k$ pairwise vertex-disjoint pa
 \begin{corollary}\label{cor:tp}
 In the situation of Theorem~\ref{thm:tp} let $u(X)=\sum_ju_jX^j$ and $v(X)=\sum_jv_jX^j$.
 \begin{enumerate}[label=(\roman*)]
-\item The minors of order $2$ are the inequalities of Lemma~\ref{lem:winding}(i) (columns of one parity) and of Lemma~\ref{lem:windingrails} (columns of different parity).
+\item The minors of order $2$ in two consecutive rows are the inequalities of Lemma~\ref{lem:winding}(i) (columns of one parity) and of Lemma~\ref{lem:windingrails} (columns of different parity).
 \item Each of $u$ and $v$ is zero or has only real roots, none positive. In particular a rail with exactly three levels has $n_1^{2}\ge4\,n_0n_2$, which contains parts (ii) and (iii) of Lemma~\ref{lem:winding} for three levels.
-\item The polynomial $W(Y)=v(Y^{2})+Y\,u(Y^{2})$ has no root with positive real part. Equivalently, if $u\ne0\ne v$ and $g=\gcd(u,v)$, the roots of $u/g$ and $v/g$ are real, simple and not positive, and listed in decreasing order they alternate, beginning with a root of $v/g$.
+\item The polynomial $W(Y)=v(Y^{2})+Y\,u(Y^{2})$ has no root with positive real part. For polynomials $u\ne0\ne v$ with non-negative coefficients this is equivalent to the following: with $g=\gcd(u,v)$, the roots of $g$ are real and not positive, and the roots of $u/g$ and $v/g$ are real, simple and not positive and, listed in decreasing order, alternate, beginning with a root of $v/g$.
 \end{enumerate}
 \end{corollary}
 \begin{proof}
-(i) With rows $i<i'$ and columns $c<c'$ the minor is $\mathsf{w}_{c-2i}\mathsf{w}_{c'-2i'}-\mathsf{w}_{c'-2i}\mathsf{w}_{c-2i'}$. For $i=0$, $i'=1$, $c=2j+2$, $c'=2j'+1$ with $j'\ge j+1$ this is $v_{j+1}u_{j'-1}-u_{j'}v_j\ge0$, the first inequality of Lemma~\ref{lem:windingrails}; $c=2j+3$, $c'=2j'+2$ with $j'\ge j+2$ gives the second, and two columns of one parity give Lemma~\ref{lem:winding}(i).
+(i) With rows $i<i'$ and columns $c<c'$ the minor is $\mathsf{w}_{c-2i}\mathsf{w}_{c'-2i'}-\mathsf{w}_{c'-2i}\mathsf{w}_{c-2i'}$. For $i=0$, $i'=1$, $c=2j+2$, $c'=2j'+1$ with $j'\ge j+1$ this is $v_{j+1}u_{j'-1}-u_{j'}v_j\ge0$, the first inequality of Lemma~\ref{lem:windingrails}; $c=2j+3$, $c'=2j'$ with $j'\ge j+2$ gives $u_{j+1}v_{j'-1}-v_{j'}u_j\ge0$, the second, and two columns of one parity give Lemma~\ref{lem:winding}(i). Minors of order $2$ in rows further apart are further inequalities of the same kind.
 (ii) The columns of odd index form the array $(u_{j-i})$, which is therefore totally non-negative: $(u_j)$ is a P\'olya frequency sequence with finitely many non-zero terms, and by the theorem of Aissen, Schoenberg, Whitney and Edrei \cite{aswe} its generating polynomial has only real non-positive roots; likewise $v$. For three levels the discriminant gives $n_1^{2}\ge4n_0n_2$; then $n_1\ge2$, and $n_1^{2}/4\le n_1(n_1-1)/2$.
-(iii) The array $(\mathsf{w}_{c-2i})$ is the infinite Hurwitz matrix of $W$. A real polynomial whose infinite Hurwitz matrix is totally non-negative has no root in the open right half-plane \cite{holtztyaglov}; the equivalent form is the Hermite--Biehler theorem in the version for roots on the closed left half-plane, given in the same place.
+(iii) The array $(\mathsf{w}_{c-2i})$ is, after transposition and with the coefficients of $W$ read in the reverse order, the infinite Hurwitz matrix of $W$; reversing the coefficients replaces the roots by their inverses and keeps the open right half-plane. A real polynomial whose infinite Hurwitz matrix is totally non-negative has no root in the open right half-plane \cite{holtztyaglov}; the equivalent form is the Hermite--Biehler theorem in the version for roots on the closed left half-plane, given in the same place.
 \end{proof}
 
-Part (iii) is quoted, not reproved here, and is \textbf{COMPUTED}: see the remark at the end. The theorem itself is \textbf{PROVED}.
+Part (iii) is quoted, not reproved here, and is \textbf{COMPUTED}: see the remark at the end. The theorem itself is \textbf{PROVED}. On the rings of $1$ and $2$ sites, which the notation excludes, two of the sinks coincide and the proof does not apply as written; there $W=Y(1+Y)(1+Y^{2})^{T-1}$ and the conclusions hold.
 
 \paragraph{Products of multisets.} Write a multiset of elements of the gain group $A$ as an element of the semiring $\mathbb{N}[A]$, so that $m*m'$ is the multiset of all products $gg'$, $g$ from $m$ and $g'$ from $m'$; $T_g m=e_g*m$.
 
