@@ -10,5 +10,10 @@
 | 4 | 15 Nov 2026 | director | P1, the fork, odd M (the first test could not reach it) | HELD | `function/result_kill_z6_followup_run1.json` |
 | 5 | 15 Nov 2026 | director | O7 a convention? | HELD by D6 | FORM.md |
 | 6 | 15 Nov 2026 | director | brand sentence on composite worlds (weak point 1) | NOT DECIDED | FORM.md section 3 |
+| 7 | 15 Nov 2026 | wildcard sub-agent, seed `seam` | the ADDED answer and the brand against O6 (weak point 1) | **KILL**, accepted by the director | `attacks/2026-11-15_wildcard_seam/` |
+| 8 | 15 Nov 2026 | same | brand's parity commitment; OVERVIEW "far side" | WOUND twice | same |
+| 9 | 15 Nov 2026 | same | P1 to P5, plot, gate names, D4 | HELD | same |
+
+**Closed: the candidate was abandoned on 15 November 2026. See `WHY_ABANDONED.md`.** The text below is kept as written before the kill.
 
 Open for attack by the sub-agents of this stack and by Director G's stack from the moment this file is pushed. A verified KILL ends the candidate; it will not be repaired.
