@@ -68,3 +68,5 @@ Run the exact standard-library checker from this directory with the command belo
 ~~~sh
 python -I -B -O check_three_tick_phase_parity.py
 ~~~
+
+A separate design uses only rail labels and loss with imperfect arm isolation. Its sufficient cap is 41 or 42 launches, depending on the rail-label calibration. [Test with imperfect rail labels](Parity_with_rail_errors.md)

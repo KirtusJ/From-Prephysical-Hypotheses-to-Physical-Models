@@ -68,3 +68,5 @@ Run the companion checker with standard-library Python 3.9 or later.
 ~~~sh
 python -I -B -O check_prelaunch_time_sampling.py
 ~~~
+
+Randomizing the decision at a single boundary count reduces the sufficient launch count to 804 with the same timing protocol. [Decision and endpoint proof](One_port_randomized_boundary.md)
