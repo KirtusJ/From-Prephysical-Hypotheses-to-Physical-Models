@@ -14,6 +14,10 @@
 | 8 | 15 Nov 2026 | same | brand: "nothing to do with ignorance or coarse-graining" | WOUND, false as worded | same |
 | 9 | 15 Nov 2026 | same | S6 (the arrow is put in by the start and the step order) | WOUND, by argument | same |
 | 10 | 15 Nov 2026 | same | T-1 equality case, Q4, Q5 numbers, plot, gate titles, weak point 2 as worded | HELD | same |
+| 11 | 15 Nov 2026 | challenger sub-agent (reported after the kill) | T-1 line by line, 28,718 position product events and 316,225 arbitrary sets of walks | HELD; the hypothesis "position product event" is not used by the proof | `attacks/2026-11-15_challenger_form/` |
+| 12 | 15 Nov 2026 | same | S5: subadditivity for correlated pairs fails (ring of 1 site, three pairs: H = (4/5) log 2 with both parts at 0); merging records can raise or lower H | WOUND; the candidate never claimed subadditivity | same |
+| 13 | 15 Nov 2026 | same | S6: counts cannot be run backwards; on the mirror carrier T-1 holds in the opposite direction | WOUND: the arrow is the direction away from the pinned start | same |
+| 14 | 15 Nov 2026 | same | weak point 5 (H stops growing?), commitment 1 (empty?), T-2 to T-4 | HELD; T-1 fails for weights not conserved site by site, so it is not empty | same |
 
 **Closed: the candidate was abandoned on 15 November 2026. See `WHY_ABANDONED.md`.** The text below is kept as written before the kill.
 
