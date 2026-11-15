@@ -12,11 +12,13 @@ from pathlib import Path
 
 PIN = "0ca75f60c76af1be7f3c25c2ed8914e82243ff5d"
 REGISTRY = "edition/PROGRAM/registers/THEOREM_REGISTRY.csv"
+PAPER_INDEX = "edition/PROGRAM/registers/PAPER_INDEX.csv"
 EXTRACTOR = "edition/tools/assemble.py"
 PUBLIC_BASE = "https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/blob/" + PIN + "/"
 SELECTED = {"PROOF_NOT_ADJACENT", "CONDITIONAL_ON_NAMED_INPUTS"}
 REPLAY_IDS = ["D6-05-11", "F2-01-06", "D8-03-04", "D3-01-01", "F1-01-06"]
 BLOBS = {
+    PAPER_INDEX: "8f7d0b9fc2d98b52fe7f54cbfde223c204416af5",
     "edition/PAPERS/D3_Finite_Part_of_Wilson_Dirac_Relative_Entropy/parts/01_Finite_Part_of_Wilson_Dirac_Relative_Entropy.pdf": "50e812b4dffffc3e74e2725f975ea6f7f823574e",
     "edition/PAPERS/D6_Concentration_Spectrum_of_the_Half_Filled_Sine_Kernel_Periods_Tails_an/parts/05_Positive_Moment_Bounds_and_Growing_Plunge_Windows.pdf": "2869c938fafb35da97d5ae27358af079446f7fa9",
     "edition/PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/03_Exact_Wilson_Reference_Geometry_and_Two_Bond_Asymptotics.pdf": "e73163e43a6dde68d5dfe9c3c30b73d950011b68",
@@ -47,27 +49,39 @@ def pinned_data(path, args):
     return data
 
 
-def check_rows(rows):
+def check_judgment(row, paper_path, heading, body):
+    # The issued extractor joins these two words in D8-03-04.
+    name = row["name"].replace("fixed-μtwo-bond", "fixed-μ two-bond")
+    title = " ".join(part for part in (row["kind"], row["number"], name) if part)
+    if heading != title:
+        raise ValueError("Issued heading mismatch for " + row["id"])
+    if re.findall(r"^Issued status `([^`]+)`", body, re.M) != [row["status"]]:
+        raise ValueError("Issued status mismatch for " + row["id"])
+    paper = row["paper"]
+    page = row["paper_file_page"]
+    reference = (f"Assembled {paper}, p. {page}", f"{PUBLIC_BASE}edition/{paper_path}#page={page}")
+    links = re.findall(r"\[(Assembled [^]\n]+)\]\(([^)\s]+)\)", body)
+    if links != [reference]:
+        raise ValueError("Assembled paper or page mismatch for " + row["id"])
+
+
+def check_rows(rows, papers):
     source = Path(__file__).with_name("judgments.md").read_text(encoding="utf-8")
-    sections = re.split(r"^## ([A-Z]\d+-\d+-\d+) · [^\n]+\n", source, flags=re.M)
+    sections = re.split(r"^## ([A-Z]\d+-\d+-\d+) · ([^\n]+)\n", source, flags=re.M)
     reviewed = {}
-    for identifier, body in zip(sections[1::2], sections[2::2]):
+    for identifier, heading, body in zip(sections[1::3], sections[2::3], sections[3::3]):
         if identifier in reviewed:
             raise ValueError("Duplicate judgment for " + identifier)
-        reviewed[identifier] = body
+        reviewed[identifier] = (heading, body)
     expected = {r["id"] for r in rows if r["status"] in SELECTED}
     if len(rows) != 456 or len(expected) != 33 or set(reviewed) != expected:
         raise ValueError("The ledger IDs do not match the 33 selected Z33 rows")
     for row in rows:
         if row["id"] not in reviewed:
             continue
-        body = reviewed[row["id"]]
-        paper = row["paper"]
-        page = row["paper_file_page"]
-        link_pattern = re.escape(PUBLIC_BASE + "edition/PAPERS/" + paper + "_") + r"[^\s)]+\.pdf#page=" + page + r"\)"
-        if "Issued status `" + row["status"] + "`" not in body or not re.search(link_pattern, body):
-            raise ValueError("Status or pinned page mismatch for " + row["id"])
-    print("33/33 unique IDs, issued labels and pinned page links match the Z33 register.")
+        heading, body = reviewed[row["id"]]
+        check_judgment(row, papers[row["paper"]], heading, body)
+    print("33/33 unique IDs, issued headings and statuses, and assembled-paper page links match Z33.")
 
 
 def replay(rows, args):
@@ -108,7 +122,9 @@ def main():
     parser.add_argument("--replay", action="store_true", help="Run the issued extraction function on five source components")
     args = parser.parse_args()
     rows = list(csv.DictReader(io.StringIO(pinned_data(REGISTRY, args).decode("utf-8"))))
-    check_rows(rows)
+    index = csv.DictReader(io.StringIO(pinned_data(PAPER_INDEX, args).decode("utf-8-sig")))
+    papers = {row["id"]: row["file"] for row in index}
+    check_rows(rows, papers)
     if args.replay:
         replay(rows, args)
 
