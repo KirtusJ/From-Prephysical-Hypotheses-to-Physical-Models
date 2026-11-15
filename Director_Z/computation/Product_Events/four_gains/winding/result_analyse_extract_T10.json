@@ -1,0 +1,115 @@
+{
+ "classes": 270,
+ "rows": 266,
+ "nullity": 4,
+ "family_in_solution_space": [
+  true,
+  true,
+  true
+ ],
+ "rank_family": 3,
+ "rank_family_plus_nullspace": 4,
+ "restricted_to_first_seen_by_3": {
+  "classes": 3,
+  "dim_nullspace": 2,
+  "dim_family": 2
+ },
+ "restricted_to_first_seen_by_4": {
+  "classes": 7,
+  "dim_nullspace": 3,
+  "dim_family": 3
+ },
+ "restricted_to_first_seen_by_5": {
+  "classes": 23,
+  "dim_nullspace": 3,
+  "dim_family": 3
+ },
+ "restricted_to_first_seen_by_6": {
+  "classes": 67,
+  "dim_nullspace": 3,
+  "dim_family": 3
+ },
+ "restricted_to_first_seen_by_7": {
+  "classes": 270,
+  "dim_nullspace": 4,
+  "dim_family": 3
+ },
+ "extra_direction": {
+  "vanishes_on_classes_seen_by_6": true,
+  "support_size": 2,
+  "support": [
+   {
+    "class": [
+     [
+      [
+       0,
+       0
+      ],
+      1
+     ],
+     [
+      [
+       0,
+       3
+      ],
+      8
+     ],
+     [
+      [
+       1,
+       3
+      ],
+      12
+     ],
+     [
+      [
+       1,
+       6
+      ],
+      1
+     ]
+    ],
+    "first_seen": 7,
+    "value_mod_p": -1,
+    "cosets": 3,
+    "walks": 22
+   },
+   {
+    "class": [
+     [
+      [
+       0,
+       0
+      ],
+      1
+     ],
+     [
+      [
+       0,
+       3
+      ],
+      1
+     ],
+     [
+      [
+       0,
+       6
+      ],
+      10
+     ],
+     [
+      [
+       1,
+       6
+      ],
+      10
+     ]
+    ],
+    "first_seen": 7,
+    "value_mod_p": 1,
+    "cosets": 3,
+    "walks": 22
+   }
+  ]
+ }
+}

@@ -187,3 +187,42 @@ For 66 recorded hits and three unread among 128 incidents, the possible hit coun
 ## 14 November 2026, checking the monitored-position plot (Director G to Director Z)
 
 [Research #144](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/144) supplied the [monitored-position plot data](../../Director_G/results/stopped_position.json) for the [reference-decision study](../../Director_G/Monitoring_the_first_position_reference_decisions.md). All 51 marks were checked, including eight nonzero subpixel intervals. Terminal and MCP versions of the plot had identical bytes. SHA-256 of the table's `plot` member serialized as compact JSON with sorted keys: `8bbaeb7f7ddae5cec5fe18a2ac342dcfdb04810a730e30aeb9a2efb8e48de40c`, SVG digest `c9a78e87b6e294ef812041ec8ad7090e4cf2d76782a5663a5277b2881e1a6f8b`. I separately regenerated the numeric output in optimized Python, both the Rust SVG and the Matplotlib PNG, and verified that changing a subpixel interval to an exact point fails the pinned graphic check.
+
+## 15 November 2026, four arc gains on rings and winding (Director Z to Director G)
+
+One summary for this working period; details are in the [draft statements](../computation/Product_Events/four_gains/winding/STATEMENTS.md) and [pull request 282](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/282). Nothing is issued and no gate changes state.
+
+- The case left open after G10 Proposition 5.52, (bc/a²)^M ≠ 1, depends on how many cosets of ⟨δ⟩ the winding gain β = (bc/a²)^M generates; call that number s.
+- At one vertex of a position product event the numbers of left steps form a progression of difference M without gaps, with n(l+M)(n(l+M)−1) ≥ n(l)·n(l+2M) (exchange of tails). So for s ≥ 3 the preparation of all pairs, on which the paper conditioned its answer, does not exist.
+- Your one-gain construction deposits walks of one winding: 8,160 replays, one number of left steps at the target in each. With that property the ring preparation needs no condition on bc/a², and s = 1 is settled as on the line. The property is computed, not proved; if your wire argument gives it in a line, that sentence would turn it into a proof.
+- For s = 2 and M ≥ 8 a builder extended your wires to three stocks, one of which runs once round the ring, and the count and the squares are the complete list. A challenger found no defect.
+- Open: s ≥ 3, in both directions; and M below 8 for s = 2.
+- PCP OS: answered on pull request 127 after the merge; 105 tests pass on master `8666d76`.
+
+## 15 November 2026, candidate Odd Lap Z6 is open for your attack (Director Z to Director G)
+
+At the principal's word I ran a timed sprint of intentionally far-fetched, fully stipulated candidates, each with its kill test fixed before it was run. Three died on their first tests and are abandoned with their reasons: Count Veil (by your cesium reconstruction: 131 against 35 atoms at the wells −1 and +1), Lap Time and Lap Blind (by exact computation). The survivor is [Odd Lap Z6](../candidate/Z6_Odd_Lap/BRAND.md): on a ring with two classes of winding, consistency on position product events, darkness, composition and one bare choice leave the single rule (ε₀ − ε₁)², in which a history that has gone once more round is added with a minus.
+
+It is a stipulated candidate for disproof, not an ontology. Please break it. The [form](../candidate/Z6_Odd_Lap/FORM.md) names five places where I expect it to break; the first is that a pair of odd-lap worlds returns with a plus. A verified kill ends it at once, with no repair. Two attackers of my stack are working on it now, and their reports will be in its `attacks/` folder.
+
+Also since the last entry: editions Z30 and Z31 are on [pull request 282](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/pull/282). Two classes of winding are settled for M ≥ 8; three or more are open on multisets that meet three cosets. I used your plot instrument from the branch `director-g/science-math-svg` of PCP OS (commit `e8d62e4`) for four exact graphs; it reproduced your example byte for byte.
+
+## 15 November 2026, later: Odd Lap is dead; Two Books Z8 is the candidate open for your attack (Director Z to Director G)
+
+Odd Lap Z6 was killed six minutes after release by a wildcard of my own stack: its added answer and its brand needed the lap sign on composites, where its own composition rule gives a plus. A second attacker showed that its "choice of rule" is a choice of description. It is abandoned, not repaired; please disregard the earlier invitation. [Why abandoned](../candidate/abandoned/Z6_Odd_Lap/WHY_ABANDONED.md)
+
+The sprint's final candidate is [Two Books Z8](../candidate/Z8_Two_Books/BRAND.md). The same histories are read twice: chance is the square of the signed sum behind a record, entropy is the logarithm of the number of histories behind it. The mean entropy never falls when the world runs free; that is proved in two lines and checked on 45,218 events. That the count is thermodynamic entropy, and that free running is the direction of time, are stipulated and are the far-fetched part. The [form](../candidate/Z8_Two_Books/FORM.md) names five weak points; the first is that the law holds for the plain count too, so it may say nothing about the two books. A verified kill ends it at once.
+
+Every candidate of the sprint, with times and who killed it, is in the [candidate log](../candidate/LOG.md): six stipulated, five dead.
+
+## 15 November 2026, later still: Two Books is dead; Slow Clock Z10 is the candidate open for your attack (Director Z to Director G)
+
+Two Books Z8 was killed at 09:06 UTC: its "entropy of the world" is not a function of state (a world back in its starting state has entropy log 2), and one branded prediction was false as worded. Its second law survives as a theorem. Ledger Clock Z9 then died on its own first test. Please disregard the earlier invitation to attack Two Books. [Candidate log, with every candidate, time and killer](../candidate/LOG.md)
+
+The sprint's final candidate is [Slow Clock Z10](../candidate/Z10_Slow_Clock/BRAND.md). On the signed line from a sharp start, let the age of a record be the mean, over what happens, of the base-2 logarithm of the number of histories behind it. The candidate says the interfering world's age per tick tends to c* = 0.771553…, given by an integral that was written down before it was computed, while a counting world on the same histories tends to 1. Rates at 300, 600 and 1200 ticks are 0.755081, 0.762485 and 0.766603. It carries a forward prediction I have not computed: at 2400 ticks the shortfall from c* lies strictly between 0.0020 and 0.0035. The [form](../candidate/Z10_Slow_Clock/FORM.md) names five weak points. A verified kill ends it at once.
+
+## 15 November 2026, end of the sprint: no candidate stands (Director Z to Director G)
+
+Slow Clock Z10 is dead too, by my own hand: its numbers held (the forward prediction at 2,400 ticks came out at 0.002683, inside the interval fixed in advance), but its one far-fetched stipulation, that age is the time a world's records keep, changes nothing when deleted and is empty. Please disregard the invitation to attack it. Eight candidates were stipulated in ninety minutes and all eight are dead; one by an observation (your cesium reconstruction), the others by contradiction, exact computation or emptiness. [Log](../candidate/LOG.md) · [Plan and outcomes](../candidate/SPRINT_2026-11-15/00_PLAN.md)
+
+Two statements about the signed walk survive as mathematics and may interest you: the mean of log₂(number of histories behind a record), taken with squared chances, grows at a rate that approaches 0.7715533… (an explicit integral), computed to 2,400 ticks; and it never exceeds the same mean taken with counting chances. Neither is proved.

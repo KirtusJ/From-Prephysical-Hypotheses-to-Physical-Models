@@ -1,0 +1,1711 @@
+{
+ "command": "python3 t2.py > t2_run2.log 2>&1",
+ "seed": 20261115,
+ "families": {
+  "i_allsets_ring1_T2": {
+   "events": 65535,
+   "zero_pair_weight": 215,
+   "m": {
+    "qualify": 65230,
+    "sub_viol": 24,
+    "mon1_viol": 63310,
+    "mon2_viol": 63310,
+    "additive": 68
+   },
+   "s": {
+    "qualify": 64942,
+    "sub_viol": 2664,
+    "mon1_viol": 21472,
+    "mon2_viol": 21472,
+    "additive": 2136
+   }
+  },
+  "i_allsets_ring3_T2": {
+   "events": 65535,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 65535,
+    "sub_viol": 0,
+    "mon1_viol": 64911,
+    "mon2_viol": 64911,
+    "additive": 208
+   },
+   "s": {
+    "qualify": 65535,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 65535
+   }
+  },
+  "ii_jointmask_ring3_Tle2_exhaustive": {
+   "events": 2113,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 2113,
+    "sub_viol": 0,
+    "mon1_viol": 1786,
+    "mon2_viol": 1786,
+    "additive": 165
+   },
+   "s": {
+    "qualify": 2113,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 2113
+   }
+  },
+  "ii_jointmask_ring3_T3_sample4000": {
+   "events": 3854,
+   "zero_pair_weight": 7,
+   "m": {
+    "qualify": 3847,
+    "sub_viol": 0,
+    "mon1_viol": 3653,
+    "mon2_viol": 3642,
+    "additive": 66
+   },
+   "s": {
+    "qualify": 3844,
+    "sub_viol": 652,
+    "mon1_viol": 713,
+    "mon2_viol": 692,
+    "additive": 1253
+   }
+  },
+  "ii_jointmask_line_T3_sample4000": {
+   "events": 3875,
+   "zero_pair_weight": 3,
+   "m": {
+    "qualify": 3872,
+    "sub_viol": 0,
+    "mon1_viol": 3677,
+    "mon2_viol": 3677,
+    "additive": 64
+   },
+   "s": {
+    "qualify": 3870,
+    "sub_viol": 609,
+    "mon1_viol": 702,
+    "mon2_viol": 664,
+    "additive": 1273
+   }
+  },
+  "ii_jointmask_ring4_T4_sample2000": {
+   "events": 1800,
+   "zero_pair_weight": 344,
+   "m": {
+    "qualify": 1402,
+    "sub_viol": 0,
+    "mon1_viol": 1150,
+    "mon2_viol": 1173,
+    "additive": 3
+   },
+   "s": {
+    "qualify": 1144,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 339
+   }
+  },
+  "iii_random_ring1_T3": {
+   "events": 19682,
+   "zero_pair_weight": 80,
+   "m": {
+    "qualify": 19413,
+    "sub_viol": 9,
+    "mon1_viol": 18629,
+    "mon2_viol": 18637,
+    "additive": 419
+   },
+   "s": {
+    "qualify": 19358,
+    "sub_viol": 17,
+    "mon1_viol": 2533,
+    "mon2_viol": 2598,
+    "additive": 868
+   }
+  },
+  "iii_random_ring3_T3": {
+   "events": 19679,
+   "zero_pair_weight": 2,
+   "m": {
+    "qualify": 19656,
+    "sub_viol": 2,
+    "mon1_viol": 18675,
+    "mon2_viol": 18710,
+    "additive": 651
+   },
+   "s": {
+    "qualify": 19644,
+    "sub_viol": 1349,
+    "mon1_viol": 6170,
+    "mon2_viol": 6117,
+    "additive": 2406
+   }
+  },
+  "iii_random_ring4_T3": {
+   "events": 19706,
+   "zero_pair_weight": 10,
+   "m": {
+    "qualify": 19656,
+    "sub_viol": 4,
+    "mon1_viol": 18807,
+    "mon2_viol": 18818,
+    "additive": 564
+   },
+   "s": {
+    "qualify": 19627,
+    "sub_viol": 48,
+    "mon1_viol": 5845,
+    "mon2_viol": 5881,
+    "additive": 1421
+   }
+  },
+  "iv_same_site_ring1_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring1_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring1_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring1_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring1_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring1_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring1_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring1_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring2_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring2_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring2_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring2_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring2_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring2_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring2_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring2_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring3_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring3_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring3_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring3_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring3_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring3_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_site_ring3_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring3_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_site_ring4_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring4_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring4_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring4_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring4_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring4_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring4_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring4_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring5_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring5_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring5_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring5_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring5_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring5_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_site_ring5_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring5_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_site_ring6_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring6_T1": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring6_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_vertex_ring6_T2": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 1
+   }
+  },
+  "iv_same_site_ring6_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring6_T3": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_site_ring6_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  },
+  "iv_same_vertex_ring6_T4": {
+   "events": 1,
+   "zero_pair_weight": 0,
+   "m": {
+    "qualify": 1,
+    "sub_viol": 0,
+    "mon1_viol": 1,
+    "mon2_viol": 1,
+    "additive": 0
+   },
+   "s": {
+    "qualify": 1,
+    "sub_viol": 1,
+    "mon1_viol": 0,
+    "mon2_viol": 0,
+    "additive": 0
+   }
+  }
+ },
+ "smallest_violations": {
+  "m/mon1_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "RR"
+    ],
+    [
+     "RR",
+     "RL"
+    ]
+   ]
+  ],
+  "m/mon2_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "RR"
+    ],
+    [
+     "RL",
+     "RR"
+    ]
+   ]
+  ],
+  "s/mon2_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "LR"
+    ],
+    [
+     "RL",
+     "RR"
+    ]
+   ]
+  ],
+  "s/sub_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "RR"
+    ],
+    [
+     "RL",
+     "LL"
+    ],
+    [
+     "LL",
+     "RL"
+    ]
+   ]
+  ],
+  "s/mon1_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "RL"
+    ],
+    [
+     "LR",
+     "RR"
+    ]
+   ]
+  ],
+  "m/sub_viol": [
+   "i_allsets_ring1_T2",
+   [
+    [
+     "RR",
+     "RR"
+    ],
+    [
+     "RL",
+     "LL"
+    ],
+    [
+     "LL",
+     "RL"
+    ]
+   ]
+  ],
+  "jointmask_m/mon1_viol": [
+   "ii_jointmask_ring3_Tle2_exhaustive",
+   [
+    [
+     "RL",
+     "RR"
+    ],
+    [
+     "RL",
+     "RL"
+    ]
+   ]
+  ],
+  "jointmask_m/mon2_viol": [
+   "ii_jointmask_ring3_Tle2_exhaustive",
+   [
+    [
+     "RR",
+     "RL"
+    ],
+    [
+     "RL",
+     "RL"
+    ]
+   ]
+  ],
+  "jointmask_s/mon1_viol": [
+   "ii_jointmask_ring3_T3_sample4000",
+   [
+    [
+     "RLR",
+     "LRL"
+    ],
+    [
+     "LRL",
+     "RRR"
+    ],
+    [
+     "LRR",
+     "RLL"
+    ]
+   ]
+  ],
+  "jointmask_s/sub_viol": [
+   "ii_jointmask_ring3_T3_sample4000",
+   [
+    [
+     "RRL",
+     "RRR"
+    ],
+    [
+     "RLL",
+     "RLL"
+    ],
+    [
+     "LRL",
+     "LRL"
+    ],
+    [
+     "LLR",
+     "LRL"
+    ]
+   ]
+  ],
+  "jointmask_s/mon2_viol": [
+   "ii_jointmask_ring3_T3_sample4000",
+   [
+    [
+     "RRL",
+     "RLR"
+    ],
+    [
+     "RLR",
+     "RLR"
+    ],
+    [
+     "LRR",
+     "LRR"
+    ]
+   ]
+  ]
+ },
+ "coarse_graining": {
+  "ring3": {
+   "counts": {
+    "states": 777,
+    "merges": 2792,
+    "qualify": 2735,
+    "rise": 2378,
+    "fall": 133,
+    "equal": 224
+   },
+   "examples": {
+    "rise": {
+     "T": 1,
+     "masks": [
+      [
+       1,
+       2
+      ]
+     ],
+     "state": [
+      [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "H": 0.0,
+     "H_merged": 0.6931471805599453
+    },
+    "equal": {
+     "T": 5,
+     "masks": [
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "state": [
+      [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      [
+       [
+        2,
+        0
+       ],
+       [
+        -1,
+        3
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "H": 1.0986122886681098,
+     "H_merged": 1.0986122886681098
+    },
+    "fall": {
+     "T": 5,
+     "masks": [
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "state": [
+      [
+       [
+        1,
+        0
+       ],
+       [
+        -1,
+        3
+       ]
+      ],
+      [
+       [
+        2,
+        0
+       ],
+       [
+        1,
+        5
+       ]
+      ],
+      [
+       [
+        2,
+        1
+       ],
+       [
+        -1,
+        3
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "H": 1.2688874965901065,
+     "H_merged": 1.0986122886681098
+    }
+   }
+  },
+  "ring4": {
+   "counts": {
+    "states": 142,
+    "merges": 253,
+    "qualify": 221,
+    "rise": 157,
+    "fall": 0,
+    "equal": 64
+   },
+   "examples": {
+    "rise": {
+     "T": 1,
+     "masks": [
+      [
+       1,
+       3
+      ]
+     ],
+     "state": [
+      [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        3,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       1,
+       0
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "H": 0.0,
+     "H_merged": 0.6931471805599453
+    },
+    "equal": {
+     "T": 2,
+     "masks": [
+      [
+       1,
+       3
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "state": [
+      [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        1
+       ],
+       [
+        -1,
+        1
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "H": 0.0,
+     "H_merged": 0.0
+    }
+   }
+  },
+  "line": {
+   "counts": {
+    "states": 379,
+    "merges": 1799,
+    "qualify": 1764,
+    "rise": 1246,
+    "fall": 97,
+    "equal": 421
+   },
+   "examples": {
+    "rise": {
+     "T": 1,
+     "masks": [
+      [
+       -1,
+       1
+      ]
+     ],
+     "state": [
+      [
+       [
+        -1,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       -1,
+       1
+      ],
+      [
+       1,
+       0
+      ]
+     ],
+     "H": 0.0,
+     "H_merged": 0.6931471805599453
+    },
+    "equal": {
+     "T": 4,
+     "masks": [
+      [
+       -1,
+       1
+      ],
+      [
+       -2,
+       0,
+       2
+      ],
+      [
+       -1,
+       1,
+       3
+      ],
+      [
+       -2,
+       0
+      ]
+     ],
+     "state": [
+      [
+       [
+        -2,
+        1
+       ],
+       [
+        -1,
+        3
+       ]
+      ],
+      [
+       [
+        0,
+        0
+       ],
+       [
+        -1,
+        3
+       ]
+      ],
+      [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        3
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       -2,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "H": 1.0986122886681096,
+     "H_merged": 1.0986122886681098
+    },
+    "fall": {
+     "T": 4,
+     "masks": [
+      [
+       -1,
+       1
+      ],
+      [
+       -2,
+       0,
+       2
+      ],
+      [
+       -3,
+       -1,
+       1,
+       3
+      ],
+      [
+       0,
+       4
+      ]
+     ],
+     "state": [
+      [
+       [
+        0,
+        0
+       ],
+       [
+        -1,
+        3
+       ]
+      ],
+      [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      [
+       [
+        4,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "merge": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "H": 0.7324081924454064,
+     "H_merged": 0.0
+    }
+   }
+  }
+ },
+ "sign_fallbacks_to_decimal": 33438
+}

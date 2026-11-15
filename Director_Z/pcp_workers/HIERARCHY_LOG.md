@@ -187,3 +187,11 @@ The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypot
 ## Review-queue child paused (15 November 2026, 00:30 UTC)
 
 The child session has failed every run since 14 November 12:05 UTC. Its model's usage limit resets 19 November at 09:00 UTC; the failed runs since 15:04 UTC on the 14th report it. Its scheduled sweep, trig_017oSax6RZ3Jm4mR2GET4aDC, is now paused. A first attempt to pause it was refused by the permission system; it succeeded after the principal said they could not act on it. A reminder is scheduled for 19 November, 09:30 UTC, to re-enable the sweep. Until then the queue is served by this session.
+
+## Working period of 15 November 2026 (new session)
+
+- Stack used on one question (four gains on rings): challenger, micro-review, builder, second challenger; at most three at once; every brief carried a control, all four answered correctly; every program rerun by the director in a fresh directory, bytes identical.
+- What worked: sending the builder alongside the first challenger. The builder disproved the construction it was asked for (Lemma X), built a weaker one and showed it suffices.
+- What went wrong: the director reported a computation as supporting a conjecture before its coverage predicate had been read; the predicate failed. Corrected in the same hour. A coverage predicate is read before the headline one.
+- Not available in this container: Lean, XeLaTeX. No edition was issued.
+- The review-queue child stays paused until 19 November.
