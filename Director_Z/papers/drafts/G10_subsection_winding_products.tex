@@ -42,7 +42,7 @@ In the situation of Theorem~\ref{thm:tp} let $u(X)=\sum_ju_jX^j$ and $v(X)=\sum_
 \begin{proof}
 (i) With rows $i<i'$ and columns $c<c'$ the minor is $\mathsf{w}_{c-2i}\mathsf{w}_{c'-2i'}-\mathsf{w}_{c'-2i}\mathsf{w}_{c-2i'}$. For $i=0$, $i'=1$, $c=2j+2$, $c'=2j'+1$ with $j'\ge j+1$ this is $v_{j+1}u_{j'-1}-u_{j'}v_j\ge0$, the first inequality of Lemma~\ref{lem:windingrails}; $c=2j+3$, $c'=2j'$ with $j'\ge j+2$ gives $u_{j+1}v_{j'-1}-v_{j'}u_j\ge0$, the second, and two columns of one parity give Lemma~\ref{lem:winding}(i). Minors of order $2$ in rows further apart are further inequalities of the same kind.
 (ii) The columns of odd index form the array $(u_{j-i})$, which is therefore totally non-negative: $(u_j)$ is a P\'olya frequency sequence with finitely many non-zero terms, and by the theorem of Aissen, Schoenberg, Whitney and Edrei \cite{aswe} its generating polynomial has only real non-positive roots; likewise $v$. For three levels the discriminant gives $n_1^{2}\ge4n_0n_2$; then $n_1\ge2$, and $n_1^{2}/4\le n_1(n_1-1)/2$.
-(iii) The array $(\mathsf{w}_{c-2i})$ is, after transposition and with the coefficients of $W$ read in the reverse order, the infinite Hurwitz matrix of $W$; reversing the coefficients replaces the roots by their inverses and keeps the open right half-plane. A real polynomial whose infinite Hurwitz matrix is totally non-negative has no root in the open right half-plane \cite{holtztyaglov}; the equivalent form is the Hermite--Biehler theorem in the version for roots on the closed left half-plane, given in the same place.
+(iii) The array $(\mathsf{w}_{c-2i})$ is, after transposition and with the coefficients of $W$ read in the reverse order, the infinite Hurwitz matrix of $W$; reversing the coefficients replaces the roots by their inverses and keeps the open right half-plane. A real polynomial whose infinite Hurwitz matrix is totally non-negative has no root in the open right half-plane \cite[Theorem~3.44]{holtztyaglov}; the equivalent form is the Hermite--Biehler theorem in the version for roots on the closed left half-plane, given in the same place.
 \end{proof}
 
 Part (iii) is quoted, not reproved here, and is \textbf{COMPUTED}: see the remark at the end. The theorem itself is \textbf{PROVED}. On the rings of $1$ and $2$ sites, which the notation excludes, two of the sinks coincide and the proof does not apply as written; there $W=Y(1+Y)(1+Y^{2})^{T-1}$ and the conclusions hold.
@@ -136,5 +136,9 @@ So the condition on \cite{dgone} remains for $M=6$ and $M=7$ only.
 % \bibitem{aswe} M. Aissen, I. J. Schoenberg and A. M. Whitney, On the generating functions of totally positive sequences I,
 %   J. Analyse Math. 2 (1952) 93--103; A. Edrei, On the generating functions of totally positive sequences II, ibid. 104--109.
 % \bibitem{holtztyaglov} O. Holtz and M. Tyaglov, Structured matrices, continued fractions, and root localization of polynomials,
-%   SIAM Review 54 (2012) 421--509.  (The statement used is to be checked against the source before issue.)
+%   SIAM Review 54 (2012) 421--509, Theorem 3.44 (arXiv:0912.4703).  Checked on 15 November 2026 only through the
+%   account of it in M. Adm, J. Garloff and M. Tyaglov, Total nonnegativity of finite Hurwitz matrices and root location
+%   of polynomials (arXiv:1711.04651): the infinite Hurwitz matrix of a real polynomial is totally non-negative exactly
+%   when the polynomial is quasi-stable (roots in the closed left half-plane).  The theorem's own text and its
+%   normalisation have not been read by the author.
 % \bibitem{comptp} Director_Z/computation/Product_Events/four_gains/winding/total_positivity/
