@@ -1,0 +1,35 @@
+{
+  "known_imbalance": [
+    {
+      "max_relative_gain_difference": "1/4",
+      "preparations": 2289,
+      "required_occupied": 206,
+      "maximum_doubles": 0
+    },
+    {
+      "max_relative_gain_difference": "1/2",
+      "preparations": 2794,
+      "required_occupied": 254,
+      "maximum_doubles": 0
+    },
+    {
+      "max_relative_gain_difference": "4/5",
+      "preparations": 5468,
+      "required_occupied": 511,
+      "maximum_doubles": 0
+    }
+  ],
+  "reference": {
+    "detected_events": 512,
+    "min_labels_A": 219,
+    "max_labels_A": 293,
+    "bad_calibration_acceptance_below": ".008133"
+  },
+  "joint_design": {
+    "science_preparations": 2494,
+    "min_occupied": 223,
+    "max_doubles": 0,
+    "field_rejection_below": ".04",
+    "balanced_clean_power_above": ".9644"
+  }
+}
