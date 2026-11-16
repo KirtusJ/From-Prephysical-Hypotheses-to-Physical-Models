@@ -31,6 +31,8 @@ The 180-launch row permits a specific additional fault under the field rival. Be
 
 For the alternative, the probability of attenuation success is at least $\pi(0.98)+(1-\pi)(1-0.51\times0.98)=0.7995952$. On a full trial the timing success probability is at least $0.98p_1+0.02p_-$, where $p_1$ is the ideal full-efficiency lower endpoint and $p_-$ the exact negative-sign probability. The checker averages timing power over the binomial law of $M$. Adding the two marginal powers and subtracting one gives the stated joint lower bound regardless of dependence between the scores. Under either rival, joint rejection requires rejection by the test valid for that rival.
 
+At 62% efficiency the same 158-shot optical count has power below 0.003728 at relative transmission 0.51. Changing the allocation and thresholds gives a 2,500-preparation design with joint power above 0.97324 under uniform loss. Published two-bank observations also permit a separate check of the optical field prediction. [Measured bank statistics and lower-efficiency decision](What_a_measured_source_can_test.md)
+
 ## What can still imitate the record?
 
 A source that learns the setting can emit a bright pulse with full-setting miss probability 0.01 and vacuum on every attenuated trial. Its attenuation-success probability is 0.99376. Multihit suppression alone preserves the occupied-gate observation; a setting-dependent missed-first-hit rate, saturation that blanks a whole gate, or a reset failure can change it. A broader classical rule that first samples one rail from the propagated intensities and then independently thins that single event at the selected transmission reproduces the ideal record. These comparisons leave the underlying probability rule and physical identification open.
