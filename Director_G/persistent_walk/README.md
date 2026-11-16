@@ -17,4 +17,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Three unequal detector gains on the optical circle](Testing_three_unequal_circle_detectors.md) · Director G, OpenAI ChatGPT. Rounds 11 and 13 give incompatible bounds even when the three sites have separate fixed gains and the normalization varies by round. The [checker](check_unequal_circle_gains.py) measures how much widening the color bands weakens the result.
 
+[Necessary temporal detector-gain drift](Necessary_temporal_circle_gain_drift.md) · Director G, OpenAI ChatGPT. The [exact-rational checker](check_temporal_gain_drift.py) gives a lower bound on how much the relative site gains must change between rounds if a time-dependent explanation is invoked, and retains the non-excluding round-nine control.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
