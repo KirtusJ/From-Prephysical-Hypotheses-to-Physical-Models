@@ -31,6 +31,25 @@ Average the frequency bounds before dividing by the actual acceptance probabilit
 
 The resulting long-design endpoints are $p_0\le0.557844796873$ and $p_1\ge0.762530256739$. At 56 independent binary scores the most powerful level-5% randomized test between those two rounded endpoints has power below 0.949048018717. The likelihood ratio increases with the count, so this follows by spending the remaining test size on the boundary count. The 57-launch minimum applies to that Bernoulli comparison. The greatest attainable stochastic success for the actual model class, other choices of timing law and the effect of measured apparatus imperfections remain open. A coherent classical-wave realization with the same amplitudes and square-law readout shares the ideal prediction.
 
+## Loss accumulated during the walk
+
+Suppose an otherwise ideal walker is independently lost with probability $r$ on each physical tick. Loss is permanent and gives a miss. If $w_j$ is the signed integer timing weight including proposal multiplicity, $D=\sum_j|w_j|$, and $I_j$ the ideal launch-port intensity, the signed success probability is
+
+$$
+p(r)=\frac{\sum_j\max(-w_j,0)+\sum_j w_j I_j(1-r)^{2j}}{D}.
+$$
+
+The negative-setting miss contribution matters because a lost click can turn a negative-sign trial into a success. The checker proves that $p(r)$ decreases over $0\le r\le1.2\times10^{-8}$ by bounding its derivative across the entire interval. It checks all 1,999,999 lags, rounding the survival recurrence down on the same 128-bit grid and allowing two grid units of error per update.
+
+| Prespecified decision | Per-tick loss with ideal power above 95% | Per-tick loss with ideal power below 95% |
+|---|---:|---:|
+| 57 launches, randomized at 38 | $1.876\times10^{-10}$ | $1.877\times10^{-10}$ |
+| 61 launches, reject at 41 | $1.183\times10^{-8}$ | $1.184\times10^{-8}$ |
+
+Four additional preparations give the second rule more than 63 times the per-tick loss tolerance of the first in this model. The bounds concern alternative power under uniform loss. An apparatus needs a measured loss rate for comparison. The stochastic guarantee counts every loss state toward the 55-state budget.
+
+Run `python -I -B Director_G/persistent_walk/check_single_port_loss.py` to reproduce the brackets. [Loss calculation](check_single_port_loss.py) · [Recorded bounds](single_port_loss_output.json)
+
 ## Reproduction
 
 Run the following from the repository root and compare standard output to the recorded JSON. The checker exercises a negative scoring sign, rejection exactly at the threshold, fixed detectors, sign disclosure, both timing distributions and all four decisions. Calculations use the Python standard library. Physical identification and Stage 1 Initial External Grounding remain open.
