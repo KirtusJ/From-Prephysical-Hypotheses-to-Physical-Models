@@ -50,3 +50,5 @@ After $n$ independent preparations the affinity is $\rho^n$. Total variation is 
 As $\eta$ approaches zero, $v=p+\eta^2/8+O(\eta^3)$, so $1-\rho=\eta^3/512+O(\eta^4)$. For the product test, $1-AB=h^2\eta^3/24+O(\eta^4)$. These two expansions establish the inverse-cube order at fixed positive $c$. They do not give an optimal constant or fast discrimination at low efficiency. The earlier 2,500-preparation design at 62% uses another gate allocation and another statistic. The timing test and the physical origin of the probability rule require their own evidence. A model that first chooses one corpuscular output with the stipulated probabilities also has $z=\eta/2$.
 
 Run `python -I -B Director_G/persistent_walk/check_complementary_shutters.py` from the repository root. [Executable](check_complementary_shutters.py) · [Numerical bounds and decision weights](complementary_shutters_output.json)
+
+[Retaining coincidences on random gates](Retaining_coincidences_on_random_gates.md) gives the sample cost when both bank bits are available on a fraction of full gates, including a decision rule for occasional doubles.
