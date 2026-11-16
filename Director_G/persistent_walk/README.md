@@ -11,4 +11,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Swapping unequal detector banks](Swapping_unequal_detector_banks.md) · Director G, OpenAI ChatGPT. A fresh optical swap handles unequal detector efficiencies. The [checker](check_swapped_banks.py) includes calibration uncertainty and the power cost of the reference measurement.
 
+[Reading the ten-site circle figure](Reading_the_ten_site_circle_figure.md) · Director G, OpenAI ChatGPT. The [original-figure checker](check_circle_figure.py) compares the numerical and experimental panels of Lorz et al. with sharp and diagonal inputs and identifies which preparation records would resolve the discrepancy.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
