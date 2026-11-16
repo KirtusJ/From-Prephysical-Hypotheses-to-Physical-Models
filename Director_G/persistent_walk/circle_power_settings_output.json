@@ -1,0 +1,132 @@
+{
+  "cells": 200,
+  "postlaunch_positive_margin": "1/4096",
+  "no_loss": {
+    "power_settings": 7,
+    "knots": 91,
+    "postlaunch_total_range": [
+      "459921907/800000000",
+      "1141171939/1152000000"
+    ]
+  },
+  "no_loss_lower_bound_pairs": 21,
+  "per_step_retention": [
+    "3/5",
+    "33/50"
+  ],
+  "with_loss": {
+    "power_settings": 4,
+    "knots": 91,
+    "postlaunch_total_range": [
+      "2309/4096",
+      "10669015689/10688000000"
+    ]
+  },
+  "loss_lower_bound_pairs": [
+    {
+      "rounds": [
+        3,
+        4
+      ],
+      "lower": "27/16",
+      "lower_sites": [
+        9,
+        8
+      ],
+      "upper": "16/33",
+      "upper_sites": [
+        5,
+        0
+      ]
+    },
+    {
+      "rounds": [
+        3,
+        5
+      ],
+      "lower": "27/13",
+      "lower_sites": [
+        9,
+        7
+      ],
+      "upper": "16/33",
+      "upper_sites": [
+        5,
+        9
+      ]
+    },
+    {
+      "rounds": [
+        3,
+        7
+      ],
+      "lower": "27/22",
+      "lower_sites": [
+        9,
+        3
+      ],
+      "upper": "16/27",
+      "upper_sites": [
+        5,
+        5
+      ]
+    },
+    {
+      "rounds": [
+        4,
+        5
+      ],
+      "lower": "66/13",
+      "lower_sites": [
+        0,
+        7
+      ],
+      "upper": "41/22",
+      "upper_sites": [
+        4,
+        9
+      ]
+    },
+    {
+      "rounds": [
+        4,
+        7
+      ],
+      "lower": "3",
+      "lower_sites": [
+        0,
+        3
+      ],
+      "upper": "41/31",
+      "upper_sites": [
+        4,
+        7
+      ]
+    },
+    {
+      "rounds": [
+        5,
+        7
+      ],
+      "lower": "33/52",
+      "lower_sites": [
+        9,
+        7
+      ],
+      "upper": "14/27",
+      "upper_sites": [
+        3,
+        5
+      ]
+    }
+  ],
+  "strong_loss_sufficient_open_limit": "534652/19857765",
+  "strong_loss_single_power_control": {
+    "power_settings": 1,
+    "knots": 91,
+    "postlaunch_total_range": [
+      "2309/4096",
+      "2009/2048"
+    ]
+  }
+}

@@ -42,4 +42,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [One mixed launch fits both optical-circle displays](One_launch_fits_both_optical_circle_displays.md) · OpenAI ChatGPT, research direction by Kirtus Justus. One fixed set of analyzers and an increasing curve fit all 200 display cells. The [checker](check_full_circle_display.py) also proves that seven rounds need distinct effective input scales for these same analyzers and launch.
 
+[How many power settings fit the optical circle?](How_many_power_settings_fit_the_optical_circle.md) · OpenAI ChatGPT, research direction by Kirtus Justus. For the specified mixed launch and analyzers, the [checker](check_circle_power_settings.py) gives an exact minimum of seven effective levels without loss and four initial levels if every step retains 60% to 66% of the intensity at the response input.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
