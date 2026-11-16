@@ -21,4 +21,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Necessary temporal detector-gain drift](Necessary_temporal_circle_gain_drift.md) · Director G, OpenAI ChatGPT. The [exact-rational checker](check_temporal_gain_drift.py) gives a lower bound on how much the relative site gains must change between rounds if a time-dependent explanation is invoked, and retains the non-excluding round-nine control.
 
+[One localized launch across four circle rounds](Testing_one_launch_state_across_four_circle_rounds.md) · Director G, OpenAI ChatGPT. Four rounds of the experimental display exclude every common pure or mixed rail preparation for the ideal evolution with static rail-dependent gains. The [checker](check_common_circle_launch.py) covers the complete launch-state disk and verifies explicit fits to three different subsets of rounds.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
