@@ -62,3 +62,5 @@ For the source, $\Pr(K<12000)\le e^{-500}$. The probability of an audited double
 A shared latch that suppresses the second bank on an audited gate destroys the field bound. For a bright field it can report $K$ near $n/2$ and $D=0$ even with substantial actual coincidences. A simultaneous two-path pulse with known timing and independently measured bank responses can check that failure mode. Applying either rule to the five-site walk still requires source, optical split, switching and readout measurements. Stage 1 Initial External Grounding and physical identification remain open.
 
 Run `python -I -B Director_G/persistent_walk/check_audited_banks.py` from the repository root. The [checker](check_audited_banks.py) uses the adjacent [occupancy arithmetic](check_complementary_shutters.py), checks the two-bank probability table independently and reproduces the [sample bounds and thresholds](audited_banks_output.json).
+
+[Changing the polarization analyzer](Changing_the_polarization_analyzer.md) replaces a positive rate-share floor on each field with independently selected, calibrated analyzer axes and records both banks on every gate.
