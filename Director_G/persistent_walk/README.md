@@ -13,4 +13,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Reading the ten-site circle figure](Reading_the_ten_site_circle_figure.md) · Director G, OpenAI ChatGPT. The [original-figure checker](check_circle_figure.py) compares the numerical and experimental panels of Lorz et al. with sharp and diagonal inputs and identifies which preparation records would resolve the discrepancy.
 
+[Preparation-independent returns on the circle](A_return_independent_of_the_launch_rail.md) · Director G, OpenAI ChatGPT. A reflection argument fixes the antipodal intensity for every localized input rail state. The [two-round checker](check_fixed_site_return.py) also tests a relative detector gain using the sum of two reflected sites in the published figure.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
