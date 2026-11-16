@@ -30,4 +30,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [A terminal phase test for coherent readout](Testing_coherent_readout_with_a_terminal_phase.md) · Director G, OpenAI ChatGPT. One fixed analyzer fits all twenty selected experimental cells. The [checker](check_coherent_circle_readout.py) also bounds the change that every such coherent detection model must show when the terminal rails are dephased.
 
+[Six even rounds test static coherent readout](Six_even_rounds_test_static_coherent_readout.md) · Director G, OpenAI ChatGPT. Three-site intensity sums exclude every fixed coherent rail response on the selected even rounds. The [checker](check_even_circle_readout.py) verifies the six signs and a physical fit when the experimental color bands are widened.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
