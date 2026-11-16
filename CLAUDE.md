@@ -65,15 +65,11 @@ The following practices come from asynchronous checks of the research program.
 5. A task is given a fresh directory and never reuses one; a call file is submitted once (`pcp_submit.py`).
 6. A brief to a lower-tier agent carries a control with a known answer, answered first.
 
-## The principal's computer
+## Local research workers
 
-This cloud session cannot attach folders on the principal's computer, joebidenator: none is offered to cloud sessions. D:\ is used through the local Claude Code session "Local folder read check for Director Z" (session_01CeUdCuzifeXbhLZJXGQMiT). The path:
+Use the local worker route Kirtus Justus authorized for the specific session and trusted device. Retrieve its address and workspace from the existing private handoff. Keep reads and writes within the scope of that authorization. Read back the completed result through the same authorized route. A new session or destination needs its own authorization.
 
-1. Send it the job with `send_message`, read-only unless writing is the job.
-2. It works on the computer.
-3. Read its final reply with `list_events`. Its own messages back to this session fail ("session not found").
-
-Workspace: `D:\PCP-Replays\Director-Z`. The principal allowed this route in person on 15 November 2026, and that limits this session to trusted devices. Do not ask to attach a computer folder: after such a request this session can no longer message the principal's other sessions.
+File the scientific input, reproducible check and result with the research. Keep machine addresses, session identifiers, delivery receipts and private acknowledgments on the approved private route. The [research first-contact issue](https://github.com/KirtusJ/From-Prephysical-Hypotheses-to-Physical-Models/issues/270) accepts public scientific introductions. The [director communication issue](https://github.com/KirtusJ/pcp-os/issues/140) covers delivery arrangements within each participant's authorized audience. Product implementation and release work belong in the [PCP OS repository](https://github.com/KirtusJ/pcp-os).
 
 ## Lessons paid for
 

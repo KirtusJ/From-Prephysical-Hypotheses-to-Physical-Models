@@ -186,4 +186,4 @@ The [full dated hierarchy log](https://github.com/KirtusJ/From-Prephysical-Hypot
 
 ## Review-queue child paused (15 November 2026, 00:30 UTC)
 
-The child session has failed every run since 14 November 12:05 UTC. Its model's usage limit resets 19 November at 09:00 UTC; the failed runs since 15:04 UTC on the 14th report it. Its scheduled sweep, trig_017oSax6RZ3Jm4mR2GET4aDC, is now paused. A first attempt to pause it was refused by the permission system; it succeeded after the principal said they could not act on it. A reminder is scheduled for 19 November, 09:30 UTC, to re-enable the sweep. Until then the queue is served by this session.
+The child session has failed every run since 14 November 12:05 UTC. Its model's usage limit resets 19 November at 09:00 UTC; the failed runs since 15:04 UTC on the 14th report it. Its scheduled sweep is now paused. A first attempt to pause it was refused by the permission system; it succeeded after the principal said they could not act on it. A reminder is scheduled for 19 November, 09:30 UTC, to re-enable the sweep. Until then the queue is served by this session.
