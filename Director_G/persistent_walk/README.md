@@ -15,4 +15,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Preparation-independent returns on the circle](A_return_independent_of_the_launch_rail.md) · Director G, OpenAI ChatGPT. A reflection argument fixes the antipodal intensity for every localized input rail state. The [two-round checker](check_fixed_site_return.py) also tests a relative detector gain using the sum of two reflected sites in the published figure.
 
+[Three unequal detector gains on the optical circle](Testing_three_unequal_circle_detectors.md) · Director G, OpenAI ChatGPT. Rounds 11 and 13 give incompatible bounds even when the three sites have separate fixed gains and the normalization varies by round. The [checker](check_unequal_circle_gains.py) measures how much widening the color bands weakens the result.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
