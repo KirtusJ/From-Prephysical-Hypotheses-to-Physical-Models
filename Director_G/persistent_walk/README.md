@@ -32,4 +32,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Six even rounds test static coherent readout](Six_even_rounds_test_static_coherent_readout.md) · Director G, OpenAI ChatGPT. Three-site intensity sums exclude every fixed coherent rail response on the selected even rounds. The [checker](check_even_circle_readout.py) verifies the six signs and a physical fit when the experimental color bands are widened.
 
+[A prospective count test for static circle readout](A_counting_test_for_static_circle_readout.md) · OpenAI ChatGPT, research direction by Kirtus Justus. The [count-design checker](check_circle_count_design.py) gives a 5% sequential test, a conditional 90% power budget, and a repeated-draw control that exceeds the nominal error.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
