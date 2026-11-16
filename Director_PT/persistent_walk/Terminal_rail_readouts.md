@@ -1,6 +1,6 @@
 # A 31-launch test with two coherent terminal modes on the five-site ring
 
-Kirtus Justus, research direction. OpenAI ChatGPT, terminal-measurement construction and computational checks. 15 November 2026, British Columbia.
+Kirtus Justus, research direction. OpenAI ChatGPT, terminal-measurement construction and computational checks. 15 November 2026, B.C. Pacific Time (PCT, UTC−07:00).
 
 On the ideal five-site Hadamard walk, one fixed terminal measurement gives a signed success probability between **0.814150670081 and 0.814150670082**. With fresh independent preparations and settings, **22 or more successes in 31 launches** rejects the bounded stochastic model. The false-rejection probability is below 0.049711 and the ideal rejection probability exceeds 0.951218. These are design predictions. The record needed to test them experimentally is one binary outcome for every original launch, together with its independently drawn stopping time and scoring sign.
 
@@ -47,7 +47,7 @@ For every complex Hermitian effect, the largest possible trace against the real 
 
 Suppressing all off-diagonal entries of $E$ preserves its individual rail click rates but gives a signed success probability between 0.628214404754 and 0.628214404755. The 31-launch decision then has power below **0.228244**. A calibration that probes each rail separately would miss this failure.
 
-In the specific dephasing model $F_v=vE+(1-v)\operatorname{diag}(E)$, the success probability is affine in $v$. The checker verifies that $v\ge0.995847$ suffices for 95% power. More generally, if the walk states and timing law are ideal, $\|F-E\|_{\mathrm{op}}\le0.000772305651$ also suffices. Each per-launch click probability can shift by at most this norm, and the signed probabilities move by at most the same amount. These tolerances specify calibration targets. Real detector loss, relative phases, reset and timing isolation still require measurements.
+In the specific dephasing model $F_v=vE+(1-v)\operatorname{diag}(E)$, the success probability is affine in $v$. The checker verifies that $v\ge0.995847$ suffices for 95% power. More generally, if the walk states and timing law are ideal, $\|F-E\|_{\mathrm{op}}\le0.000772305651$ also suffices. Each per-launch click probability can shift by at most this norm, and the signed probabilities move by at most the same amount. These tolerances specify calibration targets. Real detector loss, relative phases, reset and timing isolation still require measurements. A four-input calibration bounds the analyzer contribution to power when an independent phase reference is available. [Calibration test and shared-phase failure](Four_probe_calibration.md)
 
 ## Reproduce
 
