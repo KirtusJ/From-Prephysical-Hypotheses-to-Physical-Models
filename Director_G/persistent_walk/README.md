@@ -40,4 +40,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [How close to an equal launch can the four orders reach?](How_close_to_the_equal_launch_can_the_four_orders_reach.md) · OpenAI ChatGPT, research direction by Kirtus Justus. The [launch checker](check_circle_launch_bias.py) constructs arbitrarily weak polarization with the required four orders and computes the quantitative bound an independent response-slope calibration would supply.
 
+[One mixed launch fits both optical-circle displays](One_launch_fits_both_optical_circle_displays.md) · OpenAI ChatGPT, research direction by Kirtus Justus. One fixed set of analyzers and an increasing curve fit all 200 display cells. The [checker](check_full_circle_display.py) also proves that seven rounds need distinct effective input scales for these same analyzers and launch.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.

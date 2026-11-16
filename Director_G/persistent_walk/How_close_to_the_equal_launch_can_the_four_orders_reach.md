@@ -28,6 +28,8 @@ All four differences are positive on the stated open interval. At $z=1/134$ roun
 
 Both latent intensities in each pair are positive because the launch and effects are positive definite and each selected transfer is nonzero. Choose a displayed value in each of the two corresponding bands. Linear interpolation from the origin through the ordered pair of input-output points gives a common increasing response on the sampled interval for that round. The slopes may grow without bound as $z$ decreases. This construction fixes eight displayed values. It leaves the other cells, joint normalization of a full predicted panel, and feasibility with one response function shared across rounds unresolved.
 
+A [full-panel construction](One_launch_fits_both_optical_circle_displays.md) uses a different mixed launch of radius $3/4$ and fits both renderings. The near-zero-radius result above remains specific to the four pairs.
+
 ## What an independent response calibration would buy
 
 For general $\rho=(I+\mathbf r\cdot\boldsymbol\sigma)/2$, use the Pauli order $(X,Y,Z)$ and $\|\mathbf r\|\le1$. Write $d_t=x_{t,\mathrm{brighter}}-x_{t,\mathrm{dimmer}}$ in the four directions above and $J=\sum_t w_t d_t$, with $w=(1545,1648,7444,1280)$. Give the brighter site sign $s_{tm}=+1$ and the dimmer site sign $-1$. Direct propagation of both input columns gives
