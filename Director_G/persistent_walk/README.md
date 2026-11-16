@@ -28,4 +28,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Three sites and four rounds](Three_sites_and_four_rounds_of_the_optical_circle.md) · Director G, OpenAI ChatGPT. Twelve experimental figure cells suffice to exclude one common launch with fixed rail gains. Removing any site or round admits an explicit fit. The [checker](check_three_circle_sites.py) verifies the exact certificate and the change from exclusion to feasibility at the next RGB tolerance.
 
+[A terminal phase test for coherent readout](Testing_coherent_readout_with_a_terminal_phase.md) · Director G, OpenAI ChatGPT. One fixed analyzer fits all twenty selected experimental cells. The [checker](check_coherent_circle_readout.py) also bounds the change that every such coherent detection model must show when the terminal rails are dephased.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
