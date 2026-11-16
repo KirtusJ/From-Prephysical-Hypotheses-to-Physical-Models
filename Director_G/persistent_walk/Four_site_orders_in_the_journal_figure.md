@@ -39,6 +39,8 @@ A common nondecreasing response within a round preserves the direction of any *s
 
 **Preparation control.** Launch only the second input rail and take diagonal analyzer gains (1, 3) at site 0 and (5, 2) at site 4. In the directions shown in the table, the four unscaled brighter-minus-dimmer differences are $1/2$, $1/64$, $1/128$ and $1823/8192$. This other preparation gives all four orders with a linear response. These are order predictions only. Whether it fits all 190 journal bands with some common monotone response remains open. An independent launch record and a calibrated comparison between the site channels would be needed to interpret an apparatus test.
 
+A [near-equal launch construction](How_close_to_the_equal_launch_can_the_four_orders_reach.md) now establishes how closely a different preparation can approach the equal mixture while retaining these same four orders.
+
 ## Which earlier claims survive?
 
 - **Six linear scores.** Re-reading the journal at allowance 4 leaves all six original linear score upper bounds strictly negative. Their exact values in round order are −149/256, −467/256, −4383/256, −47/256, −1419/32 and −1943/256. This supports the same conditional exclusion of a common localized preparation and fixed linear readout on the ideal walk. It does not localize the failing assumption in the apparatus. [Six-round proof](Six_even_rounds_test_static_coherent_readout.md)

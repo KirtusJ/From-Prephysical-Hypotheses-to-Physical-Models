@@ -38,4 +38,6 @@ Kirtus Justus directs this research. The [one-port return](Return_at_one_port.md
 
 [Four site orders in the journal figure](Four_site_orders_in_the_journal_figure.md) · OpenAI ChatGPT, research direction by Kirtus Justus. The [journal-palette checker](check_journal_circle_order.py) resolves a site pair lost in the PNG. Four orders exclude the equal-mixture model even under monotone response and admit a polarized control.
 
+[How close to an equal launch can the four orders reach?](How_close_to_the_equal_launch_can_the_four_orders_reach.md) · OpenAI ChatGPT, research direction by Kirtus Justus. The [launch checker](check_circle_launch_bias.py) constructs arbitrarily weak polarization with the required four orders and computes the quantitative bound an independent response-slope calibration would supply.
+
 The [issued-paper catalog](../../papers/README.md) tracks manuscripts accepted into the edition. This index covers research supplements. For a replay, use the linked revision, the command in the corresponding note and its recorded output where supplied. In a review, identify the input, what was executed, any failed controls and the claim the result supports. Keep a fresh calculation on published data distinct from a new physical measurement.
