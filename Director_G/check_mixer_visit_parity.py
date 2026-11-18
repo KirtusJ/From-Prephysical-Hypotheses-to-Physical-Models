@@ -1,5 +1,6 @@
 """Exact mixer-visit parity records in the controlled eight-well walk."""
 from fractions import Fraction as F
+from itertools import combinations
 
 ZERO = (F(0), F(0))
 
@@ -42,7 +43,42 @@ def check(word, expected_return):
     assert (total, cross) == (1, 0)
 
 
+def counterpart(word):
+    """Copy the unordered pair at each step, choosing its physical orientation."""
+    signs = [1] * 4
+    result = []
+    for pair in word.split():
+        left, right = map(int, pair)
+        if signs[left] == signs[right]:
+            result.append(pair)
+            signs[left] *= -1
+            signs[right] *= -1
+        else:
+            result.append(pair[::-1])
+    return " ".join(result)
+
+
+def check_relative_sign_states():
+    # A subset records the negative coordinates. Complementing it preserves
+    # all pair comparisons. Include the empty prefix and every one-gate prefix.
+    pairs = list(combinations(range(4), 2))
+    classes = {
+        tuple((i in negative) == (j in negative) for i, j in pairs)
+        for negative in [(), *pairs]
+    }
+    assert len(classes) == 4
+
+
 if __name__ == "__main__":
-    check("01 12 01", (F(3,8), F(1,4)))
-    check("01 02 21 10 12 10 20 21 02 20 01 21 10 20 01 02", (F(513,1024), F(45,128)))
-    print("Both physical schedules preserve parity sectors and normalize both flag arms.")
+    check_relative_sign_states()
+    cases = [
+        ("01 12 01", "01 21 01", F(3, 8), F(1, 4)),
+        ("01 02 21 10 12 10 20 21 02 20 01 21 10 20 01 02",
+         "01 20 12 10 12 01 02 21 02 20 01 12 10 20 10 02",
+         F(513, 1024), F(45, 128)),
+    ]
+    for original, partner, mean, contrast in cases:
+        assert counterpart(original) == partner and counterpart(partner) == original
+        check(original, (mean, contrast))
+        check(partner, (mean, -contrast))
+    print("Both equal-length pairs exchange the port-zero probabilities.")
