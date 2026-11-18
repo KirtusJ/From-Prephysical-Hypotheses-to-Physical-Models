@@ -1,0 +1,29 @@
+Builder notes, target G10 Thm 5.32(ii),(iii) -> one gain of order q.
+CLAIM A (PROVED). D_h line or ring, any q>=1. Suppose (Eq) with k=2 holds at every site x for the pairs
+(U,V)=(m,0) and (0,m), for every m in N^C (only these "one-sided" pairs are needed), and y->F_y(m) bounded below
+(automatic on rings). Then F_y(m) does not depend on y.
+Proof. Fix m; A^j_x=F_(x,R)(T^j m), B^j_x=F_(x,L)(T^j m), j in Z/q (T^q=1). (Eq) at (T^j m,0),(0,T^j m):
+ (1) A^j_{x+1}+B^j_{x-1}=2A^j_x,  (2) A^j_{x+1}+B^{j+1}_{x-1}=2B^j_x  [(0,V): U+TV=T V].
+For w with w^q=1 put a_x=sum_j w^{-j}A^j_x, b_x=sum_j w^{-j}B^j_x. Then sum_j w^{-j}B^{j+1}=w b, so
+ (1') a_{x+1}+b_{x-1}=2a_x, (2') a_{x+1}+w b_{x-1}=2b_x.
+w=1: a=b, a_{x+1}+a_{x-1}=2a_x, a affine in x; ring: periodic => constant; line: a=sum_j A^j bounded below => constant.
+ Line: each A^j_x = a - sum_{i!=j}A^i_x is then bounded above too; likewise B^j. So all a_x,b_x bounded (all w).
+w!=1: (2')-(1'): b_x=a_x+((w-1)/2) b_{x-1}; with v_x=(a_x,b_{x-1}): v_{x+1}=M v_x, M=[[2,-1],[1,(w-1)/2]],
+ det M=w (invertible), tr M=(3+w)/2. If M had eigenvalue l with |l|=1: other is w/l, l+w*conj(l)=tr, i.e.
+ 2cos(th-ph/2)e^{i ph/2}=(3+e^{i ph})/2 (l=e^{i th}, w=e^{i ph}); multiply by e^{-i ph/2}: RHS=2cos(ph/2)-i sin(ph/2)
+ must be real => sin(ph/2)=0 => w=1, contradiction. So |l1|>1>|l2| (|l1 l2|=1). Line: v bounded on Z => both
+ components 0. Ring: v_{x+N}=v_x, (M^N-1)v=0, l^N!=1 => v=0. So a=b=0 for all w!=1.
+Fourier inversion: A^j_x = (1/q) sum_w w^j a^{(w)}_x = (1/q) a^{(1)} = constant P, B^j_x = P too. QED.
+(For q=2, w=-1: M has char poly l^2-l-1, the paper's golden matrix up to change of variables.)
+CLAIM B (PROVED). Theorem 5.36 analogue of 5.32(ii): if Lemma prepq holds on D_h (line, rings N/gcd(N,2)>=6),
+(ppcons) with k=2, F_y(m) bounded below in y => all F_y one F, form of Prop solveq. (Claim A + Thm 5.36(i).)
+CLAIM C (PROVED). Analogue of (iii): (ppcons) with real k, F_y>=0, not all 0, and either site-independent or ring.
+Sum (1),(2) with factor k over j in Z/q: 2 sum_j A^j_{x+1}+2 sum_j B^j_{x-1} = k sum_j(A^j_x+B^j_x)
+(the shift j->j+1 is a bijection of Z/q). Drop x or sum over Z_N: 2 Sigma=k Sigma, Sigma>0 for some m => k=2.
+Then B. Positivity: q odd F=a|m|, a=F(e_1)>=0 >0. q even: F(n(e1+eh))=2an>=0, F(n e1)=an+cn^2>=0 all n => c>=0; a+c>0.
+Note: the k=2 step uses only one-sided pairs; on a ring where only one-sided pairs (U,0),(0,V) are realizable,
+Claim A still gives site-independence, but Prop solveq needs Step 4 (general U,V) and V=1 with general U.
+COMPUTED (gap.py, res1.txt): N=3,q=3, all position product events to length 7 (13674 configurations, 1235 unknowns):
+ solution space of mu(Ext S)=2mu(S), site-independent F_R,F_L, projected on |m|<=2, has dim 1 = nominal; |m| solves. PASS.
+Remaining cases (N=3 q=4,5,6; N=6 q=3..6) not reached: run stopped at budget (~10 min per case). PARTIAL.
+Thm 5.36(i) on gap rings: CONJECTURED (evidence only N=3,q=3, truncated). Not proved.

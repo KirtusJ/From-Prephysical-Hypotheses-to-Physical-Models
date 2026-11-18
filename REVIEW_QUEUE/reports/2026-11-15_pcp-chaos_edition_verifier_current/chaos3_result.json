@@ -1,0 +1,1009 @@
+{
+ "seed": 20261113,
+ "pristine_tree_digest": "98b3a84cb7cf3ed02aa840c8766fb81bdb495fc4e7481357b22543ce097dbc8a",
+ "mutants": [
+  {
+   "id": "M01",
+   "kind": "added file under a __pycache__ directory (old E06)",
+   "changed": [
+    "PAPERS/__pycache__/MUTANT_M01_stray_paper.tex"
+   ],
+   "original_sha256": {
+    "PAPERS/__pycache__/MUTANT_M01_stray_paper.tex": "(added file)"
+   },
+   "note": "",
+   "check": "verifier: unlisted file (new check)",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('unlisted', 'PAPERS/__pycache__/MUTANT_M01_stray_paper.tex')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('unlisted', 'PAPERS/__pycache__/MUTANT_M01_stray_paper.tex')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M02",
+   "kind": "README registry count 413 -> 431, manifest consistent (old E14)",
+   "changed": [
+    "MANIFEST.json",
+    "README.md"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "README.md": "cd8f91d3ea3a5e5f7ffcdc1307d1b01b12764d50540fd6d687a1c7e8ce11e4f3"
+   },
+   "note": "",
+   "check": "verifier: README count (new check)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('README registry count', '431')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('README registry count', '431')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M03",
+   "kind": "registry row G8-01-03 removed, manifest consistent (old E16)",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv": "f5f458c0eac42bb7a915324b59dbf1f7f3608e9b50b93d1e201e15fe5cce55ce"
+   },
+   "note": "",
+   "check": "verifier: PAPER_INDEX statements and README count (new checks)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('PAPER_INDEX statements differ from registry', 'G8')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('PAPER_INDEX statements differ from registry', 'G8')",
+    "('README registry count', '434')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M04",
+   "kind": "a size in the manifest +1 (old E19)",
+   "changed": [
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "size +1 of COMPUTATION/Baseline_Additions/Fourth_Session_Corrections_Results.json",
+   "check": "verifier: size (new check)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('size', 'COMPUTATION/Baseline_Additions/Fourth_Session_Corrections_Results.json')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('size', 'COMPUTATION/Baseline_Additions/Fourth_Session_Corrections_Results.json')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M05",
+   "kind": "register copy, a middle line altered, manifest consistent (old E20)",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "line seq 395 ts last digit +1",
+   "check": "verifier: register hash chain (new check)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')",
+    "('register chain', 'REVIEW_RECORDS/Director_Z/Session_4/register seq 395')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M06",
+   "kind": "PAPER_INDEX pages of G10 +1, manifest consistent (old E21)",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/PAPER_INDEX.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/PAPER_INDEX.csv": "22f676b30e86ac45afe84e224ab0ff8428ee7548e2516f139dd55c876418a91c"
+   },
+   "note": "G10 pages 63 -> 64",
+   "check": "verifier: PDF page count (new check; needs PyMuPDF, absent here)",
+   "prediction": "SURVIVED here (check skipped)",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('PAPER_INDEX pages differ from PDF (pdfinfo)', 'G10')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('PAPER_INDEX pages differ from PDF (pdfinfo)', 'G10')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M07",
+   "kind": "digit in a result file, manifest consistent (remaining kind 1, old E13)",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "byte 836: 6 -> 7",
+   "check": "rerun and byte comparison; not the verifier",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M08",
+   "kind": "registry status word, manifest consistent (remaining kind 2, old E15)",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv": "f5f458c0eac42bb7a915324b59dbf1f7f3608e9b50b93d1e201e15fe5cce55ce"
+   },
+   "note": "",
+   "check": "reviewer comparing row and paper",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M09",
+   "kind": "count in the addendum's summary sentence (remaining kind 3, old E17)",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z24.md"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/ADDENDUM_EDITION_Z24.md": "8dee8e8715681938f7c9516781ea46f3e6ceb7a5e607cb5dd47521d9c91981f4"
+   },
+   "note": "",
+   "check": "summary review",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M10",
+   "kind": "predecessor digest in the manifest (remaining kind 4, old E18)",
+   "changed": [
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "hex digit 36: f -> 0",
+   "check": "comparison with the predecessor manifest in git",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('predecessor digest matches no earlier MANIFEST.json', 'e6077ae450cce1e198ddf48b9090c227c7cb0e03ff04dcfda5d1a007313029c5')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('predecessor digest matches no earlier MANIFEST.json', 'e6077ae450cce1e198ddf48b9090c227c7cb0e03ff04dcfda5d1a007313029c"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M11",
+   "kind": "verifier disabled, with README count wrong, manifest not updated (remaining kind 5, old E22)",
+   "changed": [
+    "README.md",
+    "verify_baseline.py"
+   ],
+   "original_sha256": {
+    "README.md": "cd8f91d3ea3a5e5f7ffcdc1307d1b01b12764d50540fd6d687a1c7e8ce11e4f3",
+    "verify_baseline.py": "8532cb66ce83a711027400df17c6c5bfa6d5e209c84fc050235f5700d25f21b6"
+   },
+   "note": "",
+   "check": "a trusted copy of the verifier run from outside",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M12",
+   "kind": "last line of the register copy altered, manifest consistent (remaining kind 6, old E23)",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "",
+   "check": "comparison with .pcp/register.jsonl",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M13",
+   "kind": "program: walk loop of verify_periodic.py stops at the first class found (remaining kind 7; old P5 site no longer exists)",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_periodic.py",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_periodic.py": "5f96aadeffa66f0efb3c83258605b6dd7c252ca14ce5a6897a88a78fc8c8bfd0",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "source digest tied to the result; not the verifier",
+   "prediction": "SURVIVED",
+   "made_false": "yes (docstring says 400)",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M14",
+   "kind": "program: predicate == -> <= in verify_periodic.py (remaining kind 8, old P6)",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_periodic.py",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_periodic.py": "5f96aadeffa66f0efb3c83258605b6dd7c252ca14ce5a6897a88a78fc8c8bfd0",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "source digest tied to the result; not the verifier",
+   "prediction": "SURVIVED",
+   "made_false": "yes (predicate weaker than stated)",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M15",
+   "kind": "program: loop one short in verify_return_weight.py (remaining kind 9; old P3's program is not in the edition under its name, old P7 used)",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_return_weight.py",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Vertex_Law/verify_return_weight.py": "3afe842669b8a960c30dbc6a2e606b28b951db843fde7dd96da88362284d0a99",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "rerun and byte comparison",
+   "prediction": "SURVIVED the verifier",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M16",
+   "kind": "Lean: hypothesis deleted from a theorem in RootsSum.lean under the same name (remaining kind 10, as old L1/L3)",
+   "changed": [
+    "COMPUTATION/Lean/Mathlib/RootsSum.lean",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Lean/Mathlib/RootsSum.lean": "bbd5bdf665ddcb98d1c73fd8633ec3fff03370479c8b412e0fd4d25aa7b2a151",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "Lean build; not the verifier",
+   "prediction": "SURVIVED the verifier",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M17",
+   "kind": "register copy truncated: last 3 lines dropped, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "",
+   "check": "comparison with .pcp/register.jsonl",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M18",
+   "kind": "register copy: first line dropped, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "",
+   "check": "a genesis/sequence test",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')",
+    "('register genesis or sequence', 'REVIEW_RECORDS/Director_Z/Session_4/register')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M19",
+   "kind": "register copy: a middle line altered and the chain recomputed after it, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "line seq 279 altered, later prev fields recomputed",
+   "check": "comparison with .pcp/register.jsonl",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M20",
+   "kind": "register copy converted to CRLF, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "",
+   "check": "verifier: hash chain",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')",
+    "('register chain', 'REVIEW_RECORDS/Director_Z/Session_4/register seq 0')",
+    "('register chain', 'REVIEW_RECORDS/Director_Z/Session_4/register seq 1')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M21",
+   "kind": "THEOREM_REGISTRY.csv converted to CRLF, manifest consistent",
+   "changed": [],
+   "original_sha256": {},
+   "note": "",
+   "check": "none needed",
+   "prediction": "EQUIVALENT",
+   "made_false": "no",
+   "exit": 0,
+   "outcome": "EQUIVALENT",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M22",
+   "kind": "result file truncated to half (no longer JSON), manifest consistent",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "a parse of every listed .json",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('not JSON', 'COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('not JSON', 'COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M23",
+   "kind": "result file renamed, manifest key renamed with it",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results_MUTANT_M23.json",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results_MUTANT_M23.json": "(added file)",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "comparison of the file list with the predecessor and the change list",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M24",
+   "kind": "file removed together with its manifest entry",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/pcp_workers/chaos/2026-11-13/FINDINGS.md"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/pcp_workers/chaos/2026-11-13/FINDINGS.md": "1b77e6605f6638cf5d6576031c74923fa2c0a7b8136ccfea1ee960b5299d1373"
+   },
+   "note": "",
+   "check": "comparison of the file list with the predecessor and the change list",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M25",
+   "kind": "file added together with a manifest entry",
+   "changed": [
+    "COMPUTATION/MUTANT_M25_stray_result.json",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/MUTANT_M25_stray_result.json": "(added file)",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "comparison of the file list with the predecessor and the change list",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M26",
+   "kind": "PAPER_INDEX: kind of G10 set to 'planned' (switches off its statement and page tests)",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/PAPER_INDEX.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/PAPER_INDEX.csv": "22f676b30e86ac45afe84e224ab0ff8428ee7548e2516f139dd55c876418a91c"
+   },
+   "note": "",
+   "check": "a test that planned papers have no registry rows",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('planned paper has registry rows', 'G10')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('planned paper has registry rows', 'G10')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M27",
+   "kind": "registry row removed and PAPER_INDEX and README counts lowered to agree",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/PAPER_INDEX.csv",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv",
+    "README.md"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/PAPER_INDEX.csv": "22f676b30e86ac45afe84e224ab0ff8428ee7548e2516f139dd55c876418a91c",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv": "f5f458c0eac42bb7a915324b59dbf1f7f3608e9b50b93d1e201e15fe5cce55ce",
+    "README.md": "cd8f91d3ea3a5e5f7ffcdc1307d1b01b12764d50540fd6d687a1c7e8ce11e4f3"
+   },
+   "note": "",
+   "check": "reviewer comparing registry with the paper",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M28",
+   "kind": "README count wrong and the sentence reworded so the pattern does not match",
+   "changed": [
+    "MANIFEST.json",
+    "README.md"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "README.md": "cd8f91d3ea3a5e5f7ffcdc1307d1b01b12764d50540fd6d687a1c7e8ce11e4f3"
+   },
+   "note": "",
+   "check": "a test that the pattern matches at least once",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('README registry count sentence not found', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('README registry count sentence not found', '')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M29",
+   "kind": "crosswalk baseline digest, one hex digit, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/COMPONENT_CROSSWALK.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/COMPONENT_CROSSWALK.csv": "f235a3ead947d88310e2eebff820758e5a390fe1efd2a76efb3a195209fd619f"
+   },
+   "note": "",
+   "check": "verifier: crosswalk digest (old check)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('crosswalk digest', 'PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/07_Hilbert_Schmidt_Scaling_Limit_for_Wilson_Dirac_Covariances.pdf'",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('crosswalk digest', 'PAPERS/D8_Wilson_Dirac_Covariance_Majorant_and_Boundary_Estimates/parts/07_Hilbert_Schmidt_Scaling"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M30",
+   "kind": "digit in a result file, manifest not updated",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254"
+   },
+   "note": "",
+   "check": "verifier: manifest digest (old check)",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('digest', 'COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('digest', 'COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M31",
+   "kind": "added text file named *.pyc under a __pycache__ directory",
+   "changed": [
+    "PAPERS/__pycache__/MUTANT_M31_stray_paper.pyc"
+   ],
+   "original_sha256": {
+    "PAPERS/__pycache__/MUTANT_M31_stray_paper.pyc": "(added file)"
+   },
+   "note": "",
+   "check": "a test of the .pyc magic bytes",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('unlisted', 'PAPERS/__pycache__/MUTANT_M31_stray_paper.pyc')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('unlisted', 'PAPERS/__pycache__/MUTANT_M31_stray_paper.pyc')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "M32",
+   "kind": "register copy: a middle line removed, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "line seq 309 removed",
+   "check": "verifier: hash chain",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')",
+    "('register chain', 'REVIEW_RECORDS/Director_Z/Session_4/register seq 308')",
+    "('register genesis or sequence', 'REVIEW_RECORDS/Director_Z/Session_4/register')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N01",
+   "kind": "PAPER_INDEX statements of G10 +1 only",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/PAPER_INDEX.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/PAPER_INDEX.csv": "22f676b30e86ac45afe84e224ab0ff8428ee7548e2516f139dd55c876418a91c"
+   },
+   "note": "",
+   "check": "verifier: statements vs registry",
+   "prediction": "CAUGHT",
+   "made_false": "yes",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('PAPER_INDEX statements differ from registry', 'G10')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('PAPER_INDEX statements differ from registry', 'G10')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N02",
+   "kind": "registry row duplicated",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/THEOREM_REGISTRY.csv": "f5f458c0eac42bb7a915324b59dbf1f7f3608e9b50b93d1e201e15fe5cce55ce"
+   },
+   "note": "",
+   "check": "verifier: duplicate id",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('duplicate registry id', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('duplicate registry id', '')",
+    "('PAPER_INDEX statements differ from registry', 'G8')",
+    "('README registry count', '434')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N03",
+   "kind": "result all_pass true->false, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_periodic_interaction/xr9_result.json"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_periodic_interaction/xr9_result.json": "f0037679c17708c7ef066588d403e5f9a7a1fcb77176397fce0450a3d79416c1"
+   },
+   "note": "REVIEW_RECORDS/Director_Z/Session_4/cross_review/subagent_periodic_interaction/xr9_result.json",
+   "check": "rerun and byte comparison",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N04",
+   "kind": "crosswalk legacy row removed",
+   "changed": [
+    "MANIFEST.json",
+    "PROGRAM/registers/COMPONENT_CROSSWALK.csv"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "PROGRAM/registers/COMPONENT_CROSSWALK.csv": "f235a3ead947d88310e2eebff820758e5a390fe1efd2a76efb3a195209fd619f"
+   },
+   "note": "legacy row 97 removed",
+   "check": "verifier: component not in crosswalk",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('component not in crosswalk', 'Calibration, Identified Sets and Uniform Limits')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('component not in crosswalk', 'Calibration, Identified Sets and Uniform Limits')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N05",
+   "kind": "result truncated and renamed *partial*, manifest consistent",
+   "changed": [
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json",
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results_partial_MUTANT_N05.json",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results.json": "a4c45db727734621bfd18ad51b4e7ce18a46e3567a8b98bd9f786a8be8fa6254",
+    "COMPUTATION/Baseline_Additions/Monodromy_Index_Results_partial_MUTANT_N05.json": "(added file)",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "file list vs predecessor",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N06",
+   "kind": ".pyc with valid magic tail bytes but arbitrary content",
+   "changed": [
+    "PAPERS/__pycache__/MUTANT_N06.cpython-311.pyc"
+   ],
+   "original_sha256": {
+    "PAPERS/__pycache__/MUTANT_N06.cpython-311.pyc": "(added file)"
+   },
+   "note": "",
+   "check": "unmarshal/compile check or ban .pyc",
+   "prediction": "SURVIVED",
+   "made_false": "record altered",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N07",
+   "kind": "register copy: forged line appended with correct chain, manifest consistent",
+   "changed": [
+    "MANIFEST.json",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl"
+   ],
+   "original_sha256": {
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092",
+    "REVIEW_RECORDS/Director_Z/Session_4/register/register.jsonl": "db9b1c116246edc7a3cc8279a1230419c1535828d2b70644c39d4e1bb9957037"
+   },
+   "note": "",
+   "check": "verifier: initial segment of live register",
+   "prediction": "CAUGHT",
+   "made_false": "record altered",
+   "exit": 1,
+   "outcome": "CAUGHT",
+   "how": "('register copy is not an initial segment of the live register', '')",
+   "crash": false,
+   "patched_exit": 1,
+   "patched_how": [
+    "('register copy is not an initial segment of the live register', '')"
+   ],
+   "patched_crash": false,
+   "restored": true
+  },
+  {
+   "id": "N08",
+   "kind": "Lean proof replaced by sorry, manifest consistent",
+   "changed": [
+    "COMPUTATION/Lean/Mathlib/RootsSum.lean",
+    "MANIFEST.json"
+   ],
+   "original_sha256": {
+    "COMPUTATION/Lean/Mathlib/RootsSum.lean": "bbd5bdf665ddcb98d1c73fd8633ec3fff03370479c8b412e0fd4d25aa7b2a151",
+    "MANIFEST.json": "68051519e87307574df67230c70df5b1f3d30fcb25bf1065f148ac30e2ecd092"
+   },
+   "note": "",
+   "check": "Lean build / grep sorry",
+   "prediction": "SURVIVED",
+   "made_false": "yes",
+   "exit": 0,
+   "outcome": "SURVIVED",
+   "how": "",
+   "crash": false,
+   "patched_exit": 0,
+   "patched_how": [],
+   "patched_crash": false,
+   "restored": true
+  }
+ ]
+}

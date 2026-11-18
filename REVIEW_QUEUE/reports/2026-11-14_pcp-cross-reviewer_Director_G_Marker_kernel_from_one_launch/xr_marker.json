@@ -1,0 +1,1895 @@
+{
+ "seed": 20261113,
+ "predicates": {
+  "P1": {
+   "status": "FAIL",
+   "checks": {
+    "eig1": "True",
+    "eig2": "True",
+    "z0": "True",
+    "z1": "True",
+    "omega_k": false,
+    "stationary": "True",
+    "curvature": "True",
+    "det": "True",
+    "phase": "True"
+   },
+   "min_radius_of_ellipse": 0.3314135740355918,
+   "max_radius": 0.8001031451912656
+  },
+  "P2": {
+   "status": "PASS",
+   "qualifying": 600,
+   "of": 600
+  },
+  "P3": {
+   "status": "PASS",
+   "resid_1": 0.08844622227388829,
+   "resid_144": 7.355821069918083e-05,
+   "gap_12": 1.2028153906499124,
+   "gap_144": 0.2516875547650296
+  },
+  "P4": {
+   "status": "FAIL",
+   "sup_C_1_144": 1.5163122302012197,
+   "sup_C_145_600": 1.516442569294971,
+   "min_C_145_600": 0.9053044877888119,
+   "envelope_slope": -1.653111095000245,
+   "resid_300": 3.647993856637747e-05,
+   "resid_600": 8.926348848634703e-06
+  },
+  "P5": {
+   "status": "PASS",
+   "sup_dang_t_1_144": 1.947597410530122,
+   "sup_dang_t_145_600": 1.9444100106982785,
+   "argmax_low": 33
+  },
+  "P6": {
+   "status": "PASS",
+   "gaps": {
+    "12": 1.2028153906499124,
+    "36": 0.5087188233809751,
+    "72": 0.2860994133321337,
+    "144": 0.2516875547650296,
+    "300": 0.19503237453747585,
+    "600": 0.10535479000624867
+   },
+   "covering_radius": {
+    "12": 0.6014076953249562,
+    "36": 0.25435941169048754,
+    "72": 0.14304970666606684,
+    "144": 0.1258437773825148,
+    "300": 0.09751618726873792,
+    "600": 0.052677395003124336
+   },
+   "parent_p_times_t_range": [
+    0.521929608294413,
+    3.3125
+   ]
+  },
+  "P7": {
+   "status": "PASS",
+   "qualifying": 17,
+   "of": 17,
+   "rows": [
+    {
+     "T0": 3,
+     "c": 0,
+     "m": 3,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 48,
+     "match": true,
+     "visits": 18,
+     "distinct_pairs": 10,
+     "pairs_not_in_blank_depth_le_T0m": [],
+     "pairs_not_in_blank_depth_le_40": [],
+     "directions_not_in_blank_le_40": [],
+     "directions_not_in_blank_le_200": []
+    },
+    {
+     "T0": 2,
+     "c": -1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 86,
+     "match": true,
+     "visits": 31,
+     "distinct_pairs": 15,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -1,
+       -1
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -1,
+       -1
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "directions_not_in_blank_le_40": [],
+     "directions_not_in_blank_le_200": []
+    },
+    {
+     "T0": 2,
+     "c": 0,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 86,
+     "match": true,
+     "visits": 31,
+     "distinct_pairs": 15,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -1,
+       -1
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -1,
+       -1
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "directions_not_in_blank_le_40": [],
+     "directions_not_in_blank_le_200": []
+    },
+    {
+     "T0": 2,
+     "c": 1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 90,
+     "match": true,
+     "visits": 35,
+     "distinct_pairs": 17,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       -1
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       -1
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       2
+      ]
+     ]
+    },
+    {
+     "T0": 2,
+     "c": 2,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 90,
+     "match": true,
+     "visits": 35,
+     "distinct_pairs": 17,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       -1
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       -1
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       2
+      ]
+     ]
+    },
+    {
+     "T0": 3,
+     "c": -1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 100,
+     "match": true,
+     "visits": 40,
+     "distinct_pairs": 21,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -5,
+       -1
+      ],
+      [
+       -3,
+       -2
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       -1,
+       3
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -5,
+       -1
+      ],
+      [
+       -3,
+       -2
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       -1,
+       3
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -5,
+       -1
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       -1,
+       3
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -5,
+       -1
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       -1,
+       3
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ]
+     ]
+    },
+    {
+     "T0": 3,
+     "c": 0,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 100,
+     "match": true,
+     "visits": 40,
+     "distinct_pairs": 21,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -2,
+       0
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       4
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -2,
+       0
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       4
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       6,
+       4
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       6,
+       4
+      ]
+     ]
+    },
+    {
+     "T0": 3,
+     "c": 1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 100,
+     "match": true,
+     "visits": 40,
+     "distinct_pairs": 21,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -2,
+       0
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       4
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -2,
+       0
+      ],
+      [
+       -1,
+       -1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       4
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       6,
+       4
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       6,
+       4
+      ]
+     ]
+    },
+    {
+     "T0": 3,
+     "c": 2,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 100,
+     "match": true,
+     "visits": 40,
+     "distinct_pairs": 21,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -5,
+       0
+      ],
+      [
+       -2,
+       -3
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       3
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -5,
+       0
+      ],
+      [
+       -2,
+       -3
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       3
+      ]
+     ],
+     "directions_not_in_blank_le_40": [],
+     "directions_not_in_blank_le_200": []
+    },
+    {
+     "T0": 4,
+     "c": -1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 106,
+     "match": true,
+     "visits": 41,
+     "distinct_pairs": 27,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -2,
+       1
+      ],
+      [
+       2,
+       -3
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -2,
+       1
+      ],
+      [
+       2,
+       -3
+      ]
+     ]
+    },
+    {
+     "T0": 4,
+     "c": 0,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 106,
+     "match": true,
+     "visits": 41,
+     "distinct_pairs": 27,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -2,
+       1
+      ],
+      [
+       2,
+       -3
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -2,
+       1
+      ],
+      [
+       2,
+       -3
+      ]
+     ]
+    },
+    {
+     "T0": 4,
+     "c": 1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 106,
+     "match": true,
+     "visits": 41,
+     "distinct_pairs": 28,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ]
+    },
+    {
+     "T0": 4,
+     "c": 2,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 106,
+     "match": true,
+     "visits": 41,
+     "distinct_pairs": 28,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ]
+    },
+    {
+     "T0": 5,
+     "c": -1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 120,
+     "match": true,
+     "visits": 50,
+     "distinct_pairs": 33,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -4,
+       6
+      ],
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       -1,
+       -6
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       2,
+       -4
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -4,
+       6
+      ],
+      [
+       -2,
+       1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       -1,
+       -6
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       2,
+       -4
+      ],
+      [
+       2,
+       -3
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -4,
+       6
+      ],
+      [
+       -2,
+       1
+      ],
+      [
+       -1,
+       -6
+      ],
+      [
+       2,
+       -4
+      ],
+      [
+       2,
+       -3
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -4,
+       6
+      ],
+      [
+       -2,
+       1
+      ],
+      [
+       -1,
+       -6
+      ],
+      [
+       2,
+       -4
+      ],
+      [
+       2,
+       -3
+      ]
+     ]
+    },
+    {
+     "T0": 5,
+     "c": 0,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 120,
+     "match": true,
+     "visits": 50,
+     "distinct_pairs": 34,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -2,
+       4
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -2,
+       4
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ]
+    },
+    {
+     "T0": 5,
+     "c": 1,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 120,
+     "match": true,
+     "visits": 50,
+     "distinct_pairs": 34,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -2,
+       4
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       0
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -2,
+       4
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -3,
+       1
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       -2,
+       3
+      ],
+      [
+       -1,
+       -2
+      ],
+      [
+       1,
+       -4
+      ],
+      [
+       1,
+       -2
+      ],
+      [
+       2,
+       -8
+      ],
+      [
+       2,
+       -1
+      ],
+      [
+       3,
+       -2
+      ]
+     ]
+    },
+    {
+     "T0": 5,
+     "c": 2,
+     "m": 5,
+     "hypothesis": true,
+     "both_sectors_nonempty": true,
+     "ports": 120,
+     "match": true,
+     "visits": 50,
+     "distinct_pairs": 36,
+     "pairs_not_in_blank_depth_le_T0m": [
+      [
+       -4,
+       2
+      ],
+      [
+       -3,
+       -4
+      ],
+      [
+       -3,
+       -1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       9
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       -6
+      ],
+      [
+       3,
+       -2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       12,
+       6
+      ]
+     ],
+     "pairs_not_in_blank_depth_le_40": [
+      [
+       -4,
+       2
+      ],
+      [
+       -3,
+       -4
+      ],
+      [
+       -3,
+       -1
+      ],
+      [
+       -2,
+       2
+      ],
+      [
+       0,
+       -3
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       9
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       -6
+      ],
+      [
+       3,
+       -2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       12,
+       6
+      ]
+     ],
+     "directions_not_in_blank_le_40": [
+      [
+       -4,
+       2
+      ],
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       -6
+      ],
+      [
+       3,
+       -2
+      ]
+     ],
+     "directions_not_in_blank_le_200": [
+      [
+       -4,
+       2
+      ],
+      [
+       -3,
+       -1
+      ],
+      [
+       3,
+       -6
+      ],
+      [
+       3,
+       -2
+      ]
+     ]
+    }
+   ]
+  },
+  "P8": {
+   "status": "PASS",
+   "visits": 18,
+   "distinct": 10
+  },
+  "P9": {
+   "status": "PASS",
+   "note_instance_missing_at_depth_le_6": [],
+   "followup_unreported_instances_with_exact_pair_missing_le_T0m": 16,
+   "followup_with_exact_pair_missing_le_40": 16,
+   "followup_with_direction_missing_le_40": 13,
+   "followup_with_direction_missing_le_200": 13,
+   "of_unreported": 16
+  },
+  "P10": {
+   "status": "PASS",
+   "h_law": "9/16",
+   "rival": "5/16",
+   "marginals_equal": true,
+   "aggregate": "9/10",
+   "parent_mass": "5/8",
+   "table_hlaw_rival": {
+    "4": {
+     "(0, -4, 0)": [
+      "0",
+      "0"
+     ],
+     "(0, -4, 1)": [
+      "1/16",
+      "1/16"
+     ],
+     "(0, -2, 0)": [
+      "1/16",
+      "1/16"
+     ],
+     "(0, -2, 1)": [
+      "1/16",
+      "1/16"
+     ],
+     "(0, 0, 0)": [
+      "1/16",
+      "1/16"
+     ],
+     "(0, 0, 1)": [
+      "0",
+      "0"
+     ],
+     "(1, 0, 0)": [
+      "0",
+      "0"
+     ],
+     "(1, 0, 1)": [
+      "1/16",
+      "5/16"
+     ],
+     "(1, 2, 0)": [
+      "9/16",
+      "5/16"
+     ],
+     "(1, 2, 1)": [
+      "1/16",
+      "1/16"
+     ],
+     "(1, 4, 0)": [
+      "1/16",
+      "1/16"
+     ],
+     "(1, 4, 1)": [
+      "0",
+      "0"
+     ]
+    },
+    "5": {
+     "(0, -5, 0)": [
+      "0",
+      "0"
+     ],
+     "(0, -5, 1)": [
+      "1/32",
+      "1/32"
+     ],
+     "(0, -3, 0)": [
+      "1/32",
+      "1/32"
+     ],
+     "(0, -3, 1)": [
+      "1/8",
+      "1/8"
+     ],
+     "(0, -1, 0)": [
+      "0",
+      "0"
+     ],
+     "(0, -1, 1)": [
+      "1/32",
+      "1/32"
+     ],
+     "(0, 1, 0)": [
+      "1/32",
+      "1/32"
+     ],
+     "(0, 1, 1)": [
+      "0",
+      "0"
+     ],
+     "(1, -1, 0)": [
+      "0",
+      "0"
+     ],
+     "(1, -1, 1)": [
+      "1/32",
+      "5/32"
+     ],
+     "(1, 1, 0)": [
+      "1/32",
+      "5/32"
+     ],
+     "(1, 1, 1)": [
+      "1/8",
+      "3/16"
+     ],
+     "(1, 3, 0)": [
+      "1/2",
+      "3/16"
+     ],
+     "(1, 3, 1)": [
+      "1/32",
+      "1/32"
+     ],
+     "(1, 5, 0)": [
+      "1/32",
+      "1/32"
+     ],
+     "(1, 5, 1)": [
+      "0",
+      "0"
+     ]
+    },
+    "6": {
+     "(0, -6, 0)": [
+      "0",
+      "0"
+     ],
+     "(0, -6, 1)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, -4, 0)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, -4, 1)": [
+      "9/64",
+      "9/64"
+     ],
+     "(0, -2, 0)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, -2, 1)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, 0, 0)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, 0, 1)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, 2, 0)": [
+      "1/64",
+      "1/64"
+     ],
+     "(0, 2, 1)": [
+      "0",
+      "0"
+     ],
+     "(1, -2, 0)": [
+      "0",
+      "0"
+     ],
+     "(1, -2, 1)": [
+      "1/64",
+      "5/64"
+     ],
+     "(1, 0, 0)": [
+      "1/64",
+      "5/64"
+     ],
+     "(1, 0, 1)": [
+      "1/64",
+      "11/64"
+     ],
+     "(1, 2, 0)": [
+      "9/64",
+      "11/64"
+     ],
+     "(1, 2, 1)": [
+      "9/64",
+      "7/64"
+     ],
+     "(1, 4, 0)": [
+      "25/64",
+      "7/64"
+     ],
+     "(1, 4, 1)": [
+      "1/64",
+      "1/64"
+     ],
+     "(1, 6, 0)": [
+      "1/64",
+      "1/64"
+     ],
+     "(1, 6, 1)": [
+      "0",
+      "0"
+     ]
+    }
+   }
+  },
+  "P11": {
+   "status": "PASS",
+   "trials": 60,
+   "max_ratio": 0.7092206352586065,
+   "evaluation": {
+    "12": {
+     "r": 0.6014076953249562,
+     "bound_L1_e0": 1.2028153906499124,
+     "informative_vs_trivial_1": false,
+     "below_discriminator_sep_0p4": false
+    },
+    "36": {
+     "r": 0.25435941169048754,
+     "bound_L1_e0": 0.5087188233809751,
+     "informative_vs_trivial_1": true,
+     "below_discriminator_sep_0p4": false
+    },
+    "72": {
+     "r": 0.14304970666606684,
+     "bound_L1_e0": 0.2860994133321337,
+     "informative_vs_trivial_1": true,
+     "below_discriminator_sep_0p4": true
+    },
+    "144": {
+     "r": 0.1258437773825148,
+     "bound_L1_e0": 0.2516875547650296,
+     "informative_vs_trivial_1": true,
+     "below_discriminator_sep_0p4": true
+    },
+    "300": {
+     "r": 0.09751618726873792,
+     "bound_L1_e0": 0.19503237453747585,
+     "informative_vs_trivial_1": true,
+     "below_discriminator_sep_0p4": true
+    },
+    "600": {
+     "r": 0.052677395003124336,
+     "bound_L1_e0": 0.10535479000624867,
+     "informative_vs_trivial_1": true,
+     "below_discriminator_sep_0p4": true
+    }
+   },
+   "note": "basis: exact inequality, no tolerance; grid sup is a lower estimate of the true sup"
+  },
+  "P12": {
+   "status": "PASS",
+   "rows": [
+    {
+     "N": 12,
+     "in_unit_interval": true,
+     "max_deviation_from_h": 0.2135040673847493
+    },
+    {
+     "N": 144,
+     "in_unit_interval": true,
+     "max_deviation_from_h": 0.10969371140400436
+    },
+    {
+     "N": 600,
+     "in_unit_interval": true,
+     "max_deviation_from_h": 0.07211055008030522
+    }
+   ]
+  }
+ },
+ "summary": {
+  "P1": "FAIL",
+  "P2": "PASS",
+  "P3": "PASS",
+  "P4": "FAIL",
+  "P5": "PASS",
+  "P6": "PASS",
+  "P7": "PASS",
+  "P8": "PASS",
+  "P9": "PASS",
+  "P10": "PASS",
+  "P11": "PASS",
+  "P12": "PASS"
+ }
+}

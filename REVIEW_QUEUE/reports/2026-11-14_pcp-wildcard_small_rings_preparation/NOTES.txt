@@ -1,0 +1,24 @@
+Wildcard p6, seed "margin". Target: margin of G10 Lemma 5.30/5.34 (small rings; Remark 5.33(d) "not known").
+Pruning proof: the continuations of a walk depend only on its current site and the later masks, so all n walks
+at site z at time s have the same number d of descendants at the target site at time T. If n > B and d >= 1 the
+target total is >= n > B. So d = 0, and deleting z from A_s changes nothing at the target. QED.
+
+FINDING. Ring Z_4 (any q): at every time the walks sit on one parity class {z,z+2}; site z+1 receives one
+continuation of every walk at z and at z+2, and so does z-1=z+3. So after a step both sites of the other class
+have total t(z)+t(z+2), and the mask keeps both, one or none. Induction from total 1: the two totals are always
+(t,t),(t,0),(0,0) with t a power of two. Hence no position product event has a site with 3 walks: the conclusion
+of Lemma 5.30 / 5.34 is FALSE on Z_4 (e.g. U=(3,0),V=(0,0)), and Theorem 5.32(i) fails there as stated, since
+F(3,0) never occurs in any event and is unconstrained. Programs: small_rings.py (result_a.json, result_b.json),
+n4_totals.py (result_n4_totals.json: totals {0,1,2,4,8,16}).
+Positive: N=3,5,6,8,10 (the other rings Remark 5.33(d) calls 'not known' for q=2): all 35 site-states of total
+<=3 occur at every site (N=3 also all 70 of total <=4). Bounded evidence only, not a proof for all U,V.
+Controls: N=1,2 fail as Remark (d) says; brute force over all masks T<=4 on N=3 equals closure at depth 4.
+Failed/unfinished: did not test whether extra consistent rules exist on Z_4 restricted to occurring states.
+
+SECOND FINDING (new; Director G's note l.50 leaves deficit periods 3,4,5 open). small_rings_q.py/result_q.json,
+missing_q.py/result_missing_q.json: on Z_3 and Z_6 with q=3,4,5,6 no position product event has
+m(x,R)=e_g, m(x,L)=e_{gh} (one walk on each rail, gains g and gh); exhaustive closure at B=2 (B=3 for q=3).
+So the conclusion of Lemma 5.34 is false at period 3 for q>=3 (tested q<=6); for q=2 at N=3 all states of
+total <=5 occur. Period 4,5 (N=8,5,10): all states of total <=3 (q=2), <=2 (q=3) occur: no counterexample.
+Already known to Director G: N=4 (his note l.50); the paper's Remark (d) still says 'not known' -> patch.
+No hand proof of the period-3 obstruction was found (kept as open).

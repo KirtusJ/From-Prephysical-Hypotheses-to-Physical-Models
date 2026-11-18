@@ -1,0 +1,37 @@
+argv=['explore.py', 'res_T8_W6_B2_full.txt', '8', '6', '2']
+N=5 q=2 M=5 QUALIFIES events=29866 P1 reached 70/70 PASS sample_missing=[]
+   P2 unknowns=54 rank=52 projected_dim(|m|<=2)=2 expected=2 PASS
+N=5 q=3 M=5 QUALIFIES events=62250 P1 reached 129/135 FAIL sample_missing=[(1, (0, 0, 0), (0, 0, 2)), (1, (0, 0, 1), (1, 0, 0)), (2, (0, 0, 1), (1, 0, 0)), (2, (1, 0, 1), (0, 0, 0))]
+   P2 unknowns=166 rank=165 projected_dim(|m|<=2)=1 expected=1 PASS
+N=5 q=4 M=5 QUALIFIES events=70126 P1 reached 169/220 FAIL sample_missing=[(0, (0, 0, 0, 0), (0, 0, 0, 2)), (0, (0, 0, 0, 0), (1, 0, 0, 1)), (0, (0, 0, 0, 0), (1, 0, 1, 0)), (0, (0, 0, 0, 1), (1, 0, 0, 0))]
+   P2 unknowns=363 rank=361 projected_dim(|m|<=2)=2 expected=2 PASS
+N=8 q=2 M=4 QUALIFIES events=13926 P1 reached 112/112 PASS sample_missing=[]
+   P2 unknowns=54 rank=52 projected_dim(|m|<=2)=2 expected=2 PASS
+N=8 q=3 M=4 QUALIFIES events=24748 P1 reached 188/216 FAIL sample_missing=[(1, (0, 0, 0), (0, 0, 2)), (1, (1, 0, 0), (0, 0, 1)), (1, (1, 0, 0), (0, 1, 0)), (1, (1, 0, 1), (0, 0, 0))]
+   P2 unknowns=166 rank=165 projected_dim(|m|<=2)=1 expected=1 PASS
+N=8 q=4 M=4 QUALIFIES events=24414 P1 reached 199/352 FAIL sample_missing=[(0, (0, 0, 0, 0), (1, 0, 0, 1)), (0, (0, 0, 0, 0), (1, 0, 1, 0)), (0, (0, 0, 0, 1), (1, 0, 0, 0)), (0, (0, 0, 1, 0), (1, 0, 0, 0))]
+   P2 unknowns=369 rank=367 projected_dim(|m|<=2)=2 expected=2 PASS
+N=10 q=2 M=5 QUALIFIES events=41942 P1 reached 134/140 FAIL sample_missing=[(3, (0, 0), (0, 2)), (3, (1, 0), (0, 1)), (5, (0, 0), (0, 2)), (5, (0, 1), (0, 1))]
+   P2 unknowns=54 rank=52 projected_dim(|m|<=2)=2 expected=2 PASS
+N=10 q=3 M=5 QUALIFIES events=69238 P1 reached 203/270 FAIL sample_missing=[(1, (0, 0, 0), (0, 0, 2)), (1, (0, 0, 0), (1, 0, 1)), (1, (0, 0, 1), (1, 0, 0)), (1, (1, 0, 0), (0, 0, 1))]
+   P2 unknowns=166 rank=165 projected_dim(|m|<=2)=1 expected=1 PASS
+N=10 q=4 M=5 QUALIFIES events=71088 P1 reached 220/440 FAIL sample_missing=[(0, (0, 0, 0, 0), (0, 0, 0, 2)), (0, (0, 0, 0, 0), (1, 0, 0, 1)), (0, (0, 0, 0, 0), (1, 0, 1, 0)), (0, (0, 0, 0, 1), (1, 0, 0, 0))]
+   P2 unknowns=363 rank=361 projected_dim(|m|<=2)=2 expected=2 PASS
+N=6 q=2 M=3 OTHER events=2707 P1 reached 84/84 PASS sample_missing=[]
+   P2 unknowns=54 rank=52 projected_dim(|m|<=2)=2 expected=2 PASS
+N=6 q=3 M=3 OTHER events=4006 P1 reached 133/162 FAIL sample_missing=[(0, (0, 0, 1), (1, 0, 0)), (0, (0, 1, 0), (0, 0, 1)), (0, (1, 0, 0), (0, 1, 0)), (1, (0, 0, 0), (1, 0, 1))]
+   P2 unknowns=166 rank=165 projected_dim(|m|<=2)=1 expected=1 PASS
+N=6 q=4 M=3 OTHER events=5145 P1 reached 180/264 FAIL sample_missing=[(0, (0, 0, 0, 0), (0, 0, 0, 2)), (0, (0, 0, 0, 1), (0, 0, 0, 1)), (0, (0, 0, 0, 1), (1, 0, 0, 0)), (0, (0, 0, 0, 2), (0, 0, 0, 0))]
+   P2 unknowns=378 rank=376 projected_dim(|m|<=2)=2 expected=2 PASS
+N=12 q=2 M=6 CONTROL(M>=6) events=89163 P1 reached 146/168 FAIL sample_missing=[(3, (0, 0), (0, 2)), (3, (1, 0), (0, 1)), (5, (0, 0), (0, 1)), (5, (0, 0), (0, 2))]
+   P2 unknowns=54 rank=52 projected_dim(|m|<=2)=2 expected=2 PASS
+N=12 q=3 M=6 CONTROL(M>=6) events=133557 P1 reached 204/324 FAIL sample_missing=[(1, (0, 0, 0), (0, 0, 2)), (1, (0, 0, 0), (1, 0, 1)), (1, (0, 0, 1), (1, 0, 0)), (1, (1, 0, 0), (0, 0, 1))]
+   P2 unknowns=166 rank=165 projected_dim(|m|<=2)=1 expected=1 PASS
+N=12 q=4 M=6 CONTROL(M>=6) events=143516 P1 reached 220/528 FAIL sample_missing=[(0, (0, 0, 0, 0), (0, 0, 0, 2)), (0, (0, 0, 0, 0), (1, 0, 0, 1)), (0, (0, 0, 0, 0), (1, 0, 1, 0)), (0, (0, 0, 0, 1), (1, 0, 0, 0))]
+   P2 unknowns=356 rank=354 projected_dim(|m|<=2)=2 expected=2 PASS
+carriers qualifying=9 of 15
+
+real	32m57.491s
+user	32m48.975s
+sys	0m0.785s
+exit=0

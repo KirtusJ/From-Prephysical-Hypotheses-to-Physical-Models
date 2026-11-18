@@ -1,0 +1,18 @@
+Target: the small rings left "not known" by G10 Remark 5.33(d) (body.tex line 871) for the preparation Lemmas 5.30 and 5.34; edition Z26, commit 4ad1dec. Chosen by the wildcard from the seed word "margin". It also answers part of the director's wanted item for edition Z25 (a challenger on Lemma 5.30 for the small rings).
+Control (known answer): number of items and first title of "Lessons paid for" in CLAUDE.md. Expected 6 and "Test the hypothesis in the predicate"; reported 6 and that title. Control passed.
+Outcome: DEFECT in one sentence of the paper (it says "not known" where the answer is known and is in Director G's note), and a new negative result for rings of 3 and 6 sites with gains of order 3 to 6. A patch for the sentence is filed beside this report, not applied.
+Reviewer kind: pcp-wildcard run as a sub-agent of the queue session; the N = 4 claim was rechecked by the queue session with a program of its own. Same model family as the author. Not independent review.
+
+Findings
+1. Ring of 4 sites, any q: the conclusion of the preparation lemma is false. Under position product events the total number of walks at a site is always 0 or a power of two (proof in NOTES.txt; result_n4_totals.json lists 0, 1, 2, 4, 8, 16), so a site with three walks on one rail and none on the other never occurs. Director G's note already says this (Director_G/Position_preparation_for_one_gain.md, line 50), but Remark 5.33(d) still lists these rings as not known. On that ring Theorem 5.32(i) as worded would leave F(3,0) unconstrained; the paper does not claim the theorem there.
+2. Rings of 3 and 6 sites, q = 3 to 6 (new): no position product event has one walk at (x,R) with gain g and one at (x,L) with gain g h. Exhaustive closure over all sequences of position masks (result_q.json, result_missing_q.json). Director G's note leaves period 3 open. For q = 2 on 3 sites every state of total at most 5 occurs.
+3. Rings of 5, 8 and 10 sites (favourable, bounded evidence only): every state of total at most 3 (q = 2) and at most 2 (q = 3) occurs at every site.
+
+Method: exact integer closure over all mask sequences, with a pruning rule proved in NOTES.txt (a site whose total exceeds the bound can be masked at once). Controls inside the program: rings of 1 and 2 sites fail as the remark says; brute force over all masks up to length 4 on 3 sites equals the closure. Integers only; result files opened with mode 'x'.
+How to check: in the folder of this report, `python3 small_rings.py '[[4,3],[3,3]]' new.json`, `python3 n4_totals.py`, `python3 missing_q.py`, each in a fresh directory.
+
+Kept as failed or open by the sub-agent: no hand proof of the obstruction at period 3; it was not tested whether extra consistent rules exist on these rings once the equation is restricted to the states that occur.
+Runners-up: Theorem 5.36 on rings of 3 and 6 sites for q >= 3 may still hold by another proof, since only the pairs (e_g, e_gh) are missing (a builder item); the bound N/gcd(N,2) >= 6 of Lemma 5.34 may not be sharp at periods 4 and 5 (no counterexample found).
+
+Rechecked by the queue session: the control; with a program written without reading the sub-agent's (step, then mask any set of positions; totals per site; entries up to 64), on the ring of 4 sites the totals that occur are exactly 0, 1, 2, 4, 8, 16, 32, 64, and on the ring of 3 sites every value up to 19 occurs; line 871 of the paper and line 50 of Director G's note say what is quoted; the patch passes `git apply --check`. Not rechecked: finding 2 and finding 3.
+Cost reported by the sub-agent: about 16 minutes, 13 tool calls.

@@ -1,0 +1,6 @@
+CONTROL 32. s.py -> res_cap10.txt: N=3,6, q=3,4,5 no target state (fields<=10); q=2 hits. rel.py -> rel.txt: lone walks at sites y,y+2 always opposite chirality.
+PROOF (N in {3,6}, every q>=3): lone(y,t)= exactly one walk at site y at time t. L1: lone walk at y has chirality R iff at t-1 site y-1 lone and y+1 empty (L: y+1 lone, y-1 empty), N>=3.
+L2: lone at x-1 and x+1 => opposite chiralities (both R: x empty and x lone; both L: likewise).
+L3 (q>=3): not (x-1 lone L gain g, x+1 lone R gain gh): both come from a single walk z at x, gains g' h^{c_z}, g' -> h^{c_z+1}=1, impossible.
+Target at t+1 <=> lone pair at x-1,x+1 at t with g_b h^{c_b}=g_a h; c_b=R excluded by L2+L3; so B(x,t): x-1 R gain g, x+1 L gain g.
+L4: B(x,t) => at t-1 lone at x-2 (gain g) and x+2 (gain g_v h^{c_v}=g). N|6 => x-2=x+4, pair centre x+3; by L2,L3 it is B(x+3,t-1). Descent to t=0 (one walk) contradiction.

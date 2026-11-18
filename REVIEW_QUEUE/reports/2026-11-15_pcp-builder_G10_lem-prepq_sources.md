@@ -1,0 +1,10 @@
+Target: whether Director G's notes give the preparation G10 Lemma 5.34 (lem:prepq) cites, for gains in the q-th roots of unity (director's Z25 request); master a8c9608.
+Control: walks of length 6 from 0 with steps +-1 ending at 2. Expected 15 = C(6,4); reported 15. Control passed.
+Outcome: NOTHING strengthened; the source question is answered; one conjectured obstruction.
+Reviewer kind: pcp-builder run as a sub-agent of the queue session. Same model family as the author.
+
+- The lemma cites Director_G/Position_preparation_for_one_gain.md, not Preparing_signed_sheet_residues.md. The latter works on another carrier (a staircase with residue gain floor(x/2) mod M on rings of 4M sites) and does not give the lemma for any q.
+- The cited note covers exactly what the lemma needs: the line and every ring with N/gcd(N,2) >= 6, every site, every q, every pair (U, V); PROVED there by a circuit argument with a Lean check of wire isolation, and computed on rings of 7 and 12 sites. Rings with N/gcd(N,2) in {1, 2} fail, proved there. Rings with N/gcd(N,2) in {3, 4, 5} are neither needed nor covered. The comparison is of statements and proof structure; the note's Lean file and checker were not rerun.
+- Own exhaustive search over position mask sequences on the uncovered rings (fields with more than 8 walks pruned; targets all (U, V) with |U| + |V| <= 2): all targets reached on rings of 5 and 8 sites for q <= 3, on 10 sites for q <= 2, and on 3 and 6 sites for q <= 2. On 3 and 6 sites with q = 3, 24 of 27 are reached; the three missing are one walk on each rail with the L walk carrying one more factor of h. This agrees with the wildcard report of 14 November (rings of 3 and 6 sites, q = 3 to 6). Because of the pruning it is CONJECTURED, not proved, that they cannot be prepared.
+- Consequence: Theorem 5.36(i) stands on the carriers it names; extending it to rings with N/gcd(N,2) = 4 or 5 needs a proof of preparability for all (U, V), open.
+Rechecked by the queue session: the control. Cost: about 12 minutes, 8 tool calls.

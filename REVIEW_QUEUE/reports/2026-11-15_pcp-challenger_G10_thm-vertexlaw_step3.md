@@ -1,0 +1,9 @@
+Target: Step 3 of the proof of G10 Theorem 5.22 (thm:vertexlaw), with Lemma 5.24 (lem:maxp) which it uses; master a8c9608 (body.tex 1228 lines). Second challenger, text alone.
+Control: walks of length 5 from 0 to 0 on the directed 3-cycle with a loop at each vertex. Expected 11 = C(5,0) + C(5,3); reported 11. Control passed.
+Outcome: NONE FOUND.
+Reviewer kind: pcp-challenger run as a sub-agent of the queue session; rechecked as stated at the end. Same model family as the author. Not independent review.
+
+Every step follows: the induction set-up and the vanishing of G_z(w_z) for Y not inside pred(z); (a) for |Y| >= 2 and the extension by multilinearity; (b) for Y = {y}, using G_z(0) = 0; the characters X_psi spanning P_1 (C finite abelian); the three-input identity for |Y| = 1, 2, 3, which needs N >= 3 (stated); "every vertex of R has at most one predecessor" (an invertible matrix gives g = 0, a contradiction); "R is empty" via Lemma 5.24(2), whose proof counts the d|W'| distinct arcs leaving W' (exactly d out-arcs, no parallel arcs, d >= 2; loops handled). Every hypothesis used is in the statement or in the step.
+Computation (step3.py, exact rational elimination, predicates fixed first, result file opened with mode 'x'): within the size-N equations, the unknowns of size N have only the zero solution, for N = 3 on 15 of 15 qualifying carriers (Hadamard block over Z2, loops, the non-cyclic group Z2 x Z2, two disconnected copies, a vertex without predecessor, ten random carriers with d = 2, 3) and for N = 4 on three of them. Hypothesis needed: a single loop with d = 1 gives kernel 4, a 3-cycle with d = 1 kernel 2, one vertex with two parallel loops kernel 18. No predicate failed.
+Not checked: Steps 1, 2, 4; parts (a)-(d); Corollary 5.23; N above 4; Lean (the step mixes graph theory with linear algebra).
+Rechecked by the queue session: the control by hand. Cost: about 6 minutes, 4 tool calls.

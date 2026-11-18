@@ -1,0 +1,5 @@
+Lemma lem:prepq needs: every site x, all U,V in N^C, every q>=1, on line and rings N/gcd(N,2)>=6. cites dgone.
+Position_preparation_for_one_gain.md: claims exactly this (line + D>=6, all q, all U,V), written proof; Lean for wire isolation; replay q<=4 (+97), rings 7,12.
+Preparing_signed_sheet_residues.md: different carrier (staircase, residue gain floor(x/2), ring 4M); not D_h. Does not give lem:prepq.
+Small rings D=3,4,5 outside lemma: exhaustive BFS small_rings.py -> res1.txt (bounded B=8).
+res1.txt: N=10 q=3 cut by 170 s timeout (no line). D=3 rings (N=3,6), q=3: (U,V)=(e_j,e_{j+1}) not reached within B=8; all other |U|+|V|<=2 targets reached on N=3,5,6,8,10 for q<=3 (N=10 q<=2).

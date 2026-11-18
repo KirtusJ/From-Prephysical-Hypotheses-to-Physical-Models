@@ -1,0 +1,24 @@
+CONTROL 4-cycle period: 4
+ring3: HOLDS t=8 min=16
+ring4: FAILS reached 16/16 lifted, lift SC=True period=2, gains at start=[(0,), (1,)]
+ring5: HOLDS t=9 min=13
+ring6: FAILS reached 24/24 lifted, lift SC=True period=2, gains at start=[(0,), (1,)]
+ring7: HOLDS t=11 min=17
+ring8: FAILS reached 32/32 lifted, lift SC=True period=2, gains at start=[(0,), (1,)]
+ring9: HOLDS t=13 min=21
+ring10: FAILS reached 40/40 lifted, lift SC=True period=2, gains at start=[(0,), (1,)]
+B_2 (mod 2): HOLDS t=6 min=12
+B_3 (mod 6): HOLDS t=8 min=16
+B_4 (mod 4): HOLDS t=7 min=12
+B_5 (mod 10): HOLDS t=9 min=13
+B_6 (mod 6): HOLDS t=8 min=15
+B_7 (mod 14): HOLDS t=11 min=17
+B_8 (mod 8): HOLDS t=9 min=22
+B_9 (mod 18): HOLDS t=13 min=21
+B_10 (mod 10): HOLDS t=10 min=26
+B_11 (mod 22): HOLDS t=15 min=25
+B_12 (mod 12): HOLDS t=10 min=15
+staircase M=3: FAILS reached 144/144 lifted, lift SC=True period=2, gains at start=[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+staircase M=4: FAILS reached 256/256 lifted, lift SC=True period=2, gains at start=[(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3)]
+staircase M=5: FAILS reached 400/400 lifted, lift SC=True period=2, gains at start=[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4)]
+staircase M=6: FAILS reached 576/576 lifted, lift SC=True period=2, gains at start=[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5)]

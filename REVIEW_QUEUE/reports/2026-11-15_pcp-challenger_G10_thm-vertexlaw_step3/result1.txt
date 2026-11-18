@@ -1,0 +1,25 @@
+CONTROL: 11 P0 True
+d2 2-vertex Hadamard Z2 hyp True ker3 0
+d2 loop+tree-like into sink-ish hyp True ker3 0
+d2 non-cyclic Z2xZ2 hyp True ker3 0
+d2 disconnected 2 copies hyp True ker3 0
+d2 unreachable source vertex hyp True ker3 0
+random 0 V3 d3 C[4] hyp True ker3 0
+random 1 V4 d3 C[4] hyp True ker3 0
+random 2 V4 d3 C[4] hyp True ker3 0
+random 3 V4 d2 C[2, 2] hyp True ker3 0
+random 4 V3 d3 C[3] hyp True ker3 0
+random 5 V4 d3 C[3] hyp True ker3 0
+random 6 V4 d2 C[2] hyp True ker3 0
+random 7 V4 d2 C[2] hyp True ker3 0
+random 8 V3 d3 C[3] hyp True ker3 0
+random 9 V3 d2 C[2, 2] hyp True ker3 0
+qualifying 15 of 15 P1 True
+d2 2-vertex Hadamard Z2 ker4 0
+d2 loop+tree-like into sink-ish ker4 0
+d2 non-cyclic Z2xZ2 ker4 0
+P2 True
+d1 single loop hyp False ker 4
+d1 3-cycle hyp False ker 2
+parallel 2 loops gain0 (sizes 3..6) hyp False ker 18
+P3 True

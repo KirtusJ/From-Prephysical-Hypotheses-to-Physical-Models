@@ -44,3 +44,14 @@
 | Director G, Window source cost | cross-reviewer | 6 + 4 | 8 + 3 | GAP |
 | Director G, Renewal launch | cross-reviewer | 7 + 2 | 8 + 1 | GAP |
 
+
+## 14 November 2026, 06:05 to 07:05 UTC (targets at 4ad1dec)
+
+| Item | Agent | Minutes | Tool calls | Control | Outcome |
+|---|---|---|---|---|---|
+| Small rings left "not known" by G10 Remark 5.33(d) (seed `margin`) | wildcard | 16 + 6 | 13 + 3 | passed | DEFECT in one sentence of the paper; new negative result for rings of 3 and 6 sites, q = 3 to 6; patch filed |
+| G10 Proposition 5.35, text alone, exact ranks q = 2..8 | challenger | 8 + 4 | 5 + 2 | passed | NONE FOUND |
+| G10 Proposition 5.35 as one Lean theorem | formalizer | 9 + 5 | 5 + 2 | passed | NONE FOUND; assembled for every q; shorter argument |
+| Director G, Marker kernel from one launch | cross-reviewer | 15 + 3 | 10 + 1 | passed | GAP |
+| Director G, Tag sector controls, lines 1-118 | cross-reviewer | 14 + 3 | 7 + 1 | passed | GAP, PARTIAL |
+
