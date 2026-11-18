@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+from fractions import Fraction
 from math import sqrt
 from pathlib import Path
 
@@ -88,6 +89,26 @@ def extract(figure):
             "cairo_opt_hellinger_fidelity_by_tick_0_to_29": fidelities}
 
 
+def check_site_four_coin():
+    # For the published input (cos(pi/12), i*sin(pi/12)), a real row (u,v)
+    # gives probability [(u²+v²)/2 + (u²-v²)*sqrt(3)/4] / denominator.
+    # Adding or subtracting the two output rows includes the final Hadamard.
+    for ticks, sign in ((6, -1), (8, 1)):
+        a, b, c, d = transfer_matrices(ticks)[4]
+        scale = 2 ** (ticks // 2)
+        require((4*a, 4*b, 4*c, 4*d) == (3*scale, -sign*scale, sign*scale, 3*scale),
+                f"Site-four transfer matrix at tick {ticks}")
+        denominator = 2 * scale**2
+        for outcome, u, v in ((1, a+c, b+d), (-1, a-c, b-d)):
+            rational_part = Fraction(u*u + v*v, 2 * denominator)
+            radical_part = Fraction(u*u - v*v, 4 * denominator)
+            require((rational_part, radical_part) == (Fraction(5, 16), Fraction(3 * sign * outcome, 32)),
+                    f"Site-four X outcome {outcome} at tick {ticks}")
+        print(f"Tick {ticks} joint site-four, plus probability: "
+              f"{5/16 + sign * 3*sqrt(3)/32:.9f}")
+
+
+
 def check(data):
     rows = data["cairo_opt_sites_0_to_7_by_tick_0_to_8"]
     fid = data["cairo_opt_hellinger_fidelity_by_tick_0_to_29"]
@@ -133,6 +154,7 @@ if __name__ == "__main__":
         parser.error("--write-transcription requires the authors' figure")
     record = extract(args.figure) if args.figure else json.loads(RECORD.read_text())
     check(record)
+    check_site_four_coin()
     if args.write_transcription:
         RECORD.write_bytes((json.dumps(record, indent=2) + "\n").encode("utf-8"))
     elif args.figure:

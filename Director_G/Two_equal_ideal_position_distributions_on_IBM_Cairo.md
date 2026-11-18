@@ -12,6 +12,27 @@ The stronger six/eight comparison uses the entire ordered table. At both clocks 
 
 For the authors’ particular coin, the full sixteen computational-basis probabilities also coincide. The transfer matrices have real entries. The relative phase i removes their column cross terms. Every squared entry of the unnormalized eight-tick matrices is four times its six-tick counterpart, precisely the change in the normalization. Thus a fixed classical confusion matrix on all four measured bits, followed by reporting position, still predicts equality on the ideal circuits. A coherent rail-sensitive measurement can distinguish states with the same computational-basis probabilities.
 
+## A local measurement of the coin
+
+The two clocks give the same probability of arriving at site four, but they leave different relative phases between the two coin amplitudes there. Those phases can be compared with one common terminal measurement. Using the paper’s coin and site conventions, the site-four transfer matrices from the input coin are
+
+$
+K_6(4)=\frac14\begin{pmatrix}3&1\\-1&3\end{pmatrix},\qquad
+K_8(4)=\frac14\begin{pmatrix}3&-1\\1&3\end{pmatrix}.
+$
+
+Both satisfy $K^\dagger K=5I/8$. Reading the coin in the $X$ basis adds its two amplitudes for the $+$ outcome and subtracts them for the $-$ outcome. For the published input $(\cos(\pi/12),i\sin(\pi/12))$, the squared norms give the following fractions of **all launches**.
+
+| Ideal joint readout at site four | Six steps | Eight steps |
+|---|---:|---:|
+| Site four, either coin outcome | $5/8$ | $5/8$ |
+| Site four, $+$ | $5/16-3\sqrt3/32$ (15.012%) | $5/16+3\sqrt3/32$ (47.488%) |
+| Site four, $-$ | $5/16+3\sqrt3/32$ (47.488%) | $5/16-3\sqrt3/32$ (15.012%) |
+
+Complete dephasing of the terminal coin in its computational basis removes the cross term. It predicts $5/16$ for each joint outcome at both clocks. For an implementation, apply the same terminal Hadamard to the coin in each circuit and read position and coin together. Count the launches that yield site four and coin zero. A reversal of the coin readout labels reverses the signed contrast. Comparing interleaved clocks and tracking the position marginal and all launch outcomes would distinguish some circuit and readout changes from the ideal contrast.
+
+Figure 8(b) reports position. The rotated-coin probabilities above are new predictions for the specified circuits. The observed position discrepancy alone supplies no estimate of this coherence. A run would test the coherence surviving at the chosen clocks and the calibration of this measurement. Many microscopic descriptions can give the same two probabilities.
+
 ## What the hardware figure resolves
 
 | Duration | Site 0 | Site 1 | Site 2 | Site 3 | Site 4 | Site 5 | Site 6 | Site 7 |
